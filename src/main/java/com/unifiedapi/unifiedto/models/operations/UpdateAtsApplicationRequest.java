@@ -21,7 +21,7 @@ import java.util.Optional;
 public class UpdateAtsApplicationRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends AtsApplication> atsApplication;
+    private AtsApplication atsApplication;
 
     /**
      * ID of the connection
@@ -43,7 +43,7 @@ public class UpdateAtsApplicationRequest {
 
     @JsonCreator
     public UpdateAtsApplicationRequest(
-            Optional<? extends AtsApplication> atsApplication,
+            AtsApplication atsApplication,
             String connectionId,
             Optional<? extends List<String>> fields,
             String id) {
@@ -58,15 +58,15 @@ public class UpdateAtsApplicationRequest {
     }
     
     public UpdateAtsApplicationRequest(
+            AtsApplication atsApplication,
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, Optional.empty(), id);
+        this(atsApplication, connectionId, Optional.empty(), id);
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<AtsApplication> atsApplication() {
-        return (Optional<AtsApplication>) atsApplication;
+    public AtsApplication atsApplication() {
+        return atsApplication;
     }
 
     /**
@@ -99,12 +99,6 @@ public class UpdateAtsApplicationRequest {
     }
 
     public UpdateAtsApplicationRequest withAtsApplication(AtsApplication atsApplication) {
-        Utils.checkNotNull(atsApplication, "atsApplication");
-        this.atsApplication = Optional.ofNullable(atsApplication);
-        return this;
-    }
-
-    public UpdateAtsApplicationRequest withAtsApplication(Optional<? extends AtsApplication> atsApplication) {
         Utils.checkNotNull(atsApplication, "atsApplication");
         this.atsApplication = atsApplication;
         return this;
@@ -182,7 +176,7 @@ public class UpdateAtsApplicationRequest {
     
     public final static class Builder {
  
-        private Optional<? extends AtsApplication> atsApplication = Optional.empty();
+        private AtsApplication atsApplication;
  
         private String connectionId;
  
@@ -195,12 +189,6 @@ public class UpdateAtsApplicationRequest {
         }
 
         public Builder atsApplication(AtsApplication atsApplication) {
-            Utils.checkNotNull(atsApplication, "atsApplication");
-            this.atsApplication = Optional.ofNullable(atsApplication);
-            return this;
-        }
-
-        public Builder atsApplication(Optional<? extends AtsApplication> atsApplication) {
             Utils.checkNotNull(atsApplication, "atsApplication");
             this.atsApplication = atsApplication;
             return this;

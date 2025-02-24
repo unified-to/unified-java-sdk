@@ -21,7 +21,7 @@ import java.util.Optional;
 public class CreateAccountingContactRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends AccountingContact> accountingContact;
+    private AccountingContact accountingContact;
 
     /**
      * ID of the connection
@@ -37,7 +37,7 @@ public class CreateAccountingContactRequest {
 
     @JsonCreator
     public CreateAccountingContactRequest(
-            Optional<? extends AccountingContact> accountingContact,
+            AccountingContact accountingContact,
             String connectionId,
             Optional<? extends List<String>> fields) {
         Utils.checkNotNull(accountingContact, "accountingContact");
@@ -49,14 +49,14 @@ public class CreateAccountingContactRequest {
     }
     
     public CreateAccountingContactRequest(
+            AccountingContact accountingContact,
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty());
+        this(accountingContact, connectionId, Optional.empty());
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<AccountingContact> accountingContact() {
-        return (Optional<AccountingContact>) accountingContact;
+    public AccountingContact accountingContact() {
+        return accountingContact;
     }
 
     /**
@@ -81,12 +81,6 @@ public class CreateAccountingContactRequest {
     }
 
     public CreateAccountingContactRequest withAccountingContact(AccountingContact accountingContact) {
-        Utils.checkNotNull(accountingContact, "accountingContact");
-        this.accountingContact = Optional.ofNullable(accountingContact);
-        return this;
-    }
-
-    public CreateAccountingContactRequest withAccountingContact(Optional<? extends AccountingContact> accountingContact) {
         Utils.checkNotNull(accountingContact, "accountingContact");
         this.accountingContact = accountingContact;
         return this;
@@ -152,7 +146,7 @@ public class CreateAccountingContactRequest {
     
     public final static class Builder {
  
-        private Optional<? extends AccountingContact> accountingContact = Optional.empty();
+        private AccountingContact accountingContact;
  
         private String connectionId;
  
@@ -163,12 +157,6 @@ public class CreateAccountingContactRequest {
         }
 
         public Builder accountingContact(AccountingContact accountingContact) {
-            Utils.checkNotNull(accountingContact, "accountingContact");
-            this.accountingContact = Optional.ofNullable(accountingContact);
-            return this;
-        }
-
-        public Builder accountingContact(Optional<? extends AccountingContact> accountingContact) {
             Utils.checkNotNull(accountingContact, "accountingContact");
             this.accountingContact = accountingContact;
             return this;

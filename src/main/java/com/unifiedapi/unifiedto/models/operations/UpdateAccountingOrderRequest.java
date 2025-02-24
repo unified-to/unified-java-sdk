@@ -21,7 +21,7 @@ import java.util.Optional;
 public class UpdateAccountingOrderRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends AccountingOrder> accountingOrder;
+    private AccountingOrder accountingOrder;
 
     /**
      * ID of the connection
@@ -43,7 +43,7 @@ public class UpdateAccountingOrderRequest {
 
     @JsonCreator
     public UpdateAccountingOrderRequest(
-            Optional<? extends AccountingOrder> accountingOrder,
+            AccountingOrder accountingOrder,
             String connectionId,
             Optional<? extends List<String>> fields,
             String id) {
@@ -58,15 +58,15 @@ public class UpdateAccountingOrderRequest {
     }
     
     public UpdateAccountingOrderRequest(
+            AccountingOrder accountingOrder,
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, Optional.empty(), id);
+        this(accountingOrder, connectionId, Optional.empty(), id);
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<AccountingOrder> accountingOrder() {
-        return (Optional<AccountingOrder>) accountingOrder;
+    public AccountingOrder accountingOrder() {
+        return accountingOrder;
     }
 
     /**
@@ -99,12 +99,6 @@ public class UpdateAccountingOrderRequest {
     }
 
     public UpdateAccountingOrderRequest withAccountingOrder(AccountingOrder accountingOrder) {
-        Utils.checkNotNull(accountingOrder, "accountingOrder");
-        this.accountingOrder = Optional.ofNullable(accountingOrder);
-        return this;
-    }
-
-    public UpdateAccountingOrderRequest withAccountingOrder(Optional<? extends AccountingOrder> accountingOrder) {
         Utils.checkNotNull(accountingOrder, "accountingOrder");
         this.accountingOrder = accountingOrder;
         return this;
@@ -182,7 +176,7 @@ public class UpdateAccountingOrderRequest {
     
     public final static class Builder {
  
-        private Optional<? extends AccountingOrder> accountingOrder = Optional.empty();
+        private AccountingOrder accountingOrder;
  
         private String connectionId;
  
@@ -195,12 +189,6 @@ public class UpdateAccountingOrderRequest {
         }
 
         public Builder accountingOrder(AccountingOrder accountingOrder) {
-            Utils.checkNotNull(accountingOrder, "accountingOrder");
-            this.accountingOrder = Optional.ofNullable(accountingOrder);
-            return this;
-        }
-
-        public Builder accountingOrder(Optional<? extends AccountingOrder> accountingOrder) {
             Utils.checkNotNull(accountingOrder, "accountingOrder");
             this.accountingOrder = accountingOrder;
             return this;

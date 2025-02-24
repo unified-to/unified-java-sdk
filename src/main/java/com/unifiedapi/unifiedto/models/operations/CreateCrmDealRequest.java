@@ -24,7 +24,7 @@ public class CreateCrmDealRequest {
      * A deal represents an opportunity with companies and/or contacts
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends CrmDeal> crmDeal;
+    private CrmDeal crmDeal;
 
     /**
      * ID of the connection
@@ -40,7 +40,7 @@ public class CreateCrmDealRequest {
 
     @JsonCreator
     public CreateCrmDealRequest(
-            Optional<? extends CrmDeal> crmDeal,
+            CrmDeal crmDeal,
             String connectionId,
             Optional<? extends List<String>> fields) {
         Utils.checkNotNull(crmDeal, "crmDeal");
@@ -52,17 +52,17 @@ public class CreateCrmDealRequest {
     }
     
     public CreateCrmDealRequest(
+            CrmDeal crmDeal,
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty());
+        this(crmDeal, connectionId, Optional.empty());
     }
 
     /**
      * A deal represents an opportunity with companies and/or contacts
      */
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<CrmDeal> crmDeal() {
-        return (Optional<CrmDeal>) crmDeal;
+    public CrmDeal crmDeal() {
+        return crmDeal;
     }
 
     /**
@@ -90,15 +90,6 @@ public class CreateCrmDealRequest {
      * A deal represents an opportunity with companies and/or contacts
      */
     public CreateCrmDealRequest withCrmDeal(CrmDeal crmDeal) {
-        Utils.checkNotNull(crmDeal, "crmDeal");
-        this.crmDeal = Optional.ofNullable(crmDeal);
-        return this;
-    }
-
-    /**
-     * A deal represents an opportunity with companies and/or contacts
-     */
-    public CreateCrmDealRequest withCrmDeal(Optional<? extends CrmDeal> crmDeal) {
         Utils.checkNotNull(crmDeal, "crmDeal");
         this.crmDeal = crmDeal;
         return this;
@@ -164,7 +155,7 @@ public class CreateCrmDealRequest {
     
     public final static class Builder {
  
-        private Optional<? extends CrmDeal> crmDeal = Optional.empty();
+        private CrmDeal crmDeal;
  
         private String connectionId;
  
@@ -178,15 +169,6 @@ public class CreateCrmDealRequest {
          * A deal represents an opportunity with companies and/or contacts
          */
         public Builder crmDeal(CrmDeal crmDeal) {
-            Utils.checkNotNull(crmDeal, "crmDeal");
-            this.crmDeal = Optional.ofNullable(crmDeal);
-            return this;
-        }
-
-        /**
-         * A deal represents an opportunity with companies and/or contacts
-         */
-        public Builder crmDeal(Optional<? extends CrmDeal> crmDeal) {
             Utils.checkNotNull(crmDeal, "crmDeal");
             this.crmDeal = crmDeal;
             return this;

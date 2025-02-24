@@ -24,6 +24,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingJournalRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingJournalResponse;
+import com.unifiedapi.unifiedto.models.shared.AccountingJournal;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -38,6 +39,8 @@ public class Application {
             .build();
 
         CreateAccountingJournalRequest req = CreateAccountingJournalRequest.builder()
+                .accountingJournal(AccountingJournal.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -193,6 +196,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingJournalRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingJournalResponse;
+import com.unifiedapi.unifiedto.models.shared.AccountingJournal;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -207,6 +211,8 @@ public class Application {
             .build();
 
         PatchAccountingJournalRequest req = PatchAccountingJournalRequest.builder()
+                .accountingJournal(AccountingJournal.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -305,6 +311,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingJournalRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingJournalResponse;
+import com.unifiedapi.unifiedto.models.shared.AccountingJournal;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -319,6 +326,8 @@ public class Application {
             .build();
 
         UpdateAccountingJournalRequest req = UpdateAccountingJournalRequest.builder()
+                .accountingJournal(AccountingJournal.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

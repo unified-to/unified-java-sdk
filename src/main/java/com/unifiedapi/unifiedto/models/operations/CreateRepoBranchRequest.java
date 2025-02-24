@@ -21,7 +21,7 @@ import java.util.Optional;
 public class CreateRepoBranchRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends RepoBranch> repoBranch;
+    private RepoBranch repoBranch;
 
     /**
      * ID of the connection
@@ -37,7 +37,7 @@ public class CreateRepoBranchRequest {
 
     @JsonCreator
     public CreateRepoBranchRequest(
-            Optional<? extends RepoBranch> repoBranch,
+            RepoBranch repoBranch,
             String connectionId,
             Optional<? extends List<String>> fields) {
         Utils.checkNotNull(repoBranch, "repoBranch");
@@ -49,14 +49,14 @@ public class CreateRepoBranchRequest {
     }
     
     public CreateRepoBranchRequest(
+            RepoBranch repoBranch,
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty());
+        this(repoBranch, connectionId, Optional.empty());
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<RepoBranch> repoBranch() {
-        return (Optional<RepoBranch>) repoBranch;
+    public RepoBranch repoBranch() {
+        return repoBranch;
     }
 
     /**
@@ -81,12 +81,6 @@ public class CreateRepoBranchRequest {
     }
 
     public CreateRepoBranchRequest withRepoBranch(RepoBranch repoBranch) {
-        Utils.checkNotNull(repoBranch, "repoBranch");
-        this.repoBranch = Optional.ofNullable(repoBranch);
-        return this;
-    }
-
-    public CreateRepoBranchRequest withRepoBranch(Optional<? extends RepoBranch> repoBranch) {
         Utils.checkNotNull(repoBranch, "repoBranch");
         this.repoBranch = repoBranch;
         return this;
@@ -152,7 +146,7 @@ public class CreateRepoBranchRequest {
     
     public final static class Builder {
  
-        private Optional<? extends RepoBranch> repoBranch = Optional.empty();
+        private RepoBranch repoBranch;
  
         private String connectionId;
  
@@ -163,12 +157,6 @@ public class CreateRepoBranchRequest {
         }
 
         public Builder repoBranch(RepoBranch repoBranch) {
-            Utils.checkNotNull(repoBranch, "repoBranch");
-            this.repoBranch = Optional.ofNullable(repoBranch);
-            return this;
-        }
-
-        public Builder repoBranch(Optional<? extends RepoBranch> repoBranch) {
             Utils.checkNotNull(repoBranch, "repoBranch");
             this.repoBranch = repoBranch;
             return this;

@@ -24,7 +24,7 @@ public class CreateCrmEventRequest {
      * An event represents an event, activity, or engagement and is always associated with a deal, contact, or company
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends CrmEvent> crmEvent;
+    private CrmEvent crmEvent;
 
     /**
      * ID of the connection
@@ -40,7 +40,7 @@ public class CreateCrmEventRequest {
 
     @JsonCreator
     public CreateCrmEventRequest(
-            Optional<? extends CrmEvent> crmEvent,
+            CrmEvent crmEvent,
             String connectionId,
             Optional<? extends List<String>> fields) {
         Utils.checkNotNull(crmEvent, "crmEvent");
@@ -52,17 +52,17 @@ public class CreateCrmEventRequest {
     }
     
     public CreateCrmEventRequest(
+            CrmEvent crmEvent,
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty());
+        this(crmEvent, connectionId, Optional.empty());
     }
 
     /**
      * An event represents an event, activity, or engagement and is always associated with a deal, contact, or company
      */
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<CrmEvent> crmEvent() {
-        return (Optional<CrmEvent>) crmEvent;
+    public CrmEvent crmEvent() {
+        return crmEvent;
     }
 
     /**
@@ -90,15 +90,6 @@ public class CreateCrmEventRequest {
      * An event represents an event, activity, or engagement and is always associated with a deal, contact, or company
      */
     public CreateCrmEventRequest withCrmEvent(CrmEvent crmEvent) {
-        Utils.checkNotNull(crmEvent, "crmEvent");
-        this.crmEvent = Optional.ofNullable(crmEvent);
-        return this;
-    }
-
-    /**
-     * An event represents an event, activity, or engagement and is always associated with a deal, contact, or company
-     */
-    public CreateCrmEventRequest withCrmEvent(Optional<? extends CrmEvent> crmEvent) {
         Utils.checkNotNull(crmEvent, "crmEvent");
         this.crmEvent = crmEvent;
         return this;
@@ -164,7 +155,7 @@ public class CreateCrmEventRequest {
     
     public final static class Builder {
  
-        private Optional<? extends CrmEvent> crmEvent = Optional.empty();
+        private CrmEvent crmEvent;
  
         private String connectionId;
  
@@ -178,15 +169,6 @@ public class CreateCrmEventRequest {
          * An event represents an event, activity, or engagement and is always associated with a deal, contact, or company
          */
         public Builder crmEvent(CrmEvent crmEvent) {
-            Utils.checkNotNull(crmEvent, "crmEvent");
-            this.crmEvent = Optional.ofNullable(crmEvent);
-            return this;
-        }
-
-        /**
-         * An event represents an event, activity, or engagement and is always associated with a deal, contact, or company
-         */
-        public Builder crmEvent(Optional<? extends CrmEvent> crmEvent) {
             Utils.checkNotNull(crmEvent, "crmEvent");
             this.crmEvent = crmEvent;
             return this;

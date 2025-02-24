@@ -21,7 +21,7 @@ import java.util.Optional;
 public class UpdateHrisGroupRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends HrisGroup> hrisGroup;
+    private HrisGroup hrisGroup;
 
     /**
      * ID of the connection
@@ -43,7 +43,7 @@ public class UpdateHrisGroupRequest {
 
     @JsonCreator
     public UpdateHrisGroupRequest(
-            Optional<? extends HrisGroup> hrisGroup,
+            HrisGroup hrisGroup,
             String connectionId,
             Optional<? extends List<String>> fields,
             String id) {
@@ -58,15 +58,15 @@ public class UpdateHrisGroupRequest {
     }
     
     public UpdateHrisGroupRequest(
+            HrisGroup hrisGroup,
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, Optional.empty(), id);
+        this(hrisGroup, connectionId, Optional.empty(), id);
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<HrisGroup> hrisGroup() {
-        return (Optional<HrisGroup>) hrisGroup;
+    public HrisGroup hrisGroup() {
+        return hrisGroup;
     }
 
     /**
@@ -99,12 +99,6 @@ public class UpdateHrisGroupRequest {
     }
 
     public UpdateHrisGroupRequest withHrisGroup(HrisGroup hrisGroup) {
-        Utils.checkNotNull(hrisGroup, "hrisGroup");
-        this.hrisGroup = Optional.ofNullable(hrisGroup);
-        return this;
-    }
-
-    public UpdateHrisGroupRequest withHrisGroup(Optional<? extends HrisGroup> hrisGroup) {
         Utils.checkNotNull(hrisGroup, "hrisGroup");
         this.hrisGroup = hrisGroup;
         return this;
@@ -182,7 +176,7 @@ public class UpdateHrisGroupRequest {
     
     public final static class Builder {
  
-        private Optional<? extends HrisGroup> hrisGroup = Optional.empty();
+        private HrisGroup hrisGroup;
  
         private String connectionId;
  
@@ -195,12 +189,6 @@ public class UpdateHrisGroupRequest {
         }
 
         public Builder hrisGroup(HrisGroup hrisGroup) {
-            Utils.checkNotNull(hrisGroup, "hrisGroup");
-            this.hrisGroup = Optional.ofNullable(hrisGroup);
-            return this;
-        }
-
-        public Builder hrisGroup(Optional<? extends HrisGroup> hrisGroup) {
             Utils.checkNotNull(hrisGroup, "hrisGroup");
             this.hrisGroup = hrisGroup;
             return this;

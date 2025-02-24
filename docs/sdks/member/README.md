@@ -24,6 +24,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateMartechMemberRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateMartechMemberResponse;
+import com.unifiedapi.unifiedto.models.shared.MarketingMember;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -38,6 +39,8 @@ public class Application {
             .build();
 
         CreateMartechMemberRequest req = CreateMartechMemberRequest.builder()
+                .marketingMember(MarketingMember.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -193,6 +196,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchMartechMemberRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchMartechMemberResponse;
+import com.unifiedapi.unifiedto.models.shared.MarketingMember;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -207,6 +211,8 @@ public class Application {
             .build();
 
         PatchMartechMemberRequest req = PatchMartechMemberRequest.builder()
+                .marketingMember(MarketingMember.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -305,6 +311,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberResponse;
+import com.unifiedapi.unifiedto.models.shared.MarketingMember;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -319,6 +326,8 @@ public class Application {
             .build();
 
         UpdateMartechMemberRequest req = UpdateMartechMemberRequest.builder()
+                .marketingMember(MarketingMember.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

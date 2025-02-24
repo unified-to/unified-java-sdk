@@ -21,7 +21,7 @@ import java.util.Optional;
 public class UpdateCommerceLocationRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends CommerceLocation> commerceLocation;
+    private CommerceLocation commerceLocation;
 
     /**
      * ID of the connection
@@ -43,7 +43,7 @@ public class UpdateCommerceLocationRequest {
 
     @JsonCreator
     public UpdateCommerceLocationRequest(
-            Optional<? extends CommerceLocation> commerceLocation,
+            CommerceLocation commerceLocation,
             String connectionId,
             Optional<? extends List<String>> fields,
             String id) {
@@ -58,15 +58,15 @@ public class UpdateCommerceLocationRequest {
     }
     
     public UpdateCommerceLocationRequest(
+            CommerceLocation commerceLocation,
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, Optional.empty(), id);
+        this(commerceLocation, connectionId, Optional.empty(), id);
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<CommerceLocation> commerceLocation() {
-        return (Optional<CommerceLocation>) commerceLocation;
+    public CommerceLocation commerceLocation() {
+        return commerceLocation;
     }
 
     /**
@@ -99,12 +99,6 @@ public class UpdateCommerceLocationRequest {
     }
 
     public UpdateCommerceLocationRequest withCommerceLocation(CommerceLocation commerceLocation) {
-        Utils.checkNotNull(commerceLocation, "commerceLocation");
-        this.commerceLocation = Optional.ofNullable(commerceLocation);
-        return this;
-    }
-
-    public UpdateCommerceLocationRequest withCommerceLocation(Optional<? extends CommerceLocation> commerceLocation) {
         Utils.checkNotNull(commerceLocation, "commerceLocation");
         this.commerceLocation = commerceLocation;
         return this;
@@ -182,7 +176,7 @@ public class UpdateCommerceLocationRequest {
     
     public final static class Builder {
  
-        private Optional<? extends CommerceLocation> commerceLocation = Optional.empty();
+        private CommerceLocation commerceLocation;
  
         private String connectionId;
  
@@ -195,12 +189,6 @@ public class UpdateCommerceLocationRequest {
         }
 
         public Builder commerceLocation(CommerceLocation commerceLocation) {
-            Utils.checkNotNull(commerceLocation, "commerceLocation");
-            this.commerceLocation = Optional.ofNullable(commerceLocation);
-            return this;
-        }
-
-        public Builder commerceLocation(Optional<? extends CommerceLocation> commerceLocation) {
             Utils.checkNotNull(commerceLocation, "commerceLocation");
             this.commerceLocation = commerceLocation;
             return this;

@@ -24,7 +24,7 @@ public class CreateUcContactRequest {
      * A contact represents a person that optionally is associated with a call
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends UcContact> ucContact;
+    private UcContact ucContact;
 
     /**
      * ID of the connection
@@ -40,7 +40,7 @@ public class CreateUcContactRequest {
 
     @JsonCreator
     public CreateUcContactRequest(
-            Optional<? extends UcContact> ucContact,
+            UcContact ucContact,
             String connectionId,
             Optional<? extends List<String>> fields) {
         Utils.checkNotNull(ucContact, "ucContact");
@@ -52,17 +52,17 @@ public class CreateUcContactRequest {
     }
     
     public CreateUcContactRequest(
+            UcContact ucContact,
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty());
+        this(ucContact, connectionId, Optional.empty());
     }
 
     /**
      * A contact represents a person that optionally is associated with a call
      */
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<UcContact> ucContact() {
-        return (Optional<UcContact>) ucContact;
+    public UcContact ucContact() {
+        return ucContact;
     }
 
     /**
@@ -90,15 +90,6 @@ public class CreateUcContactRequest {
      * A contact represents a person that optionally is associated with a call
      */
     public CreateUcContactRequest withUcContact(UcContact ucContact) {
-        Utils.checkNotNull(ucContact, "ucContact");
-        this.ucContact = Optional.ofNullable(ucContact);
-        return this;
-    }
-
-    /**
-     * A contact represents a person that optionally is associated with a call
-     */
-    public CreateUcContactRequest withUcContact(Optional<? extends UcContact> ucContact) {
         Utils.checkNotNull(ucContact, "ucContact");
         this.ucContact = ucContact;
         return this;
@@ -164,7 +155,7 @@ public class CreateUcContactRequest {
     
     public final static class Builder {
  
-        private Optional<? extends UcContact> ucContact = Optional.empty();
+        private UcContact ucContact;
  
         private String connectionId;
  
@@ -178,15 +169,6 @@ public class CreateUcContactRequest {
          * A contact represents a person that optionally is associated with a call
          */
         public Builder ucContact(UcContact ucContact) {
-            Utils.checkNotNull(ucContact, "ucContact");
-            this.ucContact = Optional.ofNullable(ucContact);
-            return this;
-        }
-
-        /**
-         * A contact represents a person that optionally is associated with a call
-         */
-        public Builder ucContact(Optional<? extends UcContact> ucContact) {
             Utils.checkNotNull(ucContact, "ucContact");
             this.ucContact = ucContact;
             return this;

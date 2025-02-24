@@ -30,6 +30,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceLocationResponse;
+import com.unifiedapi.unifiedto.models.shared.CommerceLocation;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -44,6 +45,9 @@ public class Application {
             .build();
 
         CreateCommerceLocationRequest req = CreateCommerceLocationRequest.builder()
+                .commerceLocation(CommerceLocation.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -86,6 +90,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateHrisLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateHrisLocationResponse;
+import com.unifiedapi.unifiedto.models.shared.HrisLocation;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -100,6 +105,8 @@ public class Application {
             .build();
 
         CreateHrisLocationRequest req = CreateHrisLocationRequest.builder()
+                .hrisLocation(HrisLocation.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -368,6 +375,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceLocationResponse;
+import com.unifiedapi.unifiedto.models.shared.CommerceLocation;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -382,6 +390,9 @@ public class Application {
             .build();
 
         PatchCommerceLocationRequest req = PatchCommerceLocationRequest.builder()
+                .commerceLocation(CommerceLocation.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -425,6 +436,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchHrisLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchHrisLocationResponse;
+import com.unifiedapi.unifiedto.models.shared.HrisLocation;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -439,6 +451,8 @@ public class Application {
             .build();
 
         PatchHrisLocationRequest req = PatchHrisLocationRequest.builder()
+                .hrisLocation(HrisLocation.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -592,6 +606,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceLocationResponse;
+import com.unifiedapi.unifiedto.models.shared.CommerceLocation;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -606,6 +621,9 @@ public class Application {
             .build();
 
         UpdateCommerceLocationRequest req = UpdateCommerceLocationRequest.builder()
+                .commerceLocation(CommerceLocation.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -649,6 +667,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateHrisLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateHrisLocationResponse;
+import com.unifiedapi.unifiedto.models.shared.HrisLocation;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -663,6 +682,8 @@ public class Application {
             .build();
 
         UpdateHrisLocationRequest req = UpdateHrisLocationRequest.builder()
+                .hrisLocation(HrisLocation.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

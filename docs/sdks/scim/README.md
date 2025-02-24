@@ -30,6 +30,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateScimGroupsRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateScimGroupsResponse;
+import com.unifiedapi.unifiedto.models.shared.ScimGroup;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -44,6 +45,9 @@ public class Application {
             .build();
 
         CreateScimGroupsRequest req = CreateScimGroupsRequest.builder()
+                .scimGroup(ScimGroup.builder()
+                    .displayName("Bert89")
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -86,6 +90,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateScimUsersRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateScimUsersResponse;
+import com.unifiedapi.unifiedto.models.shared.ScimUser;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -100,6 +105,8 @@ public class Application {
             .build();
 
         CreateScimUsersRequest req = CreateScimUsersRequest.builder()
+                .scimUser(ScimUser.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -368,6 +375,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchScimGroupsRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchScimGroupsResponse;
+import com.unifiedapi.unifiedto.models.shared.ScimGroup;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -382,6 +390,9 @@ public class Application {
             .build();
 
         PatchScimGroupsRequest req = PatchScimGroupsRequest.builder()
+                .scimGroup(ScimGroup.builder()
+                    .displayName("Damon_Rutherford93")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -425,6 +436,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchScimUsersRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchScimUsersResponse;
+import com.unifiedapi.unifiedto.models.shared.ScimUser;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -439,6 +451,8 @@ public class Application {
             .build();
 
         PatchScimUsersRequest req = PatchScimUsersRequest.builder()
+                .scimUser(ScimUser.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -592,6 +606,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateScimGroupsRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateScimGroupsResponse;
+import com.unifiedapi.unifiedto.models.shared.ScimGroup;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -606,6 +621,9 @@ public class Application {
             .build();
 
         UpdateScimGroupsRequest req = UpdateScimGroupsRequest.builder()
+                .scimGroup(ScimGroup.builder()
+                    .displayName("Frederic.Reichel")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -649,6 +667,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateScimUsersRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateScimUsersResponse;
+import com.unifiedapi.unifiedto.models.shared.ScimUser;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -663,6 +682,8 @@ public class Application {
             .build();
 
         UpdateScimUsersRequest req = UpdateScimUsersRequest.builder()
+                .scimUser(ScimUser.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

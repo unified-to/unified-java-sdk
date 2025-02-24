@@ -21,7 +21,7 @@ import java.util.Optional;
 public class CreateKmsSpaceRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends KmsSpace> kmsSpace;
+    private KmsSpace kmsSpace;
 
     /**
      * ID of the connection
@@ -37,7 +37,7 @@ public class CreateKmsSpaceRequest {
 
     @JsonCreator
     public CreateKmsSpaceRequest(
-            Optional<? extends KmsSpace> kmsSpace,
+            KmsSpace kmsSpace,
             String connectionId,
             Optional<? extends List<String>> fields) {
         Utils.checkNotNull(kmsSpace, "kmsSpace");
@@ -49,14 +49,14 @@ public class CreateKmsSpaceRequest {
     }
     
     public CreateKmsSpaceRequest(
+            KmsSpace kmsSpace,
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty());
+        this(kmsSpace, connectionId, Optional.empty());
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<KmsSpace> kmsSpace() {
-        return (Optional<KmsSpace>) kmsSpace;
+    public KmsSpace kmsSpace() {
+        return kmsSpace;
     }
 
     /**
@@ -81,12 +81,6 @@ public class CreateKmsSpaceRequest {
     }
 
     public CreateKmsSpaceRequest withKmsSpace(KmsSpace kmsSpace) {
-        Utils.checkNotNull(kmsSpace, "kmsSpace");
-        this.kmsSpace = Optional.ofNullable(kmsSpace);
-        return this;
-    }
-
-    public CreateKmsSpaceRequest withKmsSpace(Optional<? extends KmsSpace> kmsSpace) {
         Utils.checkNotNull(kmsSpace, "kmsSpace");
         this.kmsSpace = kmsSpace;
         return this;
@@ -152,7 +146,7 @@ public class CreateKmsSpaceRequest {
     
     public final static class Builder {
  
-        private Optional<? extends KmsSpace> kmsSpace = Optional.empty();
+        private KmsSpace kmsSpace;
  
         private String connectionId;
  
@@ -163,12 +157,6 @@ public class CreateKmsSpaceRequest {
         }
 
         public Builder kmsSpace(KmsSpace kmsSpace) {
-            Utils.checkNotNull(kmsSpace, "kmsSpace");
-            this.kmsSpace = Optional.ofNullable(kmsSpace);
-            return this;
-        }
-
-        public Builder kmsSpace(Optional<? extends KmsSpace> kmsSpace) {
             Utils.checkNotNull(kmsSpace, "kmsSpace");
             this.kmsSpace = kmsSpace;
             return this;

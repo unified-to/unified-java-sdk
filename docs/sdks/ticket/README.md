@@ -25,6 +25,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.TicketingTicket;
 import java.lang.Exception;
 
 public class Application {
@@ -38,6 +39,8 @@ public class Application {
             .build();
 
         CreateTicketingTicketRequest req = CreateTicketingTicketRequest.builder()
+                .ticketingTicket(TicketingTicket.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -194,6 +197,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.TicketingTicket;
 import java.lang.Exception;
 
 public class Application {
@@ -207,6 +211,8 @@ public class Application {
             .build();
 
         PatchTicketingTicketRequest req = PatchTicketingTicketRequest.builder()
+                .ticketingTicket(TicketingTicket.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -306,6 +312,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.TicketingTicket;
 import java.lang.Exception;
 
 public class Application {
@@ -319,6 +326,8 @@ public class Application {
             .build();
 
         UpdateTicketingTicketRequest req = UpdateTicketingTicketRequest.builder()
+                .ticketingTicket(TicketingTicket.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

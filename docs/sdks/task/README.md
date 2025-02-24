@@ -37,6 +37,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateTaskCommentRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateTaskCommentResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.TaskComment;
 import java.lang.Exception;
 
 public class Application {
@@ -50,6 +51,10 @@ public class Application {
             .build();
 
         CreateTaskCommentRequest req = CreateTaskCommentRequest.builder()
+                .taskComment(TaskComment.builder()
+                    .taskId("<id>")
+                    .text("<value>")
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -93,6 +98,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateTaskProjectRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateTaskProjectResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.TaskProject;
 import java.lang.Exception;
 
 public class Application {
@@ -106,6 +112,8 @@ public class Application {
             .build();
 
         CreateTaskProjectRequest req = CreateTaskProjectRequest.builder()
+                .taskProject(TaskProject.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -149,6 +157,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateTaskTaskRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateTaskTaskResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.TaskTask;
 import java.lang.Exception;
 
 public class Application {
@@ -162,6 +171,8 @@ public class Application {
             .build();
 
         CreateTaskTaskRequest req = CreateTaskTaskRequest.builder()
+                .taskTask(TaskTask.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -544,6 +555,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchTaskCommentRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchTaskCommentResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.TaskComment;
 import java.lang.Exception;
 
 public class Application {
@@ -557,6 +569,10 @@ public class Application {
             .build();
 
         PatchTaskCommentRequest req = PatchTaskCommentRequest.builder()
+                .taskComment(TaskComment.builder()
+                    .taskId("<id>")
+                    .text("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -601,6 +617,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchTaskProjectRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchTaskProjectResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.TaskProject;
 import java.lang.Exception;
 
 public class Application {
@@ -614,6 +631,8 @@ public class Application {
             .build();
 
         PatchTaskProjectRequest req = PatchTaskProjectRequest.builder()
+                .taskProject(TaskProject.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -658,6 +677,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchTaskTaskRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchTaskTaskResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.TaskTask;
 import java.lang.Exception;
 
 public class Application {
@@ -671,6 +691,8 @@ public class Application {
             .build();
 
         PatchTaskTaskRequest req = PatchTaskTaskRequest.builder()
+                .taskTask(TaskTask.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -880,6 +902,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateTaskCommentRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateTaskCommentResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.TaskComment;
 import java.lang.Exception;
 
 public class Application {
@@ -893,6 +916,10 @@ public class Application {
             .build();
 
         UpdateTaskCommentRequest req = UpdateTaskCommentRequest.builder()
+                .taskComment(TaskComment.builder()
+                    .taskId("<id>")
+                    .text("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -937,6 +964,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateTaskProjectRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateTaskProjectResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.TaskProject;
 import java.lang.Exception;
 
 public class Application {
@@ -950,6 +978,8 @@ public class Application {
             .build();
 
         UpdateTaskProjectRequest req = UpdateTaskProjectRequest.builder()
+                .taskProject(TaskProject.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -994,6 +1024,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateTaskTaskRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateTaskTaskResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.TaskTask;
 import java.lang.Exception;
 
 public class Application {
@@ -1007,6 +1038,8 @@ public class Application {
             .build();
 
         UpdateTaskTaskRequest req = UpdateTaskTaskRequest.builder()
+                .taskTask(TaskTask.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

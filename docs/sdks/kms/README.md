@@ -36,6 +36,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateKmsCommentRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateKmsCommentResponse;
+import com.unifiedapi.unifiedto.models.shared.KmsComment;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -50,6 +51,9 @@ public class Application {
             .build();
 
         CreateKmsCommentRequest req = CreateKmsCommentRequest.builder()
+                .kmsComment(KmsComment.builder()
+                    .content("<value>")
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -92,6 +96,8 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateKmsPageRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateKmsPageResponse;
+import com.unifiedapi.unifiedto.models.shared.KmsPage;
+import com.unifiedapi.unifiedto.models.shared.KmsPageType;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -106,6 +112,10 @@ public class Application {
             .build();
 
         CreateKmsPageRequest req = CreateKmsPageRequest.builder()
+                .kmsPage(KmsPage.builder()
+                    .title("<value>")
+                    .type(KmsPageType.HTML)
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -148,6 +158,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateKmsSpaceRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateKmsSpaceResponse;
+import com.unifiedapi.unifiedto.models.shared.KmsSpace;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -162,6 +173,9 @@ public class Application {
             .build();
 
         CreateKmsSpaceRequest req = CreateKmsSpaceRequest.builder()
+                .kmsSpace(KmsSpace.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -543,6 +557,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchKmsCommentRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchKmsCommentResponse;
+import com.unifiedapi.unifiedto.models.shared.KmsComment;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -557,6 +572,9 @@ public class Application {
             .build();
 
         PatchKmsCommentRequest req = PatchKmsCommentRequest.builder()
+                .kmsComment(KmsComment.builder()
+                    .content("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -600,6 +618,8 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchKmsPageRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchKmsPageResponse;
+import com.unifiedapi.unifiedto.models.shared.KmsPage;
+import com.unifiedapi.unifiedto.models.shared.KmsPageType;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -614,6 +634,10 @@ public class Application {
             .build();
 
         PatchKmsPageRequest req = PatchKmsPageRequest.builder()
+                .kmsPage(KmsPage.builder()
+                    .title("<value>")
+                    .type(KmsPageType.TEXT)
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -657,6 +681,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchKmsSpaceRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchKmsSpaceResponse;
+import com.unifiedapi.unifiedto.models.shared.KmsSpace;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -671,6 +696,9 @@ public class Application {
             .build();
 
         PatchKmsSpaceRequest req = PatchKmsSpaceRequest.builder()
+                .kmsSpace(KmsSpace.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -879,6 +907,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateKmsCommentRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateKmsCommentResponse;
+import com.unifiedapi.unifiedto.models.shared.KmsComment;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -893,6 +922,9 @@ public class Application {
             .build();
 
         UpdateKmsCommentRequest req = UpdateKmsCommentRequest.builder()
+                .kmsComment(KmsComment.builder()
+                    .content("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -936,6 +968,8 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateKmsPageRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateKmsPageResponse;
+import com.unifiedapi.unifiedto.models.shared.KmsPage;
+import com.unifiedapi.unifiedto.models.shared.KmsPageType;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -950,6 +984,10 @@ public class Application {
             .build();
 
         UpdateKmsPageRequest req = UpdateKmsPageRequest.builder()
+                .kmsPage(KmsPage.builder()
+                    .title("<value>")
+                    .type(KmsPageType.OTHER)
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -993,6 +1031,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateKmsSpaceRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateKmsSpaceResponse;
+import com.unifiedapi.unifiedto.models.shared.KmsSpace;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -1007,6 +1046,9 @@ public class Application {
             .build();
 
         UpdateKmsSpaceRequest req = UpdateKmsSpaceRequest.builder()
+                .kmsSpace(KmsSpace.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

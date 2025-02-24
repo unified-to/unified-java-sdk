@@ -46,6 +46,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateHrisCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateHrisCompanyResponse;
+import com.unifiedapi.unifiedto.models.shared.HrisCompany;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -60,6 +61,8 @@ public class Application {
             .build();
 
         CreateHrisCompanyRequest req = CreateHrisCompanyRequest.builder()
+                .hrisCompany(HrisCompany.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -102,6 +105,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeResponse;
+import com.unifiedapi.unifiedto.models.shared.HrisEmployee;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -116,6 +120,8 @@ public class Application {
             .build();
 
         CreateHrisEmployeeRequest req = CreateHrisEmployeeRequest.builder()
+                .hrisEmployee(HrisEmployee.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -158,6 +164,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateHrisGroupRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateHrisGroupResponse;
+import com.unifiedapi.unifiedto.models.shared.HrisGroup;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -172,6 +179,8 @@ public class Application {
             .build();
 
         CreateHrisGroupRequest req = CreateHrisGroupRequest.builder()
+                .hrisGroup(HrisGroup.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -214,6 +223,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateHrisLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateHrisLocationResponse;
+import com.unifiedapi.unifiedto.models.shared.HrisLocation;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -228,6 +238,8 @@ public class Application {
             .build();
 
         CreateHrisLocationRequest req = CreateHrisLocationRequest.builder()
+                .hrisLocation(HrisLocation.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -948,6 +960,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchHrisCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchHrisCompanyResponse;
+import com.unifiedapi.unifiedto.models.shared.HrisCompany;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -962,6 +975,8 @@ public class Application {
             .build();
 
         PatchHrisCompanyRequest req = PatchHrisCompanyRequest.builder()
+                .hrisCompany(HrisCompany.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1005,6 +1020,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeResponse;
+import com.unifiedapi.unifiedto.models.shared.HrisEmployee;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -1019,6 +1035,8 @@ public class Application {
             .build();
 
         PatchHrisEmployeeRequest req = PatchHrisEmployeeRequest.builder()
+                .hrisEmployee(HrisEmployee.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1062,6 +1080,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchHrisGroupRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchHrisGroupResponse;
+import com.unifiedapi.unifiedto.models.shared.HrisGroup;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -1076,6 +1095,8 @@ public class Application {
             .build();
 
         PatchHrisGroupRequest req = PatchHrisGroupRequest.builder()
+                .hrisGroup(HrisGroup.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1119,6 +1140,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchHrisLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchHrisLocationResponse;
+import com.unifiedapi.unifiedto.models.shared.HrisLocation;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -1133,6 +1155,8 @@ public class Application {
             .build();
 
         PatchHrisLocationRequest req = PatchHrisLocationRequest.builder()
+                .hrisLocation(HrisLocation.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1396,6 +1420,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateHrisCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateHrisCompanyResponse;
+import com.unifiedapi.unifiedto.models.shared.HrisCompany;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -1410,6 +1435,8 @@ public class Application {
             .build();
 
         UpdateHrisCompanyRequest req = UpdateHrisCompanyRequest.builder()
+                .hrisCompany(HrisCompany.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1453,6 +1480,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeResponse;
+import com.unifiedapi.unifiedto.models.shared.HrisEmployee;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -1467,6 +1495,8 @@ public class Application {
             .build();
 
         UpdateHrisEmployeeRequest req = UpdateHrisEmployeeRequest.builder()
+                .hrisEmployee(HrisEmployee.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1510,6 +1540,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateHrisGroupRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateHrisGroupResponse;
+import com.unifiedapi.unifiedto.models.shared.HrisGroup;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -1524,6 +1555,8 @@ public class Application {
             .build();
 
         UpdateHrisGroupRequest req = UpdateHrisGroupRequest.builder()
+                .hrisGroup(HrisGroup.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1567,6 +1600,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateHrisLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateHrisLocationResponse;
+import com.unifiedapi.unifiedto.models.shared.HrisLocation;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -1581,6 +1615,8 @@ public class Application {
             .build();
 
         UpdateHrisLocationRequest req = UpdateHrisLocationRequest.builder()
+                .hrisLocation(HrisLocation.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

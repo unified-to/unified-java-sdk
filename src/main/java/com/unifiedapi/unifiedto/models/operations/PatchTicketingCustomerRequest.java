@@ -21,7 +21,7 @@ import java.util.Optional;
 public class PatchTicketingCustomerRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends TicketingCustomer> ticketingCustomer;
+    private TicketingCustomer ticketingCustomer;
 
     /**
      * ID of the connection
@@ -43,7 +43,7 @@ public class PatchTicketingCustomerRequest {
 
     @JsonCreator
     public PatchTicketingCustomerRequest(
-            Optional<? extends TicketingCustomer> ticketingCustomer,
+            TicketingCustomer ticketingCustomer,
             String connectionId,
             Optional<? extends List<String>> fields,
             String id) {
@@ -58,15 +58,15 @@ public class PatchTicketingCustomerRequest {
     }
     
     public PatchTicketingCustomerRequest(
+            TicketingCustomer ticketingCustomer,
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, Optional.empty(), id);
+        this(ticketingCustomer, connectionId, Optional.empty(), id);
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<TicketingCustomer> ticketingCustomer() {
-        return (Optional<TicketingCustomer>) ticketingCustomer;
+    public TicketingCustomer ticketingCustomer() {
+        return ticketingCustomer;
     }
 
     /**
@@ -99,12 +99,6 @@ public class PatchTicketingCustomerRequest {
     }
 
     public PatchTicketingCustomerRequest withTicketingCustomer(TicketingCustomer ticketingCustomer) {
-        Utils.checkNotNull(ticketingCustomer, "ticketingCustomer");
-        this.ticketingCustomer = Optional.ofNullable(ticketingCustomer);
-        return this;
-    }
-
-    public PatchTicketingCustomerRequest withTicketingCustomer(Optional<? extends TicketingCustomer> ticketingCustomer) {
         Utils.checkNotNull(ticketingCustomer, "ticketingCustomer");
         this.ticketingCustomer = ticketingCustomer;
         return this;
@@ -182,7 +176,7 @@ public class PatchTicketingCustomerRequest {
     
     public final static class Builder {
  
-        private Optional<? extends TicketingCustomer> ticketingCustomer = Optional.empty();
+        private TicketingCustomer ticketingCustomer;
  
         private String connectionId;
  
@@ -195,12 +189,6 @@ public class PatchTicketingCustomerRequest {
         }
 
         public Builder ticketingCustomer(TicketingCustomer ticketingCustomer) {
-            Utils.checkNotNull(ticketingCustomer, "ticketingCustomer");
-            this.ticketingCustomer = Optional.ofNullable(ticketingCustomer);
-            return this;
-        }
-
-        public Builder ticketingCustomer(Optional<? extends TicketingCustomer> ticketingCustomer) {
             Utils.checkNotNull(ticketingCustomer, "ticketingCustomer");
             this.ticketingCustomer = ticketingCustomer;
             return this;

@@ -42,10 +42,13 @@ public class Application {
 
         Connection req = Connection.builder()
                 .categories(List.of(
-                    PropertyConnectionCategories.REPO))
+                    PropertyConnectionCategories.ACCOUNTING,
+                    PropertyConnectionCategories.MARTECH,
+                    PropertyConnectionCategories.MARTECH))
                 .integrationType("<value>")
                 .permissions(List.of(
-                    PropertyConnectionPermissions.CRM_LEAD_READ))
+                    PropertyConnectionPermissions.LMS_COURSE_READ,
+                    PropertyConnectionPermissions.SCIM_USERS_READ))
                 .build();
 
         CreateUnifiedConnectionResponse res = sdk.connection().createUnifiedConnection()
@@ -198,8 +201,11 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchUnifiedConnectionRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchUnifiedConnectionResponse;
+import com.unifiedapi.unifiedto.models.shared.Connection;
+import com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import java.util.List;
 
 public class Application {
 
@@ -212,6 +218,14 @@ public class Application {
             .build();
 
         PatchUnifiedConnectionRequest req = PatchUnifiedConnectionRequest.builder()
+                .connection(Connection.builder()
+                    .categories(List.of(
+                        PropertyConnectionCategories.METADATA,
+                        PropertyConnectionCategories.CRM))
+                    .integrationType("<value>")
+                    .permissions(List.of(
+                    ))
+                    .build())
                 .id("<id>")
                 .build();
 
@@ -308,8 +322,11 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedConnectionRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedConnectionResponse;
+import com.unifiedapi.unifiedto.models.shared.Connection;
+import com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import java.util.List;
 
 public class Application {
 
@@ -322,6 +339,15 @@ public class Application {
             .build();
 
         UpdateUnifiedConnectionRequest req = UpdateUnifiedConnectionRequest.builder()
+                .connection(Connection.builder()
+                    .categories(List.of(
+                        PropertyConnectionCategories.METADATA,
+                        PropertyConnectionCategories.ACCOUNTING,
+                        PropertyConnectionCategories.METADATA))
+                    .integrationType("<value>")
+                    .permissions(List.of(
+                    ))
+                    .build())
                 .id("<id>")
                 .build();
 

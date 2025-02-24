@@ -21,7 +21,7 @@ import java.util.Optional;
 public class UpdateTaskCommentRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends TaskComment> taskComment;
+    private TaskComment taskComment;
 
     /**
      * ID of the connection
@@ -43,7 +43,7 @@ public class UpdateTaskCommentRequest {
 
     @JsonCreator
     public UpdateTaskCommentRequest(
-            Optional<? extends TaskComment> taskComment,
+            TaskComment taskComment,
             String connectionId,
             Optional<? extends List<String>> fields,
             String id) {
@@ -58,15 +58,15 @@ public class UpdateTaskCommentRequest {
     }
     
     public UpdateTaskCommentRequest(
+            TaskComment taskComment,
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, Optional.empty(), id);
+        this(taskComment, connectionId, Optional.empty(), id);
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<TaskComment> taskComment() {
-        return (Optional<TaskComment>) taskComment;
+    public TaskComment taskComment() {
+        return taskComment;
     }
 
     /**
@@ -99,12 +99,6 @@ public class UpdateTaskCommentRequest {
     }
 
     public UpdateTaskCommentRequest withTaskComment(TaskComment taskComment) {
-        Utils.checkNotNull(taskComment, "taskComment");
-        this.taskComment = Optional.ofNullable(taskComment);
-        return this;
-    }
-
-    public UpdateTaskCommentRequest withTaskComment(Optional<? extends TaskComment> taskComment) {
         Utils.checkNotNull(taskComment, "taskComment");
         this.taskComment = taskComment;
         return this;
@@ -182,7 +176,7 @@ public class UpdateTaskCommentRequest {
     
     public final static class Builder {
  
-        private Optional<? extends TaskComment> taskComment = Optional.empty();
+        private TaskComment taskComment;
  
         private String connectionId;
  
@@ -195,12 +189,6 @@ public class UpdateTaskCommentRequest {
         }
 
         public Builder taskComment(TaskComment taskComment) {
-            Utils.checkNotNull(taskComment, "taskComment");
-            this.taskComment = Optional.ofNullable(taskComment);
-            return this;
-        }
-
-        public Builder taskComment(Optional<? extends TaskComment> taskComment) {
             Utils.checkNotNull(taskComment, "taskComment");
             this.taskComment = taskComment;
             return this;

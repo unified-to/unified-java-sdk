@@ -24,6 +24,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateKmsSpaceRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateKmsSpaceResponse;
+import com.unifiedapi.unifiedto.models.shared.KmsSpace;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -38,6 +39,9 @@ public class Application {
             .build();
 
         CreateKmsSpaceRequest req = CreateKmsSpaceRequest.builder()
+                .kmsSpace(KmsSpace.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -193,6 +197,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchKmsSpaceRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchKmsSpaceResponse;
+import com.unifiedapi.unifiedto.models.shared.KmsSpace;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -207,6 +212,9 @@ public class Application {
             .build();
 
         PatchKmsSpaceRequest req = PatchKmsSpaceRequest.builder()
+                .kmsSpace(KmsSpace.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -305,6 +313,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateKmsSpaceRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateKmsSpaceResponse;
+import com.unifiedapi.unifiedto.models.shared.KmsSpace;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -319,6 +328,9 @@ public class Application {
             .build();
 
         UpdateKmsSpaceRequest req = UpdateKmsSpaceRequest.builder()
+                .kmsSpace(KmsSpace.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

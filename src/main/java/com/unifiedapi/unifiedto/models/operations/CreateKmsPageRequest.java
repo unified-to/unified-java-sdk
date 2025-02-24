@@ -21,7 +21,7 @@ import java.util.Optional;
 public class CreateKmsPageRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends KmsPage> kmsPage;
+    private KmsPage kmsPage;
 
     /**
      * ID of the connection
@@ -37,7 +37,7 @@ public class CreateKmsPageRequest {
 
     @JsonCreator
     public CreateKmsPageRequest(
-            Optional<? extends KmsPage> kmsPage,
+            KmsPage kmsPage,
             String connectionId,
             Optional<? extends List<String>> fields) {
         Utils.checkNotNull(kmsPage, "kmsPage");
@@ -49,14 +49,14 @@ public class CreateKmsPageRequest {
     }
     
     public CreateKmsPageRequest(
+            KmsPage kmsPage,
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty());
+        this(kmsPage, connectionId, Optional.empty());
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<KmsPage> kmsPage() {
-        return (Optional<KmsPage>) kmsPage;
+    public KmsPage kmsPage() {
+        return kmsPage;
     }
 
     /**
@@ -81,12 +81,6 @@ public class CreateKmsPageRequest {
     }
 
     public CreateKmsPageRequest withKmsPage(KmsPage kmsPage) {
-        Utils.checkNotNull(kmsPage, "kmsPage");
-        this.kmsPage = Optional.ofNullable(kmsPage);
-        return this;
-    }
-
-    public CreateKmsPageRequest withKmsPage(Optional<? extends KmsPage> kmsPage) {
         Utils.checkNotNull(kmsPage, "kmsPage");
         this.kmsPage = kmsPage;
         return this;
@@ -152,7 +146,7 @@ public class CreateKmsPageRequest {
     
     public final static class Builder {
  
-        private Optional<? extends KmsPage> kmsPage = Optional.empty();
+        private KmsPage kmsPage;
  
         private String connectionId;
  
@@ -163,12 +157,6 @@ public class CreateKmsPageRequest {
         }
 
         public Builder kmsPage(KmsPage kmsPage) {
-            Utils.checkNotNull(kmsPage, "kmsPage");
-            this.kmsPage = Optional.ofNullable(kmsPage);
-            return this;
-        }
-
-        public Builder kmsPage(Optional<? extends KmsPage> kmsPage) {
             Utils.checkNotNull(kmsPage, "kmsPage");
             this.kmsPage = kmsPage;
             return this;

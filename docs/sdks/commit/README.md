@@ -24,6 +24,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateRepoCommitRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateRepoCommitResponse;
+import com.unifiedapi.unifiedto.models.shared.RepoCommit;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -38,6 +39,10 @@ public class Application {
             .build();
 
         CreateRepoCommitRequest req = CreateRepoCommitRequest.builder()
+                .repoCommit(RepoCommit.builder()
+                    .repoId("<id>")
+                    .userId("<id>")
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -193,6 +198,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchRepoCommitRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchRepoCommitResponse;
+import com.unifiedapi.unifiedto.models.shared.RepoCommit;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -207,6 +213,10 @@ public class Application {
             .build();
 
         PatchRepoCommitRequest req = PatchRepoCommitRequest.builder()
+                .repoCommit(RepoCommit.builder()
+                    .repoId("<id>")
+                    .userId("<id>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -305,6 +315,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateRepoCommitRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateRepoCommitResponse;
+import com.unifiedapi.unifiedto.models.shared.RepoCommit;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -319,6 +330,10 @@ public class Application {
             .build();
 
         UpdateRepoCommitRequest req = UpdateRepoCommitRequest.builder()
+                .repoCommit(RepoCommit.builder()
+                    .repoId("<id>")
+                    .userId("<id>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

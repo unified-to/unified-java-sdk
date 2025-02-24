@@ -24,6 +24,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateMartechListRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateMartechListResponse;
+import com.unifiedapi.unifiedto.models.shared.MarketingList;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -38,6 +39,8 @@ public class Application {
             .build();
 
         CreateMartechListRequest req = CreateMartechListRequest.builder()
+                .marketingList(MarketingList.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -193,6 +196,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchMartechListRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchMartechListResponse;
+import com.unifiedapi.unifiedto.models.shared.MarketingList;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -207,6 +211,8 @@ public class Application {
             .build();
 
         PatchMartechListRequest req = PatchMartechListRequest.builder()
+                .marketingList(MarketingList.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -305,6 +311,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateMartechListRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateMartechListResponse;
+import com.unifiedapi.unifiedto.models.shared.MarketingList;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -319,6 +326,8 @@ public class Application {
             .build();
 
         UpdateMartechListRequest req = UpdateMartechListRequest.builder()
+                .marketingList(MarketingList.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

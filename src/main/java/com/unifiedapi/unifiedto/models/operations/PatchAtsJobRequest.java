@@ -21,7 +21,7 @@ import java.util.Optional;
 public class PatchAtsJobRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends AtsJob> atsJob;
+    private AtsJob atsJob;
 
     /**
      * ID of the connection
@@ -43,7 +43,7 @@ public class PatchAtsJobRequest {
 
     @JsonCreator
     public PatchAtsJobRequest(
-            Optional<? extends AtsJob> atsJob,
+            AtsJob atsJob,
             String connectionId,
             Optional<? extends List<String>> fields,
             String id) {
@@ -58,15 +58,15 @@ public class PatchAtsJobRequest {
     }
     
     public PatchAtsJobRequest(
+            AtsJob atsJob,
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, Optional.empty(), id);
+        this(atsJob, connectionId, Optional.empty(), id);
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<AtsJob> atsJob() {
-        return (Optional<AtsJob>) atsJob;
+    public AtsJob atsJob() {
+        return atsJob;
     }
 
     /**
@@ -99,12 +99,6 @@ public class PatchAtsJobRequest {
     }
 
     public PatchAtsJobRequest withAtsJob(AtsJob atsJob) {
-        Utils.checkNotNull(atsJob, "atsJob");
-        this.atsJob = Optional.ofNullable(atsJob);
-        return this;
-    }
-
-    public PatchAtsJobRequest withAtsJob(Optional<? extends AtsJob> atsJob) {
         Utils.checkNotNull(atsJob, "atsJob");
         this.atsJob = atsJob;
         return this;
@@ -182,7 +176,7 @@ public class PatchAtsJobRequest {
     
     public final static class Builder {
  
-        private Optional<? extends AtsJob> atsJob = Optional.empty();
+        private AtsJob atsJob;
  
         private String connectionId;
  
@@ -195,12 +189,6 @@ public class PatchAtsJobRequest {
         }
 
         public Builder atsJob(AtsJob atsJob) {
-            Utils.checkNotNull(atsJob, "atsJob");
-            this.atsJob = Optional.ofNullable(atsJob);
-            return this;
-        }
-
-        public Builder atsJob(Optional<? extends AtsJob> atsJob) {
             Utils.checkNotNull(atsJob, "atsJob");
             this.atsJob = atsJob;
             return this;

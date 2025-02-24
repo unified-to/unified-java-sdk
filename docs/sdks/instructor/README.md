@@ -24,6 +24,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateLmsInstructorRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateLmsInstructorResponse;
+import com.unifiedapi.unifiedto.models.shared.LmsInstructor;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -38,6 +39,8 @@ public class Application {
             .build();
 
         CreateLmsInstructorRequest req = CreateLmsInstructorRequest.builder()
+                .lmsInstructor(LmsInstructor.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -193,6 +196,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchLmsInstructorRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchLmsInstructorResponse;
+import com.unifiedapi.unifiedto.models.shared.LmsInstructor;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -207,6 +211,8 @@ public class Application {
             .build();
 
         PatchLmsInstructorRequest req = PatchLmsInstructorRequest.builder()
+                .lmsInstructor(LmsInstructor.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -305,6 +311,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateLmsInstructorRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateLmsInstructorResponse;
+import com.unifiedapi.unifiedto.models.shared.LmsInstructor;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -319,6 +326,8 @@ public class Application {
             .build();
 
         UpdateLmsInstructorRequest req = UpdateLmsInstructorRequest.builder()
+                .lmsInstructor(LmsInstructor.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

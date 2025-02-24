@@ -21,7 +21,7 @@ import java.util.Optional;
 public class CreateStorageFileRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends StorageFile> storageFile;
+    private StorageFile storageFile;
 
     /**
      * ID of the connection
@@ -37,7 +37,7 @@ public class CreateStorageFileRequest {
 
     @JsonCreator
     public CreateStorageFileRequest(
-            Optional<? extends StorageFile> storageFile,
+            StorageFile storageFile,
             String connectionId,
             Optional<? extends List<String>> fields) {
         Utils.checkNotNull(storageFile, "storageFile");
@@ -49,14 +49,14 @@ public class CreateStorageFileRequest {
     }
     
     public CreateStorageFileRequest(
+            StorageFile storageFile,
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty());
+        this(storageFile, connectionId, Optional.empty());
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<StorageFile> storageFile() {
-        return (Optional<StorageFile>) storageFile;
+    public StorageFile storageFile() {
+        return storageFile;
     }
 
     /**
@@ -81,12 +81,6 @@ public class CreateStorageFileRequest {
     }
 
     public CreateStorageFileRequest withStorageFile(StorageFile storageFile) {
-        Utils.checkNotNull(storageFile, "storageFile");
-        this.storageFile = Optional.ofNullable(storageFile);
-        return this;
-    }
-
-    public CreateStorageFileRequest withStorageFile(Optional<? extends StorageFile> storageFile) {
         Utils.checkNotNull(storageFile, "storageFile");
         this.storageFile = storageFile;
         return this;
@@ -152,7 +146,7 @@ public class CreateStorageFileRequest {
     
     public final static class Builder {
  
-        private Optional<? extends StorageFile> storageFile = Optional.empty();
+        private StorageFile storageFile;
  
         private String connectionId;
  
@@ -163,12 +157,6 @@ public class CreateStorageFileRequest {
         }
 
         public Builder storageFile(StorageFile storageFile) {
-            Utils.checkNotNull(storageFile, "storageFile");
-            this.storageFile = Optional.ofNullable(storageFile);
-            return this;
-        }
-
-        public Builder storageFile(Optional<? extends StorageFile> storageFile) {
             Utils.checkNotNull(storageFile, "storageFile");
             this.storageFile = storageFile;
             return this;

@@ -21,7 +21,7 @@ import java.util.Optional;
 public class CreateCrmLeadRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends CrmLead> crmLead;
+    private CrmLead crmLead;
 
     /**
      * ID of the connection
@@ -37,7 +37,7 @@ public class CreateCrmLeadRequest {
 
     @JsonCreator
     public CreateCrmLeadRequest(
-            Optional<? extends CrmLead> crmLead,
+            CrmLead crmLead,
             String connectionId,
             Optional<? extends List<String>> fields) {
         Utils.checkNotNull(crmLead, "crmLead");
@@ -49,14 +49,14 @@ public class CreateCrmLeadRequest {
     }
     
     public CreateCrmLeadRequest(
+            CrmLead crmLead,
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty());
+        this(crmLead, connectionId, Optional.empty());
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<CrmLead> crmLead() {
-        return (Optional<CrmLead>) crmLead;
+    public CrmLead crmLead() {
+        return crmLead;
     }
 
     /**
@@ -81,12 +81,6 @@ public class CreateCrmLeadRequest {
     }
 
     public CreateCrmLeadRequest withCrmLead(CrmLead crmLead) {
-        Utils.checkNotNull(crmLead, "crmLead");
-        this.crmLead = Optional.ofNullable(crmLead);
-        return this;
-    }
-
-    public CreateCrmLeadRequest withCrmLead(Optional<? extends CrmLead> crmLead) {
         Utils.checkNotNull(crmLead, "crmLead");
         this.crmLead = crmLead;
         return this;
@@ -152,7 +146,7 @@ public class CreateCrmLeadRequest {
     
     public final static class Builder {
  
-        private Optional<? extends CrmLead> crmLead = Optional.empty();
+        private CrmLead crmLead;
  
         private String connectionId;
  
@@ -163,12 +157,6 @@ public class CreateCrmLeadRequest {
         }
 
         public Builder crmLead(CrmLead crmLead) {
-            Utils.checkNotNull(crmLead, "crmLead");
-            this.crmLead = Optional.ofNullable(crmLead);
-            return this;
-        }
-
-        public Builder crmLead(Optional<? extends CrmLead> crmLead) {
             Utils.checkNotNull(crmLead, "crmLead");
             this.crmLead = crmLead;
             return this;

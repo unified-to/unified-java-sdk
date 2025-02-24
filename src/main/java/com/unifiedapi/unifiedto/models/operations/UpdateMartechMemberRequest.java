@@ -24,7 +24,7 @@ public class UpdateMartechMemberRequest {
      * A member represents a person
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends MarketingMember> marketingMember;
+    private MarketingMember marketingMember;
 
     /**
      * ID of the connection
@@ -46,7 +46,7 @@ public class UpdateMartechMemberRequest {
 
     @JsonCreator
     public UpdateMartechMemberRequest(
-            Optional<? extends MarketingMember> marketingMember,
+            MarketingMember marketingMember,
             String connectionId,
             Optional<? extends List<String>> fields,
             String id) {
@@ -61,18 +61,18 @@ public class UpdateMartechMemberRequest {
     }
     
     public UpdateMartechMemberRequest(
+            MarketingMember marketingMember,
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, Optional.empty(), id);
+        this(marketingMember, connectionId, Optional.empty(), id);
     }
 
     /**
      * A member represents a person
      */
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<MarketingMember> marketingMember() {
-        return (Optional<MarketingMember>) marketingMember;
+    public MarketingMember marketingMember() {
+        return marketingMember;
     }
 
     /**
@@ -108,15 +108,6 @@ public class UpdateMartechMemberRequest {
      * A member represents a person
      */
     public UpdateMartechMemberRequest withMarketingMember(MarketingMember marketingMember) {
-        Utils.checkNotNull(marketingMember, "marketingMember");
-        this.marketingMember = Optional.ofNullable(marketingMember);
-        return this;
-    }
-
-    /**
-     * A member represents a person
-     */
-    public UpdateMartechMemberRequest withMarketingMember(Optional<? extends MarketingMember> marketingMember) {
         Utils.checkNotNull(marketingMember, "marketingMember");
         this.marketingMember = marketingMember;
         return this;
@@ -194,7 +185,7 @@ public class UpdateMartechMemberRequest {
     
     public final static class Builder {
  
-        private Optional<? extends MarketingMember> marketingMember = Optional.empty();
+        private MarketingMember marketingMember;
  
         private String connectionId;
  
@@ -210,15 +201,6 @@ public class UpdateMartechMemberRequest {
          * A member represents a person
          */
         public Builder marketingMember(MarketingMember marketingMember) {
-            Utils.checkNotNull(marketingMember, "marketingMember");
-            this.marketingMember = Optional.ofNullable(marketingMember);
-            return this;
-        }
-
-        /**
-         * A member represents a person
-         */
-        public Builder marketingMember(Optional<? extends MarketingMember> marketingMember) {
             Utils.checkNotNull(marketingMember, "marketingMember");
             this.marketingMember = marketingMember;
             return this;

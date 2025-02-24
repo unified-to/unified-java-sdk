@@ -21,7 +21,7 @@ import java.util.Optional;
 public class CreateRepoOrganizationRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends RepoOrganization> repoOrganization;
+    private RepoOrganization repoOrganization;
 
     /**
      * ID of the connection
@@ -37,7 +37,7 @@ public class CreateRepoOrganizationRequest {
 
     @JsonCreator
     public CreateRepoOrganizationRequest(
-            Optional<? extends RepoOrganization> repoOrganization,
+            RepoOrganization repoOrganization,
             String connectionId,
             Optional<? extends List<String>> fields) {
         Utils.checkNotNull(repoOrganization, "repoOrganization");
@@ -49,14 +49,14 @@ public class CreateRepoOrganizationRequest {
     }
     
     public CreateRepoOrganizationRequest(
+            RepoOrganization repoOrganization,
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty());
+        this(repoOrganization, connectionId, Optional.empty());
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<RepoOrganization> repoOrganization() {
-        return (Optional<RepoOrganization>) repoOrganization;
+    public RepoOrganization repoOrganization() {
+        return repoOrganization;
     }
 
     /**
@@ -81,12 +81,6 @@ public class CreateRepoOrganizationRequest {
     }
 
     public CreateRepoOrganizationRequest withRepoOrganization(RepoOrganization repoOrganization) {
-        Utils.checkNotNull(repoOrganization, "repoOrganization");
-        this.repoOrganization = Optional.ofNullable(repoOrganization);
-        return this;
-    }
-
-    public CreateRepoOrganizationRequest withRepoOrganization(Optional<? extends RepoOrganization> repoOrganization) {
         Utils.checkNotNull(repoOrganization, "repoOrganization");
         this.repoOrganization = repoOrganization;
         return this;
@@ -152,7 +146,7 @@ public class CreateRepoOrganizationRequest {
     
     public final static class Builder {
  
-        private Optional<? extends RepoOrganization> repoOrganization = Optional.empty();
+        private RepoOrganization repoOrganization;
  
         private String connectionId;
  
@@ -163,12 +157,6 @@ public class CreateRepoOrganizationRequest {
         }
 
         public Builder repoOrganization(RepoOrganization repoOrganization) {
-            Utils.checkNotNull(repoOrganization, "repoOrganization");
-            this.repoOrganization = Optional.ofNullable(repoOrganization);
-            return this;
-        }
-
-        public Builder repoOrganization(Optional<? extends RepoOrganization> repoOrganization) {
             Utils.checkNotNull(repoOrganization, "repoOrganization");
             this.repoOrganization = repoOrganization;
             return this;

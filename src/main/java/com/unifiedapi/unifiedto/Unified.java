@@ -129,22 +129,12 @@ public class Unified implements
     /**
      * Create connection
      * Used only to import existing customer credentials; use "Create connection indirectly" instead
-     * @return The response from the API call
-     * @throws Exception if the API call fails
-     */
-    public CreateUnifiedConnectionResponse createUnifiedConnectionDirect() throws Exception {
-        return createUnifiedConnection(Optional.empty());
-    }
-    
-    /**
-     * Create connection
-     * Used only to import existing customer credentials; use "Create connection indirectly" instead
      * @param request The request object containing all of the parameters for the API call.
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
     public CreateUnifiedConnectionResponse createUnifiedConnection(
-            Optional<? extends Connection> request) throws Exception {
+            Connection request) throws Exception {
         String _baseUrl = this.sdkConfiguration.serverUrl;
         String _url = Utils.generateURL(
                 _baseUrl,
@@ -154,12 +144,15 @@ public class Unified implements
         Object _convertedRequest = Utils.convertToShape(
                 request, 
                 JsonShape.DEFAULT,
-                new TypeReference<Optional<? extends Connection>>() {});
+                new TypeReference<Connection>() {});
         SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
                 _convertedRequest, 
                 "request",
                 "json",
                 false);
+        if (_serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
         _req.setBody(Optional.ofNullable(_serializedRequestBody));
         _req.addHeader("Accept", "application/json")
             .addHeader("user-agent", 
@@ -294,6 +287,9 @@ public class Unified implements
                 "webhook",
                 "json",
                 false);
+        if (_serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
         _req.setBody(Optional.ofNullable(_serializedRequestBody));
         _req.addHeader("Accept", "application/json")
             .addHeader("user-agent", 
@@ -1700,6 +1696,9 @@ public class Unified implements
                 "connection",
                 "json",
                 false);
+        if (_serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
         _req.setBody(Optional.ofNullable(_serializedRequestBody));
         _req.addHeader("Accept", "application/json")
             .addHeader("user-agent", 
@@ -1834,6 +1833,9 @@ public class Unified implements
                 "webhook",
                 "json",
                 false);
+        if (_serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
         _req.setBody(Optional.ofNullable(_serializedRequestBody));
         _req.addHeader("Accept", "application/json")
             .addHeader("user-agent", 
@@ -2322,6 +2324,9 @@ public class Unified implements
                 "connection",
                 "json",
                 false);
+        if (_serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
         _req.setBody(Optional.ofNullable(_serializedRequestBody));
         _req.addHeader("Accept", "application/json")
             .addHeader("user-agent", 
@@ -2456,6 +2461,9 @@ public class Unified implements
                 "webhook",
                 "json",
                 false);
+        if (_serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
         _req.setBody(Optional.ofNullable(_serializedRequestBody));
         _req.addHeader("Accept", "application/json")
             .addHeader("user-agent", 

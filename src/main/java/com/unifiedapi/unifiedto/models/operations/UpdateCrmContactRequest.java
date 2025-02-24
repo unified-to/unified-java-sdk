@@ -24,7 +24,7 @@ public class UpdateCrmContactRequest {
      * A contact represents a person that optionally is associated with a deal and/or a company
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends CrmContact> crmContact;
+    private CrmContact crmContact;
 
     /**
      * ID of the connection
@@ -46,7 +46,7 @@ public class UpdateCrmContactRequest {
 
     @JsonCreator
     public UpdateCrmContactRequest(
-            Optional<? extends CrmContact> crmContact,
+            CrmContact crmContact,
             String connectionId,
             Optional<? extends List<String>> fields,
             String id) {
@@ -61,18 +61,18 @@ public class UpdateCrmContactRequest {
     }
     
     public UpdateCrmContactRequest(
+            CrmContact crmContact,
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, Optional.empty(), id);
+        this(crmContact, connectionId, Optional.empty(), id);
     }
 
     /**
      * A contact represents a person that optionally is associated with a deal and/or a company
      */
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<CrmContact> crmContact() {
-        return (Optional<CrmContact>) crmContact;
+    public CrmContact crmContact() {
+        return crmContact;
     }
 
     /**
@@ -108,15 +108,6 @@ public class UpdateCrmContactRequest {
      * A contact represents a person that optionally is associated with a deal and/or a company
      */
     public UpdateCrmContactRequest withCrmContact(CrmContact crmContact) {
-        Utils.checkNotNull(crmContact, "crmContact");
-        this.crmContact = Optional.ofNullable(crmContact);
-        return this;
-    }
-
-    /**
-     * A contact represents a person that optionally is associated with a deal and/or a company
-     */
-    public UpdateCrmContactRequest withCrmContact(Optional<? extends CrmContact> crmContact) {
         Utils.checkNotNull(crmContact, "crmContact");
         this.crmContact = crmContact;
         return this;
@@ -194,7 +185,7 @@ public class UpdateCrmContactRequest {
     
     public final static class Builder {
  
-        private Optional<? extends CrmContact> crmContact = Optional.empty();
+        private CrmContact crmContact;
  
         private String connectionId;
  
@@ -210,15 +201,6 @@ public class UpdateCrmContactRequest {
          * A contact represents a person that optionally is associated with a deal and/or a company
          */
         public Builder crmContact(CrmContact crmContact) {
-            Utils.checkNotNull(crmContact, "crmContact");
-            this.crmContact = Optional.ofNullable(crmContact);
-            return this;
-        }
-
-        /**
-         * A contact represents a person that optionally is associated with a deal and/or a company
-         */
-        public Builder crmContact(Optional<? extends CrmContact> crmContact) {
             Utils.checkNotNull(crmContact, "crmContact");
             this.crmContact = crmContact;
             return this;

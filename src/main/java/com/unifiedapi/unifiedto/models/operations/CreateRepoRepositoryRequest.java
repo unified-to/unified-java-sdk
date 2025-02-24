@@ -21,7 +21,7 @@ import java.util.Optional;
 public class CreateRepoRepositoryRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends RepoRepository> repoRepository;
+    private RepoRepository repoRepository;
 
     /**
      * ID of the connection
@@ -37,7 +37,7 @@ public class CreateRepoRepositoryRequest {
 
     @JsonCreator
     public CreateRepoRepositoryRequest(
-            Optional<? extends RepoRepository> repoRepository,
+            RepoRepository repoRepository,
             String connectionId,
             Optional<? extends List<String>> fields) {
         Utils.checkNotNull(repoRepository, "repoRepository");
@@ -49,14 +49,14 @@ public class CreateRepoRepositoryRequest {
     }
     
     public CreateRepoRepositoryRequest(
+            RepoRepository repoRepository,
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty());
+        this(repoRepository, connectionId, Optional.empty());
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<RepoRepository> repoRepository() {
-        return (Optional<RepoRepository>) repoRepository;
+    public RepoRepository repoRepository() {
+        return repoRepository;
     }
 
     /**
@@ -81,12 +81,6 @@ public class CreateRepoRepositoryRequest {
     }
 
     public CreateRepoRepositoryRequest withRepoRepository(RepoRepository repoRepository) {
-        Utils.checkNotNull(repoRepository, "repoRepository");
-        this.repoRepository = Optional.ofNullable(repoRepository);
-        return this;
-    }
-
-    public CreateRepoRepositoryRequest withRepoRepository(Optional<? extends RepoRepository> repoRepository) {
         Utils.checkNotNull(repoRepository, "repoRepository");
         this.repoRepository = repoRepository;
         return this;
@@ -152,7 +146,7 @@ public class CreateRepoRepositoryRequest {
     
     public final static class Builder {
  
-        private Optional<? extends RepoRepository> repoRepository = Optional.empty();
+        private RepoRepository repoRepository;
  
         private String connectionId;
  
@@ -163,12 +157,6 @@ public class CreateRepoRepositoryRequest {
         }
 
         public Builder repoRepository(RepoRepository repoRepository) {
-            Utils.checkNotNull(repoRepository, "repoRepository");
-            this.repoRepository = Optional.ofNullable(repoRepository);
-            return this;
-        }
-
-        public Builder repoRepository(Optional<? extends RepoRepository> repoRepository) {
             Utils.checkNotNull(repoRepository, "repoRepository");
             this.repoRepository = repoRepository;
             return this;

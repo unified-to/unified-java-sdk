@@ -21,7 +21,7 @@ import java.util.Optional;
 public class UpdateCommerceInventoryRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends CommerceInventory> commerceInventory;
+    private CommerceInventory commerceInventory;
 
     /**
      * ID of the connection
@@ -43,7 +43,7 @@ public class UpdateCommerceInventoryRequest {
 
     @JsonCreator
     public UpdateCommerceInventoryRequest(
-            Optional<? extends CommerceInventory> commerceInventory,
+            CommerceInventory commerceInventory,
             String connectionId,
             Optional<? extends List<String>> fields,
             String id) {
@@ -58,15 +58,15 @@ public class UpdateCommerceInventoryRequest {
     }
     
     public UpdateCommerceInventoryRequest(
+            CommerceInventory commerceInventory,
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, Optional.empty(), id);
+        this(commerceInventory, connectionId, Optional.empty(), id);
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<CommerceInventory> commerceInventory() {
-        return (Optional<CommerceInventory>) commerceInventory;
+    public CommerceInventory commerceInventory() {
+        return commerceInventory;
     }
 
     /**
@@ -99,12 +99,6 @@ public class UpdateCommerceInventoryRequest {
     }
 
     public UpdateCommerceInventoryRequest withCommerceInventory(CommerceInventory commerceInventory) {
-        Utils.checkNotNull(commerceInventory, "commerceInventory");
-        this.commerceInventory = Optional.ofNullable(commerceInventory);
-        return this;
-    }
-
-    public UpdateCommerceInventoryRequest withCommerceInventory(Optional<? extends CommerceInventory> commerceInventory) {
         Utils.checkNotNull(commerceInventory, "commerceInventory");
         this.commerceInventory = commerceInventory;
         return this;
@@ -182,7 +176,7 @@ public class UpdateCommerceInventoryRequest {
     
     public final static class Builder {
  
-        private Optional<? extends CommerceInventory> commerceInventory = Optional.empty();
+        private CommerceInventory commerceInventory;
  
         private String connectionId;
  
@@ -195,12 +189,6 @@ public class UpdateCommerceInventoryRequest {
         }
 
         public Builder commerceInventory(CommerceInventory commerceInventory) {
-            Utils.checkNotNull(commerceInventory, "commerceInventory");
-            this.commerceInventory = Optional.ofNullable(commerceInventory);
-            return this;
-        }
-
-        public Builder commerceInventory(Optional<? extends CommerceInventory> commerceInventory) {
             Utils.checkNotNull(commerceInventory, "commerceInventory");
             this.commerceInventory = commerceInventory;
             return this;

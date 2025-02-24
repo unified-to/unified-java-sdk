@@ -30,6 +30,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateKmsCommentRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateKmsCommentResponse;
+import com.unifiedapi.unifiedto.models.shared.KmsComment;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -44,6 +45,9 @@ public class Application {
             .build();
 
         CreateKmsCommentRequest req = CreateKmsCommentRequest.builder()
+                .kmsComment(KmsComment.builder()
+                    .content("<value>")
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -87,6 +91,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateTaskCommentRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateTaskCommentResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.TaskComment;
 import java.lang.Exception;
 
 public class Application {
@@ -100,6 +105,10 @@ public class Application {
             .build();
 
         CreateTaskCommentRequest req = CreateTaskCommentRequest.builder()
+                .taskComment(TaskComment.builder()
+                    .taskId("<id>")
+                    .text("<value>")
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -368,6 +377,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchKmsCommentRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchKmsCommentResponse;
+import com.unifiedapi.unifiedto.models.shared.KmsComment;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -382,6 +392,9 @@ public class Application {
             .build();
 
         PatchKmsCommentRequest req = PatchKmsCommentRequest.builder()
+                .kmsComment(KmsComment.builder()
+                    .content("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -426,6 +439,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchTaskCommentRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchTaskCommentResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.TaskComment;
 import java.lang.Exception;
 
 public class Application {
@@ -439,6 +453,10 @@ public class Application {
             .build();
 
         PatchTaskCommentRequest req = PatchTaskCommentRequest.builder()
+                .taskComment(TaskComment.builder()
+                    .taskId("<id>")
+                    .text("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -592,6 +610,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateKmsCommentRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateKmsCommentResponse;
+import com.unifiedapi.unifiedto.models.shared.KmsComment;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -606,6 +625,9 @@ public class Application {
             .build();
 
         UpdateKmsCommentRequest req = UpdateKmsCommentRequest.builder()
+                .kmsComment(KmsComment.builder()
+                    .content("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -650,6 +672,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateTaskCommentRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateTaskCommentResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.TaskComment;
 import java.lang.Exception;
 
 public class Application {
@@ -663,6 +686,10 @@ public class Application {
             .build();
 
         UpdateTaskCommentRequest req = UpdateTaskCommentRequest.builder()
+                .taskComment(TaskComment.builder()
+                    .taskId("<id>")
+                    .text("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

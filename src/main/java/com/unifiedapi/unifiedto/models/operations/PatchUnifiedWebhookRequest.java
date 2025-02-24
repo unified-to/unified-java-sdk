@@ -12,9 +12,7 @@ import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
 import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Objects;
-import java.util.Optional;
 
 
 public class PatchUnifiedWebhookRequest {
@@ -23,7 +21,7 @@ public class PatchUnifiedWebhookRequest {
      * A webhook is used to POST new/updated information to your server.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends Webhook> webhook;
+    private Webhook webhook;
 
     /**
      * ID of the Webhook
@@ -33,26 +31,20 @@ public class PatchUnifiedWebhookRequest {
 
     @JsonCreator
     public PatchUnifiedWebhookRequest(
-            Optional<? extends Webhook> webhook,
+            Webhook webhook,
             String id) {
         Utils.checkNotNull(webhook, "webhook");
         Utils.checkNotNull(id, "id");
         this.webhook = webhook;
         this.id = id;
     }
-    
-    public PatchUnifiedWebhookRequest(
-            String id) {
-        this(Optional.empty(), id);
-    }
 
     /**
      * A webhook is used to POST new/updated information to your server.
      */
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Webhook> webhook() {
-        return (Optional<Webhook>) webhook;
+    public Webhook webhook() {
+        return webhook;
     }
 
     /**
@@ -71,15 +63,6 @@ public class PatchUnifiedWebhookRequest {
      * A webhook is used to POST new/updated information to your server.
      */
     public PatchUnifiedWebhookRequest withWebhook(Webhook webhook) {
-        Utils.checkNotNull(webhook, "webhook");
-        this.webhook = Optional.ofNullable(webhook);
-        return this;
-    }
-
-    /**
-     * A webhook is used to POST new/updated information to your server.
-     */
-    public PatchUnifiedWebhookRequest withWebhook(Optional<? extends Webhook> webhook) {
         Utils.checkNotNull(webhook, "webhook");
         this.webhook = webhook;
         return this;
@@ -124,7 +107,7 @@ public class PatchUnifiedWebhookRequest {
     
     public final static class Builder {
  
-        private Optional<? extends Webhook> webhook = Optional.empty();
+        private Webhook webhook;
  
         private String id;  
         
@@ -136,15 +119,6 @@ public class PatchUnifiedWebhookRequest {
          * A webhook is used to POST new/updated information to your server.
          */
         public Builder webhook(Webhook webhook) {
-            Utils.checkNotNull(webhook, "webhook");
-            this.webhook = Optional.ofNullable(webhook);
-            return this;
-        }
-
-        /**
-         * A webhook is used to POST new/updated information to your server.
-         */
-        public Builder webhook(Optional<? extends Webhook> webhook) {
             Utils.checkNotNull(webhook, "webhook");
             this.webhook = webhook;
             return this;

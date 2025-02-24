@@ -21,7 +21,7 @@ import java.util.Optional;
 public class PatchRepoOrganizationRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends RepoOrganization> repoOrganization;
+    private RepoOrganization repoOrganization;
 
     /**
      * ID of the connection
@@ -43,7 +43,7 @@ public class PatchRepoOrganizationRequest {
 
     @JsonCreator
     public PatchRepoOrganizationRequest(
-            Optional<? extends RepoOrganization> repoOrganization,
+            RepoOrganization repoOrganization,
             String connectionId,
             Optional<? extends List<String>> fields,
             String id) {
@@ -58,15 +58,15 @@ public class PatchRepoOrganizationRequest {
     }
     
     public PatchRepoOrganizationRequest(
+            RepoOrganization repoOrganization,
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, Optional.empty(), id);
+        this(repoOrganization, connectionId, Optional.empty(), id);
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<RepoOrganization> repoOrganization() {
-        return (Optional<RepoOrganization>) repoOrganization;
+    public RepoOrganization repoOrganization() {
+        return repoOrganization;
     }
 
     /**
@@ -99,12 +99,6 @@ public class PatchRepoOrganizationRequest {
     }
 
     public PatchRepoOrganizationRequest withRepoOrganization(RepoOrganization repoOrganization) {
-        Utils.checkNotNull(repoOrganization, "repoOrganization");
-        this.repoOrganization = Optional.ofNullable(repoOrganization);
-        return this;
-    }
-
-    public PatchRepoOrganizationRequest withRepoOrganization(Optional<? extends RepoOrganization> repoOrganization) {
         Utils.checkNotNull(repoOrganization, "repoOrganization");
         this.repoOrganization = repoOrganization;
         return this;
@@ -182,7 +176,7 @@ public class PatchRepoOrganizationRequest {
     
     public final static class Builder {
  
-        private Optional<? extends RepoOrganization> repoOrganization = Optional.empty();
+        private RepoOrganization repoOrganization;
  
         private String connectionId;
  
@@ -195,12 +189,6 @@ public class PatchRepoOrganizationRequest {
         }
 
         public Builder repoOrganization(RepoOrganization repoOrganization) {
-            Utils.checkNotNull(repoOrganization, "repoOrganization");
-            this.repoOrganization = Optional.ofNullable(repoOrganization);
-            return this;
-        }
-
-        public Builder repoOrganization(Optional<? extends RepoOrganization> repoOrganization) {
             Utils.checkNotNull(repoOrganization, "repoOrganization");
             this.repoOrganization = repoOrganization;
             return this;

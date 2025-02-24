@@ -21,7 +21,7 @@ import java.util.Optional;
 public class CreateAccountingTaxrateRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends AccountingTaxrate> accountingTaxrate;
+    private AccountingTaxrate accountingTaxrate;
 
     /**
      * ID of the connection
@@ -37,7 +37,7 @@ public class CreateAccountingTaxrateRequest {
 
     @JsonCreator
     public CreateAccountingTaxrateRequest(
-            Optional<? extends AccountingTaxrate> accountingTaxrate,
+            AccountingTaxrate accountingTaxrate,
             String connectionId,
             Optional<? extends List<String>> fields) {
         Utils.checkNotNull(accountingTaxrate, "accountingTaxrate");
@@ -49,14 +49,14 @@ public class CreateAccountingTaxrateRequest {
     }
     
     public CreateAccountingTaxrateRequest(
+            AccountingTaxrate accountingTaxrate,
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty());
+        this(accountingTaxrate, connectionId, Optional.empty());
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<AccountingTaxrate> accountingTaxrate() {
-        return (Optional<AccountingTaxrate>) accountingTaxrate;
+    public AccountingTaxrate accountingTaxrate() {
+        return accountingTaxrate;
     }
 
     /**
@@ -81,12 +81,6 @@ public class CreateAccountingTaxrateRequest {
     }
 
     public CreateAccountingTaxrateRequest withAccountingTaxrate(AccountingTaxrate accountingTaxrate) {
-        Utils.checkNotNull(accountingTaxrate, "accountingTaxrate");
-        this.accountingTaxrate = Optional.ofNullable(accountingTaxrate);
-        return this;
-    }
-
-    public CreateAccountingTaxrateRequest withAccountingTaxrate(Optional<? extends AccountingTaxrate> accountingTaxrate) {
         Utils.checkNotNull(accountingTaxrate, "accountingTaxrate");
         this.accountingTaxrate = accountingTaxrate;
         return this;
@@ -152,7 +146,7 @@ public class CreateAccountingTaxrateRequest {
     
     public final static class Builder {
  
-        private Optional<? extends AccountingTaxrate> accountingTaxrate = Optional.empty();
+        private AccountingTaxrate accountingTaxrate;
  
         private String connectionId;
  
@@ -163,12 +157,6 @@ public class CreateAccountingTaxrateRequest {
         }
 
         public Builder accountingTaxrate(AccountingTaxrate accountingTaxrate) {
-            Utils.checkNotNull(accountingTaxrate, "accountingTaxrate");
-            this.accountingTaxrate = Optional.ofNullable(accountingTaxrate);
-            return this;
-        }
-
-        public Builder accountingTaxrate(Optional<? extends AccountingTaxrate> accountingTaxrate) {
             Utils.checkNotNull(accountingTaxrate, "accountingTaxrate");
             this.accountingTaxrate = accountingTaxrate;
             return this;

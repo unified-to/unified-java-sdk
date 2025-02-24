@@ -24,6 +24,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateRepoRepositoryRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateRepoRepositoryResponse;
+import com.unifiedapi.unifiedto.models.shared.RepoRepository;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -38,6 +39,9 @@ public class Application {
             .build();
 
         CreateRepoRepositoryRequest req = CreateRepoRepositoryRequest.builder()
+                .repoRepository(RepoRepository.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -193,6 +197,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchRepoRepositoryRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchRepoRepositoryResponse;
+import com.unifiedapi.unifiedto.models.shared.RepoRepository;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -207,6 +212,9 @@ public class Application {
             .build();
 
         PatchRepoRepositoryRequest req = PatchRepoRepositoryRequest.builder()
+                .repoRepository(RepoRepository.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -305,6 +313,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateRepoRepositoryRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateRepoRepositoryResponse;
+import com.unifiedapi.unifiedto.models.shared.RepoRepository;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -319,6 +328,9 @@ public class Application {
             .build();
 
         UpdateRepoRepositoryRequest req = UpdateRepoRepositoryRequest.builder()
+                .repoRepository(RepoRepository.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

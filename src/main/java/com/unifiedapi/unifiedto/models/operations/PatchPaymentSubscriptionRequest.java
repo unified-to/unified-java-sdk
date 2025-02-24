@@ -21,7 +21,7 @@ import java.util.Optional;
 public class PatchPaymentSubscriptionRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends PaymentSubscription> paymentSubscription;
+    private PaymentSubscription paymentSubscription;
 
     /**
      * ID of the connection
@@ -43,7 +43,7 @@ public class PatchPaymentSubscriptionRequest {
 
     @JsonCreator
     public PatchPaymentSubscriptionRequest(
-            Optional<? extends PaymentSubscription> paymentSubscription,
+            PaymentSubscription paymentSubscription,
             String connectionId,
             Optional<? extends List<String>> fields,
             String id) {
@@ -58,15 +58,15 @@ public class PatchPaymentSubscriptionRequest {
     }
     
     public PatchPaymentSubscriptionRequest(
+            PaymentSubscription paymentSubscription,
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, Optional.empty(), id);
+        this(paymentSubscription, connectionId, Optional.empty(), id);
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<PaymentSubscription> paymentSubscription() {
-        return (Optional<PaymentSubscription>) paymentSubscription;
+    public PaymentSubscription paymentSubscription() {
+        return paymentSubscription;
     }
 
     /**
@@ -99,12 +99,6 @@ public class PatchPaymentSubscriptionRequest {
     }
 
     public PatchPaymentSubscriptionRequest withPaymentSubscription(PaymentSubscription paymentSubscription) {
-        Utils.checkNotNull(paymentSubscription, "paymentSubscription");
-        this.paymentSubscription = Optional.ofNullable(paymentSubscription);
-        return this;
-    }
-
-    public PatchPaymentSubscriptionRequest withPaymentSubscription(Optional<? extends PaymentSubscription> paymentSubscription) {
         Utils.checkNotNull(paymentSubscription, "paymentSubscription");
         this.paymentSubscription = paymentSubscription;
         return this;
@@ -182,7 +176,7 @@ public class PatchPaymentSubscriptionRequest {
     
     public final static class Builder {
  
-        private Optional<? extends PaymentSubscription> paymentSubscription = Optional.empty();
+        private PaymentSubscription paymentSubscription;
  
         private String connectionId;
  
@@ -195,12 +189,6 @@ public class PatchPaymentSubscriptionRequest {
         }
 
         public Builder paymentSubscription(PaymentSubscription paymentSubscription) {
-            Utils.checkNotNull(paymentSubscription, "paymentSubscription");
-            this.paymentSubscription = Optional.ofNullable(paymentSubscription);
-            return this;
-        }
-
-        public Builder paymentSubscription(Optional<? extends PaymentSubscription> paymentSubscription) {
             Utils.checkNotNull(paymentSubscription, "paymentSubscription");
             this.paymentSubscription = paymentSubscription;
             return this;

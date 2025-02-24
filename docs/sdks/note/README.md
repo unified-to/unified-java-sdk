@@ -25,6 +25,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateTicketingNoteRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateTicketingNoteResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.TicketingNote;
 import java.lang.Exception;
 
 public class Application {
@@ -38,6 +39,8 @@ public class Application {
             .build();
 
         CreateTicketingNoteRequest req = CreateTicketingNoteRequest.builder()
+                .ticketingNote(TicketingNote.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -194,6 +197,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchTicketingNoteRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchTicketingNoteResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.TicketingNote;
 import java.lang.Exception;
 
 public class Application {
@@ -207,6 +211,8 @@ public class Application {
             .build();
 
         PatchTicketingNoteRequest req = PatchTicketingNoteRequest.builder()
+                .ticketingNote(TicketingNote.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -306,6 +312,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateTicketingNoteRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateTicketingNoteResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.TicketingNote;
 import java.lang.Exception;
 
 public class Application {
@@ -319,6 +326,8 @@ public class Application {
             .build();
 
         UpdateTicketingNoteRequest req = UpdateTicketingNoteRequest.builder()
+                .ticketingNote(TicketingNote.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

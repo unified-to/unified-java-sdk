@@ -42,6 +42,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionResponse;
+import com.unifiedapi.unifiedto.models.shared.CommerceCollection;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -56,6 +57,9 @@ public class Application {
             .build();
 
         CreateCommerceCollectionRequest req = CreateCommerceCollectionRequest.builder()
+                .commerceCollection(CommerceCollection.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -98,6 +102,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceInventoryRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceInventoryResponse;
+import com.unifiedapi.unifiedto.models.shared.CommerceInventory;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -112,6 +117,9 @@ public class Application {
             .build();
 
         CreateCommerceInventoryRequest req = CreateCommerceInventoryRequest.builder()
+                .commerceInventory(CommerceInventory.builder()
+                    .available(5165.08d)
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -154,6 +162,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceItemRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceItemResponse;
+import com.unifiedapi.unifiedto.models.shared.CommerceItem;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -168,6 +177,8 @@ public class Application {
             .build();
 
         CreateCommerceItemRequest req = CreateCommerceItemRequest.builder()
+                .commerceItem(CommerceItem.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -210,6 +221,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceLocationResponse;
+import com.unifiedapi.unifiedto.models.shared.CommerceLocation;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -224,6 +236,9 @@ public class Application {
             .build();
 
         CreateCommerceLocationRequest req = CreateCommerceLocationRequest.builder()
+                .commerceLocation(CommerceLocation.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -718,6 +733,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionResponse;
+import com.unifiedapi.unifiedto.models.shared.CommerceCollection;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -732,6 +748,9 @@ public class Application {
             .build();
 
         PatchCommerceCollectionRequest req = PatchCommerceCollectionRequest.builder()
+                .commerceCollection(CommerceCollection.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -775,6 +794,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceInventoryRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceInventoryResponse;
+import com.unifiedapi.unifiedto.models.shared.CommerceInventory;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -789,6 +809,9 @@ public class Application {
             .build();
 
         PatchCommerceInventoryRequest req = PatchCommerceInventoryRequest.builder()
+                .commerceInventory(CommerceInventory.builder()
+                    .available(615.23d)
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -832,6 +855,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceItemRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceItemResponse;
+import com.unifiedapi.unifiedto.models.shared.CommerceItem;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -846,6 +870,8 @@ public class Application {
             .build();
 
         PatchCommerceItemRequest req = PatchCommerceItemRequest.builder()
+                .commerceItem(CommerceItem.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -889,6 +915,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceLocationResponse;
+import com.unifiedapi.unifiedto.models.shared.CommerceLocation;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -903,6 +930,9 @@ public class Application {
             .build();
 
         PatchCommerceLocationRequest req = PatchCommerceLocationRequest.builder()
+                .commerceLocation(CommerceLocation.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1166,6 +1196,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionResponse;
+import com.unifiedapi.unifiedto.models.shared.CommerceCollection;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -1180,6 +1211,9 @@ public class Application {
             .build();
 
         UpdateCommerceCollectionRequest req = UpdateCommerceCollectionRequest.builder()
+                .commerceCollection(CommerceCollection.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1223,6 +1257,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceInventoryRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceInventoryResponse;
+import com.unifiedapi.unifiedto.models.shared.CommerceInventory;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -1237,6 +1272,9 @@ public class Application {
             .build();
 
         UpdateCommerceInventoryRequest req = UpdateCommerceInventoryRequest.builder()
+                .commerceInventory(CommerceInventory.builder()
+                    .available(9360.02d)
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1280,6 +1318,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceItemRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceItemResponse;
+import com.unifiedapi.unifiedto.models.shared.CommerceItem;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -1294,6 +1333,8 @@ public class Application {
             .build();
 
         UpdateCommerceItemRequest req = UpdateCommerceItemRequest.builder()
+                .commerceItem(CommerceItem.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1337,6 +1378,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceLocationResponse;
+import com.unifiedapi.unifiedto.models.shared.CommerceLocation;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -1351,6 +1393,9 @@ public class Application {
             .build();
 
         UpdateCommerceLocationRequest req = UpdateCommerceLocationRequest.builder()
+                .commerceLocation(CommerceLocation.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

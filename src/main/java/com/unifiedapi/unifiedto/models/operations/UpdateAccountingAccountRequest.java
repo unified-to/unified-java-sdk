@@ -24,7 +24,7 @@ public class UpdateAccountingAccountRequest {
      * Chart of accounts
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends AccountingAccount> accountingAccount;
+    private AccountingAccount accountingAccount;
 
     /**
      * ID of the connection
@@ -46,7 +46,7 @@ public class UpdateAccountingAccountRequest {
 
     @JsonCreator
     public UpdateAccountingAccountRequest(
-            Optional<? extends AccountingAccount> accountingAccount,
+            AccountingAccount accountingAccount,
             String connectionId,
             Optional<? extends List<String>> fields,
             String id) {
@@ -61,18 +61,18 @@ public class UpdateAccountingAccountRequest {
     }
     
     public UpdateAccountingAccountRequest(
+            AccountingAccount accountingAccount,
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, Optional.empty(), id);
+        this(accountingAccount, connectionId, Optional.empty(), id);
     }
 
     /**
      * Chart of accounts
      */
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<AccountingAccount> accountingAccount() {
-        return (Optional<AccountingAccount>) accountingAccount;
+    public AccountingAccount accountingAccount() {
+        return accountingAccount;
     }
 
     /**
@@ -108,15 +108,6 @@ public class UpdateAccountingAccountRequest {
      * Chart of accounts
      */
     public UpdateAccountingAccountRequest withAccountingAccount(AccountingAccount accountingAccount) {
-        Utils.checkNotNull(accountingAccount, "accountingAccount");
-        this.accountingAccount = Optional.ofNullable(accountingAccount);
-        return this;
-    }
-
-    /**
-     * Chart of accounts
-     */
-    public UpdateAccountingAccountRequest withAccountingAccount(Optional<? extends AccountingAccount> accountingAccount) {
         Utils.checkNotNull(accountingAccount, "accountingAccount");
         this.accountingAccount = accountingAccount;
         return this;
@@ -194,7 +185,7 @@ public class UpdateAccountingAccountRequest {
     
     public final static class Builder {
  
-        private Optional<? extends AccountingAccount> accountingAccount = Optional.empty();
+        private AccountingAccount accountingAccount;
  
         private String connectionId;
  
@@ -210,15 +201,6 @@ public class UpdateAccountingAccountRequest {
          * Chart of accounts
          */
         public Builder accountingAccount(AccountingAccount accountingAccount) {
-            Utils.checkNotNull(accountingAccount, "accountingAccount");
-            this.accountingAccount = Optional.ofNullable(accountingAccount);
-            return this;
-        }
-
-        /**
-         * Chart of accounts
-         */
-        public Builder accountingAccount(Optional<? extends AccountingAccount> accountingAccount) {
             Utils.checkNotNull(accountingAccount, "accountingAccount");
             this.accountingAccount = accountingAccount;
             return this;

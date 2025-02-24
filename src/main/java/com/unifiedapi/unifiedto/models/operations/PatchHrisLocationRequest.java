@@ -21,7 +21,7 @@ import java.util.Optional;
 public class PatchHrisLocationRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends HrisLocation> hrisLocation;
+    private HrisLocation hrisLocation;
 
     /**
      * ID of the connection
@@ -43,7 +43,7 @@ public class PatchHrisLocationRequest {
 
     @JsonCreator
     public PatchHrisLocationRequest(
-            Optional<? extends HrisLocation> hrisLocation,
+            HrisLocation hrisLocation,
             String connectionId,
             Optional<? extends List<String>> fields,
             String id) {
@@ -58,15 +58,15 @@ public class PatchHrisLocationRequest {
     }
     
     public PatchHrisLocationRequest(
+            HrisLocation hrisLocation,
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, Optional.empty(), id);
+        this(hrisLocation, connectionId, Optional.empty(), id);
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<HrisLocation> hrisLocation() {
-        return (Optional<HrisLocation>) hrisLocation;
+    public HrisLocation hrisLocation() {
+        return hrisLocation;
     }
 
     /**
@@ -99,12 +99,6 @@ public class PatchHrisLocationRequest {
     }
 
     public PatchHrisLocationRequest withHrisLocation(HrisLocation hrisLocation) {
-        Utils.checkNotNull(hrisLocation, "hrisLocation");
-        this.hrisLocation = Optional.ofNullable(hrisLocation);
-        return this;
-    }
-
-    public PatchHrisLocationRequest withHrisLocation(Optional<? extends HrisLocation> hrisLocation) {
         Utils.checkNotNull(hrisLocation, "hrisLocation");
         this.hrisLocation = hrisLocation;
         return this;
@@ -182,7 +176,7 @@ public class PatchHrisLocationRequest {
     
     public final static class Builder {
  
-        private Optional<? extends HrisLocation> hrisLocation = Optional.empty();
+        private HrisLocation hrisLocation;
  
         private String connectionId;
  
@@ -195,12 +189,6 @@ public class PatchHrisLocationRequest {
         }
 
         public Builder hrisLocation(HrisLocation hrisLocation) {
-            Utils.checkNotNull(hrisLocation, "hrisLocation");
-            this.hrisLocation = Optional.ofNullable(hrisLocation);
-            return this;
-        }
-
-        public Builder hrisLocation(Optional<? extends HrisLocation> hrisLocation) {
             Utils.checkNotNull(hrisLocation, "hrisLocation");
             this.hrisLocation = hrisLocation;
             return this;

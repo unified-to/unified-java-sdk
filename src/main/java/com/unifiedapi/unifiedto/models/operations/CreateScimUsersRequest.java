@@ -13,7 +13,6 @@ import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -21,7 +20,7 @@ import java.util.Optional;
 public class CreateScimUsersRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends ScimUser> scimUser;
+    private ScimUser scimUser;
 
     /**
      * ID of the connection
@@ -46,7 +45,7 @@ public class CreateScimUsersRequest {
 
     @JsonCreator
     public CreateScimUsersRequest(
-            Optional<? extends ScimUser> scimUser,
+            ScimUser scimUser,
             String connectionId,
             Optional<Double> count,
             Optional<String> filter,
@@ -70,14 +69,14 @@ public class CreateScimUsersRequest {
     }
     
     public CreateScimUsersRequest(
+            ScimUser scimUser,
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(scimUser, connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<ScimUser> scimUser() {
-        return (Optional<ScimUser>) scimUser;
+    public ScimUser scimUser() {
+        return scimUser;
     }
 
     /**
@@ -118,12 +117,6 @@ public class CreateScimUsersRequest {
     }
 
     public CreateScimUsersRequest withScimUser(ScimUser scimUser) {
-        Utils.checkNotNull(scimUser, "scimUser");
-        this.scimUser = Optional.ofNullable(scimUser);
-        return this;
-    }
-
-    public CreateScimUsersRequest withScimUser(Optional<? extends ScimUser> scimUser) {
         Utils.checkNotNull(scimUser, "scimUser");
         this.scimUser = scimUser;
         return this;
@@ -243,7 +236,7 @@ public class CreateScimUsersRequest {
     
     public final static class Builder {
  
-        private Optional<? extends ScimUser> scimUser = Optional.empty();
+        private ScimUser scimUser;
  
         private String connectionId;
  
@@ -262,12 +255,6 @@ public class CreateScimUsersRequest {
         }
 
         public Builder scimUser(ScimUser scimUser) {
-            Utils.checkNotNull(scimUser, "scimUser");
-            this.scimUser = Optional.ofNullable(scimUser);
-            return this;
-        }
-
-        public Builder scimUser(Optional<? extends ScimUser> scimUser) {
             Utils.checkNotNull(scimUser, "scimUser");
             this.scimUser = scimUser;
             return this;

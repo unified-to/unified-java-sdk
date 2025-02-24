@@ -48,6 +48,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateRepoBranchRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateRepoBranchResponse;
+import com.unifiedapi.unifiedto.models.shared.RepoBranch;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -62,6 +63,10 @@ public class Application {
             .build();
 
         CreateRepoBranchRequest req = CreateRepoBranchRequest.builder()
+                .repoBranch(RepoBranch.builder()
+                    .name("<value>")
+                    .repoId("<id>")
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -104,6 +109,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateRepoCommitRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateRepoCommitResponse;
+import com.unifiedapi.unifiedto.models.shared.RepoCommit;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -118,6 +124,10 @@ public class Application {
             .build();
 
         CreateRepoCommitRequest req = CreateRepoCommitRequest.builder()
+                .repoCommit(RepoCommit.builder()
+                    .repoId("<id>")
+                    .userId("<id>")
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -160,6 +170,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateRepoOrganizationRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateRepoOrganizationResponse;
+import com.unifiedapi.unifiedto.models.shared.RepoOrganization;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -174,6 +185,8 @@ public class Application {
             .build();
 
         CreateRepoOrganizationRequest req = CreateRepoOrganizationRequest.builder()
+                .repoOrganization(RepoOrganization.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -216,6 +229,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateRepoPullrequestRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateRepoPullrequestResponse;
+import com.unifiedapi.unifiedto.models.shared.RepoPullrequest;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -230,6 +244,8 @@ public class Application {
             .build();
 
         CreateRepoPullrequestRequest req = CreateRepoPullrequestRequest.builder()
+                .repoPullrequest(RepoPullrequest.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -272,6 +288,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateRepoRepositoryRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateRepoRepositoryResponse;
+import com.unifiedapi.unifiedto.models.shared.RepoRepository;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -286,6 +303,9 @@ public class Application {
             .build();
 
         CreateRepoRepositoryRequest req = CreateRepoRepositoryRequest.builder()
+                .repoRepository(RepoRepository.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -893,6 +913,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchRepoBranchRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchRepoBranchResponse;
+import com.unifiedapi.unifiedto.models.shared.RepoBranch;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -907,6 +928,10 @@ public class Application {
             .build();
 
         PatchRepoBranchRequest req = PatchRepoBranchRequest.builder()
+                .repoBranch(RepoBranch.builder()
+                    .name("<value>")
+                    .repoId("<id>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -950,6 +975,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchRepoCommitRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchRepoCommitResponse;
+import com.unifiedapi.unifiedto.models.shared.RepoCommit;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -964,6 +990,10 @@ public class Application {
             .build();
 
         PatchRepoCommitRequest req = PatchRepoCommitRequest.builder()
+                .repoCommit(RepoCommit.builder()
+                    .repoId("<id>")
+                    .userId("<id>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1007,6 +1037,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchRepoOrganizationRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchRepoOrganizationResponse;
+import com.unifiedapi.unifiedto.models.shared.RepoOrganization;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -1021,6 +1052,8 @@ public class Application {
             .build();
 
         PatchRepoOrganizationRequest req = PatchRepoOrganizationRequest.builder()
+                .repoOrganization(RepoOrganization.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1064,6 +1097,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchRepoPullrequestRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchRepoPullrequestResponse;
+import com.unifiedapi.unifiedto.models.shared.RepoPullrequest;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -1078,6 +1112,8 @@ public class Application {
             .build();
 
         PatchRepoPullrequestRequest req = PatchRepoPullrequestRequest.builder()
+                .repoPullrequest(RepoPullrequest.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1121,6 +1157,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchRepoRepositoryRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchRepoRepositoryResponse;
+import com.unifiedapi.unifiedto.models.shared.RepoRepository;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -1135,6 +1172,9 @@ public class Application {
             .build();
 
         PatchRepoRepositoryRequest req = PatchRepoRepositoryRequest.builder()
+                .repoRepository(RepoRepository.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1453,6 +1493,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateRepoBranchRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateRepoBranchResponse;
+import com.unifiedapi.unifiedto.models.shared.RepoBranch;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -1467,6 +1508,10 @@ public class Application {
             .build();
 
         UpdateRepoBranchRequest req = UpdateRepoBranchRequest.builder()
+                .repoBranch(RepoBranch.builder()
+                    .name("<value>")
+                    .repoId("<id>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1510,6 +1555,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateRepoCommitRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateRepoCommitResponse;
+import com.unifiedapi.unifiedto.models.shared.RepoCommit;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -1524,6 +1570,10 @@ public class Application {
             .build();
 
         UpdateRepoCommitRequest req = UpdateRepoCommitRequest.builder()
+                .repoCommit(RepoCommit.builder()
+                    .repoId("<id>")
+                    .userId("<id>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1567,6 +1617,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateRepoOrganizationRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateRepoOrganizationResponse;
+import com.unifiedapi.unifiedto.models.shared.RepoOrganization;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -1581,6 +1632,8 @@ public class Application {
             .build();
 
         UpdateRepoOrganizationRequest req = UpdateRepoOrganizationRequest.builder()
+                .repoOrganization(RepoOrganization.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1624,6 +1677,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateRepoPullrequestRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateRepoPullrequestResponse;
+import com.unifiedapi.unifiedto.models.shared.RepoPullrequest;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -1638,6 +1692,8 @@ public class Application {
             .build();
 
         UpdateRepoPullrequestRequest req = UpdateRepoPullrequestRequest.builder()
+                .repoPullrequest(RepoPullrequest.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1681,6 +1737,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateRepoRepositoryRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateRepoRepositoryResponse;
+import com.unifiedapi.unifiedto.models.shared.RepoRepository;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -1695,6 +1752,9 @@ public class Application {
             .build();
 
         UpdateRepoRepositoryRequest req = UpdateRepoRepositoryRequest.builder()
+                .repoRepository(RepoRepository.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

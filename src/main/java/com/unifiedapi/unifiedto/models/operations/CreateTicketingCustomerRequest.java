@@ -21,7 +21,7 @@ import java.util.Optional;
 public class CreateTicketingCustomerRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends TicketingCustomer> ticketingCustomer;
+    private TicketingCustomer ticketingCustomer;
 
     /**
      * ID of the connection
@@ -37,7 +37,7 @@ public class CreateTicketingCustomerRequest {
 
     @JsonCreator
     public CreateTicketingCustomerRequest(
-            Optional<? extends TicketingCustomer> ticketingCustomer,
+            TicketingCustomer ticketingCustomer,
             String connectionId,
             Optional<? extends List<String>> fields) {
         Utils.checkNotNull(ticketingCustomer, "ticketingCustomer");
@@ -49,14 +49,14 @@ public class CreateTicketingCustomerRequest {
     }
     
     public CreateTicketingCustomerRequest(
+            TicketingCustomer ticketingCustomer,
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty());
+        this(ticketingCustomer, connectionId, Optional.empty());
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<TicketingCustomer> ticketingCustomer() {
-        return (Optional<TicketingCustomer>) ticketingCustomer;
+    public TicketingCustomer ticketingCustomer() {
+        return ticketingCustomer;
     }
 
     /**
@@ -81,12 +81,6 @@ public class CreateTicketingCustomerRequest {
     }
 
     public CreateTicketingCustomerRequest withTicketingCustomer(TicketingCustomer ticketingCustomer) {
-        Utils.checkNotNull(ticketingCustomer, "ticketingCustomer");
-        this.ticketingCustomer = Optional.ofNullable(ticketingCustomer);
-        return this;
-    }
-
-    public CreateTicketingCustomerRequest withTicketingCustomer(Optional<? extends TicketingCustomer> ticketingCustomer) {
         Utils.checkNotNull(ticketingCustomer, "ticketingCustomer");
         this.ticketingCustomer = ticketingCustomer;
         return this;
@@ -152,7 +146,7 @@ public class CreateTicketingCustomerRequest {
     
     public final static class Builder {
  
-        private Optional<? extends TicketingCustomer> ticketingCustomer = Optional.empty();
+        private TicketingCustomer ticketingCustomer;
  
         private String connectionId;
  
@@ -163,12 +157,6 @@ public class CreateTicketingCustomerRequest {
         }
 
         public Builder ticketingCustomer(TicketingCustomer ticketingCustomer) {
-            Utils.checkNotNull(ticketingCustomer, "ticketingCustomer");
-            this.ticketingCustomer = Optional.ofNullable(ticketingCustomer);
-            return this;
-        }
-
-        public Builder ticketingCustomer(Optional<? extends TicketingCustomer> ticketingCustomer) {
             Utils.checkNotNull(ticketingCustomer, "ticketingCustomer");
             this.ticketingCustomer = ticketingCustomer;
             return this;

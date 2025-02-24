@@ -24,6 +24,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceInventoryRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceInventoryResponse;
+import com.unifiedapi.unifiedto.models.shared.CommerceInventory;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -38,6 +39,9 @@ public class Application {
             .build();
 
         CreateCommerceInventoryRequest req = CreateCommerceInventoryRequest.builder()
+                .commerceInventory(CommerceInventory.builder()
+                    .available(5165.08d)
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -193,6 +197,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceInventoryRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceInventoryResponse;
+import com.unifiedapi.unifiedto.models.shared.CommerceInventory;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -207,6 +212,9 @@ public class Application {
             .build();
 
         PatchCommerceInventoryRequest req = PatchCommerceInventoryRequest.builder()
+                .commerceInventory(CommerceInventory.builder()
+                    .available(615.23d)
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -305,6 +313,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceInventoryRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceInventoryResponse;
+import com.unifiedapi.unifiedto.models.shared.CommerceInventory;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -319,6 +328,9 @@ public class Application {
             .build();
 
         UpdateCommerceInventoryRequest req = UpdateCommerceInventoryRequest.builder()
+                .commerceInventory(CommerceInventory.builder()
+                    .available(9360.02d)
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

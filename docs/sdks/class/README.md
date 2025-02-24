@@ -24,6 +24,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateLmsClassRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateLmsClassResponse;
+import com.unifiedapi.unifiedto.models.shared.LmsClass;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -38,6 +39,10 @@ public class Application {
             .build();
 
         CreateLmsClassRequest req = CreateLmsClassRequest.builder()
+                .lmsClass(LmsClass.builder()
+                    .courseId("<id>")
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -193,6 +198,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchLmsClassRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchLmsClassResponse;
+import com.unifiedapi.unifiedto.models.shared.LmsClass;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -207,6 +213,10 @@ public class Application {
             .build();
 
         PatchLmsClassRequest req = PatchLmsClassRequest.builder()
+                .lmsClass(LmsClass.builder()
+                    .courseId("<id>")
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -305,6 +315,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateLmsClassRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateLmsClassResponse;
+import com.unifiedapi.unifiedto.models.shared.LmsClass;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -319,6 +330,10 @@ public class Application {
             .build();
 
         UpdateLmsClassRequest req = UpdateLmsClassRequest.builder()
+                .lmsClass(LmsClass.builder()
+                    .courseId("<id>")
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

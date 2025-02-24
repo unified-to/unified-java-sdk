@@ -6,7 +6,6 @@ package com.unifiedapi.unifiedto.models.operations;
 
 import com.unifiedapi.unifiedto.models.shared.Connection;
 import java.lang.Exception;
-import java.util.Optional;
 
 public class SDKMethodInterfaces {
 
@@ -2233,7 +2232,7 @@ public class SDKMethodInterfaces {
 
     public interface MethodCallCreateUnifiedConnection {
         CreateUnifiedConnectionResponse createUnifiedConnection(
-            Optional<? extends Connection> request) throws Exception;
+            Connection request) throws Exception;
     }
 
 

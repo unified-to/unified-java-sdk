@@ -21,7 +21,7 @@ import java.util.Optional;
 public class PatchLmsCourseRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends LmsCourse> lmsCourse;
+    private LmsCourse lmsCourse;
 
     /**
      * ID of the connection
@@ -43,7 +43,7 @@ public class PatchLmsCourseRequest {
 
     @JsonCreator
     public PatchLmsCourseRequest(
-            Optional<? extends LmsCourse> lmsCourse,
+            LmsCourse lmsCourse,
             String connectionId,
             Optional<? extends List<String>> fields,
             String id) {
@@ -58,15 +58,15 @@ public class PatchLmsCourseRequest {
     }
     
     public PatchLmsCourseRequest(
+            LmsCourse lmsCourse,
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, Optional.empty(), id);
+        this(lmsCourse, connectionId, Optional.empty(), id);
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<LmsCourse> lmsCourse() {
-        return (Optional<LmsCourse>) lmsCourse;
+    public LmsCourse lmsCourse() {
+        return lmsCourse;
     }
 
     /**
@@ -99,12 +99,6 @@ public class PatchLmsCourseRequest {
     }
 
     public PatchLmsCourseRequest withLmsCourse(LmsCourse lmsCourse) {
-        Utils.checkNotNull(lmsCourse, "lmsCourse");
-        this.lmsCourse = Optional.ofNullable(lmsCourse);
-        return this;
-    }
-
-    public PatchLmsCourseRequest withLmsCourse(Optional<? extends LmsCourse> lmsCourse) {
         Utils.checkNotNull(lmsCourse, "lmsCourse");
         this.lmsCourse = lmsCourse;
         return this;
@@ -182,7 +176,7 @@ public class PatchLmsCourseRequest {
     
     public final static class Builder {
  
-        private Optional<? extends LmsCourse> lmsCourse = Optional.empty();
+        private LmsCourse lmsCourse;
  
         private String connectionId;
  
@@ -195,12 +189,6 @@ public class PatchLmsCourseRequest {
         }
 
         public Builder lmsCourse(LmsCourse lmsCourse) {
-            Utils.checkNotNull(lmsCourse, "lmsCourse");
-            this.lmsCourse = Optional.ofNullable(lmsCourse);
-            return this;
-        }
-
-        public Builder lmsCourse(Optional<? extends LmsCourse> lmsCourse) {
             Utils.checkNotNull(lmsCourse, "lmsCourse");
             this.lmsCourse = lmsCourse;
             return this;

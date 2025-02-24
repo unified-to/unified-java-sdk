@@ -21,7 +21,7 @@ import java.util.Optional;
 public class PatchHrisCompanyRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends HrisCompany> hrisCompany;
+    private HrisCompany hrisCompany;
 
     /**
      * ID of the connection
@@ -43,7 +43,7 @@ public class PatchHrisCompanyRequest {
 
     @JsonCreator
     public PatchHrisCompanyRequest(
-            Optional<? extends HrisCompany> hrisCompany,
+            HrisCompany hrisCompany,
             String connectionId,
             Optional<? extends List<String>> fields,
             String id) {
@@ -58,15 +58,15 @@ public class PatchHrisCompanyRequest {
     }
     
     public PatchHrisCompanyRequest(
+            HrisCompany hrisCompany,
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, Optional.empty(), id);
+        this(hrisCompany, connectionId, Optional.empty(), id);
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<HrisCompany> hrisCompany() {
-        return (Optional<HrisCompany>) hrisCompany;
+    public HrisCompany hrisCompany() {
+        return hrisCompany;
     }
 
     /**
@@ -99,12 +99,6 @@ public class PatchHrisCompanyRequest {
     }
 
     public PatchHrisCompanyRequest withHrisCompany(HrisCompany hrisCompany) {
-        Utils.checkNotNull(hrisCompany, "hrisCompany");
-        this.hrisCompany = Optional.ofNullable(hrisCompany);
-        return this;
-    }
-
-    public PatchHrisCompanyRequest withHrisCompany(Optional<? extends HrisCompany> hrisCompany) {
         Utils.checkNotNull(hrisCompany, "hrisCompany");
         this.hrisCompany = hrisCompany;
         return this;
@@ -182,7 +176,7 @@ public class PatchHrisCompanyRequest {
     
     public final static class Builder {
  
-        private Optional<? extends HrisCompany> hrisCompany = Optional.empty();
+        private HrisCompany hrisCompany;
  
         private String connectionId;
  
@@ -195,12 +189,6 @@ public class PatchHrisCompanyRequest {
         }
 
         public Builder hrisCompany(HrisCompany hrisCompany) {
-            Utils.checkNotNull(hrisCompany, "hrisCompany");
-            this.hrisCompany = Optional.ofNullable(hrisCompany);
-            return this;
-        }
-
-        public Builder hrisCompany(Optional<? extends HrisCompany> hrisCompany) {
             Utils.checkNotNull(hrisCompany, "hrisCompany");
             this.hrisCompany = hrisCompany;
             return this;

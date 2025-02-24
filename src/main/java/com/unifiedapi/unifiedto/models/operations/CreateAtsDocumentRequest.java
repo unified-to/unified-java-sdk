@@ -21,7 +21,7 @@ import java.util.Optional;
 public class CreateAtsDocumentRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends AtsDocument> atsDocument;
+    private AtsDocument atsDocument;
 
     /**
      * ID of the connection
@@ -37,7 +37,7 @@ public class CreateAtsDocumentRequest {
 
     @JsonCreator
     public CreateAtsDocumentRequest(
-            Optional<? extends AtsDocument> atsDocument,
+            AtsDocument atsDocument,
             String connectionId,
             Optional<? extends List<String>> fields) {
         Utils.checkNotNull(atsDocument, "atsDocument");
@@ -49,14 +49,14 @@ public class CreateAtsDocumentRequest {
     }
     
     public CreateAtsDocumentRequest(
+            AtsDocument atsDocument,
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty());
+        this(atsDocument, connectionId, Optional.empty());
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<AtsDocument> atsDocument() {
-        return (Optional<AtsDocument>) atsDocument;
+    public AtsDocument atsDocument() {
+        return atsDocument;
     }
 
     /**
@@ -81,12 +81,6 @@ public class CreateAtsDocumentRequest {
     }
 
     public CreateAtsDocumentRequest withAtsDocument(AtsDocument atsDocument) {
-        Utils.checkNotNull(atsDocument, "atsDocument");
-        this.atsDocument = Optional.ofNullable(atsDocument);
-        return this;
-    }
-
-    public CreateAtsDocumentRequest withAtsDocument(Optional<? extends AtsDocument> atsDocument) {
         Utils.checkNotNull(atsDocument, "atsDocument");
         this.atsDocument = atsDocument;
         return this;
@@ -152,7 +146,7 @@ public class CreateAtsDocumentRequest {
     
     public final static class Builder {
  
-        private Optional<? extends AtsDocument> atsDocument = Optional.empty();
+        private AtsDocument atsDocument;
  
         private String connectionId;
  
@@ -163,12 +157,6 @@ public class CreateAtsDocumentRequest {
         }
 
         public Builder atsDocument(AtsDocument atsDocument) {
-            Utils.checkNotNull(atsDocument, "atsDocument");
-            this.atsDocument = Optional.ofNullable(atsDocument);
-            return this;
-        }
-
-        public Builder atsDocument(Optional<? extends AtsDocument> atsDocument) {
             Utils.checkNotNull(atsDocument, "atsDocument");
             this.atsDocument = atsDocument;
             return this;

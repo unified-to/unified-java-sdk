@@ -24,6 +24,8 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateKmsPageRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateKmsPageResponse;
+import com.unifiedapi.unifiedto.models.shared.KmsPage;
+import com.unifiedapi.unifiedto.models.shared.KmsPageType;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -38,6 +40,10 @@ public class Application {
             .build();
 
         CreateKmsPageRequest req = CreateKmsPageRequest.builder()
+                .kmsPage(KmsPage.builder()
+                    .title("<value>")
+                    .type(KmsPageType.HTML)
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -193,6 +199,8 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchKmsPageRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchKmsPageResponse;
+import com.unifiedapi.unifiedto.models.shared.KmsPage;
+import com.unifiedapi.unifiedto.models.shared.KmsPageType;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -207,6 +215,10 @@ public class Application {
             .build();
 
         PatchKmsPageRequest req = PatchKmsPageRequest.builder()
+                .kmsPage(KmsPage.builder()
+                    .title("<value>")
+                    .type(KmsPageType.TEXT)
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -305,6 +317,8 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateKmsPageRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateKmsPageResponse;
+import com.unifiedapi.unifiedto.models.shared.KmsPage;
+import com.unifiedapi.unifiedto.models.shared.KmsPageType;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -319,6 +333,10 @@ public class Application {
             .build();
 
         UpdateKmsPageRequest req = UpdateKmsPageRequest.builder()
+                .kmsPage(KmsPage.builder()
+                    .title("<value>")
+                    .type(KmsPageType.OTHER)
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

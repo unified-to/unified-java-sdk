@@ -26,7 +26,10 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookResponse;
+import com.unifiedapi.unifiedto.models.shared.Event;
+import com.unifiedapi.unifiedto.models.shared.ObjectType;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.Webhook;
 import java.lang.Exception;
 
 public class Application {
@@ -40,6 +43,11 @@ public class Application {
             .build();
 
         CreateUnifiedWebhookRequest req = CreateUnifiedWebhookRequest.builder()
+                .webhook(Webhook.builder()
+                    .connectionId("<id>")
+                    .event(Event.CREATED)
+                    .objectType(ObjectType.HRIS_EMPLOYEE)
+                    .build())
                 .build();
 
         CreateUnifiedWebhookResponse res = sdk.webhook().createUnifiedWebhook()
@@ -192,7 +200,10 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookResponse;
+import com.unifiedapi.unifiedto.models.shared.Event;
+import com.unifiedapi.unifiedto.models.shared.ObjectType;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.Webhook;
 import java.lang.Exception;
 
 public class Application {
@@ -206,6 +217,11 @@ public class Application {
             .build();
 
         PatchUnifiedWebhookRequest req = PatchUnifiedWebhookRequest.builder()
+                .webhook(Webhook.builder()
+                    .connectionId("<id>")
+                    .event(Event.DELETED)
+                    .objectType(ObjectType.CRM_DEAL)
+                    .build())
                 .id("<id>")
                 .build();
 
@@ -356,7 +372,10 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookResponse;
+import com.unifiedapi.unifiedto.models.shared.Event;
+import com.unifiedapi.unifiedto.models.shared.ObjectType;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.Webhook;
 import java.lang.Exception;
 
 public class Application {
@@ -370,6 +389,11 @@ public class Application {
             .build();
 
         UpdateUnifiedWebhookRequest req = UpdateUnifiedWebhookRequest.builder()
+                .webhook(Webhook.builder()
+                    .connectionId("<id>")
+                    .event(Event.CREATED)
+                    .objectType(ObjectType.PAYMENT_LINK)
+                    .build())
                 .id("<id>")
                 .build();
 

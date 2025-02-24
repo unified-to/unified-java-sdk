@@ -30,6 +30,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateHrisGroupRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateHrisGroupResponse;
+import com.unifiedapi.unifiedto.models.shared.HrisGroup;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -44,6 +45,8 @@ public class Application {
             .build();
 
         CreateHrisGroupRequest req = CreateHrisGroupRequest.builder()
+                .hrisGroup(HrisGroup.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -86,6 +89,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateScimGroupsRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateScimGroupsResponse;
+import com.unifiedapi.unifiedto.models.shared.ScimGroup;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -100,6 +104,9 @@ public class Application {
             .build();
 
         CreateScimGroupsRequest req = CreateScimGroupsRequest.builder()
+                .scimGroup(ScimGroup.builder()
+                    .displayName("Bert89")
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -368,6 +375,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchHrisGroupRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchHrisGroupResponse;
+import com.unifiedapi.unifiedto.models.shared.HrisGroup;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -382,6 +390,8 @@ public class Application {
             .build();
 
         PatchHrisGroupRequest req = PatchHrisGroupRequest.builder()
+                .hrisGroup(HrisGroup.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -425,6 +435,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchScimGroupsRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchScimGroupsResponse;
+import com.unifiedapi.unifiedto.models.shared.ScimGroup;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -439,6 +450,9 @@ public class Application {
             .build();
 
         PatchScimGroupsRequest req = PatchScimGroupsRequest.builder()
+                .scimGroup(ScimGroup.builder()
+                    .displayName("Damon_Rutherford93")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -592,6 +606,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateHrisGroupRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateHrisGroupResponse;
+import com.unifiedapi.unifiedto.models.shared.HrisGroup;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -606,6 +621,8 @@ public class Application {
             .build();
 
         UpdateHrisGroupRequest req = UpdateHrisGroupRequest.builder()
+                .hrisGroup(HrisGroup.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -649,6 +666,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateScimGroupsRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateScimGroupsResponse;
+import com.unifiedapi.unifiedto.models.shared.ScimGroup;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -663,6 +681,9 @@ public class Application {
             .build();
 
         UpdateScimGroupsRequest req = UpdateScimGroupsRequest.builder()
+                .scimGroup(ScimGroup.builder()
+                    .displayName("Frederic.Reichel")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

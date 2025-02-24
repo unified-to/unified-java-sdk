@@ -24,6 +24,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreatePaymentLinkRequest;
 import com.unifiedapi.unifiedto.models.operations.CreatePaymentLinkResponse;
+import com.unifiedapi.unifiedto.models.shared.PaymentLink;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -38,6 +39,8 @@ public class Application {
             .build();
 
         CreatePaymentLinkRequest req = CreatePaymentLinkRequest.builder()
+                .paymentLink(PaymentLink.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -193,6 +196,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchPaymentLinkRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchPaymentLinkResponse;
+import com.unifiedapi.unifiedto.models.shared.PaymentLink;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -207,6 +211,8 @@ public class Application {
             .build();
 
         PatchPaymentLinkRequest req = PatchPaymentLinkRequest.builder()
+                .paymentLink(PaymentLink.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -305,6 +311,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdatePaymentLinkRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdatePaymentLinkResponse;
+import com.unifiedapi.unifiedto.models.shared.PaymentLink;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -319,6 +326,8 @@ public class Application {
             .build();
 
         UpdatePaymentLinkRequest req = UpdatePaymentLinkRequest.builder()
+                .paymentLink(PaymentLink.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

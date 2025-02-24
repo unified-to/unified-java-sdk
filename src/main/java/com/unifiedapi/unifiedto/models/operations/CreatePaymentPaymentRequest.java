@@ -21,7 +21,7 @@ import java.util.Optional;
 public class CreatePaymentPaymentRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends PaymentPayment> paymentPayment;
+    private PaymentPayment paymentPayment;
 
     /**
      * ID of the connection
@@ -37,7 +37,7 @@ public class CreatePaymentPaymentRequest {
 
     @JsonCreator
     public CreatePaymentPaymentRequest(
-            Optional<? extends PaymentPayment> paymentPayment,
+            PaymentPayment paymentPayment,
             String connectionId,
             Optional<? extends List<String>> fields) {
         Utils.checkNotNull(paymentPayment, "paymentPayment");
@@ -49,14 +49,14 @@ public class CreatePaymentPaymentRequest {
     }
     
     public CreatePaymentPaymentRequest(
+            PaymentPayment paymentPayment,
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty());
+        this(paymentPayment, connectionId, Optional.empty());
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<PaymentPayment> paymentPayment() {
-        return (Optional<PaymentPayment>) paymentPayment;
+    public PaymentPayment paymentPayment() {
+        return paymentPayment;
     }
 
     /**
@@ -81,12 +81,6 @@ public class CreatePaymentPaymentRequest {
     }
 
     public CreatePaymentPaymentRequest withPaymentPayment(PaymentPayment paymentPayment) {
-        Utils.checkNotNull(paymentPayment, "paymentPayment");
-        this.paymentPayment = Optional.ofNullable(paymentPayment);
-        return this;
-    }
-
-    public CreatePaymentPaymentRequest withPaymentPayment(Optional<? extends PaymentPayment> paymentPayment) {
         Utils.checkNotNull(paymentPayment, "paymentPayment");
         this.paymentPayment = paymentPayment;
         return this;
@@ -152,7 +146,7 @@ public class CreatePaymentPaymentRequest {
     
     public final static class Builder {
  
-        private Optional<? extends PaymentPayment> paymentPayment = Optional.empty();
+        private PaymentPayment paymentPayment;
  
         private String connectionId;
  
@@ -163,12 +157,6 @@ public class CreatePaymentPaymentRequest {
         }
 
         public Builder paymentPayment(PaymentPayment paymentPayment) {
-            Utils.checkNotNull(paymentPayment, "paymentPayment");
-            this.paymentPayment = Optional.ofNullable(paymentPayment);
-            return this;
-        }
-
-        public Builder paymentPayment(Optional<? extends PaymentPayment> paymentPayment) {
             Utils.checkNotNull(paymentPayment, "paymentPayment");
             this.paymentPayment = paymentPayment;
             return this;

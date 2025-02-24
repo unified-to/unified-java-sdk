@@ -21,7 +21,7 @@ import java.util.Optional;
 public class CreateGenaiPromptRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends GenaiPrompt> genaiPrompt;
+    private GenaiPrompt genaiPrompt;
 
     /**
      * ID of the connection
@@ -37,7 +37,7 @@ public class CreateGenaiPromptRequest {
 
     @JsonCreator
     public CreateGenaiPromptRequest(
-            Optional<? extends GenaiPrompt> genaiPrompt,
+            GenaiPrompt genaiPrompt,
             String connectionId,
             Optional<? extends List<String>> fields) {
         Utils.checkNotNull(genaiPrompt, "genaiPrompt");
@@ -49,14 +49,14 @@ public class CreateGenaiPromptRequest {
     }
     
     public CreateGenaiPromptRequest(
+            GenaiPrompt genaiPrompt,
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty());
+        this(genaiPrompt, connectionId, Optional.empty());
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<GenaiPrompt> genaiPrompt() {
-        return (Optional<GenaiPrompt>) genaiPrompt;
+    public GenaiPrompt genaiPrompt() {
+        return genaiPrompt;
     }
 
     /**
@@ -81,12 +81,6 @@ public class CreateGenaiPromptRequest {
     }
 
     public CreateGenaiPromptRequest withGenaiPrompt(GenaiPrompt genaiPrompt) {
-        Utils.checkNotNull(genaiPrompt, "genaiPrompt");
-        this.genaiPrompt = Optional.ofNullable(genaiPrompt);
-        return this;
-    }
-
-    public CreateGenaiPromptRequest withGenaiPrompt(Optional<? extends GenaiPrompt> genaiPrompt) {
         Utils.checkNotNull(genaiPrompt, "genaiPrompt");
         this.genaiPrompt = genaiPrompt;
         return this;
@@ -152,7 +146,7 @@ public class CreateGenaiPromptRequest {
     
     public final static class Builder {
  
-        private Optional<? extends GenaiPrompt> genaiPrompt = Optional.empty();
+        private GenaiPrompt genaiPrompt;
  
         private String connectionId;
  
@@ -163,12 +157,6 @@ public class CreateGenaiPromptRequest {
         }
 
         public Builder genaiPrompt(GenaiPrompt genaiPrompt) {
-            Utils.checkNotNull(genaiPrompt, "genaiPrompt");
-            this.genaiPrompt = Optional.ofNullable(genaiPrompt);
-            return this;
-        }
-
-        public Builder genaiPrompt(Optional<? extends GenaiPrompt> genaiPrompt) {
             Utils.checkNotNull(genaiPrompt, "genaiPrompt");
             this.genaiPrompt = genaiPrompt;
             return this;

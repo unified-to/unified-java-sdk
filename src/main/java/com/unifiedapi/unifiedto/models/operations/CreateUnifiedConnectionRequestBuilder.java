@@ -6,24 +6,17 @@ package com.unifiedapi.unifiedto.models.operations;
 
 import com.unifiedapi.unifiedto.models.shared.Connection;
 import com.unifiedapi.unifiedto.utils.Utils;
-import java.util.Optional;
 
 public class CreateUnifiedConnectionRequestBuilder {
 
-    private Optional<? extends Connection> request = Optional.empty();
+    private Connection request;
     private final SDKMethodInterfaces.MethodCallCreateUnifiedConnection sdk;
 
     public CreateUnifiedConnectionRequestBuilder(SDKMethodInterfaces.MethodCallCreateUnifiedConnection sdk) {
         this.sdk = sdk;
     }
-                
-    public CreateUnifiedConnectionRequestBuilder request(Connection request) {
-        Utils.checkNotNull(request, "request");
-        this.request = Optional.of(request);
-        return this;
-    }
 
-    public CreateUnifiedConnectionRequestBuilder request(Optional<? extends Connection> request) {
+    public CreateUnifiedConnectionRequestBuilder request(Connection request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

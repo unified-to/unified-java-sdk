@@ -21,7 +21,7 @@ import java.util.Optional;
 public class CreateCommerceItemRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends CommerceItem> commerceItem;
+    private CommerceItem commerceItem;
 
     /**
      * ID of the connection
@@ -37,7 +37,7 @@ public class CreateCommerceItemRequest {
 
     @JsonCreator
     public CreateCommerceItemRequest(
-            Optional<? extends CommerceItem> commerceItem,
+            CommerceItem commerceItem,
             String connectionId,
             Optional<? extends List<String>> fields) {
         Utils.checkNotNull(commerceItem, "commerceItem");
@@ -49,14 +49,14 @@ public class CreateCommerceItemRequest {
     }
     
     public CreateCommerceItemRequest(
+            CommerceItem commerceItem,
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty());
+        this(commerceItem, connectionId, Optional.empty());
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<CommerceItem> commerceItem() {
-        return (Optional<CommerceItem>) commerceItem;
+    public CommerceItem commerceItem() {
+        return commerceItem;
     }
 
     /**
@@ -81,12 +81,6 @@ public class CreateCommerceItemRequest {
     }
 
     public CreateCommerceItemRequest withCommerceItem(CommerceItem commerceItem) {
-        Utils.checkNotNull(commerceItem, "commerceItem");
-        this.commerceItem = Optional.ofNullable(commerceItem);
-        return this;
-    }
-
-    public CreateCommerceItemRequest withCommerceItem(Optional<? extends CommerceItem> commerceItem) {
         Utils.checkNotNull(commerceItem, "commerceItem");
         this.commerceItem = commerceItem;
         return this;
@@ -152,7 +146,7 @@ public class CreateCommerceItemRequest {
     
     public final static class Builder {
  
-        private Optional<? extends CommerceItem> commerceItem = Optional.empty();
+        private CommerceItem commerceItem;
  
         private String connectionId;
  
@@ -163,12 +157,6 @@ public class CreateCommerceItemRequest {
         }
 
         public Builder commerceItem(CommerceItem commerceItem) {
-            Utils.checkNotNull(commerceItem, "commerceItem");
-            this.commerceItem = Optional.ofNullable(commerceItem);
-            return this;
-        }
-
-        public Builder commerceItem(Optional<? extends CommerceItem> commerceItem) {
             Utils.checkNotNull(commerceItem, "commerceItem");
             this.commerceItem = commerceItem;
             return this;

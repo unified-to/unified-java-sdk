@@ -12,9 +12,7 @@ import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
 import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Objects;
-import java.util.Optional;
 
 
 public class UpdateUnifiedConnectionRequest {
@@ -23,7 +21,7 @@ public class UpdateUnifiedConnectionRequest {
      * A connection represents a specific authentication of an integration.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends Connection> connection;
+    private Connection connection;
 
     /**
      * ID of the Connection
@@ -33,26 +31,20 @@ public class UpdateUnifiedConnectionRequest {
 
     @JsonCreator
     public UpdateUnifiedConnectionRequest(
-            Optional<? extends Connection> connection,
+            Connection connection,
             String id) {
         Utils.checkNotNull(connection, "connection");
         Utils.checkNotNull(id, "id");
         this.connection = connection;
         this.id = id;
     }
-    
-    public UpdateUnifiedConnectionRequest(
-            String id) {
-        this(Optional.empty(), id);
-    }
 
     /**
      * A connection represents a specific authentication of an integration.
      */
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Connection> connection() {
-        return (Optional<Connection>) connection;
+    public Connection connection() {
+        return connection;
     }
 
     /**
@@ -71,15 +63,6 @@ public class UpdateUnifiedConnectionRequest {
      * A connection represents a specific authentication of an integration.
      */
     public UpdateUnifiedConnectionRequest withConnection(Connection connection) {
-        Utils.checkNotNull(connection, "connection");
-        this.connection = Optional.ofNullable(connection);
-        return this;
-    }
-
-    /**
-     * A connection represents a specific authentication of an integration.
-     */
-    public UpdateUnifiedConnectionRequest withConnection(Optional<? extends Connection> connection) {
         Utils.checkNotNull(connection, "connection");
         this.connection = connection;
         return this;
@@ -124,7 +107,7 @@ public class UpdateUnifiedConnectionRequest {
     
     public final static class Builder {
  
-        private Optional<? extends Connection> connection = Optional.empty();
+        private Connection connection;
  
         private String id;  
         
@@ -136,15 +119,6 @@ public class UpdateUnifiedConnectionRequest {
          * A connection represents a specific authentication of an integration.
          */
         public Builder connection(Connection connection) {
-            Utils.checkNotNull(connection, "connection");
-            this.connection = Optional.ofNullable(connection);
-            return this;
-        }
-
-        /**
-         * A connection represents a specific authentication of an integration.
-         */
-        public Builder connection(Optional<? extends Connection> connection) {
             Utils.checkNotNull(connection, "connection");
             this.connection = connection;
             return this;

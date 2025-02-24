@@ -24,6 +24,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateLmsStudentRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateLmsStudentResponse;
+import com.unifiedapi.unifiedto.models.shared.LmsStudent;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -38,6 +39,8 @@ public class Application {
             .build();
 
         CreateLmsStudentRequest req = CreateLmsStudentRequest.builder()
+                .lmsStudent(LmsStudent.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -193,6 +196,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchLmsStudentRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchLmsStudentResponse;
+import com.unifiedapi.unifiedto.models.shared.LmsStudent;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -207,6 +211,8 @@ public class Application {
             .build();
 
         PatchLmsStudentRequest req = PatchLmsStudentRequest.builder()
+                .lmsStudent(LmsStudent.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -305,6 +311,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateLmsStudentRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateLmsStudentResponse;
+import com.unifiedapi.unifiedto.models.shared.LmsStudent;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -319,6 +326,8 @@ public class Application {
             .build();
 
         UpdateLmsStudentRequest req = UpdateLmsStudentRequest.builder()
+                .lmsStudent(LmsStudent.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

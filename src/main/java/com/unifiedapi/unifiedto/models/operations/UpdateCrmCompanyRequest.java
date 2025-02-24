@@ -24,7 +24,7 @@ public class UpdateCrmCompanyRequest {
      * A company represents an organization that optionally is associated with a deal and/or contacts
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends CrmCompany> crmCompany;
+    private CrmCompany crmCompany;
 
     /**
      * ID of the connection
@@ -46,7 +46,7 @@ public class UpdateCrmCompanyRequest {
 
     @JsonCreator
     public UpdateCrmCompanyRequest(
-            Optional<? extends CrmCompany> crmCompany,
+            CrmCompany crmCompany,
             String connectionId,
             Optional<? extends List<String>> fields,
             String id) {
@@ -61,18 +61,18 @@ public class UpdateCrmCompanyRequest {
     }
     
     public UpdateCrmCompanyRequest(
+            CrmCompany crmCompany,
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, Optional.empty(), id);
+        this(crmCompany, connectionId, Optional.empty(), id);
     }
 
     /**
      * A company represents an organization that optionally is associated with a deal and/or contacts
      */
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<CrmCompany> crmCompany() {
-        return (Optional<CrmCompany>) crmCompany;
+    public CrmCompany crmCompany() {
+        return crmCompany;
     }
 
     /**
@@ -108,15 +108,6 @@ public class UpdateCrmCompanyRequest {
      * A company represents an organization that optionally is associated with a deal and/or contacts
      */
     public UpdateCrmCompanyRequest withCrmCompany(CrmCompany crmCompany) {
-        Utils.checkNotNull(crmCompany, "crmCompany");
-        this.crmCompany = Optional.ofNullable(crmCompany);
-        return this;
-    }
-
-    /**
-     * A company represents an organization that optionally is associated with a deal and/or contacts
-     */
-    public UpdateCrmCompanyRequest withCrmCompany(Optional<? extends CrmCompany> crmCompany) {
         Utils.checkNotNull(crmCompany, "crmCompany");
         this.crmCompany = crmCompany;
         return this;
@@ -194,7 +185,7 @@ public class UpdateCrmCompanyRequest {
     
     public final static class Builder {
  
-        private Optional<? extends CrmCompany> crmCompany = Optional.empty();
+        private CrmCompany crmCompany;
  
         private String connectionId;
  
@@ -210,15 +201,6 @@ public class UpdateCrmCompanyRequest {
          * A company represents an organization that optionally is associated with a deal and/or contacts
          */
         public Builder crmCompany(CrmCompany crmCompany) {
-            Utils.checkNotNull(crmCompany, "crmCompany");
-            this.crmCompany = Optional.ofNullable(crmCompany);
-            return this;
-        }
-
-        /**
-         * A company represents an organization that optionally is associated with a deal and/or contacts
-         */
-        public Builder crmCompany(Optional<? extends CrmCompany> crmCompany) {
             Utils.checkNotNull(crmCompany, "crmCompany");
             this.crmCompany = crmCompany;
             return this;

@@ -21,7 +21,7 @@ import java.util.Optional;
 public class CreateAccountingTransactionRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends AccountingTransaction> accountingTransaction;
+    private AccountingTransaction accountingTransaction;
 
     /**
      * ID of the connection
@@ -37,7 +37,7 @@ public class CreateAccountingTransactionRequest {
 
     @JsonCreator
     public CreateAccountingTransactionRequest(
-            Optional<? extends AccountingTransaction> accountingTransaction,
+            AccountingTransaction accountingTransaction,
             String connectionId,
             Optional<? extends List<String>> fields) {
         Utils.checkNotNull(accountingTransaction, "accountingTransaction");
@@ -49,14 +49,14 @@ public class CreateAccountingTransactionRequest {
     }
     
     public CreateAccountingTransactionRequest(
+            AccountingTransaction accountingTransaction,
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty());
+        this(accountingTransaction, connectionId, Optional.empty());
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<AccountingTransaction> accountingTransaction() {
-        return (Optional<AccountingTransaction>) accountingTransaction;
+    public AccountingTransaction accountingTransaction() {
+        return accountingTransaction;
     }
 
     /**
@@ -81,12 +81,6 @@ public class CreateAccountingTransactionRequest {
     }
 
     public CreateAccountingTransactionRequest withAccountingTransaction(AccountingTransaction accountingTransaction) {
-        Utils.checkNotNull(accountingTransaction, "accountingTransaction");
-        this.accountingTransaction = Optional.ofNullable(accountingTransaction);
-        return this;
-    }
-
-    public CreateAccountingTransactionRequest withAccountingTransaction(Optional<? extends AccountingTransaction> accountingTransaction) {
         Utils.checkNotNull(accountingTransaction, "accountingTransaction");
         this.accountingTransaction = accountingTransaction;
         return this;
@@ -152,7 +146,7 @@ public class CreateAccountingTransactionRequest {
     
     public final static class Builder {
  
-        private Optional<? extends AccountingTransaction> accountingTransaction = Optional.empty();
+        private AccountingTransaction accountingTransaction;
  
         private String connectionId;
  
@@ -163,12 +157,6 @@ public class CreateAccountingTransactionRequest {
         }
 
         public Builder accountingTransaction(AccountingTransaction accountingTransaction) {
-            Utils.checkNotNull(accountingTransaction, "accountingTransaction");
-            this.accountingTransaction = Optional.ofNullable(accountingTransaction);
-            return this;
-        }
-
-        public Builder accountingTransaction(Optional<? extends AccountingTransaction> accountingTransaction) {
             Utils.checkNotNull(accountingTransaction, "accountingTransaction");
             this.accountingTransaction = accountingTransaction;
             return this;

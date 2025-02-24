@@ -21,7 +21,7 @@ import java.util.Optional;
 public class CreateTaskProjectRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends TaskProject> taskProject;
+    private TaskProject taskProject;
 
     /**
      * ID of the connection
@@ -37,7 +37,7 @@ public class CreateTaskProjectRequest {
 
     @JsonCreator
     public CreateTaskProjectRequest(
-            Optional<? extends TaskProject> taskProject,
+            TaskProject taskProject,
             String connectionId,
             Optional<? extends List<String>> fields) {
         Utils.checkNotNull(taskProject, "taskProject");
@@ -49,14 +49,14 @@ public class CreateTaskProjectRequest {
     }
     
     public CreateTaskProjectRequest(
+            TaskProject taskProject,
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty());
+        this(taskProject, connectionId, Optional.empty());
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<TaskProject> taskProject() {
-        return (Optional<TaskProject>) taskProject;
+    public TaskProject taskProject() {
+        return taskProject;
     }
 
     /**
@@ -81,12 +81,6 @@ public class CreateTaskProjectRequest {
     }
 
     public CreateTaskProjectRequest withTaskProject(TaskProject taskProject) {
-        Utils.checkNotNull(taskProject, "taskProject");
-        this.taskProject = Optional.ofNullable(taskProject);
-        return this;
-    }
-
-    public CreateTaskProjectRequest withTaskProject(Optional<? extends TaskProject> taskProject) {
         Utils.checkNotNull(taskProject, "taskProject");
         this.taskProject = taskProject;
         return this;
@@ -152,7 +146,7 @@ public class CreateTaskProjectRequest {
     
     public final static class Builder {
  
-        private Optional<? extends TaskProject> taskProject = Optional.empty();
+        private TaskProject taskProject;
  
         private String connectionId;
  
@@ -163,12 +157,6 @@ public class CreateTaskProjectRequest {
         }
 
         public Builder taskProject(TaskProject taskProject) {
-            Utils.checkNotNull(taskProject, "taskProject");
-            this.taskProject = Optional.ofNullable(taskProject);
-            return this;
-        }
-
-        public Builder taskProject(Optional<? extends TaskProject> taskProject) {
             Utils.checkNotNull(taskProject, "taskProject");
             this.taskProject = taskProject;
             return this;

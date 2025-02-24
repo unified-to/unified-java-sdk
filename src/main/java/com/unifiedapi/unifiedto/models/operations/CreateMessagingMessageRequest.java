@@ -21,7 +21,7 @@ import java.util.Optional;
 public class CreateMessagingMessageRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends MessagingMessage> messagingMessage;
+    private MessagingMessage messagingMessage;
 
     /**
      * ID of the connection
@@ -37,7 +37,7 @@ public class CreateMessagingMessageRequest {
 
     @JsonCreator
     public CreateMessagingMessageRequest(
-            Optional<? extends MessagingMessage> messagingMessage,
+            MessagingMessage messagingMessage,
             String connectionId,
             Optional<? extends List<String>> fields) {
         Utils.checkNotNull(messagingMessage, "messagingMessage");
@@ -49,14 +49,14 @@ public class CreateMessagingMessageRequest {
     }
     
     public CreateMessagingMessageRequest(
+            MessagingMessage messagingMessage,
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty());
+        this(messagingMessage, connectionId, Optional.empty());
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<MessagingMessage> messagingMessage() {
-        return (Optional<MessagingMessage>) messagingMessage;
+    public MessagingMessage messagingMessage() {
+        return messagingMessage;
     }
 
     /**
@@ -81,12 +81,6 @@ public class CreateMessagingMessageRequest {
     }
 
     public CreateMessagingMessageRequest withMessagingMessage(MessagingMessage messagingMessage) {
-        Utils.checkNotNull(messagingMessage, "messagingMessage");
-        this.messagingMessage = Optional.ofNullable(messagingMessage);
-        return this;
-    }
-
-    public CreateMessagingMessageRequest withMessagingMessage(Optional<? extends MessagingMessage> messagingMessage) {
         Utils.checkNotNull(messagingMessage, "messagingMessage");
         this.messagingMessage = messagingMessage;
         return this;
@@ -152,7 +146,7 @@ public class CreateMessagingMessageRequest {
     
     public final static class Builder {
  
-        private Optional<? extends MessagingMessage> messagingMessage = Optional.empty();
+        private MessagingMessage messagingMessage;
  
         private String connectionId;
  
@@ -163,12 +157,6 @@ public class CreateMessagingMessageRequest {
         }
 
         public Builder messagingMessage(MessagingMessage messagingMessage) {
-            Utils.checkNotNull(messagingMessage, "messagingMessage");
-            this.messagingMessage = Optional.ofNullable(messagingMessage);
-            return this;
-        }
-
-        public Builder messagingMessage(Optional<? extends MessagingMessage> messagingMessage) {
             Utils.checkNotNull(messagingMessage, "messagingMessage");
             this.messagingMessage = messagingMessage;
             return this;

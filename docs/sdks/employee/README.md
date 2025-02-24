@@ -24,6 +24,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeResponse;
+import com.unifiedapi.unifiedto.models.shared.HrisEmployee;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -38,6 +39,8 @@ public class Application {
             .build();
 
         CreateHrisEmployeeRequest req = CreateHrisEmployeeRequest.builder()
+                .hrisEmployee(HrisEmployee.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -193,6 +196,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeResponse;
+import com.unifiedapi.unifiedto.models.shared.HrisEmployee;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -207,6 +211,8 @@ public class Application {
             .build();
 
         PatchHrisEmployeeRequest req = PatchHrisEmployeeRequest.builder()
+                .hrisEmployee(HrisEmployee.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -305,6 +311,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeResponse;
+import com.unifiedapi.unifiedto.models.shared.HrisEmployee;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -319,6 +326,8 @@ public class Application {
             .build();
 
         UpdateHrisEmployeeRequest req = UpdateHrisEmployeeRequest.builder()
+                .hrisEmployee(HrisEmployee.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

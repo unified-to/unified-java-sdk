@@ -21,7 +21,7 @@ import java.util.Optional;
 public class PatchAccountingInvoiceRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends AccountingInvoice> accountingInvoice;
+    private AccountingInvoice accountingInvoice;
 
     /**
      * ID of the connection
@@ -43,7 +43,7 @@ public class PatchAccountingInvoiceRequest {
 
     @JsonCreator
     public PatchAccountingInvoiceRequest(
-            Optional<? extends AccountingInvoice> accountingInvoice,
+            AccountingInvoice accountingInvoice,
             String connectionId,
             Optional<? extends List<String>> fields,
             String id) {
@@ -58,15 +58,15 @@ public class PatchAccountingInvoiceRequest {
     }
     
     public PatchAccountingInvoiceRequest(
+            AccountingInvoice accountingInvoice,
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, Optional.empty(), id);
+        this(accountingInvoice, connectionId, Optional.empty(), id);
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<AccountingInvoice> accountingInvoice() {
-        return (Optional<AccountingInvoice>) accountingInvoice;
+    public AccountingInvoice accountingInvoice() {
+        return accountingInvoice;
     }
 
     /**
@@ -99,12 +99,6 @@ public class PatchAccountingInvoiceRequest {
     }
 
     public PatchAccountingInvoiceRequest withAccountingInvoice(AccountingInvoice accountingInvoice) {
-        Utils.checkNotNull(accountingInvoice, "accountingInvoice");
-        this.accountingInvoice = Optional.ofNullable(accountingInvoice);
-        return this;
-    }
-
-    public PatchAccountingInvoiceRequest withAccountingInvoice(Optional<? extends AccountingInvoice> accountingInvoice) {
         Utils.checkNotNull(accountingInvoice, "accountingInvoice");
         this.accountingInvoice = accountingInvoice;
         return this;
@@ -182,7 +176,7 @@ public class PatchAccountingInvoiceRequest {
     
     public final static class Builder {
  
-        private Optional<? extends AccountingInvoice> accountingInvoice = Optional.empty();
+        private AccountingInvoice accountingInvoice;
  
         private String connectionId;
  
@@ -195,12 +189,6 @@ public class PatchAccountingInvoiceRequest {
         }
 
         public Builder accountingInvoice(AccountingInvoice accountingInvoice) {
-            Utils.checkNotNull(accountingInvoice, "accountingInvoice");
-            this.accountingInvoice = Optional.ofNullable(accountingInvoice);
-            return this;
-        }
-
-        public Builder accountingInvoice(Optional<? extends AccountingInvoice> accountingInvoice) {
             Utils.checkNotNull(accountingInvoice, "accountingInvoice");
             this.accountingInvoice = accountingInvoice;
             return this;

@@ -24,6 +24,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateMessagingMessageRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateMessagingMessageResponse;
+import com.unifiedapi.unifiedto.models.shared.MessagingMessage;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -38,6 +39,8 @@ public class Application {
             .build();
 
         CreateMessagingMessageRequest req = CreateMessagingMessageRequest.builder()
+                .messagingMessage(MessagingMessage.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -193,6 +196,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchMessagingMessageRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchMessagingMessageResponse;
+import com.unifiedapi.unifiedto.models.shared.MessagingMessage;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -207,6 +211,8 @@ public class Application {
             .build();
 
         PatchMessagingMessageRequest req = PatchMessagingMessageRequest.builder()
+                .messagingMessage(MessagingMessage.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -305,6 +311,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateMessagingMessageRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateMessagingMessageResponse;
+import com.unifiedapi.unifiedto.models.shared.MessagingMessage;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -319,6 +326,8 @@ public class Application {
             .build();
 
         UpdateMessagingMessageRequest req = UpdateMessagingMessageRequest.builder()
+                .messagingMessage(MessagingMessage.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

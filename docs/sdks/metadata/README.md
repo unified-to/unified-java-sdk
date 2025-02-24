@@ -24,6 +24,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateMetadataMetadataRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateMetadataMetadataResponse;
+import com.unifiedapi.unifiedto.models.shared.MetadataMetadata;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -38,6 +39,10 @@ public class Application {
             .build();
 
         CreateMetadataMetadataRequest req = CreateMetadataMetadataRequest.builder()
+                .metadataMetadata(MetadataMetadata.builder()
+                    .name("<value>")
+                    .objectType("<value>")
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -193,6 +198,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchMetadataMetadataRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchMetadataMetadataResponse;
+import com.unifiedapi.unifiedto.models.shared.MetadataMetadata;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -207,6 +213,10 @@ public class Application {
             .build();
 
         PatchMetadataMetadataRequest req = PatchMetadataMetadataRequest.builder()
+                .metadataMetadata(MetadataMetadata.builder()
+                    .name("<value>")
+                    .objectType("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -305,6 +315,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateMetadataMetadataRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateMetadataMetadataResponse;
+import com.unifiedapi.unifiedto.models.shared.MetadataMetadata;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -319,6 +330,10 @@ public class Application {
             .build();
 
         UpdateMetadataMetadataRequest req = UpdateMetadataMetadataRequest.builder()
+                .metadataMetadata(MetadataMetadata.builder()
+                    .name("<value>")
+                    .objectType("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

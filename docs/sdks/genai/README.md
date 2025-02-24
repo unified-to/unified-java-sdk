@@ -20,6 +20,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateGenaiPromptRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateGenaiPromptResponse;
+import com.unifiedapi.unifiedto.models.shared.GenaiPrompt;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -34,6 +35,8 @@ public class Application {
             .build();
 
         CreateGenaiPromptRequest req = CreateGenaiPromptRequest.builder()
+                .genaiPrompt(GenaiPrompt.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 

@@ -21,7 +21,7 @@ import java.util.Optional;
 public class CreateHrisEmployeeRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends HrisEmployee> hrisEmployee;
+    private HrisEmployee hrisEmployee;
 
     /**
      * ID of the connection
@@ -37,7 +37,7 @@ public class CreateHrisEmployeeRequest {
 
     @JsonCreator
     public CreateHrisEmployeeRequest(
-            Optional<? extends HrisEmployee> hrisEmployee,
+            HrisEmployee hrisEmployee,
             String connectionId,
             Optional<? extends List<String>> fields) {
         Utils.checkNotNull(hrisEmployee, "hrisEmployee");
@@ -49,14 +49,14 @@ public class CreateHrisEmployeeRequest {
     }
     
     public CreateHrisEmployeeRequest(
+            HrisEmployee hrisEmployee,
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty());
+        this(hrisEmployee, connectionId, Optional.empty());
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<HrisEmployee> hrisEmployee() {
-        return (Optional<HrisEmployee>) hrisEmployee;
+    public HrisEmployee hrisEmployee() {
+        return hrisEmployee;
     }
 
     /**
@@ -81,12 +81,6 @@ public class CreateHrisEmployeeRequest {
     }
 
     public CreateHrisEmployeeRequest withHrisEmployee(HrisEmployee hrisEmployee) {
-        Utils.checkNotNull(hrisEmployee, "hrisEmployee");
-        this.hrisEmployee = Optional.ofNullable(hrisEmployee);
-        return this;
-    }
-
-    public CreateHrisEmployeeRequest withHrisEmployee(Optional<? extends HrisEmployee> hrisEmployee) {
         Utils.checkNotNull(hrisEmployee, "hrisEmployee");
         this.hrisEmployee = hrisEmployee;
         return this;
@@ -152,7 +146,7 @@ public class CreateHrisEmployeeRequest {
     
     public final static class Builder {
  
-        private Optional<? extends HrisEmployee> hrisEmployee = Optional.empty();
+        private HrisEmployee hrisEmployee;
  
         private String connectionId;
  
@@ -163,12 +157,6 @@ public class CreateHrisEmployeeRequest {
         }
 
         public Builder hrisEmployee(HrisEmployee hrisEmployee) {
-            Utils.checkNotNull(hrisEmployee, "hrisEmployee");
-            this.hrisEmployee = Optional.ofNullable(hrisEmployee);
-            return this;
-        }
-
-        public Builder hrisEmployee(Optional<? extends HrisEmployee> hrisEmployee) {
             Utils.checkNotNull(hrisEmployee, "hrisEmployee");
             this.hrisEmployee = hrisEmployee;
             return this;

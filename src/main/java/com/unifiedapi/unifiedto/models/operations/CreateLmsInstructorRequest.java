@@ -21,7 +21,7 @@ import java.util.Optional;
 public class CreateLmsInstructorRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends LmsInstructor> lmsInstructor;
+    private LmsInstructor lmsInstructor;
 
     /**
      * ID of the connection
@@ -37,7 +37,7 @@ public class CreateLmsInstructorRequest {
 
     @JsonCreator
     public CreateLmsInstructorRequest(
-            Optional<? extends LmsInstructor> lmsInstructor,
+            LmsInstructor lmsInstructor,
             String connectionId,
             Optional<? extends List<String>> fields) {
         Utils.checkNotNull(lmsInstructor, "lmsInstructor");
@@ -49,14 +49,14 @@ public class CreateLmsInstructorRequest {
     }
     
     public CreateLmsInstructorRequest(
+            LmsInstructor lmsInstructor,
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty());
+        this(lmsInstructor, connectionId, Optional.empty());
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<LmsInstructor> lmsInstructor() {
-        return (Optional<LmsInstructor>) lmsInstructor;
+    public LmsInstructor lmsInstructor() {
+        return lmsInstructor;
     }
 
     /**
@@ -81,12 +81,6 @@ public class CreateLmsInstructorRequest {
     }
 
     public CreateLmsInstructorRequest withLmsInstructor(LmsInstructor lmsInstructor) {
-        Utils.checkNotNull(lmsInstructor, "lmsInstructor");
-        this.lmsInstructor = Optional.ofNullable(lmsInstructor);
-        return this;
-    }
-
-    public CreateLmsInstructorRequest withLmsInstructor(Optional<? extends LmsInstructor> lmsInstructor) {
         Utils.checkNotNull(lmsInstructor, "lmsInstructor");
         this.lmsInstructor = lmsInstructor;
         return this;
@@ -152,7 +146,7 @@ public class CreateLmsInstructorRequest {
     
     public final static class Builder {
  
-        private Optional<? extends LmsInstructor> lmsInstructor = Optional.empty();
+        private LmsInstructor lmsInstructor;
  
         private String connectionId;
  
@@ -163,12 +157,6 @@ public class CreateLmsInstructorRequest {
         }
 
         public Builder lmsInstructor(LmsInstructor lmsInstructor) {
-            Utils.checkNotNull(lmsInstructor, "lmsInstructor");
-            this.lmsInstructor = Optional.ofNullable(lmsInstructor);
-            return this;
-        }
-
-        public Builder lmsInstructor(Optional<? extends LmsInstructor> lmsInstructor) {
             Utils.checkNotNull(lmsInstructor, "lmsInstructor");
             this.lmsInstructor = lmsInstructor;
             return this;

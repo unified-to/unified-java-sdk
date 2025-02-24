@@ -21,7 +21,7 @@ import java.util.Optional;
 public class PatchMetadataMetadataRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends MetadataMetadata> metadataMetadata;
+    private MetadataMetadata metadataMetadata;
 
     /**
      * ID of the connection
@@ -43,7 +43,7 @@ public class PatchMetadataMetadataRequest {
 
     @JsonCreator
     public PatchMetadataMetadataRequest(
-            Optional<? extends MetadataMetadata> metadataMetadata,
+            MetadataMetadata metadataMetadata,
             String connectionId,
             Optional<? extends List<String>> fields,
             String id) {
@@ -58,15 +58,15 @@ public class PatchMetadataMetadataRequest {
     }
     
     public PatchMetadataMetadataRequest(
+            MetadataMetadata metadataMetadata,
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, Optional.empty(), id);
+        this(metadataMetadata, connectionId, Optional.empty(), id);
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<MetadataMetadata> metadataMetadata() {
-        return (Optional<MetadataMetadata>) metadataMetadata;
+    public MetadataMetadata metadataMetadata() {
+        return metadataMetadata;
     }
 
     /**
@@ -99,12 +99,6 @@ public class PatchMetadataMetadataRequest {
     }
 
     public PatchMetadataMetadataRequest withMetadataMetadata(MetadataMetadata metadataMetadata) {
-        Utils.checkNotNull(metadataMetadata, "metadataMetadata");
-        this.metadataMetadata = Optional.ofNullable(metadataMetadata);
-        return this;
-    }
-
-    public PatchMetadataMetadataRequest withMetadataMetadata(Optional<? extends MetadataMetadata> metadataMetadata) {
         Utils.checkNotNull(metadataMetadata, "metadataMetadata");
         this.metadataMetadata = metadataMetadata;
         return this;
@@ -182,7 +176,7 @@ public class PatchMetadataMetadataRequest {
     
     public final static class Builder {
  
-        private Optional<? extends MetadataMetadata> metadataMetadata = Optional.empty();
+        private MetadataMetadata metadataMetadata;
  
         private String connectionId;
  
@@ -195,12 +189,6 @@ public class PatchMetadataMetadataRequest {
         }
 
         public Builder metadataMetadata(MetadataMetadata metadataMetadata) {
-            Utils.checkNotNull(metadataMetadata, "metadataMetadata");
-            this.metadataMetadata = Optional.ofNullable(metadataMetadata);
-            return this;
-        }
-
-        public Builder metadataMetadata(Optional<? extends MetadataMetadata> metadataMetadata) {
             Utils.checkNotNull(metadataMetadata, "metadataMetadata");
             this.metadataMetadata = metadataMetadata;
             return this;

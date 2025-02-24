@@ -24,6 +24,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreatePaymentSubscriptionRequest;
 import com.unifiedapi.unifiedto.models.operations.CreatePaymentSubscriptionResponse;
+import com.unifiedapi.unifiedto.models.shared.PaymentSubscription;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -38,6 +39,8 @@ public class Application {
             .build();
 
         CreatePaymentSubscriptionRequest req = CreatePaymentSubscriptionRequest.builder()
+                .paymentSubscription(PaymentSubscription.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -193,6 +196,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchPaymentSubscriptionRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchPaymentSubscriptionResponse;
+import com.unifiedapi.unifiedto.models.shared.PaymentSubscription;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -207,6 +211,8 @@ public class Application {
             .build();
 
         PatchPaymentSubscriptionRequest req = PatchPaymentSubscriptionRequest.builder()
+                .paymentSubscription(PaymentSubscription.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -305,6 +311,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdatePaymentSubscriptionRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdatePaymentSubscriptionResponse;
+import com.unifiedapi.unifiedto.models.shared.PaymentSubscription;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -319,6 +326,8 @@ public class Application {
             .build();
 
         UpdatePaymentSubscriptionRequest req = UpdatePaymentSubscriptionRequest.builder()
+                .paymentSubscription(PaymentSubscription.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

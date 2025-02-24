@@ -25,6 +25,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateTaskProjectRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateTaskProjectResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.TaskProject;
 import java.lang.Exception;
 
 public class Application {
@@ -38,6 +39,8 @@ public class Application {
             .build();
 
         CreateTaskProjectRequest req = CreateTaskProjectRequest.builder()
+                .taskProject(TaskProject.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -194,6 +197,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchTaskProjectRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchTaskProjectResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.TaskProject;
 import java.lang.Exception;
 
 public class Application {
@@ -207,6 +211,8 @@ public class Application {
             .build();
 
         PatchTaskProjectRequest req = PatchTaskProjectRequest.builder()
+                .taskProject(TaskProject.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -306,6 +312,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateTaskProjectRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateTaskProjectResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.TaskProject;
 import java.lang.Exception;
 
 public class Application {
@@ -319,6 +326,8 @@ public class Application {
             .build();
 
         UpdateTaskProjectRequest req = UpdateTaskProjectRequest.builder()
+                .taskProject(TaskProject.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

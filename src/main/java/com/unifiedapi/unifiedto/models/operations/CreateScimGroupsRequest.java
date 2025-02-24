@@ -12,15 +12,13 @@ import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
 import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Objects;
-import java.util.Optional;
 
 
 public class CreateScimGroupsRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends ScimGroup> scimGroup;
+    private ScimGroup scimGroup;
 
     /**
      * ID of the connection
@@ -30,23 +28,17 @@ public class CreateScimGroupsRequest {
 
     @JsonCreator
     public CreateScimGroupsRequest(
-            Optional<? extends ScimGroup> scimGroup,
+            ScimGroup scimGroup,
             String connectionId) {
         Utils.checkNotNull(scimGroup, "scimGroup");
         Utils.checkNotNull(connectionId, "connectionId");
         this.scimGroup = scimGroup;
         this.connectionId = connectionId;
     }
-    
-    public CreateScimGroupsRequest(
-            String connectionId) {
-        this(Optional.empty(), connectionId);
-    }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<ScimGroup> scimGroup() {
-        return (Optional<ScimGroup>) scimGroup;
+    public ScimGroup scimGroup() {
+        return scimGroup;
     }
 
     /**
@@ -62,12 +54,6 @@ public class CreateScimGroupsRequest {
     }
 
     public CreateScimGroupsRequest withScimGroup(ScimGroup scimGroup) {
-        Utils.checkNotNull(scimGroup, "scimGroup");
-        this.scimGroup = Optional.ofNullable(scimGroup);
-        return this;
-    }
-
-    public CreateScimGroupsRequest withScimGroup(Optional<? extends ScimGroup> scimGroup) {
         Utils.checkNotNull(scimGroup, "scimGroup");
         this.scimGroup = scimGroup;
         return this;
@@ -112,7 +98,7 @@ public class CreateScimGroupsRequest {
     
     public final static class Builder {
  
-        private Optional<? extends ScimGroup> scimGroup = Optional.empty();
+        private ScimGroup scimGroup;
  
         private String connectionId;  
         
@@ -121,12 +107,6 @@ public class CreateScimGroupsRequest {
         }
 
         public Builder scimGroup(ScimGroup scimGroup) {
-            Utils.checkNotNull(scimGroup, "scimGroup");
-            this.scimGroup = Optional.ofNullable(scimGroup);
-            return this;
-        }
-
-        public Builder scimGroup(Optional<? extends ScimGroup> scimGroup) {
             Utils.checkNotNull(scimGroup, "scimGroup");
             this.scimGroup = scimGroup;
             return this;

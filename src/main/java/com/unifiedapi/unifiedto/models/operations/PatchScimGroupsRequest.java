@@ -12,15 +12,13 @@ import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
 import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Objects;
-import java.util.Optional;
 
 
 public class PatchScimGroupsRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends ScimGroup> scimGroup;
+    private ScimGroup scimGroup;
 
     /**
      * ID of the connection
@@ -36,7 +34,7 @@ public class PatchScimGroupsRequest {
 
     @JsonCreator
     public PatchScimGroupsRequest(
-            Optional<? extends ScimGroup> scimGroup,
+            ScimGroup scimGroup,
             String connectionId,
             String id) {
         Utils.checkNotNull(scimGroup, "scimGroup");
@@ -46,17 +44,10 @@ public class PatchScimGroupsRequest {
         this.connectionId = connectionId;
         this.id = id;
     }
-    
-    public PatchScimGroupsRequest(
-            String connectionId,
-            String id) {
-        this(Optional.empty(), connectionId, id);
-    }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<ScimGroup> scimGroup() {
-        return (Optional<ScimGroup>) scimGroup;
+    public ScimGroup scimGroup() {
+        return scimGroup;
     }
 
     /**
@@ -80,12 +71,6 @@ public class PatchScimGroupsRequest {
     }
 
     public PatchScimGroupsRequest withScimGroup(ScimGroup scimGroup) {
-        Utils.checkNotNull(scimGroup, "scimGroup");
-        this.scimGroup = Optional.ofNullable(scimGroup);
-        return this;
-    }
-
-    public PatchScimGroupsRequest withScimGroup(Optional<? extends ScimGroup> scimGroup) {
         Utils.checkNotNull(scimGroup, "scimGroup");
         this.scimGroup = scimGroup;
         return this;
@@ -142,7 +127,7 @@ public class PatchScimGroupsRequest {
     
     public final static class Builder {
  
-        private Optional<? extends ScimGroup> scimGroup = Optional.empty();
+        private ScimGroup scimGroup;
  
         private String connectionId;
  
@@ -153,12 +138,6 @@ public class PatchScimGroupsRequest {
         }
 
         public Builder scimGroup(ScimGroup scimGroup) {
-            Utils.checkNotNull(scimGroup, "scimGroup");
-            this.scimGroup = Optional.ofNullable(scimGroup);
-            return this;
-        }
-
-        public Builder scimGroup(Optional<? extends ScimGroup> scimGroup) {
             Utils.checkNotNull(scimGroup, "scimGroup");
             this.scimGroup = scimGroup;
             return this;

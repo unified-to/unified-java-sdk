@@ -21,7 +21,7 @@ import java.util.Optional;
 public class CreateAtsScorecardRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends AtsScorecard> atsScorecard;
+    private AtsScorecard atsScorecard;
 
     /**
      * ID of the connection
@@ -37,7 +37,7 @@ public class CreateAtsScorecardRequest {
 
     @JsonCreator
     public CreateAtsScorecardRequest(
-            Optional<? extends AtsScorecard> atsScorecard,
+            AtsScorecard atsScorecard,
             String connectionId,
             Optional<? extends List<String>> fields) {
         Utils.checkNotNull(atsScorecard, "atsScorecard");
@@ -49,14 +49,14 @@ public class CreateAtsScorecardRequest {
     }
     
     public CreateAtsScorecardRequest(
+            AtsScorecard atsScorecard,
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty());
+        this(atsScorecard, connectionId, Optional.empty());
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<AtsScorecard> atsScorecard() {
-        return (Optional<AtsScorecard>) atsScorecard;
+    public AtsScorecard atsScorecard() {
+        return atsScorecard;
     }
 
     /**
@@ -81,12 +81,6 @@ public class CreateAtsScorecardRequest {
     }
 
     public CreateAtsScorecardRequest withAtsScorecard(AtsScorecard atsScorecard) {
-        Utils.checkNotNull(atsScorecard, "atsScorecard");
-        this.atsScorecard = Optional.ofNullable(atsScorecard);
-        return this;
-    }
-
-    public CreateAtsScorecardRequest withAtsScorecard(Optional<? extends AtsScorecard> atsScorecard) {
         Utils.checkNotNull(atsScorecard, "atsScorecard");
         this.atsScorecard = atsScorecard;
         return this;
@@ -152,7 +146,7 @@ public class CreateAtsScorecardRequest {
     
     public final static class Builder {
  
-        private Optional<? extends AtsScorecard> atsScorecard = Optional.empty();
+        private AtsScorecard atsScorecard;
  
         private String connectionId;
  
@@ -163,12 +157,6 @@ public class CreateAtsScorecardRequest {
         }
 
         public Builder atsScorecard(AtsScorecard atsScorecard) {
-            Utils.checkNotNull(atsScorecard, "atsScorecard");
-            this.atsScorecard = Optional.ofNullable(atsScorecard);
-            return this;
-        }
-
-        public Builder atsScorecard(Optional<? extends AtsScorecard> atsScorecard) {
             Utils.checkNotNull(atsScorecard, "atsScorecard");
             this.atsScorecard = atsScorecard;
             return this;

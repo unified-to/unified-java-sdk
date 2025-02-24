@@ -24,7 +24,7 @@ public class UpdateMartechListRequest {
      * Mailing List
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends MarketingList> marketingList;
+    private MarketingList marketingList;
 
     /**
      * ID of the connection
@@ -46,7 +46,7 @@ public class UpdateMartechListRequest {
 
     @JsonCreator
     public UpdateMartechListRequest(
-            Optional<? extends MarketingList> marketingList,
+            MarketingList marketingList,
             String connectionId,
             Optional<? extends List<String>> fields,
             String id) {
@@ -61,18 +61,18 @@ public class UpdateMartechListRequest {
     }
     
     public UpdateMartechListRequest(
+            MarketingList marketingList,
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, Optional.empty(), id);
+        this(marketingList, connectionId, Optional.empty(), id);
     }
 
     /**
      * Mailing List
      */
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<MarketingList> marketingList() {
-        return (Optional<MarketingList>) marketingList;
+    public MarketingList marketingList() {
+        return marketingList;
     }
 
     /**
@@ -108,15 +108,6 @@ public class UpdateMartechListRequest {
      * Mailing List
      */
     public UpdateMartechListRequest withMarketingList(MarketingList marketingList) {
-        Utils.checkNotNull(marketingList, "marketingList");
-        this.marketingList = Optional.ofNullable(marketingList);
-        return this;
-    }
-
-    /**
-     * Mailing List
-     */
-    public UpdateMartechListRequest withMarketingList(Optional<? extends MarketingList> marketingList) {
         Utils.checkNotNull(marketingList, "marketingList");
         this.marketingList = marketingList;
         return this;
@@ -194,7 +185,7 @@ public class UpdateMartechListRequest {
     
     public final static class Builder {
  
-        private Optional<? extends MarketingList> marketingList = Optional.empty();
+        private MarketingList marketingList;
  
         private String connectionId;
  
@@ -210,15 +201,6 @@ public class UpdateMartechListRequest {
          * Mailing List
          */
         public Builder marketingList(MarketingList marketingList) {
-            Utils.checkNotNull(marketingList, "marketingList");
-            this.marketingList = Optional.ofNullable(marketingList);
-            return this;
-        }
-
-        /**
-         * Mailing List
-         */
-        public Builder marketingList(Optional<? extends MarketingList> marketingList) {
             Utils.checkNotNull(marketingList, "marketingList");
             this.marketingList = marketingList;
             return this;

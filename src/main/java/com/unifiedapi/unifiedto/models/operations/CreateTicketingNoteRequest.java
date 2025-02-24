@@ -21,7 +21,7 @@ import java.util.Optional;
 public class CreateTicketingNoteRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends TicketingNote> ticketingNote;
+    private TicketingNote ticketingNote;
 
     /**
      * ID of the connection
@@ -37,7 +37,7 @@ public class CreateTicketingNoteRequest {
 
     @JsonCreator
     public CreateTicketingNoteRequest(
-            Optional<? extends TicketingNote> ticketingNote,
+            TicketingNote ticketingNote,
             String connectionId,
             Optional<? extends List<String>> fields) {
         Utils.checkNotNull(ticketingNote, "ticketingNote");
@@ -49,14 +49,14 @@ public class CreateTicketingNoteRequest {
     }
     
     public CreateTicketingNoteRequest(
+            TicketingNote ticketingNote,
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty());
+        this(ticketingNote, connectionId, Optional.empty());
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<TicketingNote> ticketingNote() {
-        return (Optional<TicketingNote>) ticketingNote;
+    public TicketingNote ticketingNote() {
+        return ticketingNote;
     }
 
     /**
@@ -81,12 +81,6 @@ public class CreateTicketingNoteRequest {
     }
 
     public CreateTicketingNoteRequest withTicketingNote(TicketingNote ticketingNote) {
-        Utils.checkNotNull(ticketingNote, "ticketingNote");
-        this.ticketingNote = Optional.ofNullable(ticketingNote);
-        return this;
-    }
-
-    public CreateTicketingNoteRequest withTicketingNote(Optional<? extends TicketingNote> ticketingNote) {
         Utils.checkNotNull(ticketingNote, "ticketingNote");
         this.ticketingNote = ticketingNote;
         return this;
@@ -152,7 +146,7 @@ public class CreateTicketingNoteRequest {
     
     public final static class Builder {
  
-        private Optional<? extends TicketingNote> ticketingNote = Optional.empty();
+        private TicketingNote ticketingNote;
  
         private String connectionId;
  
@@ -163,12 +157,6 @@ public class CreateTicketingNoteRequest {
         }
 
         public Builder ticketingNote(TicketingNote ticketingNote) {
-            Utils.checkNotNull(ticketingNote, "ticketingNote");
-            this.ticketingNote = Optional.ofNullable(ticketingNote);
-            return this;
-        }
-
-        public Builder ticketingNote(Optional<? extends TicketingNote> ticketingNote) {
             Utils.checkNotNull(ticketingNote, "ticketingNote");
             this.ticketingNote = ticketingNote;
             return this;

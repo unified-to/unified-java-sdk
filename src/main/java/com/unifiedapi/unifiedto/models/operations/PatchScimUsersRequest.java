@@ -12,15 +12,13 @@ import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
 import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Objects;
-import java.util.Optional;
 
 
 public class PatchScimUsersRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends ScimUser> scimUser;
+    private ScimUser scimUser;
 
     /**
      * ID of the connection
@@ -36,7 +34,7 @@ public class PatchScimUsersRequest {
 
     @JsonCreator
     public PatchScimUsersRequest(
-            Optional<? extends ScimUser> scimUser,
+            ScimUser scimUser,
             String connectionId,
             String id) {
         Utils.checkNotNull(scimUser, "scimUser");
@@ -46,17 +44,10 @@ public class PatchScimUsersRequest {
         this.connectionId = connectionId;
         this.id = id;
     }
-    
-    public PatchScimUsersRequest(
-            String connectionId,
-            String id) {
-        this(Optional.empty(), connectionId, id);
-    }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<ScimUser> scimUser() {
-        return (Optional<ScimUser>) scimUser;
+    public ScimUser scimUser() {
+        return scimUser;
     }
 
     /**
@@ -80,12 +71,6 @@ public class PatchScimUsersRequest {
     }
 
     public PatchScimUsersRequest withScimUser(ScimUser scimUser) {
-        Utils.checkNotNull(scimUser, "scimUser");
-        this.scimUser = Optional.ofNullable(scimUser);
-        return this;
-    }
-
-    public PatchScimUsersRequest withScimUser(Optional<? extends ScimUser> scimUser) {
         Utils.checkNotNull(scimUser, "scimUser");
         this.scimUser = scimUser;
         return this;
@@ -142,7 +127,7 @@ public class PatchScimUsersRequest {
     
     public final static class Builder {
  
-        private Optional<? extends ScimUser> scimUser = Optional.empty();
+        private ScimUser scimUser;
  
         private String connectionId;
  
@@ -153,12 +138,6 @@ public class PatchScimUsersRequest {
         }
 
         public Builder scimUser(ScimUser scimUser) {
-            Utils.checkNotNull(scimUser, "scimUser");
-            this.scimUser = Optional.ofNullable(scimUser);
-            return this;
-        }
-
-        public Builder scimUser(Optional<? extends ScimUser> scimUser) {
             Utils.checkNotNull(scimUser, "scimUser");
             this.scimUser = scimUser;
             return this;

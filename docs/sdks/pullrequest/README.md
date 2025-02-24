@@ -24,6 +24,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateRepoPullrequestRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateRepoPullrequestResponse;
+import com.unifiedapi.unifiedto.models.shared.RepoPullrequest;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -38,6 +39,8 @@ public class Application {
             .build();
 
         CreateRepoPullrequestRequest req = CreateRepoPullrequestRequest.builder()
+                .repoPullrequest(RepoPullrequest.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -193,6 +196,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchRepoPullrequestRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchRepoPullrequestResponse;
+import com.unifiedapi.unifiedto.models.shared.RepoPullrequest;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -207,6 +211,8 @@ public class Application {
             .build();
 
         PatchRepoPullrequestRequest req = PatchRepoPullrequestRequest.builder()
+                .repoPullrequest(RepoPullrequest.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -305,6 +311,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateRepoPullrequestRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateRepoPullrequestResponse;
+import com.unifiedapi.unifiedto.models.shared.RepoPullrequest;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -319,6 +326,8 @@ public class Application {
             .build();
 
         UpdateRepoPullrequestRequest req = UpdateRepoPullrequestRequest.builder()
+                .repoPullrequest(RepoPullrequest.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

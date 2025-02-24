@@ -21,7 +21,7 @@ import java.util.Optional;
 public class UpdateRepoPullrequestRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends RepoPullrequest> repoPullrequest;
+    private RepoPullrequest repoPullrequest;
 
     /**
      * ID of the connection
@@ -43,7 +43,7 @@ public class UpdateRepoPullrequestRequest {
 
     @JsonCreator
     public UpdateRepoPullrequestRequest(
-            Optional<? extends RepoPullrequest> repoPullrequest,
+            RepoPullrequest repoPullrequest,
             String connectionId,
             Optional<? extends List<String>> fields,
             String id) {
@@ -58,15 +58,15 @@ public class UpdateRepoPullrequestRequest {
     }
     
     public UpdateRepoPullrequestRequest(
+            RepoPullrequest repoPullrequest,
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, Optional.empty(), id);
+        this(repoPullrequest, connectionId, Optional.empty(), id);
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<RepoPullrequest> repoPullrequest() {
-        return (Optional<RepoPullrequest>) repoPullrequest;
+    public RepoPullrequest repoPullrequest() {
+        return repoPullrequest;
     }
 
     /**
@@ -99,12 +99,6 @@ public class UpdateRepoPullrequestRequest {
     }
 
     public UpdateRepoPullrequestRequest withRepoPullrequest(RepoPullrequest repoPullrequest) {
-        Utils.checkNotNull(repoPullrequest, "repoPullrequest");
-        this.repoPullrequest = Optional.ofNullable(repoPullrequest);
-        return this;
-    }
-
-    public UpdateRepoPullrequestRequest withRepoPullrequest(Optional<? extends RepoPullrequest> repoPullrequest) {
         Utils.checkNotNull(repoPullrequest, "repoPullrequest");
         this.repoPullrequest = repoPullrequest;
         return this;
@@ -182,7 +176,7 @@ public class UpdateRepoPullrequestRequest {
     
     public final static class Builder {
  
-        private Optional<? extends RepoPullrequest> repoPullrequest = Optional.empty();
+        private RepoPullrequest repoPullrequest;
  
         private String connectionId;
  
@@ -195,12 +189,6 @@ public class UpdateRepoPullrequestRequest {
         }
 
         public Builder repoPullrequest(RepoPullrequest repoPullrequest) {
-            Utils.checkNotNull(repoPullrequest, "repoPullrequest");
-            this.repoPullrequest = Optional.ofNullable(repoPullrequest);
-            return this;
-        }
-
-        public Builder repoPullrequest(Optional<? extends RepoPullrequest> repoPullrequest) {
             Utils.checkNotNull(repoPullrequest, "repoPullrequest");
             this.repoPullrequest = repoPullrequest;
             return this;

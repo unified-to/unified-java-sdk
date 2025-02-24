@@ -21,7 +21,7 @@ import java.util.Optional;
 public class UpdateLmsStudentRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends LmsStudent> lmsStudent;
+    private LmsStudent lmsStudent;
 
     /**
      * ID of the connection
@@ -43,7 +43,7 @@ public class UpdateLmsStudentRequest {
 
     @JsonCreator
     public UpdateLmsStudentRequest(
-            Optional<? extends LmsStudent> lmsStudent,
+            LmsStudent lmsStudent,
             String connectionId,
             Optional<? extends List<String>> fields,
             String id) {
@@ -58,15 +58,15 @@ public class UpdateLmsStudentRequest {
     }
     
     public UpdateLmsStudentRequest(
+            LmsStudent lmsStudent,
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, Optional.empty(), id);
+        this(lmsStudent, connectionId, Optional.empty(), id);
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<LmsStudent> lmsStudent() {
-        return (Optional<LmsStudent>) lmsStudent;
+    public LmsStudent lmsStudent() {
+        return lmsStudent;
     }
 
     /**
@@ -99,12 +99,6 @@ public class UpdateLmsStudentRequest {
     }
 
     public UpdateLmsStudentRequest withLmsStudent(LmsStudent lmsStudent) {
-        Utils.checkNotNull(lmsStudent, "lmsStudent");
-        this.lmsStudent = Optional.ofNullable(lmsStudent);
-        return this;
-    }
-
-    public UpdateLmsStudentRequest withLmsStudent(Optional<? extends LmsStudent> lmsStudent) {
         Utils.checkNotNull(lmsStudent, "lmsStudent");
         this.lmsStudent = lmsStudent;
         return this;
@@ -182,7 +176,7 @@ public class UpdateLmsStudentRequest {
     
     public final static class Builder {
  
-        private Optional<? extends LmsStudent> lmsStudent = Optional.empty();
+        private LmsStudent lmsStudent;
  
         private String connectionId;
  
@@ -195,12 +189,6 @@ public class UpdateLmsStudentRequest {
         }
 
         public Builder lmsStudent(LmsStudent lmsStudent) {
-            Utils.checkNotNull(lmsStudent, "lmsStudent");
-            this.lmsStudent = Optional.ofNullable(lmsStudent);
-            return this;
-        }
-
-        public Builder lmsStudent(Optional<? extends LmsStudent> lmsStudent) {
             Utils.checkNotNull(lmsStudent, "lmsStudent");
             this.lmsStudent = lmsStudent;
             return this;

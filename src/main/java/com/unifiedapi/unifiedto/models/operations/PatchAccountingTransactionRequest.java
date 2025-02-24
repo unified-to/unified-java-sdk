@@ -21,7 +21,7 @@ import java.util.Optional;
 public class PatchAccountingTransactionRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends AccountingTransaction> accountingTransaction;
+    private AccountingTransaction accountingTransaction;
 
     /**
      * ID of the connection
@@ -43,7 +43,7 @@ public class PatchAccountingTransactionRequest {
 
     @JsonCreator
     public PatchAccountingTransactionRequest(
-            Optional<? extends AccountingTransaction> accountingTransaction,
+            AccountingTransaction accountingTransaction,
             String connectionId,
             Optional<? extends List<String>> fields,
             String id) {
@@ -58,15 +58,15 @@ public class PatchAccountingTransactionRequest {
     }
     
     public PatchAccountingTransactionRequest(
+            AccountingTransaction accountingTransaction,
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, Optional.empty(), id);
+        this(accountingTransaction, connectionId, Optional.empty(), id);
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<AccountingTransaction> accountingTransaction() {
-        return (Optional<AccountingTransaction>) accountingTransaction;
+    public AccountingTransaction accountingTransaction() {
+        return accountingTransaction;
     }
 
     /**
@@ -99,12 +99,6 @@ public class PatchAccountingTransactionRequest {
     }
 
     public PatchAccountingTransactionRequest withAccountingTransaction(AccountingTransaction accountingTransaction) {
-        Utils.checkNotNull(accountingTransaction, "accountingTransaction");
-        this.accountingTransaction = Optional.ofNullable(accountingTransaction);
-        return this;
-    }
-
-    public PatchAccountingTransactionRequest withAccountingTransaction(Optional<? extends AccountingTransaction> accountingTransaction) {
         Utils.checkNotNull(accountingTransaction, "accountingTransaction");
         this.accountingTransaction = accountingTransaction;
         return this;
@@ -182,7 +176,7 @@ public class PatchAccountingTransactionRequest {
     
     public final static class Builder {
  
-        private Optional<? extends AccountingTransaction> accountingTransaction = Optional.empty();
+        private AccountingTransaction accountingTransaction;
  
         private String connectionId;
  
@@ -195,12 +189,6 @@ public class PatchAccountingTransactionRequest {
         }
 
         public Builder accountingTransaction(AccountingTransaction accountingTransaction) {
-            Utils.checkNotNull(accountingTransaction, "accountingTransaction");
-            this.accountingTransaction = Optional.ofNullable(accountingTransaction);
-            return this;
-        }
-
-        public Builder accountingTransaction(Optional<? extends AccountingTransaction> accountingTransaction) {
             Utils.checkNotNull(accountingTransaction, "accountingTransaction");
             this.accountingTransaction = accountingTransaction;
             return this;

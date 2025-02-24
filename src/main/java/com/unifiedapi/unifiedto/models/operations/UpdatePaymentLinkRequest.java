@@ -21,7 +21,7 @@ import java.util.Optional;
 public class UpdatePaymentLinkRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends PaymentLink> paymentLink;
+    private PaymentLink paymentLink;
 
     /**
      * ID of the connection
@@ -43,7 +43,7 @@ public class UpdatePaymentLinkRequest {
 
     @JsonCreator
     public UpdatePaymentLinkRequest(
-            Optional<? extends PaymentLink> paymentLink,
+            PaymentLink paymentLink,
             String connectionId,
             Optional<? extends List<String>> fields,
             String id) {
@@ -58,15 +58,15 @@ public class UpdatePaymentLinkRequest {
     }
     
     public UpdatePaymentLinkRequest(
+            PaymentLink paymentLink,
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, Optional.empty(), id);
+        this(paymentLink, connectionId, Optional.empty(), id);
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<PaymentLink> paymentLink() {
-        return (Optional<PaymentLink>) paymentLink;
+    public PaymentLink paymentLink() {
+        return paymentLink;
     }
 
     /**
@@ -99,12 +99,6 @@ public class UpdatePaymentLinkRequest {
     }
 
     public UpdatePaymentLinkRequest withPaymentLink(PaymentLink paymentLink) {
-        Utils.checkNotNull(paymentLink, "paymentLink");
-        this.paymentLink = Optional.ofNullable(paymentLink);
-        return this;
-    }
-
-    public UpdatePaymentLinkRequest withPaymentLink(Optional<? extends PaymentLink> paymentLink) {
         Utils.checkNotNull(paymentLink, "paymentLink");
         this.paymentLink = paymentLink;
         return this;
@@ -182,7 +176,7 @@ public class UpdatePaymentLinkRequest {
     
     public final static class Builder {
  
-        private Optional<? extends PaymentLink> paymentLink = Optional.empty();
+        private PaymentLink paymentLink;
  
         private String connectionId;
  
@@ -195,12 +189,6 @@ public class UpdatePaymentLinkRequest {
         }
 
         public Builder paymentLink(PaymentLink paymentLink) {
-            Utils.checkNotNull(paymentLink, "paymentLink");
-            this.paymentLink = Optional.ofNullable(paymentLink);
-            return this;
-        }
-
-        public Builder paymentLink(Optional<? extends PaymentLink> paymentLink) {
             Utils.checkNotNull(paymentLink, "paymentLink");
             this.paymentLink = paymentLink;
             return this;

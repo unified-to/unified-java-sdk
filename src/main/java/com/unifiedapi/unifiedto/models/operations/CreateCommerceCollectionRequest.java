@@ -24,7 +24,7 @@ public class CreateCommerceCollectionRequest {
      * A collection of items/products/services
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends CommerceCollection> commerceCollection;
+    private CommerceCollection commerceCollection;
 
     /**
      * ID of the connection
@@ -40,7 +40,7 @@ public class CreateCommerceCollectionRequest {
 
     @JsonCreator
     public CreateCommerceCollectionRequest(
-            Optional<? extends CommerceCollection> commerceCollection,
+            CommerceCollection commerceCollection,
             String connectionId,
             Optional<? extends List<String>> fields) {
         Utils.checkNotNull(commerceCollection, "commerceCollection");
@@ -52,17 +52,17 @@ public class CreateCommerceCollectionRequest {
     }
     
     public CreateCommerceCollectionRequest(
+            CommerceCollection commerceCollection,
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty());
+        this(commerceCollection, connectionId, Optional.empty());
     }
 
     /**
      * A collection of items/products/services
      */
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<CommerceCollection> commerceCollection() {
-        return (Optional<CommerceCollection>) commerceCollection;
+    public CommerceCollection commerceCollection() {
+        return commerceCollection;
     }
 
     /**
@@ -90,15 +90,6 @@ public class CreateCommerceCollectionRequest {
      * A collection of items/products/services
      */
     public CreateCommerceCollectionRequest withCommerceCollection(CommerceCollection commerceCollection) {
-        Utils.checkNotNull(commerceCollection, "commerceCollection");
-        this.commerceCollection = Optional.ofNullable(commerceCollection);
-        return this;
-    }
-
-    /**
-     * A collection of items/products/services
-     */
-    public CreateCommerceCollectionRequest withCommerceCollection(Optional<? extends CommerceCollection> commerceCollection) {
         Utils.checkNotNull(commerceCollection, "commerceCollection");
         this.commerceCollection = commerceCollection;
         return this;
@@ -164,7 +155,7 @@ public class CreateCommerceCollectionRequest {
     
     public final static class Builder {
  
-        private Optional<? extends CommerceCollection> commerceCollection = Optional.empty();
+        private CommerceCollection commerceCollection;
  
         private String connectionId;
  
@@ -178,15 +169,6 @@ public class CreateCommerceCollectionRequest {
          * A collection of items/products/services
          */
         public Builder commerceCollection(CommerceCollection commerceCollection) {
-            Utils.checkNotNull(commerceCollection, "commerceCollection");
-            this.commerceCollection = Optional.ofNullable(commerceCollection);
-            return this;
-        }
-
-        /**
-         * A collection of items/products/services
-         */
-        public Builder commerceCollection(Optional<? extends CommerceCollection> commerceCollection) {
             Utils.checkNotNull(commerceCollection, "commerceCollection");
             this.commerceCollection = commerceCollection;
             return this;

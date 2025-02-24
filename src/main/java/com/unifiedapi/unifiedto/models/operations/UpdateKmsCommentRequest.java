@@ -21,7 +21,7 @@ import java.util.Optional;
 public class UpdateKmsCommentRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends KmsComment> kmsComment;
+    private KmsComment kmsComment;
 
     /**
      * ID of the connection
@@ -43,7 +43,7 @@ public class UpdateKmsCommentRequest {
 
     @JsonCreator
     public UpdateKmsCommentRequest(
-            Optional<? extends KmsComment> kmsComment,
+            KmsComment kmsComment,
             String connectionId,
             Optional<? extends List<String>> fields,
             String id) {
@@ -58,15 +58,15 @@ public class UpdateKmsCommentRequest {
     }
     
     public UpdateKmsCommentRequest(
+            KmsComment kmsComment,
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, Optional.empty(), id);
+        this(kmsComment, connectionId, Optional.empty(), id);
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<KmsComment> kmsComment() {
-        return (Optional<KmsComment>) kmsComment;
+    public KmsComment kmsComment() {
+        return kmsComment;
     }
 
     /**
@@ -99,12 +99,6 @@ public class UpdateKmsCommentRequest {
     }
 
     public UpdateKmsCommentRequest withKmsComment(KmsComment kmsComment) {
-        Utils.checkNotNull(kmsComment, "kmsComment");
-        this.kmsComment = Optional.ofNullable(kmsComment);
-        return this;
-    }
-
-    public UpdateKmsCommentRequest withKmsComment(Optional<? extends KmsComment> kmsComment) {
         Utils.checkNotNull(kmsComment, "kmsComment");
         this.kmsComment = kmsComment;
         return this;
@@ -182,7 +176,7 @@ public class UpdateKmsCommentRequest {
     
     public final static class Builder {
  
-        private Optional<? extends KmsComment> kmsComment = Optional.empty();
+        private KmsComment kmsComment;
  
         private String connectionId;
  
@@ -195,12 +189,6 @@ public class UpdateKmsCommentRequest {
         }
 
         public Builder kmsComment(KmsComment kmsComment) {
-            Utils.checkNotNull(kmsComment, "kmsComment");
-            this.kmsComment = Optional.ofNullable(kmsComment);
-            return this;
-        }
-
-        public Builder kmsComment(Optional<? extends KmsComment> kmsComment) {
             Utils.checkNotNull(kmsComment, "kmsComment");
             this.kmsComment = kmsComment;
             return this;

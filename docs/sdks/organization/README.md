@@ -26,6 +26,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateRepoOrganizationRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateRepoOrganizationResponse;
+import com.unifiedapi.unifiedto.models.shared.RepoOrganization;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -40,6 +41,8 @@ public class Application {
             .build();
 
         CreateRepoOrganizationRequest req = CreateRepoOrganizationRequest.builder()
+                .repoOrganization(RepoOrganization.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -308,6 +311,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchRepoOrganizationRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchRepoOrganizationResponse;
+import com.unifiedapi.unifiedto.models.shared.RepoOrganization;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -322,6 +326,8 @@ public class Application {
             .build();
 
         PatchRepoOrganizationRequest req = PatchRepoOrganizationRequest.builder()
+                .repoOrganization(RepoOrganization.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -420,6 +426,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateRepoOrganizationRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateRepoOrganizationResponse;
+import com.unifiedapi.unifiedto.models.shared.RepoOrganization;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -434,6 +441,8 @@ public class Application {
             .build();
 
         UpdateRepoOrganizationRequest req = UpdateRepoOrganizationRequest.builder()
+                .repoOrganization(RepoOrganization.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

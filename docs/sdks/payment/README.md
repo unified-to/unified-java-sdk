@@ -40,6 +40,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreatePaymentLinkRequest;
 import com.unifiedapi.unifiedto.models.operations.CreatePaymentLinkResponse;
+import com.unifiedapi.unifiedto.models.shared.PaymentLink;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -54,6 +55,8 @@ public class Application {
             .build();
 
         CreatePaymentLinkRequest req = CreatePaymentLinkRequest.builder()
+                .paymentLink(PaymentLink.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -96,6 +99,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreatePaymentPaymentRequest;
 import com.unifiedapi.unifiedto.models.operations.CreatePaymentPaymentResponse;
+import com.unifiedapi.unifiedto.models.shared.PaymentPayment;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -110,6 +114,8 @@ public class Application {
             .build();
 
         CreatePaymentPaymentRequest req = CreatePaymentPaymentRequest.builder()
+                .paymentPayment(PaymentPayment.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -152,6 +158,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreatePaymentSubscriptionRequest;
 import com.unifiedapi.unifiedto.models.operations.CreatePaymentSubscriptionResponse;
+import com.unifiedapi.unifiedto.models.shared.PaymentSubscription;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -166,6 +173,8 @@ public class Application {
             .build();
 
         CreatePaymentSubscriptionRequest req = CreatePaymentSubscriptionRequest.builder()
+                .paymentSubscription(PaymentSubscription.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -773,6 +782,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchPaymentLinkRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchPaymentLinkResponse;
+import com.unifiedapi.unifiedto.models.shared.PaymentLink;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -787,6 +797,8 @@ public class Application {
             .build();
 
         PatchPaymentLinkRequest req = PatchPaymentLinkRequest.builder()
+                .paymentLink(PaymentLink.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -830,6 +842,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchPaymentPaymentRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchPaymentPaymentResponse;
+import com.unifiedapi.unifiedto.models.shared.PaymentPayment;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -844,6 +857,8 @@ public class Application {
             .build();
 
         PatchPaymentPaymentRequest req = PatchPaymentPaymentRequest.builder()
+                .paymentPayment(PaymentPayment.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -887,6 +902,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchPaymentSubscriptionRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchPaymentSubscriptionResponse;
+import com.unifiedapi.unifiedto.models.shared.PaymentSubscription;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -901,6 +917,8 @@ public class Application {
             .build();
 
         PatchPaymentSubscriptionRequest req = PatchPaymentSubscriptionRequest.builder()
+                .paymentSubscription(PaymentSubscription.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1109,6 +1127,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdatePaymentLinkRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdatePaymentLinkResponse;
+import com.unifiedapi.unifiedto.models.shared.PaymentLink;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -1123,6 +1142,8 @@ public class Application {
             .build();
 
         UpdatePaymentLinkRequest req = UpdatePaymentLinkRequest.builder()
+                .paymentLink(PaymentLink.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1166,6 +1187,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdatePaymentPaymentRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdatePaymentPaymentResponse;
+import com.unifiedapi.unifiedto.models.shared.PaymentPayment;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -1180,6 +1202,8 @@ public class Application {
             .build();
 
         UpdatePaymentPaymentRequest req = UpdatePaymentPaymentRequest.builder()
+                .paymentPayment(PaymentPayment.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1223,6 +1247,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdatePaymentSubscriptionRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdatePaymentSubscriptionResponse;
+import com.unifiedapi.unifiedto.models.shared.PaymentSubscription;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -1237,6 +1262,8 @@ public class Application {
             .build();
 
         UpdatePaymentSubscriptionRequest req = UpdatePaymentSubscriptionRequest.builder()
+                .paymentSubscription(PaymentSubscription.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

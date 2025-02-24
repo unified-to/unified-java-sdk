@@ -21,7 +21,7 @@ import java.util.Optional;
 public class PatchStorageFileRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends StorageFile> storageFile;
+    private StorageFile storageFile;
 
     /**
      * ID of the connection
@@ -43,7 +43,7 @@ public class PatchStorageFileRequest {
 
     @JsonCreator
     public PatchStorageFileRequest(
-            Optional<? extends StorageFile> storageFile,
+            StorageFile storageFile,
             String connectionId,
             Optional<? extends List<String>> fields,
             String id) {
@@ -58,15 +58,15 @@ public class PatchStorageFileRequest {
     }
     
     public PatchStorageFileRequest(
+            StorageFile storageFile,
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, Optional.empty(), id);
+        this(storageFile, connectionId, Optional.empty(), id);
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<StorageFile> storageFile() {
-        return (Optional<StorageFile>) storageFile;
+    public StorageFile storageFile() {
+        return storageFile;
     }
 
     /**
@@ -99,12 +99,6 @@ public class PatchStorageFileRequest {
     }
 
     public PatchStorageFileRequest withStorageFile(StorageFile storageFile) {
-        Utils.checkNotNull(storageFile, "storageFile");
-        this.storageFile = Optional.ofNullable(storageFile);
-        return this;
-    }
-
-    public PatchStorageFileRequest withStorageFile(Optional<? extends StorageFile> storageFile) {
         Utils.checkNotNull(storageFile, "storageFile");
         this.storageFile = storageFile;
         return this;
@@ -182,7 +176,7 @@ public class PatchStorageFileRequest {
     
     public final static class Builder {
  
-        private Optional<? extends StorageFile> storageFile = Optional.empty();
+        private StorageFile storageFile;
  
         private String connectionId;
  
@@ -195,12 +189,6 @@ public class PatchStorageFileRequest {
         }
 
         public Builder storageFile(StorageFile storageFile) {
-            Utils.checkNotNull(storageFile, "storageFile");
-            this.storageFile = Optional.ofNullable(storageFile);
-            return this;
-        }
-
-        public Builder storageFile(Optional<? extends StorageFile> storageFile) {
             Utils.checkNotNull(storageFile, "storageFile");
             this.storageFile = storageFile;
             return this;

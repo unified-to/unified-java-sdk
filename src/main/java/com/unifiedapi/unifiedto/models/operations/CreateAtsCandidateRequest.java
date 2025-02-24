@@ -21,7 +21,7 @@ import java.util.Optional;
 public class CreateAtsCandidateRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends AtsCandidate> atsCandidate;
+    private AtsCandidate atsCandidate;
 
     /**
      * ID of the connection
@@ -37,7 +37,7 @@ public class CreateAtsCandidateRequest {
 
     @JsonCreator
     public CreateAtsCandidateRequest(
-            Optional<? extends AtsCandidate> atsCandidate,
+            AtsCandidate atsCandidate,
             String connectionId,
             Optional<? extends List<String>> fields) {
         Utils.checkNotNull(atsCandidate, "atsCandidate");
@@ -49,14 +49,14 @@ public class CreateAtsCandidateRequest {
     }
     
     public CreateAtsCandidateRequest(
+            AtsCandidate atsCandidate,
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty());
+        this(atsCandidate, connectionId, Optional.empty());
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<AtsCandidate> atsCandidate() {
-        return (Optional<AtsCandidate>) atsCandidate;
+    public AtsCandidate atsCandidate() {
+        return atsCandidate;
     }
 
     /**
@@ -81,12 +81,6 @@ public class CreateAtsCandidateRequest {
     }
 
     public CreateAtsCandidateRequest withAtsCandidate(AtsCandidate atsCandidate) {
-        Utils.checkNotNull(atsCandidate, "atsCandidate");
-        this.atsCandidate = Optional.ofNullable(atsCandidate);
-        return this;
-    }
-
-    public CreateAtsCandidateRequest withAtsCandidate(Optional<? extends AtsCandidate> atsCandidate) {
         Utils.checkNotNull(atsCandidate, "atsCandidate");
         this.atsCandidate = atsCandidate;
         return this;
@@ -152,7 +146,7 @@ public class CreateAtsCandidateRequest {
     
     public final static class Builder {
  
-        private Optional<? extends AtsCandidate> atsCandidate = Optional.empty();
+        private AtsCandidate atsCandidate;
  
         private String connectionId;
  
@@ -163,12 +157,6 @@ public class CreateAtsCandidateRequest {
         }
 
         public Builder atsCandidate(AtsCandidate atsCandidate) {
-            Utils.checkNotNull(atsCandidate, "atsCandidate");
-            this.atsCandidate = Optional.ofNullable(atsCandidate);
-            return this;
-        }
-
-        public Builder atsCandidate(Optional<? extends AtsCandidate> atsCandidate) {
             Utils.checkNotNull(atsCandidate, "atsCandidate");
             this.atsCandidate = atsCandidate;
             return this;

@@ -21,7 +21,7 @@ import java.util.Optional;
 public class CreateAtsActivityRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends AtsActivity> atsActivity;
+    private AtsActivity atsActivity;
 
     /**
      * ID of the connection
@@ -37,7 +37,7 @@ public class CreateAtsActivityRequest {
 
     @JsonCreator
     public CreateAtsActivityRequest(
-            Optional<? extends AtsActivity> atsActivity,
+            AtsActivity atsActivity,
             String connectionId,
             Optional<? extends List<String>> fields) {
         Utils.checkNotNull(atsActivity, "atsActivity");
@@ -49,14 +49,14 @@ public class CreateAtsActivityRequest {
     }
     
     public CreateAtsActivityRequest(
+            AtsActivity atsActivity,
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty());
+        this(atsActivity, connectionId, Optional.empty());
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<AtsActivity> atsActivity() {
-        return (Optional<AtsActivity>) atsActivity;
+    public AtsActivity atsActivity() {
+        return atsActivity;
     }
 
     /**
@@ -81,12 +81,6 @@ public class CreateAtsActivityRequest {
     }
 
     public CreateAtsActivityRequest withAtsActivity(AtsActivity atsActivity) {
-        Utils.checkNotNull(atsActivity, "atsActivity");
-        this.atsActivity = Optional.ofNullable(atsActivity);
-        return this;
-    }
-
-    public CreateAtsActivityRequest withAtsActivity(Optional<? extends AtsActivity> atsActivity) {
         Utils.checkNotNull(atsActivity, "atsActivity");
         this.atsActivity = atsActivity;
         return this;
@@ -152,7 +146,7 @@ public class CreateAtsActivityRequest {
     
     public final static class Builder {
  
-        private Optional<? extends AtsActivity> atsActivity = Optional.empty();
+        private AtsActivity atsActivity;
  
         private String connectionId;
  
@@ -163,12 +157,6 @@ public class CreateAtsActivityRequest {
         }
 
         public Builder atsActivity(AtsActivity atsActivity) {
-            Utils.checkNotNull(atsActivity, "atsActivity");
-            this.atsActivity = Optional.ofNullable(atsActivity);
-            return this;
-        }
-
-        public Builder atsActivity(Optional<? extends AtsActivity> atsActivity) {
             Utils.checkNotNull(atsActivity, "atsActivity");
             this.atsActivity = atsActivity;
             return this;

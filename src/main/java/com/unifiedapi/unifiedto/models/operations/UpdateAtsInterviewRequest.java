@@ -21,7 +21,7 @@ import java.util.Optional;
 public class UpdateAtsInterviewRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends AtsInterview> atsInterview;
+    private AtsInterview atsInterview;
 
     /**
      * ID of the connection
@@ -43,7 +43,7 @@ public class UpdateAtsInterviewRequest {
 
     @JsonCreator
     public UpdateAtsInterviewRequest(
-            Optional<? extends AtsInterview> atsInterview,
+            AtsInterview atsInterview,
             String connectionId,
             Optional<? extends List<String>> fields,
             String id) {
@@ -58,15 +58,15 @@ public class UpdateAtsInterviewRequest {
     }
     
     public UpdateAtsInterviewRequest(
+            AtsInterview atsInterview,
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, Optional.empty(), id);
+        this(atsInterview, connectionId, Optional.empty(), id);
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<AtsInterview> atsInterview() {
-        return (Optional<AtsInterview>) atsInterview;
+    public AtsInterview atsInterview() {
+        return atsInterview;
     }
 
     /**
@@ -99,12 +99,6 @@ public class UpdateAtsInterviewRequest {
     }
 
     public UpdateAtsInterviewRequest withAtsInterview(AtsInterview atsInterview) {
-        Utils.checkNotNull(atsInterview, "atsInterview");
-        this.atsInterview = Optional.ofNullable(atsInterview);
-        return this;
-    }
-
-    public UpdateAtsInterviewRequest withAtsInterview(Optional<? extends AtsInterview> atsInterview) {
         Utils.checkNotNull(atsInterview, "atsInterview");
         this.atsInterview = atsInterview;
         return this;
@@ -182,7 +176,7 @@ public class UpdateAtsInterviewRequest {
     
     public final static class Builder {
  
-        private Optional<? extends AtsInterview> atsInterview = Optional.empty();
+        private AtsInterview atsInterview;
  
         private String connectionId;
  
@@ -195,12 +189,6 @@ public class UpdateAtsInterviewRequest {
         }
 
         public Builder atsInterview(AtsInterview atsInterview) {
-            Utils.checkNotNull(atsInterview, "atsInterview");
-            this.atsInterview = Optional.ofNullable(atsInterview);
-            return this;
-        }
-
-        public Builder atsInterview(Optional<? extends AtsInterview> atsInterview) {
             Utils.checkNotNull(atsInterview, "atsInterview");
             this.atsInterview = atsInterview;
             return this;

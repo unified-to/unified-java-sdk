@@ -21,7 +21,7 @@ import java.util.Optional;
 public class UpdateAccountingJournalRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends AccountingJournal> accountingJournal;
+    private AccountingJournal accountingJournal;
 
     /**
      * ID of the connection
@@ -43,7 +43,7 @@ public class UpdateAccountingJournalRequest {
 
     @JsonCreator
     public UpdateAccountingJournalRequest(
-            Optional<? extends AccountingJournal> accountingJournal,
+            AccountingJournal accountingJournal,
             String connectionId,
             Optional<? extends List<String>> fields,
             String id) {
@@ -58,15 +58,15 @@ public class UpdateAccountingJournalRequest {
     }
     
     public UpdateAccountingJournalRequest(
+            AccountingJournal accountingJournal,
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, Optional.empty(), id);
+        this(accountingJournal, connectionId, Optional.empty(), id);
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<AccountingJournal> accountingJournal() {
-        return (Optional<AccountingJournal>) accountingJournal;
+    public AccountingJournal accountingJournal() {
+        return accountingJournal;
     }
 
     /**
@@ -99,12 +99,6 @@ public class UpdateAccountingJournalRequest {
     }
 
     public UpdateAccountingJournalRequest withAccountingJournal(AccountingJournal accountingJournal) {
-        Utils.checkNotNull(accountingJournal, "accountingJournal");
-        this.accountingJournal = Optional.ofNullable(accountingJournal);
-        return this;
-    }
-
-    public UpdateAccountingJournalRequest withAccountingJournal(Optional<? extends AccountingJournal> accountingJournal) {
         Utils.checkNotNull(accountingJournal, "accountingJournal");
         this.accountingJournal = accountingJournal;
         return this;
@@ -182,7 +176,7 @@ public class UpdateAccountingJournalRequest {
     
     public final static class Builder {
  
-        private Optional<? extends AccountingJournal> accountingJournal = Optional.empty();
+        private AccountingJournal accountingJournal;
  
         private String connectionId;
  
@@ -195,12 +189,6 @@ public class UpdateAccountingJournalRequest {
         }
 
         public Builder accountingJournal(AccountingJournal accountingJournal) {
-            Utils.checkNotNull(accountingJournal, "accountingJournal");
-            this.accountingJournal = Optional.ofNullable(accountingJournal);
-            return this;
-        }
-
-        public Builder accountingJournal(Optional<? extends AccountingJournal> accountingJournal) {
             Utils.checkNotNull(accountingJournal, "accountingJournal");
             this.accountingJournal = accountingJournal;
             return this;

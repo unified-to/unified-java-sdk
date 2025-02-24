@@ -24,6 +24,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingOrderRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingOrderResponse;
+import com.unifiedapi.unifiedto.models.shared.AccountingOrder;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -38,6 +39,8 @@ public class Application {
             .build();
 
         CreateAccountingOrderRequest req = CreateAccountingOrderRequest.builder()
+                .accountingOrder(AccountingOrder.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -193,6 +196,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingOrderRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingOrderResponse;
+import com.unifiedapi.unifiedto.models.shared.AccountingOrder;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -207,6 +211,8 @@ public class Application {
             .build();
 
         PatchAccountingOrderRequest req = PatchAccountingOrderRequest.builder()
+                .accountingOrder(AccountingOrder.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -305,6 +311,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingOrderRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingOrderResponse;
+import com.unifiedapi.unifiedto.models.shared.AccountingOrder;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -319,6 +326,8 @@ public class Application {
             .build();
 
         UpdateAccountingOrderRequest req = UpdateAccountingOrderRequest.builder()
+                .accountingOrder(AccountingOrder.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

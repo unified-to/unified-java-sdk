@@ -21,7 +21,7 @@ import java.util.Optional;
 public class PatchRepoCommitRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends RepoCommit> repoCommit;
+    private RepoCommit repoCommit;
 
     /**
      * ID of the connection
@@ -43,7 +43,7 @@ public class PatchRepoCommitRequest {
 
     @JsonCreator
     public PatchRepoCommitRequest(
-            Optional<? extends RepoCommit> repoCommit,
+            RepoCommit repoCommit,
             String connectionId,
             Optional<? extends List<String>> fields,
             String id) {
@@ -58,15 +58,15 @@ public class PatchRepoCommitRequest {
     }
     
     public PatchRepoCommitRequest(
+            RepoCommit repoCommit,
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, Optional.empty(), id);
+        this(repoCommit, connectionId, Optional.empty(), id);
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<RepoCommit> repoCommit() {
-        return (Optional<RepoCommit>) repoCommit;
+    public RepoCommit repoCommit() {
+        return repoCommit;
     }
 
     /**
@@ -99,12 +99,6 @@ public class PatchRepoCommitRequest {
     }
 
     public PatchRepoCommitRequest withRepoCommit(RepoCommit repoCommit) {
-        Utils.checkNotNull(repoCommit, "repoCommit");
-        this.repoCommit = Optional.ofNullable(repoCommit);
-        return this;
-    }
-
-    public PatchRepoCommitRequest withRepoCommit(Optional<? extends RepoCommit> repoCommit) {
         Utils.checkNotNull(repoCommit, "repoCommit");
         this.repoCommit = repoCommit;
         return this;
@@ -182,7 +176,7 @@ public class PatchRepoCommitRequest {
     
     public final static class Builder {
  
-        private Optional<? extends RepoCommit> repoCommit = Optional.empty();
+        private RepoCommit repoCommit;
  
         private String connectionId;
  
@@ -195,12 +189,6 @@ public class PatchRepoCommitRequest {
         }
 
         public Builder repoCommit(RepoCommit repoCommit) {
-            Utils.checkNotNull(repoCommit, "repoCommit");
-            this.repoCommit = Optional.ofNullable(repoCommit);
-            return this;
-        }
-
-        public Builder repoCommit(Optional<? extends RepoCommit> repoCommit) {
             Utils.checkNotNull(repoCommit, "repoCommit");
             this.repoCommit = repoCommit;
             return this;

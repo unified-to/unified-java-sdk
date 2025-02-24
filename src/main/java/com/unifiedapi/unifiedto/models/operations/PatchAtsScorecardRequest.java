@@ -21,7 +21,7 @@ import java.util.Optional;
 public class PatchAtsScorecardRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends AtsScorecard> atsScorecard;
+    private AtsScorecard atsScorecard;
 
     /**
      * ID of the connection
@@ -43,7 +43,7 @@ public class PatchAtsScorecardRequest {
 
     @JsonCreator
     public PatchAtsScorecardRequest(
-            Optional<? extends AtsScorecard> atsScorecard,
+            AtsScorecard atsScorecard,
             String connectionId,
             Optional<? extends List<String>> fields,
             String id) {
@@ -58,15 +58,15 @@ public class PatchAtsScorecardRequest {
     }
     
     public PatchAtsScorecardRequest(
+            AtsScorecard atsScorecard,
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, Optional.empty(), id);
+        this(atsScorecard, connectionId, Optional.empty(), id);
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<AtsScorecard> atsScorecard() {
-        return (Optional<AtsScorecard>) atsScorecard;
+    public AtsScorecard atsScorecard() {
+        return atsScorecard;
     }
 
     /**
@@ -99,12 +99,6 @@ public class PatchAtsScorecardRequest {
     }
 
     public PatchAtsScorecardRequest withAtsScorecard(AtsScorecard atsScorecard) {
-        Utils.checkNotNull(atsScorecard, "atsScorecard");
-        this.atsScorecard = Optional.ofNullable(atsScorecard);
-        return this;
-    }
-
-    public PatchAtsScorecardRequest withAtsScorecard(Optional<? extends AtsScorecard> atsScorecard) {
         Utils.checkNotNull(atsScorecard, "atsScorecard");
         this.atsScorecard = atsScorecard;
         return this;
@@ -182,7 +176,7 @@ public class PatchAtsScorecardRequest {
     
     public final static class Builder {
  
-        private Optional<? extends AtsScorecard> atsScorecard = Optional.empty();
+        private AtsScorecard atsScorecard;
  
         private String connectionId;
  
@@ -195,12 +189,6 @@ public class PatchAtsScorecardRequest {
         }
 
         public Builder atsScorecard(AtsScorecard atsScorecard) {
-            Utils.checkNotNull(atsScorecard, "atsScorecard");
-            this.atsScorecard = Optional.ofNullable(atsScorecard);
-            return this;
-        }
-
-        public Builder atsScorecard(Optional<? extends AtsScorecard> atsScorecard) {
             Utils.checkNotNull(atsScorecard, "atsScorecard");
             this.atsScorecard = atsScorecard;
             return this;

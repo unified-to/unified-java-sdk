@@ -24,6 +24,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateRepoBranchRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateRepoBranchResponse;
+import com.unifiedapi.unifiedto.models.shared.RepoBranch;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -38,6 +39,10 @@ public class Application {
             .build();
 
         CreateRepoBranchRequest req = CreateRepoBranchRequest.builder()
+                .repoBranch(RepoBranch.builder()
+                    .name("<value>")
+                    .repoId("<id>")
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -193,6 +198,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchRepoBranchRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchRepoBranchResponse;
+import com.unifiedapi.unifiedto.models.shared.RepoBranch;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -207,6 +213,10 @@ public class Application {
             .build();
 
         PatchRepoBranchRequest req = PatchRepoBranchRequest.builder()
+                .repoBranch(RepoBranch.builder()
+                    .name("<value>")
+                    .repoId("<id>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -305,6 +315,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateRepoBranchRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateRepoBranchResponse;
+import com.unifiedapi.unifiedto.models.shared.RepoBranch;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -319,6 +330,10 @@ public class Application {
             .build();
 
         UpdateRepoBranchRequest req = UpdateRepoBranchRequest.builder()
+                .repoBranch(RepoBranch.builder()
+                    .name("<value>")
+                    .repoId("<id>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

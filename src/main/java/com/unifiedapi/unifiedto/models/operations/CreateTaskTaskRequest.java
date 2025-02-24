@@ -21,7 +21,7 @@ import java.util.Optional;
 public class CreateTaskTaskRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends TaskTask> taskTask;
+    private TaskTask taskTask;
 
     /**
      * ID of the connection
@@ -37,7 +37,7 @@ public class CreateTaskTaskRequest {
 
     @JsonCreator
     public CreateTaskTaskRequest(
-            Optional<? extends TaskTask> taskTask,
+            TaskTask taskTask,
             String connectionId,
             Optional<? extends List<String>> fields) {
         Utils.checkNotNull(taskTask, "taskTask");
@@ -49,14 +49,14 @@ public class CreateTaskTaskRequest {
     }
     
     public CreateTaskTaskRequest(
+            TaskTask taskTask,
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty());
+        this(taskTask, connectionId, Optional.empty());
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<TaskTask> taskTask() {
-        return (Optional<TaskTask>) taskTask;
+    public TaskTask taskTask() {
+        return taskTask;
     }
 
     /**
@@ -81,12 +81,6 @@ public class CreateTaskTaskRequest {
     }
 
     public CreateTaskTaskRequest withTaskTask(TaskTask taskTask) {
-        Utils.checkNotNull(taskTask, "taskTask");
-        this.taskTask = Optional.ofNullable(taskTask);
-        return this;
-    }
-
-    public CreateTaskTaskRequest withTaskTask(Optional<? extends TaskTask> taskTask) {
         Utils.checkNotNull(taskTask, "taskTask");
         this.taskTask = taskTask;
         return this;
@@ -152,7 +146,7 @@ public class CreateTaskTaskRequest {
     
     public final static class Builder {
  
-        private Optional<? extends TaskTask> taskTask = Optional.empty();
+        private TaskTask taskTask;
  
         private String connectionId;
  
@@ -163,12 +157,6 @@ public class CreateTaskTaskRequest {
         }
 
         public Builder taskTask(TaskTask taskTask) {
-            Utils.checkNotNull(taskTask, "taskTask");
-            this.taskTask = Optional.ofNullable(taskTask);
-            return this;
-        }
-
-        public Builder taskTask(Optional<? extends TaskTask> taskTask) {
             Utils.checkNotNull(taskTask, "taskTask");
             this.taskTask = taskTask;
             return this;

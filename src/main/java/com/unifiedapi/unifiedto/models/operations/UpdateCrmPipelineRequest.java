@@ -21,7 +21,7 @@ import java.util.Optional;
 public class UpdateCrmPipelineRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends CrmPipeline> crmPipeline;
+    private CrmPipeline crmPipeline;
 
     /**
      * ID of the connection
@@ -43,7 +43,7 @@ public class UpdateCrmPipelineRequest {
 
     @JsonCreator
     public UpdateCrmPipelineRequest(
-            Optional<? extends CrmPipeline> crmPipeline,
+            CrmPipeline crmPipeline,
             String connectionId,
             Optional<? extends List<String>> fields,
             String id) {
@@ -58,15 +58,15 @@ public class UpdateCrmPipelineRequest {
     }
     
     public UpdateCrmPipelineRequest(
+            CrmPipeline crmPipeline,
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, Optional.empty(), id);
+        this(crmPipeline, connectionId, Optional.empty(), id);
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<CrmPipeline> crmPipeline() {
-        return (Optional<CrmPipeline>) crmPipeline;
+    public CrmPipeline crmPipeline() {
+        return crmPipeline;
     }
 
     /**
@@ -99,12 +99,6 @@ public class UpdateCrmPipelineRequest {
     }
 
     public UpdateCrmPipelineRequest withCrmPipeline(CrmPipeline crmPipeline) {
-        Utils.checkNotNull(crmPipeline, "crmPipeline");
-        this.crmPipeline = Optional.ofNullable(crmPipeline);
-        return this;
-    }
-
-    public UpdateCrmPipelineRequest withCrmPipeline(Optional<? extends CrmPipeline> crmPipeline) {
         Utils.checkNotNull(crmPipeline, "crmPipeline");
         this.crmPipeline = crmPipeline;
         return this;
@@ -182,7 +176,7 @@ public class UpdateCrmPipelineRequest {
     
     public final static class Builder {
  
-        private Optional<? extends CrmPipeline> crmPipeline = Optional.empty();
+        private CrmPipeline crmPipeline;
  
         private String connectionId;
  
@@ -195,12 +189,6 @@ public class UpdateCrmPipelineRequest {
         }
 
         public Builder crmPipeline(CrmPipeline crmPipeline) {
-            Utils.checkNotNull(crmPipeline, "crmPipeline");
-            this.crmPipeline = Optional.ofNullable(crmPipeline);
-            return this;
-        }
-
-        public Builder crmPipeline(Optional<? extends CrmPipeline> crmPipeline) {
             Utils.checkNotNull(crmPipeline, "crmPipeline");
             this.crmPipeline = crmPipeline;
             return this;
