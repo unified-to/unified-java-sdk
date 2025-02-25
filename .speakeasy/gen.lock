@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 3c83ac41ca19a0aa4a6ad1896f8a1398
+  docChecksum: 9075a5eee0d5e437f7630ea01fb59832
   docVersion: "1.0"
-  speakeasyVersion: 1.501.0
-  generationVersion: 2.522.1
-  releaseVersion: 0.27.2
-  configChecksum: dec9f4fa9b15bb37954b6460ba1a2d93
+  speakeasyVersion: 1.502.0
+  generationVersion: 2.524.1
+  releaseVersion: 0.27.3
+  configChecksum: f4ed30bc8c0e9fd78a14d5343b3a6740
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -988,6 +988,7 @@ generatedFiles:
   - docs/models/shared/ListCourseId.md
   - docs/models/shared/ListCustomerId.md
   - docs/models/shared/ListDealId.md
+  - docs/models/shared/ListEndLe.md
   - docs/models/shared/ListInstructorId.md
   - docs/models/shared/ListInterviewId.md
   - docs/models/shared/ListInvoiceId.md
@@ -1012,6 +1013,7 @@ generatedFiles:
   - docs/models/shared/ListSortByName.md
   - docs/models/shared/ListSortByUpdatedAt.md
   - docs/models/shared/ListSpaceId.md
+  - docs/models/shared/ListStartGte.md
   - docs/models/shared/ListStudentId.md
   - docs/models/shared/ListTaskId.md
   - docs/models/shared/ListTicketId.md
@@ -2728,6 +2730,7 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListCourseId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListCustomerId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListDealId.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/ListEndLe.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListInstructorId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListInterviewId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListInvoiceId.java
@@ -2752,6 +2755,7 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListSortByName.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListSortByUpdatedAt.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListSpaceId.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/ListStartGte.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListStudentId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListTaskId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListTicketId.java

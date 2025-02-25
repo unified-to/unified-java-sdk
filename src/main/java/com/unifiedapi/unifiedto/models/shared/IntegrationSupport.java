@@ -77,6 +77,10 @@ public class IntegrationSupport {
     private Optional<? extends ListDealId> listDealId;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("list_end_le")
+    private Optional<? extends ListEndLe> listEndLe;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_instructor_id")
     private Optional<? extends ListInstructorId> listInstructorId;
 
@@ -171,6 +175,10 @@ public class IntegrationSupport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_space_id")
     private Optional<? extends ListSpaceId> listSpaceId;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("list_start_gte")
+    private Optional<? extends ListStartGte> listStartGte;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_student_id")
@@ -306,6 +314,7 @@ public class IntegrationSupport {
             @JsonProperty("list_course_id") Optional<? extends ListCourseId> listCourseId,
             @JsonProperty("list_customer_id") Optional<? extends ListCustomerId> listCustomerId,
             @JsonProperty("list_deal_id") Optional<? extends ListDealId> listDealId,
+            @JsonProperty("list_end_le") Optional<? extends ListEndLe> listEndLe,
             @JsonProperty("list_instructor_id") Optional<? extends ListInstructorId> listInstructorId,
             @JsonProperty("list_interview_id") Optional<? extends ListInterviewId> listInterviewId,
             @JsonProperty("list_invoice_id") Optional<? extends ListInvoiceId> listInvoiceId,
@@ -330,6 +339,7 @@ public class IntegrationSupport {
             @JsonProperty("list_sort_by_name") Optional<? extends ListSortByName> listSortByName,
             @JsonProperty("list_sort_by_updated_at") Optional<? extends ListSortByUpdatedAt> listSortByUpdatedAt,
             @JsonProperty("list_space_id") Optional<? extends ListSpaceId> listSpaceId,
+            @JsonProperty("list_start_gte") Optional<? extends ListStartGte> listStartGte,
             @JsonProperty("list_student_id") Optional<? extends ListStudentId> listStudentId,
             @JsonProperty("list_task_id") Optional<? extends ListTaskId> listTaskId,
             @JsonProperty("list_ticket_id") Optional<? extends ListTicketId> listTicketId,
@@ -372,6 +382,7 @@ public class IntegrationSupport {
         Utils.checkNotNull(listCourseId, "listCourseId");
         Utils.checkNotNull(listCustomerId, "listCustomerId");
         Utils.checkNotNull(listDealId, "listDealId");
+        Utils.checkNotNull(listEndLe, "listEndLe");
         Utils.checkNotNull(listInstructorId, "listInstructorId");
         Utils.checkNotNull(listInterviewId, "listInterviewId");
         Utils.checkNotNull(listInvoiceId, "listInvoiceId");
@@ -396,6 +407,7 @@ public class IntegrationSupport {
         Utils.checkNotNull(listSortByName, "listSortByName");
         Utils.checkNotNull(listSortByUpdatedAt, "listSortByUpdatedAt");
         Utils.checkNotNull(listSpaceId, "listSpaceId");
+        Utils.checkNotNull(listStartGte, "listStartGte");
         Utils.checkNotNull(listStudentId, "listStudentId");
         Utils.checkNotNull(listTaskId, "listTaskId");
         Utils.checkNotNull(listTicketId, "listTicketId");
@@ -438,6 +450,7 @@ public class IntegrationSupport {
         this.listCourseId = listCourseId;
         this.listCustomerId = listCustomerId;
         this.listDealId = listDealId;
+        this.listEndLe = listEndLe;
         this.listInstructorId = listInstructorId;
         this.listInterviewId = listInterviewId;
         this.listInvoiceId = listInvoiceId;
@@ -462,6 +475,7 @@ public class IntegrationSupport {
         this.listSortByName = listSortByName;
         this.listSortByUpdatedAt = listSortByUpdatedAt;
         this.listSpaceId = listSpaceId;
+        this.listStartGte = listStartGte;
         this.listStudentId = listStudentId;
         this.listTaskId = listTaskId;
         this.listTicketId = listTicketId;
@@ -494,7 +508,7 @@ public class IntegrationSupport {
     }
     
     public IntegrationSupport() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -573,6 +587,12 @@ public class IntegrationSupport {
     @JsonIgnore
     public Optional<ListDealId> listDealId() {
         return (Optional<ListDealId>) listDealId;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<ListEndLe> listEndLe() {
+        return (Optional<ListEndLe>) listEndLe;
     }
 
     @SuppressWarnings("unchecked")
@@ -717,6 +737,12 @@ public class IntegrationSupport {
     @JsonIgnore
     public Optional<ListSpaceId> listSpaceId() {
         return (Optional<ListSpaceId>) listSpaceId;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<ListStartGte> listStartGte() {
+        return (Optional<ListStartGte>) listStartGte;
     }
 
     @SuppressWarnings("unchecked")
@@ -1056,6 +1082,18 @@ public class IntegrationSupport {
         return this;
     }
 
+    public IntegrationSupport withListEndLe(ListEndLe listEndLe) {
+        Utils.checkNotNull(listEndLe, "listEndLe");
+        this.listEndLe = Optional.ofNullable(listEndLe);
+        return this;
+    }
+
+    public IntegrationSupport withListEndLe(Optional<? extends ListEndLe> listEndLe) {
+        Utils.checkNotNull(listEndLe, "listEndLe");
+        this.listEndLe = listEndLe;
+        return this;
+    }
+
     public IntegrationSupport withListInstructorId(ListInstructorId listInstructorId) {
         Utils.checkNotNull(listInstructorId, "listInstructorId");
         this.listInstructorId = Optional.ofNullable(listInstructorId);
@@ -1341,6 +1379,18 @@ public class IntegrationSupport {
     public IntegrationSupport withListSpaceId(Optional<? extends ListSpaceId> listSpaceId) {
         Utils.checkNotNull(listSpaceId, "listSpaceId");
         this.listSpaceId = listSpaceId;
+        return this;
+    }
+
+    public IntegrationSupport withListStartGte(ListStartGte listStartGte) {
+        Utils.checkNotNull(listStartGte, "listStartGte");
+        this.listStartGte = Optional.ofNullable(listStartGte);
+        return this;
+    }
+
+    public IntegrationSupport withListStartGte(Optional<? extends ListStartGte> listStartGte) {
+        Utils.checkNotNull(listStartGte, "listStartGte");
+        this.listStartGte = listStartGte;
         return this;
     }
 
@@ -1721,6 +1771,7 @@ public class IntegrationSupport {
             Objects.deepEquals(this.listCourseId, other.listCourseId) &&
             Objects.deepEquals(this.listCustomerId, other.listCustomerId) &&
             Objects.deepEquals(this.listDealId, other.listDealId) &&
+            Objects.deepEquals(this.listEndLe, other.listEndLe) &&
             Objects.deepEquals(this.listInstructorId, other.listInstructorId) &&
             Objects.deepEquals(this.listInterviewId, other.listInterviewId) &&
             Objects.deepEquals(this.listInvoiceId, other.listInvoiceId) &&
@@ -1745,6 +1796,7 @@ public class IntegrationSupport {
             Objects.deepEquals(this.listSortByName, other.listSortByName) &&
             Objects.deepEquals(this.listSortByUpdatedAt, other.listSortByUpdatedAt) &&
             Objects.deepEquals(this.listSpaceId, other.listSpaceId) &&
+            Objects.deepEquals(this.listStartGte, other.listStartGte) &&
             Objects.deepEquals(this.listStudentId, other.listStudentId) &&
             Objects.deepEquals(this.listTaskId, other.listTaskId) &&
             Objects.deepEquals(this.listTicketId, other.listTicketId) &&
@@ -1792,6 +1844,7 @@ public class IntegrationSupport {
             listCourseId,
             listCustomerId,
             listDealId,
+            listEndLe,
             listInstructorId,
             listInterviewId,
             listInvoiceId,
@@ -1816,6 +1869,7 @@ public class IntegrationSupport {
             listSortByName,
             listSortByUpdatedAt,
             listSpaceId,
+            listStartGte,
             listStudentId,
             listTaskId,
             listTicketId,
@@ -1863,6 +1917,7 @@ public class IntegrationSupport {
                 "listCourseId", listCourseId,
                 "listCustomerId", listCustomerId,
                 "listDealId", listDealId,
+                "listEndLe", listEndLe,
                 "listInstructorId", listInstructorId,
                 "listInterviewId", listInterviewId,
                 "listInvoiceId", listInvoiceId,
@@ -1887,6 +1942,7 @@ public class IntegrationSupport {
                 "listSortByName", listSortByName,
                 "listSortByUpdatedAt", listSortByUpdatedAt,
                 "listSpaceId", listSpaceId,
+                "listStartGte", listStartGte,
                 "listStudentId", listStudentId,
                 "listTaskId", listTaskId,
                 "listTicketId", listTicketId,
@@ -1946,6 +2002,8 @@ public class IntegrationSupport {
  
         private Optional<? extends ListDealId> listDealId = Optional.empty();
  
+        private Optional<? extends ListEndLe> listEndLe = Optional.empty();
+ 
         private Optional<? extends ListInstructorId> listInstructorId = Optional.empty();
  
         private Optional<? extends ListInterviewId> listInterviewId = Optional.empty();
@@ -1993,6 +2051,8 @@ public class IntegrationSupport {
         private Optional<? extends ListSortByUpdatedAt> listSortByUpdatedAt = Optional.empty();
  
         private Optional<? extends ListSpaceId> listSpaceId = Optional.empty();
+ 
+        private Optional<? extends ListStartGte> listStartGte = Optional.empty();
  
         private Optional<? extends ListStudentId> listStudentId = Optional.empty();
  
@@ -2209,6 +2269,18 @@ public class IntegrationSupport {
         public Builder listDealId(Optional<? extends ListDealId> listDealId) {
             Utils.checkNotNull(listDealId, "listDealId");
             this.listDealId = listDealId;
+            return this;
+        }
+
+        public Builder listEndLe(ListEndLe listEndLe) {
+            Utils.checkNotNull(listEndLe, "listEndLe");
+            this.listEndLe = Optional.ofNullable(listEndLe);
+            return this;
+        }
+
+        public Builder listEndLe(Optional<? extends ListEndLe> listEndLe) {
+            Utils.checkNotNull(listEndLe, "listEndLe");
+            this.listEndLe = listEndLe;
             return this;
         }
 
@@ -2497,6 +2569,18 @@ public class IntegrationSupport {
         public Builder listSpaceId(Optional<? extends ListSpaceId> listSpaceId) {
             Utils.checkNotNull(listSpaceId, "listSpaceId");
             this.listSpaceId = listSpaceId;
+            return this;
+        }
+
+        public Builder listStartGte(ListStartGte listStartGte) {
+            Utils.checkNotNull(listStartGte, "listStartGte");
+            this.listStartGte = Optional.ofNullable(listStartGte);
+            return this;
+        }
+
+        public Builder listStartGte(Optional<? extends ListStartGte> listStartGte) {
+            Utils.checkNotNull(listStartGte, "listStartGte");
+            this.listStartGte = listStartGte;
             return this;
         }
 
@@ -2869,6 +2953,7 @@ public class IntegrationSupport {
                 listCourseId,
                 listCustomerId,
                 listDealId,
+                listEndLe,
                 listInstructorId,
                 listInterviewId,
                 listInvoiceId,
@@ -2893,6 +2978,7 @@ public class IntegrationSupport {
                 listSortByName,
                 listSortByUpdatedAt,
                 listSpaceId,
+                listStartGte,
                 listStudentId,
                 listTaskId,
                 listTicketId,
