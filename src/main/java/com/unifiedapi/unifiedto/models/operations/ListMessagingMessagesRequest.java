@@ -30,6 +30,9 @@ public class ListMessagingMessagesRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
     private String connectionId;
 
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_le")
+    private Optional<String> endLe;
+
     /**
      * Comma-delimited fields to return
      */
@@ -57,6 +60,9 @@ public class ListMessagingMessagesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     private Optional<String> sort;
 
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_gte")
+    private Optional<String> startGte;
+
     /**
      * Return only results whose updated date is equal or greater to this value
      */
@@ -67,6 +73,7 @@ public class ListMessagingMessagesRequest {
     public ListMessagingMessagesRequest(
             Optional<String> channelId,
             String connectionId,
+            Optional<String> endLe,
             Optional<? extends List<String>> fields,
             Optional<Double> limit,
             Optional<Double> offset,
@@ -74,9 +81,11 @@ public class ListMessagingMessagesRequest {
             Optional<String> parentId,
             Optional<String> query,
             Optional<String> sort,
+            Optional<String> startGte,
             Optional<OffsetDateTime> updatedGte) {
         Utils.checkNotNull(channelId, "channelId");
         Utils.checkNotNull(connectionId, "connectionId");
+        Utils.checkNotNull(endLe, "endLe");
         Utils.checkNotNull(fields, "fields");
         Utils.checkNotNull(limit, "limit");
         Utils.checkNotNull(offset, "offset");
@@ -84,9 +93,11 @@ public class ListMessagingMessagesRequest {
         Utils.checkNotNull(parentId, "parentId");
         Utils.checkNotNull(query, "query");
         Utils.checkNotNull(sort, "sort");
+        Utils.checkNotNull(startGte, "startGte");
         Utils.checkNotNull(updatedGte, "updatedGte");
         this.channelId = channelId;
         this.connectionId = connectionId;
+        this.endLe = endLe;
         this.fields = fields;
         this.limit = limit;
         this.offset = offset;
@@ -94,12 +105,13 @@ public class ListMessagingMessagesRequest {
         this.parentId = parentId;
         this.query = query;
         this.sort = sort;
+        this.startGte = startGte;
         this.updatedGte = updatedGte;
     }
     
     public ListMessagingMessagesRequest(
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -113,6 +125,11 @@ public class ListMessagingMessagesRequest {
     @JsonIgnore
     public String connectionId() {
         return connectionId;
+    }
+
+    @JsonIgnore
+    public Optional<String> endLe() {
+        return endLe;
     }
 
     /**
@@ -157,6 +174,11 @@ public class ListMessagingMessagesRequest {
         return sort;
     }
 
+    @JsonIgnore
+    public Optional<String> startGte() {
+        return startGte;
+    }
+
     /**
      * Return only results whose updated date is equal or greater to this value
      */
@@ -187,6 +209,18 @@ public class ListMessagingMessagesRequest {
     public ListMessagingMessagesRequest withConnectionId(String connectionId) {
         Utils.checkNotNull(connectionId, "connectionId");
         this.connectionId = connectionId;
+        return this;
+    }
+
+    public ListMessagingMessagesRequest withEndLe(String endLe) {
+        Utils.checkNotNull(endLe, "endLe");
+        this.endLe = Optional.ofNullable(endLe);
+        return this;
+    }
+
+    public ListMessagingMessagesRequest withEndLe(Optional<String> endLe) {
+        Utils.checkNotNull(endLe, "endLe");
+        this.endLe = endLe;
         return this;
     }
 
@@ -286,6 +320,18 @@ public class ListMessagingMessagesRequest {
         return this;
     }
 
+    public ListMessagingMessagesRequest withStartGte(String startGte) {
+        Utils.checkNotNull(startGte, "startGte");
+        this.startGte = Optional.ofNullable(startGte);
+        return this;
+    }
+
+    public ListMessagingMessagesRequest withStartGte(Optional<String> startGte) {
+        Utils.checkNotNull(startGte, "startGte");
+        this.startGte = startGte;
+        return this;
+    }
+
     /**
      * Return only results whose updated date is equal or greater to this value
      */
@@ -316,6 +362,7 @@ public class ListMessagingMessagesRequest {
         return 
             Objects.deepEquals(this.channelId, other.channelId) &&
             Objects.deepEquals(this.connectionId, other.connectionId) &&
+            Objects.deepEquals(this.endLe, other.endLe) &&
             Objects.deepEquals(this.fields, other.fields) &&
             Objects.deepEquals(this.limit, other.limit) &&
             Objects.deepEquals(this.offset, other.offset) &&
@@ -323,6 +370,7 @@ public class ListMessagingMessagesRequest {
             Objects.deepEquals(this.parentId, other.parentId) &&
             Objects.deepEquals(this.query, other.query) &&
             Objects.deepEquals(this.sort, other.sort) &&
+            Objects.deepEquals(this.startGte, other.startGte) &&
             Objects.deepEquals(this.updatedGte, other.updatedGte);
     }
     
@@ -331,6 +379,7 @@ public class ListMessagingMessagesRequest {
         return Objects.hash(
             channelId,
             connectionId,
+            endLe,
             fields,
             limit,
             offset,
@@ -338,6 +387,7 @@ public class ListMessagingMessagesRequest {
             parentId,
             query,
             sort,
+            startGte,
             updatedGte);
     }
     
@@ -346,6 +396,7 @@ public class ListMessagingMessagesRequest {
         return Utils.toString(ListMessagingMessagesRequest.class,
                 "channelId", channelId,
                 "connectionId", connectionId,
+                "endLe", endLe,
                 "fields", fields,
                 "limit", limit,
                 "offset", offset,
@@ -353,6 +404,7 @@ public class ListMessagingMessagesRequest {
                 "parentId", parentId,
                 "query", query,
                 "sort", sort,
+                "startGte", startGte,
                 "updatedGte", updatedGte);
     }
     
@@ -361,6 +413,8 @@ public class ListMessagingMessagesRequest {
         private Optional<String> channelId = Optional.empty();
  
         private String connectionId;
+ 
+        private Optional<String> endLe = Optional.empty();
  
         private Optional<? extends List<String>> fields = Optional.empty();
  
@@ -375,6 +429,8 @@ public class ListMessagingMessagesRequest {
         private Optional<String> query = Optional.empty();
  
         private Optional<String> sort = Optional.empty();
+ 
+        private Optional<String> startGte = Optional.empty();
  
         private Optional<OffsetDateTime> updatedGte = Optional.empty();  
         
@@ -400,6 +456,18 @@ public class ListMessagingMessagesRequest {
         public Builder connectionId(String connectionId) {
             Utils.checkNotNull(connectionId, "connectionId");
             this.connectionId = connectionId;
+            return this;
+        }
+
+        public Builder endLe(String endLe) {
+            Utils.checkNotNull(endLe, "endLe");
+            this.endLe = Optional.ofNullable(endLe);
+            return this;
+        }
+
+        public Builder endLe(Optional<String> endLe) {
+            Utils.checkNotNull(endLe, "endLe");
+            this.endLe = endLe;
             return this;
         }
 
@@ -499,6 +567,18 @@ public class ListMessagingMessagesRequest {
             return this;
         }
 
+        public Builder startGte(String startGte) {
+            Utils.checkNotNull(startGte, "startGte");
+            this.startGte = Optional.ofNullable(startGte);
+            return this;
+        }
+
+        public Builder startGte(Optional<String> startGte) {
+            Utils.checkNotNull(startGte, "startGte");
+            this.startGte = startGte;
+            return this;
+        }
+
         /**
          * Return only results whose updated date is equal or greater to this value
          */
@@ -521,6 +601,7 @@ public class ListMessagingMessagesRequest {
             return new ListMessagingMessagesRequest(
                 channelId,
                 connectionId,
+                endLe,
                 fields,
                 limit,
                 offset,
@@ -528,6 +609,7 @@ public class ListMessagingMessagesRequest {
                 parentId,
                 query,
                 sort,
+                startGte,
                 updatedGte);
         }
     }
