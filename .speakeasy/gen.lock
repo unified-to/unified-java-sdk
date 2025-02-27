@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: eed3e21cce15d18d6d589ec03e5be2ce
+  docChecksum: a642c7bece4e0a94752d9efa149625ea
   docVersion: "1.0"
-  speakeasyVersion: 1.504.1
-  generationVersion: 2.529.2
-  releaseVersion: 0.27.4
-  configChecksum: 5c7c04a164662154ee6b9c8f4646eacf
+  speakeasyVersion: 1.505.1
+  generationVersion: 2.531.0
+  releaseVersion: 0.27.5
+  configChecksum: b22cc62026fc0ac8c1890fda6ec91793
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -850,6 +850,8 @@ generatedFiles:
   - docs/models/shared/AtsApplicationRaw.md
   - docs/models/shared/AtsApplicationStatus.md
   - docs/models/shared/AtsCandidate.md
+  - docs/models/shared/AtsCandidateEducation.md
+  - docs/models/shared/AtsCandidateExperience.md
   - docs/models/shared/AtsCandidateRaw.md
   - docs/models/shared/AtsCompany.md
   - docs/models/shared/AtsCompanyRaw.md
@@ -2592,6 +2594,8 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AtsApplicationRaw.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AtsApplicationStatus.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AtsCandidate.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/AtsCandidateEducation.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/AtsCandidateExperience.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AtsCandidateRaw.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AtsCompany.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AtsCompanyRaw.java
