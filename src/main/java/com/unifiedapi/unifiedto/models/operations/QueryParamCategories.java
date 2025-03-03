@@ -29,7 +29,8 @@ public enum QueryParamCategories {
     SCIM("scim"),
     LMS("lms"),
     REPO("repo"),
-    METADATA("metadata");
+    METADATA("metadata"),
+    CALENDAR("calendar");
 
     @JsonValue
     private final String value;

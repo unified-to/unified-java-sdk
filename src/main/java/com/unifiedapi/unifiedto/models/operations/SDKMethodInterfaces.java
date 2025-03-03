@@ -730,6 +730,204 @@ public class SDKMethodInterfaces {
     }
 
 
+    public interface MethodCallCreateCalendarCalendar {
+        CreateCalendarCalendarResponse createCalendarCalendar(
+            CreateCalendarCalendarRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallCreateCalendarEvent {
+        CreateCalendarEventResponse createCalendarEvent(
+            CreateCalendarEventRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallCreateCalendarLink {
+        CreateCalendarLinkResponse createCalendarLink(
+            CreateCalendarLinkRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallGetCalendarCalendar {
+        GetCalendarCalendarResponse getCalendarCalendar(
+            GetCalendarCalendarRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallGetCalendarEvent {
+        GetCalendarEventResponse getCalendarEvent(
+            GetCalendarEventRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallGetCalendarLink {
+        GetCalendarLinkResponse getCalendarLink(
+            GetCalendarLinkRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallGetCalendarRecording {
+        GetCalendarRecordingResponse getCalendarRecording(
+            GetCalendarRecordingRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallListCalendarBusies {
+        ListCalendarBusiesResponse listCalendarBusies(
+            ListCalendarBusiesRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallListCalendarCalendars {
+        ListCalendarCalendarsResponse listCalendarCalendars(
+            ListCalendarCalendarsRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallListCalendarEvents {
+        ListCalendarEventsResponse listCalendarEvents(
+            ListCalendarEventsRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallListCalendarLinks {
+        ListCalendarLinksResponse listCalendarLinks(
+            ListCalendarLinksRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallListCalendarRecordings {
+        ListCalendarRecordingsResponse listCalendarRecordings(
+            ListCalendarRecordingsRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallPatchCalendarCalendar {
+        PatchCalendarCalendarResponse patchCalendarCalendar(
+            PatchCalendarCalendarRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallPatchCalendarEvent {
+        PatchCalendarEventResponse patchCalendarEvent(
+            PatchCalendarEventRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallPatchCalendarLink {
+        PatchCalendarLinkResponse patchCalendarLink(
+            PatchCalendarLinkRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallRemoveCalendarCalendar {
+        RemoveCalendarCalendarResponse removeCalendarCalendar(
+            RemoveCalendarCalendarRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallRemoveCalendarEvent {
+        RemoveCalendarEventResponse removeCalendarEvent(
+            RemoveCalendarEventRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallRemoveCalendarLink {
+        RemoveCalendarLinkResponse removeCalendarLink(
+            RemoveCalendarLinkRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallUpdateCalendarCalendar {
+        UpdateCalendarCalendarResponse updateCalendarCalendar(
+            UpdateCalendarCalendarRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallUpdateCalendarEvent {
+        UpdateCalendarEventResponse updateCalendarEvent(
+            UpdateCalendarEventRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallUpdateCalendarLink {
+        UpdateCalendarLinkResponse updateCalendarLink(
+            UpdateCalendarLinkRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallCreateCrmEvent {
+        CreateCrmEventResponse createCrmEvent(
+            CreateCrmEventRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallGetCrmEvent {
+        GetCrmEventResponse getCrmEvent(
+            GetCrmEventRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallListCrmEvents {
+        ListCrmEventsResponse listCrmEvents(
+            ListCrmEventsRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallPatchCrmEvent {
+        PatchCrmEventResponse patchCrmEvent(
+            PatchCrmEventRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallRemoveCrmEvent {
+        RemoveCrmEventResponse removeCrmEvent(
+            RemoveCrmEventRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallUpdateCrmEvent {
+        UpdateCrmEventResponse updateCrmEvent(
+            UpdateCrmEventRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallCreatePaymentLink {
+        CreatePaymentLinkResponse createPaymentLink(
+            CreatePaymentLinkRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallGetPaymentLink {
+        GetPaymentLinkResponse getPaymentLink(
+            GetPaymentLinkRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallListPaymentLinks {
+        ListPaymentLinksResponse listPaymentLinks(
+            ListPaymentLinksRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallPatchPaymentLink {
+        PatchPaymentLinkResponse patchPaymentLink(
+            PatchPaymentLinkRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallRemovePaymentLink {
+        RemovePaymentLinkResponse removePaymentLink(
+            RemovePaymentLinkRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallUpdatePaymentLink {
+        UpdatePaymentLinkResponse updatePaymentLink(
+            UpdatePaymentLinkRequest request) throws Exception;
+    }
+
+
     public interface MethodCallCreateCommerceCollection {
         CreateCommerceCollectionResponse createCommerceCollection(
             CreateCommerceCollectionRequest request) throws Exception;
@@ -916,12 +1114,6 @@ public class SDKMethodInterfaces {
     }
 
 
-    public interface MethodCallCreateCrmEvent {
-        CreateCrmEventResponse createCrmEvent(
-            CreateCrmEventRequest request) throws Exception;
-    }
-
-
     public interface MethodCallCreateCrmLead {
         CreateCrmLeadResponse createCrmLead(
             CreateCrmLeadRequest request) throws Exception;
@@ -937,12 +1129,6 @@ public class SDKMethodInterfaces {
     public interface MethodCallGetCrmDeal {
         GetCrmDealResponse getCrmDeal(
             GetCrmDealRequest request) throws Exception;
-    }
-
-
-    public interface MethodCallGetCrmEvent {
-        GetCrmEventResponse getCrmEvent(
-            GetCrmEventRequest request) throws Exception;
     }
 
 
@@ -964,12 +1150,6 @@ public class SDKMethodInterfaces {
     }
 
 
-    public interface MethodCallListCrmEvents {
-        ListCrmEventsResponse listCrmEvents(
-            ListCrmEventsRequest request) throws Exception;
-    }
-
-
     public interface MethodCallListCrmLeads {
         ListCrmLeadsResponse listCrmLeads(
             ListCrmLeadsRequest request) throws Exception;
@@ -985,12 +1165,6 @@ public class SDKMethodInterfaces {
     public interface MethodCallPatchCrmDeal {
         PatchCrmDealResponse patchCrmDeal(
             PatchCrmDealRequest request) throws Exception;
-    }
-
-
-    public interface MethodCallPatchCrmEvent {
-        PatchCrmEventResponse patchCrmEvent(
-            PatchCrmEventRequest request) throws Exception;
     }
 
 
@@ -1012,12 +1186,6 @@ public class SDKMethodInterfaces {
     }
 
 
-    public interface MethodCallRemoveCrmEvent {
-        RemoveCrmEventResponse removeCrmEvent(
-            RemoveCrmEventRequest request) throws Exception;
-    }
-
-
     public interface MethodCallRemoveCrmLead {
         RemoveCrmLeadResponse removeCrmLead(
             RemoveCrmLeadRequest request) throws Exception;
@@ -1033,12 +1201,6 @@ public class SDKMethodInterfaces {
     public interface MethodCallUpdateCrmDeal {
         UpdateCrmDealResponse updateCrmDeal(
             UpdateCrmDealRequest request) throws Exception;
-    }
-
-
-    public interface MethodCallUpdateCrmEvent {
-        UpdateCrmEventResponse updateCrmEvent(
-            UpdateCrmEventRequest request) throws Exception;
     }
 
 
@@ -1696,12 +1858,6 @@ public class SDKMethodInterfaces {
     }
 
 
-    public interface MethodCallCreatePaymentLink {
-        CreatePaymentLinkResponse createPaymentLink(
-            CreatePaymentLinkRequest request) throws Exception;
-    }
-
-
     public interface MethodCallCreatePaymentPayment {
         CreatePaymentPaymentResponse createPaymentPayment(
             CreatePaymentPaymentRequest request) throws Exception;
@@ -1711,12 +1867,6 @@ public class SDKMethodInterfaces {
     public interface MethodCallCreatePaymentSubscription {
         CreatePaymentSubscriptionResponse createPaymentSubscription(
             CreatePaymentSubscriptionRequest request) throws Exception;
-    }
-
-
-    public interface MethodCallGetPaymentLink {
-        GetPaymentLinkResponse getPaymentLink(
-            GetPaymentLinkRequest request) throws Exception;
     }
 
 
@@ -1744,12 +1894,6 @@ public class SDKMethodInterfaces {
     }
 
 
-    public interface MethodCallListPaymentLinks {
-        ListPaymentLinksResponse listPaymentLinks(
-            ListPaymentLinksRequest request) throws Exception;
-    }
-
-
     public interface MethodCallListPaymentPayments {
         ListPaymentPaymentsResponse listPaymentPayments(
             ListPaymentPaymentsRequest request) throws Exception;
@@ -1774,12 +1918,6 @@ public class SDKMethodInterfaces {
     }
 
 
-    public interface MethodCallPatchPaymentLink {
-        PatchPaymentLinkResponse patchPaymentLink(
-            PatchPaymentLinkRequest request) throws Exception;
-    }
-
-
     public interface MethodCallPatchPaymentPayment {
         PatchPaymentPaymentResponse patchPaymentPayment(
             PatchPaymentPaymentRequest request) throws Exception;
@@ -1792,12 +1930,6 @@ public class SDKMethodInterfaces {
     }
 
 
-    public interface MethodCallRemovePaymentLink {
-        RemovePaymentLinkResponse removePaymentLink(
-            RemovePaymentLinkRequest request) throws Exception;
-    }
-
-
     public interface MethodCallRemovePaymentPayment {
         RemovePaymentPaymentResponse removePaymentPayment(
             RemovePaymentPaymentRequest request) throws Exception;
@@ -1807,12 +1939,6 @@ public class SDKMethodInterfaces {
     public interface MethodCallRemovePaymentSubscription {
         RemovePaymentSubscriptionResponse removePaymentSubscription(
             RemovePaymentSubscriptionRequest request) throws Exception;
-    }
-
-
-    public interface MethodCallUpdatePaymentLink {
-        UpdatePaymentLinkResponse updatePaymentLink(
-            UpdatePaymentLinkRequest request) throws Exception;
     }
 
 

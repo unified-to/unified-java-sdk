@@ -33,7 +33,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'com.unifiedapi:unifiedto:0.27.5'
+implementation 'com.unifiedapi:unifiedto:0.27.6'
 ```
 
 Maven:
@@ -41,7 +41,7 @@ Maven:
 <dependency>
     <groupId>com.unifiedapi</groupId>
     <artifactId>unifiedto</artifactId>
-    <version>0.27.5</version>
+    <version>0.27.6</version>
 </dependency>
 ```
 
@@ -253,6 +253,34 @@ public class Application {
 * [patchRepoBranch](docs/sdks/branch/README.md#patchrepobranch) - Update a branch
 * [removeRepoBranch](docs/sdks/branch/README.md#removerepobranch) - Remove a branch
 * [updateRepoBranch](docs/sdks/branch/README.md#updaterepobranch) - Update a branch
+
+### [busy()](docs/sdks/busy/README.md)
+
+* [listCalendarBusies](docs/sdks/busy/README.md#listcalendarbusies) - List all busies
+
+### [calendar()](docs/sdks/calendar/README.md)
+
+* [createCalendarCalendar](docs/sdks/calendar/README.md#createcalendarcalendar) - Create a calendar
+* [createCalendarEvent](docs/sdks/calendar/README.md#createcalendarevent) - Create an event
+* [createCalendarLink](docs/sdks/calendar/README.md#createcalendarlink) - Create a link
+* [getCalendarCalendar](docs/sdks/calendar/README.md#getcalendarcalendar) - Retrieve a calendar
+* [getCalendarEvent](docs/sdks/calendar/README.md#getcalendarevent) - Retrieve an event
+* [getCalendarLink](docs/sdks/calendar/README.md#getcalendarlink) - Retrieve a link
+* [getCalendarRecording](docs/sdks/calendar/README.md#getcalendarrecording) - Retrieve a recording
+* [listCalendarBusies](docs/sdks/calendar/README.md#listcalendarbusies) - List all busies
+* [listCalendarCalendars](docs/sdks/calendar/README.md#listcalendarcalendars) - List all calendars
+* [listCalendarEvents](docs/sdks/calendar/README.md#listcalendarevents) - List all events
+* [listCalendarLinks](docs/sdks/calendar/README.md#listcalendarlinks) - List all links
+* [listCalendarRecordings](docs/sdks/calendar/README.md#listcalendarrecordings) - List all recordings
+* [patchCalendarCalendar](docs/sdks/calendar/README.md#patchcalendarcalendar) - Update a calendar
+* [patchCalendarEvent](docs/sdks/calendar/README.md#patchcalendarevent) - Update an event
+* [patchCalendarLink](docs/sdks/calendar/README.md#patchcalendarlink) - Update a link
+* [removeCalendarCalendar](docs/sdks/calendar/README.md#removecalendarcalendar) - Remove a calendar
+* [removeCalendarEvent](docs/sdks/calendar/README.md#removecalendarevent) - Remove an event
+* [removeCalendarLink](docs/sdks/calendar/README.md#removecalendarlink) - Remove a link
+* [updateCalendarCalendar](docs/sdks/calendar/README.md#updatecalendarcalendar) - Update a calendar
+* [updateCalendarEvent](docs/sdks/calendar/README.md#updatecalendarevent) - Update an event
+* [updateCalendarLink](docs/sdks/calendar/README.md#updatecalendarlink) - Update a link
 
 ### [call()](docs/sdks/call/README.md)
 
@@ -480,11 +508,17 @@ public class Application {
 
 ### [event()](docs/sdks/event/README.md)
 
+* [createCalendarEvent](docs/sdks/event/README.md#createcalendarevent) - Create an event
 * [createCrmEvent](docs/sdks/event/README.md#createcrmevent) - Create an event
+* [getCalendarEvent](docs/sdks/event/README.md#getcalendarevent) - Retrieve an event
 * [getCrmEvent](docs/sdks/event/README.md#getcrmevent) - Retrieve an event
+* [listCalendarEvents](docs/sdks/event/README.md#listcalendarevents) - List all events
 * [listCrmEvents](docs/sdks/event/README.md#listcrmevents) - List all events
+* [patchCalendarEvent](docs/sdks/event/README.md#patchcalendarevent) - Update an event
 * [patchCrmEvent](docs/sdks/event/README.md#patchcrmevent) - Update an event
+* [removeCalendarEvent](docs/sdks/event/README.md#removecalendarevent) - Remove an event
 * [removeCrmEvent](docs/sdks/event/README.md#removecrmevent) - Remove an event
+* [updateCalendarEvent](docs/sdks/event/README.md#updatecalendarevent) - Update an event
 * [updateCrmEvent](docs/sdks/event/README.md#updatecrmevent) - Update an event
 
 ### [file()](docs/sdks/file/README.md)
@@ -652,11 +686,17 @@ public class Application {
 
 ### [link()](docs/sdks/link/README.md)
 
+* [createCalendarLink](docs/sdks/link/README.md#createcalendarlink) - Create a link
 * [createPaymentLink](docs/sdks/link/README.md#createpaymentlink) - Create a link
+* [getCalendarLink](docs/sdks/link/README.md#getcalendarlink) - Retrieve a link
 * [getPaymentLink](docs/sdks/link/README.md#getpaymentlink) - Retrieve a link
+* [listCalendarLinks](docs/sdks/link/README.md#listcalendarlinks) - List all links
 * [listPaymentLinks](docs/sdks/link/README.md#listpaymentlinks) - List all links
+* [patchCalendarLink](docs/sdks/link/README.md#patchcalendarlink) - Update a link
 * [patchPaymentLink](docs/sdks/link/README.md#patchpaymentlink) - Update a link
+* [removeCalendarLink](docs/sdks/link/README.md#removecalendarlink) - Remove a link
 * [removePaymentLink](docs/sdks/link/README.md#removepaymentlink) - Remove a link
+* [updateCalendarLink](docs/sdks/link/README.md#updatecalendarlink) - Update a link
 * [updatePaymentLink](docs/sdks/link/README.md#updatepaymentlink) - Update a link
 
 ### [list()](docs/sdks/list/README.md)
@@ -889,6 +929,11 @@ public class Application {
 * [patchRepoPullrequest](docs/sdks/pullrequest/README.md#patchrepopullrequest) - Update a pullrequest
 * [removeRepoPullrequest](docs/sdks/pullrequest/README.md#removerepopullrequest) - Remove a pullrequest
 * [updateRepoPullrequest](docs/sdks/pullrequest/README.md#updaterepopullrequest) - Update a pullrequest
+
+### [recording()](docs/sdks/recording/README.md)
+
+* [getCalendarRecording](docs/sdks/recording/README.md#getcalendarrecording) - Retrieve a recording
+* [listCalendarRecordings](docs/sdks/recording/README.md#listcalendarrecordings) - List all recordings
 
 ### [refund()](docs/sdks/refund/README.md)
 

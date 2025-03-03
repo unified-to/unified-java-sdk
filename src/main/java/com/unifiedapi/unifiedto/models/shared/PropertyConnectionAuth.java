@@ -119,6 +119,10 @@ public class PropertyConnectionAuth {
     @JsonProperty("token_url")
     private Optional<String> tokenUrl;
 
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("user_id")
+    private Optional<String> userId;
+
     @JsonCreator
     public PropertyConnectionAuth(
             @JsonProperty("access_token") Optional<String> accessToken,
@@ -143,7 +147,8 @@ public class PropertyConnectionAuth {
             @JsonProperty("refresh_token_expires_in") Optional<Double> refreshTokenExpiresIn,
             @JsonProperty("state") Optional<String> state,
             @JsonProperty("token") Optional<String> token,
-            @JsonProperty("token_url") Optional<String> tokenUrl) {
+            @JsonProperty("token_url") Optional<String> tokenUrl,
+            @JsonProperty("user_id") Optional<String> userId) {
         Utils.checkNotNull(accessToken, "accessToken");
         Utils.checkNotNull(apiUrl, "apiUrl");
         Utils.checkNotNull(appId, "appId");
@@ -167,6 +172,7 @@ public class PropertyConnectionAuth {
         Utils.checkNotNull(state, "state");
         Utils.checkNotNull(token, "token");
         Utils.checkNotNull(tokenUrl, "tokenUrl");
+        Utils.checkNotNull(userId, "userId");
         this.accessToken = accessToken;
         this.apiUrl = apiUrl;
         this.appId = appId;
@@ -190,10 +196,11 @@ public class PropertyConnectionAuth {
         this.state = state;
         this.token = token;
         this.tokenUrl = tokenUrl;
+        this.userId = userId;
     }
     
     public PropertyConnectionAuth() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -315,6 +322,11 @@ public class PropertyConnectionAuth {
     @JsonIgnore
     public Optional<String> tokenUrl() {
         return tokenUrl;
+    }
+
+    @JsonIgnore
+    public Optional<String> userId() {
+        return userId;
     }
 
     public final static Builder builder() {
@@ -602,6 +614,18 @@ public class PropertyConnectionAuth {
         this.tokenUrl = tokenUrl;
         return this;
     }
+
+    public PropertyConnectionAuth withUserId(String userId) {
+        Utils.checkNotNull(userId, "userId");
+        this.userId = Optional.ofNullable(userId);
+        return this;
+    }
+
+    public PropertyConnectionAuth withUserId(Optional<String> userId) {
+        Utils.checkNotNull(userId, "userId");
+        this.userId = userId;
+        return this;
+    }
     
     @Override
     public boolean equals(java.lang.Object o) {
@@ -635,7 +659,8 @@ public class PropertyConnectionAuth {
             Objects.deepEquals(this.refreshTokenExpiresIn, other.refreshTokenExpiresIn) &&
             Objects.deepEquals(this.state, other.state) &&
             Objects.deepEquals(this.token, other.token) &&
-            Objects.deepEquals(this.tokenUrl, other.tokenUrl);
+            Objects.deepEquals(this.tokenUrl, other.tokenUrl) &&
+            Objects.deepEquals(this.userId, other.userId);
     }
     
     @Override
@@ -663,7 +688,8 @@ public class PropertyConnectionAuth {
             refreshTokenExpiresIn,
             state,
             token,
-            tokenUrl);
+            tokenUrl,
+            userId);
     }
     
     @Override
@@ -691,7 +717,8 @@ public class PropertyConnectionAuth {
                 "refreshTokenExpiresIn", refreshTokenExpiresIn,
                 "state", state,
                 "token", token,
-                "tokenUrl", tokenUrl);
+                "tokenUrl", tokenUrl,
+                "userId", userId);
     }
     
     public final static class Builder {
@@ -740,7 +767,9 @@ public class PropertyConnectionAuth {
  
         private Optional<String> token = Optional.empty();
  
-        private Optional<String> tokenUrl = Optional.empty();  
+        private Optional<String> tokenUrl = Optional.empty();
+ 
+        private Optional<String> userId = Optional.empty();  
         
         private Builder() {
           // force use of static builder() method
@@ -1027,6 +1056,18 @@ public class PropertyConnectionAuth {
             this.tokenUrl = tokenUrl;
             return this;
         }
+
+        public Builder userId(String userId) {
+            Utils.checkNotNull(userId, "userId");
+            this.userId = Optional.ofNullable(userId);
+            return this;
+        }
+
+        public Builder userId(Optional<String> userId) {
+            Utils.checkNotNull(userId, "userId");
+            this.userId = userId;
+            return this;
+        }
         
         public PropertyConnectionAuth build() {
             return new PropertyConnectionAuth(
@@ -1052,7 +1093,8 @@ public class PropertyConnectionAuth {
                 refreshTokenExpiresIn,
                 state,
                 token,
-                tokenUrl);
+                tokenUrl,
+                userId);
         }
     }
 }

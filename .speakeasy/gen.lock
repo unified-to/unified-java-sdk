@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: a642c7bece4e0a94752d9efa149625ea
+  docChecksum: 04bf3a6a3ccbffee7bf0c8268abe98b3
   docVersion: "1.0"
-  speakeasyVersion: 1.505.1
-  generationVersion: 2.531.0
-  releaseVersion: 0.27.5
-  configChecksum: b22cc62026fc0ac8c1890fda6ec91793
+  speakeasyVersion: 1.508.1
+  generationVersion: 2.536.0
+  releaseVersion: 0.27.6
+  configChecksum: ae2a7521177cb07be944609b03557e4f
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -54,6 +54,12 @@ generatedFiles:
   - docs/models/operations/CreateAtsJobResponse.md
   - docs/models/operations/CreateAtsScorecardRequest.md
   - docs/models/operations/CreateAtsScorecardResponse.md
+  - docs/models/operations/CreateCalendarCalendarRequest.md
+  - docs/models/operations/CreateCalendarCalendarResponse.md
+  - docs/models/operations/CreateCalendarEventRequest.md
+  - docs/models/operations/CreateCalendarEventResponse.md
+  - docs/models/operations/CreateCalendarLinkRequest.md
+  - docs/models/operations/CreateCalendarLinkResponse.md
   - docs/models/operations/CreateCommerceCollectionRequest.md
   - docs/models/operations/CreateCommerceCollectionResponse.md
   - docs/models/operations/CreateCommerceInventoryRequest.md
@@ -181,6 +187,14 @@ generatedFiles:
   - docs/models/operations/GetAtsJobResponse.md
   - docs/models/operations/GetAtsScorecardRequest.md
   - docs/models/operations/GetAtsScorecardResponse.md
+  - docs/models/operations/GetCalendarCalendarRequest.md
+  - docs/models/operations/GetCalendarCalendarResponse.md
+  - docs/models/operations/GetCalendarEventRequest.md
+  - docs/models/operations/GetCalendarEventResponse.md
+  - docs/models/operations/GetCalendarLinkRequest.md
+  - docs/models/operations/GetCalendarLinkResponse.md
+  - docs/models/operations/GetCalendarRecordingRequest.md
+  - docs/models/operations/GetCalendarRecordingResponse.md
   - docs/models/operations/GetCommerceCollectionRequest.md
   - docs/models/operations/GetCommerceCollectionResponse.md
   - docs/models/operations/GetCommerceInventoryRequest.md
@@ -321,6 +335,16 @@ generatedFiles:
   - docs/models/operations/ListAtsJobsResponse.md
   - docs/models/operations/ListAtsScorecardsRequest.md
   - docs/models/operations/ListAtsScorecardsResponse.md
+  - docs/models/operations/ListCalendarBusiesRequest.md
+  - docs/models/operations/ListCalendarBusiesResponse.md
+  - docs/models/operations/ListCalendarCalendarsRequest.md
+  - docs/models/operations/ListCalendarCalendarsResponse.md
+  - docs/models/operations/ListCalendarEventsRequest.md
+  - docs/models/operations/ListCalendarEventsResponse.md
+  - docs/models/operations/ListCalendarLinksRequest.md
+  - docs/models/operations/ListCalendarLinksResponse.md
+  - docs/models/operations/ListCalendarRecordingsRequest.md
+  - docs/models/operations/ListCalendarRecordingsResponse.md
   - docs/models/operations/ListCommerceCollectionsRequest.md
   - docs/models/operations/ListCommerceCollectionsResponse.md
   - docs/models/operations/ListCommerceInventoriesRequest.md
@@ -468,6 +492,12 @@ generatedFiles:
   - docs/models/operations/PatchAtsJobResponse.md
   - docs/models/operations/PatchAtsScorecardRequest.md
   - docs/models/operations/PatchAtsScorecardResponse.md
+  - docs/models/operations/PatchCalendarCalendarRequest.md
+  - docs/models/operations/PatchCalendarCalendarResponse.md
+  - docs/models/operations/PatchCalendarEventRequest.md
+  - docs/models/operations/PatchCalendarEventResponse.md
+  - docs/models/operations/PatchCalendarLinkRequest.md
+  - docs/models/operations/PatchCalendarLinkResponse.md
   - docs/models/operations/PatchCommerceCollectionRequest.md
   - docs/models/operations/PatchCommerceCollectionResponse.md
   - docs/models/operations/PatchCommerceInventoryRequest.md
@@ -593,6 +623,12 @@ generatedFiles:
   - docs/models/operations/RemoveAtsJobResponse.md
   - docs/models/operations/RemoveAtsScorecardRequest.md
   - docs/models/operations/RemoveAtsScorecardResponse.md
+  - docs/models/operations/RemoveCalendarCalendarRequest.md
+  - docs/models/operations/RemoveCalendarCalendarResponse.md
+  - docs/models/operations/RemoveCalendarEventRequest.md
+  - docs/models/operations/RemoveCalendarEventResponse.md
+  - docs/models/operations/RemoveCalendarLinkRequest.md
+  - docs/models/operations/RemoveCalendarLinkResponse.md
   - docs/models/operations/RemoveCommerceCollectionRequest.md
   - docs/models/operations/RemoveCommerceCollectionResponse.md
   - docs/models/operations/RemoveCommerceInventoryRequest.md
@@ -714,6 +750,12 @@ generatedFiles:
   - docs/models/operations/UpdateAtsJobResponse.md
   - docs/models/operations/UpdateAtsScorecardRequest.md
   - docs/models/operations/UpdateAtsScorecardResponse.md
+  - docs/models/operations/UpdateCalendarCalendarRequest.md
+  - docs/models/operations/UpdateCalendarCalendarResponse.md
+  - docs/models/operations/UpdateCalendarEventRequest.md
+  - docs/models/operations/UpdateCalendarEventResponse.md
+  - docs/models/operations/UpdateCalendarLinkRequest.md
+  - docs/models/operations/UpdateCalendarLinkResponse.md
   - docs/models/operations/UpdateCommerceCollectionRequest.md
   - docs/models/operations/UpdateCommerceCollectionResponse.md
   - docs/models/operations/UpdateCommerceInventoryRequest.md
@@ -884,6 +926,21 @@ generatedFiles:
   - docs/models/shared/AtsStatusStatus.md
   - docs/models/shared/AtsTelephone.md
   - docs/models/shared/AtsTelephoneType.md
+  - docs/models/shared/CalendarAttendee.md
+  - docs/models/shared/CalendarAttendeeStatus.md
+  - docs/models/shared/CalendarBusy.md
+  - docs/models/shared/CalendarBusyRaw.md
+  - docs/models/shared/CalendarCalendar.md
+  - docs/models/shared/CalendarCalendarRaw.md
+  - docs/models/shared/CalendarEvent.md
+  - docs/models/shared/CalendarEventRaw.md
+  - docs/models/shared/CalendarEventStatus.md
+  - docs/models/shared/CalendarLink.md
+  - docs/models/shared/CalendarLinkRaw.md
+  - docs/models/shared/CalendarRecording.md
+  - docs/models/shared/CalendarRecordingMedia.md
+  - docs/models/shared/CalendarRecordingRaw.md
+  - docs/models/shared/CalendarRecordingTranscript.md
   - docs/models/shared/CommerceCollection.md
   - docs/models/shared/CommerceCollectionRaw.md
   - docs/models/shared/CommerceCollectionType.md
@@ -981,6 +1038,7 @@ generatedFiles:
   - docs/models/shared/KmsSpace.md
   - docs/models/shared/ListAccountId.md
   - docs/models/shared/ListApplicationId.md
+  - docs/models/shared/ListCalendarId.md
   - docs/models/shared/ListCandidateId.md
   - docs/models/shared/ListChannelId.md
   - docs/models/shared/ListClassId.md
@@ -991,6 +1049,7 @@ generatedFiles:
   - docs/models/shared/ListCustomerId.md
   - docs/models/shared/ListDealId.md
   - docs/models/shared/ListEndLe.md
+  - docs/models/shared/ListEventId.md
   - docs/models/shared/ListInstructorId.md
   - docs/models/shared/ListInterviewId.md
   - docs/models/shared/ListInvoiceId.md
@@ -1070,6 +1129,10 @@ generatedFiles:
   - docs/models/shared/PropertyAtsCandidateAddress.md
   - docs/models/shared/PropertyAtsCompanyAddress.md
   - docs/models/shared/PropertyAtsJobPostingAddress.md
+  - docs/models/shared/PropertyCalendarEventOrganizer.md
+  - docs/models/shared/PropertyCalendarEventOrganizerStatus.md
+  - docs/models/shared/PropertyCalendarRecordingTranscriptAttendee.md
+  - docs/models/shared/PropertyCalendarRecordingTranscriptAttendeeStatus.md
   - docs/models/shared/PropertyCommerceLocationAddress.md
   - docs/models/shared/PropertyConnectionAuth.md
   - docs/models/shared/PropertyConnectionAuthMeta.md
@@ -1203,6 +1266,8 @@ generatedFiles:
   - docs/sdks/ats/README.md
   - docs/sdks/auth/README.md
   - docs/sdks/branch/README.md
+  - docs/sdks/busy/README.md
+  - docs/sdks/calendar/README.md
   - docs/sdks/call/README.md
   - docs/sdks/candidate/README.md
   - docs/sdks/channel/README.md
@@ -1261,6 +1326,7 @@ generatedFiles:
   - docs/sdks/project/README.md
   - docs/sdks/prompt/README.md
   - docs/sdks/pullrequest/README.md
+  - docs/sdks/recording/README.md
   - docs/sdks/refund/README.md
   - docs/sdks/repo/README.md
   - docs/sdks/repository/README.md
@@ -1295,6 +1361,8 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/Ats.java
   - src/main/java/com/unifiedapi/unifiedto/Auth.java
   - src/main/java/com/unifiedapi/unifiedto/Branch.java
+  - src/main/java/com/unifiedapi/unifiedto/Busy.java
+  - src/main/java/com/unifiedapi/unifiedto/Calendar.java
   - src/main/java/com/unifiedapi/unifiedto/Call.java
   - src/main/java/com/unifiedapi/unifiedto/Candidate.java
   - src/main/java/com/unifiedapi/unifiedto/Channel.java
@@ -1353,6 +1421,7 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/Project.java
   - src/main/java/com/unifiedapi/unifiedto/Prompt.java
   - src/main/java/com/unifiedapi/unifiedto/Pullrequest.java
+  - src/main/java/com/unifiedapi/unifiedto/Recording.java
   - src/main/java/com/unifiedapi/unifiedto/Refund.java
   - src/main/java/com/unifiedapi/unifiedto/Repo.java
   - src/main/java/com/unifiedapi/unifiedto/Repository.java
@@ -1420,6 +1489,15 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAtsScorecardRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAtsScorecardRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAtsScorecardResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCalendarCalendarRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCalendarCalendarRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCalendarCalendarResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCalendarEventRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCalendarEventRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCalendarEventResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCalendarLinkRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCalendarLinkRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCalendarLinkResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCommerceCollectionRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCommerceCollectionRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCommerceCollectionResponse.java
@@ -1611,6 +1689,18 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetAtsScorecardRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetAtsScorecardRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetAtsScorecardResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetCalendarCalendarRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetCalendarCalendarRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetCalendarCalendarResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetCalendarEventRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetCalendarEventRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetCalendarEventResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetCalendarLinkRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetCalendarLinkRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetCalendarLinkResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetCalendarRecordingRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetCalendarRecordingRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetCalendarRecordingResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetCommerceCollectionRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetCommerceCollectionRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetCommerceCollectionResponse.java
@@ -1821,6 +1911,21 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsScorecardsRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsScorecardsRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsScorecardsResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListCalendarBusiesRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListCalendarBusiesRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListCalendarBusiesResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListCalendarCalendarsRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListCalendarCalendarsRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListCalendarCalendarsResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListCalendarEventsRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListCalendarEventsRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListCalendarEventsResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListCalendarLinksRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListCalendarLinksRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListCalendarLinksResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListCalendarRecordingsRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListCalendarRecordingsRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListCalendarRecordingsResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListCommerceCollectionsRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListCommerceCollectionsRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListCommerceCollectionsResponse.java
@@ -2041,6 +2146,15 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAtsScorecardRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAtsScorecardRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAtsScorecardResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCalendarCalendarRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCalendarCalendarRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCalendarCalendarResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCalendarEventRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCalendarEventRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCalendarEventResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCalendarLinkRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCalendarLinkRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCalendarLinkResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCommerceCollectionRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCommerceCollectionRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCommerceCollectionResponse.java
@@ -2228,6 +2342,15 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAtsScorecardRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAtsScorecardRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAtsScorecardResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCalendarCalendarRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCalendarCalendarRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCalendarCalendarResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCalendarEventRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCalendarEventRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCalendarEventResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCalendarLinkRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCalendarLinkRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCalendarLinkResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCommerceCollectionRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCommerceCollectionRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCommerceCollectionResponse.java
@@ -2410,6 +2533,15 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAtsScorecardRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAtsScorecardRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAtsScorecardResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCalendarCalendarRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCalendarCalendarRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCalendarCalendarResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCalendarEventRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCalendarEventRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCalendarEventResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCalendarLinkRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCalendarLinkRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCalendarLinkResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCommerceCollectionRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCommerceCollectionRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCommerceCollectionResponse.java
@@ -2628,6 +2760,21 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AtsStatusStatus.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AtsTelephone.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AtsTelephoneType.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/CalendarAttendee.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/CalendarAttendeeStatus.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/CalendarBusy.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/CalendarBusyRaw.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/CalendarCalendar.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/CalendarCalendarRaw.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/CalendarEvent.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/CalendarEventRaw.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/CalendarEventStatus.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/CalendarLink.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/CalendarLinkRaw.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/CalendarRecording.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/CalendarRecordingMedia.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/CalendarRecordingRaw.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/CalendarRecordingTranscript.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceCollection.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceCollectionRaw.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceCollectionType.java
@@ -2725,6 +2872,7 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/KmsSpace.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListAccountId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListApplicationId.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/ListCalendarId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListCandidateId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListChannelId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListClassId.java
@@ -2735,6 +2883,7 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListCustomerId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListDealId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListEndLe.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/ListEventId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListInstructorId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListInterviewId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListInvoiceId.java
@@ -2814,6 +2963,10 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAtsCandidateAddress.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAtsCompanyAddress.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAtsJobPostingAddress.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCalendarEventOrganizer.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCalendarEventOrganizerStatus.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCalendarRecordingTranscriptAttendee.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCalendarRecordingTranscriptAttendeeStatus.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCommerceLocationAddress.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyConnectionAuth.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyConnectionAuthMeta.java
@@ -6838,5 +6991,213 @@ examples:
       responses:
         "200":
           text/plain: "<value>"
+  createCalendarCalendar:
+    speakeasy-default-create-calendar-calendar:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  createCalendarEvent:
+    speakeasy-default-create-calendar-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+      responses:
+        "200":
+          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+  createCalendarLink:
+    speakeasy-default-create-calendar-link:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"url": "https://sturdy-begonia.biz/"}
+      responses:
+        "200":
+          application/json: {"url": "https://mealy-crest.com"}
+  getCalendarCalendar:
+    speakeasy-default-get-calendar-calendar:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  getCalendarEvent:
+    speakeasy-default-get-calendar-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+  getCalendarLink:
+    speakeasy-default-get-calendar-link:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"url": "https://helpful-rule.com/"}
+  getCalendarRecording:
+    speakeasy-default-get-calendar-recording:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  listCalendarBusies:
+    speakeasy-default-list-calendar-busies:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"end_at": "2024-10-27T10:02:59.053Z", "start_at": "2025-09-24T22:24:48.779Z"}, {"end_at": "2024-03-01T22:16:54.474Z", "start_at": "2025-05-11T06:32:32.457Z"}, {"end_at": "2023-06-10T22:37:04.573Z", "start_at": "2023-09-17T05:28:38.179Z"}]
+  listCalendarCalendars:
+    speakeasy-default-list-calendar-calendars:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"name": "<value>"}, {"name": "<value>"}, {"name": "<value>"}]
+  listCalendarEvents:
+    speakeasy-default-list-calendar-events:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}, {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}, {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}]
+  listCalendarLinks:
+    speakeasy-default-list-calendar-links:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"url": "https://unwritten-approach.info/"}, {"url": "https://innocent-ruin.biz/"}]
+  listCalendarRecordings:
+    speakeasy-default-list-calendar-recordings:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{}, {}, {}]
+  patchCalendarCalendar:
+    speakeasy-default-patch-calendar-calendar:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  patchCalendarEvent:
+    speakeasy-default-patch-calendar-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+      responses:
+        "200":
+          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+  patchCalendarLink:
+    speakeasy-default-patch-calendar-link:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"url": "https://curly-skyline.biz/"}
+      responses:
+        "200":
+          application/json: {"url": "https://first-testimonial.biz/"}
+  removeCalendarCalendar:
+    speakeasy-default-remove-calendar-calendar:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeCalendarEvent:
+    speakeasy-default-remove-calendar-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeCalendarLink:
+    speakeasy-default-remove-calendar-link:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateCalendarCalendar:
+    speakeasy-default-update-calendar-calendar:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  updateCalendarEvent:
+    speakeasy-default-update-calendar-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+      responses:
+        "200":
+          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+  updateCalendarLink:
+    speakeasy-default-update-calendar-link:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"url": "https://quiet-coordination.name"}
+      responses:
+        "200":
+          application/json: {"url": "https://standard-birth.info/"}
 examplesVersion: 1.0.0
 generatedTests: {}

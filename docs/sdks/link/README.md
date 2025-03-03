@@ -5,12 +5,78 @@
 
 ### Available Operations
 
+* [createCalendarLink](#createcalendarlink) - Create a link
 * [createPaymentLink](#createpaymentlink) - Create a link
+* [getCalendarLink](#getcalendarlink) - Retrieve a link
 * [getPaymentLink](#getpaymentlink) - Retrieve a link
+* [listCalendarLinks](#listcalendarlinks) - List all links
 * [listPaymentLinks](#listpaymentlinks) - List all links
+* [patchCalendarLink](#patchcalendarlink) - Update a link
 * [patchPaymentLink](#patchpaymentlink) - Update a link
+* [removeCalendarLink](#removecalendarlink) - Remove a link
 * [removePaymentLink](#removepaymentlink) - Remove a link
+* [updateCalendarLink](#updatecalendarlink) - Update a link
 * [updatePaymentLink](#updatepaymentlink) - Update a link
+
+## createCalendarLink
+
+Create a link
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.CreateCalendarLinkRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateCalendarLinkResponse;
+import com.unifiedapi.unifiedto.models.shared.CalendarLink;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        CreateCalendarLinkRequest req = CreateCalendarLinkRequest.builder()
+                .calendarLink(CalendarLink.builder()
+                    .url("https://sturdy-begonia.biz/")
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateCalendarLinkResponse res = sdk.link().createCalendarLink()
+                .request(req)
+                .call();
+
+        if (res.calendarLink().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [CreateCalendarLinkRequest](../../models/operations/CreateCalendarLinkRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[CreateCalendarLinkResponse](../../models/operations/CreateCalendarLinkResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createPaymentLink
 
@@ -64,6 +130,63 @@ public class Application {
 ### Response
 
 **[CreatePaymentLinkResponse](../../models/operations/CreatePaymentLinkResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getCalendarLink
+
+Retrieve a link
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.GetCalendarLinkRequest;
+import com.unifiedapi.unifiedto.models.operations.GetCalendarLinkResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        GetCalendarLinkRequest req = GetCalendarLinkRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetCalendarLinkResponse res = sdk.link().getCalendarLink()
+                .request(req)
+                .call();
+
+        if (res.calendarLink().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [GetCalendarLinkRequest](../../models/operations/GetCalendarLinkRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+
+### Response
+
+**[GetCalendarLinkResponse](../../models/operations/GetCalendarLinkResponse.md)**
 
 ### Errors
 
@@ -128,6 +251,62 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listCalendarLinks
+
+List all links
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.ListCalendarLinksRequest;
+import com.unifiedapi.unifiedto.models.operations.ListCalendarLinksResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        ListCalendarLinksRequest req = ListCalendarLinksRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListCalendarLinksResponse res = sdk.link().listCalendarLinks()
+                .request(req)
+                .call();
+
+        if (res.calendarLinks().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListCalendarLinksRequest](../../models/operations/ListCalendarLinksRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[ListCalendarLinksResponse](../../models/operations/ListCalendarLinksResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listPaymentLinks
 
 List all links
@@ -177,6 +356,67 @@ public class Application {
 ### Response
 
 **[ListPaymentLinksResponse](../../models/operations/ListPaymentLinksResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchCalendarLink
+
+Update a link
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.PatchCalendarLinkRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchCalendarLinkResponse;
+import com.unifiedapi.unifiedto.models.shared.CalendarLink;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        PatchCalendarLinkRequest req = PatchCalendarLinkRequest.builder()
+                .calendarLink(CalendarLink.builder()
+                    .url("https://curly-skyline.biz/")
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchCalendarLinkResponse res = sdk.link().patchCalendarLink()
+                .request(req)
+                .call();
+
+        if (res.calendarLink().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [PatchCalendarLinkRequest](../../models/operations/PatchCalendarLinkRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[PatchCalendarLinkResponse](../../models/operations/PatchCalendarLinkResponse.md)**
 
 ### Errors
 
@@ -244,6 +484,61 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removeCalendarLink
+
+Remove a link
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.RemoveCalendarLinkRequest;
+import com.unifiedapi.unifiedto.models.operations.RemoveCalendarLinkResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        RemoveCalendarLinkRequest req = RemoveCalendarLinkRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveCalendarLinkResponse res = sdk.link().removeCalendarLink()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [RemoveCalendarLinkRequest](../../models/operations/RemoveCalendarLinkRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[RemoveCalendarLinkResponse](../../models/operations/RemoveCalendarLinkResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## removePaymentLink
 
 Remove a link
@@ -292,6 +587,67 @@ public class Application {
 ### Response
 
 **[RemovePaymentLinkResponse](../../models/operations/RemovePaymentLinkResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateCalendarLink
+
+Update a link
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.UpdateCalendarLinkRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdateCalendarLinkResponse;
+import com.unifiedapi.unifiedto.models.shared.CalendarLink;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        UpdateCalendarLinkRequest req = UpdateCalendarLinkRequest.builder()
+                .calendarLink(CalendarLink.builder()
+                    .url("https://quiet-coordination.name")
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateCalendarLinkResponse res = sdk.link().updateCalendarLink()
+                .request(req)
+                .call();
+
+        if (res.calendarLink().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [UpdateCalendarLinkRequest](../../models/operations/UpdateCalendarLinkRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[UpdateCalendarLinkResponse](../../models/operations/UpdateCalendarLinkResponse.md)**
 
 ### Errors
 

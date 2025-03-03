@@ -6,25 +6,44 @@ package com.unifiedapi.unifiedto;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.unifiedapi.unifiedto.models.errors.SDKError;
+import com.unifiedapi.unifiedto.models.operations.CreateCalendarLinkRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateCalendarLinkRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.CreateCalendarLinkResponse;
 import com.unifiedapi.unifiedto.models.operations.CreatePaymentLinkRequest;
 import com.unifiedapi.unifiedto.models.operations.CreatePaymentLinkRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.CreatePaymentLinkResponse;
+import com.unifiedapi.unifiedto.models.operations.GetCalendarLinkRequest;
+import com.unifiedapi.unifiedto.models.operations.GetCalendarLinkRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.GetCalendarLinkResponse;
 import com.unifiedapi.unifiedto.models.operations.GetPaymentLinkRequest;
 import com.unifiedapi.unifiedto.models.operations.GetPaymentLinkRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.GetPaymentLinkResponse;
+import com.unifiedapi.unifiedto.models.operations.ListCalendarLinksRequest;
+import com.unifiedapi.unifiedto.models.operations.ListCalendarLinksRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.ListCalendarLinksResponse;
 import com.unifiedapi.unifiedto.models.operations.ListPaymentLinksRequest;
 import com.unifiedapi.unifiedto.models.operations.ListPaymentLinksRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.ListPaymentLinksResponse;
+import com.unifiedapi.unifiedto.models.operations.PatchCalendarLinkRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchCalendarLinkRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.PatchCalendarLinkResponse;
 import com.unifiedapi.unifiedto.models.operations.PatchPaymentLinkRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchPaymentLinkRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.PatchPaymentLinkResponse;
+import com.unifiedapi.unifiedto.models.operations.RemoveCalendarLinkRequest;
+import com.unifiedapi.unifiedto.models.operations.RemoveCalendarLinkRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.RemoveCalendarLinkResponse;
 import com.unifiedapi.unifiedto.models.operations.RemovePaymentLinkRequest;
 import com.unifiedapi.unifiedto.models.operations.RemovePaymentLinkRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.RemovePaymentLinkResponse;
 import com.unifiedapi.unifiedto.models.operations.SDKMethodInterfaces.*;
+import com.unifiedapi.unifiedto.models.operations.UpdateCalendarLinkRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdateCalendarLinkRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.UpdateCalendarLinkResponse;
 import com.unifiedapi.unifiedto.models.operations.UpdatePaymentLinkRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdatePaymentLinkRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.UpdatePaymentLinkResponse;
+import com.unifiedapi.unifiedto.models.shared.CalendarLink;
 import com.unifiedapi.unifiedto.models.shared.PaymentLink;
 import com.unifiedapi.unifiedto.utils.HTTPClient;
 import com.unifiedapi.unifiedto.utils.HTTPRequest;
@@ -44,11 +63,17 @@ import java.util.List;
 import java.util.Optional; 
 
 public class Link implements
+            MethodCallCreateCalendarLink,
             MethodCallCreatePaymentLink,
+            MethodCallGetCalendarLink,
             MethodCallGetPaymentLink,
+            MethodCallListCalendarLinks,
             MethodCallListPaymentLinks,
+            MethodCallPatchCalendarLink,
             MethodCallPatchPaymentLink,
+            MethodCallRemoveCalendarLink,
             MethodCallRemovePaymentLink,
+            MethodCallUpdateCalendarLink,
             MethodCallUpdatePaymentLink {
 
     private final SDKConfiguration sdkConfiguration;
@@ -56,6 +81,148 @@ public class Link implements
     Link(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
+
+
+    /**
+     * Create a link
+     * @return The call builder
+     */
+    public CreateCalendarLinkRequestBuilder createCalendarLink() {
+        return new CreateCalendarLinkRequestBuilder(this);
+    }
+
+    /**
+     * Create a link
+     * @param request The request object containing all of the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public CreateCalendarLinkResponse createCalendarLink(
+            CreateCalendarLinkRequest request) throws Exception {
+        String _baseUrl = this.sdkConfiguration.serverUrl;
+        String _url = Utils.generateURL(
+                CreateCalendarLinkRequest.class,
+                _baseUrl,
+                "/calendar/{connection_id}/link",
+                request, null);
+        
+        HTTPRequest _req = new HTTPRequest(_url, "POST");
+        Object _convertedRequest = Utils.convertToShape(
+                request, 
+                JsonShape.DEFAULT,
+                new TypeReference<CreateCalendarLinkRequest>() {});
+        SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
+                _convertedRequest, 
+                "calendarLink",
+                "json",
+                false);
+        if (_serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        _req.setBody(Optional.ofNullable(_serializedRequestBody));
+        _req.addHeader("Accept", "application/json")
+            .addHeader("user-agent", 
+                SDKConfiguration.USER_AGENT);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                CreateCalendarLinkRequest.class,
+                request, 
+                null));
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
+        Utils.configureSecurity(_req,  
+                this.sdkConfiguration.securitySource.getSecurity());
+        HTTPClient _client = this.sdkConfiguration.defaultClient;
+        HttpRequest _r = 
+            sdkConfiguration.hooks()
+               .beforeRequest(
+                  new BeforeRequestContextImpl(
+                      "createCalendarLink", 
+                      Optional.of(List.of()), 
+                      _hookSecuritySource),
+                  _req.build());
+        HttpResponse<InputStream> _httpRes;
+        try {
+            _httpRes = _client.send(_r);
+            if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "createCalendarLink",
+                            Optional.of(List.of()),
+                            _hookSecuritySource),
+                        Optional.of(_httpRes),
+                        Optional.empty());
+            } else {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterSuccess(
+                        new AfterSuccessContextImpl(
+                            "createCalendarLink",
+                            Optional.of(List.of()), 
+                            _hookSecuritySource),
+                         _httpRes);
+            }
+        } catch (Exception _e) {
+            _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "createCalendarLink",
+                            Optional.of(List.of()),
+                            _hookSecuritySource), 
+                        Optional.empty(),
+                        Optional.of(_e));
+        }
+        String _contentType = _httpRes
+            .headers()
+            .firstValue("Content-Type")
+            .orElse("application/octet-stream");
+        CreateCalendarLinkResponse.Builder _resBuilder = 
+            CreateCalendarLinkResponse
+                .builder()
+                .contentType(_contentType)
+                .statusCode(_httpRes.statusCode())
+                .rawResponse(_httpRes);
+
+        CreateCalendarLinkResponse _res = _resBuilder.build();
+        
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            if (Utils.contentTypeMatches(_contentType, "application/json")) {
+                CalendarLink _out = Utils.mapper().readValue(
+                    Utils.toUtf8AndClose(_httpRes.body()),
+                    new TypeReference<CalendarLink>() {});
+                _res.withCalendarLink(Optional.ofNullable(_out));
+                return _res;
+            } else {
+                throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "Unexpected content-type received: " + _contentType, 
+                    Utils.extractByteArrayFromBody(_httpRes));
+            }
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        throw new SDKError(
+            _httpRes, 
+            _httpRes.statusCode(), 
+            "Unexpected status code received: " + _httpRes.statusCode(), 
+            Utils.extractByteArrayFromBody(_httpRes));
+    }
+
 
 
     /**
@@ -166,6 +333,135 @@ public class Link implements
                     Utils.toUtf8AndClose(_httpRes.body()),
                     new TypeReference<PaymentLink>() {});
                 _res.withPaymentLink(Optional.ofNullable(_out));
+                return _res;
+            } else {
+                throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "Unexpected content-type received: " + _contentType, 
+                    Utils.extractByteArrayFromBody(_httpRes));
+            }
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        throw new SDKError(
+            _httpRes, 
+            _httpRes.statusCode(), 
+            "Unexpected status code received: " + _httpRes.statusCode(), 
+            Utils.extractByteArrayFromBody(_httpRes));
+    }
+
+
+
+    /**
+     * Retrieve a link
+     * @return The call builder
+     */
+    public GetCalendarLinkRequestBuilder getCalendarLink() {
+        return new GetCalendarLinkRequestBuilder(this);
+    }
+
+    /**
+     * Retrieve a link
+     * @param request The request object containing all of the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public GetCalendarLinkResponse getCalendarLink(
+            GetCalendarLinkRequest request) throws Exception {
+        String _baseUrl = this.sdkConfiguration.serverUrl;
+        String _url = Utils.generateURL(
+                GetCalendarLinkRequest.class,
+                _baseUrl,
+                "/calendar/{connection_id}/link/{id}",
+                request, null);
+        
+        HTTPRequest _req = new HTTPRequest(_url, "GET");
+        _req.addHeader("Accept", "application/json")
+            .addHeader("user-agent", 
+                SDKConfiguration.USER_AGENT);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                GetCalendarLinkRequest.class,
+                request, 
+                null));
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
+        Utils.configureSecurity(_req,  
+                this.sdkConfiguration.securitySource.getSecurity());
+        HTTPClient _client = this.sdkConfiguration.defaultClient;
+        HttpRequest _r = 
+            sdkConfiguration.hooks()
+               .beforeRequest(
+                  new BeforeRequestContextImpl(
+                      "getCalendarLink", 
+                      Optional.of(List.of()), 
+                      _hookSecuritySource),
+                  _req.build());
+        HttpResponse<InputStream> _httpRes;
+        try {
+            _httpRes = _client.send(_r);
+            if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "getCalendarLink",
+                            Optional.of(List.of()),
+                            _hookSecuritySource),
+                        Optional.of(_httpRes),
+                        Optional.empty());
+            } else {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterSuccess(
+                        new AfterSuccessContextImpl(
+                            "getCalendarLink",
+                            Optional.of(List.of()), 
+                            _hookSecuritySource),
+                         _httpRes);
+            }
+        } catch (Exception _e) {
+            _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "getCalendarLink",
+                            Optional.of(List.of()),
+                            _hookSecuritySource), 
+                        Optional.empty(),
+                        Optional.of(_e));
+        }
+        String _contentType = _httpRes
+            .headers()
+            .firstValue("Content-Type")
+            .orElse("application/octet-stream");
+        GetCalendarLinkResponse.Builder _resBuilder = 
+            GetCalendarLinkResponse
+                .builder()
+                .contentType(_contentType)
+                .statusCode(_httpRes.statusCode())
+                .rawResponse(_httpRes);
+
+        GetCalendarLinkResponse _res = _resBuilder.build();
+        
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            if (Utils.contentTypeMatches(_contentType, "application/json")) {
+                CalendarLink _out = Utils.mapper().readValue(
+                    Utils.toUtf8AndClose(_httpRes.body()),
+                    new TypeReference<CalendarLink>() {});
+                _res.withCalendarLink(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -333,6 +629,135 @@ public class Link implements
      * List all links
      * @return The call builder
      */
+    public ListCalendarLinksRequestBuilder listCalendarLinks() {
+        return new ListCalendarLinksRequestBuilder(this);
+    }
+
+    /**
+     * List all links
+     * @param request The request object containing all of the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public ListCalendarLinksResponse listCalendarLinks(
+            ListCalendarLinksRequest request) throws Exception {
+        String _baseUrl = this.sdkConfiguration.serverUrl;
+        String _url = Utils.generateURL(
+                ListCalendarLinksRequest.class,
+                _baseUrl,
+                "/calendar/{connection_id}/link",
+                request, null);
+        
+        HTTPRequest _req = new HTTPRequest(_url, "GET");
+        _req.addHeader("Accept", "application/json")
+            .addHeader("user-agent", 
+                SDKConfiguration.USER_AGENT);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                ListCalendarLinksRequest.class,
+                request, 
+                null));
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
+        Utils.configureSecurity(_req,  
+                this.sdkConfiguration.securitySource.getSecurity());
+        HTTPClient _client = this.sdkConfiguration.defaultClient;
+        HttpRequest _r = 
+            sdkConfiguration.hooks()
+               .beforeRequest(
+                  new BeforeRequestContextImpl(
+                      "listCalendarLinks", 
+                      Optional.of(List.of()), 
+                      _hookSecuritySource),
+                  _req.build());
+        HttpResponse<InputStream> _httpRes;
+        try {
+            _httpRes = _client.send(_r);
+            if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "listCalendarLinks",
+                            Optional.of(List.of()),
+                            _hookSecuritySource),
+                        Optional.of(_httpRes),
+                        Optional.empty());
+            } else {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterSuccess(
+                        new AfterSuccessContextImpl(
+                            "listCalendarLinks",
+                            Optional.of(List.of()), 
+                            _hookSecuritySource),
+                         _httpRes);
+            }
+        } catch (Exception _e) {
+            _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "listCalendarLinks",
+                            Optional.of(List.of()),
+                            _hookSecuritySource), 
+                        Optional.empty(),
+                        Optional.of(_e));
+        }
+        String _contentType = _httpRes
+            .headers()
+            .firstValue("Content-Type")
+            .orElse("application/octet-stream");
+        ListCalendarLinksResponse.Builder _resBuilder = 
+            ListCalendarLinksResponse
+                .builder()
+                .contentType(_contentType)
+                .statusCode(_httpRes.statusCode())
+                .rawResponse(_httpRes);
+
+        ListCalendarLinksResponse _res = _resBuilder.build();
+        
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            if (Utils.contentTypeMatches(_contentType, "application/json")) {
+                List<CalendarLink> _out = Utils.mapper().readValue(
+                    Utils.toUtf8AndClose(_httpRes.body()),
+                    new TypeReference<List<CalendarLink>>() {});
+                _res.withCalendarLinks(Optional.ofNullable(_out));
+                return _res;
+            } else {
+                throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "Unexpected content-type received: " + _contentType, 
+                    Utils.extractByteArrayFromBody(_httpRes));
+            }
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        throw new SDKError(
+            _httpRes, 
+            _httpRes.statusCode(), 
+            "Unexpected status code received: " + _httpRes.statusCode(), 
+            Utils.extractByteArrayFromBody(_httpRes));
+    }
+
+
+
+    /**
+     * List all links
+     * @return The call builder
+     */
     public ListPaymentLinksRequestBuilder listPaymentLinks() {
         return new ListPaymentLinksRequestBuilder(this);
     }
@@ -424,6 +849,148 @@ public class Link implements
                     Utils.toUtf8AndClose(_httpRes.body()),
                     new TypeReference<List<PaymentLink>>() {});
                 _res.withPaymentLinks(Optional.ofNullable(_out));
+                return _res;
+            } else {
+                throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "Unexpected content-type received: " + _contentType, 
+                    Utils.extractByteArrayFromBody(_httpRes));
+            }
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        throw new SDKError(
+            _httpRes, 
+            _httpRes.statusCode(), 
+            "Unexpected status code received: " + _httpRes.statusCode(), 
+            Utils.extractByteArrayFromBody(_httpRes));
+    }
+
+
+
+    /**
+     * Update a link
+     * @return The call builder
+     */
+    public PatchCalendarLinkRequestBuilder patchCalendarLink() {
+        return new PatchCalendarLinkRequestBuilder(this);
+    }
+
+    /**
+     * Update a link
+     * @param request The request object containing all of the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public PatchCalendarLinkResponse patchCalendarLink(
+            PatchCalendarLinkRequest request) throws Exception {
+        String _baseUrl = this.sdkConfiguration.serverUrl;
+        String _url = Utils.generateURL(
+                PatchCalendarLinkRequest.class,
+                _baseUrl,
+                "/calendar/{connection_id}/link/{id}",
+                request, null);
+        
+        HTTPRequest _req = new HTTPRequest(_url, "PATCH");
+        Object _convertedRequest = Utils.convertToShape(
+                request, 
+                JsonShape.DEFAULT,
+                new TypeReference<PatchCalendarLinkRequest>() {});
+        SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
+                _convertedRequest, 
+                "calendarLink",
+                "json",
+                false);
+        if (_serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        _req.setBody(Optional.ofNullable(_serializedRequestBody));
+        _req.addHeader("Accept", "application/json")
+            .addHeader("user-agent", 
+                SDKConfiguration.USER_AGENT);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                PatchCalendarLinkRequest.class,
+                request, 
+                null));
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
+        Utils.configureSecurity(_req,  
+                this.sdkConfiguration.securitySource.getSecurity());
+        HTTPClient _client = this.sdkConfiguration.defaultClient;
+        HttpRequest _r = 
+            sdkConfiguration.hooks()
+               .beforeRequest(
+                  new BeforeRequestContextImpl(
+                      "patchCalendarLink", 
+                      Optional.of(List.of()), 
+                      _hookSecuritySource),
+                  _req.build());
+        HttpResponse<InputStream> _httpRes;
+        try {
+            _httpRes = _client.send(_r);
+            if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "patchCalendarLink",
+                            Optional.of(List.of()),
+                            _hookSecuritySource),
+                        Optional.of(_httpRes),
+                        Optional.empty());
+            } else {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterSuccess(
+                        new AfterSuccessContextImpl(
+                            "patchCalendarLink",
+                            Optional.of(List.of()), 
+                            _hookSecuritySource),
+                         _httpRes);
+            }
+        } catch (Exception _e) {
+            _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "patchCalendarLink",
+                            Optional.of(List.of()),
+                            _hookSecuritySource), 
+                        Optional.empty(),
+                        Optional.of(_e));
+        }
+        String _contentType = _httpRes
+            .headers()
+            .firstValue("Content-Type")
+            .orElse("application/octet-stream");
+        PatchCalendarLinkResponse.Builder _resBuilder = 
+            PatchCalendarLinkResponse
+                .builder()
+                .contentType(_contentType)
+                .statusCode(_httpRes.statusCode())
+                .rawResponse(_httpRes);
+
+        PatchCalendarLinkResponse _res = _resBuilder.build();
+        
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            if (Utils.contentTypeMatches(_contentType, "application/json")) {
+                CalendarLink _out = Utils.mapper().readValue(
+                    Utils.toUtf8AndClose(_httpRes.body()),
+                    new TypeReference<CalendarLink>() {});
+                _res.withCalendarLink(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -604,6 +1171,124 @@ public class Link implements
      * Remove a link
      * @return The call builder
      */
+    public RemoveCalendarLinkRequestBuilder removeCalendarLink() {
+        return new RemoveCalendarLinkRequestBuilder(this);
+    }
+
+    /**
+     * Remove a link
+     * @param request The request object containing all of the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public RemoveCalendarLinkResponse removeCalendarLink(
+            RemoveCalendarLinkRequest request) throws Exception {
+        String _baseUrl = this.sdkConfiguration.serverUrl;
+        String _url = Utils.generateURL(
+                RemoveCalendarLinkRequest.class,
+                _baseUrl,
+                "/calendar/{connection_id}/link/{id}",
+                request, null);
+        
+        HTTPRequest _req = new HTTPRequest(_url, "DELETE");
+        _req.addHeader("Accept", "*/*")
+            .addHeader("user-agent", 
+                SDKConfiguration.USER_AGENT);
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
+        Utils.configureSecurity(_req,  
+                this.sdkConfiguration.securitySource.getSecurity());
+        HTTPClient _client = this.sdkConfiguration.defaultClient;
+        HttpRequest _r = 
+            sdkConfiguration.hooks()
+               .beforeRequest(
+                  new BeforeRequestContextImpl(
+                      "removeCalendarLink", 
+                      Optional.of(List.of()), 
+                      _hookSecuritySource),
+                  _req.build());
+        HttpResponse<InputStream> _httpRes;
+        try {
+            _httpRes = _client.send(_r);
+            if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "removeCalendarLink",
+                            Optional.of(List.of()),
+                            _hookSecuritySource),
+                        Optional.of(_httpRes),
+                        Optional.empty());
+            } else {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterSuccess(
+                        new AfterSuccessContextImpl(
+                            "removeCalendarLink",
+                            Optional.of(List.of()), 
+                            _hookSecuritySource),
+                         _httpRes);
+            }
+        } catch (Exception _e) {
+            _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "removeCalendarLink",
+                            Optional.of(List.of()),
+                            _hookSecuritySource), 
+                        Optional.empty(),
+                        Optional.of(_e));
+        }
+        String _contentType = _httpRes
+            .headers()
+            .firstValue("Content-Type")
+            .orElse("application/octet-stream");
+        RemoveCalendarLinkResponse.Builder _resBuilder = 
+            RemoveCalendarLinkResponse
+                .builder()
+                .contentType(_contentType)
+                .statusCode(_httpRes.statusCode())
+                .rawResponse(_httpRes);
+
+        RemoveCalendarLinkResponse _res = _resBuilder.build();
+        
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            // no content 
+            return _res;
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
+            _res.withHeaders(_httpRes.headers().map());
+            // no content 
+            return _res;
+        }
+        throw new SDKError(
+            _httpRes, 
+            _httpRes.statusCode(), 
+            "Unexpected status code received: " + _httpRes.statusCode(), 
+            Utils.extractByteArrayFromBody(_httpRes));
+    }
+
+
+
+    /**
+     * Remove a link
+     * @return The call builder
+     */
     public RemovePaymentLinkRequestBuilder removePaymentLink() {
         return new RemovePaymentLinkRequestBuilder(this);
     }
@@ -708,6 +1393,148 @@ public class Link implements
             _res.withHeaders(_httpRes.headers().map());
             // no content 
             return _res;
+        }
+        throw new SDKError(
+            _httpRes, 
+            _httpRes.statusCode(), 
+            "Unexpected status code received: " + _httpRes.statusCode(), 
+            Utils.extractByteArrayFromBody(_httpRes));
+    }
+
+
+
+    /**
+     * Update a link
+     * @return The call builder
+     */
+    public UpdateCalendarLinkRequestBuilder updateCalendarLink() {
+        return new UpdateCalendarLinkRequestBuilder(this);
+    }
+
+    /**
+     * Update a link
+     * @param request The request object containing all of the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public UpdateCalendarLinkResponse updateCalendarLink(
+            UpdateCalendarLinkRequest request) throws Exception {
+        String _baseUrl = this.sdkConfiguration.serverUrl;
+        String _url = Utils.generateURL(
+                UpdateCalendarLinkRequest.class,
+                _baseUrl,
+                "/calendar/{connection_id}/link/{id}",
+                request, null);
+        
+        HTTPRequest _req = new HTTPRequest(_url, "PUT");
+        Object _convertedRequest = Utils.convertToShape(
+                request, 
+                JsonShape.DEFAULT,
+                new TypeReference<UpdateCalendarLinkRequest>() {});
+        SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
+                _convertedRequest, 
+                "calendarLink",
+                "json",
+                false);
+        if (_serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        _req.setBody(Optional.ofNullable(_serializedRequestBody));
+        _req.addHeader("Accept", "application/json")
+            .addHeader("user-agent", 
+                SDKConfiguration.USER_AGENT);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                UpdateCalendarLinkRequest.class,
+                request, 
+                null));
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
+        Utils.configureSecurity(_req,  
+                this.sdkConfiguration.securitySource.getSecurity());
+        HTTPClient _client = this.sdkConfiguration.defaultClient;
+        HttpRequest _r = 
+            sdkConfiguration.hooks()
+               .beforeRequest(
+                  new BeforeRequestContextImpl(
+                      "updateCalendarLink", 
+                      Optional.of(List.of()), 
+                      _hookSecuritySource),
+                  _req.build());
+        HttpResponse<InputStream> _httpRes;
+        try {
+            _httpRes = _client.send(_r);
+            if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "updateCalendarLink",
+                            Optional.of(List.of()),
+                            _hookSecuritySource),
+                        Optional.of(_httpRes),
+                        Optional.empty());
+            } else {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterSuccess(
+                        new AfterSuccessContextImpl(
+                            "updateCalendarLink",
+                            Optional.of(List.of()), 
+                            _hookSecuritySource),
+                         _httpRes);
+            }
+        } catch (Exception _e) {
+            _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "updateCalendarLink",
+                            Optional.of(List.of()),
+                            _hookSecuritySource), 
+                        Optional.empty(),
+                        Optional.of(_e));
+        }
+        String _contentType = _httpRes
+            .headers()
+            .firstValue("Content-Type")
+            .orElse("application/octet-stream");
+        UpdateCalendarLinkResponse.Builder _resBuilder = 
+            UpdateCalendarLinkResponse
+                .builder()
+                .contentType(_contentType)
+                .statusCode(_httpRes.statusCode())
+                .rawResponse(_httpRes);
+
+        UpdateCalendarLinkResponse _res = _resBuilder.build();
+        
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            if (Utils.contentTypeMatches(_contentType, "application/json")) {
+                CalendarLink _out = Utils.mapper().readValue(
+                    Utils.toUtf8AndClose(_httpRes.body()),
+                    new TypeReference<CalendarLink>() {});
+                _res.withCalendarLink(Optional.ofNullable(_out));
+                return _res;
+            } else {
+                throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "Unexpected content-type received: " + _contentType, 
+                    Utils.extractByteArrayFromBody(_httpRes));
+            }
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
         }
         throw new SDKError(
             _httpRes, 

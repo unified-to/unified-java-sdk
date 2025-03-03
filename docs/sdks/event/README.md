@@ -5,12 +5,80 @@
 
 ### Available Operations
 
+* [createCalendarEvent](#createcalendarevent) - Create an event
 * [createCrmEvent](#createcrmevent) - Create an event
+* [getCalendarEvent](#getcalendarevent) - Retrieve an event
 * [getCrmEvent](#getcrmevent) - Retrieve an event
+* [listCalendarEvents](#listcalendarevents) - List all events
 * [listCrmEvents](#listcrmevents) - List all events
+* [patchCalendarEvent](#patchcalendarevent) - Update an event
 * [patchCrmEvent](#patchcrmevent) - Update an event
+* [removeCalendarEvent](#removecalendarevent) - Remove an event
 * [removeCrmEvent](#removecrmevent) - Remove an event
+* [updateCalendarEvent](#updatecalendarevent) - Update an event
 * [updateCrmEvent](#updatecrmevent) - Update an event
+
+## createCalendarEvent
+
+Create an event
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.CreateCalendarEventRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateCalendarEventResponse;
+import com.unifiedapi.unifiedto.models.shared.CalendarEvent;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        CreateCalendarEventRequest req = CreateCalendarEventRequest.builder()
+                .calendarEvent(CalendarEvent.builder()
+                    .endAt("<value>")
+                    .startAt("<value>")
+                    .subject("<value>")
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateCalendarEventResponse res = sdk.event().createCalendarEvent()
+                .request(req)
+                .call();
+
+        if (res.calendarEvent().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [CreateCalendarEventRequest](../../models/operations/CreateCalendarEventRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[CreateCalendarEventResponse](../../models/operations/CreateCalendarEventResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createCrmEvent
 
@@ -64,6 +132,63 @@ public class Application {
 ### Response
 
 **[CreateCrmEventResponse](../../models/operations/CreateCrmEventResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getCalendarEvent
+
+Retrieve an event
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.GetCalendarEventRequest;
+import com.unifiedapi.unifiedto.models.operations.GetCalendarEventResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        GetCalendarEventRequest req = GetCalendarEventRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetCalendarEventResponse res = sdk.event().getCalendarEvent()
+                .request(req)
+                .call();
+
+        if (res.calendarEvent().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [GetCalendarEventRequest](../../models/operations/GetCalendarEventRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[GetCalendarEventResponse](../../models/operations/GetCalendarEventResponse.md)**
 
 ### Errors
 
@@ -128,6 +253,62 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listCalendarEvents
+
+List all events
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.ListCalendarEventsRequest;
+import com.unifiedapi.unifiedto.models.operations.ListCalendarEventsResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        ListCalendarEventsRequest req = ListCalendarEventsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListCalendarEventsResponse res = sdk.event().listCalendarEvents()
+                .request(req)
+                .call();
+
+        if (res.calendarEvents().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [ListCalendarEventsRequest](../../models/operations/ListCalendarEventsRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[ListCalendarEventsResponse](../../models/operations/ListCalendarEventsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listCrmEvents
 
 List all events
@@ -177,6 +358,69 @@ public class Application {
 ### Response
 
 **[ListCrmEventsResponse](../../models/operations/ListCrmEventsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchCalendarEvent
+
+Update an event
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.PatchCalendarEventRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchCalendarEventResponse;
+import com.unifiedapi.unifiedto.models.shared.CalendarEvent;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        PatchCalendarEventRequest req = PatchCalendarEventRequest.builder()
+                .calendarEvent(CalendarEvent.builder()
+                    .endAt("<value>")
+                    .startAt("<value>")
+                    .subject("<value>")
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchCalendarEventResponse res = sdk.event().patchCalendarEvent()
+                .request(req)
+                .call();
+
+        if (res.calendarEvent().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [PatchCalendarEventRequest](../../models/operations/PatchCalendarEventRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[PatchCalendarEventResponse](../../models/operations/PatchCalendarEventResponse.md)**
 
 ### Errors
 
@@ -244,6 +488,61 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removeCalendarEvent
+
+Remove an event
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.RemoveCalendarEventRequest;
+import com.unifiedapi.unifiedto.models.operations.RemoveCalendarEventResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        RemoveCalendarEventRequest req = RemoveCalendarEventRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveCalendarEventResponse res = sdk.event().removeCalendarEvent()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [RemoveCalendarEventRequest](../../models/operations/RemoveCalendarEventRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[RemoveCalendarEventResponse](../../models/operations/RemoveCalendarEventResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## removeCrmEvent
 
 Remove an event
@@ -292,6 +591,69 @@ public class Application {
 ### Response
 
 **[RemoveCrmEventResponse](../../models/operations/RemoveCrmEventResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateCalendarEvent
+
+Update an event
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.UpdateCalendarEventRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdateCalendarEventResponse;
+import com.unifiedapi.unifiedto.models.shared.CalendarEvent;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        UpdateCalendarEventRequest req = UpdateCalendarEventRequest.builder()
+                .calendarEvent(CalendarEvent.builder()
+                    .endAt("<value>")
+                    .startAt("<value>")
+                    .subject("<value>")
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateCalendarEventResponse res = sdk.event().updateCalendarEvent()
+                .request(req)
+                .call();
+
+        if (res.calendarEvent().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [UpdateCalendarEventRequest](../../models/operations/UpdateCalendarEventRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[UpdateCalendarEventResponse](../../models/operations/UpdateCalendarEventResponse.md)**
 
 ### Errors
 

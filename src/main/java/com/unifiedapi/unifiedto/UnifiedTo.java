@@ -70,6 +70,16 @@ public class UnifiedTo {
 
     private final Scorecard scorecard;
 
+    private final Calendar calendar;
+
+    private final Busy busy;
+
+    private final Event event;
+
+    private final Link link;
+
+    private final Recording recording;
+
     private final Commerce commerce;
 
     private final Collection collection;
@@ -83,8 +93,6 @@ public class UnifiedTo {
     private final Crm crm;
 
     private final Deal deal;
-
-    private final Event event;
 
     private final Lead lead;
 
@@ -145,8 +153,6 @@ public class UnifiedTo {
     private final Passthrough passthrough;
 
     private final Payment payment;
-
-    private final Link link;
 
     private final Payout payout;
 
@@ -280,6 +286,26 @@ public class UnifiedTo {
         return scorecard;
     }
 
+    public Calendar calendar() {
+        return calendar;
+    }
+
+    public Busy busy() {
+        return busy;
+    }
+
+    public Event event() {
+        return event;
+    }
+
+    public Link link() {
+        return link;
+    }
+
+    public Recording recording() {
+        return recording;
+    }
+
     public Commerce commerce() {
         return commerce;
     }
@@ -306,10 +332,6 @@ public class UnifiedTo {
 
     public Deal deal() {
         return deal;
-    }
-
-    public Event event() {
-        return event;
     }
 
     public Lead lead() {
@@ -430,10 +452,6 @@ public class UnifiedTo {
 
     public Payment payment() {
         return payment;
-    }
-
-    public Link link() {
-        return link;
     }
 
     public Payout payout() {
@@ -688,6 +706,11 @@ public class UnifiedTo {
         this.interview = new Interview(sdkConfiguration);
         this.job = new Job(sdkConfiguration);
         this.scorecard = new Scorecard(sdkConfiguration);
+        this.calendar = new Calendar(sdkConfiguration);
+        this.busy = new Busy(sdkConfiguration);
+        this.event = new Event(sdkConfiguration);
+        this.link = new Link(sdkConfiguration);
+        this.recording = new Recording(sdkConfiguration);
         this.commerce = new Commerce(sdkConfiguration);
         this.collection = new Collection(sdkConfiguration);
         this.inventory = new Inventory(sdkConfiguration);
@@ -695,7 +718,6 @@ public class UnifiedTo {
         this.location = new Location(sdkConfiguration);
         this.crm = new Crm(sdkConfiguration);
         this.deal = new Deal(sdkConfiguration);
-        this.event = new Event(sdkConfiguration);
         this.lead = new Lead(sdkConfiguration);
         this.pipeline = new Pipeline(sdkConfiguration);
         this.enrich = new Enrich(sdkConfiguration);
@@ -726,7 +748,6 @@ public class UnifiedTo {
         this.metadata = new Metadata(sdkConfiguration);
         this.passthrough = new Passthrough(sdkConfiguration);
         this.payment = new Payment(sdkConfiguration);
-        this.link = new Link(sdkConfiguration);
         this.payout = new Payout(sdkConfiguration);
         this.refund = new Refund(sdkConfiguration);
         this.subscription = new Subscription(sdkConfiguration);

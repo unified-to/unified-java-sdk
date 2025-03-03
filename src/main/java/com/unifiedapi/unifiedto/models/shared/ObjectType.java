@@ -79,7 +79,12 @@ public enum ObjectType {
     REPO_BRANCH("repo_branch"),
     REPO_COMMIT("repo_commit"),
     REPO_PULLREQUEST("repo_pullrequest"),
-    METADATA_METADATA("metadata_metadata");
+    METADATA_METADATA("metadata_metadata"),
+    CALENDAR_CALENDAR("calendar_calendar"),
+    CALENDAR_EVENT("calendar_event"),
+    CALENDAR_BUSY("calendar_busy"),
+    CALENDAR_LINK("calendar_link"),
+    CALENDAR_RECORDING("calendar_recording");
 
     @JsonValue
     private final String value;

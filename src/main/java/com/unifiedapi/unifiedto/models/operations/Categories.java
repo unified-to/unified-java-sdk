@@ -29,7 +29,8 @@ public enum Categories {
     SCIM("scim"),
     LMS("lms"),
     REPO("repo"),
-    METADATA("metadata");
+    METADATA("metadata"),
+    CALENDAR("calendar");
 
     @JsonValue
     private final String value;
