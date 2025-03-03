@@ -26,7 +26,7 @@ java:
   defaultErrorName: SDKError
   flattenGlobalSecurity: false
   githubURL: github.com/unified-to/unified-java-sdk
-  groupID: com.unifiedapi
+  groupID: to.unified
   imports:
     option: openapi
     paths:
