@@ -21,12 +21,12 @@ Create a deal
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateCrmDealRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateCrmDealResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmDeal;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateCrmDealRequest;
+import to.unified.unifiedto.models.operations.CreateCrmDealResponse;
+import to.unified.unifiedto.models.shared.CrmDeal;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -80,11 +80,11 @@ Retrieve a deal
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetCrmDealRequest;
-import com.unifiedapi.unifiedto.models.operations.GetCrmDealResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetCrmDealRequest;
+import to.unified.unifiedto.models.operations.GetCrmDealResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -137,11 +137,11 @@ List all deals
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListCrmDealsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListCrmDealsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListCrmDealsRequest;
+import to.unified.unifiedto.models.operations.ListCrmDealsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -193,12 +193,12 @@ Update a deal
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmDealRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmDealResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmDeal;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchCrmDealRequest;
+import to.unified.unifiedto.models.operations.PatchCrmDealResponse;
+import to.unified.unifiedto.models.shared.CrmDeal;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -253,11 +253,11 @@ Remove a deal
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveCrmDealRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveCrmDealResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveCrmDealRequest;
+import to.unified.unifiedto.models.operations.RemoveCrmDealResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -308,12 +308,12 @@ Update a deal
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateCrmDealRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateCrmDealResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmDeal;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateCrmDealRequest;
+import to.unified.unifiedto.models.operations.UpdateCrmDealResponse;
+import to.unified.unifiedto.models.shared.CrmDeal;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 

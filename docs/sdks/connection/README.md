@@ -21,14 +21,14 @@ Used only to import existing customer credentials; use "Create connection indire
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateUnifiedConnectionResponse;
-import com.unifiedapi.unifiedto.models.shared.Connection;
-import com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories;
-import com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 import java.util.List;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateUnifiedConnectionResponse;
+import to.unified.unifiedto.models.shared.Connection;
+import to.unified.unifiedto.models.shared.PropertyConnectionCategories;
+import to.unified.unifiedto.models.shared.PropertyConnectionPermissions;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -87,11 +87,11 @@ Retrieve connection
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionRequest;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetUnifiedConnectionRequest;
+import to.unified.unifiedto.models.operations.GetUnifiedConnectionResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -143,11 +143,11 @@ List all connections
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListUnifiedConnectionsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListUnifiedConnectionsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListUnifiedConnectionsRequest;
+import to.unified.unifiedto.models.operations.ListUnifiedConnectionsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -198,14 +198,14 @@ Update connection
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchUnifiedConnectionRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchUnifiedConnectionResponse;
-import com.unifiedapi.unifiedto.models.shared.Connection;
-import com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 import java.util.List;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchUnifiedConnectionRequest;
+import to.unified.unifiedto.models.operations.PatchUnifiedConnectionResponse;
+import to.unified.unifiedto.models.shared.Connection;
+import to.unified.unifiedto.models.shared.PropertyConnectionCategories;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -265,11 +265,11 @@ Remove connection
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveUnifiedConnectionRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveUnifiedConnectionResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveUnifiedConnectionRequest;
+import to.unified.unifiedto.models.operations.RemoveUnifiedConnectionResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -319,14 +319,14 @@ Update connection
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedConnectionRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedConnectionResponse;
-import com.unifiedapi.unifiedto.models.shared.Connection;
-import com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 import java.util.List;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateUnifiedConnectionRequest;
+import to.unified.unifiedto.models.operations.UpdateUnifiedConnectionResponse;
+import to.unified.unifiedto.models.shared.Connection;
+import to.unified.unifiedto.models.shared.PropertyConnectionCategories;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 

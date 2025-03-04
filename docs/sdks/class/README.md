@@ -21,12 +21,12 @@ Create a class
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateLmsClassRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateLmsClassResponse;
-import com.unifiedapi.unifiedto.models.shared.LmsClass;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateLmsClassRequest;
+import to.unified.unifiedto.models.operations.CreateLmsClassResponse;
+import to.unified.unifiedto.models.shared.LmsClass;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -82,11 +82,11 @@ Retrieve a class
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetLmsClassRequest;
-import com.unifiedapi.unifiedto.models.operations.GetLmsClassResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetLmsClassRequest;
+import to.unified.unifiedto.models.operations.GetLmsClassResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -139,11 +139,11 @@ List all classes
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListLmsClassesRequest;
-import com.unifiedapi.unifiedto.models.operations.ListLmsClassesResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListLmsClassesRequest;
+import to.unified.unifiedto.models.operations.ListLmsClassesResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -195,12 +195,12 @@ Update a class
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchLmsClassRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchLmsClassResponse;
-import com.unifiedapi.unifiedto.models.shared.LmsClass;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchLmsClassRequest;
+import to.unified.unifiedto.models.operations.PatchLmsClassResponse;
+import to.unified.unifiedto.models.shared.LmsClass;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -257,11 +257,11 @@ Remove a class
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveLmsClassRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveLmsClassResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveLmsClassRequest;
+import to.unified.unifiedto.models.operations.RemoveLmsClassResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -312,12 +312,12 @@ Update a class
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateLmsClassRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateLmsClassResponse;
-import com.unifiedapi.unifiedto.models.shared.LmsClass;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateLmsClassRequest;
+import to.unified.unifiedto.models.operations.UpdateLmsClassResponse;
+import to.unified.unifiedto.models.shared.LmsClass;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 

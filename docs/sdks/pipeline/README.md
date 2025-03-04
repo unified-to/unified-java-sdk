@@ -21,12 +21,12 @@ Create a pipeline
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmPipeline;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateCrmPipelineRequest;
+import to.unified.unifiedto.models.operations.CreateCrmPipelineResponse;
+import to.unified.unifiedto.models.shared.CrmPipeline;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -80,11 +80,11 @@ Retrieve a pipeline
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetCrmPipelineRequest;
-import com.unifiedapi.unifiedto.models.operations.GetCrmPipelineResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetCrmPipelineRequest;
+import to.unified.unifiedto.models.operations.GetCrmPipelineResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -137,11 +137,11 @@ List all pipelines
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesRequest;
-import com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListCrmPipelinesRequest;
+import to.unified.unifiedto.models.operations.ListCrmPipelinesResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -193,12 +193,12 @@ Update a pipeline
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmPipeline;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchCrmPipelineRequest;
+import to.unified.unifiedto.models.operations.PatchCrmPipelineResponse;
+import to.unified.unifiedto.models.shared.CrmPipeline;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -253,11 +253,11 @@ Remove a pipeline
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveCrmPipelineRequest;
+import to.unified.unifiedto.models.operations.RemoveCrmPipelineResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -308,12 +308,12 @@ Update a pipeline
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmPipeline;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateCrmPipelineRequest;
+import to.unified.unifiedto.models.operations.UpdateCrmPipelineResponse;
+import to.unified.unifiedto.models.shared.CrmPipeline;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 

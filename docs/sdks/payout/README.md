@@ -17,11 +17,11 @@ Retrieve a payout
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetPaymentPayoutRequest;
-import com.unifiedapi.unifiedto.models.operations.GetPaymentPayoutResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetPaymentPayoutRequest;
+import to.unified.unifiedto.models.operations.GetPaymentPayoutResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -74,11 +74,11 @@ List all payouts
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListPaymentPayoutsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListPaymentPayoutsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListPaymentPayoutsRequest;
+import to.unified.unifiedto.models.operations.ListPaymentPayoutsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 

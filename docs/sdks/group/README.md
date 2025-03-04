@@ -27,12 +27,12 @@ Create a group
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateHrisGroupRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateHrisGroupResponse;
-import com.unifiedapi.unifiedto.models.shared.HrisGroup;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateHrisGroupRequest;
+import to.unified.unifiedto.models.operations.CreateHrisGroupResponse;
+import to.unified.unifiedto.models.shared.HrisGroup;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -86,12 +86,12 @@ Create group
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateScimGroupsRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateScimGroupsResponse;
-import com.unifiedapi.unifiedto.models.shared.ScimGroup;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateScimGroupsRequest;
+import to.unified.unifiedto.models.operations.CreateScimGroupsResponse;
+import to.unified.unifiedto.models.shared.ScimGroup;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -146,11 +146,11 @@ Retrieve a group
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetHrisGroupRequest;
-import com.unifiedapi.unifiedto.models.operations.GetHrisGroupResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetHrisGroupRequest;
+import to.unified.unifiedto.models.operations.GetHrisGroupResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -203,11 +203,11 @@ Get group
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetScimGroupsRequest;
-import com.unifiedapi.unifiedto.models.operations.GetScimGroupsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetScimGroupsRequest;
+import to.unified.unifiedto.models.operations.GetScimGroupsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -260,11 +260,11 @@ List all groups
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListHrisGroupsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListHrisGroupsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListHrisGroupsRequest;
+import to.unified.unifiedto.models.operations.ListHrisGroupsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -316,11 +316,11 @@ List groups
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListScimGroupsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListScimGroupsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListScimGroupsRequest;
+import to.unified.unifiedto.models.operations.ListScimGroupsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -372,12 +372,12 @@ Update a group
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchHrisGroupRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchHrisGroupResponse;
-import com.unifiedapi.unifiedto.models.shared.HrisGroup;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchHrisGroupRequest;
+import to.unified.unifiedto.models.operations.PatchHrisGroupResponse;
+import to.unified.unifiedto.models.shared.HrisGroup;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -432,12 +432,12 @@ Update group
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchScimGroupsRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchScimGroupsResponse;
-import com.unifiedapi.unifiedto.models.shared.ScimGroup;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchScimGroupsRequest;
+import to.unified.unifiedto.models.operations.PatchScimGroupsResponse;
+import to.unified.unifiedto.models.shared.ScimGroup;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -493,11 +493,11 @@ Remove a group
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveHrisGroupRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveHrisGroupResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveHrisGroupRequest;
+import to.unified.unifiedto.models.operations.RemoveHrisGroupResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -548,11 +548,11 @@ Delete group
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveScimGroupsRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveScimGroupsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveScimGroupsRequest;
+import to.unified.unifiedto.models.operations.RemoveScimGroupsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -603,12 +603,12 @@ Update a group
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateHrisGroupRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateHrisGroupResponse;
-import com.unifiedapi.unifiedto.models.shared.HrisGroup;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateHrisGroupRequest;
+import to.unified.unifiedto.models.operations.UpdateHrisGroupResponse;
+import to.unified.unifiedto.models.shared.HrisGroup;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -663,12 +663,12 @@ Update group
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateScimGroupsRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateScimGroupsResponse;
-import com.unifiedapi.unifiedto.models.shared.ScimGroup;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateScimGroupsRequest;
+import to.unified.unifiedto.models.operations.UpdateScimGroupsResponse;
+import to.unified.unifiedto.models.shared.ScimGroup;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 

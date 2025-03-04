@@ -27,12 +27,12 @@ Create a link
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateCalendarLinkRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateCalendarLinkResponse;
-import com.unifiedapi.unifiedto.models.shared.CalendarLink;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateCalendarLinkRequest;
+import to.unified.unifiedto.models.operations.CreateCalendarLinkResponse;
+import to.unified.unifiedto.models.shared.CalendarLink;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -87,12 +87,12 @@ Create a link
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreatePaymentLinkRequest;
-import com.unifiedapi.unifiedto.models.operations.CreatePaymentLinkResponse;
-import com.unifiedapi.unifiedto.models.shared.PaymentLink;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreatePaymentLinkRequest;
+import to.unified.unifiedto.models.operations.CreatePaymentLinkResponse;
+import to.unified.unifiedto.models.shared.PaymentLink;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -146,11 +146,11 @@ Retrieve a link
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetCalendarLinkRequest;
-import com.unifiedapi.unifiedto.models.operations.GetCalendarLinkResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetCalendarLinkRequest;
+import to.unified.unifiedto.models.operations.GetCalendarLinkResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -203,11 +203,11 @@ Retrieve a link
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetPaymentLinkRequest;
-import com.unifiedapi.unifiedto.models.operations.GetPaymentLinkResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetPaymentLinkRequest;
+import to.unified.unifiedto.models.operations.GetPaymentLinkResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -260,11 +260,11 @@ List all links
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListCalendarLinksRequest;
-import com.unifiedapi.unifiedto.models.operations.ListCalendarLinksResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListCalendarLinksRequest;
+import to.unified.unifiedto.models.operations.ListCalendarLinksResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -316,11 +316,11 @@ List all links
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListPaymentLinksRequest;
-import com.unifiedapi.unifiedto.models.operations.ListPaymentLinksResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListPaymentLinksRequest;
+import to.unified.unifiedto.models.operations.ListPaymentLinksResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -372,12 +372,12 @@ Update a link
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchCalendarLinkRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchCalendarLinkResponse;
-import com.unifiedapi.unifiedto.models.shared.CalendarLink;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchCalendarLinkRequest;
+import to.unified.unifiedto.models.operations.PatchCalendarLinkResponse;
+import to.unified.unifiedto.models.shared.CalendarLink;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -433,12 +433,12 @@ Update a link
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchPaymentLinkRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchPaymentLinkResponse;
-import com.unifiedapi.unifiedto.models.shared.PaymentLink;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchPaymentLinkRequest;
+import to.unified.unifiedto.models.operations.PatchPaymentLinkResponse;
+import to.unified.unifiedto.models.shared.PaymentLink;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -493,11 +493,11 @@ Remove a link
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveCalendarLinkRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveCalendarLinkResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveCalendarLinkRequest;
+import to.unified.unifiedto.models.operations.RemoveCalendarLinkResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -548,11 +548,11 @@ Remove a link
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemovePaymentLinkRequest;
-import com.unifiedapi.unifiedto.models.operations.RemovePaymentLinkResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemovePaymentLinkRequest;
+import to.unified.unifiedto.models.operations.RemovePaymentLinkResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -603,12 +603,12 @@ Update a link
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateCalendarLinkRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateCalendarLinkResponse;
-import com.unifiedapi.unifiedto.models.shared.CalendarLink;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateCalendarLinkRequest;
+import to.unified.unifiedto.models.operations.UpdateCalendarLinkResponse;
+import to.unified.unifiedto.models.shared.CalendarLink;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -664,12 +664,12 @@ Update a link
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdatePaymentLinkRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdatePaymentLinkResponse;
-import com.unifiedapi.unifiedto.models.shared.PaymentLink;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdatePaymentLinkRequest;
+import to.unified.unifiedto.models.operations.UpdatePaymentLinkResponse;
+import to.unified.unifiedto.models.shared.PaymentLink;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 

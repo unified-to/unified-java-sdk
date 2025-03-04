@@ -21,12 +21,12 @@ Create an employee
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeResponse;
-import com.unifiedapi.unifiedto.models.shared.HrisEmployee;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateHrisEmployeeRequest;
+import to.unified.unifiedto.models.operations.CreateHrisEmployeeResponse;
+import to.unified.unifiedto.models.shared.HrisEmployee;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -80,11 +80,11 @@ Retrieve an employee
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetHrisEmployeeRequest;
-import com.unifiedapi.unifiedto.models.operations.GetHrisEmployeeResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetHrisEmployeeRequest;
+import to.unified.unifiedto.models.operations.GetHrisEmployeeResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -137,11 +137,11 @@ List all employees
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListHrisEmployeesRequest;
-import com.unifiedapi.unifiedto.models.operations.ListHrisEmployeesResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListHrisEmployeesRequest;
+import to.unified.unifiedto.models.operations.ListHrisEmployeesResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -193,12 +193,12 @@ Update an employee
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeResponse;
-import com.unifiedapi.unifiedto.models.shared.HrisEmployee;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchHrisEmployeeRequest;
+import to.unified.unifiedto.models.operations.PatchHrisEmployeeResponse;
+import to.unified.unifiedto.models.shared.HrisEmployee;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -253,11 +253,11 @@ Remove an employee
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveHrisEmployeeRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveHrisEmployeeResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveHrisEmployeeRequest;
+import to.unified.unifiedto.models.operations.RemoveHrisEmployeeResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -308,12 +308,12 @@ Update an employee
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeResponse;
-import com.unifiedapi.unifiedto.models.shared.HrisEmployee;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateHrisEmployeeRequest;
+import to.unified.unifiedto.models.operations.UpdateHrisEmployeeResponse;
+import to.unified.unifiedto.models.shared.HrisEmployee;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 

@@ -21,12 +21,12 @@ Create a metadata
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateMetadataMetadataRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateMetadataMetadataResponse;
-import com.unifiedapi.unifiedto.models.shared.MetadataMetadata;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateMetadataMetadataRequest;
+import to.unified.unifiedto.models.operations.CreateMetadataMetadataResponse;
+import to.unified.unifiedto.models.shared.MetadataMetadata;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -82,11 +82,11 @@ Retrieve a metadata
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetMetadataMetadataRequest;
-import com.unifiedapi.unifiedto.models.operations.GetMetadataMetadataResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetMetadataMetadataRequest;
+import to.unified.unifiedto.models.operations.GetMetadataMetadataResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -139,11 +139,11 @@ List all metadatas
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListMetadataMetadatasRequest;
-import com.unifiedapi.unifiedto.models.operations.ListMetadataMetadatasResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListMetadataMetadatasRequest;
+import to.unified.unifiedto.models.operations.ListMetadataMetadatasResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -195,12 +195,12 @@ Update a metadata
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchMetadataMetadataRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchMetadataMetadataResponse;
-import com.unifiedapi.unifiedto.models.shared.MetadataMetadata;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchMetadataMetadataRequest;
+import to.unified.unifiedto.models.operations.PatchMetadataMetadataResponse;
+import to.unified.unifiedto.models.shared.MetadataMetadata;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -257,11 +257,11 @@ Remove a metadata
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveMetadataMetadataRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveMetadataMetadataResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveMetadataMetadataRequest;
+import to.unified.unifiedto.models.operations.RemoveMetadataMetadataResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -312,12 +312,12 @@ Update a metadata
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateMetadataMetadataRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateMetadataMetadataResponse;
-import com.unifiedapi.unifiedto.models.shared.MetadataMetadata;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateMetadataMetadataRequest;
+import to.unified.unifiedto.models.operations.UpdateMetadataMetadataResponse;
+import to.unified.unifiedto.models.shared.MetadataMetadata;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 

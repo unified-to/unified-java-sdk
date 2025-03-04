@@ -17,12 +17,12 @@ Create a prompt
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateGenaiPromptRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateGenaiPromptResponse;
-import com.unifiedapi.unifiedto.models.shared.GenaiPrompt;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateGenaiPromptRequest;
+import to.unified.unifiedto.models.operations.CreateGenaiPromptResponse;
+import to.unified.unifiedto.models.shared.GenaiPrompt;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -76,11 +76,11 @@ List all models
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListGenaiModelsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListGenaiModelsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListGenaiModelsRequest;
+import to.unified.unifiedto.models.operations.ListGenaiModelsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 

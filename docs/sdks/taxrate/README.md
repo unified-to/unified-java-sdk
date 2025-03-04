@@ -21,12 +21,12 @@ Create a taxrate
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateAccountingTaxrateRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateAccountingTaxrateResponse;
-import com.unifiedapi.unifiedto.models.shared.AccountingTaxrate;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateAccountingTaxrateRequest;
+import to.unified.unifiedto.models.operations.CreateAccountingTaxrateResponse;
+import to.unified.unifiedto.models.shared.AccountingTaxrate;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -80,11 +80,11 @@ Retrieve a taxrate
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetAccountingTaxrateRequest;
-import com.unifiedapi.unifiedto.models.operations.GetAccountingTaxrateResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetAccountingTaxrateRequest;
+import to.unified.unifiedto.models.operations.GetAccountingTaxrateResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -137,11 +137,11 @@ List all taxrates
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListAccountingTaxratesRequest;
-import com.unifiedapi.unifiedto.models.operations.ListAccountingTaxratesResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListAccountingTaxratesRequest;
+import to.unified.unifiedto.models.operations.ListAccountingTaxratesResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -193,12 +193,12 @@ Update a taxrate
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchAccountingTaxrateRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchAccountingTaxrateResponse;
-import com.unifiedapi.unifiedto.models.shared.AccountingTaxrate;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchAccountingTaxrateRequest;
+import to.unified.unifiedto.models.operations.PatchAccountingTaxrateResponse;
+import to.unified.unifiedto.models.shared.AccountingTaxrate;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -253,11 +253,11 @@ Remove a taxrate
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveAccountingTaxrateRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveAccountingTaxrateResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveAccountingTaxrateRequest;
+import to.unified.unifiedto.models.operations.RemoveAccountingTaxrateResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -308,12 +308,12 @@ Update a taxrate
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateAccountingTaxrateRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateAccountingTaxrateResponse;
-import com.unifiedapi.unifiedto.models.shared.AccountingTaxrate;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateAccountingTaxrateRequest;
+import to.unified.unifiedto.models.operations.UpdateAccountingTaxrateResponse;
+import to.unified.unifiedto.models.shared.AccountingTaxrate;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 

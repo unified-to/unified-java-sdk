@@ -21,12 +21,12 @@ Create a document
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsDocument;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateAtsDocumentRequest;
+import to.unified.unifiedto.models.operations.CreateAtsDocumentResponse;
+import to.unified.unifiedto.models.shared.AtsDocument;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -80,11 +80,11 @@ Retrieve a document
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetAtsDocumentRequest;
-import com.unifiedapi.unifiedto.models.operations.GetAtsDocumentResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetAtsDocumentRequest;
+import to.unified.unifiedto.models.operations.GetAtsDocumentResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -137,11 +137,11 @@ List all documents
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListAtsDocumentsRequest;
+import to.unified.unifiedto.models.operations.ListAtsDocumentsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -193,12 +193,12 @@ Update a document
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsDocument;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchAtsDocumentRequest;
+import to.unified.unifiedto.models.operations.PatchAtsDocumentResponse;
+import to.unified.unifiedto.models.shared.AtsDocument;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -253,11 +253,11 @@ Remove a document
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveAtsDocumentRequest;
+import to.unified.unifiedto.models.operations.RemoveAtsDocumentResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -308,12 +308,12 @@ Update a document
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsDocument;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateAtsDocumentRequest;
+import to.unified.unifiedto.models.operations.UpdateAtsDocumentResponse;
+import to.unified.unifiedto.models.shared.AtsDocument;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 

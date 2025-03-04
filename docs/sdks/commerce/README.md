@@ -39,12 +39,12 @@ Create a collection
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionResponse;
-import com.unifiedapi.unifiedto.models.shared.CommerceCollection;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateCommerceCollectionRequest;
+import to.unified.unifiedto.models.operations.CreateCommerceCollectionResponse;
+import to.unified.unifiedto.models.shared.CommerceCollection;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -99,12 +99,12 @@ Create an inventory
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateCommerceInventoryRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateCommerceInventoryResponse;
-import com.unifiedapi.unifiedto.models.shared.CommerceInventory;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateCommerceInventoryRequest;
+import to.unified.unifiedto.models.operations.CreateCommerceInventoryResponse;
+import to.unified.unifiedto.models.shared.CommerceInventory;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -159,12 +159,12 @@ Create an item
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateCommerceItemRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateCommerceItemResponse;
-import com.unifiedapi.unifiedto.models.shared.CommerceItem;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateCommerceItemRequest;
+import to.unified.unifiedto.models.operations.CreateCommerceItemResponse;
+import to.unified.unifiedto.models.shared.CommerceItem;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -218,12 +218,12 @@ Create a location
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateCommerceLocationRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateCommerceLocationResponse;
-import com.unifiedapi.unifiedto.models.shared.CommerceLocation;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateCommerceLocationRequest;
+import to.unified.unifiedto.models.operations.CreateCommerceLocationResponse;
+import to.unified.unifiedto.models.shared.CommerceLocation;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -278,11 +278,11 @@ Retrieve a collection
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionRequest;
-import com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetCommerceCollectionRequest;
+import to.unified.unifiedto.models.operations.GetCommerceCollectionResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -335,11 +335,11 @@ Retrieve an inventory
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetCommerceInventoryRequest;
-import com.unifiedapi.unifiedto.models.operations.GetCommerceInventoryResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetCommerceInventoryRequest;
+import to.unified.unifiedto.models.operations.GetCommerceInventoryResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -392,11 +392,11 @@ Retrieve an item
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetCommerceItemRequest;
-import com.unifiedapi.unifiedto.models.operations.GetCommerceItemResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetCommerceItemRequest;
+import to.unified.unifiedto.models.operations.GetCommerceItemResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -449,11 +449,11 @@ Retrieve a location
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetCommerceLocationRequest;
-import com.unifiedapi.unifiedto.models.operations.GetCommerceLocationResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetCommerceLocationRequest;
+import to.unified.unifiedto.models.operations.GetCommerceLocationResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -506,11 +506,11 @@ List all collections
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListCommerceCollectionsRequest;
+import to.unified.unifiedto.models.operations.ListCommerceCollectionsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -562,11 +562,11 @@ List all inventories
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListCommerceInventoriesRequest;
-import com.unifiedapi.unifiedto.models.operations.ListCommerceInventoriesResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListCommerceInventoriesRequest;
+import to.unified.unifiedto.models.operations.ListCommerceInventoriesResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -618,11 +618,11 @@ List all items
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListCommerceItemsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListCommerceItemsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListCommerceItemsRequest;
+import to.unified.unifiedto.models.operations.ListCommerceItemsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -674,11 +674,11 @@ List all locations
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListCommerceLocationsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListCommerceLocationsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListCommerceLocationsRequest;
+import to.unified.unifiedto.models.operations.ListCommerceLocationsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -730,12 +730,12 @@ Update a collection
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionResponse;
-import com.unifiedapi.unifiedto.models.shared.CommerceCollection;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchCommerceCollectionRequest;
+import to.unified.unifiedto.models.operations.PatchCommerceCollectionResponse;
+import to.unified.unifiedto.models.shared.CommerceCollection;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -791,12 +791,12 @@ Update an inventory
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchCommerceInventoryRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchCommerceInventoryResponse;
-import com.unifiedapi.unifiedto.models.shared.CommerceInventory;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchCommerceInventoryRequest;
+import to.unified.unifiedto.models.operations.PatchCommerceInventoryResponse;
+import to.unified.unifiedto.models.shared.CommerceInventory;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -852,12 +852,12 @@ Update an item
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchCommerceItemRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchCommerceItemResponse;
-import com.unifiedapi.unifiedto.models.shared.CommerceItem;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchCommerceItemRequest;
+import to.unified.unifiedto.models.operations.PatchCommerceItemResponse;
+import to.unified.unifiedto.models.shared.CommerceItem;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -912,12 +912,12 @@ Update a location
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchCommerceLocationRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchCommerceLocationResponse;
-import com.unifiedapi.unifiedto.models.shared.CommerceLocation;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchCommerceLocationRequest;
+import to.unified.unifiedto.models.operations.PatchCommerceLocationResponse;
+import to.unified.unifiedto.models.shared.CommerceLocation;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -973,11 +973,11 @@ Remove a collection
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveCommerceCollectionRequest;
+import to.unified.unifiedto.models.operations.RemoveCommerceCollectionResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1028,11 +1028,11 @@ Remove an inventory
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveCommerceInventoryRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveCommerceInventoryResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveCommerceInventoryRequest;
+import to.unified.unifiedto.models.operations.RemoveCommerceInventoryResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1083,11 +1083,11 @@ Remove an item
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveCommerceItemRequest;
+import to.unified.unifiedto.models.operations.RemoveCommerceItemResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1138,11 +1138,11 @@ Remove a location
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveCommerceLocationRequest;
+import to.unified.unifiedto.models.operations.RemoveCommerceLocationResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1193,12 +1193,12 @@ Update a collection
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionResponse;
-import com.unifiedapi.unifiedto.models.shared.CommerceCollection;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateCommerceCollectionRequest;
+import to.unified.unifiedto.models.operations.UpdateCommerceCollectionResponse;
+import to.unified.unifiedto.models.shared.CommerceCollection;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1254,12 +1254,12 @@ Update an inventory
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateCommerceInventoryRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateCommerceInventoryResponse;
-import com.unifiedapi.unifiedto.models.shared.CommerceInventory;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateCommerceInventoryRequest;
+import to.unified.unifiedto.models.operations.UpdateCommerceInventoryResponse;
+import to.unified.unifiedto.models.shared.CommerceInventory;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1315,12 +1315,12 @@ Update an item
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateCommerceItemRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateCommerceItemResponse;
-import com.unifiedapi.unifiedto.models.shared.CommerceItem;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateCommerceItemRequest;
+import to.unified.unifiedto.models.operations.UpdateCommerceItemResponse;
+import to.unified.unifiedto.models.shared.CommerceItem;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1375,12 +1375,12 @@ Update a location
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateCommerceLocationRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateCommerceLocationResponse;
-import com.unifiedapi.unifiedto.models.shared.CommerceLocation;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateCommerceLocationRequest;
+import to.unified.unifiedto.models.operations.UpdateCommerceLocationResponse;
+import to.unified.unifiedto.models.shared.CommerceLocation;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 

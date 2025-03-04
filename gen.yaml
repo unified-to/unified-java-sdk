@@ -1,46 +1,46 @@
 configVersion: 2.0.0
 generation:
-    sdkClassName: Unified-to
-    usageSnippets:
-        optionalPropertyRendering: withExample
-    useClassNamesForArrayFields: true
-    fixes:
-        nameResolutionFeb2025: false
-        parameterOrderingFeb2024: false
-        requestResponseComponentNamesFeb2024: false
-        securityFeb2025: false
-    auth:
-        oAuth2ClientCredentialsEnabled: false
-        oAuth2PasswordEnabled: false
-    baseServerURL: ''
-    flattenGlobalSecurity: true
+  sdkClassName: Unified-to
+  usageSnippets:
+    optionalPropertyRendering: withExample
+  useClassNamesForArrayFields: true
+  fixes:
+    nameResolutionFeb2025: false
+    parameterOrderingFeb2024: false
+    requestResponseComponentNamesFeb2024: false
+    securityFeb2025: false
+  auth:
+    oAuth2ClientCredentialsEnabled: false
+    oAuth2PasswordEnabled: false
+  baseServerURL: ""
+  flattenGlobalSecurity: true
 java:
-    version: 0.27.6
-    additionalDependencies: []
-    additionalPlugins: []
-    artifactID: unifiedto
-    clientServerStatusCodesAsErrors: true
-    companyEmail: hello@unified.to
-    companyName: Unified API Inc.
-    companyURL: www.unified.to
-    defaultErrorName: SDKError
-    flattenGlobalSecurity: false
-    githubURL: github.com/unified-to/unified-java-sdk
-    groupID: to.unified
-    imports:
-        option: openapi
-        paths:
-            callbacks: models/callbacks
-            errors: models/errors
-            operations: models/operations
-            shared: models/shared
-            webhooks: models/webhooks
-    inputModelSuffix: input
-    license:
-        name: The MIT License (MIT)
-        shortName: MIT
-        url: https://mit-license.org/
-    maxMethodParams: 0
-    outputModelSuffix: output
-    projectName: Unified-java-sdk
-    templateVersion: v2
+  version: 0.27.7
+  additionalDependencies: []
+  additionalPlugins: []
+  artifactID: unifiedto
+  clientServerStatusCodesAsErrors: true
+  companyEmail: hello@unified.to
+  companyName: Unified API Inc.
+  companyURL: www.unified.to
+  defaultErrorName: SDKError
+  flattenGlobalSecurity: false
+  githubURL: github.com/unified-to/unified-java-sdk
+  groupID: to.unified
+  imports:
+    option: openapi
+    paths:
+      callbacks: models/callbacks
+      errors: models/errors
+      operations: models/operations
+      shared: models/shared
+      webhooks: models/webhooks
+  inputModelSuffix: input
+  license:
+    name: The MIT License (MIT)
+    shortName: MIT
+    url: https://mit-license.org/
+  maxMethodParams: 0
+  outputModelSuffix: output
+  projectName: Unified-java-sdk
+  templateVersion: v2

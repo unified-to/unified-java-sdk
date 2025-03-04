@@ -17,11 +17,11 @@ Retrieve a recording
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetCalendarRecordingRequest;
-import com.unifiedapi.unifiedto.models.operations.GetCalendarRecordingResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetCalendarRecordingRequest;
+import to.unified.unifiedto.models.operations.GetCalendarRecordingResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -74,11 +74,11 @@ List all recordings
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListCalendarRecordingsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListCalendarRecordingsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListCalendarRecordingsRequest;
+import to.unified.unifiedto.models.operations.ListCalendarRecordingsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 

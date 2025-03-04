@@ -16,11 +16,11 @@ List all busies
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListCalendarBusiesRequest;
-import com.unifiedapi.unifiedto.models.operations.ListCalendarBusiesResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListCalendarBusiesRequest;
+import to.unified.unifiedto.models.operations.ListCalendarBusiesResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 

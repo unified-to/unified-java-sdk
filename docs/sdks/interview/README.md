@@ -21,12 +21,12 @@ Create an interview
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateAtsInterviewRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateAtsInterviewResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsInterview;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateAtsInterviewRequest;
+import to.unified.unifiedto.models.operations.CreateAtsInterviewResponse;
+import to.unified.unifiedto.models.shared.AtsInterview;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -80,11 +80,11 @@ Retrieve an interview
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetAtsInterviewRequest;
-import com.unifiedapi.unifiedto.models.operations.GetAtsInterviewResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetAtsInterviewRequest;
+import to.unified.unifiedto.models.operations.GetAtsInterviewResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -137,11 +137,11 @@ List all interviews
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListAtsInterviewsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListAtsInterviewsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListAtsInterviewsRequest;
+import to.unified.unifiedto.models.operations.ListAtsInterviewsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -193,12 +193,12 @@ Update an interview
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchAtsInterviewRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchAtsInterviewResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsInterview;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchAtsInterviewRequest;
+import to.unified.unifiedto.models.operations.PatchAtsInterviewResponse;
+import to.unified.unifiedto.models.shared.AtsInterview;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -253,11 +253,11 @@ Remove an interview
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveAtsInterviewRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveAtsInterviewResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveAtsInterviewRequest;
+import to.unified.unifiedto.models.operations.RemoveAtsInterviewResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -308,12 +308,12 @@ Update an interview
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateAtsInterviewRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateAtsInterviewResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsInterview;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateAtsInterviewRequest;
+import to.unified.unifiedto.models.operations.UpdateAtsInterviewResponse;
+import to.unified.unifiedto.models.shared.AtsInterview;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 

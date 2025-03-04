@@ -27,12 +27,12 @@ Create an event
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateCalendarEventRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateCalendarEventResponse;
-import com.unifiedapi.unifiedto.models.shared.CalendarEvent;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateCalendarEventRequest;
+import to.unified.unifiedto.models.operations.CreateCalendarEventResponse;
+import to.unified.unifiedto.models.shared.CalendarEvent;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -89,12 +89,12 @@ Create an event
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateCrmEventRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateCrmEventResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmEvent;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateCrmEventRequest;
+import to.unified.unifiedto.models.operations.CreateCrmEventResponse;
+import to.unified.unifiedto.models.shared.CrmEvent;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -148,11 +148,11 @@ Retrieve an event
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetCalendarEventRequest;
-import com.unifiedapi.unifiedto.models.operations.GetCalendarEventResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetCalendarEventRequest;
+import to.unified.unifiedto.models.operations.GetCalendarEventResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -205,11 +205,11 @@ Retrieve an event
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetCrmEventRequest;
-import com.unifiedapi.unifiedto.models.operations.GetCrmEventResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetCrmEventRequest;
+import to.unified.unifiedto.models.operations.GetCrmEventResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -262,11 +262,11 @@ List all events
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListCalendarEventsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListCalendarEventsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListCalendarEventsRequest;
+import to.unified.unifiedto.models.operations.ListCalendarEventsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -318,11 +318,11 @@ List all events
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListCrmEventsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListCrmEventsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListCrmEventsRequest;
+import to.unified.unifiedto.models.operations.ListCrmEventsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -374,12 +374,12 @@ Update an event
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchCalendarEventRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchCalendarEventResponse;
-import com.unifiedapi.unifiedto.models.shared.CalendarEvent;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchCalendarEventRequest;
+import to.unified.unifiedto.models.operations.PatchCalendarEventResponse;
+import to.unified.unifiedto.models.shared.CalendarEvent;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -437,12 +437,12 @@ Update an event
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmEventRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmEventResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmEvent;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchCrmEventRequest;
+import to.unified.unifiedto.models.operations.PatchCrmEventResponse;
+import to.unified.unifiedto.models.shared.CrmEvent;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -497,11 +497,11 @@ Remove an event
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveCalendarEventRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveCalendarEventResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveCalendarEventRequest;
+import to.unified.unifiedto.models.operations.RemoveCalendarEventResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -552,11 +552,11 @@ Remove an event
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveCrmEventRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveCrmEventResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveCrmEventRequest;
+import to.unified.unifiedto.models.operations.RemoveCrmEventResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -607,12 +607,12 @@ Update an event
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateCalendarEventRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateCalendarEventResponse;
-import com.unifiedapi.unifiedto.models.shared.CalendarEvent;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateCalendarEventRequest;
+import to.unified.unifiedto.models.operations.UpdateCalendarEventResponse;
+import to.unified.unifiedto.models.shared.CalendarEvent;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -670,12 +670,12 @@ Update an event
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateCrmEventRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateCrmEventResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmEvent;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateCrmEventRequest;
+import to.unified.unifiedto.models.operations.UpdateCrmEventResponse;
+import to.unified.unifiedto.models.shared.CrmEvent;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 

@@ -33,15 +33,15 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'com.unifiedapi:unifiedto:0.27.6'
+implementation 'to.unified:unifiedto:0.27.7'
 ```
 
 Maven:
 ```xml
 <dependency>
-    <groupId>com.unifiedapi</groupId>
+    <groupId>to.unified</groupId>
     <artifactId>unifiedto</artifactId>
-    <version>0.27.6</version>
+    <version>0.27.7</version>
 </dependency>
 ```
 
@@ -68,12 +68,12 @@ gradlew.bat publishToMavenLocal -Pskip.signing
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse;
-import com.unifiedapi.unifiedto.models.shared.AccountingAccount;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateAccountingAccountRequest;
+import to.unified.unifiedto.models.operations.CreateAccountingAccountResponse;
+import to.unified.unifiedto.models.shared.AccountingAccount;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1192,12 +1192,12 @@ You can override the default server globally using the `.serverIndex(int serverI
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse;
-import com.unifiedapi.unifiedto.models.shared.AccountingAccount;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateAccountingAccountRequest;
+import to.unified.unifiedto.models.operations.CreateAccountingAccountResponse;
+import to.unified.unifiedto.models.shared.AccountingAccount;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1233,12 +1233,12 @@ The default server can also be overridden globally using the `.serverURL(String 
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse;
-import com.unifiedapi.unifiedto.models.shared.AccountingAccount;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateAccountingAccountRequest;
+import to.unified.unifiedto.models.operations.CreateAccountingAccountResponse;
+import to.unified.unifiedto.models.shared.AccountingAccount;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1285,12 +1285,12 @@ By default, an API error will throw a `models/errors/SDKError` exception. When c
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse;
-import com.unifiedapi.unifiedto.models.shared.AccountingAccount;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateAccountingAccountRequest;
+import to.unified.unifiedto.models.operations.CreateAccountingAccountResponse;
+import to.unified.unifiedto.models.shared.AccountingAccount;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1335,12 +1335,12 @@ You can set the security parameters through the `security` builder method when i
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse;
-import com.unifiedapi.unifiedto.models.shared.AccountingAccount;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateAccountingAccountRequest;
+import to.unified.unifiedto.models.operations.CreateAccountingAccountResponse;
+import to.unified.unifiedto.models.shared.AccountingAccount;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 

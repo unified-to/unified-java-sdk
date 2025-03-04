@@ -21,12 +21,12 @@ Create an application
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsApplication;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateAtsApplicationRequest;
+import to.unified.unifiedto.models.operations.CreateAtsApplicationResponse;
+import to.unified.unifiedto.models.shared.AtsApplication;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -80,11 +80,11 @@ Retrieve an application
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetAtsApplicationRequest;
-import com.unifiedapi.unifiedto.models.operations.GetAtsApplicationResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetAtsApplicationRequest;
+import to.unified.unifiedto.models.operations.GetAtsApplicationResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -137,11 +137,11 @@ List all applications
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListAtsApplicationsRequest;
+import to.unified.unifiedto.models.operations.ListAtsApplicationsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -193,12 +193,12 @@ Update an application
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsApplication;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchAtsApplicationRequest;
+import to.unified.unifiedto.models.operations.PatchAtsApplicationResponse;
+import to.unified.unifiedto.models.shared.AtsApplication;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -253,11 +253,11 @@ Remove an application
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveAtsApplicationRequest;
+import to.unified.unifiedto.models.operations.RemoveAtsApplicationResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -308,12 +308,12 @@ Update an application
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsApplication;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateAtsApplicationRequest;
+import to.unified.unifiedto.models.operations.UpdateAtsApplicationResponse;
+import to.unified.unifiedto.models.shared.AtsApplication;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
