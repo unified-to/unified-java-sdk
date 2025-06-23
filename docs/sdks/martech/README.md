@@ -28,11 +28,11 @@ Create a list
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateMartechListRequest;
-import to.unified.unifiedto.models.operations.CreateMartechListResponse;
-import to.unified.unifiedto.models.shared.MarketingList;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateMartechListRequest;
+import to.unified.unified_java_sdk.models.operations.CreateMartechListResponse;
+import to.unified.unified_java_sdk.models.shared.MarketingList;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -87,11 +87,11 @@ Create a member
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateMartechMemberRequest;
-import to.unified.unifiedto.models.operations.CreateMartechMemberResponse;
-import to.unified.unifiedto.models.shared.MarketingMember;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateMartechMemberRequest;
+import to.unified.unified_java_sdk.models.operations.CreateMartechMemberResponse;
+import to.unified.unified_java_sdk.models.shared.MarketingMember;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -146,10 +146,10 @@ Retrieve a list
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetMartechListRequest;
-import to.unified.unifiedto.models.operations.GetMartechListResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetMartechListRequest;
+import to.unified.unified_java_sdk.models.operations.GetMartechListResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -203,10 +203,10 @@ Retrieve a member
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetMartechMemberRequest;
-import to.unified.unifiedto.models.operations.GetMartechMemberResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetMartechMemberRequest;
+import to.unified.unified_java_sdk.models.operations.GetMartechMemberResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -260,10 +260,10 @@ List all lists
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListMartechListsRequest;
-import to.unified.unifiedto.models.operations.ListMartechListsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListMartechListsRequest;
+import to.unified.unified_java_sdk.models.operations.ListMartechListsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -316,10 +316,10 @@ List all members
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListMartechMembersRequest;
-import to.unified.unifiedto.models.operations.ListMartechMembersResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListMartechMembersRequest;
+import to.unified.unified_java_sdk.models.operations.ListMartechMembersResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -372,11 +372,11 @@ Update a list
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchMartechListRequest;
-import to.unified.unifiedto.models.operations.PatchMartechListResponse;
-import to.unified.unifiedto.models.shared.MarketingList;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchMartechListRequest;
+import to.unified.unified_java_sdk.models.operations.PatchMartechListResponse;
+import to.unified.unified_java_sdk.models.shared.MarketingList;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -432,11 +432,11 @@ Update a member
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchMartechMemberRequest;
-import to.unified.unifiedto.models.operations.PatchMartechMemberResponse;
-import to.unified.unifiedto.models.shared.MarketingMember;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchMartechMemberRequest;
+import to.unified.unified_java_sdk.models.operations.PatchMartechMemberResponse;
+import to.unified.unified_java_sdk.models.shared.MarketingMember;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -492,10 +492,10 @@ Remove a list
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveMartechListRequest;
-import to.unified.unifiedto.models.operations.RemoveMartechListResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechListRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechListResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -547,10 +547,10 @@ Remove a member
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveMartechMemberRequest;
-import to.unified.unifiedto.models.operations.RemoveMartechMemberResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechMemberRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechMemberResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -602,11 +602,11 @@ Update a list
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateMartechListRequest;
-import to.unified.unifiedto.models.operations.UpdateMartechListResponse;
-import to.unified.unifiedto.models.shared.MarketingList;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechListRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechListResponse;
+import to.unified.unified_java_sdk.models.shared.MarketingList;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -662,11 +662,11 @@ Update a member
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateMartechMemberRequest;
-import to.unified.unifiedto.models.operations.UpdateMartechMemberResponse;
-import to.unified.unifiedto.models.shared.MarketingMember;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechMemberRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechMemberResponse;
+import to.unified.unified_java_sdk.models.shared.MarketingMember;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

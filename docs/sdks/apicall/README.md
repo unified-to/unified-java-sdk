@@ -18,10 +18,10 @@ Retrieve specific API Call by its ID
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetUnifiedApicallRequest;
-import to.unified.unifiedto.models.operations.GetUnifiedApicallResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedApicallRequest;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedApicallResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -74,10 +74,9 @@ Returns API Calls
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListUnifiedApicallsRequest;
-import to.unified.unifiedto.models.operations.ListUnifiedApicallsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedApicallsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -89,11 +88,7 @@ public class Application {
                     .build())
             .build();
 
-        ListUnifiedApicallsRequest req = ListUnifiedApicallsRequest.builder()
-                .build();
-
         ListUnifiedApicallsResponse res = sdk.apicall().listUnifiedApicalls()
-                .request(req)
                 .call();
 
         if (res.apiCalls().isPresent()) {

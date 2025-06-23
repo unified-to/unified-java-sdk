@@ -22,11 +22,11 @@ Create an item
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateCommerceItemRequest;
-import to.unified.unifiedto.models.operations.CreateCommerceItemResponse;
-import to.unified.unifiedto.models.shared.CommerceItem;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceItemRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceItemResponse;
+import to.unified.unified_java_sdk.models.shared.CommerceItem;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -81,10 +81,10 @@ Retrieve an item
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetCommerceItemRequest;
-import to.unified.unifiedto.models.operations.GetCommerceItemResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetCommerceItemRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceItemResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -138,10 +138,10 @@ List all items
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListCommerceItemsRequest;
-import to.unified.unifiedto.models.operations.ListCommerceItemsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListCommerceItemsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceItemsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -194,11 +194,11 @@ Update an item
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchCommerceItemRequest;
-import to.unified.unifiedto.models.operations.PatchCommerceItemResponse;
-import to.unified.unifiedto.models.shared.CommerceItem;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceItemRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceItemResponse;
+import to.unified.unified_java_sdk.models.shared.CommerceItem;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -254,10 +254,10 @@ Remove an item
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveCommerceItemRequest;
-import to.unified.unifiedto.models.operations.RemoveCommerceItemResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceItemRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceItemResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -309,11 +309,11 @@ Update an item
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateCommerceItemRequest;
-import to.unified.unifiedto.models.operations.UpdateCommerceItemResponse;
-import to.unified.unifiedto.models.shared.CommerceItem;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemResponse;
+import to.unified.unified_java_sdk.models.shared.CommerceItem;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

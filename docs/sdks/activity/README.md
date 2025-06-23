@@ -22,11 +22,11 @@ Create an activity
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateAtsActivityRequest;
-import to.unified.unifiedto.models.operations.CreateAtsActivityResponse;
-import to.unified.unifiedto.models.shared.AtsActivity;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAtsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAtsActivityResponse;
+import to.unified.unified_java_sdk.models.shared.AtsActivity;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -81,10 +81,10 @@ Retrieve an activity
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetAtsActivityRequest;
-import to.unified.unifiedto.models.operations.GetAtsActivityResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAtsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.GetAtsActivityResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -138,10 +138,10 @@ List all activities
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListAtsActivitiesRequest;
-import to.unified.unifiedto.models.operations.ListAtsActivitiesResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAtsActivitiesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAtsActivitiesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -194,11 +194,11 @@ Update an activity
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchAtsActivityRequest;
-import to.unified.unifiedto.models.operations.PatchAtsActivityResponse;
-import to.unified.unifiedto.models.shared.AtsActivity;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAtsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAtsActivityResponse;
+import to.unified.unified_java_sdk.models.shared.AtsActivity;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -254,10 +254,10 @@ Remove an activity
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveAtsActivityRequest;
-import to.unified.unifiedto.models.operations.RemoveAtsActivityResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsActivityResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -309,11 +309,11 @@ Update an activity
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateAtsActivityRequest;
-import to.unified.unifiedto.models.operations.UpdateAtsActivityResponse;
-import to.unified.unifiedto.models.shared.AtsActivity;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsActivityResponse;
+import to.unified.unified_java_sdk.models.shared.AtsActivity;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

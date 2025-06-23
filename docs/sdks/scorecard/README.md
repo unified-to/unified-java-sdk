@@ -22,11 +22,11 @@ Create a scorecard
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateAtsScorecardRequest;
-import to.unified.unifiedto.models.operations.CreateAtsScorecardResponse;
-import to.unified.unifiedto.models.shared.AtsScorecard;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAtsScorecardRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAtsScorecardResponse;
+import to.unified.unified_java_sdk.models.shared.AtsScorecard;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -81,10 +81,10 @@ Retrieve a scorecard
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetAtsScorecardRequest;
-import to.unified.unifiedto.models.operations.GetAtsScorecardResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAtsScorecardRequest;
+import to.unified.unified_java_sdk.models.operations.GetAtsScorecardResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -138,10 +138,10 @@ List all scorecards
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListAtsScorecardsRequest;
-import to.unified.unifiedto.models.operations.ListAtsScorecardsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAtsScorecardsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAtsScorecardsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -194,11 +194,11 @@ Update a scorecard
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchAtsScorecardRequest;
-import to.unified.unifiedto.models.operations.PatchAtsScorecardResponse;
-import to.unified.unifiedto.models.shared.AtsScorecard;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAtsScorecardRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAtsScorecardResponse;
+import to.unified.unified_java_sdk.models.shared.AtsScorecard;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -254,10 +254,10 @@ Remove a scorecard
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveAtsScorecardRequest;
-import to.unified.unifiedto.models.operations.RemoveAtsScorecardResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsScorecardRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsScorecardResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -309,11 +309,11 @@ Update a scorecard
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateAtsScorecardRequest;
-import to.unified.unifiedto.models.operations.UpdateAtsScorecardResponse;
-import to.unified.unifiedto.models.shared.AtsScorecard;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecardRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecardResponse;
+import to.unified.unified_java_sdk.models.shared.AtsScorecard;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

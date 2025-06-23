@@ -3,11 +3,11 @@
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateAccountingAccountRequest;
-import to.unified.unifiedto.models.operations.CreateAccountingAccountResponse;
-import to.unified.unifiedto.models.shared.AccountingAccount;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingAccount;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

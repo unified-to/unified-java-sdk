@@ -22,11 +22,11 @@ Create user
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateScimUsersRequest;
-import to.unified.unifiedto.models.operations.CreateScimUsersResponse;
-import to.unified.unifiedto.models.shared.ScimUser;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateScimUsersRequest;
+import to.unified.unified_java_sdk.models.operations.CreateScimUsersResponse;
+import to.unified.unified_java_sdk.models.shared.ScimUser;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -81,10 +81,10 @@ Get user
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetScimUsersRequest;
-import to.unified.unifiedto.models.operations.GetScimUsersResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetScimUsersRequest;
+import to.unified.unified_java_sdk.models.operations.GetScimUsersResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -138,10 +138,10 @@ List users
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListScimUsersRequest;
-import to.unified.unifiedto.models.operations.ListScimUsersResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListScimUsersRequest;
+import to.unified.unified_java_sdk.models.operations.ListScimUsersResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -194,11 +194,11 @@ Update user
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchScimUsersRequest;
-import to.unified.unifiedto.models.operations.PatchScimUsersResponse;
-import to.unified.unifiedto.models.shared.ScimUser;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchScimUsersRequest;
+import to.unified.unified_java_sdk.models.operations.PatchScimUsersResponse;
+import to.unified.unified_java_sdk.models.shared.ScimUser;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -254,10 +254,10 @@ Delete user
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveScimUsersRequest;
-import to.unified.unifiedto.models.operations.RemoveScimUsersResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveScimUsersRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveScimUsersResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -309,11 +309,11 @@ Update user
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateScimUsersRequest;
-import to.unified.unifiedto.models.operations.UpdateScimUsersResponse;
-import to.unified.unifiedto.models.shared.ScimUser;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateScimUsersRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateScimUsersResponse;
+import to.unified.unified_java_sdk.models.shared.ScimUser;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

@@ -18,10 +18,10 @@ Returns an authorization URL for the specified integration.  Once a successful a
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetUnifiedIntegrationAuthRequest;
-import to.unified.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationAuthRequest;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationAuthResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -75,10 +75,10 @@ Returns an authentication URL for the specified integration.  Once a successful 
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetUnifiedIntegrationLoginRequest;
-import to.unified.unifiedto.models.operations.GetUnifiedIntegrationLoginResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationLoginRequest;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationLoginResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

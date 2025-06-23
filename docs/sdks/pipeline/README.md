@@ -22,11 +22,11 @@ Create a pipeline
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateCrmPipelineRequest;
-import to.unified.unifiedto.models.operations.CreateCrmPipelineResponse;
-import to.unified.unifiedto.models.shared.CrmPipeline;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateCrmPipelineRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCrmPipelineResponse;
+import to.unified.unified_java_sdk.models.shared.CrmPipeline;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -81,10 +81,10 @@ Retrieve a pipeline
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetCrmPipelineRequest;
-import to.unified.unifiedto.models.operations.GetCrmPipelineResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetCrmPipelineRequest;
+import to.unified.unified_java_sdk.models.operations.GetCrmPipelineResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -138,10 +138,10 @@ List all pipelines
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListCrmPipelinesRequest;
-import to.unified.unifiedto.models.operations.ListCrmPipelinesResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListCrmPipelinesRequest;
+import to.unified.unified_java_sdk.models.operations.ListCrmPipelinesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -194,11 +194,11 @@ Update a pipeline
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchCrmPipelineRequest;
-import to.unified.unifiedto.models.operations.PatchCrmPipelineResponse;
-import to.unified.unifiedto.models.shared.CrmPipeline;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchCrmPipelineRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCrmPipelineResponse;
+import to.unified.unified_java_sdk.models.shared.CrmPipeline;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -254,10 +254,10 @@ Remove a pipeline
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveCrmPipelineRequest;
-import to.unified.unifiedto.models.operations.RemoveCrmPipelineResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmPipelineRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmPipelineResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -309,11 +309,11 @@ Update a pipeline
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateCrmPipelineRequest;
-import to.unified.unifiedto.models.operations.UpdateCrmPipelineResponse;
-import to.unified.unifiedto.models.shared.CrmPipeline;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmPipelineRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmPipelineResponse;
+import to.unified.unified_java_sdk.models.shared.CrmPipeline;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

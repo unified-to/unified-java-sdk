@@ -22,11 +22,11 @@ Create an account
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateAccountingAccountRequest;
-import to.unified.unifiedto.models.operations.CreateAccountingAccountResponse;
-import to.unified.unifiedto.models.shared.AccountingAccount;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingAccount;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -81,10 +81,10 @@ Retrieve an account
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetAccountingAccountRequest;
-import to.unified.unifiedto.models.operations.GetAccountingAccountResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAccountingAccountRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingAccountResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -138,10 +138,10 @@ List all accounts
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListAccountingAccountsRequest;
-import to.unified.unifiedto.models.operations.ListAccountingAccountsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAccountingAccountsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingAccountsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -194,11 +194,11 @@ Update an account
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchAccountingAccountRequest;
-import to.unified.unifiedto.models.operations.PatchAccountingAccountResponse;
-import to.unified.unifiedto.models.shared.AccountingAccount;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingAccountRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingAccountResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingAccount;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -254,10 +254,10 @@ Remove an account
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveAccountingAccountRequest;
-import to.unified.unifiedto.models.operations.RemoveAccountingAccountResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingAccountRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingAccountResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -309,11 +309,11 @@ Update an account
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateAccountingAccountRequest;
-import to.unified.unifiedto.models.operations.UpdateAccountingAccountResponse;
-import to.unified.unifiedto.models.shared.AccountingAccount;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingAccountRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingAccountResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingAccount;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

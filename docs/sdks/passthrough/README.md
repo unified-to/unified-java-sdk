@@ -24,10 +24,10 @@ Passthrough POST
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreatePassthroughJsonRequest;
-import to.unified.unifiedto.models.operations.CreatePassthroughJsonResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreatePassthroughJsonRequest;
+import to.unified.unified_java_sdk.models.operations.CreatePassthroughJsonResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -41,7 +41,7 @@ public class Application {
 
         CreatePassthroughJsonRequest req = CreatePassthroughJsonRequest.builder()
                 .connectionId("<id>")
-                .path("/opt/lib")
+                .path("/var/log")
                 .build();
 
         CreatePassthroughJsonResponse res = sdk.passthrough().createPassthroughJson()
@@ -79,10 +79,10 @@ Passthrough POST
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreatePassthroughRawRequest;
-import to.unified.unifiedto.models.operations.CreatePassthroughRawResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreatePassthroughRawRequest;
+import to.unified.unified_java_sdk.models.operations.CreatePassthroughRawResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -96,7 +96,7 @@ public class Application {
 
         CreatePassthroughRawRequest req = CreatePassthroughRawRequest.builder()
                 .connectionId("<id>")
-                .path("/opt/lib")
+                .path("/var/log")
                 .build();
 
         CreatePassthroughRawResponse res = sdk.passthrough().createPassthroughRaw()
@@ -134,10 +134,10 @@ Passthrough GET
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListPassthroughsRequest;
-import to.unified.unifiedto.models.operations.ListPassthroughsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListPassthroughsRequest;
+import to.unified.unified_java_sdk.models.operations.ListPassthroughsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -151,7 +151,7 @@ public class Application {
 
         ListPassthroughsRequest req = ListPassthroughsRequest.builder()
                 .connectionId("<id>")
-                .path("/selinux")
+                .path("/System")
                 .build();
 
         ListPassthroughsResponse res = sdk.passthrough().listPassthroughs()
@@ -189,10 +189,10 @@ Passthrough PUT
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchPassthroughJsonRequest;
-import to.unified.unifiedto.models.operations.PatchPassthroughJsonResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchPassthroughJsonRequest;
+import to.unified.unified_java_sdk.models.operations.PatchPassthroughJsonResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -206,7 +206,7 @@ public class Application {
 
         PatchPassthroughJsonRequest req = PatchPassthroughJsonRequest.builder()
                 .connectionId("<id>")
-                .path("/home/user")
+                .path("/System")
                 .build();
 
         PatchPassthroughJsonResponse res = sdk.passthrough().patchPassthroughJson()
@@ -244,10 +244,10 @@ Passthrough PUT
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchPassthroughRawRequest;
-import to.unified.unifiedto.models.operations.PatchPassthroughRawResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchPassthroughRawRequest;
+import to.unified.unified_java_sdk.models.operations.PatchPassthroughRawResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -261,7 +261,7 @@ public class Application {
 
         PatchPassthroughRawRequest req = PatchPassthroughRawRequest.builder()
                 .connectionId("<id>")
-                .path("/home/user")
+                .path("/System")
                 .build();
 
         PatchPassthroughRawResponse res = sdk.passthrough().patchPassthroughRaw()
@@ -299,10 +299,10 @@ Passthrough DELETE
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemovePassthroughRequest;
-import to.unified.unifiedto.models.operations.RemovePassthroughResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemovePassthroughRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePassthroughResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -316,7 +316,7 @@ public class Application {
 
         RemovePassthroughRequest req = RemovePassthroughRequest.builder()
                 .connectionId("<id>")
-                .path("/Applications")
+                .path("/bin")
                 .build();
 
         RemovePassthroughResponse res = sdk.passthrough().removePassthrough()
@@ -354,10 +354,10 @@ Passthrough PUT
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdatePassthroughJsonRequest;
-import to.unified.unifiedto.models.operations.UpdatePassthroughJsonResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdatePassthroughJsonRequest;
+import to.unified.unified_java_sdk.models.operations.UpdatePassthroughJsonResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -371,7 +371,7 @@ public class Application {
 
         UpdatePassthroughJsonRequest req = UpdatePassthroughJsonRequest.builder()
                 .connectionId("<id>")
-                .path("/etc/namedb")
+                .path("/var/tmp")
                 .build();
 
         UpdatePassthroughJsonResponse res = sdk.passthrough().updatePassthroughJson()
@@ -409,10 +409,10 @@ Passthrough PUT
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdatePassthroughRawRequest;
-import to.unified.unifiedto.models.operations.UpdatePassthroughRawResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdatePassthroughRawRequest;
+import to.unified.unified_java_sdk.models.operations.UpdatePassthroughRawResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -426,7 +426,7 @@ public class Application {
 
         UpdatePassthroughRawRequest req = UpdatePassthroughRawRequest.builder()
                 .connectionId("<id>")
-                .path("/etc/namedb")
+                .path("/var/tmp")
                 .build();
 
         UpdatePassthroughRawResponse res = sdk.passthrough().updatePassthroughRaw()

@@ -18,10 +18,10 @@ Retrieve a channel
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetMessagingChannelRequest;
-import to.unified.unifiedto.models.operations.GetMessagingChannelResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetMessagingChannelRequest;
+import to.unified.unified_java_sdk.models.operations.GetMessagingChannelResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -75,10 +75,10 @@ List all channels
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListMessagingChannelsRequest;
-import to.unified.unifiedto.models.operations.ListMessagingChannelsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListMessagingChannelsRequest;
+import to.unified.unified_java_sdk.models.operations.ListMessagingChannelsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

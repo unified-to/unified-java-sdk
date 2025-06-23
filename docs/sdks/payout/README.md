@@ -18,10 +18,10 @@ Retrieve a payout
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetPaymentPayoutRequest;
-import to.unified.unifiedto.models.operations.GetPaymentPayoutResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetPaymentPayoutRequest;
+import to.unified.unified_java_sdk.models.operations.GetPaymentPayoutResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -75,10 +75,10 @@ List all payouts
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListPaymentPayoutsRequest;
-import to.unified.unifiedto.models.operations.ListPaymentPayoutsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListPaymentPayoutsRequest;
+import to.unified.unified_java_sdk.models.operations.ListPaymentPayoutsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

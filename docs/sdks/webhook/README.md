@@ -24,13 +24,10 @@ The data payload received by your server is described at https://docs.unified.to
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateUnifiedWebhookRequest;
-import to.unified.unifiedto.models.operations.CreateUnifiedWebhookResponse;
-import to.unified.unifiedto.models.shared.Event;
-import to.unified.unifiedto.models.shared.ObjectType;
-import to.unified.unifiedto.models.shared.Security;
-import to.unified.unifiedto.models.shared.Webhook;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateUnifiedWebhookRequest;
+import to.unified.unified_java_sdk.models.operations.CreateUnifiedWebhookResponse;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -46,7 +43,7 @@ public class Application {
                 .webhook(Webhook.builder()
                     .connectionId("<id>")
                     .event(Event.CREATED)
-                    .objectType(ObjectType.HRIS_EMPLOYEE)
+                    .objectType(ObjectType.ATS_SCORECARD)
                     .build())
                 .build();
 
@@ -87,10 +84,10 @@ Retrieve webhook by its ID
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetUnifiedWebhookRequest;
-import to.unified.unifiedto.models.operations.GetUnifiedWebhookResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedWebhookRequest;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedWebhookResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -143,10 +140,9 @@ Returns all registered webhooks
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListUnifiedWebhooksRequest;
-import to.unified.unifiedto.models.operations.ListUnifiedWebhooksResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedWebhooksResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -158,11 +154,7 @@ public class Application {
                     .build())
             .build();
 
-        ListUnifiedWebhooksRequest req = ListUnifiedWebhooksRequest.builder()
-                .build();
-
         ListUnifiedWebhooksResponse res = sdk.webhook().listUnifiedWebhooks()
-                .request(req)
                 .call();
 
         if (res.webhooks().isPresent()) {
@@ -198,13 +190,10 @@ Update webhook subscription
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchUnifiedWebhookRequest;
-import to.unified.unifiedto.models.operations.PatchUnifiedWebhookResponse;
-import to.unified.unifiedto.models.shared.Event;
-import to.unified.unifiedto.models.shared.ObjectType;
-import to.unified.unifiedto.models.shared.Security;
-import to.unified.unifiedto.models.shared.Webhook;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchUnifiedWebhookRequest;
+import to.unified.unified_java_sdk.models.operations.PatchUnifiedWebhookResponse;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -219,8 +208,8 @@ public class Application {
         PatchUnifiedWebhookRequest req = PatchUnifiedWebhookRequest.builder()
                 .webhook(Webhook.builder()
                     .connectionId("<id>")
-                    .event(Event.DELETED)
-                    .objectType(ObjectType.CRM_DEAL)
+                    .event(Event.UPDATED)
+                    .objectType(ObjectType.TICKETING_TICKET)
                     .build())
                 .id("<id>")
                 .build();
@@ -262,10 +251,10 @@ Trigger webhook
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchUnifiedWebhookTriggerRequest;
-import to.unified.unifiedto.models.operations.PatchUnifiedWebhookTriggerResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchUnifiedWebhookTriggerRequest;
+import to.unified.unified_java_sdk.models.operations.PatchUnifiedWebhookTriggerResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -316,10 +305,10 @@ Remove webhook subscription
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveUnifiedWebhookRequest;
-import to.unified.unifiedto.models.operations.RemoveUnifiedWebhookResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveUnifiedWebhookRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveUnifiedWebhookResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -370,13 +359,10 @@ Update webhook subscription
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateUnifiedWebhookRequest;
-import to.unified.unifiedto.models.operations.UpdateUnifiedWebhookResponse;
-import to.unified.unifiedto.models.shared.Event;
-import to.unified.unifiedto.models.shared.ObjectType;
-import to.unified.unifiedto.models.shared.Security;
-import to.unified.unifiedto.models.shared.Webhook;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateUnifiedWebhookRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateUnifiedWebhookResponse;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -391,8 +377,8 @@ public class Application {
         UpdateUnifiedWebhookRequest req = UpdateUnifiedWebhookRequest.builder()
                 .webhook(Webhook.builder()
                     .connectionId("<id>")
-                    .event(Event.CREATED)
-                    .objectType(ObjectType.PAYMENT_LINK)
+                    .event(Event.DELETED)
+                    .objectType(ObjectType.MESSAGING_CHANNEL)
                     .build())
                 .id("<id>")
                 .build();
@@ -434,10 +420,10 @@ Trigger webhook
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateUnifiedWebhookTriggerRequest;
-import to.unified.unifiedto.models.operations.UpdateUnifiedWebhookTriggerResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateUnifiedWebhookTriggerRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateUnifiedWebhookTriggerResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

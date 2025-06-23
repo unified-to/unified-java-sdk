@@ -22,11 +22,11 @@ Create a lead
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateCrmLeadRequest;
-import to.unified.unifiedto.models.operations.CreateCrmLeadResponse;
-import to.unified.unifiedto.models.shared.CrmLead;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateCrmLeadRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCrmLeadResponse;
+import to.unified.unified_java_sdk.models.shared.CrmLead;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -81,10 +81,10 @@ Retrieve a lead
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetCrmLeadRequest;
-import to.unified.unifiedto.models.operations.GetCrmLeadResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetCrmLeadRequest;
+import to.unified.unified_java_sdk.models.operations.GetCrmLeadResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -138,10 +138,10 @@ List all leads
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListCrmLeadsRequest;
-import to.unified.unifiedto.models.operations.ListCrmLeadsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListCrmLeadsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCrmLeadsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -194,11 +194,11 @@ Update a lead
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchCrmLeadRequest;
-import to.unified.unifiedto.models.operations.PatchCrmLeadResponse;
-import to.unified.unifiedto.models.shared.CrmLead;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchCrmLeadRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCrmLeadResponse;
+import to.unified.unified_java_sdk.models.shared.CrmLead;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -254,10 +254,10 @@ Remove a lead
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveCrmLeadRequest;
-import to.unified.unifiedto.models.operations.RemoveCrmLeadResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmLeadRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmLeadResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -309,11 +309,11 @@ Update a lead
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateCrmLeadRequest;
-import to.unified.unifiedto.models.operations.UpdateCrmLeadResponse;
-import to.unified.unifiedto.models.shared.CrmLead;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmLeadRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmLeadResponse;
+import to.unified.unified_java_sdk.models.shared.CrmLead;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

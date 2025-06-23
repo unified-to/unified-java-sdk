@@ -22,11 +22,11 @@ Create a metadata
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateMetadataMetadataRequest;
-import to.unified.unifiedto.models.operations.CreateMetadataMetadataResponse;
-import to.unified.unifiedto.models.shared.MetadataMetadata;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateMetadataMetadataRequest;
+import to.unified.unified_java_sdk.models.operations.CreateMetadataMetadataResponse;
+import to.unified.unified_java_sdk.models.shared.MetadataMetadata;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -83,10 +83,10 @@ Retrieve a metadata
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetMetadataMetadataRequest;
-import to.unified.unifiedto.models.operations.GetMetadataMetadataResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetMetadataMetadataRequest;
+import to.unified.unified_java_sdk.models.operations.GetMetadataMetadataResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -140,10 +140,10 @@ List all metadatas
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListMetadataMetadatasRequest;
-import to.unified.unifiedto.models.operations.ListMetadataMetadatasResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListMetadataMetadatasRequest;
+import to.unified.unified_java_sdk.models.operations.ListMetadataMetadatasResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -196,11 +196,11 @@ Update a metadata
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchMetadataMetadataRequest;
-import to.unified.unifiedto.models.operations.PatchMetadataMetadataResponse;
-import to.unified.unifiedto.models.shared.MetadataMetadata;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchMetadataMetadataRequest;
+import to.unified.unified_java_sdk.models.operations.PatchMetadataMetadataResponse;
+import to.unified.unified_java_sdk.models.shared.MetadataMetadata;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -258,10 +258,10 @@ Remove a metadata
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveMetadataMetadataRequest;
-import to.unified.unifiedto.models.operations.RemoveMetadataMetadataResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveMetadataMetadataRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveMetadataMetadataResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -313,11 +313,11 @@ Update a metadata
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateMetadataMetadataRequest;
-import to.unified.unifiedto.models.operations.UpdateMetadataMetadataResponse;
-import to.unified.unifiedto.models.shared.MetadataMetadata;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateMetadataMetadataRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateMetadataMetadataResponse;
+import to.unified.unified_java_sdk.models.shared.MetadataMetadata;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

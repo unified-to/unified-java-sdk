@@ -24,11 +24,11 @@ Create an organization
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateRepoOrganizationRequest;
-import to.unified.unifiedto.models.operations.CreateRepoOrganizationResponse;
-import to.unified.unifiedto.models.shared.RepoOrganization;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateRepoOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.CreateRepoOrganizationResponse;
+import to.unified.unified_java_sdk.models.shared.RepoOrganization;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -83,10 +83,10 @@ Retrieve an organization
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetAccountingOrganizationRequest;
-import to.unified.unifiedto.models.operations.GetAccountingOrganizationResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAccountingOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingOrganizationResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -140,10 +140,10 @@ Retrieve an organization
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetRepoOrganizationRequest;
-import to.unified.unifiedto.models.operations.GetRepoOrganizationResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetRepoOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.GetRepoOrganizationResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -197,10 +197,10 @@ List all organizations
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListAccountingOrganizationsRequest;
-import to.unified.unifiedto.models.operations.ListAccountingOrganizationsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAccountingOrganizationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingOrganizationsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -253,10 +253,10 @@ List all organizations
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListRepoOrganizationsRequest;
-import to.unified.unifiedto.models.operations.ListRepoOrganizationsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListRepoOrganizationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListRepoOrganizationsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -309,11 +309,11 @@ Update an organization
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchRepoOrganizationRequest;
-import to.unified.unifiedto.models.operations.PatchRepoOrganizationResponse;
-import to.unified.unifiedto.models.shared.RepoOrganization;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchRepoOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.PatchRepoOrganizationResponse;
+import to.unified.unified_java_sdk.models.shared.RepoOrganization;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -369,10 +369,10 @@ Remove an organization
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveRepoOrganizationRequest;
-import to.unified.unifiedto.models.operations.RemoveRepoOrganizationResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveRepoOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveRepoOrganizationResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -424,11 +424,11 @@ Update an organization
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateRepoOrganizationRequest;
-import to.unified.unifiedto.models.operations.UpdateRepoOrganizationResponse;
-import to.unified.unifiedto.models.shared.RepoOrganization;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateRepoOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateRepoOrganizationResponse;
+import to.unified.unified_java_sdk.models.shared.RepoOrganization;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

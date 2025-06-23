@@ -61,11 +61,11 @@ Create an activity
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateAtsActivityRequest;
-import to.unified.unifiedto.models.operations.CreateAtsActivityResponse;
-import to.unified.unifiedto.models.shared.AtsActivity;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAtsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAtsActivityResponse;
+import to.unified.unified_java_sdk.models.shared.AtsActivity;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -120,11 +120,11 @@ Create an application
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateAtsApplicationRequest;
-import to.unified.unifiedto.models.operations.CreateAtsApplicationResponse;
-import to.unified.unifiedto.models.shared.AtsApplication;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAtsApplicationRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAtsApplicationResponse;
+import to.unified.unified_java_sdk.models.shared.AtsApplication;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -179,11 +179,11 @@ Create a candidate
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateAtsCandidateRequest;
-import to.unified.unifiedto.models.operations.CreateAtsCandidateResponse;
-import to.unified.unifiedto.models.shared.AtsCandidate;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAtsCandidateRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAtsCandidateResponse;
+import to.unified.unified_java_sdk.models.shared.AtsCandidate;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -238,11 +238,11 @@ Create a document
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateAtsDocumentRequest;
-import to.unified.unifiedto.models.operations.CreateAtsDocumentResponse;
-import to.unified.unifiedto.models.shared.AtsDocument;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentResponse;
+import to.unified.unified_java_sdk.models.shared.AtsDocument;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -297,11 +297,11 @@ Create an interview
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateAtsInterviewRequest;
-import to.unified.unifiedto.models.operations.CreateAtsInterviewResponse;
-import to.unified.unifiedto.models.shared.AtsInterview;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAtsInterviewRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAtsInterviewResponse;
+import to.unified.unified_java_sdk.models.shared.AtsInterview;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -356,11 +356,11 @@ Create a job
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateAtsJobRequest;
-import to.unified.unifiedto.models.operations.CreateAtsJobResponse;
-import to.unified.unifiedto.models.shared.AtsJob;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAtsJobRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAtsJobResponse;
+import to.unified.unified_java_sdk.models.shared.AtsJob;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -415,11 +415,11 @@ Create a scorecard
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateAtsScorecardRequest;
-import to.unified.unifiedto.models.operations.CreateAtsScorecardResponse;
-import to.unified.unifiedto.models.shared.AtsScorecard;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAtsScorecardRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAtsScorecardResponse;
+import to.unified.unified_java_sdk.models.shared.AtsScorecard;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -474,10 +474,10 @@ Retrieve an activity
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetAtsActivityRequest;
-import to.unified.unifiedto.models.operations.GetAtsActivityResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAtsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.GetAtsActivityResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -531,10 +531,10 @@ Retrieve an application
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetAtsApplicationRequest;
-import to.unified.unifiedto.models.operations.GetAtsApplicationResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAtsApplicationRequest;
+import to.unified.unified_java_sdk.models.operations.GetAtsApplicationResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -588,10 +588,10 @@ Retrieve a candidate
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetAtsCandidateRequest;
-import to.unified.unifiedto.models.operations.GetAtsCandidateResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAtsCandidateRequest;
+import to.unified.unified_java_sdk.models.operations.GetAtsCandidateResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -645,10 +645,10 @@ Retrieve a company
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetAtsCompanyRequest;
-import to.unified.unifiedto.models.operations.GetAtsCompanyResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAtsCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.GetAtsCompanyResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -702,10 +702,10 @@ Retrieve a document
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetAtsDocumentRequest;
-import to.unified.unifiedto.models.operations.GetAtsDocumentResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAtsDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.GetAtsDocumentResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -759,10 +759,10 @@ Retrieve an interview
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetAtsInterviewRequest;
-import to.unified.unifiedto.models.operations.GetAtsInterviewResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAtsInterviewRequest;
+import to.unified.unified_java_sdk.models.operations.GetAtsInterviewResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -816,10 +816,10 @@ Retrieve a job
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetAtsJobRequest;
-import to.unified.unifiedto.models.operations.GetAtsJobResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAtsJobRequest;
+import to.unified.unified_java_sdk.models.operations.GetAtsJobResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -873,10 +873,10 @@ Retrieve a scorecard
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetAtsScorecardRequest;
-import to.unified.unifiedto.models.operations.GetAtsScorecardResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAtsScorecardRequest;
+import to.unified.unified_java_sdk.models.operations.GetAtsScorecardResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -930,10 +930,10 @@ List all activities
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListAtsActivitiesRequest;
-import to.unified.unifiedto.models.operations.ListAtsActivitiesResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAtsActivitiesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAtsActivitiesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -986,10 +986,10 @@ List all applications
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListAtsApplicationsRequest;
-import to.unified.unifiedto.models.operations.ListAtsApplicationsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAtsApplicationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAtsApplicationsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1042,10 +1042,10 @@ List all applicationstatuses
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListAtsApplicationstatusesRequest;
-import to.unified.unifiedto.models.operations.ListAtsApplicationstatusesResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatusesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatusesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1098,10 +1098,10 @@ List all candidates
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListAtsCandidatesRequest;
-import to.unified.unifiedto.models.operations.ListAtsCandidatesResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAtsCandidatesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAtsCandidatesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1154,10 +1154,10 @@ List all companies
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListAtsCompaniesRequest;
-import to.unified.unifiedto.models.operations.ListAtsCompaniesResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAtsCompaniesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAtsCompaniesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1210,10 +1210,10 @@ List all documents
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListAtsDocumentsRequest;
-import to.unified.unifiedto.models.operations.ListAtsDocumentsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAtsDocumentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAtsDocumentsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1266,10 +1266,10 @@ List all interviews
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListAtsInterviewsRequest;
-import to.unified.unifiedto.models.operations.ListAtsInterviewsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAtsInterviewsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAtsInterviewsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1322,10 +1322,10 @@ List all jobs
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListAtsJobsRequest;
-import to.unified.unifiedto.models.operations.ListAtsJobsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAtsJobsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAtsJobsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1378,10 +1378,10 @@ List all scorecards
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListAtsScorecardsRequest;
-import to.unified.unifiedto.models.operations.ListAtsScorecardsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAtsScorecardsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAtsScorecardsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1434,11 +1434,11 @@ Update an activity
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchAtsActivityRequest;
-import to.unified.unifiedto.models.operations.PatchAtsActivityResponse;
-import to.unified.unifiedto.models.shared.AtsActivity;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAtsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAtsActivityResponse;
+import to.unified.unified_java_sdk.models.shared.AtsActivity;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1494,11 +1494,11 @@ Update an application
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchAtsApplicationRequest;
-import to.unified.unifiedto.models.operations.PatchAtsApplicationResponse;
-import to.unified.unifiedto.models.shared.AtsApplication;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAtsApplicationRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAtsApplicationResponse;
+import to.unified.unified_java_sdk.models.shared.AtsApplication;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1554,11 +1554,11 @@ Update a candidate
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchAtsCandidateRequest;
-import to.unified.unifiedto.models.operations.PatchAtsCandidateResponse;
-import to.unified.unifiedto.models.shared.AtsCandidate;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAtsCandidateRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAtsCandidateResponse;
+import to.unified.unified_java_sdk.models.shared.AtsCandidate;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1614,11 +1614,11 @@ Update a document
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchAtsDocumentRequest;
-import to.unified.unifiedto.models.operations.PatchAtsDocumentResponse;
-import to.unified.unifiedto.models.shared.AtsDocument;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAtsDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAtsDocumentResponse;
+import to.unified.unified_java_sdk.models.shared.AtsDocument;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1674,11 +1674,11 @@ Update an interview
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchAtsInterviewRequest;
-import to.unified.unifiedto.models.operations.PatchAtsInterviewResponse;
-import to.unified.unifiedto.models.shared.AtsInterview;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAtsInterviewRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAtsInterviewResponse;
+import to.unified.unified_java_sdk.models.shared.AtsInterview;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1734,11 +1734,11 @@ Update a job
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchAtsJobRequest;
-import to.unified.unifiedto.models.operations.PatchAtsJobResponse;
-import to.unified.unifiedto.models.shared.AtsJob;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAtsJobRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAtsJobResponse;
+import to.unified.unified_java_sdk.models.shared.AtsJob;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1794,11 +1794,11 @@ Update a scorecard
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchAtsScorecardRequest;
-import to.unified.unifiedto.models.operations.PatchAtsScorecardResponse;
-import to.unified.unifiedto.models.shared.AtsScorecard;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAtsScorecardRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAtsScorecardResponse;
+import to.unified.unified_java_sdk.models.shared.AtsScorecard;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1854,10 +1854,10 @@ Remove an activity
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveAtsActivityRequest;
-import to.unified.unifiedto.models.operations.RemoveAtsActivityResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsActivityResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1909,10 +1909,10 @@ Remove an application
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveAtsApplicationRequest;
-import to.unified.unifiedto.models.operations.RemoveAtsApplicationResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsApplicationRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsApplicationResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1964,10 +1964,10 @@ Remove a candidate
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveAtsCandidateRequest;
-import to.unified.unifiedto.models.operations.RemoveAtsCandidateResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsCandidateRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsCandidateResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -2019,10 +2019,10 @@ Remove a document
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveAtsDocumentRequest;
-import to.unified.unifiedto.models.operations.RemoveAtsDocumentResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsDocumentResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -2074,10 +2074,10 @@ Remove an interview
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveAtsInterviewRequest;
-import to.unified.unifiedto.models.operations.RemoveAtsInterviewResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsInterviewRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsInterviewResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -2129,10 +2129,10 @@ Remove a job
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveAtsJobRequest;
-import to.unified.unifiedto.models.operations.RemoveAtsJobResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsJobRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsJobResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -2184,10 +2184,10 @@ Remove a scorecard
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveAtsScorecardRequest;
-import to.unified.unifiedto.models.operations.RemoveAtsScorecardResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsScorecardRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsScorecardResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -2239,11 +2239,11 @@ Update an activity
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateAtsActivityRequest;
-import to.unified.unifiedto.models.operations.UpdateAtsActivityResponse;
-import to.unified.unifiedto.models.shared.AtsActivity;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsActivityResponse;
+import to.unified.unified_java_sdk.models.shared.AtsActivity;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -2299,11 +2299,11 @@ Update an application
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateAtsApplicationRequest;
-import to.unified.unifiedto.models.operations.UpdateAtsApplicationResponse;
-import to.unified.unifiedto.models.shared.AtsApplication;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsApplicationRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsApplicationResponse;
+import to.unified.unified_java_sdk.models.shared.AtsApplication;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -2359,11 +2359,11 @@ Update a candidate
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateAtsCandidateRequest;
-import to.unified.unifiedto.models.operations.UpdateAtsCandidateResponse;
-import to.unified.unifiedto.models.shared.AtsCandidate;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsCandidateRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsCandidateResponse;
+import to.unified.unified_java_sdk.models.shared.AtsCandidate;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -2419,11 +2419,11 @@ Update a document
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateAtsDocumentRequest;
-import to.unified.unifiedto.models.operations.UpdateAtsDocumentResponse;
-import to.unified.unifiedto.models.shared.AtsDocument;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsDocumentResponse;
+import to.unified.unified_java_sdk.models.shared.AtsDocument;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -2479,11 +2479,11 @@ Update an interview
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateAtsInterviewRequest;
-import to.unified.unifiedto.models.operations.UpdateAtsInterviewResponse;
-import to.unified.unifiedto.models.shared.AtsInterview;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsInterviewRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsInterviewResponse;
+import to.unified.unified_java_sdk.models.shared.AtsInterview;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -2539,11 +2539,11 @@ Update a job
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateAtsJobRequest;
-import to.unified.unifiedto.models.operations.UpdateAtsJobResponse;
-import to.unified.unifiedto.models.shared.AtsJob;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsJobRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsJobResponse;
+import to.unified.unified_java_sdk.models.shared.AtsJob;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -2599,11 +2599,11 @@ Update a scorecard
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateAtsScorecardRequest;
-import to.unified.unifiedto.models.operations.UpdateAtsScorecardResponse;
-import to.unified.unifiedto.models.shared.AtsScorecard;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecardRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecardResponse;
+import to.unified.unified_java_sdk.models.shared.AtsScorecard;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

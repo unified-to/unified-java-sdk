@@ -18,6 +18,7 @@
 * [getAccountingJournal](#getaccountingjournal) - Retrieve a journal
 * [getAccountingOrder](#getaccountingorder) - Retrieve an order
 * [getAccountingOrganization](#getaccountingorganization) - Retrieve an organization
+* [getAccountingReport](#getaccountingreport) - Retrieve a report
 * [getAccountingTaxrate](#getaccountingtaxrate) - Retrieve a taxrate
 * [getAccountingTransaction](#getaccountingtransaction) - Retrieve a transaction
 * [listAccountingAccounts](#listaccountingaccounts) - List all accounts
@@ -26,6 +27,7 @@
 * [listAccountingJournals](#listaccountingjournals) - List all journals
 * [listAccountingOrders](#listaccountingorders) - List all orders
 * [listAccountingOrganizations](#listaccountingorganizations) - List all organizations
+* [listAccountingReports](#listaccountingreports) - List all reports
 * [listAccountingTaxrates](#listaccountingtaxrates) - List all taxrates
 * [listAccountingTransactions](#listaccountingtransactions) - List all transactions
 * [patchAccountingAccount](#patchaccountingaccount) - Update an account
@@ -60,11 +62,11 @@ Create an account
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateAccountingAccountRequest;
-import to.unified.unifiedto.models.operations.CreateAccountingAccountResponse;
-import to.unified.unifiedto.models.shared.AccountingAccount;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingAccount;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -119,11 +121,11 @@ Create a contact
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateAccountingContactRequest;
-import to.unified.unifiedto.models.operations.CreateAccountingContactResponse;
-import to.unified.unifiedto.models.shared.AccountingContact;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingContactRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingContactResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingContact;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -178,11 +180,11 @@ Create an invoice
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateAccountingInvoiceRequest;
-import to.unified.unifiedto.models.operations.CreateAccountingInvoiceResponse;
-import to.unified.unifiedto.models.shared.AccountingInvoice;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingInvoiceRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingInvoiceResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingInvoice;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -237,11 +239,11 @@ Create a journal
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateAccountingJournalRequest;
-import to.unified.unifiedto.models.operations.CreateAccountingJournalResponse;
-import to.unified.unifiedto.models.shared.AccountingJournal;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingJournalRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingJournalResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingJournal;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -296,11 +298,11 @@ Create an order
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateAccountingOrderRequest;
-import to.unified.unifiedto.models.operations.CreateAccountingOrderResponse;
-import to.unified.unifiedto.models.shared.AccountingOrder;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingOrderRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingOrderResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingOrder;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -355,11 +357,11 @@ Create a taxrate
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateAccountingTaxrateRequest;
-import to.unified.unifiedto.models.operations.CreateAccountingTaxrateResponse;
-import to.unified.unifiedto.models.shared.AccountingTaxrate;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingTaxrateRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingTaxrateResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingTaxrate;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -414,11 +416,11 @@ Create a transaction
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateAccountingTransactionRequest;
-import to.unified.unifiedto.models.operations.CreateAccountingTransactionResponse;
-import to.unified.unifiedto.models.shared.AccountingTransaction;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingTransactionRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingTransactionResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingTransaction;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -473,10 +475,10 @@ Retrieve an account
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetAccountingAccountRequest;
-import to.unified.unifiedto.models.operations.GetAccountingAccountResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAccountingAccountRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingAccountResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -530,10 +532,10 @@ Retrieve a contact
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetAccountingContactRequest;
-import to.unified.unifiedto.models.operations.GetAccountingContactResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAccountingContactRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingContactResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -587,10 +589,10 @@ Retrieve an invoice
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetAccountingInvoiceRequest;
-import to.unified.unifiedto.models.operations.GetAccountingInvoiceResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAccountingInvoiceRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingInvoiceResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -644,10 +646,10 @@ Retrieve a journal
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetAccountingJournalRequest;
-import to.unified.unifiedto.models.operations.GetAccountingJournalResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAccountingJournalRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingJournalResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -701,10 +703,10 @@ Retrieve an order
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetAccountingOrderRequest;
-import to.unified.unifiedto.models.operations.GetAccountingOrderResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAccountingOrderRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingOrderResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -758,10 +760,10 @@ Retrieve an organization
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetAccountingOrganizationRequest;
-import to.unified.unifiedto.models.operations.GetAccountingOrganizationResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAccountingOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingOrganizationResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -805,6 +807,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getAccountingReport
+
+Retrieve a report
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAccountingReportRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingReportResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        GetAccountingReportRequest req = GetAccountingReportRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetAccountingReportResponse res = sdk.accounting().getAccountingReport()
+                .request(req)
+                .call();
+
+        if (res.accountingReport().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [GetAccountingReportRequest](../../models/operations/GetAccountingReportRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[GetAccountingReportResponse](../../models/operations/GetAccountingReportResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## getAccountingTaxrate
 
 Retrieve a taxrate
@@ -815,10 +874,10 @@ Retrieve a taxrate
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetAccountingTaxrateRequest;
-import to.unified.unifiedto.models.operations.GetAccountingTaxrateResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAccountingTaxrateRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingTaxrateResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -872,10 +931,10 @@ Retrieve a transaction
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetAccountingTransactionRequest;
-import to.unified.unifiedto.models.operations.GetAccountingTransactionResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAccountingTransactionRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingTransactionResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -929,10 +988,10 @@ List all accounts
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListAccountingAccountsRequest;
-import to.unified.unifiedto.models.operations.ListAccountingAccountsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAccountingAccountsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingAccountsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -985,10 +1044,10 @@ List all contacts
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListAccountingContactsRequest;
-import to.unified.unifiedto.models.operations.ListAccountingContactsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAccountingContactsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingContactsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1041,10 +1100,10 @@ List all invoices
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListAccountingInvoicesRequest;
-import to.unified.unifiedto.models.operations.ListAccountingInvoicesResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAccountingInvoicesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingInvoicesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1097,10 +1156,10 @@ List all journals
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListAccountingJournalsRequest;
-import to.unified.unifiedto.models.operations.ListAccountingJournalsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAccountingJournalsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingJournalsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1153,10 +1212,10 @@ List all orders
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListAccountingOrdersRequest;
-import to.unified.unifiedto.models.operations.ListAccountingOrdersResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAccountingOrdersRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingOrdersResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1209,10 +1268,10 @@ List all organizations
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListAccountingOrganizationsRequest;
-import to.unified.unifiedto.models.operations.ListAccountingOrganizationsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAccountingOrganizationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingOrganizationsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1255,6 +1314,62 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listAccountingReports
+
+List all reports
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAccountingReportsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingReportsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        ListAccountingReportsRequest req = ListAccountingReportsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListAccountingReportsResponse res = sdk.accounting().listAccountingReports()
+                .request(req)
+                .call();
+
+        if (res.accountingReports().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [ListAccountingReportsRequest](../../models/operations/ListAccountingReportsRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[ListAccountingReportsResponse](../../models/operations/ListAccountingReportsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listAccountingTaxrates
 
 List all taxrates
@@ -1265,10 +1380,10 @@ List all taxrates
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListAccountingTaxratesRequest;
-import to.unified.unifiedto.models.operations.ListAccountingTaxratesResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAccountingTaxratesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingTaxratesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1321,10 +1436,10 @@ List all transactions
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListAccountingTransactionsRequest;
-import to.unified.unifiedto.models.operations.ListAccountingTransactionsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAccountingTransactionsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingTransactionsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1377,11 +1492,11 @@ Update an account
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchAccountingAccountRequest;
-import to.unified.unifiedto.models.operations.PatchAccountingAccountResponse;
-import to.unified.unifiedto.models.shared.AccountingAccount;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingAccountRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingAccountResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingAccount;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1437,11 +1552,11 @@ Update a contact
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchAccountingContactRequest;
-import to.unified.unifiedto.models.operations.PatchAccountingContactResponse;
-import to.unified.unifiedto.models.shared.AccountingContact;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingContactRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingContactResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingContact;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1497,11 +1612,11 @@ Update an invoice
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchAccountingInvoiceRequest;
-import to.unified.unifiedto.models.operations.PatchAccountingInvoiceResponse;
-import to.unified.unifiedto.models.shared.AccountingInvoice;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingInvoiceRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingInvoiceResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingInvoice;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1557,11 +1672,11 @@ Update a journal
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchAccountingJournalRequest;
-import to.unified.unifiedto.models.operations.PatchAccountingJournalResponse;
-import to.unified.unifiedto.models.shared.AccountingJournal;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingJournalRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingJournalResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingJournal;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1617,11 +1732,11 @@ Update an order
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchAccountingOrderRequest;
-import to.unified.unifiedto.models.operations.PatchAccountingOrderResponse;
-import to.unified.unifiedto.models.shared.AccountingOrder;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingOrderRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingOrderResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingOrder;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1677,11 +1792,11 @@ Update a taxrate
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchAccountingTaxrateRequest;
-import to.unified.unifiedto.models.operations.PatchAccountingTaxrateResponse;
-import to.unified.unifiedto.models.shared.AccountingTaxrate;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingTaxrateRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingTaxrateResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingTaxrate;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1737,11 +1852,11 @@ Update a transaction
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchAccountingTransactionRequest;
-import to.unified.unifiedto.models.operations.PatchAccountingTransactionResponse;
-import to.unified.unifiedto.models.shared.AccountingTransaction;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingTransactionRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingTransactionResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingTransaction;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1797,10 +1912,10 @@ Remove an account
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveAccountingAccountRequest;
-import to.unified.unifiedto.models.operations.RemoveAccountingAccountResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingAccountRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingAccountResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1852,10 +1967,10 @@ Remove a contact
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveAccountingContactRequest;
-import to.unified.unifiedto.models.operations.RemoveAccountingContactResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingContactRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingContactResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1907,10 +2022,10 @@ Remove an invoice
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveAccountingInvoiceRequest;
-import to.unified.unifiedto.models.operations.RemoveAccountingInvoiceResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingInvoiceRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingInvoiceResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1962,10 +2077,10 @@ Remove a journal
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveAccountingJournalRequest;
-import to.unified.unifiedto.models.operations.RemoveAccountingJournalResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingJournalRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingJournalResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -2017,10 +2132,10 @@ Remove an order
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveAccountingOrderRequest;
-import to.unified.unifiedto.models.operations.RemoveAccountingOrderResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingOrderRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingOrderResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -2072,10 +2187,10 @@ Remove a taxrate
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveAccountingTaxrateRequest;
-import to.unified.unifiedto.models.operations.RemoveAccountingTaxrateResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingTaxrateRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingTaxrateResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -2127,10 +2242,10 @@ Remove a transaction
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveAccountingTransactionRequest;
-import to.unified.unifiedto.models.operations.RemoveAccountingTransactionResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingTransactionRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingTransactionResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -2182,11 +2297,11 @@ Update an account
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateAccountingAccountRequest;
-import to.unified.unifiedto.models.operations.UpdateAccountingAccountResponse;
-import to.unified.unifiedto.models.shared.AccountingAccount;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingAccountRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingAccountResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingAccount;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -2242,11 +2357,11 @@ Update a contact
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateAccountingContactRequest;
-import to.unified.unifiedto.models.operations.UpdateAccountingContactResponse;
-import to.unified.unifiedto.models.shared.AccountingContact;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingContactRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingContactResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingContact;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -2302,11 +2417,11 @@ Update an invoice
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateAccountingInvoiceRequest;
-import to.unified.unifiedto.models.operations.UpdateAccountingInvoiceResponse;
-import to.unified.unifiedto.models.shared.AccountingInvoice;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingInvoiceRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingInvoiceResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingInvoice;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -2362,11 +2477,11 @@ Update a journal
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateAccountingJournalRequest;
-import to.unified.unifiedto.models.operations.UpdateAccountingJournalResponse;
-import to.unified.unifiedto.models.shared.AccountingJournal;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingJournalRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingJournalResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingJournal;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -2422,11 +2537,11 @@ Update an order
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateAccountingOrderRequest;
-import to.unified.unifiedto.models.operations.UpdateAccountingOrderResponse;
-import to.unified.unifiedto.models.shared.AccountingOrder;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingOrderRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingOrderResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingOrder;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -2482,11 +2597,11 @@ Update a taxrate
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateAccountingTaxrateRequest;
-import to.unified.unifiedto.models.operations.UpdateAccountingTaxrateResponse;
-import to.unified.unifiedto.models.shared.AccountingTaxrate;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingTaxrateRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingTaxrateResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingTaxrate;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -2542,11 +2657,11 @@ Update a transaction
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateAccountingTransactionRequest;
-import to.unified.unifiedto.models.operations.UpdateAccountingTransactionResponse;
-import to.unified.unifiedto.models.shared.AccountingTransaction;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingTransactionRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingTransactionResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingTransaction;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

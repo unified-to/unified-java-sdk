@@ -22,11 +22,11 @@ Create a subscription
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreatePaymentSubscriptionRequest;
-import to.unified.unifiedto.models.operations.CreatePaymentSubscriptionResponse;
-import to.unified.unifiedto.models.shared.PaymentSubscription;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreatePaymentSubscriptionRequest;
+import to.unified.unified_java_sdk.models.operations.CreatePaymentSubscriptionResponse;
+import to.unified.unified_java_sdk.models.shared.PaymentSubscription;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -81,10 +81,10 @@ Retrieve a subscription
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetPaymentSubscriptionRequest;
-import to.unified.unifiedto.models.operations.GetPaymentSubscriptionResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetPaymentSubscriptionRequest;
+import to.unified.unified_java_sdk.models.operations.GetPaymentSubscriptionResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -138,10 +138,10 @@ List all subscriptions
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListPaymentSubscriptionsRequest;
-import to.unified.unifiedto.models.operations.ListPaymentSubscriptionsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListPaymentSubscriptionsRequest;
+import to.unified.unified_java_sdk.models.operations.ListPaymentSubscriptionsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -194,11 +194,11 @@ Update a subscription
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchPaymentSubscriptionRequest;
-import to.unified.unifiedto.models.operations.PatchPaymentSubscriptionResponse;
-import to.unified.unifiedto.models.shared.PaymentSubscription;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchPaymentSubscriptionRequest;
+import to.unified.unified_java_sdk.models.operations.PatchPaymentSubscriptionResponse;
+import to.unified.unified_java_sdk.models.shared.PaymentSubscription;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -254,10 +254,10 @@ Remove a subscription
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemovePaymentSubscriptionRequest;
-import to.unified.unifiedto.models.operations.RemovePaymentSubscriptionResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemovePaymentSubscriptionRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePaymentSubscriptionResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -309,11 +309,11 @@ Update a subscription
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdatePaymentSubscriptionRequest;
-import to.unified.unifiedto.models.operations.UpdatePaymentSubscriptionResponse;
-import to.unified.unifiedto.models.shared.PaymentSubscription;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdatePaymentSubscriptionRequest;
+import to.unified.unified_java_sdk.models.operations.UpdatePaymentSubscriptionResponse;
+import to.unified.unified_java_sdk.models.shared.PaymentSubscription;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

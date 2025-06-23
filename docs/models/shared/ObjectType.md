@@ -13,6 +13,7 @@
 | `ACCOUNTING_TAXRATE`      | accounting_taxrate        |
 | `ACCOUNTING_ORGANIZATION` | accounting_organization   |
 | `ACCOUNTING_ORDER`        | accounting_order          |
+| `ACCOUNTING_REPORT`       | accounting_report         |
 | `PAYMENT_PAYMENT`         | payment_payment           |
 | `PAYMENT_LINK`            | payment_link              |
 | `PAYMENT_PAYOUT`          | payment_payout            |
@@ -22,6 +23,7 @@
 | `COMMERCE_COLLECTION`     | commerce_collection       |
 | `COMMERCE_INVENTORY`      | commerce_inventory        |
 | `COMMERCE_LOCATION`       | commerce_location         |
+| `COMMERCE_REVIEW`         | commerce_review           |
 | `ATS_ACTIVITY`            | ats_activity              |
 | `ATS_APPLICATION`         | ats_application           |
 | `ATS_APPLICATIONSTATUS`   | ats_applicationstatus     |
@@ -43,6 +45,8 @@
 | `HRIS_TIMEOFF`            | hris_timeoff              |
 | `HRIS_COMPANY`            | hris_company              |
 | `HRIS_LOCATION`           | hris_location             |
+| `HRIS_DEVICE`             | hris_device               |
+| `HRIS_TIMESHIFT`          | hris_timeshift            |
 | `MARTECH_LIST`            | martech_list              |
 | `MARTECH_MEMBER`          | martech_member            |
 | `PASSTHROUGH`             | passthrough               |
@@ -51,6 +55,8 @@
 | `TICKETING_CUSTOMER`      | ticketing_customer        |
 | `UC_CONTACT`              | uc_contact                |
 | `UC_CALL`                 | uc_call                   |
+| `UC_COMMENT`              | uc_comment                |
+| `UC_RECORDING`            | uc_recording              |
 | `ENRICH_PERSON`           | enrich_person             |
 | `ENRICH_COMPANY`          | enrich_company            |
 | `STORAGE_FILE`            | storage_file              |

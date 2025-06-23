@@ -19,10 +19,10 @@ Returns an authorization URL for the specified integration.  Once a successful a
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetUnifiedIntegrationAuthRequest;
-import to.unified.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationAuthRequest;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationAuthResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -76,10 +76,10 @@ No authentication required as this is to be used by front-end interface
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesRequest;
-import to.unified.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedIntegrationWorkspacesRequest;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedIntegrationWorkspacesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -132,10 +132,9 @@ Returns all integrations
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListUnifiedIntegrationsRequest;
-import to.unified.unifiedto.models.operations.ListUnifiedIntegrationsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedIntegrationsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -147,11 +146,7 @@ public class Application {
                     .build())
             .build();
 
-        ListUnifiedIntegrationsRequest req = ListUnifiedIntegrationsRequest.builder()
-                .build();
-
         ListUnifiedIntegrationsResponse res = sdk.integration().listUnifiedIntegrations()
-                .request(req)
                 .call();
 
         if (res.integrations().isPresent()) {

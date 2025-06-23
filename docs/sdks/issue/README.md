@@ -17,10 +17,9 @@ List support issues
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListUnifiedIssuesRequest;
-import to.unified.unifiedto.models.operations.ListUnifiedIssuesResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedIssuesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -32,11 +31,7 @@ public class Application {
                     .build())
             .build();
 
-        ListUnifiedIssuesRequest req = ListUnifiedIssuesRequest.builder()
-                .build();
-
         ListUnifiedIssuesResponse res = sdk.issue().listUnifiedIssues()
-                .request(req)
                 .call();
 
         if (res.issues().isPresent()) {

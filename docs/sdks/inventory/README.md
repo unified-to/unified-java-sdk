@@ -22,11 +22,11 @@ Create an inventory
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateCommerceInventoryRequest;
-import to.unified.unifiedto.models.operations.CreateCommerceInventoryResponse;
-import to.unified.unifiedto.models.shared.CommerceInventory;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceInventoryRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceInventoryResponse;
+import to.unified.unified_java_sdk.models.shared.CommerceInventory;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -40,7 +40,7 @@ public class Application {
 
         CreateCommerceInventoryRequest req = CreateCommerceInventoryRequest.builder()
                 .commerceInventory(CommerceInventory.builder()
-                    .available(5165.08d)
+                    .available(7463.62)
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -82,10 +82,10 @@ Retrieve an inventory
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetCommerceInventoryRequest;
-import to.unified.unifiedto.models.operations.GetCommerceInventoryResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetCommerceInventoryRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceInventoryResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -139,10 +139,10 @@ List all inventories
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListCommerceInventoriesRequest;
-import to.unified.unifiedto.models.operations.ListCommerceInventoriesResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListCommerceInventoriesRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceInventoriesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -195,11 +195,11 @@ Update an inventory
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchCommerceInventoryRequest;
-import to.unified.unifiedto.models.operations.PatchCommerceInventoryResponse;
-import to.unified.unifiedto.models.shared.CommerceInventory;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceInventoryRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceInventoryResponse;
+import to.unified.unified_java_sdk.models.shared.CommerceInventory;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -213,7 +213,7 @@ public class Application {
 
         PatchCommerceInventoryRequest req = PatchCommerceInventoryRequest.builder()
                 .commerceInventory(CommerceInventory.builder()
-                    .available(615.23d)
+                    .available(7859.84)
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -256,10 +256,10 @@ Remove an inventory
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveCommerceInventoryRequest;
-import to.unified.unifiedto.models.operations.RemoveCommerceInventoryResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceInventoryRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceInventoryResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -311,11 +311,11 @@ Update an inventory
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateCommerceInventoryRequest;
-import to.unified.unifiedto.models.operations.UpdateCommerceInventoryResponse;
-import to.unified.unifiedto.models.shared.CommerceInventory;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceInventoryRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceInventoryResponse;
+import to.unified.unified_java_sdk.models.shared.CommerceInventory;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -329,7 +329,7 @@ public class Application {
 
         UpdateCommerceInventoryRequest req = UpdateCommerceInventoryRequest.builder()
                 .commerceInventory(CommerceInventory.builder()
-                    .available(9360.02d)
+                    .available(4497.29)
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

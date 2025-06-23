@@ -22,11 +22,11 @@ Create an order
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateAccountingOrderRequest;
-import to.unified.unifiedto.models.operations.CreateAccountingOrderResponse;
-import to.unified.unifiedto.models.shared.AccountingOrder;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingOrderRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingOrderResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingOrder;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -81,10 +81,10 @@ Retrieve an order
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetAccountingOrderRequest;
-import to.unified.unifiedto.models.operations.GetAccountingOrderResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAccountingOrderRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingOrderResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -138,10 +138,10 @@ List all orders
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListAccountingOrdersRequest;
-import to.unified.unifiedto.models.operations.ListAccountingOrdersResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAccountingOrdersRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingOrdersResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -194,11 +194,11 @@ Update an order
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchAccountingOrderRequest;
-import to.unified.unifiedto.models.operations.PatchAccountingOrderResponse;
-import to.unified.unifiedto.models.shared.AccountingOrder;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingOrderRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingOrderResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingOrder;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -254,10 +254,10 @@ Remove an order
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveAccountingOrderRequest;
-import to.unified.unifiedto.models.operations.RemoveAccountingOrderResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingOrderRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingOrderResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -309,11 +309,11 @@ Update an order
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateAccountingOrderRequest;
-import to.unified.unifiedto.models.operations.UpdateAccountingOrderResponse;
-import to.unified.unifiedto.models.shared.AccountingOrder;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingOrderRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingOrderResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingOrder;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

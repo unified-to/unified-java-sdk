@@ -34,11 +34,11 @@ Create a contact
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateAccountingContactRequest;
-import to.unified.unifiedto.models.operations.CreateAccountingContactResponse;
-import to.unified.unifiedto.models.shared.AccountingContact;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingContactRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingContactResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingContact;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -93,11 +93,11 @@ Create a contact
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateCrmContactRequest;
-import to.unified.unifiedto.models.operations.CreateCrmContactResponse;
-import to.unified.unifiedto.models.shared.CrmContact;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateCrmContactRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCrmContactResponse;
+import to.unified.unified_java_sdk.models.shared.CrmContact;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -152,11 +152,11 @@ Create a contact
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateUcContactRequest;
-import to.unified.unifiedto.models.operations.CreateUcContactResponse;
-import to.unified.unifiedto.models.shared.Security;
-import to.unified.unifiedto.models.shared.UcContact;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateUcContactRequest;
+import to.unified.unified_java_sdk.models.operations.CreateUcContactResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.UcContact;
 
 public class Application {
 
@@ -211,10 +211,10 @@ Retrieve a contact
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetAccountingContactRequest;
-import to.unified.unifiedto.models.operations.GetAccountingContactResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAccountingContactRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingContactResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -268,10 +268,10 @@ Retrieve a contact
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetCrmContactRequest;
-import to.unified.unifiedto.models.operations.GetCrmContactResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetCrmContactRequest;
+import to.unified.unified_java_sdk.models.operations.GetCrmContactResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -325,10 +325,10 @@ Retrieve a contact
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetUcContactRequest;
-import to.unified.unifiedto.models.operations.GetUcContactResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetUcContactRequest;
+import to.unified.unified_java_sdk.models.operations.GetUcContactResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -382,10 +382,10 @@ List all contacts
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListAccountingContactsRequest;
-import to.unified.unifiedto.models.operations.ListAccountingContactsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAccountingContactsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingContactsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -438,10 +438,10 @@ List all contacts
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListCrmContactsRequest;
-import to.unified.unifiedto.models.operations.ListCrmContactsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListCrmContactsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCrmContactsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -494,10 +494,10 @@ List all contacts
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListUcContactsRequest;
-import to.unified.unifiedto.models.operations.ListUcContactsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListUcContactsRequest;
+import to.unified.unified_java_sdk.models.operations.ListUcContactsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -550,11 +550,11 @@ Update a contact
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchAccountingContactRequest;
-import to.unified.unifiedto.models.operations.PatchAccountingContactResponse;
-import to.unified.unifiedto.models.shared.AccountingContact;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingContactRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingContactResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingContact;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -610,11 +610,11 @@ Update a contact
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchCrmContactRequest;
-import to.unified.unifiedto.models.operations.PatchCrmContactResponse;
-import to.unified.unifiedto.models.shared.CrmContact;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchCrmContactRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCrmContactResponse;
+import to.unified.unified_java_sdk.models.shared.CrmContact;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -670,11 +670,11 @@ Update a contact
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchUcContactRequest;
-import to.unified.unifiedto.models.operations.PatchUcContactResponse;
-import to.unified.unifiedto.models.shared.Security;
-import to.unified.unifiedto.models.shared.UcContact;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchUcContactRequest;
+import to.unified.unified_java_sdk.models.operations.PatchUcContactResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.UcContact;
 
 public class Application {
 
@@ -730,10 +730,10 @@ Remove a contact
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveAccountingContactRequest;
-import to.unified.unifiedto.models.operations.RemoveAccountingContactResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingContactRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingContactResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -785,10 +785,10 @@ Remove a contact
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveCrmContactRequest;
-import to.unified.unifiedto.models.operations.RemoveCrmContactResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmContactRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmContactResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -840,10 +840,10 @@ Remove a contact
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveUcContactRequest;
-import to.unified.unifiedto.models.operations.RemoveUcContactResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveUcContactRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveUcContactResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -895,11 +895,11 @@ Update a contact
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateAccountingContactRequest;
-import to.unified.unifiedto.models.operations.UpdateAccountingContactResponse;
-import to.unified.unifiedto.models.shared.AccountingContact;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingContactRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingContactResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingContact;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -955,11 +955,11 @@ Update a contact
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateCrmContactRequest;
-import to.unified.unifiedto.models.operations.UpdateCrmContactResponse;
-import to.unified.unifiedto.models.shared.CrmContact;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmContactRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmContactResponse;
+import to.unified.unified_java_sdk.models.shared.CrmContact;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1015,11 +1015,11 @@ Update a contact
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateUcContactRequest;
-import to.unified.unifiedto.models.operations.UpdateUcContactResponse;
-import to.unified.unifiedto.models.shared.Security;
-import to.unified.unifiedto.models.shared.UcContact;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateUcContactRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateUcContactResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.UcContact;
 
 public class Application {
 

@@ -18,10 +18,10 @@ Retrieve a timeoff
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetHrisTimeoffRequest;
-import to.unified.unifiedto.models.operations.GetHrisTimeoffResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHrisTimeoffRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisTimeoffResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -75,10 +75,10 @@ List all timeoffs
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListHrisTimeoffsRequest;
-import to.unified.unifiedto.models.operations.ListHrisTimeoffsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

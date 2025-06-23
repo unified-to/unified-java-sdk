@@ -22,11 +22,11 @@ Create an invoice
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateAccountingInvoiceRequest;
-import to.unified.unifiedto.models.operations.CreateAccountingInvoiceResponse;
-import to.unified.unifiedto.models.shared.AccountingInvoice;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingInvoiceRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingInvoiceResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingInvoice;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -81,10 +81,10 @@ Retrieve an invoice
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetAccountingInvoiceRequest;
-import to.unified.unifiedto.models.operations.GetAccountingInvoiceResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAccountingInvoiceRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingInvoiceResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -138,10 +138,10 @@ List all invoices
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListAccountingInvoicesRequest;
-import to.unified.unifiedto.models.operations.ListAccountingInvoicesResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAccountingInvoicesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingInvoicesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -194,11 +194,11 @@ Update an invoice
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchAccountingInvoiceRequest;
-import to.unified.unifiedto.models.operations.PatchAccountingInvoiceResponse;
-import to.unified.unifiedto.models.shared.AccountingInvoice;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingInvoiceRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingInvoiceResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingInvoice;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -254,10 +254,10 @@ Remove an invoice
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveAccountingInvoiceRequest;
-import to.unified.unifiedto.models.operations.RemoveAccountingInvoiceResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingInvoiceRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingInvoiceResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -309,11 +309,11 @@ Update an invoice
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateAccountingInvoiceRequest;
-import to.unified.unifiedto.models.operations.UpdateAccountingInvoiceResponse;
-import to.unified.unifiedto.models.shared.AccountingInvoice;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingInvoiceRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingInvoiceResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingInvoice;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

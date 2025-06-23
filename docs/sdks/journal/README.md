@@ -22,11 +22,11 @@ Create a journal
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateAccountingJournalRequest;
-import to.unified.unifiedto.models.operations.CreateAccountingJournalResponse;
-import to.unified.unifiedto.models.shared.AccountingJournal;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingJournalRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingJournalResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingJournal;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -81,10 +81,10 @@ Retrieve a journal
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetAccountingJournalRequest;
-import to.unified.unifiedto.models.operations.GetAccountingJournalResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAccountingJournalRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingJournalResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -138,10 +138,10 @@ List all journals
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListAccountingJournalsRequest;
-import to.unified.unifiedto.models.operations.ListAccountingJournalsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAccountingJournalsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingJournalsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -194,11 +194,11 @@ Update a journal
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchAccountingJournalRequest;
-import to.unified.unifiedto.models.operations.PatchAccountingJournalResponse;
-import to.unified.unifiedto.models.shared.AccountingJournal;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingJournalRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingJournalResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingJournal;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -254,10 +254,10 @@ Remove a journal
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveAccountingJournalRequest;
-import to.unified.unifiedto.models.operations.RemoveAccountingJournalResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingJournalRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingJournalResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -309,11 +309,11 @@ Update a journal
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateAccountingJournalRequest;
-import to.unified.unifiedto.models.operations.UpdateAccountingJournalResponse;
-import to.unified.unifiedto.models.shared.AccountingJournal;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingJournalRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingJournalResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingJournal;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

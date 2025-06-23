@@ -24,11 +24,11 @@ Create a message
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateMessagingMessageRequest;
-import to.unified.unifiedto.models.operations.CreateMessagingMessageResponse;
-import to.unified.unifiedto.models.shared.MessagingMessage;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateMessagingMessageRequest;
+import to.unified.unified_java_sdk.models.operations.CreateMessagingMessageResponse;
+import to.unified.unified_java_sdk.models.shared.MessagingMessage;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -83,10 +83,10 @@ Retrieve a channel
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetMessagingChannelRequest;
-import to.unified.unifiedto.models.operations.GetMessagingChannelResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetMessagingChannelRequest;
+import to.unified.unified_java_sdk.models.operations.GetMessagingChannelResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -140,10 +140,10 @@ Retrieve a message
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetMessagingMessageRequest;
-import to.unified.unifiedto.models.operations.GetMessagingMessageResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetMessagingMessageRequest;
+import to.unified.unified_java_sdk.models.operations.GetMessagingMessageResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -197,10 +197,10 @@ List all channels
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListMessagingChannelsRequest;
-import to.unified.unifiedto.models.operations.ListMessagingChannelsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListMessagingChannelsRequest;
+import to.unified.unified_java_sdk.models.operations.ListMessagingChannelsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -253,10 +253,10 @@ List all messages
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListMessagingMessagesRequest;
-import to.unified.unifiedto.models.operations.ListMessagingMessagesResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListMessagingMessagesRequest;
+import to.unified.unified_java_sdk.models.operations.ListMessagingMessagesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -309,11 +309,11 @@ Update a message
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchMessagingMessageRequest;
-import to.unified.unifiedto.models.operations.PatchMessagingMessageResponse;
-import to.unified.unifiedto.models.shared.MessagingMessage;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchMessagingMessageRequest;
+import to.unified.unified_java_sdk.models.operations.PatchMessagingMessageResponse;
+import to.unified.unified_java_sdk.models.shared.MessagingMessage;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -369,10 +369,10 @@ Remove a message
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveMessagingMessageRequest;
-import to.unified.unifiedto.models.operations.RemoveMessagingMessageResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveMessagingMessageRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveMessagingMessageResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -424,11 +424,11 @@ Update a message
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateMessagingMessageRequest;
-import to.unified.unifiedto.models.operations.UpdateMessagingMessageResponse;
-import to.unified.unifiedto.models.shared.MessagingMessage;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateMessagingMessageRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateMessagingMessageResponse;
+import to.unified.unified_java_sdk.models.shared.MessagingMessage;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

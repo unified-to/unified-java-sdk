@@ -22,12 +22,10 @@ Create a page
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateKmsPageRequest;
-import to.unified.unifiedto.models.operations.CreateKmsPageResponse;
-import to.unified.unifiedto.models.shared.KmsPage;
-import to.unified.unifiedto.models.shared.KmsPageType;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateKmsPageRequest;
+import to.unified.unified_java_sdk.models.operations.CreateKmsPageResponse;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -42,7 +40,7 @@ public class Application {
         CreateKmsPageRequest req = CreateKmsPageRequest.builder()
                 .kmsPage(KmsPage.builder()
                     .title("<value>")
-                    .type(KmsPageType.HTML)
+                    .type(KmsPageType.TEXT)
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -84,10 +82,10 @@ Retrieve a page
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetKmsPageRequest;
-import to.unified.unifiedto.models.operations.GetKmsPageResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetKmsPageRequest;
+import to.unified.unified_java_sdk.models.operations.GetKmsPageResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -141,10 +139,10 @@ List all pages
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListKmsPagesRequest;
-import to.unified.unifiedto.models.operations.ListKmsPagesResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListKmsPagesRequest;
+import to.unified.unified_java_sdk.models.operations.ListKmsPagesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -197,12 +195,10 @@ Update a page
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchKmsPageRequest;
-import to.unified.unifiedto.models.operations.PatchKmsPageResponse;
-import to.unified.unifiedto.models.shared.KmsPage;
-import to.unified.unifiedto.models.shared.KmsPageType;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchKmsPageRequest;
+import to.unified.unified_java_sdk.models.operations.PatchKmsPageResponse;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -217,7 +213,7 @@ public class Application {
         PatchKmsPageRequest req = PatchKmsPageRequest.builder()
                 .kmsPage(KmsPage.builder()
                     .title("<value>")
-                    .type(KmsPageType.TEXT)
+                    .type(KmsPageType.OTHER)
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -260,10 +256,10 @@ Remove a page
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveKmsPageRequest;
-import to.unified.unifiedto.models.operations.RemoveKmsPageResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsPageRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsPageResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -315,12 +311,10 @@ Update a page
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateKmsPageRequest;
-import to.unified.unifiedto.models.operations.UpdateKmsPageResponse;
-import to.unified.unifiedto.models.shared.KmsPage;
-import to.unified.unifiedto.models.shared.KmsPageType;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsPageRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsPageResponse;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 

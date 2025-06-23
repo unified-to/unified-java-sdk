@@ -18,10 +18,10 @@ Retrieve a payslip
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetHrisPayslipRequest;
-import to.unified.unifiedto.models.operations.GetHrisPayslipResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHrisPayslipRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisPayslipResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -75,10 +75,10 @@ List all payslips
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListHrisPayslipsRequest;
-import to.unified.unifiedto.models.operations.ListHrisPayslipsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHrisPayslipsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisPayslipsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

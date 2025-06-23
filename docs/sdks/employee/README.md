@@ -22,11 +22,11 @@ Create an employee
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateHrisEmployeeRequest;
-import to.unified.unifiedto.models.operations.CreateHrisEmployeeResponse;
-import to.unified.unifiedto.models.shared.HrisEmployee;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeResponse;
+import to.unified.unified_java_sdk.models.shared.HrisEmployee;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -81,10 +81,10 @@ Retrieve an employee
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetHrisEmployeeRequest;
-import to.unified.unifiedto.models.operations.GetHrisEmployeeResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHrisEmployeeRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisEmployeeResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -138,10 +138,10 @@ List all employees
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListHrisEmployeesRequest;
-import to.unified.unifiedto.models.operations.ListHrisEmployeesResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHrisEmployeesRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisEmployeesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -194,11 +194,11 @@ Update an employee
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchHrisEmployeeRequest;
-import to.unified.unifiedto.models.operations.PatchHrisEmployeeResponse;
-import to.unified.unifiedto.models.shared.HrisEmployee;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchHrisEmployeeRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisEmployeeResponse;
+import to.unified.unified_java_sdk.models.shared.HrisEmployee;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -254,10 +254,10 @@ Remove an employee
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveHrisEmployeeRequest;
-import to.unified.unifiedto.models.operations.RemoveHrisEmployeeResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisEmployeeRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisEmployeeResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -309,11 +309,11 @@ Update an employee
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateHrisEmployeeRequest;
-import to.unified.unifiedto.models.operations.UpdateHrisEmployeeResponse;
-import to.unified.unifiedto.models.shared.HrisEmployee;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployeeRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployeeResponse;
+import to.unified.unified_java_sdk.models.shared.HrisEmployee;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

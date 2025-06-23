@@ -22,11 +22,11 @@ Create a pullrequest
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateRepoPullrequestRequest;
-import to.unified.unifiedto.models.operations.CreateRepoPullrequestResponse;
-import to.unified.unifiedto.models.shared.RepoPullrequest;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateRepoPullrequestRequest;
+import to.unified.unified_java_sdk.models.operations.CreateRepoPullrequestResponse;
+import to.unified.unified_java_sdk.models.shared.RepoPullrequest;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -81,10 +81,10 @@ Retrieve a pullrequest
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetRepoPullrequestRequest;
-import to.unified.unifiedto.models.operations.GetRepoPullrequestResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetRepoPullrequestRequest;
+import to.unified.unified_java_sdk.models.operations.GetRepoPullrequestResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -138,10 +138,10 @@ List all pullrequests
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListRepoPullrequestsRequest;
-import to.unified.unifiedto.models.operations.ListRepoPullrequestsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListRepoPullrequestsRequest;
+import to.unified.unified_java_sdk.models.operations.ListRepoPullrequestsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -194,11 +194,11 @@ Update a pullrequest
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchRepoPullrequestRequest;
-import to.unified.unifiedto.models.operations.PatchRepoPullrequestResponse;
-import to.unified.unifiedto.models.shared.RepoPullrequest;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchRepoPullrequestRequest;
+import to.unified.unified_java_sdk.models.operations.PatchRepoPullrequestResponse;
+import to.unified.unified_java_sdk.models.shared.RepoPullrequest;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -254,10 +254,10 @@ Remove a pullrequest
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveRepoPullrequestRequest;
-import to.unified.unifiedto.models.operations.RemoveRepoPullrequestResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveRepoPullrequestRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveRepoPullrequestResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -309,11 +309,11 @@ Update a pullrequest
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateRepoPullrequestRequest;
-import to.unified.unifiedto.models.operations.UpdateRepoPullrequestResponse;
-import to.unified.unifiedto.models.shared.RepoPullrequest;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateRepoPullrequestRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateRepoPullrequestResponse;
+import to.unified.unified_java_sdk.models.shared.RepoPullrequest;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

@@ -18,10 +18,10 @@ Retrieve a refund
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetPaymentRefundRequest;
-import to.unified.unifiedto.models.operations.GetPaymentRefundResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetPaymentRefundRequest;
+import to.unified.unified_java_sdk.models.operations.GetPaymentRefundResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -75,10 +75,10 @@ List all refunds
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListPaymentRefundsRequest;
-import to.unified.unifiedto.models.operations.ListPaymentRefundsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListPaymentRefundsRequest;
+import to.unified.unified_java_sdk.models.operations.ListPaymentRefundsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

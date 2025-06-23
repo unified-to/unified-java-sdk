@@ -17,10 +17,10 @@ List all models
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListGenaiModelsRequest;
-import to.unified.unifiedto.models.operations.ListGenaiModelsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListGenaiModelsRequest;
+import to.unified.unified_java_sdk.models.operations.ListGenaiModelsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

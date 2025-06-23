@@ -37,12 +37,10 @@ package hello.world;
 
 import java.lang.Exception;
 import java.util.List;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateUnifiedConnectionResponse;
-import to.unified.unifiedto.models.shared.Connection;
-import to.unified.unifiedto.models.shared.PropertyConnectionCategories;
-import to.unified.unifiedto.models.shared.PropertyConnectionPermissions;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateUnifiedConnectionResponse;
+import to.unified.unified_java_sdk.models.shared.Connection;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -55,14 +53,9 @@ public class Application {
             .build();
 
         Connection req = Connection.builder()
-                .categories(List.of(
-                    PropertyConnectionCategories.ACCOUNTING,
-                    PropertyConnectionCategories.MARTECH,
-                    PropertyConnectionCategories.MARTECH))
+                .categories(List.of())
                 .integrationType("<value>")
-                .permissions(List.of(
-                    PropertyConnectionPermissions.LMS_COURSE_READ,
-                    PropertyConnectionPermissions.SCIM_USERS_READ))
+                .permissions(List.of())
                 .build();
 
         CreateUnifiedConnectionResponse res = sdk.unified().createUnifiedConnection()
@@ -102,13 +95,10 @@ The data payload received by your server is described at https://docs.unified.to
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateUnifiedWebhookRequest;
-import to.unified.unifiedto.models.operations.CreateUnifiedWebhookResponse;
-import to.unified.unifiedto.models.shared.Event;
-import to.unified.unifiedto.models.shared.ObjectType;
-import to.unified.unifiedto.models.shared.Security;
-import to.unified.unifiedto.models.shared.Webhook;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateUnifiedWebhookRequest;
+import to.unified.unified_java_sdk.models.operations.CreateUnifiedWebhookResponse;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -124,7 +114,7 @@ public class Application {
                 .webhook(Webhook.builder()
                     .connectionId("<id>")
                     .event(Event.CREATED)
-                    .objectType(ObjectType.HRIS_EMPLOYEE)
+                    .objectType(ObjectType.ATS_SCORECARD)
                     .build())
                 .build();
 
@@ -165,10 +155,10 @@ Retrieve specific API Call by its ID
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetUnifiedApicallRequest;
-import to.unified.unifiedto.models.operations.GetUnifiedApicallResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedApicallRequest;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedApicallResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -221,10 +211,10 @@ Retrieve connection
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetUnifiedConnectionRequest;
-import to.unified.unifiedto.models.operations.GetUnifiedConnectionResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedConnectionRequest;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedConnectionResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -277,10 +267,10 @@ Returns an authorization URL for the specified integration.  Once a successful a
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetUnifiedIntegrationAuthRequest;
-import to.unified.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationAuthRequest;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationAuthResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -334,10 +324,10 @@ Retrieve webhook by its ID
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetUnifiedWebhookRequest;
-import to.unified.unifiedto.models.operations.GetUnifiedWebhookResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedWebhookRequest;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedWebhookResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -390,10 +380,9 @@ Returns API Calls
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListUnifiedApicallsRequest;
-import to.unified.unifiedto.models.operations.ListUnifiedApicallsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedApicallsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -405,11 +394,7 @@ public class Application {
                     .build())
             .build();
 
-        ListUnifiedApicallsRequest req = ListUnifiedApicallsRequest.builder()
-                .build();
-
         ListUnifiedApicallsResponse res = sdk.unified().listUnifiedApicalls()
-                .request(req)
                 .call();
 
         if (res.apiCalls().isPresent()) {
@@ -445,10 +430,9 @@ List all connections
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListUnifiedConnectionsRequest;
-import to.unified.unifiedto.models.operations.ListUnifiedConnectionsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedConnectionsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -460,11 +444,7 @@ public class Application {
                     .build())
             .build();
 
-        ListUnifiedConnectionsRequest req = ListUnifiedConnectionsRequest.builder()
-                .build();
-
         ListUnifiedConnectionsResponse res = sdk.unified().listUnifiedConnections()
-                .request(req)
                 .call();
 
         if (res.connections().isPresent()) {
@@ -500,10 +480,10 @@ No authentication required as this is to be used by front-end interface
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesRequest;
-import to.unified.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedIntegrationWorkspacesRequest;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedIntegrationWorkspacesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -556,10 +536,9 @@ Returns all integrations
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListUnifiedIntegrationsRequest;
-import to.unified.unifiedto.models.operations.ListUnifiedIntegrationsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedIntegrationsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -571,11 +550,7 @@ public class Application {
                     .build())
             .build();
 
-        ListUnifiedIntegrationsRequest req = ListUnifiedIntegrationsRequest.builder()
-                .build();
-
         ListUnifiedIntegrationsResponse res = sdk.unified().listUnifiedIntegrations()
-                .request(req)
                 .call();
 
         if (res.integrations().isPresent()) {
@@ -611,10 +586,9 @@ List support issues
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListUnifiedIssuesRequest;
-import to.unified.unifiedto.models.operations.ListUnifiedIssuesResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedIssuesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -626,11 +600,7 @@ public class Application {
                     .build())
             .build();
 
-        ListUnifiedIssuesRequest req = ListUnifiedIssuesRequest.builder()
-                .build();
-
         ListUnifiedIssuesResponse res = sdk.unified().listUnifiedIssues()
-                .request(req)
                 .call();
 
         if (res.issues().isPresent()) {
@@ -666,10 +636,9 @@ Returns all registered webhooks
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListUnifiedWebhooksRequest;
-import to.unified.unifiedto.models.operations.ListUnifiedWebhooksResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedWebhooksResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -681,11 +650,7 @@ public class Application {
                     .build())
             .build();
 
-        ListUnifiedWebhooksRequest req = ListUnifiedWebhooksRequest.builder()
-                .build();
-
         ListUnifiedWebhooksResponse res = sdk.unified().listUnifiedWebhooks()
-                .request(req)
                 .call();
 
         if (res.webhooks().isPresent()) {
@@ -722,12 +687,11 @@ package hello.world;
 
 import java.lang.Exception;
 import java.util.List;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchUnifiedConnectionRequest;
-import to.unified.unifiedto.models.operations.PatchUnifiedConnectionResponse;
-import to.unified.unifiedto.models.shared.Connection;
-import to.unified.unifiedto.models.shared.PropertyConnectionCategories;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchUnifiedConnectionRequest;
+import to.unified.unified_java_sdk.models.operations.PatchUnifiedConnectionResponse;
+import to.unified.unified_java_sdk.models.shared.Connection;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -741,12 +705,9 @@ public class Application {
 
         PatchUnifiedConnectionRequest req = PatchUnifiedConnectionRequest.builder()
                 .connection(Connection.builder()
-                    .categories(List.of(
-                        PropertyConnectionCategories.METADATA,
-                        PropertyConnectionCategories.CRM))
+                    .categories(List.of())
                     .integrationType("<value>")
-                    .permissions(List.of(
-                    ))
+                    .permissions(List.of())
                     .build())
                 .id("<id>")
                 .build();
@@ -788,13 +749,10 @@ Update webhook subscription
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchUnifiedWebhookRequest;
-import to.unified.unifiedto.models.operations.PatchUnifiedWebhookResponse;
-import to.unified.unifiedto.models.shared.Event;
-import to.unified.unifiedto.models.shared.ObjectType;
-import to.unified.unifiedto.models.shared.Security;
-import to.unified.unifiedto.models.shared.Webhook;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchUnifiedWebhookRequest;
+import to.unified.unified_java_sdk.models.operations.PatchUnifiedWebhookResponse;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -809,8 +767,8 @@ public class Application {
         PatchUnifiedWebhookRequest req = PatchUnifiedWebhookRequest.builder()
                 .webhook(Webhook.builder()
                     .connectionId("<id>")
-                    .event(Event.DELETED)
-                    .objectType(ObjectType.CRM_DEAL)
+                    .event(Event.UPDATED)
+                    .objectType(ObjectType.TICKETING_TICKET)
                     .build())
                 .id("<id>")
                 .build();
@@ -852,10 +810,10 @@ Trigger webhook
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchUnifiedWebhookTriggerRequest;
-import to.unified.unifiedto.models.operations.PatchUnifiedWebhookTriggerResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchUnifiedWebhookTriggerRequest;
+import to.unified.unified_java_sdk.models.operations.PatchUnifiedWebhookTriggerResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -906,10 +864,10 @@ Remove connection
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveUnifiedConnectionRequest;
-import to.unified.unifiedto.models.operations.RemoveUnifiedConnectionResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveUnifiedConnectionRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveUnifiedConnectionResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -960,10 +918,10 @@ Remove webhook subscription
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveUnifiedWebhookRequest;
-import to.unified.unifiedto.models.operations.RemoveUnifiedWebhookResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveUnifiedWebhookRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveUnifiedWebhookResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1015,12 +973,10 @@ package hello.world;
 
 import java.lang.Exception;
 import java.util.List;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateUnifiedConnectionRequest;
-import to.unified.unifiedto.models.operations.UpdateUnifiedConnectionResponse;
-import to.unified.unifiedto.models.shared.Connection;
-import to.unified.unifiedto.models.shared.PropertyConnectionCategories;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateUnifiedConnectionRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateUnifiedConnectionResponse;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1034,13 +990,10 @@ public class Application {
 
         UpdateUnifiedConnectionRequest req = UpdateUnifiedConnectionRequest.builder()
                 .connection(Connection.builder()
-                    .categories(List.of(
-                        PropertyConnectionCategories.METADATA,
-                        PropertyConnectionCategories.ACCOUNTING,
-                        PropertyConnectionCategories.METADATA))
+                    .categories(List.of())
                     .integrationType("<value>")
                     .permissions(List.of(
-                    ))
+                        PropertyConnectionPermissions.COMMERCE_REVIEW_WRITE))
                     .build())
                 .id("<id>")
                 .build();
@@ -1082,13 +1035,10 @@ Update webhook subscription
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateUnifiedWebhookRequest;
-import to.unified.unifiedto.models.operations.UpdateUnifiedWebhookResponse;
-import to.unified.unifiedto.models.shared.Event;
-import to.unified.unifiedto.models.shared.ObjectType;
-import to.unified.unifiedto.models.shared.Security;
-import to.unified.unifiedto.models.shared.Webhook;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateUnifiedWebhookRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateUnifiedWebhookResponse;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1103,8 +1053,8 @@ public class Application {
         UpdateUnifiedWebhookRequest req = UpdateUnifiedWebhookRequest.builder()
                 .webhook(Webhook.builder()
                     .connectionId("<id>")
-                    .event(Event.CREATED)
-                    .objectType(ObjectType.PAYMENT_LINK)
+                    .event(Event.DELETED)
+                    .objectType(ObjectType.MESSAGING_CHANNEL)
                     .build())
                 .id("<id>")
                 .build();
@@ -1146,10 +1096,10 @@ Trigger webhook
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateUnifiedWebhookTriggerRequest;
-import to.unified.unifiedto.models.operations.UpdateUnifiedWebhookTriggerResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateUnifiedWebhookTriggerRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateUnifiedWebhookTriggerResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

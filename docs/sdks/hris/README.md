@@ -6,33 +6,45 @@
 ### Available Operations
 
 * [createHrisCompany](#createhriscompany) - Create a company
+* [createHrisDevice](#createhrisdevice) - Create a device
 * [createHrisEmployee](#createhrisemployee) - Create an employee
 * [createHrisGroup](#createhrisgroup) - Create a group
 * [createHrisLocation](#createhrislocation) - Create a location
+* [createHrisTimeshift](#createhristimeshift) - Create a timeshift
 * [getHrisCompany](#gethriscompany) - Retrieve a company
+* [getHrisDevice](#gethrisdevice) - Retrieve a device
 * [getHrisEmployee](#gethrisemployee) - Retrieve an employee
 * [getHrisGroup](#gethrisgroup) - Retrieve a group
 * [getHrisLocation](#gethrislocation) - Retrieve a location
 * [getHrisPayslip](#gethrispayslip) - Retrieve a payslip
 * [getHrisTimeoff](#gethristimeoff) - Retrieve a timeoff
+* [getHrisTimeshift](#gethristimeshift) - Retrieve a timeshift
 * [listHrisCompanies](#listhriscompanies) - List all companies
+* [listHrisDevices](#listhrisdevices) - List all devices
 * [listHrisEmployees](#listhrisemployees) - List all employees
 * [listHrisGroups](#listhrisgroups) - List all groups
 * [listHrisLocations](#listhrislocations) - List all locations
 * [listHrisPayslips](#listhrispayslips) - List all payslips
 * [listHrisTimeoffs](#listhristimeoffs) - List all timeoffs
+* [listHrisTimeshifts](#listhristimeshifts) - List all timeshifts
 * [patchHrisCompany](#patchhriscompany) - Update a company
+* [patchHrisDevice](#patchhrisdevice) - Update a device
 * [patchHrisEmployee](#patchhrisemployee) - Update an employee
 * [patchHrisGroup](#patchhrisgroup) - Update a group
 * [patchHrisLocation](#patchhrislocation) - Update a location
+* [patchHrisTimeshift](#patchhristimeshift) - Update a timeshift
 * [removeHrisCompany](#removehriscompany) - Remove a company
+* [removeHrisDevice](#removehrisdevice) - Remove a device
 * [removeHrisEmployee](#removehrisemployee) - Remove an employee
 * [removeHrisGroup](#removehrisgroup) - Remove a group
 * [removeHrisLocation](#removehrislocation) - Remove a location
+* [removeHrisTimeshift](#removehristimeshift) - Remove a timeshift
 * [updateHrisCompany](#updatehriscompany) - Update a company
+* [updateHrisDevice](#updatehrisdevice) - Update a device
 * [updateHrisEmployee](#updatehrisemployee) - Update an employee
 * [updateHrisGroup](#updatehrisgroup) - Update a group
 * [updateHrisLocation](#updatehrislocation) - Update a location
+* [updateHrisTimeshift](#updatehristimeshift) - Update a timeshift
 
 ## createHrisCompany
 
@@ -44,11 +56,11 @@ Create a company
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateHrisCompanyRequest;
-import to.unified.unifiedto.models.operations.CreateHrisCompanyResponse;
-import to.unified.unifiedto.models.shared.HrisCompany;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateHrisCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisCompanyResponse;
+import to.unified.unified_java_sdk.models.shared.HrisCompany;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -93,6 +105,66 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## createHrisDevice
+
+Create a device
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateHrisDeviceRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisDeviceResponse;
+import to.unified.unified_java_sdk.models.shared.HrisDevice;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        CreateHrisDeviceRequest req = CreateHrisDeviceRequest.builder()
+                .hrisDevice(HrisDevice.builder()
+                    .name("<value>")
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateHrisDeviceResponse res = sdk.hris().createHrisDevice()
+                .request(req)
+                .call();
+
+        if (res.hrisDevice().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [CreateHrisDeviceRequest](../../models/operations/CreateHrisDeviceRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[CreateHrisDeviceResponse](../../models/operations/CreateHrisDeviceResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## createHrisEmployee
 
 Create an employee
@@ -103,11 +175,11 @@ Create an employee
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateHrisEmployeeRequest;
-import to.unified.unifiedto.models.operations.CreateHrisEmployeeResponse;
-import to.unified.unifiedto.models.shared.HrisEmployee;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeResponse;
+import to.unified.unified_java_sdk.models.shared.HrisEmployee;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -162,11 +234,11 @@ Create a group
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateHrisGroupRequest;
-import to.unified.unifiedto.models.operations.CreateHrisGroupResponse;
-import to.unified.unifiedto.models.shared.HrisGroup;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateHrisGroupRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisGroupResponse;
+import to.unified.unified_java_sdk.models.shared.HrisGroup;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -221,11 +293,11 @@ Create a location
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateHrisLocationRequest;
-import to.unified.unifiedto.models.operations.CreateHrisLocationResponse;
-import to.unified.unifiedto.models.shared.HrisLocation;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateHrisLocationRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisLocationResponse;
+import to.unified.unified_java_sdk.models.shared.HrisLocation;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -270,6 +342,65 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## createHrisTimeshift
+
+Create a timeshift
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftResponse;
+import to.unified.unified_java_sdk.models.shared.HrisTimeshift;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        CreateHrisTimeshiftRequest req = CreateHrisTimeshiftRequest.builder()
+                .hrisTimeshift(HrisTimeshift.builder()
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateHrisTimeshiftResponse res = sdk.hris().createHrisTimeshift()
+                .request(req)
+                .call();
+
+        if (res.hrisTimeshift().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [CreateHrisTimeshiftRequest](../../models/operations/CreateHrisTimeshiftRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[CreateHrisTimeshiftResponse](../../models/operations/CreateHrisTimeshiftResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## getHrisCompany
 
 Retrieve a company
@@ -280,10 +411,10 @@ Retrieve a company
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetHrisCompanyRequest;
-import to.unified.unifiedto.models.operations.GetHrisCompanyResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHrisCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisCompanyResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -327,6 +458,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getHrisDevice
+
+Retrieve a device
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHrisDeviceRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisDeviceResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        GetHrisDeviceRequest req = GetHrisDeviceRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetHrisDeviceResponse res = sdk.hris().getHrisDevice()
+                .request(req)
+                .call();
+
+        if (res.hrisDevice().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [GetHrisDeviceRequest](../../models/operations/GetHrisDeviceRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+
+### Response
+
+**[GetHrisDeviceResponse](../../models/operations/GetHrisDeviceResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## getHrisEmployee
 
 Retrieve an employee
@@ -337,10 +525,10 @@ Retrieve an employee
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetHrisEmployeeRequest;
-import to.unified.unifiedto.models.operations.GetHrisEmployeeResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHrisEmployeeRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisEmployeeResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -394,10 +582,10 @@ Retrieve a group
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetHrisGroupRequest;
-import to.unified.unifiedto.models.operations.GetHrisGroupResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHrisGroupRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisGroupResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -451,10 +639,10 @@ Retrieve a location
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetHrisLocationRequest;
-import to.unified.unifiedto.models.operations.GetHrisLocationResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHrisLocationRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisLocationResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -508,10 +696,10 @@ Retrieve a payslip
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetHrisPayslipRequest;
-import to.unified.unifiedto.models.operations.GetHrisPayslipResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHrisPayslipRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisPayslipResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -565,10 +753,10 @@ Retrieve a timeoff
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetHrisTimeoffRequest;
-import to.unified.unifiedto.models.operations.GetHrisTimeoffResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHrisTimeoffRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisTimeoffResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -612,6 +800,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getHrisTimeshift
+
+Retrieve a timeshift
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHrisTimeshiftRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisTimeshiftResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        GetHrisTimeshiftRequest req = GetHrisTimeshiftRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetHrisTimeshiftResponse res = sdk.hris().getHrisTimeshift()
+                .request(req)
+                .call();
+
+        if (res.hrisTimeshift().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [GetHrisTimeshiftRequest](../../models/operations/GetHrisTimeshiftRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[GetHrisTimeshiftResponse](../../models/operations/GetHrisTimeshiftResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listHrisCompanies
 
 List all companies
@@ -622,10 +867,10 @@ List all companies
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListHrisCompaniesRequest;
-import to.unified.unifiedto.models.operations.ListHrisCompaniesResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHrisCompaniesRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisCompaniesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -668,6 +913,62 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listHrisDevices
+
+List all devices
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHrisDevicesRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisDevicesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        ListHrisDevicesRequest req = ListHrisDevicesRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListHrisDevicesResponse res = sdk.hris().listHrisDevices()
+                .request(req)
+                .call();
+
+        if (res.hrisDevices().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [ListHrisDevicesRequest](../../models/operations/ListHrisDevicesRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+
+### Response
+
+**[ListHrisDevicesResponse](../../models/operations/ListHrisDevicesResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listHrisEmployees
 
 List all employees
@@ -678,10 +979,10 @@ List all employees
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListHrisEmployeesRequest;
-import to.unified.unifiedto.models.operations.ListHrisEmployeesResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHrisEmployeesRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisEmployeesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -734,10 +1035,10 @@ List all groups
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListHrisGroupsRequest;
-import to.unified.unifiedto.models.operations.ListHrisGroupsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHrisGroupsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisGroupsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -790,10 +1091,10 @@ List all locations
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListHrisLocationsRequest;
-import to.unified.unifiedto.models.operations.ListHrisLocationsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHrisLocationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisLocationsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -846,10 +1147,10 @@ List all payslips
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListHrisPayslipsRequest;
-import to.unified.unifiedto.models.operations.ListHrisPayslipsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHrisPayslipsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisPayslipsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -902,10 +1203,10 @@ List all timeoffs
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListHrisTimeoffsRequest;
-import to.unified.unifiedto.models.operations.ListHrisTimeoffsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -948,6 +1249,62 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listHrisTimeshifts
+
+List all timeshifts
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHrisTimeshiftsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisTimeshiftsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        ListHrisTimeshiftsRequest req = ListHrisTimeshiftsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListHrisTimeshiftsResponse res = sdk.hris().listHrisTimeshifts()
+                .request(req)
+                .call();
+
+        if (res.hrisTimeshifts().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [ListHrisTimeshiftsRequest](../../models/operations/ListHrisTimeshiftsRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[ListHrisTimeshiftsResponse](../../models/operations/ListHrisTimeshiftsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## patchHrisCompany
 
 Update a company
@@ -958,11 +1315,11 @@ Update a company
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchHrisCompanyRequest;
-import to.unified.unifiedto.models.operations.PatchHrisCompanyResponse;
-import to.unified.unifiedto.models.shared.HrisCompany;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchHrisCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisCompanyResponse;
+import to.unified.unified_java_sdk.models.shared.HrisCompany;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1008,6 +1365,67 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## patchHrisDevice
+
+Update a device
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchHrisDeviceRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisDeviceResponse;
+import to.unified.unified_java_sdk.models.shared.HrisDevice;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        PatchHrisDeviceRequest req = PatchHrisDeviceRequest.builder()
+                .hrisDevice(HrisDevice.builder()
+                    .name("<value>")
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchHrisDeviceResponse res = sdk.hris().patchHrisDevice()
+                .request(req)
+                .call();
+
+        if (res.hrisDevice().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [PatchHrisDeviceRequest](../../models/operations/PatchHrisDeviceRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+
+### Response
+
+**[PatchHrisDeviceResponse](../../models/operations/PatchHrisDeviceResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## patchHrisEmployee
 
 Update an employee
@@ -1018,11 +1436,11 @@ Update an employee
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchHrisEmployeeRequest;
-import to.unified.unifiedto.models.operations.PatchHrisEmployeeResponse;
-import to.unified.unifiedto.models.shared.HrisEmployee;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchHrisEmployeeRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisEmployeeResponse;
+import to.unified.unified_java_sdk.models.shared.HrisEmployee;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1078,11 +1496,11 @@ Update a group
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchHrisGroupRequest;
-import to.unified.unifiedto.models.operations.PatchHrisGroupResponse;
-import to.unified.unifiedto.models.shared.HrisGroup;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchHrisGroupRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisGroupResponse;
+import to.unified.unified_java_sdk.models.shared.HrisGroup;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1138,11 +1556,11 @@ Update a location
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchHrisLocationRequest;
-import to.unified.unifiedto.models.operations.PatchHrisLocationResponse;
-import to.unified.unifiedto.models.shared.HrisLocation;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchHrisLocationRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisLocationResponse;
+import to.unified.unified_java_sdk.models.shared.HrisLocation;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1188,6 +1606,66 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## patchHrisTimeshift
+
+Update a timeshift
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshiftRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshiftResponse;
+import to.unified.unified_java_sdk.models.shared.HrisTimeshift;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        PatchHrisTimeshiftRequest req = PatchHrisTimeshiftRequest.builder()
+                .hrisTimeshift(HrisTimeshift.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchHrisTimeshiftResponse res = sdk.hris().patchHrisTimeshift()
+                .request(req)
+                .call();
+
+        if (res.hrisTimeshift().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [PatchHrisTimeshiftRequest](../../models/operations/PatchHrisTimeshiftRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[PatchHrisTimeshiftResponse](../../models/operations/PatchHrisTimeshiftResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## removeHrisCompany
 
 Remove a company
@@ -1198,10 +1676,10 @@ Remove a company
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveHrisCompanyRequest;
-import to.unified.unifiedto.models.operations.RemoveHrisCompanyResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisCompanyResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1243,6 +1721,61 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removeHrisDevice
+
+Remove a device
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisDeviceRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisDeviceResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        RemoveHrisDeviceRequest req = RemoveHrisDeviceRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveHrisDeviceResponse res = sdk.hris().removeHrisDevice()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [RemoveHrisDeviceRequest](../../models/operations/RemoveHrisDeviceRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[RemoveHrisDeviceResponse](../../models/operations/RemoveHrisDeviceResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## removeHrisEmployee
 
 Remove an employee
@@ -1253,10 +1786,10 @@ Remove an employee
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveHrisEmployeeRequest;
-import to.unified.unifiedto.models.operations.RemoveHrisEmployeeResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisEmployeeRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisEmployeeResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1308,10 +1841,10 @@ Remove a group
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveHrisGroupRequest;
-import to.unified.unifiedto.models.operations.RemoveHrisGroupResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisGroupRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisGroupResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1363,10 +1896,10 @@ Remove a location
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveHrisLocationRequest;
-import to.unified.unifiedto.models.operations.RemoveHrisLocationResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisLocationRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisLocationResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1408,6 +1941,61 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removeHrisTimeshift
+
+Remove a timeshift
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeshiftRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeshiftResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        RemoveHrisTimeshiftRequest req = RemoveHrisTimeshiftRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveHrisTimeshiftResponse res = sdk.hris().removeHrisTimeshift()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [RemoveHrisTimeshiftRequest](../../models/operations/RemoveHrisTimeshiftRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[RemoveHrisTimeshiftResponse](../../models/operations/RemoveHrisTimeshiftResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## updateHrisCompany
 
 Update a company
@@ -1418,11 +2006,11 @@ Update a company
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateHrisCompanyRequest;
-import to.unified.unifiedto.models.operations.UpdateHrisCompanyResponse;
-import to.unified.unifiedto.models.shared.HrisCompany;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisCompanyResponse;
+import to.unified.unified_java_sdk.models.shared.HrisCompany;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1468,6 +2056,67 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## updateHrisDevice
+
+Update a device
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisDeviceRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisDeviceResponse;
+import to.unified.unified_java_sdk.models.shared.HrisDevice;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        UpdateHrisDeviceRequest req = UpdateHrisDeviceRequest.builder()
+                .hrisDevice(HrisDevice.builder()
+                    .name("<value>")
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateHrisDeviceResponse res = sdk.hris().updateHrisDevice()
+                .request(req)
+                .call();
+
+        if (res.hrisDevice().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [UpdateHrisDeviceRequest](../../models/operations/UpdateHrisDeviceRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[UpdateHrisDeviceResponse](../../models/operations/UpdateHrisDeviceResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## updateHrisEmployee
 
 Update an employee
@@ -1478,11 +2127,11 @@ Update an employee
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateHrisEmployeeRequest;
-import to.unified.unifiedto.models.operations.UpdateHrisEmployeeResponse;
-import to.unified.unifiedto.models.shared.HrisEmployee;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployeeRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployeeResponse;
+import to.unified.unified_java_sdk.models.shared.HrisEmployee;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1538,11 +2187,11 @@ Update a group
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateHrisGroupRequest;
-import to.unified.unifiedto.models.operations.UpdateHrisGroupResponse;
-import to.unified.unifiedto.models.shared.HrisGroup;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisGroupRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisGroupResponse;
+import to.unified.unified_java_sdk.models.shared.HrisGroup;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1598,11 +2247,11 @@ Update a location
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateHrisLocationRequest;
-import to.unified.unifiedto.models.operations.UpdateHrisLocationResponse;
-import to.unified.unifiedto.models.shared.HrisLocation;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationResponse;
+import to.unified.unified_java_sdk.models.shared.HrisLocation;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1641,6 +2290,66 @@ public class Application {
 ### Response
 
 **[UpdateHrisLocationResponse](../../models/operations/UpdateHrisLocationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateHrisTimeshift
+
+Update a timeshift
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftResponse;
+import to.unified.unified_java_sdk.models.shared.HrisTimeshift;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        UpdateHrisTimeshiftRequest req = UpdateHrisTimeshiftRequest.builder()
+                .hrisTimeshift(HrisTimeshift.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateHrisTimeshiftResponse res = sdk.hris().updateHrisTimeshift()
+                .request(req)
+                .call();
+
+        if (res.hrisTimeshift().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [UpdateHrisTimeshiftRequest](../../models/operations/UpdateHrisTimeshiftRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[UpdateHrisTimeshiftResponse](../../models/operations/UpdateHrisTimeshiftResponse.md)**
 
 ### Errors
 

@@ -5,13 +5,85 @@
 
 ### Available Operations
 
+* [createUcComment](#createuccomment) - Create a comment
 * [createUcContact](#createuccontact) - Create a contact
+* [createUcRecording](#createucrecording) - Create a recording
+* [getUcComment](#getuccomment) - Retrieve a comment
 * [getUcContact](#getuccontact) - Retrieve a contact
+* [getUcRecording](#getucrecording) - Retrieve a recording
 * [listUcCalls](#listuccalls) - List all calls
+* [listUcComments](#listuccomments) - List all comments
 * [listUcContacts](#listuccontacts) - List all contacts
+* [listUcRecordings](#listucrecordings) - List all recordings
+* [patchUcComment](#patchuccomment) - Update a comment
 * [patchUcContact](#patchuccontact) - Update a contact
+* [patchUcRecording](#patchucrecording) - Update a recording
+* [removeUcComment](#removeuccomment) - Remove a comment
 * [removeUcContact](#removeuccontact) - Remove a contact
+* [removeUcRecording](#removeucrecording) - Remove a recording
+* [updateUcComment](#updateuccomment) - Update a comment
 * [updateUcContact](#updateuccontact) - Update a contact
+* [updateUcRecording](#updateucrecording) - Update a recording
+
+## createUcComment
+
+Create a comment
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateUcCommentRequest;
+import to.unified.unified_java_sdk.models.operations.CreateUcCommentResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.UcComment;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        CreateUcCommentRequest req = CreateUcCommentRequest.builder()
+                .ucComment(UcComment.builder()
+                    .content("<value>")
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateUcCommentResponse res = sdk.uc().createUcComment()
+                .request(req)
+                .call();
+
+        if (res.ucComment().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [CreateUcCommentRequest](../../models/operations/CreateUcCommentRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+
+### Response
+
+**[CreateUcCommentResponse](../../models/operations/CreateUcCommentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createUcContact
 
@@ -23,11 +95,11 @@ Create a contact
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateUcContactRequest;
-import to.unified.unifiedto.models.operations.CreateUcContactResponse;
-import to.unified.unifiedto.models.shared.Security;
-import to.unified.unifiedto.models.shared.UcContact;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateUcContactRequest;
+import to.unified.unified_java_sdk.models.operations.CreateUcContactResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.UcContact;
 
 public class Application {
 
@@ -72,6 +144,122 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## createUcRecording
+
+Create a recording
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateUcRecordingRequest;
+import to.unified.unified_java_sdk.models.operations.CreateUcRecordingResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.UcRecording;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        CreateUcRecordingRequest req = CreateUcRecordingRequest.builder()
+                .ucRecording(UcRecording.builder()
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateUcRecordingResponse res = sdk.uc().createUcRecording()
+                .request(req)
+                .call();
+
+        if (res.ucRecording().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [CreateUcRecordingRequest](../../models/operations/CreateUcRecordingRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[CreateUcRecordingResponse](../../models/operations/CreateUcRecordingResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getUcComment
+
+Retrieve a comment
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetUcCommentRequest;
+import to.unified.unified_java_sdk.models.operations.GetUcCommentResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        GetUcCommentRequest req = GetUcCommentRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetUcCommentResponse res = sdk.uc().getUcComment()
+                .request(req)
+                .call();
+
+        if (res.ucComment().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [GetUcCommentRequest](../../models/operations/GetUcCommentRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
+
+### Response
+
+**[GetUcCommentResponse](../../models/operations/GetUcCommentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## getUcContact
 
 Retrieve a contact
@@ -82,10 +270,10 @@ Retrieve a contact
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetUcContactRequest;
-import to.unified.unifiedto.models.operations.GetUcContactResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetUcContactRequest;
+import to.unified.unified_java_sdk.models.operations.GetUcContactResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -129,6 +317,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getUcRecording
+
+Retrieve a recording
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetUcRecordingRequest;
+import to.unified.unified_java_sdk.models.operations.GetUcRecordingResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        GetUcRecordingRequest req = GetUcRecordingRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetUcRecordingResponse res = sdk.uc().getUcRecording()
+                .request(req)
+                .call();
+
+        if (res.ucRecording().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetUcRecordingRequest](../../models/operations/GetUcRecordingRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+
+### Response
+
+**[GetUcRecordingResponse](../../models/operations/GetUcRecordingResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listUcCalls
 
 List all calls
@@ -139,10 +384,10 @@ List all calls
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListUcCallsRequest;
-import to.unified.unifiedto.models.operations.ListUcCallsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListUcCallsRequest;
+import to.unified.unified_java_sdk.models.operations.ListUcCallsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -185,6 +430,62 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listUcComments
+
+List all comments
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListUcCommentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListUcCommentsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        ListUcCommentsRequest req = ListUcCommentsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListUcCommentsResponse res = sdk.uc().listUcComments()
+                .request(req)
+                .call();
+
+        if (res.ucComments().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [ListUcCommentsRequest](../../models/operations/ListUcCommentsRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+
+### Response
+
+**[ListUcCommentsResponse](../../models/operations/ListUcCommentsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listUcContacts
 
 List all contacts
@@ -195,10 +496,10 @@ List all contacts
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListUcContactsRequest;
-import to.unified.unifiedto.models.operations.ListUcContactsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListUcContactsRequest;
+import to.unified.unified_java_sdk.models.operations.ListUcContactsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -241,6 +542,123 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listUcRecordings
+
+List all recordings
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListUcRecordingsRequest;
+import to.unified.unified_java_sdk.models.operations.ListUcRecordingsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        ListUcRecordingsRequest req = ListUcRecordingsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListUcRecordingsResponse res = sdk.uc().listUcRecordings()
+                .request(req)
+                .call();
+
+        if (res.ucRecordings().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListUcRecordingsRequest](../../models/operations/ListUcRecordingsRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[ListUcRecordingsResponse](../../models/operations/ListUcRecordingsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchUcComment
+
+Update a comment
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchUcCommentRequest;
+import to.unified.unified_java_sdk.models.operations.PatchUcCommentResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.UcComment;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        PatchUcCommentRequest req = PatchUcCommentRequest.builder()
+                .ucComment(UcComment.builder()
+                    .content("<value>")
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchUcCommentResponse res = sdk.uc().patchUcComment()
+                .request(req)
+                .call();
+
+        if (res.ucComment().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [PatchUcCommentRequest](../../models/operations/PatchUcCommentRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+
+### Response
+
+**[PatchUcCommentResponse](../../models/operations/PatchUcCommentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## patchUcContact
 
 Update a contact
@@ -251,11 +669,11 @@ Update a contact
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchUcContactRequest;
-import to.unified.unifiedto.models.operations.PatchUcContactResponse;
-import to.unified.unifiedto.models.shared.Security;
-import to.unified.unifiedto.models.shared.UcContact;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchUcContactRequest;
+import to.unified.unified_java_sdk.models.operations.PatchUcContactResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.UcContact;
 
 public class Application {
 
@@ -301,6 +719,121 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## patchUcRecording
+
+Update a recording
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchUcRecordingRequest;
+import to.unified.unified_java_sdk.models.operations.PatchUcRecordingResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.UcRecording;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        PatchUcRecordingRequest req = PatchUcRecordingRequest.builder()
+                .ucRecording(UcRecording.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchUcRecordingResponse res = sdk.uc().patchUcRecording()
+                .request(req)
+                .call();
+
+        if (res.ucRecording().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [PatchUcRecordingRequest](../../models/operations/PatchUcRecordingRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[PatchUcRecordingResponse](../../models/operations/PatchUcRecordingResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeUcComment
+
+Remove a comment
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveUcCommentRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveUcCommentResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        RemoveUcCommentRequest req = RemoveUcCommentRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveUcCommentResponse res = sdk.uc().removeUcComment()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [RemoveUcCommentRequest](../../models/operations/RemoveUcCommentRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+
+### Response
+
+**[RemoveUcCommentResponse](../../models/operations/RemoveUcCommentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## removeUcContact
 
 Remove a contact
@@ -311,10 +844,10 @@ Remove a contact
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveUcContactRequest;
-import to.unified.unifiedto.models.operations.RemoveUcContactResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveUcContactRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveUcContactResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -356,6 +889,122 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removeUcRecording
+
+Remove a recording
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveUcRecordingRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveUcRecordingResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        RemoveUcRecordingRequest req = RemoveUcRecordingRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveUcRecordingResponse res = sdk.uc().removeUcRecording()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [RemoveUcRecordingRequest](../../models/operations/RemoveUcRecordingRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[RemoveUcRecordingResponse](../../models/operations/RemoveUcRecordingResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateUcComment
+
+Update a comment
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateUcCommentRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateUcCommentResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.UcComment;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        UpdateUcCommentRequest req = UpdateUcCommentRequest.builder()
+                .ucComment(UcComment.builder()
+                    .content("<value>")
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateUcCommentResponse res = sdk.uc().updateUcComment()
+                .request(req)
+                .call();
+
+        if (res.ucComment().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [UpdateUcCommentRequest](../../models/operations/UpdateUcCommentRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+
+### Response
+
+**[UpdateUcCommentResponse](../../models/operations/UpdateUcCommentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## updateUcContact
 
 Update a contact
@@ -366,11 +1015,11 @@ Update a contact
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateUcContactRequest;
-import to.unified.unifiedto.models.operations.UpdateUcContactResponse;
-import to.unified.unifiedto.models.shared.Security;
-import to.unified.unifiedto.models.shared.UcContact;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateUcContactRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateUcContactResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.UcContact;
 
 public class Application {
 
@@ -409,6 +1058,66 @@ public class Application {
 ### Response
 
 **[UpdateUcContactResponse](../../models/operations/UpdateUcContactResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateUcRecording
+
+Update a recording
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateUcRecordingRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateUcRecordingResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.UcRecording;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        UpdateUcRecordingRequest req = UpdateUcRecordingRequest.builder()
+                .ucRecording(UcRecording.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateUcRecordingResponse res = sdk.uc().updateUcRecording()
+                .request(req)
+                .call();
+
+        if (res.ucRecording().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [UpdateUcRecordingRequest](../../models/operations/UpdateUcRecordingRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[UpdateUcRecordingResponse](../../models/operations/UpdateUcRecordingResponse.md)**
 
 ### Errors
 

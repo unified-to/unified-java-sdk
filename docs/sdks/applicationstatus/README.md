@@ -17,10 +17,10 @@ List all applicationstatuses
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListAtsApplicationstatusesRequest;
-import to.unified.unifiedto.models.operations.ListAtsApplicationstatusesResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatusesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatusesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

@@ -28,11 +28,11 @@ Create a link
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateCalendarLinkRequest;
-import to.unified.unifiedto.models.operations.CreateCalendarLinkResponse;
-import to.unified.unifiedto.models.shared.CalendarLink;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateCalendarLinkRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCalendarLinkResponse;
+import to.unified.unified_java_sdk.models.shared.CalendarLink;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -46,7 +46,7 @@ public class Application {
 
         CreateCalendarLinkRequest req = CreateCalendarLinkRequest.builder()
                 .calendarLink(CalendarLink.builder()
-                    .url("https://sturdy-begonia.biz/")
+                    .url("https://misguided-thongs.info")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -88,11 +88,11 @@ Create a link
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreatePaymentLinkRequest;
-import to.unified.unifiedto.models.operations.CreatePaymentLinkResponse;
-import to.unified.unifiedto.models.shared.PaymentLink;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreatePaymentLinkRequest;
+import to.unified.unified_java_sdk.models.operations.CreatePaymentLinkResponse;
+import to.unified.unified_java_sdk.models.shared.PaymentLink;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -147,10 +147,10 @@ Retrieve a link
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetCalendarLinkRequest;
-import to.unified.unifiedto.models.operations.GetCalendarLinkResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetCalendarLinkRequest;
+import to.unified.unified_java_sdk.models.operations.GetCalendarLinkResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -204,10 +204,10 @@ Retrieve a link
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetPaymentLinkRequest;
-import to.unified.unifiedto.models.operations.GetPaymentLinkResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetPaymentLinkRequest;
+import to.unified.unified_java_sdk.models.operations.GetPaymentLinkResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -261,10 +261,10 @@ List all links
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListCalendarLinksRequest;
-import to.unified.unifiedto.models.operations.ListCalendarLinksResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListCalendarLinksRequest;
+import to.unified.unified_java_sdk.models.operations.ListCalendarLinksResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -317,10 +317,10 @@ List all links
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListPaymentLinksRequest;
-import to.unified.unifiedto.models.operations.ListPaymentLinksResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListPaymentLinksRequest;
+import to.unified.unified_java_sdk.models.operations.ListPaymentLinksResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -373,11 +373,11 @@ Update a link
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchCalendarLinkRequest;
-import to.unified.unifiedto.models.operations.PatchCalendarLinkResponse;
-import to.unified.unifiedto.models.shared.CalendarLink;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchCalendarLinkRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCalendarLinkResponse;
+import to.unified.unified_java_sdk.models.shared.CalendarLink;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -391,7 +391,7 @@ public class Application {
 
         PatchCalendarLinkRequest req = PatchCalendarLinkRequest.builder()
                 .calendarLink(CalendarLink.builder()
-                    .url("https://curly-skyline.biz/")
+                    .url("https://warm-hexagon.name/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -434,11 +434,11 @@ Update a link
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchPaymentLinkRequest;
-import to.unified.unifiedto.models.operations.PatchPaymentLinkResponse;
-import to.unified.unifiedto.models.shared.PaymentLink;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchPaymentLinkRequest;
+import to.unified.unified_java_sdk.models.operations.PatchPaymentLinkResponse;
+import to.unified.unified_java_sdk.models.shared.PaymentLink;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -494,10 +494,10 @@ Remove a link
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveCalendarLinkRequest;
-import to.unified.unifiedto.models.operations.RemoveCalendarLinkResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveCalendarLinkRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCalendarLinkResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -549,10 +549,10 @@ Remove a link
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemovePaymentLinkRequest;
-import to.unified.unifiedto.models.operations.RemovePaymentLinkResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemovePaymentLinkRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePaymentLinkResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -604,11 +604,11 @@ Update a link
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateCalendarLinkRequest;
-import to.unified.unifiedto.models.operations.UpdateCalendarLinkResponse;
-import to.unified.unifiedto.models.shared.CalendarLink;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateCalendarLinkRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCalendarLinkResponse;
+import to.unified.unified_java_sdk.models.shared.CalendarLink;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -622,7 +622,7 @@ public class Application {
 
         UpdateCalendarLinkRequest req = UpdateCalendarLinkRequest.builder()
                 .calendarLink(CalendarLink.builder()
-                    .url("https://quiet-coordination.name")
+                    .url("https://partial-hydrocarbon.info")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -665,11 +665,11 @@ Update a link
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdatePaymentLinkRequest;
-import to.unified.unifiedto.models.operations.UpdatePaymentLinkResponse;
-import to.unified.unifiedto.models.shared.PaymentLink;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdatePaymentLinkRequest;
+import to.unified.unified_java_sdk.models.operations.UpdatePaymentLinkResponse;
+import to.unified.unified_java_sdk.models.shared.PaymentLink;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

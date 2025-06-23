@@ -22,11 +22,11 @@ Create a repository
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateRepoRepositoryRequest;
-import to.unified.unifiedto.models.operations.CreateRepoRepositoryResponse;
-import to.unified.unifiedto.models.shared.RepoRepository;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateRepoRepositoryRequest;
+import to.unified.unified_java_sdk.models.operations.CreateRepoRepositoryResponse;
+import to.unified.unified_java_sdk.models.shared.RepoRepository;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -82,10 +82,10 @@ Retrieve a repository
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetRepoRepositoryRequest;
-import to.unified.unifiedto.models.operations.GetRepoRepositoryResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetRepoRepositoryRequest;
+import to.unified.unified_java_sdk.models.operations.GetRepoRepositoryResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -139,10 +139,10 @@ List all repositories
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListRepoRepositoriesRequest;
-import to.unified.unifiedto.models.operations.ListRepoRepositoriesResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListRepoRepositoriesRequest;
+import to.unified.unified_java_sdk.models.operations.ListRepoRepositoriesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -195,11 +195,11 @@ Update a repository
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchRepoRepositoryRequest;
-import to.unified.unifiedto.models.operations.PatchRepoRepositoryResponse;
-import to.unified.unifiedto.models.shared.RepoRepository;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchRepoRepositoryRequest;
+import to.unified.unified_java_sdk.models.operations.PatchRepoRepositoryResponse;
+import to.unified.unified_java_sdk.models.shared.RepoRepository;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -256,10 +256,10 @@ Remove a repository
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveRepoRepositoryRequest;
-import to.unified.unifiedto.models.operations.RemoveRepoRepositoryResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveRepoRepositoryRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveRepoRepositoryResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -311,11 +311,11 @@ Update a repository
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateRepoRepositoryRequest;
-import to.unified.unifiedto.models.operations.UpdateRepoRepositoryResponse;
-import to.unified.unifiedto.models.shared.RepoRepository;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateRepoRepositoryRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateRepoRepositoryResponse;
+import to.unified.unified_java_sdk.models.shared.RepoRepository;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

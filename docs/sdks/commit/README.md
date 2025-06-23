@@ -22,11 +22,11 @@ Create a commit
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateRepoCommitRequest;
-import to.unified.unifiedto.models.operations.CreateRepoCommitResponse;
-import to.unified.unifiedto.models.shared.RepoCommit;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateRepoCommitRequest;
+import to.unified.unified_java_sdk.models.operations.CreateRepoCommitResponse;
+import to.unified.unified_java_sdk.models.shared.RepoCommit;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -83,10 +83,10 @@ Retrieve a commit
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetRepoCommitRequest;
-import to.unified.unifiedto.models.operations.GetRepoCommitResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetRepoCommitRequest;
+import to.unified.unified_java_sdk.models.operations.GetRepoCommitResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -140,10 +140,10 @@ List all commits
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListRepoCommitsRequest;
-import to.unified.unifiedto.models.operations.ListRepoCommitsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListRepoCommitsRequest;
+import to.unified.unified_java_sdk.models.operations.ListRepoCommitsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -196,11 +196,11 @@ Update a commit
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchRepoCommitRequest;
-import to.unified.unifiedto.models.operations.PatchRepoCommitResponse;
-import to.unified.unifiedto.models.shared.RepoCommit;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchRepoCommitRequest;
+import to.unified.unified_java_sdk.models.operations.PatchRepoCommitResponse;
+import to.unified.unified_java_sdk.models.shared.RepoCommit;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -258,10 +258,10 @@ Remove a commit
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveRepoCommitRequest;
-import to.unified.unifiedto.models.operations.RemoveRepoCommitResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveRepoCommitRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveRepoCommitResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -313,11 +313,11 @@ Update a commit
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateRepoCommitRequest;
-import to.unified.unifiedto.models.operations.UpdateRepoCommitResponse;
-import to.unified.unifiedto.models.shared.RepoCommit;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateRepoCommitRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateRepoCommitResponse;
+import to.unified.unified_java_sdk.models.shared.RepoCommit;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

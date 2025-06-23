@@ -40,11 +40,11 @@ Create a class
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateLmsClassRequest;
-import to.unified.unifiedto.models.operations.CreateLmsClassResponse;
-import to.unified.unifiedto.models.shared.LmsClass;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateLmsClassRequest;
+import to.unified.unified_java_sdk.models.operations.CreateLmsClassResponse;
+import to.unified.unified_java_sdk.models.shared.LmsClass;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -101,11 +101,11 @@ Create a course
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateLmsCourseRequest;
-import to.unified.unifiedto.models.operations.CreateLmsCourseResponse;
-import to.unified.unifiedto.models.shared.LmsCourse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateLmsCourseRequest;
+import to.unified.unified_java_sdk.models.operations.CreateLmsCourseResponse;
+import to.unified.unified_java_sdk.models.shared.LmsCourse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -161,11 +161,11 @@ Create an instructor
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateLmsInstructorRequest;
-import to.unified.unifiedto.models.operations.CreateLmsInstructorResponse;
-import to.unified.unifiedto.models.shared.LmsInstructor;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateLmsInstructorRequest;
+import to.unified.unified_java_sdk.models.operations.CreateLmsInstructorResponse;
+import to.unified.unified_java_sdk.models.shared.LmsInstructor;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -220,11 +220,11 @@ Create a student
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateLmsStudentRequest;
-import to.unified.unifiedto.models.operations.CreateLmsStudentResponse;
-import to.unified.unifiedto.models.shared.LmsStudent;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateLmsStudentRequest;
+import to.unified.unified_java_sdk.models.operations.CreateLmsStudentResponse;
+import to.unified.unified_java_sdk.models.shared.LmsStudent;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -279,10 +279,10 @@ Retrieve a class
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetLmsClassRequest;
-import to.unified.unifiedto.models.operations.GetLmsClassResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetLmsClassRequest;
+import to.unified.unified_java_sdk.models.operations.GetLmsClassResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -336,10 +336,10 @@ Retrieve a course
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetLmsCourseRequest;
-import to.unified.unifiedto.models.operations.GetLmsCourseResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetLmsCourseRequest;
+import to.unified.unified_java_sdk.models.operations.GetLmsCourseResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -393,10 +393,10 @@ Retrieve an instructor
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetLmsInstructorRequest;
-import to.unified.unifiedto.models.operations.GetLmsInstructorResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetLmsInstructorRequest;
+import to.unified.unified_java_sdk.models.operations.GetLmsInstructorResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -450,10 +450,10 @@ Retrieve a student
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetLmsStudentRequest;
-import to.unified.unifiedto.models.operations.GetLmsStudentResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetLmsStudentRequest;
+import to.unified.unified_java_sdk.models.operations.GetLmsStudentResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -507,10 +507,10 @@ List all classes
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListLmsClassesRequest;
-import to.unified.unifiedto.models.operations.ListLmsClassesResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListLmsClassesRequest;
+import to.unified.unified_java_sdk.models.operations.ListLmsClassesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -563,10 +563,10 @@ List all courses
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListLmsCoursesRequest;
-import to.unified.unifiedto.models.operations.ListLmsCoursesResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListLmsCoursesRequest;
+import to.unified.unified_java_sdk.models.operations.ListLmsCoursesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -619,10 +619,10 @@ List all instructors
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListLmsInstructorsRequest;
-import to.unified.unifiedto.models.operations.ListLmsInstructorsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListLmsInstructorsRequest;
+import to.unified.unified_java_sdk.models.operations.ListLmsInstructorsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -675,10 +675,10 @@ List all students
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListLmsStudentsRequest;
-import to.unified.unifiedto.models.operations.ListLmsStudentsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListLmsStudentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListLmsStudentsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -731,11 +731,11 @@ Update a class
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchLmsClassRequest;
-import to.unified.unifiedto.models.operations.PatchLmsClassResponse;
-import to.unified.unifiedto.models.shared.LmsClass;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchLmsClassRequest;
+import to.unified.unified_java_sdk.models.operations.PatchLmsClassResponse;
+import to.unified.unified_java_sdk.models.shared.LmsClass;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -793,11 +793,11 @@ Update a course
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchLmsCourseRequest;
-import to.unified.unifiedto.models.operations.PatchLmsCourseResponse;
-import to.unified.unifiedto.models.shared.LmsCourse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchLmsCourseRequest;
+import to.unified.unified_java_sdk.models.operations.PatchLmsCourseResponse;
+import to.unified.unified_java_sdk.models.shared.LmsCourse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -854,11 +854,11 @@ Update an instructor
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchLmsInstructorRequest;
-import to.unified.unifiedto.models.operations.PatchLmsInstructorResponse;
-import to.unified.unifiedto.models.shared.LmsInstructor;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchLmsInstructorRequest;
+import to.unified.unified_java_sdk.models.operations.PatchLmsInstructorResponse;
+import to.unified.unified_java_sdk.models.shared.LmsInstructor;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -914,11 +914,11 @@ Update a student
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchLmsStudentRequest;
-import to.unified.unifiedto.models.operations.PatchLmsStudentResponse;
-import to.unified.unifiedto.models.shared.LmsStudent;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchLmsStudentRequest;
+import to.unified.unified_java_sdk.models.operations.PatchLmsStudentResponse;
+import to.unified.unified_java_sdk.models.shared.LmsStudent;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -974,10 +974,10 @@ Remove a class
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveLmsClassRequest;
-import to.unified.unifiedto.models.operations.RemoveLmsClassResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsClassRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsClassResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1029,10 +1029,10 @@ Remove a course
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveLmsCourseRequest;
-import to.unified.unifiedto.models.operations.RemoveLmsCourseResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsCourseRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsCourseResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1084,10 +1084,10 @@ Remove an instructor
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveLmsInstructorRequest;
-import to.unified.unifiedto.models.operations.RemoveLmsInstructorResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsInstructorRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsInstructorResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1139,10 +1139,10 @@ Remove a student
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveLmsStudentRequest;
-import to.unified.unifiedto.models.operations.RemoveLmsStudentResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsStudentRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsStudentResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1194,11 +1194,11 @@ Update a class
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateLmsClassRequest;
-import to.unified.unifiedto.models.operations.UpdateLmsClassResponse;
-import to.unified.unifiedto.models.shared.LmsClass;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsClassRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsClassResponse;
+import to.unified.unified_java_sdk.models.shared.LmsClass;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1256,11 +1256,11 @@ Update a course
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateLmsCourseRequest;
-import to.unified.unifiedto.models.operations.UpdateLmsCourseResponse;
-import to.unified.unifiedto.models.shared.LmsCourse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsCourseRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsCourseResponse;
+import to.unified.unified_java_sdk.models.shared.LmsCourse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1317,11 +1317,11 @@ Update an instructor
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateLmsInstructorRequest;
-import to.unified.unifiedto.models.operations.UpdateLmsInstructorResponse;
-import to.unified.unifiedto.models.shared.LmsInstructor;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsInstructorRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsInstructorResponse;
+import to.unified.unified_java_sdk.models.shared.LmsInstructor;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1377,11 +1377,11 @@ Update a student
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateLmsStudentRequest;
-import to.unified.unifiedto.models.operations.UpdateLmsStudentResponse;
-import to.unified.unifiedto.models.shared.LmsStudent;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsStudentRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsStudentResponse;
+import to.unified.unified_java_sdk.models.shared.LmsStudent;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

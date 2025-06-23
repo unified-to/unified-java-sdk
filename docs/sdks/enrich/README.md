@@ -18,10 +18,10 @@ Retrieve enrichment information for a company
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListEnrichCompaniesRequest;
-import to.unified.unifiedto.models.operations.ListEnrichCompaniesResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListEnrichCompaniesRequest;
+import to.unified.unified_java_sdk.models.operations.ListEnrichCompaniesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -74,10 +74,10 @@ Retrieve enrichment information for a person
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListEnrichPeopleRequest;
-import to.unified.unifiedto.models.operations.ListEnrichPeopleResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleRequest;
+import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

@@ -22,11 +22,11 @@ Create a space
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateKmsSpaceRequest;
-import to.unified.unifiedto.models.operations.CreateKmsSpaceResponse;
-import to.unified.unifiedto.models.shared.KmsSpace;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceRequest;
+import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceResponse;
+import to.unified.unified_java_sdk.models.shared.KmsSpace;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -82,10 +82,10 @@ Retrieve a space
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetKmsSpaceRequest;
-import to.unified.unifiedto.models.operations.GetKmsSpaceResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetKmsSpaceRequest;
+import to.unified.unified_java_sdk.models.operations.GetKmsSpaceResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -139,10 +139,10 @@ List all spaces
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListKmsSpacesRequest;
-import to.unified.unifiedto.models.operations.ListKmsSpacesResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListKmsSpacesRequest;
+import to.unified.unified_java_sdk.models.operations.ListKmsSpacesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -195,11 +195,11 @@ Update a space
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchKmsSpaceRequest;
-import to.unified.unifiedto.models.operations.PatchKmsSpaceResponse;
-import to.unified.unifiedto.models.shared.KmsSpace;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchKmsSpaceRequest;
+import to.unified.unified_java_sdk.models.operations.PatchKmsSpaceResponse;
+import to.unified.unified_java_sdk.models.shared.KmsSpace;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -256,10 +256,10 @@ Remove a space
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveKmsSpaceRequest;
-import to.unified.unifiedto.models.operations.RemoveKmsSpaceResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsSpaceRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsSpaceResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -311,11 +311,11 @@ Update a space
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateKmsSpaceRequest;
-import to.unified.unifiedto.models.operations.UpdateKmsSpaceResponse;
-import to.unified.unifiedto.models.shared.KmsSpace;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsSpaceRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsSpaceResponse;
+import to.unified.unified_java_sdk.models.shared.KmsSpace;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

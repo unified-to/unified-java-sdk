@@ -28,11 +28,11 @@ Create a location
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateCommerceLocationRequest;
-import to.unified.unifiedto.models.operations.CreateCommerceLocationResponse;
-import to.unified.unifiedto.models.shared.CommerceLocation;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceLocationRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceLocationResponse;
+import to.unified.unified_java_sdk.models.shared.CommerceLocation;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -88,11 +88,11 @@ Create a location
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateHrisLocationRequest;
-import to.unified.unifiedto.models.operations.CreateHrisLocationResponse;
-import to.unified.unifiedto.models.shared.HrisLocation;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateHrisLocationRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisLocationResponse;
+import to.unified.unified_java_sdk.models.shared.HrisLocation;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -147,10 +147,10 @@ Retrieve a location
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetCommerceLocationRequest;
-import to.unified.unifiedto.models.operations.GetCommerceLocationResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetCommerceLocationRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceLocationResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -204,10 +204,10 @@ Retrieve a location
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetHrisLocationRequest;
-import to.unified.unifiedto.models.operations.GetHrisLocationResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHrisLocationRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisLocationResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -261,10 +261,10 @@ List all locations
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListCommerceLocationsRequest;
-import to.unified.unifiedto.models.operations.ListCommerceLocationsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListCommerceLocationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceLocationsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -317,10 +317,10 @@ List all locations
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListHrisLocationsRequest;
-import to.unified.unifiedto.models.operations.ListHrisLocationsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHrisLocationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisLocationsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -373,11 +373,11 @@ Update a location
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchCommerceLocationRequest;
-import to.unified.unifiedto.models.operations.PatchCommerceLocationResponse;
-import to.unified.unifiedto.models.shared.CommerceLocation;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceLocationRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceLocationResponse;
+import to.unified.unified_java_sdk.models.shared.CommerceLocation;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -434,11 +434,11 @@ Update a location
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchHrisLocationRequest;
-import to.unified.unifiedto.models.operations.PatchHrisLocationResponse;
-import to.unified.unifiedto.models.shared.HrisLocation;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchHrisLocationRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisLocationResponse;
+import to.unified.unified_java_sdk.models.shared.HrisLocation;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -494,10 +494,10 @@ Remove a location
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveCommerceLocationRequest;
-import to.unified.unifiedto.models.operations.RemoveCommerceLocationResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceLocationRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceLocationResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -549,10 +549,10 @@ Remove a location
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveHrisLocationRequest;
-import to.unified.unifiedto.models.operations.RemoveHrisLocationResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisLocationRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisLocationResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -604,11 +604,11 @@ Update a location
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateCommerceLocationRequest;
-import to.unified.unifiedto.models.operations.UpdateCommerceLocationResponse;
-import to.unified.unifiedto.models.shared.CommerceLocation;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceLocationRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceLocationResponse;
+import to.unified.unified_java_sdk.models.shared.CommerceLocation;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -665,11 +665,11 @@ Update a location
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateHrisLocationRequest;
-import to.unified.unifiedto.models.operations.UpdateHrisLocationResponse;
-import to.unified.unifiedto.models.shared.HrisLocation;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationResponse;
+import to.unified.unified_java_sdk.models.shared.HrisLocation;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

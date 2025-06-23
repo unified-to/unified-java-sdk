@@ -1,0 +1,10 @@
+# PropertyAccountingReportTrialBalance
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `subItems`                                                                                   | List\<[AccountingTrialBalanceSubItem](../../models/shared/AccountingTrialBalanceSubItem.md)> | :heavy_minus_sign:                                                                           | N/A                                                                                          |
+| `totalCreditAmount`                                                                          | *Optional\<Double>*                                                                          | :heavy_minus_sign:                                                                           | N/A                                                                                          |
+| `totalDebitAmount`                                                                           | *Optional\<Double>*                                                                          | :heavy_minus_sign:                                                                           | N/A                                                                                          |

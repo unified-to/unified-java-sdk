@@ -22,11 +22,11 @@ Create a project
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateTaskProjectRequest;
-import to.unified.unifiedto.models.operations.CreateTaskProjectResponse;
-import to.unified.unifiedto.models.shared.Security;
-import to.unified.unifiedto.models.shared.TaskProject;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateTaskProjectRequest;
+import to.unified.unified_java_sdk.models.operations.CreateTaskProjectResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.TaskProject;
 
 public class Application {
 
@@ -81,10 +81,10 @@ Retrieve a project
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetTaskProjectRequest;
-import to.unified.unifiedto.models.operations.GetTaskProjectResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetTaskProjectRequest;
+import to.unified.unified_java_sdk.models.operations.GetTaskProjectResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -138,10 +138,10 @@ List all projects
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListTaskProjectsRequest;
-import to.unified.unifiedto.models.operations.ListTaskProjectsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListTaskProjectsRequest;
+import to.unified.unified_java_sdk.models.operations.ListTaskProjectsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -194,11 +194,11 @@ Update a project
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchTaskProjectRequest;
-import to.unified.unifiedto.models.operations.PatchTaskProjectResponse;
-import to.unified.unifiedto.models.shared.Security;
-import to.unified.unifiedto.models.shared.TaskProject;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchTaskProjectRequest;
+import to.unified.unified_java_sdk.models.operations.PatchTaskProjectResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.TaskProject;
 
 public class Application {
 
@@ -254,10 +254,10 @@ Remove a project
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveTaskProjectRequest;
-import to.unified.unifiedto.models.operations.RemoveTaskProjectResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveTaskProjectRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveTaskProjectResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -309,11 +309,11 @@ Update a project
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateTaskProjectRequest;
-import to.unified.unifiedto.models.operations.UpdateTaskProjectResponse;
-import to.unified.unifiedto.models.shared.Security;
-import to.unified.unifiedto.models.shared.TaskProject;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateTaskProjectRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateTaskProjectResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.TaskProject;
 
 public class Application {
 

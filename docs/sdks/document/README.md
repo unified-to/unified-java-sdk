@@ -22,11 +22,11 @@ Create a document
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateAtsDocumentRequest;
-import to.unified.unifiedto.models.operations.CreateAtsDocumentResponse;
-import to.unified.unifiedto.models.shared.AtsDocument;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentResponse;
+import to.unified.unified_java_sdk.models.shared.AtsDocument;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -81,10 +81,10 @@ Retrieve a document
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetAtsDocumentRequest;
-import to.unified.unifiedto.models.operations.GetAtsDocumentResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAtsDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.GetAtsDocumentResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -138,10 +138,10 @@ List all documents
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListAtsDocumentsRequest;
-import to.unified.unifiedto.models.operations.ListAtsDocumentsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAtsDocumentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAtsDocumentsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -194,11 +194,11 @@ Update a document
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchAtsDocumentRequest;
-import to.unified.unifiedto.models.operations.PatchAtsDocumentResponse;
-import to.unified.unifiedto.models.shared.AtsDocument;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAtsDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAtsDocumentResponse;
+import to.unified.unified_java_sdk.models.shared.AtsDocument;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -254,10 +254,10 @@ Remove a document
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveAtsDocumentRequest;
-import to.unified.unifiedto.models.operations.RemoveAtsDocumentResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsDocumentResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -309,11 +309,11 @@ Update a document
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateAtsDocumentRequest;
-import to.unified.unifiedto.models.operations.UpdateAtsDocumentResponse;
-import to.unified.unifiedto.models.shared.AtsDocument;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsDocumentResponse;
+import to.unified.unified_java_sdk.models.shared.AtsDocument;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

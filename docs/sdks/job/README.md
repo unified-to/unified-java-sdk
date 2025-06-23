@@ -22,11 +22,11 @@ Create a job
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateAtsJobRequest;
-import to.unified.unifiedto.models.operations.CreateAtsJobResponse;
-import to.unified.unifiedto.models.shared.AtsJob;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAtsJobRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAtsJobResponse;
+import to.unified.unified_java_sdk.models.shared.AtsJob;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -81,10 +81,10 @@ Retrieve a job
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetAtsJobRequest;
-import to.unified.unifiedto.models.operations.GetAtsJobResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAtsJobRequest;
+import to.unified.unified_java_sdk.models.operations.GetAtsJobResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -138,10 +138,10 @@ List all jobs
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListAtsJobsRequest;
-import to.unified.unifiedto.models.operations.ListAtsJobsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAtsJobsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAtsJobsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -194,11 +194,11 @@ Update a job
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchAtsJobRequest;
-import to.unified.unifiedto.models.operations.PatchAtsJobResponse;
-import to.unified.unifiedto.models.shared.AtsJob;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAtsJobRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAtsJobResponse;
+import to.unified.unified_java_sdk.models.shared.AtsJob;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -254,10 +254,10 @@ Remove a job
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveAtsJobRequest;
-import to.unified.unifiedto.models.operations.RemoveAtsJobResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsJobRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsJobResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -309,11 +309,11 @@ Update a job
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateAtsJobRequest;
-import to.unified.unifiedto.models.operations.UpdateAtsJobResponse;
-import to.unified.unifiedto.models.shared.AtsJob;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsJobRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsJobResponse;
+import to.unified.unified_java_sdk.models.shared.AtsJob;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

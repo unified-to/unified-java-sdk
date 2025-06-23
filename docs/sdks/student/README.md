@@ -22,11 +22,11 @@ Create a student
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateLmsStudentRequest;
-import to.unified.unifiedto.models.operations.CreateLmsStudentResponse;
-import to.unified.unifiedto.models.shared.LmsStudent;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateLmsStudentRequest;
+import to.unified.unified_java_sdk.models.operations.CreateLmsStudentResponse;
+import to.unified.unified_java_sdk.models.shared.LmsStudent;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -81,10 +81,10 @@ Retrieve a student
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetLmsStudentRequest;
-import to.unified.unifiedto.models.operations.GetLmsStudentResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetLmsStudentRequest;
+import to.unified.unified_java_sdk.models.operations.GetLmsStudentResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -138,10 +138,10 @@ List all students
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListLmsStudentsRequest;
-import to.unified.unifiedto.models.operations.ListLmsStudentsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListLmsStudentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListLmsStudentsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -194,11 +194,11 @@ Update a student
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchLmsStudentRequest;
-import to.unified.unifiedto.models.operations.PatchLmsStudentResponse;
-import to.unified.unifiedto.models.shared.LmsStudent;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchLmsStudentRequest;
+import to.unified.unified_java_sdk.models.operations.PatchLmsStudentResponse;
+import to.unified.unified_java_sdk.models.shared.LmsStudent;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -254,10 +254,10 @@ Remove a student
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveLmsStudentRequest;
-import to.unified.unifiedto.models.operations.RemoveLmsStudentResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsStudentRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsStudentResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -309,11 +309,11 @@ Update a student
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateLmsStudentRequest;
-import to.unified.unifiedto.models.operations.UpdateLmsStudentResponse;
-import to.unified.unifiedto.models.shared.LmsStudent;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsStudentRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsStudentResponse;
+import to.unified.unified_java_sdk.models.shared.LmsStudent;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

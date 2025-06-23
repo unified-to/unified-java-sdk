@@ -22,11 +22,11 @@ Create a branch
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateRepoBranchRequest;
-import to.unified.unifiedto.models.operations.CreateRepoBranchResponse;
-import to.unified.unifiedto.models.shared.RepoBranch;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateRepoBranchRequest;
+import to.unified.unified_java_sdk.models.operations.CreateRepoBranchResponse;
+import to.unified.unified_java_sdk.models.shared.RepoBranch;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -83,10 +83,10 @@ Retrieve a branch
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetRepoBranchRequest;
-import to.unified.unifiedto.models.operations.GetRepoBranchResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetRepoBranchRequest;
+import to.unified.unified_java_sdk.models.operations.GetRepoBranchResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -140,10 +140,10 @@ List all branches
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListRepoBranchesRequest;
-import to.unified.unifiedto.models.operations.ListRepoBranchesResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListRepoBranchesRequest;
+import to.unified.unified_java_sdk.models.operations.ListRepoBranchesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -196,11 +196,11 @@ Update a branch
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchRepoBranchRequest;
-import to.unified.unifiedto.models.operations.PatchRepoBranchResponse;
-import to.unified.unifiedto.models.shared.RepoBranch;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchRepoBranchRequest;
+import to.unified.unified_java_sdk.models.operations.PatchRepoBranchResponse;
+import to.unified.unified_java_sdk.models.shared.RepoBranch;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -258,10 +258,10 @@ Remove a branch
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveRepoBranchRequest;
-import to.unified.unifiedto.models.operations.RemoveRepoBranchResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveRepoBranchRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveRepoBranchResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -313,11 +313,11 @@ Update a branch
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateRepoBranchRequest;
-import to.unified.unifiedto.models.operations.UpdateRepoBranchResponse;
-import to.unified.unifiedto.models.shared.RepoBranch;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateRepoBranchRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateRepoBranchResponse;
+import to.unified.unified_java_sdk.models.shared.RepoBranch;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

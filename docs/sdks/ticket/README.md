@@ -22,11 +22,11 @@ Create a ticket
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateTicketingTicketRequest;
-import to.unified.unifiedto.models.operations.CreateTicketingTicketResponse;
-import to.unified.unifiedto.models.shared.Security;
-import to.unified.unifiedto.models.shared.TicketingTicket;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingTicketRequest;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingTicketResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.TicketingTicket;
 
 public class Application {
 
@@ -81,10 +81,10 @@ Retrieve a ticket
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetTicketingTicketRequest;
-import to.unified.unifiedto.models.operations.GetTicketingTicketResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetTicketingTicketRequest;
+import to.unified.unified_java_sdk.models.operations.GetTicketingTicketResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -138,10 +138,10 @@ List all tickets
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListTicketingTicketsRequest;
-import to.unified.unifiedto.models.operations.ListTicketingTicketsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListTicketingTicketsRequest;
+import to.unified.unified_java_sdk.models.operations.ListTicketingTicketsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -194,11 +194,11 @@ Update a ticket
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchTicketingTicketRequest;
-import to.unified.unifiedto.models.operations.PatchTicketingTicketResponse;
-import to.unified.unifiedto.models.shared.Security;
-import to.unified.unifiedto.models.shared.TicketingTicket;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingTicketRequest;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingTicketResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.TicketingTicket;
 
 public class Application {
 
@@ -254,10 +254,10 @@ Remove a ticket
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveTicketingTicketRequest;
-import to.unified.unifiedto.models.operations.RemoveTicketingTicketResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingTicketRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingTicketResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -309,11 +309,11 @@ Update a ticket
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateTicketingTicketRequest;
-import to.unified.unifiedto.models.operations.UpdateTicketingTicketResponse;
-import to.unified.unifiedto.models.shared.Security;
-import to.unified.unifiedto.models.shared.TicketingTicket;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingTicketRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingTicketResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.TicketingTicket;
 
 public class Application {
 

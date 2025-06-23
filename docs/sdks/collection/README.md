@@ -22,11 +22,11 @@ Create a collection
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateCommerceCollectionRequest;
-import to.unified.unifiedto.models.operations.CreateCommerceCollectionResponse;
-import to.unified.unifiedto.models.shared.CommerceCollection;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceCollectionRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceCollectionResponse;
+import to.unified.unified_java_sdk.models.shared.CommerceCollection;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -82,10 +82,10 @@ Retrieve a collection
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetCommerceCollectionRequest;
-import to.unified.unifiedto.models.operations.GetCommerceCollectionResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetCommerceCollectionRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceCollectionResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -139,10 +139,10 @@ List all collections
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListCommerceCollectionsRequest;
-import to.unified.unifiedto.models.operations.ListCommerceCollectionsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListCommerceCollectionsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceCollectionsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -195,11 +195,11 @@ Update a collection
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchCommerceCollectionRequest;
-import to.unified.unifiedto.models.operations.PatchCommerceCollectionResponse;
-import to.unified.unifiedto.models.shared.CommerceCollection;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceCollectionRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceCollectionResponse;
+import to.unified.unified_java_sdk.models.shared.CommerceCollection;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -256,10 +256,10 @@ Remove a collection
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveCommerceCollectionRequest;
-import to.unified.unifiedto.models.operations.RemoveCommerceCollectionResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceCollectionRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceCollectionResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -311,11 +311,11 @@ Update a collection
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateCommerceCollectionRequest;
-import to.unified.unifiedto.models.operations.UpdateCommerceCollectionResponse;
-import to.unified.unifiedto.models.shared.CommerceCollection;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceCollectionRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceCollectionResponse;
+import to.unified.unified_java_sdk.models.shared.CommerceCollection;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

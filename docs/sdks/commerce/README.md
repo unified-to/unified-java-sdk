@@ -9,26 +9,32 @@
 * [createCommerceInventory](#createcommerceinventory) - Create an inventory
 * [createCommerceItem](#createcommerceitem) - Create an item
 * [createCommerceLocation](#createcommercelocation) - Create a location
+* [createCommerceReview](#createcommercereview) - Create a review
 * [getCommerceCollection](#getcommercecollection) - Retrieve a collection
 * [getCommerceInventory](#getcommerceinventory) - Retrieve an inventory
 * [getCommerceItem](#getcommerceitem) - Retrieve an item
 * [getCommerceLocation](#getcommercelocation) - Retrieve a location
+* [getCommerceReview](#getcommercereview) - Retrieve a review
 * [listCommerceCollections](#listcommercecollections) - List all collections
 * [listCommerceInventories](#listcommerceinventories) - List all inventories
 * [listCommerceItems](#listcommerceitems) - List all items
 * [listCommerceLocations](#listcommercelocations) - List all locations
+* [listCommerceReviews](#listcommercereviews) - List all reviews
 * [patchCommerceCollection](#patchcommercecollection) - Update a collection
 * [patchCommerceInventory](#patchcommerceinventory) - Update an inventory
 * [patchCommerceItem](#patchcommerceitem) - Update an item
 * [patchCommerceLocation](#patchcommercelocation) - Update a location
+* [patchCommerceReview](#patchcommercereview) - Update a review
 * [removeCommerceCollection](#removecommercecollection) - Remove a collection
 * [removeCommerceInventory](#removecommerceinventory) - Remove an inventory
 * [removeCommerceItem](#removecommerceitem) - Remove an item
 * [removeCommerceLocation](#removecommercelocation) - Remove a location
+* [removeCommerceReview](#removecommercereview) - Remove a review
 * [updateCommerceCollection](#updatecommercecollection) - Update a collection
 * [updateCommerceInventory](#updatecommerceinventory) - Update an inventory
 * [updateCommerceItem](#updatecommerceitem) - Update an item
 * [updateCommerceLocation](#updatecommercelocation) - Update a location
+* [updateCommerceReview](#updatecommercereview) - Update a review
 
 ## createCommerceCollection
 
@@ -40,11 +46,11 @@ Create a collection
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateCommerceCollectionRequest;
-import to.unified.unifiedto.models.operations.CreateCommerceCollectionResponse;
-import to.unified.unifiedto.models.shared.CommerceCollection;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceCollectionRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceCollectionResponse;
+import to.unified.unified_java_sdk.models.shared.CommerceCollection;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -100,11 +106,11 @@ Create an inventory
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateCommerceInventoryRequest;
-import to.unified.unifiedto.models.operations.CreateCommerceInventoryResponse;
-import to.unified.unifiedto.models.shared.CommerceInventory;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceInventoryRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceInventoryResponse;
+import to.unified.unified_java_sdk.models.shared.CommerceInventory;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -118,7 +124,7 @@ public class Application {
 
         CreateCommerceInventoryRequest req = CreateCommerceInventoryRequest.builder()
                 .commerceInventory(CommerceInventory.builder()
-                    .available(5165.08d)
+                    .available(7463.62)
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -160,11 +166,11 @@ Create an item
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateCommerceItemRequest;
-import to.unified.unifiedto.models.operations.CreateCommerceItemResponse;
-import to.unified.unifiedto.models.shared.CommerceItem;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceItemRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceItemResponse;
+import to.unified.unified_java_sdk.models.shared.CommerceItem;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -219,11 +225,11 @@ Create a location
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateCommerceLocationRequest;
-import to.unified.unifiedto.models.operations.CreateCommerceLocationResponse;
-import to.unified.unifiedto.models.shared.CommerceLocation;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceLocationRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceLocationResponse;
+import to.unified.unified_java_sdk.models.shared.CommerceLocation;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -269,6 +275,66 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## createCommerceReview
+
+Create a review
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceReviewRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.shared.CommerceReview;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        CreateCommerceReviewRequest req = CreateCommerceReviewRequest.builder()
+                .commerceReview(CommerceReview.builder()
+                    .itemId("<id>")
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateCommerceReviewResponse res = sdk.commerce().createCommerceReview()
+                .request(req)
+                .call();
+
+        if (res.commerceReview().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [CreateCommerceReviewRequest](../../models/operations/CreateCommerceReviewRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[CreateCommerceReviewResponse](../../models/operations/CreateCommerceReviewResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## getCommerceCollection
 
 Retrieve a collection
@@ -279,10 +345,10 @@ Retrieve a collection
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetCommerceCollectionRequest;
-import to.unified.unifiedto.models.operations.GetCommerceCollectionResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetCommerceCollectionRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceCollectionResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -336,10 +402,10 @@ Retrieve an inventory
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetCommerceInventoryRequest;
-import to.unified.unifiedto.models.operations.GetCommerceInventoryResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetCommerceInventoryRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceInventoryResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -393,10 +459,10 @@ Retrieve an item
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetCommerceItemRequest;
-import to.unified.unifiedto.models.operations.GetCommerceItemResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetCommerceItemRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceItemResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -450,10 +516,10 @@ Retrieve a location
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetCommerceLocationRequest;
-import to.unified.unifiedto.models.operations.GetCommerceLocationResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetCommerceLocationRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceLocationResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -497,6 +563,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getCommerceReview
+
+Retrieve a review
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetCommerceReviewRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        GetCommerceReviewRequest req = GetCommerceReviewRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetCommerceReviewResponse res = sdk.commerce().getCommerceReview()
+                .request(req)
+                .call();
+
+        if (res.commerceReview().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [GetCommerceReviewRequest](../../models/operations/GetCommerceReviewRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[GetCommerceReviewResponse](../../models/operations/GetCommerceReviewResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listCommerceCollections
 
 List all collections
@@ -507,10 +630,10 @@ List all collections
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListCommerceCollectionsRequest;
-import to.unified.unifiedto.models.operations.ListCommerceCollectionsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListCommerceCollectionsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceCollectionsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -563,10 +686,10 @@ List all inventories
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListCommerceInventoriesRequest;
-import to.unified.unifiedto.models.operations.ListCommerceInventoriesResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListCommerceInventoriesRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceInventoriesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -619,10 +742,10 @@ List all items
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListCommerceItemsRequest;
-import to.unified.unifiedto.models.operations.ListCommerceItemsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListCommerceItemsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceItemsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -675,10 +798,10 @@ List all locations
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListCommerceLocationsRequest;
-import to.unified.unifiedto.models.operations.ListCommerceLocationsResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListCommerceLocationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceLocationsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -721,6 +844,62 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listCommerceReviews
+
+List all reviews
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListCommerceReviewsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceReviewsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        ListCommerceReviewsRequest req = ListCommerceReviewsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListCommerceReviewsResponse res = sdk.commerce().listCommerceReviews()
+                .request(req)
+                .call();
+
+        if (res.commerceReviews().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [ListCommerceReviewsRequest](../../models/operations/ListCommerceReviewsRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[ListCommerceReviewsResponse](../../models/operations/ListCommerceReviewsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## patchCommerceCollection
 
 Update a collection
@@ -731,11 +910,11 @@ Update a collection
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchCommerceCollectionRequest;
-import to.unified.unifiedto.models.operations.PatchCommerceCollectionResponse;
-import to.unified.unifiedto.models.shared.CommerceCollection;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceCollectionRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceCollectionResponse;
+import to.unified.unified_java_sdk.models.shared.CommerceCollection;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -792,11 +971,11 @@ Update an inventory
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchCommerceInventoryRequest;
-import to.unified.unifiedto.models.operations.PatchCommerceInventoryResponse;
-import to.unified.unifiedto.models.shared.CommerceInventory;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceInventoryRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceInventoryResponse;
+import to.unified.unified_java_sdk.models.shared.CommerceInventory;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -810,7 +989,7 @@ public class Application {
 
         PatchCommerceInventoryRequest req = PatchCommerceInventoryRequest.builder()
                 .commerceInventory(CommerceInventory.builder()
-                    .available(615.23d)
+                    .available(7859.84)
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -853,11 +1032,11 @@ Update an item
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchCommerceItemRequest;
-import to.unified.unifiedto.models.operations.PatchCommerceItemResponse;
-import to.unified.unifiedto.models.shared.CommerceItem;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceItemRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceItemResponse;
+import to.unified.unified_java_sdk.models.shared.CommerceItem;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -913,11 +1092,11 @@ Update a location
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchCommerceLocationRequest;
-import to.unified.unifiedto.models.operations.PatchCommerceLocationResponse;
-import to.unified.unifiedto.models.shared.CommerceLocation;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceLocationRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceLocationResponse;
+import to.unified.unified_java_sdk.models.shared.CommerceLocation;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -964,6 +1143,67 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## patchCommerceReview
+
+Update a review
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceReviewRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.shared.CommerceReview;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        PatchCommerceReviewRequest req = PatchCommerceReviewRequest.builder()
+                .commerceReview(CommerceReview.builder()
+                    .itemId("<id>")
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchCommerceReviewResponse res = sdk.commerce().patchCommerceReview()
+                .request(req)
+                .call();
+
+        if (res.commerceReview().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [PatchCommerceReviewRequest](../../models/operations/PatchCommerceReviewRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[PatchCommerceReviewResponse](../../models/operations/PatchCommerceReviewResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## removeCommerceCollection
 
 Remove a collection
@@ -974,10 +1214,10 @@ Remove a collection
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveCommerceCollectionRequest;
-import to.unified.unifiedto.models.operations.RemoveCommerceCollectionResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceCollectionRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceCollectionResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1029,10 +1269,10 @@ Remove an inventory
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveCommerceInventoryRequest;
-import to.unified.unifiedto.models.operations.RemoveCommerceInventoryResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceInventoryRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceInventoryResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1084,10 +1324,10 @@ Remove an item
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveCommerceItemRequest;
-import to.unified.unifiedto.models.operations.RemoveCommerceItemResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceItemRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceItemResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1139,10 +1379,10 @@ Remove a location
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveCommerceLocationRequest;
-import to.unified.unifiedto.models.operations.RemoveCommerceLocationResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceLocationRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceLocationResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1184,6 +1424,61 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removeCommerceReview
+
+Remove a review
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceReviewRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        RemoveCommerceReviewRequest req = RemoveCommerceReviewRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveCommerceReviewResponse res = sdk.commerce().removeCommerceReview()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [RemoveCommerceReviewRequest](../../models/operations/RemoveCommerceReviewRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[RemoveCommerceReviewResponse](../../models/operations/RemoveCommerceReviewResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## updateCommerceCollection
 
 Update a collection
@@ -1194,11 +1489,11 @@ Update a collection
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateCommerceCollectionRequest;
-import to.unified.unifiedto.models.operations.UpdateCommerceCollectionResponse;
-import to.unified.unifiedto.models.shared.CommerceCollection;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceCollectionRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceCollectionResponse;
+import to.unified.unified_java_sdk.models.shared.CommerceCollection;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1255,11 +1550,11 @@ Update an inventory
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateCommerceInventoryRequest;
-import to.unified.unifiedto.models.operations.UpdateCommerceInventoryResponse;
-import to.unified.unifiedto.models.shared.CommerceInventory;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceInventoryRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceInventoryResponse;
+import to.unified.unified_java_sdk.models.shared.CommerceInventory;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1273,7 +1568,7 @@ public class Application {
 
         UpdateCommerceInventoryRequest req = UpdateCommerceInventoryRequest.builder()
                 .commerceInventory(CommerceInventory.builder()
-                    .available(9360.02d)
+                    .available(4497.29)
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1316,11 +1611,11 @@ Update an item
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateCommerceItemRequest;
-import to.unified.unifiedto.models.operations.UpdateCommerceItemResponse;
-import to.unified.unifiedto.models.shared.CommerceItem;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemResponse;
+import to.unified.unified_java_sdk.models.shared.CommerceItem;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1376,11 +1671,11 @@ Update a location
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateCommerceLocationRequest;
-import to.unified.unifiedto.models.operations.UpdateCommerceLocationResponse;
-import to.unified.unifiedto.models.shared.CommerceLocation;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceLocationRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceLocationResponse;
+import to.unified.unified_java_sdk.models.shared.CommerceLocation;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -1420,6 +1715,67 @@ public class Application {
 ### Response
 
 **[UpdateCommerceLocationResponse](../../models/operations/UpdateCommerceLocationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateCommerceReview
+
+Update a review
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceReviewRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.shared.CommerceReview;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        UpdateCommerceReviewRequest req = UpdateCommerceReviewRequest.builder()
+                .commerceReview(CommerceReview.builder()
+                    .itemId("<id>")
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateCommerceReviewResponse res = sdk.commerce().updateCommerceReview()
+                .request(req)
+                .call();
+
+        if (res.commerceReview().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [UpdateCommerceReviewRequest](../../models/operations/UpdateCommerceReviewRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[UpdateCommerceReviewResponse](../../models/operations/UpdateCommerceReviewResponse.md)**
 
 ### Errors
 

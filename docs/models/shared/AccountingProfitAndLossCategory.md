@@ -1,0 +1,10 @@
+# AccountingProfitAndLossCategory
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `amount`                                                                                               | *Optional\<Double>*                                                                                    | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |
+| `name`                                                                                                 | *Optional\<String>*                                                                                    | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |
+| `subItems`                                                                                             | List\<[AccountingProfitAndLossSubcategory](../../models/shared/AccountingProfitAndLossSubcategory.md)> | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |

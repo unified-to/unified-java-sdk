@@ -22,11 +22,11 @@ Create a candidate
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateAtsCandidateRequest;
-import to.unified.unifiedto.models.operations.CreateAtsCandidateResponse;
-import to.unified.unifiedto.models.shared.AtsCandidate;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAtsCandidateRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAtsCandidateResponse;
+import to.unified.unified_java_sdk.models.shared.AtsCandidate;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -81,10 +81,10 @@ Retrieve a candidate
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetAtsCandidateRequest;
-import to.unified.unifiedto.models.operations.GetAtsCandidateResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAtsCandidateRequest;
+import to.unified.unified_java_sdk.models.operations.GetAtsCandidateResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -138,10 +138,10 @@ List all candidates
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListAtsCandidatesRequest;
-import to.unified.unifiedto.models.operations.ListAtsCandidatesResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAtsCandidatesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAtsCandidatesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -194,11 +194,11 @@ Update a candidate
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchAtsCandidateRequest;
-import to.unified.unifiedto.models.operations.PatchAtsCandidateResponse;
-import to.unified.unifiedto.models.shared.AtsCandidate;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAtsCandidateRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAtsCandidateResponse;
+import to.unified.unified_java_sdk.models.shared.AtsCandidate;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -254,10 +254,10 @@ Remove a candidate
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveAtsCandidateRequest;
-import to.unified.unifiedto.models.operations.RemoveAtsCandidateResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsCandidateRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsCandidateResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -309,11 +309,11 @@ Update a candidate
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateAtsCandidateRequest;
-import to.unified.unifiedto.models.operations.UpdateAtsCandidateResponse;
-import to.unified.unifiedto.models.shared.AtsCandidate;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsCandidateRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsCandidateResponse;
+import to.unified.unified_java_sdk.models.shared.AtsCandidate;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 

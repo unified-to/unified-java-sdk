@@ -22,11 +22,11 @@ Create a file
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateStorageFileRequest;
-import to.unified.unifiedto.models.operations.CreateStorageFileResponse;
-import to.unified.unifiedto.models.shared.Security;
-import to.unified.unifiedto.models.shared.StorageFile;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateStorageFileRequest;
+import to.unified.unified_java_sdk.models.operations.CreateStorageFileResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.StorageFile;
 
 public class Application {
 
@@ -81,10 +81,10 @@ Retrieve a file
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetStorageFileRequest;
-import to.unified.unifiedto.models.operations.GetStorageFileResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetStorageFileRequest;
+import to.unified.unified_java_sdk.models.operations.GetStorageFileResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -138,10 +138,10 @@ List all files
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListStorageFilesRequest;
-import to.unified.unifiedto.models.operations.ListStorageFilesResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListStorageFilesRequest;
+import to.unified.unified_java_sdk.models.operations.ListStorageFilesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -194,11 +194,11 @@ Update a file
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchStorageFileRequest;
-import to.unified.unifiedto.models.operations.PatchStorageFileResponse;
-import to.unified.unifiedto.models.shared.Security;
-import to.unified.unifiedto.models.shared.StorageFile;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchStorageFileRequest;
+import to.unified.unified_java_sdk.models.operations.PatchStorageFileResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.StorageFile;
 
 public class Application {
 
@@ -254,10 +254,10 @@ Remove a file
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveStorageFileRequest;
-import to.unified.unifiedto.models.operations.RemoveStorageFileResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveStorageFileRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveStorageFileResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -309,11 +309,11 @@ Update a file
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateStorageFileRequest;
-import to.unified.unifiedto.models.operations.UpdateStorageFileResponse;
-import to.unified.unifiedto.models.shared.Security;
-import to.unified.unifiedto.models.shared.StorageFile;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateStorageFileRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateStorageFileResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.StorageFile;
 
 public class Application {
 

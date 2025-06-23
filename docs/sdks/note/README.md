@@ -22,11 +22,11 @@ Create a note
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.CreateTicketingNoteRequest;
-import to.unified.unifiedto.models.operations.CreateTicketingNoteResponse;
-import to.unified.unifiedto.models.shared.Security;
-import to.unified.unifiedto.models.shared.TicketingNote;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingNoteRequest;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingNoteResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.TicketingNote;
 
 public class Application {
 
@@ -81,10 +81,10 @@ Retrieve a note
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.GetTicketingNoteRequest;
-import to.unified.unifiedto.models.operations.GetTicketingNoteResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetTicketingNoteRequest;
+import to.unified.unified_java_sdk.models.operations.GetTicketingNoteResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -138,10 +138,10 @@ List all notes
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.ListTicketingNotesRequest;
-import to.unified.unifiedto.models.operations.ListTicketingNotesResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListTicketingNotesRequest;
+import to.unified.unified_java_sdk.models.operations.ListTicketingNotesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -194,11 +194,11 @@ Update a note
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.PatchTicketingNoteRequest;
-import to.unified.unifiedto.models.operations.PatchTicketingNoteResponse;
-import to.unified.unifiedto.models.shared.Security;
-import to.unified.unifiedto.models.shared.TicketingNote;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingNoteRequest;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingNoteResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.TicketingNote;
 
 public class Application {
 
@@ -254,10 +254,10 @@ Remove a note
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.RemoveTicketingNoteRequest;
-import to.unified.unifiedto.models.operations.RemoveTicketingNoteResponse;
-import to.unified.unifiedto.models.shared.Security;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingNoteRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingNoteResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -309,11 +309,11 @@ Update a note
 package hello.world;
 
 import java.lang.Exception;
-import to.unified.unifiedto.UnifiedTo;
-import to.unified.unifiedto.models.operations.UpdateTicketingNoteRequest;
-import to.unified.unifiedto.models.operations.UpdateTicketingNoteResponse;
-import to.unified.unifiedto.models.shared.Security;
-import to.unified.unifiedto.models.shared.TicketingNote;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingNoteRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingNoteResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.TicketingNote;
 
 public class Application {
 
