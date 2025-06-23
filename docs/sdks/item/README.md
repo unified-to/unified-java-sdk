@@ -21,11 +21,12 @@ Create an item
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateCommerceItemRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateCommerceItemResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateCommerceItemRequest;
+import to.unified.unifiedto.models.operations.CreateCommerceItemResponse;
+import to.unified.unifiedto.models.shared.CommerceItem;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -38,6 +39,8 @@ public class Application {
             .build();
 
         CreateCommerceItemRequest req = CreateCommerceItemRequest.builder()
+                .commerceItem(CommerceItem.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -77,11 +80,11 @@ Retrieve an item
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetCommerceItemRequest;
-import com.unifiedapi.unifiedto.models.operations.GetCommerceItemResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetCommerceItemRequest;
+import to.unified.unifiedto.models.operations.GetCommerceItemResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -134,11 +137,11 @@ List all items
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListCommerceItemsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListCommerceItemsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListCommerceItemsRequest;
+import to.unified.unifiedto.models.operations.ListCommerceItemsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -190,11 +193,12 @@ Update an item
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchCommerceItemRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchCommerceItemResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchCommerceItemRequest;
+import to.unified.unifiedto.models.operations.PatchCommerceItemResponse;
+import to.unified.unifiedto.models.shared.CommerceItem;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -207,6 +211,8 @@ public class Application {
             .build();
 
         PatchCommerceItemRequest req = PatchCommerceItemRequest.builder()
+                .commerceItem(CommerceItem.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -247,11 +253,11 @@ Remove an item
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveCommerceItemRequest;
+import to.unified.unifiedto.models.operations.RemoveCommerceItemResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -302,11 +308,12 @@ Update an item
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateCommerceItemRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateCommerceItemResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateCommerceItemRequest;
+import to.unified.unifiedto.models.operations.UpdateCommerceItemResponse;
+import to.unified.unifiedto.models.shared.CommerceItem;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -319,6 +326,8 @@ public class Application {
             .build();
 
         UpdateCommerceItemRequest req = UpdateCommerceItemRequest.builder()
+                .commerceItem(CommerceItem.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

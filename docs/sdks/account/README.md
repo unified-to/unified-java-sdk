@@ -21,11 +21,12 @@ Create an account
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateAccountingAccountRequest;
+import to.unified.unifiedto.models.operations.CreateAccountingAccountResponse;
+import to.unified.unifiedto.models.shared.AccountingAccount;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -38,6 +39,8 @@ public class Application {
             .build();
 
         CreateAccountingAccountRequest req = CreateAccountingAccountRequest.builder()
+                .accountingAccount(AccountingAccount.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -77,11 +80,11 @@ Retrieve an account
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetAccountingAccountRequest;
-import com.unifiedapi.unifiedto.models.operations.GetAccountingAccountResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetAccountingAccountRequest;
+import to.unified.unifiedto.models.operations.GetAccountingAccountResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -134,11 +137,11 @@ List all accounts
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListAccountingAccountsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListAccountingAccountsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListAccountingAccountsRequest;
+import to.unified.unifiedto.models.operations.ListAccountingAccountsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -190,11 +193,12 @@ Update an account
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchAccountingAccountRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchAccountingAccountResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchAccountingAccountRequest;
+import to.unified.unifiedto.models.operations.PatchAccountingAccountResponse;
+import to.unified.unifiedto.models.shared.AccountingAccount;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -207,6 +211,8 @@ public class Application {
             .build();
 
         PatchAccountingAccountRequest req = PatchAccountingAccountRequest.builder()
+                .accountingAccount(AccountingAccount.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -247,11 +253,11 @@ Remove an account
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveAccountingAccountRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveAccountingAccountResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveAccountingAccountRequest;
+import to.unified.unifiedto.models.operations.RemoveAccountingAccountResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -302,11 +308,12 @@ Update an account
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateAccountingAccountRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateAccountingAccountResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateAccountingAccountRequest;
+import to.unified.unifiedto.models.operations.UpdateAccountingAccountResponse;
+import to.unified.unifiedto.models.shared.AccountingAccount;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -319,6 +326,8 @@ public class Application {
             .build();
 
         UpdateAccountingAccountRequest req = UpdateAccountingAccountRequest.builder()
+                .accountingAccount(AccountingAccount.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

@@ -17,11 +17,11 @@ Retrieve a payslip
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetHrisPayslipRequest;
-import com.unifiedapi.unifiedto.models.operations.GetHrisPayslipResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetHrisPayslipRequest;
+import to.unified.unifiedto.models.operations.GetHrisPayslipResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -74,11 +74,11 @@ List all payslips
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListHrisPayslipsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListHrisPayslipsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListHrisPayslipsRequest;
+import to.unified.unifiedto.models.operations.ListHrisPayslipsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 

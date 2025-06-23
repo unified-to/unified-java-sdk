@@ -22,11 +22,12 @@ Create a contact
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateUcContactRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateUcContactResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateUcContactRequest;
+import to.unified.unifiedto.models.operations.CreateUcContactResponse;
+import to.unified.unifiedto.models.shared.Security;
+import to.unified.unifiedto.models.shared.UcContact;
 
 public class Application {
 
@@ -39,6 +40,8 @@ public class Application {
             .build();
 
         CreateUcContactRequest req = CreateUcContactRequest.builder()
+                .ucContact(UcContact.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -78,11 +81,11 @@ Retrieve a contact
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetUcContactRequest;
-import com.unifiedapi.unifiedto.models.operations.GetUcContactResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetUcContactRequest;
+import to.unified.unifiedto.models.operations.GetUcContactResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -135,11 +138,11 @@ List all calls
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListUcCallsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListUcCallsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListUcCallsRequest;
+import to.unified.unifiedto.models.operations.ListUcCallsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -191,11 +194,11 @@ List all contacts
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListUcContactsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListUcContactsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListUcContactsRequest;
+import to.unified.unifiedto.models.operations.ListUcContactsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -247,11 +250,12 @@ Update a contact
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchUcContactRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchUcContactResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchUcContactRequest;
+import to.unified.unifiedto.models.operations.PatchUcContactResponse;
+import to.unified.unifiedto.models.shared.Security;
+import to.unified.unifiedto.models.shared.UcContact;
 
 public class Application {
 
@@ -264,6 +268,8 @@ public class Application {
             .build();
 
         PatchUcContactRequest req = PatchUcContactRequest.builder()
+                .ucContact(UcContact.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -304,11 +310,11 @@ Remove a contact
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveUcContactRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveUcContactResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveUcContactRequest;
+import to.unified.unifiedto.models.operations.RemoveUcContactResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -359,11 +365,12 @@ Update a contact
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateUcContactRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateUcContactResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateUcContactRequest;
+import to.unified.unifiedto.models.operations.UpdateUcContactResponse;
+import to.unified.unifiedto.models.shared.Security;
+import to.unified.unifiedto.models.shared.UcContact;
 
 public class Application {
 
@@ -376,6 +383,8 @@ public class Application {
             .build();
 
         UpdateUcContactRequest req = UpdateUcContactRequest.builder()
+                .ucContact(UcContact.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

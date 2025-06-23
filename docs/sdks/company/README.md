@@ -30,11 +30,12 @@ Create a company
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateCrmCompanyRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateCrmCompanyResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateCrmCompanyRequest;
+import to.unified.unifiedto.models.operations.CreateCrmCompanyResponse;
+import to.unified.unifiedto.models.shared.CrmCompany;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -47,6 +48,8 @@ public class Application {
             .build();
 
         CreateCrmCompanyRequest req = CreateCrmCompanyRequest.builder()
+                .crmCompany(CrmCompany.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -86,11 +89,12 @@ Create a company
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateHrisCompanyRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateHrisCompanyResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateHrisCompanyRequest;
+import to.unified.unifiedto.models.operations.CreateHrisCompanyResponse;
+import to.unified.unifiedto.models.shared.HrisCompany;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -103,6 +107,8 @@ public class Application {
             .build();
 
         CreateHrisCompanyRequest req = CreateHrisCompanyRequest.builder()
+                .hrisCompany(HrisCompany.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -142,11 +148,11 @@ Retrieve a company
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetAtsCompanyRequest;
-import com.unifiedapi.unifiedto.models.operations.GetAtsCompanyResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetAtsCompanyRequest;
+import to.unified.unifiedto.models.operations.GetAtsCompanyResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -199,11 +205,11 @@ Retrieve a company
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetCrmCompanyRequest;
-import com.unifiedapi.unifiedto.models.operations.GetCrmCompanyResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetCrmCompanyRequest;
+import to.unified.unifiedto.models.operations.GetCrmCompanyResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -256,11 +262,11 @@ Retrieve a company
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetHrisCompanyRequest;
-import com.unifiedapi.unifiedto.models.operations.GetHrisCompanyResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetHrisCompanyRequest;
+import to.unified.unifiedto.models.operations.GetHrisCompanyResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -313,11 +319,11 @@ List all companies
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListAtsCompaniesRequest;
-import com.unifiedapi.unifiedto.models.operations.ListAtsCompaniesResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListAtsCompaniesRequest;
+import to.unified.unifiedto.models.operations.ListAtsCompaniesResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -369,11 +375,11 @@ List all companies
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListCrmCompaniesRequest;
-import com.unifiedapi.unifiedto.models.operations.ListCrmCompaniesResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListCrmCompaniesRequest;
+import to.unified.unifiedto.models.operations.ListCrmCompaniesResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -425,11 +431,11 @@ Retrieve enrichment information for a company
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesRequest;
-import com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListEnrichCompaniesRequest;
+import to.unified.unifiedto.models.operations.ListEnrichCompaniesResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -481,11 +487,11 @@ List all companies
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListHrisCompaniesRequest;
-import com.unifiedapi.unifiedto.models.operations.ListHrisCompaniesResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListHrisCompaniesRequest;
+import to.unified.unifiedto.models.operations.ListHrisCompaniesResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -537,11 +543,12 @@ Update a company
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmCompanyRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmCompanyResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchCrmCompanyRequest;
+import to.unified.unifiedto.models.operations.PatchCrmCompanyResponse;
+import to.unified.unifiedto.models.shared.CrmCompany;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -554,6 +561,8 @@ public class Application {
             .build();
 
         PatchCrmCompanyRequest req = PatchCrmCompanyRequest.builder()
+                .crmCompany(CrmCompany.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -594,11 +603,12 @@ Update a company
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchHrisCompanyRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchHrisCompanyResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchHrisCompanyRequest;
+import to.unified.unifiedto.models.operations.PatchHrisCompanyResponse;
+import to.unified.unifiedto.models.shared.HrisCompany;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -611,6 +621,8 @@ public class Application {
             .build();
 
         PatchHrisCompanyRequest req = PatchHrisCompanyRequest.builder()
+                .hrisCompany(HrisCompany.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -651,11 +663,11 @@ Remove a company
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveCrmCompanyRequest;
+import to.unified.unifiedto.models.operations.RemoveCrmCompanyResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -706,11 +718,11 @@ Remove a company
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveHrisCompanyRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveHrisCompanyResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveHrisCompanyRequest;
+import to.unified.unifiedto.models.operations.RemoveHrisCompanyResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -761,11 +773,12 @@ Update a company
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateCrmCompanyRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateCrmCompanyResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateCrmCompanyRequest;
+import to.unified.unifiedto.models.operations.UpdateCrmCompanyResponse;
+import to.unified.unifiedto.models.shared.CrmCompany;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -778,6 +791,8 @@ public class Application {
             .build();
 
         UpdateCrmCompanyRequest req = UpdateCrmCompanyRequest.builder()
+                .crmCompany(CrmCompany.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -818,11 +833,12 @@ Update a company
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateHrisCompanyRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateHrisCompanyResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateHrisCompanyRequest;
+import to.unified.unifiedto.models.operations.UpdateHrisCompanyResponse;
+import to.unified.unifiedto.models.shared.HrisCompany;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -835,6 +851,8 @@ public class Application {
             .build();
 
         UpdateHrisCompanyRequest req = UpdateHrisCompanyRequest.builder()
+                .hrisCompany(HrisCompany.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

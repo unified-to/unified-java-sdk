@@ -23,11 +23,14 @@ The data payload received by your server is described at https://docs.unified.to
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateUnifiedWebhookRequest;
+import to.unified.unifiedto.models.operations.CreateUnifiedWebhookResponse;
+import to.unified.unifiedto.models.shared.Event;
+import to.unified.unifiedto.models.shared.ObjectType;
+import to.unified.unifiedto.models.shared.Security;
+import to.unified.unifiedto.models.shared.Webhook;
 
 public class Application {
 
@@ -40,6 +43,11 @@ public class Application {
             .build();
 
         CreateUnifiedWebhookRequest req = CreateUnifiedWebhookRequest.builder()
+                .webhook(Webhook.builder()
+                    .connectionId("<id>")
+                    .event(Event.CREATED)
+                    .objectType(ObjectType.HRIS_EMPLOYEE)
+                    .build())
                 .build();
 
         CreateUnifiedWebhookResponse res = sdk.webhook().createUnifiedWebhook()
@@ -78,11 +86,11 @@ Retrieve webhook by its ID
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookRequest;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetUnifiedWebhookRequest;
+import to.unified.unifiedto.models.operations.GetUnifiedWebhookResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -134,11 +142,11 @@ Returns all registered webhooks
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListUnifiedWebhooksRequest;
-import com.unifiedapi.unifiedto.models.operations.ListUnifiedWebhooksResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListUnifiedWebhooksRequest;
+import to.unified.unifiedto.models.operations.ListUnifiedWebhooksResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -189,11 +197,14 @@ Update webhook subscription
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchUnifiedWebhookRequest;
+import to.unified.unifiedto.models.operations.PatchUnifiedWebhookResponse;
+import to.unified.unifiedto.models.shared.Event;
+import to.unified.unifiedto.models.shared.ObjectType;
+import to.unified.unifiedto.models.shared.Security;
+import to.unified.unifiedto.models.shared.Webhook;
 
 public class Application {
 
@@ -206,6 +217,11 @@ public class Application {
             .build();
 
         PatchUnifiedWebhookRequest req = PatchUnifiedWebhookRequest.builder()
+                .webhook(Webhook.builder()
+                    .connectionId("<id>")
+                    .event(Event.DELETED)
+                    .objectType(ObjectType.CRM_DEAL)
+                    .build())
                 .id("<id>")
                 .build();
 
@@ -245,11 +261,11 @@ Trigger webhook
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookTriggerRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookTriggerResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchUnifiedWebhookTriggerRequest;
+import to.unified.unifiedto.models.operations.PatchUnifiedWebhookTriggerResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -299,11 +315,11 @@ Remove webhook subscription
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveUnifiedWebhookRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveUnifiedWebhookResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveUnifiedWebhookRequest;
+import to.unified.unifiedto.models.operations.RemoveUnifiedWebhookResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -353,11 +369,14 @@ Update webhook subscription
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateUnifiedWebhookRequest;
+import to.unified.unifiedto.models.operations.UpdateUnifiedWebhookResponse;
+import to.unified.unifiedto.models.shared.Event;
+import to.unified.unifiedto.models.shared.ObjectType;
+import to.unified.unifiedto.models.shared.Security;
+import to.unified.unifiedto.models.shared.Webhook;
 
 public class Application {
 
@@ -370,6 +389,11 @@ public class Application {
             .build();
 
         UpdateUnifiedWebhookRequest req = UpdateUnifiedWebhookRequest.builder()
+                .webhook(Webhook.builder()
+                    .connectionId("<id>")
+                    .event(Event.CREATED)
+                    .objectType(ObjectType.PAYMENT_LINK)
+                    .build())
                 .id("<id>")
                 .build();
 
@@ -409,11 +433,11 @@ Trigger webhook
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookTriggerRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookTriggerResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateUnifiedWebhookTriggerRequest;
+import to.unified.unifiedto.models.operations.UpdateUnifiedWebhookTriggerResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 

@@ -2,11 +2,12 @@
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateAccountingAccountRequest;
+import to.unified.unifiedto.models.operations.CreateAccountingAccountResponse;
+import to.unified.unifiedto.models.shared.AccountingAccount;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -19,6 +20,8 @@ public class Application {
             .build();
 
         CreateAccountingAccountRequest req = CreateAccountingAccountRequest.builder()
+                .accountingAccount(AccountingAccount.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 

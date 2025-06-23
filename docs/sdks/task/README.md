@@ -33,11 +33,12 @@ Create a comment
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateTaskCommentRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateTaskCommentResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateTaskCommentRequest;
+import to.unified.unifiedto.models.operations.CreateTaskCommentResponse;
+import to.unified.unifiedto.models.shared.Security;
+import to.unified.unifiedto.models.shared.TaskComment;
 
 public class Application {
 
@@ -50,6 +51,10 @@ public class Application {
             .build();
 
         CreateTaskCommentRequest req = CreateTaskCommentRequest.builder()
+                .taskComment(TaskComment.builder()
+                    .taskId("<id>")
+                    .text("<value>")
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -89,11 +94,12 @@ Create a project
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateTaskProjectRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateTaskProjectResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateTaskProjectRequest;
+import to.unified.unifiedto.models.operations.CreateTaskProjectResponse;
+import to.unified.unifiedto.models.shared.Security;
+import to.unified.unifiedto.models.shared.TaskProject;
 
 public class Application {
 
@@ -106,6 +112,8 @@ public class Application {
             .build();
 
         CreateTaskProjectRequest req = CreateTaskProjectRequest.builder()
+                .taskProject(TaskProject.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -145,11 +153,12 @@ Create a task
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateTaskTaskRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateTaskTaskResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateTaskTaskRequest;
+import to.unified.unifiedto.models.operations.CreateTaskTaskResponse;
+import to.unified.unifiedto.models.shared.Security;
+import to.unified.unifiedto.models.shared.TaskTask;
 
 public class Application {
 
@@ -162,6 +171,8 @@ public class Application {
             .build();
 
         CreateTaskTaskRequest req = CreateTaskTaskRequest.builder()
+                .taskTask(TaskTask.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -201,11 +212,11 @@ Retrieve a comment
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetTaskCommentRequest;
-import com.unifiedapi.unifiedto.models.operations.GetTaskCommentResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetTaskCommentRequest;
+import to.unified.unifiedto.models.operations.GetTaskCommentResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -258,11 +269,11 @@ Retrieve a project
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetTaskProjectRequest;
-import com.unifiedapi.unifiedto.models.operations.GetTaskProjectResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetTaskProjectRequest;
+import to.unified.unifiedto.models.operations.GetTaskProjectResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -315,11 +326,11 @@ Retrieve a task
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetTaskTaskRequest;
-import com.unifiedapi.unifiedto.models.operations.GetTaskTaskResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetTaskTaskRequest;
+import to.unified.unifiedto.models.operations.GetTaskTaskResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -372,11 +383,11 @@ List all comments
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListTaskCommentsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListTaskCommentsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListTaskCommentsRequest;
+import to.unified.unifiedto.models.operations.ListTaskCommentsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -428,11 +439,11 @@ List all projects
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListTaskProjectsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListTaskProjectsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListTaskProjectsRequest;
+import to.unified.unifiedto.models.operations.ListTaskProjectsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -484,11 +495,11 @@ List all tasks
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListTaskTasksRequest;
-import com.unifiedapi.unifiedto.models.operations.ListTaskTasksResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListTaskTasksRequest;
+import to.unified.unifiedto.models.operations.ListTaskTasksResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -540,11 +551,12 @@ Update a comment
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchTaskCommentRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchTaskCommentResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchTaskCommentRequest;
+import to.unified.unifiedto.models.operations.PatchTaskCommentResponse;
+import to.unified.unifiedto.models.shared.Security;
+import to.unified.unifiedto.models.shared.TaskComment;
 
 public class Application {
 
@@ -557,6 +569,10 @@ public class Application {
             .build();
 
         PatchTaskCommentRequest req = PatchTaskCommentRequest.builder()
+                .taskComment(TaskComment.builder()
+                    .taskId("<id>")
+                    .text("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -597,11 +613,12 @@ Update a project
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchTaskProjectRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchTaskProjectResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchTaskProjectRequest;
+import to.unified.unifiedto.models.operations.PatchTaskProjectResponse;
+import to.unified.unifiedto.models.shared.Security;
+import to.unified.unifiedto.models.shared.TaskProject;
 
 public class Application {
 
@@ -614,6 +631,8 @@ public class Application {
             .build();
 
         PatchTaskProjectRequest req = PatchTaskProjectRequest.builder()
+                .taskProject(TaskProject.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -654,11 +673,12 @@ Update a task
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchTaskTaskRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchTaskTaskResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchTaskTaskRequest;
+import to.unified.unifiedto.models.operations.PatchTaskTaskResponse;
+import to.unified.unifiedto.models.shared.Security;
+import to.unified.unifiedto.models.shared.TaskTask;
 
 public class Application {
 
@@ -671,6 +691,8 @@ public class Application {
             .build();
 
         PatchTaskTaskRequest req = PatchTaskTaskRequest.builder()
+                .taskTask(TaskTask.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -711,11 +733,11 @@ Remove a comment
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveTaskCommentRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveTaskCommentResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveTaskCommentRequest;
+import to.unified.unifiedto.models.operations.RemoveTaskCommentResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -766,11 +788,11 @@ Remove a project
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveTaskProjectRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveTaskProjectResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveTaskProjectRequest;
+import to.unified.unifiedto.models.operations.RemoveTaskProjectResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -821,11 +843,11 @@ Remove a task
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveTaskTaskRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveTaskTaskResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveTaskTaskRequest;
+import to.unified.unifiedto.models.operations.RemoveTaskTaskResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -876,11 +898,12 @@ Update a comment
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateTaskCommentRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateTaskCommentResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateTaskCommentRequest;
+import to.unified.unifiedto.models.operations.UpdateTaskCommentResponse;
+import to.unified.unifiedto.models.shared.Security;
+import to.unified.unifiedto.models.shared.TaskComment;
 
 public class Application {
 
@@ -893,6 +916,10 @@ public class Application {
             .build();
 
         UpdateTaskCommentRequest req = UpdateTaskCommentRequest.builder()
+                .taskComment(TaskComment.builder()
+                    .taskId("<id>")
+                    .text("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -933,11 +960,12 @@ Update a project
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateTaskProjectRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateTaskProjectResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateTaskProjectRequest;
+import to.unified.unifiedto.models.operations.UpdateTaskProjectResponse;
+import to.unified.unifiedto.models.shared.Security;
+import to.unified.unifiedto.models.shared.TaskProject;
 
 public class Application {
 
@@ -950,6 +978,8 @@ public class Application {
             .build();
 
         UpdateTaskProjectRequest req = UpdateTaskProjectRequest.builder()
+                .taskProject(TaskProject.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -990,11 +1020,12 @@ Update a task
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateTaskTaskRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateTaskTaskResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateTaskTaskRequest;
+import to.unified.unifiedto.models.operations.UpdateTaskTaskResponse;
+import to.unified.unifiedto.models.shared.Security;
+import to.unified.unifiedto.models.shared.TaskTask;
 
 public class Application {
 
@@ -1007,6 +1038,8 @@ public class Application {
             .build();
 
         UpdateTaskTaskRequest req = UpdateTaskTaskRequest.builder()
+                .taskTask(TaskTask.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

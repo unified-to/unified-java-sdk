@@ -21,14 +21,14 @@ Used only to import existing customer credentials; use "Create connection indire
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateUnifiedConnectionResponse;
-import com.unifiedapi.unifiedto.models.shared.Connection;
-import com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories;
-import com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 import java.util.List;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateUnifiedConnectionResponse;
+import to.unified.unifiedto.models.shared.Connection;
+import to.unified.unifiedto.models.shared.PropertyConnectionCategories;
+import to.unified.unifiedto.models.shared.PropertyConnectionPermissions;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -42,10 +42,13 @@ public class Application {
 
         Connection req = Connection.builder()
                 .categories(List.of(
-                    PropertyConnectionCategories.REPO))
+                    PropertyConnectionCategories.ACCOUNTING,
+                    PropertyConnectionCategories.MARTECH,
+                    PropertyConnectionCategories.MARTECH))
                 .integrationType("<value>")
                 .permissions(List.of(
-                    PropertyConnectionPermissions.CRM_LEAD_READ))
+                    PropertyConnectionPermissions.LMS_COURSE_READ,
+                    PropertyConnectionPermissions.SCIM_USERS_READ))
                 .build();
 
         CreateUnifiedConnectionResponse res = sdk.connection().createUnifiedConnection()
@@ -84,11 +87,11 @@ Retrieve connection
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionRequest;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetUnifiedConnectionRequest;
+import to.unified.unifiedto.models.operations.GetUnifiedConnectionResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -140,11 +143,11 @@ List all connections
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListUnifiedConnectionsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListUnifiedConnectionsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListUnifiedConnectionsRequest;
+import to.unified.unifiedto.models.operations.ListUnifiedConnectionsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -195,11 +198,14 @@ Update connection
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchUnifiedConnectionRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchUnifiedConnectionResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import java.util.List;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchUnifiedConnectionRequest;
+import to.unified.unifiedto.models.operations.PatchUnifiedConnectionResponse;
+import to.unified.unifiedto.models.shared.Connection;
+import to.unified.unifiedto.models.shared.PropertyConnectionCategories;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -212,6 +218,14 @@ public class Application {
             .build();
 
         PatchUnifiedConnectionRequest req = PatchUnifiedConnectionRequest.builder()
+                .connection(Connection.builder()
+                    .categories(List.of(
+                        PropertyConnectionCategories.METADATA,
+                        PropertyConnectionCategories.CRM))
+                    .integrationType("<value>")
+                    .permissions(List.of(
+                    ))
+                    .build())
                 .id("<id>")
                 .build();
 
@@ -251,11 +265,11 @@ Remove connection
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveUnifiedConnectionRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveUnifiedConnectionResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveUnifiedConnectionRequest;
+import to.unified.unifiedto.models.operations.RemoveUnifiedConnectionResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -305,11 +319,14 @@ Update connection
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedConnectionRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedConnectionResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import java.util.List;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateUnifiedConnectionRequest;
+import to.unified.unifiedto.models.operations.UpdateUnifiedConnectionResponse;
+import to.unified.unifiedto.models.shared.Connection;
+import to.unified.unifiedto.models.shared.PropertyConnectionCategories;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -322,6 +339,15 @@ public class Application {
             .build();
 
         UpdateUnifiedConnectionRequest req = UpdateUnifiedConnectionRequest.builder()
+                .connection(Connection.builder()
+                    .categories(List.of(
+                        PropertyConnectionCategories.METADATA,
+                        PropertyConnectionCategories.ACCOUNTING,
+                        PropertyConnectionCategories.METADATA))
+                    .integrationType("<value>")
+                    .permissions(List.of(
+                    ))
+                    .build())
                 .id("<id>")
                 .build();
 

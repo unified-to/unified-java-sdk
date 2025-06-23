@@ -39,11 +39,12 @@ Create a class
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateLmsClassRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateLmsClassResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateLmsClassRequest;
+import to.unified.unifiedto.models.operations.CreateLmsClassResponse;
+import to.unified.unifiedto.models.shared.LmsClass;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -56,6 +57,10 @@ public class Application {
             .build();
 
         CreateLmsClassRequest req = CreateLmsClassRequest.builder()
+                .lmsClass(LmsClass.builder()
+                    .courseId("<id>")
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -95,11 +100,12 @@ Create a course
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateLmsCourseRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateLmsCourseResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateLmsCourseRequest;
+import to.unified.unifiedto.models.operations.CreateLmsCourseResponse;
+import to.unified.unifiedto.models.shared.LmsCourse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -112,6 +118,9 @@ public class Application {
             .build();
 
         CreateLmsCourseRequest req = CreateLmsCourseRequest.builder()
+                .lmsCourse(LmsCourse.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -151,11 +160,12 @@ Create an instructor
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateLmsInstructorRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateLmsInstructorResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateLmsInstructorRequest;
+import to.unified.unifiedto.models.operations.CreateLmsInstructorResponse;
+import to.unified.unifiedto.models.shared.LmsInstructor;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -168,6 +178,8 @@ public class Application {
             .build();
 
         CreateLmsInstructorRequest req = CreateLmsInstructorRequest.builder()
+                .lmsInstructor(LmsInstructor.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -207,11 +219,12 @@ Create a student
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateLmsStudentRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateLmsStudentResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateLmsStudentRequest;
+import to.unified.unifiedto.models.operations.CreateLmsStudentResponse;
+import to.unified.unifiedto.models.shared.LmsStudent;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -224,6 +237,8 @@ public class Application {
             .build();
 
         CreateLmsStudentRequest req = CreateLmsStudentRequest.builder()
+                .lmsStudent(LmsStudent.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -263,11 +278,11 @@ Retrieve a class
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetLmsClassRequest;
-import com.unifiedapi.unifiedto.models.operations.GetLmsClassResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetLmsClassRequest;
+import to.unified.unifiedto.models.operations.GetLmsClassResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -320,11 +335,11 @@ Retrieve a course
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetLmsCourseRequest;
-import com.unifiedapi.unifiedto.models.operations.GetLmsCourseResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetLmsCourseRequest;
+import to.unified.unifiedto.models.operations.GetLmsCourseResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -377,11 +392,11 @@ Retrieve an instructor
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetLmsInstructorRequest;
-import com.unifiedapi.unifiedto.models.operations.GetLmsInstructorResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetLmsInstructorRequest;
+import to.unified.unifiedto.models.operations.GetLmsInstructorResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -434,11 +449,11 @@ Retrieve a student
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetLmsStudentRequest;
-import com.unifiedapi.unifiedto.models.operations.GetLmsStudentResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetLmsStudentRequest;
+import to.unified.unifiedto.models.operations.GetLmsStudentResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -491,11 +506,11 @@ List all classes
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListLmsClassesRequest;
-import com.unifiedapi.unifiedto.models.operations.ListLmsClassesResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListLmsClassesRequest;
+import to.unified.unifiedto.models.operations.ListLmsClassesResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -547,11 +562,11 @@ List all courses
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListLmsCoursesRequest;
-import com.unifiedapi.unifiedto.models.operations.ListLmsCoursesResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListLmsCoursesRequest;
+import to.unified.unifiedto.models.operations.ListLmsCoursesResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -603,11 +618,11 @@ List all instructors
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListLmsInstructorsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListLmsInstructorsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListLmsInstructorsRequest;
+import to.unified.unifiedto.models.operations.ListLmsInstructorsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -659,11 +674,11 @@ List all students
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListLmsStudentsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListLmsStudentsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListLmsStudentsRequest;
+import to.unified.unifiedto.models.operations.ListLmsStudentsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -715,11 +730,12 @@ Update a class
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchLmsClassRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchLmsClassResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchLmsClassRequest;
+import to.unified.unifiedto.models.operations.PatchLmsClassResponse;
+import to.unified.unifiedto.models.shared.LmsClass;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -732,6 +748,10 @@ public class Application {
             .build();
 
         PatchLmsClassRequest req = PatchLmsClassRequest.builder()
+                .lmsClass(LmsClass.builder()
+                    .courseId("<id>")
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -772,11 +792,12 @@ Update a course
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchLmsCourseRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchLmsCourseResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchLmsCourseRequest;
+import to.unified.unifiedto.models.operations.PatchLmsCourseResponse;
+import to.unified.unifiedto.models.shared.LmsCourse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -789,6 +810,9 @@ public class Application {
             .build();
 
         PatchLmsCourseRequest req = PatchLmsCourseRequest.builder()
+                .lmsCourse(LmsCourse.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -829,11 +853,12 @@ Update an instructor
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchLmsInstructorRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchLmsInstructorResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchLmsInstructorRequest;
+import to.unified.unifiedto.models.operations.PatchLmsInstructorResponse;
+import to.unified.unifiedto.models.shared.LmsInstructor;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -846,6 +871,8 @@ public class Application {
             .build();
 
         PatchLmsInstructorRequest req = PatchLmsInstructorRequest.builder()
+                .lmsInstructor(LmsInstructor.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -886,11 +913,12 @@ Update a student
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchLmsStudentRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchLmsStudentResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchLmsStudentRequest;
+import to.unified.unifiedto.models.operations.PatchLmsStudentResponse;
+import to.unified.unifiedto.models.shared.LmsStudent;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -903,6 +931,8 @@ public class Application {
             .build();
 
         PatchLmsStudentRequest req = PatchLmsStudentRequest.builder()
+                .lmsStudent(LmsStudent.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -943,11 +973,11 @@ Remove a class
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveLmsClassRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveLmsClassResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveLmsClassRequest;
+import to.unified.unifiedto.models.operations.RemoveLmsClassResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -998,11 +1028,11 @@ Remove a course
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveLmsCourseRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveLmsCourseResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveLmsCourseRequest;
+import to.unified.unifiedto.models.operations.RemoveLmsCourseResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1053,11 +1083,11 @@ Remove an instructor
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveLmsInstructorRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveLmsInstructorResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveLmsInstructorRequest;
+import to.unified.unifiedto.models.operations.RemoveLmsInstructorResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1108,11 +1138,11 @@ Remove a student
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveLmsStudentRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveLmsStudentResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveLmsStudentRequest;
+import to.unified.unifiedto.models.operations.RemoveLmsStudentResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1163,11 +1193,12 @@ Update a class
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateLmsClassRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateLmsClassResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateLmsClassRequest;
+import to.unified.unifiedto.models.operations.UpdateLmsClassResponse;
+import to.unified.unifiedto.models.shared.LmsClass;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1180,6 +1211,10 @@ public class Application {
             .build();
 
         UpdateLmsClassRequest req = UpdateLmsClassRequest.builder()
+                .lmsClass(LmsClass.builder()
+                    .courseId("<id>")
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1220,11 +1255,12 @@ Update a course
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateLmsCourseRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateLmsCourseResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateLmsCourseRequest;
+import to.unified.unifiedto.models.operations.UpdateLmsCourseResponse;
+import to.unified.unifiedto.models.shared.LmsCourse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1237,6 +1273,9 @@ public class Application {
             .build();
 
         UpdateLmsCourseRequest req = UpdateLmsCourseRequest.builder()
+                .lmsCourse(LmsCourse.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1277,11 +1316,12 @@ Update an instructor
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateLmsInstructorRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateLmsInstructorResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateLmsInstructorRequest;
+import to.unified.unifiedto.models.operations.UpdateLmsInstructorResponse;
+import to.unified.unifiedto.models.shared.LmsInstructor;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1294,6 +1334,8 @@ public class Application {
             .build();
 
         UpdateLmsInstructorRequest req = UpdateLmsInstructorRequest.builder()
+                .lmsInstructor(LmsInstructor.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1334,11 +1376,12 @@ Update a student
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateLmsStudentRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateLmsStudentResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateLmsStudentRequest;
+import to.unified.unifiedto.models.operations.UpdateLmsStudentResponse;
+import to.unified.unifiedto.models.shared.LmsStudent;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1351,6 +1394,8 @@ public class Application {
             .build();
 
         UpdateLmsStudentRequest req = UpdateLmsStudentRequest.builder()
+                .lmsStudent(LmsStudent.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

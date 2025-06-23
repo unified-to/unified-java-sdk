@@ -21,11 +21,12 @@ Create a customer
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateTicketingCustomerRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateTicketingCustomerResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateTicketingCustomerRequest;
+import to.unified.unifiedto.models.operations.CreateTicketingCustomerResponse;
+import to.unified.unifiedto.models.shared.Security;
+import to.unified.unifiedto.models.shared.TicketingCustomer;
 
 public class Application {
 
@@ -38,6 +39,8 @@ public class Application {
             .build();
 
         CreateTicketingCustomerRequest req = CreateTicketingCustomerRequest.builder()
+                .ticketingCustomer(TicketingCustomer.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -77,11 +80,11 @@ Retrieve a customer
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetTicketingCustomerRequest;
-import com.unifiedapi.unifiedto.models.operations.GetTicketingCustomerResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetTicketingCustomerRequest;
+import to.unified.unifiedto.models.operations.GetTicketingCustomerResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -134,11 +137,11 @@ List all customers
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListTicketingCustomersRequest;
-import com.unifiedapi.unifiedto.models.operations.ListTicketingCustomersResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListTicketingCustomersRequest;
+import to.unified.unifiedto.models.operations.ListTicketingCustomersResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -190,11 +193,12 @@ Update a customer
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchTicketingCustomerRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchTicketingCustomerResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchTicketingCustomerRequest;
+import to.unified.unifiedto.models.operations.PatchTicketingCustomerResponse;
+import to.unified.unifiedto.models.shared.Security;
+import to.unified.unifiedto.models.shared.TicketingCustomer;
 
 public class Application {
 
@@ -207,6 +211,8 @@ public class Application {
             .build();
 
         PatchTicketingCustomerRequest req = PatchTicketingCustomerRequest.builder()
+                .ticketingCustomer(TicketingCustomer.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -247,11 +253,11 @@ Remove a customer
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveTicketingCustomerRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveTicketingCustomerResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveTicketingCustomerRequest;
+import to.unified.unifiedto.models.operations.RemoveTicketingCustomerResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -302,11 +308,12 @@ Update a customer
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateTicketingCustomerRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateTicketingCustomerResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateTicketingCustomerRequest;
+import to.unified.unifiedto.models.operations.UpdateTicketingCustomerResponse;
+import to.unified.unifiedto.models.shared.Security;
+import to.unified.unifiedto.models.shared.TicketingCustomer;
 
 public class Application {
 
@@ -319,6 +326,8 @@ public class Application {
             .build();
 
         UpdateTicketingCustomerRequest req = UpdateTicketingCustomerRequest.builder()
+                .ticketingCustomer(TicketingCustomer.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

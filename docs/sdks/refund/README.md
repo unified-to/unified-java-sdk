@@ -17,11 +17,11 @@ Retrieve a refund
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetPaymentRefundRequest;
-import com.unifiedapi.unifiedto.models.operations.GetPaymentRefundResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetPaymentRefundRequest;
+import to.unified.unifiedto.models.operations.GetPaymentRefundResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -74,11 +74,11 @@ List all refunds
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListPaymentRefundsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListPaymentRefundsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListPaymentRefundsRequest;
+import to.unified.unifiedto.models.operations.ListPaymentRefundsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 

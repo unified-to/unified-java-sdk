@@ -3,8 +3,8 @@
 
 ## Fields
 
-| Field                                                    | Type                                                     | Required                                                 | Description                                              |
-| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
-| `scimGroup`                                              | [Optional\<ScimGroup>](../../models/shared/ScimGroup.md) | :heavy_minus_sign:                                       | N/A                                                      |
-| `connectionId`                                           | *String*                                                 | :heavy_check_mark:                                       | ID of the connection                                     |
-| `id`                                                     | *String*                                                 | :heavy_check_mark:                                       | ID of the Group                                          |
+| Field                                         | Type                                          | Required                                      | Description                                   |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| `scimGroup`                                   | [ScimGroup](../../models/shared/ScimGroup.md) | :heavy_check_mark:                            | N/A                                           |
+| `connectionId`                                | *String*                                      | :heavy_check_mark:                            | ID of the connection                          |
+| `id`                                          | *String*                                      | :heavy_check_mark:                            | ID of the Group                               |

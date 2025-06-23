@@ -21,11 +21,12 @@ Create a file
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateStorageFileRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateStorageFileResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateStorageFileRequest;
+import to.unified.unifiedto.models.operations.CreateStorageFileResponse;
+import to.unified.unifiedto.models.shared.Security;
+import to.unified.unifiedto.models.shared.StorageFile;
 
 public class Application {
 
@@ -38,6 +39,8 @@ public class Application {
             .build();
 
         CreateStorageFileRequest req = CreateStorageFileRequest.builder()
+                .storageFile(StorageFile.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -77,11 +80,11 @@ Retrieve a file
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetStorageFileRequest;
-import com.unifiedapi.unifiedto.models.operations.GetStorageFileResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetStorageFileRequest;
+import to.unified.unifiedto.models.operations.GetStorageFileResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -134,11 +137,11 @@ List all files
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListStorageFilesRequest;
-import com.unifiedapi.unifiedto.models.operations.ListStorageFilesResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListStorageFilesRequest;
+import to.unified.unifiedto.models.operations.ListStorageFilesResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -190,11 +193,12 @@ Update a file
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchStorageFileRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchStorageFileResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchStorageFileRequest;
+import to.unified.unifiedto.models.operations.PatchStorageFileResponse;
+import to.unified.unifiedto.models.shared.Security;
+import to.unified.unifiedto.models.shared.StorageFile;
 
 public class Application {
 
@@ -207,6 +211,8 @@ public class Application {
             .build();
 
         PatchStorageFileRequest req = PatchStorageFileRequest.builder()
+                .storageFile(StorageFile.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -247,11 +253,11 @@ Remove a file
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveStorageFileRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveStorageFileResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveStorageFileRequest;
+import to.unified.unifiedto.models.operations.RemoveStorageFileResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -302,11 +308,12 @@ Update a file
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateStorageFileRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateStorageFileResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateStorageFileRequest;
+import to.unified.unifiedto.models.operations.UpdateStorageFileResponse;
+import to.unified.unifiedto.models.shared.Security;
+import to.unified.unifiedto.models.shared.StorageFile;
 
 public class Application {
 
@@ -319,6 +326,8 @@ public class Application {
             .build();
 
         UpdateStorageFileRequest req = UpdateStorageFileRequest.builder()
+                .storageFile(StorageFile.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

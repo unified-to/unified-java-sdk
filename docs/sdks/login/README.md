@@ -16,11 +16,11 @@ Returns an authentication URL for the specified integration.  Once a successful 
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginRequest;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetUnifiedIntegrationLoginRequest;
+import to.unified.unifiedto.models.operations.GetUnifiedIntegrationLoginResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 

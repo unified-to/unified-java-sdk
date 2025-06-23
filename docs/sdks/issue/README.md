@@ -16,11 +16,11 @@ List support issues
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListUnifiedIssuesRequest;
-import com.unifiedapi.unifiedto.models.operations.ListUnifiedIssuesResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListUnifiedIssuesRequest;
+import to.unified.unifiedto.models.operations.ListUnifiedIssuesResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 

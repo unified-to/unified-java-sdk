@@ -21,11 +21,12 @@ Create an activity
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateAtsActivityRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateAtsActivityResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateAtsActivityRequest;
+import to.unified.unifiedto.models.operations.CreateAtsActivityResponse;
+import to.unified.unifiedto.models.shared.AtsActivity;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -38,6 +39,8 @@ public class Application {
             .build();
 
         CreateAtsActivityRequest req = CreateAtsActivityRequest.builder()
+                .atsActivity(AtsActivity.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -77,11 +80,11 @@ Retrieve an activity
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetAtsActivityRequest;
-import com.unifiedapi.unifiedto.models.operations.GetAtsActivityResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetAtsActivityRequest;
+import to.unified.unifiedto.models.operations.GetAtsActivityResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -134,11 +137,11 @@ List all activities
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListAtsActivitiesRequest;
-import com.unifiedapi.unifiedto.models.operations.ListAtsActivitiesResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListAtsActivitiesRequest;
+import to.unified.unifiedto.models.operations.ListAtsActivitiesResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -190,11 +193,12 @@ Update an activity
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchAtsActivityRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchAtsActivityResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchAtsActivityRequest;
+import to.unified.unifiedto.models.operations.PatchAtsActivityResponse;
+import to.unified.unifiedto.models.shared.AtsActivity;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -207,6 +211,8 @@ public class Application {
             .build();
 
         PatchAtsActivityRequest req = PatchAtsActivityRequest.builder()
+                .atsActivity(AtsActivity.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -247,11 +253,11 @@ Remove an activity
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveAtsActivityRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveAtsActivityResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveAtsActivityRequest;
+import to.unified.unifiedto.models.operations.RemoveAtsActivityResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -302,11 +308,12 @@ Update an activity
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateAtsActivityRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateAtsActivityResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateAtsActivityRequest;
+import to.unified.unifiedto.models.operations.UpdateAtsActivityResponse;
+import to.unified.unifiedto.models.shared.AtsActivity;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -319,6 +326,8 @@ public class Application {
             .build();
 
         UpdateAtsActivityRequest req = UpdateAtsActivityRequest.builder()
+                .atsActivity(AtsActivity.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

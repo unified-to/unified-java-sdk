@@ -21,11 +21,12 @@ Create a branch
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateRepoBranchRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateRepoBranchResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateRepoBranchRequest;
+import to.unified.unifiedto.models.operations.CreateRepoBranchResponse;
+import to.unified.unifiedto.models.shared.RepoBranch;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -38,6 +39,10 @@ public class Application {
             .build();
 
         CreateRepoBranchRequest req = CreateRepoBranchRequest.builder()
+                .repoBranch(RepoBranch.builder()
+                    .name("<value>")
+                    .repoId("<id>")
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -77,11 +82,11 @@ Retrieve a branch
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetRepoBranchRequest;
-import com.unifiedapi.unifiedto.models.operations.GetRepoBranchResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetRepoBranchRequest;
+import to.unified.unifiedto.models.operations.GetRepoBranchResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -134,11 +139,11 @@ List all branches
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListRepoBranchesRequest;
-import com.unifiedapi.unifiedto.models.operations.ListRepoBranchesResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListRepoBranchesRequest;
+import to.unified.unifiedto.models.operations.ListRepoBranchesResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -190,11 +195,12 @@ Update a branch
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchRepoBranchRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchRepoBranchResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchRepoBranchRequest;
+import to.unified.unifiedto.models.operations.PatchRepoBranchResponse;
+import to.unified.unifiedto.models.shared.RepoBranch;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -207,6 +213,10 @@ public class Application {
             .build();
 
         PatchRepoBranchRequest req = PatchRepoBranchRequest.builder()
+                .repoBranch(RepoBranch.builder()
+                    .name("<value>")
+                    .repoId("<id>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -247,11 +257,11 @@ Remove a branch
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveRepoBranchRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveRepoBranchResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveRepoBranchRequest;
+import to.unified.unifiedto.models.operations.RemoveRepoBranchResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -302,11 +312,12 @@ Update a branch
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateRepoBranchRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateRepoBranchResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateRepoBranchRequest;
+import to.unified.unifiedto.models.operations.UpdateRepoBranchResponse;
+import to.unified.unifiedto.models.shared.RepoBranch;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -319,6 +330,10 @@ public class Application {
             .build();
 
         UpdateRepoBranchRequest req = UpdateRepoBranchRequest.builder()
+                .repoBranch(RepoBranch.builder()
+                    .name("<value>")
+                    .repoId("<id>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

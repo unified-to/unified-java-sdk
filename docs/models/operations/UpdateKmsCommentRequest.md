@@ -3,9 +3,9 @@
 
 ## Fields
 
-| Field                                                      | Type                                                       | Required                                                   | Description                                                |
-| ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------- |
-| `kmsComment`                                               | [Optional\<KmsComment>](../../models/shared/KmsComment.md) | :heavy_minus_sign:                                         | N/A                                                        |
-| `connectionId`                                             | *String*                                                   | :heavy_check_mark:                                         | ID of the connection                                       |
-| `fields`                                                   | List\<*String*>                                            | :heavy_minus_sign:                                         | Comma-delimited fields to return                           |
-| `id`                                                       | *String*                                                   | :heavy_check_mark:                                         | ID of the Comment                                          |
+| Field                                           | Type                                            | Required                                        | Description                                     |
+| ----------------------------------------------- | ----------------------------------------------- | ----------------------------------------------- | ----------------------------------------------- |
+| `kmsComment`                                    | [KmsComment](../../models/shared/KmsComment.md) | :heavy_check_mark:                              | N/A                                             |
+| `connectionId`                                  | *String*                                        | :heavy_check_mark:                              | ID of the connection                            |
+| `fields`                                        | List\<*String*>                                 | :heavy_minus_sign:                              | Comma-delimited fields to return                |
+| `id`                                            | *String*                                        | :heavy_check_mark:                              | ID of the Comment                               |

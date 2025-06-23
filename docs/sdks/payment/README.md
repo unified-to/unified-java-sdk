@@ -37,11 +37,12 @@ Create a link
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreatePaymentLinkRequest;
-import com.unifiedapi.unifiedto.models.operations.CreatePaymentLinkResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreatePaymentLinkRequest;
+import to.unified.unifiedto.models.operations.CreatePaymentLinkResponse;
+import to.unified.unifiedto.models.shared.PaymentLink;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -54,6 +55,8 @@ public class Application {
             .build();
 
         CreatePaymentLinkRequest req = CreatePaymentLinkRequest.builder()
+                .paymentLink(PaymentLink.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -93,11 +96,12 @@ Create a payment
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreatePaymentPaymentRequest;
-import com.unifiedapi.unifiedto.models.operations.CreatePaymentPaymentResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreatePaymentPaymentRequest;
+import to.unified.unifiedto.models.operations.CreatePaymentPaymentResponse;
+import to.unified.unifiedto.models.shared.PaymentPayment;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -110,6 +114,8 @@ public class Application {
             .build();
 
         CreatePaymentPaymentRequest req = CreatePaymentPaymentRequest.builder()
+                .paymentPayment(PaymentPayment.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -149,11 +155,12 @@ Create a subscription
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreatePaymentSubscriptionRequest;
-import com.unifiedapi.unifiedto.models.operations.CreatePaymentSubscriptionResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreatePaymentSubscriptionRequest;
+import to.unified.unifiedto.models.operations.CreatePaymentSubscriptionResponse;
+import to.unified.unifiedto.models.shared.PaymentSubscription;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -166,6 +173,8 @@ public class Application {
             .build();
 
         CreatePaymentSubscriptionRequest req = CreatePaymentSubscriptionRequest.builder()
+                .paymentSubscription(PaymentSubscription.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -205,11 +214,11 @@ Retrieve a link
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetPaymentLinkRequest;
-import com.unifiedapi.unifiedto.models.operations.GetPaymentLinkResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetPaymentLinkRequest;
+import to.unified.unifiedto.models.operations.GetPaymentLinkResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -262,11 +271,11 @@ Retrieve a payment
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetPaymentPaymentRequest;
-import com.unifiedapi.unifiedto.models.operations.GetPaymentPaymentResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetPaymentPaymentRequest;
+import to.unified.unifiedto.models.operations.GetPaymentPaymentResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -319,11 +328,11 @@ Retrieve a payout
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetPaymentPayoutRequest;
-import com.unifiedapi.unifiedto.models.operations.GetPaymentPayoutResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetPaymentPayoutRequest;
+import to.unified.unifiedto.models.operations.GetPaymentPayoutResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -376,11 +385,11 @@ Retrieve a refund
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetPaymentRefundRequest;
-import com.unifiedapi.unifiedto.models.operations.GetPaymentRefundResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetPaymentRefundRequest;
+import to.unified.unifiedto.models.operations.GetPaymentRefundResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -433,11 +442,11 @@ Retrieve a subscription
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetPaymentSubscriptionRequest;
-import com.unifiedapi.unifiedto.models.operations.GetPaymentSubscriptionResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetPaymentSubscriptionRequest;
+import to.unified.unifiedto.models.operations.GetPaymentSubscriptionResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -490,11 +499,11 @@ List all links
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListPaymentLinksRequest;
-import com.unifiedapi.unifiedto.models.operations.ListPaymentLinksResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListPaymentLinksRequest;
+import to.unified.unifiedto.models.operations.ListPaymentLinksResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -546,11 +555,11 @@ List all payments
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListPaymentPaymentsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListPaymentPaymentsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListPaymentPaymentsRequest;
+import to.unified.unifiedto.models.operations.ListPaymentPaymentsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -602,11 +611,11 @@ List all payouts
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListPaymentPayoutsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListPaymentPayoutsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListPaymentPayoutsRequest;
+import to.unified.unifiedto.models.operations.ListPaymentPayoutsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -658,11 +667,11 @@ List all refunds
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListPaymentRefundsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListPaymentRefundsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListPaymentRefundsRequest;
+import to.unified.unifiedto.models.operations.ListPaymentRefundsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -714,11 +723,11 @@ List all subscriptions
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListPaymentSubscriptionsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListPaymentSubscriptionsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListPaymentSubscriptionsRequest;
+import to.unified.unifiedto.models.operations.ListPaymentSubscriptionsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -770,11 +779,12 @@ Update a link
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchPaymentLinkRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchPaymentLinkResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchPaymentLinkRequest;
+import to.unified.unifiedto.models.operations.PatchPaymentLinkResponse;
+import to.unified.unifiedto.models.shared.PaymentLink;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -787,6 +797,8 @@ public class Application {
             .build();
 
         PatchPaymentLinkRequest req = PatchPaymentLinkRequest.builder()
+                .paymentLink(PaymentLink.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -827,11 +839,12 @@ Update a payment
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchPaymentPaymentRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchPaymentPaymentResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchPaymentPaymentRequest;
+import to.unified.unifiedto.models.operations.PatchPaymentPaymentResponse;
+import to.unified.unifiedto.models.shared.PaymentPayment;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -844,6 +857,8 @@ public class Application {
             .build();
 
         PatchPaymentPaymentRequest req = PatchPaymentPaymentRequest.builder()
+                .paymentPayment(PaymentPayment.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -884,11 +899,12 @@ Update a subscription
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchPaymentSubscriptionRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchPaymentSubscriptionResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchPaymentSubscriptionRequest;
+import to.unified.unifiedto.models.operations.PatchPaymentSubscriptionResponse;
+import to.unified.unifiedto.models.shared.PaymentSubscription;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -901,6 +917,8 @@ public class Application {
             .build();
 
         PatchPaymentSubscriptionRequest req = PatchPaymentSubscriptionRequest.builder()
+                .paymentSubscription(PaymentSubscription.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -941,11 +959,11 @@ Remove a link
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemovePaymentLinkRequest;
-import com.unifiedapi.unifiedto.models.operations.RemovePaymentLinkResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemovePaymentLinkRequest;
+import to.unified.unifiedto.models.operations.RemovePaymentLinkResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -996,11 +1014,11 @@ Remove a payment
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemovePaymentPaymentRequest;
-import com.unifiedapi.unifiedto.models.operations.RemovePaymentPaymentResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemovePaymentPaymentRequest;
+import to.unified.unifiedto.models.operations.RemovePaymentPaymentResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1051,11 +1069,11 @@ Remove a subscription
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemovePaymentSubscriptionRequest;
-import com.unifiedapi.unifiedto.models.operations.RemovePaymentSubscriptionResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemovePaymentSubscriptionRequest;
+import to.unified.unifiedto.models.operations.RemovePaymentSubscriptionResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1106,11 +1124,12 @@ Update a link
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdatePaymentLinkRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdatePaymentLinkResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdatePaymentLinkRequest;
+import to.unified.unifiedto.models.operations.UpdatePaymentLinkResponse;
+import to.unified.unifiedto.models.shared.PaymentLink;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1123,6 +1142,8 @@ public class Application {
             .build();
 
         UpdatePaymentLinkRequest req = UpdatePaymentLinkRequest.builder()
+                .paymentLink(PaymentLink.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1163,11 +1184,12 @@ Update a payment
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdatePaymentPaymentRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdatePaymentPaymentResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdatePaymentPaymentRequest;
+import to.unified.unifiedto.models.operations.UpdatePaymentPaymentResponse;
+import to.unified.unifiedto.models.shared.PaymentPayment;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1180,6 +1202,8 @@ public class Application {
             .build();
 
         UpdatePaymentPaymentRequest req = UpdatePaymentPaymentRequest.builder()
+                .paymentPayment(PaymentPayment.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1220,11 +1244,12 @@ Update a subscription
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdatePaymentSubscriptionRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdatePaymentSubscriptionResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdatePaymentSubscriptionRequest;
+import to.unified.unifiedto.models.operations.UpdatePaymentSubscriptionResponse;
+import to.unified.unifiedto.models.shared.PaymentSubscription;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1237,6 +1262,8 @@ public class Application {
             .build();
 
         UpdatePaymentSubscriptionRequest req = UpdatePaymentSubscriptionRequest.builder()
+                .paymentSubscription(PaymentSubscription.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

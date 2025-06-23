@@ -17,11 +17,11 @@ Retrieve a channel
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetMessagingChannelRequest;
-import com.unifiedapi.unifiedto.models.operations.GetMessagingChannelResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetMessagingChannelRequest;
+import to.unified.unifiedto.models.operations.GetMessagingChannelResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -74,11 +74,11 @@ List all channels
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListMessagingChannelsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListMessagingChannelsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListMessagingChannelsRequest;
+import to.unified.unifiedto.models.operations.ListMessagingChannelsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 

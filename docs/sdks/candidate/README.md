@@ -21,11 +21,12 @@ Create a candidate
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateAtsCandidateRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateAtsCandidateResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateAtsCandidateRequest;
+import to.unified.unifiedto.models.operations.CreateAtsCandidateResponse;
+import to.unified.unifiedto.models.shared.AtsCandidate;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -38,6 +39,8 @@ public class Application {
             .build();
 
         CreateAtsCandidateRequest req = CreateAtsCandidateRequest.builder()
+                .atsCandidate(AtsCandidate.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -77,11 +80,11 @@ Retrieve a candidate
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetAtsCandidateRequest;
-import com.unifiedapi.unifiedto.models.operations.GetAtsCandidateResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetAtsCandidateRequest;
+import to.unified.unifiedto.models.operations.GetAtsCandidateResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -134,11 +137,11 @@ List all candidates
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListAtsCandidatesRequest;
-import com.unifiedapi.unifiedto.models.operations.ListAtsCandidatesResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListAtsCandidatesRequest;
+import to.unified.unifiedto.models.operations.ListAtsCandidatesResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -190,11 +193,12 @@ Update a candidate
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchAtsCandidateRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchAtsCandidateResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchAtsCandidateRequest;
+import to.unified.unifiedto.models.operations.PatchAtsCandidateResponse;
+import to.unified.unifiedto.models.shared.AtsCandidate;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -207,6 +211,8 @@ public class Application {
             .build();
 
         PatchAtsCandidateRequest req = PatchAtsCandidateRequest.builder()
+                .atsCandidate(AtsCandidate.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -247,11 +253,11 @@ Remove a candidate
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveAtsCandidateRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveAtsCandidateResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveAtsCandidateRequest;
+import to.unified.unifiedto.models.operations.RemoveAtsCandidateResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -302,11 +308,12 @@ Update a candidate
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateAtsCandidateRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateAtsCandidateResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateAtsCandidateRequest;
+import to.unified.unifiedto.models.operations.UpdateAtsCandidateResponse;
+import to.unified.unifiedto.models.shared.AtsCandidate;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -319,6 +326,8 @@ public class Application {
             .build();
 
         UpdateAtsCandidateRequest req = UpdateAtsCandidateRequest.builder()
+                .atsCandidate(AtsCandidate.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

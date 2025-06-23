@@ -21,11 +21,12 @@ Create a collection
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateCommerceCollectionRequest;
+import to.unified.unifiedto.models.operations.CreateCommerceCollectionResponse;
+import to.unified.unifiedto.models.shared.CommerceCollection;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -38,6 +39,9 @@ public class Application {
             .build();
 
         CreateCommerceCollectionRequest req = CreateCommerceCollectionRequest.builder()
+                .commerceCollection(CommerceCollection.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -77,11 +81,11 @@ Retrieve a collection
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionRequest;
-import com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetCommerceCollectionRequest;
+import to.unified.unifiedto.models.operations.GetCommerceCollectionResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -134,11 +138,11 @@ List all collections
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListCommerceCollectionsRequest;
+import to.unified.unifiedto.models.operations.ListCommerceCollectionsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -190,11 +194,12 @@ Update a collection
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchCommerceCollectionRequest;
+import to.unified.unifiedto.models.operations.PatchCommerceCollectionResponse;
+import to.unified.unifiedto.models.shared.CommerceCollection;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -207,6 +212,9 @@ public class Application {
             .build();
 
         PatchCommerceCollectionRequest req = PatchCommerceCollectionRequest.builder()
+                .commerceCollection(CommerceCollection.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -247,11 +255,11 @@ Remove a collection
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveCommerceCollectionRequest;
+import to.unified.unifiedto.models.operations.RemoveCommerceCollectionResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -302,11 +310,12 @@ Update a collection
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateCommerceCollectionRequest;
+import to.unified.unifiedto.models.operations.UpdateCommerceCollectionResponse;
+import to.unified.unifiedto.models.shared.CommerceCollection;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -319,6 +328,9 @@ public class Application {
             .build();
 
         UpdateCommerceCollectionRequest req = UpdateCommerceCollectionRequest.builder()
+                .commerceCollection(CommerceCollection.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

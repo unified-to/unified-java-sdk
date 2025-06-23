@@ -21,11 +21,12 @@ Create a deal
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateCrmDealRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateCrmDealResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateCrmDealRequest;
+import to.unified.unifiedto.models.operations.CreateCrmDealResponse;
+import to.unified.unifiedto.models.shared.CrmDeal;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -38,6 +39,8 @@ public class Application {
             .build();
 
         CreateCrmDealRequest req = CreateCrmDealRequest.builder()
+                .crmDeal(CrmDeal.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -77,11 +80,11 @@ Retrieve a deal
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetCrmDealRequest;
-import com.unifiedapi.unifiedto.models.operations.GetCrmDealResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetCrmDealRequest;
+import to.unified.unifiedto.models.operations.GetCrmDealResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -134,11 +137,11 @@ List all deals
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListCrmDealsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListCrmDealsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListCrmDealsRequest;
+import to.unified.unifiedto.models.operations.ListCrmDealsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -190,11 +193,12 @@ Update a deal
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmDealRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmDealResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchCrmDealRequest;
+import to.unified.unifiedto.models.operations.PatchCrmDealResponse;
+import to.unified.unifiedto.models.shared.CrmDeal;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -207,6 +211,8 @@ public class Application {
             .build();
 
         PatchCrmDealRequest req = PatchCrmDealRequest.builder()
+                .crmDeal(CrmDeal.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -247,11 +253,11 @@ Remove a deal
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveCrmDealRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveCrmDealResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveCrmDealRequest;
+import to.unified.unifiedto.models.operations.RemoveCrmDealResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -302,11 +308,12 @@ Update a deal
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateCrmDealRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateCrmDealResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateCrmDealRequest;
+import to.unified.unifiedto.models.operations.UpdateCrmDealResponse;
+import to.unified.unifiedto.models.shared.CrmDeal;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -319,6 +326,8 @@ public class Application {
             .build();
 
         UpdateCrmDealRequest req = UpdateCrmDealRequest.builder()
+                .crmDeal(CrmDeal.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

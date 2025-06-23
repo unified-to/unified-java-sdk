@@ -21,11 +21,12 @@ Create a journal
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateAccountingJournalRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateAccountingJournalResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateAccountingJournalRequest;
+import to.unified.unifiedto.models.operations.CreateAccountingJournalResponse;
+import to.unified.unifiedto.models.shared.AccountingJournal;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -38,6 +39,8 @@ public class Application {
             .build();
 
         CreateAccountingJournalRequest req = CreateAccountingJournalRequest.builder()
+                .accountingJournal(AccountingJournal.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -77,11 +80,11 @@ Retrieve a journal
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetAccountingJournalRequest;
-import com.unifiedapi.unifiedto.models.operations.GetAccountingJournalResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetAccountingJournalRequest;
+import to.unified.unifiedto.models.operations.GetAccountingJournalResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -134,11 +137,11 @@ List all journals
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListAccountingJournalsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListAccountingJournalsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListAccountingJournalsRequest;
+import to.unified.unifiedto.models.operations.ListAccountingJournalsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -190,11 +193,12 @@ Update a journal
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchAccountingJournalRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchAccountingJournalResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchAccountingJournalRequest;
+import to.unified.unifiedto.models.operations.PatchAccountingJournalResponse;
+import to.unified.unifiedto.models.shared.AccountingJournal;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -207,6 +211,8 @@ public class Application {
             .build();
 
         PatchAccountingJournalRequest req = PatchAccountingJournalRequest.builder()
+                .accountingJournal(AccountingJournal.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -247,11 +253,11 @@ Remove a journal
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveAccountingJournalRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveAccountingJournalResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveAccountingJournalRequest;
+import to.unified.unifiedto.models.operations.RemoveAccountingJournalResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -302,11 +308,12 @@ Update a journal
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateAccountingJournalRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateAccountingJournalResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateAccountingJournalRequest;
+import to.unified.unifiedto.models.operations.UpdateAccountingJournalResponse;
+import to.unified.unifiedto.models.shared.AccountingJournal;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -319,6 +326,8 @@ public class Application {
             .build();
 
         UpdateAccountingJournalRequest req = UpdateAccountingJournalRequest.builder()
+                .accountingJournal(AccountingJournal.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

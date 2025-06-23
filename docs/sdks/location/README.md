@@ -27,11 +27,12 @@ Create a location
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateCommerceLocationRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateCommerceLocationResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateCommerceLocationRequest;
+import to.unified.unifiedto.models.operations.CreateCommerceLocationResponse;
+import to.unified.unifiedto.models.shared.CommerceLocation;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -44,6 +45,9 @@ public class Application {
             .build();
 
         CreateCommerceLocationRequest req = CreateCommerceLocationRequest.builder()
+                .commerceLocation(CommerceLocation.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -83,11 +87,12 @@ Create a location
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateHrisLocationRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateHrisLocationResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateHrisLocationRequest;
+import to.unified.unifiedto.models.operations.CreateHrisLocationResponse;
+import to.unified.unifiedto.models.shared.HrisLocation;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -100,6 +105,8 @@ public class Application {
             .build();
 
         CreateHrisLocationRequest req = CreateHrisLocationRequest.builder()
+                .hrisLocation(HrisLocation.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -139,11 +146,11 @@ Retrieve a location
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetCommerceLocationRequest;
-import com.unifiedapi.unifiedto.models.operations.GetCommerceLocationResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetCommerceLocationRequest;
+import to.unified.unifiedto.models.operations.GetCommerceLocationResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -196,11 +203,11 @@ Retrieve a location
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetHrisLocationRequest;
-import com.unifiedapi.unifiedto.models.operations.GetHrisLocationResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetHrisLocationRequest;
+import to.unified.unifiedto.models.operations.GetHrisLocationResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -253,11 +260,11 @@ List all locations
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListCommerceLocationsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListCommerceLocationsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListCommerceLocationsRequest;
+import to.unified.unifiedto.models.operations.ListCommerceLocationsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -309,11 +316,11 @@ List all locations
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListHrisLocationsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListHrisLocationsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListHrisLocationsRequest;
+import to.unified.unifiedto.models.operations.ListHrisLocationsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -365,11 +372,12 @@ Update a location
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchCommerceLocationRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchCommerceLocationResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchCommerceLocationRequest;
+import to.unified.unifiedto.models.operations.PatchCommerceLocationResponse;
+import to.unified.unifiedto.models.shared.CommerceLocation;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -382,6 +390,9 @@ public class Application {
             .build();
 
         PatchCommerceLocationRequest req = PatchCommerceLocationRequest.builder()
+                .commerceLocation(CommerceLocation.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -422,11 +433,12 @@ Update a location
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchHrisLocationRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchHrisLocationResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchHrisLocationRequest;
+import to.unified.unifiedto.models.operations.PatchHrisLocationResponse;
+import to.unified.unifiedto.models.shared.HrisLocation;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -439,6 +451,8 @@ public class Application {
             .build();
 
         PatchHrisLocationRequest req = PatchHrisLocationRequest.builder()
+                .hrisLocation(HrisLocation.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -479,11 +493,11 @@ Remove a location
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveCommerceLocationRequest;
+import to.unified.unifiedto.models.operations.RemoveCommerceLocationResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -534,11 +548,11 @@ Remove a location
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveHrisLocationRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveHrisLocationResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveHrisLocationRequest;
+import to.unified.unifiedto.models.operations.RemoveHrisLocationResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -589,11 +603,12 @@ Update a location
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateCommerceLocationRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateCommerceLocationResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateCommerceLocationRequest;
+import to.unified.unifiedto.models.operations.UpdateCommerceLocationResponse;
+import to.unified.unifiedto.models.shared.CommerceLocation;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -606,6 +621,9 @@ public class Application {
             .build();
 
         UpdateCommerceLocationRequest req = UpdateCommerceLocationRequest.builder()
+                .commerceLocation(CommerceLocation.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -646,11 +664,12 @@ Update a location
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateHrisLocationRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateHrisLocationResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateHrisLocationRequest;
+import to.unified.unifiedto.models.operations.UpdateHrisLocationResponse;
+import to.unified.unifiedto.models.shared.HrisLocation;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -663,6 +682,8 @@ public class Application {
             .build();
 
         UpdateHrisLocationRequest req = UpdateHrisLocationRequest.builder()
+                .hrisLocation(HrisLocation.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

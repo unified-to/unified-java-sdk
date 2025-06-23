@@ -21,11 +21,12 @@ Create a repository
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateRepoRepositoryRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateRepoRepositoryResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateRepoRepositoryRequest;
+import to.unified.unifiedto.models.operations.CreateRepoRepositoryResponse;
+import to.unified.unifiedto.models.shared.RepoRepository;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -38,6 +39,9 @@ public class Application {
             .build();
 
         CreateRepoRepositoryRequest req = CreateRepoRepositoryRequest.builder()
+                .repoRepository(RepoRepository.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -77,11 +81,11 @@ Retrieve a repository
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetRepoRepositoryRequest;
-import com.unifiedapi.unifiedto.models.operations.GetRepoRepositoryResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetRepoRepositoryRequest;
+import to.unified.unifiedto.models.operations.GetRepoRepositoryResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -134,11 +138,11 @@ List all repositories
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListRepoRepositoriesRequest;
-import com.unifiedapi.unifiedto.models.operations.ListRepoRepositoriesResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListRepoRepositoriesRequest;
+import to.unified.unifiedto.models.operations.ListRepoRepositoriesResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -190,11 +194,12 @@ Update a repository
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchRepoRepositoryRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchRepoRepositoryResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchRepoRepositoryRequest;
+import to.unified.unifiedto.models.operations.PatchRepoRepositoryResponse;
+import to.unified.unifiedto.models.shared.RepoRepository;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -207,6 +212,9 @@ public class Application {
             .build();
 
         PatchRepoRepositoryRequest req = PatchRepoRepositoryRequest.builder()
+                .repoRepository(RepoRepository.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -247,11 +255,11 @@ Remove a repository
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveRepoRepositoryRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveRepoRepositoryResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveRepoRepositoryRequest;
+import to.unified.unifiedto.models.operations.RemoveRepoRepositoryResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -302,11 +310,12 @@ Update a repository
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateRepoRepositoryRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateRepoRepositoryResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateRepoRepositoryRequest;
+import to.unified.unifiedto.models.operations.UpdateRepoRepositoryResponse;
+import to.unified.unifiedto.models.shared.RepoRepository;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -319,6 +328,9 @@ public class Application {
             .build();
 
         UpdateRepoRepositoryRequest req = UpdateRepoRepositoryRequest.builder()
+                .repoRepository(RepoRepository.builder()
+                    .name("<value>")
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

@@ -21,11 +21,12 @@ Create a student
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateLmsStudentRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateLmsStudentResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateLmsStudentRequest;
+import to.unified.unifiedto.models.operations.CreateLmsStudentResponse;
+import to.unified.unifiedto.models.shared.LmsStudent;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -38,6 +39,8 @@ public class Application {
             .build();
 
         CreateLmsStudentRequest req = CreateLmsStudentRequest.builder()
+                .lmsStudent(LmsStudent.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -77,11 +80,11 @@ Retrieve a student
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetLmsStudentRequest;
-import com.unifiedapi.unifiedto.models.operations.GetLmsStudentResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetLmsStudentRequest;
+import to.unified.unifiedto.models.operations.GetLmsStudentResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -134,11 +137,11 @@ List all students
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListLmsStudentsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListLmsStudentsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListLmsStudentsRequest;
+import to.unified.unifiedto.models.operations.ListLmsStudentsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -190,11 +193,12 @@ Update a student
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchLmsStudentRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchLmsStudentResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchLmsStudentRequest;
+import to.unified.unifiedto.models.operations.PatchLmsStudentResponse;
+import to.unified.unifiedto.models.shared.LmsStudent;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -207,6 +211,8 @@ public class Application {
             .build();
 
         PatchLmsStudentRequest req = PatchLmsStudentRequest.builder()
+                .lmsStudent(LmsStudent.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -247,11 +253,11 @@ Remove a student
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveLmsStudentRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveLmsStudentResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveLmsStudentRequest;
+import to.unified.unifiedto.models.operations.RemoveLmsStudentResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -302,11 +308,12 @@ Update a student
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateLmsStudentRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateLmsStudentResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateLmsStudentRequest;
+import to.unified.unifiedto.models.operations.UpdateLmsStudentResponse;
+import to.unified.unifiedto.models.shared.LmsStudent;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -319,6 +326,8 @@ public class Application {
             .build();
 
         UpdateLmsStudentRequest req = UpdateLmsStudentRequest.builder()
+                .lmsStudent(LmsStudent.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

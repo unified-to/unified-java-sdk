@@ -17,11 +17,11 @@ Returns an authorization URL for the specified integration.  Once a successful a
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthRequest;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetUnifiedIntegrationAuthRequest;
+import to.unified.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -74,11 +74,11 @@ Returns an authentication URL for the specified integration.  Once a successful 
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginRequest;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetUnifiedIntegrationLoginRequest;
+import to.unified.unifiedto.models.operations.GetUnifiedIntegrationLoginResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 

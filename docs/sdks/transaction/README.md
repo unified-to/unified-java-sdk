@@ -21,11 +21,12 @@ Create a transaction
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateAccountingTransactionRequest;
+import to.unified.unifiedto.models.operations.CreateAccountingTransactionResponse;
+import to.unified.unifiedto.models.shared.AccountingTransaction;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -38,6 +39,8 @@ public class Application {
             .build();
 
         CreateAccountingTransactionRequest req = CreateAccountingTransactionRequest.builder()
+                .accountingTransaction(AccountingTransaction.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -77,11 +80,11 @@ Retrieve a transaction
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetAccountingTransactionRequest;
-import com.unifiedapi.unifiedto.models.operations.GetAccountingTransactionResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetAccountingTransactionRequest;
+import to.unified.unifiedto.models.operations.GetAccountingTransactionResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -134,11 +137,11 @@ List all transactions
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListAccountingTransactionsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListAccountingTransactionsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListAccountingTransactionsRequest;
+import to.unified.unifiedto.models.operations.ListAccountingTransactionsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -190,11 +193,12 @@ Update a transaction
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchAccountingTransactionRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchAccountingTransactionResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchAccountingTransactionRequest;
+import to.unified.unifiedto.models.operations.PatchAccountingTransactionResponse;
+import to.unified.unifiedto.models.shared.AccountingTransaction;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -207,6 +211,8 @@ public class Application {
             .build();
 
         PatchAccountingTransactionRequest req = PatchAccountingTransactionRequest.builder()
+                .accountingTransaction(AccountingTransaction.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -247,11 +253,11 @@ Remove a transaction
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveAccountingTransactionRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveAccountingTransactionResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveAccountingTransactionRequest;
+import to.unified.unifiedto.models.operations.RemoveAccountingTransactionResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -302,11 +308,12 @@ Update a transaction
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateAccountingTransactionRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateAccountingTransactionResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateAccountingTransactionRequest;
+import to.unified.unifiedto.models.operations.UpdateAccountingTransactionResponse;
+import to.unified.unifiedto.models.shared.AccountingTransaction;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -319,6 +326,8 @@ public class Application {
             .build();
 
         UpdateAccountingTransactionRequest req = UpdateAccountingTransactionRequest.builder()
+                .accountingTransaction(AccountingTransaction.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

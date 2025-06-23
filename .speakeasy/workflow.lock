@@ -1,21 +1,20 @@
-speakeasyVersion: 1.470.1
+speakeasyVersion: 1.509.1
 sources:
     my-source:
         sourceNamespace: my-source
-        sourceRevisionDigest: sha256:418e7033a7fe7005bcaa628383c6e5b72a56ab6341698270be71446e756f6c1c
-        sourceBlobDigest: sha256:4be74a33c8e5a32ebff1b291a5ec020213438fd2f0041e7122c15fb098e643c7
+        sourceRevisionDigest: sha256:1ce5db32b1707cd2b796bd50c509d285457f0ecda20d442344623def219faa38
+        sourceBlobDigest: sha256:90891f84523a01df02bb18070a5fbc65c8633c1d6d3f15666d63543cf2025612
         tags:
             - latest
-            - speakeasy-sdk-regen-1737590688
             - "1.0"
 targets:
     java-target:
         source: my-source
         sourceNamespace: my-source
-        sourceRevisionDigest: sha256:418e7033a7fe7005bcaa628383c6e5b72a56ab6341698270be71446e756f6c1c
-        sourceBlobDigest: sha256:4be74a33c8e5a32ebff1b291a5ec020213438fd2f0041e7122c15fb098e643c7
+        sourceRevisionDigest: sha256:1ce5db32b1707cd2b796bd50c509d285457f0ecda20d442344623def219faa38
+        sourceBlobDigest: sha256:90891f84523a01df02bb18070a5fbc65c8633c1d6d3f15666d63543cf2025612
         codeSamplesNamespace: my-source-java-code-samples
-        codeSamplesRevisionDigest: sha256:8e275540d9ab19043dd250393abf874d61229e1265bcca6df7bf95a2da33f5dc
+        codeSamplesRevisionDigest: sha256:5cda90ba326fe9ef93021df56522942aceb9be2c02ddf61a3df6706102e22f68
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -30,6 +29,12 @@ workflow:
         java-target:
             target: java
             source: my-source
+            publish:
+                java:
+                    ossrhUsername: $ossrh_username
+                    ossrhPassword: $ossrh_password
+                    gpgSecretKey: $java_gpg_secret_key
+                    gpgPassPhrase: $java_gpg_passphrase
             codeSamples:
                 registry:
                     location: registry.speakeasyapi.dev/unified/unified/my-source-java-code-samples

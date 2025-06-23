@@ -21,11 +21,12 @@ Create a note
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateTicketingNoteRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateTicketingNoteResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateTicketingNoteRequest;
+import to.unified.unifiedto.models.operations.CreateTicketingNoteResponse;
+import to.unified.unifiedto.models.shared.Security;
+import to.unified.unifiedto.models.shared.TicketingNote;
 
 public class Application {
 
@@ -38,6 +39,8 @@ public class Application {
             .build();
 
         CreateTicketingNoteRequest req = CreateTicketingNoteRequest.builder()
+                .ticketingNote(TicketingNote.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -77,11 +80,11 @@ Retrieve a note
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetTicketingNoteRequest;
-import com.unifiedapi.unifiedto.models.operations.GetTicketingNoteResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetTicketingNoteRequest;
+import to.unified.unifiedto.models.operations.GetTicketingNoteResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -134,11 +137,11 @@ List all notes
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListTicketingNotesRequest;
-import com.unifiedapi.unifiedto.models.operations.ListTicketingNotesResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListTicketingNotesRequest;
+import to.unified.unifiedto.models.operations.ListTicketingNotesResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -190,11 +193,12 @@ Update a note
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchTicketingNoteRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchTicketingNoteResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchTicketingNoteRequest;
+import to.unified.unifiedto.models.operations.PatchTicketingNoteResponse;
+import to.unified.unifiedto.models.shared.Security;
+import to.unified.unifiedto.models.shared.TicketingNote;
 
 public class Application {
 
@@ -207,6 +211,8 @@ public class Application {
             .build();
 
         PatchTicketingNoteRequest req = PatchTicketingNoteRequest.builder()
+                .ticketingNote(TicketingNote.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -247,11 +253,11 @@ Remove a note
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveTicketingNoteRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveTicketingNoteResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveTicketingNoteRequest;
+import to.unified.unifiedto.models.operations.RemoveTicketingNoteResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -302,11 +308,12 @@ Update a note
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateTicketingNoteRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateTicketingNoteResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateTicketingNoteRequest;
+import to.unified.unifiedto.models.operations.UpdateTicketingNoteResponse;
+import to.unified.unifiedto.models.shared.Security;
+import to.unified.unifiedto.models.shared.TicketingNote;
 
 public class Application {
 
@@ -319,6 +326,8 @@ public class Application {
             .build();
 
         UpdateTicketingNoteRequest req = UpdateTicketingNoteRequest.builder()
+                .ticketingNote(TicketingNote.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

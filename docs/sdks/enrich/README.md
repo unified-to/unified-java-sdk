@@ -17,11 +17,11 @@ Retrieve enrichment information for a company
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesRequest;
-import com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListEnrichCompaniesRequest;
+import to.unified.unifiedto.models.operations.ListEnrichCompaniesResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -73,11 +73,11 @@ Retrieve enrichment information for a person
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleRequest;
-import com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListEnrichPeopleRequest;
+import to.unified.unifiedto.models.operations.ListEnrichPeopleResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 

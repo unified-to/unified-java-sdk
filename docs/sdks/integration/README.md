@@ -18,11 +18,11 @@ Returns an authorization URL for the specified integration.  Once a successful a
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthRequest;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetUnifiedIntegrationAuthRequest;
+import to.unified.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -75,11 +75,11 @@ No authentication required as this is to be used by front-end interface
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesRequest;
-import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesRequest;
+import to.unified.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -131,11 +131,11 @@ Returns all integrations
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListUnifiedIntegrationsRequest;
+import to.unified.unifiedto.models.operations.ListUnifiedIntegrationsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 

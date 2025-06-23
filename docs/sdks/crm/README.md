@@ -51,11 +51,12 @@ Create a company
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateCrmCompanyRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateCrmCompanyResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateCrmCompanyRequest;
+import to.unified.unifiedto.models.operations.CreateCrmCompanyResponse;
+import to.unified.unifiedto.models.shared.CrmCompany;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -68,6 +69,8 @@ public class Application {
             .build();
 
         CreateCrmCompanyRequest req = CreateCrmCompanyRequest.builder()
+                .crmCompany(CrmCompany.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -107,11 +110,12 @@ Create a contact
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateCrmContactRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateCrmContactResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateCrmContactRequest;
+import to.unified.unifiedto.models.operations.CreateCrmContactResponse;
+import to.unified.unifiedto.models.shared.CrmContact;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -124,6 +128,8 @@ public class Application {
             .build();
 
         CreateCrmContactRequest req = CreateCrmContactRequest.builder()
+                .crmContact(CrmContact.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -163,11 +169,12 @@ Create a deal
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateCrmDealRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateCrmDealResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateCrmDealRequest;
+import to.unified.unifiedto.models.operations.CreateCrmDealResponse;
+import to.unified.unifiedto.models.shared.CrmDeal;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -180,6 +187,8 @@ public class Application {
             .build();
 
         CreateCrmDealRequest req = CreateCrmDealRequest.builder()
+                .crmDeal(CrmDeal.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -219,11 +228,12 @@ Create an event
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateCrmEventRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateCrmEventResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateCrmEventRequest;
+import to.unified.unifiedto.models.operations.CreateCrmEventResponse;
+import to.unified.unifiedto.models.shared.CrmEvent;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -236,6 +246,8 @@ public class Application {
             .build();
 
         CreateCrmEventRequest req = CreateCrmEventRequest.builder()
+                .crmEvent(CrmEvent.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -275,11 +287,12 @@ Create a lead
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateCrmLeadRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateCrmLeadResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateCrmLeadRequest;
+import to.unified.unifiedto.models.operations.CreateCrmLeadResponse;
+import to.unified.unifiedto.models.shared.CrmLead;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -292,6 +305,8 @@ public class Application {
             .build();
 
         CreateCrmLeadRequest req = CreateCrmLeadRequest.builder()
+                .crmLead(CrmLead.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -331,11 +346,12 @@ Create a pipeline
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateCrmPipelineRequest;
+import to.unified.unifiedto.models.operations.CreateCrmPipelineResponse;
+import to.unified.unifiedto.models.shared.CrmPipeline;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -348,6 +364,8 @@ public class Application {
             .build();
 
         CreateCrmPipelineRequest req = CreateCrmPipelineRequest.builder()
+                .crmPipeline(CrmPipeline.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -387,11 +405,11 @@ Retrieve a company
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetCrmCompanyRequest;
-import com.unifiedapi.unifiedto.models.operations.GetCrmCompanyResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetCrmCompanyRequest;
+import to.unified.unifiedto.models.operations.GetCrmCompanyResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -444,11 +462,11 @@ Retrieve a contact
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetCrmContactRequest;
-import com.unifiedapi.unifiedto.models.operations.GetCrmContactResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetCrmContactRequest;
+import to.unified.unifiedto.models.operations.GetCrmContactResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -501,11 +519,11 @@ Retrieve a deal
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetCrmDealRequest;
-import com.unifiedapi.unifiedto.models.operations.GetCrmDealResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetCrmDealRequest;
+import to.unified.unifiedto.models.operations.GetCrmDealResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -558,11 +576,11 @@ Retrieve an event
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetCrmEventRequest;
-import com.unifiedapi.unifiedto.models.operations.GetCrmEventResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetCrmEventRequest;
+import to.unified.unifiedto.models.operations.GetCrmEventResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -615,11 +633,11 @@ Retrieve a lead
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetCrmLeadRequest;
-import com.unifiedapi.unifiedto.models.operations.GetCrmLeadResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetCrmLeadRequest;
+import to.unified.unifiedto.models.operations.GetCrmLeadResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -672,11 +690,11 @@ Retrieve a pipeline
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetCrmPipelineRequest;
-import com.unifiedapi.unifiedto.models.operations.GetCrmPipelineResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetCrmPipelineRequest;
+import to.unified.unifiedto.models.operations.GetCrmPipelineResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -729,11 +747,11 @@ List all companies
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListCrmCompaniesRequest;
-import com.unifiedapi.unifiedto.models.operations.ListCrmCompaniesResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListCrmCompaniesRequest;
+import to.unified.unifiedto.models.operations.ListCrmCompaniesResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -785,11 +803,11 @@ List all contacts
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListCrmContactsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListCrmContactsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListCrmContactsRequest;
+import to.unified.unifiedto.models.operations.ListCrmContactsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -841,11 +859,11 @@ List all deals
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListCrmDealsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListCrmDealsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListCrmDealsRequest;
+import to.unified.unifiedto.models.operations.ListCrmDealsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -897,11 +915,11 @@ List all events
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListCrmEventsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListCrmEventsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListCrmEventsRequest;
+import to.unified.unifiedto.models.operations.ListCrmEventsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -953,11 +971,11 @@ List all leads
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListCrmLeadsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListCrmLeadsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListCrmLeadsRequest;
+import to.unified.unifiedto.models.operations.ListCrmLeadsResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1009,11 +1027,11 @@ List all pipelines
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesRequest;
-import com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListCrmPipelinesRequest;
+import to.unified.unifiedto.models.operations.ListCrmPipelinesResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1065,11 +1083,12 @@ Update a company
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmCompanyRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmCompanyResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchCrmCompanyRequest;
+import to.unified.unifiedto.models.operations.PatchCrmCompanyResponse;
+import to.unified.unifiedto.models.shared.CrmCompany;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1082,6 +1101,8 @@ public class Application {
             .build();
 
         PatchCrmCompanyRequest req = PatchCrmCompanyRequest.builder()
+                .crmCompany(CrmCompany.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1122,11 +1143,12 @@ Update a contact
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmContactRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmContactResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchCrmContactRequest;
+import to.unified.unifiedto.models.operations.PatchCrmContactResponse;
+import to.unified.unifiedto.models.shared.CrmContact;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1139,6 +1161,8 @@ public class Application {
             .build();
 
         PatchCrmContactRequest req = PatchCrmContactRequest.builder()
+                .crmContact(CrmContact.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1179,11 +1203,12 @@ Update a deal
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmDealRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmDealResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchCrmDealRequest;
+import to.unified.unifiedto.models.operations.PatchCrmDealResponse;
+import to.unified.unifiedto.models.shared.CrmDeal;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1196,6 +1221,8 @@ public class Application {
             .build();
 
         PatchCrmDealRequest req = PatchCrmDealRequest.builder()
+                .crmDeal(CrmDeal.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1236,11 +1263,12 @@ Update an event
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmEventRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmEventResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchCrmEventRequest;
+import to.unified.unifiedto.models.operations.PatchCrmEventResponse;
+import to.unified.unifiedto.models.shared.CrmEvent;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1253,6 +1281,8 @@ public class Application {
             .build();
 
         PatchCrmEventRequest req = PatchCrmEventRequest.builder()
+                .crmEvent(CrmEvent.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1293,11 +1323,12 @@ Update a lead
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmLeadRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmLeadResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchCrmLeadRequest;
+import to.unified.unifiedto.models.operations.PatchCrmLeadResponse;
+import to.unified.unifiedto.models.shared.CrmLead;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1310,6 +1341,8 @@ public class Application {
             .build();
 
         PatchCrmLeadRequest req = PatchCrmLeadRequest.builder()
+                .crmLead(CrmLead.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1350,11 +1383,12 @@ Update a pipeline
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchCrmPipelineRequest;
+import to.unified.unifiedto.models.operations.PatchCrmPipelineResponse;
+import to.unified.unifiedto.models.shared.CrmPipeline;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1367,6 +1401,8 @@ public class Application {
             .build();
 
         PatchCrmPipelineRequest req = PatchCrmPipelineRequest.builder()
+                .crmPipeline(CrmPipeline.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1407,11 +1443,11 @@ Remove a company
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveCrmCompanyRequest;
+import to.unified.unifiedto.models.operations.RemoveCrmCompanyResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1462,11 +1498,11 @@ Remove a contact
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveCrmContactRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveCrmContactResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveCrmContactRequest;
+import to.unified.unifiedto.models.operations.RemoveCrmContactResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1517,11 +1553,11 @@ Remove a deal
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveCrmDealRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveCrmDealResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveCrmDealRequest;
+import to.unified.unifiedto.models.operations.RemoveCrmDealResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1572,11 +1608,11 @@ Remove an event
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveCrmEventRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveCrmEventResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveCrmEventRequest;
+import to.unified.unifiedto.models.operations.RemoveCrmEventResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1627,11 +1663,11 @@ Remove a lead
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveCrmLeadRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveCrmLeadResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveCrmLeadRequest;
+import to.unified.unifiedto.models.operations.RemoveCrmLeadResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1682,11 +1718,11 @@ Remove a pipeline
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveCrmPipelineRequest;
+import to.unified.unifiedto.models.operations.RemoveCrmPipelineResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1737,11 +1773,12 @@ Update a company
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateCrmCompanyRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateCrmCompanyResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateCrmCompanyRequest;
+import to.unified.unifiedto.models.operations.UpdateCrmCompanyResponse;
+import to.unified.unifiedto.models.shared.CrmCompany;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1754,6 +1791,8 @@ public class Application {
             .build();
 
         UpdateCrmCompanyRequest req = UpdateCrmCompanyRequest.builder()
+                .crmCompany(CrmCompany.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1794,11 +1833,12 @@ Update a contact
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateCrmContactRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateCrmContactResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateCrmContactRequest;
+import to.unified.unifiedto.models.operations.UpdateCrmContactResponse;
+import to.unified.unifiedto.models.shared.CrmContact;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1811,6 +1851,8 @@ public class Application {
             .build();
 
         UpdateCrmContactRequest req = UpdateCrmContactRequest.builder()
+                .crmContact(CrmContact.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1851,11 +1893,12 @@ Update a deal
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateCrmDealRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateCrmDealResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateCrmDealRequest;
+import to.unified.unifiedto.models.operations.UpdateCrmDealResponse;
+import to.unified.unifiedto.models.shared.CrmDeal;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1868,6 +1911,8 @@ public class Application {
             .build();
 
         UpdateCrmDealRequest req = UpdateCrmDealRequest.builder()
+                .crmDeal(CrmDeal.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1908,11 +1953,12 @@ Update an event
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateCrmEventRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateCrmEventResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateCrmEventRequest;
+import to.unified.unifiedto.models.operations.UpdateCrmEventResponse;
+import to.unified.unifiedto.models.shared.CrmEvent;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1925,6 +1971,8 @@ public class Application {
             .build();
 
         UpdateCrmEventRequest req = UpdateCrmEventRequest.builder()
+                .crmEvent(CrmEvent.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -1965,11 +2013,12 @@ Update a lead
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateCrmLeadRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateCrmLeadResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateCrmLeadRequest;
+import to.unified.unifiedto.models.operations.UpdateCrmLeadResponse;
+import to.unified.unifiedto.models.shared.CrmLead;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -1982,6 +2031,8 @@ public class Application {
             .build();
 
         UpdateCrmLeadRequest req = UpdateCrmLeadRequest.builder()
+                .crmLead(CrmLead.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -2022,11 +2073,12 @@ Update a pipeline
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateCrmPipelineRequest;
+import to.unified.unifiedto.models.operations.UpdateCrmPipelineResponse;
+import to.unified.unifiedto.models.shared.CrmPipeline;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -2039,6 +2091,8 @@ public class Application {
             .build();
 
         UpdateCrmPipelineRequest req = UpdateCrmPipelineRequest.builder()
+                .crmPipeline(CrmPipeline.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();

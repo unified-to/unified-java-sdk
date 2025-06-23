@@ -21,11 +21,12 @@ Create an invoice
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateAccountingInvoiceRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateAccountingInvoiceResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.CreateAccountingInvoiceRequest;
+import to.unified.unifiedto.models.operations.CreateAccountingInvoiceResponse;
+import to.unified.unifiedto.models.shared.AccountingInvoice;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -38,6 +39,8 @@ public class Application {
             .build();
 
         CreateAccountingInvoiceRequest req = CreateAccountingInvoiceRequest.builder()
+                .accountingInvoice(AccountingInvoice.builder()
+                    .build())
                 .connectionId("<id>")
                 .build();
 
@@ -77,11 +80,11 @@ Retrieve an invoice
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetAccountingInvoiceRequest;
-import com.unifiedapi.unifiedto.models.operations.GetAccountingInvoiceResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.GetAccountingInvoiceRequest;
+import to.unified.unifiedto.models.operations.GetAccountingInvoiceResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -134,11 +137,11 @@ List all invoices
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListAccountingInvoicesRequest;
-import com.unifiedapi.unifiedto.models.operations.ListAccountingInvoicesResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.ListAccountingInvoicesRequest;
+import to.unified.unifiedto.models.operations.ListAccountingInvoicesResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -190,11 +193,12 @@ Update an invoice
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchAccountingInvoiceRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchAccountingInvoiceResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.PatchAccountingInvoiceRequest;
+import to.unified.unifiedto.models.operations.PatchAccountingInvoiceResponse;
+import to.unified.unifiedto.models.shared.AccountingInvoice;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -207,6 +211,8 @@ public class Application {
             .build();
 
         PatchAccountingInvoiceRequest req = PatchAccountingInvoiceRequest.builder()
+                .accountingInvoice(AccountingInvoice.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
@@ -247,11 +253,11 @@ Remove an invoice
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveAccountingInvoiceRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveAccountingInvoiceResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.RemoveAccountingInvoiceRequest;
+import to.unified.unifiedto.models.operations.RemoveAccountingInvoiceResponse;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -302,11 +308,12 @@ Update an invoice
 ```java
 package hello.world;
 
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateAccountingInvoiceRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateAccountingInvoiceResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
+import to.unified.unifiedto.UnifiedTo;
+import to.unified.unifiedto.models.operations.UpdateAccountingInvoiceRequest;
+import to.unified.unifiedto.models.operations.UpdateAccountingInvoiceResponse;
+import to.unified.unifiedto.models.shared.AccountingInvoice;
+import to.unified.unifiedto.models.shared.Security;
 
 public class Application {
 
@@ -319,6 +326,8 @@ public class Application {
             .build();
 
         UpdateAccountingInvoiceRequest req = UpdateAccountingInvoiceRequest.builder()
+                .accountingInvoice(AccountingInvoice.builder()
+                    .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
