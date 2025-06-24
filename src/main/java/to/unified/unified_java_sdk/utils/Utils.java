@@ -89,7 +89,7 @@ public final class Utils {
     }
     
     public static <T> String generateURL(Class<T> type, String baseURL, String path, JsonNullable<? extends T> params,
-            Map<String, Map<String, Map<String, Object>>> globals) throws JsonProcessingException, IllegalArgumentException, IllegalAccessException {
+            Globals globals) throws JsonProcessingException, IllegalArgumentException, IllegalAccessException {
         if (params.isPresent() && params.get() != null) {
             return generateURL(type, baseURL, path, params.get(), globals);
         } else {
@@ -98,7 +98,7 @@ public final class Utils {
     }
     
     public static <T> String generateURL(Class<T> type, String baseURL, String path, Optional<? extends T> params,
-            Map<String, Map<String, Map<String, Object>>> globals) throws JsonProcessingException, IllegalArgumentException, IllegalAccessException {
+            Globals globals) throws JsonProcessingException, IllegalArgumentException, IllegalAccessException {
         if (params.isPresent()) {
             return generateURL(type, baseURL, path, params.get(), globals);
         } else {
@@ -107,7 +107,7 @@ public final class Utils {
     }
 
     public static <T> String generateURL(Class<T> type, String baseURL, String path, T params,
-            Map<String, Map<String, Map<String, Object>>> globals)
+            Globals globals)
             throws IllegalArgumentException, IllegalAccessException, JsonProcessingException {
         if (baseURL != null && baseURL.endsWith("/")) {
             baseURL = baseURL.substring(0, baseURL.length() - 1);
@@ -207,7 +207,14 @@ public final class Utils {
                 }
             }
         }
-
+        // include all global params in pathParams if not already present
+        if (globals != null) {
+            globals.pathParamsAsStream()
+                .filter(entry -> !pathParams.containsKey(entry.getKey()))
+                .forEach(entry -> pathParams.put(entry.getKey(), //
+                            pathEncode(entry.getValue(), false)));
+        }
+        
         return baseURL + templateUrl(path, pathParams);
     }
     
@@ -265,7 +272,7 @@ public final class Utils {
     }
     
     public static <T extends Object> List<QueryParameter> getQueryParams(Class<T> type, Optional<? extends T> params,
-            Map<String, Map<String, Map<String, Object>>> globals) throws Exception {
+            Globals globals) throws Exception {
         if (params.isEmpty()) {
             return Collections.emptyList();
         } else {
@@ -274,7 +281,7 @@ public final class Utils {
     }
     
     public static <T extends Object> List<QueryParameter> getQueryParams(Class<T> type, JsonNullable<? extends T> params,
-            Map<String, Map<String, Map<String, Object>>> globals) throws Exception {
+            Globals globals) throws Exception {
         if (!params.isPresent() || params.get() == null) {
             return Collections.emptyList();
         } else {
@@ -283,7 +290,7 @@ public final class Utils {
     }
 
     public static <T extends Object> List<QueryParameter> getQueryParams(Class<T> type, T params,
-            Map<String, Map<String, Map<String, Object>>> globals) throws Exception {
+            Globals globals) throws Exception {
         return QueryParameters.parseQueryParams(type, params, globals);
     }
 
@@ -316,7 +323,7 @@ public final class Utils {
         return sb.toString().replace(DOLLAR_MARKER, "$");
     }
 
-    public static Map<String, List<String>> getHeadersFromMetadata(Object headers, Map<String, Map<String, Map<String, Object>>> globals) throws Exception {
+    public static Map<String, List<String>> getHeadersFromMetadata(Object headers, Globals globals) throws Exception {
         if (headers == null) {
             return Collections.emptyMap();
         }
@@ -441,6 +448,14 @@ public final class Utils {
                 }
             }
         }
+        
+        // include all global headers in result if not already present
+        if (globals != null) {
+            globals.headerParamsAsStream()
+                .filter(entry -> !result.containsKey(entry.getKey()))
+                .forEach(entry -> result.put(entry.getKey(), //
+                            Arrays.asList(entry.getValue())));
+        }
 
         return result;
     }
@@ -467,17 +482,10 @@ public final class Utils {
     }
 
     public static Object populateGlobal(Object value, String fieldName, String paramType,
-            Map<String, Map<String, Map<String, Object>>> globals) {
-        if (value == null &&
-                globals != null &&
-                globals.containsKey("parameters") &&
-                globals.get("parameters").containsKey(paramType)) {
-            Object globalVal = globals.get("parameters").get(paramType).get(fieldName);
-            if (globalVal != null) {
-                value = globalVal;
-            }
-        }
-
+            Globals globals) {
+        if (value == null) {
+            return globals.getParam(paramType, fieldName).orElse(null);
+        } 
         return value;
     }
 

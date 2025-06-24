@@ -58,6 +58,10 @@ public class MessagingChannel {
     private Optional<String> parentChannelId;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("parent_id")
+    private Optional<String> parentId;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
@@ -80,6 +84,7 @@ public class MessagingChannel {
             @JsonProperty("members") Optional<? extends List<MessagingMember>> members,
             @JsonProperty("name") String name,
             @JsonProperty("parent_channel_id") Optional<String> parentChannelId,
+            @JsonProperty("parent_id") Optional<String> parentId,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
             @JsonProperty("web_url") Optional<String> webUrl) {
@@ -92,6 +97,7 @@ public class MessagingChannel {
         Utils.checkNotNull(members, "members");
         Utils.checkNotNull(name, "name");
         Utils.checkNotNull(parentChannelId, "parentChannelId");
+        Utils.checkNotNull(parentId, "parentId");
         Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(updatedAt, "updatedAt");
         Utils.checkNotNull(webUrl, "webUrl");
@@ -104,6 +110,7 @@ public class MessagingChannel {
         this.members = members;
         this.name = name;
         this.parentChannelId = parentChannelId;
+        this.parentId = parentId;
         this.raw = raw;
         this.updatedAt = updatedAt;
         this.webUrl = webUrl;
@@ -111,7 +118,7 @@ public class MessagingChannel {
     
     public MessagingChannel(
             String name) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), name, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), name, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -158,6 +165,11 @@ public class MessagingChannel {
     @JsonIgnore
     public Optional<String> parentChannelId() {
         return parentChannelId;
+    }
+
+    @JsonIgnore
+    public Optional<String> parentId() {
+        return parentId;
     }
 
     @SuppressWarnings("unchecked")
@@ -282,6 +294,18 @@ public class MessagingChannel {
         return this;
     }
 
+    public MessagingChannel withParentId(String parentId) {
+        Utils.checkNotNull(parentId, "parentId");
+        this.parentId = Optional.ofNullable(parentId);
+        return this;
+    }
+
+    public MessagingChannel withParentId(Optional<String> parentId) {
+        Utils.checkNotNull(parentId, "parentId");
+        this.parentId = parentId;
+        return this;
+    }
+
     public MessagingChannel withRaw(Map<String, Object> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
@@ -338,6 +362,7 @@ public class MessagingChannel {
             Objects.deepEquals(this.members, other.members) &&
             Objects.deepEquals(this.name, other.name) &&
             Objects.deepEquals(this.parentChannelId, other.parentChannelId) &&
+            Objects.deepEquals(this.parentId, other.parentId) &&
             Objects.deepEquals(this.raw, other.raw) &&
             Objects.deepEquals(this.updatedAt, other.updatedAt) &&
             Objects.deepEquals(this.webUrl, other.webUrl);
@@ -355,6 +380,7 @@ public class MessagingChannel {
             members,
             name,
             parentChannelId,
+            parentId,
             raw,
             updatedAt,
             webUrl);
@@ -372,6 +398,7 @@ public class MessagingChannel {
                 "members", members,
                 "name", name,
                 "parentChannelId", parentChannelId,
+                "parentId", parentId,
                 "raw", raw,
                 "updatedAt", updatedAt,
                 "webUrl", webUrl);
@@ -396,6 +423,8 @@ public class MessagingChannel {
         private String name;
  
         private Optional<String> parentChannelId = Optional.empty();
+ 
+        private Optional<String> parentId = Optional.empty();
  
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
  
@@ -509,6 +538,18 @@ public class MessagingChannel {
             return this;
         }
 
+        public Builder parentId(String parentId) {
+            Utils.checkNotNull(parentId, "parentId");
+            this.parentId = Optional.ofNullable(parentId);
+            return this;
+        }
+
+        public Builder parentId(Optional<String> parentId) {
+            Utils.checkNotNull(parentId, "parentId");
+            this.parentId = parentId;
+            return this;
+        }
+
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
@@ -556,6 +597,7 @@ public class MessagingChannel {
                 members,
                 name,
                 parentChannelId,
+                parentId,
                 raw,
                 updatedAt,
                 webUrl);
