@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.PatchPassthroughRawOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchPassthroughRawRequestBuilder {
 
     private PatchPassthroughRawRequest request;
-    private final SDKMethodInterfaces.MethodCallPatchPassthroughRaw sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public PatchPassthroughRawRequestBuilder(SDKMethodInterfaces.MethodCallPatchPassthroughRaw sdk) {
-        this.sdk = sdk;
+    public PatchPassthroughRawRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public PatchPassthroughRawRequestBuilder request(PatchPassthroughRawRequest request) {
@@ -22,8 +26,10 @@ public class PatchPassthroughRawRequestBuilder {
     }
 
     public PatchPassthroughRawResponse call() throws Exception {
+        
+        RequestOperation<PatchPassthroughRawRequest, PatchPassthroughRawResponse> operation
+              = new PatchPassthroughRawOperation( sdkConfiguration);
 
-        return sdk.patchPassthroughRaw(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

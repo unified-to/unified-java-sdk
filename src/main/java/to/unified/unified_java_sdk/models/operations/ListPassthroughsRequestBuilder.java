@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.ListPassthroughsOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListPassthroughsRequestBuilder {
 
     private ListPassthroughsRequest request;
-    private final SDKMethodInterfaces.MethodCallListPassthroughs sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public ListPassthroughsRequestBuilder(SDKMethodInterfaces.MethodCallListPassthroughs sdk) {
-        this.sdk = sdk;
+    public ListPassthroughsRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public ListPassthroughsRequestBuilder request(ListPassthroughsRequest request) {
@@ -22,8 +26,10 @@ public class ListPassthroughsRequestBuilder {
     }
 
     public ListPassthroughsResponse call() throws Exception {
+        
+        RequestOperation<ListPassthroughsRequest, ListPassthroughsResponse> operation
+              = new ListPassthroughsOperation( sdkConfiguration);
 
-        return sdk.listPassthroughs(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

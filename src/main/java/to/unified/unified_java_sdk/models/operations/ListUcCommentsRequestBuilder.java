@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.ListUcCommentsOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListUcCommentsRequestBuilder {
 
     private ListUcCommentsRequest request;
-    private final SDKMethodInterfaces.MethodCallListUcComments sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public ListUcCommentsRequestBuilder(SDKMethodInterfaces.MethodCallListUcComments sdk) {
-        this.sdk = sdk;
+    public ListUcCommentsRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public ListUcCommentsRequestBuilder request(ListUcCommentsRequest request) {
@@ -22,8 +26,10 @@ public class ListUcCommentsRequestBuilder {
     }
 
     public ListUcCommentsResponse call() throws Exception {
+        
+        RequestOperation<ListUcCommentsRequest, ListUcCommentsResponse> operation
+              = new ListUcCommentsOperation( sdkConfiguration);
 
-        return sdk.listUcComments(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

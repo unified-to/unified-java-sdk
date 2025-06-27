@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.CreateCalendarEventOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateCalendarEventRequestBuilder {
 
     private CreateCalendarEventRequest request;
-    private final SDKMethodInterfaces.MethodCallCreateCalendarEvent sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public CreateCalendarEventRequestBuilder(SDKMethodInterfaces.MethodCallCreateCalendarEvent sdk) {
-        this.sdk = sdk;
+    public CreateCalendarEventRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public CreateCalendarEventRequestBuilder request(CreateCalendarEventRequest request) {
@@ -22,8 +26,10 @@ public class CreateCalendarEventRequestBuilder {
     }
 
     public CreateCalendarEventResponse call() throws Exception {
+        
+        RequestOperation<CreateCalendarEventRequest, CreateCalendarEventResponse> operation
+              = new CreateCalendarEventOperation( sdkConfiguration);
 
-        return sdk.createCalendarEvent(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

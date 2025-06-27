@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.ListEnrichPeopleOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListEnrichPeopleRequestBuilder {
 
     private ListEnrichPeopleRequest request;
-    private final SDKMethodInterfaces.MethodCallListEnrichPeople sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public ListEnrichPeopleRequestBuilder(SDKMethodInterfaces.MethodCallListEnrichPeople sdk) {
-        this.sdk = sdk;
+    public ListEnrichPeopleRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public ListEnrichPeopleRequestBuilder request(ListEnrichPeopleRequest request) {
@@ -22,8 +26,10 @@ public class ListEnrichPeopleRequestBuilder {
     }
 
     public ListEnrichPeopleResponse call() throws Exception {
+        
+        RequestOperation<ListEnrichPeopleRequest, ListEnrichPeopleResponse> operation
+              = new ListEnrichPeopleOperation( sdkConfiguration);
 
-        return sdk.listEnrichPeople(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

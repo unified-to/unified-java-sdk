@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.PatchCommerceItemOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchCommerceItemRequestBuilder {
 
     private PatchCommerceItemRequest request;
-    private final SDKMethodInterfaces.MethodCallPatchCommerceItem sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public PatchCommerceItemRequestBuilder(SDKMethodInterfaces.MethodCallPatchCommerceItem sdk) {
-        this.sdk = sdk;
+    public PatchCommerceItemRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public PatchCommerceItemRequestBuilder request(PatchCommerceItemRequest request) {
@@ -22,8 +26,10 @@ public class PatchCommerceItemRequestBuilder {
     }
 
     public PatchCommerceItemResponse call() throws Exception {
+        
+        RequestOperation<PatchCommerceItemRequest, PatchCommerceItemResponse> operation
+              = new PatchCommerceItemOperation( sdkConfiguration);
 
-        return sdk.patchCommerceItem(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

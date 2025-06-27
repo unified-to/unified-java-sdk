@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveAtsScorecardOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveAtsScorecardRequestBuilder {
 
     private RemoveAtsScorecardRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveAtsScorecard sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveAtsScorecardRequestBuilder(SDKMethodInterfaces.MethodCallRemoveAtsScorecard sdk) {
-        this.sdk = sdk;
+    public RemoveAtsScorecardRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveAtsScorecardRequestBuilder request(RemoveAtsScorecardRequest request) {
@@ -22,8 +26,10 @@ public class RemoveAtsScorecardRequestBuilder {
     }
 
     public RemoveAtsScorecardResponse call() throws Exception {
+        
+        RequestOperation<RemoveAtsScorecardRequest, RemoveAtsScorecardResponse> operation
+              = new RemoveAtsScorecardOperation( sdkConfiguration);
 
-        return sdk.removeAtsScorecard(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.PatchStorageFileOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchStorageFileRequestBuilder {
 
     private PatchStorageFileRequest request;
-    private final SDKMethodInterfaces.MethodCallPatchStorageFile sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public PatchStorageFileRequestBuilder(SDKMethodInterfaces.MethodCallPatchStorageFile sdk) {
-        this.sdk = sdk;
+    public PatchStorageFileRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public PatchStorageFileRequestBuilder request(PatchStorageFileRequest request) {
@@ -22,8 +26,10 @@ public class PatchStorageFileRequestBuilder {
     }
 
     public PatchStorageFileResponse call() throws Exception {
+        
+        RequestOperation<PatchStorageFileRequest, PatchStorageFileResponse> operation
+              = new PatchStorageFileOperation( sdkConfiguration);
 
-        return sdk.patchStorageFile(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

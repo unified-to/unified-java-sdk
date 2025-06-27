@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.GetPaymentRefundOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetPaymentRefundRequestBuilder {
 
     private GetPaymentRefundRequest request;
-    private final SDKMethodInterfaces.MethodCallGetPaymentRefund sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public GetPaymentRefundRequestBuilder(SDKMethodInterfaces.MethodCallGetPaymentRefund sdk) {
-        this.sdk = sdk;
+    public GetPaymentRefundRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public GetPaymentRefundRequestBuilder request(GetPaymentRefundRequest request) {
@@ -22,8 +26,10 @@ public class GetPaymentRefundRequestBuilder {
     }
 
     public GetPaymentRefundResponse call() throws Exception {
+        
+        RequestOperation<GetPaymentRefundRequest, GetPaymentRefundResponse> operation
+              = new GetPaymentRefundOperation( sdkConfiguration);
 
-        return sdk.getPaymentRefund(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.ListAccountingOrganizationsOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListAccountingOrganizationsRequestBuilder {
 
     private ListAccountingOrganizationsRequest request;
-    private final SDKMethodInterfaces.MethodCallListAccountingOrganizations sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public ListAccountingOrganizationsRequestBuilder(SDKMethodInterfaces.MethodCallListAccountingOrganizations sdk) {
-        this.sdk = sdk;
+    public ListAccountingOrganizationsRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public ListAccountingOrganizationsRequestBuilder request(ListAccountingOrganizationsRequest request) {
@@ -22,8 +26,10 @@ public class ListAccountingOrganizationsRequestBuilder {
     }
 
     public ListAccountingOrganizationsResponse call() throws Exception {
+        
+        RequestOperation<ListAccountingOrganizationsRequest, ListAccountingOrganizationsResponse> operation
+              = new ListAccountingOrganizationsOperation( sdkConfiguration);
 
-        return sdk.listAccountingOrganizations(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.ListHrisTimeoffsOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListHrisTimeoffsRequestBuilder {
 
     private ListHrisTimeoffsRequest request;
-    private final SDKMethodInterfaces.MethodCallListHrisTimeoffs sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public ListHrisTimeoffsRequestBuilder(SDKMethodInterfaces.MethodCallListHrisTimeoffs sdk) {
-        this.sdk = sdk;
+    public ListHrisTimeoffsRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public ListHrisTimeoffsRequestBuilder request(ListHrisTimeoffsRequest request) {
@@ -22,8 +26,10 @@ public class ListHrisTimeoffsRequestBuilder {
     }
 
     public ListHrisTimeoffsResponse call() throws Exception {
+        
+        RequestOperation<ListHrisTimeoffsRequest, ListHrisTimeoffsResponse> operation
+              = new ListHrisTimeoffsOperation( sdkConfiguration);
 
-        return sdk.listHrisTimeoffs(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.CreateCommerceLocationOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateCommerceLocationRequestBuilder {
 
     private CreateCommerceLocationRequest request;
-    private final SDKMethodInterfaces.MethodCallCreateCommerceLocation sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public CreateCommerceLocationRequestBuilder(SDKMethodInterfaces.MethodCallCreateCommerceLocation sdk) {
-        this.sdk = sdk;
+    public CreateCommerceLocationRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public CreateCommerceLocationRequestBuilder request(CreateCommerceLocationRequest request) {
@@ -22,8 +26,10 @@ public class CreateCommerceLocationRequestBuilder {
     }
 
     public CreateCommerceLocationResponse call() throws Exception {
+        
+        RequestOperation<CreateCommerceLocationRequest, CreateCommerceLocationResponse> operation
+              = new CreateCommerceLocationOperation( sdkConfiguration);
 
-        return sdk.createCommerceLocation(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.ListAtsScorecardsOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListAtsScorecardsRequestBuilder {
 
     private ListAtsScorecardsRequest request;
-    private final SDKMethodInterfaces.MethodCallListAtsScorecards sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public ListAtsScorecardsRequestBuilder(SDKMethodInterfaces.MethodCallListAtsScorecards sdk) {
-        this.sdk = sdk;
+    public ListAtsScorecardsRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public ListAtsScorecardsRequestBuilder request(ListAtsScorecardsRequest request) {
@@ -22,8 +26,10 @@ public class ListAtsScorecardsRequestBuilder {
     }
 
     public ListAtsScorecardsResponse call() throws Exception {
+        
+        RequestOperation<ListAtsScorecardsRequest, ListAtsScorecardsResponse> operation
+              = new ListAtsScorecardsOperation( sdkConfiguration);
 
-        return sdk.listAtsScorecards(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

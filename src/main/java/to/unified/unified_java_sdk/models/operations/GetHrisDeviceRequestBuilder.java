@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.GetHrisDeviceOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetHrisDeviceRequestBuilder {
 
     private GetHrisDeviceRequest request;
-    private final SDKMethodInterfaces.MethodCallGetHrisDevice sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public GetHrisDeviceRequestBuilder(SDKMethodInterfaces.MethodCallGetHrisDevice sdk) {
-        this.sdk = sdk;
+    public GetHrisDeviceRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public GetHrisDeviceRequestBuilder request(GetHrisDeviceRequest request) {
@@ -22,8 +26,10 @@ public class GetHrisDeviceRequestBuilder {
     }
 
     public GetHrisDeviceResponse call() throws Exception {
+        
+        RequestOperation<GetHrisDeviceRequest, GetHrisDeviceResponse> operation
+              = new GetHrisDeviceOperation( sdkConfiguration);
 
-        return sdk.getHrisDevice(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

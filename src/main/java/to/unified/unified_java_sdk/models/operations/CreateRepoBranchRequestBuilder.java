@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.CreateRepoBranchOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateRepoBranchRequestBuilder {
 
     private CreateRepoBranchRequest request;
-    private final SDKMethodInterfaces.MethodCallCreateRepoBranch sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public CreateRepoBranchRequestBuilder(SDKMethodInterfaces.MethodCallCreateRepoBranch sdk) {
-        this.sdk = sdk;
+    public CreateRepoBranchRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public CreateRepoBranchRequestBuilder request(CreateRepoBranchRequest request) {
@@ -22,8 +26,10 @@ public class CreateRepoBranchRequestBuilder {
     }
 
     public CreateRepoBranchResponse call() throws Exception {
+        
+        RequestOperation<CreateRepoBranchRequest, CreateRepoBranchResponse> operation
+              = new CreateRepoBranchOperation( sdkConfiguration);
 
-        return sdk.createRepoBranch(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

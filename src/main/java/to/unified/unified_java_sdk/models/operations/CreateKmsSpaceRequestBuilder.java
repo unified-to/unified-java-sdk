@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.CreateKmsSpaceOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateKmsSpaceRequestBuilder {
 
     private CreateKmsSpaceRequest request;
-    private final SDKMethodInterfaces.MethodCallCreateKmsSpace sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public CreateKmsSpaceRequestBuilder(SDKMethodInterfaces.MethodCallCreateKmsSpace sdk) {
-        this.sdk = sdk;
+    public CreateKmsSpaceRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public CreateKmsSpaceRequestBuilder request(CreateKmsSpaceRequest request) {
@@ -22,8 +26,10 @@ public class CreateKmsSpaceRequestBuilder {
     }
 
     public CreateKmsSpaceResponse call() throws Exception {
+        
+        RequestOperation<CreateKmsSpaceRequest, CreateKmsSpaceResponse> operation
+              = new CreateKmsSpaceOperation( sdkConfiguration);
 
-        return sdk.createKmsSpace(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

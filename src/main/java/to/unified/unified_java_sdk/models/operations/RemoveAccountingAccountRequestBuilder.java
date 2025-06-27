@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveAccountingAccountOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveAccountingAccountRequestBuilder {
 
     private RemoveAccountingAccountRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveAccountingAccount sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveAccountingAccountRequestBuilder(SDKMethodInterfaces.MethodCallRemoveAccountingAccount sdk) {
-        this.sdk = sdk;
+    public RemoveAccountingAccountRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveAccountingAccountRequestBuilder request(RemoveAccountingAccountRequest request) {
@@ -22,8 +26,10 @@ public class RemoveAccountingAccountRequestBuilder {
     }
 
     public RemoveAccountingAccountResponse call() throws Exception {
+        
+        RequestOperation<RemoveAccountingAccountRequest, RemoveAccountingAccountResponse> operation
+              = new RemoveAccountingAccountOperation( sdkConfiguration);
 
-        return sdk.removeAccountingAccount(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.PatchTicketingCustomerOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchTicketingCustomerRequestBuilder {
 
     private PatchTicketingCustomerRequest request;
-    private final SDKMethodInterfaces.MethodCallPatchTicketingCustomer sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public PatchTicketingCustomerRequestBuilder(SDKMethodInterfaces.MethodCallPatchTicketingCustomer sdk) {
-        this.sdk = sdk;
+    public PatchTicketingCustomerRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public PatchTicketingCustomerRequestBuilder request(PatchTicketingCustomerRequest request) {
@@ -22,8 +26,10 @@ public class PatchTicketingCustomerRequestBuilder {
     }
 
     public PatchTicketingCustomerResponse call() throws Exception {
+        
+        RequestOperation<PatchTicketingCustomerRequest, PatchTicketingCustomerResponse> operation
+              = new PatchTicketingCustomerOperation( sdkConfiguration);
 
-        return sdk.patchTicketingCustomer(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

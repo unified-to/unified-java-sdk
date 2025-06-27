@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveUnifiedWebhookOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveUnifiedWebhookRequestBuilder {
 
     private RemoveUnifiedWebhookRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveUnifiedWebhook sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveUnifiedWebhookRequestBuilder(SDKMethodInterfaces.MethodCallRemoveUnifiedWebhook sdk) {
-        this.sdk = sdk;
+    public RemoveUnifiedWebhookRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveUnifiedWebhookRequestBuilder request(RemoveUnifiedWebhookRequest request) {
@@ -22,8 +26,10 @@ public class RemoveUnifiedWebhookRequestBuilder {
     }
 
     public RemoveUnifiedWebhookResponse call() throws Exception {
+        
+        RequestOperation<RemoveUnifiedWebhookRequest, RemoveUnifiedWebhookResponse> operation
+              = new RemoveUnifiedWebhookOperation( sdkConfiguration);
 
-        return sdk.removeUnifiedWebhook(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

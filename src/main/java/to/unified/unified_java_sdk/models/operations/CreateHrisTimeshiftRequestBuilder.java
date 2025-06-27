@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.CreateHrisTimeshiftOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateHrisTimeshiftRequestBuilder {
 
     private CreateHrisTimeshiftRequest request;
-    private final SDKMethodInterfaces.MethodCallCreateHrisTimeshift sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public CreateHrisTimeshiftRequestBuilder(SDKMethodInterfaces.MethodCallCreateHrisTimeshift sdk) {
-        this.sdk = sdk;
+    public CreateHrisTimeshiftRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public CreateHrisTimeshiftRequestBuilder request(CreateHrisTimeshiftRequest request) {
@@ -22,8 +26,10 @@ public class CreateHrisTimeshiftRequestBuilder {
     }
 
     public CreateHrisTimeshiftResponse call() throws Exception {
+        
+        RequestOperation<CreateHrisTimeshiftRequest, CreateHrisTimeshiftResponse> operation
+              = new CreateHrisTimeshiftOperation( sdkConfiguration);
 
-        return sdk.createHrisTimeshift(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

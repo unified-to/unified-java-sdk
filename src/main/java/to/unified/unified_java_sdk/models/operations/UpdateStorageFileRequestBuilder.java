@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.UpdateStorageFileOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdateStorageFileRequestBuilder {
 
     private UpdateStorageFileRequest request;
-    private final SDKMethodInterfaces.MethodCallUpdateStorageFile sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public UpdateStorageFileRequestBuilder(SDKMethodInterfaces.MethodCallUpdateStorageFile sdk) {
-        this.sdk = sdk;
+    public UpdateStorageFileRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public UpdateStorageFileRequestBuilder request(UpdateStorageFileRequest request) {
@@ -22,8 +26,10 @@ public class UpdateStorageFileRequestBuilder {
     }
 
     public UpdateStorageFileResponse call() throws Exception {
+        
+        RequestOperation<UpdateStorageFileRequest, UpdateStorageFileResponse> operation
+              = new UpdateStorageFileOperation( sdkConfiguration);
 
-        return sdk.updateStorageFile(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

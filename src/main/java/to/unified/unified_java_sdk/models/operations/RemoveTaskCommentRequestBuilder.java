@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveTaskCommentOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveTaskCommentRequestBuilder {
 
     private RemoveTaskCommentRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveTaskComment sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveTaskCommentRequestBuilder(SDKMethodInterfaces.MethodCallRemoveTaskComment sdk) {
-        this.sdk = sdk;
+    public RemoveTaskCommentRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveTaskCommentRequestBuilder request(RemoveTaskCommentRequest request) {
@@ -22,8 +26,10 @@ public class RemoveTaskCommentRequestBuilder {
     }
 
     public RemoveTaskCommentResponse call() throws Exception {
+        
+        RequestOperation<RemoveTaskCommentRequest, RemoveTaskCommentResponse> operation
+              = new RemoveTaskCommentOperation( sdkConfiguration);
 
-        return sdk.removeTaskComment(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

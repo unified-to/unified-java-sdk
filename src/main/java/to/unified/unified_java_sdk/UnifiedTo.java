@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.HTTPClient;
 import to.unified.unified_java_sdk.utils.RetryConfig;
+import to.unified.unified_java_sdk.utils.SpeakeasyHTTPClient;
 import to.unified.unified_java_sdk.utils.Utils;
 
 /**
@@ -33,6 +34,8 @@ public class UnifiedTo {
          */
         "https://api-au.unified.to",
     };
+
+    
 
     private final Accounting accounting;
 
@@ -591,7 +594,6 @@ public class UnifiedTo {
     public Webhook webhook() {
         return webhook;
     }
-
     private SDKConfiguration sdkConfiguration;
 
     /**
@@ -686,6 +688,21 @@ public class UnifiedTo {
             this.sdkConfiguration.setRetryConfig(Optional.of(retryConfig));
             return this;
         }
+
+        /**
+         * Enables debug logging for HTTP requests and responses, including JSON body content.
+         *
+         * Convenience method that calls {@link HTTPClient#enableDebugging(boolean)}.
+         * {@link SpeakeasyHTTPClient} honors this setting. If you are using a custom HTTP client,
+         * it is up to the custom client to honor this setting.
+         *
+         * @return The builder instance.
+         */
+        public Builder enableHTTPDebugLogging(boolean enabled) {
+            this.sdkConfiguration.client().enableDebugging(enabled);
+            return this;
+        }
+
         /**
          * Builds a new instance of the SDK.
          *

@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.ListCalendarEventsOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListCalendarEventsRequestBuilder {
 
     private ListCalendarEventsRequest request;
-    private final SDKMethodInterfaces.MethodCallListCalendarEvents sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public ListCalendarEventsRequestBuilder(SDKMethodInterfaces.MethodCallListCalendarEvents sdk) {
-        this.sdk = sdk;
+    public ListCalendarEventsRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public ListCalendarEventsRequestBuilder request(ListCalendarEventsRequest request) {
@@ -22,8 +26,10 @@ public class ListCalendarEventsRequestBuilder {
     }
 
     public ListCalendarEventsResponse call() throws Exception {
+        
+        RequestOperation<ListCalendarEventsRequest, ListCalendarEventsResponse> operation
+              = new ListCalendarEventsOperation( sdkConfiguration);
 
-        return sdk.listCalendarEvents(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

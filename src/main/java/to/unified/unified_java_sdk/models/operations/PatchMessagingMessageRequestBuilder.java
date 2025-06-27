@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.PatchMessagingMessageOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchMessagingMessageRequestBuilder {
 
     private PatchMessagingMessageRequest request;
-    private final SDKMethodInterfaces.MethodCallPatchMessagingMessage sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public PatchMessagingMessageRequestBuilder(SDKMethodInterfaces.MethodCallPatchMessagingMessage sdk) {
-        this.sdk = sdk;
+    public PatchMessagingMessageRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public PatchMessagingMessageRequestBuilder request(PatchMessagingMessageRequest request) {
@@ -22,8 +26,10 @@ public class PatchMessagingMessageRequestBuilder {
     }
 
     public PatchMessagingMessageResponse call() throws Exception {
+        
+        RequestOperation<PatchMessagingMessageRequest, PatchMessagingMessageResponse> operation
+              = new PatchMessagingMessageOperation( sdkConfiguration);
 
-        return sdk.patchMessagingMessage(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

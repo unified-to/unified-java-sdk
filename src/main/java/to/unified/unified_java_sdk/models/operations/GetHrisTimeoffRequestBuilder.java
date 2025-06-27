@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.GetHrisTimeoffOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetHrisTimeoffRequestBuilder {
 
     private GetHrisTimeoffRequest request;
-    private final SDKMethodInterfaces.MethodCallGetHrisTimeoff sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public GetHrisTimeoffRequestBuilder(SDKMethodInterfaces.MethodCallGetHrisTimeoff sdk) {
-        this.sdk = sdk;
+    public GetHrisTimeoffRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public GetHrisTimeoffRequestBuilder request(GetHrisTimeoffRequest request) {
@@ -22,8 +26,10 @@ public class GetHrisTimeoffRequestBuilder {
     }
 
     public GetHrisTimeoffResponse call() throws Exception {
+        
+        RequestOperation<GetHrisTimeoffRequest, GetHrisTimeoffResponse> operation
+              = new GetHrisTimeoffOperation( sdkConfiguration);
 
-        return sdk.getHrisTimeoff(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

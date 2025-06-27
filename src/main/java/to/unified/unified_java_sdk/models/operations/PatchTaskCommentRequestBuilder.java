@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.PatchTaskCommentOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchTaskCommentRequestBuilder {
 
     private PatchTaskCommentRequest request;
-    private final SDKMethodInterfaces.MethodCallPatchTaskComment sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public PatchTaskCommentRequestBuilder(SDKMethodInterfaces.MethodCallPatchTaskComment sdk) {
-        this.sdk = sdk;
+    public PatchTaskCommentRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public PatchTaskCommentRequestBuilder request(PatchTaskCommentRequest request) {
@@ -22,8 +26,10 @@ public class PatchTaskCommentRequestBuilder {
     }
 
     public PatchTaskCommentResponse call() throws Exception {
+        
+        RequestOperation<PatchTaskCommentRequest, PatchTaskCommentResponse> operation
+              = new PatchTaskCommentOperation( sdkConfiguration);
 
-        return sdk.patchTaskComment(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

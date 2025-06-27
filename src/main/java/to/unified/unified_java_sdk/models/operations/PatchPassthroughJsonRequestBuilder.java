@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.PatchPassthroughJsonOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchPassthroughJsonRequestBuilder {
 
     private PatchPassthroughJsonRequest request;
-    private final SDKMethodInterfaces.MethodCallPatchPassthroughJson sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public PatchPassthroughJsonRequestBuilder(SDKMethodInterfaces.MethodCallPatchPassthroughJson sdk) {
-        this.sdk = sdk;
+    public PatchPassthroughJsonRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public PatchPassthroughJsonRequestBuilder request(PatchPassthroughJsonRequest request) {
@@ -22,8 +26,10 @@ public class PatchPassthroughJsonRequestBuilder {
     }
 
     public PatchPassthroughJsonResponse call() throws Exception {
+        
+        RequestOperation<PatchPassthroughJsonRequest, PatchPassthroughJsonResponse> operation
+              = new PatchPassthroughJsonOperation( sdkConfiguration);
 
-        return sdk.patchPassthroughJson(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

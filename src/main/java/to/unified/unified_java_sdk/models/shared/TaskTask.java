@@ -61,6 +61,10 @@ public class TaskTask {
     private Optional<String> id;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private Optional<? extends List<TaskMetadata>> metadata;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
 
@@ -111,6 +115,7 @@ public class TaskTask {
             @JsonProperty("follower_user_ids") Optional<? extends List<String>> followerUserIds,
             @JsonProperty("group_ids") Optional<? extends List<String>> groupIds,
             @JsonProperty("id") Optional<String> id,
+            @JsonProperty("metadata") Optional<? extends List<TaskMetadata>> metadata,
             @JsonProperty("name") Optional<String> name,
             @JsonProperty("notes") Optional<String> notes,
             @JsonProperty("parent_id") Optional<String> parentId,
@@ -130,6 +135,7 @@ public class TaskTask {
         Utils.checkNotNull(followerUserIds, "followerUserIds");
         Utils.checkNotNull(groupIds, "groupIds");
         Utils.checkNotNull(id, "id");
+        Utils.checkNotNull(metadata, "metadata");
         Utils.checkNotNull(name, "name");
         Utils.checkNotNull(notes, "notes");
         Utils.checkNotNull(parentId, "parentId");
@@ -149,6 +155,7 @@ public class TaskTask {
         this.followerUserIds = followerUserIds;
         this.groupIds = groupIds;
         this.id = id;
+        this.metadata = metadata;
         this.name = name;
         this.notes = notes;
         this.parentId = parentId;
@@ -162,7 +169,7 @@ public class TaskTask {
     }
     
     public TaskTask() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -215,6 +222,12 @@ public class TaskTask {
     @JsonIgnore
     public Optional<String> id() {
         return id;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<TaskMetadata>> metadata() {
+        return (Optional<List<TaskMetadata>>) metadata;
     }
 
     @JsonIgnore
@@ -388,6 +401,18 @@ public class TaskTask {
         return this;
     }
 
+    public TaskTask withMetadata(List<TaskMetadata> metadata) {
+        Utils.checkNotNull(metadata, "metadata");
+        this.metadata = Optional.ofNullable(metadata);
+        return this;
+    }
+
+    public TaskTask withMetadata(Optional<? extends List<TaskMetadata>> metadata) {
+        Utils.checkNotNull(metadata, "metadata");
+        this.metadata = metadata;
+        return this;
+    }
+
     public TaskTask withName(String name) {
         Utils.checkNotNull(name, "name");
         this.name = Optional.ofNullable(name);
@@ -528,6 +553,7 @@ public class TaskTask {
             Objects.deepEquals(this.followerUserIds, other.followerUserIds) &&
             Objects.deepEquals(this.groupIds, other.groupIds) &&
             Objects.deepEquals(this.id, other.id) &&
+            Objects.deepEquals(this.metadata, other.metadata) &&
             Objects.deepEquals(this.name, other.name) &&
             Objects.deepEquals(this.notes, other.notes) &&
             Objects.deepEquals(this.parentId, other.parentId) &&
@@ -552,6 +578,7 @@ public class TaskTask {
             followerUserIds,
             groupIds,
             id,
+            metadata,
             name,
             notes,
             parentId,
@@ -576,6 +603,7 @@ public class TaskTask {
                 "followerUserIds", followerUserIds,
                 "groupIds", groupIds,
                 "id", id,
+                "metadata", metadata,
                 "name", name,
                 "notes", notes,
                 "parentId", parentId,
@@ -607,6 +635,8 @@ public class TaskTask {
         private Optional<? extends List<String>> groupIds = Optional.empty();
  
         private Optional<String> id = Optional.empty();
+ 
+        private Optional<? extends List<TaskMetadata>> metadata = Optional.empty();
  
         private Optional<String> name = Optional.empty();
  
@@ -746,6 +776,18 @@ public class TaskTask {
             return this;
         }
 
+        public Builder metadata(List<TaskMetadata> metadata) {
+            Utils.checkNotNull(metadata, "metadata");
+            this.metadata = Optional.ofNullable(metadata);
+            return this;
+        }
+
+        public Builder metadata(Optional<? extends List<TaskMetadata>> metadata) {
+            Utils.checkNotNull(metadata, "metadata");
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = Optional.ofNullable(name);
@@ -877,6 +919,7 @@ public class TaskTask {
                 followerUserIds,
                 groupIds,
                 id,
+                metadata,
                 name,
                 notes,
                 parentId,

@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.ListUnifiedConnectionsOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListUnifiedConnectionsRequestBuilder {
 
     private ListUnifiedConnectionsRequest request;
-    private final SDKMethodInterfaces.MethodCallListUnifiedConnections sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public ListUnifiedConnectionsRequestBuilder(SDKMethodInterfaces.MethodCallListUnifiedConnections sdk) {
-        this.sdk = sdk;
+    public ListUnifiedConnectionsRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public ListUnifiedConnectionsRequestBuilder request(ListUnifiedConnectionsRequest request) {
@@ -22,8 +26,10 @@ public class ListUnifiedConnectionsRequestBuilder {
     }
 
     public ListUnifiedConnectionsResponse call() throws Exception {
+        
+        RequestOperation<ListUnifiedConnectionsRequest, ListUnifiedConnectionsResponse> operation
+              = new ListUnifiedConnectionsOperation( sdkConfiguration);
 
-        return sdk.listUnifiedConnections(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

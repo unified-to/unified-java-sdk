@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemovePaymentLinkOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemovePaymentLinkRequestBuilder {
 
     private RemovePaymentLinkRequest request;
-    private final SDKMethodInterfaces.MethodCallRemovePaymentLink sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemovePaymentLinkRequestBuilder(SDKMethodInterfaces.MethodCallRemovePaymentLink sdk) {
-        this.sdk = sdk;
+    public RemovePaymentLinkRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemovePaymentLinkRequestBuilder request(RemovePaymentLinkRequest request) {
@@ -22,8 +26,10 @@ public class RemovePaymentLinkRequestBuilder {
     }
 
     public RemovePaymentLinkResponse call() throws Exception {
+        
+        RequestOperation<RemovePaymentLinkRequest, RemovePaymentLinkResponse> operation
+              = new RemovePaymentLinkOperation( sdkConfiguration);
 
-        return sdk.removePaymentLink(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

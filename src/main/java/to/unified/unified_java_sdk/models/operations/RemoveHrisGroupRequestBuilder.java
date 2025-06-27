@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveHrisGroupOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveHrisGroupRequestBuilder {
 
     private RemoveHrisGroupRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveHrisGroup sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveHrisGroupRequestBuilder(SDKMethodInterfaces.MethodCallRemoveHrisGroup sdk) {
-        this.sdk = sdk;
+    public RemoveHrisGroupRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveHrisGroupRequestBuilder request(RemoveHrisGroupRequest request) {
@@ -22,8 +26,10 @@ public class RemoveHrisGroupRequestBuilder {
     }
 
     public RemoveHrisGroupResponse call() throws Exception {
+        
+        RequestOperation<RemoveHrisGroupRequest, RemoveHrisGroupResponse> operation
+              = new RemoveHrisGroupOperation( sdkConfiguration);
 
-        return sdk.removeHrisGroup(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveStorageFileOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveStorageFileRequestBuilder {
 
     private RemoveStorageFileRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveStorageFile sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveStorageFileRequestBuilder(SDKMethodInterfaces.MethodCallRemoveStorageFile sdk) {
-        this.sdk = sdk;
+    public RemoveStorageFileRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveStorageFileRequestBuilder request(RemoveStorageFileRequest request) {
@@ -22,8 +26,10 @@ public class RemoveStorageFileRequestBuilder {
     }
 
     public RemoveStorageFileResponse call() throws Exception {
+        
+        RequestOperation<RemoveStorageFileRequest, RemoveStorageFileResponse> operation
+              = new RemoveStorageFileOperation( sdkConfiguration);
 
-        return sdk.removeStorageFile(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

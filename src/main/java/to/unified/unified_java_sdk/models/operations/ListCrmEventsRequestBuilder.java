@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.ListCrmEventsOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListCrmEventsRequestBuilder {
 
     private ListCrmEventsRequest request;
-    private final SDKMethodInterfaces.MethodCallListCrmEvents sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public ListCrmEventsRequestBuilder(SDKMethodInterfaces.MethodCallListCrmEvents sdk) {
-        this.sdk = sdk;
+    public ListCrmEventsRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public ListCrmEventsRequestBuilder request(ListCrmEventsRequest request) {
@@ -22,8 +26,10 @@ public class ListCrmEventsRequestBuilder {
     }
 
     public ListCrmEventsResponse call() throws Exception {
+        
+        RequestOperation<ListCrmEventsRequest, ListCrmEventsResponse> operation
+              = new ListCrmEventsOperation( sdkConfiguration);
 
-        return sdk.listCrmEvents(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

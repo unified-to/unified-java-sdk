@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveCrmLeadOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveCrmLeadRequestBuilder {
 
     private RemoveCrmLeadRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveCrmLead sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveCrmLeadRequestBuilder(SDKMethodInterfaces.MethodCallRemoveCrmLead sdk) {
-        this.sdk = sdk;
+    public RemoveCrmLeadRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveCrmLeadRequestBuilder request(RemoveCrmLeadRequest request) {
@@ -22,8 +26,10 @@ public class RemoveCrmLeadRequestBuilder {
     }
 
     public RemoveCrmLeadResponse call() throws Exception {
+        
+        RequestOperation<RemoveCrmLeadRequest, RemoveCrmLeadResponse> operation
+              = new RemoveCrmLeadOperation( sdkConfiguration);
 
-        return sdk.removeCrmLead(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

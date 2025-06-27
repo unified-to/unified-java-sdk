@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.CreateUcCommentOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateUcCommentRequestBuilder {
 
     private CreateUcCommentRequest request;
-    private final SDKMethodInterfaces.MethodCallCreateUcComment sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public CreateUcCommentRequestBuilder(SDKMethodInterfaces.MethodCallCreateUcComment sdk) {
-        this.sdk = sdk;
+    public CreateUcCommentRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public CreateUcCommentRequestBuilder request(CreateUcCommentRequest request) {
@@ -22,8 +26,10 @@ public class CreateUcCommentRequestBuilder {
     }
 
     public CreateUcCommentResponse call() throws Exception {
+        
+        RequestOperation<CreateUcCommentRequest, CreateUcCommentResponse> operation
+              = new CreateUcCommentOperation( sdkConfiguration);
 
-        return sdk.createUcComment(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

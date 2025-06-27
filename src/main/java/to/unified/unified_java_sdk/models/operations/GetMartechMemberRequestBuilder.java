@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.GetMartechMemberOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetMartechMemberRequestBuilder {
 
     private GetMartechMemberRequest request;
-    private final SDKMethodInterfaces.MethodCallGetMartechMember sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public GetMartechMemberRequestBuilder(SDKMethodInterfaces.MethodCallGetMartechMember sdk) {
-        this.sdk = sdk;
+    public GetMartechMemberRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public GetMartechMemberRequestBuilder request(GetMartechMemberRequest request) {
@@ -22,8 +26,10 @@ public class GetMartechMemberRequestBuilder {
     }
 
     public GetMartechMemberResponse call() throws Exception {
+        
+        RequestOperation<GetMartechMemberRequest, GetMartechMemberResponse> operation
+              = new GetMartechMemberOperation( sdkConfiguration);
 
-        return sdk.getMartechMember(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

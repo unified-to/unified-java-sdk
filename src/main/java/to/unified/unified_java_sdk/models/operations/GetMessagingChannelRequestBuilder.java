@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.GetMessagingChannelOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetMessagingChannelRequestBuilder {
 
     private GetMessagingChannelRequest request;
-    private final SDKMethodInterfaces.MethodCallGetMessagingChannel sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public GetMessagingChannelRequestBuilder(SDKMethodInterfaces.MethodCallGetMessagingChannel sdk) {
-        this.sdk = sdk;
+    public GetMessagingChannelRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public GetMessagingChannelRequestBuilder request(GetMessagingChannelRequest request) {
@@ -22,8 +26,10 @@ public class GetMessagingChannelRequestBuilder {
     }
 
     public GetMessagingChannelResponse call() throws Exception {
+        
+        RequestOperation<GetMessagingChannelRequest, GetMessagingChannelResponse> operation
+              = new GetMessagingChannelOperation( sdkConfiguration);
 
-        return sdk.getMessagingChannel(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.CreateTicketingTicketOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateTicketingTicketRequestBuilder {
 
     private CreateTicketingTicketRequest request;
-    private final SDKMethodInterfaces.MethodCallCreateTicketingTicket sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public CreateTicketingTicketRequestBuilder(SDKMethodInterfaces.MethodCallCreateTicketingTicket sdk) {
-        this.sdk = sdk;
+    public CreateTicketingTicketRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public CreateTicketingTicketRequestBuilder request(CreateTicketingTicketRequest request) {
@@ -22,8 +26,10 @@ public class CreateTicketingTicketRequestBuilder {
     }
 
     public CreateTicketingTicketResponse call() throws Exception {
+        
+        RequestOperation<CreateTicketingTicketRequest, CreateTicketingTicketResponse> operation
+              = new CreateTicketingTicketOperation( sdkConfiguration);
 
-        return sdk.createTicketingTicket(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

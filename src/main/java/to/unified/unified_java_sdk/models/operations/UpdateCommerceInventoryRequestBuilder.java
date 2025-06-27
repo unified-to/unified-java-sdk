@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.UpdateCommerceInventoryOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdateCommerceInventoryRequestBuilder {
 
     private UpdateCommerceInventoryRequest request;
-    private final SDKMethodInterfaces.MethodCallUpdateCommerceInventory sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public UpdateCommerceInventoryRequestBuilder(SDKMethodInterfaces.MethodCallUpdateCommerceInventory sdk) {
-        this.sdk = sdk;
+    public UpdateCommerceInventoryRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public UpdateCommerceInventoryRequestBuilder request(UpdateCommerceInventoryRequest request) {
@@ -22,8 +26,10 @@ public class UpdateCommerceInventoryRequestBuilder {
     }
 
     public UpdateCommerceInventoryResponse call() throws Exception {
+        
+        RequestOperation<UpdateCommerceInventoryRequest, UpdateCommerceInventoryResponse> operation
+              = new UpdateCommerceInventoryOperation( sdkConfiguration);
 
-        return sdk.updateCommerceInventory(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

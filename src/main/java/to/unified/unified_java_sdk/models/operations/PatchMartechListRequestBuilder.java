@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.PatchMartechListOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchMartechListRequestBuilder {
 
     private PatchMartechListRequest request;
-    private final SDKMethodInterfaces.MethodCallPatchMartechList sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public PatchMartechListRequestBuilder(SDKMethodInterfaces.MethodCallPatchMartechList sdk) {
-        this.sdk = sdk;
+    public PatchMartechListRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public PatchMartechListRequestBuilder request(PatchMartechListRequest request) {
@@ -22,8 +26,10 @@ public class PatchMartechListRequestBuilder {
     }
 
     public PatchMartechListResponse call() throws Exception {
+        
+        RequestOperation<PatchMartechListRequest, PatchMartechListResponse> operation
+              = new PatchMartechListOperation( sdkConfiguration);
 
-        return sdk.patchMartechList(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveUnifiedConnectionOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveUnifiedConnectionRequestBuilder {
 
     private RemoveUnifiedConnectionRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveUnifiedConnection sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveUnifiedConnectionRequestBuilder(SDKMethodInterfaces.MethodCallRemoveUnifiedConnection sdk) {
-        this.sdk = sdk;
+    public RemoveUnifiedConnectionRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveUnifiedConnectionRequestBuilder request(RemoveUnifiedConnectionRequest request) {
@@ -22,8 +26,10 @@ public class RemoveUnifiedConnectionRequestBuilder {
     }
 
     public RemoveUnifiedConnectionResponse call() throws Exception {
+        
+        RequestOperation<RemoveUnifiedConnectionRequest, RemoveUnifiedConnectionResponse> operation
+              = new RemoveUnifiedConnectionOperation( sdkConfiguration);
 
-        return sdk.removeUnifiedConnection(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

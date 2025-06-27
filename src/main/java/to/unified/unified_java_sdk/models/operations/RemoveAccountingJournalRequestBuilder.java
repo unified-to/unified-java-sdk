@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveAccountingJournalOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveAccountingJournalRequestBuilder {
 
     private RemoveAccountingJournalRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveAccountingJournal sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveAccountingJournalRequestBuilder(SDKMethodInterfaces.MethodCallRemoveAccountingJournal sdk) {
-        this.sdk = sdk;
+    public RemoveAccountingJournalRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveAccountingJournalRequestBuilder request(RemoveAccountingJournalRequest request) {
@@ -22,8 +26,10 @@ public class RemoveAccountingJournalRequestBuilder {
     }
 
     public RemoveAccountingJournalResponse call() throws Exception {
+        
+        RequestOperation<RemoveAccountingJournalRequest, RemoveAccountingJournalResponse> operation
+              = new RemoveAccountingJournalOperation( sdkConfiguration);
 
-        return sdk.removeAccountingJournal(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

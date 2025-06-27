@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveTaskProjectOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveTaskProjectRequestBuilder {
 
     private RemoveTaskProjectRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveTaskProject sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveTaskProjectRequestBuilder(SDKMethodInterfaces.MethodCallRemoveTaskProject sdk) {
-        this.sdk = sdk;
+    public RemoveTaskProjectRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveTaskProjectRequestBuilder request(RemoveTaskProjectRequest request) {
@@ -22,8 +26,10 @@ public class RemoveTaskProjectRequestBuilder {
     }
 
     public RemoveTaskProjectResponse call() throws Exception {
+        
+        RequestOperation<RemoveTaskProjectRequest, RemoveTaskProjectResponse> operation
+              = new RemoveTaskProjectOperation( sdkConfiguration);
 
-        return sdk.removeTaskProject(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.CreateAccountingOrderOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateAccountingOrderRequestBuilder {
 
     private CreateAccountingOrderRequest request;
-    private final SDKMethodInterfaces.MethodCallCreateAccountingOrder sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public CreateAccountingOrderRequestBuilder(SDKMethodInterfaces.MethodCallCreateAccountingOrder sdk) {
-        this.sdk = sdk;
+    public CreateAccountingOrderRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public CreateAccountingOrderRequestBuilder request(CreateAccountingOrderRequest request) {
@@ -22,8 +26,10 @@ public class CreateAccountingOrderRequestBuilder {
     }
 
     public CreateAccountingOrderResponse call() throws Exception {
+        
+        RequestOperation<CreateAccountingOrderRequest, CreateAccountingOrderResponse> operation
+              = new CreateAccountingOrderOperation( sdkConfiguration);
 
-        return sdk.createAccountingOrder(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.ListStorageFilesOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListStorageFilesRequestBuilder {
 
     private ListStorageFilesRequest request;
-    private final SDKMethodInterfaces.MethodCallListStorageFiles sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public ListStorageFilesRequestBuilder(SDKMethodInterfaces.MethodCallListStorageFiles sdk) {
-        this.sdk = sdk;
+    public ListStorageFilesRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public ListStorageFilesRequestBuilder request(ListStorageFilesRequest request) {
@@ -22,8 +26,10 @@ public class ListStorageFilesRequestBuilder {
     }
 
     public ListStorageFilesResponse call() throws Exception {
+        
+        RequestOperation<ListStorageFilesRequest, ListStorageFilesResponse> operation
+              = new ListStorageFilesOperation( sdkConfiguration);
 
-        return sdk.listStorageFiles(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.PatchCommerceInventoryOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchCommerceInventoryRequestBuilder {
 
     private PatchCommerceInventoryRequest request;
-    private final SDKMethodInterfaces.MethodCallPatchCommerceInventory sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public PatchCommerceInventoryRequestBuilder(SDKMethodInterfaces.MethodCallPatchCommerceInventory sdk) {
-        this.sdk = sdk;
+    public PatchCommerceInventoryRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public PatchCommerceInventoryRequestBuilder request(PatchCommerceInventoryRequest request) {
@@ -22,8 +26,10 @@ public class PatchCommerceInventoryRequestBuilder {
     }
 
     public PatchCommerceInventoryResponse call() throws Exception {
+        
+        RequestOperation<PatchCommerceInventoryRequest, PatchCommerceInventoryResponse> operation
+              = new PatchCommerceInventoryOperation( sdkConfiguration);
 
-        return sdk.patchCommerceInventory(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

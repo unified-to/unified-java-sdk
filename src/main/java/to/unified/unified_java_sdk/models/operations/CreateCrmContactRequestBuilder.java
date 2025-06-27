@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.CreateCrmContactOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateCrmContactRequestBuilder {
 
     private CreateCrmContactRequest request;
-    private final SDKMethodInterfaces.MethodCallCreateCrmContact sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public CreateCrmContactRequestBuilder(SDKMethodInterfaces.MethodCallCreateCrmContact sdk) {
-        this.sdk = sdk;
+    public CreateCrmContactRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public CreateCrmContactRequestBuilder request(CreateCrmContactRequest request) {
@@ -22,8 +26,10 @@ public class CreateCrmContactRequestBuilder {
     }
 
     public CreateCrmContactResponse call() throws Exception {
+        
+        RequestOperation<CreateCrmContactRequest, CreateCrmContactResponse> operation
+              = new CreateCrmContactOperation( sdkConfiguration);
 
-        return sdk.createCrmContact(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

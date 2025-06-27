@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.CreateAccountingContactOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateAccountingContactRequestBuilder {
 
     private CreateAccountingContactRequest request;
-    private final SDKMethodInterfaces.MethodCallCreateAccountingContact sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public CreateAccountingContactRequestBuilder(SDKMethodInterfaces.MethodCallCreateAccountingContact sdk) {
-        this.sdk = sdk;
+    public CreateAccountingContactRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public CreateAccountingContactRequestBuilder request(CreateAccountingContactRequest request) {
@@ -22,8 +26,10 @@ public class CreateAccountingContactRequestBuilder {
     }
 
     public CreateAccountingContactResponse call() throws Exception {
+        
+        RequestOperation<CreateAccountingContactRequest, CreateAccountingContactResponse> operation
+              = new CreateAccountingContactOperation( sdkConfiguration);
 
-        return sdk.createAccountingContact(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

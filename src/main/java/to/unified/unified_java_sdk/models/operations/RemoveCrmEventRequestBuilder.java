@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveCrmEventOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveCrmEventRequestBuilder {
 
     private RemoveCrmEventRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveCrmEvent sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveCrmEventRequestBuilder(SDKMethodInterfaces.MethodCallRemoveCrmEvent sdk) {
-        this.sdk = sdk;
+    public RemoveCrmEventRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveCrmEventRequestBuilder request(RemoveCrmEventRequest request) {
@@ -22,8 +26,10 @@ public class RemoveCrmEventRequestBuilder {
     }
 
     public RemoveCrmEventResponse call() throws Exception {
+        
+        RequestOperation<RemoveCrmEventRequest, RemoveCrmEventResponse> operation
+              = new RemoveCrmEventOperation( sdkConfiguration);
 
-        return sdk.removeCrmEvent(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

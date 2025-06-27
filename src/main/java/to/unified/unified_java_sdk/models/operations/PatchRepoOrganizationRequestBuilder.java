@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.PatchRepoOrganizationOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchRepoOrganizationRequestBuilder {
 
     private PatchRepoOrganizationRequest request;
-    private final SDKMethodInterfaces.MethodCallPatchRepoOrganization sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public PatchRepoOrganizationRequestBuilder(SDKMethodInterfaces.MethodCallPatchRepoOrganization sdk) {
-        this.sdk = sdk;
+    public PatchRepoOrganizationRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public PatchRepoOrganizationRequestBuilder request(PatchRepoOrganizationRequest request) {
@@ -22,8 +26,10 @@ public class PatchRepoOrganizationRequestBuilder {
     }
 
     public PatchRepoOrganizationResponse call() throws Exception {
+        
+        RequestOperation<PatchRepoOrganizationRequest, PatchRepoOrganizationResponse> operation
+              = new PatchRepoOrganizationOperation( sdkConfiguration);
 
-        return sdk.patchRepoOrganization(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

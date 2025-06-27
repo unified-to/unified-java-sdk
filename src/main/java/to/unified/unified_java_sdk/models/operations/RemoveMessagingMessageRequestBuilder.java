@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveMessagingMessageOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveMessagingMessageRequestBuilder {
 
     private RemoveMessagingMessageRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveMessagingMessage sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveMessagingMessageRequestBuilder(SDKMethodInterfaces.MethodCallRemoveMessagingMessage sdk) {
-        this.sdk = sdk;
+    public RemoveMessagingMessageRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveMessagingMessageRequestBuilder request(RemoveMessagingMessageRequest request) {
@@ -22,8 +26,10 @@ public class RemoveMessagingMessageRequestBuilder {
     }
 
     public RemoveMessagingMessageResponse call() throws Exception {
+        
+        RequestOperation<RemoveMessagingMessageRequest, RemoveMessagingMessageResponse> operation
+              = new RemoveMessagingMessageOperation( sdkConfiguration);
 
-        return sdk.removeMessagingMessage(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

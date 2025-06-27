@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.CreateScimGroupsOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateScimGroupsRequestBuilder {
 
     private CreateScimGroupsRequest request;
-    private final SDKMethodInterfaces.MethodCallCreateScimGroups sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public CreateScimGroupsRequestBuilder(SDKMethodInterfaces.MethodCallCreateScimGroups sdk) {
-        this.sdk = sdk;
+    public CreateScimGroupsRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public CreateScimGroupsRequestBuilder request(CreateScimGroupsRequest request) {
@@ -22,8 +26,10 @@ public class CreateScimGroupsRequestBuilder {
     }
 
     public CreateScimGroupsResponse call() throws Exception {
+        
+        RequestOperation<CreateScimGroupsRequest, CreateScimGroupsResponse> operation
+              = new CreateScimGroupsOperation( sdkConfiguration);
 
-        return sdk.createScimGroups(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

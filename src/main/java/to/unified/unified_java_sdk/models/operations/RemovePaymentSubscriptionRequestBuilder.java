@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemovePaymentSubscriptionOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemovePaymentSubscriptionRequestBuilder {
 
     private RemovePaymentSubscriptionRequest request;
-    private final SDKMethodInterfaces.MethodCallRemovePaymentSubscription sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemovePaymentSubscriptionRequestBuilder(SDKMethodInterfaces.MethodCallRemovePaymentSubscription sdk) {
-        this.sdk = sdk;
+    public RemovePaymentSubscriptionRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemovePaymentSubscriptionRequestBuilder request(RemovePaymentSubscriptionRequest request) {
@@ -22,8 +26,10 @@ public class RemovePaymentSubscriptionRequestBuilder {
     }
 
     public RemovePaymentSubscriptionResponse call() throws Exception {
+        
+        RequestOperation<RemovePaymentSubscriptionRequest, RemovePaymentSubscriptionResponse> operation
+              = new RemovePaymentSubscriptionOperation( sdkConfiguration);
 
-        return sdk.removePaymentSubscription(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

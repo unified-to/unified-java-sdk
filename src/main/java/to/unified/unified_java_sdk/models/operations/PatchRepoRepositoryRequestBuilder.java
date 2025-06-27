@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.PatchRepoRepositoryOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchRepoRepositoryRequestBuilder {
 
     private PatchRepoRepositoryRequest request;
-    private final SDKMethodInterfaces.MethodCallPatchRepoRepository sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public PatchRepoRepositoryRequestBuilder(SDKMethodInterfaces.MethodCallPatchRepoRepository sdk) {
-        this.sdk = sdk;
+    public PatchRepoRepositoryRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public PatchRepoRepositoryRequestBuilder request(PatchRepoRepositoryRequest request) {
@@ -22,8 +26,10 @@ public class PatchRepoRepositoryRequestBuilder {
     }
 
     public PatchRepoRepositoryResponse call() throws Exception {
+        
+        RequestOperation<PatchRepoRepositoryRequest, PatchRepoRepositoryResponse> operation
+              = new PatchRepoRepositoryOperation( sdkConfiguration);
 
-        return sdk.patchRepoRepository(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

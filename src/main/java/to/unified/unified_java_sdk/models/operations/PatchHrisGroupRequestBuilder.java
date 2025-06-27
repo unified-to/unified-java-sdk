@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.PatchHrisGroupOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchHrisGroupRequestBuilder {
 
     private PatchHrisGroupRequest request;
-    private final SDKMethodInterfaces.MethodCallPatchHrisGroup sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public PatchHrisGroupRequestBuilder(SDKMethodInterfaces.MethodCallPatchHrisGroup sdk) {
-        this.sdk = sdk;
+    public PatchHrisGroupRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public PatchHrisGroupRequestBuilder request(PatchHrisGroupRequest request) {
@@ -22,8 +26,10 @@ public class PatchHrisGroupRequestBuilder {
     }
 
     public PatchHrisGroupResponse call() throws Exception {
+        
+        RequestOperation<PatchHrisGroupRequest, PatchHrisGroupResponse> operation
+              = new PatchHrisGroupOperation( sdkConfiguration);
 
-        return sdk.patchHrisGroup(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

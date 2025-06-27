@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveLmsCourseOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveLmsCourseRequestBuilder {
 
     private RemoveLmsCourseRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveLmsCourse sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveLmsCourseRequestBuilder(SDKMethodInterfaces.MethodCallRemoveLmsCourse sdk) {
-        this.sdk = sdk;
+    public RemoveLmsCourseRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveLmsCourseRequestBuilder request(RemoveLmsCourseRequest request) {
@@ -22,8 +26,10 @@ public class RemoveLmsCourseRequestBuilder {
     }
 
     public RemoveLmsCourseResponse call() throws Exception {
+        
+        RequestOperation<RemoveLmsCourseRequest, RemoveLmsCourseResponse> operation
+              = new RemoveLmsCourseOperation( sdkConfiguration);
 
-        return sdk.removeLmsCourse(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

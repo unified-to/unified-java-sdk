@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.GetAccountingInvoiceOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetAccountingInvoiceRequestBuilder {
 
     private GetAccountingInvoiceRequest request;
-    private final SDKMethodInterfaces.MethodCallGetAccountingInvoice sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public GetAccountingInvoiceRequestBuilder(SDKMethodInterfaces.MethodCallGetAccountingInvoice sdk) {
-        this.sdk = sdk;
+    public GetAccountingInvoiceRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public GetAccountingInvoiceRequestBuilder request(GetAccountingInvoiceRequest request) {
@@ -22,8 +26,10 @@ public class GetAccountingInvoiceRequestBuilder {
     }
 
     public GetAccountingInvoiceResponse call() throws Exception {
+        
+        RequestOperation<GetAccountingInvoiceRequest, GetAccountingInvoiceResponse> operation
+              = new GetAccountingInvoiceOperation( sdkConfiguration);
 
-        return sdk.getAccountingInvoice(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

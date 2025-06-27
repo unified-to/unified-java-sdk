@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.PatchTaskProjectOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchTaskProjectRequestBuilder {
 
     private PatchTaskProjectRequest request;
-    private final SDKMethodInterfaces.MethodCallPatchTaskProject sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public PatchTaskProjectRequestBuilder(SDKMethodInterfaces.MethodCallPatchTaskProject sdk) {
-        this.sdk = sdk;
+    public PatchTaskProjectRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public PatchTaskProjectRequestBuilder request(PatchTaskProjectRequest request) {
@@ -22,8 +26,10 @@ public class PatchTaskProjectRequestBuilder {
     }
 
     public PatchTaskProjectResponse call() throws Exception {
+        
+        RequestOperation<PatchTaskProjectRequest, PatchTaskProjectResponse> operation
+              = new PatchTaskProjectOperation( sdkConfiguration);
 
-        return sdk.patchTaskProject(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.CreatePaymentLinkOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreatePaymentLinkRequestBuilder {
 
     private CreatePaymentLinkRequest request;
-    private final SDKMethodInterfaces.MethodCallCreatePaymentLink sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public CreatePaymentLinkRequestBuilder(SDKMethodInterfaces.MethodCallCreatePaymentLink sdk) {
-        this.sdk = sdk;
+    public CreatePaymentLinkRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public CreatePaymentLinkRequestBuilder request(CreatePaymentLinkRequest request) {
@@ -22,8 +26,10 @@ public class CreatePaymentLinkRequestBuilder {
     }
 
     public CreatePaymentLinkResponse call() throws Exception {
+        
+        RequestOperation<CreatePaymentLinkRequest, CreatePaymentLinkResponse> operation
+              = new CreatePaymentLinkOperation( sdkConfiguration);
 
-        return sdk.createPaymentLink(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

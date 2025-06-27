@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveAccountingOrderOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveAccountingOrderRequestBuilder {
 
     private RemoveAccountingOrderRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveAccountingOrder sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveAccountingOrderRequestBuilder(SDKMethodInterfaces.MethodCallRemoveAccountingOrder sdk) {
-        this.sdk = sdk;
+    public RemoveAccountingOrderRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveAccountingOrderRequestBuilder request(RemoveAccountingOrderRequest request) {
@@ -22,8 +26,10 @@ public class RemoveAccountingOrderRequestBuilder {
     }
 
     public RemoveAccountingOrderResponse call() throws Exception {
+        
+        RequestOperation<RemoveAccountingOrderRequest, RemoveAccountingOrderResponse> operation
+              = new RemoveAccountingOrderOperation( sdkConfiguration);
 
-        return sdk.removeAccountingOrder(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

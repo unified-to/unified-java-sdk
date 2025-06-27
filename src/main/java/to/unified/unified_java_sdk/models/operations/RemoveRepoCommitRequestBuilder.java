@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveRepoCommitOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveRepoCommitRequestBuilder {
 
     private RemoveRepoCommitRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveRepoCommit sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveRepoCommitRequestBuilder(SDKMethodInterfaces.MethodCallRemoveRepoCommit sdk) {
-        this.sdk = sdk;
+    public RemoveRepoCommitRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveRepoCommitRequestBuilder request(RemoveRepoCommitRequest request) {
@@ -22,8 +26,10 @@ public class RemoveRepoCommitRequestBuilder {
     }
 
     public RemoveRepoCommitResponse call() throws Exception {
+        
+        RequestOperation<RemoveRepoCommitRequest, RemoveRepoCommitResponse> operation
+              = new RemoveRepoCommitOperation( sdkConfiguration);
 
-        return sdk.removeRepoCommit(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

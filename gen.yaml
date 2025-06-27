@@ -14,10 +14,14 @@ generation:
   auth:
     oAuth2ClientCredentialsEnabled: false
     oAuth2PasswordEnabled: false
+  tests:
+    generateTests: true
+    generateNewTests: false
+    skipResponseBodyAssertions: false
   baseServerURL: ""
   flattenGlobalSecurity: true
 java:
-  version: 0.28.1
+  version: 0.28.2
   additionalDependencies: []
   additionalPlugins: []
   artifactID: unified-java-sdk

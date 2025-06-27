@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveAtsDocumentOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveAtsDocumentRequestBuilder {
 
     private RemoveAtsDocumentRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveAtsDocument sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveAtsDocumentRequestBuilder(SDKMethodInterfaces.MethodCallRemoveAtsDocument sdk) {
-        this.sdk = sdk;
+    public RemoveAtsDocumentRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveAtsDocumentRequestBuilder request(RemoveAtsDocumentRequest request) {
@@ -22,8 +26,10 @@ public class RemoveAtsDocumentRequestBuilder {
     }
 
     public RemoveAtsDocumentResponse call() throws Exception {
+        
+        RequestOperation<RemoveAtsDocumentRequest, RemoveAtsDocumentResponse> operation
+              = new RemoveAtsDocumentOperation( sdkConfiguration);
 
-        return sdk.removeAtsDocument(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

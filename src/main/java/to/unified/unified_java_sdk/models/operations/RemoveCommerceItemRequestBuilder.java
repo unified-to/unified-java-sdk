@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveCommerceItemOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveCommerceItemRequestBuilder {
 
     private RemoveCommerceItemRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveCommerceItem sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveCommerceItemRequestBuilder(SDKMethodInterfaces.MethodCallRemoveCommerceItem sdk) {
-        this.sdk = sdk;
+    public RemoveCommerceItemRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveCommerceItemRequestBuilder request(RemoveCommerceItemRequest request) {
@@ -22,8 +26,10 @@ public class RemoveCommerceItemRequestBuilder {
     }
 
     public RemoveCommerceItemResponse call() throws Exception {
+        
+        RequestOperation<RemoveCommerceItemRequest, RemoveCommerceItemResponse> operation
+              = new RemoveCommerceItemOperation( sdkConfiguration);
 
-        return sdk.removeCommerceItem(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

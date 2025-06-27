@@ -35,7 +35,7 @@ public enum ListUnifiedIntegrationsQueryParamCategories {
     @JsonValue
     private final String value;
 
-    private ListUnifiedIntegrationsQueryParamCategories(String value) {
+    ListUnifiedIntegrationsQueryParamCategories(String value) {
         this.value = value;
     }
     

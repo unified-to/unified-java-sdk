@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.UpdatePaymentSubscriptionOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdatePaymentSubscriptionRequestBuilder {
 
     private UpdatePaymentSubscriptionRequest request;
-    private final SDKMethodInterfaces.MethodCallUpdatePaymentSubscription sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public UpdatePaymentSubscriptionRequestBuilder(SDKMethodInterfaces.MethodCallUpdatePaymentSubscription sdk) {
-        this.sdk = sdk;
+    public UpdatePaymentSubscriptionRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public UpdatePaymentSubscriptionRequestBuilder request(UpdatePaymentSubscriptionRequest request) {
@@ -22,8 +26,10 @@ public class UpdatePaymentSubscriptionRequestBuilder {
     }
 
     public UpdatePaymentSubscriptionResponse call() throws Exception {
+        
+        RequestOperation<UpdatePaymentSubscriptionRequest, UpdatePaymentSubscriptionResponse> operation
+              = new UpdatePaymentSubscriptionOperation( sdkConfiguration);
 
-        return sdk.updatePaymentSubscription(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

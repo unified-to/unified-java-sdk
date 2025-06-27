@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.GetAccountingReportOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetAccountingReportRequestBuilder {
 
     private GetAccountingReportRequest request;
-    private final SDKMethodInterfaces.MethodCallGetAccountingReport sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public GetAccountingReportRequestBuilder(SDKMethodInterfaces.MethodCallGetAccountingReport sdk) {
-        this.sdk = sdk;
+    public GetAccountingReportRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public GetAccountingReportRequestBuilder request(GetAccountingReportRequest request) {
@@ -22,8 +26,10 @@ public class GetAccountingReportRequestBuilder {
     }
 
     public GetAccountingReportResponse call() throws Exception {
+        
+        RequestOperation<GetAccountingReportRequest, GetAccountingReportResponse> operation
+              = new GetAccountingReportOperation( sdkConfiguration);
 
-        return sdk.getAccountingReport(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

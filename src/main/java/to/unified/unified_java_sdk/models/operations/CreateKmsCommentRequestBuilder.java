@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.CreateKmsCommentOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateKmsCommentRequestBuilder {
 
     private CreateKmsCommentRequest request;
-    private final SDKMethodInterfaces.MethodCallCreateKmsComment sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public CreateKmsCommentRequestBuilder(SDKMethodInterfaces.MethodCallCreateKmsComment sdk) {
-        this.sdk = sdk;
+    public CreateKmsCommentRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public CreateKmsCommentRequestBuilder request(CreateKmsCommentRequest request) {
@@ -22,8 +26,10 @@ public class CreateKmsCommentRequestBuilder {
     }
 
     public CreateKmsCommentResponse call() throws Exception {
+        
+        RequestOperation<CreateKmsCommentRequest, CreateKmsCommentResponse> operation
+              = new CreateKmsCommentOperation( sdkConfiguration);
 
-        return sdk.createKmsComment(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.CreateRepoCommitOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateRepoCommitRequestBuilder {
 
     private CreateRepoCommitRequest request;
-    private final SDKMethodInterfaces.MethodCallCreateRepoCommit sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public CreateRepoCommitRequestBuilder(SDKMethodInterfaces.MethodCallCreateRepoCommit sdk) {
-        this.sdk = sdk;
+    public CreateRepoCommitRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public CreateRepoCommitRequestBuilder request(CreateRepoCommitRequest request) {
@@ -22,8 +26,10 @@ public class CreateRepoCommitRequestBuilder {
     }
 
     public CreateRepoCommitResponse call() throws Exception {
+        
+        RequestOperation<CreateRepoCommitRequest, CreateRepoCommitResponse> operation
+              = new CreateRepoCommitOperation( sdkConfiguration);
 
-        return sdk.createRepoCommit(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

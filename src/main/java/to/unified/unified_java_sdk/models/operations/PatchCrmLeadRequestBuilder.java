@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.PatchCrmLeadOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchCrmLeadRequestBuilder {
 
     private PatchCrmLeadRequest request;
-    private final SDKMethodInterfaces.MethodCallPatchCrmLead sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public PatchCrmLeadRequestBuilder(SDKMethodInterfaces.MethodCallPatchCrmLead sdk) {
-        this.sdk = sdk;
+    public PatchCrmLeadRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public PatchCrmLeadRequestBuilder request(PatchCrmLeadRequest request) {
@@ -22,8 +26,10 @@ public class PatchCrmLeadRequestBuilder {
     }
 
     public PatchCrmLeadResponse call() throws Exception {
+        
+        RequestOperation<PatchCrmLeadRequest, PatchCrmLeadResponse> operation
+              = new PatchCrmLeadOperation( sdkConfiguration);
 
-        return sdk.patchCrmLead(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.ListUnifiedIntegrationWorkspacesOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListUnifiedIntegrationWorkspacesRequestBuilder {
 
     private ListUnifiedIntegrationWorkspacesRequest request;
-    private final SDKMethodInterfaces.MethodCallListUnifiedIntegrationWorkspaces sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public ListUnifiedIntegrationWorkspacesRequestBuilder(SDKMethodInterfaces.MethodCallListUnifiedIntegrationWorkspaces sdk) {
-        this.sdk = sdk;
+    public ListUnifiedIntegrationWorkspacesRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public ListUnifiedIntegrationWorkspacesRequestBuilder request(ListUnifiedIntegrationWorkspacesRequest request) {
@@ -22,8 +26,10 @@ public class ListUnifiedIntegrationWorkspacesRequestBuilder {
     }
 
     public ListUnifiedIntegrationWorkspacesResponse call() throws Exception {
+        
+        RequestOperation<ListUnifiedIntegrationWorkspacesRequest, ListUnifiedIntegrationWorkspacesResponse> operation
+              = new ListUnifiedIntegrationWorkspacesOperation( sdkConfiguration);
 
-        return sdk.listUnifiedIntegrationWorkspaces(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

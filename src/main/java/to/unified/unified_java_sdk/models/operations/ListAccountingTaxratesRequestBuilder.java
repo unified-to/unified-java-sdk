@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.ListAccountingTaxratesOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListAccountingTaxratesRequestBuilder {
 
     private ListAccountingTaxratesRequest request;
-    private final SDKMethodInterfaces.MethodCallListAccountingTaxrates sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public ListAccountingTaxratesRequestBuilder(SDKMethodInterfaces.MethodCallListAccountingTaxrates sdk) {
-        this.sdk = sdk;
+    public ListAccountingTaxratesRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public ListAccountingTaxratesRequestBuilder request(ListAccountingTaxratesRequest request) {
@@ -22,8 +26,10 @@ public class ListAccountingTaxratesRequestBuilder {
     }
 
     public ListAccountingTaxratesResponse call() throws Exception {
+        
+        RequestOperation<ListAccountingTaxratesRequest, ListAccountingTaxratesResponse> operation
+              = new ListAccountingTaxratesOperation( sdkConfiguration);
 
-        return sdk.listAccountingTaxrates(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

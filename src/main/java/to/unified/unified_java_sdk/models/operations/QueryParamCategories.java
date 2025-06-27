@@ -35,7 +35,7 @@ public enum QueryParamCategories {
     @JsonValue
     private final String value;
 
-    private QueryParamCategories(String value) {
+    QueryParamCategories(String value) {
         this.value = value;
     }
     

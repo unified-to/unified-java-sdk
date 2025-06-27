@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveHrisTimeshiftOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveHrisTimeshiftRequestBuilder {
 
     private RemoveHrisTimeshiftRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveHrisTimeshift sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveHrisTimeshiftRequestBuilder(SDKMethodInterfaces.MethodCallRemoveHrisTimeshift sdk) {
-        this.sdk = sdk;
+    public RemoveHrisTimeshiftRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveHrisTimeshiftRequestBuilder request(RemoveHrisTimeshiftRequest request) {
@@ -22,8 +26,10 @@ public class RemoveHrisTimeshiftRequestBuilder {
     }
 
     public RemoveHrisTimeshiftResponse call() throws Exception {
+        
+        RequestOperation<RemoveHrisTimeshiftRequest, RemoveHrisTimeshiftResponse> operation
+              = new RemoveHrisTimeshiftOperation( sdkConfiguration);
 
-        return sdk.removeHrisTimeshift(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

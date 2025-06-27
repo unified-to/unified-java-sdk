@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.CreateCrmPipelineOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateCrmPipelineRequestBuilder {
 
     private CreateCrmPipelineRequest request;
-    private final SDKMethodInterfaces.MethodCallCreateCrmPipeline sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public CreateCrmPipelineRequestBuilder(SDKMethodInterfaces.MethodCallCreateCrmPipeline sdk) {
-        this.sdk = sdk;
+    public CreateCrmPipelineRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public CreateCrmPipelineRequestBuilder request(CreateCrmPipelineRequest request) {
@@ -22,8 +26,10 @@ public class CreateCrmPipelineRequestBuilder {
     }
 
     public CreateCrmPipelineResponse call() throws Exception {
+        
+        RequestOperation<CreateCrmPipelineRequest, CreateCrmPipelineResponse> operation
+              = new CreateCrmPipelineOperation( sdkConfiguration);
 
-        return sdk.createCrmPipeline(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

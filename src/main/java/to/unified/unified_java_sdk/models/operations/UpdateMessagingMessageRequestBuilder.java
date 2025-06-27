@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.UpdateMessagingMessageOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdateMessagingMessageRequestBuilder {
 
     private UpdateMessagingMessageRequest request;
-    private final SDKMethodInterfaces.MethodCallUpdateMessagingMessage sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public UpdateMessagingMessageRequestBuilder(SDKMethodInterfaces.MethodCallUpdateMessagingMessage sdk) {
-        this.sdk = sdk;
+    public UpdateMessagingMessageRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public UpdateMessagingMessageRequestBuilder request(UpdateMessagingMessageRequest request) {
@@ -22,8 +26,10 @@ public class UpdateMessagingMessageRequestBuilder {
     }
 
     public UpdateMessagingMessageResponse call() throws Exception {
+        
+        RequestOperation<UpdateMessagingMessageRequest, UpdateMessagingMessageResponse> operation
+              = new UpdateMessagingMessageOperation( sdkConfiguration);
 
-        return sdk.updateMessagingMessage(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

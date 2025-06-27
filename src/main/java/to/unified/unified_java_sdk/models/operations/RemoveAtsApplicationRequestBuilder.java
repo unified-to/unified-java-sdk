@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveAtsApplicationOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveAtsApplicationRequestBuilder {
 
     private RemoveAtsApplicationRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveAtsApplication sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveAtsApplicationRequestBuilder(SDKMethodInterfaces.MethodCallRemoveAtsApplication sdk) {
-        this.sdk = sdk;
+    public RemoveAtsApplicationRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveAtsApplicationRequestBuilder request(RemoveAtsApplicationRequest request) {
@@ -22,8 +26,10 @@ public class RemoveAtsApplicationRequestBuilder {
     }
 
     public RemoveAtsApplicationResponse call() throws Exception {
+        
+        RequestOperation<RemoveAtsApplicationRequest, RemoveAtsApplicationResponse> operation
+              = new RemoveAtsApplicationOperation( sdkConfiguration);
 
-        return sdk.removeAtsApplication(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

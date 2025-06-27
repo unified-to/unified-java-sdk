@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.ListUnifiedIntegrationsOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListUnifiedIntegrationsRequestBuilder {
 
     private ListUnifiedIntegrationsRequest request;
-    private final SDKMethodInterfaces.MethodCallListUnifiedIntegrations sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public ListUnifiedIntegrationsRequestBuilder(SDKMethodInterfaces.MethodCallListUnifiedIntegrations sdk) {
-        this.sdk = sdk;
+    public ListUnifiedIntegrationsRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public ListUnifiedIntegrationsRequestBuilder request(ListUnifiedIntegrationsRequest request) {
@@ -22,8 +26,10 @@ public class ListUnifiedIntegrationsRequestBuilder {
     }
 
     public ListUnifiedIntegrationsResponse call() throws Exception {
+        
+        RequestOperation<ListUnifiedIntegrationsRequest, ListUnifiedIntegrationsResponse> operation
+              = new ListUnifiedIntegrationsOperation( sdkConfiguration);
 
-        return sdk.listUnifiedIntegrations(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

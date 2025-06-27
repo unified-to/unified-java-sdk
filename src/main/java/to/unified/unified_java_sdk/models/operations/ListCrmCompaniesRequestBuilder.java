@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.ListCrmCompaniesOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListCrmCompaniesRequestBuilder {
 
     private ListCrmCompaniesRequest request;
-    private final SDKMethodInterfaces.MethodCallListCrmCompanies sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public ListCrmCompaniesRequestBuilder(SDKMethodInterfaces.MethodCallListCrmCompanies sdk) {
-        this.sdk = sdk;
+    public ListCrmCompaniesRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public ListCrmCompaniesRequestBuilder request(ListCrmCompaniesRequest request) {
@@ -22,8 +26,10 @@ public class ListCrmCompaniesRequestBuilder {
     }
 
     public ListCrmCompaniesResponse call() throws Exception {
+        
+        RequestOperation<ListCrmCompaniesRequest, ListCrmCompaniesResponse> operation
+              = new ListCrmCompaniesOperation( sdkConfiguration);
 
-        return sdk.listCrmCompanies(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.CreateKmsPageOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateKmsPageRequestBuilder {
 
     private CreateKmsPageRequest request;
-    private final SDKMethodInterfaces.MethodCallCreateKmsPage sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public CreateKmsPageRequestBuilder(SDKMethodInterfaces.MethodCallCreateKmsPage sdk) {
-        this.sdk = sdk;
+    public CreateKmsPageRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public CreateKmsPageRequestBuilder request(CreateKmsPageRequest request) {
@@ -22,8 +26,10 @@ public class CreateKmsPageRequestBuilder {
     }
 
     public CreateKmsPageResponse call() throws Exception {
+        
+        RequestOperation<CreateKmsPageRequest, CreateKmsPageResponse> operation
+              = new CreateKmsPageOperation( sdkConfiguration);
 
-        return sdk.createKmsPage(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

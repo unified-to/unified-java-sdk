@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.PatchRepoCommitOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchRepoCommitRequestBuilder {
 
     private PatchRepoCommitRequest request;
-    private final SDKMethodInterfaces.MethodCallPatchRepoCommit sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public PatchRepoCommitRequestBuilder(SDKMethodInterfaces.MethodCallPatchRepoCommit sdk) {
-        this.sdk = sdk;
+    public PatchRepoCommitRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public PatchRepoCommitRequestBuilder request(PatchRepoCommitRequest request) {
@@ -22,8 +26,10 @@ public class PatchRepoCommitRequestBuilder {
     }
 
     public PatchRepoCommitResponse call() throws Exception {
+        
+        RequestOperation<PatchRepoCommitRequest, PatchRepoCommitResponse> operation
+              = new PatchRepoCommitOperation( sdkConfiguration);
 
-        return sdk.patchRepoCommit(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

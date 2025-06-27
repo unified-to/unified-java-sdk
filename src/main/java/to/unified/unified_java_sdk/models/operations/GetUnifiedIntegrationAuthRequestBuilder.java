@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationAuthOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetUnifiedIntegrationAuthRequestBuilder {
 
     private GetUnifiedIntegrationAuthRequest request;
-    private final SDKMethodInterfaces.MethodCallGetUnifiedIntegrationAuth sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public GetUnifiedIntegrationAuthRequestBuilder(SDKMethodInterfaces.MethodCallGetUnifiedIntegrationAuth sdk) {
-        this.sdk = sdk;
+    public GetUnifiedIntegrationAuthRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public GetUnifiedIntegrationAuthRequestBuilder request(GetUnifiedIntegrationAuthRequest request) {
@@ -22,8 +26,10 @@ public class GetUnifiedIntegrationAuthRequestBuilder {
     }
 
     public GetUnifiedIntegrationAuthResponse call() throws Exception {
+        
+        RequestOperation<GetUnifiedIntegrationAuthRequest, GetUnifiedIntegrationAuthResponse> operation
+              = new GetUnifiedIntegrationAuthOperation( sdkConfiguration);
 
-        return sdk.getUnifiedIntegrationAuth(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.CreateHrisLocationOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateHrisLocationRequestBuilder {
 
     private CreateHrisLocationRequest request;
-    private final SDKMethodInterfaces.MethodCallCreateHrisLocation sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public CreateHrisLocationRequestBuilder(SDKMethodInterfaces.MethodCallCreateHrisLocation sdk) {
-        this.sdk = sdk;
+    public CreateHrisLocationRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public CreateHrisLocationRequestBuilder request(CreateHrisLocationRequest request) {
@@ -22,8 +26,10 @@ public class CreateHrisLocationRequestBuilder {
     }
 
     public CreateHrisLocationResponse call() throws Exception {
+        
+        RequestOperation<CreateHrisLocationRequest, CreateHrisLocationResponse> operation
+              = new CreateHrisLocationOperation( sdkConfiguration);
 
-        return sdk.createHrisLocation(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

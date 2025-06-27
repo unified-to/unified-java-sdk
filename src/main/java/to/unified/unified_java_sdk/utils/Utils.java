@@ -3,6 +3,8 @@
  */
 package to.unified.unified_java_sdk.utils;
 
+import static to.unified.unified_java_sdk.utils.Exceptions.rethrow;
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -35,6 +37,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.lang.Iterable;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
@@ -45,6 +48,7 @@ import java.util.Optional;
 import java.util.Random;
 import java.util.concurrent.Callable;
 import java.util.function.BiPredicate;
+import java.util.function.Function;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -80,7 +84,7 @@ public final class Utils {
     }
     
     public static String generateURL(String baseURL, String path)
-            throws IllegalArgumentException, IllegalAccessException {
+            throws IllegalArgumentException {
         if (baseURL != null && baseURL.endsWith("/")) {
             baseURL = baseURL.substring(0, baseURL.length() - 1);
         }
@@ -778,7 +782,12 @@ public final class Utils {
     public static <T> Stream<T> stream(Callable<Optional<T>> first, Function<T, Optional<T>> next) {
         return StreamSupport.stream(iterable(first, next).spliterator(), false);
     }
-    
+
+    public static <T> Stream<T> toStream(Iterable<T> iterable) {
+        return StreamSupport.stream(iterable.spliterator(), false);
+    }
+
+
     // need a Function method that throws
     public interface Function<S, T> {
         T apply(S value) throws Exception;
@@ -830,19 +839,7 @@ public final class Utils {
             }
         };
     }
-    
-    static <T> T rethrow(Throwable e) {
-        if (e instanceof RuntimeException) {
-            throw (RuntimeException) e;
-        } else if (e instanceof Error) {
-            throw (Error) e;
-        } else if (e instanceof IOException) {
-            throw new UncheckedIOException((IOException) e);
-        } else {
-           throw new RuntimeException(e);
-        }
-    }
-    
+
     public static boolean statusCodeMatches(int statusCode, String... expectedStatusCodes) {
         return Arrays.stream(expectedStatusCodes)
             .anyMatch(expected -> statusCodeMatchesOne(statusCode, expected));
@@ -1413,4 +1410,34 @@ public final class Utils {
     public static <T> T valueOrNull(JsonNullable<T> value) {
         return valueOrElse(value, null);
     }
+
+    public static <N> N castLong(long value, Class<N> targetType) {
+        // Handle supported types safely
+        if (targetType == Integer.class) {
+            return targetType.cast((int) value);
+        } else if (targetType == Long.class) {
+            return targetType.cast(value);
+        } else if (targetType == Short.class) {
+            return targetType.cast((short) value);
+        } else if (targetType == BigInteger.class) {
+            return targetType.cast(BigInteger.valueOf(value));
+        } else {
+            throw new IllegalArgumentException("Unsupported number type: " + targetType);
+        }
+    }
+
+    public static <I, O> Iterator<O> transform(Iterator<I> iterator, Function<I, O> mapper) {
+        return new Iterator<>() {
+            @Override
+            public boolean hasNext() {
+                return iterator.hasNext();
+            }
+
+            @Override
+            public O next() {
+                return Exceptions.unchecked(() -> mapper.apply(iterator.next())).get();
+            }
+        };
+    }
+
 }

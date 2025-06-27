@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveAccountingTaxrateOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveAccountingTaxrateRequestBuilder {
 
     private RemoveAccountingTaxrateRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveAccountingTaxrate sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveAccountingTaxrateRequestBuilder(SDKMethodInterfaces.MethodCallRemoveAccountingTaxrate sdk) {
-        this.sdk = sdk;
+    public RemoveAccountingTaxrateRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveAccountingTaxrateRequestBuilder request(RemoveAccountingTaxrateRequest request) {
@@ -22,8 +26,10 @@ public class RemoveAccountingTaxrateRequestBuilder {
     }
 
     public RemoveAccountingTaxrateResponse call() throws Exception {
+        
+        RequestOperation<RemoveAccountingTaxrateRequest, RemoveAccountingTaxrateResponse> operation
+              = new RemoveAccountingTaxrateOperation( sdkConfiguration);
 
-        return sdk.removeAccountingTaxrate(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

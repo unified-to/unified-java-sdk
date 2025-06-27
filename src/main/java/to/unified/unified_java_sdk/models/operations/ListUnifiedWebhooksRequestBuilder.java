@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.ListUnifiedWebhooksOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListUnifiedWebhooksRequestBuilder {
 
     private ListUnifiedWebhooksRequest request;
-    private final SDKMethodInterfaces.MethodCallListUnifiedWebhooks sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public ListUnifiedWebhooksRequestBuilder(SDKMethodInterfaces.MethodCallListUnifiedWebhooks sdk) {
-        this.sdk = sdk;
+    public ListUnifiedWebhooksRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public ListUnifiedWebhooksRequestBuilder request(ListUnifiedWebhooksRequest request) {
@@ -22,8 +26,10 @@ public class ListUnifiedWebhooksRequestBuilder {
     }
 
     public ListUnifiedWebhooksResponse call() throws Exception {
+        
+        RequestOperation<ListUnifiedWebhooksRequest, ListUnifiedWebhooksResponse> operation
+              = new ListUnifiedWebhooksOperation( sdkConfiguration);
 
-        return sdk.listUnifiedWebhooks(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.UpdateHrisCompanyOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdateHrisCompanyRequestBuilder {
 
     private UpdateHrisCompanyRequest request;
-    private final SDKMethodInterfaces.MethodCallUpdateHrisCompany sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public UpdateHrisCompanyRequestBuilder(SDKMethodInterfaces.MethodCallUpdateHrisCompany sdk) {
-        this.sdk = sdk;
+    public UpdateHrisCompanyRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public UpdateHrisCompanyRequestBuilder request(UpdateHrisCompanyRequest request) {
@@ -22,8 +26,10 @@ public class UpdateHrisCompanyRequestBuilder {
     }
 
     public UpdateHrisCompanyResponse call() throws Exception {
+        
+        RequestOperation<UpdateHrisCompanyRequest, UpdateHrisCompanyResponse> operation
+              = new UpdateHrisCompanyOperation( sdkConfiguration);
 
-        return sdk.updateHrisCompany(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

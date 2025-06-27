@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.PatchUnifiedConnectionOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchUnifiedConnectionRequestBuilder {
 
     private PatchUnifiedConnectionRequest request;
-    private final SDKMethodInterfaces.MethodCallPatchUnifiedConnection sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public PatchUnifiedConnectionRequestBuilder(SDKMethodInterfaces.MethodCallPatchUnifiedConnection sdk) {
-        this.sdk = sdk;
+    public PatchUnifiedConnectionRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public PatchUnifiedConnectionRequestBuilder request(PatchUnifiedConnectionRequest request) {
@@ -22,8 +26,10 @@ public class PatchUnifiedConnectionRequestBuilder {
     }
 
     public PatchUnifiedConnectionResponse call() throws Exception {
+        
+        RequestOperation<PatchUnifiedConnectionRequest, PatchUnifiedConnectionResponse> operation
+              = new PatchUnifiedConnectionOperation( sdkConfiguration);
 
-        return sdk.patchUnifiedConnection(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

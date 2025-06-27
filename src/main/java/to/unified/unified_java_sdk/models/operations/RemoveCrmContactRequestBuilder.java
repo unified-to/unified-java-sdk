@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveCrmContactOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveCrmContactRequestBuilder {
 
     private RemoveCrmContactRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveCrmContact sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveCrmContactRequestBuilder(SDKMethodInterfaces.MethodCallRemoveCrmContact sdk) {
-        this.sdk = sdk;
+    public RemoveCrmContactRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveCrmContactRequestBuilder request(RemoveCrmContactRequest request) {
@@ -22,8 +26,10 @@ public class RemoveCrmContactRequestBuilder {
     }
 
     public RemoveCrmContactResponse call() throws Exception {
+        
+        RequestOperation<RemoveCrmContactRequest, RemoveCrmContactResponse> operation
+              = new RemoveCrmContactOperation( sdkConfiguration);
 
-        return sdk.removeCrmContact(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

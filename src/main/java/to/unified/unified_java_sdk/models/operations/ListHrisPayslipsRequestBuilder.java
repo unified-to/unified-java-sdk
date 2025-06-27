@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.ListHrisPayslipsOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListHrisPayslipsRequestBuilder {
 
     private ListHrisPayslipsRequest request;
-    private final SDKMethodInterfaces.MethodCallListHrisPayslips sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public ListHrisPayslipsRequestBuilder(SDKMethodInterfaces.MethodCallListHrisPayslips sdk) {
-        this.sdk = sdk;
+    public ListHrisPayslipsRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public ListHrisPayslipsRequestBuilder request(ListHrisPayslipsRequest request) {
@@ -22,8 +26,10 @@ public class ListHrisPayslipsRequestBuilder {
     }
 
     public ListHrisPayslipsResponse call() throws Exception {
+        
+        RequestOperation<ListHrisPayslipsRequest, ListHrisPayslipsResponse> operation
+              = new ListHrisPayslipsOperation( sdkConfiguration);
 
-        return sdk.listHrisPayslips(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

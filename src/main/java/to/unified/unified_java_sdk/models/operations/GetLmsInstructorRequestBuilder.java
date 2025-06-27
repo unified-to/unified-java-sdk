@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.GetLmsInstructorOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetLmsInstructorRequestBuilder {
 
     private GetLmsInstructorRequest request;
-    private final SDKMethodInterfaces.MethodCallGetLmsInstructor sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public GetLmsInstructorRequestBuilder(SDKMethodInterfaces.MethodCallGetLmsInstructor sdk) {
-        this.sdk = sdk;
+    public GetLmsInstructorRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public GetLmsInstructorRequestBuilder request(GetLmsInstructorRequest request) {
@@ -22,8 +26,10 @@ public class GetLmsInstructorRequestBuilder {
     }
 
     public GetLmsInstructorResponse call() throws Exception {
+        
+        RequestOperation<GetLmsInstructorRequest, GetLmsInstructorResponse> operation
+              = new GetLmsInstructorOperation( sdkConfiguration);
 
-        return sdk.getLmsInstructor(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

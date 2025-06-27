@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.ListGenaiModelsOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListGenaiModelsRequestBuilder {
 
     private ListGenaiModelsRequest request;
-    private final SDKMethodInterfaces.MethodCallListGenaiModels sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public ListGenaiModelsRequestBuilder(SDKMethodInterfaces.MethodCallListGenaiModels sdk) {
-        this.sdk = sdk;
+    public ListGenaiModelsRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public ListGenaiModelsRequestBuilder request(ListGenaiModelsRequest request) {
@@ -22,8 +26,10 @@ public class ListGenaiModelsRequestBuilder {
     }
 
     public ListGenaiModelsResponse call() throws Exception {
+        
+        RequestOperation<ListGenaiModelsRequest, ListGenaiModelsResponse> operation
+              = new ListGenaiModelsOperation( sdkConfiguration);
 
-        return sdk.listGenaiModels(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

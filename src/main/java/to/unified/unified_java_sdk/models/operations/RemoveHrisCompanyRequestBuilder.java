@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveHrisCompanyOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveHrisCompanyRequestBuilder {
 
     private RemoveHrisCompanyRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveHrisCompany sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveHrisCompanyRequestBuilder(SDKMethodInterfaces.MethodCallRemoveHrisCompany sdk) {
-        this.sdk = sdk;
+    public RemoveHrisCompanyRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveHrisCompanyRequestBuilder request(RemoveHrisCompanyRequest request) {
@@ -22,8 +26,10 @@ public class RemoveHrisCompanyRequestBuilder {
     }
 
     public RemoveHrisCompanyResponse call() throws Exception {
+        
+        RequestOperation<RemoveHrisCompanyRequest, RemoveHrisCompanyResponse> operation
+              = new RemoveHrisCompanyOperation( sdkConfiguration);
 
-        return sdk.removeHrisCompany(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

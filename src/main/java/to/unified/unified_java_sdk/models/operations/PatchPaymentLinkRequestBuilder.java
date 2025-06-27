@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.PatchPaymentLinkOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchPaymentLinkRequestBuilder {
 
     private PatchPaymentLinkRequest request;
-    private final SDKMethodInterfaces.MethodCallPatchPaymentLink sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public PatchPaymentLinkRequestBuilder(SDKMethodInterfaces.MethodCallPatchPaymentLink sdk) {
-        this.sdk = sdk;
+    public PatchPaymentLinkRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public PatchPaymentLinkRequestBuilder request(PatchPaymentLinkRequest request) {
@@ -22,8 +26,10 @@ public class PatchPaymentLinkRequestBuilder {
     }
 
     public PatchPaymentLinkResponse call() throws Exception {
+        
+        RequestOperation<PatchPaymentLinkRequest, PatchPaymentLinkResponse> operation
+              = new PatchPaymentLinkOperation( sdkConfiguration);
 
-        return sdk.patchPaymentLink(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

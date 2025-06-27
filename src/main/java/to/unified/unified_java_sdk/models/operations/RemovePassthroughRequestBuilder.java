@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemovePassthroughOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemovePassthroughRequestBuilder {
 
     private RemovePassthroughRequest request;
-    private final SDKMethodInterfaces.MethodCallRemovePassthrough sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemovePassthroughRequestBuilder(SDKMethodInterfaces.MethodCallRemovePassthrough sdk) {
-        this.sdk = sdk;
+    public RemovePassthroughRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemovePassthroughRequestBuilder request(RemovePassthroughRequest request) {
@@ -22,8 +26,10 @@ public class RemovePassthroughRequestBuilder {
     }
 
     public RemovePassthroughResponse call() throws Exception {
+        
+        RequestOperation<RemovePassthroughRequest, RemovePassthroughResponse> operation
+              = new RemovePassthroughOperation( sdkConfiguration);
 
-        return sdk.removePassthrough(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

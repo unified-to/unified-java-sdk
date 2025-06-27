@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.ListCommerceCollectionsOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListCommerceCollectionsRequestBuilder {
 
     private ListCommerceCollectionsRequest request;
-    private final SDKMethodInterfaces.MethodCallListCommerceCollections sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public ListCommerceCollectionsRequestBuilder(SDKMethodInterfaces.MethodCallListCommerceCollections sdk) {
-        this.sdk = sdk;
+    public ListCommerceCollectionsRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public ListCommerceCollectionsRequestBuilder request(ListCommerceCollectionsRequest request) {
@@ -22,8 +26,10 @@ public class ListCommerceCollectionsRequestBuilder {
     }
 
     public ListCommerceCollectionsResponse call() throws Exception {
+        
+        RequestOperation<ListCommerceCollectionsRequest, ListCommerceCollectionsResponse> operation
+              = new ListCommerceCollectionsOperation( sdkConfiguration);
 
-        return sdk.listCommerceCollections(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

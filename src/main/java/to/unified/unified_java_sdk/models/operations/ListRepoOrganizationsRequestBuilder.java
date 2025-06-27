@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.ListRepoOrganizationsOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListRepoOrganizationsRequestBuilder {
 
     private ListRepoOrganizationsRequest request;
-    private final SDKMethodInterfaces.MethodCallListRepoOrganizations sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public ListRepoOrganizationsRequestBuilder(SDKMethodInterfaces.MethodCallListRepoOrganizations sdk) {
-        this.sdk = sdk;
+    public ListRepoOrganizationsRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public ListRepoOrganizationsRequestBuilder request(ListRepoOrganizationsRequest request) {
@@ -22,8 +26,10 @@ public class ListRepoOrganizationsRequestBuilder {
     }
 
     public ListRepoOrganizationsResponse call() throws Exception {
+        
+        RequestOperation<ListRepoOrganizationsRequest, ListRepoOrganizationsResponse> operation
+              = new ListRepoOrganizationsOperation( sdkConfiguration);
 
-        return sdk.listRepoOrganizations(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

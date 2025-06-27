@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.CreateAtsJobOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateAtsJobRequestBuilder {
 
     private CreateAtsJobRequest request;
-    private final SDKMethodInterfaces.MethodCallCreateAtsJob sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public CreateAtsJobRequestBuilder(SDKMethodInterfaces.MethodCallCreateAtsJob sdk) {
-        this.sdk = sdk;
+    public CreateAtsJobRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public CreateAtsJobRequestBuilder request(CreateAtsJobRequest request) {
@@ -22,8 +26,10 @@ public class CreateAtsJobRequestBuilder {
     }
 
     public CreateAtsJobResponse call() throws Exception {
+        
+        RequestOperation<CreateAtsJobRequest, CreateAtsJobResponse> operation
+              = new CreateAtsJobOperation( sdkConfiguration);
 
-        return sdk.createAtsJob(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

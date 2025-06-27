@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.ListAtsDocumentsOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListAtsDocumentsRequestBuilder {
 
     private ListAtsDocumentsRequest request;
-    private final SDKMethodInterfaces.MethodCallListAtsDocuments sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public ListAtsDocumentsRequestBuilder(SDKMethodInterfaces.MethodCallListAtsDocuments sdk) {
-        this.sdk = sdk;
+    public ListAtsDocumentsRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public ListAtsDocumentsRequestBuilder request(ListAtsDocumentsRequest request) {
@@ -22,8 +26,10 @@ public class ListAtsDocumentsRequestBuilder {
     }
 
     public ListAtsDocumentsResponse call() throws Exception {
+        
+        RequestOperation<ListAtsDocumentsRequest, ListAtsDocumentsResponse> operation
+              = new ListAtsDocumentsOperation( sdkConfiguration);
 
-        return sdk.listAtsDocuments(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveUcContactOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveUcContactRequestBuilder {
 
     private RemoveUcContactRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveUcContact sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveUcContactRequestBuilder(SDKMethodInterfaces.MethodCallRemoveUcContact sdk) {
-        this.sdk = sdk;
+    public RemoveUcContactRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveUcContactRequestBuilder request(RemoveUcContactRequest request) {
@@ -22,8 +26,10 @@ public class RemoveUcContactRequestBuilder {
     }
 
     public RemoveUcContactResponse call() throws Exception {
+        
+        RequestOperation<RemoveUcContactRequest, RemoveUcContactResponse> operation
+              = new RemoveUcContactOperation( sdkConfiguration);
 
-        return sdk.removeUcContact(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

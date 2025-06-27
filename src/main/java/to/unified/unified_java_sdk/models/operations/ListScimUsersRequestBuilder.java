@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.ListScimUsersOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListScimUsersRequestBuilder {
 
     private ListScimUsersRequest request;
-    private final SDKMethodInterfaces.MethodCallListScimUsers sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public ListScimUsersRequestBuilder(SDKMethodInterfaces.MethodCallListScimUsers sdk) {
-        this.sdk = sdk;
+    public ListScimUsersRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public ListScimUsersRequestBuilder request(ListScimUsersRequest request) {
@@ -22,8 +26,10 @@ public class ListScimUsersRequestBuilder {
     }
 
     public ListScimUsersResponse call() throws Exception {
+        
+        RequestOperation<ListScimUsersRequest, ListScimUsersResponse> operation
+              = new ListScimUsersOperation( sdkConfiguration);
 
-        return sdk.listScimUsers(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

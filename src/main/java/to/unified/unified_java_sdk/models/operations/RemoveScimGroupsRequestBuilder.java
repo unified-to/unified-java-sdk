@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveScimGroupsOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveScimGroupsRequestBuilder {
 
     private RemoveScimGroupsRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveScimGroups sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveScimGroupsRequestBuilder(SDKMethodInterfaces.MethodCallRemoveScimGroups sdk) {
-        this.sdk = sdk;
+    public RemoveScimGroupsRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveScimGroupsRequestBuilder request(RemoveScimGroupsRequest request) {
@@ -22,8 +26,10 @@ public class RemoveScimGroupsRequestBuilder {
     }
 
     public RemoveScimGroupsResponse call() throws Exception {
+        
+        RequestOperation<RemoveScimGroupsRequest, RemoveScimGroupsResponse> operation
+              = new RemoveScimGroupsOperation( sdkConfiguration);
 
-        return sdk.removeScimGroups(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

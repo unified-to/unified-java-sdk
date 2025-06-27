@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.GetHrisPayslipOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetHrisPayslipRequestBuilder {
 
     private GetHrisPayslipRequest request;
-    private final SDKMethodInterfaces.MethodCallGetHrisPayslip sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public GetHrisPayslipRequestBuilder(SDKMethodInterfaces.MethodCallGetHrisPayslip sdk) {
-        this.sdk = sdk;
+    public GetHrisPayslipRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public GetHrisPayslipRequestBuilder request(GetHrisPayslipRequest request) {
@@ -22,8 +26,10 @@ public class GetHrisPayslipRequestBuilder {
     }
 
     public GetHrisPayslipResponse call() throws Exception {
+        
+        RequestOperation<GetHrisPayslipRequest, GetHrisPayslipResponse> operation
+              = new GetHrisPayslipOperation( sdkConfiguration);
 
-        return sdk.getHrisPayslip(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

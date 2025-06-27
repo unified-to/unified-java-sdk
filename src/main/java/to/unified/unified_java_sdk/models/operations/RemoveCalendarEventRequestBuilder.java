@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveCalendarEventOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveCalendarEventRequestBuilder {
 
     private RemoveCalendarEventRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveCalendarEvent sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveCalendarEventRequestBuilder(SDKMethodInterfaces.MethodCallRemoveCalendarEvent sdk) {
-        this.sdk = sdk;
+    public RemoveCalendarEventRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveCalendarEventRequestBuilder request(RemoveCalendarEventRequest request) {
@@ -22,8 +26,10 @@ public class RemoveCalendarEventRequestBuilder {
     }
 
     public RemoveCalendarEventResponse call() throws Exception {
+        
+        RequestOperation<RemoveCalendarEventRequest, RemoveCalendarEventResponse> operation
+              = new RemoveCalendarEventOperation( sdkConfiguration);
 
-        return sdk.removeCalendarEvent(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

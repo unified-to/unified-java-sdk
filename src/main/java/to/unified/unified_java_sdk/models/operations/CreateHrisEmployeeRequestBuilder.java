@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.CreateHrisEmployeeOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateHrisEmployeeRequestBuilder {
 
     private CreateHrisEmployeeRequest request;
-    private final SDKMethodInterfaces.MethodCallCreateHrisEmployee sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public CreateHrisEmployeeRequestBuilder(SDKMethodInterfaces.MethodCallCreateHrisEmployee sdk) {
-        this.sdk = sdk;
+    public CreateHrisEmployeeRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public CreateHrisEmployeeRequestBuilder request(CreateHrisEmployeeRequest request) {
@@ -22,8 +26,10 @@ public class CreateHrisEmployeeRequestBuilder {
     }
 
     public CreateHrisEmployeeResponse call() throws Exception {
+        
+        RequestOperation<CreateHrisEmployeeRequest, CreateHrisEmployeeResponse> operation
+              = new CreateHrisEmployeeOperation( sdkConfiguration);
 
-        return sdk.createHrisEmployee(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveKmsPageOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveKmsPageRequestBuilder {
 
     private RemoveKmsPageRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveKmsPage sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveKmsPageRequestBuilder(SDKMethodInterfaces.MethodCallRemoveKmsPage sdk) {
-        this.sdk = sdk;
+    public RemoveKmsPageRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveKmsPageRequestBuilder request(RemoveKmsPageRequest request) {
@@ -22,8 +26,10 @@ public class RemoveKmsPageRequestBuilder {
     }
 
     public RemoveKmsPageResponse call() throws Exception {
+        
+        RequestOperation<RemoveKmsPageRequest, RemoveKmsPageResponse> operation
+              = new RemoveKmsPageOperation( sdkConfiguration);
 
-        return sdk.removeKmsPage(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

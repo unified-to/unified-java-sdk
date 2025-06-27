@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.GetMetadataMetadataOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetMetadataMetadataRequestBuilder {
 
     private GetMetadataMetadataRequest request;
-    private final SDKMethodInterfaces.MethodCallGetMetadataMetadata sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public GetMetadataMetadataRequestBuilder(SDKMethodInterfaces.MethodCallGetMetadataMetadata sdk) {
-        this.sdk = sdk;
+    public GetMetadataMetadataRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public GetMetadataMetadataRequestBuilder request(GetMetadataMetadataRequest request) {
@@ -22,8 +26,10 @@ public class GetMetadataMetadataRequestBuilder {
     }
 
     public GetMetadataMetadataResponse call() throws Exception {
+        
+        RequestOperation<GetMetadataMetadataRequest, GetMetadataMetadataResponse> operation
+              = new GetMetadataMetadataOperation( sdkConfiguration);
 
-        return sdk.getMetadataMetadata(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

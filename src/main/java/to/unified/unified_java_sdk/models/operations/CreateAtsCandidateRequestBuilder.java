@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.CreateAtsCandidateOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateAtsCandidateRequestBuilder {
 
     private CreateAtsCandidateRequest request;
-    private final SDKMethodInterfaces.MethodCallCreateAtsCandidate sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public CreateAtsCandidateRequestBuilder(SDKMethodInterfaces.MethodCallCreateAtsCandidate sdk) {
-        this.sdk = sdk;
+    public CreateAtsCandidateRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public CreateAtsCandidateRequestBuilder request(CreateAtsCandidateRequest request) {
@@ -22,8 +26,10 @@ public class CreateAtsCandidateRequestBuilder {
     }
 
     public CreateAtsCandidateResponse call() throws Exception {
+        
+        RequestOperation<CreateAtsCandidateRequest, CreateAtsCandidateResponse> operation
+              = new CreateAtsCandidateOperation( sdkConfiguration);
 
-        return sdk.createAtsCandidate(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

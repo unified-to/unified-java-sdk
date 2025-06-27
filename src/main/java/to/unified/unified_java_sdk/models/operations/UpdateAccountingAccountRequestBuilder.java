@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.UpdateAccountingAccountOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdateAccountingAccountRequestBuilder {
 
     private UpdateAccountingAccountRequest request;
-    private final SDKMethodInterfaces.MethodCallUpdateAccountingAccount sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public UpdateAccountingAccountRequestBuilder(SDKMethodInterfaces.MethodCallUpdateAccountingAccount sdk) {
-        this.sdk = sdk;
+    public UpdateAccountingAccountRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public UpdateAccountingAccountRequestBuilder request(UpdateAccountingAccountRequest request) {
@@ -22,8 +26,10 @@ public class UpdateAccountingAccountRequestBuilder {
     }
 
     public UpdateAccountingAccountResponse call() throws Exception {
+        
+        RequestOperation<UpdateAccountingAccountRequest, UpdateAccountingAccountResponse> operation
+              = new UpdateAccountingAccountOperation( sdkConfiguration);
 
-        return sdk.updateAccountingAccount(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

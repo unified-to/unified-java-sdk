@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.PatchHrisLocationOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchHrisLocationRequestBuilder {
 
     private PatchHrisLocationRequest request;
-    private final SDKMethodInterfaces.MethodCallPatchHrisLocation sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public PatchHrisLocationRequestBuilder(SDKMethodInterfaces.MethodCallPatchHrisLocation sdk) {
-        this.sdk = sdk;
+    public PatchHrisLocationRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public PatchHrisLocationRequestBuilder request(PatchHrisLocationRequest request) {
@@ -22,8 +26,10 @@ public class PatchHrisLocationRequestBuilder {
     }
 
     public PatchHrisLocationResponse call() throws Exception {
+        
+        RequestOperation<PatchHrisLocationRequest, PatchHrisLocationResponse> operation
+              = new PatchHrisLocationOperation( sdkConfiguration);
 
-        return sdk.patchHrisLocation(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

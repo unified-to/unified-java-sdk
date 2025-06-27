@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.ListLmsCoursesOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListLmsCoursesRequestBuilder {
 
     private ListLmsCoursesRequest request;
-    private final SDKMethodInterfaces.MethodCallListLmsCourses sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public ListLmsCoursesRequestBuilder(SDKMethodInterfaces.MethodCallListLmsCourses sdk) {
-        this.sdk = sdk;
+    public ListLmsCoursesRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public ListLmsCoursesRequestBuilder request(ListLmsCoursesRequest request) {
@@ -22,8 +26,10 @@ public class ListLmsCoursesRequestBuilder {
     }
 
     public ListLmsCoursesResponse call() throws Exception {
+        
+        RequestOperation<ListLmsCoursesRequest, ListLmsCoursesResponse> operation
+              = new ListLmsCoursesOperation( sdkConfiguration);
 
-        return sdk.listLmsCourses(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

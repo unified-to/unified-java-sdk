@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.ListAtsActivitiesOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListAtsActivitiesRequestBuilder {
 
     private ListAtsActivitiesRequest request;
-    private final SDKMethodInterfaces.MethodCallListAtsActivities sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public ListAtsActivitiesRequestBuilder(SDKMethodInterfaces.MethodCallListAtsActivities sdk) {
-        this.sdk = sdk;
+    public ListAtsActivitiesRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public ListAtsActivitiesRequestBuilder request(ListAtsActivitiesRequest request) {
@@ -22,8 +26,10 @@ public class ListAtsActivitiesRequestBuilder {
     }
 
     public ListAtsActivitiesResponse call() throws Exception {
+        
+        RequestOperation<ListAtsActivitiesRequest, ListAtsActivitiesResponse> operation
+              = new ListAtsActivitiesOperation( sdkConfiguration);
 
-        return sdk.listAtsActivities(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

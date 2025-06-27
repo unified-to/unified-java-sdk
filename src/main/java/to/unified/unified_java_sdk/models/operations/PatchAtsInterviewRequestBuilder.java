@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.PatchAtsInterviewOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchAtsInterviewRequestBuilder {
 
     private PatchAtsInterviewRequest request;
-    private final SDKMethodInterfaces.MethodCallPatchAtsInterview sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public PatchAtsInterviewRequestBuilder(SDKMethodInterfaces.MethodCallPatchAtsInterview sdk) {
-        this.sdk = sdk;
+    public PatchAtsInterviewRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public PatchAtsInterviewRequestBuilder request(PatchAtsInterviewRequest request) {
@@ -22,8 +26,10 @@ public class PatchAtsInterviewRequestBuilder {
     }
 
     public PatchAtsInterviewResponse call() throws Exception {
+        
+        RequestOperation<PatchAtsInterviewRequest, PatchAtsInterviewResponse> operation
+              = new PatchAtsInterviewOperation( sdkConfiguration);
 
-        return sdk.patchAtsInterview(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

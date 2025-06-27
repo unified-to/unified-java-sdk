@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.PatchUcRecordingOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchUcRecordingRequestBuilder {
 
     private PatchUcRecordingRequest request;
-    private final SDKMethodInterfaces.MethodCallPatchUcRecording sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public PatchUcRecordingRequestBuilder(SDKMethodInterfaces.MethodCallPatchUcRecording sdk) {
-        this.sdk = sdk;
+    public PatchUcRecordingRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public PatchUcRecordingRequestBuilder request(PatchUcRecordingRequest request) {
@@ -22,8 +26,10 @@ public class PatchUcRecordingRequestBuilder {
     }
 
     public PatchUcRecordingResponse call() throws Exception {
+        
+        RequestOperation<PatchUcRecordingRequest, PatchUcRecordingResponse> operation
+              = new PatchUcRecordingOperation( sdkConfiguration);
 
-        return sdk.patchUcRecording(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

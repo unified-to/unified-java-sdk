@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.CreatePassthroughJsonOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreatePassthroughJsonRequestBuilder {
 
     private CreatePassthroughJsonRequest request;
-    private final SDKMethodInterfaces.MethodCallCreatePassthroughJson sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public CreatePassthroughJsonRequestBuilder(SDKMethodInterfaces.MethodCallCreatePassthroughJson sdk) {
-        this.sdk = sdk;
+    public CreatePassthroughJsonRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public CreatePassthroughJsonRequestBuilder request(CreatePassthroughJsonRequest request) {
@@ -22,8 +26,10 @@ public class CreatePassthroughJsonRequestBuilder {
     }
 
     public CreatePassthroughJsonResponse call() throws Exception {
+        
+        RequestOperation<CreatePassthroughJsonRequest, CreatePassthroughJsonResponse> operation
+              = new CreatePassthroughJsonOperation( sdkConfiguration);
 
-        return sdk.createPassthroughJson(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

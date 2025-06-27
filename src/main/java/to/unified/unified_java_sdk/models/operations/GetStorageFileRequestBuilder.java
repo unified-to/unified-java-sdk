@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.GetStorageFileOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetStorageFileRequestBuilder {
 
     private GetStorageFileRequest request;
-    private final SDKMethodInterfaces.MethodCallGetStorageFile sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public GetStorageFileRequestBuilder(SDKMethodInterfaces.MethodCallGetStorageFile sdk) {
-        this.sdk = sdk;
+    public GetStorageFileRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public GetStorageFileRequestBuilder request(GetStorageFileRequest request) {
@@ -22,8 +26,10 @@ public class GetStorageFileRequestBuilder {
     }
 
     public GetStorageFileResponse call() throws Exception {
+        
+        RequestOperation<GetStorageFileRequest, GetStorageFileResponse> operation
+              = new GetStorageFileOperation( sdkConfiguration);
 
-        return sdk.getStorageFile(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

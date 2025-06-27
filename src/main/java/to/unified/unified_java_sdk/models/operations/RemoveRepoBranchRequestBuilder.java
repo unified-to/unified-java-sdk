@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveRepoBranchOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveRepoBranchRequestBuilder {
 
     private RemoveRepoBranchRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveRepoBranch sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveRepoBranchRequestBuilder(SDKMethodInterfaces.MethodCallRemoveRepoBranch sdk) {
-        this.sdk = sdk;
+    public RemoveRepoBranchRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveRepoBranchRequestBuilder request(RemoveRepoBranchRequest request) {
@@ -22,8 +26,10 @@ public class RemoveRepoBranchRequestBuilder {
     }
 
     public RemoveRepoBranchResponse call() throws Exception {
+        
+        RequestOperation<RemoveRepoBranchRequest, RemoveRepoBranchResponse> operation
+              = new RemoveRepoBranchOperation( sdkConfiguration);
 
-        return sdk.removeRepoBranch(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

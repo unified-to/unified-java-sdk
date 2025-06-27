@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.ListTaskTasksOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListTaskTasksRequestBuilder {
 
     private ListTaskTasksRequest request;
-    private final SDKMethodInterfaces.MethodCallListTaskTasks sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public ListTaskTasksRequestBuilder(SDKMethodInterfaces.MethodCallListTaskTasks sdk) {
-        this.sdk = sdk;
+    public ListTaskTasksRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public ListTaskTasksRequestBuilder request(ListTaskTasksRequest request) {
@@ -22,8 +26,10 @@ public class ListTaskTasksRequestBuilder {
     }
 
     public ListTaskTasksResponse call() throws Exception {
+        
+        RequestOperation<ListTaskTasksRequest, ListTaskTasksResponse> operation
+              = new ListTaskTasksOperation( sdkConfiguration);
 
-        return sdk.listTaskTasks(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveAccountingContactOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveAccountingContactRequestBuilder {
 
     private RemoveAccountingContactRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveAccountingContact sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveAccountingContactRequestBuilder(SDKMethodInterfaces.MethodCallRemoveAccountingContact sdk) {
-        this.sdk = sdk;
+    public RemoveAccountingContactRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveAccountingContactRequestBuilder request(RemoveAccountingContactRequest request) {
@@ -22,8 +26,10 @@ public class RemoveAccountingContactRequestBuilder {
     }
 
     public RemoveAccountingContactResponse call() throws Exception {
+        
+        RequestOperation<RemoveAccountingContactRequest, RemoveAccountingContactResponse> operation
+              = new RemoveAccountingContactOperation( sdkConfiguration);
 
-        return sdk.removeAccountingContact(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

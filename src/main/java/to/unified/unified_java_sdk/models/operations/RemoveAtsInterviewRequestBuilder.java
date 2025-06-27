@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveAtsInterviewOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveAtsInterviewRequestBuilder {
 
     private RemoveAtsInterviewRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveAtsInterview sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveAtsInterviewRequestBuilder(SDKMethodInterfaces.MethodCallRemoveAtsInterview sdk) {
-        this.sdk = sdk;
+    public RemoveAtsInterviewRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveAtsInterviewRequestBuilder request(RemoveAtsInterviewRequest request) {
@@ -22,8 +26,10 @@ public class RemoveAtsInterviewRequestBuilder {
     }
 
     public RemoveAtsInterviewResponse call() throws Exception {
+        
+        RequestOperation<RemoveAtsInterviewRequest, RemoveAtsInterviewResponse> operation
+              = new RemoveAtsInterviewOperation( sdkConfiguration);
 
-        return sdk.removeAtsInterview(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

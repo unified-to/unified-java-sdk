@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.PatchHrisTimeshiftOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchHrisTimeshiftRequestBuilder {
 
     private PatchHrisTimeshiftRequest request;
-    private final SDKMethodInterfaces.MethodCallPatchHrisTimeshift sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public PatchHrisTimeshiftRequestBuilder(SDKMethodInterfaces.MethodCallPatchHrisTimeshift sdk) {
-        this.sdk = sdk;
+    public PatchHrisTimeshiftRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public PatchHrisTimeshiftRequestBuilder request(PatchHrisTimeshiftRequest request) {
@@ -22,8 +26,10 @@ public class PatchHrisTimeshiftRequestBuilder {
     }
 
     public PatchHrisTimeshiftResponse call() throws Exception {
+        
+        RequestOperation<PatchHrisTimeshiftRequest, PatchHrisTimeshiftResponse> operation
+              = new PatchHrisTimeshiftOperation( sdkConfiguration);
 
-        return sdk.patchHrisTimeshift(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

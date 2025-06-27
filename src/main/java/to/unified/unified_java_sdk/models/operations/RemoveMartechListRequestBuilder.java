@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveMartechListOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveMartechListRequestBuilder {
 
     private RemoveMartechListRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveMartechList sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveMartechListRequestBuilder(SDKMethodInterfaces.MethodCallRemoveMartechList sdk) {
-        this.sdk = sdk;
+    public RemoveMartechListRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveMartechListRequestBuilder request(RemoveMartechListRequest request) {
@@ -22,8 +26,10 @@ public class RemoveMartechListRequestBuilder {
     }
 
     public RemoveMartechListResponse call() throws Exception {
+        
+        RequestOperation<RemoveMartechListRequest, RemoveMartechListResponse> operation
+              = new RemoveMartechListOperation( sdkConfiguration);
 
-        return sdk.removeMartechList(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

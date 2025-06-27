@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.CreateAccountingJournalOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateAccountingJournalRequestBuilder {
 
     private CreateAccountingJournalRequest request;
-    private final SDKMethodInterfaces.MethodCallCreateAccountingJournal sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public CreateAccountingJournalRequestBuilder(SDKMethodInterfaces.MethodCallCreateAccountingJournal sdk) {
-        this.sdk = sdk;
+    public CreateAccountingJournalRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public CreateAccountingJournalRequestBuilder request(CreateAccountingJournalRequest request) {
@@ -22,8 +26,10 @@ public class CreateAccountingJournalRequestBuilder {
     }
 
     public CreateAccountingJournalResponse call() throws Exception {
+        
+        RequestOperation<CreateAccountingJournalRequest, CreateAccountingJournalResponse> operation
+              = new CreateAccountingJournalOperation( sdkConfiguration);
 
-        return sdk.createAccountingJournal(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

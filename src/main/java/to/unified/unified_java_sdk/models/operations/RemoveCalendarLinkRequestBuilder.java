@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveCalendarLinkOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveCalendarLinkRequestBuilder {
 
     private RemoveCalendarLinkRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveCalendarLink sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveCalendarLinkRequestBuilder(SDKMethodInterfaces.MethodCallRemoveCalendarLink sdk) {
-        this.sdk = sdk;
+    public RemoveCalendarLinkRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveCalendarLinkRequestBuilder request(RemoveCalendarLinkRequest request) {
@@ -22,8 +26,10 @@ public class RemoveCalendarLinkRequestBuilder {
     }
 
     public RemoveCalendarLinkResponse call() throws Exception {
+        
+        RequestOperation<RemoveCalendarLinkRequest, RemoveCalendarLinkResponse> operation
+              = new RemoveCalendarLinkOperation( sdkConfiguration);
 
-        return sdk.removeCalendarLink(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

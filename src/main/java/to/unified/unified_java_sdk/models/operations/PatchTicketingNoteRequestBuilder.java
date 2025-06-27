@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.PatchTicketingNoteOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchTicketingNoteRequestBuilder {
 
     private PatchTicketingNoteRequest request;
-    private final SDKMethodInterfaces.MethodCallPatchTicketingNote sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public PatchTicketingNoteRequestBuilder(SDKMethodInterfaces.MethodCallPatchTicketingNote sdk) {
-        this.sdk = sdk;
+    public PatchTicketingNoteRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public PatchTicketingNoteRequestBuilder request(PatchTicketingNoteRequest request) {
@@ -22,8 +26,10 @@ public class PatchTicketingNoteRequestBuilder {
     }
 
     public PatchTicketingNoteResponse call() throws Exception {
+        
+        RequestOperation<PatchTicketingNoteRequest, PatchTicketingNoteResponse> operation
+              = new PatchTicketingNoteOperation( sdkConfiguration);
 
-        return sdk.patchTicketingNote(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

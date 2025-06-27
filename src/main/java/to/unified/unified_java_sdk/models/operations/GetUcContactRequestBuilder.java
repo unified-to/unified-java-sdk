@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.GetUcContactOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetUcContactRequestBuilder {
 
     private GetUcContactRequest request;
-    private final SDKMethodInterfaces.MethodCallGetUcContact sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public GetUcContactRequestBuilder(SDKMethodInterfaces.MethodCallGetUcContact sdk) {
-        this.sdk = sdk;
+    public GetUcContactRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public GetUcContactRequestBuilder request(GetUcContactRequest request) {
@@ -22,8 +26,10 @@ public class GetUcContactRequestBuilder {
     }
 
     public GetUcContactResponse call() throws Exception {
+        
+        RequestOperation<GetUcContactRequest, GetUcContactResponse> operation
+              = new GetUcContactOperation( sdkConfiguration);
 
-        return sdk.getUcContact(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.CreateRepoPullrequestOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateRepoPullrequestRequestBuilder {
 
     private CreateRepoPullrequestRequest request;
-    private final SDKMethodInterfaces.MethodCallCreateRepoPullrequest sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public CreateRepoPullrequestRequestBuilder(SDKMethodInterfaces.MethodCallCreateRepoPullrequest sdk) {
-        this.sdk = sdk;
+    public CreateRepoPullrequestRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public CreateRepoPullrequestRequestBuilder request(CreateRepoPullrequestRequest request) {
@@ -22,8 +26,10 @@ public class CreateRepoPullrequestRequestBuilder {
     }
 
     public CreateRepoPullrequestResponse call() throws Exception {
+        
+        RequestOperation<CreateRepoPullrequestRequest, CreateRepoPullrequestResponse> operation
+              = new CreateRepoPullrequestOperation( sdkConfiguration);
 
-        return sdk.createRepoPullrequest(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

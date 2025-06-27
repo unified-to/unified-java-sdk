@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.UpdateCommerceReviewOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdateCommerceReviewRequestBuilder {
 
     private UpdateCommerceReviewRequest request;
-    private final SDKMethodInterfaces.MethodCallUpdateCommerceReview sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public UpdateCommerceReviewRequestBuilder(SDKMethodInterfaces.MethodCallUpdateCommerceReview sdk) {
-        this.sdk = sdk;
+    public UpdateCommerceReviewRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public UpdateCommerceReviewRequestBuilder request(UpdateCommerceReviewRequest request) {
@@ -22,8 +26,10 @@ public class UpdateCommerceReviewRequestBuilder {
     }
 
     public UpdateCommerceReviewResponse call() throws Exception {
+        
+        RequestOperation<UpdateCommerceReviewRequest, UpdateCommerceReviewResponse> operation
+              = new UpdateCommerceReviewOperation( sdkConfiguration);
 
-        return sdk.updateCommerceReview(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

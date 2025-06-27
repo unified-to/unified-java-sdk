@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.GetCalendarLinkOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetCalendarLinkRequestBuilder {
 
     private GetCalendarLinkRequest request;
-    private final SDKMethodInterfaces.MethodCallGetCalendarLink sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public GetCalendarLinkRequestBuilder(SDKMethodInterfaces.MethodCallGetCalendarLink sdk) {
-        this.sdk = sdk;
+    public GetCalendarLinkRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public GetCalendarLinkRequestBuilder request(GetCalendarLinkRequest request) {
@@ -22,8 +26,10 @@ public class GetCalendarLinkRequestBuilder {
     }
 
     public GetCalendarLinkResponse call() throws Exception {
+        
+        RequestOperation<GetCalendarLinkRequest, GetCalendarLinkResponse> operation
+              = new GetCalendarLinkOperation( sdkConfiguration);
 
-        return sdk.getCalendarLink(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }

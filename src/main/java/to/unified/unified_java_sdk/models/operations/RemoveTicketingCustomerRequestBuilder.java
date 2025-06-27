@@ -3,16 +3,20 @@
  */
 package to.unified.unified_java_sdk.models.operations;
 
+import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+
 import java.lang.Exception;
+import to.unified.unified_java_sdk.SDKConfiguration;
+import to.unified.unified_java_sdk.operations.RemoveTicketingCustomerOperation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveTicketingCustomerRequestBuilder {
 
     private RemoveTicketingCustomerRequest request;
-    private final SDKMethodInterfaces.MethodCallRemoveTicketingCustomer sdk;
+    private final SDKConfiguration sdkConfiguration;
 
-    public RemoveTicketingCustomerRequestBuilder(SDKMethodInterfaces.MethodCallRemoveTicketingCustomer sdk) {
-        this.sdk = sdk;
+    public RemoveTicketingCustomerRequestBuilder(SDKConfiguration sdkConfiguration) {
+        this.sdkConfiguration = sdkConfiguration;
     }
 
     public RemoveTicketingCustomerRequestBuilder request(RemoveTicketingCustomerRequest request) {
@@ -22,8 +26,10 @@ public class RemoveTicketingCustomerRequestBuilder {
     }
 
     public RemoveTicketingCustomerResponse call() throws Exception {
+        
+        RequestOperation<RemoveTicketingCustomerRequest, RemoveTicketingCustomerResponse> operation
+              = new RemoveTicketingCustomerOperation( sdkConfiguration);
 
-        return sdk.removeTicketingCustomer(
-            request);
+        return operation.handleResponse(operation.doRequest(request));
     }
 }
