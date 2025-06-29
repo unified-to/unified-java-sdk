@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 1ed136fdd156254f45506d66d75335d4
+  docChecksum: 30f30cd0f1e19f64975bb2a6da82b7fc
   docVersion: "1.0"
-  speakeasyVersion: 1.570.2
-  generationVersion: 2.638.5
-  releaseVersion: 0.28.2
-  configChecksum: 6b144f3e7f94392a28fd81218d2411d8
+  speakeasyVersion: 1.571.1
+  generationVersion: 2.640.2
+  releaseVersion: 0.29.0
+  configChecksum: 5d355c7a49ad5f2304100ca58fe5543f
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -15,7 +15,7 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.1
-    core: 3.39.1
+    core: 3.40.1
     downloadStreams: 0.1.1
     globalSecurity: 2.82.8
     globalSecurityCallbacks: 0.1.0
@@ -48,6 +48,8 @@ generatedFiles:
   - docs/models/operations/CreateAtsApplicationResponse.md
   - docs/models/operations/CreateAtsCandidateRequest.md
   - docs/models/operations/CreateAtsCandidateResponse.md
+  - docs/models/operations/CreateAtsCompanyRequest.md
+  - docs/models/operations/CreateAtsCompanyResponse.md
   - docs/models/operations/CreateAtsDocumentRequest.md
   - docs/models/operations/CreateAtsDocumentResponse.md
   - docs/models/operations/CreateAtsInterviewRequest.md
@@ -520,6 +522,8 @@ generatedFiles:
   - docs/models/operations/PatchAtsApplicationResponse.md
   - docs/models/operations/PatchAtsCandidateRequest.md
   - docs/models/operations/PatchAtsCandidateResponse.md
+  - docs/models/operations/PatchAtsCompanyRequest.md
+  - docs/models/operations/PatchAtsCompanyResponse.md
   - docs/models/operations/PatchAtsDocumentRequest.md
   - docs/models/operations/PatchAtsDocumentResponse.md
   - docs/models/operations/PatchAtsInterviewRequest.md
@@ -661,6 +665,8 @@ generatedFiles:
   - docs/models/operations/RemoveAtsApplicationResponse.md
   - docs/models/operations/RemoveAtsCandidateRequest.md
   - docs/models/operations/RemoveAtsCandidateResponse.md
+  - docs/models/operations/RemoveAtsCompanyRequest.md
+  - docs/models/operations/RemoveAtsCompanyResponse.md
   - docs/models/operations/RemoveAtsDocumentRequest.md
   - docs/models/operations/RemoveAtsDocumentResponse.md
   - docs/models/operations/RemoveAtsInterviewRequest.md
@@ -797,6 +803,8 @@ generatedFiles:
   - docs/models/operations/UpdateAtsApplicationResponse.md
   - docs/models/operations/UpdateAtsCandidateRequest.md
   - docs/models/operations/UpdateAtsCandidateResponse.md
+  - docs/models/operations/UpdateAtsCompanyRequest.md
+  - docs/models/operations/UpdateAtsCompanyResponse.md
   - docs/models/operations/UpdateAtsDocumentRequest.md
   - docs/models/operations/UpdateAtsDocumentResponse.md
   - docs/models/operations/UpdateAtsInterviewRequest.md
@@ -1626,6 +1634,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateAtsCandidateRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateAtsCandidateRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateAtsCandidateResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/CreateAtsCompanyRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/CreateAtsCompanyRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/CreateAtsCompanyResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateAtsDocumentRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateAtsDocumentRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateAtsDocumentResponse.java
@@ -2334,6 +2345,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchAtsCandidateRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchAtsCandidateRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchAtsCandidateResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/PatchAtsCompanyRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/PatchAtsCompanyRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/PatchAtsCompanyResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchAtsDocumentRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchAtsDocumentRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchAtsDocumentResponse.java
@@ -2545,6 +2559,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveAtsCandidateRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveAtsCandidateRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveAtsCandidateResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveAtsCompanyRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveAtsCompanyRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveAtsCompanyResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveAtsDocumentRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveAtsDocumentRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveAtsDocumentResponse.java
@@ -2749,6 +2766,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateAtsCandidateRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateAtsCandidateRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateAtsCandidateResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateAtsCompanyRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateAtsCompanyRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateAtsCompanyResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateAtsDocumentRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateAtsDocumentRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateAtsDocumentResponse.java
@@ -3419,6 +3439,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/CreateAtsActivityOperation.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateAtsApplicationOperation.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateAtsCandidateOperation.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateAtsCompanyOperation.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateAtsDocumentOperation.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateAtsInterviewOperation.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateAtsJobOperation.java
@@ -3656,6 +3677,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/PatchAtsActivityOperation.java
   - src/main/java/to/unified/unified_java_sdk/operations/PatchAtsApplicationOperation.java
   - src/main/java/to/unified/unified_java_sdk/operations/PatchAtsCandidateOperation.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchAtsCompanyOperation.java
   - src/main/java/to/unified/unified_java_sdk/operations/PatchAtsDocumentOperation.java
   - src/main/java/to/unified/unified_java_sdk/operations/PatchAtsInterviewOperation.java
   - src/main/java/to/unified/unified_java_sdk/operations/PatchAtsJobOperation.java
@@ -3726,6 +3748,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveAtsActivityOperation.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveAtsApplicationOperation.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveAtsCandidateOperation.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAtsCompanyOperation.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveAtsDocumentOperation.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveAtsInterviewOperation.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveAtsJobOperation.java
@@ -3794,6 +3817,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateAtsActivityOperation.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateAtsApplicationOperation.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateAtsCandidateOperation.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAtsCompanyOperation.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateAtsDocumentOperation.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateAtsInterviewOperation.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateAtsJobOperation.java
@@ -7940,5 +7964,43 @@ examples:
       responses:
         "200":
           text/plain: "<value>"
+  createAtsCompany:
+    speakeasy-default-create-ats-company:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  patchAtsCompany:
+    speakeasy-default-patch-ats-company:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  removeAtsCompany:
+    speakeasy-default-remove-ats-company:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateAtsCompany:
+    speakeasy-default-update-ats-company:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
 examplesVersion: 1.0.2
 generatedTests: {}

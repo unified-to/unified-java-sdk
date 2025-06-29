@@ -8,6 +8,9 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 import java.lang.Exception;
 import java.util.List;
 import java.util.Optional;
+import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyResponse;
 import to.unified.unified_java_sdk.models.operations.CreateCrmCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCrmCompanyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCrmCompanyResponse;
@@ -35,24 +38,34 @@ import to.unified.unified_java_sdk.models.operations.ListEnrichCompaniesResponse
 import to.unified.unified_java_sdk.models.operations.ListHrisCompaniesRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisCompaniesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHrisCompaniesResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAtsCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAtsCompanyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAtsCompanyResponse;
 import to.unified.unified_java_sdk.models.operations.PatchCrmCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCrmCompanyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchCrmCompanyResponse;
 import to.unified.unified_java_sdk.models.operations.PatchHrisCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisCompanyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchHrisCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsCompanyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsCompanyResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveCrmCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveCrmCompanyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveCrmCompanyResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisCompanyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsCompanyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsCompanyResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmCompanyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmCompanyResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisCompanyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisCompanyResponse;
+import to.unified.unified_java_sdk.operations.CreateAtsCompanyOperation;
 import to.unified.unified_java_sdk.operations.CreateCrmCompanyOperation;
 import to.unified.unified_java_sdk.operations.CreateHrisCompanyOperation;
 import to.unified.unified_java_sdk.operations.GetAtsCompanyOperation;
@@ -62,10 +75,13 @@ import to.unified.unified_java_sdk.operations.ListAtsCompaniesOperation;
 import to.unified.unified_java_sdk.operations.ListCrmCompaniesOperation;
 import to.unified.unified_java_sdk.operations.ListEnrichCompaniesOperation;
 import to.unified.unified_java_sdk.operations.ListHrisCompaniesOperation;
+import to.unified.unified_java_sdk.operations.PatchAtsCompanyOperation;
 import to.unified.unified_java_sdk.operations.PatchCrmCompanyOperation;
 import to.unified.unified_java_sdk.operations.PatchHrisCompanyOperation;
+import to.unified.unified_java_sdk.operations.RemoveAtsCompanyOperation;
 import to.unified.unified_java_sdk.operations.RemoveCrmCompanyOperation;
 import to.unified.unified_java_sdk.operations.RemoveHrisCompanyOperation;
+import to.unified.unified_java_sdk.operations.UpdateAtsCompanyOperation;
 import to.unified.unified_java_sdk.operations.UpdateCrmCompanyOperation;
 import to.unified.unified_java_sdk.operations.UpdateHrisCompanyOperation;
 
@@ -76,6 +92,30 @@ public class Company {
     Company(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
+
+    /**
+     * Create a company
+     * 
+     * @return The call builder
+     */
+    public CreateAtsCompanyRequestBuilder createAtsCompany() {
+        return new CreateAtsCompanyRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a company
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public CreateAtsCompanyResponse createAtsCompany(
+            CreateAtsCompanyRequest request) throws Exception {
+        RequestOperation<CreateAtsCompanyRequest, CreateAtsCompanyResponse> operation
+              = new CreateAtsCompanyOperation( sdkConfiguration);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
 
     /**
      * Create a company
@@ -298,6 +338,30 @@ public class Company {
      * 
      * @return The call builder
      */
+    public PatchAtsCompanyRequestBuilder patchAtsCompany() {
+        return new PatchAtsCompanyRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a company
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public PatchAtsCompanyResponse patchAtsCompany(
+            PatchAtsCompanyRequest request) throws Exception {
+        RequestOperation<PatchAtsCompanyRequest, PatchAtsCompanyResponse> operation
+              = new PatchAtsCompanyOperation( sdkConfiguration);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+
+    /**
+     * Update a company
+     * 
+     * @return The call builder
+     */
     public PatchCrmCompanyRequestBuilder patchCrmCompany() {
         return new PatchCrmCompanyRequestBuilder(sdkConfiguration);
     }
@@ -346,6 +410,30 @@ public class Company {
      * 
      * @return The call builder
      */
+    public RemoveAtsCompanyRequestBuilder removeAtsCompany() {
+        return new RemoveAtsCompanyRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a company
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public RemoveAtsCompanyResponse removeAtsCompany(
+            RemoveAtsCompanyRequest request) throws Exception {
+        RequestOperation<RemoveAtsCompanyRequest, RemoveAtsCompanyResponse> operation
+              = new RemoveAtsCompanyOperation( sdkConfiguration);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+
+    /**
+     * Remove a company
+     * 
+     * @return The call builder
+     */
     public RemoveCrmCompanyRequestBuilder removeCrmCompany() {
         return new RemoveCrmCompanyRequestBuilder(sdkConfiguration);
     }
@@ -385,6 +473,30 @@ public class Company {
             RemoveHrisCompanyRequest request) throws Exception {
         RequestOperation<RemoveHrisCompanyRequest, RemoveHrisCompanyResponse> operation
               = new RemoveHrisCompanyOperation( sdkConfiguration);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+
+    /**
+     * Update a company
+     * 
+     * @return The call builder
+     */
+    public UpdateAtsCompanyRequestBuilder updateAtsCompany() {
+        return new UpdateAtsCompanyRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a company
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public UpdateAtsCompanyResponse updateAtsCompany(
+            UpdateAtsCompanyRequest request) throws Exception {
+        RequestOperation<UpdateAtsCompanyRequest, UpdateAtsCompanyResponse> operation
+              = new UpdateAtsCompanyOperation( sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

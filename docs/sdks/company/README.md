@@ -5,6 +5,7 @@
 
 ### Available Operations
 
+* [createAtsCompany](#createatscompany) - Create a company
 * [createCrmCompany](#createcrmcompany) - Create a company
 * [createHrisCompany](#createhriscompany) - Create a company
 * [getAtsCompany](#getatscompany) - Retrieve a company
@@ -14,12 +15,75 @@
 * [listCrmCompanies](#listcrmcompanies) - List all companies
 * [listEnrichCompanies](#listenrichcompanies) - Retrieve enrichment information for a company
 * [listHrisCompanies](#listhriscompanies) - List all companies
+* [patchAtsCompany](#patchatscompany) - Update a company
 * [patchCrmCompany](#patchcrmcompany) - Update a company
 * [patchHrisCompany](#patchhriscompany) - Update a company
+* [removeAtsCompany](#removeatscompany) - Remove a company
 * [removeCrmCompany](#removecrmcompany) - Remove a company
 * [removeHrisCompany](#removehriscompany) - Remove a company
+* [updateAtsCompany](#updateatscompany) - Update a company
 * [updateCrmCompany](#updatecrmcompany) - Update a company
 * [updateHrisCompany](#updatehriscompany) - Update a company
+
+## createAtsCompany
+
+Create a company
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyResponse;
+import to.unified.unified_java_sdk.models.shared.AtsCompany;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        CreateAtsCompanyRequest req = CreateAtsCompanyRequest.builder()
+                .atsCompany(AtsCompany.builder()
+                    .name("<value>")
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateAtsCompanyResponse res = sdk.company().createAtsCompany()
+                .request(req)
+                .call();
+
+        if (res.atsCompany().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [CreateAtsCompanyRequest](../../models/operations/CreateAtsCompanyRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[CreateAtsCompanyResponse](../../models/operations/CreateAtsCompanyResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createCrmCompany
 
@@ -534,6 +598,67 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## patchAtsCompany
+
+Update a company
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAtsCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAtsCompanyResponse;
+import to.unified.unified_java_sdk.models.shared.AtsCompany;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        PatchAtsCompanyRequest req = PatchAtsCompanyRequest.builder()
+                .atsCompany(AtsCompany.builder()
+                    .name("<value>")
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchAtsCompanyResponse res = sdk.company().patchAtsCompany()
+                .request(req)
+                .call();
+
+        if (res.atsCompany().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [PatchAtsCompanyRequest](../../models/operations/PatchAtsCompanyRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+
+### Response
+
+**[PatchAtsCompanyResponse](../../models/operations/PatchAtsCompanyResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## patchCrmCompany
 
 Update a company
@@ -654,6 +779,61 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removeAtsCompany
+
+Remove a company
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsCompanyResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        RemoveAtsCompanyRequest req = RemoveAtsCompanyRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAtsCompanyResponse res = sdk.company().removeAtsCompany()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [RemoveAtsCompanyRequest](../../models/operations/RemoveAtsCompanyRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[RemoveAtsCompanyResponse](../../models/operations/RemoveAtsCompanyResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## removeCrmCompany
 
 Remove a company
@@ -757,6 +937,67 @@ public class Application {
 ### Response
 
 **[RemoveHrisCompanyResponse](../../models/operations/RemoveHrisCompanyResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateAtsCompany
+
+Update a company
+
+### Example Usage
+
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsCompanyResponse;
+import to.unified.unified_java_sdk.models.shared.AtsCompany;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        UpdateAtsCompanyRequest req = UpdateAtsCompanyRequest.builder()
+                .atsCompany(AtsCompany.builder()
+                    .name("<value>")
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateAtsCompanyResponse res = sdk.company().updateAtsCompany()
+                .request(req)
+                .call();
+
+        if (res.atsCompany().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [UpdateAtsCompanyRequest](../../models/operations/UpdateAtsCompanyRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[UpdateAtsCompanyResponse](../../models/operations/UpdateAtsCompanyResponse.md)**
 
 ### Errors
 

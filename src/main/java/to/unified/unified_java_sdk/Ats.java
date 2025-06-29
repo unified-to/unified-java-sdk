@@ -17,6 +17,9 @@ import to.unified.unified_java_sdk.models.operations.CreateAtsApplicationRespons
 import to.unified.unified_java_sdk.models.operations.CreateAtsCandidateRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsCandidateRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAtsCandidateResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyResponse;
 import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentResponse;
@@ -89,6 +92,9 @@ import to.unified.unified_java_sdk.models.operations.PatchAtsApplicationResponse
 import to.unified.unified_java_sdk.models.operations.PatchAtsCandidateRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAtsCandidateRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchAtsCandidateResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAtsCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAtsCompanyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAtsCompanyResponse;
 import to.unified.unified_java_sdk.models.operations.PatchAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAtsDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchAtsDocumentResponse;
@@ -110,6 +116,9 @@ import to.unified.unified_java_sdk.models.operations.RemoveAtsApplicationRespons
 import to.unified.unified_java_sdk.models.operations.RemoveAtsCandidateRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAtsCandidateRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveAtsCandidateResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsCompanyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsCompanyResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAtsDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveAtsDocumentResponse;
@@ -131,6 +140,9 @@ import to.unified.unified_java_sdk.models.operations.UpdateAtsApplicationRespons
 import to.unified.unified_java_sdk.models.operations.UpdateAtsCandidateRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsCandidateRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsCandidateResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsCompanyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsCompanyResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsDocumentResponse;
@@ -146,6 +158,7 @@ import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecardResponse;
 import to.unified.unified_java_sdk.operations.CreateAtsActivityOperation;
 import to.unified.unified_java_sdk.operations.CreateAtsApplicationOperation;
 import to.unified.unified_java_sdk.operations.CreateAtsCandidateOperation;
+import to.unified.unified_java_sdk.operations.CreateAtsCompanyOperation;
 import to.unified.unified_java_sdk.operations.CreateAtsDocumentOperation;
 import to.unified.unified_java_sdk.operations.CreateAtsInterviewOperation;
 import to.unified.unified_java_sdk.operations.CreateAtsJobOperation;
@@ -170,6 +183,7 @@ import to.unified.unified_java_sdk.operations.ListAtsScorecardsOperation;
 import to.unified.unified_java_sdk.operations.PatchAtsActivityOperation;
 import to.unified.unified_java_sdk.operations.PatchAtsApplicationOperation;
 import to.unified.unified_java_sdk.operations.PatchAtsCandidateOperation;
+import to.unified.unified_java_sdk.operations.PatchAtsCompanyOperation;
 import to.unified.unified_java_sdk.operations.PatchAtsDocumentOperation;
 import to.unified.unified_java_sdk.operations.PatchAtsInterviewOperation;
 import to.unified.unified_java_sdk.operations.PatchAtsJobOperation;
@@ -177,6 +191,7 @@ import to.unified.unified_java_sdk.operations.PatchAtsScorecardOperation;
 import to.unified.unified_java_sdk.operations.RemoveAtsActivityOperation;
 import to.unified.unified_java_sdk.operations.RemoveAtsApplicationOperation;
 import to.unified.unified_java_sdk.operations.RemoveAtsCandidateOperation;
+import to.unified.unified_java_sdk.operations.RemoveAtsCompanyOperation;
 import to.unified.unified_java_sdk.operations.RemoveAtsDocumentOperation;
 import to.unified.unified_java_sdk.operations.RemoveAtsInterviewOperation;
 import to.unified.unified_java_sdk.operations.RemoveAtsJobOperation;
@@ -184,6 +199,7 @@ import to.unified.unified_java_sdk.operations.RemoveAtsScorecardOperation;
 import to.unified.unified_java_sdk.operations.UpdateAtsActivityOperation;
 import to.unified.unified_java_sdk.operations.UpdateAtsApplicationOperation;
 import to.unified.unified_java_sdk.operations.UpdateAtsCandidateOperation;
+import to.unified.unified_java_sdk.operations.UpdateAtsCompanyOperation;
 import to.unified.unified_java_sdk.operations.UpdateAtsDocumentOperation;
 import to.unified.unified_java_sdk.operations.UpdateAtsInterviewOperation;
 import to.unified.unified_java_sdk.operations.UpdateAtsJobOperation;
@@ -265,6 +281,30 @@ public class Ats {
             CreateAtsCandidateRequest request) throws Exception {
         RequestOperation<CreateAtsCandidateRequest, CreateAtsCandidateResponse> operation
               = new CreateAtsCandidateOperation( sdkConfiguration);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+
+    /**
+     * Create a company
+     * 
+     * @return The call builder
+     */
+    public CreateAtsCompanyRequestBuilder createAtsCompany() {
+        return new CreateAtsCompanyRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a company
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public CreateAtsCompanyResponse createAtsCompany(
+            CreateAtsCompanyRequest request) throws Exception {
+        RequestOperation<CreateAtsCompanyRequest, CreateAtsCompanyResponse> operation
+              = new CreateAtsCompanyOperation( sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -846,6 +886,30 @@ public class Ats {
 
 
     /**
+     * Update a company
+     * 
+     * @return The call builder
+     */
+    public PatchAtsCompanyRequestBuilder patchAtsCompany() {
+        return new PatchAtsCompanyRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a company
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public PatchAtsCompanyResponse patchAtsCompany(
+            PatchAtsCompanyRequest request) throws Exception {
+        RequestOperation<PatchAtsCompanyRequest, PatchAtsCompanyResponse> operation
+              = new PatchAtsCompanyOperation( sdkConfiguration);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+
+    /**
      * Update a document
      * 
      * @return The call builder
@@ -1014,6 +1078,30 @@ public class Ats {
 
 
     /**
+     * Remove a company
+     * 
+     * @return The call builder
+     */
+    public RemoveAtsCompanyRequestBuilder removeAtsCompany() {
+        return new RemoveAtsCompanyRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a company
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public RemoveAtsCompanyResponse removeAtsCompany(
+            RemoveAtsCompanyRequest request) throws Exception {
+        RequestOperation<RemoveAtsCompanyRequest, RemoveAtsCompanyResponse> operation
+              = new RemoveAtsCompanyOperation( sdkConfiguration);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+
+    /**
      * Remove a document
      * 
      * @return The call builder
@@ -1177,6 +1265,30 @@ public class Ats {
             UpdateAtsCandidateRequest request) throws Exception {
         RequestOperation<UpdateAtsCandidateRequest, UpdateAtsCandidateResponse> operation
               = new UpdateAtsCandidateOperation( sdkConfiguration);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+
+    /**
+     * Update a company
+     * 
+     * @return The call builder
+     */
+    public UpdateAtsCompanyRequestBuilder updateAtsCompany() {
+        return new UpdateAtsCompanyRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a company
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public UpdateAtsCompanyResponse updateAtsCompany(
+            UpdateAtsCompanyRequest request) throws Exception {
+        RequestOperation<UpdateAtsCompanyRequest, UpdateAtsCompanyResponse> operation
+              = new UpdateAtsCompanyOperation( sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
