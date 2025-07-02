@@ -5,8 +5,8 @@ management:
   docVersion: "1.0"
   speakeasyVersion: 1.571.1
   generationVersion: 2.640.2
-  releaseVersion: 0.29.0
-  configChecksum: 5d355c7a49ad5f2304100ca58fe5543f
+  releaseVersion: 0.30.1
+  configChecksum: f11ea0e4305b82e22308fe5d2328e5c9
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true

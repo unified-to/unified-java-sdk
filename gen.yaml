@@ -21,7 +21,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 java:
-  version: 0.29.0
+  version: 0.30.1
   additionalDependencies: []
   additionalPlugins: []
   artifactID: unified-java-sdk
@@ -44,6 +44,7 @@ java:
       shared: models/shared
       webhooks: models/webhooks
   inputModelSuffix: input
+  languageVersion: 11
   license:
     name: The MIT License (MIT)
     shortName: MIT
