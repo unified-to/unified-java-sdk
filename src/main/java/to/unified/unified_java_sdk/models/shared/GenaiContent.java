@@ -11,7 +11,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -83,13 +82,13 @@ public class GenaiContent {
         }
         GenaiContent other = (GenaiContent) o;
         return 
-            Objects.deepEquals(this.content, other.content) &&
-            Objects.deepEquals(this.role, other.role);
+            Utils.enhancedDeepEquals(this.content, other.content) &&
+            Utils.enhancedDeepEquals(this.role, other.role);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             content,
             role);
     }

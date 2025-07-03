@@ -12,7 +12,6 @@ import java.lang.String;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import to.unified.unified_java_sdk.utils.Response;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -128,15 +127,15 @@ public class RemoveKmsSpaceResponse implements Response {
         }
         RemoveKmsSpaceResponse other = (RemoveKmsSpaceResponse) o;
         return 
-            Objects.deepEquals(this.contentType, other.contentType) &&
-            Objects.deepEquals(this.headers, other.headers) &&
-            Objects.deepEquals(this.statusCode, other.statusCode) &&
-            Objects.deepEquals(this.rawResponse, other.rawResponse);
+            Utils.enhancedDeepEquals(this.contentType, other.contentType) &&
+            Utils.enhancedDeepEquals(this.headers, other.headers) &&
+            Utils.enhancedDeepEquals(this.statusCode, other.statusCode) &&
+            Utils.enhancedDeepEquals(this.rawResponse, other.rawResponse);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             contentType,
             headers,
             statusCode,

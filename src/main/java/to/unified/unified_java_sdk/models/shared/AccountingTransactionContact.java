@@ -11,7 +11,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.lang.Boolean;
 import java.lang.Override;
 import java.lang.String;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -106,14 +105,14 @@ public class AccountingTransactionContact {
         }
         AccountingTransactionContact other = (AccountingTransactionContact) o;
         return 
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.isCustomer, other.isCustomer) &&
-            Objects.deepEquals(this.isSupplier, other.isSupplier);
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.isCustomer, other.isCustomer) &&
+            Utils.enhancedDeepEquals(this.isSupplier, other.isSupplier);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             id,
             isCustomer,
             isSupplier);

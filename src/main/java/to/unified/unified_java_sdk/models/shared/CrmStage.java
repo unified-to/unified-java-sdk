@@ -13,7 +13,6 @@ import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -210,18 +209,18 @@ public class CrmStage {
         }
         CrmStage other = (CrmStage) o;
         return 
-            Objects.deepEquals(this.active, other.active) &&
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.dealProbability, other.dealProbability) &&
-            Objects.deepEquals(this.displayOrder, other.displayOrder) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.name, other.name) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt);
+            Utils.enhancedDeepEquals(this.active, other.active) &&
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.dealProbability, other.dealProbability) &&
+            Utils.enhancedDeepEquals(this.displayOrder, other.displayOrder) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             active,
             createdAt,
             dealProbability,

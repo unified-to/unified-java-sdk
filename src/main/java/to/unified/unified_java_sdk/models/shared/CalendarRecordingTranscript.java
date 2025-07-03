@@ -12,7 +12,6 @@ import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -156,16 +155,16 @@ public class CalendarRecordingTranscript {
         }
         CalendarRecordingTranscript other = (CalendarRecordingTranscript) o;
         return 
-            Objects.deepEquals(this.attendee, other.attendee) &&
-            Objects.deepEquals(this.endAt, other.endAt) &&
-            Objects.deepEquals(this.language, other.language) &&
-            Objects.deepEquals(this.startAt, other.startAt) &&
-            Objects.deepEquals(this.text, other.text);
+            Utils.enhancedDeepEquals(this.attendee, other.attendee) &&
+            Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
+            Utils.enhancedDeepEquals(this.language, other.language) &&
+            Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
+            Utils.enhancedDeepEquals(this.text, other.text);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             attendee,
             endAt,
             language,

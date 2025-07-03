@@ -15,7 +15,6 @@ import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -279,21 +278,21 @@ public class RepoRepository {
         }
         RepoRepository other = (RepoRepository) o;
         return 
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.description, other.description) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.isPrivate, other.isPrivate) &&
-            Objects.deepEquals(this.name, other.name) &&
-            Objects.deepEquals(this.orgId, other.orgId) &&
-            Objects.deepEquals(this.owner, other.owner) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt) &&
-            Objects.deepEquals(this.webUrl, other.webUrl);
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.description, other.description) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.isPrivate, other.isPrivate) &&
+            Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.orgId, other.orgId) &&
+            Utils.enhancedDeepEquals(this.owner, other.owner) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
+            Utils.enhancedDeepEquals(this.webUrl, other.webUrl);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             createdAt,
             description,
             id,

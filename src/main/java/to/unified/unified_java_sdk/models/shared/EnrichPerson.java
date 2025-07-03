@@ -16,7 +16,6 @@ import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -680,35 +679,35 @@ public class EnrichPerson {
         }
         EnrichPerson other = (EnrichPerson) o;
         return 
-            Objects.deepEquals(this.address, other.address) &&
-            Objects.deepEquals(this.bio, other.bio) &&
-            Objects.deepEquals(this.birthdate, other.birthdate) &&
-            Objects.deepEquals(this.company, other.company) &&
-            Objects.deepEquals(this.companyDomain, other.companyDomain) &&
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.emails, other.emails) &&
-            Objects.deepEquals(this.facebookUrl, other.facebookUrl) &&
-            Objects.deepEquals(this.gender, other.gender) &&
-            Objects.deepEquals(this.githubUrl, other.githubUrl) &&
-            Objects.deepEquals(this.githubUsername, other.githubUsername) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.imageUrl, other.imageUrl) &&
-            Objects.deepEquals(this.linkedinUrl, other.linkedinUrl) &&
-            Objects.deepEquals(this.name, other.name) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.telephones, other.telephones) &&
-            Objects.deepEquals(this.timezone, other.timezone) &&
-            Objects.deepEquals(this.title, other.title) &&
-            Objects.deepEquals(this.twitterHandle, other.twitterHandle) &&
-            Objects.deepEquals(this.twitterUrl, other.twitterUrl) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt) &&
-            Objects.deepEquals(this.utcOffset, other.utcOffset) &&
-            Objects.deepEquals(this.workHistories, other.workHistories);
+            Utils.enhancedDeepEquals(this.address, other.address) &&
+            Utils.enhancedDeepEquals(this.bio, other.bio) &&
+            Utils.enhancedDeepEquals(this.birthdate, other.birthdate) &&
+            Utils.enhancedDeepEquals(this.company, other.company) &&
+            Utils.enhancedDeepEquals(this.companyDomain, other.companyDomain) &&
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.emails, other.emails) &&
+            Utils.enhancedDeepEquals(this.facebookUrl, other.facebookUrl) &&
+            Utils.enhancedDeepEquals(this.gender, other.gender) &&
+            Utils.enhancedDeepEquals(this.githubUrl, other.githubUrl) &&
+            Utils.enhancedDeepEquals(this.githubUsername, other.githubUsername) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.imageUrl, other.imageUrl) &&
+            Utils.enhancedDeepEquals(this.linkedinUrl, other.linkedinUrl) &&
+            Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.telephones, other.telephones) &&
+            Utils.enhancedDeepEquals(this.timezone, other.timezone) &&
+            Utils.enhancedDeepEquals(this.title, other.title) &&
+            Utils.enhancedDeepEquals(this.twitterHandle, other.twitterHandle) &&
+            Utils.enhancedDeepEquals(this.twitterUrl, other.twitterUrl) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
+            Utils.enhancedDeepEquals(this.utcOffset, other.utcOffset) &&
+            Utils.enhancedDeepEquals(this.workHistories, other.workHistories);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             address,
             bio,
             birthdate,

@@ -14,7 +14,6 @@ import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -176,17 +175,17 @@ public class CalendarBusy {
         }
         CalendarBusy other = (CalendarBusy) o;
         return 
-            Objects.deepEquals(this.description, other.description) &&
-            Objects.deepEquals(this.endAt, other.endAt) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.startAt, other.startAt) &&
-            Objects.deepEquals(this.timezone, other.timezone);
+            Utils.enhancedDeepEquals(this.description, other.description) &&
+            Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
+            Utils.enhancedDeepEquals(this.timezone, other.timezone);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             description,
             endAt,
             id,

@@ -11,7 +11,6 @@ import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.HrisCompany;
 import to.unified.unified_java_sdk.utils.Response;
@@ -155,15 +154,15 @@ public class CreateHrisCompanyResponse implements Response {
         }
         CreateHrisCompanyResponse other = (CreateHrisCompanyResponse) o;
         return 
-            Objects.deepEquals(this.contentType, other.contentType) &&
-            Objects.deepEquals(this.hrisCompany, other.hrisCompany) &&
-            Objects.deepEquals(this.statusCode, other.statusCode) &&
-            Objects.deepEquals(this.rawResponse, other.rawResponse);
+            Utils.enhancedDeepEquals(this.contentType, other.contentType) &&
+            Utils.enhancedDeepEquals(this.hrisCompany, other.hrisCompany) &&
+            Utils.enhancedDeepEquals(this.statusCode, other.statusCode) &&
+            Utils.enhancedDeepEquals(this.rawResponse, other.rawResponse);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             contentType,
             hrisCompany,
             statusCode,

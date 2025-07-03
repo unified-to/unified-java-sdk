@@ -15,7 +15,6 @@ import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -231,19 +230,19 @@ public class CommerceInventory {
         }
         CommerceInventory other = (CommerceInventory) o;
         return 
-            Objects.deepEquals(this.available, other.available) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.itemId, other.itemId) &&
-            Objects.deepEquals(this.itemOptionId, other.itemOptionId) &&
-            Objects.deepEquals(this.itemVariantId, other.itemVariantId) &&
-            Objects.deepEquals(this.locationId, other.locationId) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt);
+            Utils.enhancedDeepEquals(this.available, other.available) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.itemId, other.itemId) &&
+            Utils.enhancedDeepEquals(this.itemOptionId, other.itemOptionId) &&
+            Utils.enhancedDeepEquals(this.itemVariantId, other.itemVariantId) &&
+            Utils.enhancedDeepEquals(this.locationId, other.locationId) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             available,
             id,
             itemId,

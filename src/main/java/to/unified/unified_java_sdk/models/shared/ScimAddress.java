@@ -11,7 +11,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -209,18 +208,18 @@ public class ScimAddress {
         }
         ScimAddress other = (ScimAddress) o;
         return 
-            Objects.deepEquals(this.country, other.country) &&
-            Objects.deepEquals(this.formatted, other.formatted) &&
-            Objects.deepEquals(this.locality, other.locality) &&
-            Objects.deepEquals(this.postalCode, other.postalCode) &&
-            Objects.deepEquals(this.region, other.region) &&
-            Objects.deepEquals(this.streetAddress, other.streetAddress) &&
-            Objects.deepEquals(this.type, other.type);
+            Utils.enhancedDeepEquals(this.country, other.country) &&
+            Utils.enhancedDeepEquals(this.formatted, other.formatted) &&
+            Utils.enhancedDeepEquals(this.locality, other.locality) &&
+            Utils.enhancedDeepEquals(this.postalCode, other.postalCode) &&
+            Utils.enhancedDeepEquals(this.region, other.region) &&
+            Utils.enhancedDeepEquals(this.streetAddress, other.streetAddress) &&
+            Utils.enhancedDeepEquals(this.type, other.type);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             country,
             formatted,
             locality,

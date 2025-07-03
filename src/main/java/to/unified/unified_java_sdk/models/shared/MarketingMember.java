@@ -15,7 +15,6 @@ import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -293,19 +292,19 @@ public class MarketingMember {
         }
         MarketingMember other = (MarketingMember) o;
         return 
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.emails, other.emails) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.listIds, other.listIds) &&
-            Objects.deepEquals(this.name, other.name) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.tags, other.tags) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt);
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.emails, other.emails) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.listIds, other.listIds) &&
+            Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.tags, other.tags) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             createdAt,
             emails,
             id,

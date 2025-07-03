@@ -15,7 +15,6 @@ import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -300,22 +299,22 @@ public class MetadataMetadata {
         }
         MetadataMetadata other = (MetadataMetadata) o;
         return 
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.format, other.format) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.name, other.name) &&
-            Objects.deepEquals(this.objectType, other.objectType) &&
-            Objects.deepEquals(this.objects, other.objects) &&
-            Objects.deepEquals(this.options, other.options) &&
-            Objects.deepEquals(this.originalFormat, other.originalFormat) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.slug, other.slug) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt);
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.format, other.format) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.objectType, other.objectType) &&
+            Utils.enhancedDeepEquals(this.objects, other.objects) &&
+            Utils.enhancedDeepEquals(this.options, other.options) &&
+            Utils.enhancedDeepEquals(this.originalFormat, other.originalFormat) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.slug, other.slug) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             createdAt,
             format,
             id,

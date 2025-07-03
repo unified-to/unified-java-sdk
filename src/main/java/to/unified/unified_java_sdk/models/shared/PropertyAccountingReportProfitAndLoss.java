@@ -13,7 +13,6 @@ import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -165,16 +164,16 @@ public class PropertyAccountingReportProfitAndLoss {
         }
         PropertyAccountingReportProfitAndLoss other = (PropertyAccountingReportProfitAndLoss) o;
         return 
-            Objects.deepEquals(this.costOfGoodsSold, other.costOfGoodsSold) &&
-            Objects.deepEquals(this.expenses, other.expenses) &&
-            Objects.deepEquals(this.grossProfitAmount, other.grossProfitAmount) &&
-            Objects.deepEquals(this.income, other.income) &&
-            Objects.deepEquals(this.netProfitAmount, other.netProfitAmount);
+            Utils.enhancedDeepEquals(this.costOfGoodsSold, other.costOfGoodsSold) &&
+            Utils.enhancedDeepEquals(this.expenses, other.expenses) &&
+            Utils.enhancedDeepEquals(this.grossProfitAmount, other.grossProfitAmount) &&
+            Utils.enhancedDeepEquals(this.income, other.income) &&
+            Utils.enhancedDeepEquals(this.netProfitAmount, other.netProfitAmount);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             costOfGoodsSold,
             expenses,
             grossProfitAmount,

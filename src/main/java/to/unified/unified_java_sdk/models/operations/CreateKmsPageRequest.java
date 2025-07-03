@@ -9,7 +9,6 @@ import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.KmsPage;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
@@ -156,15 +155,15 @@ public class CreateKmsPageRequest {
         }
         CreateKmsPageRequest other = (CreateKmsPageRequest) o;
         return 
-            Objects.deepEquals(this.kmsPage, other.kmsPage) &&
-            Objects.deepEquals(this.connectionId, other.connectionId) &&
-            Objects.deepEquals(this.fields, other.fields) &&
-            Objects.deepEquals(this.raw, other.raw);
+            Utils.enhancedDeepEquals(this.kmsPage, other.kmsPage) &&
+            Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
+            Utils.enhancedDeepEquals(this.fields, other.fields) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             kmsPage,
             connectionId,
             fields,

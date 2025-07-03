@@ -17,7 +17,6 @@ import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -360,24 +359,24 @@ public class PaymentLink {
         }
         PaymentLink other = (PaymentLink) o;
         return 
-            Objects.deepEquals(this.amount, other.amount) &&
-            Objects.deepEquals(this.contactId, other.contactId) &&
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.currency, other.currency) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.isActive, other.isActive) &&
-            Objects.deepEquals(this.isChargeableNow, other.isChargeableNow) &&
-            Objects.deepEquals(this.lineitems, other.lineitems) &&
-            Objects.deepEquals(this.paymentId, other.paymentId) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.successUrl, other.successUrl) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt) &&
-            Objects.deepEquals(this.url, other.url);
+            Utils.enhancedDeepEquals(this.amount, other.amount) &&
+            Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.currency, other.currency) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
+            Utils.enhancedDeepEquals(this.isChargeableNow, other.isChargeableNow) &&
+            Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
+            Utils.enhancedDeepEquals(this.paymentId, other.paymentId) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.successUrl, other.successUrl) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
+            Utils.enhancedDeepEquals(this.url, other.url);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             amount,
             contactId,
             createdAt,

@@ -18,7 +18,6 @@ import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.LazySingletonValue;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -604,34 +603,34 @@ public class Webhook {
         }
         Webhook other = (Webhook) o;
         return 
-            Objects.deepEquals(this.checkedAt, other.checkedAt) &&
-            Objects.deepEquals(this.connectionId, other.connectionId) &&
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.dbNamePrefix, other.dbNamePrefix) &&
-            Objects.deepEquals(this.dbType, other.dbType) &&
-            Objects.deepEquals(this.dbUrl, other.dbUrl) &&
-            Objects.deepEquals(this.environment, other.environment) &&
-            Objects.deepEquals(this.event, other.event) &&
-            Objects.deepEquals(this.fields, other.fields) &&
-            Objects.deepEquals(this.filters, other.filters) &&
-            Objects.deepEquals(this.hookUrl, other.hookUrl) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.integrationType, other.integrationType) &&
-            Objects.deepEquals(this.interval, other.interval) &&
-            Objects.deepEquals(this.isHealthy, other.isHealthy) &&
-            Objects.deepEquals(this.isPaused, other.isPaused) &&
-            Objects.deepEquals(this.meta, other.meta) &&
-            Objects.deepEquals(this.objectType, other.objectType) &&
-            Objects.deepEquals(this.pageMaxLimit, other.pageMaxLimit) &&
-            Objects.deepEquals(this.runs, other.runs) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt) &&
-            Objects.deepEquals(this.webhookType, other.webhookType) &&
-            Objects.deepEquals(this.workspaceId, other.workspaceId);
+            Utils.enhancedDeepEquals(this.checkedAt, other.checkedAt) &&
+            Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.dbNamePrefix, other.dbNamePrefix) &&
+            Utils.enhancedDeepEquals(this.dbType, other.dbType) &&
+            Utils.enhancedDeepEquals(this.dbUrl, other.dbUrl) &&
+            Utils.enhancedDeepEquals(this.environment, other.environment) &&
+            Utils.enhancedDeepEquals(this.event, other.event) &&
+            Utils.enhancedDeepEquals(this.fields, other.fields) &&
+            Utils.enhancedDeepEquals(this.filters, other.filters) &&
+            Utils.enhancedDeepEquals(this.hookUrl, other.hookUrl) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.integrationType, other.integrationType) &&
+            Utils.enhancedDeepEquals(this.interval, other.interval) &&
+            Utils.enhancedDeepEquals(this.isHealthy, other.isHealthy) &&
+            Utils.enhancedDeepEquals(this.isPaused, other.isPaused) &&
+            Utils.enhancedDeepEquals(this.meta, other.meta) &&
+            Utils.enhancedDeepEquals(this.objectType, other.objectType) &&
+            Utils.enhancedDeepEquals(this.pageMaxLimit, other.pageMaxLimit) &&
+            Utils.enhancedDeepEquals(this.runs, other.runs) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
+            Utils.enhancedDeepEquals(this.webhookType, other.webhookType) &&
+            Utils.enhancedDeepEquals(this.workspaceId, other.workspaceId);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             checkedAt,
             connectionId,
             createdAt,

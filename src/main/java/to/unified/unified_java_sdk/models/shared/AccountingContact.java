@@ -17,7 +17,6 @@ import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.LazySingletonValue;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -535,31 +534,31 @@ public class AccountingContact {
         }
         AccountingContact other = (AccountingContact) o;
         return 
-            Objects.deepEquals(this.associatedContacts, other.associatedContacts) &&
-            Objects.deepEquals(this.billingAddress, other.billingAddress) &&
-            Objects.deepEquals(this.companyName, other.companyName) &&
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.currency, other.currency) &&
-            Objects.deepEquals(this.emails, other.emails) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.identification, other.identification) &&
-            Objects.deepEquals(this.isActive, other.isActive) &&
-            Objects.deepEquals(this.isCustomer, other.isCustomer) &&
-            Objects.deepEquals(this.isSupplier, other.isSupplier) &&
-            Objects.deepEquals(this.name, other.name) &&
-            Objects.deepEquals(this.paymentMethods, other.paymentMethods) &&
-            Objects.deepEquals(this.portalUrl, other.portalUrl) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.shippingAddress, other.shippingAddress) &&
-            Objects.deepEquals(this.taxExemption, other.taxExemption) &&
-            Objects.deepEquals(this.taxNumber, other.taxNumber) &&
-            Objects.deepEquals(this.telephones, other.telephones) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt);
+            Utils.enhancedDeepEquals(this.associatedContacts, other.associatedContacts) &&
+            Utils.enhancedDeepEquals(this.billingAddress, other.billingAddress) &&
+            Utils.enhancedDeepEquals(this.companyName, other.companyName) &&
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.currency, other.currency) &&
+            Utils.enhancedDeepEquals(this.emails, other.emails) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.identification, other.identification) &&
+            Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
+            Utils.enhancedDeepEquals(this.isCustomer, other.isCustomer) &&
+            Utils.enhancedDeepEquals(this.isSupplier, other.isSupplier) &&
+            Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.paymentMethods, other.paymentMethods) &&
+            Utils.enhancedDeepEquals(this.portalUrl, other.portalUrl) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.shippingAddress, other.shippingAddress) &&
+            Utils.enhancedDeepEquals(this.taxExemption, other.taxExemption) &&
+            Utils.enhancedDeepEquals(this.taxNumber, other.taxNumber) &&
+            Utils.enhancedDeepEquals(this.telephones, other.telephones) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             associatedContacts,
             billingAddress,
             companyName,

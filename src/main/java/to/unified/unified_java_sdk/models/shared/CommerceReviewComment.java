@@ -17,7 +17,6 @@ import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -403,26 +402,26 @@ public class CommerceReviewComment {
         }
         CommerceReviewComment other = (CommerceReviewComment) o;
         return 
-            Objects.deepEquals(this.authorAvatarUrl, other.authorAvatarUrl) &&
-            Objects.deepEquals(this.authorEmail, other.authorEmail) &&
-            Objects.deepEquals(this.authorLocation, other.authorLocation) &&
-            Objects.deepEquals(this.authorName, other.authorName) &&
-            Objects.deepEquals(this.content, other.content) &&
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.helpfulVotes, other.helpfulVotes) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.isPublic, other.isPublic) &&
-            Objects.deepEquals(this.isVerified, other.isVerified) &&
-            Objects.deepEquals(this.metadata, other.metadata) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.status, other.status) &&
-            Objects.deepEquals(this.unhelpfulVotes, other.unhelpfulVotes) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt);
+            Utils.enhancedDeepEquals(this.authorAvatarUrl, other.authorAvatarUrl) &&
+            Utils.enhancedDeepEquals(this.authorEmail, other.authorEmail) &&
+            Utils.enhancedDeepEquals(this.authorLocation, other.authorLocation) &&
+            Utils.enhancedDeepEquals(this.authorName, other.authorName) &&
+            Utils.enhancedDeepEquals(this.content, other.content) &&
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.helpfulVotes, other.helpfulVotes) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.isPublic, other.isPublic) &&
+            Utils.enhancedDeepEquals(this.isVerified, other.isVerified) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.status, other.status) &&
+            Utils.enhancedDeepEquals(this.unhelpfulVotes, other.unhelpfulVotes) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             authorAvatarUrl,
             authorEmail,
             authorLocation,

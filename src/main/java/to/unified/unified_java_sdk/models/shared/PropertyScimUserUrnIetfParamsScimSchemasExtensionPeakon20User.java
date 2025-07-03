@@ -12,7 +12,6 @@ import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -138,15 +137,15 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User {
         }
         PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User other = (PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User) o;
         return 
-            Objects.deepEquals(this.dateOfBirth, other.dateOfBirth) &&
-            Objects.deepEquals(this.gender, other.gender) &&
-            Objects.deepEquals(this.manager, other.manager) &&
-            Objects.deepEquals(this.team, other.team);
+            Utils.enhancedDeepEquals(this.dateOfBirth, other.dateOfBirth) &&
+            Utils.enhancedDeepEquals(this.gender, other.gender) &&
+            Utils.enhancedDeepEquals(this.manager, other.manager) &&
+            Utils.enhancedDeepEquals(this.team, other.team);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             dateOfBirth,
             gender,
             manager,

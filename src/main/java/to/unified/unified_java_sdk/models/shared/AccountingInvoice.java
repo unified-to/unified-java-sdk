@@ -17,7 +17,6 @@ import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -724,39 +723,39 @@ public class AccountingInvoice {
         }
         AccountingInvoice other = (AccountingInvoice) o;
         return 
-            Objects.deepEquals(this.attachments, other.attachments) &&
-            Objects.deepEquals(this.balanceAmount, other.balanceAmount) &&
-            Objects.deepEquals(this.cancelledAt, other.cancelledAt) &&
-            Objects.deepEquals(this.contactId, other.contactId) &&
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.currency, other.currency) &&
-            Objects.deepEquals(this.discountAmount, other.discountAmount) &&
-            Objects.deepEquals(this.dueAt, other.dueAt) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.invoiceAt, other.invoiceAt) &&
-            Objects.deepEquals(this.invoiceNumber, other.invoiceNumber) &&
-            Objects.deepEquals(this.lineitems, other.lineitems) &&
-            Objects.deepEquals(this.notes, other.notes) &&
-            Objects.deepEquals(this.paidAmount, other.paidAmount) &&
-            Objects.deepEquals(this.paidAt, other.paidAt) &&
-            Objects.deepEquals(this.paymentCollectionMethod, other.paymentCollectionMethod) &&
-            Objects.deepEquals(this.postedAt, other.postedAt) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.refundAmount, other.refundAmount) &&
-            Objects.deepEquals(this.refundReason, other.refundReason) &&
-            Objects.deepEquals(this.refundedAt, other.refundedAt) &&
-            Objects.deepEquals(this.send, other.send) &&
-            Objects.deepEquals(this.status, other.status) &&
-            Objects.deepEquals(this.taxAmount, other.taxAmount) &&
-            Objects.deepEquals(this.totalAmount, other.totalAmount) &&
-            Objects.deepEquals(this.type, other.type) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt) &&
-            Objects.deepEquals(this.url, other.url);
+            Utils.enhancedDeepEquals(this.attachments, other.attachments) &&
+            Utils.enhancedDeepEquals(this.balanceAmount, other.balanceAmount) &&
+            Utils.enhancedDeepEquals(this.cancelledAt, other.cancelledAt) &&
+            Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.currency, other.currency) &&
+            Utils.enhancedDeepEquals(this.discountAmount, other.discountAmount) &&
+            Utils.enhancedDeepEquals(this.dueAt, other.dueAt) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.invoiceAt, other.invoiceAt) &&
+            Utils.enhancedDeepEquals(this.invoiceNumber, other.invoiceNumber) &&
+            Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
+            Utils.enhancedDeepEquals(this.notes, other.notes) &&
+            Utils.enhancedDeepEquals(this.paidAmount, other.paidAmount) &&
+            Utils.enhancedDeepEquals(this.paidAt, other.paidAt) &&
+            Utils.enhancedDeepEquals(this.paymentCollectionMethod, other.paymentCollectionMethod) &&
+            Utils.enhancedDeepEquals(this.postedAt, other.postedAt) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.refundAmount, other.refundAmount) &&
+            Utils.enhancedDeepEquals(this.refundReason, other.refundReason) &&
+            Utils.enhancedDeepEquals(this.refundedAt, other.refundedAt) &&
+            Utils.enhancedDeepEquals(this.send, other.send) &&
+            Utils.enhancedDeepEquals(this.status, other.status) &&
+            Utils.enhancedDeepEquals(this.taxAmount, other.taxAmount) &&
+            Utils.enhancedDeepEquals(this.totalAmount, other.totalAmount) &&
+            Utils.enhancedDeepEquals(this.type, other.type) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
+            Utils.enhancedDeepEquals(this.url, other.url);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             attachments,
             balanceAmount,
             cancelledAt,

@@ -11,7 +11,6 @@ import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -254,19 +253,19 @@ public class ListUnifiedIntegrationWorkspacesRequest {
         }
         ListUnifiedIntegrationWorkspacesRequest other = (ListUnifiedIntegrationWorkspacesRequest) o;
         return 
-            Objects.deepEquals(this.active, other.active) &&
-            Objects.deepEquals(this.categories, other.categories) &&
-            Objects.deepEquals(this.env, other.env) &&
-            Objects.deepEquals(this.limit, other.limit) &&
-            Objects.deepEquals(this.offset, other.offset) &&
-            Objects.deepEquals(this.summary, other.summary) &&
-            Objects.deepEquals(this.updatedGte, other.updatedGte) &&
-            Objects.deepEquals(this.workspaceId, other.workspaceId);
+            Utils.enhancedDeepEquals(this.active, other.active) &&
+            Utils.enhancedDeepEquals(this.categories, other.categories) &&
+            Utils.enhancedDeepEquals(this.env, other.env) &&
+            Utils.enhancedDeepEquals(this.limit, other.limit) &&
+            Utils.enhancedDeepEquals(this.offset, other.offset) &&
+            Utils.enhancedDeepEquals(this.summary, other.summary) &&
+            Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte) &&
+            Utils.enhancedDeepEquals(this.workspaceId, other.workspaceId);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             active,
             categories,
             env,

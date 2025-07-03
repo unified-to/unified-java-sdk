@@ -11,7 +11,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.lang.Boolean;
 import java.lang.Override;
 import java.lang.String;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -130,15 +129,15 @@ public class ScimEmail {
         }
         ScimEmail other = (ScimEmail) o;
         return 
-            Objects.deepEquals(this.display, other.display) &&
-            Objects.deepEquals(this.primary, other.primary) &&
-            Objects.deepEquals(this.type, other.type) &&
-            Objects.deepEquals(this.value, other.value);
+            Utils.enhancedDeepEquals(this.display, other.display) &&
+            Utils.enhancedDeepEquals(this.primary, other.primary) &&
+            Utils.enhancedDeepEquals(this.type, other.type) &&
+            Utils.enhancedDeepEquals(this.value, other.value);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             display,
             primary,
             type,

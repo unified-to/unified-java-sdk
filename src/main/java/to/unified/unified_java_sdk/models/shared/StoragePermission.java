@@ -12,7 +12,6 @@ import java.lang.Boolean;
 import java.lang.Override;
 import java.lang.String;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -155,16 +154,16 @@ public class StoragePermission {
         }
         StoragePermission other = (StoragePermission) o;
         return 
-            Objects.deepEquals(this.groupId, other.groupId) &&
-            Objects.deepEquals(this.isHidden, other.isHidden) &&
-            Objects.deepEquals(this.isPublic, other.isPublic) &&
-            Objects.deepEquals(this.roles, other.roles) &&
-            Objects.deepEquals(this.userId, other.userId);
+            Utils.enhancedDeepEquals(this.groupId, other.groupId) &&
+            Utils.enhancedDeepEquals(this.isHidden, other.isHidden) &&
+            Utils.enhancedDeepEquals(this.isPublic, other.isPublic) &&
+            Utils.enhancedDeepEquals(this.roles, other.roles) &&
+            Utils.enhancedDeepEquals(this.userId, other.userId);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             groupId,
             isHidden,
             isPublic,

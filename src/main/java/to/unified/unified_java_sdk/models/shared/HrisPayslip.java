@@ -16,7 +16,6 @@ import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -377,25 +376,25 @@ public class HrisPayslip {
         }
         HrisPayslip other = (HrisPayslip) o;
         return 
-            Objects.deepEquals(this.companyId, other.companyId) &&
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.currency, other.currency) &&
-            Objects.deepEquals(this.details, other.details) &&
-            Objects.deepEquals(this.endAt, other.endAt) &&
-            Objects.deepEquals(this.grossAmount, other.grossAmount) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.netAmount, other.netAmount) &&
-            Objects.deepEquals(this.paidAt, other.paidAt) &&
-            Objects.deepEquals(this.paymentType, other.paymentType) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.startAt, other.startAt) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt) &&
-            Objects.deepEquals(this.userId, other.userId);
+            Utils.enhancedDeepEquals(this.companyId, other.companyId) &&
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.currency, other.currency) &&
+            Utils.enhancedDeepEquals(this.details, other.details) &&
+            Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
+            Utils.enhancedDeepEquals(this.grossAmount, other.grossAmount) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.netAmount, other.netAmount) &&
+            Utils.enhancedDeepEquals(this.paidAt, other.paidAt) &&
+            Utils.enhancedDeepEquals(this.paymentType, other.paymentType) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
+            Utils.enhancedDeepEquals(this.userId, other.userId);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             companyId,
             createdAt,
             currency,

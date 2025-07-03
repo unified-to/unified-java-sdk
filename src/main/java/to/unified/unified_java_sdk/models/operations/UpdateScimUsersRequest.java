@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.lang.Override;
 import java.lang.String;
-import java.util.Objects;
 import to.unified.unified_java_sdk.models.shared.ScimUser;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -102,14 +101,14 @@ public class UpdateScimUsersRequest {
         }
         UpdateScimUsersRequest other = (UpdateScimUsersRequest) o;
         return 
-            Objects.deepEquals(this.scimUser, other.scimUser) &&
-            Objects.deepEquals(this.connectionId, other.connectionId) &&
-            Objects.deepEquals(this.id, other.id);
+            Utils.enhancedDeepEquals(this.scimUser, other.scimUser) &&
+            Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
+            Utils.enhancedDeepEquals(this.id, other.id);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             scimUser,
             connectionId,
             id);

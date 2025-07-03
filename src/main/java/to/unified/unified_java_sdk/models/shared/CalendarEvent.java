@@ -15,7 +15,6 @@ import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -603,34 +602,34 @@ public class CalendarEvent {
         }
         CalendarEvent other = (CalendarEvent) o;
         return 
-            Objects.deepEquals(this.attachments, other.attachments) &&
-            Objects.deepEquals(this.attendees, other.attendees) &&
-            Objects.deepEquals(this.calendarId, other.calendarId) &&
-            Objects.deepEquals(this.conference, other.conference) &&
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.endAt, other.endAt) &&
-            Objects.deepEquals(this.hasConference, other.hasConference) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.isAllDay, other.isAllDay) &&
-            Objects.deepEquals(this.isFree, other.isFree) &&
-            Objects.deepEquals(this.isPrivate, other.isPrivate) &&
-            Objects.deepEquals(this.location, other.location) &&
-            Objects.deepEquals(this.notes, other.notes) &&
-            Objects.deepEquals(this.organizer, other.organizer) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.recurrence, other.recurrence) &&
-            Objects.deepEquals(this.recurringEventId, other.recurringEventId) &&
-            Objects.deepEquals(this.startAt, other.startAt) &&
-            Objects.deepEquals(this.status, other.status) &&
-            Objects.deepEquals(this.subject, other.subject) &&
-            Objects.deepEquals(this.timezone, other.timezone) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt) &&
-            Objects.deepEquals(this.webUrl, other.webUrl);
+            Utils.enhancedDeepEquals(this.attachments, other.attachments) &&
+            Utils.enhancedDeepEquals(this.attendees, other.attendees) &&
+            Utils.enhancedDeepEquals(this.calendarId, other.calendarId) &&
+            Utils.enhancedDeepEquals(this.conference, other.conference) &&
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
+            Utils.enhancedDeepEquals(this.hasConference, other.hasConference) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.isAllDay, other.isAllDay) &&
+            Utils.enhancedDeepEquals(this.isFree, other.isFree) &&
+            Utils.enhancedDeepEquals(this.isPrivate, other.isPrivate) &&
+            Utils.enhancedDeepEquals(this.location, other.location) &&
+            Utils.enhancedDeepEquals(this.notes, other.notes) &&
+            Utils.enhancedDeepEquals(this.organizer, other.organizer) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.recurrence, other.recurrence) &&
+            Utils.enhancedDeepEquals(this.recurringEventId, other.recurringEventId) &&
+            Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
+            Utils.enhancedDeepEquals(this.status, other.status) &&
+            Utils.enhancedDeepEquals(this.subject, other.subject) &&
+            Utils.enhancedDeepEquals(this.timezone, other.timezone) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
+            Utils.enhancedDeepEquals(this.webUrl, other.webUrl);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             attachments,
             attendees,
             calendarId,

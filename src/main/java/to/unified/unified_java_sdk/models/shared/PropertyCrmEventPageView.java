@@ -11,7 +11,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -112,14 +111,14 @@ public class PropertyCrmEventPageView {
         }
         PropertyCrmEventPageView other = (PropertyCrmEventPageView) o;
         return 
-            Objects.deepEquals(this.average, other.average) &&
-            Objects.deepEquals(this.count, other.count) &&
-            Objects.deepEquals(this.url, other.url);
+            Utils.enhancedDeepEquals(this.average, other.average) &&
+            Utils.enhancedDeepEquals(this.count, other.count) &&
+            Utils.enhancedDeepEquals(this.url, other.url);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             average,
             count,
             url);

@@ -17,7 +17,6 @@ import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -264,20 +263,20 @@ public class CrmPipeline {
         }
         CrmPipeline other = (CrmPipeline) o;
         return 
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.dealProbability, other.dealProbability) &&
-            Objects.deepEquals(this.displayOrder, other.displayOrder) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.isActive, other.isActive) &&
-            Objects.deepEquals(this.name, other.name) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.stages, other.stages) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt);
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.dealProbability, other.dealProbability) &&
+            Utils.enhancedDeepEquals(this.displayOrder, other.displayOrder) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
+            Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.stages, other.stages) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             createdAt,
             dealProbability,
             displayOrder,

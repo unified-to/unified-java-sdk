@@ -13,7 +13,6 @@ import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -753,39 +752,39 @@ public class ScimUser {
         }
         ScimUser other = (ScimUser) o;
         return 
-            Objects.deepEquals(this.active, other.active) &&
-            Objects.deepEquals(this.addresses, other.addresses) &&
-            Objects.deepEquals(this.displayName, other.displayName) &&
-            Objects.deepEquals(this.emails, other.emails) &&
-            Objects.deepEquals(this.entitlements, other.entitlements) &&
-            Objects.deepEquals(this.externalId, other.externalId) &&
-            Objects.deepEquals(this.groups, other.groups) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.ims, other.ims) &&
-            Objects.deepEquals(this.locale, other.locale) &&
-            Objects.deepEquals(this.meta, other.meta) &&
-            Objects.deepEquals(this.name, other.name) &&
-            Objects.deepEquals(this.nickName, other.nickName) &&
-            Objects.deepEquals(this.password, other.password) &&
-            Objects.deepEquals(this.phoneNumbers, other.phoneNumbers) &&
-            Objects.deepEquals(this.photos, other.photos) &&
-            Objects.deepEquals(this.preferredLanguage, other.preferredLanguage) &&
-            Objects.deepEquals(this.profileUrl, other.profileUrl) &&
-            Objects.deepEquals(this.roles, other.roles) &&
-            Objects.deepEquals(this.schemas, other.schemas) &&
-            Objects.deepEquals(this.timezone, other.timezone) &&
-            Objects.deepEquals(this.title, other.title) &&
-            Objects.deepEquals(this.urnIetfParamsScimSchemasExtensionEnterprise20User, other.urnIetfParamsScimSchemasExtensionEnterprise20User) &&
-            Objects.deepEquals(this.urnIetfParamsScimSchemasExtensionLatticeAttributes10User, other.urnIetfParamsScimSchemasExtensionLatticeAttributes10User) &&
-            Objects.deepEquals(this.urnIetfParamsScimSchemasExtensionPeakon20User, other.urnIetfParamsScimSchemasExtensionPeakon20User) &&
-            Objects.deepEquals(this.userName, other.userName) &&
-            Objects.deepEquals(this.userType, other.userType) &&
-            Objects.deepEquals(this.x509Certificates, other.x509Certificates);
+            Utils.enhancedDeepEquals(this.active, other.active) &&
+            Utils.enhancedDeepEquals(this.addresses, other.addresses) &&
+            Utils.enhancedDeepEquals(this.displayName, other.displayName) &&
+            Utils.enhancedDeepEquals(this.emails, other.emails) &&
+            Utils.enhancedDeepEquals(this.entitlements, other.entitlements) &&
+            Utils.enhancedDeepEquals(this.externalId, other.externalId) &&
+            Utils.enhancedDeepEquals(this.groups, other.groups) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.ims, other.ims) &&
+            Utils.enhancedDeepEquals(this.locale, other.locale) &&
+            Utils.enhancedDeepEquals(this.meta, other.meta) &&
+            Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.nickName, other.nickName) &&
+            Utils.enhancedDeepEquals(this.password, other.password) &&
+            Utils.enhancedDeepEquals(this.phoneNumbers, other.phoneNumbers) &&
+            Utils.enhancedDeepEquals(this.photos, other.photos) &&
+            Utils.enhancedDeepEquals(this.preferredLanguage, other.preferredLanguage) &&
+            Utils.enhancedDeepEquals(this.profileUrl, other.profileUrl) &&
+            Utils.enhancedDeepEquals(this.roles, other.roles) &&
+            Utils.enhancedDeepEquals(this.schemas, other.schemas) &&
+            Utils.enhancedDeepEquals(this.timezone, other.timezone) &&
+            Utils.enhancedDeepEquals(this.title, other.title) &&
+            Utils.enhancedDeepEquals(this.urnIetfParamsScimSchemasExtensionEnterprise20User, other.urnIetfParamsScimSchemasExtensionEnterprise20User) &&
+            Utils.enhancedDeepEquals(this.urnIetfParamsScimSchemasExtensionLatticeAttributes10User, other.urnIetfParamsScimSchemasExtensionLatticeAttributes10User) &&
+            Utils.enhancedDeepEquals(this.urnIetfParamsScimSchemasExtensionPeakon20User, other.urnIetfParamsScimSchemasExtensionPeakon20User) &&
+            Utils.enhancedDeepEquals(this.userName, other.userName) &&
+            Utils.enhancedDeepEquals(this.userType, other.userType) &&
+            Utils.enhancedDeepEquals(this.x509Certificates, other.x509Certificates);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             active,
             addresses,
             displayName,

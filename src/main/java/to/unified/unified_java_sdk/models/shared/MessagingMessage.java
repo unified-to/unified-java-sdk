@@ -16,7 +16,6 @@ import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -569,32 +568,32 @@ public class MessagingMessage {
         }
         MessagingMessage other = (MessagingMessage) o;
         return 
-            Objects.deepEquals(this.attachments, other.attachments) &&
-            Objects.deepEquals(this.authorMember, other.authorMember) &&
-            Objects.deepEquals(this.channelId, other.channelId) &&
-            Objects.deepEquals(this.channelIds, other.channelIds) &&
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.destinationMembers, other.destinationMembers) &&
-            Objects.deepEquals(this.hasChildren, other.hasChildren) &&
-            Objects.deepEquals(this.hiddenMembers, other.hiddenMembers) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.mentionedMembers, other.mentionedMembers) &&
-            Objects.deepEquals(this.message, other.message) &&
-            Objects.deepEquals(this.messageHtml, other.messageHtml) &&
-            Objects.deepEquals(this.messageMarkdown, other.messageMarkdown) &&
-            Objects.deepEquals(this.parentMessageId, other.parentMessageId) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.reactions, other.reactions) &&
-            Objects.deepEquals(this.reference, other.reference) &&
-            Objects.deepEquals(this.rootMessageId, other.rootMessageId) &&
-            Objects.deepEquals(this.subject, other.subject) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt) &&
-            Objects.deepEquals(this.webUrl, other.webUrl);
+            Utils.enhancedDeepEquals(this.attachments, other.attachments) &&
+            Utils.enhancedDeepEquals(this.authorMember, other.authorMember) &&
+            Utils.enhancedDeepEquals(this.channelId, other.channelId) &&
+            Utils.enhancedDeepEquals(this.channelIds, other.channelIds) &&
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.destinationMembers, other.destinationMembers) &&
+            Utils.enhancedDeepEquals(this.hasChildren, other.hasChildren) &&
+            Utils.enhancedDeepEquals(this.hiddenMembers, other.hiddenMembers) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.mentionedMembers, other.mentionedMembers) &&
+            Utils.enhancedDeepEquals(this.message, other.message) &&
+            Utils.enhancedDeepEquals(this.messageHtml, other.messageHtml) &&
+            Utils.enhancedDeepEquals(this.messageMarkdown, other.messageMarkdown) &&
+            Utils.enhancedDeepEquals(this.parentMessageId, other.parentMessageId) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.reactions, other.reactions) &&
+            Utils.enhancedDeepEquals(this.reference, other.reference) &&
+            Utils.enhancedDeepEquals(this.rootMessageId, other.rootMessageId) &&
+            Utils.enhancedDeepEquals(this.subject, other.subject) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
+            Utils.enhancedDeepEquals(this.webUrl, other.webUrl);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             attachments,
             authorMember,
             channelId,

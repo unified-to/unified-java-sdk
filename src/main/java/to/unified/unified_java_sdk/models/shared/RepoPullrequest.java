@@ -15,7 +15,6 @@ import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -289,21 +288,21 @@ public class RepoPullrequest {
         }
         RepoPullrequest other = (RepoPullrequest) o;
         return 
-            Objects.deepEquals(this.closedAt, other.closedAt) &&
-            Objects.deepEquals(this.commitIds, other.commitIds) &&
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.labels, other.labels) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.repoId, other.repoId) &&
-            Objects.deepEquals(this.status, other.status) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt) &&
-            Objects.deepEquals(this.userIds, other.userIds);
+            Utils.enhancedDeepEquals(this.closedAt, other.closedAt) &&
+            Utils.enhancedDeepEquals(this.commitIds, other.commitIds) &&
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.labels, other.labels) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.repoId, other.repoId) &&
+            Utils.enhancedDeepEquals(this.status, other.status) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
+            Utils.enhancedDeepEquals(this.userIds, other.userIds);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             closedAt,
             commitIds,
             createdAt,

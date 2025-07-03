@@ -15,7 +15,6 @@ import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -591,29 +590,29 @@ public class CrmEvent {
         }
         CrmEvent other = (CrmEvent) o;
         return 
-            Objects.deepEquals(this.call, other.call) &&
-            Objects.deepEquals(this.companyIds, other.companyIds) &&
-            Objects.deepEquals(this.contactIds, other.contactIds) &&
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.dealIds, other.dealIds) &&
-            Objects.deepEquals(this.email, other.email) &&
-            Objects.deepEquals(this.form, other.form) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.leadIds, other.leadIds) &&
-            Objects.deepEquals(this.marketingEmail, other.marketingEmail) &&
-            Objects.deepEquals(this.meeting, other.meeting) &&
-            Objects.deepEquals(this.note, other.note) &&
-            Objects.deepEquals(this.pageView, other.pageView) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.task, other.task) &&
-            Objects.deepEquals(this.type, other.type) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt) &&
-            Objects.deepEquals(this.userId, other.userId);
+            Utils.enhancedDeepEquals(this.call, other.call) &&
+            Utils.enhancedDeepEquals(this.companyIds, other.companyIds) &&
+            Utils.enhancedDeepEquals(this.contactIds, other.contactIds) &&
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.dealIds, other.dealIds) &&
+            Utils.enhancedDeepEquals(this.email, other.email) &&
+            Utils.enhancedDeepEquals(this.form, other.form) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.leadIds, other.leadIds) &&
+            Utils.enhancedDeepEquals(this.marketingEmail, other.marketingEmail) &&
+            Utils.enhancedDeepEquals(this.meeting, other.meeting) &&
+            Utils.enhancedDeepEquals(this.note, other.note) &&
+            Utils.enhancedDeepEquals(this.pageView, other.pageView) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.task, other.task) &&
+            Utils.enhancedDeepEquals(this.type, other.type) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
+            Utils.enhancedDeepEquals(this.userId, other.userId);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             call,
             companyIds,
             contactIds,

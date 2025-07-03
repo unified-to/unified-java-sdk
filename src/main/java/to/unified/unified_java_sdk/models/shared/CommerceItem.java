@@ -16,7 +16,6 @@ import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -519,30 +518,30 @@ public class CommerceItem {
         }
         CommerceItem other = (CommerceItem) o;
         return 
-            Objects.deepEquals(this.accountId, other.accountId) &&
-            Objects.deepEquals(this.collectionIds, other.collectionIds) &&
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.description, other.description) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.isActive, other.isActive) &&
-            Objects.deepEquals(this.isTaxable, other.isTaxable) &&
-            Objects.deepEquals(this.media, other.media) &&
-            Objects.deepEquals(this.metadata, other.metadata) &&
-            Objects.deepEquals(this.name, other.name) &&
-            Objects.deepEquals(this.publicDescription, other.publicDescription) &&
-            Objects.deepEquals(this.publicName, other.publicName) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.slug, other.slug) &&
-            Objects.deepEquals(this.tags, other.tags) &&
-            Objects.deepEquals(this.type, other.type) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt) &&
-            Objects.deepEquals(this.variants, other.variants) &&
-            Objects.deepEquals(this.vendorName, other.vendorName);
+            Utils.enhancedDeepEquals(this.accountId, other.accountId) &&
+            Utils.enhancedDeepEquals(this.collectionIds, other.collectionIds) &&
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.description, other.description) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
+            Utils.enhancedDeepEquals(this.isTaxable, other.isTaxable) &&
+            Utils.enhancedDeepEquals(this.media, other.media) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
+            Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.publicDescription, other.publicDescription) &&
+            Utils.enhancedDeepEquals(this.publicName, other.publicName) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.slug, other.slug) &&
+            Utils.enhancedDeepEquals(this.tags, other.tags) &&
+            Utils.enhancedDeepEquals(this.type, other.type) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
+            Utils.enhancedDeepEquals(this.variants, other.variants) &&
+            Utils.enhancedDeepEquals(this.vendorName, other.vendorName);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             accountId,
             collectionIds,
             createdAt,

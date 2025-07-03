@@ -16,7 +16,6 @@ import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -534,31 +533,31 @@ public class HrisDevice {
         }
         HrisDevice other = (HrisDevice) o;
         return 
-            Objects.deepEquals(this.adminUserIds, other.adminUserIds) &&
-            Objects.deepEquals(this.assetTag, other.assetTag) &&
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.hasAntivirus, other.hasAntivirus) &&
-            Objects.deepEquals(this.hasFirewall, other.hasFirewall) &&
-            Objects.deepEquals(this.hasHdEncrypted, other.hasHdEncrypted) &&
-            Objects.deepEquals(this.hasPasswordManager, other.hasPasswordManager) &&
-            Objects.deepEquals(this.hasScreenlock, other.hasScreenlock) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.isMissing, other.isMissing) &&
-            Objects.deepEquals(this.locationId, other.locationId) &&
-            Objects.deepEquals(this.manufacturer, other.manufacturer) &&
-            Objects.deepEquals(this.model, other.model) &&
-            Objects.deepEquals(this.name, other.name) &&
-            Objects.deepEquals(this.os, other.os) &&
-            Objects.deepEquals(this.osVersion, other.osVersion) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt) &&
-            Objects.deepEquals(this.userIds, other.userIds) &&
-            Objects.deepEquals(this.version, other.version);
+            Utils.enhancedDeepEquals(this.adminUserIds, other.adminUserIds) &&
+            Utils.enhancedDeepEquals(this.assetTag, other.assetTag) &&
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.hasAntivirus, other.hasAntivirus) &&
+            Utils.enhancedDeepEquals(this.hasFirewall, other.hasFirewall) &&
+            Utils.enhancedDeepEquals(this.hasHdEncrypted, other.hasHdEncrypted) &&
+            Utils.enhancedDeepEquals(this.hasPasswordManager, other.hasPasswordManager) &&
+            Utils.enhancedDeepEquals(this.hasScreenlock, other.hasScreenlock) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.isMissing, other.isMissing) &&
+            Utils.enhancedDeepEquals(this.locationId, other.locationId) &&
+            Utils.enhancedDeepEquals(this.manufacturer, other.manufacturer) &&
+            Utils.enhancedDeepEquals(this.model, other.model) &&
+            Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.os, other.os) &&
+            Utils.enhancedDeepEquals(this.osVersion, other.osVersion) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
+            Utils.enhancedDeepEquals(this.userIds, other.userIds) &&
+            Utils.enhancedDeepEquals(this.version, other.version);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             adminUserIds,
             assetTag,
             createdAt,

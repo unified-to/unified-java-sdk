@@ -11,7 +11,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -155,16 +154,16 @@ public class LmsMedia {
         }
         LmsMedia other = (LmsMedia) o;
         return 
-            Objects.deepEquals(this.description, other.description) &&
-            Objects.deepEquals(this.name, other.name) &&
-            Objects.deepEquals(this.thumbnailUrl, other.thumbnailUrl) &&
-            Objects.deepEquals(this.type, other.type) &&
-            Objects.deepEquals(this.url, other.url);
+            Utils.enhancedDeepEquals(this.description, other.description) &&
+            Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.thumbnailUrl, other.thumbnailUrl) &&
+            Utils.enhancedDeepEquals(this.type, other.type) &&
+            Utils.enhancedDeepEquals(this.url, other.url);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             description,
             name,
             thumbnailUrl,

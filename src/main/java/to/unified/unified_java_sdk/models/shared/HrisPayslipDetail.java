@@ -12,7 +12,6 @@ import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -180,17 +179,17 @@ public class HrisPayslipDetail {
         }
         HrisPayslipDetail other = (HrisPayslipDetail) o;
         return 
-            Objects.deepEquals(this.amount, other.amount) &&
-            Objects.deepEquals(this.companyAmount, other.companyAmount) &&
-            Objects.deepEquals(this.description, other.description) &&
-            Objects.deepEquals(this.employeeAmount, other.employeeAmount) &&
-            Objects.deepEquals(this.name, other.name) &&
-            Objects.deepEquals(this.type, other.type);
+            Utils.enhancedDeepEquals(this.amount, other.amount) &&
+            Utils.enhancedDeepEquals(this.companyAmount, other.companyAmount) &&
+            Utils.enhancedDeepEquals(this.description, other.description) &&
+            Utils.enhancedDeepEquals(this.employeeAmount, other.employeeAmount) &&
+            Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.type, other.type);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             amount,
             companyAmount,
             description,

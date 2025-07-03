@@ -17,7 +17,6 @@ import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -696,37 +695,37 @@ public class Integration {
         }
         Integration other = (Integration) o;
         return 
-            Objects.deepEquals(this.activeHealthyConnections, other.activeHealthyConnections) &&
-            Objects.deepEquals(this.api, other.api) &&
-            Objects.deepEquals(this.apiDocsUrl, other.apiDocsUrl) &&
-            Objects.deepEquals(this.beta, other.beta) &&
-            Objects.deepEquals(this.categories, other.categories) &&
-            Objects.deepEquals(this.color, other.color) &&
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.description, other.description) &&
-            Objects.deepEquals(this.faIcon, other.faIcon) &&
-            Objects.deepEquals(this.featured, other.featured) &&
-            Objects.deepEquals(this.inProgress, other.inProgress) &&
-            Objects.deepEquals(this.isActive, other.isActive) &&
-            Objects.deepEquals(this.logoUrl, other.logoUrl) &&
-            Objects.deepEquals(this.name, other.name) &&
-            Objects.deepEquals(this.partnership, other.partnership) &&
-            Objects.deepEquals(this.popularity, other.popularity) &&
-            Objects.deepEquals(this.rateLimitDescription, other.rateLimitDescription) &&
-            Objects.deepEquals(this.sandbox, other.sandbox) &&
-            Objects.deepEquals(this.support, other.support) &&
-            Objects.deepEquals(this.testedAt, other.testedAt) &&
-            Objects.deepEquals(this.textColor, other.textColor) &&
-            Objects.deepEquals(this.tokenInstructions, other.tokenInstructions) &&
-            Objects.deepEquals(this.tokenNames, other.tokenNames) &&
-            Objects.deepEquals(this.type, other.type) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt) &&
-            Objects.deepEquals(this.webUrl, other.webUrl);
+            Utils.enhancedDeepEquals(this.activeHealthyConnections, other.activeHealthyConnections) &&
+            Utils.enhancedDeepEquals(this.api, other.api) &&
+            Utils.enhancedDeepEquals(this.apiDocsUrl, other.apiDocsUrl) &&
+            Utils.enhancedDeepEquals(this.beta, other.beta) &&
+            Utils.enhancedDeepEquals(this.categories, other.categories) &&
+            Utils.enhancedDeepEquals(this.color, other.color) &&
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.description, other.description) &&
+            Utils.enhancedDeepEquals(this.faIcon, other.faIcon) &&
+            Utils.enhancedDeepEquals(this.featured, other.featured) &&
+            Utils.enhancedDeepEquals(this.inProgress, other.inProgress) &&
+            Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
+            Utils.enhancedDeepEquals(this.logoUrl, other.logoUrl) &&
+            Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.partnership, other.partnership) &&
+            Utils.enhancedDeepEquals(this.popularity, other.popularity) &&
+            Utils.enhancedDeepEquals(this.rateLimitDescription, other.rateLimitDescription) &&
+            Utils.enhancedDeepEquals(this.sandbox, other.sandbox) &&
+            Utils.enhancedDeepEquals(this.support, other.support) &&
+            Utils.enhancedDeepEquals(this.testedAt, other.testedAt) &&
+            Utils.enhancedDeepEquals(this.textColor, other.textColor) &&
+            Utils.enhancedDeepEquals(this.tokenInstructions, other.tokenInstructions) &&
+            Utils.enhancedDeepEquals(this.tokenNames, other.tokenNames) &&
+            Utils.enhancedDeepEquals(this.type, other.type) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
+            Utils.enhancedDeepEquals(this.webUrl, other.webUrl);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             activeHealthyConnections,
             api,
             apiDocsUrl,

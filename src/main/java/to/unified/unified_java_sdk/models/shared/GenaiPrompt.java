@@ -15,7 +15,6 @@ import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -215,18 +214,18 @@ public class GenaiPrompt {
         }
         GenaiPrompt other = (GenaiPrompt) o;
         return 
-            Objects.deepEquals(this.maxTokens, other.maxTokens) &&
-            Objects.deepEquals(this.messages, other.messages) &&
-            Objects.deepEquals(this.modelId, other.modelId) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.responses, other.responses) &&
-            Objects.deepEquals(this.temperature, other.temperature) &&
-            Objects.deepEquals(this.tokensUsed, other.tokensUsed);
+            Utils.enhancedDeepEquals(this.maxTokens, other.maxTokens) &&
+            Utils.enhancedDeepEquals(this.messages, other.messages) &&
+            Utils.enhancedDeepEquals(this.modelId, other.modelId) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.responses, other.responses) &&
+            Utils.enhancedDeepEquals(this.temperature, other.temperature) &&
+            Utils.enhancedDeepEquals(this.tokensUsed, other.tokensUsed);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             maxTokens,
             messages,
             modelId,

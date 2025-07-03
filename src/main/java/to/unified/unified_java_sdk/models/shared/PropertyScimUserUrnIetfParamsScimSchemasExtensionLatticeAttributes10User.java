@@ -12,7 +12,6 @@ import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -284,21 +283,21 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes1
         }
         PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User other = (PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User) o;
         return 
-            Objects.deepEquals(this.jobLevel, other.jobLevel) &&
-            Objects.deepEquals(this.peopleManagerReviews, other.peopleManagerReviews) &&
-            Objects.deepEquals(this.remoteWorkLocation, other.remoteWorkLocation) &&
-            Objects.deepEquals(this.salaryInformation, other.salaryInformation) &&
-            Objects.deepEquals(this.subDepartments, other.subDepartments) &&
-            Objects.deepEquals(this.birthDate, other.birthDate) &&
-            Objects.deepEquals(this.ethnicity, other.ethnicity) &&
-            Objects.deepEquals(this.gender, other.gender) &&
-            Objects.deepEquals(this.sexualOrientation, other.sexualOrientation) &&
-            Objects.deepEquals(this.startDate, other.startDate);
+            Utils.enhancedDeepEquals(this.jobLevel, other.jobLevel) &&
+            Utils.enhancedDeepEquals(this.peopleManagerReviews, other.peopleManagerReviews) &&
+            Utils.enhancedDeepEquals(this.remoteWorkLocation, other.remoteWorkLocation) &&
+            Utils.enhancedDeepEquals(this.salaryInformation, other.salaryInformation) &&
+            Utils.enhancedDeepEquals(this.subDepartments, other.subDepartments) &&
+            Utils.enhancedDeepEquals(this.birthDate, other.birthDate) &&
+            Utils.enhancedDeepEquals(this.ethnicity, other.ethnicity) &&
+            Utils.enhancedDeepEquals(this.gender, other.gender) &&
+            Utils.enhancedDeepEquals(this.sexualOrientation, other.sexualOrientation) &&
+            Utils.enhancedDeepEquals(this.startDate, other.startDate);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             jobLevel,
             peopleManagerReviews,
             remoteWorkLocation,

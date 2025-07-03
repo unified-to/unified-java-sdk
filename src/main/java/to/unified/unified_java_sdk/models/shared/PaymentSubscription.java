@@ -16,7 +16,6 @@ import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -529,31 +528,31 @@ public class PaymentSubscription {
         }
         PaymentSubscription other = (PaymentSubscription) o;
         return 
-            Objects.deepEquals(this.canceledAt, other.canceledAt) &&
-            Objects.deepEquals(this.contactId, other.contactId) &&
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.currency, other.currency) &&
-            Objects.deepEquals(this.currentPeriodEndAt, other.currentPeriodEndAt) &&
-            Objects.deepEquals(this.currentPeriodStartAt, other.currentPeriodStartAt) &&
-            Objects.deepEquals(this.dayOfMonth, other.dayOfMonth) &&
-            Objects.deepEquals(this.dayOfWeek, other.dayOfWeek) &&
-            Objects.deepEquals(this.description, other.description) &&
-            Objects.deepEquals(this.endAt, other.endAt) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.interval, other.interval) &&
-            Objects.deepEquals(this.intervalUnit, other.intervalUnit) &&
-            Objects.deepEquals(this.invoiceId, other.invoiceId) &&
-            Objects.deepEquals(this.lineitems, other.lineitems) &&
-            Objects.deepEquals(this.month, other.month) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.startAt, other.startAt) &&
-            Objects.deepEquals(this.status, other.status) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt);
+            Utils.enhancedDeepEquals(this.canceledAt, other.canceledAt) &&
+            Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.currency, other.currency) &&
+            Utils.enhancedDeepEquals(this.currentPeriodEndAt, other.currentPeriodEndAt) &&
+            Utils.enhancedDeepEquals(this.currentPeriodStartAt, other.currentPeriodStartAt) &&
+            Utils.enhancedDeepEquals(this.dayOfMonth, other.dayOfMonth) &&
+            Utils.enhancedDeepEquals(this.dayOfWeek, other.dayOfWeek) &&
+            Utils.enhancedDeepEquals(this.description, other.description) &&
+            Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.interval, other.interval) &&
+            Utils.enhancedDeepEquals(this.intervalUnit, other.intervalUnit) &&
+            Utils.enhancedDeepEquals(this.invoiceId, other.invoiceId) &&
+            Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
+            Utils.enhancedDeepEquals(this.month, other.month) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
+            Utils.enhancedDeepEquals(this.status, other.status) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             canceledAt,
             contactId,
             createdAt,

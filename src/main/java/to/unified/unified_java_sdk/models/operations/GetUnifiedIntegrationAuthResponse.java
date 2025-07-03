@@ -10,7 +10,6 @@ import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
 import java.net.http.HttpResponse;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Response;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -152,15 +151,15 @@ public class GetUnifiedIntegrationAuthResponse implements Response {
         }
         GetUnifiedIntegrationAuthResponse other = (GetUnifiedIntegrationAuthResponse) o;
         return 
-            Objects.deepEquals(this.contentType, other.contentType) &&
-            Objects.deepEquals(this.statusCode, other.statusCode) &&
-            Objects.deepEquals(this.rawResponse, other.rawResponse) &&
-            Objects.deepEquals(this.res, other.res);
+            Utils.enhancedDeepEquals(this.contentType, other.contentType) &&
+            Utils.enhancedDeepEquals(this.statusCode, other.statusCode) &&
+            Utils.enhancedDeepEquals(this.rawResponse, other.rawResponse) &&
+            Utils.enhancedDeepEquals(this.res, other.res);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             contentType,
             statusCode,
             rawResponse,

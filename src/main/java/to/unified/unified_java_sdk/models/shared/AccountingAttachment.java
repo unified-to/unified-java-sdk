@@ -10,7 +10,6 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.lang.Override;
 import java.lang.String;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -135,15 +134,15 @@ public class AccountingAttachment {
         }
         AccountingAttachment other = (AccountingAttachment) o;
         return 
-            Objects.deepEquals(this.downloadUrl, other.downloadUrl) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.mimeType, other.mimeType) &&
-            Objects.deepEquals(this.name, other.name);
+            Utils.enhancedDeepEquals(this.downloadUrl, other.downloadUrl) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.mimeType, other.mimeType) &&
+            Utils.enhancedDeepEquals(this.name, other.name);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             downloadUrl,
             id,
             mimeType,

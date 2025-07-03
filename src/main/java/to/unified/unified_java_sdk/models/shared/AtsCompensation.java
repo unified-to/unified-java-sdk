@@ -12,7 +12,6 @@ import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -163,16 +162,16 @@ public class AtsCompensation {
         }
         AtsCompensation other = (AtsCompensation) o;
         return 
-            Objects.deepEquals(this.currency, other.currency) &&
-            Objects.deepEquals(this.frequency, other.frequency) &&
-            Objects.deepEquals(this.max, other.max) &&
-            Objects.deepEquals(this.min, other.min) &&
-            Objects.deepEquals(this.type, other.type);
+            Utils.enhancedDeepEquals(this.currency, other.currency) &&
+            Utils.enhancedDeepEquals(this.frequency, other.frequency) &&
+            Utils.enhancedDeepEquals(this.max, other.max) &&
+            Utils.enhancedDeepEquals(this.min, other.min) &&
+            Utils.enhancedDeepEquals(this.type, other.type);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             currency,
             frequency,
             max,

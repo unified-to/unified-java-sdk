@@ -12,7 +12,6 @@ import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -217,17 +216,17 @@ public class PropertyCrmEventEmail {
         }
         PropertyCrmEventEmail other = (PropertyCrmEventEmail) o;
         return 
-            Objects.deepEquals(this.attachmentFileIds, other.attachmentFileIds) &&
-            Objects.deepEquals(this.body, other.body) &&
-            Objects.deepEquals(this.cc, other.cc) &&
-            Objects.deepEquals(this.from, other.from) &&
-            Objects.deepEquals(this.subject, other.subject) &&
-            Objects.deepEquals(this.to, other.to);
+            Utils.enhancedDeepEquals(this.attachmentFileIds, other.attachmentFileIds) &&
+            Utils.enhancedDeepEquals(this.body, other.body) &&
+            Utils.enhancedDeepEquals(this.cc, other.cc) &&
+            Utils.enhancedDeepEquals(this.from, other.from) &&
+            Utils.enhancedDeepEquals(this.subject, other.subject) &&
+            Utils.enhancedDeepEquals(this.to, other.to);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             attachmentFileIds,
             body,
             cc,

@@ -12,7 +12,6 @@ import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -230,18 +229,18 @@ public class ScimGroup {
         }
         ScimGroup other = (ScimGroup) o;
         return 
-            Objects.deepEquals(this.displayName, other.displayName) &&
-            Objects.deepEquals(this.externalId, other.externalId) &&
-            Objects.deepEquals(this.groupType, other.groupType) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.members, other.members) &&
-            Objects.deepEquals(this.meta, other.meta) &&
-            Objects.deepEquals(this.schemas, other.schemas);
+            Utils.enhancedDeepEquals(this.displayName, other.displayName) &&
+            Utils.enhancedDeepEquals(this.externalId, other.externalId) &&
+            Utils.enhancedDeepEquals(this.groupType, other.groupType) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.members, other.members) &&
+            Utils.enhancedDeepEquals(this.meta, other.meta) &&
+            Utils.enhancedDeepEquals(this.schemas, other.schemas);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             displayName,
             externalId,
             groupType,

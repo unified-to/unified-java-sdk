@@ -12,7 +12,6 @@ import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.AccountingReport;
 import to.unified.unified_java_sdk.utils.Response;
@@ -156,15 +155,15 @@ public class ListAccountingReportsResponse implements Response {
         }
         ListAccountingReportsResponse other = (ListAccountingReportsResponse) o;
         return 
-            Objects.deepEquals(this.accountingReports, other.accountingReports) &&
-            Objects.deepEquals(this.contentType, other.contentType) &&
-            Objects.deepEquals(this.statusCode, other.statusCode) &&
-            Objects.deepEquals(this.rawResponse, other.rawResponse);
+            Utils.enhancedDeepEquals(this.accountingReports, other.accountingReports) &&
+            Utils.enhancedDeepEquals(this.contentType, other.contentType) &&
+            Utils.enhancedDeepEquals(this.statusCode, other.statusCode) &&
+            Utils.enhancedDeepEquals(this.rawResponse, other.rawResponse);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             accountingReports,
             contentType,
             statusCode,

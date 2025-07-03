@@ -8,7 +8,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.lang.Boolean;
 import java.lang.Override;
 import java.lang.String;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.Webhook;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
@@ -101,13 +100,13 @@ public class CreateUnifiedWebhookRequest {
         }
         CreateUnifiedWebhookRequest other = (CreateUnifiedWebhookRequest) o;
         return 
-            Objects.deepEquals(this.webhook, other.webhook) &&
-            Objects.deepEquals(this.includeAll, other.includeAll);
+            Utils.enhancedDeepEquals(this.webhook, other.webhook) &&
+            Utils.enhancedDeepEquals(this.includeAll, other.includeAll);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             webhook,
             includeAll);
     }

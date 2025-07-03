@@ -15,7 +15,6 @@ import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -627,35 +626,35 @@ public class CommerceItemVariant {
         }
         CommerceItemVariant other = (CommerceItemVariant) o;
         return 
-            Objects.deepEquals(this.availableAt, other.availableAt) &&
-            Objects.deepEquals(this.description, other.description) &&
-            Objects.deepEquals(this.height, other.height) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.inventoryId, other.inventoryId) &&
-            Objects.deepEquals(this.isActive, other.isActive) &&
-            Objects.deepEquals(this.isFeatured, other.isFeatured) &&
-            Objects.deepEquals(this.isVisible, other.isVisible) &&
-            Objects.deepEquals(this.length, other.length) &&
-            Objects.deepEquals(this.media, other.media) &&
-            Objects.deepEquals(this.metadata, other.metadata) &&
-            Objects.deepEquals(this.name, other.name) &&
-            Objects.deepEquals(this.options, other.options) &&
-            Objects.deepEquals(this.prices, other.prices) &&
-            Objects.deepEquals(this.publicDescription, other.publicDescription) &&
-            Objects.deepEquals(this.publicName, other.publicName) &&
-            Objects.deepEquals(this.requiresShipping, other.requiresShipping) &&
-            Objects.deepEquals(this.sizeUnit, other.sizeUnit) &&
-            Objects.deepEquals(this.sku, other.sku) &&
-            Objects.deepEquals(this.tags, other.tags) &&
-            Objects.deepEquals(this.totalStock, other.totalStock) &&
-            Objects.deepEquals(this.weight, other.weight) &&
-            Objects.deepEquals(this.weightUnit, other.weightUnit) &&
-            Objects.deepEquals(this.width, other.width);
+            Utils.enhancedDeepEquals(this.availableAt, other.availableAt) &&
+            Utils.enhancedDeepEquals(this.description, other.description) &&
+            Utils.enhancedDeepEquals(this.height, other.height) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.inventoryId, other.inventoryId) &&
+            Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
+            Utils.enhancedDeepEquals(this.isFeatured, other.isFeatured) &&
+            Utils.enhancedDeepEquals(this.isVisible, other.isVisible) &&
+            Utils.enhancedDeepEquals(this.length, other.length) &&
+            Utils.enhancedDeepEquals(this.media, other.media) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
+            Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.options, other.options) &&
+            Utils.enhancedDeepEquals(this.prices, other.prices) &&
+            Utils.enhancedDeepEquals(this.publicDescription, other.publicDescription) &&
+            Utils.enhancedDeepEquals(this.publicName, other.publicName) &&
+            Utils.enhancedDeepEquals(this.requiresShipping, other.requiresShipping) &&
+            Utils.enhancedDeepEquals(this.sizeUnit, other.sizeUnit) &&
+            Utils.enhancedDeepEquals(this.sku, other.sku) &&
+            Utils.enhancedDeepEquals(this.tags, other.tags) &&
+            Utils.enhancedDeepEquals(this.totalStock, other.totalStock) &&
+            Utils.enhancedDeepEquals(this.weight, other.weight) &&
+            Utils.enhancedDeepEquals(this.weightUnit, other.weightUnit) &&
+            Utils.enhancedDeepEquals(this.width, other.width);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             availableAt,
             description,
             height,

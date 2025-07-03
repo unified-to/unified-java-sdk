@@ -14,7 +14,6 @@ import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -333,23 +332,23 @@ public class AtsDocument {
         }
         AtsDocument other = (AtsDocument) o;
         return 
-            Objects.deepEquals(this.applicationId, other.applicationId) &&
-            Objects.deepEquals(this.candidateId, other.candidateId) &&
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.documentData, other.documentData) &&
-            Objects.deepEquals(this.documentUrl, other.documentUrl) &&
-            Objects.deepEquals(this.filename, other.filename) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.jobId, other.jobId) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.type, other.type) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt) &&
-            Objects.deepEquals(this.userId, other.userId);
+            Utils.enhancedDeepEquals(this.applicationId, other.applicationId) &&
+            Utils.enhancedDeepEquals(this.candidateId, other.candidateId) &&
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.documentData, other.documentData) &&
+            Utils.enhancedDeepEquals(this.documentUrl, other.documentUrl) &&
+            Utils.enhancedDeepEquals(this.filename, other.filename) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.jobId, other.jobId) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.type, other.type) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
+            Utils.enhancedDeepEquals(this.userId, other.userId);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             applicationId,
             candidateId,
             createdAt,

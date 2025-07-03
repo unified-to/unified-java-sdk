@@ -16,7 +16,6 @@ import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -485,29 +484,29 @@ public class AccountingAccount {
         }
         AccountingAccount other = (AccountingAccount) o;
         return 
-            Objects.deepEquals(this.balance, other.balance) &&
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.currency, other.currency) &&
-            Objects.deepEquals(this.customerDefinedCode, other.customerDefinedCode) &&
-            Objects.deepEquals(this.description, other.description) &&
-            Objects.deepEquals(this.group, other.group) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.isPayable, other.isPayable) &&
-            Objects.deepEquals(this.name, other.name) &&
-            Objects.deepEquals(this.parentAccountId, other.parentAccountId) &&
-            Objects.deepEquals(this.parentId, other.parentId) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.section, other.section) &&
-            Objects.deepEquals(this.status, other.status) &&
-            Objects.deepEquals(this.subgroup, other.subgroup) &&
-            Objects.deepEquals(this.subsection, other.subsection) &&
-            Objects.deepEquals(this.type, other.type) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt);
+            Utils.enhancedDeepEquals(this.balance, other.balance) &&
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.currency, other.currency) &&
+            Utils.enhancedDeepEquals(this.customerDefinedCode, other.customerDefinedCode) &&
+            Utils.enhancedDeepEquals(this.description, other.description) &&
+            Utils.enhancedDeepEquals(this.group, other.group) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.isPayable, other.isPayable) &&
+            Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.parentAccountId, other.parentAccountId) &&
+            Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.section, other.section) &&
+            Utils.enhancedDeepEquals(this.status, other.status) &&
+            Utils.enhancedDeepEquals(this.subgroup, other.subgroup) &&
+            Utils.enhancedDeepEquals(this.subsection, other.subsection) &&
+            Utils.enhancedDeepEquals(this.type, other.type) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             balance,
             createdAt,
             currency,

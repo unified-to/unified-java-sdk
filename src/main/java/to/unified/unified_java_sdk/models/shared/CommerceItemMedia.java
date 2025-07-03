@@ -13,7 +13,6 @@ import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -230,19 +229,19 @@ public class CommerceItemMedia {
         }
         CommerceItemMedia other = (CommerceItemMedia) o;
         return 
-            Objects.deepEquals(this.alt, other.alt) &&
-            Objects.deepEquals(this.height, other.height) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.metadata, other.metadata) &&
-            Objects.deepEquals(this.position, other.position) &&
-            Objects.deepEquals(this.type, other.type) &&
-            Objects.deepEquals(this.url, other.url) &&
-            Objects.deepEquals(this.width, other.width);
+            Utils.enhancedDeepEquals(this.alt, other.alt) &&
+            Utils.enhancedDeepEquals(this.height, other.height) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
+            Utils.enhancedDeepEquals(this.position, other.position) &&
+            Utils.enhancedDeepEquals(this.type, other.type) &&
+            Utils.enhancedDeepEquals(this.url, other.url) &&
+            Utils.enhancedDeepEquals(this.width, other.width);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             alt,
             height,
             id,

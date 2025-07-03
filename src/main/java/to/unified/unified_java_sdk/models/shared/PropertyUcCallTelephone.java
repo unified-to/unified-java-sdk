@@ -11,7 +11,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -88,13 +87,13 @@ public class PropertyUcCallTelephone {
         }
         PropertyUcCallTelephone other = (PropertyUcCallTelephone) o;
         return 
-            Objects.deepEquals(this.telephone, other.telephone) &&
-            Objects.deepEquals(this.type, other.type);
+            Utils.enhancedDeepEquals(this.telephone, other.telephone) &&
+            Utils.enhancedDeepEquals(this.type, other.type);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             telephone,
             type);
     }

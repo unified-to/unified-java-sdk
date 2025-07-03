@@ -10,7 +10,6 @@ import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -362,22 +361,22 @@ public class GetUnifiedIntegrationAuthRequest {
         }
         GetUnifiedIntegrationAuthRequest other = (GetUnifiedIntegrationAuthRequest) o;
         return 
-            Objects.deepEquals(this.env, other.env) &&
-            Objects.deepEquals(this.externalXref, other.externalXref) &&
-            Objects.deepEquals(this.failureRedirect, other.failureRedirect) &&
-            Objects.deepEquals(this.integrationType, other.integrationType) &&
-            Objects.deepEquals(this.lang, other.lang) &&
-            Objects.deepEquals(this.redirect, other.redirect) &&
-            Objects.deepEquals(this.scopes, other.scopes) &&
-            Objects.deepEquals(this.state, other.state) &&
-            Objects.deepEquals(this.subdomain, other.subdomain) &&
-            Objects.deepEquals(this.successRedirect, other.successRedirect) &&
-            Objects.deepEquals(this.workspaceId, other.workspaceId);
+            Utils.enhancedDeepEquals(this.env, other.env) &&
+            Utils.enhancedDeepEquals(this.externalXref, other.externalXref) &&
+            Utils.enhancedDeepEquals(this.failureRedirect, other.failureRedirect) &&
+            Utils.enhancedDeepEquals(this.integrationType, other.integrationType) &&
+            Utils.enhancedDeepEquals(this.lang, other.lang) &&
+            Utils.enhancedDeepEquals(this.redirect, other.redirect) &&
+            Utils.enhancedDeepEquals(this.scopes, other.scopes) &&
+            Utils.enhancedDeepEquals(this.state, other.state) &&
+            Utils.enhancedDeepEquals(this.subdomain, other.subdomain) &&
+            Utils.enhancedDeepEquals(this.successRedirect, other.successRedirect) &&
+            Utils.enhancedDeepEquals(this.workspaceId, other.workspaceId);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             env,
             externalXref,
             failureRedirect,

@@ -15,7 +15,6 @@ import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -335,23 +334,23 @@ public class AtsScorecard {
         }
         AtsScorecard other = (AtsScorecard) o;
         return 
-            Objects.deepEquals(this.applicationId, other.applicationId) &&
-            Objects.deepEquals(this.candidateId, other.candidateId) &&
-            Objects.deepEquals(this.comment, other.comment) &&
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.interviewId, other.interviewId) &&
-            Objects.deepEquals(this.interviewerId, other.interviewerId) &&
-            Objects.deepEquals(this.jobId, other.jobId) &&
-            Objects.deepEquals(this.questions, other.questions) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.recommendation, other.recommendation) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt);
+            Utils.enhancedDeepEquals(this.applicationId, other.applicationId) &&
+            Utils.enhancedDeepEquals(this.candidateId, other.candidateId) &&
+            Utils.enhancedDeepEquals(this.comment, other.comment) &&
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.interviewId, other.interviewId) &&
+            Utils.enhancedDeepEquals(this.interviewerId, other.interviewerId) &&
+            Utils.enhancedDeepEquals(this.jobId, other.jobId) &&
+            Utils.enhancedDeepEquals(this.questions, other.questions) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.recommendation, other.recommendation) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             applicationId,
             candidateId,
             comment,

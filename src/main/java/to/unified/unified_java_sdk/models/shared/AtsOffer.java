@@ -15,7 +15,6 @@ import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -347,23 +346,23 @@ public class AtsOffer {
         }
         AtsOffer other = (AtsOffer) o;
         return 
-            Objects.deepEquals(this.acceptedAt, other.acceptedAt) &&
-            Objects.deepEquals(this.compensation, other.compensation) &&
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.creatorUserId, other.creatorUserId) &&
-            Objects.deepEquals(this.employeeUserId, other.employeeUserId) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.rejectedAt, other.rejectedAt) &&
-            Objects.deepEquals(this.sentAt, other.sentAt) &&
-            Objects.deepEquals(this.startAt, other.startAt) &&
-            Objects.deepEquals(this.status, other.status) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt);
+            Utils.enhancedDeepEquals(this.acceptedAt, other.acceptedAt) &&
+            Utils.enhancedDeepEquals(this.compensation, other.compensation) &&
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.creatorUserId, other.creatorUserId) &&
+            Utils.enhancedDeepEquals(this.employeeUserId, other.employeeUserId) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.rejectedAt, other.rejectedAt) &&
+            Utils.enhancedDeepEquals(this.sentAt, other.sentAt) &&
+            Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
+            Utils.enhancedDeepEquals(this.status, other.status) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             acceptedAt,
             compensation,
             createdAt,

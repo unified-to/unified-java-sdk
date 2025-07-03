@@ -12,7 +12,6 @@ import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -162,16 +161,16 @@ public class AtsJobOpening {
         }
         AtsJobOpening other = (AtsJobOpening) o;
         return 
-            Objects.deepEquals(this.applicationId, other.applicationId) &&
-            Objects.deepEquals(this.closeReason, other.closeReason) &&
-            Objects.deepEquals(this.closedAt, other.closedAt) &&
-            Objects.deepEquals(this.openedAt, other.openedAt) &&
-            Objects.deepEquals(this.status, other.status);
+            Utils.enhancedDeepEquals(this.applicationId, other.applicationId) &&
+            Utils.enhancedDeepEquals(this.closeReason, other.closeReason) &&
+            Utils.enhancedDeepEquals(this.closedAt, other.closedAt) &&
+            Utils.enhancedDeepEquals(this.openedAt, other.openedAt) &&
+            Utils.enhancedDeepEquals(this.status, other.status);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             applicationId,
             closeReason,
             closedAt,

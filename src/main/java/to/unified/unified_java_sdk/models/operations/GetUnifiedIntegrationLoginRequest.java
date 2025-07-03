@@ -8,7 +8,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.lang.Boolean;
 import java.lang.Override;
 import java.lang.String;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -243,18 +242,18 @@ public class GetUnifiedIntegrationLoginRequest {
         }
         GetUnifiedIntegrationLoginRequest other = (GetUnifiedIntegrationLoginRequest) o;
         return 
-            Objects.deepEquals(this.env, other.env) &&
-            Objects.deepEquals(this.failureRedirect, other.failureRedirect) &&
-            Objects.deepEquals(this.integrationType, other.integrationType) &&
-            Objects.deepEquals(this.redirect, other.redirect) &&
-            Objects.deepEquals(this.state, other.state) &&
-            Objects.deepEquals(this.successRedirect, other.successRedirect) &&
-            Objects.deepEquals(this.workspaceId, other.workspaceId);
+            Utils.enhancedDeepEquals(this.env, other.env) &&
+            Utils.enhancedDeepEquals(this.failureRedirect, other.failureRedirect) &&
+            Utils.enhancedDeepEquals(this.integrationType, other.integrationType) &&
+            Utils.enhancedDeepEquals(this.redirect, other.redirect) &&
+            Utils.enhancedDeepEquals(this.state, other.state) &&
+            Utils.enhancedDeepEquals(this.successRedirect, other.successRedirect) &&
+            Utils.enhancedDeepEquals(this.workspaceId, other.workspaceId);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             env,
             failureRedirect,
             integrationType,

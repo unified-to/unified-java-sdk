@@ -17,7 +17,6 @@ import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -684,35 +683,35 @@ public class AtsJob {
         }
         AtsJob other = (AtsJob) o;
         return 
-            Objects.deepEquals(this.addresses, other.addresses) &&
-            Objects.deepEquals(this.closedAt, other.closedAt) &&
-            Objects.deepEquals(this.companyId, other.companyId) &&
-            Objects.deepEquals(this.compensation, other.compensation) &&
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.departments, other.departments) &&
-            Objects.deepEquals(this.description, other.description) &&
-            Objects.deepEquals(this.employmentType, other.employmentType) &&
-            Objects.deepEquals(this.groups, other.groups) &&
-            Objects.deepEquals(this.hiringManagerIds, other.hiringManagerIds) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.languageLocale, other.languageLocale) &&
-            Objects.deepEquals(this.metadata, other.metadata) &&
-            Objects.deepEquals(this.name, other.name) &&
-            Objects.deepEquals(this.numberOfOpenings, other.numberOfOpenings) &&
-            Objects.deepEquals(this.openings, other.openings) &&
-            Objects.deepEquals(this.postings, other.postings) &&
-            Objects.deepEquals(this.publicJobUrls, other.publicJobUrls) &&
-            Objects.deepEquals(this.questions, other.questions) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.recruiterIds, other.recruiterIds) &&
-            Objects.deepEquals(this.remote, other.remote) &&
-            Objects.deepEquals(this.status, other.status) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt);
+            Utils.enhancedDeepEquals(this.addresses, other.addresses) &&
+            Utils.enhancedDeepEquals(this.closedAt, other.closedAt) &&
+            Utils.enhancedDeepEquals(this.companyId, other.companyId) &&
+            Utils.enhancedDeepEquals(this.compensation, other.compensation) &&
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.departments, other.departments) &&
+            Utils.enhancedDeepEquals(this.description, other.description) &&
+            Utils.enhancedDeepEquals(this.employmentType, other.employmentType) &&
+            Utils.enhancedDeepEquals(this.groups, other.groups) &&
+            Utils.enhancedDeepEquals(this.hiringManagerIds, other.hiringManagerIds) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.languageLocale, other.languageLocale) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
+            Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.numberOfOpenings, other.numberOfOpenings) &&
+            Utils.enhancedDeepEquals(this.openings, other.openings) &&
+            Utils.enhancedDeepEquals(this.postings, other.postings) &&
+            Utils.enhancedDeepEquals(this.publicJobUrls, other.publicJobUrls) &&
+            Utils.enhancedDeepEquals(this.questions, other.questions) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.recruiterIds, other.recruiterIds) &&
+            Utils.enhancedDeepEquals(this.remote, other.remote) &&
+            Utils.enhancedDeepEquals(this.status, other.status) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             addresses,
             closedAt,
             companyId,

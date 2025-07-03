@@ -15,7 +15,6 @@ import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -213,18 +212,18 @@ public class GenaiModel {
         }
         GenaiModel other = (GenaiModel) o;
         return 
-            Objects.deepEquals(this.description, other.description) &&
-            Objects.deepEquals(this.hasTemperature, other.hasTemperature) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.maxTokens, other.maxTokens) &&
-            Objects.deepEquals(this.name, other.name) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.webUrl, other.webUrl);
+            Utils.enhancedDeepEquals(this.description, other.description) &&
+            Utils.enhancedDeepEquals(this.hasTemperature, other.hasTemperature) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.maxTokens, other.maxTokens) &&
+            Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.webUrl, other.webUrl);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             description,
             hasTemperature,
             id,

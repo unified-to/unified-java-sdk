@@ -12,7 +12,6 @@ import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -449,28 +448,28 @@ public class AccountingLineitem {
         }
         AccountingLineitem other = (AccountingLineitem) o;
         return 
-            Objects.deepEquals(this.accountId, other.accountId) &&
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.discountAmount, other.discountAmount) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.itemDescription, other.itemDescription) &&
-            Objects.deepEquals(this.itemId, other.itemId) &&
-            Objects.deepEquals(this.itemName, other.itemName) &&
-            Objects.deepEquals(this.itemSku, other.itemSku) &&
-            Objects.deepEquals(this.notes, other.notes) &&
-            Objects.deepEquals(this.refundAmount, other.refundAmount) &&
-            Objects.deepEquals(this.refundedAt, other.refundedAt) &&
-            Objects.deepEquals(this.taxAmount, other.taxAmount) &&
-            Objects.deepEquals(this.taxrateId, other.taxrateId) &&
-            Objects.deepEquals(this.totalAmount, other.totalAmount) &&
-            Objects.deepEquals(this.unitAmount, other.unitAmount) &&
-            Objects.deepEquals(this.unitQuantity, other.unitQuantity) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt);
+            Utils.enhancedDeepEquals(this.accountId, other.accountId) &&
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.discountAmount, other.discountAmount) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.itemDescription, other.itemDescription) &&
+            Utils.enhancedDeepEquals(this.itemId, other.itemId) &&
+            Utils.enhancedDeepEquals(this.itemName, other.itemName) &&
+            Utils.enhancedDeepEquals(this.itemSku, other.itemSku) &&
+            Utils.enhancedDeepEquals(this.notes, other.notes) &&
+            Utils.enhancedDeepEquals(this.refundAmount, other.refundAmount) &&
+            Utils.enhancedDeepEquals(this.refundedAt, other.refundedAt) &&
+            Utils.enhancedDeepEquals(this.taxAmount, other.taxAmount) &&
+            Utils.enhancedDeepEquals(this.taxrateId, other.taxrateId) &&
+            Utils.enhancedDeepEquals(this.totalAmount, other.totalAmount) &&
+            Utils.enhancedDeepEquals(this.unitAmount, other.unitAmount) &&
+            Utils.enhancedDeepEquals(this.unitQuantity, other.unitQuantity) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             accountId,
             createdAt,
             discountAmount,

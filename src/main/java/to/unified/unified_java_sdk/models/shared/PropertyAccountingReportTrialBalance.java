@@ -13,7 +13,6 @@ import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -115,14 +114,14 @@ public class PropertyAccountingReportTrialBalance {
         }
         PropertyAccountingReportTrialBalance other = (PropertyAccountingReportTrialBalance) o;
         return 
-            Objects.deepEquals(this.subItems, other.subItems) &&
-            Objects.deepEquals(this.totalCreditAmount, other.totalCreditAmount) &&
-            Objects.deepEquals(this.totalDebitAmount, other.totalDebitAmount);
+            Utils.enhancedDeepEquals(this.subItems, other.subItems) &&
+            Utils.enhancedDeepEquals(this.totalCreditAmount, other.totalCreditAmount) &&
+            Utils.enhancedDeepEquals(this.totalDebitAmount, other.totalDebitAmount);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             subItems,
             totalCreditAmount,
             totalDebitAmount);

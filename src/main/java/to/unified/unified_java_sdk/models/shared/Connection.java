@@ -15,7 +15,6 @@ import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.LazySingletonValue;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -414,26 +413,26 @@ public class Connection {
         }
         Connection other = (Connection) o;
         return 
-            Objects.deepEquals(this.auth, other.auth) &&
-            Objects.deepEquals(this.authAwsArn, other.authAwsArn) &&
-            Objects.deepEquals(this.categories, other.categories) &&
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.environment, other.environment) &&
-            Objects.deepEquals(this.externalXref, other.externalXref) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.integrationName, other.integrationName) &&
-            Objects.deepEquals(this.integrationType, other.integrationType) &&
-            Objects.deepEquals(this.isPaused, other.isPaused) &&
-            Objects.deepEquals(this.lastHealthyAt, other.lastHealthyAt) &&
-            Objects.deepEquals(this.lastUnhealthyAt, other.lastUnhealthyAt) &&
-            Objects.deepEquals(this.permissions, other.permissions) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt) &&
-            Objects.deepEquals(this.workspaceId, other.workspaceId);
+            Utils.enhancedDeepEquals(this.auth, other.auth) &&
+            Utils.enhancedDeepEquals(this.authAwsArn, other.authAwsArn) &&
+            Utils.enhancedDeepEquals(this.categories, other.categories) &&
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.environment, other.environment) &&
+            Utils.enhancedDeepEquals(this.externalXref, other.externalXref) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.integrationName, other.integrationName) &&
+            Utils.enhancedDeepEquals(this.integrationType, other.integrationType) &&
+            Utils.enhancedDeepEquals(this.isPaused, other.isPaused) &&
+            Utils.enhancedDeepEquals(this.lastHealthyAt, other.lastHealthyAt) &&
+            Utils.enhancedDeepEquals(this.lastUnhealthyAt, other.lastUnhealthyAt) &&
+            Utils.enhancedDeepEquals(this.permissions, other.permissions) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
+            Utils.enhancedDeepEquals(this.workspaceId, other.workspaceId);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             auth,
             authAwsArn,
             categories,

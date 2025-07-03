@@ -10,7 +10,6 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.lang.Override;
 import java.lang.String;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -231,19 +230,19 @@ public class PropertyAccountingContactBillingAddress {
         }
         PropertyAccountingContactBillingAddress other = (PropertyAccountingContactBillingAddress) o;
         return 
-            Objects.deepEquals(this.address1, other.address1) &&
-            Objects.deepEquals(this.address2, other.address2) &&
-            Objects.deepEquals(this.city, other.city) &&
-            Objects.deepEquals(this.country, other.country) &&
-            Objects.deepEquals(this.countryCode, other.countryCode) &&
-            Objects.deepEquals(this.postalCode, other.postalCode) &&
-            Objects.deepEquals(this.region, other.region) &&
-            Objects.deepEquals(this.regionCode, other.regionCode);
+            Utils.enhancedDeepEquals(this.address1, other.address1) &&
+            Utils.enhancedDeepEquals(this.address2, other.address2) &&
+            Utils.enhancedDeepEquals(this.city, other.city) &&
+            Utils.enhancedDeepEquals(this.country, other.country) &&
+            Utils.enhancedDeepEquals(this.countryCode, other.countryCode) &&
+            Utils.enhancedDeepEquals(this.postalCode, other.postalCode) &&
+            Utils.enhancedDeepEquals(this.region, other.region) &&
+            Utils.enhancedDeepEquals(this.regionCode, other.regionCode);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             address1,
             address2,
             city,

@@ -13,7 +13,6 @@ import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -139,15 +138,15 @@ public class PropertyCrmEventForm {
         }
         PropertyCrmEventForm other = (PropertyCrmEventForm) o;
         return 
-            Objects.deepEquals(this.archivedAt, other.archivedAt) &&
-            Objects.deepEquals(this.fields, other.fields) &&
-            Objects.deepEquals(this.name, other.name) &&
-            Objects.deepEquals(this.redirectUrl, other.redirectUrl);
+            Utils.enhancedDeepEquals(this.archivedAt, other.archivedAt) &&
+            Utils.enhancedDeepEquals(this.fields, other.fields) &&
+            Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.redirectUrl, other.redirectUrl);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             archivedAt,
             fields,
             name,

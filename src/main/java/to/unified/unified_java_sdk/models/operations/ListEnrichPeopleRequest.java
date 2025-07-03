@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.lang.Override;
 import java.lang.String;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -239,17 +238,17 @@ public class ListEnrichPeopleRequest {
         }
         ListEnrichPeopleRequest other = (ListEnrichPeopleRequest) o;
         return 
-            Objects.deepEquals(this.companyName, other.companyName) &&
-            Objects.deepEquals(this.connectionId, other.connectionId) &&
-            Objects.deepEquals(this.email, other.email) &&
-            Objects.deepEquals(this.linkedinUrl, other.linkedinUrl) &&
-            Objects.deepEquals(this.name, other.name) &&
-            Objects.deepEquals(this.twitter, other.twitter);
+            Utils.enhancedDeepEquals(this.companyName, other.companyName) &&
+            Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
+            Utils.enhancedDeepEquals(this.email, other.email) &&
+            Utils.enhancedDeepEquals(this.linkedinUrl, other.linkedinUrl) &&
+            Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.twitter, other.twitter);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             companyName,
             connectionId,
             email,

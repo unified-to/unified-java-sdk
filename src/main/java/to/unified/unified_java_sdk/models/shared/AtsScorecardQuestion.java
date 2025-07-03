@@ -10,7 +10,6 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.lang.Override;
 import java.lang.String;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -105,14 +104,14 @@ public class AtsScorecardQuestion {
         }
         AtsScorecardQuestion other = (AtsScorecardQuestion) o;
         return 
-            Objects.deepEquals(this.answer, other.answer) &&
-            Objects.deepEquals(this.description, other.description) &&
-            Objects.deepEquals(this.text, other.text);
+            Utils.enhancedDeepEquals(this.answer, other.answer) &&
+            Utils.enhancedDeepEquals(this.description, other.description) &&
+            Utils.enhancedDeepEquals(this.text, other.text);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             answer,
             description,
             text);

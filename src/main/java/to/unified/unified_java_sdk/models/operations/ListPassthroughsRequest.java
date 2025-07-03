@@ -10,7 +10,6 @@ import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -109,14 +108,14 @@ public class ListPassthroughsRequest {
         }
         ListPassthroughsRequest other = (ListPassthroughsRequest) o;
         return 
-            Objects.deepEquals(this.connectionId, other.connectionId) &&
-            Objects.deepEquals(this.path, other.path) &&
-            Objects.deepEquals(this.query, other.query);
+            Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
+            Utils.enhancedDeepEquals(this.path, other.path) &&
+            Utils.enhancedDeepEquals(this.query, other.query);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             connectionId,
             path,
             query);

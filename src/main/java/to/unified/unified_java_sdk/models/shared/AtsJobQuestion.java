@@ -13,7 +13,6 @@ import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -199,18 +198,18 @@ public class AtsJobQuestion {
         }
         AtsJobQuestion other = (AtsJobQuestion) o;
         return 
-            Objects.deepEquals(this.description, other.description) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.options, other.options) &&
-            Objects.deepEquals(this.prompt, other.prompt) &&
-            Objects.deepEquals(this.question, other.question) &&
-            Objects.deepEquals(this.required, other.required) &&
-            Objects.deepEquals(this.type, other.type);
+            Utils.enhancedDeepEquals(this.description, other.description) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.options, other.options) &&
+            Utils.enhancedDeepEquals(this.prompt, other.prompt) &&
+            Utils.enhancedDeepEquals(this.question, other.question) &&
+            Utils.enhancedDeepEquals(this.required, other.required) &&
+            Utils.enhancedDeepEquals(this.type, other.type);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             description,
             id,
             options,

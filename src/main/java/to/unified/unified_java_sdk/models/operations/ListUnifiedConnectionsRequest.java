@@ -10,7 +10,6 @@ import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -261,19 +260,19 @@ public class ListUnifiedConnectionsRequest {
         }
         ListUnifiedConnectionsRequest other = (ListUnifiedConnectionsRequest) o;
         return 
-            Objects.deepEquals(this.categories, other.categories) &&
-            Objects.deepEquals(this.env, other.env) &&
-            Objects.deepEquals(this.externalXref, other.externalXref) &&
-            Objects.deepEquals(this.limit, other.limit) &&
-            Objects.deepEquals(this.offset, other.offset) &&
-            Objects.deepEquals(this.order, other.order) &&
-            Objects.deepEquals(this.sort, other.sort) &&
-            Objects.deepEquals(this.updatedGte, other.updatedGte);
+            Utils.enhancedDeepEquals(this.categories, other.categories) &&
+            Utils.enhancedDeepEquals(this.env, other.env) &&
+            Utils.enhancedDeepEquals(this.externalXref, other.externalXref) &&
+            Utils.enhancedDeepEquals(this.limit, other.limit) &&
+            Utils.enhancedDeepEquals(this.offset, other.offset) &&
+            Utils.enhancedDeepEquals(this.order, other.order) &&
+            Utils.enhancedDeepEquals(this.sort, other.sort) &&
+            Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             categories,
             env,
             externalXref,

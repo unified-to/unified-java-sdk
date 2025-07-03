@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.lang.Override;
 import java.lang.String;
-import java.util.Objects;
 import to.unified.unified_java_sdk.models.shared.Webhook;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -85,13 +84,13 @@ public class UpdateUnifiedWebhookRequest {
         }
         UpdateUnifiedWebhookRequest other = (UpdateUnifiedWebhookRequest) o;
         return 
-            Objects.deepEquals(this.webhook, other.webhook) &&
-            Objects.deepEquals(this.id, other.id);
+            Utils.enhancedDeepEquals(this.webhook, other.webhook) &&
+            Utils.enhancedDeepEquals(this.id, other.id);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             webhook,
             id);
     }

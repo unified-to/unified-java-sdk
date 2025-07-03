@@ -8,7 +8,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -180,17 +179,17 @@ public class ListScimUsersRequest {
         }
         ListScimUsersRequest other = (ListScimUsersRequest) o;
         return 
-            Objects.deepEquals(this.connectionId, other.connectionId) &&
-            Objects.deepEquals(this.count, other.count) &&
-            Objects.deepEquals(this.filter, other.filter) &&
-            Objects.deepEquals(this.sortBy, other.sortBy) &&
-            Objects.deepEquals(this.sortOrder, other.sortOrder) &&
-            Objects.deepEquals(this.startIndex, other.startIndex);
+            Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
+            Utils.enhancedDeepEquals(this.count, other.count) &&
+            Utils.enhancedDeepEquals(this.filter, other.filter) &&
+            Utils.enhancedDeepEquals(this.sortBy, other.sortBy) &&
+            Utils.enhancedDeepEquals(this.sortOrder, other.sortOrder) &&
+            Utils.enhancedDeepEquals(this.startIndex, other.startIndex);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             connectionId,
             count,
             filter,

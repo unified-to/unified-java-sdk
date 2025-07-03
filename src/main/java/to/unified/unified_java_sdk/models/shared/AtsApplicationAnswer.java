@@ -9,7 +9,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.lang.Override;
 import java.lang.String;
 import java.util.List;
-import java.util.Objects;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class AtsApplicationAnswer {
@@ -67,13 +66,13 @@ public class AtsApplicationAnswer {
         }
         AtsApplicationAnswer other = (AtsApplicationAnswer) o;
         return 
-            Objects.deepEquals(this.answers, other.answers) &&
-            Objects.deepEquals(this.questionId, other.questionId);
+            Utils.enhancedDeepEquals(this.answers, other.answers) &&
+            Utils.enhancedDeepEquals(this.questionId, other.questionId);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             answers,
             questionId);
     }

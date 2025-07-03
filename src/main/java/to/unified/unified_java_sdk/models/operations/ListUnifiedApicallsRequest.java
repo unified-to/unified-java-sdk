@@ -9,7 +9,6 @@ import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -434,24 +433,24 @@ public class ListUnifiedApicallsRequest {
         }
         ListUnifiedApicallsRequest other = (ListUnifiedApicallsRequest) o;
         return 
-            Objects.deepEquals(this.connectionId, other.connectionId) &&
-            Objects.deepEquals(this.env, other.env) &&
-            Objects.deepEquals(this.error, other.error) &&
-            Objects.deepEquals(this.externalXref, other.externalXref) &&
-            Objects.deepEquals(this.integrationType, other.integrationType) &&
-            Objects.deepEquals(this.isBillable, other.isBillable) &&
-            Objects.deepEquals(this.limit, other.limit) &&
-            Objects.deepEquals(this.offset, other.offset) &&
-            Objects.deepEquals(this.order, other.order) &&
-            Objects.deepEquals(this.sort, other.sort) &&
-            Objects.deepEquals(this.type, other.type) &&
-            Objects.deepEquals(this.updatedGte, other.updatedGte) &&
-            Objects.deepEquals(this.webhookId, other.webhookId);
+            Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
+            Utils.enhancedDeepEquals(this.env, other.env) &&
+            Utils.enhancedDeepEquals(this.error, other.error) &&
+            Utils.enhancedDeepEquals(this.externalXref, other.externalXref) &&
+            Utils.enhancedDeepEquals(this.integrationType, other.integrationType) &&
+            Utils.enhancedDeepEquals(this.isBillable, other.isBillable) &&
+            Utils.enhancedDeepEquals(this.limit, other.limit) &&
+            Utils.enhancedDeepEquals(this.offset, other.offset) &&
+            Utils.enhancedDeepEquals(this.order, other.order) &&
+            Utils.enhancedDeepEquals(this.sort, other.sort) &&
+            Utils.enhancedDeepEquals(this.type, other.type) &&
+            Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte) &&
+            Utils.enhancedDeepEquals(this.webhookId, other.webhookId);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             connectionId,
             env,
             error,

@@ -9,7 +9,6 @@ import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.CommerceInventory;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
@@ -183,16 +182,16 @@ public class UpdateCommerceInventoryRequest {
         }
         UpdateCommerceInventoryRequest other = (UpdateCommerceInventoryRequest) o;
         return 
-            Objects.deepEquals(this.commerceInventory, other.commerceInventory) &&
-            Objects.deepEquals(this.connectionId, other.connectionId) &&
-            Objects.deepEquals(this.fields, other.fields) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.raw, other.raw);
+            Utils.enhancedDeepEquals(this.commerceInventory, other.commerceInventory) &&
+            Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
+            Utils.enhancedDeepEquals(this.fields, other.fields) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             commerceInventory,
             connectionId,
             fields,

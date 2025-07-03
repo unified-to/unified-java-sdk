@@ -14,7 +14,6 @@ import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -281,19 +280,19 @@ public class CalendarEventRecurrence {
         }
         CalendarEventRecurrence other = (CalendarEventRecurrence) o;
         return 
-            Objects.deepEquals(this.count, other.count) &&
-            Objects.deepEquals(this.endAt, other.endAt) &&
-            Objects.deepEquals(this.excludedDates, other.excludedDates) &&
-            Objects.deepEquals(this.frequency, other.frequency) &&
-            Objects.deepEquals(this.interval, other.interval) &&
-            Objects.deepEquals(this.onDays, other.onDays) &&
-            Objects.deepEquals(this.onMonthDays, other.onMonthDays) &&
-            Objects.deepEquals(this.onMonths, other.onMonths);
+            Utils.enhancedDeepEquals(this.count, other.count) &&
+            Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
+            Utils.enhancedDeepEquals(this.excludedDates, other.excludedDates) &&
+            Utils.enhancedDeepEquals(this.frequency, other.frequency) &&
+            Utils.enhancedDeepEquals(this.interval, other.interval) &&
+            Utils.enhancedDeepEquals(this.onDays, other.onDays) &&
+            Utils.enhancedDeepEquals(this.onMonthDays, other.onMonthDays) &&
+            Utils.enhancedDeepEquals(this.onMonths, other.onMonths);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             count,
             endAt,
             excludedDates,

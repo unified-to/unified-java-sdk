@@ -13,7 +13,6 @@ import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -212,18 +211,18 @@ public class CalendarRecordingMedia {
         }
         CalendarRecordingMedia other = (CalendarRecordingMedia) o;
         return 
-            Objects.deepEquals(this.attendees, other.attendees) &&
-            Objects.deepEquals(this.endAt, other.endAt) &&
-            Objects.deepEquals(this.language, other.language) &&
-            Objects.deepEquals(this.recordingDownloadUrl, other.recordingDownloadUrl) &&
-            Objects.deepEquals(this.startAt, other.startAt) &&
-            Objects.deepEquals(this.transcriptDownloadUrl, other.transcriptDownloadUrl) &&
-            Objects.deepEquals(this.transcripts, other.transcripts);
+            Utils.enhancedDeepEquals(this.attendees, other.attendees) &&
+            Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
+            Utils.enhancedDeepEquals(this.language, other.language) &&
+            Utils.enhancedDeepEquals(this.recordingDownloadUrl, other.recordingDownloadUrl) &&
+            Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
+            Utils.enhancedDeepEquals(this.transcriptDownloadUrl, other.transcriptDownloadUrl) &&
+            Utils.enhancedDeepEquals(this.transcripts, other.transcripts);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             attendees,
             endAt,
             language,

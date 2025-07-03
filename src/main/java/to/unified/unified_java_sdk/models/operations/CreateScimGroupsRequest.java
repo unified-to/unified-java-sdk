@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.lang.Override;
 import java.lang.String;
-import java.util.Objects;
 import to.unified.unified_java_sdk.models.shared.ScimGroup;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -76,13 +75,13 @@ public class CreateScimGroupsRequest {
         }
         CreateScimGroupsRequest other = (CreateScimGroupsRequest) o;
         return 
-            Objects.deepEquals(this.scimGroup, other.scimGroup) &&
-            Objects.deepEquals(this.connectionId, other.connectionId);
+            Utils.enhancedDeepEquals(this.scimGroup, other.scimGroup) &&
+            Utils.enhancedDeepEquals(this.connectionId, other.connectionId);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             scimGroup,
             connectionId);
     }

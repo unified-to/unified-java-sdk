@@ -17,7 +17,6 @@ import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -408,26 +407,26 @@ public class HrisTimeshift {
         }
         HrisTimeshift other = (HrisTimeshift) o;
         return 
-            Objects.deepEquals(this.approvedAt, other.approvedAt) &&
-            Objects.deepEquals(this.approverUserId, other.approverUserId) &&
-            Objects.deepEquals(this.companyId, other.companyId) &&
-            Objects.deepEquals(this.compensation, other.compensation) &&
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.employeeUserId, other.employeeUserId) &&
-            Objects.deepEquals(this.endAt, other.endAt) &&
-            Objects.deepEquals(this.groupId, other.groupId) &&
-            Objects.deepEquals(this.hours, other.hours) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.isApproved, other.isApproved) &&
-            Objects.deepEquals(this.locationId, other.locationId) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.startAt, other.startAt) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt);
+            Utils.enhancedDeepEquals(this.approvedAt, other.approvedAt) &&
+            Utils.enhancedDeepEquals(this.approverUserId, other.approverUserId) &&
+            Utils.enhancedDeepEquals(this.companyId, other.companyId) &&
+            Utils.enhancedDeepEquals(this.compensation, other.compensation) &&
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.employeeUserId, other.employeeUserId) &&
+            Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
+            Utils.enhancedDeepEquals(this.groupId, other.groupId) &&
+            Utils.enhancedDeepEquals(this.hours, other.hours) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.isApproved, other.isApproved) &&
+            Utils.enhancedDeepEquals(this.locationId, other.locationId) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             approvedAt,
             approverUserId,
             companyId,

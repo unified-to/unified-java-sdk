@@ -15,7 +15,6 @@ import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -544,31 +543,31 @@ public class TaskTask {
         }
         TaskTask other = (TaskTask) o;
         return 
-            Objects.deepEquals(this.assignedUserIds, other.assignedUserIds) &&
-            Objects.deepEquals(this.attachmentIds, other.attachmentIds) &&
-            Objects.deepEquals(this.completedAt, other.completedAt) &&
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.creatorUserId, other.creatorUserId) &&
-            Objects.deepEquals(this.dueAt, other.dueAt) &&
-            Objects.deepEquals(this.followerUserIds, other.followerUserIds) &&
-            Objects.deepEquals(this.groupIds, other.groupIds) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.metadata, other.metadata) &&
-            Objects.deepEquals(this.name, other.name) &&
-            Objects.deepEquals(this.notes, other.notes) &&
-            Objects.deepEquals(this.parentId, other.parentId) &&
-            Objects.deepEquals(this.priority, other.priority) &&
-            Objects.deepEquals(this.projectId, other.projectId) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.status, other.status) &&
-            Objects.deepEquals(this.tags, other.tags) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt) &&
-            Objects.deepEquals(this.url, other.url);
+            Utils.enhancedDeepEquals(this.assignedUserIds, other.assignedUserIds) &&
+            Utils.enhancedDeepEquals(this.attachmentIds, other.attachmentIds) &&
+            Utils.enhancedDeepEquals(this.completedAt, other.completedAt) &&
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.creatorUserId, other.creatorUserId) &&
+            Utils.enhancedDeepEquals(this.dueAt, other.dueAt) &&
+            Utils.enhancedDeepEquals(this.followerUserIds, other.followerUserIds) &&
+            Utils.enhancedDeepEquals(this.groupIds, other.groupIds) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
+            Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.notes, other.notes) &&
+            Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
+            Utils.enhancedDeepEquals(this.priority, other.priority) &&
+            Utils.enhancedDeepEquals(this.projectId, other.projectId) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.status, other.status) &&
+            Utils.enhancedDeepEquals(this.tags, other.tags) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
+            Utils.enhancedDeepEquals(this.url, other.url);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             assignedUserIds,
             attachmentIds,
             completedAt,

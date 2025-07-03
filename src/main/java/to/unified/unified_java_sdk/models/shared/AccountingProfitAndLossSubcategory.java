@@ -13,7 +13,6 @@ import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -115,14 +114,14 @@ public class AccountingProfitAndLossSubcategory {
         }
         AccountingProfitAndLossSubcategory other = (AccountingProfitAndLossSubcategory) o;
         return 
-            Objects.deepEquals(this.amount, other.amount) &&
-            Objects.deepEquals(this.name, other.name) &&
-            Objects.deepEquals(this.transactionIds, other.transactionIds);
+            Utils.enhancedDeepEquals(this.amount, other.amount) &&
+            Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.transactionIds, other.transactionIds);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             amount,
             name,
             transactionIds);

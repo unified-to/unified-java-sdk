@@ -11,7 +11,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -184,17 +183,17 @@ public class AtsCandidateEducation {
         }
         AtsCandidateEducation other = (AtsCandidateEducation) o;
         return 
-            Objects.deepEquals(this.degree, other.degree) &&
-            Objects.deepEquals(this.endAt, other.endAt) &&
-            Objects.deepEquals(this.fieldOfStudy, other.fieldOfStudy) &&
-            Objects.deepEquals(this.institution, other.institution) &&
-            Objects.deepEquals(this.level, other.level) &&
-            Objects.deepEquals(this.startAt, other.startAt);
+            Utils.enhancedDeepEquals(this.degree, other.degree) &&
+            Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
+            Utils.enhancedDeepEquals(this.fieldOfStudy, other.fieldOfStudy) &&
+            Utils.enhancedDeepEquals(this.institution, other.institution) &&
+            Utils.enhancedDeepEquals(this.level, other.level) &&
+            Utils.enhancedDeepEquals(this.startAt, other.startAt);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             degree,
             endAt,
             fieldOfStudy,

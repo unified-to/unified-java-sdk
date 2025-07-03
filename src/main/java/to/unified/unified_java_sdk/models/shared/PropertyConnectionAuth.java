@@ -16,7 +16,6 @@ import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -641,35 +640,35 @@ public class PropertyConnectionAuth {
         }
         PropertyConnectionAuth other = (PropertyConnectionAuth) o;
         return 
-            Objects.deepEquals(this.accessToken, other.accessToken) &&
-            Objects.deepEquals(this.apiUrl, other.apiUrl) &&
-            Objects.deepEquals(this.appId, other.appId) &&
-            Objects.deepEquals(this.authorizeUrl, other.authorizeUrl) &&
-            Objects.deepEquals(this.clientId, other.clientId) &&
-            Objects.deepEquals(this.clientSecret, other.clientSecret) &&
-            Objects.deepEquals(this.consumerKey, other.consumerKey) &&
-            Objects.deepEquals(this.consumerSecret, other.consumerSecret) &&
-            Objects.deepEquals(this.devApiKey, other.devApiKey) &&
-            Objects.deepEquals(this.emails, other.emails) &&
-            Objects.deepEquals(this.expiresIn, other.expiresIn) &&
-            Objects.deepEquals(this.expiryDate, other.expiryDate) &&
-            Objects.deepEquals(this.key, other.key) &&
-            Objects.deepEquals(this.meta, other.meta) &&
-            Objects.deepEquals(this.name, other.name) &&
-            Objects.deepEquals(this.otherAuthInfo, other.otherAuthInfo) &&
-            Objects.deepEquals(this.pem, other.pem) &&
-            Objects.deepEquals(this.refreshToken, other.refreshToken) &&
-            Objects.deepEquals(this.refreshTokenExpiresDate, other.refreshTokenExpiresDate) &&
-            Objects.deepEquals(this.refreshTokenExpiresIn, other.refreshTokenExpiresIn) &&
-            Objects.deepEquals(this.state, other.state) &&
-            Objects.deepEquals(this.token, other.token) &&
-            Objects.deepEquals(this.tokenUrl, other.tokenUrl) &&
-            Objects.deepEquals(this.userId, other.userId);
+            Utils.enhancedDeepEquals(this.accessToken, other.accessToken) &&
+            Utils.enhancedDeepEquals(this.apiUrl, other.apiUrl) &&
+            Utils.enhancedDeepEquals(this.appId, other.appId) &&
+            Utils.enhancedDeepEquals(this.authorizeUrl, other.authorizeUrl) &&
+            Utils.enhancedDeepEquals(this.clientId, other.clientId) &&
+            Utils.enhancedDeepEquals(this.clientSecret, other.clientSecret) &&
+            Utils.enhancedDeepEquals(this.consumerKey, other.consumerKey) &&
+            Utils.enhancedDeepEquals(this.consumerSecret, other.consumerSecret) &&
+            Utils.enhancedDeepEquals(this.devApiKey, other.devApiKey) &&
+            Utils.enhancedDeepEquals(this.emails, other.emails) &&
+            Utils.enhancedDeepEquals(this.expiresIn, other.expiresIn) &&
+            Utils.enhancedDeepEquals(this.expiryDate, other.expiryDate) &&
+            Utils.enhancedDeepEquals(this.key, other.key) &&
+            Utils.enhancedDeepEquals(this.meta, other.meta) &&
+            Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.otherAuthInfo, other.otherAuthInfo) &&
+            Utils.enhancedDeepEquals(this.pem, other.pem) &&
+            Utils.enhancedDeepEquals(this.refreshToken, other.refreshToken) &&
+            Utils.enhancedDeepEquals(this.refreshTokenExpiresDate, other.refreshTokenExpiresDate) &&
+            Utils.enhancedDeepEquals(this.refreshTokenExpiresIn, other.refreshTokenExpiresIn) &&
+            Utils.enhancedDeepEquals(this.state, other.state) &&
+            Utils.enhancedDeepEquals(this.token, other.token) &&
+            Utils.enhancedDeepEquals(this.tokenUrl, other.tokenUrl) &&
+            Utils.enhancedDeepEquals(this.userId, other.userId);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             accessToken,
             apiUrl,
             appId,

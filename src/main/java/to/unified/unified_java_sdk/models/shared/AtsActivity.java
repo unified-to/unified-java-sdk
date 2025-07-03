@@ -16,7 +16,6 @@ import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -557,31 +556,31 @@ public class AtsActivity {
         }
         AtsActivity other = (AtsActivity) o;
         return 
-            Objects.deepEquals(this.applicationId, other.applicationId) &&
-            Objects.deepEquals(this.bcc, other.bcc) &&
-            Objects.deepEquals(this.candidateId, other.candidateId) &&
-            Objects.deepEquals(this.cc, other.cc) &&
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.description, other.description) &&
-            Objects.deepEquals(this.documentId, other.documentId) &&
-            Objects.deepEquals(this.documentIds, other.documentIds) &&
-            Objects.deepEquals(this.from, other.from) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.interviewId, other.interviewId) &&
-            Objects.deepEquals(this.isPrivate, other.isPrivate) &&
-            Objects.deepEquals(this.jobId, other.jobId) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.subType, other.subType) &&
-            Objects.deepEquals(this.title, other.title) &&
-            Objects.deepEquals(this.to, other.to) &&
-            Objects.deepEquals(this.type, other.type) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt) &&
-            Objects.deepEquals(this.userIds, other.userIds);
+            Utils.enhancedDeepEquals(this.applicationId, other.applicationId) &&
+            Utils.enhancedDeepEquals(this.bcc, other.bcc) &&
+            Utils.enhancedDeepEquals(this.candidateId, other.candidateId) &&
+            Utils.enhancedDeepEquals(this.cc, other.cc) &&
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.description, other.description) &&
+            Utils.enhancedDeepEquals(this.documentId, other.documentId) &&
+            Utils.enhancedDeepEquals(this.documentIds, other.documentIds) &&
+            Utils.enhancedDeepEquals(this.from, other.from) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.interviewId, other.interviewId) &&
+            Utils.enhancedDeepEquals(this.isPrivate, other.isPrivate) &&
+            Utils.enhancedDeepEquals(this.jobId, other.jobId) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.subType, other.subType) &&
+            Utils.enhancedDeepEquals(this.title, other.title) &&
+            Utils.enhancedDeepEquals(this.to, other.to) &&
+            Utils.enhancedDeepEquals(this.type, other.type) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
+            Utils.enhancedDeepEquals(this.userIds, other.userIds);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             applicationId,
             bcc,
             candidateId,

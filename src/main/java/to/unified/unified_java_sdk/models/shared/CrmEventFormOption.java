@@ -10,7 +10,6 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.lang.Override;
 import java.lang.String;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -87,13 +86,13 @@ public class CrmEventFormOption {
         }
         CrmEventFormOption other = (CrmEventFormOption) o;
         return 
-            Objects.deepEquals(this.label, other.label) &&
-            Objects.deepEquals(this.value, other.value);
+            Utils.enhancedDeepEquals(this.label, other.label) &&
+            Utils.enhancedDeepEquals(this.value, other.value);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             label,
             value);
     }

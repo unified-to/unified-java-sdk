@@ -11,7 +11,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -184,17 +183,17 @@ public class MessagingAttachment {
         }
         MessagingAttachment other = (MessagingAttachment) o;
         return 
-            Objects.deepEquals(this.contentIdentifier, other.contentIdentifier) &&
-            Objects.deepEquals(this.contentType, other.contentType) &&
-            Objects.deepEquals(this.downloadUrl, other.downloadUrl) &&
-            Objects.deepEquals(this.filename, other.filename) &&
-            Objects.deepEquals(this.messageId, other.messageId) &&
-            Objects.deepEquals(this.size, other.size);
+            Utils.enhancedDeepEquals(this.contentIdentifier, other.contentIdentifier) &&
+            Utils.enhancedDeepEquals(this.contentType, other.contentType) &&
+            Utils.enhancedDeepEquals(this.downloadUrl, other.downloadUrl) &&
+            Utils.enhancedDeepEquals(this.filename, other.filename) &&
+            Utils.enhancedDeepEquals(this.messageId, other.messageId) &&
+            Utils.enhancedDeepEquals(this.size, other.size);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             contentIdentifier,
             contentType,
             downloadUrl,

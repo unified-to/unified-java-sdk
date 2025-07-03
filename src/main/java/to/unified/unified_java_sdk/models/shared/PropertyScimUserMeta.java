@@ -11,7 +11,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -161,16 +160,16 @@ public class PropertyScimUserMeta {
         }
         PropertyScimUserMeta other = (PropertyScimUserMeta) o;
         return 
-            Objects.deepEquals(this.created, other.created) &&
-            Objects.deepEquals(this.lastModified, other.lastModified) &&
-            Objects.deepEquals(this.location, other.location) &&
-            Objects.deepEquals(this.resourceType, other.resourceType) &&
-            Objects.deepEquals(this.version, other.version);
+            Utils.enhancedDeepEquals(this.created, other.created) &&
+            Utils.enhancedDeepEquals(this.lastModified, other.lastModified) &&
+            Utils.enhancedDeepEquals(this.location, other.location) &&
+            Utils.enhancedDeepEquals(this.resourceType, other.resourceType) &&
+            Utils.enhancedDeepEquals(this.version, other.version);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             created,
             lastModified,
             location,

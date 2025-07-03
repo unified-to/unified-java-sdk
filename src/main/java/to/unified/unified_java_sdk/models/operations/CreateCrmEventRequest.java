@@ -9,7 +9,6 @@ import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.CrmEvent;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
@@ -165,15 +164,15 @@ public class CreateCrmEventRequest {
         }
         CreateCrmEventRequest other = (CreateCrmEventRequest) o;
         return 
-            Objects.deepEquals(this.crmEvent, other.crmEvent) &&
-            Objects.deepEquals(this.connectionId, other.connectionId) &&
-            Objects.deepEquals(this.fields, other.fields) &&
-            Objects.deepEquals(this.raw, other.raw);
+            Utils.enhancedDeepEquals(this.crmEvent, other.crmEvent) &&
+            Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
+            Utils.enhancedDeepEquals(this.fields, other.fields) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             crmEvent,
             connectionId,
             fields,

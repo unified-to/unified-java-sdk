@@ -10,7 +10,6 @@ import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -370,22 +369,22 @@ public class ListPaymentPaymentsRequest {
         }
         ListPaymentPaymentsRequest other = (ListPaymentPaymentsRequest) o;
         return 
-            Objects.deepEquals(this.connectionId, other.connectionId) &&
-            Objects.deepEquals(this.contactId, other.contactId) &&
-            Objects.deepEquals(this.fields, other.fields) &&
-            Objects.deepEquals(this.invoiceId, other.invoiceId) &&
-            Objects.deepEquals(this.limit, other.limit) &&
-            Objects.deepEquals(this.offset, other.offset) &&
-            Objects.deepEquals(this.order, other.order) &&
-            Objects.deepEquals(this.query, other.query) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.sort, other.sort) &&
-            Objects.deepEquals(this.updatedGte, other.updatedGte);
+            Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
+            Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
+            Utils.enhancedDeepEquals(this.fields, other.fields) &&
+            Utils.enhancedDeepEquals(this.invoiceId, other.invoiceId) &&
+            Utils.enhancedDeepEquals(this.limit, other.limit) &&
+            Utils.enhancedDeepEquals(this.offset, other.offset) &&
+            Utils.enhancedDeepEquals(this.order, other.order) &&
+            Utils.enhancedDeepEquals(this.query, other.query) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.sort, other.sort) &&
+            Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             connectionId,
             contactId,
             fields,

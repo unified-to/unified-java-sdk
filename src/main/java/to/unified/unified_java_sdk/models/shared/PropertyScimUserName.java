@@ -10,7 +10,6 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.lang.Override;
 import java.lang.String;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -183,17 +182,17 @@ public class PropertyScimUserName {
         }
         PropertyScimUserName other = (PropertyScimUserName) o;
         return 
-            Objects.deepEquals(this.familyName, other.familyName) &&
-            Objects.deepEquals(this.formatted, other.formatted) &&
-            Objects.deepEquals(this.givenName, other.givenName) &&
-            Objects.deepEquals(this.honorificPrefix, other.honorificPrefix) &&
-            Objects.deepEquals(this.honorificSuffix, other.honorificSuffix) &&
-            Objects.deepEquals(this.middleName, other.middleName);
+            Utils.enhancedDeepEquals(this.familyName, other.familyName) &&
+            Utils.enhancedDeepEquals(this.formatted, other.formatted) &&
+            Utils.enhancedDeepEquals(this.givenName, other.givenName) &&
+            Utils.enhancedDeepEquals(this.honorificPrefix, other.honorificPrefix) &&
+            Utils.enhancedDeepEquals(this.honorificSuffix, other.honorificSuffix) &&
+            Utils.enhancedDeepEquals(this.middleName, other.middleName);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             familyName,
             formatted,
             givenName,

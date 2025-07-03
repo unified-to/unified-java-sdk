@@ -10,7 +10,6 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.lang.Override;
 import java.lang.String;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -255,20 +254,20 @@ public class CalendarConference {
         }
         CalendarConference other = (CalendarConference) o;
         return 
-            Objects.deepEquals(this.conferenceIdentifier, other.conferenceIdentifier) &&
-            Objects.deepEquals(this.countryCode, other.countryCode) &&
-            Objects.deepEquals(this.hostAccessCode, other.hostAccessCode) &&
-            Objects.deepEquals(this.label, other.label) &&
-            Objects.deepEquals(this.notes, other.notes) &&
-            Objects.deepEquals(this.participantAccessCode, other.participantAccessCode) &&
-            Objects.deepEquals(this.regionCode, other.regionCode) &&
-            Objects.deepEquals(this.telephone, other.telephone) &&
-            Objects.deepEquals(this.url, other.url);
+            Utils.enhancedDeepEquals(this.conferenceIdentifier, other.conferenceIdentifier) &&
+            Utils.enhancedDeepEquals(this.countryCode, other.countryCode) &&
+            Utils.enhancedDeepEquals(this.hostAccessCode, other.hostAccessCode) &&
+            Utils.enhancedDeepEquals(this.label, other.label) &&
+            Utils.enhancedDeepEquals(this.notes, other.notes) &&
+            Utils.enhancedDeepEquals(this.participantAccessCode, other.participantAccessCode) &&
+            Utils.enhancedDeepEquals(this.regionCode, other.regionCode) &&
+            Utils.enhancedDeepEquals(this.telephone, other.telephone) &&
+            Utils.enhancedDeepEquals(this.url, other.url);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             conferenceIdentifier,
             countryCode,
             hostAccessCode,

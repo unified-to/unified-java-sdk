@@ -6,7 +6,6 @@ package to.unified.unified_java_sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import java.lang.Override;
 import java.lang.String;
-import java.util.Objects;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CrmMetadataSchemasExtraData2 {
@@ -35,7 +34,7 @@ public class CrmMetadataSchemasExtraData2 {
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             );
     }
     

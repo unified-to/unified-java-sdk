@@ -10,7 +10,6 @@ import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -440,24 +439,24 @@ public class ListCalendarEventsRequest {
         }
         ListCalendarEventsRequest other = (ListCalendarEventsRequest) o;
         return 
-            Objects.deepEquals(this.calendarId, other.calendarId) &&
-            Objects.deepEquals(this.connectionId, other.connectionId) &&
-            Objects.deepEquals(this.endLe, other.endLe) &&
-            Objects.deepEquals(this.expandRecurringEvents, other.expandRecurringEvents) &&
-            Objects.deepEquals(this.fields, other.fields) &&
-            Objects.deepEquals(this.limit, other.limit) &&
-            Objects.deepEquals(this.offset, other.offset) &&
-            Objects.deepEquals(this.order, other.order) &&
-            Objects.deepEquals(this.query, other.query) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.sort, other.sort) &&
-            Objects.deepEquals(this.startGte, other.startGte) &&
-            Objects.deepEquals(this.updatedGte, other.updatedGte);
+            Utils.enhancedDeepEquals(this.calendarId, other.calendarId) &&
+            Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
+            Utils.enhancedDeepEquals(this.endLe, other.endLe) &&
+            Utils.enhancedDeepEquals(this.expandRecurringEvents, other.expandRecurringEvents) &&
+            Utils.enhancedDeepEquals(this.fields, other.fields) &&
+            Utils.enhancedDeepEquals(this.limit, other.limit) &&
+            Utils.enhancedDeepEquals(this.offset, other.offset) &&
+            Utils.enhancedDeepEquals(this.order, other.order) &&
+            Utils.enhancedDeepEquals(this.query, other.query) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.sort, other.sort) &&
+            Utils.enhancedDeepEquals(this.startGte, other.startGte) &&
+            Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             calendarId,
             connectionId,
             endLe,

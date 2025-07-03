@@ -16,7 +16,6 @@ import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -737,38 +736,38 @@ public class EnrichCompany {
         }
         EnrichCompany other = (EnrichCompany) o;
         return 
-            Objects.deepEquals(this.address, other.address) &&
-            Objects.deepEquals(this.alexaRank, other.alexaRank) &&
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.crunchbaseUrl, other.crunchbaseUrl) &&
-            Objects.deepEquals(this.description, other.description) &&
-            Objects.deepEquals(this.domain, other.domain) &&
-            Objects.deepEquals(this.employees, other.employees) &&
-            Objects.deepEquals(this.exchange, other.exchange) &&
-            Objects.deepEquals(this.facebookUrl, other.facebookUrl) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.industry, other.industry) &&
-            Objects.deepEquals(this.instagramUrl, other.instagramUrl) &&
-            Objects.deepEquals(this.linkedinUrl, other.linkedinUrl) &&
-            Objects.deepEquals(this.logoUrl, other.logoUrl) &&
-            Objects.deepEquals(this.naicsCode, other.naicsCode) &&
-            Objects.deepEquals(this.name, other.name) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.revenue, other.revenue) &&
-            Objects.deepEquals(this.sicCode, other.sicCode) &&
-            Objects.deepEquals(this.stock, other.stock) &&
-            Objects.deepEquals(this.telephones, other.telephones) &&
-            Objects.deepEquals(this.twitterHandle, other.twitterHandle) &&
-            Objects.deepEquals(this.twitterUrl, other.twitterUrl) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt) &&
-            Objects.deepEquals(this.yearFounded, other.yearFounded) &&
-            Objects.deepEquals(this.yelpUrl, other.yelpUrl) &&
-            Objects.deepEquals(this.youtubeUrl, other.youtubeUrl);
+            Utils.enhancedDeepEquals(this.address, other.address) &&
+            Utils.enhancedDeepEquals(this.alexaRank, other.alexaRank) &&
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.crunchbaseUrl, other.crunchbaseUrl) &&
+            Utils.enhancedDeepEquals(this.description, other.description) &&
+            Utils.enhancedDeepEquals(this.domain, other.domain) &&
+            Utils.enhancedDeepEquals(this.employees, other.employees) &&
+            Utils.enhancedDeepEquals(this.exchange, other.exchange) &&
+            Utils.enhancedDeepEquals(this.facebookUrl, other.facebookUrl) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.industry, other.industry) &&
+            Utils.enhancedDeepEquals(this.instagramUrl, other.instagramUrl) &&
+            Utils.enhancedDeepEquals(this.linkedinUrl, other.linkedinUrl) &&
+            Utils.enhancedDeepEquals(this.logoUrl, other.logoUrl) &&
+            Utils.enhancedDeepEquals(this.naicsCode, other.naicsCode) &&
+            Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.revenue, other.revenue) &&
+            Utils.enhancedDeepEquals(this.sicCode, other.sicCode) &&
+            Utils.enhancedDeepEquals(this.stock, other.stock) &&
+            Utils.enhancedDeepEquals(this.telephones, other.telephones) &&
+            Utils.enhancedDeepEquals(this.twitterHandle, other.twitterHandle) &&
+            Utils.enhancedDeepEquals(this.twitterUrl, other.twitterUrl) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
+            Utils.enhancedDeepEquals(this.yearFounded, other.yearFounded) &&
+            Utils.enhancedDeepEquals(this.yelpUrl, other.yelpUrl) &&
+            Utils.enhancedDeepEquals(this.youtubeUrl, other.youtubeUrl);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             address,
             alexaRank,
             createdAt,

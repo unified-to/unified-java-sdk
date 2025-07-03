@@ -13,7 +13,6 @@ import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -374,24 +373,24 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
         }
         PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User other = (PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) o;
         return 
-            Objects.deepEquals(this.additionalManagers, other.additionalManagers) &&
-            Objects.deepEquals(this.birthday, other.birthday) &&
-            Objects.deepEquals(this.costCenter, other.costCenter) &&
-            Objects.deepEquals(this.department, other.department) &&
-            Objects.deepEquals(this.division, other.division) &&
-            Objects.deepEquals(this.employeeNumber, other.employeeNumber) &&
-            Objects.deepEquals(this.endDate, other.endDate) &&
-            Objects.deepEquals(this.gender, other.gender) &&
-            Objects.deepEquals(this.level, other.level) &&
-            Objects.deepEquals(this.location, other.location) &&
-            Objects.deepEquals(this.manager, other.manager) &&
-            Objects.deepEquals(this.organization, other.organization) &&
-            Objects.deepEquals(this.startDate, other.startDate);
+            Utils.enhancedDeepEquals(this.additionalManagers, other.additionalManagers) &&
+            Utils.enhancedDeepEquals(this.birthday, other.birthday) &&
+            Utils.enhancedDeepEquals(this.costCenter, other.costCenter) &&
+            Utils.enhancedDeepEquals(this.department, other.department) &&
+            Utils.enhancedDeepEquals(this.division, other.division) &&
+            Utils.enhancedDeepEquals(this.employeeNumber, other.employeeNumber) &&
+            Utils.enhancedDeepEquals(this.endDate, other.endDate) &&
+            Utils.enhancedDeepEquals(this.gender, other.gender) &&
+            Utils.enhancedDeepEquals(this.level, other.level) &&
+            Utils.enhancedDeepEquals(this.location, other.location) &&
+            Utils.enhancedDeepEquals(this.manager, other.manager) &&
+            Utils.enhancedDeepEquals(this.organization, other.organization) &&
+            Utils.enhancedDeepEquals(this.startDate, other.startDate);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             additionalManagers,
             birthday,
             costCenter,

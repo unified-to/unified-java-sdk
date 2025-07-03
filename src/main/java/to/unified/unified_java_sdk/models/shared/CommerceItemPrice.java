@@ -11,7 +11,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -106,14 +105,14 @@ public class CommerceItemPrice {
         }
         CommerceItemPrice other = (CommerceItemPrice) o;
         return 
-            Objects.deepEquals(this.compareAtPrice, other.compareAtPrice) &&
-            Objects.deepEquals(this.currency, other.currency) &&
-            Objects.deepEquals(this.price, other.price);
+            Utils.enhancedDeepEquals(this.compareAtPrice, other.compareAtPrice) &&
+            Utils.enhancedDeepEquals(this.currency, other.currency) &&
+            Utils.enhancedDeepEquals(this.price, other.price);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             compareAtPrice,
             currency,
             price);

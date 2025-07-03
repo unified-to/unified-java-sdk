@@ -8,7 +8,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.lang.Override;
 import java.lang.String;
-import java.util.Objects;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class MessagingReaction {
@@ -66,13 +65,13 @@ public class MessagingReaction {
         }
         MessagingReaction other = (MessagingReaction) o;
         return 
-            Objects.deepEquals(this.member, other.member) &&
-            Objects.deepEquals(this.reaction, other.reaction);
+            Utils.enhancedDeepEquals(this.member, other.member) &&
+            Utils.enhancedDeepEquals(this.reaction, other.reaction);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             member,
             reaction);
     }

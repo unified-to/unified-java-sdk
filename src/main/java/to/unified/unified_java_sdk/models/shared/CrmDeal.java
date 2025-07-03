@@ -16,7 +16,6 @@ import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -559,32 +558,32 @@ public class CrmDeal {
         }
         CrmDeal other = (CrmDeal) o;
         return 
-            Objects.deepEquals(this.amount, other.amount) &&
-            Objects.deepEquals(this.closedAt, other.closedAt) &&
-            Objects.deepEquals(this.companyIds, other.companyIds) &&
-            Objects.deepEquals(this.contactIds, other.contactIds) &&
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.currency, other.currency) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.lostReason, other.lostReason) &&
-            Objects.deepEquals(this.metadata, other.metadata) &&
-            Objects.deepEquals(this.name, other.name) &&
-            Objects.deepEquals(this.pipeline, other.pipeline) &&
-            Objects.deepEquals(this.pipelineId, other.pipelineId) &&
-            Objects.deepEquals(this.probability, other.probability) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.source, other.source) &&
-            Objects.deepEquals(this.stage, other.stage) &&
-            Objects.deepEquals(this.stageId, other.stageId) &&
-            Objects.deepEquals(this.tags, other.tags) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt) &&
-            Objects.deepEquals(this.userId, other.userId) &&
-            Objects.deepEquals(this.wonReason, other.wonReason);
+            Utils.enhancedDeepEquals(this.amount, other.amount) &&
+            Utils.enhancedDeepEquals(this.closedAt, other.closedAt) &&
+            Utils.enhancedDeepEquals(this.companyIds, other.companyIds) &&
+            Utils.enhancedDeepEquals(this.contactIds, other.contactIds) &&
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.currency, other.currency) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.lostReason, other.lostReason) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
+            Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.pipeline, other.pipeline) &&
+            Utils.enhancedDeepEquals(this.pipelineId, other.pipelineId) &&
+            Utils.enhancedDeepEquals(this.probability, other.probability) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.source, other.source) &&
+            Utils.enhancedDeepEquals(this.stage, other.stage) &&
+            Utils.enhancedDeepEquals(this.stageId, other.stageId) &&
+            Utils.enhancedDeepEquals(this.tags, other.tags) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
+            Utils.enhancedDeepEquals(this.userId, other.userId) &&
+            Utils.enhancedDeepEquals(this.wonReason, other.wonReason);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             amount,
             closedAt,
             companyIds,

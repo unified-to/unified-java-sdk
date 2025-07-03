@@ -11,7 +11,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -166,16 +165,16 @@ public class ScimManager {
         }
         ScimManager other = (ScimManager) o;
         return 
-            Objects.deepEquals(this.dollarRef, other.dollarRef) &&
-            Objects.deepEquals(this.displayName, other.displayName) &&
-            Objects.deepEquals(this.managerId, other.managerId) &&
-            Objects.deepEquals(this.type, other.type) &&
-            Objects.deepEquals(this.value, other.value);
+            Utils.enhancedDeepEquals(this.dollarRef, other.dollarRef) &&
+            Utils.enhancedDeepEquals(this.displayName, other.displayName) &&
+            Utils.enhancedDeepEquals(this.managerId, other.managerId) &&
+            Utils.enhancedDeepEquals(this.type, other.type) &&
+            Utils.enhancedDeepEquals(this.value, other.value);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             dollarRef,
             displayName,
             managerId,

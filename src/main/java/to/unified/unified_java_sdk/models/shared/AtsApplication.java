@@ -15,7 +15,6 @@ import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -433,27 +432,27 @@ public class AtsApplication {
         }
         AtsApplication other = (AtsApplication) o;
         return 
-            Objects.deepEquals(this.answers, other.answers) &&
-            Objects.deepEquals(this.appliedAt, other.appliedAt) &&
-            Objects.deepEquals(this.candidateId, other.candidateId) &&
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.hiredAt, other.hiredAt) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.jobId, other.jobId) &&
-            Objects.deepEquals(this.metadata, other.metadata) &&
-            Objects.deepEquals(this.offers, other.offers) &&
-            Objects.deepEquals(this.originalStatus, other.originalStatus) &&
-            Objects.deepEquals(this.raw, other.raw) &&
-            Objects.deepEquals(this.rejectedAt, other.rejectedAt) &&
-            Objects.deepEquals(this.rejectedReason, other.rejectedReason) &&
-            Objects.deepEquals(this.source, other.source) &&
-            Objects.deepEquals(this.status, other.status) &&
-            Objects.deepEquals(this.updatedAt, other.updatedAt);
+            Utils.enhancedDeepEquals(this.answers, other.answers) &&
+            Utils.enhancedDeepEquals(this.appliedAt, other.appliedAt) &&
+            Utils.enhancedDeepEquals(this.candidateId, other.candidateId) &&
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.hiredAt, other.hiredAt) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.jobId, other.jobId) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
+            Utils.enhancedDeepEquals(this.offers, other.offers) &&
+            Utils.enhancedDeepEquals(this.originalStatus, other.originalStatus) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.rejectedAt, other.rejectedAt) &&
+            Utils.enhancedDeepEquals(this.rejectedReason, other.rejectedReason) &&
+            Utils.enhancedDeepEquals(this.source, other.source) &&
+            Utils.enhancedDeepEquals(this.status, other.status) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             answers,
             appliedAt,
             candidateId,

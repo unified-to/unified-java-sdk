@@ -14,7 +14,6 @@ import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Response;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -311,20 +310,20 @@ public class ListPassthroughsResponse implements Response {
         }
         ListPassthroughsResponse other = (ListPassthroughsResponse) o;
         return 
-            Objects.deepEquals(this.contentType, other.contentType) &&
-            Objects.deepEquals(this.headers, other.headers) &&
-            Objects.deepEquals(this.statusCode, other.statusCode) &&
-            Objects.deepEquals(this.rawResponse, other.rawResponse) &&
-            Objects.deepEquals(this.defaultWildcardWildcardResponseStream, other.defaultWildcardWildcardResponseStream) &&
-            Objects.deepEquals(this.defaultApplicationJsonAny, other.defaultApplicationJsonAny) &&
-            Objects.deepEquals(this.defaultApplicationXmlRes, other.defaultApplicationXmlRes) &&
-            Objects.deepEquals(this.defaultTextCsvRes, other.defaultTextCsvRes) &&
-            Objects.deepEquals(this.defaultTextPlainRes, other.defaultTextPlainRes);
+            Utils.enhancedDeepEquals(this.contentType, other.contentType) &&
+            Utils.enhancedDeepEquals(this.headers, other.headers) &&
+            Utils.enhancedDeepEquals(this.statusCode, other.statusCode) &&
+            Utils.enhancedDeepEquals(this.rawResponse, other.rawResponse) &&
+            Utils.enhancedDeepEquals(this.defaultWildcardWildcardResponseStream, other.defaultWildcardWildcardResponseStream) &&
+            Utils.enhancedDeepEquals(this.defaultApplicationJsonAny, other.defaultApplicationJsonAny) &&
+            Utils.enhancedDeepEquals(this.defaultApplicationXmlRes, other.defaultApplicationXmlRes) &&
+            Utils.enhancedDeepEquals(this.defaultTextCsvRes, other.defaultTextCsvRes) &&
+            Utils.enhancedDeepEquals(this.defaultTextPlainRes, other.defaultTextPlainRes);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             contentType,
             headers,
             statusCode,

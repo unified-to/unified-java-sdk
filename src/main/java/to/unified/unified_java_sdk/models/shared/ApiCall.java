@@ -14,7 +14,6 @@ import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
-import java.util.Objects;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.LazySingletonValue;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -416,28 +415,28 @@ public class ApiCall {
         }
         ApiCall other = (ApiCall) o;
         return 
-            Objects.deepEquals(this.connectionId, other.connectionId) &&
-            Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.environment, other.environment) &&
-            Objects.deepEquals(this.error, other.error) &&
-            Objects.deepEquals(this.externalXref, other.externalXref) &&
-            Objects.deepEquals(this.id, other.id) &&
-            Objects.deepEquals(this.integrationType, other.integrationType) &&
-            Objects.deepEquals(this.ipAddress, other.ipAddress) &&
-            Objects.deepEquals(this.isBillable, other.isBillable) &&
-            Objects.deepEquals(this.method, other.method) &&
-            Objects.deepEquals(this.name, other.name) &&
-            Objects.deepEquals(this.path, other.path) &&
-            Objects.deepEquals(this.size, other.size) &&
-            Objects.deepEquals(this.status, other.status) &&
-            Objects.deepEquals(this.type, other.type) &&
-            Objects.deepEquals(this.webhookId, other.webhookId) &&
-            Objects.deepEquals(this.workspaceId, other.workspaceId);
+            Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
+            Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.environment, other.environment) &&
+            Utils.enhancedDeepEquals(this.error, other.error) &&
+            Utils.enhancedDeepEquals(this.externalXref, other.externalXref) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.integrationType, other.integrationType) &&
+            Utils.enhancedDeepEquals(this.ipAddress, other.ipAddress) &&
+            Utils.enhancedDeepEquals(this.isBillable, other.isBillable) &&
+            Utils.enhancedDeepEquals(this.method, other.method) &&
+            Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.path, other.path) &&
+            Utils.enhancedDeepEquals(this.size, other.size) &&
+            Utils.enhancedDeepEquals(this.status, other.status) &&
+            Utils.enhancedDeepEquals(this.type, other.type) &&
+            Utils.enhancedDeepEquals(this.webhookId, other.webhookId) &&
+            Utils.enhancedDeepEquals(this.workspaceId, other.workspaceId);
     }
     
     @Override
     public int hashCode() {
-        return Objects.hash(
+        return Utils.enhancedHash(
             connectionId,
             createdAt,
             environment,
