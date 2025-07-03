@@ -86,6 +86,10 @@ public class MessagingMessage {
     private Optional<? extends Map<String, Object>> raw;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reactions")
+    private Optional<? extends List<MessagingReaction>> reactions;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     private Optional<String> reference;
 
@@ -122,6 +126,7 @@ public class MessagingMessage {
             @JsonProperty("message_markdown") Optional<String> messageMarkdown,
             @JsonProperty("parent_message_id") Optional<String> parentMessageId,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("reactions") Optional<? extends List<MessagingReaction>> reactions,
             @JsonProperty("reference") Optional<String> reference,
             @JsonProperty("root_message_id") Optional<String> rootMessageId,
             @JsonProperty("subject") Optional<String> subject,
@@ -142,6 +147,7 @@ public class MessagingMessage {
         Utils.checkNotNull(messageMarkdown, "messageMarkdown");
         Utils.checkNotNull(parentMessageId, "parentMessageId");
         Utils.checkNotNull(raw, "raw");
+        Utils.checkNotNull(reactions, "reactions");
         Utils.checkNotNull(reference, "reference");
         Utils.checkNotNull(rootMessageId, "rootMessageId");
         Utils.checkNotNull(subject, "subject");
@@ -162,6 +168,7 @@ public class MessagingMessage {
         this.messageMarkdown = messageMarkdown;
         this.parentMessageId = parentMessageId;
         this.raw = raw;
+        this.reactions = reactions;
         this.reference = reference;
         this.rootMessageId = rootMessageId;
         this.subject = subject;
@@ -170,7 +177,7 @@ public class MessagingMessage {
     }
     
     public MessagingMessage() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -256,6 +263,12 @@ public class MessagingMessage {
     @JsonIgnore
     public Optional<Map<String, Object>> raw() {
         return (Optional<Map<String, Object>>) raw;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<MessagingReaction>> reactions() {
+        return (Optional<List<MessagingReaction>>) reactions;
     }
 
     @JsonIgnore
@@ -473,6 +486,18 @@ public class MessagingMessage {
         return this;
     }
 
+    public MessagingMessage withReactions(List<MessagingReaction> reactions) {
+        Utils.checkNotNull(reactions, "reactions");
+        this.reactions = Optional.ofNullable(reactions);
+        return this;
+    }
+
+    public MessagingMessage withReactions(Optional<? extends List<MessagingReaction>> reactions) {
+        Utils.checkNotNull(reactions, "reactions");
+        this.reactions = reactions;
+        return this;
+    }
+
     public MessagingMessage withReference(String reference) {
         Utils.checkNotNull(reference, "reference");
         this.reference = Optional.ofNullable(reference);
@@ -559,6 +584,7 @@ public class MessagingMessage {
             Objects.deepEquals(this.messageMarkdown, other.messageMarkdown) &&
             Objects.deepEquals(this.parentMessageId, other.parentMessageId) &&
             Objects.deepEquals(this.raw, other.raw) &&
+            Objects.deepEquals(this.reactions, other.reactions) &&
             Objects.deepEquals(this.reference, other.reference) &&
             Objects.deepEquals(this.rootMessageId, other.rootMessageId) &&
             Objects.deepEquals(this.subject, other.subject) &&
@@ -584,6 +610,7 @@ public class MessagingMessage {
             messageMarkdown,
             parentMessageId,
             raw,
+            reactions,
             reference,
             rootMessageId,
             subject,
@@ -609,6 +636,7 @@ public class MessagingMessage {
                 "messageMarkdown", messageMarkdown,
                 "parentMessageId", parentMessageId,
                 "raw", raw,
+                "reactions", reactions,
                 "reference", reference,
                 "rootMessageId", rootMessageId,
                 "subject", subject,
@@ -647,6 +675,8 @@ public class MessagingMessage {
         private Optional<String> parentMessageId = Optional.empty();
  
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
+ 
+        private Optional<? extends List<MessagingReaction>> reactions = Optional.empty();
  
         private Optional<String> reference = Optional.empty();
  
@@ -848,6 +878,18 @@ public class MessagingMessage {
             return this;
         }
 
+        public Builder reactions(List<MessagingReaction> reactions) {
+            Utils.checkNotNull(reactions, "reactions");
+            this.reactions = Optional.ofNullable(reactions);
+            return this;
+        }
+
+        public Builder reactions(Optional<? extends List<MessagingReaction>> reactions) {
+            Utils.checkNotNull(reactions, "reactions");
+            this.reactions = reactions;
+            return this;
+        }
+
         public Builder reference(String reference) {
             Utils.checkNotNull(reference, "reference");
             this.reference = Optional.ofNullable(reference);
@@ -925,6 +967,7 @@ public class MessagingMessage {
                 messageMarkdown,
                 parentMessageId,
                 raw,
+                reactions,
                 reference,
                 rootMessageId,
                 subject,
