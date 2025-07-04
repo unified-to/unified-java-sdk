@@ -16,6 +16,11 @@ import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+/**
+ * AccountingProfitAndLossCategory
+ * 
+ * <p>&#64;deprecated
+ */
 public class AccountingProfitAndLossCategory {
 
     @JsonInclude(Include.NON_ABSENT)

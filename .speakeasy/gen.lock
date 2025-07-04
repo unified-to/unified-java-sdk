@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: b9a9d44d0d49d0a08964e6f3ef075270
+  docChecksum: cfcf5e019d822f732c2d765252728b21
   docVersion: "1.0"
   speakeasyVersion: 1.575.4
   generationVersion: 2.648.7
-  releaseVersion: 0.32.0
-  configChecksum: e56e0a3da37f60fc9ef0a88f8d4f861b
+  releaseVersion: 0.32.1
+  configChecksum: 4c2f8ce4265a311aa79e58956d180769
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -944,7 +944,9 @@ generatedFiles:
   - docs/models/shared/AccountingOrderStatus.md
   - docs/models/shared/AccountingOrderType.md
   - docs/models/shared/AccountingOrganization.md
+  - docs/models/shared/AccountingProfitAndLossAccount.md
   - docs/models/shared/AccountingProfitAndLossCategory.md
+  - docs/models/shared/AccountingProfitAndLossSection.md
   - docs/models/shared/AccountingProfitAndLossSubcategory.md
   - docs/models/shared/AccountingReport.md
   - docs/models/shared/AccountingReportType.md
@@ -2970,7 +2972,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingOrderStatus.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingOrderType.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingOrganization.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingProfitAndLossAccount.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingProfitAndLossCategory.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingProfitAndLossSection.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingProfitAndLossSubcategory.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingReport.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingReportType.java

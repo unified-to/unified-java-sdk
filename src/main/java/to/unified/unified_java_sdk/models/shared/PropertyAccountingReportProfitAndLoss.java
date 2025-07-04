@@ -18,21 +18,58 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class PropertyAccountingReportProfitAndLoss {
 
+    /**
+     * &#64;deprecated
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cost_of_goods_sold")
     private Optional<? extends List<AccountingProfitAndLossCategory>> costOfGoodsSold;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cost_of_goods_sold_sections")
+    private Optional<? extends List<AccountingProfitAndLossSection>> costOfGoodsSoldSections;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cost_of_goods_sold_total_amount")
+    private Optional<Double> costOfGoodsSoldTotalAmount;
+
+    /**
+     * &#64;deprecated
+     */
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expenses")
     private Optional<? extends List<AccountingProfitAndLossCategory>> expenses;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("expenses_sections")
+    private Optional<? extends List<AccountingProfitAndLossSection>> expensesSections;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("expenses_total_amount")
+    private Optional<Double> expensesTotalAmount;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gross_profit_amount")
     private Optional<Double> grossProfitAmount;
 
+    /**
+     * &#64;deprecated
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("income")
     private Optional<? extends List<AccountingProfitAndLossCategory>> income;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("income_sections")
+    private Optional<? extends List<AccountingProfitAndLossSection>> incomeSections;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("income_total_amount")
+    private Optional<Double> incomeTotalAmount;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("net_income_amount")
+    private Optional<Double> netIncomeAmount;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("net_profit_amount")
@@ -41,26 +78,50 @@ public class PropertyAccountingReportProfitAndLoss {
     @JsonCreator
     public PropertyAccountingReportProfitAndLoss(
             @JsonProperty("cost_of_goods_sold") Optional<? extends List<AccountingProfitAndLossCategory>> costOfGoodsSold,
+            @JsonProperty("cost_of_goods_sold_sections") Optional<? extends List<AccountingProfitAndLossSection>> costOfGoodsSoldSections,
+            @JsonProperty("cost_of_goods_sold_total_amount") Optional<Double> costOfGoodsSoldTotalAmount,
             @JsonProperty("expenses") Optional<? extends List<AccountingProfitAndLossCategory>> expenses,
+            @JsonProperty("expenses_sections") Optional<? extends List<AccountingProfitAndLossSection>> expensesSections,
+            @JsonProperty("expenses_total_amount") Optional<Double> expensesTotalAmount,
             @JsonProperty("gross_profit_amount") Optional<Double> grossProfitAmount,
             @JsonProperty("income") Optional<? extends List<AccountingProfitAndLossCategory>> income,
+            @JsonProperty("income_sections") Optional<? extends List<AccountingProfitAndLossSection>> incomeSections,
+            @JsonProperty("income_total_amount") Optional<Double> incomeTotalAmount,
+            @JsonProperty("net_income_amount") Optional<Double> netIncomeAmount,
             @JsonProperty("net_profit_amount") Optional<Double> netProfitAmount) {
         Utils.checkNotNull(costOfGoodsSold, "costOfGoodsSold");
+        Utils.checkNotNull(costOfGoodsSoldSections, "costOfGoodsSoldSections");
+        Utils.checkNotNull(costOfGoodsSoldTotalAmount, "costOfGoodsSoldTotalAmount");
         Utils.checkNotNull(expenses, "expenses");
+        Utils.checkNotNull(expensesSections, "expensesSections");
+        Utils.checkNotNull(expensesTotalAmount, "expensesTotalAmount");
         Utils.checkNotNull(grossProfitAmount, "grossProfitAmount");
         Utils.checkNotNull(income, "income");
+        Utils.checkNotNull(incomeSections, "incomeSections");
+        Utils.checkNotNull(incomeTotalAmount, "incomeTotalAmount");
+        Utils.checkNotNull(netIncomeAmount, "netIncomeAmount");
         Utils.checkNotNull(netProfitAmount, "netProfitAmount");
         this.costOfGoodsSold = costOfGoodsSold;
+        this.costOfGoodsSoldSections = costOfGoodsSoldSections;
+        this.costOfGoodsSoldTotalAmount = costOfGoodsSoldTotalAmount;
         this.expenses = expenses;
+        this.expensesSections = expensesSections;
+        this.expensesTotalAmount = expensesTotalAmount;
         this.grossProfitAmount = grossProfitAmount;
         this.income = income;
+        this.incomeSections = incomeSections;
+        this.incomeTotalAmount = incomeTotalAmount;
+        this.netIncomeAmount = netIncomeAmount;
         this.netProfitAmount = netProfitAmount;
     }
     
     public PropertyAccountingReportProfitAndLoss() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
+    /**
+     * &#64;deprecated
+     */
     @SuppressWarnings("unchecked")
     @JsonIgnore
     public Optional<List<AccountingProfitAndLossCategory>> costOfGoodsSold() {
@@ -69,8 +130,33 @@ public class PropertyAccountingReportProfitAndLoss {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
+    public Optional<List<AccountingProfitAndLossSection>> costOfGoodsSoldSections() {
+        return (Optional<List<AccountingProfitAndLossSection>>) costOfGoodsSoldSections;
+    }
+
+    @JsonIgnore
+    public Optional<Double> costOfGoodsSoldTotalAmount() {
+        return costOfGoodsSoldTotalAmount;
+    }
+
+    /**
+     * &#64;deprecated
+     */
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
     public Optional<List<AccountingProfitAndLossCategory>> expenses() {
         return (Optional<List<AccountingProfitAndLossCategory>>) expenses;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<AccountingProfitAndLossSection>> expensesSections() {
+        return (Optional<List<AccountingProfitAndLossSection>>) expensesSections;
+    }
+
+    @JsonIgnore
+    public Optional<Double> expensesTotalAmount() {
+        return expensesTotalAmount;
     }
 
     @JsonIgnore
@@ -78,10 +164,29 @@ public class PropertyAccountingReportProfitAndLoss {
         return grossProfitAmount;
     }
 
+    /**
+     * &#64;deprecated
+     */
     @SuppressWarnings("unchecked")
     @JsonIgnore
     public Optional<List<AccountingProfitAndLossCategory>> income() {
         return (Optional<List<AccountingProfitAndLossCategory>>) income;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<AccountingProfitAndLossSection>> incomeSections() {
+        return (Optional<List<AccountingProfitAndLossSection>>) incomeSections;
+    }
+
+    @JsonIgnore
+    public Optional<Double> incomeTotalAmount() {
+        return incomeTotalAmount;
+    }
+
+    @JsonIgnore
+    public Optional<Double> netIncomeAmount() {
+        return netIncomeAmount;
     }
 
     @JsonIgnore
@@ -93,27 +198,87 @@ public class PropertyAccountingReportProfitAndLoss {
         return new Builder();
     }    
 
+    /**
+     * &#64;deprecated
+     */
     public PropertyAccountingReportProfitAndLoss withCostOfGoodsSold(List<AccountingProfitAndLossCategory> costOfGoodsSold) {
         Utils.checkNotNull(costOfGoodsSold, "costOfGoodsSold");
         this.costOfGoodsSold = Optional.ofNullable(costOfGoodsSold);
         return this;
     }
 
+    /**
+     * &#64;deprecated
+     */
     public PropertyAccountingReportProfitAndLoss withCostOfGoodsSold(Optional<? extends List<AccountingProfitAndLossCategory>> costOfGoodsSold) {
         Utils.checkNotNull(costOfGoodsSold, "costOfGoodsSold");
         this.costOfGoodsSold = costOfGoodsSold;
         return this;
     }
 
+    public PropertyAccountingReportProfitAndLoss withCostOfGoodsSoldSections(List<AccountingProfitAndLossSection> costOfGoodsSoldSections) {
+        Utils.checkNotNull(costOfGoodsSoldSections, "costOfGoodsSoldSections");
+        this.costOfGoodsSoldSections = Optional.ofNullable(costOfGoodsSoldSections);
+        return this;
+    }
+
+    public PropertyAccountingReportProfitAndLoss withCostOfGoodsSoldSections(Optional<? extends List<AccountingProfitAndLossSection>> costOfGoodsSoldSections) {
+        Utils.checkNotNull(costOfGoodsSoldSections, "costOfGoodsSoldSections");
+        this.costOfGoodsSoldSections = costOfGoodsSoldSections;
+        return this;
+    }
+
+    public PropertyAccountingReportProfitAndLoss withCostOfGoodsSoldTotalAmount(double costOfGoodsSoldTotalAmount) {
+        Utils.checkNotNull(costOfGoodsSoldTotalAmount, "costOfGoodsSoldTotalAmount");
+        this.costOfGoodsSoldTotalAmount = Optional.ofNullable(costOfGoodsSoldTotalAmount);
+        return this;
+    }
+
+    public PropertyAccountingReportProfitAndLoss withCostOfGoodsSoldTotalAmount(Optional<Double> costOfGoodsSoldTotalAmount) {
+        Utils.checkNotNull(costOfGoodsSoldTotalAmount, "costOfGoodsSoldTotalAmount");
+        this.costOfGoodsSoldTotalAmount = costOfGoodsSoldTotalAmount;
+        return this;
+    }
+
+    /**
+     * &#64;deprecated
+     */
     public PropertyAccountingReportProfitAndLoss withExpenses(List<AccountingProfitAndLossCategory> expenses) {
         Utils.checkNotNull(expenses, "expenses");
         this.expenses = Optional.ofNullable(expenses);
         return this;
     }
 
+    /**
+     * &#64;deprecated
+     */
     public PropertyAccountingReportProfitAndLoss withExpenses(Optional<? extends List<AccountingProfitAndLossCategory>> expenses) {
         Utils.checkNotNull(expenses, "expenses");
         this.expenses = expenses;
+        return this;
+    }
+
+    public PropertyAccountingReportProfitAndLoss withExpensesSections(List<AccountingProfitAndLossSection> expensesSections) {
+        Utils.checkNotNull(expensesSections, "expensesSections");
+        this.expensesSections = Optional.ofNullable(expensesSections);
+        return this;
+    }
+
+    public PropertyAccountingReportProfitAndLoss withExpensesSections(Optional<? extends List<AccountingProfitAndLossSection>> expensesSections) {
+        Utils.checkNotNull(expensesSections, "expensesSections");
+        this.expensesSections = expensesSections;
+        return this;
+    }
+
+    public PropertyAccountingReportProfitAndLoss withExpensesTotalAmount(double expensesTotalAmount) {
+        Utils.checkNotNull(expensesTotalAmount, "expensesTotalAmount");
+        this.expensesTotalAmount = Optional.ofNullable(expensesTotalAmount);
+        return this;
+    }
+
+    public PropertyAccountingReportProfitAndLoss withExpensesTotalAmount(Optional<Double> expensesTotalAmount) {
+        Utils.checkNotNull(expensesTotalAmount, "expensesTotalAmount");
+        this.expensesTotalAmount = expensesTotalAmount;
         return this;
     }
 
@@ -129,15 +294,57 @@ public class PropertyAccountingReportProfitAndLoss {
         return this;
     }
 
+    /**
+     * &#64;deprecated
+     */
     public PropertyAccountingReportProfitAndLoss withIncome(List<AccountingProfitAndLossCategory> income) {
         Utils.checkNotNull(income, "income");
         this.income = Optional.ofNullable(income);
         return this;
     }
 
+    /**
+     * &#64;deprecated
+     */
     public PropertyAccountingReportProfitAndLoss withIncome(Optional<? extends List<AccountingProfitAndLossCategory>> income) {
         Utils.checkNotNull(income, "income");
         this.income = income;
+        return this;
+    }
+
+    public PropertyAccountingReportProfitAndLoss withIncomeSections(List<AccountingProfitAndLossSection> incomeSections) {
+        Utils.checkNotNull(incomeSections, "incomeSections");
+        this.incomeSections = Optional.ofNullable(incomeSections);
+        return this;
+    }
+
+    public PropertyAccountingReportProfitAndLoss withIncomeSections(Optional<? extends List<AccountingProfitAndLossSection>> incomeSections) {
+        Utils.checkNotNull(incomeSections, "incomeSections");
+        this.incomeSections = incomeSections;
+        return this;
+    }
+
+    public PropertyAccountingReportProfitAndLoss withIncomeTotalAmount(double incomeTotalAmount) {
+        Utils.checkNotNull(incomeTotalAmount, "incomeTotalAmount");
+        this.incomeTotalAmount = Optional.ofNullable(incomeTotalAmount);
+        return this;
+    }
+
+    public PropertyAccountingReportProfitAndLoss withIncomeTotalAmount(Optional<Double> incomeTotalAmount) {
+        Utils.checkNotNull(incomeTotalAmount, "incomeTotalAmount");
+        this.incomeTotalAmount = incomeTotalAmount;
+        return this;
+    }
+
+    public PropertyAccountingReportProfitAndLoss withNetIncomeAmount(double netIncomeAmount) {
+        Utils.checkNotNull(netIncomeAmount, "netIncomeAmount");
+        this.netIncomeAmount = Optional.ofNullable(netIncomeAmount);
+        return this;
+    }
+
+    public PropertyAccountingReportProfitAndLoss withNetIncomeAmount(Optional<Double> netIncomeAmount) {
+        Utils.checkNotNull(netIncomeAmount, "netIncomeAmount");
+        this.netIncomeAmount = netIncomeAmount;
         return this;
     }
 
@@ -165,9 +372,16 @@ public class PropertyAccountingReportProfitAndLoss {
         PropertyAccountingReportProfitAndLoss other = (PropertyAccountingReportProfitAndLoss) o;
         return 
             Utils.enhancedDeepEquals(this.costOfGoodsSold, other.costOfGoodsSold) &&
+            Utils.enhancedDeepEquals(this.costOfGoodsSoldSections, other.costOfGoodsSoldSections) &&
+            Utils.enhancedDeepEquals(this.costOfGoodsSoldTotalAmount, other.costOfGoodsSoldTotalAmount) &&
             Utils.enhancedDeepEquals(this.expenses, other.expenses) &&
+            Utils.enhancedDeepEquals(this.expensesSections, other.expensesSections) &&
+            Utils.enhancedDeepEquals(this.expensesTotalAmount, other.expensesTotalAmount) &&
             Utils.enhancedDeepEquals(this.grossProfitAmount, other.grossProfitAmount) &&
             Utils.enhancedDeepEquals(this.income, other.income) &&
+            Utils.enhancedDeepEquals(this.incomeSections, other.incomeSections) &&
+            Utils.enhancedDeepEquals(this.incomeTotalAmount, other.incomeTotalAmount) &&
+            Utils.enhancedDeepEquals(this.netIncomeAmount, other.netIncomeAmount) &&
             Utils.enhancedDeepEquals(this.netProfitAmount, other.netProfitAmount);
     }
     
@@ -175,9 +389,16 @@ public class PropertyAccountingReportProfitAndLoss {
     public int hashCode() {
         return Utils.enhancedHash(
             costOfGoodsSold,
+            costOfGoodsSoldSections,
+            costOfGoodsSoldTotalAmount,
             expenses,
+            expensesSections,
+            expensesTotalAmount,
             grossProfitAmount,
             income,
+            incomeSections,
+            incomeTotalAmount,
+            netIncomeAmount,
             netProfitAmount);
     }
     
@@ -185,9 +406,16 @@ public class PropertyAccountingReportProfitAndLoss {
     public String toString() {
         return Utils.toString(PropertyAccountingReportProfitAndLoss.class,
                 "costOfGoodsSold", costOfGoodsSold,
+                "costOfGoodsSoldSections", costOfGoodsSoldSections,
+                "costOfGoodsSoldTotalAmount", costOfGoodsSoldTotalAmount,
                 "expenses", expenses,
+                "expensesSections", expensesSections,
+                "expensesTotalAmount", expensesTotalAmount,
                 "grossProfitAmount", grossProfitAmount,
                 "income", income,
+                "incomeSections", incomeSections,
+                "incomeTotalAmount", incomeTotalAmount,
+                "netIncomeAmount", netIncomeAmount,
                 "netProfitAmount", netProfitAmount);
     }
     
@@ -195,11 +423,25 @@ public class PropertyAccountingReportProfitAndLoss {
  
         private Optional<? extends List<AccountingProfitAndLossCategory>> costOfGoodsSold = Optional.empty();
  
+        private Optional<? extends List<AccountingProfitAndLossSection>> costOfGoodsSoldSections = Optional.empty();
+ 
+        private Optional<Double> costOfGoodsSoldTotalAmount = Optional.empty();
+ 
         private Optional<? extends List<AccountingProfitAndLossCategory>> expenses = Optional.empty();
+ 
+        private Optional<? extends List<AccountingProfitAndLossSection>> expensesSections = Optional.empty();
+ 
+        private Optional<Double> expensesTotalAmount = Optional.empty();
  
         private Optional<Double> grossProfitAmount = Optional.empty();
  
         private Optional<? extends List<AccountingProfitAndLossCategory>> income = Optional.empty();
+ 
+        private Optional<? extends List<AccountingProfitAndLossSection>> incomeSections = Optional.empty();
+ 
+        private Optional<Double> incomeTotalAmount = Optional.empty();
+ 
+        private Optional<Double> netIncomeAmount = Optional.empty();
  
         private Optional<Double> netProfitAmount = Optional.empty();
         
@@ -207,27 +449,87 @@ public class PropertyAccountingReportProfitAndLoss {
           // force use of static builder() method
         }
 
+        /**
+         * &#64;deprecated
+         */
         public Builder costOfGoodsSold(List<AccountingProfitAndLossCategory> costOfGoodsSold) {
             Utils.checkNotNull(costOfGoodsSold, "costOfGoodsSold");
             this.costOfGoodsSold = Optional.ofNullable(costOfGoodsSold);
             return this;
         }
 
+        /**
+         * &#64;deprecated
+         */
         public Builder costOfGoodsSold(Optional<? extends List<AccountingProfitAndLossCategory>> costOfGoodsSold) {
             Utils.checkNotNull(costOfGoodsSold, "costOfGoodsSold");
             this.costOfGoodsSold = costOfGoodsSold;
             return this;
         }
 
+        public Builder costOfGoodsSoldSections(List<AccountingProfitAndLossSection> costOfGoodsSoldSections) {
+            Utils.checkNotNull(costOfGoodsSoldSections, "costOfGoodsSoldSections");
+            this.costOfGoodsSoldSections = Optional.ofNullable(costOfGoodsSoldSections);
+            return this;
+        }
+
+        public Builder costOfGoodsSoldSections(Optional<? extends List<AccountingProfitAndLossSection>> costOfGoodsSoldSections) {
+            Utils.checkNotNull(costOfGoodsSoldSections, "costOfGoodsSoldSections");
+            this.costOfGoodsSoldSections = costOfGoodsSoldSections;
+            return this;
+        }
+
+        public Builder costOfGoodsSoldTotalAmount(double costOfGoodsSoldTotalAmount) {
+            Utils.checkNotNull(costOfGoodsSoldTotalAmount, "costOfGoodsSoldTotalAmount");
+            this.costOfGoodsSoldTotalAmount = Optional.ofNullable(costOfGoodsSoldTotalAmount);
+            return this;
+        }
+
+        public Builder costOfGoodsSoldTotalAmount(Optional<Double> costOfGoodsSoldTotalAmount) {
+            Utils.checkNotNull(costOfGoodsSoldTotalAmount, "costOfGoodsSoldTotalAmount");
+            this.costOfGoodsSoldTotalAmount = costOfGoodsSoldTotalAmount;
+            return this;
+        }
+
+        /**
+         * &#64;deprecated
+         */
         public Builder expenses(List<AccountingProfitAndLossCategory> expenses) {
             Utils.checkNotNull(expenses, "expenses");
             this.expenses = Optional.ofNullable(expenses);
             return this;
         }
 
+        /**
+         * &#64;deprecated
+         */
         public Builder expenses(Optional<? extends List<AccountingProfitAndLossCategory>> expenses) {
             Utils.checkNotNull(expenses, "expenses");
             this.expenses = expenses;
+            return this;
+        }
+
+        public Builder expensesSections(List<AccountingProfitAndLossSection> expensesSections) {
+            Utils.checkNotNull(expensesSections, "expensesSections");
+            this.expensesSections = Optional.ofNullable(expensesSections);
+            return this;
+        }
+
+        public Builder expensesSections(Optional<? extends List<AccountingProfitAndLossSection>> expensesSections) {
+            Utils.checkNotNull(expensesSections, "expensesSections");
+            this.expensesSections = expensesSections;
+            return this;
+        }
+
+        public Builder expensesTotalAmount(double expensesTotalAmount) {
+            Utils.checkNotNull(expensesTotalAmount, "expensesTotalAmount");
+            this.expensesTotalAmount = Optional.ofNullable(expensesTotalAmount);
+            return this;
+        }
+
+        public Builder expensesTotalAmount(Optional<Double> expensesTotalAmount) {
+            Utils.checkNotNull(expensesTotalAmount, "expensesTotalAmount");
+            this.expensesTotalAmount = expensesTotalAmount;
             return this;
         }
 
@@ -243,15 +545,57 @@ public class PropertyAccountingReportProfitAndLoss {
             return this;
         }
 
+        /**
+         * &#64;deprecated
+         */
         public Builder income(List<AccountingProfitAndLossCategory> income) {
             Utils.checkNotNull(income, "income");
             this.income = Optional.ofNullable(income);
             return this;
         }
 
+        /**
+         * &#64;deprecated
+         */
         public Builder income(Optional<? extends List<AccountingProfitAndLossCategory>> income) {
             Utils.checkNotNull(income, "income");
             this.income = income;
+            return this;
+        }
+
+        public Builder incomeSections(List<AccountingProfitAndLossSection> incomeSections) {
+            Utils.checkNotNull(incomeSections, "incomeSections");
+            this.incomeSections = Optional.ofNullable(incomeSections);
+            return this;
+        }
+
+        public Builder incomeSections(Optional<? extends List<AccountingProfitAndLossSection>> incomeSections) {
+            Utils.checkNotNull(incomeSections, "incomeSections");
+            this.incomeSections = incomeSections;
+            return this;
+        }
+
+        public Builder incomeTotalAmount(double incomeTotalAmount) {
+            Utils.checkNotNull(incomeTotalAmount, "incomeTotalAmount");
+            this.incomeTotalAmount = Optional.ofNullable(incomeTotalAmount);
+            return this;
+        }
+
+        public Builder incomeTotalAmount(Optional<Double> incomeTotalAmount) {
+            Utils.checkNotNull(incomeTotalAmount, "incomeTotalAmount");
+            this.incomeTotalAmount = incomeTotalAmount;
+            return this;
+        }
+
+        public Builder netIncomeAmount(double netIncomeAmount) {
+            Utils.checkNotNull(netIncomeAmount, "netIncomeAmount");
+            this.netIncomeAmount = Optional.ofNullable(netIncomeAmount);
+            return this;
+        }
+
+        public Builder netIncomeAmount(Optional<Double> netIncomeAmount) {
+            Utils.checkNotNull(netIncomeAmount, "netIncomeAmount");
+            this.netIncomeAmount = netIncomeAmount;
             return this;
         }
 
@@ -270,9 +614,16 @@ public class PropertyAccountingReportProfitAndLoss {
         public PropertyAccountingReportProfitAndLoss build() {
             return new PropertyAccountingReportProfitAndLoss(
                 costOfGoodsSold,
+                costOfGoodsSoldSections,
+                costOfGoodsSoldTotalAmount,
                 expenses,
+                expensesSections,
+                expensesTotalAmount,
                 grossProfitAmount,
                 income,
+                incomeSections,
+                incomeTotalAmount,
+                netIncomeAmount,
                 netProfitAmount);
         }
     }
