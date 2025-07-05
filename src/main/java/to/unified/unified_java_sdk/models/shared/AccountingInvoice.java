@@ -84,7 +84,7 @@ public class AccountingInvoice {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_collection_method")
-    private Optional<? extends PaymentCollectionMethod> paymentCollectionMethod;
+    private Optional<? extends AccountingInvoicePaymentCollectionMethod> paymentCollectionMethod;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posted_at")
@@ -151,7 +151,7 @@ public class AccountingInvoice {
             @JsonProperty("notes") Optional<String> notes,
             @JsonProperty("paid_amount") Optional<Double> paidAmount,
             @JsonProperty("paid_at") Optional<OffsetDateTime> paidAt,
-            @JsonProperty("payment_collection_method") Optional<? extends PaymentCollectionMethod> paymentCollectionMethod,
+            @JsonProperty("payment_collection_method") Optional<? extends AccountingInvoicePaymentCollectionMethod> paymentCollectionMethod,
             @JsonProperty("posted_at") Optional<OffsetDateTime> postedAt,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
             @JsonProperty("refund_amount") Optional<Double> refundAmount,
@@ -305,8 +305,8 @@ public class AccountingInvoice {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<PaymentCollectionMethod> paymentCollectionMethod() {
-        return (Optional<PaymentCollectionMethod>) paymentCollectionMethod;
+    public Optional<AccountingInvoicePaymentCollectionMethod> paymentCollectionMethod() {
+        return (Optional<AccountingInvoicePaymentCollectionMethod>) paymentCollectionMethod;
     }
 
     @JsonIgnore
@@ -556,13 +556,13 @@ public class AccountingInvoice {
         return this;
     }
 
-    public AccountingInvoice withPaymentCollectionMethod(PaymentCollectionMethod paymentCollectionMethod) {
+    public AccountingInvoice withPaymentCollectionMethod(AccountingInvoicePaymentCollectionMethod paymentCollectionMethod) {
         Utils.checkNotNull(paymentCollectionMethod, "paymentCollectionMethod");
         this.paymentCollectionMethod = Optional.ofNullable(paymentCollectionMethod);
         return this;
     }
 
-    public AccountingInvoice withPaymentCollectionMethod(Optional<? extends PaymentCollectionMethod> paymentCollectionMethod) {
+    public AccountingInvoice withPaymentCollectionMethod(Optional<? extends AccountingInvoicePaymentCollectionMethod> paymentCollectionMethod) {
         Utils.checkNotNull(paymentCollectionMethod, "paymentCollectionMethod");
         this.paymentCollectionMethod = paymentCollectionMethod;
         return this;
@@ -851,7 +851,7 @@ public class AccountingInvoice {
  
         private Optional<OffsetDateTime> paidAt = Optional.empty();
  
-        private Optional<? extends PaymentCollectionMethod> paymentCollectionMethod = Optional.empty();
+        private Optional<? extends AccountingInvoicePaymentCollectionMethod> paymentCollectionMethod = Optional.empty();
  
         private Optional<OffsetDateTime> postedAt = Optional.empty();
  
@@ -1061,13 +1061,13 @@ public class AccountingInvoice {
             return this;
         }
 
-        public Builder paymentCollectionMethod(PaymentCollectionMethod paymentCollectionMethod) {
+        public Builder paymentCollectionMethod(AccountingInvoicePaymentCollectionMethod paymentCollectionMethod) {
             Utils.checkNotNull(paymentCollectionMethod, "paymentCollectionMethod");
             this.paymentCollectionMethod = Optional.ofNullable(paymentCollectionMethod);
             return this;
         }
 
-        public Builder paymentCollectionMethod(Optional<? extends PaymentCollectionMethod> paymentCollectionMethod) {
+        public Builder paymentCollectionMethod(Optional<? extends AccountingInvoicePaymentCollectionMethod> paymentCollectionMethod) {
             Utils.checkNotNull(paymentCollectionMethod, "paymentCollectionMethod");
             this.paymentCollectionMethod = paymentCollectionMethod;
             return this;

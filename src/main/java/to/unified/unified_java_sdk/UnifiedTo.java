@@ -41,7 +41,13 @@ public class UnifiedTo {
 
     private final Account account;
 
+    private final Balancesheet balancesheet;
+
+    private final Bill bill;
+
     private final Contact contact;
+
+    private final Creditmemo creditmemo;
 
     private final Invoice invoice;
 
@@ -51,11 +57,19 @@ public class UnifiedTo {
 
     private final Organization organization;
 
+    private final Profitloss profitloss;
+
+    private final Purchaseorder purchaseorder;
+
     private final Report report;
+
+    private final Salesorder salesorder;
 
     private final Taxrate taxrate;
 
     private final Transaction transaction;
+
+    private final Trialbalance trialbalance;
 
     private final Ats ats;
 
@@ -231,8 +245,20 @@ public class UnifiedTo {
         return account;
     }
 
+    public Balancesheet balancesheet() {
+        return balancesheet;
+    }
+
+    public Bill bill() {
+        return bill;
+    }
+
     public Contact contact() {
         return contact;
+    }
+
+    public Creditmemo creditmemo() {
+        return creditmemo;
     }
 
     public Invoice invoice() {
@@ -251,8 +277,20 @@ public class UnifiedTo {
         return organization;
     }
 
+    public Profitloss profitloss() {
+        return profitloss;
+    }
+
+    public Purchaseorder purchaseorder() {
+        return purchaseorder;
+    }
+
     public Report report() {
         return report;
+    }
+
+    public Salesorder salesorder() {
+        return salesorder;
     }
 
     public Taxrate taxrate() {
@@ -261,6 +299,10 @@ public class UnifiedTo {
 
     public Transaction transaction() {
         return transaction;
+    }
+
+    public Trialbalance trialbalance() {
+        return trialbalance;
     }
 
     public Ats ats() {
@@ -732,14 +774,21 @@ public class UnifiedTo {
         this.sdkConfiguration.initialize();
         this.accounting = new Accounting(sdkConfiguration);
         this.account = new Account(sdkConfiguration);
+        this.balancesheet = new Balancesheet(sdkConfiguration);
+        this.bill = new Bill(sdkConfiguration);
         this.contact = new Contact(sdkConfiguration);
+        this.creditmemo = new Creditmemo(sdkConfiguration);
         this.invoice = new Invoice(sdkConfiguration);
         this.journal = new Journal(sdkConfiguration);
         this.order = new Order(sdkConfiguration);
         this.organization = new Organization(sdkConfiguration);
+        this.profitloss = new Profitloss(sdkConfiguration);
+        this.purchaseorder = new Purchaseorder(sdkConfiguration);
         this.report = new Report(sdkConfiguration);
+        this.salesorder = new Salesorder(sdkConfiguration);
         this.taxrate = new Taxrate(sdkConfiguration);
         this.transaction = new Transaction(sdkConfiguration);
+        this.trialbalance = new Trialbalance(sdkConfiguration);
         this.ats = new Ats(sdkConfiguration);
         this.activity = new Activity(sdkConfiguration);
         this.application = new Application(sdkConfiguration);
