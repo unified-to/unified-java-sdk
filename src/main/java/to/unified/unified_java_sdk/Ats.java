@@ -212,7 +212,6 @@ public class Ats {
     Ats(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create an activity
      * 
@@ -229,13 +228,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAtsActivityResponse createAtsActivity(
-            CreateAtsActivityRequest request) throws Exception {
+    public CreateAtsActivityResponse createAtsActivity(CreateAtsActivityRequest request) throws Exception {
         RequestOperation<CreateAtsActivityRequest, CreateAtsActivityResponse> operation
-              = new CreateAtsActivityOperation( sdkConfiguration);
+              = new CreateAtsActivityOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create an application
@@ -253,13 +250,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAtsApplicationResponse createAtsApplication(
-            CreateAtsApplicationRequest request) throws Exception {
+    public CreateAtsApplicationResponse createAtsApplication(CreateAtsApplicationRequest request) throws Exception {
         RequestOperation<CreateAtsApplicationRequest, CreateAtsApplicationResponse> operation
-              = new CreateAtsApplicationOperation( sdkConfiguration);
+              = new CreateAtsApplicationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a candidate
@@ -277,13 +272,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAtsCandidateResponse createAtsCandidate(
-            CreateAtsCandidateRequest request) throws Exception {
+    public CreateAtsCandidateResponse createAtsCandidate(CreateAtsCandidateRequest request) throws Exception {
         RequestOperation<CreateAtsCandidateRequest, CreateAtsCandidateResponse> operation
-              = new CreateAtsCandidateOperation( sdkConfiguration);
+              = new CreateAtsCandidateOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a company
@@ -301,13 +294,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAtsCompanyResponse createAtsCompany(
-            CreateAtsCompanyRequest request) throws Exception {
+    public CreateAtsCompanyResponse createAtsCompany(CreateAtsCompanyRequest request) throws Exception {
         RequestOperation<CreateAtsCompanyRequest, CreateAtsCompanyResponse> operation
-              = new CreateAtsCompanyOperation( sdkConfiguration);
+              = new CreateAtsCompanyOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a document
@@ -325,13 +316,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAtsDocumentResponse createAtsDocument(
-            CreateAtsDocumentRequest request) throws Exception {
+    public CreateAtsDocumentResponse createAtsDocument(CreateAtsDocumentRequest request) throws Exception {
         RequestOperation<CreateAtsDocumentRequest, CreateAtsDocumentResponse> operation
-              = new CreateAtsDocumentOperation( sdkConfiguration);
+              = new CreateAtsDocumentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create an interview
@@ -349,13 +338,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAtsInterviewResponse createAtsInterview(
-            CreateAtsInterviewRequest request) throws Exception {
+    public CreateAtsInterviewResponse createAtsInterview(CreateAtsInterviewRequest request) throws Exception {
         RequestOperation<CreateAtsInterviewRequest, CreateAtsInterviewResponse> operation
-              = new CreateAtsInterviewOperation( sdkConfiguration);
+              = new CreateAtsInterviewOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a job
@@ -373,13 +360,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAtsJobResponse createAtsJob(
-            CreateAtsJobRequest request) throws Exception {
+    public CreateAtsJobResponse createAtsJob(CreateAtsJobRequest request) throws Exception {
         RequestOperation<CreateAtsJobRequest, CreateAtsJobResponse> operation
-              = new CreateAtsJobOperation( sdkConfiguration);
+              = new CreateAtsJobOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a scorecard
@@ -397,13 +382,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAtsScorecardResponse createAtsScorecard(
-            CreateAtsScorecardRequest request) throws Exception {
+    public CreateAtsScorecardResponse createAtsScorecard(CreateAtsScorecardRequest request) throws Exception {
         RequestOperation<CreateAtsScorecardRequest, CreateAtsScorecardResponse> operation
-              = new CreateAtsScorecardOperation( sdkConfiguration);
+              = new CreateAtsScorecardOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve an activity
@@ -421,13 +404,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAtsActivityResponse getAtsActivity(
-            GetAtsActivityRequest request) throws Exception {
+    public GetAtsActivityResponse getAtsActivity(GetAtsActivityRequest request) throws Exception {
         RequestOperation<GetAtsActivityRequest, GetAtsActivityResponse> operation
-              = new GetAtsActivityOperation( sdkConfiguration);
+              = new GetAtsActivityOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve an application
@@ -445,13 +426,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAtsApplicationResponse getAtsApplication(
-            GetAtsApplicationRequest request) throws Exception {
+    public GetAtsApplicationResponse getAtsApplication(GetAtsApplicationRequest request) throws Exception {
         RequestOperation<GetAtsApplicationRequest, GetAtsApplicationResponse> operation
-              = new GetAtsApplicationOperation( sdkConfiguration);
+              = new GetAtsApplicationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a candidate
@@ -469,13 +448,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAtsCandidateResponse getAtsCandidate(
-            GetAtsCandidateRequest request) throws Exception {
+    public GetAtsCandidateResponse getAtsCandidate(GetAtsCandidateRequest request) throws Exception {
         RequestOperation<GetAtsCandidateRequest, GetAtsCandidateResponse> operation
-              = new GetAtsCandidateOperation( sdkConfiguration);
+              = new GetAtsCandidateOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a company
@@ -493,13 +470,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAtsCompanyResponse getAtsCompany(
-            GetAtsCompanyRequest request) throws Exception {
+    public GetAtsCompanyResponse getAtsCompany(GetAtsCompanyRequest request) throws Exception {
         RequestOperation<GetAtsCompanyRequest, GetAtsCompanyResponse> operation
-              = new GetAtsCompanyOperation( sdkConfiguration);
+              = new GetAtsCompanyOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a document
@@ -517,13 +492,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAtsDocumentResponse getAtsDocument(
-            GetAtsDocumentRequest request) throws Exception {
+    public GetAtsDocumentResponse getAtsDocument(GetAtsDocumentRequest request) throws Exception {
         RequestOperation<GetAtsDocumentRequest, GetAtsDocumentResponse> operation
-              = new GetAtsDocumentOperation( sdkConfiguration);
+              = new GetAtsDocumentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve an interview
@@ -541,13 +514,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAtsInterviewResponse getAtsInterview(
-            GetAtsInterviewRequest request) throws Exception {
+    public GetAtsInterviewResponse getAtsInterview(GetAtsInterviewRequest request) throws Exception {
         RequestOperation<GetAtsInterviewRequest, GetAtsInterviewResponse> operation
-              = new GetAtsInterviewOperation( sdkConfiguration);
+              = new GetAtsInterviewOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a job
@@ -565,13 +536,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAtsJobResponse getAtsJob(
-            GetAtsJobRequest request) throws Exception {
+    public GetAtsJobResponse getAtsJob(GetAtsJobRequest request) throws Exception {
         RequestOperation<GetAtsJobRequest, GetAtsJobResponse> operation
-              = new GetAtsJobOperation( sdkConfiguration);
+              = new GetAtsJobOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a scorecard
@@ -589,13 +558,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAtsScorecardResponse getAtsScorecard(
-            GetAtsScorecardRequest request) throws Exception {
+    public GetAtsScorecardResponse getAtsScorecard(GetAtsScorecardRequest request) throws Exception {
         RequestOperation<GetAtsScorecardRequest, GetAtsScorecardResponse> operation
-              = new GetAtsScorecardOperation( sdkConfiguration);
+              = new GetAtsScorecardOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all activities
@@ -613,13 +580,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAtsActivitiesResponse listAtsActivities(
-            ListAtsActivitiesRequest request) throws Exception {
+    public ListAtsActivitiesResponse listAtsActivities(ListAtsActivitiesRequest request) throws Exception {
         RequestOperation<ListAtsActivitiesRequest, ListAtsActivitiesResponse> operation
-              = new ListAtsActivitiesOperation( sdkConfiguration);
+              = new ListAtsActivitiesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all applications
@@ -637,13 +602,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAtsApplicationsResponse listAtsApplications(
-            ListAtsApplicationsRequest request) throws Exception {
+    public ListAtsApplicationsResponse listAtsApplications(ListAtsApplicationsRequest request) throws Exception {
         RequestOperation<ListAtsApplicationsRequest, ListAtsApplicationsResponse> operation
-              = new ListAtsApplicationsOperation( sdkConfiguration);
+              = new ListAtsApplicationsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all applicationstatuses
@@ -661,13 +624,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAtsApplicationstatusesResponse listAtsApplicationstatuses(
-            ListAtsApplicationstatusesRequest request) throws Exception {
+    public ListAtsApplicationstatusesResponse listAtsApplicationstatuses(ListAtsApplicationstatusesRequest request) throws Exception {
         RequestOperation<ListAtsApplicationstatusesRequest, ListAtsApplicationstatusesResponse> operation
-              = new ListAtsApplicationstatusesOperation( sdkConfiguration);
+              = new ListAtsApplicationstatusesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all candidates
@@ -685,13 +646,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAtsCandidatesResponse listAtsCandidates(
-            ListAtsCandidatesRequest request) throws Exception {
+    public ListAtsCandidatesResponse listAtsCandidates(ListAtsCandidatesRequest request) throws Exception {
         RequestOperation<ListAtsCandidatesRequest, ListAtsCandidatesResponse> operation
-              = new ListAtsCandidatesOperation( sdkConfiguration);
+              = new ListAtsCandidatesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all companies
@@ -709,13 +668,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAtsCompaniesResponse listAtsCompanies(
-            ListAtsCompaniesRequest request) throws Exception {
+    public ListAtsCompaniesResponse listAtsCompanies(ListAtsCompaniesRequest request) throws Exception {
         RequestOperation<ListAtsCompaniesRequest, ListAtsCompaniesResponse> operation
-              = new ListAtsCompaniesOperation( sdkConfiguration);
+              = new ListAtsCompaniesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all documents
@@ -733,13 +690,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAtsDocumentsResponse listAtsDocuments(
-            ListAtsDocumentsRequest request) throws Exception {
+    public ListAtsDocumentsResponse listAtsDocuments(ListAtsDocumentsRequest request) throws Exception {
         RequestOperation<ListAtsDocumentsRequest, ListAtsDocumentsResponse> operation
-              = new ListAtsDocumentsOperation( sdkConfiguration);
+              = new ListAtsDocumentsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all interviews
@@ -757,13 +712,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAtsInterviewsResponse listAtsInterviews(
-            ListAtsInterviewsRequest request) throws Exception {
+    public ListAtsInterviewsResponse listAtsInterviews(ListAtsInterviewsRequest request) throws Exception {
         RequestOperation<ListAtsInterviewsRequest, ListAtsInterviewsResponse> operation
-              = new ListAtsInterviewsOperation( sdkConfiguration);
+              = new ListAtsInterviewsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all jobs
@@ -781,13 +734,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAtsJobsResponse listAtsJobs(
-            ListAtsJobsRequest request) throws Exception {
+    public ListAtsJobsResponse listAtsJobs(ListAtsJobsRequest request) throws Exception {
         RequestOperation<ListAtsJobsRequest, ListAtsJobsResponse> operation
-              = new ListAtsJobsOperation( sdkConfiguration);
+              = new ListAtsJobsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all scorecards
@@ -805,13 +756,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAtsScorecardsResponse listAtsScorecards(
-            ListAtsScorecardsRequest request) throws Exception {
+    public ListAtsScorecardsResponse listAtsScorecards(ListAtsScorecardsRequest request) throws Exception {
         RequestOperation<ListAtsScorecardsRequest, ListAtsScorecardsResponse> operation
-              = new ListAtsScorecardsOperation( sdkConfiguration);
+              = new ListAtsScorecardsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an activity
@@ -829,13 +778,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAtsActivityResponse patchAtsActivity(
-            PatchAtsActivityRequest request) throws Exception {
+    public PatchAtsActivityResponse patchAtsActivity(PatchAtsActivityRequest request) throws Exception {
         RequestOperation<PatchAtsActivityRequest, PatchAtsActivityResponse> operation
-              = new PatchAtsActivityOperation( sdkConfiguration);
+              = new PatchAtsActivityOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an application
@@ -853,13 +800,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAtsApplicationResponse patchAtsApplication(
-            PatchAtsApplicationRequest request) throws Exception {
+    public PatchAtsApplicationResponse patchAtsApplication(PatchAtsApplicationRequest request) throws Exception {
         RequestOperation<PatchAtsApplicationRequest, PatchAtsApplicationResponse> operation
-              = new PatchAtsApplicationOperation( sdkConfiguration);
+              = new PatchAtsApplicationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a candidate
@@ -877,13 +822,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAtsCandidateResponse patchAtsCandidate(
-            PatchAtsCandidateRequest request) throws Exception {
+    public PatchAtsCandidateResponse patchAtsCandidate(PatchAtsCandidateRequest request) throws Exception {
         RequestOperation<PatchAtsCandidateRequest, PatchAtsCandidateResponse> operation
-              = new PatchAtsCandidateOperation( sdkConfiguration);
+              = new PatchAtsCandidateOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a company
@@ -901,13 +844,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAtsCompanyResponse patchAtsCompany(
-            PatchAtsCompanyRequest request) throws Exception {
+    public PatchAtsCompanyResponse patchAtsCompany(PatchAtsCompanyRequest request) throws Exception {
         RequestOperation<PatchAtsCompanyRequest, PatchAtsCompanyResponse> operation
-              = new PatchAtsCompanyOperation( sdkConfiguration);
+              = new PatchAtsCompanyOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a document
@@ -925,13 +866,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAtsDocumentResponse patchAtsDocument(
-            PatchAtsDocumentRequest request) throws Exception {
+    public PatchAtsDocumentResponse patchAtsDocument(PatchAtsDocumentRequest request) throws Exception {
         RequestOperation<PatchAtsDocumentRequest, PatchAtsDocumentResponse> operation
-              = new PatchAtsDocumentOperation( sdkConfiguration);
+              = new PatchAtsDocumentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an interview
@@ -949,13 +888,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAtsInterviewResponse patchAtsInterview(
-            PatchAtsInterviewRequest request) throws Exception {
+    public PatchAtsInterviewResponse patchAtsInterview(PatchAtsInterviewRequest request) throws Exception {
         RequestOperation<PatchAtsInterviewRequest, PatchAtsInterviewResponse> operation
-              = new PatchAtsInterviewOperation( sdkConfiguration);
+              = new PatchAtsInterviewOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a job
@@ -973,13 +910,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAtsJobResponse patchAtsJob(
-            PatchAtsJobRequest request) throws Exception {
+    public PatchAtsJobResponse patchAtsJob(PatchAtsJobRequest request) throws Exception {
         RequestOperation<PatchAtsJobRequest, PatchAtsJobResponse> operation
-              = new PatchAtsJobOperation( sdkConfiguration);
+              = new PatchAtsJobOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a scorecard
@@ -997,13 +932,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAtsScorecardResponse patchAtsScorecard(
-            PatchAtsScorecardRequest request) throws Exception {
+    public PatchAtsScorecardResponse patchAtsScorecard(PatchAtsScorecardRequest request) throws Exception {
         RequestOperation<PatchAtsScorecardRequest, PatchAtsScorecardResponse> operation
-              = new PatchAtsScorecardOperation( sdkConfiguration);
+              = new PatchAtsScorecardOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove an activity
@@ -1021,13 +954,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAtsActivityResponse removeAtsActivity(
-            RemoveAtsActivityRequest request) throws Exception {
+    public RemoveAtsActivityResponse removeAtsActivity(RemoveAtsActivityRequest request) throws Exception {
         RequestOperation<RemoveAtsActivityRequest, RemoveAtsActivityResponse> operation
-              = new RemoveAtsActivityOperation( sdkConfiguration);
+              = new RemoveAtsActivityOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove an application
@@ -1045,13 +976,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAtsApplicationResponse removeAtsApplication(
-            RemoveAtsApplicationRequest request) throws Exception {
+    public RemoveAtsApplicationResponse removeAtsApplication(RemoveAtsApplicationRequest request) throws Exception {
         RequestOperation<RemoveAtsApplicationRequest, RemoveAtsApplicationResponse> operation
-              = new RemoveAtsApplicationOperation( sdkConfiguration);
+              = new RemoveAtsApplicationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a candidate
@@ -1069,13 +998,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAtsCandidateResponse removeAtsCandidate(
-            RemoveAtsCandidateRequest request) throws Exception {
+    public RemoveAtsCandidateResponse removeAtsCandidate(RemoveAtsCandidateRequest request) throws Exception {
         RequestOperation<RemoveAtsCandidateRequest, RemoveAtsCandidateResponse> operation
-              = new RemoveAtsCandidateOperation( sdkConfiguration);
+              = new RemoveAtsCandidateOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a company
@@ -1093,13 +1020,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAtsCompanyResponse removeAtsCompany(
-            RemoveAtsCompanyRequest request) throws Exception {
+    public RemoveAtsCompanyResponse removeAtsCompany(RemoveAtsCompanyRequest request) throws Exception {
         RequestOperation<RemoveAtsCompanyRequest, RemoveAtsCompanyResponse> operation
-              = new RemoveAtsCompanyOperation( sdkConfiguration);
+              = new RemoveAtsCompanyOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a document
@@ -1117,13 +1042,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAtsDocumentResponse removeAtsDocument(
-            RemoveAtsDocumentRequest request) throws Exception {
+    public RemoveAtsDocumentResponse removeAtsDocument(RemoveAtsDocumentRequest request) throws Exception {
         RequestOperation<RemoveAtsDocumentRequest, RemoveAtsDocumentResponse> operation
-              = new RemoveAtsDocumentOperation( sdkConfiguration);
+              = new RemoveAtsDocumentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove an interview
@@ -1141,13 +1064,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAtsInterviewResponse removeAtsInterview(
-            RemoveAtsInterviewRequest request) throws Exception {
+    public RemoveAtsInterviewResponse removeAtsInterview(RemoveAtsInterviewRequest request) throws Exception {
         RequestOperation<RemoveAtsInterviewRequest, RemoveAtsInterviewResponse> operation
-              = new RemoveAtsInterviewOperation( sdkConfiguration);
+              = new RemoveAtsInterviewOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a job
@@ -1165,13 +1086,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAtsJobResponse removeAtsJob(
-            RemoveAtsJobRequest request) throws Exception {
+    public RemoveAtsJobResponse removeAtsJob(RemoveAtsJobRequest request) throws Exception {
         RequestOperation<RemoveAtsJobRequest, RemoveAtsJobResponse> operation
-              = new RemoveAtsJobOperation( sdkConfiguration);
+              = new RemoveAtsJobOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a scorecard
@@ -1189,13 +1108,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAtsScorecardResponse removeAtsScorecard(
-            RemoveAtsScorecardRequest request) throws Exception {
+    public RemoveAtsScorecardResponse removeAtsScorecard(RemoveAtsScorecardRequest request) throws Exception {
         RequestOperation<RemoveAtsScorecardRequest, RemoveAtsScorecardResponse> operation
-              = new RemoveAtsScorecardOperation( sdkConfiguration);
+              = new RemoveAtsScorecardOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an activity
@@ -1213,13 +1130,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAtsActivityResponse updateAtsActivity(
-            UpdateAtsActivityRequest request) throws Exception {
+    public UpdateAtsActivityResponse updateAtsActivity(UpdateAtsActivityRequest request) throws Exception {
         RequestOperation<UpdateAtsActivityRequest, UpdateAtsActivityResponse> operation
-              = new UpdateAtsActivityOperation( sdkConfiguration);
+              = new UpdateAtsActivityOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an application
@@ -1237,13 +1152,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAtsApplicationResponse updateAtsApplication(
-            UpdateAtsApplicationRequest request) throws Exception {
+    public UpdateAtsApplicationResponse updateAtsApplication(UpdateAtsApplicationRequest request) throws Exception {
         RequestOperation<UpdateAtsApplicationRequest, UpdateAtsApplicationResponse> operation
-              = new UpdateAtsApplicationOperation( sdkConfiguration);
+              = new UpdateAtsApplicationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a candidate
@@ -1261,13 +1174,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAtsCandidateResponse updateAtsCandidate(
-            UpdateAtsCandidateRequest request) throws Exception {
+    public UpdateAtsCandidateResponse updateAtsCandidate(UpdateAtsCandidateRequest request) throws Exception {
         RequestOperation<UpdateAtsCandidateRequest, UpdateAtsCandidateResponse> operation
-              = new UpdateAtsCandidateOperation( sdkConfiguration);
+              = new UpdateAtsCandidateOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a company
@@ -1285,13 +1196,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAtsCompanyResponse updateAtsCompany(
-            UpdateAtsCompanyRequest request) throws Exception {
+    public UpdateAtsCompanyResponse updateAtsCompany(UpdateAtsCompanyRequest request) throws Exception {
         RequestOperation<UpdateAtsCompanyRequest, UpdateAtsCompanyResponse> operation
-              = new UpdateAtsCompanyOperation( sdkConfiguration);
+              = new UpdateAtsCompanyOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a document
@@ -1309,13 +1218,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAtsDocumentResponse updateAtsDocument(
-            UpdateAtsDocumentRequest request) throws Exception {
+    public UpdateAtsDocumentResponse updateAtsDocument(UpdateAtsDocumentRequest request) throws Exception {
         RequestOperation<UpdateAtsDocumentRequest, UpdateAtsDocumentResponse> operation
-              = new UpdateAtsDocumentOperation( sdkConfiguration);
+              = new UpdateAtsDocumentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an interview
@@ -1333,13 +1240,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAtsInterviewResponse updateAtsInterview(
-            UpdateAtsInterviewRequest request) throws Exception {
+    public UpdateAtsInterviewResponse updateAtsInterview(UpdateAtsInterviewRequest request) throws Exception {
         RequestOperation<UpdateAtsInterviewRequest, UpdateAtsInterviewResponse> operation
-              = new UpdateAtsInterviewOperation( sdkConfiguration);
+              = new UpdateAtsInterviewOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a job
@@ -1357,13 +1262,11 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAtsJobResponse updateAtsJob(
-            UpdateAtsJobRequest request) throws Exception {
+    public UpdateAtsJobResponse updateAtsJob(UpdateAtsJobRequest request) throws Exception {
         RequestOperation<UpdateAtsJobRequest, UpdateAtsJobResponse> operation
-              = new UpdateAtsJobOperation( sdkConfiguration);
+              = new UpdateAtsJobOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a scorecard
@@ -1381,10 +1284,9 @@ public class Ats {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAtsScorecardResponse updateAtsScorecard(
-            UpdateAtsScorecardRequest request) throws Exception {
+    public UpdateAtsScorecardResponse updateAtsScorecard(UpdateAtsScorecardRequest request) throws Exception {
         RequestOperation<UpdateAtsScorecardRequest, UpdateAtsScorecardResponse> operation
-              = new UpdateAtsScorecardOperation( sdkConfiguration);
+              = new UpdateAtsScorecardOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

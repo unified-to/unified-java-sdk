@@ -18,39 +18,48 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class LmsInstructor {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
     private Optional<? extends List<LmsEmail>> emails;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_url")
     private Optional<String> imageUrl;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephones")
     private Optional<? extends List<LmsTelephone>> telephones;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     private Optional<String> title;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -88,7 +97,9 @@ public class LmsInstructor {
     }
     
     public LmsInstructor() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -139,15 +150,17 @@ public class LmsInstructor {
         return updatedAt;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public LmsInstructor withCreatedAt(OffsetDateTime createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public LmsInstructor withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -161,6 +174,7 @@ public class LmsInstructor {
         return this;
     }
 
+
     public LmsInstructor withEmails(Optional<? extends List<LmsEmail>> emails) {
         Utils.checkNotNull(emails, "emails");
         this.emails = emails;
@@ -172,6 +186,7 @@ public class LmsInstructor {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public LmsInstructor withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -185,6 +200,7 @@ public class LmsInstructor {
         return this;
     }
 
+
     public LmsInstructor withImageUrl(Optional<String> imageUrl) {
         Utils.checkNotNull(imageUrl, "imageUrl");
         this.imageUrl = imageUrl;
@@ -196,6 +212,7 @@ public class LmsInstructor {
         this.name = Optional.ofNullable(name);
         return this;
     }
+
 
     public LmsInstructor withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
@@ -209,6 +226,7 @@ public class LmsInstructor {
         return this;
     }
 
+
     public LmsInstructor withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
@@ -220,6 +238,7 @@ public class LmsInstructor {
         this.telephones = Optional.ofNullable(telephones);
         return this;
     }
+
 
     public LmsInstructor withTelephones(Optional<? extends List<LmsTelephone>> telephones) {
         Utils.checkNotNull(telephones, "telephones");
@@ -233,6 +252,7 @@ public class LmsInstructor {
         return this;
     }
 
+
     public LmsInstructor withTitle(Optional<String> title) {
         Utils.checkNotNull(title, "title");
         this.title = title;
@@ -245,13 +265,13 @@ public class LmsInstructor {
         return this;
     }
 
+
     public LmsInstructor withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -276,15 +296,9 @@ public class LmsInstructor {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt,
-            emails,
-            id,
-            imageUrl,
-            name,
-            raw,
-            telephones,
-            title,
-            updatedAt);
+            createdAt, emails, id,
+            imageUrl, name, raw,
+            telephones, title, updatedAt);
     }
     
     @Override
@@ -300,30 +314,32 @@ public class LmsInstructor {
                 "title", title,
                 "updatedAt", updatedAt);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<? extends List<LmsEmail>> emails = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> imageUrl = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<? extends List<LmsTelephone>> telephones = Optional.empty();
- 
+
         private Optional<String> title = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -337,6 +353,7 @@ public class LmsInstructor {
             return this;
         }
 
+
         public Builder emails(List<LmsEmail> emails) {
             Utils.checkNotNull(emails, "emails");
             this.emails = Optional.ofNullable(emails);
@@ -348,6 +365,7 @@ public class LmsInstructor {
             this.emails = emails;
             return this;
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -361,6 +379,7 @@ public class LmsInstructor {
             return this;
         }
 
+
         public Builder imageUrl(String imageUrl) {
             Utils.checkNotNull(imageUrl, "imageUrl");
             this.imageUrl = Optional.ofNullable(imageUrl);
@@ -372,6 +391,7 @@ public class LmsInstructor {
             this.imageUrl = imageUrl;
             return this;
         }
+
 
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
@@ -385,6 +405,7 @@ public class LmsInstructor {
             return this;
         }
 
+
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
@@ -396,6 +417,7 @@ public class LmsInstructor {
             this.raw = raw;
             return this;
         }
+
 
         public Builder telephones(List<LmsTelephone> telephones) {
             Utils.checkNotNull(telephones, "telephones");
@@ -409,6 +431,7 @@ public class LmsInstructor {
             return this;
         }
 
+
         public Builder title(String title) {
             Utils.checkNotNull(title, "title");
             this.title = Optional.ofNullable(title);
@@ -421,6 +444,7 @@ public class LmsInstructor {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -432,18 +456,14 @@ public class LmsInstructor {
             this.updatedAt = updatedAt;
             return this;
         }
-        
+
         public LmsInstructor build() {
+
             return new LmsInstructor(
-                createdAt,
-                emails,
-                id,
-                imageUrl,
-                name,
-                raw,
-                telephones,
-                title,
-                updatedAt);
+                createdAt, emails, id,
+                imageUrl, name, raw,
+                telephones, title, updatedAt);
         }
+
     }
 }

@@ -28,7 +28,7 @@ public class ListHrisDevicesRequestBuilder {
     public ListHrisDevicesResponse call() throws Exception {
         
         RequestOperation<ListHrisDevicesRequest, ListHrisDevicesResponse> operation
-              = new ListHrisDevicesOperation( sdkConfiguration);
+              = new ListHrisDevicesOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

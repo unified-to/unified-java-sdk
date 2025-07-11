@@ -19,35 +19,43 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AccountingTaxrate {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private Optional<String> description;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     private Optional<Boolean> isActive;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate")
     private Optional<Double> rate;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -82,7 +90,9 @@ public class AccountingTaxrate {
     }
     
     public AccountingTaxrate() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -126,15 +136,17 @@ public class AccountingTaxrate {
         return updatedAt;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AccountingTaxrate withCreatedAt(OffsetDateTime createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public AccountingTaxrate withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -148,6 +160,7 @@ public class AccountingTaxrate {
         return this;
     }
 
+
     public AccountingTaxrate withDescription(Optional<String> description) {
         Utils.checkNotNull(description, "description");
         this.description = description;
@@ -159,6 +172,7 @@ public class AccountingTaxrate {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public AccountingTaxrate withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -172,6 +186,7 @@ public class AccountingTaxrate {
         return this;
     }
 
+
     public AccountingTaxrate withIsActive(Optional<Boolean> isActive) {
         Utils.checkNotNull(isActive, "isActive");
         this.isActive = isActive;
@@ -183,6 +198,7 @@ public class AccountingTaxrate {
         this.name = Optional.ofNullable(name);
         return this;
     }
+
 
     public AccountingTaxrate withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
@@ -196,6 +212,7 @@ public class AccountingTaxrate {
         return this;
     }
 
+
     public AccountingTaxrate withRate(Optional<Double> rate) {
         Utils.checkNotNull(rate, "rate");
         this.rate = rate;
@@ -207,6 +224,7 @@ public class AccountingTaxrate {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public AccountingTaxrate withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -220,13 +238,13 @@ public class AccountingTaxrate {
         return this;
     }
 
+
     public AccountingTaxrate withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -250,14 +268,9 @@ public class AccountingTaxrate {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt,
-            description,
-            id,
-            isActive,
-            name,
-            rate,
-            raw,
-            updatedAt);
+            createdAt, description, id,
+            isActive, name, rate,
+            raw, updatedAt);
     }
     
     @Override
@@ -272,28 +285,30 @@ public class AccountingTaxrate {
                 "raw", raw,
                 "updatedAt", updatedAt);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> description = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<Boolean> isActive = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<Double> rate = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -307,6 +322,7 @@ public class AccountingTaxrate {
             return this;
         }
 
+
         public Builder description(String description) {
             Utils.checkNotNull(description, "description");
             this.description = Optional.ofNullable(description);
@@ -318,6 +334,7 @@ public class AccountingTaxrate {
             this.description = description;
             return this;
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -331,6 +348,7 @@ public class AccountingTaxrate {
             return this;
         }
 
+
         public Builder isActive(boolean isActive) {
             Utils.checkNotNull(isActive, "isActive");
             this.isActive = Optional.ofNullable(isActive);
@@ -342,6 +360,7 @@ public class AccountingTaxrate {
             this.isActive = isActive;
             return this;
         }
+
 
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
@@ -355,6 +374,7 @@ public class AccountingTaxrate {
             return this;
         }
 
+
         public Builder rate(double rate) {
             Utils.checkNotNull(rate, "rate");
             this.rate = Optional.ofNullable(rate);
@@ -366,6 +386,7 @@ public class AccountingTaxrate {
             this.rate = rate;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -379,6 +400,7 @@ public class AccountingTaxrate {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -390,17 +412,14 @@ public class AccountingTaxrate {
             this.updatedAt = updatedAt;
             return this;
         }
-        
+
         public AccountingTaxrate build() {
+
             return new AccountingTaxrate(
-                createdAt,
-                description,
-                id,
-                isActive,
-                name,
-                rate,
-                raw,
-                updatedAt);
+                createdAt, description, id,
+                isActive, name, rate,
+                raw, updatedAt);
         }
+
     }
 }

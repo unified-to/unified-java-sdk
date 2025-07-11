@@ -33,70 +33,88 @@ public class Webhook {
     @JsonProperty("checked_at")
     private Optional<OffsetDateTime> checkedAt;
 
+
     @JsonProperty("connection_id")
     private String connectionId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("db_name_prefix")
     private Optional<String> dbNamePrefix;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("db_type")
     private Optional<? extends DbType> dbType;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("db_url")
     private Optional<String> dbUrl;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     private Optional<String> environment;
 
+
     @JsonProperty("event")
     private Event event;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     private Optional<String> fields;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     private Optional<? extends Map<String, Object>> filters;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hook_url")
     private Optional<String> hookUrl;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integration_type")
     private Optional<String> integrationType;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interval")
     private Optional<Double> interval;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_healthy")
     private Optional<Boolean> isHealthy;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_paused")
     private Optional<Boolean> isPaused;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     private Optional<? extends Map<String, Object>> meta;
 
+
     @JsonProperty("object_type")
     private ObjectType objectType;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page_max_limit")
@@ -109,13 +127,16 @@ public class Webhook {
     @JsonProperty("runs")
     private Optional<? extends List<String>> runs;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhook_type")
     private Optional<? extends WebhookType> webhookType;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspace_id")
@@ -198,7 +219,14 @@ public class Webhook {
             String connectionId,
             Event event,
             ObjectType objectType) {
-        this(Optional.empty(), connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), event, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), objectType, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), connectionId, Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), event, Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), objectType,
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -324,15 +352,17 @@ public class Webhook {
         return workspaceId;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public Webhook withCheckedAt(OffsetDateTime checkedAt) {
         Utils.checkNotNull(checkedAt, "checkedAt");
         this.checkedAt = Optional.ofNullable(checkedAt);
         return this;
     }
+
 
     public Webhook withCheckedAt(Optional<OffsetDateTime> checkedAt) {
         Utils.checkNotNull(checkedAt, "checkedAt");
@@ -352,6 +382,7 @@ public class Webhook {
         return this;
     }
 
+
     public Webhook withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
@@ -363,6 +394,7 @@ public class Webhook {
         this.dbNamePrefix = Optional.ofNullable(dbNamePrefix);
         return this;
     }
+
 
     public Webhook withDbNamePrefix(Optional<String> dbNamePrefix) {
         Utils.checkNotNull(dbNamePrefix, "dbNamePrefix");
@@ -376,6 +408,7 @@ public class Webhook {
         return this;
     }
 
+
     public Webhook withDbType(Optional<? extends DbType> dbType) {
         Utils.checkNotNull(dbType, "dbType");
         this.dbType = dbType;
@@ -388,6 +421,7 @@ public class Webhook {
         return this;
     }
 
+
     public Webhook withDbUrl(Optional<String> dbUrl) {
         Utils.checkNotNull(dbUrl, "dbUrl");
         this.dbUrl = dbUrl;
@@ -399,6 +433,7 @@ public class Webhook {
         this.environment = Optional.ofNullable(environment);
         return this;
     }
+
 
     public Webhook withEnvironment(Optional<String> environment) {
         Utils.checkNotNull(environment, "environment");
@@ -418,6 +453,7 @@ public class Webhook {
         return this;
     }
 
+
     public Webhook withFields(Optional<String> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
@@ -429,6 +465,7 @@ public class Webhook {
         this.filters = Optional.ofNullable(filters);
         return this;
     }
+
 
     public Webhook withFilters(Optional<? extends Map<String, Object>> filters) {
         Utils.checkNotNull(filters, "filters");
@@ -442,6 +479,7 @@ public class Webhook {
         return this;
     }
 
+
     public Webhook withHookUrl(Optional<String> hookUrl) {
         Utils.checkNotNull(hookUrl, "hookUrl");
         this.hookUrl = hookUrl;
@@ -453,6 +491,7 @@ public class Webhook {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public Webhook withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -466,6 +505,7 @@ public class Webhook {
         return this;
     }
 
+
     public Webhook withIntegrationType(Optional<String> integrationType) {
         Utils.checkNotNull(integrationType, "integrationType");
         this.integrationType = integrationType;
@@ -477,6 +517,7 @@ public class Webhook {
         this.interval = Optional.ofNullable(interval);
         return this;
     }
+
 
     public Webhook withInterval(Optional<Double> interval) {
         Utils.checkNotNull(interval, "interval");
@@ -490,6 +531,7 @@ public class Webhook {
         return this;
     }
 
+
     public Webhook withIsHealthy(Optional<Boolean> isHealthy) {
         Utils.checkNotNull(isHealthy, "isHealthy");
         this.isHealthy = isHealthy;
@@ -502,6 +544,7 @@ public class Webhook {
         return this;
     }
 
+
     public Webhook withIsPaused(Optional<Boolean> isPaused) {
         Utils.checkNotNull(isPaused, "isPaused");
         this.isPaused = isPaused;
@@ -513,6 +556,7 @@ public class Webhook {
         this.meta = Optional.ofNullable(meta);
         return this;
     }
+
 
     public Webhook withMeta(Optional<? extends Map<String, Object>> meta) {
         Utils.checkNotNull(meta, "meta");
@@ -532,6 +576,7 @@ public class Webhook {
         return this;
     }
 
+
     public Webhook withPageMaxLimit(Optional<Double> pageMaxLimit) {
         Utils.checkNotNull(pageMaxLimit, "pageMaxLimit");
         this.pageMaxLimit = pageMaxLimit;
@@ -546,6 +591,7 @@ public class Webhook {
         this.runs = Optional.ofNullable(runs);
         return this;
     }
+
 
     /**
      * An array of the most revent virtual webhook runs
@@ -562,6 +608,7 @@ public class Webhook {
         return this;
     }
 
+
     public Webhook withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
@@ -573,6 +620,7 @@ public class Webhook {
         this.webhookType = Optional.ofNullable(webhookType);
         return this;
     }
+
 
     public Webhook withWebhookType(Optional<? extends WebhookType> webhookType) {
         Utils.checkNotNull(webhookType, "webhookType");
@@ -586,13 +634,13 @@ public class Webhook {
         return this;
     }
 
+
     public Webhook withWorkspaceId(Optional<String> workspaceId) {
         Utils.checkNotNull(workspaceId, "workspaceId");
         this.workspaceId = workspaceId;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -631,29 +679,14 @@ public class Webhook {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            checkedAt,
-            connectionId,
-            createdAt,
-            dbNamePrefix,
-            dbType,
-            dbUrl,
-            environment,
-            event,
-            fields,
-            filters,
-            hookUrl,
-            id,
-            integrationType,
-            interval,
-            isHealthy,
-            isPaused,
-            meta,
-            objectType,
-            pageMaxLimit,
-            runs,
-            updatedAt,
-            webhookType,
-            workspaceId);
+            checkedAt, connectionId, createdAt,
+            dbNamePrefix, dbType, dbUrl,
+            environment, event, fields,
+            filters, hookUrl, id,
+            integrationType, interval, isHealthy,
+            isPaused, meta, objectType,
+            pageMaxLimit, runs, updatedAt,
+            webhookType, workspaceId);
     }
     
     @Override
@@ -683,58 +716,60 @@ public class Webhook {
                 "webhookType", webhookType,
                 "workspaceId", workspaceId);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<OffsetDateTime> checkedAt = Optional.empty();
- 
+
         private String connectionId;
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> dbNamePrefix = Optional.empty();
- 
+
         private Optional<? extends DbType> dbType = Optional.empty();
- 
+
         private Optional<String> dbUrl = Optional.empty();
- 
+
         private Optional<String> environment;
- 
+
         private Event event;
- 
+
         private Optional<String> fields = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> filters = Optional.empty();
- 
+
         private Optional<String> hookUrl = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> integrationType = Optional.empty();
- 
+
         private Optional<Double> interval = Optional.empty();
- 
+
         private Optional<Boolean> isHealthy = Optional.empty();
- 
+
         private Optional<Boolean> isPaused = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> meta = Optional.empty();
- 
+
         private ObjectType objectType;
- 
+
         private Optional<Double> pageMaxLimit = Optional.empty();
- 
+
         private Optional<? extends List<String>> runs = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<? extends WebhookType> webhookType = Optional.empty();
- 
+
         private Optional<String> workspaceId = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder checkedAt(OffsetDateTime checkedAt) {
             Utils.checkNotNull(checkedAt, "checkedAt");
@@ -748,11 +783,13 @@ public class Webhook {
             return this;
         }
 
+
         public Builder connectionId(String connectionId) {
             Utils.checkNotNull(connectionId, "connectionId");
             this.connectionId = connectionId;
             return this;
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -766,6 +803,7 @@ public class Webhook {
             return this;
         }
 
+
         public Builder dbNamePrefix(String dbNamePrefix) {
             Utils.checkNotNull(dbNamePrefix, "dbNamePrefix");
             this.dbNamePrefix = Optional.ofNullable(dbNamePrefix);
@@ -777,6 +815,7 @@ public class Webhook {
             this.dbNamePrefix = dbNamePrefix;
             return this;
         }
+
 
         public Builder dbType(DbType dbType) {
             Utils.checkNotNull(dbType, "dbType");
@@ -790,6 +829,7 @@ public class Webhook {
             return this;
         }
 
+
         public Builder dbUrl(String dbUrl) {
             Utils.checkNotNull(dbUrl, "dbUrl");
             this.dbUrl = Optional.ofNullable(dbUrl);
@@ -801,6 +841,7 @@ public class Webhook {
             this.dbUrl = dbUrl;
             return this;
         }
+
 
         public Builder environment(String environment) {
             Utils.checkNotNull(environment, "environment");
@@ -814,11 +855,13 @@ public class Webhook {
             return this;
         }
 
+
         public Builder event(Event event) {
             Utils.checkNotNull(event, "event");
             this.event = event;
             return this;
         }
+
 
         public Builder fields(String fields) {
             Utils.checkNotNull(fields, "fields");
@@ -832,6 +875,7 @@ public class Webhook {
             return this;
         }
 
+
         public Builder filters(Map<String, Object> filters) {
             Utils.checkNotNull(filters, "filters");
             this.filters = Optional.ofNullable(filters);
@@ -843,6 +887,7 @@ public class Webhook {
             this.filters = filters;
             return this;
         }
+
 
         public Builder hookUrl(String hookUrl) {
             Utils.checkNotNull(hookUrl, "hookUrl");
@@ -856,6 +901,7 @@ public class Webhook {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -867,6 +913,7 @@ public class Webhook {
             this.id = id;
             return this;
         }
+
 
         public Builder integrationType(String integrationType) {
             Utils.checkNotNull(integrationType, "integrationType");
@@ -880,6 +927,7 @@ public class Webhook {
             return this;
         }
 
+
         public Builder interval(double interval) {
             Utils.checkNotNull(interval, "interval");
             this.interval = Optional.ofNullable(interval);
@@ -891,6 +939,7 @@ public class Webhook {
             this.interval = interval;
             return this;
         }
+
 
         public Builder isHealthy(boolean isHealthy) {
             Utils.checkNotNull(isHealthy, "isHealthy");
@@ -904,6 +953,7 @@ public class Webhook {
             return this;
         }
 
+
         public Builder isPaused(boolean isPaused) {
             Utils.checkNotNull(isPaused, "isPaused");
             this.isPaused = Optional.ofNullable(isPaused);
@@ -915,6 +965,7 @@ public class Webhook {
             this.isPaused = isPaused;
             return this;
         }
+
 
         public Builder meta(Map<String, Object> meta) {
             Utils.checkNotNull(meta, "meta");
@@ -928,11 +979,13 @@ public class Webhook {
             return this;
         }
 
+
         public Builder objectType(ObjectType objectType) {
             Utils.checkNotNull(objectType, "objectType");
             this.objectType = objectType;
             return this;
         }
+
 
         public Builder pageMaxLimit(double pageMaxLimit) {
             Utils.checkNotNull(pageMaxLimit, "pageMaxLimit");
@@ -945,6 +998,7 @@ public class Webhook {
             this.pageMaxLimit = pageMaxLimit;
             return this;
         }
+
 
         /**
          * An array of the most revent virtual webhook runs
@@ -964,6 +1018,7 @@ public class Webhook {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -975,6 +1030,7 @@ public class Webhook {
             this.updatedAt = updatedAt;
             return this;
         }
+
 
         public Builder webhookType(WebhookType webhookType) {
             Utils.checkNotNull(webhookType, "webhookType");
@@ -988,6 +1044,7 @@ public class Webhook {
             return this;
         }
 
+
         public Builder workspaceId(String workspaceId) {
             Utils.checkNotNull(workspaceId, "workspaceId");
             this.workspaceId = Optional.ofNullable(workspaceId);
@@ -999,36 +1056,23 @@ public class Webhook {
             this.workspaceId = workspaceId;
             return this;
         }
-        
+
         public Webhook build() {
             if (environment == null) {
                 environment = _SINGLETON_VALUE_Environment.value();
             }
+
             return new Webhook(
-                checkedAt,
-                connectionId,
-                createdAt,
-                dbNamePrefix,
-                dbType,
-                dbUrl,
-                environment,
-                event,
-                fields,
-                filters,
-                hookUrl,
-                id,
-                integrationType,
-                interval,
-                isHealthy,
-                isPaused,
-                meta,
-                objectType,
-                pageMaxLimit,
-                runs,
-                updatedAt,
-                webhookType,
-                workspaceId);
+                checkedAt, connectionId, createdAt,
+                dbNamePrefix, dbType, dbUrl,
+                environment, event, fields,
+                filters, hookUrl, id,
+                integrationType, interval, isHealthy,
+                isPaused, meta, objectType,
+                pageMaxLimit, runs, updatedAt,
+                webhookType, workspaceId);
         }
+
 
         private static final LazySingletonValue<Optional<String>> _SINGLETON_VALUE_Environment =
                 new LazySingletonValue<>(

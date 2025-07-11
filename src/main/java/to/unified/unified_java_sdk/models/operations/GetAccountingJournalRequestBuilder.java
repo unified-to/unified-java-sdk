@@ -28,7 +28,7 @@ public class GetAccountingJournalRequestBuilder {
     public GetAccountingJournalResponse call() throws Exception {
         
         RequestOperation<GetAccountingJournalRequest, GetAccountingJournalResponse> operation
-              = new GetAccountingJournalOperation( sdkConfiguration);
+              = new GetAccountingJournalOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

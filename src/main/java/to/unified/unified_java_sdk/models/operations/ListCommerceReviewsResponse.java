@@ -17,8 +17,8 @@ import to.unified.unified_java_sdk.models.shared.CommerceReview;
 import to.unified.unified_java_sdk.utils.Response;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class ListCommerceReviewsResponse implements Response {
 
+public class ListCommerceReviewsResponse implements Response {
     /**
      * Successful
      */
@@ -59,7 +59,8 @@ public class ListCommerceReviewsResponse implements Response {
             String contentType,
             int statusCode,
             HttpResponse<InputStream> rawResponse) {
-        this(Optional.empty(), contentType, statusCode, rawResponse);
+        this(Optional.empty(), contentType, statusCode,
+            rawResponse);
     }
 
     /**
@@ -95,9 +96,10 @@ public class ListCommerceReviewsResponse implements Response {
         return rawResponse;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * Successful
@@ -107,6 +109,7 @@ public class ListCommerceReviewsResponse implements Response {
         this.commerceReviews = Optional.ofNullable(commerceReviews);
         return this;
     }
+
 
     /**
      * Successful
@@ -144,7 +147,6 @@ public class ListCommerceReviewsResponse implements Response {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -164,9 +166,7 @@ public class ListCommerceReviewsResponse implements Response {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            commerceReviews,
-            contentType,
-            statusCode,
+            commerceReviews, contentType, statusCode,
             rawResponse);
     }
     
@@ -178,20 +178,22 @@ public class ListCommerceReviewsResponse implements Response {
                 "statusCode", statusCode,
                 "rawResponse", rawResponse);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<? extends List<CommerceReview>> commerceReviews = Optional.empty();
- 
+
         private String contentType;
- 
+
         private Integer statusCode;
- 
+
         private HttpResponse<InputStream> rawResponse;
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * Successful
@@ -211,6 +213,7 @@ public class ListCommerceReviewsResponse implements Response {
             return this;
         }
 
+
         /**
          * HTTP response content type for this operation
          */
@@ -219,6 +222,7 @@ public class ListCommerceReviewsResponse implements Response {
             this.contentType = contentType;
             return this;
         }
+
 
         /**
          * HTTP response status code for this operation
@@ -229,6 +233,7 @@ public class ListCommerceReviewsResponse implements Response {
             return this;
         }
 
+
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
@@ -237,13 +242,13 @@ public class ListCommerceReviewsResponse implements Response {
             this.rawResponse = rawResponse;
             return this;
         }
-        
+
         public ListCommerceReviewsResponse build() {
+
             return new ListCommerceReviewsResponse(
-                commerceReviews,
-                contentType,
-                statusCode,
+                commerceReviews, contentType, statusCode,
                 rawResponse);
         }
+
     }
 }

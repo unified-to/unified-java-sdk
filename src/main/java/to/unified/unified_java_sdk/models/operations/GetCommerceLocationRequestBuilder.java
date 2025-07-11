@@ -28,7 +28,7 @@ public class GetCommerceLocationRequestBuilder {
     public GetCommerceLocationResponse call() throws Exception {
         
         RequestOperation<GetCommerceLocationRequest, GetCommerceLocationResponse> operation
-              = new GetCommerceLocationOperation( sdkConfiguration);
+              = new GetCommerceLocationOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -10,8 +10,8 @@ import java.lang.String;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class RemoveUnifiedConnectionRequest {
 
+public class RemoveUnifiedConnectionRequest {
     /**
      * ID of the Connection
      */
@@ -33,9 +33,10 @@ public class RemoveUnifiedConnectionRequest {
         return id;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * ID of the Connection
@@ -46,7 +47,6 @@ public class RemoveUnifiedConnectionRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -71,14 +71,16 @@ public class RemoveUnifiedConnectionRequest {
         return Utils.toString(RemoveUnifiedConnectionRequest.class,
                 "id", id);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private String id;
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * ID of the Connection
@@ -88,10 +90,12 @@ public class RemoveUnifiedConnectionRequest {
             this.id = id;
             return this;
         }
-        
+
         public RemoveUnifiedConnectionRequest build() {
+
             return new RemoveUnifiedConnectionRequest(
                 id);
         }
+
     }
 }

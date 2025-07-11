@@ -14,8 +14,8 @@ import to.unified.unified_java_sdk.models.shared.CrmDeal;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class CreateCrmDealRequest {
 
+public class CreateCrmDealRequest {
     /**
      * A deal represents an opportunity with companies and/or contacts
      */
@@ -59,7 +59,8 @@ public class CreateCrmDealRequest {
     public CreateCrmDealRequest(
             CrmDeal crmDeal,
             String connectionId) {
-        this(crmDeal, connectionId, Optional.empty(), Optional.empty());
+        this(crmDeal, connectionId, Optional.empty(),
+            Optional.empty());
     }
 
     /**
@@ -95,9 +96,10 @@ public class CreateCrmDealRequest {
         return raw;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * A deal represents an opportunity with companies and/or contacts
@@ -126,6 +128,7 @@ public class CreateCrmDealRequest {
         return this;
     }
 
+
     /**
      * Comma-delimited fields to return
      */
@@ -144,6 +147,7 @@ public class CreateCrmDealRequest {
         return this;
     }
 
+
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
@@ -153,7 +157,6 @@ public class CreateCrmDealRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -173,9 +176,7 @@ public class CreateCrmDealRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            crmDeal,
-            connectionId,
-            fields,
+            crmDeal, connectionId, fields,
             raw);
     }
     
@@ -187,20 +188,22 @@ public class CreateCrmDealRequest {
                 "fields", fields,
                 "raw", raw);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private CrmDeal crmDeal;
- 
+
         private String connectionId;
- 
+
         private Optional<? extends List<String>> fields = Optional.empty();
- 
+
         private Optional<String> raw = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * A deal represents an opportunity with companies and/or contacts
@@ -211,6 +214,7 @@ public class CreateCrmDealRequest {
             return this;
         }
 
+
         /**
          * ID of the connection
          */
@@ -219,6 +223,7 @@ public class CreateCrmDealRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         /**
          * Comma-delimited fields to return
@@ -238,6 +243,7 @@ public class CreateCrmDealRequest {
             return this;
         }
 
+
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
@@ -255,13 +261,13 @@ public class CreateCrmDealRequest {
             this.raw = raw;
             return this;
         }
-        
+
         public CreateCrmDealRequest build() {
+
             return new CreateCrmDealRequest(
-                crmDeal,
-                connectionId,
-                fields,
+                crmDeal, connectionId, fields,
                 raw);
         }
+
     }
 }

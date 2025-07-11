@@ -28,7 +28,7 @@ public class RemoveTicketingTicketRequestBuilder {
     public RemoveTicketingTicketResponse call() throws Exception {
         
         RequestOperation<RemoveTicketingTicketRequest, RemoveTicketingTicketResponse> operation
-              = new RemoveTicketingTicketOperation( sdkConfiguration);
+              = new RemoveTicketingTicketOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

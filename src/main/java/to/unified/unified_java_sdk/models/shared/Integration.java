@@ -31,13 +31,16 @@ public class Integration {
     @JsonProperty("active_healthy_connections")
     private Optional<Double> activeHealthyConnections;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api")
     private Optional<? extends Api> api;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api_docs_url")
     private Optional<String> apiDocsUrl;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beta")
@@ -49,64 +52,80 @@ public class Integration {
     @JsonProperty("categories")
     private List<PropertyIntegrationCategories> categories;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     private Optional<String> color;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<String> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private Optional<String> description;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fa_icon")
     private Optional<String> faIcon;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("featured")
     private Optional<Boolean> featured;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("in_progress")
     private Optional<Boolean> inProgress;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     private Optional<Boolean> isActive;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo_url")
     private Optional<String> logoUrl;
 
+
     @JsonProperty("name")
     private String name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partnership")
     private Optional<? extends Partnership> partnership;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("popularity")
     private Optional<Double> popularity;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate_limit_description")
     private Optional<String> rateLimitDescription;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sandbox")
     private Optional<? extends Sandbox> sandbox;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("support")
     private Optional<? extends Map<String, Object>> support;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tested_at")
     private Optional<OffsetDateTime> testedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text_color")
@@ -126,12 +145,15 @@ public class Integration {
     @JsonProperty("token_names")
     private Optional<? extends List<String>> tokenNames;
 
+
     @JsonProperty("type")
     private String type;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<String> updatedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web_url")
@@ -223,7 +245,15 @@ public class Integration {
             List<PropertyIntegrationCategories> categories,
             String name,
             String type) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), categories, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), name, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), type, Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), categories, Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), name, Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), type,
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -371,15 +401,17 @@ public class Integration {
         return webUrl;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public Integration withActiveHealthyConnections(double activeHealthyConnections) {
         Utils.checkNotNull(activeHealthyConnections, "activeHealthyConnections");
         this.activeHealthyConnections = Optional.ofNullable(activeHealthyConnections);
         return this;
     }
+
 
     public Integration withActiveHealthyConnections(Optional<Double> activeHealthyConnections) {
         Utils.checkNotNull(activeHealthyConnections, "activeHealthyConnections");
@@ -393,6 +425,7 @@ public class Integration {
         return this;
     }
 
+
     public Integration withApi(Optional<? extends Api> api) {
         Utils.checkNotNull(api, "api");
         this.api = api;
@@ -405,6 +438,7 @@ public class Integration {
         return this;
     }
 
+
     public Integration withApiDocsUrl(Optional<String> apiDocsUrl) {
         Utils.checkNotNull(apiDocsUrl, "apiDocsUrl");
         this.apiDocsUrl = apiDocsUrl;
@@ -416,6 +450,7 @@ public class Integration {
         this.beta = Optional.ofNullable(beta);
         return this;
     }
+
 
     public Integration withBeta(Optional<Boolean> beta) {
         Utils.checkNotNull(beta, "beta");
@@ -438,6 +473,7 @@ public class Integration {
         return this;
     }
 
+
     public Integration withColor(Optional<String> color) {
         Utils.checkNotNull(color, "color");
         this.color = color;
@@ -449,6 +485,7 @@ public class Integration {
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public Integration withCreatedAt(Optional<String> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -462,6 +499,7 @@ public class Integration {
         return this;
     }
 
+
     public Integration withDescription(Optional<String> description) {
         Utils.checkNotNull(description, "description");
         this.description = description;
@@ -473,6 +511,7 @@ public class Integration {
         this.faIcon = Optional.ofNullable(faIcon);
         return this;
     }
+
 
     public Integration withFaIcon(Optional<String> faIcon) {
         Utils.checkNotNull(faIcon, "faIcon");
@@ -486,6 +525,7 @@ public class Integration {
         return this;
     }
 
+
     public Integration withFeatured(Optional<Boolean> featured) {
         Utils.checkNotNull(featured, "featured");
         this.featured = featured;
@@ -497,6 +537,7 @@ public class Integration {
         this.inProgress = Optional.ofNullable(inProgress);
         return this;
     }
+
 
     public Integration withInProgress(Optional<Boolean> inProgress) {
         Utils.checkNotNull(inProgress, "inProgress");
@@ -510,6 +551,7 @@ public class Integration {
         return this;
     }
 
+
     public Integration withIsActive(Optional<Boolean> isActive) {
         Utils.checkNotNull(isActive, "isActive");
         this.isActive = isActive;
@@ -521,6 +563,7 @@ public class Integration {
         this.logoUrl = Optional.ofNullable(logoUrl);
         return this;
     }
+
 
     public Integration withLogoUrl(Optional<String> logoUrl) {
         Utils.checkNotNull(logoUrl, "logoUrl");
@@ -540,6 +583,7 @@ public class Integration {
         return this;
     }
 
+
     public Integration withPartnership(Optional<? extends Partnership> partnership) {
         Utils.checkNotNull(partnership, "partnership");
         this.partnership = partnership;
@@ -551,6 +595,7 @@ public class Integration {
         this.popularity = Optional.ofNullable(popularity);
         return this;
     }
+
 
     public Integration withPopularity(Optional<Double> popularity) {
         Utils.checkNotNull(popularity, "popularity");
@@ -564,6 +609,7 @@ public class Integration {
         return this;
     }
 
+
     public Integration withRateLimitDescription(Optional<String> rateLimitDescription) {
         Utils.checkNotNull(rateLimitDescription, "rateLimitDescription");
         this.rateLimitDescription = rateLimitDescription;
@@ -575,6 +621,7 @@ public class Integration {
         this.sandbox = Optional.ofNullable(sandbox);
         return this;
     }
+
 
     public Integration withSandbox(Optional<? extends Sandbox> sandbox) {
         Utils.checkNotNull(sandbox, "sandbox");
@@ -588,6 +635,7 @@ public class Integration {
         return this;
     }
 
+
     public Integration withSupport(Optional<? extends Map<String, Object>> support) {
         Utils.checkNotNull(support, "support");
         this.support = support;
@@ -600,6 +648,7 @@ public class Integration {
         return this;
     }
 
+
     public Integration withTestedAt(Optional<OffsetDateTime> testedAt) {
         Utils.checkNotNull(testedAt, "testedAt");
         this.testedAt = testedAt;
@@ -611,6 +660,7 @@ public class Integration {
         this.textColor = Optional.ofNullable(textColor);
         return this;
     }
+
 
     public Integration withTextColor(Optional<String> textColor) {
         Utils.checkNotNull(textColor, "textColor");
@@ -626,6 +676,7 @@ public class Integration {
         this.tokenInstructions = Optional.ofNullable(tokenInstructions);
         return this;
     }
+
 
     /**
      * instructions for the user on how to find the token/key
@@ -644,6 +695,7 @@ public class Integration {
         this.tokenNames = Optional.ofNullable(tokenNames);
         return this;
     }
+
 
     /**
      * if auth_types = 'token'
@@ -666,6 +718,7 @@ public class Integration {
         return this;
     }
 
+
     public Integration withUpdatedAt(Optional<String> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
@@ -678,13 +731,13 @@ public class Integration {
         return this;
     }
 
+
     public Integration withWebUrl(Optional<String> webUrl) {
         Utils.checkNotNull(webUrl, "webUrl");
         this.webUrl = webUrl;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -726,32 +779,15 @@ public class Integration {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            activeHealthyConnections,
-            api,
-            apiDocsUrl,
-            beta,
-            categories,
-            color,
-            createdAt,
-            description,
-            faIcon,
-            featured,
-            inProgress,
-            isActive,
-            logoUrl,
-            name,
-            partnership,
-            popularity,
-            rateLimitDescription,
-            sandbox,
-            support,
-            testedAt,
-            textColor,
-            tokenInstructions,
-            tokenNames,
-            type,
-            updatedAt,
-            webUrl);
+            activeHealthyConnections, api, apiDocsUrl,
+            beta, categories, color,
+            createdAt, description, faIcon,
+            featured, inProgress, isActive,
+            logoUrl, name, partnership,
+            popularity, rateLimitDescription, sandbox,
+            support, testedAt, textColor,
+            tokenInstructions, tokenNames, type,
+            updatedAt, webUrl);
     }
     
     @Override
@@ -784,64 +820,66 @@ public class Integration {
                 "updatedAt", updatedAt,
                 "webUrl", webUrl);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<Double> activeHealthyConnections = Optional.empty();
- 
+
         private Optional<? extends Api> api = Optional.empty();
- 
+
         private Optional<String> apiDocsUrl = Optional.empty();
- 
+
         private Optional<Boolean> beta = Optional.empty();
- 
+
         private List<PropertyIntegrationCategories> categories;
- 
+
         private Optional<String> color = Optional.empty();
- 
+
         private Optional<String> createdAt = Optional.empty();
- 
+
         private Optional<String> description = Optional.empty();
- 
+
         private Optional<String> faIcon = Optional.empty();
- 
+
         private Optional<Boolean> featured = Optional.empty();
- 
+
         private Optional<Boolean> inProgress = Optional.empty();
- 
+
         private Optional<Boolean> isActive = Optional.empty();
- 
+
         private Optional<String> logoUrl = Optional.empty();
- 
+
         private String name;
- 
+
         private Optional<? extends Partnership> partnership = Optional.empty();
- 
+
         private Optional<Double> popularity = Optional.empty();
- 
+
         private Optional<String> rateLimitDescription = Optional.empty();
- 
+
         private Optional<? extends Sandbox> sandbox = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> support = Optional.empty();
- 
+
         private Optional<OffsetDateTime> testedAt = Optional.empty();
- 
+
         private Optional<String> textColor = Optional.empty();
- 
+
         private Optional<? extends List<String>> tokenInstructions = Optional.empty();
- 
+
         private Optional<? extends List<String>> tokenNames = Optional.empty();
- 
+
         private String type;
- 
+
         private Optional<String> updatedAt = Optional.empty();
- 
+
         private Optional<String> webUrl = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder activeHealthyConnections(double activeHealthyConnections) {
             Utils.checkNotNull(activeHealthyConnections, "activeHealthyConnections");
@@ -855,6 +893,7 @@ public class Integration {
             return this;
         }
 
+
         public Builder api(Api api) {
             Utils.checkNotNull(api, "api");
             this.api = Optional.ofNullable(api);
@@ -866,6 +905,7 @@ public class Integration {
             this.api = api;
             return this;
         }
+
 
         public Builder apiDocsUrl(String apiDocsUrl) {
             Utils.checkNotNull(apiDocsUrl, "apiDocsUrl");
@@ -879,6 +919,7 @@ public class Integration {
             return this;
         }
 
+
         public Builder beta(boolean beta) {
             Utils.checkNotNull(beta, "beta");
             this.beta = Optional.ofNullable(beta);
@@ -891,6 +932,7 @@ public class Integration {
             return this;
         }
 
+
         /**
          * The categories of support solutions that this integration has
          */
@@ -899,6 +941,7 @@ public class Integration {
             this.categories = categories;
             return this;
         }
+
 
         public Builder color(String color) {
             Utils.checkNotNull(color, "color");
@@ -912,6 +955,7 @@ public class Integration {
             return this;
         }
 
+
         public Builder createdAt(String createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
@@ -923,6 +967,7 @@ public class Integration {
             this.createdAt = createdAt;
             return this;
         }
+
 
         public Builder description(String description) {
             Utils.checkNotNull(description, "description");
@@ -936,6 +981,7 @@ public class Integration {
             return this;
         }
 
+
         public Builder faIcon(String faIcon) {
             Utils.checkNotNull(faIcon, "faIcon");
             this.faIcon = Optional.ofNullable(faIcon);
@@ -947,6 +993,7 @@ public class Integration {
             this.faIcon = faIcon;
             return this;
         }
+
 
         public Builder featured(boolean featured) {
             Utils.checkNotNull(featured, "featured");
@@ -960,6 +1007,7 @@ public class Integration {
             return this;
         }
 
+
         public Builder inProgress(boolean inProgress) {
             Utils.checkNotNull(inProgress, "inProgress");
             this.inProgress = Optional.ofNullable(inProgress);
@@ -971,6 +1019,7 @@ public class Integration {
             this.inProgress = inProgress;
             return this;
         }
+
 
         public Builder isActive(boolean isActive) {
             Utils.checkNotNull(isActive, "isActive");
@@ -984,6 +1033,7 @@ public class Integration {
             return this;
         }
 
+
         public Builder logoUrl(String logoUrl) {
             Utils.checkNotNull(logoUrl, "logoUrl");
             this.logoUrl = Optional.ofNullable(logoUrl);
@@ -996,11 +1046,13 @@ public class Integration {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = name;
             return this;
         }
+
 
         public Builder partnership(Partnership partnership) {
             Utils.checkNotNull(partnership, "partnership");
@@ -1014,6 +1066,7 @@ public class Integration {
             return this;
         }
 
+
         public Builder popularity(double popularity) {
             Utils.checkNotNull(popularity, "popularity");
             this.popularity = Optional.ofNullable(popularity);
@@ -1025,6 +1078,7 @@ public class Integration {
             this.popularity = popularity;
             return this;
         }
+
 
         public Builder rateLimitDescription(String rateLimitDescription) {
             Utils.checkNotNull(rateLimitDescription, "rateLimitDescription");
@@ -1038,6 +1092,7 @@ public class Integration {
             return this;
         }
 
+
         public Builder sandbox(Sandbox sandbox) {
             Utils.checkNotNull(sandbox, "sandbox");
             this.sandbox = Optional.ofNullable(sandbox);
@@ -1049,6 +1104,7 @@ public class Integration {
             this.sandbox = sandbox;
             return this;
         }
+
 
         public Builder support(Map<String, Object> support) {
             Utils.checkNotNull(support, "support");
@@ -1062,6 +1118,7 @@ public class Integration {
             return this;
         }
 
+
         public Builder testedAt(OffsetDateTime testedAt) {
             Utils.checkNotNull(testedAt, "testedAt");
             this.testedAt = Optional.ofNullable(testedAt);
@@ -1074,6 +1131,7 @@ public class Integration {
             return this;
         }
 
+
         public Builder textColor(String textColor) {
             Utils.checkNotNull(textColor, "textColor");
             this.textColor = Optional.ofNullable(textColor);
@@ -1085,6 +1143,7 @@ public class Integration {
             this.textColor = textColor;
             return this;
         }
+
 
         /**
          * instructions for the user on how to find the token/key
@@ -1104,6 +1163,7 @@ public class Integration {
             return this;
         }
 
+
         /**
          * if auth_types = 'token'
          */
@@ -1122,11 +1182,13 @@ public class Integration {
             return this;
         }
 
+
         public Builder type(String type) {
             Utils.checkNotNull(type, "type");
             this.type = type;
             return this;
         }
+
 
         public Builder updatedAt(String updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
@@ -1140,6 +1202,7 @@ public class Integration {
             return this;
         }
 
+
         public Builder webUrl(String webUrl) {
             Utils.checkNotNull(webUrl, "webUrl");
             this.webUrl = Optional.ofNullable(webUrl);
@@ -1151,35 +1214,20 @@ public class Integration {
             this.webUrl = webUrl;
             return this;
         }
-        
+
         public Integration build() {
+
             return new Integration(
-                activeHealthyConnections,
-                api,
-                apiDocsUrl,
-                beta,
-                categories,
-                color,
-                createdAt,
-                description,
-                faIcon,
-                featured,
-                inProgress,
-                isActive,
-                logoUrl,
-                name,
-                partnership,
-                popularity,
-                rateLimitDescription,
-                sandbox,
-                support,
-                testedAt,
-                textColor,
-                tokenInstructions,
-                tokenNames,
-                type,
-                updatedAt,
-                webUrl);
+                activeHealthyConnections, api, apiDocsUrl,
+                beta, categories, color,
+                createdAt, description, faIcon,
+                featured, inProgress, isActive,
+                logoUrl, name, partnership,
+                popularity, rateLimitDescription, sandbox,
+                support, testedAt, textColor,
+                tokenInstructions, tokenNames, type,
+                updatedAt, webUrl);
         }
+
     }
 }

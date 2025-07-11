@@ -12,25 +12,30 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class ListScimGroupsRequest {
 
+public class ListScimGroupsRequest {
     /**
      * ID of the connection
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
     private String connectionId;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
     private Optional<Double> count;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     private Optional<String> filter;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortBy")
     private Optional<String> sortBy;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
     private Optional<String> sortOrder;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startIndex")
     private Optional<Double> startIndex;
@@ -59,7 +64,8 @@ public class ListScimGroupsRequest {
     
     public ListScimGroupsRequest(
             String connectionId) {
-        this(connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(connectionId, Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     /**
@@ -95,9 +101,10 @@ public class ListScimGroupsRequest {
         return startIndex;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * ID of the connection
@@ -114,6 +121,7 @@ public class ListScimGroupsRequest {
         return this;
     }
 
+
     public ListScimGroupsRequest withCount(Optional<Double> count) {
         Utils.checkNotNull(count, "count");
         this.count = count;
@@ -125,6 +133,7 @@ public class ListScimGroupsRequest {
         this.filter = Optional.ofNullable(filter);
         return this;
     }
+
 
     public ListScimGroupsRequest withFilter(Optional<String> filter) {
         Utils.checkNotNull(filter, "filter");
@@ -138,6 +147,7 @@ public class ListScimGroupsRequest {
         return this;
     }
 
+
     public ListScimGroupsRequest withSortBy(Optional<String> sortBy) {
         Utils.checkNotNull(sortBy, "sortBy");
         this.sortBy = sortBy;
@@ -149,6 +159,7 @@ public class ListScimGroupsRequest {
         this.sortOrder = Optional.ofNullable(sortOrder);
         return this;
     }
+
 
     public ListScimGroupsRequest withSortOrder(Optional<String> sortOrder) {
         Utils.checkNotNull(sortOrder, "sortOrder");
@@ -162,13 +173,13 @@ public class ListScimGroupsRequest {
         return this;
     }
 
+
     public ListScimGroupsRequest withStartIndex(Optional<Double> startIndex) {
         Utils.checkNotNull(startIndex, "startIndex");
         this.startIndex = startIndex;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -190,12 +201,8 @@ public class ListScimGroupsRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId,
-            count,
-            filter,
-            sortBy,
-            sortOrder,
-            startIndex);
+            connectionId, count, filter,
+            sortBy, sortOrder, startIndex);
     }
     
     @Override
@@ -208,24 +215,26 @@ public class ListScimGroupsRequest {
                 "sortOrder", sortOrder,
                 "startIndex", startIndex);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private String connectionId;
- 
+
         private Optional<Double> count = Optional.empty();
- 
+
         private Optional<String> filter = Optional.empty();
- 
+
         private Optional<String> sortBy = Optional.empty();
- 
+
         private Optional<String> sortOrder = Optional.empty();
- 
+
         private Optional<Double> startIndex = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * ID of the connection
@@ -235,6 +244,7 @@ public class ListScimGroupsRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         public Builder count(double count) {
             Utils.checkNotNull(count, "count");
@@ -248,6 +258,7 @@ public class ListScimGroupsRequest {
             return this;
         }
 
+
         public Builder filter(String filter) {
             Utils.checkNotNull(filter, "filter");
             this.filter = Optional.ofNullable(filter);
@@ -259,6 +270,7 @@ public class ListScimGroupsRequest {
             this.filter = filter;
             return this;
         }
+
 
         public Builder sortBy(String sortBy) {
             Utils.checkNotNull(sortBy, "sortBy");
@@ -272,6 +284,7 @@ public class ListScimGroupsRequest {
             return this;
         }
 
+
         public Builder sortOrder(String sortOrder) {
             Utils.checkNotNull(sortOrder, "sortOrder");
             this.sortOrder = Optional.ofNullable(sortOrder);
@@ -284,6 +297,7 @@ public class ListScimGroupsRequest {
             return this;
         }
 
+
         public Builder startIndex(double startIndex) {
             Utils.checkNotNull(startIndex, "startIndex");
             this.startIndex = Optional.ofNullable(startIndex);
@@ -295,15 +309,13 @@ public class ListScimGroupsRequest {
             this.startIndex = startIndex;
             return this;
         }
-        
+
         public ListScimGroupsRequest build() {
+
             return new ListScimGroupsRequest(
-                connectionId,
-                count,
-                filter,
-                sortBy,
-                sortOrder,
-                startIndex);
+                connectionId, count, filter,
+                sortBy, sortOrder, startIndex);
         }
+
     }
 }

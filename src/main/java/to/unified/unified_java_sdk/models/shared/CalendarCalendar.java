@@ -18,34 +18,42 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class CalendarCalendar {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private Optional<String> description;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonProperty("name")
     private String name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary")
     private Optional<Boolean> primary;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     private Optional<String> timezone;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -81,7 +89,9 @@ public class CalendarCalendar {
     
     public CalendarCalendar(
             String name) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), name, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            name, Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -125,15 +135,17 @@ public class CalendarCalendar {
         return updatedAt;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public CalendarCalendar withCreatedAt(OffsetDateTime createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public CalendarCalendar withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -147,6 +159,7 @@ public class CalendarCalendar {
         return this;
     }
 
+
     public CalendarCalendar withDescription(Optional<String> description) {
         Utils.checkNotNull(description, "description");
         this.description = description;
@@ -158,6 +171,7 @@ public class CalendarCalendar {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public CalendarCalendar withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -177,6 +191,7 @@ public class CalendarCalendar {
         return this;
     }
 
+
     public CalendarCalendar withPrimary(Optional<Boolean> primary) {
         Utils.checkNotNull(primary, "primary");
         this.primary = primary;
@@ -188,6 +203,7 @@ public class CalendarCalendar {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public CalendarCalendar withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -201,6 +217,7 @@ public class CalendarCalendar {
         return this;
     }
 
+
     public CalendarCalendar withTimezone(Optional<String> timezone) {
         Utils.checkNotNull(timezone, "timezone");
         this.timezone = timezone;
@@ -213,13 +230,13 @@ public class CalendarCalendar {
         return this;
     }
 
+
     public CalendarCalendar withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -243,14 +260,9 @@ public class CalendarCalendar {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt,
-            description,
-            id,
-            name,
-            primary,
-            raw,
-            timezone,
-            updatedAt);
+            createdAt, description, id,
+            name, primary, raw,
+            timezone, updatedAt);
     }
     
     @Override
@@ -265,28 +277,30 @@ public class CalendarCalendar {
                 "timezone", timezone,
                 "updatedAt", updatedAt);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> description = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private String name;
- 
+
         private Optional<Boolean> primary = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<String> timezone = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -300,6 +314,7 @@ public class CalendarCalendar {
             return this;
         }
 
+
         public Builder description(String description) {
             Utils.checkNotNull(description, "description");
             this.description = Optional.ofNullable(description);
@@ -311,6 +326,7 @@ public class CalendarCalendar {
             this.description = description;
             return this;
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -324,11 +340,13 @@ public class CalendarCalendar {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = name;
             return this;
         }
+
 
         public Builder primary(boolean primary) {
             Utils.checkNotNull(primary, "primary");
@@ -342,6 +360,7 @@ public class CalendarCalendar {
             return this;
         }
 
+
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
@@ -353,6 +372,7 @@ public class CalendarCalendar {
             this.raw = raw;
             return this;
         }
+
 
         public Builder timezone(String timezone) {
             Utils.checkNotNull(timezone, "timezone");
@@ -366,6 +386,7 @@ public class CalendarCalendar {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -377,17 +398,14 @@ public class CalendarCalendar {
             this.updatedAt = updatedAt;
             return this;
         }
-        
+
         public CalendarCalendar build() {
+
             return new CalendarCalendar(
-                createdAt,
-                description,
-                id,
-                name,
-                primary,
-                raw,
-                timezone,
-                updatedAt);
+                createdAt, description, id,
+                name, primary, raw,
+                timezone, updatedAt);
         }
+
     }
 }

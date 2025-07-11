@@ -28,7 +28,7 @@ public class GetAccountingProfitlossRequestBuilder {
     public GetAccountingProfitlossResponse call() throws Exception {
         
         RequestOperation<GetAccountingProfitlossRequest, GetAccountingProfitlossResponse> operation
-              = new GetAccountingProfitlossOperation( sdkConfiguration);
+              = new GetAccountingProfitlossOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

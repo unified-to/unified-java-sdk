@@ -28,7 +28,7 @@ public class PatchPassthroughRawRequestBuilder {
     public PatchPassthroughRawResponse call() throws Exception {
         
         RequestOperation<PatchPassthroughRawRequest, PatchPassthroughRawResponse> operation
-              = new PatchPassthroughRawOperation( sdkConfiguration);
+              = new PatchPassthroughRawOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

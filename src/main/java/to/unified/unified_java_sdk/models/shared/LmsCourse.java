@@ -20,62 +20,77 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class LmsCourse {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     private Optional<? extends List<String>> categories;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private Optional<String> currency;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private Optional<String> description;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instructor_ids")
     private Optional<? extends List<String>> instructorIds;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     private Optional<Boolean> isActive;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_private")
     private Optional<Boolean> isPrivate;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languages")
     private Optional<? extends List<String>> languages;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("media")
     private Optional<? extends List<LmsMedia>> media;
 
+
     @JsonProperty("name")
     private String name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price_amount")
     private Optional<Double> priceAmount;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("student_ids")
     private Optional<? extends List<String>> studentIds;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -132,7 +147,11 @@ public class LmsCourse {
     
     public LmsCourse(
             String name) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), name, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), name, Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -216,15 +235,17 @@ public class LmsCourse {
         return updatedAt;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public LmsCourse withCategories(List<String> categories) {
         Utils.checkNotNull(categories, "categories");
         this.categories = Optional.ofNullable(categories);
         return this;
     }
+
 
     public LmsCourse withCategories(Optional<? extends List<String>> categories) {
         Utils.checkNotNull(categories, "categories");
@@ -238,6 +259,7 @@ public class LmsCourse {
         return this;
     }
 
+
     public LmsCourse withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
@@ -249,6 +271,7 @@ public class LmsCourse {
         this.currency = Optional.ofNullable(currency);
         return this;
     }
+
 
     public LmsCourse withCurrency(Optional<String> currency) {
         Utils.checkNotNull(currency, "currency");
@@ -262,6 +285,7 @@ public class LmsCourse {
         return this;
     }
 
+
     public LmsCourse withDescription(Optional<String> description) {
         Utils.checkNotNull(description, "description");
         this.description = description;
@@ -273,6 +297,7 @@ public class LmsCourse {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public LmsCourse withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -286,6 +311,7 @@ public class LmsCourse {
         return this;
     }
 
+
     public LmsCourse withInstructorIds(Optional<? extends List<String>> instructorIds) {
         Utils.checkNotNull(instructorIds, "instructorIds");
         this.instructorIds = instructorIds;
@@ -297,6 +323,7 @@ public class LmsCourse {
         this.isActive = Optional.ofNullable(isActive);
         return this;
     }
+
 
     public LmsCourse withIsActive(Optional<Boolean> isActive) {
         Utils.checkNotNull(isActive, "isActive");
@@ -310,6 +337,7 @@ public class LmsCourse {
         return this;
     }
 
+
     public LmsCourse withIsPrivate(Optional<Boolean> isPrivate) {
         Utils.checkNotNull(isPrivate, "isPrivate");
         this.isPrivate = isPrivate;
@@ -322,6 +350,7 @@ public class LmsCourse {
         return this;
     }
 
+
     public LmsCourse withLanguages(Optional<? extends List<String>> languages) {
         Utils.checkNotNull(languages, "languages");
         this.languages = languages;
@@ -333,6 +362,7 @@ public class LmsCourse {
         this.media = Optional.ofNullable(media);
         return this;
     }
+
 
     public LmsCourse withMedia(Optional<? extends List<LmsMedia>> media) {
         Utils.checkNotNull(media, "media");
@@ -352,6 +382,7 @@ public class LmsCourse {
         return this;
     }
 
+
     public LmsCourse withPriceAmount(Optional<Double> priceAmount) {
         Utils.checkNotNull(priceAmount, "priceAmount");
         this.priceAmount = priceAmount;
@@ -363,6 +394,7 @@ public class LmsCourse {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public LmsCourse withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -376,6 +408,7 @@ public class LmsCourse {
         return this;
     }
 
+
     public LmsCourse withStudentIds(Optional<? extends List<String>> studentIds) {
         Utils.checkNotNull(studentIds, "studentIds");
         this.studentIds = studentIds;
@@ -388,13 +421,13 @@ public class LmsCourse {
         return this;
     }
 
+
     public LmsCourse withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -425,21 +458,11 @@ public class LmsCourse {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            categories,
-            createdAt,
-            currency,
-            description,
-            id,
-            instructorIds,
-            isActive,
-            isPrivate,
-            languages,
-            media,
-            name,
-            priceAmount,
-            raw,
-            studentIds,
-            updatedAt);
+            categories, createdAt, currency,
+            description, id, instructorIds,
+            isActive, isPrivate, languages,
+            media, name, priceAmount,
+            raw, studentIds, updatedAt);
     }
     
     @Override
@@ -461,42 +484,44 @@ public class LmsCourse {
                 "studentIds", studentIds,
                 "updatedAt", updatedAt);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<? extends List<String>> categories = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> currency = Optional.empty();
- 
+
         private Optional<String> description = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<? extends List<String>> instructorIds = Optional.empty();
- 
+
         private Optional<Boolean> isActive = Optional.empty();
- 
+
         private Optional<Boolean> isPrivate = Optional.empty();
- 
+
         private Optional<? extends List<String>> languages = Optional.empty();
- 
+
         private Optional<? extends List<LmsMedia>> media = Optional.empty();
- 
+
         private String name;
- 
+
         private Optional<Double> priceAmount = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<? extends List<String>> studentIds = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder categories(List<String> categories) {
             Utils.checkNotNull(categories, "categories");
@@ -510,6 +535,7 @@ public class LmsCourse {
             return this;
         }
 
+
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
@@ -521,6 +547,7 @@ public class LmsCourse {
             this.createdAt = createdAt;
             return this;
         }
+
 
         public Builder currency(String currency) {
             Utils.checkNotNull(currency, "currency");
@@ -534,6 +561,7 @@ public class LmsCourse {
             return this;
         }
 
+
         public Builder description(String description) {
             Utils.checkNotNull(description, "description");
             this.description = Optional.ofNullable(description);
@@ -545,6 +573,7 @@ public class LmsCourse {
             this.description = description;
             return this;
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -558,6 +587,7 @@ public class LmsCourse {
             return this;
         }
 
+
         public Builder instructorIds(List<String> instructorIds) {
             Utils.checkNotNull(instructorIds, "instructorIds");
             this.instructorIds = Optional.ofNullable(instructorIds);
@@ -569,6 +599,7 @@ public class LmsCourse {
             this.instructorIds = instructorIds;
             return this;
         }
+
 
         public Builder isActive(boolean isActive) {
             Utils.checkNotNull(isActive, "isActive");
@@ -582,6 +613,7 @@ public class LmsCourse {
             return this;
         }
 
+
         public Builder isPrivate(boolean isPrivate) {
             Utils.checkNotNull(isPrivate, "isPrivate");
             this.isPrivate = Optional.ofNullable(isPrivate);
@@ -593,6 +625,7 @@ public class LmsCourse {
             this.isPrivate = isPrivate;
             return this;
         }
+
 
         public Builder languages(List<String> languages) {
             Utils.checkNotNull(languages, "languages");
@@ -606,6 +639,7 @@ public class LmsCourse {
             return this;
         }
 
+
         public Builder media(List<LmsMedia> media) {
             Utils.checkNotNull(media, "media");
             this.media = Optional.ofNullable(media);
@@ -618,11 +652,13 @@ public class LmsCourse {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = name;
             return this;
         }
+
 
         public Builder priceAmount(double priceAmount) {
             Utils.checkNotNull(priceAmount, "priceAmount");
@@ -636,6 +672,7 @@ public class LmsCourse {
             return this;
         }
 
+
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
@@ -647,6 +684,7 @@ public class LmsCourse {
             this.raw = raw;
             return this;
         }
+
 
         public Builder studentIds(List<String> studentIds) {
             Utils.checkNotNull(studentIds, "studentIds");
@@ -660,6 +698,7 @@ public class LmsCourse {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -671,24 +710,16 @@ public class LmsCourse {
             this.updatedAt = updatedAt;
             return this;
         }
-        
+
         public LmsCourse build() {
+
             return new LmsCourse(
-                categories,
-                createdAt,
-                currency,
-                description,
-                id,
-                instructorIds,
-                isActive,
-                isPrivate,
-                languages,
-                media,
-                name,
-                priceAmount,
-                raw,
-                studentIds,
-                updatedAt);
+                categories, createdAt, currency,
+                description, id, instructorIds,
+                isActive, isPrivate, languages,
+                media, name, priceAmount,
+                raw, studentIds, updatedAt);
         }
+
     }
 }

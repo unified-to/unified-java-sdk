@@ -28,7 +28,7 @@ public class GetUcContactRequestBuilder {
     public GetUcContactResponse call() throws Exception {
         
         RequestOperation<GetUcContactRequest, GetUcContactResponse> operation
-              = new GetUcContactOperation( sdkConfiguration);
+              = new GetUcContactOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

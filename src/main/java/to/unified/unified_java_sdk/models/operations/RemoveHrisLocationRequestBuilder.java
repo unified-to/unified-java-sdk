@@ -28,7 +28,7 @@ public class RemoveHrisLocationRequestBuilder {
     public RemoveHrisLocationResponse call() throws Exception {
         
         RequestOperation<RemoveHrisLocationRequest, RemoveHrisLocationResponse> operation
-              = new RemoveHrisLocationOperation( sdkConfiguration);
+              = new RemoveHrisLocationOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

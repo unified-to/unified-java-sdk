@@ -28,7 +28,7 @@ public class PatchStorageFileRequestBuilder {
     public PatchStorageFileResponse call() throws Exception {
         
         RequestOperation<PatchStorageFileRequest, PatchStorageFileResponse> operation
-              = new PatchStorageFileOperation( sdkConfiguration);
+              = new PatchStorageFileOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

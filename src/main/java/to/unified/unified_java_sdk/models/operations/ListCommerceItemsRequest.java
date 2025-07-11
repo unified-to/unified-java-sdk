@@ -14,8 +14,8 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class ListCommerceItemsRequest {
 
+public class ListCommerceItemsRequest {
     /**
      * The collection ID to filter by
      */
@@ -34,11 +34,14 @@ public class ListCommerceItemsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     private Optional<? extends List<String>> fields;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     private Optional<Double> limit;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     private Optional<Double> offset;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     private Optional<String> order;
@@ -54,6 +57,7 @@ public class ListCommerceItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
     private Optional<String> raw;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     private Optional<String> sort;
@@ -100,7 +104,10 @@ public class ListCommerceItemsRequest {
     
     public ListCommerceItemsRequest(
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), connectionId, Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     /**
@@ -172,9 +179,10 @@ public class ListCommerceItemsRequest {
         return updatedGte;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * The collection ID to filter by
@@ -184,6 +192,7 @@ public class ListCommerceItemsRequest {
         this.collectionId = Optional.ofNullable(collectionId);
         return this;
     }
+
 
     /**
      * The collection ID to filter by
@@ -212,6 +221,7 @@ public class ListCommerceItemsRequest {
         return this;
     }
 
+
     /**
      * Comma-delimited fields to return
      */
@@ -227,6 +237,7 @@ public class ListCommerceItemsRequest {
         return this;
     }
 
+
     public ListCommerceItemsRequest withLimit(Optional<Double> limit) {
         Utils.checkNotNull(limit, "limit");
         this.limit = limit;
@@ -239,6 +250,7 @@ public class ListCommerceItemsRequest {
         return this;
     }
 
+
     public ListCommerceItemsRequest withOffset(Optional<Double> offset) {
         Utils.checkNotNull(offset, "offset");
         this.offset = offset;
@@ -250,6 +262,7 @@ public class ListCommerceItemsRequest {
         this.order = Optional.ofNullable(order);
         return this;
     }
+
 
     public ListCommerceItemsRequest withOrder(Optional<String> order) {
         Utils.checkNotNull(order, "order");
@@ -265,6 +278,7 @@ public class ListCommerceItemsRequest {
         this.query = Optional.ofNullable(query);
         return this;
     }
+
 
     /**
      * Query string to search. eg. email address or name
@@ -284,6 +298,7 @@ public class ListCommerceItemsRequest {
         return this;
     }
 
+
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
@@ -298,6 +313,7 @@ public class ListCommerceItemsRequest {
         this.sort = Optional.ofNullable(sort);
         return this;
     }
+
 
     public ListCommerceItemsRequest withSort(Optional<String> sort) {
         Utils.checkNotNull(sort, "sort");
@@ -314,6 +330,7 @@ public class ListCommerceItemsRequest {
         return this;
     }
 
+
     /**
      * Return only results whose updated date is equal or greater to this value
      */
@@ -323,7 +340,6 @@ public class ListCommerceItemsRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -349,15 +365,9 @@ public class ListCommerceItemsRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            collectionId,
-            connectionId,
-            fields,
-            limit,
-            offset,
-            order,
-            query,
-            raw,
-            sort,
+            collectionId, connectionId, fields,
+            limit, offset, order,
+            query, raw, sort,
             updatedGte);
     }
     
@@ -375,32 +385,34 @@ public class ListCommerceItemsRequest {
                 "sort", sort,
                 "updatedGte", updatedGte);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> collectionId = Optional.empty();
- 
+
         private String connectionId;
- 
+
         private Optional<? extends List<String>> fields = Optional.empty();
- 
+
         private Optional<Double> limit = Optional.empty();
- 
+
         private Optional<Double> offset = Optional.empty();
- 
+
         private Optional<String> order = Optional.empty();
- 
+
         private Optional<String> query = Optional.empty();
- 
+
         private Optional<String> raw = Optional.empty();
- 
+
         private Optional<String> sort = Optional.empty();
- 
+
         private Optional<String> updatedGte = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * The collection ID to filter by
@@ -420,6 +432,7 @@ public class ListCommerceItemsRequest {
             return this;
         }
 
+
         /**
          * ID of the connection
          */
@@ -428,6 +441,7 @@ public class ListCommerceItemsRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         /**
          * Comma-delimited fields to return
@@ -447,6 +461,7 @@ public class ListCommerceItemsRequest {
             return this;
         }
 
+
         public Builder limit(double limit) {
             Utils.checkNotNull(limit, "limit");
             this.limit = Optional.ofNullable(limit);
@@ -458,6 +473,7 @@ public class ListCommerceItemsRequest {
             this.limit = limit;
             return this;
         }
+
 
         public Builder offset(double offset) {
             Utils.checkNotNull(offset, "offset");
@@ -471,6 +487,7 @@ public class ListCommerceItemsRequest {
             return this;
         }
 
+
         public Builder order(String order) {
             Utils.checkNotNull(order, "order");
             this.order = Optional.ofNullable(order);
@@ -482,6 +499,7 @@ public class ListCommerceItemsRequest {
             this.order = order;
             return this;
         }
+
 
         /**
          * Query string to search. eg. email address or name
@@ -501,6 +519,7 @@ public class ListCommerceItemsRequest {
             return this;
         }
 
+
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
@@ -519,6 +538,7 @@ public class ListCommerceItemsRequest {
             return this;
         }
 
+
         public Builder sort(String sort) {
             Utils.checkNotNull(sort, "sort");
             this.sort = Optional.ofNullable(sort);
@@ -530,6 +550,7 @@ public class ListCommerceItemsRequest {
             this.sort = sort;
             return this;
         }
+
 
         /**
          * Return only results whose updated date is equal or greater to this value
@@ -548,19 +569,15 @@ public class ListCommerceItemsRequest {
             this.updatedGte = updatedGte;
             return this;
         }
-        
+
         public ListCommerceItemsRequest build() {
+
             return new ListCommerceItemsRequest(
-                collectionId,
-                connectionId,
-                fields,
-                limit,
-                offset,
-                order,
-                query,
-                raw,
-                sort,
+                collectionId, connectionId, fields,
+                limit, offset, order,
+                query, raw, sort,
                 updatedGte);
         }
+
     }
 }

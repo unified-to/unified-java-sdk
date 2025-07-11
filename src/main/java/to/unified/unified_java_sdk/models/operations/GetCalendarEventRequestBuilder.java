@@ -28,7 +28,7 @@ public class GetCalendarEventRequestBuilder {
     public GetCalendarEventResponse call() throws Exception {
         
         RequestOperation<GetCalendarEventRequest, GetCalendarEventResponse> operation
-              = new GetCalendarEventOperation( sdkConfiguration);
+              = new GetCalendarEventOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

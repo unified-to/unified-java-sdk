@@ -14,19 +14,23 @@ import java.lang.String;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AccountingContactPaymentMethod {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default")
     private Optional<Boolean> default_;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
+
 
     @JsonProperty("type")
     private AccountingContactPaymentMethodType type;
@@ -49,7 +53,8 @@ public class AccountingContactPaymentMethod {
     
     public AccountingContactPaymentMethod(
             AccountingContactPaymentMethodType type) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), type);
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            type);
     }
 
     @JsonIgnore
@@ -72,15 +77,17 @@ public class AccountingContactPaymentMethod {
         return type;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AccountingContactPaymentMethod withDefault(boolean default_) {
         Utils.checkNotNull(default_, "default_");
         this.default_ = Optional.ofNullable(default_);
         return this;
     }
+
 
     public AccountingContactPaymentMethod withDefault(Optional<Boolean> default_) {
         Utils.checkNotNull(default_, "default_");
@@ -94,6 +101,7 @@ public class AccountingContactPaymentMethod {
         return this;
     }
 
+
     public AccountingContactPaymentMethod withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -105,6 +113,7 @@ public class AccountingContactPaymentMethod {
         this.name = Optional.ofNullable(name);
         return this;
     }
+
 
     public AccountingContactPaymentMethod withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
@@ -118,7 +127,6 @@ public class AccountingContactPaymentMethod {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -138,9 +146,7 @@ public class AccountingContactPaymentMethod {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            default_,
-            id,
-            name,
+            default_, id, name,
             type);
     }
     
@@ -152,20 +158,22 @@ public class AccountingContactPaymentMethod {
                 "name", name,
                 "type", type);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<Boolean> default_ = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private AccountingContactPaymentMethodType type;
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder default_(boolean default_) {
             Utils.checkNotNull(default_, "default_");
@@ -179,6 +187,7 @@ public class AccountingContactPaymentMethod {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -190,6 +199,7 @@ public class AccountingContactPaymentMethod {
             this.id = id;
             return this;
         }
+
 
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
@@ -203,18 +213,19 @@ public class AccountingContactPaymentMethod {
             return this;
         }
 
+
         public Builder type(AccountingContactPaymentMethodType type) {
             Utils.checkNotNull(type, "type");
             this.type = type;
             return this;
         }
-        
+
         public AccountingContactPaymentMethod build() {
+
             return new AccountingContactPaymentMethod(
-                default_,
-                id,
-                name,
+                default_, id, name,
                 type);
         }
+
     }
 }

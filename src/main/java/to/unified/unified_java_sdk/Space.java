@@ -40,7 +40,6 @@ public class Space {
     Space(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a space
      * 
@@ -57,13 +56,11 @@ public class Space {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateKmsSpaceResponse createKmsSpace(
-            CreateKmsSpaceRequest request) throws Exception {
+    public CreateKmsSpaceResponse createKmsSpace(CreateKmsSpaceRequest request) throws Exception {
         RequestOperation<CreateKmsSpaceRequest, CreateKmsSpaceResponse> operation
-              = new CreateKmsSpaceOperation( sdkConfiguration);
+              = new CreateKmsSpaceOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a space
@@ -81,13 +78,11 @@ public class Space {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetKmsSpaceResponse getKmsSpace(
-            GetKmsSpaceRequest request) throws Exception {
+    public GetKmsSpaceResponse getKmsSpace(GetKmsSpaceRequest request) throws Exception {
         RequestOperation<GetKmsSpaceRequest, GetKmsSpaceResponse> operation
-              = new GetKmsSpaceOperation( sdkConfiguration);
+              = new GetKmsSpaceOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all spaces
@@ -105,13 +100,11 @@ public class Space {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListKmsSpacesResponse listKmsSpaces(
-            ListKmsSpacesRequest request) throws Exception {
+    public ListKmsSpacesResponse listKmsSpaces(ListKmsSpacesRequest request) throws Exception {
         RequestOperation<ListKmsSpacesRequest, ListKmsSpacesResponse> operation
-              = new ListKmsSpacesOperation( sdkConfiguration);
+              = new ListKmsSpacesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a space
@@ -129,13 +122,11 @@ public class Space {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchKmsSpaceResponse patchKmsSpace(
-            PatchKmsSpaceRequest request) throws Exception {
+    public PatchKmsSpaceResponse patchKmsSpace(PatchKmsSpaceRequest request) throws Exception {
         RequestOperation<PatchKmsSpaceRequest, PatchKmsSpaceResponse> operation
-              = new PatchKmsSpaceOperation( sdkConfiguration);
+              = new PatchKmsSpaceOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a space
@@ -153,13 +144,11 @@ public class Space {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveKmsSpaceResponse removeKmsSpace(
-            RemoveKmsSpaceRequest request) throws Exception {
+    public RemoveKmsSpaceResponse removeKmsSpace(RemoveKmsSpaceRequest request) throws Exception {
         RequestOperation<RemoveKmsSpaceRequest, RemoveKmsSpaceResponse> operation
-              = new RemoveKmsSpaceOperation( sdkConfiguration);
+              = new RemoveKmsSpaceOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a space
@@ -177,10 +166,9 @@ public class Space {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateKmsSpaceResponse updateKmsSpace(
-            UpdateKmsSpaceRequest request) throws Exception {
+    public UpdateKmsSpaceResponse updateKmsSpace(UpdateKmsSpaceRequest request) throws Exception {
         RequestOperation<UpdateKmsSpaceRequest, UpdateKmsSpaceResponse> operation
-              = new UpdateKmsSpaceOperation( sdkConfiguration);
+              = new UpdateKmsSpaceOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

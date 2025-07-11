@@ -14,8 +14,8 @@ import to.unified.unified_java_sdk.models.shared.MarketingList;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class CreateMartechListRequest {
 
+public class CreateMartechListRequest {
     /**
      * Mailing List
      */
@@ -59,7 +59,8 @@ public class CreateMartechListRequest {
     public CreateMartechListRequest(
             MarketingList marketingList,
             String connectionId) {
-        this(marketingList, connectionId, Optional.empty(), Optional.empty());
+        this(marketingList, connectionId, Optional.empty(),
+            Optional.empty());
     }
 
     /**
@@ -95,9 +96,10 @@ public class CreateMartechListRequest {
         return raw;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * Mailing List
@@ -126,6 +128,7 @@ public class CreateMartechListRequest {
         return this;
     }
 
+
     /**
      * Comma-delimited fields to return
      */
@@ -144,6 +147,7 @@ public class CreateMartechListRequest {
         return this;
     }
 
+
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
@@ -153,7 +157,6 @@ public class CreateMartechListRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -173,9 +176,7 @@ public class CreateMartechListRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            marketingList,
-            connectionId,
-            fields,
+            marketingList, connectionId, fields,
             raw);
     }
     
@@ -187,20 +188,22 @@ public class CreateMartechListRequest {
                 "fields", fields,
                 "raw", raw);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private MarketingList marketingList;
- 
+
         private String connectionId;
- 
+
         private Optional<? extends List<String>> fields = Optional.empty();
- 
+
         private Optional<String> raw = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * Mailing List
@@ -211,6 +214,7 @@ public class CreateMartechListRequest {
             return this;
         }
 
+
         /**
          * ID of the connection
          */
@@ -219,6 +223,7 @@ public class CreateMartechListRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         /**
          * Comma-delimited fields to return
@@ -238,6 +243,7 @@ public class CreateMartechListRequest {
             return this;
         }
 
+
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
@@ -255,13 +261,13 @@ public class CreateMartechListRequest {
             this.raw = raw;
             return this;
         }
-        
+
         public CreateMartechListRequest build() {
+
             return new CreateMartechListRequest(
-                marketingList,
-                connectionId,
-                fields,
+                marketingList, connectionId, fields,
                 raw);
         }
+
     }
 }

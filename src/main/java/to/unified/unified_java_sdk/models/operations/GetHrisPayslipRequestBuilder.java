@@ -28,7 +28,7 @@ public class GetHrisPayslipRequestBuilder {
     public GetHrisPayslipResponse call() throws Exception {
         
         RequestOperation<GetHrisPayslipRequest, GetHrisPayslipResponse> operation
-              = new GetHrisPayslipOperation( sdkConfiguration);
+              = new GetHrisPayslipOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

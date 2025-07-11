@@ -28,7 +28,7 @@ public class RemoveHrisCompanyRequestBuilder {
     public RemoveHrisCompanyResponse call() throws Exception {
         
         RequestOperation<RemoveHrisCompanyRequest, RemoveHrisCompanyResponse> operation
-              = new RemoveHrisCompanyOperation( sdkConfiguration);
+              = new RemoveHrisCompanyOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

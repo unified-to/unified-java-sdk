@@ -14,27 +14,33 @@ import java.time.OffsetDateTime;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AtsCandidateEducation {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("degree")
     private Optional<String> degree;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private Optional<OffsetDateTime> endAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field_of_study")
     private Optional<String> fieldOfStudy;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("institution")
     private Optional<String> institution;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("level")
     private Optional<String> level;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
@@ -63,7 +69,8 @@ public class AtsCandidateEducation {
     }
     
     public AtsCandidateEducation() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -96,15 +103,17 @@ public class AtsCandidateEducation {
         return startAt;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AtsCandidateEducation withDegree(String degree) {
         Utils.checkNotNull(degree, "degree");
         this.degree = Optional.ofNullable(degree);
         return this;
     }
+
 
     public AtsCandidateEducation withDegree(Optional<String> degree) {
         Utils.checkNotNull(degree, "degree");
@@ -118,6 +127,7 @@ public class AtsCandidateEducation {
         return this;
     }
 
+
     public AtsCandidateEducation withEndAt(Optional<OffsetDateTime> endAt) {
         Utils.checkNotNull(endAt, "endAt");
         this.endAt = endAt;
@@ -129,6 +139,7 @@ public class AtsCandidateEducation {
         this.fieldOfStudy = Optional.ofNullable(fieldOfStudy);
         return this;
     }
+
 
     public AtsCandidateEducation withFieldOfStudy(Optional<String> fieldOfStudy) {
         Utils.checkNotNull(fieldOfStudy, "fieldOfStudy");
@@ -142,6 +153,7 @@ public class AtsCandidateEducation {
         return this;
     }
 
+
     public AtsCandidateEducation withInstitution(Optional<String> institution) {
         Utils.checkNotNull(institution, "institution");
         this.institution = institution;
@@ -153,6 +165,7 @@ public class AtsCandidateEducation {
         this.level = Optional.ofNullable(level);
         return this;
     }
+
 
     public AtsCandidateEducation withLevel(Optional<String> level) {
         Utils.checkNotNull(level, "level");
@@ -166,13 +179,13 @@ public class AtsCandidateEducation {
         return this;
     }
 
+
     public AtsCandidateEducation withStartAt(Optional<OffsetDateTime> startAt) {
         Utils.checkNotNull(startAt, "startAt");
         this.startAt = startAt;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -194,12 +207,8 @@ public class AtsCandidateEducation {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            degree,
-            endAt,
-            fieldOfStudy,
-            institution,
-            level,
-            startAt);
+            degree, endAt, fieldOfStudy,
+            institution, level, startAt);
     }
     
     @Override
@@ -212,24 +221,26 @@ public class AtsCandidateEducation {
                 "level", level,
                 "startAt", startAt);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> degree = Optional.empty();
- 
+
         private Optional<OffsetDateTime> endAt = Optional.empty();
- 
+
         private Optional<String> fieldOfStudy = Optional.empty();
- 
+
         private Optional<String> institution = Optional.empty();
- 
+
         private Optional<String> level = Optional.empty();
- 
+
         private Optional<OffsetDateTime> startAt = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder degree(String degree) {
             Utils.checkNotNull(degree, "degree");
@@ -243,6 +254,7 @@ public class AtsCandidateEducation {
             return this;
         }
 
+
         public Builder endAt(OffsetDateTime endAt) {
             Utils.checkNotNull(endAt, "endAt");
             this.endAt = Optional.ofNullable(endAt);
@@ -254,6 +266,7 @@ public class AtsCandidateEducation {
             this.endAt = endAt;
             return this;
         }
+
 
         public Builder fieldOfStudy(String fieldOfStudy) {
             Utils.checkNotNull(fieldOfStudy, "fieldOfStudy");
@@ -267,6 +280,7 @@ public class AtsCandidateEducation {
             return this;
         }
 
+
         public Builder institution(String institution) {
             Utils.checkNotNull(institution, "institution");
             this.institution = Optional.ofNullable(institution);
@@ -278,6 +292,7 @@ public class AtsCandidateEducation {
             this.institution = institution;
             return this;
         }
+
 
         public Builder level(String level) {
             Utils.checkNotNull(level, "level");
@@ -291,6 +306,7 @@ public class AtsCandidateEducation {
             return this;
         }
 
+
         public Builder startAt(OffsetDateTime startAt) {
             Utils.checkNotNull(startAt, "startAt");
             this.startAt = Optional.ofNullable(startAt);
@@ -302,15 +318,13 @@ public class AtsCandidateEducation {
             this.startAt = startAt;
             return this;
         }
-        
+
         public AtsCandidateEducation build() {
+
             return new AtsCandidateEducation(
-                degree,
-                endAt,
-                fieldOfStudy,
-                institution,
-                level,
-                startAt);
+                degree, endAt, fieldOfStudy,
+                institution, level, startAt);
         }
+
     }
 }

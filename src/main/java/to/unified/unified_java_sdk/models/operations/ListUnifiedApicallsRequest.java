@@ -13,13 +13,14 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class ListUnifiedApicallsRequest {
 
+public class ListUnifiedApicallsRequest {
     /**
      * Filter the results to just this integration
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=connection_id")
     private Optional<String> connectionId;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=env")
     private Optional<String> env;
@@ -48,14 +49,18 @@ public class ListUnifiedApicallsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_billable")
     private Optional<Boolean> isBillable;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     private Optional<Double> limit;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     private Optional<Double> offset;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     private Optional<String> order;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     private Optional<String> sort;
@@ -122,7 +127,11 @@ public class ListUnifiedApicallsRequest {
     }
     
     public ListUnifiedApicallsRequest() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     /**
@@ -214,9 +223,10 @@ public class ListUnifiedApicallsRequest {
         return webhookId;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * Filter the results to just this integration
@@ -226,6 +236,7 @@ public class ListUnifiedApicallsRequest {
         this.connectionId = Optional.ofNullable(connectionId);
         return this;
     }
+
 
     /**
      * Filter the results to just this integration
@@ -242,6 +253,7 @@ public class ListUnifiedApicallsRequest {
         return this;
     }
 
+
     public ListUnifiedApicallsRequest withEnv(Optional<String> env) {
         Utils.checkNotNull(env, "env");
         this.env = env;
@@ -256,6 +268,7 @@ public class ListUnifiedApicallsRequest {
         this.error = Optional.ofNullable(error);
         return this;
     }
+
 
     /**
      * Filter the results for API Calls with errors
@@ -275,6 +288,7 @@ public class ListUnifiedApicallsRequest {
         return this;
     }
 
+
     /**
      * Filter the results to only those integrations for your user referenced by this value
      */
@@ -292,6 +306,7 @@ public class ListUnifiedApicallsRequest {
         this.integrationType = Optional.ofNullable(integrationType);
         return this;
     }
+
 
     /**
      * Filter the results to just this integration
@@ -311,6 +326,7 @@ public class ListUnifiedApicallsRequest {
         return this;
     }
 
+
     /**
      * Filter the results for only billable API Calls
      */
@@ -326,6 +342,7 @@ public class ListUnifiedApicallsRequest {
         return this;
     }
 
+
     public ListUnifiedApicallsRequest withLimit(Optional<Double> limit) {
         Utils.checkNotNull(limit, "limit");
         this.limit = limit;
@@ -337,6 +354,7 @@ public class ListUnifiedApicallsRequest {
         this.offset = Optional.ofNullable(offset);
         return this;
     }
+
 
     public ListUnifiedApicallsRequest withOffset(Optional<Double> offset) {
         Utils.checkNotNull(offset, "offset");
@@ -350,6 +368,7 @@ public class ListUnifiedApicallsRequest {
         return this;
     }
 
+
     public ListUnifiedApicallsRequest withOrder(Optional<String> order) {
         Utils.checkNotNull(order, "order");
         this.order = order;
@@ -361,6 +380,7 @@ public class ListUnifiedApicallsRequest {
         this.sort = Optional.ofNullable(sort);
         return this;
     }
+
 
     public ListUnifiedApicallsRequest withSort(Optional<String> sort) {
         Utils.checkNotNull(sort, "sort");
@@ -376,6 +396,7 @@ public class ListUnifiedApicallsRequest {
         this.type = Optional.ofNullable(type);
         return this;
     }
+
 
     /**
      * Filter the results to just this type
@@ -395,6 +416,7 @@ public class ListUnifiedApicallsRequest {
         return this;
     }
 
+
     /**
      * Return only results whose updated date is equal or greater to this value
      */
@@ -413,6 +435,7 @@ public class ListUnifiedApicallsRequest {
         return this;
     }
 
+
     /**
      * Filter the results to just this webhook
      */
@@ -422,7 +445,6 @@ public class ListUnifiedApicallsRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -451,18 +473,10 @@ public class ListUnifiedApicallsRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId,
-            env,
-            error,
-            externalXref,
-            integrationType,
-            isBillable,
-            limit,
-            offset,
-            order,
-            sort,
-            type,
-            updatedGte,
+            connectionId, env, error,
+            externalXref, integrationType, isBillable,
+            limit, offset, order,
+            sort, type, updatedGte,
             webhookId);
     }
     
@@ -483,38 +497,40 @@ public class ListUnifiedApicallsRequest {
                 "updatedGte", updatedGte,
                 "webhookId", webhookId);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> connectionId = Optional.empty();
- 
+
         private Optional<String> env = Optional.empty();
- 
+
         private Optional<Boolean> error = Optional.empty();
- 
+
         private Optional<String> externalXref = Optional.empty();
- 
+
         private Optional<String> integrationType = Optional.empty();
- 
+
         private Optional<Boolean> isBillable = Optional.empty();
- 
+
         private Optional<Double> limit = Optional.empty();
- 
+
         private Optional<Double> offset = Optional.empty();
- 
+
         private Optional<String> order = Optional.empty();
- 
+
         private Optional<String> sort = Optional.empty();
- 
+
         private Optional<String> type = Optional.empty();
- 
+
         private Optional<String> updatedGte = Optional.empty();
- 
+
         private Optional<String> webhookId = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * Filter the results to just this integration
@@ -534,6 +550,7 @@ public class ListUnifiedApicallsRequest {
             return this;
         }
 
+
         public Builder env(String env) {
             Utils.checkNotNull(env, "env");
             this.env = Optional.ofNullable(env);
@@ -545,6 +562,7 @@ public class ListUnifiedApicallsRequest {
             this.env = env;
             return this;
         }
+
 
         /**
          * Filter the results for API Calls with errors
@@ -564,6 +582,7 @@ public class ListUnifiedApicallsRequest {
             return this;
         }
 
+
         /**
          * Filter the results to only those integrations for your user referenced by this value
          */
@@ -581,6 +600,7 @@ public class ListUnifiedApicallsRequest {
             this.externalXref = externalXref;
             return this;
         }
+
 
         /**
          * Filter the results to just this integration
@@ -600,6 +620,7 @@ public class ListUnifiedApicallsRequest {
             return this;
         }
 
+
         /**
          * Filter the results for only billable API Calls
          */
@@ -618,6 +639,7 @@ public class ListUnifiedApicallsRequest {
             return this;
         }
 
+
         public Builder limit(double limit) {
             Utils.checkNotNull(limit, "limit");
             this.limit = Optional.ofNullable(limit);
@@ -629,6 +651,7 @@ public class ListUnifiedApicallsRequest {
             this.limit = limit;
             return this;
         }
+
 
         public Builder offset(double offset) {
             Utils.checkNotNull(offset, "offset");
@@ -642,6 +665,7 @@ public class ListUnifiedApicallsRequest {
             return this;
         }
 
+
         public Builder order(String order) {
             Utils.checkNotNull(order, "order");
             this.order = Optional.ofNullable(order);
@@ -654,6 +678,7 @@ public class ListUnifiedApicallsRequest {
             return this;
         }
 
+
         public Builder sort(String sort) {
             Utils.checkNotNull(sort, "sort");
             this.sort = Optional.ofNullable(sort);
@@ -665,6 +690,7 @@ public class ListUnifiedApicallsRequest {
             this.sort = sort;
             return this;
         }
+
 
         /**
          * Filter the results to just this type
@@ -684,6 +710,7 @@ public class ListUnifiedApicallsRequest {
             return this;
         }
 
+
         /**
          * Return only results whose updated date is equal or greater to this value
          */
@@ -702,6 +729,7 @@ public class ListUnifiedApicallsRequest {
             return this;
         }
 
+
         /**
          * Filter the results to just this webhook
          */
@@ -719,22 +747,16 @@ public class ListUnifiedApicallsRequest {
             this.webhookId = webhookId;
             return this;
         }
-        
+
         public ListUnifiedApicallsRequest build() {
+
             return new ListUnifiedApicallsRequest(
-                connectionId,
-                env,
-                error,
-                externalXref,
-                integrationType,
-                isBillable,
-                limit,
-                offset,
-                order,
-                sort,
-                type,
-                updatedGte,
+                connectionId, env, error,
+                externalXref, integrationType, isBillable,
+                limit, offset, order,
+                sort, type, updatedGte,
                 webhookId);
         }
+
     }
 }

@@ -28,7 +28,7 @@ public class RemoveUnifiedWebhookRequestBuilder {
     public RemoveUnifiedWebhookResponse call() throws Exception {
         
         RequestOperation<RemoveUnifiedWebhookRequest, RemoveUnifiedWebhookResponse> operation
-              = new RemoveUnifiedWebhookOperation( sdkConfiguration);
+              = new RemoveUnifiedWebhookOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

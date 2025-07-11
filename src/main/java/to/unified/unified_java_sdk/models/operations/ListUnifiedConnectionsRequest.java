@@ -14,13 +14,14 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class ListUnifiedConnectionsRequest {
 
+public class ListUnifiedConnectionsRequest {
     /**
      * Filter the results on these categories
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=categories")
     private Optional<? extends List<Categories>> categories;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=env")
     private Optional<String> env;
@@ -31,14 +32,18 @@ public class ListUnifiedConnectionsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=external_xref")
     private Optional<String> externalXref;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     private Optional<Double> limit;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     private Optional<Double> offset;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     private Optional<String> order;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     private Optional<String> sort;
@@ -78,7 +83,9 @@ public class ListUnifiedConnectionsRequest {
     }
     
     public ListUnifiedConnectionsRequest() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     /**
@@ -131,9 +138,10 @@ public class ListUnifiedConnectionsRequest {
         return updatedGte;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * Filter the results on these categories
@@ -143,6 +151,7 @@ public class ListUnifiedConnectionsRequest {
         this.categories = Optional.ofNullable(categories);
         return this;
     }
+
 
     /**
      * Filter the results on these categories
@@ -159,6 +168,7 @@ public class ListUnifiedConnectionsRequest {
         return this;
     }
 
+
     public ListUnifiedConnectionsRequest withEnv(Optional<String> env) {
         Utils.checkNotNull(env, "env");
         this.env = env;
@@ -173,6 +183,7 @@ public class ListUnifiedConnectionsRequest {
         this.externalXref = Optional.ofNullable(externalXref);
         return this;
     }
+
 
     /**
      * Filter the results to only those integrations for your user referenced by this value
@@ -189,6 +200,7 @@ public class ListUnifiedConnectionsRequest {
         return this;
     }
 
+
     public ListUnifiedConnectionsRequest withLimit(Optional<Double> limit) {
         Utils.checkNotNull(limit, "limit");
         this.limit = limit;
@@ -200,6 +212,7 @@ public class ListUnifiedConnectionsRequest {
         this.offset = Optional.ofNullable(offset);
         return this;
     }
+
 
     public ListUnifiedConnectionsRequest withOffset(Optional<Double> offset) {
         Utils.checkNotNull(offset, "offset");
@@ -213,6 +226,7 @@ public class ListUnifiedConnectionsRequest {
         return this;
     }
 
+
     public ListUnifiedConnectionsRequest withOrder(Optional<String> order) {
         Utils.checkNotNull(order, "order");
         this.order = order;
@@ -224,6 +238,7 @@ public class ListUnifiedConnectionsRequest {
         this.sort = Optional.ofNullable(sort);
         return this;
     }
+
 
     public ListUnifiedConnectionsRequest withSort(Optional<String> sort) {
         Utils.checkNotNull(sort, "sort");
@@ -240,6 +255,7 @@ public class ListUnifiedConnectionsRequest {
         return this;
     }
 
+
     /**
      * Return only results whose updated date is equal or greater to this value
      */
@@ -249,7 +265,6 @@ public class ListUnifiedConnectionsRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -273,14 +288,9 @@ public class ListUnifiedConnectionsRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            categories,
-            env,
-            externalXref,
-            limit,
-            offset,
-            order,
-            sort,
-            updatedGte);
+            categories, env, externalXref,
+            limit, offset, order,
+            sort, updatedGte);
     }
     
     @Override
@@ -295,28 +305,30 @@ public class ListUnifiedConnectionsRequest {
                 "sort", sort,
                 "updatedGte", updatedGte);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<? extends List<Categories>> categories = Optional.empty();
- 
+
         private Optional<String> env = Optional.empty();
- 
+
         private Optional<String> externalXref = Optional.empty();
- 
+
         private Optional<Double> limit = Optional.empty();
- 
+
         private Optional<Double> offset = Optional.empty();
- 
+
         private Optional<String> order = Optional.empty();
- 
+
         private Optional<String> sort = Optional.empty();
- 
+
         private Optional<String> updatedGte = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * Filter the results on these categories
@@ -336,6 +348,7 @@ public class ListUnifiedConnectionsRequest {
             return this;
         }
 
+
         public Builder env(String env) {
             Utils.checkNotNull(env, "env");
             this.env = Optional.ofNullable(env);
@@ -347,6 +360,7 @@ public class ListUnifiedConnectionsRequest {
             this.env = env;
             return this;
         }
+
 
         /**
          * Filter the results to only those integrations for your user referenced by this value
@@ -366,6 +380,7 @@ public class ListUnifiedConnectionsRequest {
             return this;
         }
 
+
         public Builder limit(double limit) {
             Utils.checkNotNull(limit, "limit");
             this.limit = Optional.ofNullable(limit);
@@ -377,6 +392,7 @@ public class ListUnifiedConnectionsRequest {
             this.limit = limit;
             return this;
         }
+
 
         public Builder offset(double offset) {
             Utils.checkNotNull(offset, "offset");
@@ -390,6 +406,7 @@ public class ListUnifiedConnectionsRequest {
             return this;
         }
 
+
         public Builder order(String order) {
             Utils.checkNotNull(order, "order");
             this.order = Optional.ofNullable(order);
@@ -402,6 +419,7 @@ public class ListUnifiedConnectionsRequest {
             return this;
         }
 
+
         public Builder sort(String sort) {
             Utils.checkNotNull(sort, "sort");
             this.sort = Optional.ofNullable(sort);
@@ -413,6 +431,7 @@ public class ListUnifiedConnectionsRequest {
             this.sort = sort;
             return this;
         }
+
 
         /**
          * Return only results whose updated date is equal or greater to this value
@@ -431,17 +450,14 @@ public class ListUnifiedConnectionsRequest {
             this.updatedGte = updatedGte;
             return this;
         }
-        
+
         public ListUnifiedConnectionsRequest build() {
+
             return new ListUnifiedConnectionsRequest(
-                categories,
-                env,
-                externalXref,
-                limit,
-                offset,
-                order,
-                sort,
-                updatedGte);
+                categories, env, externalXref,
+                limit, offset, order,
+                sort, updatedGte);
         }
+
     }
 }

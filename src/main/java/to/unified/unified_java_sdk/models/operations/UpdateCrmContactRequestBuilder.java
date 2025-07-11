@@ -28,7 +28,7 @@ public class UpdateCrmContactRequestBuilder {
     public UpdateCrmContactResponse call() throws Exception {
         
         RequestOperation<UpdateCrmContactRequest, UpdateCrmContactResponse> operation
-              = new UpdateCrmContactOperation( sdkConfiguration);
+              = new UpdateCrmContactOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -64,7 +64,6 @@ public class Event {
     Event(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create an event
      * 
@@ -81,13 +80,11 @@ public class Event {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateCalendarEventResponse createCalendarEvent(
-            CreateCalendarEventRequest request) throws Exception {
+    public CreateCalendarEventResponse createCalendarEvent(CreateCalendarEventRequest request) throws Exception {
         RequestOperation<CreateCalendarEventRequest, CreateCalendarEventResponse> operation
-              = new CreateCalendarEventOperation( sdkConfiguration);
+              = new CreateCalendarEventOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create an event
@@ -105,13 +102,11 @@ public class Event {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateCrmEventResponse createCrmEvent(
-            CreateCrmEventRequest request) throws Exception {
+    public CreateCrmEventResponse createCrmEvent(CreateCrmEventRequest request) throws Exception {
         RequestOperation<CreateCrmEventRequest, CreateCrmEventResponse> operation
-              = new CreateCrmEventOperation( sdkConfiguration);
+              = new CreateCrmEventOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve an event
@@ -129,13 +124,11 @@ public class Event {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetCalendarEventResponse getCalendarEvent(
-            GetCalendarEventRequest request) throws Exception {
+    public GetCalendarEventResponse getCalendarEvent(GetCalendarEventRequest request) throws Exception {
         RequestOperation<GetCalendarEventRequest, GetCalendarEventResponse> operation
-              = new GetCalendarEventOperation( sdkConfiguration);
+              = new GetCalendarEventOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve an event
@@ -153,13 +146,11 @@ public class Event {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetCrmEventResponse getCrmEvent(
-            GetCrmEventRequest request) throws Exception {
+    public GetCrmEventResponse getCrmEvent(GetCrmEventRequest request) throws Exception {
         RequestOperation<GetCrmEventRequest, GetCrmEventResponse> operation
-              = new GetCrmEventOperation( sdkConfiguration);
+              = new GetCrmEventOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all events
@@ -177,13 +168,11 @@ public class Event {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCalendarEventsResponse listCalendarEvents(
-            ListCalendarEventsRequest request) throws Exception {
+    public ListCalendarEventsResponse listCalendarEvents(ListCalendarEventsRequest request) throws Exception {
         RequestOperation<ListCalendarEventsRequest, ListCalendarEventsResponse> operation
-              = new ListCalendarEventsOperation( sdkConfiguration);
+              = new ListCalendarEventsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all events
@@ -201,13 +190,11 @@ public class Event {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCrmEventsResponse listCrmEvents(
-            ListCrmEventsRequest request) throws Exception {
+    public ListCrmEventsResponse listCrmEvents(ListCrmEventsRequest request) throws Exception {
         RequestOperation<ListCrmEventsRequest, ListCrmEventsResponse> operation
-              = new ListCrmEventsOperation( sdkConfiguration);
+              = new ListCrmEventsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an event
@@ -225,13 +212,11 @@ public class Event {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchCalendarEventResponse patchCalendarEvent(
-            PatchCalendarEventRequest request) throws Exception {
+    public PatchCalendarEventResponse patchCalendarEvent(PatchCalendarEventRequest request) throws Exception {
         RequestOperation<PatchCalendarEventRequest, PatchCalendarEventResponse> operation
-              = new PatchCalendarEventOperation( sdkConfiguration);
+              = new PatchCalendarEventOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an event
@@ -249,13 +234,11 @@ public class Event {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchCrmEventResponse patchCrmEvent(
-            PatchCrmEventRequest request) throws Exception {
+    public PatchCrmEventResponse patchCrmEvent(PatchCrmEventRequest request) throws Exception {
         RequestOperation<PatchCrmEventRequest, PatchCrmEventResponse> operation
-              = new PatchCrmEventOperation( sdkConfiguration);
+              = new PatchCrmEventOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove an event
@@ -273,13 +256,11 @@ public class Event {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveCalendarEventResponse removeCalendarEvent(
-            RemoveCalendarEventRequest request) throws Exception {
+    public RemoveCalendarEventResponse removeCalendarEvent(RemoveCalendarEventRequest request) throws Exception {
         RequestOperation<RemoveCalendarEventRequest, RemoveCalendarEventResponse> operation
-              = new RemoveCalendarEventOperation( sdkConfiguration);
+              = new RemoveCalendarEventOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove an event
@@ -297,13 +278,11 @@ public class Event {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveCrmEventResponse removeCrmEvent(
-            RemoveCrmEventRequest request) throws Exception {
+    public RemoveCrmEventResponse removeCrmEvent(RemoveCrmEventRequest request) throws Exception {
         RequestOperation<RemoveCrmEventRequest, RemoveCrmEventResponse> operation
-              = new RemoveCrmEventOperation( sdkConfiguration);
+              = new RemoveCrmEventOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an event
@@ -321,13 +300,11 @@ public class Event {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateCalendarEventResponse updateCalendarEvent(
-            UpdateCalendarEventRequest request) throws Exception {
+    public UpdateCalendarEventResponse updateCalendarEvent(UpdateCalendarEventRequest request) throws Exception {
         RequestOperation<UpdateCalendarEventRequest, UpdateCalendarEventResponse> operation
-              = new UpdateCalendarEventOperation( sdkConfiguration);
+              = new UpdateCalendarEventOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an event
@@ -345,10 +322,9 @@ public class Event {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateCrmEventResponse updateCrmEvent(
-            UpdateCrmEventRequest request) throws Exception {
+    public UpdateCrmEventResponse updateCrmEvent(UpdateCrmEventRequest request) throws Exception {
         RequestOperation<UpdateCrmEventRequest, UpdateCrmEventResponse> operation
-              = new UpdateCrmEventOperation( sdkConfiguration);
+              = new UpdateCrmEventOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

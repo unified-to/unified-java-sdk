@@ -14,31 +14,38 @@ import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class CrmMetadata {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extra_data")
     private Optional<? extends CrmMetadataExtraData> extraData;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     private Optional<String> key;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespace")
     private Optional<String> namespace;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     private Optional<String> slug;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private Optional<String> type;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
@@ -70,7 +77,9 @@ public class CrmMetadata {
     }
     
     public CrmMetadata() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -110,15 +119,17 @@ public class CrmMetadata {
         return (Optional<CrmMetadataValue>) value;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public CrmMetadata withExtraData(CrmMetadataExtraData extraData) {
         Utils.checkNotNull(extraData, "extraData");
         this.extraData = Optional.ofNullable(extraData);
         return this;
     }
+
 
     public CrmMetadata withExtraData(Optional<? extends CrmMetadataExtraData> extraData) {
         Utils.checkNotNull(extraData, "extraData");
@@ -132,6 +143,7 @@ public class CrmMetadata {
         return this;
     }
 
+
     public CrmMetadata withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -143,6 +155,7 @@ public class CrmMetadata {
         this.key = Optional.ofNullable(key);
         return this;
     }
+
 
     public CrmMetadata withKey(Optional<String> key) {
         Utils.checkNotNull(key, "key");
@@ -156,6 +169,7 @@ public class CrmMetadata {
         return this;
     }
 
+
     public CrmMetadata withNamespace(Optional<String> namespace) {
         Utils.checkNotNull(namespace, "namespace");
         this.namespace = namespace;
@@ -167,6 +181,7 @@ public class CrmMetadata {
         this.slug = Optional.ofNullable(slug);
         return this;
     }
+
 
     public CrmMetadata withSlug(Optional<String> slug) {
         Utils.checkNotNull(slug, "slug");
@@ -180,6 +195,7 @@ public class CrmMetadata {
         return this;
     }
 
+
     public CrmMetadata withType(Optional<String> type) {
         Utils.checkNotNull(type, "type");
         this.type = type;
@@ -192,13 +208,13 @@ public class CrmMetadata {
         return this;
     }
 
+
     public CrmMetadata withValue(Optional<? extends CrmMetadataValue> value) {
         Utils.checkNotNull(value, "value");
         this.value = value;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -221,12 +237,8 @@ public class CrmMetadata {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            extraData,
-            id,
-            key,
-            namespace,
-            slug,
-            type,
+            extraData, id, key,
+            namespace, slug, type,
             value);
     }
     
@@ -241,26 +253,28 @@ public class CrmMetadata {
                 "type", type,
                 "value", value);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<? extends CrmMetadataExtraData> extraData = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> key = Optional.empty();
- 
+
         private Optional<String> namespace = Optional.empty();
- 
+
         private Optional<String> slug = Optional.empty();
- 
+
         private Optional<String> type = Optional.empty();
- 
+
         private Optional<? extends CrmMetadataValue> value = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder extraData(CrmMetadataExtraData extraData) {
             Utils.checkNotNull(extraData, "extraData");
@@ -274,6 +288,7 @@ public class CrmMetadata {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -285,6 +300,7 @@ public class CrmMetadata {
             this.id = id;
             return this;
         }
+
 
         public Builder key(String key) {
             Utils.checkNotNull(key, "key");
@@ -298,6 +314,7 @@ public class CrmMetadata {
             return this;
         }
 
+
         public Builder namespace(String namespace) {
             Utils.checkNotNull(namespace, "namespace");
             this.namespace = Optional.ofNullable(namespace);
@@ -309,6 +326,7 @@ public class CrmMetadata {
             this.namespace = namespace;
             return this;
         }
+
 
         public Builder slug(String slug) {
             Utils.checkNotNull(slug, "slug");
@@ -322,6 +340,7 @@ public class CrmMetadata {
             return this;
         }
 
+
         public Builder type(String type) {
             Utils.checkNotNull(type, "type");
             this.type = Optional.ofNullable(type);
@@ -334,6 +353,7 @@ public class CrmMetadata {
             return this;
         }
 
+
         public Builder value(CrmMetadataValue value) {
             Utils.checkNotNull(value, "value");
             this.value = Optional.ofNullable(value);
@@ -345,16 +365,14 @@ public class CrmMetadata {
             this.value = value;
             return this;
         }
-        
+
         public CrmMetadata build() {
+
             return new CrmMetadata(
-                extraData,
-                id,
-                key,
-                namespace,
-                slug,
-                type,
+                extraData, id, key,
+                namespace, slug, type,
                 value);
         }
+
     }
 }

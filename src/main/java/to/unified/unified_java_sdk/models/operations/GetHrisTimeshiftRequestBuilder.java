@@ -28,7 +28,7 @@ public class GetHrisTimeshiftRequestBuilder {
     public GetHrisTimeshiftResponse call() throws Exception {
         
         RequestOperation<GetHrisTimeshiftRequest, GetHrisTimeshiftResponse> operation
-              = new GetHrisTimeshiftOperation( sdkConfiguration);
+              = new GetHrisTimeshiftOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

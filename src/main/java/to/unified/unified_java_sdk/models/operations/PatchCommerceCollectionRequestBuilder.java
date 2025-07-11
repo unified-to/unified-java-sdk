@@ -28,7 +28,7 @@ public class PatchCommerceCollectionRequestBuilder {
     public PatchCommerceCollectionResponse call() throws Exception {
         
         RequestOperation<PatchCommerceCollectionRequest, PatchCommerceCollectionResponse> operation
-              = new PatchCommerceCollectionOperation( sdkConfiguration);
+              = new PatchCommerceCollectionOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

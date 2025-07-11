@@ -21,7 +21,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 java:
-  version: 0.32.2
+  version: 0.33.0
   additionalDependencies: []
   additionalPlugins: []
   artifactID: unified-java-sdk
@@ -50,6 +50,7 @@ java:
     shortName: MIT
     url: https://mit-license.org/
   maxMethodParams: 0
+  nullFriendlyParameters: false
   outputModelSuffix: output
   projectName: Unified-java-sdk
   templateVersion: v2

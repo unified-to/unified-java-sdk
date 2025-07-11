@@ -40,7 +40,6 @@ public class Account {
     Account(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create an account
      * 
@@ -57,13 +56,11 @@ public class Account {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAccountingAccountResponse createAccountingAccount(
-            CreateAccountingAccountRequest request) throws Exception {
+    public CreateAccountingAccountResponse createAccountingAccount(CreateAccountingAccountRequest request) throws Exception {
         RequestOperation<CreateAccountingAccountRequest, CreateAccountingAccountResponse> operation
-              = new CreateAccountingAccountOperation( sdkConfiguration);
+              = new CreateAccountingAccountOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve an account
@@ -81,13 +78,11 @@ public class Account {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAccountingAccountResponse getAccountingAccount(
-            GetAccountingAccountRequest request) throws Exception {
+    public GetAccountingAccountResponse getAccountingAccount(GetAccountingAccountRequest request) throws Exception {
         RequestOperation<GetAccountingAccountRequest, GetAccountingAccountResponse> operation
-              = new GetAccountingAccountOperation( sdkConfiguration);
+              = new GetAccountingAccountOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all accounts
@@ -105,13 +100,11 @@ public class Account {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAccountingAccountsResponse listAccountingAccounts(
-            ListAccountingAccountsRequest request) throws Exception {
+    public ListAccountingAccountsResponse listAccountingAccounts(ListAccountingAccountsRequest request) throws Exception {
         RequestOperation<ListAccountingAccountsRequest, ListAccountingAccountsResponse> operation
-              = new ListAccountingAccountsOperation( sdkConfiguration);
+              = new ListAccountingAccountsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an account
@@ -129,13 +122,11 @@ public class Account {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAccountingAccountResponse patchAccountingAccount(
-            PatchAccountingAccountRequest request) throws Exception {
+    public PatchAccountingAccountResponse patchAccountingAccount(PatchAccountingAccountRequest request) throws Exception {
         RequestOperation<PatchAccountingAccountRequest, PatchAccountingAccountResponse> operation
-              = new PatchAccountingAccountOperation( sdkConfiguration);
+              = new PatchAccountingAccountOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove an account
@@ -153,13 +144,11 @@ public class Account {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAccountingAccountResponse removeAccountingAccount(
-            RemoveAccountingAccountRequest request) throws Exception {
+    public RemoveAccountingAccountResponse removeAccountingAccount(RemoveAccountingAccountRequest request) throws Exception {
         RequestOperation<RemoveAccountingAccountRequest, RemoveAccountingAccountResponse> operation
-              = new RemoveAccountingAccountOperation( sdkConfiguration);
+              = new RemoveAccountingAccountOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an account
@@ -177,10 +166,9 @@ public class Account {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAccountingAccountResponse updateAccountingAccount(
-            UpdateAccountingAccountRequest request) throws Exception {
+    public UpdateAccountingAccountResponse updateAccountingAccount(UpdateAccountingAccountRequest request) throws Exception {
         RequestOperation<UpdateAccountingAccountRequest, UpdateAccountingAccountResponse> operation
-              = new UpdateAccountingAccountOperation( sdkConfiguration);
+              = new UpdateAccountingAccountOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

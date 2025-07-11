@@ -48,7 +48,6 @@ public class Organization {
     Organization(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create an organization
      * 
@@ -65,13 +64,11 @@ public class Organization {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateRepoOrganizationResponse createRepoOrganization(
-            CreateRepoOrganizationRequest request) throws Exception {
+    public CreateRepoOrganizationResponse createRepoOrganization(CreateRepoOrganizationRequest request) throws Exception {
         RequestOperation<CreateRepoOrganizationRequest, CreateRepoOrganizationResponse> operation
-              = new CreateRepoOrganizationOperation( sdkConfiguration);
+              = new CreateRepoOrganizationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve an organization
@@ -89,13 +86,11 @@ public class Organization {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAccountingOrganizationResponse getAccountingOrganization(
-            GetAccountingOrganizationRequest request) throws Exception {
+    public GetAccountingOrganizationResponse getAccountingOrganization(GetAccountingOrganizationRequest request) throws Exception {
         RequestOperation<GetAccountingOrganizationRequest, GetAccountingOrganizationResponse> operation
-              = new GetAccountingOrganizationOperation( sdkConfiguration);
+              = new GetAccountingOrganizationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve an organization
@@ -113,13 +108,11 @@ public class Organization {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetRepoOrganizationResponse getRepoOrganization(
-            GetRepoOrganizationRequest request) throws Exception {
+    public GetRepoOrganizationResponse getRepoOrganization(GetRepoOrganizationRequest request) throws Exception {
         RequestOperation<GetRepoOrganizationRequest, GetRepoOrganizationResponse> operation
-              = new GetRepoOrganizationOperation( sdkConfiguration);
+              = new GetRepoOrganizationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all organizations
@@ -137,13 +130,11 @@ public class Organization {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAccountingOrganizationsResponse listAccountingOrganizations(
-            ListAccountingOrganizationsRequest request) throws Exception {
+    public ListAccountingOrganizationsResponse listAccountingOrganizations(ListAccountingOrganizationsRequest request) throws Exception {
         RequestOperation<ListAccountingOrganizationsRequest, ListAccountingOrganizationsResponse> operation
-              = new ListAccountingOrganizationsOperation( sdkConfiguration);
+              = new ListAccountingOrganizationsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all organizations
@@ -161,13 +152,11 @@ public class Organization {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListRepoOrganizationsResponse listRepoOrganizations(
-            ListRepoOrganizationsRequest request) throws Exception {
+    public ListRepoOrganizationsResponse listRepoOrganizations(ListRepoOrganizationsRequest request) throws Exception {
         RequestOperation<ListRepoOrganizationsRequest, ListRepoOrganizationsResponse> operation
-              = new ListRepoOrganizationsOperation( sdkConfiguration);
+              = new ListRepoOrganizationsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an organization
@@ -185,13 +174,11 @@ public class Organization {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchRepoOrganizationResponse patchRepoOrganization(
-            PatchRepoOrganizationRequest request) throws Exception {
+    public PatchRepoOrganizationResponse patchRepoOrganization(PatchRepoOrganizationRequest request) throws Exception {
         RequestOperation<PatchRepoOrganizationRequest, PatchRepoOrganizationResponse> operation
-              = new PatchRepoOrganizationOperation( sdkConfiguration);
+              = new PatchRepoOrganizationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove an organization
@@ -209,13 +196,11 @@ public class Organization {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveRepoOrganizationResponse removeRepoOrganization(
-            RemoveRepoOrganizationRequest request) throws Exception {
+    public RemoveRepoOrganizationResponse removeRepoOrganization(RemoveRepoOrganizationRequest request) throws Exception {
         RequestOperation<RemoveRepoOrganizationRequest, RemoveRepoOrganizationResponse> operation
-              = new RemoveRepoOrganizationOperation( sdkConfiguration);
+              = new RemoveRepoOrganizationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an organization
@@ -233,10 +218,9 @@ public class Organization {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateRepoOrganizationResponse updateRepoOrganization(
-            UpdateRepoOrganizationRequest request) throws Exception {
+    public UpdateRepoOrganizationResponse updateRepoOrganization(UpdateRepoOrganizationRequest request) throws Exception {
         RequestOperation<UpdateRepoOrganizationRequest, UpdateRepoOrganizationResponse> operation
-              = new UpdateRepoOrganizationOperation( sdkConfiguration);
+              = new UpdateRepoOrganizationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

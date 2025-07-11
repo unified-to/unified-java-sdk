@@ -13,8 +13,8 @@ import to.unified.unified_java_sdk.models.shared.Webhook;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class CreateUnifiedWebhookRequest {
 
+public class CreateUnifiedWebhookRequest {
     /**
      * A webhook is used to POST new/updated information to your server.
      */
@@ -58,9 +58,10 @@ public class CreateUnifiedWebhookRequest {
         return includeAll;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * A webhook is used to POST new/updated information to your server.
@@ -80,6 +81,7 @@ public class CreateUnifiedWebhookRequest {
         return this;
     }
 
+
     /**
      * When set, all of the existing data will sent back to your server.
      */
@@ -89,7 +91,6 @@ public class CreateUnifiedWebhookRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -107,8 +108,7 @@ public class CreateUnifiedWebhookRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            webhook,
-            includeAll);
+            webhook, includeAll);
     }
     
     @Override
@@ -117,16 +117,18 @@ public class CreateUnifiedWebhookRequest {
                 "webhook", webhook,
                 "includeAll", includeAll);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Webhook webhook;
- 
+
         private Optional<Boolean> includeAll = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * A webhook is used to POST new/updated information to your server.
@@ -136,6 +138,7 @@ public class CreateUnifiedWebhookRequest {
             this.webhook = webhook;
             return this;
         }
+
 
         /**
          * When set, all of the existing data will sent back to your server.
@@ -154,11 +157,12 @@ public class CreateUnifiedWebhookRequest {
             this.includeAll = includeAll;
             return this;
         }
-        
+
         public CreateUnifiedWebhookRequest build() {
+
             return new CreateUnifiedWebhookRequest(
-                webhook,
-                includeAll);
+                webhook, includeAll);
         }
+
     }
 }

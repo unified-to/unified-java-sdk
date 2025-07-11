@@ -88,7 +88,6 @@ public class Ticketing {
     Ticketing(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a customer
      * 
@@ -105,13 +104,11 @@ public class Ticketing {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateTicketingCustomerResponse createTicketingCustomer(
-            CreateTicketingCustomerRequest request) throws Exception {
+    public CreateTicketingCustomerResponse createTicketingCustomer(CreateTicketingCustomerRequest request) throws Exception {
         RequestOperation<CreateTicketingCustomerRequest, CreateTicketingCustomerResponse> operation
-              = new CreateTicketingCustomerOperation( sdkConfiguration);
+              = new CreateTicketingCustomerOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a note
@@ -129,13 +126,11 @@ public class Ticketing {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateTicketingNoteResponse createTicketingNote(
-            CreateTicketingNoteRequest request) throws Exception {
+    public CreateTicketingNoteResponse createTicketingNote(CreateTicketingNoteRequest request) throws Exception {
         RequestOperation<CreateTicketingNoteRequest, CreateTicketingNoteResponse> operation
-              = new CreateTicketingNoteOperation( sdkConfiguration);
+              = new CreateTicketingNoteOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a ticket
@@ -153,13 +148,11 @@ public class Ticketing {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateTicketingTicketResponse createTicketingTicket(
-            CreateTicketingTicketRequest request) throws Exception {
+    public CreateTicketingTicketResponse createTicketingTicket(CreateTicketingTicketRequest request) throws Exception {
         RequestOperation<CreateTicketingTicketRequest, CreateTicketingTicketResponse> operation
-              = new CreateTicketingTicketOperation( sdkConfiguration);
+              = new CreateTicketingTicketOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a customer
@@ -177,13 +170,11 @@ public class Ticketing {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetTicketingCustomerResponse getTicketingCustomer(
-            GetTicketingCustomerRequest request) throws Exception {
+    public GetTicketingCustomerResponse getTicketingCustomer(GetTicketingCustomerRequest request) throws Exception {
         RequestOperation<GetTicketingCustomerRequest, GetTicketingCustomerResponse> operation
-              = new GetTicketingCustomerOperation( sdkConfiguration);
+              = new GetTicketingCustomerOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a note
@@ -201,13 +192,11 @@ public class Ticketing {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetTicketingNoteResponse getTicketingNote(
-            GetTicketingNoteRequest request) throws Exception {
+    public GetTicketingNoteResponse getTicketingNote(GetTicketingNoteRequest request) throws Exception {
         RequestOperation<GetTicketingNoteRequest, GetTicketingNoteResponse> operation
-              = new GetTicketingNoteOperation( sdkConfiguration);
+              = new GetTicketingNoteOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a ticket
@@ -225,13 +214,11 @@ public class Ticketing {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetTicketingTicketResponse getTicketingTicket(
-            GetTicketingTicketRequest request) throws Exception {
+    public GetTicketingTicketResponse getTicketingTicket(GetTicketingTicketRequest request) throws Exception {
         RequestOperation<GetTicketingTicketRequest, GetTicketingTicketResponse> operation
-              = new GetTicketingTicketOperation( sdkConfiguration);
+              = new GetTicketingTicketOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all customers
@@ -249,13 +236,11 @@ public class Ticketing {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListTicketingCustomersResponse listTicketingCustomers(
-            ListTicketingCustomersRequest request) throws Exception {
+    public ListTicketingCustomersResponse listTicketingCustomers(ListTicketingCustomersRequest request) throws Exception {
         RequestOperation<ListTicketingCustomersRequest, ListTicketingCustomersResponse> operation
-              = new ListTicketingCustomersOperation( sdkConfiguration);
+              = new ListTicketingCustomersOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all notes
@@ -273,13 +258,11 @@ public class Ticketing {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListTicketingNotesResponse listTicketingNotes(
-            ListTicketingNotesRequest request) throws Exception {
+    public ListTicketingNotesResponse listTicketingNotes(ListTicketingNotesRequest request) throws Exception {
         RequestOperation<ListTicketingNotesRequest, ListTicketingNotesResponse> operation
-              = new ListTicketingNotesOperation( sdkConfiguration);
+              = new ListTicketingNotesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all tickets
@@ -297,13 +280,11 @@ public class Ticketing {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListTicketingTicketsResponse listTicketingTickets(
-            ListTicketingTicketsRequest request) throws Exception {
+    public ListTicketingTicketsResponse listTicketingTickets(ListTicketingTicketsRequest request) throws Exception {
         RequestOperation<ListTicketingTicketsRequest, ListTicketingTicketsResponse> operation
-              = new ListTicketingTicketsOperation( sdkConfiguration);
+              = new ListTicketingTicketsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a customer
@@ -321,13 +302,11 @@ public class Ticketing {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchTicketingCustomerResponse patchTicketingCustomer(
-            PatchTicketingCustomerRequest request) throws Exception {
+    public PatchTicketingCustomerResponse patchTicketingCustomer(PatchTicketingCustomerRequest request) throws Exception {
         RequestOperation<PatchTicketingCustomerRequest, PatchTicketingCustomerResponse> operation
-              = new PatchTicketingCustomerOperation( sdkConfiguration);
+              = new PatchTicketingCustomerOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a note
@@ -345,13 +324,11 @@ public class Ticketing {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchTicketingNoteResponse patchTicketingNote(
-            PatchTicketingNoteRequest request) throws Exception {
+    public PatchTicketingNoteResponse patchTicketingNote(PatchTicketingNoteRequest request) throws Exception {
         RequestOperation<PatchTicketingNoteRequest, PatchTicketingNoteResponse> operation
-              = new PatchTicketingNoteOperation( sdkConfiguration);
+              = new PatchTicketingNoteOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a ticket
@@ -369,13 +346,11 @@ public class Ticketing {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchTicketingTicketResponse patchTicketingTicket(
-            PatchTicketingTicketRequest request) throws Exception {
+    public PatchTicketingTicketResponse patchTicketingTicket(PatchTicketingTicketRequest request) throws Exception {
         RequestOperation<PatchTicketingTicketRequest, PatchTicketingTicketResponse> operation
-              = new PatchTicketingTicketOperation( sdkConfiguration);
+              = new PatchTicketingTicketOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a customer
@@ -393,13 +368,11 @@ public class Ticketing {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveTicketingCustomerResponse removeTicketingCustomer(
-            RemoveTicketingCustomerRequest request) throws Exception {
+    public RemoveTicketingCustomerResponse removeTicketingCustomer(RemoveTicketingCustomerRequest request) throws Exception {
         RequestOperation<RemoveTicketingCustomerRequest, RemoveTicketingCustomerResponse> operation
-              = new RemoveTicketingCustomerOperation( sdkConfiguration);
+              = new RemoveTicketingCustomerOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a note
@@ -417,13 +390,11 @@ public class Ticketing {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveTicketingNoteResponse removeTicketingNote(
-            RemoveTicketingNoteRequest request) throws Exception {
+    public RemoveTicketingNoteResponse removeTicketingNote(RemoveTicketingNoteRequest request) throws Exception {
         RequestOperation<RemoveTicketingNoteRequest, RemoveTicketingNoteResponse> operation
-              = new RemoveTicketingNoteOperation( sdkConfiguration);
+              = new RemoveTicketingNoteOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a ticket
@@ -441,13 +412,11 @@ public class Ticketing {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveTicketingTicketResponse removeTicketingTicket(
-            RemoveTicketingTicketRequest request) throws Exception {
+    public RemoveTicketingTicketResponse removeTicketingTicket(RemoveTicketingTicketRequest request) throws Exception {
         RequestOperation<RemoveTicketingTicketRequest, RemoveTicketingTicketResponse> operation
-              = new RemoveTicketingTicketOperation( sdkConfiguration);
+              = new RemoveTicketingTicketOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a customer
@@ -465,13 +434,11 @@ public class Ticketing {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateTicketingCustomerResponse updateTicketingCustomer(
-            UpdateTicketingCustomerRequest request) throws Exception {
+    public UpdateTicketingCustomerResponse updateTicketingCustomer(UpdateTicketingCustomerRequest request) throws Exception {
         RequestOperation<UpdateTicketingCustomerRequest, UpdateTicketingCustomerResponse> operation
-              = new UpdateTicketingCustomerOperation( sdkConfiguration);
+              = new UpdateTicketingCustomerOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a note
@@ -489,13 +456,11 @@ public class Ticketing {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateTicketingNoteResponse updateTicketingNote(
-            UpdateTicketingNoteRequest request) throws Exception {
+    public UpdateTicketingNoteResponse updateTicketingNote(UpdateTicketingNoteRequest request) throws Exception {
         RequestOperation<UpdateTicketingNoteRequest, UpdateTicketingNoteResponse> operation
-              = new UpdateTicketingNoteOperation( sdkConfiguration);
+              = new UpdateTicketingNoteOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a ticket
@@ -513,10 +478,9 @@ public class Ticketing {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateTicketingTicketResponse updateTicketingTicket(
-            UpdateTicketingTicketRequest request) throws Exception {
+    public UpdateTicketingTicketResponse updateTicketingTicket(UpdateTicketingTicketRequest request) throws Exception {
         RequestOperation<UpdateTicketingTicketRequest, UpdateTicketingTicketResponse> operation
-              = new UpdateTicketingTicketOperation( sdkConfiguration);
+              = new UpdateTicketingTicketOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

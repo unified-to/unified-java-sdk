@@ -14,8 +14,8 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class ListTicketingTicketsRequest {
 
+public class ListTicketingTicketsRequest {
     /**
      * ID of the connection
      */
@@ -34,11 +34,14 @@ public class ListTicketingTicketsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     private Optional<? extends List<String>> fields;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     private Optional<Double> limit;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     private Optional<Double> offset;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     private Optional<String> order;
@@ -54,6 +57,7 @@ public class ListTicketingTicketsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
     private Optional<String> raw;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     private Optional<String> sort;
@@ -109,7 +113,10 @@ public class ListTicketingTicketsRequest {
     
     public ListTicketingTicketsRequest(
             String connectionId) {
-        this(connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(connectionId, Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     /**
@@ -189,9 +196,10 @@ public class ListTicketingTicketsRequest {
         return userId;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * ID of the connection
@@ -211,6 +219,7 @@ public class ListTicketingTicketsRequest {
         return this;
     }
 
+
     /**
      * The customer ID to filter by
      */
@@ -229,6 +238,7 @@ public class ListTicketingTicketsRequest {
         return this;
     }
 
+
     /**
      * Comma-delimited fields to return
      */
@@ -244,6 +254,7 @@ public class ListTicketingTicketsRequest {
         return this;
     }
 
+
     public ListTicketingTicketsRequest withLimit(Optional<Double> limit) {
         Utils.checkNotNull(limit, "limit");
         this.limit = limit;
@@ -256,6 +267,7 @@ public class ListTicketingTicketsRequest {
         return this;
     }
 
+
     public ListTicketingTicketsRequest withOffset(Optional<Double> offset) {
         Utils.checkNotNull(offset, "offset");
         this.offset = offset;
@@ -267,6 +279,7 @@ public class ListTicketingTicketsRequest {
         this.order = Optional.ofNullable(order);
         return this;
     }
+
 
     public ListTicketingTicketsRequest withOrder(Optional<String> order) {
         Utils.checkNotNull(order, "order");
@@ -282,6 +295,7 @@ public class ListTicketingTicketsRequest {
         this.query = Optional.ofNullable(query);
         return this;
     }
+
 
     /**
      * Query string to search. eg. email address or name
@@ -301,6 +315,7 @@ public class ListTicketingTicketsRequest {
         return this;
     }
 
+
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
@@ -316,6 +331,7 @@ public class ListTicketingTicketsRequest {
         return this;
     }
 
+
     public ListTicketingTicketsRequest withSort(Optional<String> sort) {
         Utils.checkNotNull(sort, "sort");
         this.sort = sort;
@@ -330,6 +346,7 @@ public class ListTicketingTicketsRequest {
         this.updatedGte = Optional.ofNullable(updatedGte);
         return this;
     }
+
 
     /**
      * Return only results whose updated date is equal or greater to this value
@@ -349,6 +366,7 @@ public class ListTicketingTicketsRequest {
         return this;
     }
 
+
     /**
      * The user/employee ID to filter by
      */
@@ -358,7 +376,6 @@ public class ListTicketingTicketsRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -385,17 +402,10 @@ public class ListTicketingTicketsRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId,
-            customerId,
-            fields,
-            limit,
-            offset,
-            order,
-            query,
-            raw,
-            sort,
-            updatedGte,
-            userId);
+            connectionId, customerId, fields,
+            limit, offset, order,
+            query, raw, sort,
+            updatedGte, userId);
     }
     
     @Override
@@ -413,34 +423,36 @@ public class ListTicketingTicketsRequest {
                 "updatedGte", updatedGte,
                 "userId", userId);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private String connectionId;
- 
+
         private Optional<String> customerId = Optional.empty();
- 
+
         private Optional<? extends List<String>> fields = Optional.empty();
- 
+
         private Optional<Double> limit = Optional.empty();
- 
+
         private Optional<Double> offset = Optional.empty();
- 
+
         private Optional<String> order = Optional.empty();
- 
+
         private Optional<String> query = Optional.empty();
- 
+
         private Optional<String> raw = Optional.empty();
- 
+
         private Optional<String> sort = Optional.empty();
- 
+
         private Optional<String> updatedGte = Optional.empty();
- 
+
         private Optional<String> userId = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * ID of the connection
@@ -450,6 +462,7 @@ public class ListTicketingTicketsRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         /**
          * The customer ID to filter by
@@ -469,6 +482,7 @@ public class ListTicketingTicketsRequest {
             return this;
         }
 
+
         /**
          * Comma-delimited fields to return
          */
@@ -487,6 +501,7 @@ public class ListTicketingTicketsRequest {
             return this;
         }
 
+
         public Builder limit(double limit) {
             Utils.checkNotNull(limit, "limit");
             this.limit = Optional.ofNullable(limit);
@@ -498,6 +513,7 @@ public class ListTicketingTicketsRequest {
             this.limit = limit;
             return this;
         }
+
 
         public Builder offset(double offset) {
             Utils.checkNotNull(offset, "offset");
@@ -511,6 +527,7 @@ public class ListTicketingTicketsRequest {
             return this;
         }
 
+
         public Builder order(String order) {
             Utils.checkNotNull(order, "order");
             this.order = Optional.ofNullable(order);
@@ -522,6 +539,7 @@ public class ListTicketingTicketsRequest {
             this.order = order;
             return this;
         }
+
 
         /**
          * Query string to search. eg. email address or name
@@ -541,6 +559,7 @@ public class ListTicketingTicketsRequest {
             return this;
         }
 
+
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
@@ -559,6 +578,7 @@ public class ListTicketingTicketsRequest {
             return this;
         }
 
+
         public Builder sort(String sort) {
             Utils.checkNotNull(sort, "sort");
             this.sort = Optional.ofNullable(sort);
@@ -570,6 +590,7 @@ public class ListTicketingTicketsRequest {
             this.sort = sort;
             return this;
         }
+
 
         /**
          * Return only results whose updated date is equal or greater to this value
@@ -589,6 +610,7 @@ public class ListTicketingTicketsRequest {
             return this;
         }
 
+
         /**
          * The user/employee ID to filter by
          */
@@ -606,20 +628,15 @@ public class ListTicketingTicketsRequest {
             this.userId = userId;
             return this;
         }
-        
+
         public ListTicketingTicketsRequest build() {
+
             return new ListTicketingTicketsRequest(
-                connectionId,
-                customerId,
-                fields,
-                limit,
-                offset,
-                order,
-                query,
-                raw,
-                sort,
-                updatedGte,
-                userId);
+                connectionId, customerId, fields,
+                limit, offset, order,
+                query, raw, sort,
+                updatedGte, userId);
         }
+
     }
 }

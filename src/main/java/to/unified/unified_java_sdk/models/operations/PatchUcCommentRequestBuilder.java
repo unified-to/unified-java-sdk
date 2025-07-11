@@ -28,7 +28,7 @@ public class PatchUcCommentRequestBuilder {
     public PatchUcCommentResponse call() throws Exception {
         
         RequestOperation<PatchUcCommentRequest, PatchUcCommentResponse> operation
-              = new PatchUcCommentOperation( sdkConfiguration);
+              = new PatchUcCommentOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

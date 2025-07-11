@@ -19,51 +19,63 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class HrisGroup {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
     private Optional<String> companyId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private Optional<String> description;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     private Optional<Boolean> isActive;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manager_ids")
     private Optional<? extends List<String>> managerIds;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     private Optional<String> parentId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private Optional<? extends HrisGroupType> type;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_ids")
@@ -110,7 +122,10 @@ public class HrisGroup {
     }
     
     public HrisGroup() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -177,15 +192,17 @@ public class HrisGroup {
         return (Optional<List<String>>) userIds;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public HrisGroup withCompanyId(String companyId) {
         Utils.checkNotNull(companyId, "companyId");
         this.companyId = Optional.ofNullable(companyId);
         return this;
     }
+
 
     public HrisGroup withCompanyId(Optional<String> companyId) {
         Utils.checkNotNull(companyId, "companyId");
@@ -199,6 +216,7 @@ public class HrisGroup {
         return this;
     }
 
+
     public HrisGroup withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
@@ -210,6 +228,7 @@ public class HrisGroup {
         this.description = Optional.ofNullable(description);
         return this;
     }
+
 
     public HrisGroup withDescription(Optional<String> description) {
         Utils.checkNotNull(description, "description");
@@ -223,6 +242,7 @@ public class HrisGroup {
         return this;
     }
 
+
     public HrisGroup withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -234,6 +254,7 @@ public class HrisGroup {
         this.isActive = Optional.ofNullable(isActive);
         return this;
     }
+
 
     public HrisGroup withIsActive(Optional<Boolean> isActive) {
         Utils.checkNotNull(isActive, "isActive");
@@ -247,6 +268,7 @@ public class HrisGroup {
         return this;
     }
 
+
     public HrisGroup withManagerIds(Optional<? extends List<String>> managerIds) {
         Utils.checkNotNull(managerIds, "managerIds");
         this.managerIds = managerIds;
@@ -258,6 +280,7 @@ public class HrisGroup {
         this.name = Optional.ofNullable(name);
         return this;
     }
+
 
     public HrisGroup withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
@@ -271,6 +294,7 @@ public class HrisGroup {
         return this;
     }
 
+
     public HrisGroup withParentId(Optional<String> parentId) {
         Utils.checkNotNull(parentId, "parentId");
         this.parentId = parentId;
@@ -282,6 +306,7 @@ public class HrisGroup {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public HrisGroup withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -295,6 +320,7 @@ public class HrisGroup {
         return this;
     }
 
+
     public HrisGroup withType(Optional<? extends HrisGroupType> type) {
         Utils.checkNotNull(type, "type");
         this.type = type;
@@ -306,6 +332,7 @@ public class HrisGroup {
         this.updatedAt = Optional.ofNullable(updatedAt);
         return this;
     }
+
 
     public HrisGroup withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
@@ -319,13 +346,13 @@ public class HrisGroup {
         return this;
     }
 
+
     public HrisGroup withUserIds(Optional<? extends List<String>> userIds) {
         Utils.checkNotNull(userIds, "userIds");
         this.userIds = userIds;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -353,18 +380,10 @@ public class HrisGroup {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            companyId,
-            createdAt,
-            description,
-            id,
-            isActive,
-            managerIds,
-            name,
-            parentId,
-            raw,
-            type,
-            updatedAt,
-            userIds);
+            companyId, createdAt, description,
+            id, isActive, managerIds,
+            name, parentId, raw,
+            type, updatedAt, userIds);
     }
     
     @Override
@@ -383,36 +402,38 @@ public class HrisGroup {
                 "updatedAt", updatedAt,
                 "userIds", userIds);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> companyId = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> description = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<Boolean> isActive = Optional.empty();
- 
+
         private Optional<? extends List<String>> managerIds = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<String> parentId = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<? extends HrisGroupType> type = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<? extends List<String>> userIds = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder companyId(String companyId) {
             Utils.checkNotNull(companyId, "companyId");
@@ -426,6 +447,7 @@ public class HrisGroup {
             return this;
         }
 
+
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
@@ -437,6 +459,7 @@ public class HrisGroup {
             this.createdAt = createdAt;
             return this;
         }
+
 
         public Builder description(String description) {
             Utils.checkNotNull(description, "description");
@@ -450,6 +473,7 @@ public class HrisGroup {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -461,6 +485,7 @@ public class HrisGroup {
             this.id = id;
             return this;
         }
+
 
         public Builder isActive(boolean isActive) {
             Utils.checkNotNull(isActive, "isActive");
@@ -474,6 +499,7 @@ public class HrisGroup {
             return this;
         }
 
+
         public Builder managerIds(List<String> managerIds) {
             Utils.checkNotNull(managerIds, "managerIds");
             this.managerIds = Optional.ofNullable(managerIds);
@@ -485,6 +511,7 @@ public class HrisGroup {
             this.managerIds = managerIds;
             return this;
         }
+
 
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
@@ -498,6 +525,7 @@ public class HrisGroup {
             return this;
         }
 
+
         public Builder parentId(String parentId) {
             Utils.checkNotNull(parentId, "parentId");
             this.parentId = Optional.ofNullable(parentId);
@@ -509,6 +537,7 @@ public class HrisGroup {
             this.parentId = parentId;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -522,6 +551,7 @@ public class HrisGroup {
             return this;
         }
 
+
         public Builder type(HrisGroupType type) {
             Utils.checkNotNull(type, "type");
             this.type = Optional.ofNullable(type);
@@ -533,6 +563,7 @@ public class HrisGroup {
             this.type = type;
             return this;
         }
+
 
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
@@ -546,6 +577,7 @@ public class HrisGroup {
             return this;
         }
 
+
         public Builder userIds(List<String> userIds) {
             Utils.checkNotNull(userIds, "userIds");
             this.userIds = Optional.ofNullable(userIds);
@@ -557,21 +589,15 @@ public class HrisGroup {
             this.userIds = userIds;
             return this;
         }
-        
+
         public HrisGroup build() {
+
             return new HrisGroup(
-                companyId,
-                createdAt,
-                description,
-                id,
-                isActive,
-                managerIds,
-                name,
-                parentId,
-                raw,
-                type,
-                updatedAt,
-                userIds);
+                companyId, createdAt, description,
+                id, isActive, managerIds,
+                name, parentId, raw,
+                type, updatedAt, userIds);
         }
+
     }
 }

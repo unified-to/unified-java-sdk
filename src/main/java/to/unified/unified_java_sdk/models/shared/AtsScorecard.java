@@ -18,51 +18,63 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AtsScorecard {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("application_id")
     private Optional<String> applicationId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_id")
     private Optional<String> candidateId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     private Optional<String> comment;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interview_id")
     private Optional<String> interviewId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interviewer_id")
     private Optional<String> interviewerId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job_id")
     private Optional<String> jobId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("questions")
     private Optional<? extends List<AtsScorecardQuestion>> questions;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendation")
     private Optional<? extends Recommendation> recommendation;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -109,7 +121,10 @@ public class AtsScorecard {
     }
     
     public AtsScorecard() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -175,15 +190,17 @@ public class AtsScorecard {
         return updatedAt;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AtsScorecard withApplicationId(String applicationId) {
         Utils.checkNotNull(applicationId, "applicationId");
         this.applicationId = Optional.ofNullable(applicationId);
         return this;
     }
+
 
     public AtsScorecard withApplicationId(Optional<String> applicationId) {
         Utils.checkNotNull(applicationId, "applicationId");
@@ -197,6 +214,7 @@ public class AtsScorecard {
         return this;
     }
 
+
     public AtsScorecard withCandidateId(Optional<String> candidateId) {
         Utils.checkNotNull(candidateId, "candidateId");
         this.candidateId = candidateId;
@@ -208,6 +226,7 @@ public class AtsScorecard {
         this.comment = Optional.ofNullable(comment);
         return this;
     }
+
 
     public AtsScorecard withComment(Optional<String> comment) {
         Utils.checkNotNull(comment, "comment");
@@ -221,6 +240,7 @@ public class AtsScorecard {
         return this;
     }
 
+
     public AtsScorecard withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
@@ -232,6 +252,7 @@ public class AtsScorecard {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public AtsScorecard withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -245,6 +266,7 @@ public class AtsScorecard {
         return this;
     }
 
+
     public AtsScorecard withInterviewId(Optional<String> interviewId) {
         Utils.checkNotNull(interviewId, "interviewId");
         this.interviewId = interviewId;
@@ -256,6 +278,7 @@ public class AtsScorecard {
         this.interviewerId = Optional.ofNullable(interviewerId);
         return this;
     }
+
 
     public AtsScorecard withInterviewerId(Optional<String> interviewerId) {
         Utils.checkNotNull(interviewerId, "interviewerId");
@@ -269,6 +292,7 @@ public class AtsScorecard {
         return this;
     }
 
+
     public AtsScorecard withJobId(Optional<String> jobId) {
         Utils.checkNotNull(jobId, "jobId");
         this.jobId = jobId;
@@ -280,6 +304,7 @@ public class AtsScorecard {
         this.questions = Optional.ofNullable(questions);
         return this;
     }
+
 
     public AtsScorecard withQuestions(Optional<? extends List<AtsScorecardQuestion>> questions) {
         Utils.checkNotNull(questions, "questions");
@@ -293,6 +318,7 @@ public class AtsScorecard {
         return this;
     }
 
+
     public AtsScorecard withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
@@ -304,6 +330,7 @@ public class AtsScorecard {
         this.recommendation = Optional.ofNullable(recommendation);
         return this;
     }
+
 
     public AtsScorecard withRecommendation(Optional<? extends Recommendation> recommendation) {
         Utils.checkNotNull(recommendation, "recommendation");
@@ -317,13 +344,13 @@ public class AtsScorecard {
         return this;
     }
 
+
     public AtsScorecard withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -351,18 +378,10 @@ public class AtsScorecard {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            applicationId,
-            candidateId,
-            comment,
-            createdAt,
-            id,
-            interviewId,
-            interviewerId,
-            jobId,
-            questions,
-            raw,
-            recommendation,
-            updatedAt);
+            applicationId, candidateId, comment,
+            createdAt, id, interviewId,
+            interviewerId, jobId, questions,
+            raw, recommendation, updatedAt);
     }
     
     @Override
@@ -381,36 +400,38 @@ public class AtsScorecard {
                 "recommendation", recommendation,
                 "updatedAt", updatedAt);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> applicationId = Optional.empty();
- 
+
         private Optional<String> candidateId = Optional.empty();
- 
+
         private Optional<String> comment = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> interviewId = Optional.empty();
- 
+
         private Optional<String> interviewerId = Optional.empty();
- 
+
         private Optional<String> jobId = Optional.empty();
- 
+
         private Optional<? extends List<AtsScorecardQuestion>> questions = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<? extends Recommendation> recommendation = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder applicationId(String applicationId) {
             Utils.checkNotNull(applicationId, "applicationId");
@@ -424,6 +445,7 @@ public class AtsScorecard {
             return this;
         }
 
+
         public Builder candidateId(String candidateId) {
             Utils.checkNotNull(candidateId, "candidateId");
             this.candidateId = Optional.ofNullable(candidateId);
@@ -435,6 +457,7 @@ public class AtsScorecard {
             this.candidateId = candidateId;
             return this;
         }
+
 
         public Builder comment(String comment) {
             Utils.checkNotNull(comment, "comment");
@@ -448,6 +471,7 @@ public class AtsScorecard {
             return this;
         }
 
+
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
@@ -459,6 +483,7 @@ public class AtsScorecard {
             this.createdAt = createdAt;
             return this;
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -472,6 +497,7 @@ public class AtsScorecard {
             return this;
         }
 
+
         public Builder interviewId(String interviewId) {
             Utils.checkNotNull(interviewId, "interviewId");
             this.interviewId = Optional.ofNullable(interviewId);
@@ -483,6 +509,7 @@ public class AtsScorecard {
             this.interviewId = interviewId;
             return this;
         }
+
 
         public Builder interviewerId(String interviewerId) {
             Utils.checkNotNull(interviewerId, "interviewerId");
@@ -496,6 +523,7 @@ public class AtsScorecard {
             return this;
         }
 
+
         public Builder jobId(String jobId) {
             Utils.checkNotNull(jobId, "jobId");
             this.jobId = Optional.ofNullable(jobId);
@@ -507,6 +535,7 @@ public class AtsScorecard {
             this.jobId = jobId;
             return this;
         }
+
 
         public Builder questions(List<AtsScorecardQuestion> questions) {
             Utils.checkNotNull(questions, "questions");
@@ -520,6 +549,7 @@ public class AtsScorecard {
             return this;
         }
 
+
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
@@ -531,6 +561,7 @@ public class AtsScorecard {
             this.raw = raw;
             return this;
         }
+
 
         public Builder recommendation(Recommendation recommendation) {
             Utils.checkNotNull(recommendation, "recommendation");
@@ -544,6 +575,7 @@ public class AtsScorecard {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -555,21 +587,15 @@ public class AtsScorecard {
             this.updatedAt = updatedAt;
             return this;
         }
-        
+
         public AtsScorecard build() {
+
             return new AtsScorecard(
-                applicationId,
-                candidateId,
-                comment,
-                createdAt,
-                id,
-                interviewId,
-                interviewerId,
-                jobId,
-                questions,
-                raw,
-                recommendation,
-                updatedAt);
+                applicationId, candidateId, comment,
+                createdAt, id, interviewId,
+                interviewerId, jobId, questions,
+                raw, recommendation, updatedAt);
         }
+
     }
 }

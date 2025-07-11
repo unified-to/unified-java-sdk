@@ -15,18 +15,22 @@ import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class ScimGroup {
 
     @JsonProperty("displayName")
     private String displayName;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalId")
     private Optional<String> externalId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupType")
     private Optional<String> groupType;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
@@ -38,6 +42,7 @@ public class ScimGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members")
     private Optional<? extends List<ScimGroupMember>> members;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
@@ -77,7 +82,9 @@ public class ScimGroup {
     
     public ScimGroup(
             String displayName) {
-        this(displayName, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(displayName, Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -124,9 +131,10 @@ public class ScimGroup {
         return (Optional<List<PropertyScimGroupSchemas>>) schemas;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public ScimGroup withDisplayName(String displayName) {
         Utils.checkNotNull(displayName, "displayName");
@@ -140,6 +148,7 @@ public class ScimGroup {
         return this;
     }
 
+
     public ScimGroup withExternalId(Optional<String> externalId) {
         Utils.checkNotNull(externalId, "externalId");
         this.externalId = externalId;
@@ -152,6 +161,7 @@ public class ScimGroup {
         return this;
     }
 
+
     public ScimGroup withGroupType(Optional<String> groupType) {
         Utils.checkNotNull(groupType, "groupType");
         this.groupType = groupType;
@@ -163,6 +173,7 @@ public class ScimGroup {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public ScimGroup withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -179,6 +190,7 @@ public class ScimGroup {
         return this;
     }
 
+
     /**
      * An array of members
      */
@@ -193,6 +205,7 @@ public class ScimGroup {
         this.meta = Optional.ofNullable(meta);
         return this;
     }
+
 
     public ScimGroup withMeta(Optional<? extends PropertyScimGroupMeta> meta) {
         Utils.checkNotNull(meta, "meta");
@@ -209,6 +222,7 @@ public class ScimGroup {
         return this;
     }
 
+
     /**
      * Array of schema URIs
      */
@@ -218,7 +232,6 @@ public class ScimGroup {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -241,12 +254,8 @@ public class ScimGroup {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            displayName,
-            externalId,
-            groupType,
-            id,
-            members,
-            meta,
+            displayName, externalId, groupType,
+            id, members, meta,
             schemas);
     }
     
@@ -261,32 +270,35 @@ public class ScimGroup {
                 "meta", meta,
                 "schemas", schemas);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private String displayName;
- 
+
         private Optional<String> externalId = Optional.empty();
- 
+
         private Optional<String> groupType = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<? extends List<ScimGroupMember>> members = Optional.empty();
- 
+
         private Optional<? extends PropertyScimGroupMeta> meta = Optional.empty();
- 
+
         private Optional<? extends List<PropertyScimGroupSchemas>> schemas = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder displayName(String displayName) {
             Utils.checkNotNull(displayName, "displayName");
             this.displayName = displayName;
             return this;
         }
+
 
         public Builder externalId(String externalId) {
             Utils.checkNotNull(externalId, "externalId");
@@ -300,6 +312,7 @@ public class ScimGroup {
             return this;
         }
 
+
         public Builder groupType(String groupType) {
             Utils.checkNotNull(groupType, "groupType");
             this.groupType = Optional.ofNullable(groupType);
@@ -312,6 +325,7 @@ public class ScimGroup {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -323,6 +337,7 @@ public class ScimGroup {
             this.id = id;
             return this;
         }
+
 
         /**
          * An array of members
@@ -342,6 +357,7 @@ public class ScimGroup {
             return this;
         }
 
+
         public Builder meta(PropertyScimGroupMeta meta) {
             Utils.checkNotNull(meta, "meta");
             this.meta = Optional.ofNullable(meta);
@@ -353,6 +369,7 @@ public class ScimGroup {
             this.meta = meta;
             return this;
         }
+
 
         /**
          * Array of schema URIs
@@ -371,16 +388,14 @@ public class ScimGroup {
             this.schemas = schemas;
             return this;
         }
-        
+
         public ScimGroup build() {
+
             return new ScimGroup(
-                displayName,
-                externalId,
-                groupType,
-                id,
-                members,
-                meta,
+                displayName, externalId, groupType,
+                id, members, meta,
                 schemas);
         }
+
     }
 }

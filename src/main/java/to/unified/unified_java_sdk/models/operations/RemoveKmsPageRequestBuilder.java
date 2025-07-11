@@ -28,7 +28,7 @@ public class RemoveKmsPageRequestBuilder {
     public RemoveKmsPageResponse call() throws Exception {
         
         RequestOperation<RemoveKmsPageRequest, RemoveKmsPageResponse> operation
-              = new RemoveKmsPageOperation( sdkConfiguration);
+              = new RemoveKmsPageOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -28,7 +28,7 @@ public class RemoveUcRecordingRequestBuilder {
     public RemoveUcRecordingResponse call() throws Exception {
         
         RequestOperation<RemoveUcRecordingRequest, RemoveUcRecordingResponse> operation
-              = new RemoveUcRecordingOperation( sdkConfiguration);
+              = new RemoveUcRecordingOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

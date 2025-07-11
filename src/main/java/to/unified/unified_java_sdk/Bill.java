@@ -40,7 +40,6 @@ public class Bill {
     Bill(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a bill
      * 
@@ -57,13 +56,11 @@ public class Bill {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAccountingBillResponse createAccountingBill(
-            CreateAccountingBillRequest request) throws Exception {
+    public CreateAccountingBillResponse createAccountingBill(CreateAccountingBillRequest request) throws Exception {
         RequestOperation<CreateAccountingBillRequest, CreateAccountingBillResponse> operation
-              = new CreateAccountingBillOperation( sdkConfiguration);
+              = new CreateAccountingBillOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a bill
@@ -81,13 +78,11 @@ public class Bill {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAccountingBillResponse getAccountingBill(
-            GetAccountingBillRequest request) throws Exception {
+    public GetAccountingBillResponse getAccountingBill(GetAccountingBillRequest request) throws Exception {
         RequestOperation<GetAccountingBillRequest, GetAccountingBillResponse> operation
-              = new GetAccountingBillOperation( sdkConfiguration);
+              = new GetAccountingBillOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all bills
@@ -105,13 +100,11 @@ public class Bill {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAccountingBillsResponse listAccountingBills(
-            ListAccountingBillsRequest request) throws Exception {
+    public ListAccountingBillsResponse listAccountingBills(ListAccountingBillsRequest request) throws Exception {
         RequestOperation<ListAccountingBillsRequest, ListAccountingBillsResponse> operation
-              = new ListAccountingBillsOperation( sdkConfiguration);
+              = new ListAccountingBillsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a bill
@@ -129,13 +122,11 @@ public class Bill {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAccountingBillResponse patchAccountingBill(
-            PatchAccountingBillRequest request) throws Exception {
+    public PatchAccountingBillResponse patchAccountingBill(PatchAccountingBillRequest request) throws Exception {
         RequestOperation<PatchAccountingBillRequest, PatchAccountingBillResponse> operation
-              = new PatchAccountingBillOperation( sdkConfiguration);
+              = new PatchAccountingBillOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a bill
@@ -153,13 +144,11 @@ public class Bill {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAccountingBillResponse removeAccountingBill(
-            RemoveAccountingBillRequest request) throws Exception {
+    public RemoveAccountingBillResponse removeAccountingBill(RemoveAccountingBillRequest request) throws Exception {
         RequestOperation<RemoveAccountingBillRequest, RemoveAccountingBillResponse> operation
-              = new RemoveAccountingBillOperation( sdkConfiguration);
+              = new RemoveAccountingBillOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a bill
@@ -177,10 +166,9 @@ public class Bill {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAccountingBillResponse updateAccountingBill(
-            UpdateAccountingBillRequest request) throws Exception {
+    public UpdateAccountingBillResponse updateAccountingBill(UpdateAccountingBillRequest request) throws Exception {
         RequestOperation<UpdateAccountingBillRequest, UpdateAccountingBillResponse> operation
-              = new UpdateAccountingBillOperation( sdkConfiguration);
+              = new UpdateAccountingBillOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

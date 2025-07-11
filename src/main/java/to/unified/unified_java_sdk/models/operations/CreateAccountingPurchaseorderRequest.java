@@ -14,6 +14,7 @@ import to.unified.unified_java_sdk.models.shared.AccountingPurchaseorder;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class CreateAccountingPurchaseorderRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
@@ -56,7 +57,8 @@ public class CreateAccountingPurchaseorderRequest {
     public CreateAccountingPurchaseorderRequest(
             AccountingPurchaseorder accountingPurchaseorder,
             String connectionId) {
-        this(accountingPurchaseorder, connectionId, Optional.empty(), Optional.empty());
+        this(accountingPurchaseorder, connectionId, Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -89,9 +91,10 @@ public class CreateAccountingPurchaseorderRequest {
         return raw;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public CreateAccountingPurchaseorderRequest withAccountingPurchaseorder(AccountingPurchaseorder accountingPurchaseorder) {
         Utils.checkNotNull(accountingPurchaseorder, "accountingPurchaseorder");
@@ -117,6 +120,7 @@ public class CreateAccountingPurchaseorderRequest {
         return this;
     }
 
+
     /**
      * Comma-delimited fields to return
      */
@@ -135,6 +139,7 @@ public class CreateAccountingPurchaseorderRequest {
         return this;
     }
 
+
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
@@ -144,7 +149,6 @@ public class CreateAccountingPurchaseorderRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -164,9 +168,7 @@ public class CreateAccountingPurchaseorderRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            accountingPurchaseorder,
-            connectionId,
-            fields,
+            accountingPurchaseorder, connectionId, fields,
             raw);
     }
     
@@ -178,26 +180,29 @@ public class CreateAccountingPurchaseorderRequest {
                 "fields", fields,
                 "raw", raw);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private AccountingPurchaseorder accountingPurchaseorder;
- 
+
         private String connectionId;
- 
+
         private Optional<? extends List<String>> fields = Optional.empty();
- 
+
         private Optional<String> raw = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder accountingPurchaseorder(AccountingPurchaseorder accountingPurchaseorder) {
             Utils.checkNotNull(accountingPurchaseorder, "accountingPurchaseorder");
             this.accountingPurchaseorder = accountingPurchaseorder;
             return this;
         }
+
 
         /**
          * ID of the connection
@@ -207,6 +212,7 @@ public class CreateAccountingPurchaseorderRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         /**
          * Comma-delimited fields to return
@@ -226,6 +232,7 @@ public class CreateAccountingPurchaseorderRequest {
             return this;
         }
 
+
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
@@ -243,13 +250,13 @@ public class CreateAccountingPurchaseorderRequest {
             this.raw = raw;
             return this;
         }
-        
+
         public CreateAccountingPurchaseorderRequest build() {
+
             return new CreateAccountingPurchaseorderRequest(
-                accountingPurchaseorder,
-                connectionId,
-                fields,
+                accountingPurchaseorder, connectionId, fields,
                 raw);
         }
+
     }
 }

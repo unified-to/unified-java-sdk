@@ -24,6 +24,7 @@ public class PropertyUcCallTelephone {
     @JsonProperty("telephone")
     private String telephone;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private Optional<? extends PropertyUcCallTelephoneType> type;
@@ -54,9 +55,10 @@ public class PropertyUcCallTelephone {
         return (Optional<PropertyUcCallTelephoneType>) type;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public PropertyUcCallTelephone withTelephone(String telephone) {
         Utils.checkNotNull(telephone, "telephone");
@@ -70,13 +72,13 @@ public class PropertyUcCallTelephone {
         return this;
     }
 
+
     public PropertyUcCallTelephone withType(Optional<? extends PropertyUcCallTelephoneType> type) {
         Utils.checkNotNull(type, "type");
         this.type = type;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -94,8 +96,7 @@ public class PropertyUcCallTelephone {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            telephone,
-            type);
+            telephone, type);
     }
     
     @Override
@@ -104,22 +105,25 @@ public class PropertyUcCallTelephone {
                 "telephone", telephone,
                 "type", type);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private String telephone;
- 
+
         private Optional<? extends PropertyUcCallTelephoneType> type = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder telephone(String telephone) {
             Utils.checkNotNull(telephone, "telephone");
             this.telephone = telephone;
             return this;
         }
+
 
         public Builder type(PropertyUcCallTelephoneType type) {
             Utils.checkNotNull(type, "type");
@@ -132,11 +136,12 @@ public class PropertyUcCallTelephone {
             this.type = type;
             return this;
         }
-        
+
         public PropertyUcCallTelephone build() {
+
             return new PropertyUcCallTelephone(
-                telephone,
-                type);
+                telephone, type);
         }
+
     }
 }

@@ -88,7 +88,6 @@ public class Contact {
     Contact(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a contact
      * 
@@ -105,13 +104,11 @@ public class Contact {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAccountingContactResponse createAccountingContact(
-            CreateAccountingContactRequest request) throws Exception {
+    public CreateAccountingContactResponse createAccountingContact(CreateAccountingContactRequest request) throws Exception {
         RequestOperation<CreateAccountingContactRequest, CreateAccountingContactResponse> operation
-              = new CreateAccountingContactOperation( sdkConfiguration);
+              = new CreateAccountingContactOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a contact
@@ -129,13 +126,11 @@ public class Contact {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateCrmContactResponse createCrmContact(
-            CreateCrmContactRequest request) throws Exception {
+    public CreateCrmContactResponse createCrmContact(CreateCrmContactRequest request) throws Exception {
         RequestOperation<CreateCrmContactRequest, CreateCrmContactResponse> operation
-              = new CreateCrmContactOperation( sdkConfiguration);
+              = new CreateCrmContactOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a contact
@@ -153,13 +148,11 @@ public class Contact {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateUcContactResponse createUcContact(
-            CreateUcContactRequest request) throws Exception {
+    public CreateUcContactResponse createUcContact(CreateUcContactRequest request) throws Exception {
         RequestOperation<CreateUcContactRequest, CreateUcContactResponse> operation
-              = new CreateUcContactOperation( sdkConfiguration);
+              = new CreateUcContactOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a contact
@@ -177,13 +170,11 @@ public class Contact {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAccountingContactResponse getAccountingContact(
-            GetAccountingContactRequest request) throws Exception {
+    public GetAccountingContactResponse getAccountingContact(GetAccountingContactRequest request) throws Exception {
         RequestOperation<GetAccountingContactRequest, GetAccountingContactResponse> operation
-              = new GetAccountingContactOperation( sdkConfiguration);
+              = new GetAccountingContactOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a contact
@@ -201,13 +192,11 @@ public class Contact {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetCrmContactResponse getCrmContact(
-            GetCrmContactRequest request) throws Exception {
+    public GetCrmContactResponse getCrmContact(GetCrmContactRequest request) throws Exception {
         RequestOperation<GetCrmContactRequest, GetCrmContactResponse> operation
-              = new GetCrmContactOperation( sdkConfiguration);
+              = new GetCrmContactOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a contact
@@ -225,13 +214,11 @@ public class Contact {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetUcContactResponse getUcContact(
-            GetUcContactRequest request) throws Exception {
+    public GetUcContactResponse getUcContact(GetUcContactRequest request) throws Exception {
         RequestOperation<GetUcContactRequest, GetUcContactResponse> operation
-              = new GetUcContactOperation( sdkConfiguration);
+              = new GetUcContactOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all contacts
@@ -249,13 +236,11 @@ public class Contact {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAccountingContactsResponse listAccountingContacts(
-            ListAccountingContactsRequest request) throws Exception {
+    public ListAccountingContactsResponse listAccountingContacts(ListAccountingContactsRequest request) throws Exception {
         RequestOperation<ListAccountingContactsRequest, ListAccountingContactsResponse> operation
-              = new ListAccountingContactsOperation( sdkConfiguration);
+              = new ListAccountingContactsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all contacts
@@ -273,13 +258,11 @@ public class Contact {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCrmContactsResponse listCrmContacts(
-            ListCrmContactsRequest request) throws Exception {
+    public ListCrmContactsResponse listCrmContacts(ListCrmContactsRequest request) throws Exception {
         RequestOperation<ListCrmContactsRequest, ListCrmContactsResponse> operation
-              = new ListCrmContactsOperation( sdkConfiguration);
+              = new ListCrmContactsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all contacts
@@ -297,13 +280,11 @@ public class Contact {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListUcContactsResponse listUcContacts(
-            ListUcContactsRequest request) throws Exception {
+    public ListUcContactsResponse listUcContacts(ListUcContactsRequest request) throws Exception {
         RequestOperation<ListUcContactsRequest, ListUcContactsResponse> operation
-              = new ListUcContactsOperation( sdkConfiguration);
+              = new ListUcContactsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a contact
@@ -321,13 +302,11 @@ public class Contact {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAccountingContactResponse patchAccountingContact(
-            PatchAccountingContactRequest request) throws Exception {
+    public PatchAccountingContactResponse patchAccountingContact(PatchAccountingContactRequest request) throws Exception {
         RequestOperation<PatchAccountingContactRequest, PatchAccountingContactResponse> operation
-              = new PatchAccountingContactOperation( sdkConfiguration);
+              = new PatchAccountingContactOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a contact
@@ -345,13 +324,11 @@ public class Contact {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchCrmContactResponse patchCrmContact(
-            PatchCrmContactRequest request) throws Exception {
+    public PatchCrmContactResponse patchCrmContact(PatchCrmContactRequest request) throws Exception {
         RequestOperation<PatchCrmContactRequest, PatchCrmContactResponse> operation
-              = new PatchCrmContactOperation( sdkConfiguration);
+              = new PatchCrmContactOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a contact
@@ -369,13 +346,11 @@ public class Contact {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchUcContactResponse patchUcContact(
-            PatchUcContactRequest request) throws Exception {
+    public PatchUcContactResponse patchUcContact(PatchUcContactRequest request) throws Exception {
         RequestOperation<PatchUcContactRequest, PatchUcContactResponse> operation
-              = new PatchUcContactOperation( sdkConfiguration);
+              = new PatchUcContactOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a contact
@@ -393,13 +368,11 @@ public class Contact {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAccountingContactResponse removeAccountingContact(
-            RemoveAccountingContactRequest request) throws Exception {
+    public RemoveAccountingContactResponse removeAccountingContact(RemoveAccountingContactRequest request) throws Exception {
         RequestOperation<RemoveAccountingContactRequest, RemoveAccountingContactResponse> operation
-              = new RemoveAccountingContactOperation( sdkConfiguration);
+              = new RemoveAccountingContactOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a contact
@@ -417,13 +390,11 @@ public class Contact {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveCrmContactResponse removeCrmContact(
-            RemoveCrmContactRequest request) throws Exception {
+    public RemoveCrmContactResponse removeCrmContact(RemoveCrmContactRequest request) throws Exception {
         RequestOperation<RemoveCrmContactRequest, RemoveCrmContactResponse> operation
-              = new RemoveCrmContactOperation( sdkConfiguration);
+              = new RemoveCrmContactOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a contact
@@ -441,13 +412,11 @@ public class Contact {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveUcContactResponse removeUcContact(
-            RemoveUcContactRequest request) throws Exception {
+    public RemoveUcContactResponse removeUcContact(RemoveUcContactRequest request) throws Exception {
         RequestOperation<RemoveUcContactRequest, RemoveUcContactResponse> operation
-              = new RemoveUcContactOperation( sdkConfiguration);
+              = new RemoveUcContactOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a contact
@@ -465,13 +434,11 @@ public class Contact {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAccountingContactResponse updateAccountingContact(
-            UpdateAccountingContactRequest request) throws Exception {
+    public UpdateAccountingContactResponse updateAccountingContact(UpdateAccountingContactRequest request) throws Exception {
         RequestOperation<UpdateAccountingContactRequest, UpdateAccountingContactResponse> operation
-              = new UpdateAccountingContactOperation( sdkConfiguration);
+              = new UpdateAccountingContactOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a contact
@@ -489,13 +456,11 @@ public class Contact {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateCrmContactResponse updateCrmContact(
-            UpdateCrmContactRequest request) throws Exception {
+    public UpdateCrmContactResponse updateCrmContact(UpdateCrmContactRequest request) throws Exception {
         RequestOperation<UpdateCrmContactRequest, UpdateCrmContactResponse> operation
-              = new UpdateCrmContactOperation( sdkConfiguration);
+              = new UpdateCrmContactOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a contact
@@ -513,10 +478,9 @@ public class Contact {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateUcContactResponse updateUcContact(
-            UpdateUcContactRequest request) throws Exception {
+    public UpdateUcContactResponse updateUcContact(UpdateUcContactRequest request) throws Exception {
         RequestOperation<UpdateUcContactRequest, UpdateUcContactResponse> operation
-              = new UpdateUcContactOperation( sdkConfiguration);
+              = new UpdateUcContactOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

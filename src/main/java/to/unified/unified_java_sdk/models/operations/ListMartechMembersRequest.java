@@ -14,8 +14,8 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class ListMartechMembersRequest {
 
+public class ListMartechMembersRequest {
     /**
      * ID of the connection
      */
@@ -28,6 +28,7 @@ public class ListMartechMembersRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     private Optional<? extends List<String>> fields;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     private Optional<Double> limit;
 
@@ -37,8 +38,10 @@ public class ListMartechMembersRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=list_id")
     private Optional<String> listId;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     private Optional<Double> offset;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     private Optional<String> order;
@@ -54,6 +57,7 @@ public class ListMartechMembersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
     private Optional<String> raw;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     private Optional<String> sort;
@@ -100,7 +104,10 @@ public class ListMartechMembersRequest {
     
     public ListMartechMembersRequest(
             String connectionId) {
-        this(connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(connectionId, Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     /**
@@ -172,9 +179,10 @@ public class ListMartechMembersRequest {
         return updatedGte;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * ID of the connection
@@ -194,6 +202,7 @@ public class ListMartechMembersRequest {
         return this;
     }
 
+
     /**
      * Comma-delimited fields to return
      */
@@ -208,6 +217,7 @@ public class ListMartechMembersRequest {
         this.limit = Optional.ofNullable(limit);
         return this;
     }
+
 
     public ListMartechMembersRequest withLimit(Optional<Double> limit) {
         Utils.checkNotNull(limit, "limit");
@@ -224,6 +234,7 @@ public class ListMartechMembersRequest {
         return this;
     }
 
+
     /**
      * The list ID to filter by
      */
@@ -239,6 +250,7 @@ public class ListMartechMembersRequest {
         return this;
     }
 
+
     public ListMartechMembersRequest withOffset(Optional<Double> offset) {
         Utils.checkNotNull(offset, "offset");
         this.offset = offset;
@@ -250,6 +262,7 @@ public class ListMartechMembersRequest {
         this.order = Optional.ofNullable(order);
         return this;
     }
+
 
     public ListMartechMembersRequest withOrder(Optional<String> order) {
         Utils.checkNotNull(order, "order");
@@ -265,6 +278,7 @@ public class ListMartechMembersRequest {
         this.query = Optional.ofNullable(query);
         return this;
     }
+
 
     /**
      * Query string to search. eg. email address or name
@@ -284,6 +298,7 @@ public class ListMartechMembersRequest {
         return this;
     }
 
+
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
@@ -298,6 +313,7 @@ public class ListMartechMembersRequest {
         this.sort = Optional.ofNullable(sort);
         return this;
     }
+
 
     public ListMartechMembersRequest withSort(Optional<String> sort) {
         Utils.checkNotNull(sort, "sort");
@@ -314,6 +330,7 @@ public class ListMartechMembersRequest {
         return this;
     }
 
+
     /**
      * Return only results whose updated date is equal or greater to this value
      */
@@ -323,7 +340,6 @@ public class ListMartechMembersRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -349,15 +365,9 @@ public class ListMartechMembersRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId,
-            fields,
-            limit,
-            listId,
-            offset,
-            order,
-            query,
-            raw,
-            sort,
+            connectionId, fields, limit,
+            listId, offset, order,
+            query, raw, sort,
             updatedGte);
     }
     
@@ -375,32 +385,34 @@ public class ListMartechMembersRequest {
                 "sort", sort,
                 "updatedGte", updatedGte);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private String connectionId;
- 
+
         private Optional<? extends List<String>> fields = Optional.empty();
- 
+
         private Optional<Double> limit = Optional.empty();
- 
+
         private Optional<String> listId = Optional.empty();
- 
+
         private Optional<Double> offset = Optional.empty();
- 
+
         private Optional<String> order = Optional.empty();
- 
+
         private Optional<String> query = Optional.empty();
- 
+
         private Optional<String> raw = Optional.empty();
- 
+
         private Optional<String> sort = Optional.empty();
- 
+
         private Optional<String> updatedGte = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * ID of the connection
@@ -410,6 +422,7 @@ public class ListMartechMembersRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         /**
          * Comma-delimited fields to return
@@ -429,6 +442,7 @@ public class ListMartechMembersRequest {
             return this;
         }
 
+
         public Builder limit(double limit) {
             Utils.checkNotNull(limit, "limit");
             this.limit = Optional.ofNullable(limit);
@@ -440,6 +454,7 @@ public class ListMartechMembersRequest {
             this.limit = limit;
             return this;
         }
+
 
         /**
          * The list ID to filter by
@@ -459,6 +474,7 @@ public class ListMartechMembersRequest {
             return this;
         }
 
+
         public Builder offset(double offset) {
             Utils.checkNotNull(offset, "offset");
             this.offset = Optional.ofNullable(offset);
@@ -471,6 +487,7 @@ public class ListMartechMembersRequest {
             return this;
         }
 
+
         public Builder order(String order) {
             Utils.checkNotNull(order, "order");
             this.order = Optional.ofNullable(order);
@@ -482,6 +499,7 @@ public class ListMartechMembersRequest {
             this.order = order;
             return this;
         }
+
 
         /**
          * Query string to search. eg. email address or name
@@ -501,6 +519,7 @@ public class ListMartechMembersRequest {
             return this;
         }
 
+
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
@@ -519,6 +538,7 @@ public class ListMartechMembersRequest {
             return this;
         }
 
+
         public Builder sort(String sort) {
             Utils.checkNotNull(sort, "sort");
             this.sort = Optional.ofNullable(sort);
@@ -530,6 +550,7 @@ public class ListMartechMembersRequest {
             this.sort = sort;
             return this;
         }
+
 
         /**
          * Return only results whose updated date is equal or greater to this value
@@ -548,19 +569,15 @@ public class ListMartechMembersRequest {
             this.updatedGte = updatedGte;
             return this;
         }
-        
+
         public ListMartechMembersRequest build() {
+
             return new ListMartechMembersRequest(
-                connectionId,
-                fields,
-                limit,
-                listId,
-                offset,
-                order,
-                query,
-                raw,
-                sort,
+                connectionId, fields, limit,
+                listId, offset, order,
+                query, raw, sort,
                 updatedGte);
         }
+
     }
 }

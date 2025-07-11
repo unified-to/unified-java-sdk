@@ -24,7 +24,6 @@ public class Channel {
     Channel(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Retrieve a channel
      * 
@@ -41,13 +40,11 @@ public class Channel {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetMessagingChannelResponse getMessagingChannel(
-            GetMessagingChannelRequest request) throws Exception {
+    public GetMessagingChannelResponse getMessagingChannel(GetMessagingChannelRequest request) throws Exception {
         RequestOperation<GetMessagingChannelRequest, GetMessagingChannelResponse> operation
-              = new GetMessagingChannelOperation( sdkConfiguration);
+              = new GetMessagingChannelOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all channels
@@ -65,10 +62,9 @@ public class Channel {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListMessagingChannelsResponse listMessagingChannels(
-            ListMessagingChannelsRequest request) throws Exception {
+    public ListMessagingChannelsResponse listMessagingChannels(ListMessagingChannelsRequest request) throws Exception {
         RequestOperation<ListMessagingChannelsRequest, ListMessagingChannelsResponse> operation
-              = new ListMessagingChannelsOperation( sdkConfiguration);
+              = new ListMessagingChannelsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

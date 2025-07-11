@@ -28,7 +28,7 @@ public class RemoveAccountingContactRequestBuilder {
     public RemoveAccountingContactResponse call() throws Exception {
         
         RequestOperation<RemoveAccountingContactRequest, RemoveAccountingContactResponse> operation
-              = new RemoveAccountingContactOperation( sdkConfiguration);
+              = new RemoveAccountingContactOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -13,6 +13,7 @@ import to.unified.unified_java_sdk.models.shared.ScimUser;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class CreateScimUsersRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
@@ -24,17 +25,22 @@ public class CreateScimUsersRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
     private String connectionId;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
     private Optional<Double> count;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     private Optional<String> filter;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortBy")
     private Optional<String> sortBy;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
     private Optional<String> sortOrder;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startIndex")
     private Optional<Double> startIndex;
@@ -67,7 +73,9 @@ public class CreateScimUsersRequest {
     public CreateScimUsersRequest(
             ScimUser scimUser,
             String connectionId) {
-        this(scimUser, connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(scimUser, connectionId, Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -108,9 +116,10 @@ public class CreateScimUsersRequest {
         return startIndex;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public CreateScimUsersRequest withScimUser(ScimUser scimUser) {
         Utils.checkNotNull(scimUser, "scimUser");
@@ -133,6 +142,7 @@ public class CreateScimUsersRequest {
         return this;
     }
 
+
     public CreateScimUsersRequest withCount(Optional<Double> count) {
         Utils.checkNotNull(count, "count");
         this.count = count;
@@ -144,6 +154,7 @@ public class CreateScimUsersRequest {
         this.filter = Optional.ofNullable(filter);
         return this;
     }
+
 
     public CreateScimUsersRequest withFilter(Optional<String> filter) {
         Utils.checkNotNull(filter, "filter");
@@ -157,6 +168,7 @@ public class CreateScimUsersRequest {
         return this;
     }
 
+
     public CreateScimUsersRequest withSortBy(Optional<String> sortBy) {
         Utils.checkNotNull(sortBy, "sortBy");
         this.sortBy = sortBy;
@@ -168,6 +180,7 @@ public class CreateScimUsersRequest {
         this.sortOrder = Optional.ofNullable(sortOrder);
         return this;
     }
+
 
     public CreateScimUsersRequest withSortOrder(Optional<String> sortOrder) {
         Utils.checkNotNull(sortOrder, "sortOrder");
@@ -181,13 +194,13 @@ public class CreateScimUsersRequest {
         return this;
     }
 
+
     public CreateScimUsersRequest withStartIndex(Optional<Double> startIndex) {
         Utils.checkNotNull(startIndex, "startIndex");
         this.startIndex = startIndex;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -210,12 +223,8 @@ public class CreateScimUsersRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            scimUser,
-            connectionId,
-            count,
-            filter,
-            sortBy,
-            sortOrder,
+            scimUser, connectionId, count,
+            filter, sortBy, sortOrder,
             startIndex);
     }
     
@@ -230,32 +239,35 @@ public class CreateScimUsersRequest {
                 "sortOrder", sortOrder,
                 "startIndex", startIndex);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private ScimUser scimUser;
- 
+
         private String connectionId;
- 
+
         private Optional<Double> count = Optional.empty();
- 
+
         private Optional<String> filter = Optional.empty();
- 
+
         private Optional<String> sortBy = Optional.empty();
- 
+
         private Optional<String> sortOrder = Optional.empty();
- 
+
         private Optional<Double> startIndex = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder scimUser(ScimUser scimUser) {
             Utils.checkNotNull(scimUser, "scimUser");
             this.scimUser = scimUser;
             return this;
         }
+
 
         /**
          * ID of the connection
@@ -265,6 +277,7 @@ public class CreateScimUsersRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         public Builder count(double count) {
             Utils.checkNotNull(count, "count");
@@ -278,6 +291,7 @@ public class CreateScimUsersRequest {
             return this;
         }
 
+
         public Builder filter(String filter) {
             Utils.checkNotNull(filter, "filter");
             this.filter = Optional.ofNullable(filter);
@@ -289,6 +303,7 @@ public class CreateScimUsersRequest {
             this.filter = filter;
             return this;
         }
+
 
         public Builder sortBy(String sortBy) {
             Utils.checkNotNull(sortBy, "sortBy");
@@ -302,6 +317,7 @@ public class CreateScimUsersRequest {
             return this;
         }
 
+
         public Builder sortOrder(String sortOrder) {
             Utils.checkNotNull(sortOrder, "sortOrder");
             this.sortOrder = Optional.ofNullable(sortOrder);
@@ -314,6 +330,7 @@ public class CreateScimUsersRequest {
             return this;
         }
 
+
         public Builder startIndex(double startIndex) {
             Utils.checkNotNull(startIndex, "startIndex");
             this.startIndex = Optional.ofNullable(startIndex);
@@ -325,16 +342,14 @@ public class CreateScimUsersRequest {
             this.startIndex = startIndex;
             return this;
         }
-        
+
         public CreateScimUsersRequest build() {
+
             return new CreateScimUsersRequest(
-                scimUser,
-                connectionId,
-                count,
-                filter,
-                sortBy,
-                sortOrder,
+                scimUser, connectionId, count,
+                filter, sortBy, sortOrder,
                 startIndex);
         }
+
     }
 }

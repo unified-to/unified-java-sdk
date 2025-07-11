@@ -28,7 +28,7 @@ public class ListHrisCompaniesRequestBuilder {
     public ListHrisCompaniesResponse call() throws Exception {
         
         RequestOperation<ListHrisCompaniesRequest, ListHrisCompaniesResponse> operation
-              = new ListHrisCompaniesOperation( sdkConfiguration);
+              = new ListHrisCompaniesOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

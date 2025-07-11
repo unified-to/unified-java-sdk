@@ -28,7 +28,7 @@ public class UpdatePassthroughRawRequestBuilder {
     public UpdatePassthroughRawResponse call() throws Exception {
         
         RequestOperation<UpdatePassthroughRawRequest, UpdatePassthroughRawResponse> operation
-              = new UpdatePassthroughRawOperation( sdkConfiguration);
+              = new UpdatePassthroughRawOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

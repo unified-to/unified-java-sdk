@@ -48,7 +48,6 @@ public class Webhook {
     Webhook(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create webhook subscription
      * 
@@ -69,13 +68,11 @@ public class Webhook {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateUnifiedWebhookResponse createUnifiedWebhook(
-            CreateUnifiedWebhookRequest request) throws Exception {
+    public CreateUnifiedWebhookResponse createUnifiedWebhook(CreateUnifiedWebhookRequest request) throws Exception {
         RequestOperation<CreateUnifiedWebhookRequest, CreateUnifiedWebhookResponse> operation
-              = new CreateUnifiedWebhookOperation( sdkConfiguration);
+              = new CreateUnifiedWebhookOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve webhook by its ID
@@ -93,13 +90,11 @@ public class Webhook {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetUnifiedWebhookResponse getUnifiedWebhook(
-            GetUnifiedWebhookRequest request) throws Exception {
+    public GetUnifiedWebhookResponse getUnifiedWebhook(GetUnifiedWebhookRequest request) throws Exception {
         RequestOperation<GetUnifiedWebhookRequest, GetUnifiedWebhookResponse> operation
-              = new GetUnifiedWebhookOperation( sdkConfiguration);
+              = new GetUnifiedWebhookOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Returns all registered webhooks
@@ -117,13 +112,11 @@ public class Webhook {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListUnifiedWebhooksResponse listUnifiedWebhooks(
-            ListUnifiedWebhooksRequest request) throws Exception {
+    public ListUnifiedWebhooksResponse listUnifiedWebhooks(ListUnifiedWebhooksRequest request) throws Exception {
         RequestOperation<ListUnifiedWebhooksRequest, ListUnifiedWebhooksResponse> operation
-              = new ListUnifiedWebhooksOperation( sdkConfiguration);
+              = new ListUnifiedWebhooksOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update webhook subscription
@@ -141,13 +134,11 @@ public class Webhook {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchUnifiedWebhookResponse patchUnifiedWebhook(
-            PatchUnifiedWebhookRequest request) throws Exception {
+    public PatchUnifiedWebhookResponse patchUnifiedWebhook(PatchUnifiedWebhookRequest request) throws Exception {
         RequestOperation<PatchUnifiedWebhookRequest, PatchUnifiedWebhookResponse> operation
-              = new PatchUnifiedWebhookOperation( sdkConfiguration);
+              = new PatchUnifiedWebhookOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Trigger webhook
@@ -165,13 +156,11 @@ public class Webhook {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchUnifiedWebhookTriggerResponse patchUnifiedWebhookTrigger(
-            PatchUnifiedWebhookTriggerRequest request) throws Exception {
+    public PatchUnifiedWebhookTriggerResponse patchUnifiedWebhookTrigger(PatchUnifiedWebhookTriggerRequest request) throws Exception {
         RequestOperation<PatchUnifiedWebhookTriggerRequest, PatchUnifiedWebhookTriggerResponse> operation
-              = new PatchUnifiedWebhookTriggerOperation( sdkConfiguration);
+              = new PatchUnifiedWebhookTriggerOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove webhook subscription
@@ -189,13 +178,11 @@ public class Webhook {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveUnifiedWebhookResponse removeUnifiedWebhook(
-            RemoveUnifiedWebhookRequest request) throws Exception {
+    public RemoveUnifiedWebhookResponse removeUnifiedWebhook(RemoveUnifiedWebhookRequest request) throws Exception {
         RequestOperation<RemoveUnifiedWebhookRequest, RemoveUnifiedWebhookResponse> operation
-              = new RemoveUnifiedWebhookOperation( sdkConfiguration);
+              = new RemoveUnifiedWebhookOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update webhook subscription
@@ -213,13 +200,11 @@ public class Webhook {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateUnifiedWebhookResponse updateUnifiedWebhook(
-            UpdateUnifiedWebhookRequest request) throws Exception {
+    public UpdateUnifiedWebhookResponse updateUnifiedWebhook(UpdateUnifiedWebhookRequest request) throws Exception {
         RequestOperation<UpdateUnifiedWebhookRequest, UpdateUnifiedWebhookResponse> operation
-              = new UpdateUnifiedWebhookOperation( sdkConfiguration);
+              = new UpdateUnifiedWebhookOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Trigger webhook
@@ -237,10 +222,9 @@ public class Webhook {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateUnifiedWebhookTriggerResponse updateUnifiedWebhookTrigger(
-            UpdateUnifiedWebhookTriggerRequest request) throws Exception {
+    public UpdateUnifiedWebhookTriggerResponse updateUnifiedWebhookTrigger(UpdateUnifiedWebhookTriggerRequest request) throws Exception {
         RequestOperation<UpdateUnifiedWebhookTriggerRequest, UpdateUnifiedWebhookTriggerResponse> operation
-              = new UpdateUnifiedWebhookTriggerOperation( sdkConfiguration);
+              = new UpdateUnifiedWebhookTriggerOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

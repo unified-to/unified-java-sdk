@@ -28,7 +28,7 @@ public class CreateMartechListRequestBuilder {
     public CreateMartechListResponse call() throws Exception {
         
         RequestOperation<CreateMartechListRequest, CreateMartechListResponse> operation
-              = new CreateMartechListOperation( sdkConfiguration);
+              = new CreateMartechListOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

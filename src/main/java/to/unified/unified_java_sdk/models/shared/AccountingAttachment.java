@@ -13,19 +13,23 @@ import java.lang.String;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AccountingAttachment {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("download_url")
     private Optional<String> downloadUrl;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mime_type")
     private Optional<String> mimeType;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
@@ -48,7 +52,8 @@ public class AccountingAttachment {
     }
     
     public AccountingAttachment() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -71,15 +76,17 @@ public class AccountingAttachment {
         return name;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AccountingAttachment withDownloadUrl(String downloadUrl) {
         Utils.checkNotNull(downloadUrl, "downloadUrl");
         this.downloadUrl = Optional.ofNullable(downloadUrl);
         return this;
     }
+
 
     public AccountingAttachment withDownloadUrl(Optional<String> downloadUrl) {
         Utils.checkNotNull(downloadUrl, "downloadUrl");
@@ -93,6 +100,7 @@ public class AccountingAttachment {
         return this;
     }
 
+
     public AccountingAttachment withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -104,6 +112,7 @@ public class AccountingAttachment {
         this.mimeType = Optional.ofNullable(mimeType);
         return this;
     }
+
 
     public AccountingAttachment withMimeType(Optional<String> mimeType) {
         Utils.checkNotNull(mimeType, "mimeType");
@@ -117,13 +126,13 @@ public class AccountingAttachment {
         return this;
     }
 
+
     public AccountingAttachment withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
         this.name = name;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -143,9 +152,7 @@ public class AccountingAttachment {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            downloadUrl,
-            id,
-            mimeType,
+            downloadUrl, id, mimeType,
             name);
     }
     
@@ -157,20 +164,22 @@ public class AccountingAttachment {
                 "mimeType", mimeType,
                 "name", name);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> downloadUrl = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> mimeType = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder downloadUrl(String downloadUrl) {
             Utils.checkNotNull(downloadUrl, "downloadUrl");
@@ -184,6 +193,7 @@ public class AccountingAttachment {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -195,6 +205,7 @@ public class AccountingAttachment {
             this.id = id;
             return this;
         }
+
 
         public Builder mimeType(String mimeType) {
             Utils.checkNotNull(mimeType, "mimeType");
@@ -208,6 +219,7 @@ public class AccountingAttachment {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = Optional.ofNullable(name);
@@ -219,13 +231,13 @@ public class AccountingAttachment {
             this.name = name;
             return this;
         }
-        
+
         public AccountingAttachment build() {
+
             return new AccountingAttachment(
-                downloadUrl,
-                id,
-                mimeType,
+                downloadUrl, id, mimeType,
                 name);
         }
+
     }
 }

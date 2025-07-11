@@ -28,7 +28,7 @@ public class PatchKmsSpaceRequestBuilder {
     public PatchKmsSpaceResponse call() throws Exception {
         
         RequestOperation<PatchKmsSpaceRequest, PatchKmsSpaceResponse> operation
-              = new PatchKmsSpaceOperation( sdkConfiguration);
+              = new PatchKmsSpaceOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

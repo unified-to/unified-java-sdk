@@ -26,17 +26,21 @@ public class PropertyCrmEventTask {
     @JsonProperty("description")
     private Optional<String> description;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("due_at")
     private Optional<OffsetDateTime> dueAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     private Optional<? extends Priority> priority;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
@@ -62,7 +66,8 @@ public class PropertyCrmEventTask {
     }
     
     public PropertyCrmEventTask() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -92,15 +97,17 @@ public class PropertyCrmEventTask {
         return (Optional<PropertyCrmEventTaskStatus>) status;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public PropertyCrmEventTask withDescription(String description) {
         Utils.checkNotNull(description, "description");
         this.description = Optional.ofNullable(description);
         return this;
     }
+
 
     public PropertyCrmEventTask withDescription(Optional<String> description) {
         Utils.checkNotNull(description, "description");
@@ -114,6 +121,7 @@ public class PropertyCrmEventTask {
         return this;
     }
 
+
     public PropertyCrmEventTask withDueAt(Optional<OffsetDateTime> dueAt) {
         Utils.checkNotNull(dueAt, "dueAt");
         this.dueAt = dueAt;
@@ -125,6 +133,7 @@ public class PropertyCrmEventTask {
         this.name = Optional.ofNullable(name);
         return this;
     }
+
 
     public PropertyCrmEventTask withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
@@ -138,6 +147,7 @@ public class PropertyCrmEventTask {
         return this;
     }
 
+
     public PropertyCrmEventTask withPriority(Optional<? extends Priority> priority) {
         Utils.checkNotNull(priority, "priority");
         this.priority = priority;
@@ -150,13 +160,13 @@ public class PropertyCrmEventTask {
         return this;
     }
 
+
     public PropertyCrmEventTask withStatus(Optional<? extends PropertyCrmEventTaskStatus> status) {
         Utils.checkNotNull(status, "status");
         this.status = status;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -177,11 +187,8 @@ public class PropertyCrmEventTask {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            description,
-            dueAt,
-            name,
-            priority,
-            status);
+            description, dueAt, name,
+            priority, status);
     }
     
     @Override
@@ -193,22 +200,24 @@ public class PropertyCrmEventTask {
                 "priority", priority,
                 "status", status);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> description = Optional.empty();
- 
+
         private Optional<OffsetDateTime> dueAt = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<? extends Priority> priority = Optional.empty();
- 
+
         private Optional<? extends PropertyCrmEventTaskStatus> status = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder description(String description) {
             Utils.checkNotNull(description, "description");
@@ -222,6 +231,7 @@ public class PropertyCrmEventTask {
             return this;
         }
 
+
         public Builder dueAt(OffsetDateTime dueAt) {
             Utils.checkNotNull(dueAt, "dueAt");
             this.dueAt = Optional.ofNullable(dueAt);
@@ -233,6 +243,7 @@ public class PropertyCrmEventTask {
             this.dueAt = dueAt;
             return this;
         }
+
 
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
@@ -246,6 +257,7 @@ public class PropertyCrmEventTask {
             return this;
         }
 
+
         public Builder priority(Priority priority) {
             Utils.checkNotNull(priority, "priority");
             this.priority = Optional.ofNullable(priority);
@@ -258,6 +270,7 @@ public class PropertyCrmEventTask {
             return this;
         }
 
+
         public Builder status(PropertyCrmEventTaskStatus status) {
             Utils.checkNotNull(status, "status");
             this.status = Optional.ofNullable(status);
@@ -269,14 +282,13 @@ public class PropertyCrmEventTask {
             this.status = status;
             return this;
         }
-        
+
         public PropertyCrmEventTask build() {
+
             return new PropertyCrmEventTask(
-                description,
-                dueAt,
-                name,
-                priority,
-                status);
+                description, dueAt, name,
+                priority, status);
         }
+
     }
 }

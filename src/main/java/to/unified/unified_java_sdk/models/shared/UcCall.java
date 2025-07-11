@@ -17,27 +17,33 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class UcCall {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private Optional<String> contactId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private Optional<OffsetDateTime> endAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
@@ -50,9 +56,11 @@ public class UcCall {
     @JsonProperty("telephone")
     private Optional<? extends PropertyUcCallTelephone> telephone;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
@@ -90,7 +98,9 @@ public class UcCall {
     }
     
     public UcCall() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -143,15 +153,17 @@ public class UcCall {
         return userId;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public UcCall withContactId(String contactId) {
         Utils.checkNotNull(contactId, "contactId");
         this.contactId = Optional.ofNullable(contactId);
         return this;
     }
+
 
     public UcCall withContactId(Optional<String> contactId) {
         Utils.checkNotNull(contactId, "contactId");
@@ -165,6 +177,7 @@ public class UcCall {
         return this;
     }
 
+
     public UcCall withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
@@ -176,6 +189,7 @@ public class UcCall {
         this.endAt = Optional.ofNullable(endAt);
         return this;
     }
+
 
     public UcCall withEndAt(Optional<OffsetDateTime> endAt) {
         Utils.checkNotNull(endAt, "endAt");
@@ -189,6 +203,7 @@ public class UcCall {
         return this;
     }
 
+
     public UcCall withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -201,6 +216,7 @@ public class UcCall {
         return this;
     }
 
+
     public UcCall withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
@@ -212,6 +228,7 @@ public class UcCall {
         this.startAt = Optional.ofNullable(startAt);
         return this;
     }
+
 
     public UcCall withStartAt(Optional<OffsetDateTime> startAt) {
         Utils.checkNotNull(startAt, "startAt");
@@ -228,6 +245,7 @@ public class UcCall {
         return this;
     }
 
+
     /**
      * The telephone number called
      */
@@ -243,6 +261,7 @@ public class UcCall {
         return this;
     }
 
+
     public UcCall withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
@@ -255,13 +274,13 @@ public class UcCall {
         return this;
     }
 
+
     public UcCall withUserId(Optional<String> userId) {
         Utils.checkNotNull(userId, "userId");
         this.userId = userId;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -286,15 +305,9 @@ public class UcCall {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            contactId,
-            createdAt,
-            endAt,
-            id,
-            raw,
-            startAt,
-            telephone,
-            updatedAt,
-            userId);
+            contactId, createdAt, endAt,
+            id, raw, startAt,
+            telephone, updatedAt, userId);
     }
     
     @Override
@@ -310,30 +323,32 @@ public class UcCall {
                 "updatedAt", updatedAt,
                 "userId", userId);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> contactId = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<OffsetDateTime> endAt = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<OffsetDateTime> startAt = Optional.empty();
- 
+
         private Optional<? extends PropertyUcCallTelephone> telephone = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<String> userId = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder contactId(String contactId) {
             Utils.checkNotNull(contactId, "contactId");
@@ -347,6 +362,7 @@ public class UcCall {
             return this;
         }
 
+
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
@@ -358,6 +374,7 @@ public class UcCall {
             this.createdAt = createdAt;
             return this;
         }
+
 
         public Builder endAt(OffsetDateTime endAt) {
             Utils.checkNotNull(endAt, "endAt");
@@ -371,6 +388,7 @@ public class UcCall {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -382,6 +400,7 @@ public class UcCall {
             this.id = id;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -395,6 +414,7 @@ public class UcCall {
             return this;
         }
 
+
         public Builder startAt(OffsetDateTime startAt) {
             Utils.checkNotNull(startAt, "startAt");
             this.startAt = Optional.ofNullable(startAt);
@@ -406,6 +426,7 @@ public class UcCall {
             this.startAt = startAt;
             return this;
         }
+
 
         /**
          * The telephone number called
@@ -425,6 +446,7 @@ public class UcCall {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -437,6 +459,7 @@ public class UcCall {
             return this;
         }
 
+
         public Builder userId(String userId) {
             Utils.checkNotNull(userId, "userId");
             this.userId = Optional.ofNullable(userId);
@@ -448,18 +471,14 @@ public class UcCall {
             this.userId = userId;
             return this;
         }
-        
+
         public UcCall build() {
+
             return new UcCall(
-                contactId,
-                createdAt,
-                endAt,
-                id,
-                raw,
-                startAt,
-                telephone,
-                updatedAt,
-                userId);
+                contactId, createdAt, endAt,
+                id, raw, startAt,
+                telephone, updatedAt, userId);
         }
+
     }
 }

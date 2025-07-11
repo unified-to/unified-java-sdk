@@ -8,19 +8,17 @@ import java.lang.Override;
 import java.lang.String;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class KmsPageMetadataSchemas1 {
 
+public class KmsPageMetadataSchemas1 {
     @JsonCreator
     public KmsPageMetadataSchemas1() {
-        
-        
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
 
-    
+
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -42,16 +40,19 @@ public class KmsPageMetadataSchemas1 {
     public String toString() {
         return Utils.toString(KmsPageMetadataSchemas1.class);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
-        
+
         private Builder() {
           // force use of static builder() method
         }
-        
+
         public KmsPageMetadataSchemas1 build() {
+
             return new KmsPageMetadataSchemas1(
                 );
         }
+
     }
 }

@@ -28,7 +28,7 @@ public class PatchAccountingBillRequestBuilder {
     public PatchAccountingBillResponse call() throws Exception {
         
         RequestOperation<PatchAccountingBillRequest, PatchAccountingBillResponse> operation
-              = new PatchAccountingBillOperation( sdkConfiguration);
+              = new PatchAccountingBillOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

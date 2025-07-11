@@ -28,7 +28,7 @@ public class ListCommerceItemsRequestBuilder {
     public ListCommerceItemsResponse call() throws Exception {
         
         RequestOperation<ListCommerceItemsRequest, ListCommerceItemsResponse> operation
-              = new ListCommerceItemsOperation( sdkConfiguration);
+              = new ListCommerceItemsOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

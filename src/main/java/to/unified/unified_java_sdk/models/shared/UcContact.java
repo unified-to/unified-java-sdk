@@ -29,6 +29,7 @@ public class UcContact {
     @JsonProperty("company")
     private Optional<String> company;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
@@ -40,13 +41,16 @@ public class UcContact {
     @JsonProperty("emails")
     private Optional<? extends List<UcEmail>> emails;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
@@ -59,9 +63,11 @@ public class UcContact {
     @JsonProperty("telephones")
     private Optional<? extends List<UcTelephone>> telephones;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     private Optional<String> title;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -99,7 +105,9 @@ public class UcContact {
     }
     
     public UcContact() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -156,15 +164,17 @@ public class UcContact {
         return updatedAt;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public UcContact withCompany(String company) {
         Utils.checkNotNull(company, "company");
         this.company = Optional.ofNullable(company);
         return this;
     }
+
 
     public UcContact withCompany(Optional<String> company) {
         Utils.checkNotNull(company, "company");
@@ -177,6 +187,7 @@ public class UcContact {
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public UcContact withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -193,6 +204,7 @@ public class UcContact {
         return this;
     }
 
+
     /**
      * An array of email addresses for this contact
      */
@@ -208,6 +220,7 @@ public class UcContact {
         return this;
     }
 
+
     public UcContact withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -220,6 +233,7 @@ public class UcContact {
         return this;
     }
 
+
     public UcContact withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
         this.name = name;
@@ -231,6 +245,7 @@ public class UcContact {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public UcContact withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -247,6 +262,7 @@ public class UcContact {
         return this;
     }
 
+
     /**
      * An array of telephones for this contact
      */
@@ -262,6 +278,7 @@ public class UcContact {
         return this;
     }
 
+
     public UcContact withTitle(Optional<String> title) {
         Utils.checkNotNull(title, "title");
         this.title = title;
@@ -274,13 +291,13 @@ public class UcContact {
         return this;
     }
 
+
     public UcContact withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -305,15 +322,9 @@ public class UcContact {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            company,
-            createdAt,
-            emails,
-            id,
-            name,
-            raw,
-            telephones,
-            title,
-            updatedAt);
+            company, createdAt, emails,
+            id, name, raw,
+            telephones, title, updatedAt);
     }
     
     @Override
@@ -329,30 +340,32 @@ public class UcContact {
                 "title", title,
                 "updatedAt", updatedAt);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> company = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<? extends List<UcEmail>> emails = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<? extends List<UcTelephone>> telephones = Optional.empty();
- 
+
         private Optional<String> title = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder company(String company) {
             Utils.checkNotNull(company, "company");
@@ -366,6 +379,7 @@ public class UcContact {
             return this;
         }
 
+
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
@@ -377,6 +391,7 @@ public class UcContact {
             this.createdAt = createdAt;
             return this;
         }
+
 
         /**
          * An array of email addresses for this contact
@@ -396,6 +411,7 @@ public class UcContact {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -407,6 +423,7 @@ public class UcContact {
             this.id = id;
             return this;
         }
+
 
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
@@ -420,6 +437,7 @@ public class UcContact {
             return this;
         }
 
+
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
@@ -431,6 +449,7 @@ public class UcContact {
             this.raw = raw;
             return this;
         }
+
 
         /**
          * An array of telephones for this contact
@@ -450,6 +469,7 @@ public class UcContact {
             return this;
         }
 
+
         public Builder title(String title) {
             Utils.checkNotNull(title, "title");
             this.title = Optional.ofNullable(title);
@@ -462,6 +482,7 @@ public class UcContact {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -473,18 +494,14 @@ public class UcContact {
             this.updatedAt = updatedAt;
             return this;
         }
-        
+
         public UcContact build() {
+
             return new UcContact(
-                company,
-                createdAt,
-                emails,
-                id,
-                name,
-                raw,
-                telephones,
-                title,
-                updatedAt);
+                company, createdAt, emails,
+                id, name, raw,
+                telephones, title, updatedAt);
         }
+
     }
 }

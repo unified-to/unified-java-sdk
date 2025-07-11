@@ -28,7 +28,7 @@ public class RemoveCalendarLinkRequestBuilder {
     public RemoveCalendarLinkResponse call() throws Exception {
         
         RequestOperation<RemoveCalendarLinkRequest, RemoveCalendarLinkResponse> operation
-              = new RemoveCalendarLinkOperation( sdkConfiguration);
+              = new RemoveCalendarLinkOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

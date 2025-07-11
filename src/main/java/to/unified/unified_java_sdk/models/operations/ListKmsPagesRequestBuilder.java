@@ -28,7 +28,7 @@ public class ListKmsPagesRequestBuilder {
     public ListKmsPagesResponse call() throws Exception {
         
         RequestOperation<ListKmsPagesRequest, ListKmsPagesResponse> operation
-              = new ListKmsPagesOperation( sdkConfiguration);
+              = new ListKmsPagesOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

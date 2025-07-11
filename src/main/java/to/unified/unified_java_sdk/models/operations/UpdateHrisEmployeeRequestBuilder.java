@@ -28,7 +28,7 @@ public class UpdateHrisEmployeeRequestBuilder {
     public UpdateHrisEmployeeResponse call() throws Exception {
         
         RequestOperation<UpdateHrisEmployeeRequest, UpdateHrisEmployeeResponse> operation
-              = new UpdateHrisEmployeeOperation( sdkConfiguration);
+              = new UpdateHrisEmployeeOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

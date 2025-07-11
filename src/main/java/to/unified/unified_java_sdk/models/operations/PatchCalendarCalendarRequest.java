@@ -14,6 +14,7 @@ import to.unified.unified_java_sdk.models.shared.CalendarCalendar;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class PatchCalendarCalendarRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
@@ -66,7 +67,8 @@ public class PatchCalendarCalendarRequest {
             CalendarCalendar calendarCalendar,
             String connectionId,
             String id) {
-        this(calendarCalendar, connectionId, Optional.empty(), id, Optional.empty());
+        this(calendarCalendar, connectionId, Optional.empty(),
+            id, Optional.empty());
     }
 
     @JsonIgnore
@@ -107,9 +109,10 @@ public class PatchCalendarCalendarRequest {
         return raw;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public PatchCalendarCalendarRequest withCalendarCalendar(CalendarCalendar calendarCalendar) {
         Utils.checkNotNull(calendarCalendar, "calendarCalendar");
@@ -134,6 +137,7 @@ public class PatchCalendarCalendarRequest {
         this.fields = Optional.ofNullable(fields);
         return this;
     }
+
 
     /**
      * Comma-delimited fields to return
@@ -162,6 +166,7 @@ public class PatchCalendarCalendarRequest {
         return this;
     }
 
+
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
@@ -171,7 +176,6 @@ public class PatchCalendarCalendarRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -192,11 +196,8 @@ public class PatchCalendarCalendarRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            calendarCalendar,
-            connectionId,
-            fields,
-            id,
-            raw);
+            calendarCalendar, connectionId, fields,
+            id, raw);
     }
     
     @Override
@@ -208,28 +209,31 @@ public class PatchCalendarCalendarRequest {
                 "id", id,
                 "raw", raw);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private CalendarCalendar calendarCalendar;
- 
+
         private String connectionId;
- 
+
         private Optional<? extends List<String>> fields = Optional.empty();
- 
+
         private String id;
- 
+
         private Optional<String> raw = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder calendarCalendar(CalendarCalendar calendarCalendar) {
             Utils.checkNotNull(calendarCalendar, "calendarCalendar");
             this.calendarCalendar = calendarCalendar;
             return this;
         }
+
 
         /**
          * ID of the connection
@@ -239,6 +243,7 @@ public class PatchCalendarCalendarRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         /**
          * Comma-delimited fields to return
@@ -258,6 +263,7 @@ public class PatchCalendarCalendarRequest {
             return this;
         }
 
+
         /**
          * ID of the Calendar
          */
@@ -266,6 +272,7 @@ public class PatchCalendarCalendarRequest {
             this.id = id;
             return this;
         }
+
 
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
@@ -284,14 +291,13 @@ public class PatchCalendarCalendarRequest {
             this.raw = raw;
             return this;
         }
-        
+
         public PatchCalendarCalendarRequest build() {
+
             return new PatchCalendarCalendarRequest(
-                calendarCalendar,
-                connectionId,
-                fields,
-                id,
-                raw);
+                calendarCalendar, connectionId, fields,
+                id, raw);
         }
+
     }
 }

@@ -14,19 +14,23 @@ import java.lang.String;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class ScimEntitlement {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display")
     private Optional<String> display;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary")
     private Optional<Boolean> primary;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private Optional<String> type;
+
 
     @JsonProperty("value")
     private String value;
@@ -49,7 +53,8 @@ public class ScimEntitlement {
     
     public ScimEntitlement(
             String value) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), value);
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            value);
     }
 
     @JsonIgnore
@@ -72,15 +77,17 @@ public class ScimEntitlement {
         return value;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public ScimEntitlement withDisplay(String display) {
         Utils.checkNotNull(display, "display");
         this.display = Optional.ofNullable(display);
         return this;
     }
+
 
     public ScimEntitlement withDisplay(Optional<String> display) {
         Utils.checkNotNull(display, "display");
@@ -94,6 +101,7 @@ public class ScimEntitlement {
         return this;
     }
 
+
     public ScimEntitlement withPrimary(Optional<Boolean> primary) {
         Utils.checkNotNull(primary, "primary");
         this.primary = primary;
@@ -105,6 +113,7 @@ public class ScimEntitlement {
         this.type = Optional.ofNullable(type);
         return this;
     }
+
 
     public ScimEntitlement withType(Optional<String> type) {
         Utils.checkNotNull(type, "type");
@@ -118,7 +127,6 @@ public class ScimEntitlement {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -138,9 +146,7 @@ public class ScimEntitlement {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            display,
-            primary,
-            type,
+            display, primary, type,
             value);
     }
     
@@ -152,20 +158,22 @@ public class ScimEntitlement {
                 "type", type,
                 "value", value);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> display = Optional.empty();
- 
+
         private Optional<Boolean> primary = Optional.empty();
- 
+
         private Optional<String> type = Optional.empty();
- 
+
         private String value;
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder display(String display) {
             Utils.checkNotNull(display, "display");
@@ -179,6 +187,7 @@ public class ScimEntitlement {
             return this;
         }
 
+
         public Builder primary(boolean primary) {
             Utils.checkNotNull(primary, "primary");
             this.primary = Optional.ofNullable(primary);
@@ -190,6 +199,7 @@ public class ScimEntitlement {
             this.primary = primary;
             return this;
         }
+
 
         public Builder type(String type) {
             Utils.checkNotNull(type, "type");
@@ -203,18 +213,19 @@ public class ScimEntitlement {
             return this;
         }
 
+
         public Builder value(String value) {
             Utils.checkNotNull(value, "value");
             this.value = value;
             return this;
         }
-        
+
         public ScimEntitlement build() {
+
             return new ScimEntitlement(
-                display,
-                primary,
-                type,
+                display, primary, type,
                 value);
         }
+
     }
 }

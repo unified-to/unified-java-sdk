@@ -28,7 +28,7 @@ public class CreateKmsSpaceRequestBuilder {
     public CreateKmsSpaceResponse call() throws Exception {
         
         RequestOperation<CreateKmsSpaceRequest, CreateKmsSpaceResponse> operation
-              = new CreateKmsSpaceOperation( sdkConfiguration);
+              = new CreateKmsSpaceOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

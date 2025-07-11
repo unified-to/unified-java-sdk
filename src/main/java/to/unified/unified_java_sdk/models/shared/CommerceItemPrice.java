@@ -14,15 +14,18 @@ import java.lang.String;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class CommerceItemPrice {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compare_at_price")
     private Optional<Double> compareAtPrice;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private Optional<String> currency;
+
 
     @JsonProperty("price")
     private double price;
@@ -60,15 +63,17 @@ public class CommerceItemPrice {
         return price;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public CommerceItemPrice withCompareAtPrice(double compareAtPrice) {
         Utils.checkNotNull(compareAtPrice, "compareAtPrice");
         this.compareAtPrice = Optional.ofNullable(compareAtPrice);
         return this;
     }
+
 
     public CommerceItemPrice withCompareAtPrice(Optional<Double> compareAtPrice) {
         Utils.checkNotNull(compareAtPrice, "compareAtPrice");
@@ -82,6 +87,7 @@ public class CommerceItemPrice {
         return this;
     }
 
+
     public CommerceItemPrice withCurrency(Optional<String> currency) {
         Utils.checkNotNull(currency, "currency");
         this.currency = currency;
@@ -94,7 +100,6 @@ public class CommerceItemPrice {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -113,9 +118,7 @@ public class CommerceItemPrice {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            compareAtPrice,
-            currency,
-            price);
+            compareAtPrice, currency, price);
     }
     
     @Override
@@ -125,18 +128,20 @@ public class CommerceItemPrice {
                 "currency", currency,
                 "price", price);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<Double> compareAtPrice = Optional.empty();
- 
+
         private Optional<String> currency = Optional.empty();
- 
+
         private Double price;
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder compareAtPrice(double compareAtPrice) {
             Utils.checkNotNull(compareAtPrice, "compareAtPrice");
@@ -150,6 +155,7 @@ public class CommerceItemPrice {
             return this;
         }
 
+
         public Builder currency(String currency) {
             Utils.checkNotNull(currency, "currency");
             this.currency = Optional.ofNullable(currency);
@@ -162,17 +168,18 @@ public class CommerceItemPrice {
             return this;
         }
 
+
         public Builder price(double price) {
             Utils.checkNotNull(price, "price");
             this.price = price;
             return this;
         }
-        
+
         public CommerceItemPrice build() {
+
             return new CommerceItemPrice(
-                compareAtPrice,
-                currency,
-                price);
+                compareAtPrice, currency, price);
         }
+
     }
 }

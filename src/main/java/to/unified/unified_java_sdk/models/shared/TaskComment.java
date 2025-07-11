@@ -17,33 +17,41 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class TaskComment {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonProperty("task_id")
     private String taskId;
 
+
     @JsonProperty("text")
     private String text;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private Optional<String> userId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_name")
@@ -80,7 +88,9 @@ public class TaskComment {
     public TaskComment(
             String taskId,
             String text) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), taskId, text, Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            taskId, text, Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -124,15 +134,17 @@ public class TaskComment {
         return userName;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public TaskComment withCreatedAt(OffsetDateTime createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public TaskComment withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -146,6 +158,7 @@ public class TaskComment {
         return this;
     }
 
+
     public TaskComment withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -157,6 +170,7 @@ public class TaskComment {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public TaskComment withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -182,6 +196,7 @@ public class TaskComment {
         return this;
     }
 
+
     public TaskComment withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
@@ -193,6 +208,7 @@ public class TaskComment {
         this.userId = Optional.ofNullable(userId);
         return this;
     }
+
 
     public TaskComment withUserId(Optional<String> userId) {
         Utils.checkNotNull(userId, "userId");
@@ -206,13 +222,13 @@ public class TaskComment {
         return this;
     }
 
+
     public TaskComment withUserName(Optional<String> userName) {
         Utils.checkNotNull(userName, "userName");
         this.userName = userName;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -236,14 +252,9 @@ public class TaskComment {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt,
-            id,
-            raw,
-            taskId,
-            text,
-            updatedAt,
-            userId,
-            userName);
+            createdAt, id, raw,
+            taskId, text, updatedAt,
+            userId, userName);
     }
     
     @Override
@@ -258,28 +269,30 @@ public class TaskComment {
                 "userId", userId,
                 "userName", userName);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private String taskId;
- 
+
         private String text;
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<String> userId = Optional.empty();
- 
+
         private Optional<String> userName = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -293,6 +306,7 @@ public class TaskComment {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -304,6 +318,7 @@ public class TaskComment {
             this.id = id;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -317,17 +332,20 @@ public class TaskComment {
             return this;
         }
 
+
         public Builder taskId(String taskId) {
             Utils.checkNotNull(taskId, "taskId");
             this.taskId = taskId;
             return this;
         }
 
+
         public Builder text(String text) {
             Utils.checkNotNull(text, "text");
             this.text = text;
             return this;
         }
+
 
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
@@ -341,6 +359,7 @@ public class TaskComment {
             return this;
         }
 
+
         public Builder userId(String userId) {
             Utils.checkNotNull(userId, "userId");
             this.userId = Optional.ofNullable(userId);
@@ -353,6 +372,7 @@ public class TaskComment {
             return this;
         }
 
+
         public Builder userName(String userName) {
             Utils.checkNotNull(userName, "userName");
             this.userName = Optional.ofNullable(userName);
@@ -364,17 +384,14 @@ public class TaskComment {
             this.userName = userName;
             return this;
         }
-        
+
         public TaskComment build() {
+
             return new TaskComment(
-                createdAt,
-                id,
-                raw,
-                taskId,
-                text,
-                updatedAt,
-                userId,
-                userName);
+                createdAt, id, raw,
+                taskId, text, updatedAt,
+                userId, userName);
         }
+
     }
 }

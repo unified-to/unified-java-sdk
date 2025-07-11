@@ -28,7 +28,7 @@ public class ListTicketingCustomersRequestBuilder {
     public ListTicketingCustomersResponse call() throws Exception {
         
         RequestOperation<ListTicketingCustomersRequest, ListTicketingCustomersResponse> operation
-              = new ListTicketingCustomersOperation( sdkConfiguration);
+              = new ListTicketingCustomersOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

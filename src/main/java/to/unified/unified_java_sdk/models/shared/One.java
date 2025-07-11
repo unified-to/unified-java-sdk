@@ -8,19 +8,17 @@ import java.lang.Override;
 import java.lang.String;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class One {
 
+public class One {
     @JsonCreator
     public One() {
-        
-        
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
 
-    
+
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -42,16 +40,19 @@ public class One {
     public String toString() {
         return Utils.toString(One.class);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
-        
+
         private Builder() {
           // force use of static builder() method
         }
-        
+
         public One build() {
+
             return new One(
                 );
         }
+
     }
 }

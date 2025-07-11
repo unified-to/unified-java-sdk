@@ -28,7 +28,7 @@ public class CreateScimGroupsRequestBuilder {
     public CreateScimGroupsResponse call() throws Exception {
         
         RequestOperation<CreateScimGroupsRequest, CreateScimGroupsResponse> operation
-              = new CreateScimGroupsOperation( sdkConfiguration);
+              = new CreateScimGroupsOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

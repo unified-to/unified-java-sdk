@@ -18,59 +18,73 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class UcRecording {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("call_id")
     private Optional<String> callId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private Optional<String> contactId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_name")
     private Optional<String> contactName;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_phone")
     private Optional<String> contactPhone;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private Optional<OffsetDateTime> endAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires_at")
     private Optional<OffsetDateTime> expiresAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("media")
     private Optional<? extends List<UcRecordingMedia>> media;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private Optional<OffsetDateTime> startAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private Optional<String> userId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web_url")
@@ -123,7 +137,11 @@ public class UcRecording {
     }
     
     public UcRecording() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -198,15 +216,17 @@ public class UcRecording {
         return webUrl;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public UcRecording withCallId(String callId) {
         Utils.checkNotNull(callId, "callId");
         this.callId = Optional.ofNullable(callId);
         return this;
     }
+
 
     public UcRecording withCallId(Optional<String> callId) {
         Utils.checkNotNull(callId, "callId");
@@ -220,6 +240,7 @@ public class UcRecording {
         return this;
     }
 
+
     public UcRecording withContactId(Optional<String> contactId) {
         Utils.checkNotNull(contactId, "contactId");
         this.contactId = contactId;
@@ -231,6 +252,7 @@ public class UcRecording {
         this.contactName = Optional.ofNullable(contactName);
         return this;
     }
+
 
     public UcRecording withContactName(Optional<String> contactName) {
         Utils.checkNotNull(contactName, "contactName");
@@ -244,6 +266,7 @@ public class UcRecording {
         return this;
     }
 
+
     public UcRecording withContactPhone(Optional<String> contactPhone) {
         Utils.checkNotNull(contactPhone, "contactPhone");
         this.contactPhone = contactPhone;
@@ -255,6 +278,7 @@ public class UcRecording {
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public UcRecording withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -268,6 +292,7 @@ public class UcRecording {
         return this;
     }
 
+
     public UcRecording withEndAt(Optional<OffsetDateTime> endAt) {
         Utils.checkNotNull(endAt, "endAt");
         this.endAt = endAt;
@@ -279,6 +304,7 @@ public class UcRecording {
         this.expiresAt = Optional.ofNullable(expiresAt);
         return this;
     }
+
 
     public UcRecording withExpiresAt(Optional<OffsetDateTime> expiresAt) {
         Utils.checkNotNull(expiresAt, "expiresAt");
@@ -292,6 +318,7 @@ public class UcRecording {
         return this;
     }
 
+
     public UcRecording withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -303,6 +330,7 @@ public class UcRecording {
         this.media = Optional.ofNullable(media);
         return this;
     }
+
 
     public UcRecording withMedia(Optional<? extends List<UcRecordingMedia>> media) {
         Utils.checkNotNull(media, "media");
@@ -316,6 +344,7 @@ public class UcRecording {
         return this;
     }
 
+
     public UcRecording withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
@@ -327,6 +356,7 @@ public class UcRecording {
         this.startAt = Optional.ofNullable(startAt);
         return this;
     }
+
 
     public UcRecording withStartAt(Optional<OffsetDateTime> startAt) {
         Utils.checkNotNull(startAt, "startAt");
@@ -340,6 +370,7 @@ public class UcRecording {
         return this;
     }
 
+
     public UcRecording withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
@@ -351,6 +382,7 @@ public class UcRecording {
         this.userId = Optional.ofNullable(userId);
         return this;
     }
+
 
     public UcRecording withUserId(Optional<String> userId) {
         Utils.checkNotNull(userId, "userId");
@@ -364,13 +396,13 @@ public class UcRecording {
         return this;
     }
 
+
     public UcRecording withWebUrl(Optional<String> webUrl) {
         Utils.checkNotNull(webUrl, "webUrl");
         this.webUrl = webUrl;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -400,20 +432,11 @@ public class UcRecording {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            callId,
-            contactId,
-            contactName,
-            contactPhone,
-            createdAt,
-            endAt,
-            expiresAt,
-            id,
-            media,
-            raw,
-            startAt,
-            updatedAt,
-            userId,
-            webUrl);
+            callId, contactId, contactName,
+            contactPhone, createdAt, endAt,
+            expiresAt, id, media,
+            raw, startAt, updatedAt,
+            userId, webUrl);
     }
     
     @Override
@@ -434,40 +457,42 @@ public class UcRecording {
                 "userId", userId,
                 "webUrl", webUrl);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> callId = Optional.empty();
- 
+
         private Optional<String> contactId = Optional.empty();
- 
+
         private Optional<String> contactName = Optional.empty();
- 
+
         private Optional<String> contactPhone = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<OffsetDateTime> endAt = Optional.empty();
- 
+
         private Optional<OffsetDateTime> expiresAt = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<? extends List<UcRecordingMedia>> media = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<OffsetDateTime> startAt = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<String> userId = Optional.empty();
- 
+
         private Optional<String> webUrl = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder callId(String callId) {
             Utils.checkNotNull(callId, "callId");
@@ -481,6 +506,7 @@ public class UcRecording {
             return this;
         }
 
+
         public Builder contactId(String contactId) {
             Utils.checkNotNull(contactId, "contactId");
             this.contactId = Optional.ofNullable(contactId);
@@ -492,6 +518,7 @@ public class UcRecording {
             this.contactId = contactId;
             return this;
         }
+
 
         public Builder contactName(String contactName) {
             Utils.checkNotNull(contactName, "contactName");
@@ -505,6 +532,7 @@ public class UcRecording {
             return this;
         }
 
+
         public Builder contactPhone(String contactPhone) {
             Utils.checkNotNull(contactPhone, "contactPhone");
             this.contactPhone = Optional.ofNullable(contactPhone);
@@ -516,6 +544,7 @@ public class UcRecording {
             this.contactPhone = contactPhone;
             return this;
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -529,6 +558,7 @@ public class UcRecording {
             return this;
         }
 
+
         public Builder endAt(OffsetDateTime endAt) {
             Utils.checkNotNull(endAt, "endAt");
             this.endAt = Optional.ofNullable(endAt);
@@ -540,6 +570,7 @@ public class UcRecording {
             this.endAt = endAt;
             return this;
         }
+
 
         public Builder expiresAt(OffsetDateTime expiresAt) {
             Utils.checkNotNull(expiresAt, "expiresAt");
@@ -553,6 +584,7 @@ public class UcRecording {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -564,6 +596,7 @@ public class UcRecording {
             this.id = id;
             return this;
         }
+
 
         public Builder media(List<UcRecordingMedia> media) {
             Utils.checkNotNull(media, "media");
@@ -577,6 +610,7 @@ public class UcRecording {
             return this;
         }
 
+
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
@@ -588,6 +622,7 @@ public class UcRecording {
             this.raw = raw;
             return this;
         }
+
 
         public Builder startAt(OffsetDateTime startAt) {
             Utils.checkNotNull(startAt, "startAt");
@@ -601,6 +636,7 @@ public class UcRecording {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -612,6 +648,7 @@ public class UcRecording {
             this.updatedAt = updatedAt;
             return this;
         }
+
 
         public Builder userId(String userId) {
             Utils.checkNotNull(userId, "userId");
@@ -625,6 +662,7 @@ public class UcRecording {
             return this;
         }
 
+
         public Builder webUrl(String webUrl) {
             Utils.checkNotNull(webUrl, "webUrl");
             this.webUrl = Optional.ofNullable(webUrl);
@@ -636,23 +674,16 @@ public class UcRecording {
             this.webUrl = webUrl;
             return this;
         }
-        
+
         public UcRecording build() {
+
             return new UcRecording(
-                callId,
-                contactId,
-                contactName,
-                contactPhone,
-                createdAt,
-                endAt,
-                expiresAt,
-                id,
-                media,
-                raw,
-                startAt,
-                updatedAt,
-                userId,
-                webUrl);
+                callId, contactId, contactName,
+                contactPhone, createdAt, endAt,
+                expiresAt, id, media,
+                raw, startAt, updatedAt,
+                userId, webUrl);
         }
+
     }
 }

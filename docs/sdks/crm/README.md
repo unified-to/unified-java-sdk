@@ -64,7 +64,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -123,7 +123,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -182,7 +182,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -241,7 +241,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -300,7 +300,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -359,7 +359,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -417,7 +417,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -474,7 +474,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -531,7 +531,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -588,7 +588,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -645,7 +645,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -702,7 +702,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -759,7 +759,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -815,7 +815,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -871,7 +871,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -927,7 +927,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -983,7 +983,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -1039,7 +1039,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -1096,7 +1096,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -1156,7 +1156,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -1216,7 +1216,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -1276,7 +1276,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -1336,7 +1336,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -1396,7 +1396,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -1455,7 +1455,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -1510,7 +1510,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -1565,7 +1565,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -1620,7 +1620,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -1675,7 +1675,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -1730,7 +1730,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -1786,7 +1786,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -1846,7 +1846,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -1906,7 +1906,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -1966,7 +1966,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -2026,7 +2026,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 
@@ -2086,7 +2086,7 @@ public class Application {
 
         UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
 

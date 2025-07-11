@@ -15,19 +15,23 @@ import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class ScimPhoto {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display")
     private Optional<String> display;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary")
     private Optional<Boolean> primary;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private Optional<? extends ScimPhotoType> type;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
@@ -50,7 +54,8 @@ public class ScimPhoto {
     }
     
     public ScimPhoto() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -74,15 +79,17 @@ public class ScimPhoto {
         return value;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public ScimPhoto withDisplay(String display) {
         Utils.checkNotNull(display, "display");
         this.display = Optional.ofNullable(display);
         return this;
     }
+
 
     public ScimPhoto withDisplay(Optional<String> display) {
         Utils.checkNotNull(display, "display");
@@ -96,6 +103,7 @@ public class ScimPhoto {
         return this;
     }
 
+
     public ScimPhoto withPrimary(Optional<Boolean> primary) {
         Utils.checkNotNull(primary, "primary");
         this.primary = primary;
@@ -107,6 +115,7 @@ public class ScimPhoto {
         this.type = Optional.ofNullable(type);
         return this;
     }
+
 
     public ScimPhoto withType(Optional<? extends ScimPhotoType> type) {
         Utils.checkNotNull(type, "type");
@@ -120,13 +129,13 @@ public class ScimPhoto {
         return this;
     }
 
+
     public ScimPhoto withValue(Optional<String> value) {
         Utils.checkNotNull(value, "value");
         this.value = value;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -146,9 +155,7 @@ public class ScimPhoto {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            display,
-            primary,
-            type,
+            display, primary, type,
             value);
     }
     
@@ -160,20 +167,22 @@ public class ScimPhoto {
                 "type", type,
                 "value", value);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> display = Optional.empty();
- 
+
         private Optional<Boolean> primary = Optional.empty();
- 
+
         private Optional<? extends ScimPhotoType> type = Optional.empty();
- 
+
         private Optional<String> value = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder display(String display) {
             Utils.checkNotNull(display, "display");
@@ -187,6 +196,7 @@ public class ScimPhoto {
             return this;
         }
 
+
         public Builder primary(boolean primary) {
             Utils.checkNotNull(primary, "primary");
             this.primary = Optional.ofNullable(primary);
@@ -198,6 +208,7 @@ public class ScimPhoto {
             this.primary = primary;
             return this;
         }
+
 
         public Builder type(ScimPhotoType type) {
             Utils.checkNotNull(type, "type");
@@ -211,6 +222,7 @@ public class ScimPhoto {
             return this;
         }
 
+
         public Builder value(String value) {
             Utils.checkNotNull(value, "value");
             this.value = Optional.ofNullable(value);
@@ -222,13 +234,13 @@ public class ScimPhoto {
             this.value = value;
             return this;
         }
-        
+
         public ScimPhoto build() {
+
             return new ScimPhoto(
-                display,
-                primary,
-                type,
+                display, primary, type,
                 value);
         }
+
     }
 }

@@ -28,7 +28,7 @@ public class GetMetadataMetadataRequestBuilder {
     public GetMetadataMetadataResponse call() throws Exception {
         
         RequestOperation<GetMetadataMetadataRequest, GetMetadataMetadataResponse> operation
-              = new GetMetadataMetadataOperation( sdkConfiguration);
+              = new GetMetadataMetadataOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -28,7 +28,7 @@ public class UpdatePaymentSubscriptionRequestBuilder {
     public UpdatePaymentSubscriptionResponse call() throws Exception {
         
         RequestOperation<UpdatePaymentSubscriptionRequest, UpdatePaymentSubscriptionResponse> operation
-              = new UpdatePaymentSubscriptionOperation( sdkConfiguration);
+              = new UpdatePaymentSubscriptionOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -28,7 +28,7 @@ public class RemoveRepoCommitRequestBuilder {
     public RemoveRepoCommitResponse call() throws Exception {
         
         RequestOperation<RemoveRepoCommitRequest, RemoveRepoCommitResponse> operation
-              = new RemoveRepoCommitOperation( sdkConfiguration);
+              = new RemoveRepoCommitOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

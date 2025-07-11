@@ -28,7 +28,7 @@ public class PatchMartechListRequestBuilder {
     public PatchMartechListResponse call() throws Exception {
         
         RequestOperation<PatchMartechListRequest, PatchMartechListResponse> operation
-              = new PatchMartechListOperation( sdkConfiguration);
+              = new PatchMartechListOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

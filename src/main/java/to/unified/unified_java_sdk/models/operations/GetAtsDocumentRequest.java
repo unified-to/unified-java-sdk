@@ -13,8 +13,8 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class GetAtsDocumentRequest {
 
+public class GetAtsDocumentRequest {
     /**
      * ID of the connection
      */
@@ -58,7 +58,8 @@ public class GetAtsDocumentRequest {
     public GetAtsDocumentRequest(
             String connectionId,
             String id) {
-        this(connectionId, Optional.empty(), id, Optional.empty());
+        this(connectionId, Optional.empty(), id,
+            Optional.empty());
     }
 
     /**
@@ -94,9 +95,10 @@ public class GetAtsDocumentRequest {
         return raw;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * ID of the connection
@@ -115,6 +117,7 @@ public class GetAtsDocumentRequest {
         this.fields = Optional.ofNullable(fields);
         return this;
     }
+
 
     /**
      * Comma-delimited fields to return
@@ -143,6 +146,7 @@ public class GetAtsDocumentRequest {
         return this;
     }
 
+
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
@@ -152,7 +156,6 @@ public class GetAtsDocumentRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -172,9 +175,7 @@ public class GetAtsDocumentRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId,
-            fields,
-            id,
+            connectionId, fields, id,
             raw);
     }
     
@@ -186,20 +187,22 @@ public class GetAtsDocumentRequest {
                 "id", id,
                 "raw", raw);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private String connectionId;
- 
+
         private Optional<? extends List<String>> fields = Optional.empty();
- 
+
         private String id;
- 
+
         private Optional<String> raw = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * ID of the connection
@@ -209,6 +212,7 @@ public class GetAtsDocumentRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         /**
          * Comma-delimited fields to return
@@ -228,6 +232,7 @@ public class GetAtsDocumentRequest {
             return this;
         }
 
+
         /**
          * ID of the Document
          */
@@ -236,6 +241,7 @@ public class GetAtsDocumentRequest {
             this.id = id;
             return this;
         }
+
 
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
@@ -254,13 +260,13 @@ public class GetAtsDocumentRequest {
             this.raw = raw;
             return this;
         }
-        
+
         public GetAtsDocumentRequest build() {
+
             return new GetAtsDocumentRequest(
-                connectionId,
-                fields,
-                id,
+                connectionId, fields, id,
                 raw);
         }
+
     }
 }

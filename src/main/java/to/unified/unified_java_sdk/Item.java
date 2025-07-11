@@ -40,7 +40,6 @@ public class Item {
     Item(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create an item
      * 
@@ -57,13 +56,11 @@ public class Item {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateCommerceItemResponse createCommerceItem(
-            CreateCommerceItemRequest request) throws Exception {
+    public CreateCommerceItemResponse createCommerceItem(CreateCommerceItemRequest request) throws Exception {
         RequestOperation<CreateCommerceItemRequest, CreateCommerceItemResponse> operation
-              = new CreateCommerceItemOperation( sdkConfiguration);
+              = new CreateCommerceItemOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve an item
@@ -81,13 +78,11 @@ public class Item {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetCommerceItemResponse getCommerceItem(
-            GetCommerceItemRequest request) throws Exception {
+    public GetCommerceItemResponse getCommerceItem(GetCommerceItemRequest request) throws Exception {
         RequestOperation<GetCommerceItemRequest, GetCommerceItemResponse> operation
-              = new GetCommerceItemOperation( sdkConfiguration);
+              = new GetCommerceItemOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all items
@@ -105,13 +100,11 @@ public class Item {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCommerceItemsResponse listCommerceItems(
-            ListCommerceItemsRequest request) throws Exception {
+    public ListCommerceItemsResponse listCommerceItems(ListCommerceItemsRequest request) throws Exception {
         RequestOperation<ListCommerceItemsRequest, ListCommerceItemsResponse> operation
-              = new ListCommerceItemsOperation( sdkConfiguration);
+              = new ListCommerceItemsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an item
@@ -129,13 +122,11 @@ public class Item {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchCommerceItemResponse patchCommerceItem(
-            PatchCommerceItemRequest request) throws Exception {
+    public PatchCommerceItemResponse patchCommerceItem(PatchCommerceItemRequest request) throws Exception {
         RequestOperation<PatchCommerceItemRequest, PatchCommerceItemResponse> operation
-              = new PatchCommerceItemOperation( sdkConfiguration);
+              = new PatchCommerceItemOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove an item
@@ -153,13 +144,11 @@ public class Item {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveCommerceItemResponse removeCommerceItem(
-            RemoveCommerceItemRequest request) throws Exception {
+    public RemoveCommerceItemResponse removeCommerceItem(RemoveCommerceItemRequest request) throws Exception {
         RequestOperation<RemoveCommerceItemRequest, RemoveCommerceItemResponse> operation
-              = new RemoveCommerceItemOperation( sdkConfiguration);
+              = new RemoveCommerceItemOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an item
@@ -177,10 +166,9 @@ public class Item {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateCommerceItemResponse updateCommerceItem(
-            UpdateCommerceItemRequest request) throws Exception {
+    public UpdateCommerceItemResponse updateCommerceItem(UpdateCommerceItemRequest request) throws Exception {
         RequestOperation<UpdateCommerceItemRequest, UpdateCommerceItemResponse> operation
-              = new UpdateCommerceItemOperation( sdkConfiguration);
+              = new UpdateCommerceItemOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

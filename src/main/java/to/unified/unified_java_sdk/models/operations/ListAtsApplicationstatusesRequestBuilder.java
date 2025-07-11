@@ -28,7 +28,7 @@ public class ListAtsApplicationstatusesRequestBuilder {
     public ListAtsApplicationstatusesResponse call() throws Exception {
         
         RequestOperation<ListAtsApplicationstatusesRequest, ListAtsApplicationstatusesResponse> operation
-              = new ListAtsApplicationstatusesOperation( sdkConfiguration);
+              = new ListAtsApplicationstatusesOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

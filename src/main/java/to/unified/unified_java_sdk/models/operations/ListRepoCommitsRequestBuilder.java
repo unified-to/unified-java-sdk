@@ -28,7 +28,7 @@ public class ListRepoCommitsRequestBuilder {
     public ListRepoCommitsResponse call() throws Exception {
         
         RequestOperation<ListRepoCommitsRequest, ListRepoCommitsResponse> operation
-              = new ListRepoCommitsOperation( sdkConfiguration);
+              = new ListRepoCommitsOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

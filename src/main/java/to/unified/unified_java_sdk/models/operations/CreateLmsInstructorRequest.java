@@ -14,6 +14,7 @@ import to.unified.unified_java_sdk.models.shared.LmsInstructor;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class CreateLmsInstructorRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
@@ -56,7 +57,8 @@ public class CreateLmsInstructorRequest {
     public CreateLmsInstructorRequest(
             LmsInstructor lmsInstructor,
             String connectionId) {
-        this(lmsInstructor, connectionId, Optional.empty(), Optional.empty());
+        this(lmsInstructor, connectionId, Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -89,9 +91,10 @@ public class CreateLmsInstructorRequest {
         return raw;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public CreateLmsInstructorRequest withLmsInstructor(LmsInstructor lmsInstructor) {
         Utils.checkNotNull(lmsInstructor, "lmsInstructor");
@@ -117,6 +120,7 @@ public class CreateLmsInstructorRequest {
         return this;
     }
 
+
     /**
      * Comma-delimited fields to return
      */
@@ -135,6 +139,7 @@ public class CreateLmsInstructorRequest {
         return this;
     }
 
+
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
@@ -144,7 +149,6 @@ public class CreateLmsInstructorRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -164,9 +168,7 @@ public class CreateLmsInstructorRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            lmsInstructor,
-            connectionId,
-            fields,
+            lmsInstructor, connectionId, fields,
             raw);
     }
     
@@ -178,26 +180,29 @@ public class CreateLmsInstructorRequest {
                 "fields", fields,
                 "raw", raw);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private LmsInstructor lmsInstructor;
- 
+
         private String connectionId;
- 
+
         private Optional<? extends List<String>> fields = Optional.empty();
- 
+
         private Optional<String> raw = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder lmsInstructor(LmsInstructor lmsInstructor) {
             Utils.checkNotNull(lmsInstructor, "lmsInstructor");
             this.lmsInstructor = lmsInstructor;
             return this;
         }
+
 
         /**
          * ID of the connection
@@ -207,6 +212,7 @@ public class CreateLmsInstructorRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         /**
          * Comma-delimited fields to return
@@ -226,6 +232,7 @@ public class CreateLmsInstructorRequest {
             return this;
         }
 
+
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
@@ -243,13 +250,13 @@ public class CreateLmsInstructorRequest {
             this.raw = raw;
             return this;
         }
-        
+
         public CreateLmsInstructorRequest build() {
+
             return new CreateLmsInstructorRequest(
-                lmsInstructor,
-                connectionId,
-                fields,
+                lmsInstructor, connectionId, fields,
                 raw);
         }
+
     }
 }

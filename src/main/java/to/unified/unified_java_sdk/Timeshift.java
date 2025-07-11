@@ -40,7 +40,6 @@ public class Timeshift {
     Timeshift(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a timeshift
      * 
@@ -57,13 +56,11 @@ public class Timeshift {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateHrisTimeshiftResponse createHrisTimeshift(
-            CreateHrisTimeshiftRequest request) throws Exception {
+    public CreateHrisTimeshiftResponse createHrisTimeshift(CreateHrisTimeshiftRequest request) throws Exception {
         RequestOperation<CreateHrisTimeshiftRequest, CreateHrisTimeshiftResponse> operation
-              = new CreateHrisTimeshiftOperation( sdkConfiguration);
+              = new CreateHrisTimeshiftOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a timeshift
@@ -81,13 +78,11 @@ public class Timeshift {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetHrisTimeshiftResponse getHrisTimeshift(
-            GetHrisTimeshiftRequest request) throws Exception {
+    public GetHrisTimeshiftResponse getHrisTimeshift(GetHrisTimeshiftRequest request) throws Exception {
         RequestOperation<GetHrisTimeshiftRequest, GetHrisTimeshiftResponse> operation
-              = new GetHrisTimeshiftOperation( sdkConfiguration);
+              = new GetHrisTimeshiftOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all timeshifts
@@ -105,13 +100,11 @@ public class Timeshift {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListHrisTimeshiftsResponse listHrisTimeshifts(
-            ListHrisTimeshiftsRequest request) throws Exception {
+    public ListHrisTimeshiftsResponse listHrisTimeshifts(ListHrisTimeshiftsRequest request) throws Exception {
         RequestOperation<ListHrisTimeshiftsRequest, ListHrisTimeshiftsResponse> operation
-              = new ListHrisTimeshiftsOperation( sdkConfiguration);
+              = new ListHrisTimeshiftsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a timeshift
@@ -129,13 +122,11 @@ public class Timeshift {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchHrisTimeshiftResponse patchHrisTimeshift(
-            PatchHrisTimeshiftRequest request) throws Exception {
+    public PatchHrisTimeshiftResponse patchHrisTimeshift(PatchHrisTimeshiftRequest request) throws Exception {
         RequestOperation<PatchHrisTimeshiftRequest, PatchHrisTimeshiftResponse> operation
-              = new PatchHrisTimeshiftOperation( sdkConfiguration);
+              = new PatchHrisTimeshiftOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a timeshift
@@ -153,13 +144,11 @@ public class Timeshift {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveHrisTimeshiftResponse removeHrisTimeshift(
-            RemoveHrisTimeshiftRequest request) throws Exception {
+    public RemoveHrisTimeshiftResponse removeHrisTimeshift(RemoveHrisTimeshiftRequest request) throws Exception {
         RequestOperation<RemoveHrisTimeshiftRequest, RemoveHrisTimeshiftResponse> operation
-              = new RemoveHrisTimeshiftOperation( sdkConfiguration);
+              = new RemoveHrisTimeshiftOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a timeshift
@@ -177,10 +166,9 @@ public class Timeshift {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateHrisTimeshiftResponse updateHrisTimeshift(
-            UpdateHrisTimeshiftRequest request) throws Exception {
+    public UpdateHrisTimeshiftResponse updateHrisTimeshift(UpdateHrisTimeshiftRequest request) throws Exception {
         RequestOperation<UpdateHrisTimeshiftRequest, UpdateHrisTimeshiftResponse> operation
-              = new UpdateHrisTimeshiftOperation( sdkConfiguration);
+              = new UpdateHrisTimeshiftOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -24,7 +24,6 @@ public class Report {
     Report(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Retrieve a report
      * 
@@ -41,13 +40,11 @@ public class Report {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAccountingReportResponse getAccountingReport(
-            GetAccountingReportRequest request) throws Exception {
+    public GetAccountingReportResponse getAccountingReport(GetAccountingReportRequest request) throws Exception {
         RequestOperation<GetAccountingReportRequest, GetAccountingReportResponse> operation
-              = new GetAccountingReportOperation( sdkConfiguration);
+              = new GetAccountingReportOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all reports
@@ -65,10 +62,9 @@ public class Report {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAccountingReportsResponse listAccountingReports(
-            ListAccountingReportsRequest request) throws Exception {
+    public ListAccountingReportsResponse listAccountingReports(ListAccountingReportsRequest request) throws Exception {
         RequestOperation<ListAccountingReportsRequest, ListAccountingReportsResponse> operation
-              = new ListAccountingReportsOperation( sdkConfiguration);
+              = new ListAccountingReportsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

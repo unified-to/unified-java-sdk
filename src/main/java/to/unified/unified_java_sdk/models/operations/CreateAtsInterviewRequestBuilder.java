@@ -28,7 +28,7 @@ public class CreateAtsInterviewRequestBuilder {
     public CreateAtsInterviewResponse call() throws Exception {
         
         RequestOperation<CreateAtsInterviewRequest, CreateAtsInterviewResponse> operation
-              = new CreateAtsInterviewOperation( sdkConfiguration);
+              = new CreateAtsInterviewOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

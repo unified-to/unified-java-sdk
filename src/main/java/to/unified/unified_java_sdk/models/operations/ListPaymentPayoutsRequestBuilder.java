@@ -28,7 +28,7 @@ public class ListPaymentPayoutsRequestBuilder {
     public ListPaymentPayoutsResponse call() throws Exception {
         
         RequestOperation<ListPaymentPayoutsRequest, ListPaymentPayoutsResponse> operation
-              = new ListPaymentPayoutsOperation( sdkConfiguration);
+              = new ListPaymentPayoutsOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

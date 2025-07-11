@@ -14,8 +14,8 @@ import to.unified.unified_java_sdk.models.shared.CommerceCollection;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class CreateCommerceCollectionRequest {
 
+public class CreateCommerceCollectionRequest {
     /**
      * A collection of items/products/services
      */
@@ -59,7 +59,8 @@ public class CreateCommerceCollectionRequest {
     public CreateCommerceCollectionRequest(
             CommerceCollection commerceCollection,
             String connectionId) {
-        this(commerceCollection, connectionId, Optional.empty(), Optional.empty());
+        this(commerceCollection, connectionId, Optional.empty(),
+            Optional.empty());
     }
 
     /**
@@ -95,9 +96,10 @@ public class CreateCommerceCollectionRequest {
         return raw;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * A collection of items/products/services
@@ -126,6 +128,7 @@ public class CreateCommerceCollectionRequest {
         return this;
     }
 
+
     /**
      * Comma-delimited fields to return
      */
@@ -144,6 +147,7 @@ public class CreateCommerceCollectionRequest {
         return this;
     }
 
+
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
@@ -153,7 +157,6 @@ public class CreateCommerceCollectionRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -173,9 +176,7 @@ public class CreateCommerceCollectionRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            commerceCollection,
-            connectionId,
-            fields,
+            commerceCollection, connectionId, fields,
             raw);
     }
     
@@ -187,20 +188,22 @@ public class CreateCommerceCollectionRequest {
                 "fields", fields,
                 "raw", raw);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private CommerceCollection commerceCollection;
- 
+
         private String connectionId;
- 
+
         private Optional<? extends List<String>> fields = Optional.empty();
- 
+
         private Optional<String> raw = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * A collection of items/products/services
@@ -211,6 +214,7 @@ public class CreateCommerceCollectionRequest {
             return this;
         }
 
+
         /**
          * ID of the connection
          */
@@ -219,6 +223,7 @@ public class CreateCommerceCollectionRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         /**
          * Comma-delimited fields to return
@@ -238,6 +243,7 @@ public class CreateCommerceCollectionRequest {
             return this;
         }
 
+
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
@@ -255,13 +261,13 @@ public class CreateCommerceCollectionRequest {
             this.raw = raw;
             return this;
         }
-        
+
         public CreateCommerceCollectionRequest build() {
+
             return new CreateCommerceCollectionRequest(
-                commerceCollection,
-                connectionId,
-                fields,
+                commerceCollection, connectionId, fields,
                 raw);
         }
+
     }
 }

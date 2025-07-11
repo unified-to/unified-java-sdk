@@ -28,7 +28,7 @@ public class RemoveCommerceCollectionRequestBuilder {
     public RemoveCommerceCollectionResponse call() throws Exception {
         
         RequestOperation<RemoveCommerceCollectionRequest, RemoveCommerceCollectionResponse> operation
-              = new RemoveCommerceCollectionOperation( sdkConfiguration);
+              = new RemoveCommerceCollectionOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

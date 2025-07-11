@@ -28,7 +28,7 @@ public class RemoveLmsClassRequestBuilder {
     public RemoveLmsClassResponse call() throws Exception {
         
         RequestOperation<RemoveLmsClassRequest, RemoveLmsClassResponse> operation
-              = new RemoveLmsClassOperation( sdkConfiguration);
+              = new RemoveLmsClassOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

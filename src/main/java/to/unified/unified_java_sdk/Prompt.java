@@ -20,7 +20,6 @@ public class Prompt {
     Prompt(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a prompt
      * 
@@ -37,10 +36,9 @@ public class Prompt {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateGenaiPromptResponse createGenaiPrompt(
-            CreateGenaiPromptRequest request) throws Exception {
+    public CreateGenaiPromptResponse createGenaiPrompt(CreateGenaiPromptRequest request) throws Exception {
         RequestOperation<CreateGenaiPromptRequest, CreateGenaiPromptResponse> operation
-              = new CreateGenaiPromptOperation( sdkConfiguration);
+              = new CreateGenaiPromptOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

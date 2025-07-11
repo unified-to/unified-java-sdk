@@ -28,7 +28,7 @@ public class UpdateMessagingMessageRequestBuilder {
     public UpdateMessagingMessageResponse call() throws Exception {
         
         RequestOperation<UpdateMessagingMessageRequest, UpdateMessagingMessageResponse> operation
-              = new UpdateMessagingMessageOperation( sdkConfiguration);
+              = new UpdateMessagingMessageOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

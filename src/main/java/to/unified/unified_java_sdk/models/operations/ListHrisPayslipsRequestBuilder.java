@@ -28,7 +28,7 @@ public class ListHrisPayslipsRequestBuilder {
     public ListHrisPayslipsResponse call() throws Exception {
         
         RequestOperation<ListHrisPayslipsRequest, ListHrisPayslipsResponse> operation
-              = new ListHrisPayslipsOperation( sdkConfiguration);
+              = new ListHrisPayslipsOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

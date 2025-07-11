@@ -19,54 +19,67 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class MessagingChannel {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private Optional<String> description;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_subchannels")
     private Optional<Boolean> hasSubchannels;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     private Optional<Boolean> isActive;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_private")
     private Optional<Boolean> isPrivate;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members")
     private Optional<? extends List<MessagingMember>> members;
 
+
     @JsonProperty("name")
     private String name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_channel_id")
     private Optional<String> parentChannelId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     private Optional<String> parentId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web_url")
@@ -117,7 +130,11 @@ public class MessagingChannel {
     
     public MessagingChannel(
             String name) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), name, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), name, Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -187,15 +204,17 @@ public class MessagingChannel {
         return webUrl;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public MessagingChannel withCreatedAt(OffsetDateTime createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public MessagingChannel withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -209,6 +228,7 @@ public class MessagingChannel {
         return this;
     }
 
+
     public MessagingChannel withDescription(Optional<String> description) {
         Utils.checkNotNull(description, "description");
         this.description = description;
@@ -220,6 +240,7 @@ public class MessagingChannel {
         this.hasSubchannels = Optional.ofNullable(hasSubchannels);
         return this;
     }
+
 
     public MessagingChannel withHasSubchannels(Optional<Boolean> hasSubchannels) {
         Utils.checkNotNull(hasSubchannels, "hasSubchannels");
@@ -233,6 +254,7 @@ public class MessagingChannel {
         return this;
     }
 
+
     public MessagingChannel withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -244,6 +266,7 @@ public class MessagingChannel {
         this.isActive = Optional.ofNullable(isActive);
         return this;
     }
+
 
     public MessagingChannel withIsActive(Optional<Boolean> isActive) {
         Utils.checkNotNull(isActive, "isActive");
@@ -257,6 +280,7 @@ public class MessagingChannel {
         return this;
     }
 
+
     public MessagingChannel withIsPrivate(Optional<Boolean> isPrivate) {
         Utils.checkNotNull(isPrivate, "isPrivate");
         this.isPrivate = isPrivate;
@@ -268,6 +292,7 @@ public class MessagingChannel {
         this.members = Optional.ofNullable(members);
         return this;
     }
+
 
     public MessagingChannel withMembers(Optional<? extends List<MessagingMember>> members) {
         Utils.checkNotNull(members, "members");
@@ -287,6 +312,7 @@ public class MessagingChannel {
         return this;
     }
 
+
     public MessagingChannel withParentChannelId(Optional<String> parentChannelId) {
         Utils.checkNotNull(parentChannelId, "parentChannelId");
         this.parentChannelId = parentChannelId;
@@ -298,6 +324,7 @@ public class MessagingChannel {
         this.parentId = Optional.ofNullable(parentId);
         return this;
     }
+
 
     public MessagingChannel withParentId(Optional<String> parentId) {
         Utils.checkNotNull(parentId, "parentId");
@@ -311,6 +338,7 @@ public class MessagingChannel {
         return this;
     }
 
+
     public MessagingChannel withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
@@ -322,6 +350,7 @@ public class MessagingChannel {
         this.updatedAt = Optional.ofNullable(updatedAt);
         return this;
     }
+
 
     public MessagingChannel withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
@@ -335,13 +364,13 @@ public class MessagingChannel {
         return this;
     }
 
+
     public MessagingChannel withWebUrl(Optional<String> webUrl) {
         Utils.checkNotNull(webUrl, "webUrl");
         this.webUrl = webUrl;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -370,18 +399,10 @@ public class MessagingChannel {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt,
-            description,
-            hasSubchannels,
-            id,
-            isActive,
-            isPrivate,
-            members,
-            name,
-            parentChannelId,
-            parentId,
-            raw,
-            updatedAt,
+            createdAt, description, hasSubchannels,
+            id, isActive, isPrivate,
+            members, name, parentChannelId,
+            parentId, raw, updatedAt,
             webUrl);
     }
     
@@ -402,38 +423,40 @@ public class MessagingChannel {
                 "updatedAt", updatedAt,
                 "webUrl", webUrl);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> description = Optional.empty();
- 
+
         private Optional<Boolean> hasSubchannels = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<Boolean> isActive = Optional.empty();
- 
+
         private Optional<Boolean> isPrivate = Optional.empty();
- 
+
         private Optional<? extends List<MessagingMember>> members = Optional.empty();
- 
+
         private String name;
- 
+
         private Optional<String> parentChannelId = Optional.empty();
- 
+
         private Optional<String> parentId = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<String> webUrl = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -447,6 +470,7 @@ public class MessagingChannel {
             return this;
         }
 
+
         public Builder description(String description) {
             Utils.checkNotNull(description, "description");
             this.description = Optional.ofNullable(description);
@@ -458,6 +482,7 @@ public class MessagingChannel {
             this.description = description;
             return this;
         }
+
 
         public Builder hasSubchannels(boolean hasSubchannels) {
             Utils.checkNotNull(hasSubchannels, "hasSubchannels");
@@ -471,6 +496,7 @@ public class MessagingChannel {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -482,6 +508,7 @@ public class MessagingChannel {
             this.id = id;
             return this;
         }
+
 
         public Builder isActive(boolean isActive) {
             Utils.checkNotNull(isActive, "isActive");
@@ -495,6 +522,7 @@ public class MessagingChannel {
             return this;
         }
 
+
         public Builder isPrivate(boolean isPrivate) {
             Utils.checkNotNull(isPrivate, "isPrivate");
             this.isPrivate = Optional.ofNullable(isPrivate);
@@ -506,6 +534,7 @@ public class MessagingChannel {
             this.isPrivate = isPrivate;
             return this;
         }
+
 
         public Builder members(List<MessagingMember> members) {
             Utils.checkNotNull(members, "members");
@@ -519,11 +548,13 @@ public class MessagingChannel {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = name;
             return this;
         }
+
 
         public Builder parentChannelId(String parentChannelId) {
             Utils.checkNotNull(parentChannelId, "parentChannelId");
@@ -537,6 +568,7 @@ public class MessagingChannel {
             return this;
         }
 
+
         public Builder parentId(String parentId) {
             Utils.checkNotNull(parentId, "parentId");
             this.parentId = Optional.ofNullable(parentId);
@@ -548,6 +580,7 @@ public class MessagingChannel {
             this.parentId = parentId;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -561,6 +594,7 @@ public class MessagingChannel {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -573,6 +607,7 @@ public class MessagingChannel {
             return this;
         }
 
+
         public Builder webUrl(String webUrl) {
             Utils.checkNotNull(webUrl, "webUrl");
             this.webUrl = Optional.ofNullable(webUrl);
@@ -584,22 +619,16 @@ public class MessagingChannel {
             this.webUrl = webUrl;
             return this;
         }
-        
+
         public MessagingChannel build() {
+
             return new MessagingChannel(
-                createdAt,
-                description,
-                hasSubchannels,
-                id,
-                isActive,
-                isPrivate,
-                members,
-                name,
-                parentChannelId,
-                parentId,
-                raw,
-                updatedAt,
+                createdAt, description, hasSubchannels,
+                id, isActive, isPrivate,
+                members, name, parentChannelId,
+                parentId, raw, updatedAt,
                 webUrl);
         }
+
     }
 }

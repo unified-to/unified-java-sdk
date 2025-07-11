@@ -100,7 +100,6 @@ public class Calendar {
     Calendar(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a calendar
      * 
@@ -117,13 +116,11 @@ public class Calendar {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateCalendarCalendarResponse createCalendarCalendar(
-            CreateCalendarCalendarRequest request) throws Exception {
+    public CreateCalendarCalendarResponse createCalendarCalendar(CreateCalendarCalendarRequest request) throws Exception {
         RequestOperation<CreateCalendarCalendarRequest, CreateCalendarCalendarResponse> operation
-              = new CreateCalendarCalendarOperation( sdkConfiguration);
+              = new CreateCalendarCalendarOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create an event
@@ -141,13 +138,11 @@ public class Calendar {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateCalendarEventResponse createCalendarEvent(
-            CreateCalendarEventRequest request) throws Exception {
+    public CreateCalendarEventResponse createCalendarEvent(CreateCalendarEventRequest request) throws Exception {
         RequestOperation<CreateCalendarEventRequest, CreateCalendarEventResponse> operation
-              = new CreateCalendarEventOperation( sdkConfiguration);
+              = new CreateCalendarEventOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a link
@@ -165,13 +160,11 @@ public class Calendar {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateCalendarLinkResponse createCalendarLink(
-            CreateCalendarLinkRequest request) throws Exception {
+    public CreateCalendarLinkResponse createCalendarLink(CreateCalendarLinkRequest request) throws Exception {
         RequestOperation<CreateCalendarLinkRequest, CreateCalendarLinkResponse> operation
-              = new CreateCalendarLinkOperation( sdkConfiguration);
+              = new CreateCalendarLinkOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a calendar
@@ -189,13 +182,11 @@ public class Calendar {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetCalendarCalendarResponse getCalendarCalendar(
-            GetCalendarCalendarRequest request) throws Exception {
+    public GetCalendarCalendarResponse getCalendarCalendar(GetCalendarCalendarRequest request) throws Exception {
         RequestOperation<GetCalendarCalendarRequest, GetCalendarCalendarResponse> operation
-              = new GetCalendarCalendarOperation( sdkConfiguration);
+              = new GetCalendarCalendarOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve an event
@@ -213,13 +204,11 @@ public class Calendar {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetCalendarEventResponse getCalendarEvent(
-            GetCalendarEventRequest request) throws Exception {
+    public GetCalendarEventResponse getCalendarEvent(GetCalendarEventRequest request) throws Exception {
         RequestOperation<GetCalendarEventRequest, GetCalendarEventResponse> operation
-              = new GetCalendarEventOperation( sdkConfiguration);
+              = new GetCalendarEventOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a link
@@ -237,13 +226,11 @@ public class Calendar {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetCalendarLinkResponse getCalendarLink(
-            GetCalendarLinkRequest request) throws Exception {
+    public GetCalendarLinkResponse getCalendarLink(GetCalendarLinkRequest request) throws Exception {
         RequestOperation<GetCalendarLinkRequest, GetCalendarLinkResponse> operation
-              = new GetCalendarLinkOperation( sdkConfiguration);
+              = new GetCalendarLinkOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a recording
@@ -261,13 +248,11 @@ public class Calendar {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetCalendarRecordingResponse getCalendarRecording(
-            GetCalendarRecordingRequest request) throws Exception {
+    public GetCalendarRecordingResponse getCalendarRecording(GetCalendarRecordingRequest request) throws Exception {
         RequestOperation<GetCalendarRecordingRequest, GetCalendarRecordingResponse> operation
-              = new GetCalendarRecordingOperation( sdkConfiguration);
+              = new GetCalendarRecordingOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all busies
@@ -285,13 +270,11 @@ public class Calendar {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCalendarBusiesResponse listCalendarBusies(
-            ListCalendarBusiesRequest request) throws Exception {
+    public ListCalendarBusiesResponse listCalendarBusies(ListCalendarBusiesRequest request) throws Exception {
         RequestOperation<ListCalendarBusiesRequest, ListCalendarBusiesResponse> operation
-              = new ListCalendarBusiesOperation( sdkConfiguration);
+              = new ListCalendarBusiesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all calendars
@@ -309,13 +292,11 @@ public class Calendar {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCalendarCalendarsResponse listCalendarCalendars(
-            ListCalendarCalendarsRequest request) throws Exception {
+    public ListCalendarCalendarsResponse listCalendarCalendars(ListCalendarCalendarsRequest request) throws Exception {
         RequestOperation<ListCalendarCalendarsRequest, ListCalendarCalendarsResponse> operation
-              = new ListCalendarCalendarsOperation( sdkConfiguration);
+              = new ListCalendarCalendarsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all events
@@ -333,13 +314,11 @@ public class Calendar {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCalendarEventsResponse listCalendarEvents(
-            ListCalendarEventsRequest request) throws Exception {
+    public ListCalendarEventsResponse listCalendarEvents(ListCalendarEventsRequest request) throws Exception {
         RequestOperation<ListCalendarEventsRequest, ListCalendarEventsResponse> operation
-              = new ListCalendarEventsOperation( sdkConfiguration);
+              = new ListCalendarEventsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all links
@@ -357,13 +336,11 @@ public class Calendar {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCalendarLinksResponse listCalendarLinks(
-            ListCalendarLinksRequest request) throws Exception {
+    public ListCalendarLinksResponse listCalendarLinks(ListCalendarLinksRequest request) throws Exception {
         RequestOperation<ListCalendarLinksRequest, ListCalendarLinksResponse> operation
-              = new ListCalendarLinksOperation( sdkConfiguration);
+              = new ListCalendarLinksOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all recordings
@@ -381,13 +358,11 @@ public class Calendar {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCalendarRecordingsResponse listCalendarRecordings(
-            ListCalendarRecordingsRequest request) throws Exception {
+    public ListCalendarRecordingsResponse listCalendarRecordings(ListCalendarRecordingsRequest request) throws Exception {
         RequestOperation<ListCalendarRecordingsRequest, ListCalendarRecordingsResponse> operation
-              = new ListCalendarRecordingsOperation( sdkConfiguration);
+              = new ListCalendarRecordingsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a calendar
@@ -405,13 +380,11 @@ public class Calendar {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchCalendarCalendarResponse patchCalendarCalendar(
-            PatchCalendarCalendarRequest request) throws Exception {
+    public PatchCalendarCalendarResponse patchCalendarCalendar(PatchCalendarCalendarRequest request) throws Exception {
         RequestOperation<PatchCalendarCalendarRequest, PatchCalendarCalendarResponse> operation
-              = new PatchCalendarCalendarOperation( sdkConfiguration);
+              = new PatchCalendarCalendarOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an event
@@ -429,13 +402,11 @@ public class Calendar {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchCalendarEventResponse patchCalendarEvent(
-            PatchCalendarEventRequest request) throws Exception {
+    public PatchCalendarEventResponse patchCalendarEvent(PatchCalendarEventRequest request) throws Exception {
         RequestOperation<PatchCalendarEventRequest, PatchCalendarEventResponse> operation
-              = new PatchCalendarEventOperation( sdkConfiguration);
+              = new PatchCalendarEventOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a link
@@ -453,13 +424,11 @@ public class Calendar {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchCalendarLinkResponse patchCalendarLink(
-            PatchCalendarLinkRequest request) throws Exception {
+    public PatchCalendarLinkResponse patchCalendarLink(PatchCalendarLinkRequest request) throws Exception {
         RequestOperation<PatchCalendarLinkRequest, PatchCalendarLinkResponse> operation
-              = new PatchCalendarLinkOperation( sdkConfiguration);
+              = new PatchCalendarLinkOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a calendar
@@ -477,13 +446,11 @@ public class Calendar {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveCalendarCalendarResponse removeCalendarCalendar(
-            RemoveCalendarCalendarRequest request) throws Exception {
+    public RemoveCalendarCalendarResponse removeCalendarCalendar(RemoveCalendarCalendarRequest request) throws Exception {
         RequestOperation<RemoveCalendarCalendarRequest, RemoveCalendarCalendarResponse> operation
-              = new RemoveCalendarCalendarOperation( sdkConfiguration);
+              = new RemoveCalendarCalendarOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove an event
@@ -501,13 +468,11 @@ public class Calendar {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveCalendarEventResponse removeCalendarEvent(
-            RemoveCalendarEventRequest request) throws Exception {
+    public RemoveCalendarEventResponse removeCalendarEvent(RemoveCalendarEventRequest request) throws Exception {
         RequestOperation<RemoveCalendarEventRequest, RemoveCalendarEventResponse> operation
-              = new RemoveCalendarEventOperation( sdkConfiguration);
+              = new RemoveCalendarEventOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a link
@@ -525,13 +490,11 @@ public class Calendar {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveCalendarLinkResponse removeCalendarLink(
-            RemoveCalendarLinkRequest request) throws Exception {
+    public RemoveCalendarLinkResponse removeCalendarLink(RemoveCalendarLinkRequest request) throws Exception {
         RequestOperation<RemoveCalendarLinkRequest, RemoveCalendarLinkResponse> operation
-              = new RemoveCalendarLinkOperation( sdkConfiguration);
+              = new RemoveCalendarLinkOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a calendar
@@ -549,13 +512,11 @@ public class Calendar {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateCalendarCalendarResponse updateCalendarCalendar(
-            UpdateCalendarCalendarRequest request) throws Exception {
+    public UpdateCalendarCalendarResponse updateCalendarCalendar(UpdateCalendarCalendarRequest request) throws Exception {
         RequestOperation<UpdateCalendarCalendarRequest, UpdateCalendarCalendarResponse> operation
-              = new UpdateCalendarCalendarOperation( sdkConfiguration);
+              = new UpdateCalendarCalendarOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an event
@@ -573,13 +534,11 @@ public class Calendar {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateCalendarEventResponse updateCalendarEvent(
-            UpdateCalendarEventRequest request) throws Exception {
+    public UpdateCalendarEventResponse updateCalendarEvent(UpdateCalendarEventRequest request) throws Exception {
         RequestOperation<UpdateCalendarEventRequest, UpdateCalendarEventResponse> operation
-              = new UpdateCalendarEventOperation( sdkConfiguration);
+              = new UpdateCalendarEventOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a link
@@ -597,10 +556,9 @@ public class Calendar {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateCalendarLinkResponse updateCalendarLink(
-            UpdateCalendarLinkRequest request) throws Exception {
+    public UpdateCalendarLinkResponse updateCalendarLink(UpdateCalendarLinkRequest request) throws Exception {
         RequestOperation<UpdateCalendarLinkRequest, UpdateCalendarLinkResponse> operation
-              = new UpdateCalendarLinkOperation( sdkConfiguration);
+              = new UpdateCalendarLinkOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

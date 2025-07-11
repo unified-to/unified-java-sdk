@@ -28,7 +28,7 @@ public class CreateLmsStudentRequestBuilder {
     public CreateLmsStudentResponse call() throws Exception {
         
         RequestOperation<CreateLmsStudentRequest, CreateLmsStudentResponse> operation
-              = new CreateLmsStudentOperation( sdkConfiguration);
+              = new CreateLmsStudentOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

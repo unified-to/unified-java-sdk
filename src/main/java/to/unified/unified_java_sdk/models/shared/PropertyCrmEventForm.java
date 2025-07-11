@@ -16,19 +16,23 @@ import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class PropertyCrmEventForm {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archived_at")
     private Optional<OffsetDateTime> archivedAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     private Optional<? extends List<CrmEventFormField>> fields;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirect_url")
@@ -51,7 +55,8 @@ public class PropertyCrmEventForm {
     }
     
     public PropertyCrmEventForm() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -75,15 +80,17 @@ public class PropertyCrmEventForm {
         return redirectUrl;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public PropertyCrmEventForm withArchivedAt(OffsetDateTime archivedAt) {
         Utils.checkNotNull(archivedAt, "archivedAt");
         this.archivedAt = Optional.ofNullable(archivedAt);
         return this;
     }
+
 
     public PropertyCrmEventForm withArchivedAt(Optional<OffsetDateTime> archivedAt) {
         Utils.checkNotNull(archivedAt, "archivedAt");
@@ -97,6 +104,7 @@ public class PropertyCrmEventForm {
         return this;
     }
 
+
     public PropertyCrmEventForm withFields(Optional<? extends List<CrmEventFormField>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
@@ -108,6 +116,7 @@ public class PropertyCrmEventForm {
         this.name = Optional.ofNullable(name);
         return this;
     }
+
 
     public PropertyCrmEventForm withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
@@ -121,13 +130,13 @@ public class PropertyCrmEventForm {
         return this;
     }
 
+
     public PropertyCrmEventForm withRedirectUrl(Optional<String> redirectUrl) {
         Utils.checkNotNull(redirectUrl, "redirectUrl");
         this.redirectUrl = redirectUrl;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -147,9 +156,7 @@ public class PropertyCrmEventForm {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            archivedAt,
-            fields,
-            name,
+            archivedAt, fields, name,
             redirectUrl);
     }
     
@@ -161,20 +168,22 @@ public class PropertyCrmEventForm {
                 "name", name,
                 "redirectUrl", redirectUrl);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<OffsetDateTime> archivedAt = Optional.empty();
- 
+
         private Optional<? extends List<CrmEventFormField>> fields = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<String> redirectUrl = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder archivedAt(OffsetDateTime archivedAt) {
             Utils.checkNotNull(archivedAt, "archivedAt");
@@ -188,6 +197,7 @@ public class PropertyCrmEventForm {
             return this;
         }
 
+
         public Builder fields(List<CrmEventFormField> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
@@ -199,6 +209,7 @@ public class PropertyCrmEventForm {
             this.fields = fields;
             return this;
         }
+
 
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
@@ -212,6 +223,7 @@ public class PropertyCrmEventForm {
             return this;
         }
 
+
         public Builder redirectUrl(String redirectUrl) {
             Utils.checkNotNull(redirectUrl, "redirectUrl");
             this.redirectUrl = Optional.ofNullable(redirectUrl);
@@ -223,13 +235,13 @@ public class PropertyCrmEventForm {
             this.redirectUrl = redirectUrl;
             return this;
         }
-        
+
         public PropertyCrmEventForm build() {
+
             return new PropertyCrmEventForm(
-                archivedAt,
-                fields,
-                name,
+                archivedAt, fields, name,
                 redirectUrl);
         }
+
     }
 }

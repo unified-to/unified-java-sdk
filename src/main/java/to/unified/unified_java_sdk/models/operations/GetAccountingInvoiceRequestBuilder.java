@@ -28,7 +28,7 @@ public class GetAccountingInvoiceRequestBuilder {
     public GetAccountingInvoiceResponse call() throws Exception {
         
         RequestOperation<GetAccountingInvoiceRequest, GetAccountingInvoiceResponse> operation
-              = new GetAccountingInvoiceOperation( sdkConfiguration);
+              = new GetAccountingInvoiceOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

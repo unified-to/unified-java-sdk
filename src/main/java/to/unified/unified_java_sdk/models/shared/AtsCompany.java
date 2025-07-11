@@ -18,46 +18,57 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AtsCompany {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     private Optional<? extends PropertyAtsCompanyAddress> address;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     private Optional<? extends List<AtsMetadata>> metadata;
 
+
     @JsonProperty("name")
     private String name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     private Optional<String> parentId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     private Optional<String> phone;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recruiter_ids")
     private Optional<? extends List<String>> recruiterIds;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("website_url")
@@ -102,7 +113,10 @@ public class AtsCompany {
     
     public AtsCompany(
             String name) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), name, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), name, Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -164,15 +178,17 @@ public class AtsCompany {
         return websiteUrl;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AtsCompany withAddress(PropertyAtsCompanyAddress address) {
         Utils.checkNotNull(address, "address");
         this.address = Optional.ofNullable(address);
         return this;
     }
+
 
     public AtsCompany withAddress(Optional<? extends PropertyAtsCompanyAddress> address) {
         Utils.checkNotNull(address, "address");
@@ -186,6 +202,7 @@ public class AtsCompany {
         return this;
     }
 
+
     public AtsCompany withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
@@ -198,6 +215,7 @@ public class AtsCompany {
         return this;
     }
 
+
     public AtsCompany withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -209,6 +227,7 @@ public class AtsCompany {
         this.metadata = Optional.ofNullable(metadata);
         return this;
     }
+
 
     public AtsCompany withMetadata(Optional<? extends List<AtsMetadata>> metadata) {
         Utils.checkNotNull(metadata, "metadata");
@@ -228,6 +247,7 @@ public class AtsCompany {
         return this;
     }
 
+
     public AtsCompany withParentId(Optional<String> parentId) {
         Utils.checkNotNull(parentId, "parentId");
         this.parentId = parentId;
@@ -239,6 +259,7 @@ public class AtsCompany {
         this.phone = Optional.ofNullable(phone);
         return this;
     }
+
 
     public AtsCompany withPhone(Optional<String> phone) {
         Utils.checkNotNull(phone, "phone");
@@ -252,6 +273,7 @@ public class AtsCompany {
         return this;
     }
 
+
     public AtsCompany withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
@@ -263,6 +285,7 @@ public class AtsCompany {
         this.recruiterIds = Optional.ofNullable(recruiterIds);
         return this;
     }
+
 
     public AtsCompany withRecruiterIds(Optional<? extends List<String>> recruiterIds) {
         Utils.checkNotNull(recruiterIds, "recruiterIds");
@@ -276,6 +299,7 @@ public class AtsCompany {
         return this;
     }
 
+
     public AtsCompany withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
@@ -288,13 +312,13 @@ public class AtsCompany {
         return this;
     }
 
+
     public AtsCompany withWebsiteUrl(Optional<String> websiteUrl) {
         Utils.checkNotNull(websiteUrl, "websiteUrl");
         this.websiteUrl = websiteUrl;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -321,17 +345,10 @@ public class AtsCompany {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            address,
-            createdAt,
-            id,
-            metadata,
-            name,
-            parentId,
-            phone,
-            raw,
-            recruiterIds,
-            updatedAt,
-            websiteUrl);
+            address, createdAt, id,
+            metadata, name, parentId,
+            phone, raw, recruiterIds,
+            updatedAt, websiteUrl);
     }
     
     @Override
@@ -349,34 +366,36 @@ public class AtsCompany {
                 "updatedAt", updatedAt,
                 "websiteUrl", websiteUrl);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<? extends PropertyAtsCompanyAddress> address = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<? extends List<AtsMetadata>> metadata = Optional.empty();
- 
+
         private String name;
- 
+
         private Optional<String> parentId = Optional.empty();
- 
+
         private Optional<String> phone = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<? extends List<String>> recruiterIds = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<String> websiteUrl = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder address(PropertyAtsCompanyAddress address) {
             Utils.checkNotNull(address, "address");
@@ -390,6 +409,7 @@ public class AtsCompany {
             return this;
         }
 
+
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
@@ -401,6 +421,7 @@ public class AtsCompany {
             this.createdAt = createdAt;
             return this;
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -414,6 +435,7 @@ public class AtsCompany {
             return this;
         }
 
+
         public Builder metadata(List<AtsMetadata> metadata) {
             Utils.checkNotNull(metadata, "metadata");
             this.metadata = Optional.ofNullable(metadata);
@@ -426,11 +448,13 @@ public class AtsCompany {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = name;
             return this;
         }
+
 
         public Builder parentId(String parentId) {
             Utils.checkNotNull(parentId, "parentId");
@@ -444,6 +468,7 @@ public class AtsCompany {
             return this;
         }
 
+
         public Builder phone(String phone) {
             Utils.checkNotNull(phone, "phone");
             this.phone = Optional.ofNullable(phone);
@@ -455,6 +480,7 @@ public class AtsCompany {
             this.phone = phone;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -468,6 +494,7 @@ public class AtsCompany {
             return this;
         }
 
+
         public Builder recruiterIds(List<String> recruiterIds) {
             Utils.checkNotNull(recruiterIds, "recruiterIds");
             this.recruiterIds = Optional.ofNullable(recruiterIds);
@@ -479,6 +506,7 @@ public class AtsCompany {
             this.recruiterIds = recruiterIds;
             return this;
         }
+
 
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
@@ -492,6 +520,7 @@ public class AtsCompany {
             return this;
         }
 
+
         public Builder websiteUrl(String websiteUrl) {
             Utils.checkNotNull(websiteUrl, "websiteUrl");
             this.websiteUrl = Optional.ofNullable(websiteUrl);
@@ -503,20 +532,15 @@ public class AtsCompany {
             this.websiteUrl = websiteUrl;
             return this;
         }
-        
+
         public AtsCompany build() {
+
             return new AtsCompany(
-                address,
-                createdAt,
-                id,
-                metadata,
-                name,
-                parentId,
-                phone,
-                raw,
-                recruiterIds,
-                updatedAt,
-                websiteUrl);
+                address, createdAt, id,
+                metadata, name, parentId,
+                phone, raw, recruiterIds,
+                updatedAt, websiteUrl);
         }
+
     }
 }

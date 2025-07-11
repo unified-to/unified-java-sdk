@@ -24,7 +24,6 @@ public class Timeoff {
     Timeoff(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Retrieve a timeoff
      * 
@@ -41,13 +40,11 @@ public class Timeoff {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetHrisTimeoffResponse getHrisTimeoff(
-            GetHrisTimeoffRequest request) throws Exception {
+    public GetHrisTimeoffResponse getHrisTimeoff(GetHrisTimeoffRequest request) throws Exception {
         RequestOperation<GetHrisTimeoffRequest, GetHrisTimeoffResponse> operation
-              = new GetHrisTimeoffOperation( sdkConfiguration);
+              = new GetHrisTimeoffOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all timeoffs
@@ -65,10 +62,9 @@ public class Timeoff {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListHrisTimeoffsResponse listHrisTimeoffs(
-            ListHrisTimeoffsRequest request) throws Exception {
+    public ListHrisTimeoffsResponse listHrisTimeoffs(ListHrisTimeoffsRequest request) throws Exception {
         RequestOperation<ListHrisTimeoffsRequest, ListHrisTimeoffsResponse> operation
-              = new ListHrisTimeoffsOperation( sdkConfiguration);
+              = new ListHrisTimeoffsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

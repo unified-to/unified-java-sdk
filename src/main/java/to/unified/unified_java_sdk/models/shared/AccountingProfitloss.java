@@ -19,8 +19,8 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class AccountingProfitloss {
 
+public class AccountingProfitloss {
     /**
      * &#64;deprecated
      */
@@ -28,21 +28,26 @@ public class AccountingProfitloss {
     @JsonProperty("cost_of_goods_sold")
     private Optional<? extends List<AccountingProfitlossCategory>> costOfGoodsSold;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cost_of_goods_sold_sections")
     private Optional<? extends List<AccountingProfitlossSection>> costOfGoodsSoldSections;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cost_of_goods_sold_total_amount")
     private Optional<Double> costOfGoodsSoldTotalAmount;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private Optional<String> currency;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
@@ -55,17 +60,21 @@ public class AccountingProfitloss {
     @JsonProperty("expenses")
     private Optional<? extends List<AccountingProfitlossCategory>> expenses;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expenses_sections")
     private Optional<? extends List<AccountingProfitlossSection>> expensesSections;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expenses_total_amount")
     private Optional<Double> expensesTotalAmount;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gross_profit_amount")
     private Optional<Double> grossProfitAmount;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
@@ -78,33 +87,41 @@ public class AccountingProfitloss {
     @JsonProperty("income")
     private Optional<? extends List<AccountingProfitlossCategory>> income;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("income_sections")
     private Optional<? extends List<AccountingProfitlossSection>> incomeSections;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("income_total_amount")
     private Optional<Double> incomeTotalAmount;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("net_income_amount")
     private Optional<Double> netIncomeAmount;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("net_profit_amount")
     private Optional<Double> netProfitAmount;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private Optional<OffsetDateTime> startAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -175,7 +192,13 @@ public class AccountingProfitloss {
     }
     
     public AccountingProfitloss() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     /**
@@ -294,9 +317,10 @@ public class AccountingProfitloss {
         return updatedAt;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * &#64;deprecated
@@ -306,6 +330,7 @@ public class AccountingProfitloss {
         this.costOfGoodsSold = Optional.ofNullable(costOfGoodsSold);
         return this;
     }
+
 
     /**
      * &#64;deprecated
@@ -322,6 +347,7 @@ public class AccountingProfitloss {
         return this;
     }
 
+
     public AccountingProfitloss withCostOfGoodsSoldSections(Optional<? extends List<AccountingProfitlossSection>> costOfGoodsSoldSections) {
         Utils.checkNotNull(costOfGoodsSoldSections, "costOfGoodsSoldSections");
         this.costOfGoodsSoldSections = costOfGoodsSoldSections;
@@ -333,6 +359,7 @@ public class AccountingProfitloss {
         this.costOfGoodsSoldTotalAmount = Optional.ofNullable(costOfGoodsSoldTotalAmount);
         return this;
     }
+
 
     public AccountingProfitloss withCostOfGoodsSoldTotalAmount(Optional<Double> costOfGoodsSoldTotalAmount) {
         Utils.checkNotNull(costOfGoodsSoldTotalAmount, "costOfGoodsSoldTotalAmount");
@@ -346,6 +373,7 @@ public class AccountingProfitloss {
         return this;
     }
 
+
     public AccountingProfitloss withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
@@ -358,6 +386,7 @@ public class AccountingProfitloss {
         return this;
     }
 
+
     public AccountingProfitloss withCurrency(Optional<String> currency) {
         Utils.checkNotNull(currency, "currency");
         this.currency = currency;
@@ -369,6 +398,7 @@ public class AccountingProfitloss {
         this.endAt = Optional.ofNullable(endAt);
         return this;
     }
+
 
     public AccountingProfitloss withEndAt(Optional<OffsetDateTime> endAt) {
         Utils.checkNotNull(endAt, "endAt");
@@ -385,6 +415,7 @@ public class AccountingProfitloss {
         return this;
     }
 
+
     /**
      * &#64;deprecated
      */
@@ -400,6 +431,7 @@ public class AccountingProfitloss {
         return this;
     }
 
+
     public AccountingProfitloss withExpensesSections(Optional<? extends List<AccountingProfitlossSection>> expensesSections) {
         Utils.checkNotNull(expensesSections, "expensesSections");
         this.expensesSections = expensesSections;
@@ -411,6 +443,7 @@ public class AccountingProfitloss {
         this.expensesTotalAmount = Optional.ofNullable(expensesTotalAmount);
         return this;
     }
+
 
     public AccountingProfitloss withExpensesTotalAmount(Optional<Double> expensesTotalAmount) {
         Utils.checkNotNull(expensesTotalAmount, "expensesTotalAmount");
@@ -424,6 +457,7 @@ public class AccountingProfitloss {
         return this;
     }
 
+
     public AccountingProfitloss withGrossProfitAmount(Optional<Double> grossProfitAmount) {
         Utils.checkNotNull(grossProfitAmount, "grossProfitAmount");
         this.grossProfitAmount = grossProfitAmount;
@@ -435,6 +469,7 @@ public class AccountingProfitloss {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public AccountingProfitloss withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -451,6 +486,7 @@ public class AccountingProfitloss {
         return this;
     }
 
+
     /**
      * &#64;deprecated
      */
@@ -466,6 +502,7 @@ public class AccountingProfitloss {
         return this;
     }
 
+
     public AccountingProfitloss withIncomeSections(Optional<? extends List<AccountingProfitlossSection>> incomeSections) {
         Utils.checkNotNull(incomeSections, "incomeSections");
         this.incomeSections = incomeSections;
@@ -477,6 +514,7 @@ public class AccountingProfitloss {
         this.incomeTotalAmount = Optional.ofNullable(incomeTotalAmount);
         return this;
     }
+
 
     public AccountingProfitloss withIncomeTotalAmount(Optional<Double> incomeTotalAmount) {
         Utils.checkNotNull(incomeTotalAmount, "incomeTotalAmount");
@@ -490,6 +528,7 @@ public class AccountingProfitloss {
         return this;
     }
 
+
     public AccountingProfitloss withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
         this.name = name;
@@ -501,6 +540,7 @@ public class AccountingProfitloss {
         this.netIncomeAmount = Optional.ofNullable(netIncomeAmount);
         return this;
     }
+
 
     public AccountingProfitloss withNetIncomeAmount(Optional<Double> netIncomeAmount) {
         Utils.checkNotNull(netIncomeAmount, "netIncomeAmount");
@@ -514,6 +554,7 @@ public class AccountingProfitloss {
         return this;
     }
 
+
     public AccountingProfitloss withNetProfitAmount(Optional<Double> netProfitAmount) {
         Utils.checkNotNull(netProfitAmount, "netProfitAmount");
         this.netProfitAmount = netProfitAmount;
@@ -525,6 +566,7 @@ public class AccountingProfitloss {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public AccountingProfitloss withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -538,6 +580,7 @@ public class AccountingProfitloss {
         return this;
     }
 
+
     public AccountingProfitloss withStartAt(Optional<OffsetDateTime> startAt) {
         Utils.checkNotNull(startAt, "startAt");
         this.startAt = startAt;
@@ -550,13 +593,13 @@ public class AccountingProfitloss {
         return this;
     }
 
+
     public AccountingProfitloss withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -592,26 +635,13 @@ public class AccountingProfitloss {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            costOfGoodsSold,
-            costOfGoodsSoldSections,
-            costOfGoodsSoldTotalAmount,
-            createdAt,
-            currency,
-            endAt,
-            expenses,
-            expensesSections,
-            expensesTotalAmount,
-            grossProfitAmount,
-            id,
-            income,
-            incomeSections,
-            incomeTotalAmount,
-            name,
-            netIncomeAmount,
-            netProfitAmount,
-            raw,
-            startAt,
-            updatedAt);
+            costOfGoodsSold, costOfGoodsSoldSections, costOfGoodsSoldTotalAmount,
+            createdAt, currency, endAt,
+            expenses, expensesSections, expensesTotalAmount,
+            grossProfitAmount, id, income,
+            incomeSections, incomeTotalAmount, name,
+            netIncomeAmount, netProfitAmount, raw,
+            startAt, updatedAt);
     }
     
     @Override
@@ -638,52 +668,54 @@ public class AccountingProfitloss {
                 "startAt", startAt,
                 "updatedAt", updatedAt);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<? extends List<AccountingProfitlossCategory>> costOfGoodsSold = Optional.empty();
- 
+
         private Optional<? extends List<AccountingProfitlossSection>> costOfGoodsSoldSections = Optional.empty();
- 
+
         private Optional<Double> costOfGoodsSoldTotalAmount = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> currency = Optional.empty();
- 
+
         private Optional<OffsetDateTime> endAt = Optional.empty();
- 
+
         private Optional<? extends List<AccountingProfitlossCategory>> expenses = Optional.empty();
- 
+
         private Optional<? extends List<AccountingProfitlossSection>> expensesSections = Optional.empty();
- 
+
         private Optional<Double> expensesTotalAmount = Optional.empty();
- 
+
         private Optional<Double> grossProfitAmount = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<? extends List<AccountingProfitlossCategory>> income = Optional.empty();
- 
+
         private Optional<? extends List<AccountingProfitlossSection>> incomeSections = Optional.empty();
- 
+
         private Optional<Double> incomeTotalAmount = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<Double> netIncomeAmount = Optional.empty();
- 
+
         private Optional<Double> netProfitAmount = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<OffsetDateTime> startAt = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * &#64;deprecated
@@ -703,6 +735,7 @@ public class AccountingProfitloss {
             return this;
         }
 
+
         public Builder costOfGoodsSoldSections(List<AccountingProfitlossSection> costOfGoodsSoldSections) {
             Utils.checkNotNull(costOfGoodsSoldSections, "costOfGoodsSoldSections");
             this.costOfGoodsSoldSections = Optional.ofNullable(costOfGoodsSoldSections);
@@ -714,6 +747,7 @@ public class AccountingProfitloss {
             this.costOfGoodsSoldSections = costOfGoodsSoldSections;
             return this;
         }
+
 
         public Builder costOfGoodsSoldTotalAmount(double costOfGoodsSoldTotalAmount) {
             Utils.checkNotNull(costOfGoodsSoldTotalAmount, "costOfGoodsSoldTotalAmount");
@@ -727,6 +761,7 @@ public class AccountingProfitloss {
             return this;
         }
 
+
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
@@ -738,6 +773,7 @@ public class AccountingProfitloss {
             this.createdAt = createdAt;
             return this;
         }
+
 
         public Builder currency(String currency) {
             Utils.checkNotNull(currency, "currency");
@@ -751,6 +787,7 @@ public class AccountingProfitloss {
             return this;
         }
 
+
         public Builder endAt(OffsetDateTime endAt) {
             Utils.checkNotNull(endAt, "endAt");
             this.endAt = Optional.ofNullable(endAt);
@@ -762,6 +799,7 @@ public class AccountingProfitloss {
             this.endAt = endAt;
             return this;
         }
+
 
         /**
          * &#64;deprecated
@@ -781,6 +819,7 @@ public class AccountingProfitloss {
             return this;
         }
 
+
         public Builder expensesSections(List<AccountingProfitlossSection> expensesSections) {
             Utils.checkNotNull(expensesSections, "expensesSections");
             this.expensesSections = Optional.ofNullable(expensesSections);
@@ -792,6 +831,7 @@ public class AccountingProfitloss {
             this.expensesSections = expensesSections;
             return this;
         }
+
 
         public Builder expensesTotalAmount(double expensesTotalAmount) {
             Utils.checkNotNull(expensesTotalAmount, "expensesTotalAmount");
@@ -805,6 +845,7 @@ public class AccountingProfitloss {
             return this;
         }
 
+
         public Builder grossProfitAmount(double grossProfitAmount) {
             Utils.checkNotNull(grossProfitAmount, "grossProfitAmount");
             this.grossProfitAmount = Optional.ofNullable(grossProfitAmount);
@@ -817,6 +858,7 @@ public class AccountingProfitloss {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -828,6 +870,7 @@ public class AccountingProfitloss {
             this.id = id;
             return this;
         }
+
 
         /**
          * &#64;deprecated
@@ -847,6 +890,7 @@ public class AccountingProfitloss {
             return this;
         }
 
+
         public Builder incomeSections(List<AccountingProfitlossSection> incomeSections) {
             Utils.checkNotNull(incomeSections, "incomeSections");
             this.incomeSections = Optional.ofNullable(incomeSections);
@@ -858,6 +902,7 @@ public class AccountingProfitloss {
             this.incomeSections = incomeSections;
             return this;
         }
+
 
         public Builder incomeTotalAmount(double incomeTotalAmount) {
             Utils.checkNotNull(incomeTotalAmount, "incomeTotalAmount");
@@ -871,6 +916,7 @@ public class AccountingProfitloss {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = Optional.ofNullable(name);
@@ -882,6 +928,7 @@ public class AccountingProfitloss {
             this.name = name;
             return this;
         }
+
 
         public Builder netIncomeAmount(double netIncomeAmount) {
             Utils.checkNotNull(netIncomeAmount, "netIncomeAmount");
@@ -895,6 +942,7 @@ public class AccountingProfitloss {
             return this;
         }
 
+
         public Builder netProfitAmount(double netProfitAmount) {
             Utils.checkNotNull(netProfitAmount, "netProfitAmount");
             this.netProfitAmount = Optional.ofNullable(netProfitAmount);
@@ -906,6 +954,7 @@ public class AccountingProfitloss {
             this.netProfitAmount = netProfitAmount;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -919,6 +968,7 @@ public class AccountingProfitloss {
             return this;
         }
 
+
         public Builder startAt(OffsetDateTime startAt) {
             Utils.checkNotNull(startAt, "startAt");
             this.startAt = Optional.ofNullable(startAt);
@@ -931,6 +981,7 @@ public class AccountingProfitloss {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -942,29 +993,18 @@ public class AccountingProfitloss {
             this.updatedAt = updatedAt;
             return this;
         }
-        
+
         public AccountingProfitloss build() {
+
             return new AccountingProfitloss(
-                costOfGoodsSold,
-                costOfGoodsSoldSections,
-                costOfGoodsSoldTotalAmount,
-                createdAt,
-                currency,
-                endAt,
-                expenses,
-                expensesSections,
-                expensesTotalAmount,
-                grossProfitAmount,
-                id,
-                income,
-                incomeSections,
-                incomeTotalAmount,
-                name,
-                netIncomeAmount,
-                netProfitAmount,
-                raw,
-                startAt,
-                updatedAt);
+                costOfGoodsSold, costOfGoodsSoldSections, costOfGoodsSoldTotalAmount,
+                createdAt, currency, endAt,
+                expenses, expensesSections, expensesTotalAmount,
+                grossProfitAmount, id, income,
+                incomeSections, incomeTotalAmount, name,
+                netIncomeAmount, netProfitAmount, raw,
+                startAt, updatedAt);
         }
+
     }
 }

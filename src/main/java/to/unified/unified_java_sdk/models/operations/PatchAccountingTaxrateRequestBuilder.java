@@ -28,7 +28,7 @@ public class PatchAccountingTaxrateRequestBuilder {
     public PatchAccountingTaxrateResponse call() throws Exception {
         
         RequestOperation<PatchAccountingTaxrateRequest, PatchAccountingTaxrateResponse> operation
-              = new PatchAccountingTaxrateOperation( sdkConfiguration);
+              = new PatchAccountingTaxrateOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

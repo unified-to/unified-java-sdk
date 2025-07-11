@@ -28,7 +28,7 @@ public class PatchCommerceReviewRequestBuilder {
     public PatchCommerceReviewResponse call() throws Exception {
         
         RequestOperation<PatchCommerceReviewRequest, PatchCommerceReviewResponse> operation
-              = new PatchCommerceReviewOperation( sdkConfiguration);
+              = new PatchCommerceReviewOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

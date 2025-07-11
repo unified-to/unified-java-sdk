@@ -25,13 +25,16 @@ public class PropertyCrmEventMeeting {
     @JsonProperty("description")
     private Optional<String> description;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private Optional<OffsetDateTime> endAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private Optional<OffsetDateTime> startAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
@@ -54,7 +57,8 @@ public class PropertyCrmEventMeeting {
     }
     
     public PropertyCrmEventMeeting() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -77,15 +81,17 @@ public class PropertyCrmEventMeeting {
         return title;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public PropertyCrmEventMeeting withDescription(String description) {
         Utils.checkNotNull(description, "description");
         this.description = Optional.ofNullable(description);
         return this;
     }
+
 
     public PropertyCrmEventMeeting withDescription(Optional<String> description) {
         Utils.checkNotNull(description, "description");
@@ -99,6 +105,7 @@ public class PropertyCrmEventMeeting {
         return this;
     }
 
+
     public PropertyCrmEventMeeting withEndAt(Optional<OffsetDateTime> endAt) {
         Utils.checkNotNull(endAt, "endAt");
         this.endAt = endAt;
@@ -110,6 +117,7 @@ public class PropertyCrmEventMeeting {
         this.startAt = Optional.ofNullable(startAt);
         return this;
     }
+
 
     public PropertyCrmEventMeeting withStartAt(Optional<OffsetDateTime> startAt) {
         Utils.checkNotNull(startAt, "startAt");
@@ -123,13 +131,13 @@ public class PropertyCrmEventMeeting {
         return this;
     }
 
+
     public PropertyCrmEventMeeting withTitle(Optional<String> title) {
         Utils.checkNotNull(title, "title");
         this.title = title;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -149,9 +157,7 @@ public class PropertyCrmEventMeeting {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            description,
-            endAt,
-            startAt,
+            description, endAt, startAt,
             title);
     }
     
@@ -163,20 +169,22 @@ public class PropertyCrmEventMeeting {
                 "startAt", startAt,
                 "title", title);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> description = Optional.empty();
- 
+
         private Optional<OffsetDateTime> endAt = Optional.empty();
- 
+
         private Optional<OffsetDateTime> startAt = Optional.empty();
- 
+
         private Optional<String> title = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder description(String description) {
             Utils.checkNotNull(description, "description");
@@ -190,6 +198,7 @@ public class PropertyCrmEventMeeting {
             return this;
         }
 
+
         public Builder endAt(OffsetDateTime endAt) {
             Utils.checkNotNull(endAt, "endAt");
             this.endAt = Optional.ofNullable(endAt);
@@ -201,6 +210,7 @@ public class PropertyCrmEventMeeting {
             this.endAt = endAt;
             return this;
         }
+
 
         public Builder startAt(OffsetDateTime startAt) {
             Utils.checkNotNull(startAt, "startAt");
@@ -214,6 +224,7 @@ public class PropertyCrmEventMeeting {
             return this;
         }
 
+
         public Builder title(String title) {
             Utils.checkNotNull(title, "title");
             this.title = Optional.ofNullable(title);
@@ -225,13 +236,13 @@ public class PropertyCrmEventMeeting {
             this.title = title;
             return this;
         }
-        
+
         public PropertyCrmEventMeeting build() {
+
             return new PropertyCrmEventMeeting(
-                description,
-                endAt,
-                startAt,
+                description, endAt, startAt,
                 title);
         }
+
     }
 }

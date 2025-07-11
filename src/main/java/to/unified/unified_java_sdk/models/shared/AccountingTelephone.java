@@ -14,11 +14,13 @@ import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AccountingTelephone {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephone")
     private Optional<String> telephone;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
@@ -49,15 +51,17 @@ public class AccountingTelephone {
         return (Optional<AccountingTelephoneType>) type;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AccountingTelephone withTelephone(String telephone) {
         Utils.checkNotNull(telephone, "telephone");
         this.telephone = Optional.ofNullable(telephone);
         return this;
     }
+
 
     public AccountingTelephone withTelephone(Optional<String> telephone) {
         Utils.checkNotNull(telephone, "telephone");
@@ -71,13 +75,13 @@ public class AccountingTelephone {
         return this;
     }
 
+
     public AccountingTelephone withType(Optional<? extends AccountingTelephoneType> type) {
         Utils.checkNotNull(type, "type");
         this.type = type;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -95,8 +99,7 @@ public class AccountingTelephone {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            telephone,
-            type);
+            telephone, type);
     }
     
     @Override
@@ -105,16 +108,18 @@ public class AccountingTelephone {
                 "telephone", telephone,
                 "type", type);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> telephone = Optional.empty();
- 
+
         private Optional<? extends AccountingTelephoneType> type = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder telephone(String telephone) {
             Utils.checkNotNull(telephone, "telephone");
@@ -128,6 +133,7 @@ public class AccountingTelephone {
             return this;
         }
 
+
         public Builder type(AccountingTelephoneType type) {
             Utils.checkNotNull(type, "type");
             this.type = Optional.ofNullable(type);
@@ -139,11 +145,12 @@ public class AccountingTelephone {
             this.type = type;
             return this;
         }
-        
+
         public AccountingTelephone build() {
+
             return new AccountingTelephone(
-                telephone,
-                type);
+                telephone, type);
         }
+
     }
 }

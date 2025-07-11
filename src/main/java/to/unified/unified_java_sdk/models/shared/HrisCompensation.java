@@ -15,19 +15,23 @@ import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class HrisCompensation {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     private Optional<Double> amount;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private Optional<String> currency;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequency")
     private Optional<? extends HrisCompensationFrequency> frequency;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
@@ -50,7 +54,8 @@ public class HrisCompensation {
     }
     
     public HrisCompensation() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -75,15 +80,17 @@ public class HrisCompensation {
         return (Optional<HrisCompensationType>) type;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public HrisCompensation withAmount(double amount) {
         Utils.checkNotNull(amount, "amount");
         this.amount = Optional.ofNullable(amount);
         return this;
     }
+
 
     public HrisCompensation withAmount(Optional<Double> amount) {
         Utils.checkNotNull(amount, "amount");
@@ -97,6 +104,7 @@ public class HrisCompensation {
         return this;
     }
 
+
     public HrisCompensation withCurrency(Optional<String> currency) {
         Utils.checkNotNull(currency, "currency");
         this.currency = currency;
@@ -108,6 +116,7 @@ public class HrisCompensation {
         this.frequency = Optional.ofNullable(frequency);
         return this;
     }
+
 
     public HrisCompensation withFrequency(Optional<? extends HrisCompensationFrequency> frequency) {
         Utils.checkNotNull(frequency, "frequency");
@@ -121,13 +130,13 @@ public class HrisCompensation {
         return this;
     }
 
+
     public HrisCompensation withType(Optional<? extends HrisCompensationType> type) {
         Utils.checkNotNull(type, "type");
         this.type = type;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -147,9 +156,7 @@ public class HrisCompensation {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            amount,
-            currency,
-            frequency,
+            amount, currency, frequency,
             type);
     }
     
@@ -161,20 +168,22 @@ public class HrisCompensation {
                 "frequency", frequency,
                 "type", type);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<Double> amount = Optional.empty();
- 
+
         private Optional<String> currency = Optional.empty();
- 
+
         private Optional<? extends HrisCompensationFrequency> frequency = Optional.empty();
- 
+
         private Optional<? extends HrisCompensationType> type = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder amount(double amount) {
             Utils.checkNotNull(amount, "amount");
@@ -188,6 +197,7 @@ public class HrisCompensation {
             return this;
         }
 
+
         public Builder currency(String currency) {
             Utils.checkNotNull(currency, "currency");
             this.currency = Optional.ofNullable(currency);
@@ -199,6 +209,7 @@ public class HrisCompensation {
             this.currency = currency;
             return this;
         }
+
 
         public Builder frequency(HrisCompensationFrequency frequency) {
             Utils.checkNotNull(frequency, "frequency");
@@ -212,6 +223,7 @@ public class HrisCompensation {
             return this;
         }
 
+
         public Builder type(HrisCompensationType type) {
             Utils.checkNotNull(type, "type");
             this.type = Optional.ofNullable(type);
@@ -223,13 +235,13 @@ public class HrisCompensation {
             this.type = type;
             return this;
         }
-        
+
         public HrisCompensation build() {
+
             return new HrisCompensation(
-                amount,
-                currency,
-                frequency,
+                amount, currency, frequency,
                 type);
         }
+
     }
 }

@@ -28,7 +28,7 @@ public class RemoveAtsCompanyRequestBuilder {
     public RemoveAtsCompanyResponse call() throws Exception {
         
         RequestOperation<RemoveAtsCompanyRequest, RemoveAtsCompanyResponse> operation
-              = new RemoveAtsCompanyOperation( sdkConfiguration);
+              = new RemoveAtsCompanyOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

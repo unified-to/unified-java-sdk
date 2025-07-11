@@ -24,7 +24,6 @@ public class Enrich {
     Enrich(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Retrieve enrichment information for a company
      * 
@@ -41,13 +40,11 @@ public class Enrich {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListEnrichCompaniesResponse listEnrichCompanies(
-            ListEnrichCompaniesRequest request) throws Exception {
+    public ListEnrichCompaniesResponse listEnrichCompanies(ListEnrichCompaniesRequest request) throws Exception {
         RequestOperation<ListEnrichCompaniesRequest, ListEnrichCompaniesResponse> operation
-              = new ListEnrichCompaniesOperation( sdkConfiguration);
+              = new ListEnrichCompaniesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve enrichment information for a person
@@ -65,10 +62,9 @@ public class Enrich {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListEnrichPeopleResponse listEnrichPeople(
-            ListEnrichPeopleRequest request) throws Exception {
+    public ListEnrichPeopleResponse listEnrichPeople(ListEnrichPeopleRequest request) throws Exception {
         RequestOperation<ListEnrichPeopleRequest, ListEnrichPeopleResponse> operation
-              = new ListEnrichPeopleOperation( sdkConfiguration);
+              = new ListEnrichPeopleOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

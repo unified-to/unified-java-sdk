@@ -14,6 +14,7 @@ import to.unified.unified_java_sdk.models.shared.AccountingBill;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class PatchAccountingBillRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
@@ -66,7 +67,8 @@ public class PatchAccountingBillRequest {
             AccountingBill accountingBill,
             String connectionId,
             String id) {
-        this(accountingBill, connectionId, Optional.empty(), id, Optional.empty());
+        this(accountingBill, connectionId, Optional.empty(),
+            id, Optional.empty());
     }
 
     @JsonIgnore
@@ -107,9 +109,10 @@ public class PatchAccountingBillRequest {
         return raw;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public PatchAccountingBillRequest withAccountingBill(AccountingBill accountingBill) {
         Utils.checkNotNull(accountingBill, "accountingBill");
@@ -134,6 +137,7 @@ public class PatchAccountingBillRequest {
         this.fields = Optional.ofNullable(fields);
         return this;
     }
+
 
     /**
      * Comma-delimited fields to return
@@ -162,6 +166,7 @@ public class PatchAccountingBillRequest {
         return this;
     }
 
+
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
@@ -171,7 +176,6 @@ public class PatchAccountingBillRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -192,11 +196,8 @@ public class PatchAccountingBillRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            accountingBill,
-            connectionId,
-            fields,
-            id,
-            raw);
+            accountingBill, connectionId, fields,
+            id, raw);
     }
     
     @Override
@@ -208,28 +209,31 @@ public class PatchAccountingBillRequest {
                 "id", id,
                 "raw", raw);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private AccountingBill accountingBill;
- 
+
         private String connectionId;
- 
+
         private Optional<? extends List<String>> fields = Optional.empty();
- 
+
         private String id;
- 
+
         private Optional<String> raw = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder accountingBill(AccountingBill accountingBill) {
             Utils.checkNotNull(accountingBill, "accountingBill");
             this.accountingBill = accountingBill;
             return this;
         }
+
 
         /**
          * ID of the connection
@@ -239,6 +243,7 @@ public class PatchAccountingBillRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         /**
          * Comma-delimited fields to return
@@ -258,6 +263,7 @@ public class PatchAccountingBillRequest {
             return this;
         }
 
+
         /**
          * ID of the Bill
          */
@@ -266,6 +272,7 @@ public class PatchAccountingBillRequest {
             this.id = id;
             return this;
         }
+
 
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
@@ -284,14 +291,13 @@ public class PatchAccountingBillRequest {
             this.raw = raw;
             return this;
         }
-        
+
         public PatchAccountingBillRequest build() {
+
             return new PatchAccountingBillRequest(
-                accountingBill,
-                connectionId,
-                fields,
-                id,
-                raw);
+                accountingBill, connectionId, fields,
+                id, raw);
         }
+
     }
 }

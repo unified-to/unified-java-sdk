@@ -28,7 +28,7 @@ public class GetHrisLocationRequestBuilder {
     public GetHrisLocationResponse call() throws Exception {
         
         RequestOperation<GetHrisLocationRequest, GetHrisLocationResponse> operation
-              = new GetHrisLocationOperation( sdkConfiguration);
+              = new GetHrisLocationOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

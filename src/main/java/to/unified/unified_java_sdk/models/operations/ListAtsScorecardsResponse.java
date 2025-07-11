@@ -17,8 +17,8 @@ import to.unified.unified_java_sdk.models.shared.AtsScorecard;
 import to.unified.unified_java_sdk.utils.Response;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class ListAtsScorecardsResponse implements Response {
 
+public class ListAtsScorecardsResponse implements Response {
     /**
      * Successful
      */
@@ -59,7 +59,8 @@ public class ListAtsScorecardsResponse implements Response {
             String contentType,
             int statusCode,
             HttpResponse<InputStream> rawResponse) {
-        this(Optional.empty(), contentType, statusCode, rawResponse);
+        this(Optional.empty(), contentType, statusCode,
+            rawResponse);
     }
 
     /**
@@ -95,9 +96,10 @@ public class ListAtsScorecardsResponse implements Response {
         return rawResponse;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * Successful
@@ -107,6 +109,7 @@ public class ListAtsScorecardsResponse implements Response {
         this.atsScorecards = Optional.ofNullable(atsScorecards);
         return this;
     }
+
 
     /**
      * Successful
@@ -144,7 +147,6 @@ public class ListAtsScorecardsResponse implements Response {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -164,9 +166,7 @@ public class ListAtsScorecardsResponse implements Response {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            atsScorecards,
-            contentType,
-            statusCode,
+            atsScorecards, contentType, statusCode,
             rawResponse);
     }
     
@@ -178,20 +178,22 @@ public class ListAtsScorecardsResponse implements Response {
                 "statusCode", statusCode,
                 "rawResponse", rawResponse);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<? extends List<AtsScorecard>> atsScorecards = Optional.empty();
- 
+
         private String contentType;
- 
+
         private Integer statusCode;
- 
+
         private HttpResponse<InputStream> rawResponse;
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * Successful
@@ -211,6 +213,7 @@ public class ListAtsScorecardsResponse implements Response {
             return this;
         }
 
+
         /**
          * HTTP response content type for this operation
          */
@@ -219,6 +222,7 @@ public class ListAtsScorecardsResponse implements Response {
             this.contentType = contentType;
             return this;
         }
+
 
         /**
          * HTTP response status code for this operation
@@ -229,6 +233,7 @@ public class ListAtsScorecardsResponse implements Response {
             return this;
         }
 
+
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
@@ -237,13 +242,13 @@ public class ListAtsScorecardsResponse implements Response {
             this.rawResponse = rawResponse;
             return this;
         }
-        
+
         public ListAtsScorecardsResponse build() {
+
             return new ListAtsScorecardsResponse(
-                atsScorecards,
-                contentType,
-                statusCode,
+                atsScorecards, contentType, statusCode,
                 rawResponse);
         }
+
     }
 }

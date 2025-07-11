@@ -40,7 +40,6 @@ public class Subscription {
     Subscription(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a subscription
      * 
@@ -57,13 +56,11 @@ public class Subscription {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreatePaymentSubscriptionResponse createPaymentSubscription(
-            CreatePaymentSubscriptionRequest request) throws Exception {
+    public CreatePaymentSubscriptionResponse createPaymentSubscription(CreatePaymentSubscriptionRequest request) throws Exception {
         RequestOperation<CreatePaymentSubscriptionRequest, CreatePaymentSubscriptionResponse> operation
-              = new CreatePaymentSubscriptionOperation( sdkConfiguration);
+              = new CreatePaymentSubscriptionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a subscription
@@ -81,13 +78,11 @@ public class Subscription {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetPaymentSubscriptionResponse getPaymentSubscription(
-            GetPaymentSubscriptionRequest request) throws Exception {
+    public GetPaymentSubscriptionResponse getPaymentSubscription(GetPaymentSubscriptionRequest request) throws Exception {
         RequestOperation<GetPaymentSubscriptionRequest, GetPaymentSubscriptionResponse> operation
-              = new GetPaymentSubscriptionOperation( sdkConfiguration);
+              = new GetPaymentSubscriptionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all subscriptions
@@ -105,13 +100,11 @@ public class Subscription {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListPaymentSubscriptionsResponse listPaymentSubscriptions(
-            ListPaymentSubscriptionsRequest request) throws Exception {
+    public ListPaymentSubscriptionsResponse listPaymentSubscriptions(ListPaymentSubscriptionsRequest request) throws Exception {
         RequestOperation<ListPaymentSubscriptionsRequest, ListPaymentSubscriptionsResponse> operation
-              = new ListPaymentSubscriptionsOperation( sdkConfiguration);
+              = new ListPaymentSubscriptionsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a subscription
@@ -129,13 +122,11 @@ public class Subscription {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchPaymentSubscriptionResponse patchPaymentSubscription(
-            PatchPaymentSubscriptionRequest request) throws Exception {
+    public PatchPaymentSubscriptionResponse patchPaymentSubscription(PatchPaymentSubscriptionRequest request) throws Exception {
         RequestOperation<PatchPaymentSubscriptionRequest, PatchPaymentSubscriptionResponse> operation
-              = new PatchPaymentSubscriptionOperation( sdkConfiguration);
+              = new PatchPaymentSubscriptionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a subscription
@@ -153,13 +144,11 @@ public class Subscription {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemovePaymentSubscriptionResponse removePaymentSubscription(
-            RemovePaymentSubscriptionRequest request) throws Exception {
+    public RemovePaymentSubscriptionResponse removePaymentSubscription(RemovePaymentSubscriptionRequest request) throws Exception {
         RequestOperation<RemovePaymentSubscriptionRequest, RemovePaymentSubscriptionResponse> operation
-              = new RemovePaymentSubscriptionOperation( sdkConfiguration);
+              = new RemovePaymentSubscriptionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a subscription
@@ -177,10 +166,9 @@ public class Subscription {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdatePaymentSubscriptionResponse updatePaymentSubscription(
-            UpdatePaymentSubscriptionRequest request) throws Exception {
+    public UpdatePaymentSubscriptionResponse updatePaymentSubscription(UpdatePaymentSubscriptionRequest request) throws Exception {
         RequestOperation<UpdatePaymentSubscriptionRequest, UpdatePaymentSubscriptionResponse> operation
-              = new UpdatePaymentSubscriptionOperation( sdkConfiguration);
+              = new UpdatePaymentSubscriptionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

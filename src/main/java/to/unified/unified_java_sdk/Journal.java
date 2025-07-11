@@ -40,7 +40,6 @@ public class Journal {
     Journal(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a journal
      * 
@@ -57,13 +56,11 @@ public class Journal {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAccountingJournalResponse createAccountingJournal(
-            CreateAccountingJournalRequest request) throws Exception {
+    public CreateAccountingJournalResponse createAccountingJournal(CreateAccountingJournalRequest request) throws Exception {
         RequestOperation<CreateAccountingJournalRequest, CreateAccountingJournalResponse> operation
-              = new CreateAccountingJournalOperation( sdkConfiguration);
+              = new CreateAccountingJournalOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a journal
@@ -81,13 +78,11 @@ public class Journal {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAccountingJournalResponse getAccountingJournal(
-            GetAccountingJournalRequest request) throws Exception {
+    public GetAccountingJournalResponse getAccountingJournal(GetAccountingJournalRequest request) throws Exception {
         RequestOperation<GetAccountingJournalRequest, GetAccountingJournalResponse> operation
-              = new GetAccountingJournalOperation( sdkConfiguration);
+              = new GetAccountingJournalOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all journals
@@ -105,13 +100,11 @@ public class Journal {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAccountingJournalsResponse listAccountingJournals(
-            ListAccountingJournalsRequest request) throws Exception {
+    public ListAccountingJournalsResponse listAccountingJournals(ListAccountingJournalsRequest request) throws Exception {
         RequestOperation<ListAccountingJournalsRequest, ListAccountingJournalsResponse> operation
-              = new ListAccountingJournalsOperation( sdkConfiguration);
+              = new ListAccountingJournalsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a journal
@@ -129,13 +122,11 @@ public class Journal {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAccountingJournalResponse patchAccountingJournal(
-            PatchAccountingJournalRequest request) throws Exception {
+    public PatchAccountingJournalResponse patchAccountingJournal(PatchAccountingJournalRequest request) throws Exception {
         RequestOperation<PatchAccountingJournalRequest, PatchAccountingJournalResponse> operation
-              = new PatchAccountingJournalOperation( sdkConfiguration);
+              = new PatchAccountingJournalOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a journal
@@ -153,13 +144,11 @@ public class Journal {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAccountingJournalResponse removeAccountingJournal(
-            RemoveAccountingJournalRequest request) throws Exception {
+    public RemoveAccountingJournalResponse removeAccountingJournal(RemoveAccountingJournalRequest request) throws Exception {
         RequestOperation<RemoveAccountingJournalRequest, RemoveAccountingJournalResponse> operation
-              = new RemoveAccountingJournalOperation( sdkConfiguration);
+              = new RemoveAccountingJournalOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a journal
@@ -177,10 +166,9 @@ public class Journal {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAccountingJournalResponse updateAccountingJournal(
-            UpdateAccountingJournalRequest request) throws Exception {
+    public UpdateAccountingJournalResponse updateAccountingJournal(UpdateAccountingJournalRequest request) throws Exception {
         RequestOperation<UpdateAccountingJournalRequest, UpdateAccountingJournalResponse> operation
-              = new UpdateAccountingJournalOperation( sdkConfiguration);
+              = new UpdateAccountingJournalOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -176,7 +176,6 @@ public class Hris {
     Hris(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a company
      * 
@@ -193,13 +192,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateHrisCompanyResponse createHrisCompany(
-            CreateHrisCompanyRequest request) throws Exception {
+    public CreateHrisCompanyResponse createHrisCompany(CreateHrisCompanyRequest request) throws Exception {
         RequestOperation<CreateHrisCompanyRequest, CreateHrisCompanyResponse> operation
-              = new CreateHrisCompanyOperation( sdkConfiguration);
+              = new CreateHrisCompanyOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a device
@@ -217,13 +214,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateHrisDeviceResponse createHrisDevice(
-            CreateHrisDeviceRequest request) throws Exception {
+    public CreateHrisDeviceResponse createHrisDevice(CreateHrisDeviceRequest request) throws Exception {
         RequestOperation<CreateHrisDeviceRequest, CreateHrisDeviceResponse> operation
-              = new CreateHrisDeviceOperation( sdkConfiguration);
+              = new CreateHrisDeviceOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create an employee
@@ -241,13 +236,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateHrisEmployeeResponse createHrisEmployee(
-            CreateHrisEmployeeRequest request) throws Exception {
+    public CreateHrisEmployeeResponse createHrisEmployee(CreateHrisEmployeeRequest request) throws Exception {
         RequestOperation<CreateHrisEmployeeRequest, CreateHrisEmployeeResponse> operation
-              = new CreateHrisEmployeeOperation( sdkConfiguration);
+              = new CreateHrisEmployeeOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a group
@@ -265,13 +258,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateHrisGroupResponse createHrisGroup(
-            CreateHrisGroupRequest request) throws Exception {
+    public CreateHrisGroupResponse createHrisGroup(CreateHrisGroupRequest request) throws Exception {
         RequestOperation<CreateHrisGroupRequest, CreateHrisGroupResponse> operation
-              = new CreateHrisGroupOperation( sdkConfiguration);
+              = new CreateHrisGroupOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a location
@@ -289,13 +280,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateHrisLocationResponse createHrisLocation(
-            CreateHrisLocationRequest request) throws Exception {
+    public CreateHrisLocationResponse createHrisLocation(CreateHrisLocationRequest request) throws Exception {
         RequestOperation<CreateHrisLocationRequest, CreateHrisLocationResponse> operation
-              = new CreateHrisLocationOperation( sdkConfiguration);
+              = new CreateHrisLocationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a timeshift
@@ -313,13 +302,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateHrisTimeshiftResponse createHrisTimeshift(
-            CreateHrisTimeshiftRequest request) throws Exception {
+    public CreateHrisTimeshiftResponse createHrisTimeshift(CreateHrisTimeshiftRequest request) throws Exception {
         RequestOperation<CreateHrisTimeshiftRequest, CreateHrisTimeshiftResponse> operation
-              = new CreateHrisTimeshiftOperation( sdkConfiguration);
+              = new CreateHrisTimeshiftOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a company
@@ -337,13 +324,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetHrisCompanyResponse getHrisCompany(
-            GetHrisCompanyRequest request) throws Exception {
+    public GetHrisCompanyResponse getHrisCompany(GetHrisCompanyRequest request) throws Exception {
         RequestOperation<GetHrisCompanyRequest, GetHrisCompanyResponse> operation
-              = new GetHrisCompanyOperation( sdkConfiguration);
+              = new GetHrisCompanyOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a device
@@ -361,13 +346,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetHrisDeviceResponse getHrisDevice(
-            GetHrisDeviceRequest request) throws Exception {
+    public GetHrisDeviceResponse getHrisDevice(GetHrisDeviceRequest request) throws Exception {
         RequestOperation<GetHrisDeviceRequest, GetHrisDeviceResponse> operation
-              = new GetHrisDeviceOperation( sdkConfiguration);
+              = new GetHrisDeviceOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve an employee
@@ -385,13 +368,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetHrisEmployeeResponse getHrisEmployee(
-            GetHrisEmployeeRequest request) throws Exception {
+    public GetHrisEmployeeResponse getHrisEmployee(GetHrisEmployeeRequest request) throws Exception {
         RequestOperation<GetHrisEmployeeRequest, GetHrisEmployeeResponse> operation
-              = new GetHrisEmployeeOperation( sdkConfiguration);
+              = new GetHrisEmployeeOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a group
@@ -409,13 +390,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetHrisGroupResponse getHrisGroup(
-            GetHrisGroupRequest request) throws Exception {
+    public GetHrisGroupResponse getHrisGroup(GetHrisGroupRequest request) throws Exception {
         RequestOperation<GetHrisGroupRequest, GetHrisGroupResponse> operation
-              = new GetHrisGroupOperation( sdkConfiguration);
+              = new GetHrisGroupOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a location
@@ -433,13 +412,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetHrisLocationResponse getHrisLocation(
-            GetHrisLocationRequest request) throws Exception {
+    public GetHrisLocationResponse getHrisLocation(GetHrisLocationRequest request) throws Exception {
         RequestOperation<GetHrisLocationRequest, GetHrisLocationResponse> operation
-              = new GetHrisLocationOperation( sdkConfiguration);
+              = new GetHrisLocationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a payslip
@@ -457,13 +434,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetHrisPayslipResponse getHrisPayslip(
-            GetHrisPayslipRequest request) throws Exception {
+    public GetHrisPayslipResponse getHrisPayslip(GetHrisPayslipRequest request) throws Exception {
         RequestOperation<GetHrisPayslipRequest, GetHrisPayslipResponse> operation
-              = new GetHrisPayslipOperation( sdkConfiguration);
+              = new GetHrisPayslipOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a timeoff
@@ -481,13 +456,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetHrisTimeoffResponse getHrisTimeoff(
-            GetHrisTimeoffRequest request) throws Exception {
+    public GetHrisTimeoffResponse getHrisTimeoff(GetHrisTimeoffRequest request) throws Exception {
         RequestOperation<GetHrisTimeoffRequest, GetHrisTimeoffResponse> operation
-              = new GetHrisTimeoffOperation( sdkConfiguration);
+              = new GetHrisTimeoffOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a timeshift
@@ -505,13 +478,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetHrisTimeshiftResponse getHrisTimeshift(
-            GetHrisTimeshiftRequest request) throws Exception {
+    public GetHrisTimeshiftResponse getHrisTimeshift(GetHrisTimeshiftRequest request) throws Exception {
         RequestOperation<GetHrisTimeshiftRequest, GetHrisTimeshiftResponse> operation
-              = new GetHrisTimeshiftOperation( sdkConfiguration);
+              = new GetHrisTimeshiftOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all companies
@@ -529,13 +500,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListHrisCompaniesResponse listHrisCompanies(
-            ListHrisCompaniesRequest request) throws Exception {
+    public ListHrisCompaniesResponse listHrisCompanies(ListHrisCompaniesRequest request) throws Exception {
         RequestOperation<ListHrisCompaniesRequest, ListHrisCompaniesResponse> operation
-              = new ListHrisCompaniesOperation( sdkConfiguration);
+              = new ListHrisCompaniesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all devices
@@ -553,13 +522,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListHrisDevicesResponse listHrisDevices(
-            ListHrisDevicesRequest request) throws Exception {
+    public ListHrisDevicesResponse listHrisDevices(ListHrisDevicesRequest request) throws Exception {
         RequestOperation<ListHrisDevicesRequest, ListHrisDevicesResponse> operation
-              = new ListHrisDevicesOperation( sdkConfiguration);
+              = new ListHrisDevicesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all employees
@@ -577,13 +544,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListHrisEmployeesResponse listHrisEmployees(
-            ListHrisEmployeesRequest request) throws Exception {
+    public ListHrisEmployeesResponse listHrisEmployees(ListHrisEmployeesRequest request) throws Exception {
         RequestOperation<ListHrisEmployeesRequest, ListHrisEmployeesResponse> operation
-              = new ListHrisEmployeesOperation( sdkConfiguration);
+              = new ListHrisEmployeesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all groups
@@ -601,13 +566,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListHrisGroupsResponse listHrisGroups(
-            ListHrisGroupsRequest request) throws Exception {
+    public ListHrisGroupsResponse listHrisGroups(ListHrisGroupsRequest request) throws Exception {
         RequestOperation<ListHrisGroupsRequest, ListHrisGroupsResponse> operation
-              = new ListHrisGroupsOperation( sdkConfiguration);
+              = new ListHrisGroupsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all locations
@@ -625,13 +588,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListHrisLocationsResponse listHrisLocations(
-            ListHrisLocationsRequest request) throws Exception {
+    public ListHrisLocationsResponse listHrisLocations(ListHrisLocationsRequest request) throws Exception {
         RequestOperation<ListHrisLocationsRequest, ListHrisLocationsResponse> operation
-              = new ListHrisLocationsOperation( sdkConfiguration);
+              = new ListHrisLocationsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all payslips
@@ -649,13 +610,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListHrisPayslipsResponse listHrisPayslips(
-            ListHrisPayslipsRequest request) throws Exception {
+    public ListHrisPayslipsResponse listHrisPayslips(ListHrisPayslipsRequest request) throws Exception {
         RequestOperation<ListHrisPayslipsRequest, ListHrisPayslipsResponse> operation
-              = new ListHrisPayslipsOperation( sdkConfiguration);
+              = new ListHrisPayslipsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all timeoffs
@@ -673,13 +632,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListHrisTimeoffsResponse listHrisTimeoffs(
-            ListHrisTimeoffsRequest request) throws Exception {
+    public ListHrisTimeoffsResponse listHrisTimeoffs(ListHrisTimeoffsRequest request) throws Exception {
         RequestOperation<ListHrisTimeoffsRequest, ListHrisTimeoffsResponse> operation
-              = new ListHrisTimeoffsOperation( sdkConfiguration);
+              = new ListHrisTimeoffsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all timeshifts
@@ -697,13 +654,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListHrisTimeshiftsResponse listHrisTimeshifts(
-            ListHrisTimeshiftsRequest request) throws Exception {
+    public ListHrisTimeshiftsResponse listHrisTimeshifts(ListHrisTimeshiftsRequest request) throws Exception {
         RequestOperation<ListHrisTimeshiftsRequest, ListHrisTimeshiftsResponse> operation
-              = new ListHrisTimeshiftsOperation( sdkConfiguration);
+              = new ListHrisTimeshiftsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a company
@@ -721,13 +676,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchHrisCompanyResponse patchHrisCompany(
-            PatchHrisCompanyRequest request) throws Exception {
+    public PatchHrisCompanyResponse patchHrisCompany(PatchHrisCompanyRequest request) throws Exception {
         RequestOperation<PatchHrisCompanyRequest, PatchHrisCompanyResponse> operation
-              = new PatchHrisCompanyOperation( sdkConfiguration);
+              = new PatchHrisCompanyOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a device
@@ -745,13 +698,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchHrisDeviceResponse patchHrisDevice(
-            PatchHrisDeviceRequest request) throws Exception {
+    public PatchHrisDeviceResponse patchHrisDevice(PatchHrisDeviceRequest request) throws Exception {
         RequestOperation<PatchHrisDeviceRequest, PatchHrisDeviceResponse> operation
-              = new PatchHrisDeviceOperation( sdkConfiguration);
+              = new PatchHrisDeviceOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an employee
@@ -769,13 +720,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchHrisEmployeeResponse patchHrisEmployee(
-            PatchHrisEmployeeRequest request) throws Exception {
+    public PatchHrisEmployeeResponse patchHrisEmployee(PatchHrisEmployeeRequest request) throws Exception {
         RequestOperation<PatchHrisEmployeeRequest, PatchHrisEmployeeResponse> operation
-              = new PatchHrisEmployeeOperation( sdkConfiguration);
+              = new PatchHrisEmployeeOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a group
@@ -793,13 +742,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchHrisGroupResponse patchHrisGroup(
-            PatchHrisGroupRequest request) throws Exception {
+    public PatchHrisGroupResponse patchHrisGroup(PatchHrisGroupRequest request) throws Exception {
         RequestOperation<PatchHrisGroupRequest, PatchHrisGroupResponse> operation
-              = new PatchHrisGroupOperation( sdkConfiguration);
+              = new PatchHrisGroupOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a location
@@ -817,13 +764,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchHrisLocationResponse patchHrisLocation(
-            PatchHrisLocationRequest request) throws Exception {
+    public PatchHrisLocationResponse patchHrisLocation(PatchHrisLocationRequest request) throws Exception {
         RequestOperation<PatchHrisLocationRequest, PatchHrisLocationResponse> operation
-              = new PatchHrisLocationOperation( sdkConfiguration);
+              = new PatchHrisLocationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a timeshift
@@ -841,13 +786,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchHrisTimeshiftResponse patchHrisTimeshift(
-            PatchHrisTimeshiftRequest request) throws Exception {
+    public PatchHrisTimeshiftResponse patchHrisTimeshift(PatchHrisTimeshiftRequest request) throws Exception {
         RequestOperation<PatchHrisTimeshiftRequest, PatchHrisTimeshiftResponse> operation
-              = new PatchHrisTimeshiftOperation( sdkConfiguration);
+              = new PatchHrisTimeshiftOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a company
@@ -865,13 +808,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveHrisCompanyResponse removeHrisCompany(
-            RemoveHrisCompanyRequest request) throws Exception {
+    public RemoveHrisCompanyResponse removeHrisCompany(RemoveHrisCompanyRequest request) throws Exception {
         RequestOperation<RemoveHrisCompanyRequest, RemoveHrisCompanyResponse> operation
-              = new RemoveHrisCompanyOperation( sdkConfiguration);
+              = new RemoveHrisCompanyOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a device
@@ -889,13 +830,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveHrisDeviceResponse removeHrisDevice(
-            RemoveHrisDeviceRequest request) throws Exception {
+    public RemoveHrisDeviceResponse removeHrisDevice(RemoveHrisDeviceRequest request) throws Exception {
         RequestOperation<RemoveHrisDeviceRequest, RemoveHrisDeviceResponse> operation
-              = new RemoveHrisDeviceOperation( sdkConfiguration);
+              = new RemoveHrisDeviceOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove an employee
@@ -913,13 +852,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveHrisEmployeeResponse removeHrisEmployee(
-            RemoveHrisEmployeeRequest request) throws Exception {
+    public RemoveHrisEmployeeResponse removeHrisEmployee(RemoveHrisEmployeeRequest request) throws Exception {
         RequestOperation<RemoveHrisEmployeeRequest, RemoveHrisEmployeeResponse> operation
-              = new RemoveHrisEmployeeOperation( sdkConfiguration);
+              = new RemoveHrisEmployeeOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a group
@@ -937,13 +874,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveHrisGroupResponse removeHrisGroup(
-            RemoveHrisGroupRequest request) throws Exception {
+    public RemoveHrisGroupResponse removeHrisGroup(RemoveHrisGroupRequest request) throws Exception {
         RequestOperation<RemoveHrisGroupRequest, RemoveHrisGroupResponse> operation
-              = new RemoveHrisGroupOperation( sdkConfiguration);
+              = new RemoveHrisGroupOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a location
@@ -961,13 +896,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveHrisLocationResponse removeHrisLocation(
-            RemoveHrisLocationRequest request) throws Exception {
+    public RemoveHrisLocationResponse removeHrisLocation(RemoveHrisLocationRequest request) throws Exception {
         RequestOperation<RemoveHrisLocationRequest, RemoveHrisLocationResponse> operation
-              = new RemoveHrisLocationOperation( sdkConfiguration);
+              = new RemoveHrisLocationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a timeshift
@@ -985,13 +918,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveHrisTimeshiftResponse removeHrisTimeshift(
-            RemoveHrisTimeshiftRequest request) throws Exception {
+    public RemoveHrisTimeshiftResponse removeHrisTimeshift(RemoveHrisTimeshiftRequest request) throws Exception {
         RequestOperation<RemoveHrisTimeshiftRequest, RemoveHrisTimeshiftResponse> operation
-              = new RemoveHrisTimeshiftOperation( sdkConfiguration);
+              = new RemoveHrisTimeshiftOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a company
@@ -1009,13 +940,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateHrisCompanyResponse updateHrisCompany(
-            UpdateHrisCompanyRequest request) throws Exception {
+    public UpdateHrisCompanyResponse updateHrisCompany(UpdateHrisCompanyRequest request) throws Exception {
         RequestOperation<UpdateHrisCompanyRequest, UpdateHrisCompanyResponse> operation
-              = new UpdateHrisCompanyOperation( sdkConfiguration);
+              = new UpdateHrisCompanyOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a device
@@ -1033,13 +962,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateHrisDeviceResponse updateHrisDevice(
-            UpdateHrisDeviceRequest request) throws Exception {
+    public UpdateHrisDeviceResponse updateHrisDevice(UpdateHrisDeviceRequest request) throws Exception {
         RequestOperation<UpdateHrisDeviceRequest, UpdateHrisDeviceResponse> operation
-              = new UpdateHrisDeviceOperation( sdkConfiguration);
+              = new UpdateHrisDeviceOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an employee
@@ -1057,13 +984,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateHrisEmployeeResponse updateHrisEmployee(
-            UpdateHrisEmployeeRequest request) throws Exception {
+    public UpdateHrisEmployeeResponse updateHrisEmployee(UpdateHrisEmployeeRequest request) throws Exception {
         RequestOperation<UpdateHrisEmployeeRequest, UpdateHrisEmployeeResponse> operation
-              = new UpdateHrisEmployeeOperation( sdkConfiguration);
+              = new UpdateHrisEmployeeOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a group
@@ -1081,13 +1006,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateHrisGroupResponse updateHrisGroup(
-            UpdateHrisGroupRequest request) throws Exception {
+    public UpdateHrisGroupResponse updateHrisGroup(UpdateHrisGroupRequest request) throws Exception {
         RequestOperation<UpdateHrisGroupRequest, UpdateHrisGroupResponse> operation
-              = new UpdateHrisGroupOperation( sdkConfiguration);
+              = new UpdateHrisGroupOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a location
@@ -1105,13 +1028,11 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateHrisLocationResponse updateHrisLocation(
-            UpdateHrisLocationRequest request) throws Exception {
+    public UpdateHrisLocationResponse updateHrisLocation(UpdateHrisLocationRequest request) throws Exception {
         RequestOperation<UpdateHrisLocationRequest, UpdateHrisLocationResponse> operation
-              = new UpdateHrisLocationOperation( sdkConfiguration);
+              = new UpdateHrisLocationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a timeshift
@@ -1129,10 +1050,9 @@ public class Hris {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateHrisTimeshiftResponse updateHrisTimeshift(
-            UpdateHrisTimeshiftRequest request) throws Exception {
+    public UpdateHrisTimeshiftResponse updateHrisTimeshift(UpdateHrisTimeshiftRequest request) throws Exception {
         RequestOperation<UpdateHrisTimeshiftRequest, UpdateHrisTimeshiftResponse> operation
-              = new UpdateHrisTimeshiftOperation( sdkConfiguration);
+              = new UpdateHrisTimeshiftOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

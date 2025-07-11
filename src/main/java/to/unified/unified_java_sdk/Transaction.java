@@ -40,7 +40,6 @@ public class Transaction {
     Transaction(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a transaction
      * 
@@ -57,13 +56,11 @@ public class Transaction {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAccountingTransactionResponse createAccountingTransaction(
-            CreateAccountingTransactionRequest request) throws Exception {
+    public CreateAccountingTransactionResponse createAccountingTransaction(CreateAccountingTransactionRequest request) throws Exception {
         RequestOperation<CreateAccountingTransactionRequest, CreateAccountingTransactionResponse> operation
-              = new CreateAccountingTransactionOperation( sdkConfiguration);
+              = new CreateAccountingTransactionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a transaction
@@ -81,13 +78,11 @@ public class Transaction {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAccountingTransactionResponse getAccountingTransaction(
-            GetAccountingTransactionRequest request) throws Exception {
+    public GetAccountingTransactionResponse getAccountingTransaction(GetAccountingTransactionRequest request) throws Exception {
         RequestOperation<GetAccountingTransactionRequest, GetAccountingTransactionResponse> operation
-              = new GetAccountingTransactionOperation( sdkConfiguration);
+              = new GetAccountingTransactionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all transactions
@@ -105,13 +100,11 @@ public class Transaction {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAccountingTransactionsResponse listAccountingTransactions(
-            ListAccountingTransactionsRequest request) throws Exception {
+    public ListAccountingTransactionsResponse listAccountingTransactions(ListAccountingTransactionsRequest request) throws Exception {
         RequestOperation<ListAccountingTransactionsRequest, ListAccountingTransactionsResponse> operation
-              = new ListAccountingTransactionsOperation( sdkConfiguration);
+              = new ListAccountingTransactionsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a transaction
@@ -129,13 +122,11 @@ public class Transaction {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAccountingTransactionResponse patchAccountingTransaction(
-            PatchAccountingTransactionRequest request) throws Exception {
+    public PatchAccountingTransactionResponse patchAccountingTransaction(PatchAccountingTransactionRequest request) throws Exception {
         RequestOperation<PatchAccountingTransactionRequest, PatchAccountingTransactionResponse> operation
-              = new PatchAccountingTransactionOperation( sdkConfiguration);
+              = new PatchAccountingTransactionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a transaction
@@ -153,13 +144,11 @@ public class Transaction {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAccountingTransactionResponse removeAccountingTransaction(
-            RemoveAccountingTransactionRequest request) throws Exception {
+    public RemoveAccountingTransactionResponse removeAccountingTransaction(RemoveAccountingTransactionRequest request) throws Exception {
         RequestOperation<RemoveAccountingTransactionRequest, RemoveAccountingTransactionResponse> operation
-              = new RemoveAccountingTransactionOperation( sdkConfiguration);
+              = new RemoveAccountingTransactionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a transaction
@@ -177,10 +166,9 @@ public class Transaction {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAccountingTransactionResponse updateAccountingTransaction(
-            UpdateAccountingTransactionRequest request) throws Exception {
+    public UpdateAccountingTransactionResponse updateAccountingTransaction(UpdateAccountingTransactionRequest request) throws Exception {
         RequestOperation<UpdateAccountingTransactionRequest, UpdateAccountingTransactionResponse> operation
-              = new UpdateAccountingTransactionOperation( sdkConfiguration);
+              = new UpdateAccountingTransactionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

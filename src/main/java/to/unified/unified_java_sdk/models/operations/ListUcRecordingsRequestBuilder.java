@@ -28,7 +28,7 @@ public class ListUcRecordingsRequestBuilder {
     public ListUcRecordingsResponse call() throws Exception {
         
         RequestOperation<ListUcRecordingsRequest, ListUcRecordingsResponse> operation
-              = new ListUcRecordingsOperation( sdkConfiguration);
+              = new ListUcRecordingsOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

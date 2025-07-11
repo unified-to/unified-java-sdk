@@ -14,10 +14,12 @@ import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AtsTelephone {
 
     @JsonProperty("telephone")
     private String telephone;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
@@ -49,9 +51,10 @@ public class AtsTelephone {
         return (Optional<AtsTelephoneType>) type;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AtsTelephone withTelephone(String telephone) {
         Utils.checkNotNull(telephone, "telephone");
@@ -65,13 +68,13 @@ public class AtsTelephone {
         return this;
     }
 
+
     public AtsTelephone withType(Optional<? extends AtsTelephoneType> type) {
         Utils.checkNotNull(type, "type");
         this.type = type;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -89,8 +92,7 @@ public class AtsTelephone {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            telephone,
-            type);
+            telephone, type);
     }
     
     @Override
@@ -99,22 +101,25 @@ public class AtsTelephone {
                 "telephone", telephone,
                 "type", type);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private String telephone;
- 
+
         private Optional<? extends AtsTelephoneType> type = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder telephone(String telephone) {
             Utils.checkNotNull(telephone, "telephone");
             this.telephone = telephone;
             return this;
         }
+
 
         public Builder type(AtsTelephoneType type) {
             Utils.checkNotNull(type, "type");
@@ -127,11 +132,12 @@ public class AtsTelephone {
             this.type = type;
             return this;
         }
-        
+
         public AtsTelephone build() {
+
             return new AtsTelephone(
-                telephone,
-                type);
+                telephone, type);
         }
+
     }
 }

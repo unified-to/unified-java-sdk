@@ -28,7 +28,7 @@ public class GetAccountingBalancesheetRequestBuilder {
     public GetAccountingBalancesheetResponse call() throws Exception {
         
         RequestOperation<GetAccountingBalancesheetRequest, GetAccountingBalancesheetResponse> operation
-              = new GetAccountingBalancesheetOperation( sdkConfiguration);
+              = new GetAccountingBalancesheetOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

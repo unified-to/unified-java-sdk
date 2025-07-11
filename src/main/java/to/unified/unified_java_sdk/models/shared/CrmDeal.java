@@ -30,81 +30,101 @@ public class CrmDeal {
     @JsonProperty("amount")
     private Optional<Double> amount;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closed_at")
     private Optional<OffsetDateTime> closedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_ids")
     private Optional<? extends List<String>> companyIds;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_ids")
     private Optional<? extends List<String>> contactIds;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private Optional<String> currency;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lost_reason")
     private Optional<String> lostReason;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     private Optional<? extends List<CrmMetadata>> metadata;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipeline")
     private Optional<String> pipeline;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipeline_id")
     private Optional<String> pipelineId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("probability")
     private Optional<Double> probability;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     private Optional<String> source;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stage")
     private Optional<String> stage;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stage_id")
     private Optional<String> stageId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     private Optional<? extends List<String>> tags;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private Optional<String> userId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("won_reason")
@@ -178,7 +198,13 @@ public class CrmDeal {
     }
     
     public CrmDeal() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -291,15 +317,17 @@ public class CrmDeal {
         return wonReason;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public CrmDeal withAmount(double amount) {
         Utils.checkNotNull(amount, "amount");
         this.amount = Optional.ofNullable(amount);
         return this;
     }
+
 
     public CrmDeal withAmount(Optional<Double> amount) {
         Utils.checkNotNull(amount, "amount");
@@ -313,6 +341,7 @@ public class CrmDeal {
         return this;
     }
 
+
     public CrmDeal withClosedAt(Optional<OffsetDateTime> closedAt) {
         Utils.checkNotNull(closedAt, "closedAt");
         this.closedAt = closedAt;
@@ -324,6 +353,7 @@ public class CrmDeal {
         this.companyIds = Optional.ofNullable(companyIds);
         return this;
     }
+
 
     public CrmDeal withCompanyIds(Optional<? extends List<String>> companyIds) {
         Utils.checkNotNull(companyIds, "companyIds");
@@ -337,6 +367,7 @@ public class CrmDeal {
         return this;
     }
 
+
     public CrmDeal withContactIds(Optional<? extends List<String>> contactIds) {
         Utils.checkNotNull(contactIds, "contactIds");
         this.contactIds = contactIds;
@@ -348,6 +379,7 @@ public class CrmDeal {
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public CrmDeal withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -361,6 +393,7 @@ public class CrmDeal {
         return this;
     }
 
+
     public CrmDeal withCurrency(Optional<String> currency) {
         Utils.checkNotNull(currency, "currency");
         this.currency = currency;
@@ -372,6 +405,7 @@ public class CrmDeal {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public CrmDeal withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -385,6 +419,7 @@ public class CrmDeal {
         return this;
     }
 
+
     public CrmDeal withLostReason(Optional<String> lostReason) {
         Utils.checkNotNull(lostReason, "lostReason");
         this.lostReason = lostReason;
@@ -396,6 +431,7 @@ public class CrmDeal {
         this.metadata = Optional.ofNullable(metadata);
         return this;
     }
+
 
     public CrmDeal withMetadata(Optional<? extends List<CrmMetadata>> metadata) {
         Utils.checkNotNull(metadata, "metadata");
@@ -409,6 +445,7 @@ public class CrmDeal {
         return this;
     }
 
+
     public CrmDeal withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
         this.name = name;
@@ -420,6 +457,7 @@ public class CrmDeal {
         this.pipeline = Optional.ofNullable(pipeline);
         return this;
     }
+
 
     public CrmDeal withPipeline(Optional<String> pipeline) {
         Utils.checkNotNull(pipeline, "pipeline");
@@ -433,6 +471,7 @@ public class CrmDeal {
         return this;
     }
 
+
     public CrmDeal withPipelineId(Optional<String> pipelineId) {
         Utils.checkNotNull(pipelineId, "pipelineId");
         this.pipelineId = pipelineId;
@@ -444,6 +483,7 @@ public class CrmDeal {
         this.probability = Optional.ofNullable(probability);
         return this;
     }
+
 
     public CrmDeal withProbability(Optional<Double> probability) {
         Utils.checkNotNull(probability, "probability");
@@ -457,6 +497,7 @@ public class CrmDeal {
         return this;
     }
 
+
     public CrmDeal withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
@@ -468,6 +509,7 @@ public class CrmDeal {
         this.source = Optional.ofNullable(source);
         return this;
     }
+
 
     public CrmDeal withSource(Optional<String> source) {
         Utils.checkNotNull(source, "source");
@@ -481,6 +523,7 @@ public class CrmDeal {
         return this;
     }
 
+
     public CrmDeal withStage(Optional<String> stage) {
         Utils.checkNotNull(stage, "stage");
         this.stage = stage;
@@ -492,6 +535,7 @@ public class CrmDeal {
         this.stageId = Optional.ofNullable(stageId);
         return this;
     }
+
 
     public CrmDeal withStageId(Optional<String> stageId) {
         Utils.checkNotNull(stageId, "stageId");
@@ -505,6 +549,7 @@ public class CrmDeal {
         return this;
     }
 
+
     public CrmDeal withTags(Optional<? extends List<String>> tags) {
         Utils.checkNotNull(tags, "tags");
         this.tags = tags;
@@ -516,6 +561,7 @@ public class CrmDeal {
         this.updatedAt = Optional.ofNullable(updatedAt);
         return this;
     }
+
 
     public CrmDeal withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
@@ -529,6 +575,7 @@ public class CrmDeal {
         return this;
     }
 
+
     public CrmDeal withUserId(Optional<String> userId) {
         Utils.checkNotNull(userId, "userId");
         this.userId = userId;
@@ -541,13 +588,13 @@ public class CrmDeal {
         return this;
     }
 
+
     public CrmDeal withWonReason(Optional<String> wonReason) {
         Utils.checkNotNull(wonReason, "wonReason");
         this.wonReason = wonReason;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -584,27 +631,13 @@ public class CrmDeal {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            amount,
-            closedAt,
-            companyIds,
-            contactIds,
-            createdAt,
-            currency,
-            id,
-            lostReason,
-            metadata,
-            name,
-            pipeline,
-            pipelineId,
-            probability,
-            raw,
-            source,
-            stage,
-            stageId,
-            tags,
-            updatedAt,
-            userId,
-            wonReason);
+            amount, closedAt, companyIds,
+            contactIds, createdAt, currency,
+            id, lostReason, metadata,
+            name, pipeline, pipelineId,
+            probability, raw, source,
+            stage, stageId, tags,
+            updatedAt, userId, wonReason);
     }
     
     @Override
@@ -632,54 +665,56 @@ public class CrmDeal {
                 "userId", userId,
                 "wonReason", wonReason);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<Double> amount = Optional.empty();
- 
+
         private Optional<OffsetDateTime> closedAt = Optional.empty();
- 
+
         private Optional<? extends List<String>> companyIds = Optional.empty();
- 
+
         private Optional<? extends List<String>> contactIds = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> currency = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> lostReason = Optional.empty();
- 
+
         private Optional<? extends List<CrmMetadata>> metadata = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<String> pipeline = Optional.empty();
- 
+
         private Optional<String> pipelineId = Optional.empty();
- 
+
         private Optional<Double> probability = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<String> source = Optional.empty();
- 
+
         private Optional<String> stage = Optional.empty();
- 
+
         private Optional<String> stageId = Optional.empty();
- 
+
         private Optional<? extends List<String>> tags = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<String> userId = Optional.empty();
- 
+
         private Optional<String> wonReason = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder amount(double amount) {
             Utils.checkNotNull(amount, "amount");
@@ -693,6 +728,7 @@ public class CrmDeal {
             return this;
         }
 
+
         public Builder closedAt(OffsetDateTime closedAt) {
             Utils.checkNotNull(closedAt, "closedAt");
             this.closedAt = Optional.ofNullable(closedAt);
@@ -704,6 +740,7 @@ public class CrmDeal {
             this.closedAt = closedAt;
             return this;
         }
+
 
         public Builder companyIds(List<String> companyIds) {
             Utils.checkNotNull(companyIds, "companyIds");
@@ -717,6 +754,7 @@ public class CrmDeal {
             return this;
         }
 
+
         public Builder contactIds(List<String> contactIds) {
             Utils.checkNotNull(contactIds, "contactIds");
             this.contactIds = Optional.ofNullable(contactIds);
@@ -728,6 +766,7 @@ public class CrmDeal {
             this.contactIds = contactIds;
             return this;
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -741,6 +780,7 @@ public class CrmDeal {
             return this;
         }
 
+
         public Builder currency(String currency) {
             Utils.checkNotNull(currency, "currency");
             this.currency = Optional.ofNullable(currency);
@@ -752,6 +792,7 @@ public class CrmDeal {
             this.currency = currency;
             return this;
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -765,6 +806,7 @@ public class CrmDeal {
             return this;
         }
 
+
         public Builder lostReason(String lostReason) {
             Utils.checkNotNull(lostReason, "lostReason");
             this.lostReason = Optional.ofNullable(lostReason);
@@ -776,6 +818,7 @@ public class CrmDeal {
             this.lostReason = lostReason;
             return this;
         }
+
 
         public Builder metadata(List<CrmMetadata> metadata) {
             Utils.checkNotNull(metadata, "metadata");
@@ -789,6 +832,7 @@ public class CrmDeal {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = Optional.ofNullable(name);
@@ -800,6 +844,7 @@ public class CrmDeal {
             this.name = name;
             return this;
         }
+
 
         public Builder pipeline(String pipeline) {
             Utils.checkNotNull(pipeline, "pipeline");
@@ -813,6 +858,7 @@ public class CrmDeal {
             return this;
         }
 
+
         public Builder pipelineId(String pipelineId) {
             Utils.checkNotNull(pipelineId, "pipelineId");
             this.pipelineId = Optional.ofNullable(pipelineId);
@@ -824,6 +870,7 @@ public class CrmDeal {
             this.pipelineId = pipelineId;
             return this;
         }
+
 
         public Builder probability(double probability) {
             Utils.checkNotNull(probability, "probability");
@@ -837,6 +884,7 @@ public class CrmDeal {
             return this;
         }
 
+
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
@@ -848,6 +896,7 @@ public class CrmDeal {
             this.raw = raw;
             return this;
         }
+
 
         public Builder source(String source) {
             Utils.checkNotNull(source, "source");
@@ -861,6 +910,7 @@ public class CrmDeal {
             return this;
         }
 
+
         public Builder stage(String stage) {
             Utils.checkNotNull(stage, "stage");
             this.stage = Optional.ofNullable(stage);
@@ -872,6 +922,7 @@ public class CrmDeal {
             this.stage = stage;
             return this;
         }
+
 
         public Builder stageId(String stageId) {
             Utils.checkNotNull(stageId, "stageId");
@@ -885,6 +936,7 @@ public class CrmDeal {
             return this;
         }
 
+
         public Builder tags(List<String> tags) {
             Utils.checkNotNull(tags, "tags");
             this.tags = Optional.ofNullable(tags);
@@ -896,6 +948,7 @@ public class CrmDeal {
             this.tags = tags;
             return this;
         }
+
 
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
@@ -909,6 +962,7 @@ public class CrmDeal {
             return this;
         }
 
+
         public Builder userId(String userId) {
             Utils.checkNotNull(userId, "userId");
             this.userId = Optional.ofNullable(userId);
@@ -921,6 +975,7 @@ public class CrmDeal {
             return this;
         }
 
+
         public Builder wonReason(String wonReason) {
             Utils.checkNotNull(wonReason, "wonReason");
             this.wonReason = Optional.ofNullable(wonReason);
@@ -932,30 +987,18 @@ public class CrmDeal {
             this.wonReason = wonReason;
             return this;
         }
-        
+
         public CrmDeal build() {
+
             return new CrmDeal(
-                amount,
-                closedAt,
-                companyIds,
-                contactIds,
-                createdAt,
-                currency,
-                id,
-                lostReason,
-                metadata,
-                name,
-                pipeline,
-                pipelineId,
-                probability,
-                raw,
-                source,
-                stage,
-                stageId,
-                tags,
-                updatedAt,
-                userId,
-                wonReason);
+                amount, closedAt, companyIds,
+                contactIds, createdAt, currency,
+                id, lostReason, metadata,
+                name, pipeline, pipelineId,
+                probability, raw, source,
+                stage, stageId, tags,
+                updatedAt, userId, wonReason);
         }
+
     }
 }

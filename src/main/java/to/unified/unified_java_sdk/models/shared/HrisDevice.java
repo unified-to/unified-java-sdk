@@ -19,74 +19,92 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class HrisDevice {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("admin_user_ids")
     private Optional<? extends List<String>> adminUserIds;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asset_tag")
     private Optional<String> assetTag;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_antivirus")
     private Optional<Boolean> hasAntivirus;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_firewall")
     private Optional<Boolean> hasFirewall;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_hd_encrypted")
     private Optional<Boolean> hasHdEncrypted;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_password_manager")
     private Optional<Boolean> hasPasswordManager;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_screenlock")
     private Optional<Boolean> hasScreenlock;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_missing")
     private Optional<Boolean> isMissing;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     private Optional<String> locationId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manufacturer")
     private Optional<String> manufacturer;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     private Optional<String> model;
 
+
     @JsonProperty("name")
     private String name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("os")
     private Optional<String> os;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("os_version")
     private Optional<String> osVersion;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -98,6 +116,7 @@ public class HrisDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_ids")
     private Optional<? extends List<String>> userIds;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
@@ -169,7 +188,13 @@ public class HrisDevice {
     
     public HrisDevice(
             String name) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), name, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), name, Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -278,15 +303,17 @@ public class HrisDevice {
         return version;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public HrisDevice withAdminUserIds(List<String> adminUserIds) {
         Utils.checkNotNull(adminUserIds, "adminUserIds");
         this.adminUserIds = Optional.ofNullable(adminUserIds);
         return this;
     }
+
 
     public HrisDevice withAdminUserIds(Optional<? extends List<String>> adminUserIds) {
         Utils.checkNotNull(adminUserIds, "adminUserIds");
@@ -300,6 +327,7 @@ public class HrisDevice {
         return this;
     }
 
+
     public HrisDevice withAssetTag(Optional<String> assetTag) {
         Utils.checkNotNull(assetTag, "assetTag");
         this.assetTag = assetTag;
@@ -311,6 +339,7 @@ public class HrisDevice {
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public HrisDevice withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -324,6 +353,7 @@ public class HrisDevice {
         return this;
     }
 
+
     public HrisDevice withHasAntivirus(Optional<Boolean> hasAntivirus) {
         Utils.checkNotNull(hasAntivirus, "hasAntivirus");
         this.hasAntivirus = hasAntivirus;
@@ -335,6 +365,7 @@ public class HrisDevice {
         this.hasFirewall = Optional.ofNullable(hasFirewall);
         return this;
     }
+
 
     public HrisDevice withHasFirewall(Optional<Boolean> hasFirewall) {
         Utils.checkNotNull(hasFirewall, "hasFirewall");
@@ -348,6 +379,7 @@ public class HrisDevice {
         return this;
     }
 
+
     public HrisDevice withHasHdEncrypted(Optional<Boolean> hasHdEncrypted) {
         Utils.checkNotNull(hasHdEncrypted, "hasHdEncrypted");
         this.hasHdEncrypted = hasHdEncrypted;
@@ -359,6 +391,7 @@ public class HrisDevice {
         this.hasPasswordManager = Optional.ofNullable(hasPasswordManager);
         return this;
     }
+
 
     public HrisDevice withHasPasswordManager(Optional<Boolean> hasPasswordManager) {
         Utils.checkNotNull(hasPasswordManager, "hasPasswordManager");
@@ -372,6 +405,7 @@ public class HrisDevice {
         return this;
     }
 
+
     public HrisDevice withHasScreenlock(Optional<Boolean> hasScreenlock) {
         Utils.checkNotNull(hasScreenlock, "hasScreenlock");
         this.hasScreenlock = hasScreenlock;
@@ -383,6 +417,7 @@ public class HrisDevice {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public HrisDevice withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -396,6 +431,7 @@ public class HrisDevice {
         return this;
     }
 
+
     public HrisDevice withIsMissing(Optional<Boolean> isMissing) {
         Utils.checkNotNull(isMissing, "isMissing");
         this.isMissing = isMissing;
@@ -407,6 +443,7 @@ public class HrisDevice {
         this.locationId = Optional.ofNullable(locationId);
         return this;
     }
+
 
     public HrisDevice withLocationId(Optional<String> locationId) {
         Utils.checkNotNull(locationId, "locationId");
@@ -420,6 +457,7 @@ public class HrisDevice {
         return this;
     }
 
+
     public HrisDevice withManufacturer(Optional<String> manufacturer) {
         Utils.checkNotNull(manufacturer, "manufacturer");
         this.manufacturer = manufacturer;
@@ -431,6 +469,7 @@ public class HrisDevice {
         this.model = Optional.ofNullable(model);
         return this;
     }
+
 
     public HrisDevice withModel(Optional<String> model) {
         Utils.checkNotNull(model, "model");
@@ -450,6 +489,7 @@ public class HrisDevice {
         return this;
     }
 
+
     public HrisDevice withOs(Optional<String> os) {
         Utils.checkNotNull(os, "os");
         this.os = os;
@@ -461,6 +501,7 @@ public class HrisDevice {
         this.osVersion = Optional.ofNullable(osVersion);
         return this;
     }
+
 
     public HrisDevice withOsVersion(Optional<String> osVersion) {
         Utils.checkNotNull(osVersion, "osVersion");
@@ -474,6 +515,7 @@ public class HrisDevice {
         return this;
     }
 
+
     public HrisDevice withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
@@ -485,6 +527,7 @@ public class HrisDevice {
         this.updatedAt = Optional.ofNullable(updatedAt);
         return this;
     }
+
 
     public HrisDevice withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
@@ -501,6 +544,7 @@ public class HrisDevice {
         return this;
     }
 
+
     /**
      * users who have this device
      */
@@ -516,13 +560,13 @@ public class HrisDevice {
         return this;
     }
 
+
     public HrisDevice withVersion(Optional<String> version) {
         Utils.checkNotNull(version, "version");
         this.version = version;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -558,26 +602,13 @@ public class HrisDevice {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            adminUserIds,
-            assetTag,
-            createdAt,
-            hasAntivirus,
-            hasFirewall,
-            hasHdEncrypted,
-            hasPasswordManager,
-            hasScreenlock,
-            id,
-            isMissing,
-            locationId,
-            manufacturer,
-            model,
-            name,
-            os,
-            osVersion,
-            raw,
-            updatedAt,
-            userIds,
-            version);
+            adminUserIds, assetTag, createdAt,
+            hasAntivirus, hasFirewall, hasHdEncrypted,
+            hasPasswordManager, hasScreenlock, id,
+            isMissing, locationId, manufacturer,
+            model, name, os,
+            osVersion, raw, updatedAt,
+            userIds, version);
     }
     
     @Override
@@ -604,52 +635,54 @@ public class HrisDevice {
                 "userIds", userIds,
                 "version", version);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<? extends List<String>> adminUserIds = Optional.empty();
- 
+
         private Optional<String> assetTag = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<Boolean> hasAntivirus = Optional.empty();
- 
+
         private Optional<Boolean> hasFirewall = Optional.empty();
- 
+
         private Optional<Boolean> hasHdEncrypted = Optional.empty();
- 
+
         private Optional<Boolean> hasPasswordManager = Optional.empty();
- 
+
         private Optional<Boolean> hasScreenlock = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<Boolean> isMissing = Optional.empty();
- 
+
         private Optional<String> locationId = Optional.empty();
- 
+
         private Optional<String> manufacturer = Optional.empty();
- 
+
         private Optional<String> model = Optional.empty();
- 
+
         private String name;
- 
+
         private Optional<String> os = Optional.empty();
- 
+
         private Optional<String> osVersion = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<? extends List<String>> userIds = Optional.empty();
- 
+
         private Optional<String> version = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder adminUserIds(List<String> adminUserIds) {
             Utils.checkNotNull(adminUserIds, "adminUserIds");
@@ -663,6 +696,7 @@ public class HrisDevice {
             return this;
         }
 
+
         public Builder assetTag(String assetTag) {
             Utils.checkNotNull(assetTag, "assetTag");
             this.assetTag = Optional.ofNullable(assetTag);
@@ -674,6 +708,7 @@ public class HrisDevice {
             this.assetTag = assetTag;
             return this;
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -687,6 +722,7 @@ public class HrisDevice {
             return this;
         }
 
+
         public Builder hasAntivirus(boolean hasAntivirus) {
             Utils.checkNotNull(hasAntivirus, "hasAntivirus");
             this.hasAntivirus = Optional.ofNullable(hasAntivirus);
@@ -698,6 +734,7 @@ public class HrisDevice {
             this.hasAntivirus = hasAntivirus;
             return this;
         }
+
 
         public Builder hasFirewall(boolean hasFirewall) {
             Utils.checkNotNull(hasFirewall, "hasFirewall");
@@ -711,6 +748,7 @@ public class HrisDevice {
             return this;
         }
 
+
         public Builder hasHdEncrypted(boolean hasHdEncrypted) {
             Utils.checkNotNull(hasHdEncrypted, "hasHdEncrypted");
             this.hasHdEncrypted = Optional.ofNullable(hasHdEncrypted);
@@ -722,6 +760,7 @@ public class HrisDevice {
             this.hasHdEncrypted = hasHdEncrypted;
             return this;
         }
+
 
         public Builder hasPasswordManager(boolean hasPasswordManager) {
             Utils.checkNotNull(hasPasswordManager, "hasPasswordManager");
@@ -735,6 +774,7 @@ public class HrisDevice {
             return this;
         }
 
+
         public Builder hasScreenlock(boolean hasScreenlock) {
             Utils.checkNotNull(hasScreenlock, "hasScreenlock");
             this.hasScreenlock = Optional.ofNullable(hasScreenlock);
@@ -746,6 +786,7 @@ public class HrisDevice {
             this.hasScreenlock = hasScreenlock;
             return this;
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -759,6 +800,7 @@ public class HrisDevice {
             return this;
         }
 
+
         public Builder isMissing(boolean isMissing) {
             Utils.checkNotNull(isMissing, "isMissing");
             this.isMissing = Optional.ofNullable(isMissing);
@@ -770,6 +812,7 @@ public class HrisDevice {
             this.isMissing = isMissing;
             return this;
         }
+
 
         public Builder locationId(String locationId) {
             Utils.checkNotNull(locationId, "locationId");
@@ -783,6 +826,7 @@ public class HrisDevice {
             return this;
         }
 
+
         public Builder manufacturer(String manufacturer) {
             Utils.checkNotNull(manufacturer, "manufacturer");
             this.manufacturer = Optional.ofNullable(manufacturer);
@@ -794,6 +838,7 @@ public class HrisDevice {
             this.manufacturer = manufacturer;
             return this;
         }
+
 
         public Builder model(String model) {
             Utils.checkNotNull(model, "model");
@@ -807,11 +852,13 @@ public class HrisDevice {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = name;
             return this;
         }
+
 
         public Builder os(String os) {
             Utils.checkNotNull(os, "os");
@@ -825,6 +872,7 @@ public class HrisDevice {
             return this;
         }
 
+
         public Builder osVersion(String osVersion) {
             Utils.checkNotNull(osVersion, "osVersion");
             this.osVersion = Optional.ofNullable(osVersion);
@@ -836,6 +884,7 @@ public class HrisDevice {
             this.osVersion = osVersion;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -849,6 +898,7 @@ public class HrisDevice {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -860,6 +910,7 @@ public class HrisDevice {
             this.updatedAt = updatedAt;
             return this;
         }
+
 
         /**
          * users who have this device
@@ -879,6 +930,7 @@ public class HrisDevice {
             return this;
         }
 
+
         public Builder version(String version) {
             Utils.checkNotNull(version, "version");
             this.version = Optional.ofNullable(version);
@@ -890,29 +942,18 @@ public class HrisDevice {
             this.version = version;
             return this;
         }
-        
+
         public HrisDevice build() {
+
             return new HrisDevice(
-                adminUserIds,
-                assetTag,
-                createdAt,
-                hasAntivirus,
-                hasFirewall,
-                hasHdEncrypted,
-                hasPasswordManager,
-                hasScreenlock,
-                id,
-                isMissing,
-                locationId,
-                manufacturer,
-                model,
-                name,
-                os,
-                osVersion,
-                raw,
-                updatedAt,
-                userIds,
-                version);
+                adminUserIds, assetTag, createdAt,
+                hasAntivirus, hasFirewall, hasHdEncrypted,
+                hasPasswordManager, hasScreenlock, id,
+                isMissing, locationId, manufacturer,
+                model, name, os,
+                osVersion, raw, updatedAt,
+                userIds, version);
         }
+
     }
 }

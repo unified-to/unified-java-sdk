@@ -29,6 +29,7 @@ public class CrmContact {
     @JsonProperty("address")
     private Optional<? extends PropertyCrmContactAddress> address;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company")
     private Optional<String> company;
@@ -39,6 +40,7 @@ public class CrmContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_ids")
     private Optional<? extends List<String>> companyIds;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
@@ -58,6 +60,7 @@ public class CrmContact {
     @JsonProperty("emails")
     private Optional<? extends List<CrmEmail>> emails;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
@@ -69,13 +72,16 @@ public class CrmContact {
     @JsonProperty("link_urls")
     private Optional<? extends List<String>> linkUrls;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     private Optional<? extends List<CrmMetadata>> metadata;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
@@ -88,13 +94,16 @@ public class CrmContact {
     @JsonProperty("telephones")
     private Optional<? extends List<CrmTelephone>> telephones;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     private Optional<String> title;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
@@ -150,7 +159,11 @@ public class CrmContact {
     }
     
     public CrmContact() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -251,15 +264,17 @@ public class CrmContact {
         return userId;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public CrmContact withAddress(PropertyCrmContactAddress address) {
         Utils.checkNotNull(address, "address");
         this.address = Optional.ofNullable(address);
         return this;
     }
+
 
     public CrmContact withAddress(Optional<? extends PropertyCrmContactAddress> address) {
         Utils.checkNotNull(address, "address");
@@ -272,6 +287,7 @@ public class CrmContact {
         this.company = Optional.ofNullable(company);
         return this;
     }
+
 
     public CrmContact withCompany(Optional<String> company) {
         Utils.checkNotNull(company, "company");
@@ -288,6 +304,7 @@ public class CrmContact {
         return this;
     }
 
+
     /**
      * An array of company IDs associated with this contact
      */
@@ -303,6 +320,7 @@ public class CrmContact {
         return this;
     }
 
+
     public CrmContact withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
@@ -317,6 +335,7 @@ public class CrmContact {
         this.dealIds = Optional.ofNullable(dealIds);
         return this;
     }
+
 
     /**
      * An array of deal IDs associated with this contact
@@ -336,6 +355,7 @@ public class CrmContact {
         return this;
     }
 
+
     /**
      * An array of email addresses for this contact
      */
@@ -350,6 +370,7 @@ public class CrmContact {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public CrmContact withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -366,6 +387,7 @@ public class CrmContact {
         return this;
     }
 
+
     /**
      * Additional URLs associated with the contact e.g., LinkedIn, website, etc
      */
@@ -381,6 +403,7 @@ public class CrmContact {
         return this;
     }
 
+
     public CrmContact withMetadata(Optional<? extends List<CrmMetadata>> metadata) {
         Utils.checkNotNull(metadata, "metadata");
         this.metadata = metadata;
@@ -393,6 +416,7 @@ public class CrmContact {
         return this;
     }
 
+
     public CrmContact withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
         this.name = name;
@@ -404,6 +428,7 @@ public class CrmContact {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public CrmContact withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -420,6 +445,7 @@ public class CrmContact {
         return this;
     }
 
+
     /**
      * An array of telephones for this contact
      */
@@ -435,6 +461,7 @@ public class CrmContact {
         return this;
     }
 
+
     public CrmContact withTitle(Optional<String> title) {
         Utils.checkNotNull(title, "title");
         this.title = title;
@@ -446,6 +473,7 @@ public class CrmContact {
         this.updatedAt = Optional.ofNullable(updatedAt);
         return this;
     }
+
 
     public CrmContact withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
@@ -459,13 +487,13 @@ public class CrmContact {
         return this;
     }
 
+
     public CrmContact withUserId(Optional<String> userId) {
         Utils.checkNotNull(userId, "userId");
         this.userId = userId;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -496,21 +524,11 @@ public class CrmContact {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            address,
-            company,
-            companyIds,
-            createdAt,
-            dealIds,
-            emails,
-            id,
-            linkUrls,
-            metadata,
-            name,
-            raw,
-            telephones,
-            title,
-            updatedAt,
-            userId);
+            address, company, companyIds,
+            createdAt, dealIds, emails,
+            id, linkUrls, metadata,
+            name, raw, telephones,
+            title, updatedAt, userId);
     }
     
     @Override
@@ -532,42 +550,44 @@ public class CrmContact {
                 "updatedAt", updatedAt,
                 "userId", userId);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<? extends PropertyCrmContactAddress> address = Optional.empty();
- 
+
         private Optional<String> company = Optional.empty();
- 
+
         private Optional<? extends List<String>> companyIds = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<? extends List<String>> dealIds = Optional.empty();
- 
+
         private Optional<? extends List<CrmEmail>> emails = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<? extends List<String>> linkUrls = Optional.empty();
- 
+
         private Optional<? extends List<CrmMetadata>> metadata = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<? extends List<CrmTelephone>> telephones = Optional.empty();
- 
+
         private Optional<String> title = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<String> userId = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder address(PropertyCrmContactAddress address) {
             Utils.checkNotNull(address, "address");
@@ -581,6 +601,7 @@ public class CrmContact {
             return this;
         }
 
+
         public Builder company(String company) {
             Utils.checkNotNull(company, "company");
             this.company = Optional.ofNullable(company);
@@ -592,6 +613,7 @@ public class CrmContact {
             this.company = company;
             return this;
         }
+
 
         /**
          * An array of company IDs associated with this contact
@@ -611,6 +633,7 @@ public class CrmContact {
             return this;
         }
 
+
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
@@ -622,6 +645,7 @@ public class CrmContact {
             this.createdAt = createdAt;
             return this;
         }
+
 
         /**
          * An array of deal IDs associated with this contact
@@ -641,6 +665,7 @@ public class CrmContact {
             return this;
         }
 
+
         /**
          * An array of email addresses for this contact
          */
@@ -659,6 +684,7 @@ public class CrmContact {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -670,6 +696,7 @@ public class CrmContact {
             this.id = id;
             return this;
         }
+
 
         /**
          * Additional URLs associated with the contact e.g., LinkedIn, website, etc
@@ -689,6 +716,7 @@ public class CrmContact {
             return this;
         }
 
+
         public Builder metadata(List<CrmMetadata> metadata) {
             Utils.checkNotNull(metadata, "metadata");
             this.metadata = Optional.ofNullable(metadata);
@@ -700,6 +728,7 @@ public class CrmContact {
             this.metadata = metadata;
             return this;
         }
+
 
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
@@ -713,6 +742,7 @@ public class CrmContact {
             return this;
         }
 
+
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
@@ -724,6 +754,7 @@ public class CrmContact {
             this.raw = raw;
             return this;
         }
+
 
         /**
          * An array of telephones for this contact
@@ -743,6 +774,7 @@ public class CrmContact {
             return this;
         }
 
+
         public Builder title(String title) {
             Utils.checkNotNull(title, "title");
             this.title = Optional.ofNullable(title);
@@ -754,6 +786,7 @@ public class CrmContact {
             this.title = title;
             return this;
         }
+
 
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
@@ -767,6 +800,7 @@ public class CrmContact {
             return this;
         }
 
+
         public Builder userId(String userId) {
             Utils.checkNotNull(userId, "userId");
             this.userId = Optional.ofNullable(userId);
@@ -778,24 +812,16 @@ public class CrmContact {
             this.userId = userId;
             return this;
         }
-        
+
         public CrmContact build() {
+
             return new CrmContact(
-                address,
-                company,
-                companyIds,
-                createdAt,
-                dealIds,
-                emails,
-                id,
-                linkUrls,
-                metadata,
-                name,
-                raw,
-                telephones,
-                title,
-                updatedAt,
-                userId);
+                address, company, companyIds,
+                createdAt, dealIds, emails,
+                id, linkUrls, metadata,
+                name, raw, telephones,
+                title, updatedAt, userId);
         }
+
     }
 }

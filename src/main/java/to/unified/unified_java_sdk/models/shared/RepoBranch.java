@@ -17,25 +17,31 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class RepoBranch {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonProperty("name")
     private String name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonProperty("repo_id")
     private String repoId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -66,7 +72,8 @@ public class RepoBranch {
     public RepoBranch(
             String name,
             String repoId) {
-        this(Optional.empty(), Optional.empty(), name, Optional.empty(), repoId, Optional.empty());
+        this(Optional.empty(), Optional.empty(), name,
+            Optional.empty(), repoId, Optional.empty());
     }
 
     @JsonIgnore
@@ -100,15 +107,17 @@ public class RepoBranch {
         return updatedAt;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public RepoBranch withCreatedAt(OffsetDateTime createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public RepoBranch withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -121,6 +130,7 @@ public class RepoBranch {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public RepoBranch withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -140,6 +150,7 @@ public class RepoBranch {
         return this;
     }
 
+
     public RepoBranch withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
@@ -158,13 +169,13 @@ public class RepoBranch {
         return this;
     }
 
+
     public RepoBranch withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -186,12 +197,8 @@ public class RepoBranch {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt,
-            id,
-            name,
-            raw,
-            repoId,
-            updatedAt);
+            createdAt, id, name,
+            raw, repoId, updatedAt);
     }
     
     @Override
@@ -204,24 +211,26 @@ public class RepoBranch {
                 "repoId", repoId,
                 "updatedAt", updatedAt);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private String name;
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private String repoId;
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -235,6 +244,7 @@ public class RepoBranch {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -247,11 +257,13 @@ public class RepoBranch {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = name;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -265,11 +277,13 @@ public class RepoBranch {
             return this;
         }
 
+
         public Builder repoId(String repoId) {
             Utils.checkNotNull(repoId, "repoId");
             this.repoId = repoId;
             return this;
         }
+
 
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
@@ -282,15 +296,13 @@ public class RepoBranch {
             this.updatedAt = updatedAt;
             return this;
         }
-        
+
         public RepoBranch build() {
+
             return new RepoBranch(
-                createdAt,
-                id,
-                name,
-                raw,
-                repoId,
-                updatedAt);
+                createdAt, id, name,
+                raw, repoId, updatedAt);
         }
+
     }
 }

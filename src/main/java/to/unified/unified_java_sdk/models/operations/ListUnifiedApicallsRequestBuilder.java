@@ -28,7 +28,7 @@ public class ListUnifiedApicallsRequestBuilder {
     public ListUnifiedApicallsResponse call() throws Exception {
         
         RequestOperation<ListUnifiedApicallsRequest, ListUnifiedApicallsResponse> operation
-              = new ListUnifiedApicallsOperation( sdkConfiguration);
+              = new ListUnifiedApicallsOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

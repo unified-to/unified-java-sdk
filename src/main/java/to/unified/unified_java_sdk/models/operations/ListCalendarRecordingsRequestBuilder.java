@@ -28,7 +28,7 @@ public class ListCalendarRecordingsRequestBuilder {
     public ListCalendarRecordingsResponse call() throws Exception {
         
         RequestOperation<ListCalendarRecordingsRequest, ListCalendarRecordingsResponse> operation
-              = new ListCalendarRecordingsOperation( sdkConfiguration);
+              = new ListCalendarRecordingsOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

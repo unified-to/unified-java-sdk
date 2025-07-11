@@ -14,18 +14,22 @@ import java.lang.String;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class ScimEmail {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display")
     private Optional<String> display;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary")
     private Optional<Boolean> primary;
 
+
     @JsonProperty("type")
     private ScimEmailType type;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
@@ -49,7 +53,8 @@ public class ScimEmail {
     
     public ScimEmail(
             ScimEmailType type) {
-        this(Optional.empty(), Optional.empty(), type, Optional.empty());
+        this(Optional.empty(), Optional.empty(), type,
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -72,15 +77,17 @@ public class ScimEmail {
         return value;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public ScimEmail withDisplay(String display) {
         Utils.checkNotNull(display, "display");
         this.display = Optional.ofNullable(display);
         return this;
     }
+
 
     public ScimEmail withDisplay(Optional<String> display) {
         Utils.checkNotNull(display, "display");
@@ -93,6 +100,7 @@ public class ScimEmail {
         this.primary = Optional.ofNullable(primary);
         return this;
     }
+
 
     public ScimEmail withPrimary(Optional<Boolean> primary) {
         Utils.checkNotNull(primary, "primary");
@@ -112,13 +120,13 @@ public class ScimEmail {
         return this;
     }
 
+
     public ScimEmail withValue(Optional<String> value) {
         Utils.checkNotNull(value, "value");
         this.value = value;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -138,9 +146,7 @@ public class ScimEmail {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            display,
-            primary,
-            type,
+            display, primary, type,
             value);
     }
     
@@ -152,20 +158,22 @@ public class ScimEmail {
                 "type", type,
                 "value", value);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> display = Optional.empty();
- 
+
         private Optional<Boolean> primary = Optional.empty();
- 
+
         private ScimEmailType type;
- 
+
         private Optional<String> value = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder display(String display) {
             Utils.checkNotNull(display, "display");
@@ -179,6 +187,7 @@ public class ScimEmail {
             return this;
         }
 
+
         public Builder primary(boolean primary) {
             Utils.checkNotNull(primary, "primary");
             this.primary = Optional.ofNullable(primary);
@@ -191,11 +200,13 @@ public class ScimEmail {
             return this;
         }
 
+
         public Builder type(ScimEmailType type) {
             Utils.checkNotNull(type, "type");
             this.type = type;
             return this;
         }
+
 
         public Builder value(String value) {
             Utils.checkNotNull(value, "value");
@@ -208,13 +219,13 @@ public class ScimEmail {
             this.value = value;
             return this;
         }
-        
+
         public ScimEmail build() {
+
             return new ScimEmail(
-                display,
-                primary,
-                type,
+                display, primary, type,
                 value);
         }
+
     }
 }

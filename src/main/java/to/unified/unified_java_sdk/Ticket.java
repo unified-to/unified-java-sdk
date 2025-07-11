@@ -40,7 +40,6 @@ public class Ticket {
     Ticket(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a ticket
      * 
@@ -57,13 +56,11 @@ public class Ticket {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateTicketingTicketResponse createTicketingTicket(
-            CreateTicketingTicketRequest request) throws Exception {
+    public CreateTicketingTicketResponse createTicketingTicket(CreateTicketingTicketRequest request) throws Exception {
         RequestOperation<CreateTicketingTicketRequest, CreateTicketingTicketResponse> operation
-              = new CreateTicketingTicketOperation( sdkConfiguration);
+              = new CreateTicketingTicketOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a ticket
@@ -81,13 +78,11 @@ public class Ticket {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetTicketingTicketResponse getTicketingTicket(
-            GetTicketingTicketRequest request) throws Exception {
+    public GetTicketingTicketResponse getTicketingTicket(GetTicketingTicketRequest request) throws Exception {
         RequestOperation<GetTicketingTicketRequest, GetTicketingTicketResponse> operation
-              = new GetTicketingTicketOperation( sdkConfiguration);
+              = new GetTicketingTicketOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all tickets
@@ -105,13 +100,11 @@ public class Ticket {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListTicketingTicketsResponse listTicketingTickets(
-            ListTicketingTicketsRequest request) throws Exception {
+    public ListTicketingTicketsResponse listTicketingTickets(ListTicketingTicketsRequest request) throws Exception {
         RequestOperation<ListTicketingTicketsRequest, ListTicketingTicketsResponse> operation
-              = new ListTicketingTicketsOperation( sdkConfiguration);
+              = new ListTicketingTicketsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a ticket
@@ -129,13 +122,11 @@ public class Ticket {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchTicketingTicketResponse patchTicketingTicket(
-            PatchTicketingTicketRequest request) throws Exception {
+    public PatchTicketingTicketResponse patchTicketingTicket(PatchTicketingTicketRequest request) throws Exception {
         RequestOperation<PatchTicketingTicketRequest, PatchTicketingTicketResponse> operation
-              = new PatchTicketingTicketOperation( sdkConfiguration);
+              = new PatchTicketingTicketOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a ticket
@@ -153,13 +144,11 @@ public class Ticket {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveTicketingTicketResponse removeTicketingTicket(
-            RemoveTicketingTicketRequest request) throws Exception {
+    public RemoveTicketingTicketResponse removeTicketingTicket(RemoveTicketingTicketRequest request) throws Exception {
         RequestOperation<RemoveTicketingTicketRequest, RemoveTicketingTicketResponse> operation
-              = new RemoveTicketingTicketOperation( sdkConfiguration);
+              = new RemoveTicketingTicketOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a ticket
@@ -177,10 +166,9 @@ public class Ticket {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateTicketingTicketResponse updateTicketingTicket(
-            UpdateTicketingTicketRequest request) throws Exception {
+    public UpdateTicketingTicketResponse updateTicketingTicket(UpdateTicketingTicketRequest request) throws Exception {
         RequestOperation<UpdateTicketingTicketRequest, UpdateTicketingTicketResponse> operation
-              = new UpdateTicketingTicketOperation( sdkConfiguration);
+              = new UpdateTicketingTicketOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

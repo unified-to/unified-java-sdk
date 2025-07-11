@@ -28,7 +28,7 @@ public class PatchCrmDealRequestBuilder {
     public PatchCrmDealResponse call() throws Exception {
         
         RequestOperation<PatchCrmDealRequest, PatchCrmDealResponse> operation
-              = new PatchCrmDealOperation( sdkConfiguration);
+              = new PatchCrmDealOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -12,8 +12,8 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class ListUnifiedWebhooksRequest {
 
+public class ListUnifiedWebhooksRequest {
     /**
      * Filter the results to just this integration
      */
@@ -26,6 +26,7 @@ public class ListUnifiedWebhooksRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_lte")
     private Optional<String> createdLte;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=env")
     private Optional<String> env;
 
@@ -34,6 +35,7 @@ public class ListUnifiedWebhooksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=integration_type")
     private Optional<String> integrationType;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     private Optional<Double> limit;
@@ -44,11 +46,14 @@ public class ListUnifiedWebhooksRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=object")
     private Optional<String> object;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     private Optional<Double> offset;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     private Optional<String> order;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     private Optional<String> sort;
@@ -94,7 +99,10 @@ public class ListUnifiedWebhooksRequest {
     }
     
     public ListUnifiedWebhooksRequest() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     /**
@@ -162,9 +170,10 @@ public class ListUnifiedWebhooksRequest {
         return updatedGte;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * Filter the results to just this integration
@@ -174,6 +183,7 @@ public class ListUnifiedWebhooksRequest {
         this.connectionId = Optional.ofNullable(connectionId);
         return this;
     }
+
 
     /**
      * Filter the results to just this integration
@@ -193,6 +203,7 @@ public class ListUnifiedWebhooksRequest {
         return this;
     }
 
+
     /**
      * Return only results whose created date is equal or less to this value
      */
@@ -207,6 +218,7 @@ public class ListUnifiedWebhooksRequest {
         this.env = Optional.ofNullable(env);
         return this;
     }
+
 
     public ListUnifiedWebhooksRequest withEnv(Optional<String> env) {
         Utils.checkNotNull(env, "env");
@@ -223,6 +235,7 @@ public class ListUnifiedWebhooksRequest {
         return this;
     }
 
+
     /**
      * Filter the results to just this integration
      */
@@ -237,6 +250,7 @@ public class ListUnifiedWebhooksRequest {
         this.limit = Optional.ofNullable(limit);
         return this;
     }
+
 
     public ListUnifiedWebhooksRequest withLimit(Optional<Double> limit) {
         Utils.checkNotNull(limit, "limit");
@@ -253,6 +267,7 @@ public class ListUnifiedWebhooksRequest {
         return this;
     }
 
+
     /**
      * Filter the results for webhooks for only this object
      */
@@ -268,6 +283,7 @@ public class ListUnifiedWebhooksRequest {
         return this;
     }
 
+
     public ListUnifiedWebhooksRequest withOffset(Optional<Double> offset) {
         Utils.checkNotNull(offset, "offset");
         this.offset = offset;
@@ -280,6 +296,7 @@ public class ListUnifiedWebhooksRequest {
         return this;
     }
 
+
     public ListUnifiedWebhooksRequest withOrder(Optional<String> order) {
         Utils.checkNotNull(order, "order");
         this.order = order;
@@ -291,6 +308,7 @@ public class ListUnifiedWebhooksRequest {
         this.sort = Optional.ofNullable(sort);
         return this;
     }
+
 
     public ListUnifiedWebhooksRequest withSort(Optional<String> sort) {
         Utils.checkNotNull(sort, "sort");
@@ -307,6 +325,7 @@ public class ListUnifiedWebhooksRequest {
         return this;
     }
 
+
     /**
      * Return only results whose updated date is equal or greater to this value
      */
@@ -316,7 +335,6 @@ public class ListUnifiedWebhooksRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -342,15 +360,9 @@ public class ListUnifiedWebhooksRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId,
-            createdLte,
-            env,
-            integrationType,
-            limit,
-            object,
-            offset,
-            order,
-            sort,
+            connectionId, createdLte, env,
+            integrationType, limit, object,
+            offset, order, sort,
             updatedGte);
     }
     
@@ -368,32 +380,34 @@ public class ListUnifiedWebhooksRequest {
                 "sort", sort,
                 "updatedGte", updatedGte);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> connectionId = Optional.empty();
- 
+
         private Optional<String> createdLte = Optional.empty();
- 
+
         private Optional<String> env = Optional.empty();
- 
+
         private Optional<String> integrationType = Optional.empty();
- 
+
         private Optional<Double> limit = Optional.empty();
- 
+
         private Optional<String> object = Optional.empty();
- 
+
         private Optional<Double> offset = Optional.empty();
- 
+
         private Optional<String> order = Optional.empty();
- 
+
         private Optional<String> sort = Optional.empty();
- 
+
         private Optional<String> updatedGte = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * Filter the results to just this integration
@@ -413,6 +427,7 @@ public class ListUnifiedWebhooksRequest {
             return this;
         }
 
+
         /**
          * Return only results whose created date is equal or less to this value
          */
@@ -431,6 +446,7 @@ public class ListUnifiedWebhooksRequest {
             return this;
         }
 
+
         public Builder env(String env) {
             Utils.checkNotNull(env, "env");
             this.env = Optional.ofNullable(env);
@@ -442,6 +458,7 @@ public class ListUnifiedWebhooksRequest {
             this.env = env;
             return this;
         }
+
 
         /**
          * Filter the results to just this integration
@@ -461,6 +478,7 @@ public class ListUnifiedWebhooksRequest {
             return this;
         }
 
+
         public Builder limit(double limit) {
             Utils.checkNotNull(limit, "limit");
             this.limit = Optional.ofNullable(limit);
@@ -472,6 +490,7 @@ public class ListUnifiedWebhooksRequest {
             this.limit = limit;
             return this;
         }
+
 
         /**
          * Filter the results for webhooks for only this object
@@ -491,6 +510,7 @@ public class ListUnifiedWebhooksRequest {
             return this;
         }
 
+
         public Builder offset(double offset) {
             Utils.checkNotNull(offset, "offset");
             this.offset = Optional.ofNullable(offset);
@@ -502,6 +522,7 @@ public class ListUnifiedWebhooksRequest {
             this.offset = offset;
             return this;
         }
+
 
         public Builder order(String order) {
             Utils.checkNotNull(order, "order");
@@ -515,6 +536,7 @@ public class ListUnifiedWebhooksRequest {
             return this;
         }
 
+
         public Builder sort(String sort) {
             Utils.checkNotNull(sort, "sort");
             this.sort = Optional.ofNullable(sort);
@@ -526,6 +548,7 @@ public class ListUnifiedWebhooksRequest {
             this.sort = sort;
             return this;
         }
+
 
         /**
          * Return only results whose updated date is equal or greater to this value
@@ -544,19 +567,15 @@ public class ListUnifiedWebhooksRequest {
             this.updatedGte = updatedGte;
             return this;
         }
-        
+
         public ListUnifiedWebhooksRequest build() {
+
             return new ListUnifiedWebhooksRequest(
-                connectionId,
-                createdLte,
-                env,
-                integrationType,
-                limit,
-                object,
-                offset,
-                order,
-                sort,
+                connectionId, createdLte, env,
+                integrationType, limit, object,
+                offset, order, sort,
                 updatedGte);
         }
+
     }
 }

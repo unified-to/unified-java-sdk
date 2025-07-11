@@ -28,7 +28,7 @@ public class ListAccountingPurchaseordersRequestBuilder {
     public ListAccountingPurchaseordersResponse call() throws Exception {
         
         RequestOperation<ListAccountingPurchaseordersRequest, ListAccountingPurchaseordersResponse> operation
-              = new ListAccountingPurchaseordersOperation( sdkConfiguration);
+              = new ListAccountingPurchaseordersOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

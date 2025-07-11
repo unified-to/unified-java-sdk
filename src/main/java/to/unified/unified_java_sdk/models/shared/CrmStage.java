@@ -16,31 +16,38 @@ import java.time.OffsetDateTime;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class CrmStage {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     private Optional<Boolean> active;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deal_probability")
     private Optional<Double> dealProbability;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_order")
     private Optional<Double> displayOrder;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -72,7 +79,9 @@ public class CrmStage {
     }
     
     public CrmStage() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -110,15 +119,17 @@ public class CrmStage {
         return updatedAt;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public CrmStage withActive(boolean active) {
         Utils.checkNotNull(active, "active");
         this.active = Optional.ofNullable(active);
         return this;
     }
+
 
     public CrmStage withActive(Optional<Boolean> active) {
         Utils.checkNotNull(active, "active");
@@ -132,6 +143,7 @@ public class CrmStage {
         return this;
     }
 
+
     public CrmStage withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
@@ -143,6 +155,7 @@ public class CrmStage {
         this.dealProbability = Optional.ofNullable(dealProbability);
         return this;
     }
+
 
     public CrmStage withDealProbability(Optional<Double> dealProbability) {
         Utils.checkNotNull(dealProbability, "dealProbability");
@@ -156,6 +169,7 @@ public class CrmStage {
         return this;
     }
 
+
     public CrmStage withDisplayOrder(Optional<Double> displayOrder) {
         Utils.checkNotNull(displayOrder, "displayOrder");
         this.displayOrder = displayOrder;
@@ -167,6 +181,7 @@ public class CrmStage {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public CrmStage withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -180,6 +195,7 @@ public class CrmStage {
         return this;
     }
 
+
     public CrmStage withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
         this.name = name;
@@ -192,13 +208,13 @@ public class CrmStage {
         return this;
     }
 
+
     public CrmStage withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -221,12 +237,8 @@ public class CrmStage {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            active,
-            createdAt,
-            dealProbability,
-            displayOrder,
-            id,
-            name,
+            active, createdAt, dealProbability,
+            displayOrder, id, name,
             updatedAt);
     }
     
@@ -241,26 +253,28 @@ public class CrmStage {
                 "name", name,
                 "updatedAt", updatedAt);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<Boolean> active = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<Double> dealProbability = Optional.empty();
- 
+
         private Optional<Double> displayOrder = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder active(boolean active) {
             Utils.checkNotNull(active, "active");
@@ -274,6 +288,7 @@ public class CrmStage {
             return this;
         }
 
+
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
@@ -285,6 +300,7 @@ public class CrmStage {
             this.createdAt = createdAt;
             return this;
         }
+
 
         public Builder dealProbability(double dealProbability) {
             Utils.checkNotNull(dealProbability, "dealProbability");
@@ -298,6 +314,7 @@ public class CrmStage {
             return this;
         }
 
+
         public Builder displayOrder(double displayOrder) {
             Utils.checkNotNull(displayOrder, "displayOrder");
             this.displayOrder = Optional.ofNullable(displayOrder);
@@ -309,6 +326,7 @@ public class CrmStage {
             this.displayOrder = displayOrder;
             return this;
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -322,6 +340,7 @@ public class CrmStage {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = Optional.ofNullable(name);
@@ -334,6 +353,7 @@ public class CrmStage {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -345,16 +365,14 @@ public class CrmStage {
             this.updatedAt = updatedAt;
             return this;
         }
-        
+
         public CrmStage build() {
+
             return new CrmStage(
-                active,
-                createdAt,
-                dealProbability,
-                displayOrder,
-                id,
-                name,
+                active, createdAt, dealProbability,
+                displayOrder, id, name,
                 updatedAt);
         }
+
     }
 }

@@ -17,8 +17,8 @@ import to.unified.unified_java_sdk.models.shared.TicketingCustomer;
 import to.unified.unified_java_sdk.utils.Response;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class ListTicketingCustomersResponse implements Response {
 
+public class ListTicketingCustomersResponse implements Response {
     /**
      * HTTP response content type for this operation
      */
@@ -59,7 +59,8 @@ public class ListTicketingCustomersResponse implements Response {
             String contentType,
             int statusCode,
             HttpResponse<InputStream> rawResponse) {
-        this(contentType, statusCode, rawResponse, Optional.empty());
+        this(contentType, statusCode, rawResponse,
+            Optional.empty());
     }
 
     /**
@@ -95,9 +96,10 @@ public class ListTicketingCustomersResponse implements Response {
         return (Optional<List<TicketingCustomer>>) ticketingCustomers;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * HTTP response content type for this operation
@@ -135,6 +137,7 @@ public class ListTicketingCustomersResponse implements Response {
         return this;
     }
 
+
     /**
      * Successful
      */
@@ -144,7 +147,6 @@ public class ListTicketingCustomersResponse implements Response {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -164,9 +166,7 @@ public class ListTicketingCustomersResponse implements Response {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            contentType,
-            statusCode,
-            rawResponse,
+            contentType, statusCode, rawResponse,
             ticketingCustomers);
     }
     
@@ -178,20 +178,22 @@ public class ListTicketingCustomersResponse implements Response {
                 "rawResponse", rawResponse,
                 "ticketingCustomers", ticketingCustomers);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private String contentType;
- 
+
         private Integer statusCode;
- 
+
         private HttpResponse<InputStream> rawResponse;
- 
+
         private Optional<? extends List<TicketingCustomer>> ticketingCustomers = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * HTTP response content type for this operation
@@ -202,6 +204,7 @@ public class ListTicketingCustomersResponse implements Response {
             return this;
         }
 
+
         /**
          * HTTP response status code for this operation
          */
@@ -211,6 +214,7 @@ public class ListTicketingCustomersResponse implements Response {
             return this;
         }
 
+
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
@@ -219,6 +223,7 @@ public class ListTicketingCustomersResponse implements Response {
             this.rawResponse = rawResponse;
             return this;
         }
+
 
         /**
          * Successful
@@ -237,13 +242,13 @@ public class ListTicketingCustomersResponse implements Response {
             this.ticketingCustomers = ticketingCustomers;
             return this;
         }
-        
+
         public ListTicketingCustomersResponse build() {
+
             return new ListTicketingCustomersResponse(
-                contentType,
-                statusCode,
-                rawResponse,
+                contentType, statusCode, rawResponse,
                 ticketingCustomers);
         }
+
     }
 }

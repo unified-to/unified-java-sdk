@@ -28,7 +28,7 @@ public class RemoveUcContactRequestBuilder {
     public RemoveUcContactResponse call() throws Exception {
         
         RequestOperation<RemoveUcContactRequest, RemoveUcContactResponse> operation
-              = new RemoveUcContactOperation( sdkConfiguration);
+              = new RemoveUcContactOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -20,7 +20,6 @@ public class Issue {
     Issue(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * List support issues
      * 
@@ -37,10 +36,9 @@ public class Issue {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListUnifiedIssuesResponse listUnifiedIssues(
-            ListUnifiedIssuesRequest request) throws Exception {
+    public ListUnifiedIssuesResponse listUnifiedIssues(ListUnifiedIssuesRequest request) throws Exception {
         RequestOperation<ListUnifiedIssuesRequest, ListUnifiedIssuesResponse> operation
-              = new ListUnifiedIssuesOperation( sdkConfiguration);
+              = new ListUnifiedIssuesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

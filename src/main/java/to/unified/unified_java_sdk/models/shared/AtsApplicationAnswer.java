@@ -11,10 +11,12 @@ import java.lang.String;
 import java.util.List;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AtsApplicationAnswer {
 
     @JsonProperty("answers")
     private List<String> answers;
+
 
     @JsonProperty("question_id")
     private String questionId;
@@ -39,9 +41,10 @@ public class AtsApplicationAnswer {
         return questionId;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AtsApplicationAnswer withAnswers(List<String> answers) {
         Utils.checkNotNull(answers, "answers");
@@ -55,7 +58,6 @@ public class AtsApplicationAnswer {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -73,8 +75,7 @@ public class AtsApplicationAnswer {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            answers,
-            questionId);
+            answers, questionId);
     }
     
     @Override
@@ -83,16 +84,18 @@ public class AtsApplicationAnswer {
                 "answers", answers,
                 "questionId", questionId);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private List<String> answers;
- 
+
         private String questionId;
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder answers(List<String> answers) {
             Utils.checkNotNull(answers, "answers");
@@ -100,16 +103,18 @@ public class AtsApplicationAnswer {
             return this;
         }
 
+
         public Builder questionId(String questionId) {
             Utils.checkNotNull(questionId, "questionId");
             this.questionId = questionId;
             return this;
         }
-        
+
         public AtsApplicationAnswer build() {
+
             return new AtsApplicationAnswer(
-                answers,
-                questionId);
+                answers, questionId);
         }
+
     }
 }

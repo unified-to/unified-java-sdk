@@ -28,7 +28,7 @@ public class CreateAtsCompanyRequestBuilder {
     public CreateAtsCompanyResponse call() throws Exception {
         
         RequestOperation<CreateAtsCompanyRequest, CreateAtsCompanyResponse> operation
-              = new CreateAtsCompanyOperation( sdkConfiguration);
+              = new CreateAtsCompanyOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

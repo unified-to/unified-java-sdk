@@ -15,18 +15,22 @@ import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class CommerceItemOption {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonProperty("name")
     private String name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     private Optional<Double> position;
+
 
     @JsonProperty("values")
     private List<String> values;
@@ -50,7 +54,8 @@ public class CommerceItemOption {
     public CommerceItemOption(
             String name,
             List<String> values) {
-        this(Optional.empty(), name, Optional.empty(), values);
+        this(Optional.empty(), name, Optional.empty(),
+            values);
     }
 
     @JsonIgnore
@@ -73,15 +78,17 @@ public class CommerceItemOption {
         return values;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public CommerceItemOption withId(String id) {
         Utils.checkNotNull(id, "id");
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public CommerceItemOption withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -101,6 +108,7 @@ public class CommerceItemOption {
         return this;
     }
 
+
     public CommerceItemOption withPosition(Optional<Double> position) {
         Utils.checkNotNull(position, "position");
         this.position = position;
@@ -113,7 +121,6 @@ public class CommerceItemOption {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -133,9 +140,7 @@ public class CommerceItemOption {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            id,
-            name,
-            position,
+            id, name, position,
             values);
     }
     
@@ -147,20 +152,22 @@ public class CommerceItemOption {
                 "position", position,
                 "values", values);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private String name;
- 
+
         private Optional<Double> position = Optional.empty();
- 
+
         private List<String> values;
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -174,11 +181,13 @@ public class CommerceItemOption {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = name;
             return this;
         }
+
 
         public Builder position(double position) {
             Utils.checkNotNull(position, "position");
@@ -192,18 +201,19 @@ public class CommerceItemOption {
             return this;
         }
 
+
         public Builder values(List<String> values) {
             Utils.checkNotNull(values, "values");
             this.values = values;
             return this;
         }
-        
+
         public CommerceItemOption build() {
+
             return new CommerceItemOption(
-                id,
-                name,
-                position,
+                id, name, position,
                 values);
         }
+
     }
 }

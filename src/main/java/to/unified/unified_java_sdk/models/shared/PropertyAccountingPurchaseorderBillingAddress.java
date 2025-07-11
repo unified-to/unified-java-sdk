@@ -13,35 +13,43 @@ import java.lang.String;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class PropertyAccountingPurchaseorderBillingAddress {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address1")
     private Optional<String> address1;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address2")
     private Optional<String> address2;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     private Optional<String> city;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     private Optional<String> country;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country_code")
     private Optional<String> countryCode;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postal_code")
     private Optional<String> postalCode;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     private Optional<String> region;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region_code")
@@ -76,7 +84,9 @@ public class PropertyAccountingPurchaseorderBillingAddress {
     }
     
     public PropertyAccountingPurchaseorderBillingAddress() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -119,15 +129,17 @@ public class PropertyAccountingPurchaseorderBillingAddress {
         return regionCode;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public PropertyAccountingPurchaseorderBillingAddress withAddress1(String address1) {
         Utils.checkNotNull(address1, "address1");
         this.address1 = Optional.ofNullable(address1);
         return this;
     }
+
 
     public PropertyAccountingPurchaseorderBillingAddress withAddress1(Optional<String> address1) {
         Utils.checkNotNull(address1, "address1");
@@ -141,6 +153,7 @@ public class PropertyAccountingPurchaseorderBillingAddress {
         return this;
     }
 
+
     public PropertyAccountingPurchaseorderBillingAddress withAddress2(Optional<String> address2) {
         Utils.checkNotNull(address2, "address2");
         this.address2 = address2;
@@ -152,6 +165,7 @@ public class PropertyAccountingPurchaseorderBillingAddress {
         this.city = Optional.ofNullable(city);
         return this;
     }
+
 
     public PropertyAccountingPurchaseorderBillingAddress withCity(Optional<String> city) {
         Utils.checkNotNull(city, "city");
@@ -165,6 +179,7 @@ public class PropertyAccountingPurchaseorderBillingAddress {
         return this;
     }
 
+
     public PropertyAccountingPurchaseorderBillingAddress withCountry(Optional<String> country) {
         Utils.checkNotNull(country, "country");
         this.country = country;
@@ -176,6 +191,7 @@ public class PropertyAccountingPurchaseorderBillingAddress {
         this.countryCode = Optional.ofNullable(countryCode);
         return this;
     }
+
 
     public PropertyAccountingPurchaseorderBillingAddress withCountryCode(Optional<String> countryCode) {
         Utils.checkNotNull(countryCode, "countryCode");
@@ -189,6 +205,7 @@ public class PropertyAccountingPurchaseorderBillingAddress {
         return this;
     }
 
+
     public PropertyAccountingPurchaseorderBillingAddress withPostalCode(Optional<String> postalCode) {
         Utils.checkNotNull(postalCode, "postalCode");
         this.postalCode = postalCode;
@@ -200,6 +217,7 @@ public class PropertyAccountingPurchaseorderBillingAddress {
         this.region = Optional.ofNullable(region);
         return this;
     }
+
 
     public PropertyAccountingPurchaseorderBillingAddress withRegion(Optional<String> region) {
         Utils.checkNotNull(region, "region");
@@ -213,13 +231,13 @@ public class PropertyAccountingPurchaseorderBillingAddress {
         return this;
     }
 
+
     public PropertyAccountingPurchaseorderBillingAddress withRegionCode(Optional<String> regionCode) {
         Utils.checkNotNull(regionCode, "regionCode");
         this.regionCode = regionCode;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -243,14 +261,9 @@ public class PropertyAccountingPurchaseorderBillingAddress {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            address1,
-            address2,
-            city,
-            country,
-            countryCode,
-            postalCode,
-            region,
-            regionCode);
+            address1, address2, city,
+            country, countryCode, postalCode,
+            region, regionCode);
     }
     
     @Override
@@ -265,28 +278,30 @@ public class PropertyAccountingPurchaseorderBillingAddress {
                 "region", region,
                 "regionCode", regionCode);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> address1 = Optional.empty();
- 
+
         private Optional<String> address2 = Optional.empty();
- 
+
         private Optional<String> city = Optional.empty();
- 
+
         private Optional<String> country = Optional.empty();
- 
+
         private Optional<String> countryCode = Optional.empty();
- 
+
         private Optional<String> postalCode = Optional.empty();
- 
+
         private Optional<String> region = Optional.empty();
- 
+
         private Optional<String> regionCode = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder address1(String address1) {
             Utils.checkNotNull(address1, "address1");
@@ -300,6 +315,7 @@ public class PropertyAccountingPurchaseorderBillingAddress {
             return this;
         }
 
+
         public Builder address2(String address2) {
             Utils.checkNotNull(address2, "address2");
             this.address2 = Optional.ofNullable(address2);
@@ -311,6 +327,7 @@ public class PropertyAccountingPurchaseorderBillingAddress {
             this.address2 = address2;
             return this;
         }
+
 
         public Builder city(String city) {
             Utils.checkNotNull(city, "city");
@@ -324,6 +341,7 @@ public class PropertyAccountingPurchaseorderBillingAddress {
             return this;
         }
 
+
         public Builder country(String country) {
             Utils.checkNotNull(country, "country");
             this.country = Optional.ofNullable(country);
@@ -335,6 +353,7 @@ public class PropertyAccountingPurchaseorderBillingAddress {
             this.country = country;
             return this;
         }
+
 
         public Builder countryCode(String countryCode) {
             Utils.checkNotNull(countryCode, "countryCode");
@@ -348,6 +367,7 @@ public class PropertyAccountingPurchaseorderBillingAddress {
             return this;
         }
 
+
         public Builder postalCode(String postalCode) {
             Utils.checkNotNull(postalCode, "postalCode");
             this.postalCode = Optional.ofNullable(postalCode);
@@ -359,6 +379,7 @@ public class PropertyAccountingPurchaseorderBillingAddress {
             this.postalCode = postalCode;
             return this;
         }
+
 
         public Builder region(String region) {
             Utils.checkNotNull(region, "region");
@@ -372,6 +393,7 @@ public class PropertyAccountingPurchaseorderBillingAddress {
             return this;
         }
 
+
         public Builder regionCode(String regionCode) {
             Utils.checkNotNull(regionCode, "regionCode");
             this.regionCode = Optional.ofNullable(regionCode);
@@ -383,17 +405,14 @@ public class PropertyAccountingPurchaseorderBillingAddress {
             this.regionCode = regionCode;
             return this;
         }
-        
+
         public PropertyAccountingPurchaseorderBillingAddress build() {
+
             return new PropertyAccountingPurchaseorderBillingAddress(
-                address1,
-                address2,
-                city,
-                country,
-                countryCode,
-                postalCode,
-                region,
-                regionCode);
+                address1, address2, city,
+                country, countryCode, postalCode,
+                region, regionCode);
         }
+
     }
 }

@@ -20,58 +20,72 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class CommerceReview {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author_avatar_url")
     private Optional<String> authorAvatarUrl;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author_email")
     private Optional<String> authorEmail;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author_location")
     private Optional<String> authorLocation;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author_name")
     private Optional<String> authorName;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     private Optional<? extends List<CommerceReviewComment>> comments;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     private Optional<String> content;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("helpful_votes")
     private Optional<Double> helpfulVotes;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_featured")
     private Optional<Boolean> isFeatured;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_public")
     private Optional<Boolean> isPublic;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_verified")
     private Optional<Boolean> isVerified;
 
+
     @JsonProperty("item_id")
     private String itemId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_variant_id")
@@ -84,33 +98,41 @@ public class CommerceReview {
     @JsonProperty("media")
     private Optional<? extends List<CommerceItemMedia>> media;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     private Optional<? extends List<CommerceMetadata>> metadata;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rating")
     private Optional<Double> rating;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private Optional<? extends CommerceReviewStatus> status;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     private Optional<String> title;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unhelpful_votes")
     private Optional<Double> unhelpfulVotes;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verified_purchase")
@@ -191,7 +213,14 @@ public class CommerceReview {
     
     public CommerceReview(
             String itemId) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), itemId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            itemId, Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -317,15 +346,17 @@ public class CommerceReview {
         return verifiedPurchase;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public CommerceReview withAuthorAvatarUrl(String authorAvatarUrl) {
         Utils.checkNotNull(authorAvatarUrl, "authorAvatarUrl");
         this.authorAvatarUrl = Optional.ofNullable(authorAvatarUrl);
         return this;
     }
+
 
     public CommerceReview withAuthorAvatarUrl(Optional<String> authorAvatarUrl) {
         Utils.checkNotNull(authorAvatarUrl, "authorAvatarUrl");
@@ -339,6 +370,7 @@ public class CommerceReview {
         return this;
     }
 
+
     public CommerceReview withAuthorEmail(Optional<String> authorEmail) {
         Utils.checkNotNull(authorEmail, "authorEmail");
         this.authorEmail = authorEmail;
@@ -350,6 +382,7 @@ public class CommerceReview {
         this.authorLocation = Optional.ofNullable(authorLocation);
         return this;
     }
+
 
     public CommerceReview withAuthorLocation(Optional<String> authorLocation) {
         Utils.checkNotNull(authorLocation, "authorLocation");
@@ -363,6 +396,7 @@ public class CommerceReview {
         return this;
     }
 
+
     public CommerceReview withAuthorName(Optional<String> authorName) {
         Utils.checkNotNull(authorName, "authorName");
         this.authorName = authorName;
@@ -374,6 +408,7 @@ public class CommerceReview {
         this.comments = Optional.ofNullable(comments);
         return this;
     }
+
 
     public CommerceReview withComments(Optional<? extends List<CommerceReviewComment>> comments) {
         Utils.checkNotNull(comments, "comments");
@@ -387,6 +422,7 @@ public class CommerceReview {
         return this;
     }
 
+
     public CommerceReview withContent(Optional<String> content) {
         Utils.checkNotNull(content, "content");
         this.content = content;
@@ -398,6 +434,7 @@ public class CommerceReview {
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public CommerceReview withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -411,6 +448,7 @@ public class CommerceReview {
         return this;
     }
 
+
     public CommerceReview withHelpfulVotes(Optional<Double> helpfulVotes) {
         Utils.checkNotNull(helpfulVotes, "helpfulVotes");
         this.helpfulVotes = helpfulVotes;
@@ -422,6 +460,7 @@ public class CommerceReview {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public CommerceReview withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -435,6 +474,7 @@ public class CommerceReview {
         return this;
     }
 
+
     public CommerceReview withIsFeatured(Optional<Boolean> isFeatured) {
         Utils.checkNotNull(isFeatured, "isFeatured");
         this.isFeatured = isFeatured;
@@ -447,6 +487,7 @@ public class CommerceReview {
         return this;
     }
 
+
     public CommerceReview withIsPublic(Optional<Boolean> isPublic) {
         Utils.checkNotNull(isPublic, "isPublic");
         this.isPublic = isPublic;
@@ -458,6 +499,7 @@ public class CommerceReview {
         this.isVerified = Optional.ofNullable(isVerified);
         return this;
     }
+
 
     public CommerceReview withIsVerified(Optional<Boolean> isVerified) {
         Utils.checkNotNull(isVerified, "isVerified");
@@ -477,6 +519,7 @@ public class CommerceReview {
         return this;
     }
 
+
     public CommerceReview withItemVariantId(Optional<String> itemVariantId) {
         Utils.checkNotNull(itemVariantId, "itemVariantId");
         this.itemVariantId = itemVariantId;
@@ -491,6 +534,7 @@ public class CommerceReview {
         this.media = Optional.ofNullable(media);
         return this;
     }
+
 
     /**
      * Photosvideos attached to the review
@@ -507,6 +551,7 @@ public class CommerceReview {
         return this;
     }
 
+
     public CommerceReview withMetadata(Optional<? extends List<CommerceMetadata>> metadata) {
         Utils.checkNotNull(metadata, "metadata");
         this.metadata = metadata;
@@ -518,6 +563,7 @@ public class CommerceReview {
         this.rating = Optional.ofNullable(rating);
         return this;
     }
+
 
     public CommerceReview withRating(Optional<Double> rating) {
         Utils.checkNotNull(rating, "rating");
@@ -531,6 +577,7 @@ public class CommerceReview {
         return this;
     }
 
+
     public CommerceReview withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
@@ -542,6 +589,7 @@ public class CommerceReview {
         this.status = Optional.ofNullable(status);
         return this;
     }
+
 
     public CommerceReview withStatus(Optional<? extends CommerceReviewStatus> status) {
         Utils.checkNotNull(status, "status");
@@ -555,6 +603,7 @@ public class CommerceReview {
         return this;
     }
 
+
     public CommerceReview withTitle(Optional<String> title) {
         Utils.checkNotNull(title, "title");
         this.title = title;
@@ -566,6 +615,7 @@ public class CommerceReview {
         this.unhelpfulVotes = Optional.ofNullable(unhelpfulVotes);
         return this;
     }
+
 
     public CommerceReview withUnhelpfulVotes(Optional<Double> unhelpfulVotes) {
         Utils.checkNotNull(unhelpfulVotes, "unhelpfulVotes");
@@ -579,6 +629,7 @@ public class CommerceReview {
         return this;
     }
 
+
     public CommerceReview withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
@@ -591,13 +642,13 @@ public class CommerceReview {
         return this;
     }
 
+
     public CommerceReview withVerifiedPurchase(Optional<Boolean> verifiedPurchase) {
         Utils.checkNotNull(verifiedPurchase, "verifiedPurchase");
         this.verifiedPurchase = verifiedPurchase;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -636,29 +687,14 @@ public class CommerceReview {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            authorAvatarUrl,
-            authorEmail,
-            authorLocation,
-            authorName,
-            comments,
-            content,
-            createdAt,
-            helpfulVotes,
-            id,
-            isFeatured,
-            isPublic,
-            isVerified,
-            itemId,
-            itemVariantId,
-            media,
-            metadata,
-            rating,
-            raw,
-            status,
-            title,
-            unhelpfulVotes,
-            updatedAt,
-            verifiedPurchase);
+            authorAvatarUrl, authorEmail, authorLocation,
+            authorName, comments, content,
+            createdAt, helpfulVotes, id,
+            isFeatured, isPublic, isVerified,
+            itemId, itemVariantId, media,
+            metadata, rating, raw,
+            status, title, unhelpfulVotes,
+            updatedAt, verifiedPurchase);
     }
     
     @Override
@@ -688,58 +724,60 @@ public class CommerceReview {
                 "updatedAt", updatedAt,
                 "verifiedPurchase", verifiedPurchase);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> authorAvatarUrl = Optional.empty();
- 
+
         private Optional<String> authorEmail = Optional.empty();
- 
+
         private Optional<String> authorLocation = Optional.empty();
- 
+
         private Optional<String> authorName = Optional.empty();
- 
+
         private Optional<? extends List<CommerceReviewComment>> comments = Optional.empty();
- 
+
         private Optional<String> content = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<Double> helpfulVotes = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<Boolean> isFeatured = Optional.empty();
- 
+
         private Optional<Boolean> isPublic = Optional.empty();
- 
+
         private Optional<Boolean> isVerified = Optional.empty();
- 
+
         private String itemId;
- 
+
         private Optional<String> itemVariantId = Optional.empty();
- 
+
         private Optional<? extends List<CommerceItemMedia>> media = Optional.empty();
- 
+
         private Optional<? extends List<CommerceMetadata>> metadata = Optional.empty();
- 
+
         private Optional<Double> rating = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<? extends CommerceReviewStatus> status = Optional.empty();
- 
+
         private Optional<String> title = Optional.empty();
- 
+
         private Optional<Double> unhelpfulVotes = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<Boolean> verifiedPurchase = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder authorAvatarUrl(String authorAvatarUrl) {
             Utils.checkNotNull(authorAvatarUrl, "authorAvatarUrl");
@@ -753,6 +791,7 @@ public class CommerceReview {
             return this;
         }
 
+
         public Builder authorEmail(String authorEmail) {
             Utils.checkNotNull(authorEmail, "authorEmail");
             this.authorEmail = Optional.ofNullable(authorEmail);
@@ -764,6 +803,7 @@ public class CommerceReview {
             this.authorEmail = authorEmail;
             return this;
         }
+
 
         public Builder authorLocation(String authorLocation) {
             Utils.checkNotNull(authorLocation, "authorLocation");
@@ -777,6 +817,7 @@ public class CommerceReview {
             return this;
         }
 
+
         public Builder authorName(String authorName) {
             Utils.checkNotNull(authorName, "authorName");
             this.authorName = Optional.ofNullable(authorName);
@@ -788,6 +829,7 @@ public class CommerceReview {
             this.authorName = authorName;
             return this;
         }
+
 
         public Builder comments(List<CommerceReviewComment> comments) {
             Utils.checkNotNull(comments, "comments");
@@ -801,6 +843,7 @@ public class CommerceReview {
             return this;
         }
 
+
         public Builder content(String content) {
             Utils.checkNotNull(content, "content");
             this.content = Optional.ofNullable(content);
@@ -812,6 +855,7 @@ public class CommerceReview {
             this.content = content;
             return this;
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -825,6 +869,7 @@ public class CommerceReview {
             return this;
         }
 
+
         public Builder helpfulVotes(double helpfulVotes) {
             Utils.checkNotNull(helpfulVotes, "helpfulVotes");
             this.helpfulVotes = Optional.ofNullable(helpfulVotes);
@@ -836,6 +881,7 @@ public class CommerceReview {
             this.helpfulVotes = helpfulVotes;
             return this;
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -849,6 +895,7 @@ public class CommerceReview {
             return this;
         }
 
+
         public Builder isFeatured(boolean isFeatured) {
             Utils.checkNotNull(isFeatured, "isFeatured");
             this.isFeatured = Optional.ofNullable(isFeatured);
@@ -860,6 +907,7 @@ public class CommerceReview {
             this.isFeatured = isFeatured;
             return this;
         }
+
 
         public Builder isPublic(boolean isPublic) {
             Utils.checkNotNull(isPublic, "isPublic");
@@ -873,6 +921,7 @@ public class CommerceReview {
             return this;
         }
 
+
         public Builder isVerified(boolean isVerified) {
             Utils.checkNotNull(isVerified, "isVerified");
             this.isVerified = Optional.ofNullable(isVerified);
@@ -885,11 +934,13 @@ public class CommerceReview {
             return this;
         }
 
+
         public Builder itemId(String itemId) {
             Utils.checkNotNull(itemId, "itemId");
             this.itemId = itemId;
             return this;
         }
+
 
         public Builder itemVariantId(String itemVariantId) {
             Utils.checkNotNull(itemVariantId, "itemVariantId");
@@ -902,6 +953,7 @@ public class CommerceReview {
             this.itemVariantId = itemVariantId;
             return this;
         }
+
 
         /**
          * Photosvideos attached to the review
@@ -921,6 +973,7 @@ public class CommerceReview {
             return this;
         }
 
+
         public Builder metadata(List<CommerceMetadata> metadata) {
             Utils.checkNotNull(metadata, "metadata");
             this.metadata = Optional.ofNullable(metadata);
@@ -932,6 +985,7 @@ public class CommerceReview {
             this.metadata = metadata;
             return this;
         }
+
 
         public Builder rating(double rating) {
             Utils.checkNotNull(rating, "rating");
@@ -945,6 +999,7 @@ public class CommerceReview {
             return this;
         }
 
+
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
@@ -956,6 +1011,7 @@ public class CommerceReview {
             this.raw = raw;
             return this;
         }
+
 
         public Builder status(CommerceReviewStatus status) {
             Utils.checkNotNull(status, "status");
@@ -969,6 +1025,7 @@ public class CommerceReview {
             return this;
         }
 
+
         public Builder title(String title) {
             Utils.checkNotNull(title, "title");
             this.title = Optional.ofNullable(title);
@@ -980,6 +1037,7 @@ public class CommerceReview {
             this.title = title;
             return this;
         }
+
 
         public Builder unhelpfulVotes(double unhelpfulVotes) {
             Utils.checkNotNull(unhelpfulVotes, "unhelpfulVotes");
@@ -993,6 +1051,7 @@ public class CommerceReview {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -1005,6 +1064,7 @@ public class CommerceReview {
             return this;
         }
 
+
         public Builder verifiedPurchase(boolean verifiedPurchase) {
             Utils.checkNotNull(verifiedPurchase, "verifiedPurchase");
             this.verifiedPurchase = Optional.ofNullable(verifiedPurchase);
@@ -1016,32 +1076,19 @@ public class CommerceReview {
             this.verifiedPurchase = verifiedPurchase;
             return this;
         }
-        
+
         public CommerceReview build() {
+
             return new CommerceReview(
-                authorAvatarUrl,
-                authorEmail,
-                authorLocation,
-                authorName,
-                comments,
-                content,
-                createdAt,
-                helpfulVotes,
-                id,
-                isFeatured,
-                isPublic,
-                isVerified,
-                itemId,
-                itemVariantId,
-                media,
-                metadata,
-                rating,
-                raw,
-                status,
-                title,
-                unhelpfulVotes,
-                updatedAt,
-                verifiedPurchase);
+                authorAvatarUrl, authorEmail, authorLocation,
+                authorName, comments, content,
+                createdAt, helpfulVotes, id,
+                isFeatured, isPublic, isVerified,
+                itemId, itemVariantId, media,
+                metadata, rating, raw,
+                status, title, unhelpfulVotes,
+                updatedAt, verifiedPurchase);
         }
+
     }
 }

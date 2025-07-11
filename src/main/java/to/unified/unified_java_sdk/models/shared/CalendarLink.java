@@ -18,47 +18,58 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class CalendarLink {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<String> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private Optional<String> description;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     private Optional<Double> duration;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     private Optional<Boolean> isActive;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price_amount")
     private Optional<Double> priceAmount;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price_currency")
     private Optional<String> priceCurrency;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<String> updatedAt;
+
 
     @JsonProperty("url")
     private String url;
@@ -102,7 +113,10 @@ public class CalendarLink {
     
     public CalendarLink(
             String url) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), url);
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), url);
     }
 
     @JsonIgnore
@@ -161,15 +175,17 @@ public class CalendarLink {
         return url;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public CalendarLink withCreatedAt(String createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public CalendarLink withCreatedAt(Optional<String> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -183,6 +199,7 @@ public class CalendarLink {
         return this;
     }
 
+
     public CalendarLink withDescription(Optional<String> description) {
         Utils.checkNotNull(description, "description");
         this.description = description;
@@ -194,6 +211,7 @@ public class CalendarLink {
         this.duration = Optional.ofNullable(duration);
         return this;
     }
+
 
     public CalendarLink withDuration(Optional<Double> duration) {
         Utils.checkNotNull(duration, "duration");
@@ -207,6 +225,7 @@ public class CalendarLink {
         return this;
     }
 
+
     public CalendarLink withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -218,6 +237,7 @@ public class CalendarLink {
         this.isActive = Optional.ofNullable(isActive);
         return this;
     }
+
 
     public CalendarLink withIsActive(Optional<Boolean> isActive) {
         Utils.checkNotNull(isActive, "isActive");
@@ -231,6 +251,7 @@ public class CalendarLink {
         return this;
     }
 
+
     public CalendarLink withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
         this.name = name;
@@ -242,6 +263,7 @@ public class CalendarLink {
         this.priceAmount = Optional.ofNullable(priceAmount);
         return this;
     }
+
 
     public CalendarLink withPriceAmount(Optional<Double> priceAmount) {
         Utils.checkNotNull(priceAmount, "priceAmount");
@@ -255,6 +277,7 @@ public class CalendarLink {
         return this;
     }
 
+
     public CalendarLink withPriceCurrency(Optional<String> priceCurrency) {
         Utils.checkNotNull(priceCurrency, "priceCurrency");
         this.priceCurrency = priceCurrency;
@@ -266,6 +289,7 @@ public class CalendarLink {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public CalendarLink withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -279,6 +303,7 @@ public class CalendarLink {
         return this;
     }
 
+
     public CalendarLink withUpdatedAt(Optional<String> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
@@ -291,7 +316,6 @@ public class CalendarLink {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -318,17 +342,10 @@ public class CalendarLink {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt,
-            description,
-            duration,
-            id,
-            isActive,
-            name,
-            priceAmount,
-            priceCurrency,
-            raw,
-            updatedAt,
-            url);
+            createdAt, description, duration,
+            id, isActive, name,
+            priceAmount, priceCurrency, raw,
+            updatedAt, url);
     }
     
     @Override
@@ -346,34 +363,36 @@ public class CalendarLink {
                 "updatedAt", updatedAt,
                 "url", url);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> createdAt = Optional.empty();
- 
+
         private Optional<String> description = Optional.empty();
- 
+
         private Optional<Double> duration = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<Boolean> isActive = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<Double> priceAmount = Optional.empty();
- 
+
         private Optional<String> priceCurrency = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<String> updatedAt = Optional.empty();
- 
+
         private String url;
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder createdAt(String createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -387,6 +406,7 @@ public class CalendarLink {
             return this;
         }
 
+
         public Builder description(String description) {
             Utils.checkNotNull(description, "description");
             this.description = Optional.ofNullable(description);
@@ -398,6 +418,7 @@ public class CalendarLink {
             this.description = description;
             return this;
         }
+
 
         public Builder duration(double duration) {
             Utils.checkNotNull(duration, "duration");
@@ -411,6 +432,7 @@ public class CalendarLink {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -422,6 +444,7 @@ public class CalendarLink {
             this.id = id;
             return this;
         }
+
 
         public Builder isActive(boolean isActive) {
             Utils.checkNotNull(isActive, "isActive");
@@ -435,6 +458,7 @@ public class CalendarLink {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = Optional.ofNullable(name);
@@ -446,6 +470,7 @@ public class CalendarLink {
             this.name = name;
             return this;
         }
+
 
         public Builder priceAmount(double priceAmount) {
             Utils.checkNotNull(priceAmount, "priceAmount");
@@ -459,6 +484,7 @@ public class CalendarLink {
             return this;
         }
 
+
         public Builder priceCurrency(String priceCurrency) {
             Utils.checkNotNull(priceCurrency, "priceCurrency");
             this.priceCurrency = Optional.ofNullable(priceCurrency);
@@ -470,6 +496,7 @@ public class CalendarLink {
             this.priceCurrency = priceCurrency;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -483,6 +510,7 @@ public class CalendarLink {
             return this;
         }
 
+
         public Builder updatedAt(String updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -495,25 +523,21 @@ public class CalendarLink {
             return this;
         }
 
+
         public Builder url(String url) {
             Utils.checkNotNull(url, "url");
             this.url = url;
             return this;
         }
-        
+
         public CalendarLink build() {
+
             return new CalendarLink(
-                createdAt,
-                description,
-                duration,
-                id,
-                isActive,
-                name,
-                priceAmount,
-                priceCurrency,
-                raw,
-                updatedAt,
-                url);
+                createdAt, description, duration,
+                id, isActive, name,
+                priceAmount, priceCurrency, raw,
+                updatedAt, url);
         }
+
     }
 }

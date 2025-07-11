@@ -15,8 +15,8 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class ListUnifiedIntegrationWorkspacesRequest {
 
+public class ListUnifiedIntegrationWorkspacesRequest {
     /**
      * Filter the results for only the workspace's active integrations
      */
@@ -29,17 +29,22 @@ public class ListUnifiedIntegrationWorkspacesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=categories")
     private Optional<? extends List<QueryParamCategories>> categories;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=env")
     private Optional<String> env;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     private Optional<Double> limit;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     private Optional<Double> offset;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=summary")
     private Optional<Boolean> summary;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private Optional<String> updatedGte;
@@ -80,7 +85,9 @@ public class ListUnifiedIntegrationWorkspacesRequest {
     
     public ListUnifiedIntegrationWorkspacesRequest(
             String workspaceId) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), workspaceId);
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), workspaceId);
     }
 
     /**
@@ -133,9 +140,10 @@ public class ListUnifiedIntegrationWorkspacesRequest {
         return workspaceId;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * Filter the results for only the workspace's active integrations
@@ -145,6 +153,7 @@ public class ListUnifiedIntegrationWorkspacesRequest {
         this.active = Optional.ofNullable(active);
         return this;
     }
+
 
     /**
      * Filter the results for only the workspace's active integrations
@@ -164,6 +173,7 @@ public class ListUnifiedIntegrationWorkspacesRequest {
         return this;
     }
 
+
     /**
      * Filter the results on these categories
      */
@@ -179,6 +189,7 @@ public class ListUnifiedIntegrationWorkspacesRequest {
         return this;
     }
 
+
     public ListUnifiedIntegrationWorkspacesRequest withEnv(Optional<String> env) {
         Utils.checkNotNull(env, "env");
         this.env = env;
@@ -190,6 +201,7 @@ public class ListUnifiedIntegrationWorkspacesRequest {
         this.limit = Optional.ofNullable(limit);
         return this;
     }
+
 
     public ListUnifiedIntegrationWorkspacesRequest withLimit(Optional<Double> limit) {
         Utils.checkNotNull(limit, "limit");
@@ -203,6 +215,7 @@ public class ListUnifiedIntegrationWorkspacesRequest {
         return this;
     }
 
+
     public ListUnifiedIntegrationWorkspacesRequest withOffset(Optional<Double> offset) {
         Utils.checkNotNull(offset, "offset");
         this.offset = offset;
@@ -215,6 +228,7 @@ public class ListUnifiedIntegrationWorkspacesRequest {
         return this;
     }
 
+
     public ListUnifiedIntegrationWorkspacesRequest withSummary(Optional<Boolean> summary) {
         Utils.checkNotNull(summary, "summary");
         this.summary = summary;
@@ -226,6 +240,7 @@ public class ListUnifiedIntegrationWorkspacesRequest {
         this.updatedGte = Optional.ofNullable(updatedGte);
         return this;
     }
+
 
     public ListUnifiedIntegrationWorkspacesRequest withUpdatedGte(Optional<String> updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -242,7 +257,6 @@ public class ListUnifiedIntegrationWorkspacesRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -266,14 +280,9 @@ public class ListUnifiedIntegrationWorkspacesRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            active,
-            categories,
-            env,
-            limit,
-            offset,
-            summary,
-            updatedGte,
-            workspaceId);
+            active, categories, env,
+            limit, offset, summary,
+            updatedGte, workspaceId);
     }
     
     @Override
@@ -288,28 +297,30 @@ public class ListUnifiedIntegrationWorkspacesRequest {
                 "updatedGte", updatedGte,
                 "workspaceId", workspaceId);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<Boolean> active = Optional.empty();
- 
+
         private Optional<? extends List<QueryParamCategories>> categories = Optional.empty();
- 
+
         private Optional<String> env = Optional.empty();
- 
+
         private Optional<Double> limit = Optional.empty();
- 
+
         private Optional<Double> offset = Optional.empty();
- 
+
         private Optional<Boolean> summary = Optional.empty();
- 
+
         private Optional<String> updatedGte = Optional.empty();
- 
+
         private String workspaceId;
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * Filter the results for only the workspace's active integrations
@@ -329,6 +340,7 @@ public class ListUnifiedIntegrationWorkspacesRequest {
             return this;
         }
 
+
         /**
          * Filter the results on these categories
          */
@@ -347,6 +359,7 @@ public class ListUnifiedIntegrationWorkspacesRequest {
             return this;
         }
 
+
         public Builder env(String env) {
             Utils.checkNotNull(env, "env");
             this.env = Optional.ofNullable(env);
@@ -358,6 +371,7 @@ public class ListUnifiedIntegrationWorkspacesRequest {
             this.env = env;
             return this;
         }
+
 
         public Builder limit(double limit) {
             Utils.checkNotNull(limit, "limit");
@@ -371,6 +385,7 @@ public class ListUnifiedIntegrationWorkspacesRequest {
             return this;
         }
 
+
         public Builder offset(double offset) {
             Utils.checkNotNull(offset, "offset");
             this.offset = Optional.ofNullable(offset);
@@ -382,6 +397,7 @@ public class ListUnifiedIntegrationWorkspacesRequest {
             this.offset = offset;
             return this;
         }
+
 
         public Builder summary(boolean summary) {
             Utils.checkNotNull(summary, "summary");
@@ -395,6 +411,7 @@ public class ListUnifiedIntegrationWorkspacesRequest {
             return this;
         }
 
+
         public Builder updatedGte(String updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
             this.updatedGte = Optional.ofNullable(updatedGte);
@@ -407,6 +424,7 @@ public class ListUnifiedIntegrationWorkspacesRequest {
             return this;
         }
 
+
         /**
          * The ID of the workspace
          */
@@ -415,17 +433,14 @@ public class ListUnifiedIntegrationWorkspacesRequest {
             this.workspaceId = workspaceId;
             return this;
         }
-        
+
         public ListUnifiedIntegrationWorkspacesRequest build() {
+
             return new ListUnifiedIntegrationWorkspacesRequest(
-                active,
-                categories,
-                env,
-                limit,
-                offset,
-                summary,
-                updatedGte,
-                workspaceId);
+                active, categories, env,
+                limit, offset, summary,
+                updatedGte, workspaceId);
         }
+
     }
 }

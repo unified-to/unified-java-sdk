@@ -40,7 +40,6 @@ public class Taxrate {
     Taxrate(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a taxrate
      * 
@@ -57,13 +56,11 @@ public class Taxrate {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAccountingTaxrateResponse createAccountingTaxrate(
-            CreateAccountingTaxrateRequest request) throws Exception {
+    public CreateAccountingTaxrateResponse createAccountingTaxrate(CreateAccountingTaxrateRequest request) throws Exception {
         RequestOperation<CreateAccountingTaxrateRequest, CreateAccountingTaxrateResponse> operation
-              = new CreateAccountingTaxrateOperation( sdkConfiguration);
+              = new CreateAccountingTaxrateOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a taxrate
@@ -81,13 +78,11 @@ public class Taxrate {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAccountingTaxrateResponse getAccountingTaxrate(
-            GetAccountingTaxrateRequest request) throws Exception {
+    public GetAccountingTaxrateResponse getAccountingTaxrate(GetAccountingTaxrateRequest request) throws Exception {
         RequestOperation<GetAccountingTaxrateRequest, GetAccountingTaxrateResponse> operation
-              = new GetAccountingTaxrateOperation( sdkConfiguration);
+              = new GetAccountingTaxrateOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all taxrates
@@ -105,13 +100,11 @@ public class Taxrate {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAccountingTaxratesResponse listAccountingTaxrates(
-            ListAccountingTaxratesRequest request) throws Exception {
+    public ListAccountingTaxratesResponse listAccountingTaxrates(ListAccountingTaxratesRequest request) throws Exception {
         RequestOperation<ListAccountingTaxratesRequest, ListAccountingTaxratesResponse> operation
-              = new ListAccountingTaxratesOperation( sdkConfiguration);
+              = new ListAccountingTaxratesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a taxrate
@@ -129,13 +122,11 @@ public class Taxrate {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAccountingTaxrateResponse patchAccountingTaxrate(
-            PatchAccountingTaxrateRequest request) throws Exception {
+    public PatchAccountingTaxrateResponse patchAccountingTaxrate(PatchAccountingTaxrateRequest request) throws Exception {
         RequestOperation<PatchAccountingTaxrateRequest, PatchAccountingTaxrateResponse> operation
-              = new PatchAccountingTaxrateOperation( sdkConfiguration);
+              = new PatchAccountingTaxrateOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a taxrate
@@ -153,13 +144,11 @@ public class Taxrate {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAccountingTaxrateResponse removeAccountingTaxrate(
-            RemoveAccountingTaxrateRequest request) throws Exception {
+    public RemoveAccountingTaxrateResponse removeAccountingTaxrate(RemoveAccountingTaxrateRequest request) throws Exception {
         RequestOperation<RemoveAccountingTaxrateRequest, RemoveAccountingTaxrateResponse> operation
-              = new RemoveAccountingTaxrateOperation( sdkConfiguration);
+              = new RemoveAccountingTaxrateOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a taxrate
@@ -177,10 +166,9 @@ public class Taxrate {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAccountingTaxrateResponse updateAccountingTaxrate(
-            UpdateAccountingTaxrateRequest request) throws Exception {
+    public UpdateAccountingTaxrateResponse updateAccountingTaxrate(UpdateAccountingTaxrateRequest request) throws Exception {
         RequestOperation<UpdateAccountingTaxrateRequest, UpdateAccountingTaxrateResponse> operation
-              = new UpdateAccountingTaxrateOperation( sdkConfiguration);
+              = new UpdateAccountingTaxrateOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

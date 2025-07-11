@@ -14,6 +14,7 @@ import to.unified.unified_java_sdk.models.shared.RepoCommit;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class CreateRepoCommitRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
@@ -56,7 +57,8 @@ public class CreateRepoCommitRequest {
     public CreateRepoCommitRequest(
             RepoCommit repoCommit,
             String connectionId) {
-        this(repoCommit, connectionId, Optional.empty(), Optional.empty());
+        this(repoCommit, connectionId, Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -89,9 +91,10 @@ public class CreateRepoCommitRequest {
         return raw;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public CreateRepoCommitRequest withRepoCommit(RepoCommit repoCommit) {
         Utils.checkNotNull(repoCommit, "repoCommit");
@@ -117,6 +120,7 @@ public class CreateRepoCommitRequest {
         return this;
     }
 
+
     /**
      * Comma-delimited fields to return
      */
@@ -135,6 +139,7 @@ public class CreateRepoCommitRequest {
         return this;
     }
 
+
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
@@ -144,7 +149,6 @@ public class CreateRepoCommitRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -164,9 +168,7 @@ public class CreateRepoCommitRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            repoCommit,
-            connectionId,
-            fields,
+            repoCommit, connectionId, fields,
             raw);
     }
     
@@ -178,26 +180,29 @@ public class CreateRepoCommitRequest {
                 "fields", fields,
                 "raw", raw);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private RepoCommit repoCommit;
- 
+
         private String connectionId;
- 
+
         private Optional<? extends List<String>> fields = Optional.empty();
- 
+
         private Optional<String> raw = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder repoCommit(RepoCommit repoCommit) {
             Utils.checkNotNull(repoCommit, "repoCommit");
             this.repoCommit = repoCommit;
             return this;
         }
+
 
         /**
          * ID of the connection
@@ -207,6 +212,7 @@ public class CreateRepoCommitRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         /**
          * Comma-delimited fields to return
@@ -226,6 +232,7 @@ public class CreateRepoCommitRequest {
             return this;
         }
 
+
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
@@ -243,13 +250,13 @@ public class CreateRepoCommitRequest {
             this.raw = raw;
             return this;
         }
-        
+
         public CreateRepoCommitRequest build() {
+
             return new CreateRepoCommitRequest(
-                repoCommit,
-                connectionId,
-                fields,
+                repoCommit, connectionId, fields,
                 raw);
         }
+
     }
 }

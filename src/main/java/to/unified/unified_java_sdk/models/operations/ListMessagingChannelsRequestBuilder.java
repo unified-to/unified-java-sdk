@@ -28,7 +28,7 @@ public class ListMessagingChannelsRequestBuilder {
     public ListMessagingChannelsResponse call() throws Exception {
         
         RequestOperation<ListMessagingChannelsRequest, ListMessagingChannelsResponse> operation
-              = new ListMessagingChannelsOperation( sdkConfiguration);
+              = new ListMessagingChannelsOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

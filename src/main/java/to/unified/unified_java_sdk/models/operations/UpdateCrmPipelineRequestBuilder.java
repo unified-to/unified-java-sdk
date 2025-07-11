@@ -28,7 +28,7 @@ public class UpdateCrmPipelineRequestBuilder {
     public UpdateCrmPipelineResponse call() throws Exception {
         
         RequestOperation<UpdateCrmPipelineRequest, UpdateCrmPipelineResponse> operation
-              = new UpdateCrmPipelineOperation( sdkConfiguration);
+              = new UpdateCrmPipelineOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

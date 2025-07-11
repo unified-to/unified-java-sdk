@@ -28,7 +28,7 @@ public class RemoveUnifiedConnectionRequestBuilder {
     public RemoveUnifiedConnectionResponse call() throws Exception {
         
         RequestOperation<RemoveUnifiedConnectionRequest, RemoveUnifiedConnectionResponse> operation
-              = new RemoveUnifiedConnectionOperation( sdkConfiguration);
+              = new RemoveUnifiedConnectionOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

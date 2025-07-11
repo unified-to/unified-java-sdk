@@ -28,7 +28,7 @@ public class PatchAtsCompanyRequestBuilder {
     public PatchAtsCompanyResponse call() throws Exception {
         
         RequestOperation<PatchAtsCompanyRequest, PatchAtsCompanyResponse> operation
-              = new PatchAtsCompanyOperation( sdkConfiguration);
+              = new PatchAtsCompanyOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

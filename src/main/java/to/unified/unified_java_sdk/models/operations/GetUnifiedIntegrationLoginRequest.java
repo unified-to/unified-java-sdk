@@ -12,6 +12,7 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class GetUnifiedIntegrationLoginRequest {
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=env")
@@ -28,6 +29,7 @@ public class GetUnifiedIntegrationLoginRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=integration_type")
     private String integrationType;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=redirect")
     private Optional<Boolean> redirect;
@@ -78,7 +80,9 @@ public class GetUnifiedIntegrationLoginRequest {
     public GetUnifiedIntegrationLoginRequest(
             String integrationType,
             String workspaceId) {
-        this(Optional.empty(), Optional.empty(), integrationType, Optional.empty(), Optional.empty(), Optional.empty(), workspaceId);
+        this(Optional.empty(), Optional.empty(), integrationType,
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            workspaceId);
     }
 
     @JsonIgnore
@@ -131,15 +135,17 @@ public class GetUnifiedIntegrationLoginRequest {
         return workspaceId;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public GetUnifiedIntegrationLoginRequest withEnv(String env) {
         Utils.checkNotNull(env, "env");
         this.env = Optional.ofNullable(env);
         return this;
     }
+
 
     public GetUnifiedIntegrationLoginRequest withEnv(Optional<String> env) {
         Utils.checkNotNull(env, "env");
@@ -155,6 +161,7 @@ public class GetUnifiedIntegrationLoginRequest {
         this.failureRedirect = Optional.ofNullable(failureRedirect);
         return this;
     }
+
 
     /**
      * The URL where you want the user to be redirect to after an unsuccessful authentication. An "error" variable will be appended.
@@ -180,6 +187,7 @@ public class GetUnifiedIntegrationLoginRequest {
         return this;
     }
 
+
     public GetUnifiedIntegrationLoginRequest withRedirect(Optional<Boolean> redirect) {
         Utils.checkNotNull(redirect, "redirect");
         this.redirect = redirect;
@@ -194,6 +202,7 @@ public class GetUnifiedIntegrationLoginRequest {
         this.state = Optional.ofNullable(state);
         return this;
     }
+
 
     /**
      * Extra state to send back to your success URL
@@ -213,6 +222,7 @@ public class GetUnifiedIntegrationLoginRequest {
         return this;
     }
 
+
     /**
      * The URL where you want the user to be redirect to after a successful authentication/sign-in.  A "jwt" parameter will be appended to the URL which will contain a name and email of the user who just signed-in.
      */
@@ -231,7 +241,6 @@ public class GetUnifiedIntegrationLoginRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -254,12 +263,8 @@ public class GetUnifiedIntegrationLoginRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            env,
-            failureRedirect,
-            integrationType,
-            redirect,
-            state,
-            successRedirect,
+            env, failureRedirect, integrationType,
+            redirect, state, successRedirect,
             workspaceId);
     }
     
@@ -274,26 +279,28 @@ public class GetUnifiedIntegrationLoginRequest {
                 "successRedirect", successRedirect,
                 "workspaceId", workspaceId);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> env = Optional.empty();
- 
+
         private Optional<String> failureRedirect = Optional.empty();
- 
+
         private String integrationType;
- 
+
         private Optional<Boolean> redirect = Optional.empty();
- 
+
         private Optional<String> state = Optional.empty();
- 
+
         private Optional<String> successRedirect = Optional.empty();
- 
+
         private String workspaceId;
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder env(String env) {
             Utils.checkNotNull(env, "env");
@@ -306,6 +313,7 @@ public class GetUnifiedIntegrationLoginRequest {
             this.env = env;
             return this;
         }
+
 
         /**
          * The URL where you want the user to be redirect to after an unsuccessful authentication. An "error" variable will be appended.
@@ -325,6 +333,7 @@ public class GetUnifiedIntegrationLoginRequest {
             return this;
         }
 
+
         /**
          * Type of the supported integration
          */
@@ -333,6 +342,7 @@ public class GetUnifiedIntegrationLoginRequest {
             this.integrationType = integrationType;
             return this;
         }
+
 
         public Builder redirect(boolean redirect) {
             Utils.checkNotNull(redirect, "redirect");
@@ -345,6 +355,7 @@ public class GetUnifiedIntegrationLoginRequest {
             this.redirect = redirect;
             return this;
         }
+
 
         /**
          * Extra state to send back to your success URL
@@ -364,6 +375,7 @@ public class GetUnifiedIntegrationLoginRequest {
             return this;
         }
 
+
         /**
          * The URL where you want the user to be redirect to after a successful authentication/sign-in.  A "jwt" parameter will be appended to the URL which will contain a name and email of the user who just signed-in.
          */
@@ -382,6 +394,7 @@ public class GetUnifiedIntegrationLoginRequest {
             return this;
         }
 
+
         /**
          * The ID of the workspace
          */
@@ -390,16 +403,14 @@ public class GetUnifiedIntegrationLoginRequest {
             this.workspaceId = workspaceId;
             return this;
         }
-        
+
         public GetUnifiedIntegrationLoginRequest build() {
+
             return new GetUnifiedIntegrationLoginRequest(
-                env,
-                failureRedirect,
-                integrationType,
-                redirect,
-                state,
-                successRedirect,
+                env, failureRedirect, integrationType,
+                redirect, state, successRedirect,
                 workspaceId);
         }
+
     }
 }

@@ -28,7 +28,7 @@ public class UpdateUcCommentRequestBuilder {
     public UpdateUcCommentResponse call() throws Exception {
         
         RequestOperation<UpdateUcCommentRequest, UpdateUcCommentResponse> operation
-              = new UpdateUcCommentOperation( sdkConfiguration);
+              = new UpdateUcCommentOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

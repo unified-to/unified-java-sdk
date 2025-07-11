@@ -28,7 +28,7 @@ public class ListPaymentRefundsRequestBuilder {
     public ListPaymentRefundsResponse call() throws Exception {
         
         RequestOperation<ListPaymentRefundsRequest, ListPaymentRefundsResponse> operation
-              = new ListPaymentRefundsOperation( sdkConfiguration);
+              = new ListPaymentRefundsOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

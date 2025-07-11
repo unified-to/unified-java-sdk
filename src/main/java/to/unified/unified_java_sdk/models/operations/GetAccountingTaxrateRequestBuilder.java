@@ -28,7 +28,7 @@ public class GetAccountingTaxrateRequestBuilder {
     public GetAccountingTaxrateResponse call() throws Exception {
         
         RequestOperation<GetAccountingTaxrateRequest, GetAccountingTaxrateResponse> operation
-              = new GetAccountingTaxrateOperation( sdkConfiguration);
+              = new GetAccountingTaxrateOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

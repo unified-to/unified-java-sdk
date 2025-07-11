@@ -28,7 +28,7 @@ public class GetRepoPullrequestRequestBuilder {
     public GetRepoPullrequestResponse call() throws Exception {
         
         RequestOperation<GetRepoPullrequestRequest, GetRepoPullrequestResponse> operation
-              = new GetRepoPullrequestOperation( sdkConfiguration);
+              = new GetRepoPullrequestOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

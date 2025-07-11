@@ -20,39 +20,48 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class CrmPipeline {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deal_probability")
     private Optional<Double> dealProbability;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_order")
     private Optional<Double> displayOrder;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     private Optional<Boolean> isActive;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stages")
     private Optional<? extends List<CrmStage>> stages;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -90,7 +99,9 @@ public class CrmPipeline {
     }
     
     public CrmPipeline() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -140,15 +151,17 @@ public class CrmPipeline {
         return updatedAt;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public CrmPipeline withCreatedAt(OffsetDateTime createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public CrmPipeline withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -162,6 +175,7 @@ public class CrmPipeline {
         return this;
     }
 
+
     public CrmPipeline withDealProbability(Optional<Double> dealProbability) {
         Utils.checkNotNull(dealProbability, "dealProbability");
         this.dealProbability = dealProbability;
@@ -173,6 +187,7 @@ public class CrmPipeline {
         this.displayOrder = Optional.ofNullable(displayOrder);
         return this;
     }
+
 
     public CrmPipeline withDisplayOrder(Optional<Double> displayOrder) {
         Utils.checkNotNull(displayOrder, "displayOrder");
@@ -186,6 +201,7 @@ public class CrmPipeline {
         return this;
     }
 
+
     public CrmPipeline withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -197,6 +213,7 @@ public class CrmPipeline {
         this.isActive = Optional.ofNullable(isActive);
         return this;
     }
+
 
     public CrmPipeline withIsActive(Optional<Boolean> isActive) {
         Utils.checkNotNull(isActive, "isActive");
@@ -210,6 +227,7 @@ public class CrmPipeline {
         return this;
     }
 
+
     public CrmPipeline withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
         this.name = name;
@@ -221,6 +239,7 @@ public class CrmPipeline {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public CrmPipeline withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -234,6 +253,7 @@ public class CrmPipeline {
         return this;
     }
 
+
     public CrmPipeline withStages(Optional<? extends List<CrmStage>> stages) {
         Utils.checkNotNull(stages, "stages");
         this.stages = stages;
@@ -246,13 +266,13 @@ public class CrmPipeline {
         return this;
     }
 
+
     public CrmPipeline withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -277,15 +297,9 @@ public class CrmPipeline {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt,
-            dealProbability,
-            displayOrder,
-            id,
-            isActive,
-            name,
-            raw,
-            stages,
-            updatedAt);
+            createdAt, dealProbability, displayOrder,
+            id, isActive, name,
+            raw, stages, updatedAt);
     }
     
     @Override
@@ -301,30 +315,32 @@ public class CrmPipeline {
                 "stages", stages,
                 "updatedAt", updatedAt);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<Double> dealProbability = Optional.empty();
- 
+
         private Optional<Double> displayOrder = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<Boolean> isActive = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<? extends List<CrmStage>> stages = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -338,6 +354,7 @@ public class CrmPipeline {
             return this;
         }
 
+
         public Builder dealProbability(double dealProbability) {
             Utils.checkNotNull(dealProbability, "dealProbability");
             this.dealProbability = Optional.ofNullable(dealProbability);
@@ -349,6 +366,7 @@ public class CrmPipeline {
             this.dealProbability = dealProbability;
             return this;
         }
+
 
         public Builder displayOrder(double displayOrder) {
             Utils.checkNotNull(displayOrder, "displayOrder");
@@ -362,6 +380,7 @@ public class CrmPipeline {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -373,6 +392,7 @@ public class CrmPipeline {
             this.id = id;
             return this;
         }
+
 
         public Builder isActive(boolean isActive) {
             Utils.checkNotNull(isActive, "isActive");
@@ -386,6 +406,7 @@ public class CrmPipeline {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = Optional.ofNullable(name);
@@ -397,6 +418,7 @@ public class CrmPipeline {
             this.name = name;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -410,6 +432,7 @@ public class CrmPipeline {
             return this;
         }
 
+
         public Builder stages(List<CrmStage> stages) {
             Utils.checkNotNull(stages, "stages");
             this.stages = Optional.ofNullable(stages);
@@ -422,6 +445,7 @@ public class CrmPipeline {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -433,18 +457,14 @@ public class CrmPipeline {
             this.updatedAt = updatedAt;
             return this;
         }
-        
+
         public CrmPipeline build() {
+
             return new CrmPipeline(
-                createdAt,
-                dealProbability,
-                displayOrder,
-                id,
-                isActive,
-                name,
-                raw,
-                stages,
-                updatedAt);
+                createdAt, dealProbability, displayOrder,
+                id, isActive, name,
+                raw, stages, updatedAt);
         }
+
     }
 }

@@ -40,7 +40,6 @@ public class Activity {
     Activity(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create an activity
      * 
@@ -57,13 +56,11 @@ public class Activity {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAtsActivityResponse createAtsActivity(
-            CreateAtsActivityRequest request) throws Exception {
+    public CreateAtsActivityResponse createAtsActivity(CreateAtsActivityRequest request) throws Exception {
         RequestOperation<CreateAtsActivityRequest, CreateAtsActivityResponse> operation
-              = new CreateAtsActivityOperation( sdkConfiguration);
+              = new CreateAtsActivityOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve an activity
@@ -81,13 +78,11 @@ public class Activity {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAtsActivityResponse getAtsActivity(
-            GetAtsActivityRequest request) throws Exception {
+    public GetAtsActivityResponse getAtsActivity(GetAtsActivityRequest request) throws Exception {
         RequestOperation<GetAtsActivityRequest, GetAtsActivityResponse> operation
-              = new GetAtsActivityOperation( sdkConfiguration);
+              = new GetAtsActivityOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all activities
@@ -105,13 +100,11 @@ public class Activity {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAtsActivitiesResponse listAtsActivities(
-            ListAtsActivitiesRequest request) throws Exception {
+    public ListAtsActivitiesResponse listAtsActivities(ListAtsActivitiesRequest request) throws Exception {
         RequestOperation<ListAtsActivitiesRequest, ListAtsActivitiesResponse> operation
-              = new ListAtsActivitiesOperation( sdkConfiguration);
+              = new ListAtsActivitiesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an activity
@@ -129,13 +122,11 @@ public class Activity {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAtsActivityResponse patchAtsActivity(
-            PatchAtsActivityRequest request) throws Exception {
+    public PatchAtsActivityResponse patchAtsActivity(PatchAtsActivityRequest request) throws Exception {
         RequestOperation<PatchAtsActivityRequest, PatchAtsActivityResponse> operation
-              = new PatchAtsActivityOperation( sdkConfiguration);
+              = new PatchAtsActivityOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove an activity
@@ -153,13 +144,11 @@ public class Activity {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAtsActivityResponse removeAtsActivity(
-            RemoveAtsActivityRequest request) throws Exception {
+    public RemoveAtsActivityResponse removeAtsActivity(RemoveAtsActivityRequest request) throws Exception {
         RequestOperation<RemoveAtsActivityRequest, RemoveAtsActivityResponse> operation
-              = new RemoveAtsActivityOperation( sdkConfiguration);
+              = new RemoveAtsActivityOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an activity
@@ -177,10 +166,9 @@ public class Activity {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAtsActivityResponse updateAtsActivity(
-            UpdateAtsActivityRequest request) throws Exception {
+    public UpdateAtsActivityResponse updateAtsActivity(UpdateAtsActivityRequest request) throws Exception {
         RequestOperation<UpdateAtsActivityRequest, UpdateAtsActivityResponse> operation
-              = new UpdateAtsActivityOperation( sdkConfiguration);
+              = new UpdateAtsActivityOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

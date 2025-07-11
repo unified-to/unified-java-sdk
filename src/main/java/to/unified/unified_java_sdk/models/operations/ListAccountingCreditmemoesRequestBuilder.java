@@ -28,7 +28,7 @@ public class ListAccountingCreditmemoesRequestBuilder {
     public ListAccountingCreditmemoesResponse call() throws Exception {
         
         RequestOperation<ListAccountingCreditmemoesRequest, ListAccountingCreditmemoesResponse> operation
-              = new ListAccountingCreditmemoesOperation( sdkConfiguration);
+              = new ListAccountingCreditmemoesOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

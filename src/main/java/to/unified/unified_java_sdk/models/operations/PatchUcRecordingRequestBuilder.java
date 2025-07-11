@@ -28,7 +28,7 @@ public class PatchUcRecordingRequestBuilder {
     public PatchUcRecordingResponse call() throws Exception {
         
         RequestOperation<PatchUcRecordingRequest, PatchUcRecordingResponse> operation
-              = new PatchUcRecordingOperation( sdkConfiguration);
+              = new PatchUcRecordingOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

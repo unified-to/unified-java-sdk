@@ -28,7 +28,7 @@ public class GetUnifiedIntegrationAuthRequestBuilder {
     public GetUnifiedIntegrationAuthResponse call() throws Exception {
         
         RequestOperation<GetUnifiedIntegrationAuthRequest, GetUnifiedIntegrationAuthResponse> operation
-              = new GetUnifiedIntegrationAuthOperation( sdkConfiguration);
+              = new GetUnifiedIntegrationAuthOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

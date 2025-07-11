@@ -40,7 +40,6 @@ public class Page {
     Page(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a page
      * 
@@ -57,13 +56,11 @@ public class Page {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateKmsPageResponse createKmsPage(
-            CreateKmsPageRequest request) throws Exception {
+    public CreateKmsPageResponse createKmsPage(CreateKmsPageRequest request) throws Exception {
         RequestOperation<CreateKmsPageRequest, CreateKmsPageResponse> operation
-              = new CreateKmsPageOperation( sdkConfiguration);
+              = new CreateKmsPageOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a page
@@ -81,13 +78,11 @@ public class Page {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetKmsPageResponse getKmsPage(
-            GetKmsPageRequest request) throws Exception {
+    public GetKmsPageResponse getKmsPage(GetKmsPageRequest request) throws Exception {
         RequestOperation<GetKmsPageRequest, GetKmsPageResponse> operation
-              = new GetKmsPageOperation( sdkConfiguration);
+              = new GetKmsPageOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all pages
@@ -105,13 +100,11 @@ public class Page {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListKmsPagesResponse listKmsPages(
-            ListKmsPagesRequest request) throws Exception {
+    public ListKmsPagesResponse listKmsPages(ListKmsPagesRequest request) throws Exception {
         RequestOperation<ListKmsPagesRequest, ListKmsPagesResponse> operation
-              = new ListKmsPagesOperation( sdkConfiguration);
+              = new ListKmsPagesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a page
@@ -129,13 +122,11 @@ public class Page {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchKmsPageResponse patchKmsPage(
-            PatchKmsPageRequest request) throws Exception {
+    public PatchKmsPageResponse patchKmsPage(PatchKmsPageRequest request) throws Exception {
         RequestOperation<PatchKmsPageRequest, PatchKmsPageResponse> operation
-              = new PatchKmsPageOperation( sdkConfiguration);
+              = new PatchKmsPageOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a page
@@ -153,13 +144,11 @@ public class Page {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveKmsPageResponse removeKmsPage(
-            RemoveKmsPageRequest request) throws Exception {
+    public RemoveKmsPageResponse removeKmsPage(RemoveKmsPageRequest request) throws Exception {
         RequestOperation<RemoveKmsPageRequest, RemoveKmsPageResponse> operation
-              = new RemoveKmsPageOperation( sdkConfiguration);
+              = new RemoveKmsPageOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a page
@@ -177,10 +166,9 @@ public class Page {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateKmsPageResponse updateKmsPage(
-            UpdateKmsPageRequest request) throws Exception {
+    public UpdateKmsPageResponse updateKmsPage(UpdateKmsPageRequest request) throws Exception {
         RequestOperation<UpdateKmsPageRequest, UpdateKmsPageResponse> operation
-              = new UpdateKmsPageOperation( sdkConfiguration);
+              = new UpdateKmsPageOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

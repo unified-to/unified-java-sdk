@@ -112,7 +112,6 @@ public class Lms {
     Lms(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a class
      * 
@@ -129,13 +128,11 @@ public class Lms {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateLmsClassResponse createLmsClass(
-            CreateLmsClassRequest request) throws Exception {
+    public CreateLmsClassResponse createLmsClass(CreateLmsClassRequest request) throws Exception {
         RequestOperation<CreateLmsClassRequest, CreateLmsClassResponse> operation
-              = new CreateLmsClassOperation( sdkConfiguration);
+              = new CreateLmsClassOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a course
@@ -153,13 +150,11 @@ public class Lms {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateLmsCourseResponse createLmsCourse(
-            CreateLmsCourseRequest request) throws Exception {
+    public CreateLmsCourseResponse createLmsCourse(CreateLmsCourseRequest request) throws Exception {
         RequestOperation<CreateLmsCourseRequest, CreateLmsCourseResponse> operation
-              = new CreateLmsCourseOperation( sdkConfiguration);
+              = new CreateLmsCourseOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create an instructor
@@ -177,13 +172,11 @@ public class Lms {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateLmsInstructorResponse createLmsInstructor(
-            CreateLmsInstructorRequest request) throws Exception {
+    public CreateLmsInstructorResponse createLmsInstructor(CreateLmsInstructorRequest request) throws Exception {
         RequestOperation<CreateLmsInstructorRequest, CreateLmsInstructorResponse> operation
-              = new CreateLmsInstructorOperation( sdkConfiguration);
+              = new CreateLmsInstructorOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a student
@@ -201,13 +194,11 @@ public class Lms {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateLmsStudentResponse createLmsStudent(
-            CreateLmsStudentRequest request) throws Exception {
+    public CreateLmsStudentResponse createLmsStudent(CreateLmsStudentRequest request) throws Exception {
         RequestOperation<CreateLmsStudentRequest, CreateLmsStudentResponse> operation
-              = new CreateLmsStudentOperation( sdkConfiguration);
+              = new CreateLmsStudentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a class
@@ -225,13 +216,11 @@ public class Lms {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetLmsClassResponse getLmsClass(
-            GetLmsClassRequest request) throws Exception {
+    public GetLmsClassResponse getLmsClass(GetLmsClassRequest request) throws Exception {
         RequestOperation<GetLmsClassRequest, GetLmsClassResponse> operation
-              = new GetLmsClassOperation( sdkConfiguration);
+              = new GetLmsClassOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a course
@@ -249,13 +238,11 @@ public class Lms {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetLmsCourseResponse getLmsCourse(
-            GetLmsCourseRequest request) throws Exception {
+    public GetLmsCourseResponse getLmsCourse(GetLmsCourseRequest request) throws Exception {
         RequestOperation<GetLmsCourseRequest, GetLmsCourseResponse> operation
-              = new GetLmsCourseOperation( sdkConfiguration);
+              = new GetLmsCourseOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve an instructor
@@ -273,13 +260,11 @@ public class Lms {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetLmsInstructorResponse getLmsInstructor(
-            GetLmsInstructorRequest request) throws Exception {
+    public GetLmsInstructorResponse getLmsInstructor(GetLmsInstructorRequest request) throws Exception {
         RequestOperation<GetLmsInstructorRequest, GetLmsInstructorResponse> operation
-              = new GetLmsInstructorOperation( sdkConfiguration);
+              = new GetLmsInstructorOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a student
@@ -297,13 +282,11 @@ public class Lms {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetLmsStudentResponse getLmsStudent(
-            GetLmsStudentRequest request) throws Exception {
+    public GetLmsStudentResponse getLmsStudent(GetLmsStudentRequest request) throws Exception {
         RequestOperation<GetLmsStudentRequest, GetLmsStudentResponse> operation
-              = new GetLmsStudentOperation( sdkConfiguration);
+              = new GetLmsStudentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all classes
@@ -321,13 +304,11 @@ public class Lms {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListLmsClassesResponse listLmsClasses(
-            ListLmsClassesRequest request) throws Exception {
+    public ListLmsClassesResponse listLmsClasses(ListLmsClassesRequest request) throws Exception {
         RequestOperation<ListLmsClassesRequest, ListLmsClassesResponse> operation
-              = new ListLmsClassesOperation( sdkConfiguration);
+              = new ListLmsClassesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all courses
@@ -345,13 +326,11 @@ public class Lms {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListLmsCoursesResponse listLmsCourses(
-            ListLmsCoursesRequest request) throws Exception {
+    public ListLmsCoursesResponse listLmsCourses(ListLmsCoursesRequest request) throws Exception {
         RequestOperation<ListLmsCoursesRequest, ListLmsCoursesResponse> operation
-              = new ListLmsCoursesOperation( sdkConfiguration);
+              = new ListLmsCoursesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all instructors
@@ -369,13 +348,11 @@ public class Lms {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListLmsInstructorsResponse listLmsInstructors(
-            ListLmsInstructorsRequest request) throws Exception {
+    public ListLmsInstructorsResponse listLmsInstructors(ListLmsInstructorsRequest request) throws Exception {
         RequestOperation<ListLmsInstructorsRequest, ListLmsInstructorsResponse> operation
-              = new ListLmsInstructorsOperation( sdkConfiguration);
+              = new ListLmsInstructorsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all students
@@ -393,13 +370,11 @@ public class Lms {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListLmsStudentsResponse listLmsStudents(
-            ListLmsStudentsRequest request) throws Exception {
+    public ListLmsStudentsResponse listLmsStudents(ListLmsStudentsRequest request) throws Exception {
         RequestOperation<ListLmsStudentsRequest, ListLmsStudentsResponse> operation
-              = new ListLmsStudentsOperation( sdkConfiguration);
+              = new ListLmsStudentsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a class
@@ -417,13 +392,11 @@ public class Lms {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchLmsClassResponse patchLmsClass(
-            PatchLmsClassRequest request) throws Exception {
+    public PatchLmsClassResponse patchLmsClass(PatchLmsClassRequest request) throws Exception {
         RequestOperation<PatchLmsClassRequest, PatchLmsClassResponse> operation
-              = new PatchLmsClassOperation( sdkConfiguration);
+              = new PatchLmsClassOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a course
@@ -441,13 +414,11 @@ public class Lms {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchLmsCourseResponse patchLmsCourse(
-            PatchLmsCourseRequest request) throws Exception {
+    public PatchLmsCourseResponse patchLmsCourse(PatchLmsCourseRequest request) throws Exception {
         RequestOperation<PatchLmsCourseRequest, PatchLmsCourseResponse> operation
-              = new PatchLmsCourseOperation( sdkConfiguration);
+              = new PatchLmsCourseOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an instructor
@@ -465,13 +436,11 @@ public class Lms {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchLmsInstructorResponse patchLmsInstructor(
-            PatchLmsInstructorRequest request) throws Exception {
+    public PatchLmsInstructorResponse patchLmsInstructor(PatchLmsInstructorRequest request) throws Exception {
         RequestOperation<PatchLmsInstructorRequest, PatchLmsInstructorResponse> operation
-              = new PatchLmsInstructorOperation( sdkConfiguration);
+              = new PatchLmsInstructorOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a student
@@ -489,13 +458,11 @@ public class Lms {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchLmsStudentResponse patchLmsStudent(
-            PatchLmsStudentRequest request) throws Exception {
+    public PatchLmsStudentResponse patchLmsStudent(PatchLmsStudentRequest request) throws Exception {
         RequestOperation<PatchLmsStudentRequest, PatchLmsStudentResponse> operation
-              = new PatchLmsStudentOperation( sdkConfiguration);
+              = new PatchLmsStudentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a class
@@ -513,13 +480,11 @@ public class Lms {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveLmsClassResponse removeLmsClass(
-            RemoveLmsClassRequest request) throws Exception {
+    public RemoveLmsClassResponse removeLmsClass(RemoveLmsClassRequest request) throws Exception {
         RequestOperation<RemoveLmsClassRequest, RemoveLmsClassResponse> operation
-              = new RemoveLmsClassOperation( sdkConfiguration);
+              = new RemoveLmsClassOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a course
@@ -537,13 +502,11 @@ public class Lms {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveLmsCourseResponse removeLmsCourse(
-            RemoveLmsCourseRequest request) throws Exception {
+    public RemoveLmsCourseResponse removeLmsCourse(RemoveLmsCourseRequest request) throws Exception {
         RequestOperation<RemoveLmsCourseRequest, RemoveLmsCourseResponse> operation
-              = new RemoveLmsCourseOperation( sdkConfiguration);
+              = new RemoveLmsCourseOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove an instructor
@@ -561,13 +524,11 @@ public class Lms {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveLmsInstructorResponse removeLmsInstructor(
-            RemoveLmsInstructorRequest request) throws Exception {
+    public RemoveLmsInstructorResponse removeLmsInstructor(RemoveLmsInstructorRequest request) throws Exception {
         RequestOperation<RemoveLmsInstructorRequest, RemoveLmsInstructorResponse> operation
-              = new RemoveLmsInstructorOperation( sdkConfiguration);
+              = new RemoveLmsInstructorOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a student
@@ -585,13 +546,11 @@ public class Lms {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveLmsStudentResponse removeLmsStudent(
-            RemoveLmsStudentRequest request) throws Exception {
+    public RemoveLmsStudentResponse removeLmsStudent(RemoveLmsStudentRequest request) throws Exception {
         RequestOperation<RemoveLmsStudentRequest, RemoveLmsStudentResponse> operation
-              = new RemoveLmsStudentOperation( sdkConfiguration);
+              = new RemoveLmsStudentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a class
@@ -609,13 +568,11 @@ public class Lms {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateLmsClassResponse updateLmsClass(
-            UpdateLmsClassRequest request) throws Exception {
+    public UpdateLmsClassResponse updateLmsClass(UpdateLmsClassRequest request) throws Exception {
         RequestOperation<UpdateLmsClassRequest, UpdateLmsClassResponse> operation
-              = new UpdateLmsClassOperation( sdkConfiguration);
+              = new UpdateLmsClassOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a course
@@ -633,13 +590,11 @@ public class Lms {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateLmsCourseResponse updateLmsCourse(
-            UpdateLmsCourseRequest request) throws Exception {
+    public UpdateLmsCourseResponse updateLmsCourse(UpdateLmsCourseRequest request) throws Exception {
         RequestOperation<UpdateLmsCourseRequest, UpdateLmsCourseResponse> operation
-              = new UpdateLmsCourseOperation( sdkConfiguration);
+              = new UpdateLmsCourseOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an instructor
@@ -657,13 +612,11 @@ public class Lms {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateLmsInstructorResponse updateLmsInstructor(
-            UpdateLmsInstructorRequest request) throws Exception {
+    public UpdateLmsInstructorResponse updateLmsInstructor(UpdateLmsInstructorRequest request) throws Exception {
         RequestOperation<UpdateLmsInstructorRequest, UpdateLmsInstructorResponse> operation
-              = new UpdateLmsInstructorOperation( sdkConfiguration);
+              = new UpdateLmsInstructorOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a student
@@ -681,10 +634,9 @@ public class Lms {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateLmsStudentResponse updateLmsStudent(
-            UpdateLmsStudentRequest request) throws Exception {
+    public UpdateLmsStudentResponse updateLmsStudent(UpdateLmsStudentRequest request) throws Exception {
         RequestOperation<UpdateLmsStudentRequest, UpdateLmsStudentResponse> operation
-              = new UpdateLmsStudentOperation( sdkConfiguration);
+              = new UpdateLmsStudentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

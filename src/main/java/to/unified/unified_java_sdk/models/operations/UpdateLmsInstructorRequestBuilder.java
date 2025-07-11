@@ -28,7 +28,7 @@ public class UpdateLmsInstructorRequestBuilder {
     public UpdateLmsInstructorResponse call() throws Exception {
         
         RequestOperation<UpdateLmsInstructorRequest, UpdateLmsInstructorResponse> operation
-              = new UpdateLmsInstructorOperation( sdkConfiguration);
+              = new UpdateLmsInstructorOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

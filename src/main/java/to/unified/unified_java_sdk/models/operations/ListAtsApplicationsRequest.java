@@ -14,8 +14,8 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class ListAtsApplicationsRequest {
 
+public class ListAtsApplicationsRequest {
     /**
      * The candidate ID to filter by
      */
@@ -46,11 +46,14 @@ public class ListAtsApplicationsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=job_id")
     private Optional<String> jobId;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     private Optional<Double> limit;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     private Optional<Double> offset;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     private Optional<String> order;
@@ -66,6 +69,7 @@ public class ListAtsApplicationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
     private Optional<String> raw;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     private Optional<String> sort;
@@ -118,7 +122,10 @@ public class ListAtsApplicationsRequest {
     
     public ListAtsApplicationsRequest(
             String connectionId) {
-        this(Optional.empty(), Optional.empty(), connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), connectionId,
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     /**
@@ -206,9 +213,10 @@ public class ListAtsApplicationsRequest {
         return updatedGte;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * The candidate ID to filter by
@@ -218,6 +226,7 @@ public class ListAtsApplicationsRequest {
         this.candidateId = Optional.ofNullable(candidateId);
         return this;
     }
+
 
     /**
      * The candidate ID to filter by
@@ -236,6 +245,7 @@ public class ListAtsApplicationsRequest {
         this.companyId = Optional.ofNullable(companyId);
         return this;
     }
+
 
     /**
      * The company ID to filter by
@@ -264,6 +274,7 @@ public class ListAtsApplicationsRequest {
         return this;
     }
 
+
     /**
      * Comma-delimited fields to return
      */
@@ -282,6 +293,7 @@ public class ListAtsApplicationsRequest {
         return this;
     }
 
+
     /**
      * The job ID to filter by
      */
@@ -297,6 +309,7 @@ public class ListAtsApplicationsRequest {
         return this;
     }
 
+
     public ListAtsApplicationsRequest withLimit(Optional<Double> limit) {
         Utils.checkNotNull(limit, "limit");
         this.limit = limit;
@@ -309,6 +322,7 @@ public class ListAtsApplicationsRequest {
         return this;
     }
 
+
     public ListAtsApplicationsRequest withOffset(Optional<Double> offset) {
         Utils.checkNotNull(offset, "offset");
         this.offset = offset;
@@ -320,6 +334,7 @@ public class ListAtsApplicationsRequest {
         this.order = Optional.ofNullable(order);
         return this;
     }
+
 
     public ListAtsApplicationsRequest withOrder(Optional<String> order) {
         Utils.checkNotNull(order, "order");
@@ -335,6 +350,7 @@ public class ListAtsApplicationsRequest {
         this.query = Optional.ofNullable(query);
         return this;
     }
+
 
     /**
      * Query string to search. eg. email address or name
@@ -354,6 +370,7 @@ public class ListAtsApplicationsRequest {
         return this;
     }
 
+
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
@@ -368,6 +385,7 @@ public class ListAtsApplicationsRequest {
         this.sort = Optional.ofNullable(sort);
         return this;
     }
+
 
     public ListAtsApplicationsRequest withSort(Optional<String> sort) {
         Utils.checkNotNull(sort, "sort");
@@ -384,6 +402,7 @@ public class ListAtsApplicationsRequest {
         return this;
     }
 
+
     /**
      * Return only results whose updated date is equal or greater to this value
      */
@@ -393,7 +412,6 @@ public class ListAtsApplicationsRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -421,18 +439,10 @@ public class ListAtsApplicationsRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            candidateId,
-            companyId,
-            connectionId,
-            fields,
-            jobId,
-            limit,
-            offset,
-            order,
-            query,
-            raw,
-            sort,
-            updatedGte);
+            candidateId, companyId, connectionId,
+            fields, jobId, limit,
+            offset, order, query,
+            raw, sort, updatedGte);
     }
     
     @Override
@@ -451,36 +461,38 @@ public class ListAtsApplicationsRequest {
                 "sort", sort,
                 "updatedGte", updatedGte);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> candidateId = Optional.empty();
- 
+
         private Optional<String> companyId = Optional.empty();
- 
+
         private String connectionId;
- 
+
         private Optional<? extends List<String>> fields = Optional.empty();
- 
+
         private Optional<String> jobId = Optional.empty();
- 
+
         private Optional<Double> limit = Optional.empty();
- 
+
         private Optional<Double> offset = Optional.empty();
- 
+
         private Optional<String> order = Optional.empty();
- 
+
         private Optional<String> query = Optional.empty();
- 
+
         private Optional<String> raw = Optional.empty();
- 
+
         private Optional<String> sort = Optional.empty();
- 
+
         private Optional<String> updatedGte = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * The candidate ID to filter by
@@ -500,6 +512,7 @@ public class ListAtsApplicationsRequest {
             return this;
         }
 
+
         /**
          * The company ID to filter by
          */
@@ -518,6 +531,7 @@ public class ListAtsApplicationsRequest {
             return this;
         }
 
+
         /**
          * ID of the connection
          */
@@ -526,6 +540,7 @@ public class ListAtsApplicationsRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         /**
          * Comma-delimited fields to return
@@ -545,6 +560,7 @@ public class ListAtsApplicationsRequest {
             return this;
         }
 
+
         /**
          * The job ID to filter by
          */
@@ -563,6 +579,7 @@ public class ListAtsApplicationsRequest {
             return this;
         }
 
+
         public Builder limit(double limit) {
             Utils.checkNotNull(limit, "limit");
             this.limit = Optional.ofNullable(limit);
@@ -574,6 +591,7 @@ public class ListAtsApplicationsRequest {
             this.limit = limit;
             return this;
         }
+
 
         public Builder offset(double offset) {
             Utils.checkNotNull(offset, "offset");
@@ -587,6 +605,7 @@ public class ListAtsApplicationsRequest {
             return this;
         }
 
+
         public Builder order(String order) {
             Utils.checkNotNull(order, "order");
             this.order = Optional.ofNullable(order);
@@ -598,6 +617,7 @@ public class ListAtsApplicationsRequest {
             this.order = order;
             return this;
         }
+
 
         /**
          * Query string to search. eg. email address or name
@@ -617,6 +637,7 @@ public class ListAtsApplicationsRequest {
             return this;
         }
 
+
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
@@ -635,6 +656,7 @@ public class ListAtsApplicationsRequest {
             return this;
         }
 
+
         public Builder sort(String sort) {
             Utils.checkNotNull(sort, "sort");
             this.sort = Optional.ofNullable(sort);
@@ -646,6 +668,7 @@ public class ListAtsApplicationsRequest {
             this.sort = sort;
             return this;
         }
+
 
         /**
          * Return only results whose updated date is equal or greater to this value
@@ -664,21 +687,15 @@ public class ListAtsApplicationsRequest {
             this.updatedGte = updatedGte;
             return this;
         }
-        
+
         public ListAtsApplicationsRequest build() {
+
             return new ListAtsApplicationsRequest(
-                candidateId,
-                companyId,
-                connectionId,
-                fields,
-                jobId,
-                limit,
-                offset,
-                order,
-                query,
-                raw,
-                sort,
-                updatedGte);
+                candidateId, companyId, connectionId,
+                fields, jobId, limit,
+                offset, order, query,
+                raw, sort, updatedGte);
         }
+
     }
 }

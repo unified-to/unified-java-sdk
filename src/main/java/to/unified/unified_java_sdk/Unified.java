@@ -96,7 +96,6 @@ public class Unified {
     Unified(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create connection
      * 
@@ -117,13 +116,11 @@ public class Unified {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateUnifiedConnectionResponse createUnifiedConnection(
-            Connection request) throws Exception {
+    public CreateUnifiedConnectionResponse createUnifiedConnection(Connection request) throws Exception {
         RequestOperation<Connection, CreateUnifiedConnectionResponse> operation
-              = new CreateUnifiedConnectionOperation( sdkConfiguration);
+              = new CreateUnifiedConnectionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create webhook subscription
@@ -145,13 +142,11 @@ public class Unified {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateUnifiedWebhookResponse createUnifiedWebhook(
-            CreateUnifiedWebhookRequest request) throws Exception {
+    public CreateUnifiedWebhookResponse createUnifiedWebhook(CreateUnifiedWebhookRequest request) throws Exception {
         RequestOperation<CreateUnifiedWebhookRequest, CreateUnifiedWebhookResponse> operation
-              = new CreateUnifiedWebhookOperation( sdkConfiguration);
+              = new CreateUnifiedWebhookOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve specific API Call by its ID
@@ -169,13 +164,11 @@ public class Unified {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetUnifiedApicallResponse getUnifiedApicall(
-            GetUnifiedApicallRequest request) throws Exception {
+    public GetUnifiedApicallResponse getUnifiedApicall(GetUnifiedApicallRequest request) throws Exception {
         RequestOperation<GetUnifiedApicallRequest, GetUnifiedApicallResponse> operation
-              = new GetUnifiedApicallOperation( sdkConfiguration);
+              = new GetUnifiedApicallOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve connection
@@ -193,13 +186,11 @@ public class Unified {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetUnifiedConnectionResponse getUnifiedConnection(
-            GetUnifiedConnectionRequest request) throws Exception {
+    public GetUnifiedConnectionResponse getUnifiedConnection(GetUnifiedConnectionRequest request) throws Exception {
         RequestOperation<GetUnifiedConnectionRequest, GetUnifiedConnectionResponse> operation
-              = new GetUnifiedConnectionOperation( sdkConfiguration);
+              = new GetUnifiedConnectionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create connection indirectly
@@ -221,13 +212,11 @@ public class Unified {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetUnifiedIntegrationAuthResponse getUnifiedIntegrationAuth(
-            GetUnifiedIntegrationAuthRequest request) throws Exception {
+    public GetUnifiedIntegrationAuthResponse getUnifiedIntegrationAuth(GetUnifiedIntegrationAuthRequest request) throws Exception {
         RequestOperation<GetUnifiedIntegrationAuthRequest, GetUnifiedIntegrationAuthResponse> operation
-              = new GetUnifiedIntegrationAuthOperation( sdkConfiguration);
+              = new GetUnifiedIntegrationAuthOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve webhook by its ID
@@ -245,13 +234,11 @@ public class Unified {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetUnifiedWebhookResponse getUnifiedWebhook(
-            GetUnifiedWebhookRequest request) throws Exception {
+    public GetUnifiedWebhookResponse getUnifiedWebhook(GetUnifiedWebhookRequest request) throws Exception {
         RequestOperation<GetUnifiedWebhookRequest, GetUnifiedWebhookResponse> operation
-              = new GetUnifiedWebhookOperation( sdkConfiguration);
+              = new GetUnifiedWebhookOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Returns API Calls
@@ -269,13 +256,11 @@ public class Unified {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListUnifiedApicallsResponse listUnifiedApicalls(
-            ListUnifiedApicallsRequest request) throws Exception {
+    public ListUnifiedApicallsResponse listUnifiedApicalls(ListUnifiedApicallsRequest request) throws Exception {
         RequestOperation<ListUnifiedApicallsRequest, ListUnifiedApicallsResponse> operation
-              = new ListUnifiedApicallsOperation( sdkConfiguration);
+              = new ListUnifiedApicallsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all connections
@@ -293,13 +278,11 @@ public class Unified {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListUnifiedConnectionsResponse listUnifiedConnections(
-            ListUnifiedConnectionsRequest request) throws Exception {
+    public ListUnifiedConnectionsResponse listUnifiedConnections(ListUnifiedConnectionsRequest request) throws Exception {
         RequestOperation<ListUnifiedConnectionsRequest, ListUnifiedConnectionsResponse> operation
-              = new ListUnifiedConnectionsOperation( sdkConfiguration);
+              = new ListUnifiedConnectionsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Returns all activated integrations in a workspace
@@ -321,13 +304,11 @@ public class Unified {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListUnifiedIntegrationWorkspacesResponse listUnifiedIntegrationWorkspaces(
-            ListUnifiedIntegrationWorkspacesRequest request) throws Exception {
+    public ListUnifiedIntegrationWorkspacesResponse listUnifiedIntegrationWorkspaces(ListUnifiedIntegrationWorkspacesRequest request) throws Exception {
         RequestOperation<ListUnifiedIntegrationWorkspacesRequest, ListUnifiedIntegrationWorkspacesResponse> operation
-              = new ListUnifiedIntegrationWorkspacesOperation( sdkConfiguration);
+              = new ListUnifiedIntegrationWorkspacesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Returns all integrations
@@ -345,13 +326,11 @@ public class Unified {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListUnifiedIntegrationsResponse listUnifiedIntegrations(
-            ListUnifiedIntegrationsRequest request) throws Exception {
+    public ListUnifiedIntegrationsResponse listUnifiedIntegrations(ListUnifiedIntegrationsRequest request) throws Exception {
         RequestOperation<ListUnifiedIntegrationsRequest, ListUnifiedIntegrationsResponse> operation
-              = new ListUnifiedIntegrationsOperation( sdkConfiguration);
+              = new ListUnifiedIntegrationsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List support issues
@@ -369,13 +348,11 @@ public class Unified {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListUnifiedIssuesResponse listUnifiedIssues(
-            ListUnifiedIssuesRequest request) throws Exception {
+    public ListUnifiedIssuesResponse listUnifiedIssues(ListUnifiedIssuesRequest request) throws Exception {
         RequestOperation<ListUnifiedIssuesRequest, ListUnifiedIssuesResponse> operation
-              = new ListUnifiedIssuesOperation( sdkConfiguration);
+              = new ListUnifiedIssuesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Returns all registered webhooks
@@ -393,13 +370,11 @@ public class Unified {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListUnifiedWebhooksResponse listUnifiedWebhooks(
-            ListUnifiedWebhooksRequest request) throws Exception {
+    public ListUnifiedWebhooksResponse listUnifiedWebhooks(ListUnifiedWebhooksRequest request) throws Exception {
         RequestOperation<ListUnifiedWebhooksRequest, ListUnifiedWebhooksResponse> operation
-              = new ListUnifiedWebhooksOperation( sdkConfiguration);
+              = new ListUnifiedWebhooksOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update connection
@@ -417,13 +392,11 @@ public class Unified {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchUnifiedConnectionResponse patchUnifiedConnection(
-            PatchUnifiedConnectionRequest request) throws Exception {
+    public PatchUnifiedConnectionResponse patchUnifiedConnection(PatchUnifiedConnectionRequest request) throws Exception {
         RequestOperation<PatchUnifiedConnectionRequest, PatchUnifiedConnectionResponse> operation
-              = new PatchUnifiedConnectionOperation( sdkConfiguration);
+              = new PatchUnifiedConnectionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update webhook subscription
@@ -441,13 +414,11 @@ public class Unified {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchUnifiedWebhookResponse patchUnifiedWebhook(
-            PatchUnifiedWebhookRequest request) throws Exception {
+    public PatchUnifiedWebhookResponse patchUnifiedWebhook(PatchUnifiedWebhookRequest request) throws Exception {
         RequestOperation<PatchUnifiedWebhookRequest, PatchUnifiedWebhookResponse> operation
-              = new PatchUnifiedWebhookOperation( sdkConfiguration);
+              = new PatchUnifiedWebhookOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Trigger webhook
@@ -465,13 +436,11 @@ public class Unified {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchUnifiedWebhookTriggerResponse patchUnifiedWebhookTrigger(
-            PatchUnifiedWebhookTriggerRequest request) throws Exception {
+    public PatchUnifiedWebhookTriggerResponse patchUnifiedWebhookTrigger(PatchUnifiedWebhookTriggerRequest request) throws Exception {
         RequestOperation<PatchUnifiedWebhookTriggerRequest, PatchUnifiedWebhookTriggerResponse> operation
-              = new PatchUnifiedWebhookTriggerOperation( sdkConfiguration);
+              = new PatchUnifiedWebhookTriggerOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove connection
@@ -489,13 +458,11 @@ public class Unified {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveUnifiedConnectionResponse removeUnifiedConnection(
-            RemoveUnifiedConnectionRequest request) throws Exception {
+    public RemoveUnifiedConnectionResponse removeUnifiedConnection(RemoveUnifiedConnectionRequest request) throws Exception {
         RequestOperation<RemoveUnifiedConnectionRequest, RemoveUnifiedConnectionResponse> operation
-              = new RemoveUnifiedConnectionOperation( sdkConfiguration);
+              = new RemoveUnifiedConnectionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove webhook subscription
@@ -513,13 +480,11 @@ public class Unified {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveUnifiedWebhookResponse removeUnifiedWebhook(
-            RemoveUnifiedWebhookRequest request) throws Exception {
+    public RemoveUnifiedWebhookResponse removeUnifiedWebhook(RemoveUnifiedWebhookRequest request) throws Exception {
         RequestOperation<RemoveUnifiedWebhookRequest, RemoveUnifiedWebhookResponse> operation
-              = new RemoveUnifiedWebhookOperation( sdkConfiguration);
+              = new RemoveUnifiedWebhookOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update connection
@@ -537,13 +502,11 @@ public class Unified {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateUnifiedConnectionResponse updateUnifiedConnection(
-            UpdateUnifiedConnectionRequest request) throws Exception {
+    public UpdateUnifiedConnectionResponse updateUnifiedConnection(UpdateUnifiedConnectionRequest request) throws Exception {
         RequestOperation<UpdateUnifiedConnectionRequest, UpdateUnifiedConnectionResponse> operation
-              = new UpdateUnifiedConnectionOperation( sdkConfiguration);
+              = new UpdateUnifiedConnectionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update webhook subscription
@@ -561,13 +524,11 @@ public class Unified {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateUnifiedWebhookResponse updateUnifiedWebhook(
-            UpdateUnifiedWebhookRequest request) throws Exception {
+    public UpdateUnifiedWebhookResponse updateUnifiedWebhook(UpdateUnifiedWebhookRequest request) throws Exception {
         RequestOperation<UpdateUnifiedWebhookRequest, UpdateUnifiedWebhookResponse> operation
-              = new UpdateUnifiedWebhookOperation( sdkConfiguration);
+              = new UpdateUnifiedWebhookOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Trigger webhook
@@ -585,10 +546,9 @@ public class Unified {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateUnifiedWebhookTriggerResponse updateUnifiedWebhookTrigger(
-            UpdateUnifiedWebhookTriggerRequest request) throws Exception {
+    public UpdateUnifiedWebhookTriggerResponse updateUnifiedWebhookTrigger(UpdateUnifiedWebhookTriggerRequest request) throws Exception {
         RequestOperation<UpdateUnifiedWebhookTriggerRequest, UpdateUnifiedWebhookTriggerResponse> operation
-              = new UpdateUnifiedWebhookTriggerOperation( sdkConfiguration);
+              = new UpdateUnifiedWebhookTriggerOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

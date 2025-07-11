@@ -24,7 +24,6 @@ public class Payslip {
     Payslip(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Retrieve a payslip
      * 
@@ -41,13 +40,11 @@ public class Payslip {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetHrisPayslipResponse getHrisPayslip(
-            GetHrisPayslipRequest request) throws Exception {
+    public GetHrisPayslipResponse getHrisPayslip(GetHrisPayslipRequest request) throws Exception {
         RequestOperation<GetHrisPayslipRequest, GetHrisPayslipResponse> operation
-              = new GetHrisPayslipOperation( sdkConfiguration);
+              = new GetHrisPayslipOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all payslips
@@ -65,10 +62,9 @@ public class Payslip {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListHrisPayslipsResponse listHrisPayslips(
-            ListHrisPayslipsRequest request) throws Exception {
+    public ListHrisPayslipsResponse listHrisPayslips(ListHrisPayslipsRequest request) throws Exception {
         RequestOperation<ListHrisPayslipsRequest, ListHrisPayslipsResponse> operation
-              = new ListHrisPayslipsOperation( sdkConfiguration);
+              = new ListHrisPayslipsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

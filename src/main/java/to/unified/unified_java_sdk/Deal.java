@@ -40,7 +40,6 @@ public class Deal {
     Deal(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a deal
      * 
@@ -57,13 +56,11 @@ public class Deal {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateCrmDealResponse createCrmDeal(
-            CreateCrmDealRequest request) throws Exception {
+    public CreateCrmDealResponse createCrmDeal(CreateCrmDealRequest request) throws Exception {
         RequestOperation<CreateCrmDealRequest, CreateCrmDealResponse> operation
-              = new CreateCrmDealOperation( sdkConfiguration);
+              = new CreateCrmDealOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a deal
@@ -81,13 +78,11 @@ public class Deal {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetCrmDealResponse getCrmDeal(
-            GetCrmDealRequest request) throws Exception {
+    public GetCrmDealResponse getCrmDeal(GetCrmDealRequest request) throws Exception {
         RequestOperation<GetCrmDealRequest, GetCrmDealResponse> operation
-              = new GetCrmDealOperation( sdkConfiguration);
+              = new GetCrmDealOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all deals
@@ -105,13 +100,11 @@ public class Deal {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCrmDealsResponse listCrmDeals(
-            ListCrmDealsRequest request) throws Exception {
+    public ListCrmDealsResponse listCrmDeals(ListCrmDealsRequest request) throws Exception {
         RequestOperation<ListCrmDealsRequest, ListCrmDealsResponse> operation
-              = new ListCrmDealsOperation( sdkConfiguration);
+              = new ListCrmDealsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a deal
@@ -129,13 +122,11 @@ public class Deal {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchCrmDealResponse patchCrmDeal(
-            PatchCrmDealRequest request) throws Exception {
+    public PatchCrmDealResponse patchCrmDeal(PatchCrmDealRequest request) throws Exception {
         RequestOperation<PatchCrmDealRequest, PatchCrmDealResponse> operation
-              = new PatchCrmDealOperation( sdkConfiguration);
+              = new PatchCrmDealOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a deal
@@ -153,13 +144,11 @@ public class Deal {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveCrmDealResponse removeCrmDeal(
-            RemoveCrmDealRequest request) throws Exception {
+    public RemoveCrmDealResponse removeCrmDeal(RemoveCrmDealRequest request) throws Exception {
         RequestOperation<RemoveCrmDealRequest, RemoveCrmDealResponse> operation
-              = new RemoveCrmDealOperation( sdkConfiguration);
+              = new RemoveCrmDealOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a deal
@@ -177,10 +166,9 @@ public class Deal {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateCrmDealResponse updateCrmDeal(
-            UpdateCrmDealRequest request) throws Exception {
+    public UpdateCrmDealResponse updateCrmDeal(UpdateCrmDealRequest request) throws Exception {
         RequestOperation<UpdateCrmDealRequest, UpdateCrmDealResponse> operation
-              = new UpdateCrmDealOperation( sdkConfiguration);
+              = new UpdateCrmDealOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

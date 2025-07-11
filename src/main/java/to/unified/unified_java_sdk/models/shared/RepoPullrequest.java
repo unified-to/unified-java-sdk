@@ -18,43 +18,53 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class RepoPullrequest {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closed_at")
     private Optional<OffsetDateTime> closedAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commit_ids")
     private Optional<? extends List<String>> commitIds;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     private Optional<? extends List<String>> labels;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repo_id")
     private Optional<String> repoId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private Optional<? extends RepoPullrequestStatus> status;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_ids")
@@ -95,7 +105,10 @@ public class RepoPullrequest {
     }
     
     public RepoPullrequest() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -153,15 +166,17 @@ public class RepoPullrequest {
         return (Optional<List<String>>) userIds;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public RepoPullrequest withClosedAt(OffsetDateTime closedAt) {
         Utils.checkNotNull(closedAt, "closedAt");
         this.closedAt = Optional.ofNullable(closedAt);
         return this;
     }
+
 
     public RepoPullrequest withClosedAt(Optional<OffsetDateTime> closedAt) {
         Utils.checkNotNull(closedAt, "closedAt");
@@ -175,6 +190,7 @@ public class RepoPullrequest {
         return this;
     }
 
+
     public RepoPullrequest withCommitIds(Optional<? extends List<String>> commitIds) {
         Utils.checkNotNull(commitIds, "commitIds");
         this.commitIds = commitIds;
@@ -186,6 +202,7 @@ public class RepoPullrequest {
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public RepoPullrequest withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -199,6 +216,7 @@ public class RepoPullrequest {
         return this;
     }
 
+
     public RepoPullrequest withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -210,6 +228,7 @@ public class RepoPullrequest {
         this.labels = Optional.ofNullable(labels);
         return this;
     }
+
 
     public RepoPullrequest withLabels(Optional<? extends List<String>> labels) {
         Utils.checkNotNull(labels, "labels");
@@ -223,6 +242,7 @@ public class RepoPullrequest {
         return this;
     }
 
+
     public RepoPullrequest withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
@@ -234,6 +254,7 @@ public class RepoPullrequest {
         this.repoId = Optional.ofNullable(repoId);
         return this;
     }
+
 
     public RepoPullrequest withRepoId(Optional<String> repoId) {
         Utils.checkNotNull(repoId, "repoId");
@@ -247,6 +268,7 @@ public class RepoPullrequest {
         return this;
     }
 
+
     public RepoPullrequest withStatus(Optional<? extends RepoPullrequestStatus> status) {
         Utils.checkNotNull(status, "status");
         this.status = status;
@@ -258,6 +280,7 @@ public class RepoPullrequest {
         this.updatedAt = Optional.ofNullable(updatedAt);
         return this;
     }
+
 
     public RepoPullrequest withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
@@ -271,13 +294,13 @@ public class RepoPullrequest {
         return this;
     }
 
+
     public RepoPullrequest withUserIds(Optional<? extends List<String>> userIds) {
         Utils.checkNotNull(userIds, "userIds");
         this.userIds = userIds;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -303,15 +326,9 @@ public class RepoPullrequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            closedAt,
-            commitIds,
-            createdAt,
-            id,
-            labels,
-            raw,
-            repoId,
-            status,
-            updatedAt,
+            closedAt, commitIds, createdAt,
+            id, labels, raw,
+            repoId, status, updatedAt,
             userIds);
     }
     
@@ -329,32 +346,34 @@ public class RepoPullrequest {
                 "updatedAt", updatedAt,
                 "userIds", userIds);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<OffsetDateTime> closedAt = Optional.empty();
- 
+
         private Optional<? extends List<String>> commitIds = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<? extends List<String>> labels = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<String> repoId = Optional.empty();
- 
+
         private Optional<? extends RepoPullrequestStatus> status = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<? extends List<String>> userIds = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder closedAt(OffsetDateTime closedAt) {
             Utils.checkNotNull(closedAt, "closedAt");
@@ -368,6 +387,7 @@ public class RepoPullrequest {
             return this;
         }
 
+
         public Builder commitIds(List<String> commitIds) {
             Utils.checkNotNull(commitIds, "commitIds");
             this.commitIds = Optional.ofNullable(commitIds);
@@ -379,6 +399,7 @@ public class RepoPullrequest {
             this.commitIds = commitIds;
             return this;
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -392,6 +413,7 @@ public class RepoPullrequest {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -403,6 +425,7 @@ public class RepoPullrequest {
             this.id = id;
             return this;
         }
+
 
         public Builder labels(List<String> labels) {
             Utils.checkNotNull(labels, "labels");
@@ -416,6 +439,7 @@ public class RepoPullrequest {
             return this;
         }
 
+
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
@@ -427,6 +451,7 @@ public class RepoPullrequest {
             this.raw = raw;
             return this;
         }
+
 
         public Builder repoId(String repoId) {
             Utils.checkNotNull(repoId, "repoId");
@@ -440,6 +465,7 @@ public class RepoPullrequest {
             return this;
         }
 
+
         public Builder status(RepoPullrequestStatus status) {
             Utils.checkNotNull(status, "status");
             this.status = Optional.ofNullable(status);
@@ -451,6 +477,7 @@ public class RepoPullrequest {
             this.status = status;
             return this;
         }
+
 
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
@@ -464,6 +491,7 @@ public class RepoPullrequest {
             return this;
         }
 
+
         public Builder userIds(List<String> userIds) {
             Utils.checkNotNull(userIds, "userIds");
             this.userIds = Optional.ofNullable(userIds);
@@ -475,19 +503,15 @@ public class RepoPullrequest {
             this.userIds = userIds;
             return this;
         }
-        
+
         public RepoPullrequest build() {
+
             return new RepoPullrequest(
-                closedAt,
-                commitIds,
-                createdAt,
-                id,
-                labels,
-                raw,
-                repoId,
-                status,
-                updatedAt,
+                closedAt, commitIds, createdAt,
+                id, labels, raw,
+                repoId, status, updatedAt,
                 userIds);
         }
+
     }
 }

@@ -18,6 +18,7 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class TaskTask {
 
     @JsonInclude(Include.NON_ABSENT)
@@ -31,73 +32,91 @@ public class TaskTask {
     @JsonProperty("attachment_ids")
     private Optional<? extends List<String>> attachmentIds;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completed_at")
     private Optional<OffsetDateTime> completedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creator_user_id")
     private Optional<String> creatorUserId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("due_at")
     private Optional<OffsetDateTime> dueAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("follower_user_ids")
     private Optional<? extends List<String>> followerUserIds;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_ids")
     private Optional<? extends List<String>> groupIds;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     private Optional<? extends List<TaskMetadata>> metadata;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     private Optional<String> notes;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     private Optional<String> parentId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     private Optional<String> priority;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_id")
     private Optional<String> projectId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private Optional<? extends TaskTaskStatus> status;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     private Optional<? extends List<String>> tags;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
@@ -168,7 +187,13 @@ public class TaskTask {
     }
     
     public TaskTask() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -282,15 +307,17 @@ public class TaskTask {
         return url;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public TaskTask withAssignedUserIds(List<String> assignedUserIds) {
         Utils.checkNotNull(assignedUserIds, "assignedUserIds");
         this.assignedUserIds = Optional.ofNullable(assignedUserIds);
         return this;
     }
+
 
     public TaskTask withAssignedUserIds(Optional<? extends List<String>> assignedUserIds) {
         Utils.checkNotNull(assignedUserIds, "assignedUserIds");
@@ -307,6 +334,7 @@ public class TaskTask {
         return this;
     }
 
+
     /**
      * Array of attachment IDs retrieved from StorageFile.Get endpoint
      */
@@ -322,6 +350,7 @@ public class TaskTask {
         return this;
     }
 
+
     public TaskTask withCompletedAt(Optional<OffsetDateTime> completedAt) {
         Utils.checkNotNull(completedAt, "completedAt");
         this.completedAt = completedAt;
@@ -333,6 +362,7 @@ public class TaskTask {
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public TaskTask withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -346,6 +376,7 @@ public class TaskTask {
         return this;
     }
 
+
     public TaskTask withCreatorUserId(Optional<String> creatorUserId) {
         Utils.checkNotNull(creatorUserId, "creatorUserId");
         this.creatorUserId = creatorUserId;
@@ -357,6 +388,7 @@ public class TaskTask {
         this.dueAt = Optional.ofNullable(dueAt);
         return this;
     }
+
 
     public TaskTask withDueAt(Optional<OffsetDateTime> dueAt) {
         Utils.checkNotNull(dueAt, "dueAt");
@@ -370,6 +402,7 @@ public class TaskTask {
         return this;
     }
 
+
     public TaskTask withFollowerUserIds(Optional<? extends List<String>> followerUserIds) {
         Utils.checkNotNull(followerUserIds, "followerUserIds");
         this.followerUserIds = followerUserIds;
@@ -381,6 +414,7 @@ public class TaskTask {
         this.groupIds = Optional.ofNullable(groupIds);
         return this;
     }
+
 
     public TaskTask withGroupIds(Optional<? extends List<String>> groupIds) {
         Utils.checkNotNull(groupIds, "groupIds");
@@ -394,6 +428,7 @@ public class TaskTask {
         return this;
     }
 
+
     public TaskTask withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -405,6 +440,7 @@ public class TaskTask {
         this.metadata = Optional.ofNullable(metadata);
         return this;
     }
+
 
     public TaskTask withMetadata(Optional<? extends List<TaskMetadata>> metadata) {
         Utils.checkNotNull(metadata, "metadata");
@@ -418,6 +454,7 @@ public class TaskTask {
         return this;
     }
 
+
     public TaskTask withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
         this.name = name;
@@ -429,6 +466,7 @@ public class TaskTask {
         this.notes = Optional.ofNullable(notes);
         return this;
     }
+
 
     public TaskTask withNotes(Optional<String> notes) {
         Utils.checkNotNull(notes, "notes");
@@ -442,6 +480,7 @@ public class TaskTask {
         return this;
     }
 
+
     public TaskTask withParentId(Optional<String> parentId) {
         Utils.checkNotNull(parentId, "parentId");
         this.parentId = parentId;
@@ -453,6 +492,7 @@ public class TaskTask {
         this.priority = Optional.ofNullable(priority);
         return this;
     }
+
 
     public TaskTask withPriority(Optional<String> priority) {
         Utils.checkNotNull(priority, "priority");
@@ -466,6 +506,7 @@ public class TaskTask {
         return this;
     }
 
+
     public TaskTask withProjectId(Optional<String> projectId) {
         Utils.checkNotNull(projectId, "projectId");
         this.projectId = projectId;
@@ -477,6 +518,7 @@ public class TaskTask {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public TaskTask withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -490,6 +532,7 @@ public class TaskTask {
         return this;
     }
 
+
     public TaskTask withStatus(Optional<? extends TaskTaskStatus> status) {
         Utils.checkNotNull(status, "status");
         this.status = status;
@@ -501,6 +544,7 @@ public class TaskTask {
         this.tags = Optional.ofNullable(tags);
         return this;
     }
+
 
     public TaskTask withTags(Optional<? extends List<String>> tags) {
         Utils.checkNotNull(tags, "tags");
@@ -514,6 +558,7 @@ public class TaskTask {
         return this;
     }
 
+
     public TaskTask withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
@@ -526,13 +571,13 @@ public class TaskTask {
         return this;
     }
 
+
     public TaskTask withUrl(Optional<String> url) {
         Utils.checkNotNull(url, "url");
         this.url = url;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -568,26 +613,13 @@ public class TaskTask {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            assignedUserIds,
-            attachmentIds,
-            completedAt,
-            createdAt,
-            creatorUserId,
-            dueAt,
-            followerUserIds,
-            groupIds,
-            id,
-            metadata,
-            name,
-            notes,
-            parentId,
-            priority,
-            projectId,
-            raw,
-            status,
-            tags,
-            updatedAt,
-            url);
+            assignedUserIds, attachmentIds, completedAt,
+            createdAt, creatorUserId, dueAt,
+            followerUserIds, groupIds, id,
+            metadata, name, notes,
+            parentId, priority, projectId,
+            raw, status, tags,
+            updatedAt, url);
     }
     
     @Override
@@ -614,52 +646,54 @@ public class TaskTask {
                 "updatedAt", updatedAt,
                 "url", url);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<? extends List<String>> assignedUserIds = Optional.empty();
- 
+
         private Optional<? extends List<String>> attachmentIds = Optional.empty();
- 
+
         private Optional<OffsetDateTime> completedAt = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> creatorUserId = Optional.empty();
- 
+
         private Optional<OffsetDateTime> dueAt = Optional.empty();
- 
+
         private Optional<? extends List<String>> followerUserIds = Optional.empty();
- 
+
         private Optional<? extends List<String>> groupIds = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<? extends List<TaskMetadata>> metadata = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<String> notes = Optional.empty();
- 
+
         private Optional<String> parentId = Optional.empty();
- 
+
         private Optional<String> priority = Optional.empty();
- 
+
         private Optional<String> projectId = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<? extends TaskTaskStatus> status = Optional.empty();
- 
+
         private Optional<? extends List<String>> tags = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<String> url = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder assignedUserIds(List<String> assignedUserIds) {
             Utils.checkNotNull(assignedUserIds, "assignedUserIds");
@@ -672,6 +706,7 @@ public class TaskTask {
             this.assignedUserIds = assignedUserIds;
             return this;
         }
+
 
         /**
          * Array of attachment IDs retrieved from StorageFile.Get endpoint
@@ -691,6 +726,7 @@ public class TaskTask {
             return this;
         }
 
+
         public Builder completedAt(OffsetDateTime completedAt) {
             Utils.checkNotNull(completedAt, "completedAt");
             this.completedAt = Optional.ofNullable(completedAt);
@@ -702,6 +738,7 @@ public class TaskTask {
             this.completedAt = completedAt;
             return this;
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -715,6 +752,7 @@ public class TaskTask {
             return this;
         }
 
+
         public Builder creatorUserId(String creatorUserId) {
             Utils.checkNotNull(creatorUserId, "creatorUserId");
             this.creatorUserId = Optional.ofNullable(creatorUserId);
@@ -726,6 +764,7 @@ public class TaskTask {
             this.creatorUserId = creatorUserId;
             return this;
         }
+
 
         public Builder dueAt(OffsetDateTime dueAt) {
             Utils.checkNotNull(dueAt, "dueAt");
@@ -739,6 +778,7 @@ public class TaskTask {
             return this;
         }
 
+
         public Builder followerUserIds(List<String> followerUserIds) {
             Utils.checkNotNull(followerUserIds, "followerUserIds");
             this.followerUserIds = Optional.ofNullable(followerUserIds);
@@ -750,6 +790,7 @@ public class TaskTask {
             this.followerUserIds = followerUserIds;
             return this;
         }
+
 
         public Builder groupIds(List<String> groupIds) {
             Utils.checkNotNull(groupIds, "groupIds");
@@ -763,6 +804,7 @@ public class TaskTask {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -774,6 +816,7 @@ public class TaskTask {
             this.id = id;
             return this;
         }
+
 
         public Builder metadata(List<TaskMetadata> metadata) {
             Utils.checkNotNull(metadata, "metadata");
@@ -787,6 +830,7 @@ public class TaskTask {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = Optional.ofNullable(name);
@@ -798,6 +842,7 @@ public class TaskTask {
             this.name = name;
             return this;
         }
+
 
         public Builder notes(String notes) {
             Utils.checkNotNull(notes, "notes");
@@ -811,6 +856,7 @@ public class TaskTask {
             return this;
         }
 
+
         public Builder parentId(String parentId) {
             Utils.checkNotNull(parentId, "parentId");
             this.parentId = Optional.ofNullable(parentId);
@@ -822,6 +868,7 @@ public class TaskTask {
             this.parentId = parentId;
             return this;
         }
+
 
         public Builder priority(String priority) {
             Utils.checkNotNull(priority, "priority");
@@ -835,6 +882,7 @@ public class TaskTask {
             return this;
         }
 
+
         public Builder projectId(String projectId) {
             Utils.checkNotNull(projectId, "projectId");
             this.projectId = Optional.ofNullable(projectId);
@@ -846,6 +894,7 @@ public class TaskTask {
             this.projectId = projectId;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -859,6 +908,7 @@ public class TaskTask {
             return this;
         }
 
+
         public Builder status(TaskTaskStatus status) {
             Utils.checkNotNull(status, "status");
             this.status = Optional.ofNullable(status);
@@ -870,6 +920,7 @@ public class TaskTask {
             this.status = status;
             return this;
         }
+
 
         public Builder tags(List<String> tags) {
             Utils.checkNotNull(tags, "tags");
@@ -883,6 +934,7 @@ public class TaskTask {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -895,6 +947,7 @@ public class TaskTask {
             return this;
         }
 
+
         public Builder url(String url) {
             Utils.checkNotNull(url, "url");
             this.url = Optional.ofNullable(url);
@@ -906,29 +959,18 @@ public class TaskTask {
             this.url = url;
             return this;
         }
-        
+
         public TaskTask build() {
+
             return new TaskTask(
-                assignedUserIds,
-                attachmentIds,
-                completedAt,
-                createdAt,
-                creatorUserId,
-                dueAt,
-                followerUserIds,
-                groupIds,
-                id,
-                metadata,
-                name,
-                notes,
-                parentId,
-                priority,
-                projectId,
-                raw,
-                status,
-                tags,
-                updatedAt,
-                url);
+                assignedUserIds, attachmentIds, completedAt,
+                createdAt, creatorUserId, dueAt,
+                followerUserIds, groupIds, id,
+                metadata, name, notes,
+                parentId, priority, projectId,
+                raw, status, tags,
+                updatedAt, url);
         }
+
     }
 }

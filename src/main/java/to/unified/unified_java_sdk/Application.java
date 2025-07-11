@@ -40,7 +40,6 @@ public class Application {
     Application(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create an application
      * 
@@ -57,13 +56,11 @@ public class Application {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAtsApplicationResponse createAtsApplication(
-            CreateAtsApplicationRequest request) throws Exception {
+    public CreateAtsApplicationResponse createAtsApplication(CreateAtsApplicationRequest request) throws Exception {
         RequestOperation<CreateAtsApplicationRequest, CreateAtsApplicationResponse> operation
-              = new CreateAtsApplicationOperation( sdkConfiguration);
+              = new CreateAtsApplicationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve an application
@@ -81,13 +78,11 @@ public class Application {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAtsApplicationResponse getAtsApplication(
-            GetAtsApplicationRequest request) throws Exception {
+    public GetAtsApplicationResponse getAtsApplication(GetAtsApplicationRequest request) throws Exception {
         RequestOperation<GetAtsApplicationRequest, GetAtsApplicationResponse> operation
-              = new GetAtsApplicationOperation( sdkConfiguration);
+              = new GetAtsApplicationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all applications
@@ -105,13 +100,11 @@ public class Application {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAtsApplicationsResponse listAtsApplications(
-            ListAtsApplicationsRequest request) throws Exception {
+    public ListAtsApplicationsResponse listAtsApplications(ListAtsApplicationsRequest request) throws Exception {
         RequestOperation<ListAtsApplicationsRequest, ListAtsApplicationsResponse> operation
-              = new ListAtsApplicationsOperation( sdkConfiguration);
+              = new ListAtsApplicationsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an application
@@ -129,13 +122,11 @@ public class Application {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAtsApplicationResponse patchAtsApplication(
-            PatchAtsApplicationRequest request) throws Exception {
+    public PatchAtsApplicationResponse patchAtsApplication(PatchAtsApplicationRequest request) throws Exception {
         RequestOperation<PatchAtsApplicationRequest, PatchAtsApplicationResponse> operation
-              = new PatchAtsApplicationOperation( sdkConfiguration);
+              = new PatchAtsApplicationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove an application
@@ -153,13 +144,11 @@ public class Application {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAtsApplicationResponse removeAtsApplication(
-            RemoveAtsApplicationRequest request) throws Exception {
+    public RemoveAtsApplicationResponse removeAtsApplication(RemoveAtsApplicationRequest request) throws Exception {
         RequestOperation<RemoveAtsApplicationRequest, RemoveAtsApplicationResponse> operation
-              = new RemoveAtsApplicationOperation( sdkConfiguration);
+              = new RemoveAtsApplicationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an application
@@ -177,10 +166,9 @@ public class Application {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAtsApplicationResponse updateAtsApplication(
-            UpdateAtsApplicationRequest request) throws Exception {
+    public UpdateAtsApplicationResponse updateAtsApplication(UpdateAtsApplicationRequest request) throws Exception {
         RequestOperation<UpdateAtsApplicationRequest, UpdateAtsApplicationResponse> operation
-              = new UpdateAtsApplicationOperation( sdkConfiguration);
+              = new UpdateAtsApplicationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

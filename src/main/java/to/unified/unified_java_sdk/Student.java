@@ -40,7 +40,6 @@ public class Student {
     Student(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a student
      * 
@@ -57,13 +56,11 @@ public class Student {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateLmsStudentResponse createLmsStudent(
-            CreateLmsStudentRequest request) throws Exception {
+    public CreateLmsStudentResponse createLmsStudent(CreateLmsStudentRequest request) throws Exception {
         RequestOperation<CreateLmsStudentRequest, CreateLmsStudentResponse> operation
-              = new CreateLmsStudentOperation( sdkConfiguration);
+              = new CreateLmsStudentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a student
@@ -81,13 +78,11 @@ public class Student {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetLmsStudentResponse getLmsStudent(
-            GetLmsStudentRequest request) throws Exception {
+    public GetLmsStudentResponse getLmsStudent(GetLmsStudentRequest request) throws Exception {
         RequestOperation<GetLmsStudentRequest, GetLmsStudentResponse> operation
-              = new GetLmsStudentOperation( sdkConfiguration);
+              = new GetLmsStudentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all students
@@ -105,13 +100,11 @@ public class Student {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListLmsStudentsResponse listLmsStudents(
-            ListLmsStudentsRequest request) throws Exception {
+    public ListLmsStudentsResponse listLmsStudents(ListLmsStudentsRequest request) throws Exception {
         RequestOperation<ListLmsStudentsRequest, ListLmsStudentsResponse> operation
-              = new ListLmsStudentsOperation( sdkConfiguration);
+              = new ListLmsStudentsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a student
@@ -129,13 +122,11 @@ public class Student {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchLmsStudentResponse patchLmsStudent(
-            PatchLmsStudentRequest request) throws Exception {
+    public PatchLmsStudentResponse patchLmsStudent(PatchLmsStudentRequest request) throws Exception {
         RequestOperation<PatchLmsStudentRequest, PatchLmsStudentResponse> operation
-              = new PatchLmsStudentOperation( sdkConfiguration);
+              = new PatchLmsStudentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a student
@@ -153,13 +144,11 @@ public class Student {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveLmsStudentResponse removeLmsStudent(
-            RemoveLmsStudentRequest request) throws Exception {
+    public RemoveLmsStudentResponse removeLmsStudent(RemoveLmsStudentRequest request) throws Exception {
         RequestOperation<RemoveLmsStudentRequest, RemoveLmsStudentResponse> operation
-              = new RemoveLmsStudentOperation( sdkConfiguration);
+              = new RemoveLmsStudentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a student
@@ -177,10 +166,9 @@ public class Student {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateLmsStudentResponse updateLmsStudent(
-            UpdateLmsStudentRequest request) throws Exception {
+    public UpdateLmsStudentResponse updateLmsStudent(UpdateLmsStudentRequest request) throws Exception {
         RequestOperation<UpdateLmsStudentRequest, UpdateLmsStudentResponse> operation
-              = new UpdateLmsStudentOperation( sdkConfiguration);
+              = new UpdateLmsStudentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

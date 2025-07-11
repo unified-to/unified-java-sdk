@@ -28,7 +28,7 @@ public class ListPassthroughsRequestBuilder {
     public ListPassthroughsResponse call() throws Exception {
         
         RequestOperation<ListPassthroughsRequest, ListPassthroughsResponse> operation
-              = new ListPassthroughsOperation( sdkConfiguration);
+              = new ListPassthroughsOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

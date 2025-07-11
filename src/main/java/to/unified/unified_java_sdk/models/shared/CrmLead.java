@@ -19,75 +19,93 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class CrmLead {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     private Optional<? extends PropertyCrmLeadAddress> address;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
     private Optional<String> companyId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_name")
     private Optional<String> companyName;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private Optional<String> contactId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creator_user_id")
     private Optional<String> creatorUserId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
     private Optional<? extends List<CrmEmail>> emails;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     private Optional<Boolean> isActive;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link_urls")
     private Optional<? extends List<String>> linkUrls;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     private Optional<? extends List<CrmMetadata>> metadata;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     private Optional<String> source;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private Optional<String> status;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephones")
     private Optional<? extends List<CrmTelephone>> telephones;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
@@ -152,7 +170,12 @@ public class CrmLead {
     }
     
     public CrmLead() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -251,15 +274,17 @@ public class CrmLead {
         return userId;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public CrmLead withAddress(PropertyCrmLeadAddress address) {
         Utils.checkNotNull(address, "address");
         this.address = Optional.ofNullable(address);
         return this;
     }
+
 
     public CrmLead withAddress(Optional<? extends PropertyCrmLeadAddress> address) {
         Utils.checkNotNull(address, "address");
@@ -273,6 +298,7 @@ public class CrmLead {
         return this;
     }
 
+
     public CrmLead withCompanyId(Optional<String> companyId) {
         Utils.checkNotNull(companyId, "companyId");
         this.companyId = companyId;
@@ -284,6 +310,7 @@ public class CrmLead {
         this.companyName = Optional.ofNullable(companyName);
         return this;
     }
+
 
     public CrmLead withCompanyName(Optional<String> companyName) {
         Utils.checkNotNull(companyName, "companyName");
@@ -297,6 +324,7 @@ public class CrmLead {
         return this;
     }
 
+
     public CrmLead withContactId(Optional<String> contactId) {
         Utils.checkNotNull(contactId, "contactId");
         this.contactId = contactId;
@@ -308,6 +336,7 @@ public class CrmLead {
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public CrmLead withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -321,6 +350,7 @@ public class CrmLead {
         return this;
     }
 
+
     public CrmLead withCreatorUserId(Optional<String> creatorUserId) {
         Utils.checkNotNull(creatorUserId, "creatorUserId");
         this.creatorUserId = creatorUserId;
@@ -332,6 +362,7 @@ public class CrmLead {
         this.emails = Optional.ofNullable(emails);
         return this;
     }
+
 
     public CrmLead withEmails(Optional<? extends List<CrmEmail>> emails) {
         Utils.checkNotNull(emails, "emails");
@@ -345,6 +376,7 @@ public class CrmLead {
         return this;
     }
 
+
     public CrmLead withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -356,6 +388,7 @@ public class CrmLead {
         this.isActive = Optional.ofNullable(isActive);
         return this;
     }
+
 
     public CrmLead withIsActive(Optional<Boolean> isActive) {
         Utils.checkNotNull(isActive, "isActive");
@@ -369,6 +402,7 @@ public class CrmLead {
         return this;
     }
 
+
     public CrmLead withLinkUrls(Optional<? extends List<String>> linkUrls) {
         Utils.checkNotNull(linkUrls, "linkUrls");
         this.linkUrls = linkUrls;
@@ -380,6 +414,7 @@ public class CrmLead {
         this.metadata = Optional.ofNullable(metadata);
         return this;
     }
+
 
     public CrmLead withMetadata(Optional<? extends List<CrmMetadata>> metadata) {
         Utils.checkNotNull(metadata, "metadata");
@@ -393,6 +428,7 @@ public class CrmLead {
         return this;
     }
 
+
     public CrmLead withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
         this.name = name;
@@ -404,6 +440,7 @@ public class CrmLead {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public CrmLead withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -417,6 +454,7 @@ public class CrmLead {
         return this;
     }
 
+
     public CrmLead withSource(Optional<String> source) {
         Utils.checkNotNull(source, "source");
         this.source = source;
@@ -428,6 +466,7 @@ public class CrmLead {
         this.status = Optional.ofNullable(status);
         return this;
     }
+
 
     public CrmLead withStatus(Optional<String> status) {
         Utils.checkNotNull(status, "status");
@@ -441,6 +480,7 @@ public class CrmLead {
         return this;
     }
 
+
     public CrmLead withTelephones(Optional<? extends List<CrmTelephone>> telephones) {
         Utils.checkNotNull(telephones, "telephones");
         this.telephones = telephones;
@@ -452,6 +492,7 @@ public class CrmLead {
         this.updatedAt = Optional.ofNullable(updatedAt);
         return this;
     }
+
 
     public CrmLead withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
@@ -465,13 +506,13 @@ public class CrmLead {
         return this;
     }
 
+
     public CrmLead withUserId(Optional<String> userId) {
         Utils.checkNotNull(userId, "userId");
         this.userId = userId;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -505,24 +546,12 @@ public class CrmLead {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            address,
-            companyId,
-            companyName,
-            contactId,
-            createdAt,
-            creatorUserId,
-            emails,
-            id,
-            isActive,
-            linkUrls,
-            metadata,
-            name,
-            raw,
-            source,
-            status,
-            telephones,
-            updatedAt,
-            userId);
+            address, companyId, companyName,
+            contactId, createdAt, creatorUserId,
+            emails, id, isActive,
+            linkUrls, metadata, name,
+            raw, source, status,
+            telephones, updatedAt, userId);
     }
     
     @Override
@@ -547,48 +576,50 @@ public class CrmLead {
                 "updatedAt", updatedAt,
                 "userId", userId);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<? extends PropertyCrmLeadAddress> address = Optional.empty();
- 
+
         private Optional<String> companyId = Optional.empty();
- 
+
         private Optional<String> companyName = Optional.empty();
- 
+
         private Optional<String> contactId = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> creatorUserId = Optional.empty();
- 
+
         private Optional<? extends List<CrmEmail>> emails = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<Boolean> isActive = Optional.empty();
- 
+
         private Optional<? extends List<String>> linkUrls = Optional.empty();
- 
+
         private Optional<? extends List<CrmMetadata>> metadata = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<String> source = Optional.empty();
- 
+
         private Optional<String> status = Optional.empty();
- 
+
         private Optional<? extends List<CrmTelephone>> telephones = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<String> userId = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder address(PropertyCrmLeadAddress address) {
             Utils.checkNotNull(address, "address");
@@ -602,6 +633,7 @@ public class CrmLead {
             return this;
         }
 
+
         public Builder companyId(String companyId) {
             Utils.checkNotNull(companyId, "companyId");
             this.companyId = Optional.ofNullable(companyId);
@@ -613,6 +645,7 @@ public class CrmLead {
             this.companyId = companyId;
             return this;
         }
+
 
         public Builder companyName(String companyName) {
             Utils.checkNotNull(companyName, "companyName");
@@ -626,6 +659,7 @@ public class CrmLead {
             return this;
         }
 
+
         public Builder contactId(String contactId) {
             Utils.checkNotNull(contactId, "contactId");
             this.contactId = Optional.ofNullable(contactId);
@@ -637,6 +671,7 @@ public class CrmLead {
             this.contactId = contactId;
             return this;
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -650,6 +685,7 @@ public class CrmLead {
             return this;
         }
 
+
         public Builder creatorUserId(String creatorUserId) {
             Utils.checkNotNull(creatorUserId, "creatorUserId");
             this.creatorUserId = Optional.ofNullable(creatorUserId);
@@ -661,6 +697,7 @@ public class CrmLead {
             this.creatorUserId = creatorUserId;
             return this;
         }
+
 
         public Builder emails(List<CrmEmail> emails) {
             Utils.checkNotNull(emails, "emails");
@@ -674,6 +711,7 @@ public class CrmLead {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -685,6 +723,7 @@ public class CrmLead {
             this.id = id;
             return this;
         }
+
 
         public Builder isActive(boolean isActive) {
             Utils.checkNotNull(isActive, "isActive");
@@ -698,6 +737,7 @@ public class CrmLead {
             return this;
         }
 
+
         public Builder linkUrls(List<String> linkUrls) {
             Utils.checkNotNull(linkUrls, "linkUrls");
             this.linkUrls = Optional.ofNullable(linkUrls);
@@ -709,6 +749,7 @@ public class CrmLead {
             this.linkUrls = linkUrls;
             return this;
         }
+
 
         public Builder metadata(List<CrmMetadata> metadata) {
             Utils.checkNotNull(metadata, "metadata");
@@ -722,6 +763,7 @@ public class CrmLead {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = Optional.ofNullable(name);
@@ -733,6 +775,7 @@ public class CrmLead {
             this.name = name;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -746,6 +789,7 @@ public class CrmLead {
             return this;
         }
 
+
         public Builder source(String source) {
             Utils.checkNotNull(source, "source");
             this.source = Optional.ofNullable(source);
@@ -757,6 +801,7 @@ public class CrmLead {
             this.source = source;
             return this;
         }
+
 
         public Builder status(String status) {
             Utils.checkNotNull(status, "status");
@@ -770,6 +815,7 @@ public class CrmLead {
             return this;
         }
 
+
         public Builder telephones(List<CrmTelephone> telephones) {
             Utils.checkNotNull(telephones, "telephones");
             this.telephones = Optional.ofNullable(telephones);
@@ -781,6 +827,7 @@ public class CrmLead {
             this.telephones = telephones;
             return this;
         }
+
 
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
@@ -794,6 +841,7 @@ public class CrmLead {
             return this;
         }
 
+
         public Builder userId(String userId) {
             Utils.checkNotNull(userId, "userId");
             this.userId = Optional.ofNullable(userId);
@@ -805,27 +853,17 @@ public class CrmLead {
             this.userId = userId;
             return this;
         }
-        
+
         public CrmLead build() {
+
             return new CrmLead(
-                address,
-                companyId,
-                companyName,
-                contactId,
-                createdAt,
-                creatorUserId,
-                emails,
-                id,
-                isActive,
-                linkUrls,
-                metadata,
-                name,
-                raw,
-                source,
-                status,
-                telephones,
-                updatedAt,
-                userId);
+                address, companyId, companyName,
+                contactId, createdAt, creatorUserId,
+                emails, id, isActive,
+                linkUrls, metadata, name,
+                raw, source, status,
+                telephones, updatedAt, userId);
         }
+
     }
 }

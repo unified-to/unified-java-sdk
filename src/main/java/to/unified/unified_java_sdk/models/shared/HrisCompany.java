@@ -17,31 +17,38 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class HrisCompany {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     private Optional<? extends PropertyHrisCompanyAddress> address;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legal_name")
     private Optional<String> legalName;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -73,7 +80,9 @@ public class HrisCompany {
     }
     
     public HrisCompany() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -113,15 +122,17 @@ public class HrisCompany {
         return updatedAt;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public HrisCompany withAddress(PropertyHrisCompanyAddress address) {
         Utils.checkNotNull(address, "address");
         this.address = Optional.ofNullable(address);
         return this;
     }
+
 
     public HrisCompany withAddress(Optional<? extends PropertyHrisCompanyAddress> address) {
         Utils.checkNotNull(address, "address");
@@ -135,6 +146,7 @@ public class HrisCompany {
         return this;
     }
 
+
     public HrisCompany withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
@@ -146,6 +158,7 @@ public class HrisCompany {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public HrisCompany withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -159,6 +172,7 @@ public class HrisCompany {
         return this;
     }
 
+
     public HrisCompany withLegalName(Optional<String> legalName) {
         Utils.checkNotNull(legalName, "legalName");
         this.legalName = legalName;
@@ -170,6 +184,7 @@ public class HrisCompany {
         this.name = Optional.ofNullable(name);
         return this;
     }
+
 
     public HrisCompany withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
@@ -183,6 +198,7 @@ public class HrisCompany {
         return this;
     }
 
+
     public HrisCompany withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
@@ -195,13 +211,13 @@ public class HrisCompany {
         return this;
     }
 
+
     public HrisCompany withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -224,12 +240,8 @@ public class HrisCompany {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            address,
-            createdAt,
-            id,
-            legalName,
-            name,
-            raw,
+            address, createdAt, id,
+            legalName, name, raw,
             updatedAt);
     }
     
@@ -244,26 +256,28 @@ public class HrisCompany {
                 "raw", raw,
                 "updatedAt", updatedAt);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<? extends PropertyHrisCompanyAddress> address = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> legalName = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder address(PropertyHrisCompanyAddress address) {
             Utils.checkNotNull(address, "address");
@@ -277,6 +291,7 @@ public class HrisCompany {
             return this;
         }
 
+
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
@@ -288,6 +303,7 @@ public class HrisCompany {
             this.createdAt = createdAt;
             return this;
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -301,6 +317,7 @@ public class HrisCompany {
             return this;
         }
 
+
         public Builder legalName(String legalName) {
             Utils.checkNotNull(legalName, "legalName");
             this.legalName = Optional.ofNullable(legalName);
@@ -312,6 +329,7 @@ public class HrisCompany {
             this.legalName = legalName;
             return this;
         }
+
 
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
@@ -325,6 +343,7 @@ public class HrisCompany {
             return this;
         }
 
+
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
@@ -337,6 +356,7 @@ public class HrisCompany {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -348,16 +368,14 @@ public class HrisCompany {
             this.updatedAt = updatedAt;
             return this;
         }
-        
+
         public HrisCompany build() {
+
             return new HrisCompany(
-                address,
-                createdAt,
-                id,
-                legalName,
-                name,
-                raw,
+                address, createdAt, id,
+                legalName, name, raw,
                 updatedAt);
         }
+
     }
 }

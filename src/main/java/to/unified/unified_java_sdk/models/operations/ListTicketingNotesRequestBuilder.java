@@ -28,7 +28,7 @@ public class ListTicketingNotesRequestBuilder {
     public ListTicketingNotesResponse call() throws Exception {
         
         RequestOperation<ListTicketingNotesRequest, ListTicketingNotesResponse> operation
-              = new ListTicketingNotesOperation( sdkConfiguration);
+              = new ListTicketingNotesOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

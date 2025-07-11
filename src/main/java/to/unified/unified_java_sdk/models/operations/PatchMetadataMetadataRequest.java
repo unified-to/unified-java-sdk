@@ -14,6 +14,7 @@ import to.unified.unified_java_sdk.models.shared.MetadataMetadata;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class PatchMetadataMetadataRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
@@ -66,7 +67,8 @@ public class PatchMetadataMetadataRequest {
             MetadataMetadata metadataMetadata,
             String connectionId,
             String id) {
-        this(metadataMetadata, connectionId, Optional.empty(), id, Optional.empty());
+        this(metadataMetadata, connectionId, Optional.empty(),
+            id, Optional.empty());
     }
 
     @JsonIgnore
@@ -107,9 +109,10 @@ public class PatchMetadataMetadataRequest {
         return raw;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public PatchMetadataMetadataRequest withMetadataMetadata(MetadataMetadata metadataMetadata) {
         Utils.checkNotNull(metadataMetadata, "metadataMetadata");
@@ -134,6 +137,7 @@ public class PatchMetadataMetadataRequest {
         this.fields = Optional.ofNullable(fields);
         return this;
     }
+
 
     /**
      * Comma-delimited fields to return
@@ -162,6 +166,7 @@ public class PatchMetadataMetadataRequest {
         return this;
     }
 
+
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
@@ -171,7 +176,6 @@ public class PatchMetadataMetadataRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -192,11 +196,8 @@ public class PatchMetadataMetadataRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            metadataMetadata,
-            connectionId,
-            fields,
-            id,
-            raw);
+            metadataMetadata, connectionId, fields,
+            id, raw);
     }
     
     @Override
@@ -208,28 +209,31 @@ public class PatchMetadataMetadataRequest {
                 "id", id,
                 "raw", raw);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private MetadataMetadata metadataMetadata;
- 
+
         private String connectionId;
- 
+
         private Optional<? extends List<String>> fields = Optional.empty();
- 
+
         private String id;
- 
+
         private Optional<String> raw = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder metadataMetadata(MetadataMetadata metadataMetadata) {
             Utils.checkNotNull(metadataMetadata, "metadataMetadata");
             this.metadataMetadata = metadataMetadata;
             return this;
         }
+
 
         /**
          * ID of the connection
@@ -239,6 +243,7 @@ public class PatchMetadataMetadataRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         /**
          * Comma-delimited fields to return
@@ -258,6 +263,7 @@ public class PatchMetadataMetadataRequest {
             return this;
         }
 
+
         /**
          * ID of the Metadata
          */
@@ -266,6 +272,7 @@ public class PatchMetadataMetadataRequest {
             this.id = id;
             return this;
         }
+
 
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
@@ -284,14 +291,13 @@ public class PatchMetadataMetadataRequest {
             this.raw = raw;
             return this;
         }
-        
+
         public PatchMetadataMetadataRequest build() {
+
             return new PatchMetadataMetadataRequest(
-                metadataMetadata,
-                connectionId,
-                fields,
-                id,
-                raw);
+                metadataMetadata, connectionId, fields,
+                id, raw);
         }
+
     }
 }

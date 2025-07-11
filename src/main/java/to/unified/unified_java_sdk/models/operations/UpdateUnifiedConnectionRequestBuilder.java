@@ -28,7 +28,7 @@ public class UpdateUnifiedConnectionRequestBuilder {
     public UpdateUnifiedConnectionResponse call() throws Exception {
         
         RequestOperation<UpdateUnifiedConnectionRequest, UpdateUnifiedConnectionResponse> operation
-              = new UpdateUnifiedConnectionOperation( sdkConfiguration);
+              = new UpdateUnifiedConnectionOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

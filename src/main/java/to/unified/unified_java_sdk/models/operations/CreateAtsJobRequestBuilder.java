@@ -28,7 +28,7 @@ public class CreateAtsJobRequestBuilder {
     public CreateAtsJobResponse call() throws Exception {
         
         RequestOperation<CreateAtsJobRequest, CreateAtsJobResponse> operation
-              = new CreateAtsJobOperation( sdkConfiguration);
+              = new CreateAtsJobOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

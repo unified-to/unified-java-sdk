@@ -14,23 +14,28 @@ import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class PropertyScimUserMeta {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created")
     private Optional<String> created;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModified")
     private Optional<String> lastModified;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     private Optional<String> location;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     private Optional<? extends PropertyScimUserMetaResourceType> resourceType;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
@@ -56,7 +61,8 @@ public class PropertyScimUserMeta {
     }
     
     public PropertyScimUserMeta() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -85,15 +91,17 @@ public class PropertyScimUserMeta {
         return version;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public PropertyScimUserMeta withCreated(String created) {
         Utils.checkNotNull(created, "created");
         this.created = Optional.ofNullable(created);
         return this;
     }
+
 
     public PropertyScimUserMeta withCreated(Optional<String> created) {
         Utils.checkNotNull(created, "created");
@@ -107,6 +115,7 @@ public class PropertyScimUserMeta {
         return this;
     }
 
+
     public PropertyScimUserMeta withLastModified(Optional<String> lastModified) {
         Utils.checkNotNull(lastModified, "lastModified");
         this.lastModified = lastModified;
@@ -118,6 +127,7 @@ public class PropertyScimUserMeta {
         this.location = Optional.ofNullable(location);
         return this;
     }
+
 
     public PropertyScimUserMeta withLocation(Optional<String> location) {
         Utils.checkNotNull(location, "location");
@@ -131,6 +141,7 @@ public class PropertyScimUserMeta {
         return this;
     }
 
+
     public PropertyScimUserMeta withResourceType(Optional<? extends PropertyScimUserMetaResourceType> resourceType) {
         Utils.checkNotNull(resourceType, "resourceType");
         this.resourceType = resourceType;
@@ -143,13 +154,13 @@ public class PropertyScimUserMeta {
         return this;
     }
 
+
     public PropertyScimUserMeta withVersion(Optional<String> version) {
         Utils.checkNotNull(version, "version");
         this.version = version;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -170,11 +181,8 @@ public class PropertyScimUserMeta {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            created,
-            lastModified,
-            location,
-            resourceType,
-            version);
+            created, lastModified, location,
+            resourceType, version);
     }
     
     @Override
@@ -186,22 +194,24 @@ public class PropertyScimUserMeta {
                 "resourceType", resourceType,
                 "version", version);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> created = Optional.empty();
- 
+
         private Optional<String> lastModified = Optional.empty();
- 
+
         private Optional<String> location = Optional.empty();
- 
+
         private Optional<? extends PropertyScimUserMetaResourceType> resourceType = Optional.empty();
- 
+
         private Optional<String> version = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder created(String created) {
             Utils.checkNotNull(created, "created");
@@ -215,6 +225,7 @@ public class PropertyScimUserMeta {
             return this;
         }
 
+
         public Builder lastModified(String lastModified) {
             Utils.checkNotNull(lastModified, "lastModified");
             this.lastModified = Optional.ofNullable(lastModified);
@@ -226,6 +237,7 @@ public class PropertyScimUserMeta {
             this.lastModified = lastModified;
             return this;
         }
+
 
         public Builder location(String location) {
             Utils.checkNotNull(location, "location");
@@ -239,6 +251,7 @@ public class PropertyScimUserMeta {
             return this;
         }
 
+
         public Builder resourceType(PropertyScimUserMetaResourceType resourceType) {
             Utils.checkNotNull(resourceType, "resourceType");
             this.resourceType = Optional.ofNullable(resourceType);
@@ -251,6 +264,7 @@ public class PropertyScimUserMeta {
             return this;
         }
 
+
         public Builder version(String version) {
             Utils.checkNotNull(version, "version");
             this.version = Optional.ofNullable(version);
@@ -262,14 +276,13 @@ public class PropertyScimUserMeta {
             this.version = version;
             return this;
         }
-        
+
         public PropertyScimUserMeta build() {
+
             return new PropertyScimUserMeta(
-                created,
-                lastModified,
-                location,
-                resourceType,
-                version);
+                created, lastModified, location,
+                resourceType, version);
         }
+
     }
 }

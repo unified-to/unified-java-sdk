@@ -28,7 +28,7 @@ public class ListMessagingMessagesRequestBuilder {
     public ListMessagingMessagesResponse call() throws Exception {
         
         RequestOperation<ListMessagingMessagesRequest, ListMessagingMessagesResponse> operation
-              = new ListMessagingMessagesOperation( sdkConfiguration);
+              = new ListMessagingMessagesOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

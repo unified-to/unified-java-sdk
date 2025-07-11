@@ -11,6 +11,7 @@ import to.unified.unified_java_sdk.models.shared.ScimUser;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class UpdateScimUsersRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
@@ -62,9 +63,10 @@ public class UpdateScimUsersRequest {
         return id;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public UpdateScimUsersRequest withScimUser(ScimUser scimUser) {
         Utils.checkNotNull(scimUser, "scimUser");
@@ -90,7 +92,6 @@ public class UpdateScimUsersRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -109,9 +110,7 @@ public class UpdateScimUsersRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            scimUser,
-            connectionId,
-            id);
+            scimUser, connectionId, id);
     }
     
     @Override
@@ -121,24 +120,27 @@ public class UpdateScimUsersRequest {
                 "connectionId", connectionId,
                 "id", id);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private ScimUser scimUser;
- 
+
         private String connectionId;
- 
+
         private String id;
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder scimUser(ScimUser scimUser) {
             Utils.checkNotNull(scimUser, "scimUser");
             this.scimUser = scimUser;
             return this;
         }
+
 
         /**
          * ID of the connection
@@ -149,6 +151,7 @@ public class UpdateScimUsersRequest {
             return this;
         }
 
+
         /**
          * ID of the User
          */
@@ -157,12 +160,12 @@ public class UpdateScimUsersRequest {
             this.id = id;
             return this;
         }
-        
+
         public UpdateScimUsersRequest build() {
+
             return new UpdateScimUsersRequest(
-                scimUser,
-                connectionId,
-                id);
+                scimUser, connectionId, id);
         }
+
     }
 }

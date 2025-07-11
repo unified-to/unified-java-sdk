@@ -18,95 +18,118 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class CalendarEvent {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachments")
     private Optional<? extends List<CalendarAttachment>> attachments;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attendees")
     private Optional<? extends List<CalendarAttendee>> attendees;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calendar_id")
     private Optional<String> calendarId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conference")
     private Optional<? extends List<CalendarConference>> conference;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<String> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private Optional<String> endAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_conference")
     private Optional<Boolean> hasConference;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_all_day")
     private Optional<Boolean> isAllDay;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_free")
     private Optional<Boolean> isFree;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_private")
     private Optional<Boolean> isPrivate;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     private Optional<String> location;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     private Optional<String> notes;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizer")
     private Optional<? extends PropertyCalendarEventOrganizer> organizer;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurrence")
     private Optional<? extends List<CalendarEventRecurrence>> recurrence;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurring_event_id")
     private Optional<String> recurringEventId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private Optional<String> startAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private Optional<? extends CalendarEventStatus> status;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject")
     private Optional<String> subject;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     private Optional<String> timezone;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<String> updatedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web_url")
@@ -186,7 +209,14 @@ public class CalendarEvent {
     }
     
     public CalendarEvent() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -311,15 +341,17 @@ public class CalendarEvent {
         return webUrl;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public CalendarEvent withAttachments(List<CalendarAttachment> attachments) {
         Utils.checkNotNull(attachments, "attachments");
         this.attachments = Optional.ofNullable(attachments);
         return this;
     }
+
 
     public CalendarEvent withAttachments(Optional<? extends List<CalendarAttachment>> attachments) {
         Utils.checkNotNull(attachments, "attachments");
@@ -333,6 +365,7 @@ public class CalendarEvent {
         return this;
     }
 
+
     public CalendarEvent withAttendees(Optional<? extends List<CalendarAttendee>> attendees) {
         Utils.checkNotNull(attendees, "attendees");
         this.attendees = attendees;
@@ -344,6 +377,7 @@ public class CalendarEvent {
         this.calendarId = Optional.ofNullable(calendarId);
         return this;
     }
+
 
     public CalendarEvent withCalendarId(Optional<String> calendarId) {
         Utils.checkNotNull(calendarId, "calendarId");
@@ -357,6 +391,7 @@ public class CalendarEvent {
         return this;
     }
 
+
     public CalendarEvent withConference(Optional<? extends List<CalendarConference>> conference) {
         Utils.checkNotNull(conference, "conference");
         this.conference = conference;
@@ -368,6 +403,7 @@ public class CalendarEvent {
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public CalendarEvent withCreatedAt(Optional<String> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -381,6 +417,7 @@ public class CalendarEvent {
         return this;
     }
 
+
     public CalendarEvent withEndAt(Optional<String> endAt) {
         Utils.checkNotNull(endAt, "endAt");
         this.endAt = endAt;
@@ -392,6 +429,7 @@ public class CalendarEvent {
         this.hasConference = Optional.ofNullable(hasConference);
         return this;
     }
+
 
     public CalendarEvent withHasConference(Optional<Boolean> hasConference) {
         Utils.checkNotNull(hasConference, "hasConference");
@@ -405,6 +443,7 @@ public class CalendarEvent {
         return this;
     }
 
+
     public CalendarEvent withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -416,6 +455,7 @@ public class CalendarEvent {
         this.isAllDay = Optional.ofNullable(isAllDay);
         return this;
     }
+
 
     public CalendarEvent withIsAllDay(Optional<Boolean> isAllDay) {
         Utils.checkNotNull(isAllDay, "isAllDay");
@@ -429,6 +469,7 @@ public class CalendarEvent {
         return this;
     }
 
+
     public CalendarEvent withIsFree(Optional<Boolean> isFree) {
         Utils.checkNotNull(isFree, "isFree");
         this.isFree = isFree;
@@ -440,6 +481,7 @@ public class CalendarEvent {
         this.isPrivate = Optional.ofNullable(isPrivate);
         return this;
     }
+
 
     public CalendarEvent withIsPrivate(Optional<Boolean> isPrivate) {
         Utils.checkNotNull(isPrivate, "isPrivate");
@@ -453,6 +495,7 @@ public class CalendarEvent {
         return this;
     }
 
+
     public CalendarEvent withLocation(Optional<String> location) {
         Utils.checkNotNull(location, "location");
         this.location = location;
@@ -464,6 +507,7 @@ public class CalendarEvent {
         this.notes = Optional.ofNullable(notes);
         return this;
     }
+
 
     public CalendarEvent withNotes(Optional<String> notes) {
         Utils.checkNotNull(notes, "notes");
@@ -477,6 +521,7 @@ public class CalendarEvent {
         return this;
     }
 
+
     public CalendarEvent withOrganizer(Optional<? extends PropertyCalendarEventOrganizer> organizer) {
         Utils.checkNotNull(organizer, "organizer");
         this.organizer = organizer;
@@ -488,6 +533,7 @@ public class CalendarEvent {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public CalendarEvent withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -501,6 +547,7 @@ public class CalendarEvent {
         return this;
     }
 
+
     public CalendarEvent withRecurrence(Optional<? extends List<CalendarEventRecurrence>> recurrence) {
         Utils.checkNotNull(recurrence, "recurrence");
         this.recurrence = recurrence;
@@ -512,6 +559,7 @@ public class CalendarEvent {
         this.recurringEventId = Optional.ofNullable(recurringEventId);
         return this;
     }
+
 
     public CalendarEvent withRecurringEventId(Optional<String> recurringEventId) {
         Utils.checkNotNull(recurringEventId, "recurringEventId");
@@ -525,6 +573,7 @@ public class CalendarEvent {
         return this;
     }
 
+
     public CalendarEvent withStartAt(Optional<String> startAt) {
         Utils.checkNotNull(startAt, "startAt");
         this.startAt = startAt;
@@ -536,6 +585,7 @@ public class CalendarEvent {
         this.status = Optional.ofNullable(status);
         return this;
     }
+
 
     public CalendarEvent withStatus(Optional<? extends CalendarEventStatus> status) {
         Utils.checkNotNull(status, "status");
@@ -549,6 +599,7 @@ public class CalendarEvent {
         return this;
     }
 
+
     public CalendarEvent withSubject(Optional<String> subject) {
         Utils.checkNotNull(subject, "subject");
         this.subject = subject;
@@ -560,6 +611,7 @@ public class CalendarEvent {
         this.timezone = Optional.ofNullable(timezone);
         return this;
     }
+
 
     public CalendarEvent withTimezone(Optional<String> timezone) {
         Utils.checkNotNull(timezone, "timezone");
@@ -573,6 +625,7 @@ public class CalendarEvent {
         return this;
     }
 
+
     public CalendarEvent withUpdatedAt(Optional<String> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
@@ -585,13 +638,13 @@ public class CalendarEvent {
         return this;
     }
 
+
     public CalendarEvent withWebUrl(Optional<String> webUrl) {
         Utils.checkNotNull(webUrl, "webUrl");
         this.webUrl = webUrl;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -630,29 +683,14 @@ public class CalendarEvent {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            attachments,
-            attendees,
-            calendarId,
-            conference,
-            createdAt,
-            endAt,
-            hasConference,
-            id,
-            isAllDay,
-            isFree,
-            isPrivate,
-            location,
-            notes,
-            organizer,
-            raw,
-            recurrence,
-            recurringEventId,
-            startAt,
-            status,
-            subject,
-            timezone,
-            updatedAt,
-            webUrl);
+            attachments, attendees, calendarId,
+            conference, createdAt, endAt,
+            hasConference, id, isAllDay,
+            isFree, isPrivate, location,
+            notes, organizer, raw,
+            recurrence, recurringEventId, startAt,
+            status, subject, timezone,
+            updatedAt, webUrl);
     }
     
     @Override
@@ -682,58 +720,60 @@ public class CalendarEvent {
                 "updatedAt", updatedAt,
                 "webUrl", webUrl);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<? extends List<CalendarAttachment>> attachments = Optional.empty();
- 
+
         private Optional<? extends List<CalendarAttendee>> attendees = Optional.empty();
- 
+
         private Optional<String> calendarId = Optional.empty();
- 
+
         private Optional<? extends List<CalendarConference>> conference = Optional.empty();
- 
+
         private Optional<String> createdAt = Optional.empty();
- 
+
         private Optional<String> endAt = Optional.empty();
- 
+
         private Optional<Boolean> hasConference = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<Boolean> isAllDay = Optional.empty();
- 
+
         private Optional<Boolean> isFree = Optional.empty();
- 
+
         private Optional<Boolean> isPrivate = Optional.empty();
- 
+
         private Optional<String> location = Optional.empty();
- 
+
         private Optional<String> notes = Optional.empty();
- 
+
         private Optional<? extends PropertyCalendarEventOrganizer> organizer = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<? extends List<CalendarEventRecurrence>> recurrence = Optional.empty();
- 
+
         private Optional<String> recurringEventId = Optional.empty();
- 
+
         private Optional<String> startAt = Optional.empty();
- 
+
         private Optional<? extends CalendarEventStatus> status = Optional.empty();
- 
+
         private Optional<String> subject = Optional.empty();
- 
+
         private Optional<String> timezone = Optional.empty();
- 
+
         private Optional<String> updatedAt = Optional.empty();
- 
+
         private Optional<String> webUrl = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder attachments(List<CalendarAttachment> attachments) {
             Utils.checkNotNull(attachments, "attachments");
@@ -747,6 +787,7 @@ public class CalendarEvent {
             return this;
         }
 
+
         public Builder attendees(List<CalendarAttendee> attendees) {
             Utils.checkNotNull(attendees, "attendees");
             this.attendees = Optional.ofNullable(attendees);
@@ -758,6 +799,7 @@ public class CalendarEvent {
             this.attendees = attendees;
             return this;
         }
+
 
         public Builder calendarId(String calendarId) {
             Utils.checkNotNull(calendarId, "calendarId");
@@ -771,6 +813,7 @@ public class CalendarEvent {
             return this;
         }
 
+
         public Builder conference(List<CalendarConference> conference) {
             Utils.checkNotNull(conference, "conference");
             this.conference = Optional.ofNullable(conference);
@@ -782,6 +825,7 @@ public class CalendarEvent {
             this.conference = conference;
             return this;
         }
+
 
         public Builder createdAt(String createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -795,6 +839,7 @@ public class CalendarEvent {
             return this;
         }
 
+
         public Builder endAt(String endAt) {
             Utils.checkNotNull(endAt, "endAt");
             this.endAt = Optional.ofNullable(endAt);
@@ -806,6 +851,7 @@ public class CalendarEvent {
             this.endAt = endAt;
             return this;
         }
+
 
         public Builder hasConference(boolean hasConference) {
             Utils.checkNotNull(hasConference, "hasConference");
@@ -819,6 +865,7 @@ public class CalendarEvent {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -830,6 +877,7 @@ public class CalendarEvent {
             this.id = id;
             return this;
         }
+
 
         public Builder isAllDay(boolean isAllDay) {
             Utils.checkNotNull(isAllDay, "isAllDay");
@@ -843,6 +891,7 @@ public class CalendarEvent {
             return this;
         }
 
+
         public Builder isFree(boolean isFree) {
             Utils.checkNotNull(isFree, "isFree");
             this.isFree = Optional.ofNullable(isFree);
@@ -854,6 +903,7 @@ public class CalendarEvent {
             this.isFree = isFree;
             return this;
         }
+
 
         public Builder isPrivate(boolean isPrivate) {
             Utils.checkNotNull(isPrivate, "isPrivate");
@@ -867,6 +917,7 @@ public class CalendarEvent {
             return this;
         }
 
+
         public Builder location(String location) {
             Utils.checkNotNull(location, "location");
             this.location = Optional.ofNullable(location);
@@ -878,6 +929,7 @@ public class CalendarEvent {
             this.location = location;
             return this;
         }
+
 
         public Builder notes(String notes) {
             Utils.checkNotNull(notes, "notes");
@@ -891,6 +943,7 @@ public class CalendarEvent {
             return this;
         }
 
+
         public Builder organizer(PropertyCalendarEventOrganizer organizer) {
             Utils.checkNotNull(organizer, "organizer");
             this.organizer = Optional.ofNullable(organizer);
@@ -902,6 +955,7 @@ public class CalendarEvent {
             this.organizer = organizer;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -915,6 +969,7 @@ public class CalendarEvent {
             return this;
         }
 
+
         public Builder recurrence(List<CalendarEventRecurrence> recurrence) {
             Utils.checkNotNull(recurrence, "recurrence");
             this.recurrence = Optional.ofNullable(recurrence);
@@ -926,6 +981,7 @@ public class CalendarEvent {
             this.recurrence = recurrence;
             return this;
         }
+
 
         public Builder recurringEventId(String recurringEventId) {
             Utils.checkNotNull(recurringEventId, "recurringEventId");
@@ -939,6 +995,7 @@ public class CalendarEvent {
             return this;
         }
 
+
         public Builder startAt(String startAt) {
             Utils.checkNotNull(startAt, "startAt");
             this.startAt = Optional.ofNullable(startAt);
@@ -950,6 +1007,7 @@ public class CalendarEvent {
             this.startAt = startAt;
             return this;
         }
+
 
         public Builder status(CalendarEventStatus status) {
             Utils.checkNotNull(status, "status");
@@ -963,6 +1021,7 @@ public class CalendarEvent {
             return this;
         }
 
+
         public Builder subject(String subject) {
             Utils.checkNotNull(subject, "subject");
             this.subject = Optional.ofNullable(subject);
@@ -974,6 +1033,7 @@ public class CalendarEvent {
             this.subject = subject;
             return this;
         }
+
 
         public Builder timezone(String timezone) {
             Utils.checkNotNull(timezone, "timezone");
@@ -987,6 +1047,7 @@ public class CalendarEvent {
             return this;
         }
 
+
         public Builder updatedAt(String updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -999,6 +1060,7 @@ public class CalendarEvent {
             return this;
         }
 
+
         public Builder webUrl(String webUrl) {
             Utils.checkNotNull(webUrl, "webUrl");
             this.webUrl = Optional.ofNullable(webUrl);
@@ -1010,32 +1072,19 @@ public class CalendarEvent {
             this.webUrl = webUrl;
             return this;
         }
-        
+
         public CalendarEvent build() {
+
             return new CalendarEvent(
-                attachments,
-                attendees,
-                calendarId,
-                conference,
-                createdAt,
-                endAt,
-                hasConference,
-                id,
-                isAllDay,
-                isFree,
-                isPrivate,
-                location,
-                notes,
-                organizer,
-                raw,
-                recurrence,
-                recurringEventId,
-                startAt,
-                status,
-                subject,
-                timezone,
-                updatedAt,
-                webUrl);
+                attachments, attendees, calendarId,
+                conference, createdAt, endAt,
+                hasConference, id, isAllDay,
+                isFree, isPrivate, location,
+                notes, organizer, raw,
+                recurrence, recurringEventId, startAt,
+                status, subject, timezone,
+                updatedAt, webUrl);
         }
+
     }
 }

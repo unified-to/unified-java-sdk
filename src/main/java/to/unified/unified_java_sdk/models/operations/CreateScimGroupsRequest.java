@@ -11,6 +11,7 @@ import to.unified.unified_java_sdk.models.shared.ScimGroup;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class CreateScimGroupsRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
@@ -45,9 +46,10 @@ public class CreateScimGroupsRequest {
         return connectionId;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public CreateScimGroupsRequest withScimGroup(ScimGroup scimGroup) {
         Utils.checkNotNull(scimGroup, "scimGroup");
@@ -64,7 +66,6 @@ public class CreateScimGroupsRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -82,8 +83,7 @@ public class CreateScimGroupsRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            scimGroup,
-            connectionId);
+            scimGroup, connectionId);
     }
     
     @Override
@@ -92,22 +92,25 @@ public class CreateScimGroupsRequest {
                 "scimGroup", scimGroup,
                 "connectionId", connectionId);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private ScimGroup scimGroup;
- 
+
         private String connectionId;
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder scimGroup(ScimGroup scimGroup) {
             Utils.checkNotNull(scimGroup, "scimGroup");
             this.scimGroup = scimGroup;
             return this;
         }
+
 
         /**
          * ID of the connection
@@ -117,11 +120,12 @@ public class CreateScimGroupsRequest {
             this.connectionId = connectionId;
             return this;
         }
-        
+
         public CreateScimGroupsRequest build() {
+
             return new CreateScimGroupsRequest(
-                scimGroup,
-                connectionId);
+                scimGroup, connectionId);
         }
+
     }
 }

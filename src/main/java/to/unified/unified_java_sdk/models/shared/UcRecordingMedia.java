@@ -16,27 +16,33 @@ import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class UcRecordingMedia {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private Optional<OffsetDateTime> endAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     private Optional<String> language;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recording_download_url")
     private Optional<String> recordingDownloadUrl;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private Optional<OffsetDateTime> startAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transcript_download_url")
     private Optional<String> transcriptDownloadUrl;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transcripts")
@@ -65,7 +71,8 @@ public class UcRecordingMedia {
     }
     
     public UcRecordingMedia() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -99,15 +106,17 @@ public class UcRecordingMedia {
         return (Optional<List<UcRecordingTranscript>>) transcripts;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public UcRecordingMedia withEndAt(OffsetDateTime endAt) {
         Utils.checkNotNull(endAt, "endAt");
         this.endAt = Optional.ofNullable(endAt);
         return this;
     }
+
 
     public UcRecordingMedia withEndAt(Optional<OffsetDateTime> endAt) {
         Utils.checkNotNull(endAt, "endAt");
@@ -121,6 +130,7 @@ public class UcRecordingMedia {
         return this;
     }
 
+
     public UcRecordingMedia withLanguage(Optional<String> language) {
         Utils.checkNotNull(language, "language");
         this.language = language;
@@ -132,6 +142,7 @@ public class UcRecordingMedia {
         this.recordingDownloadUrl = Optional.ofNullable(recordingDownloadUrl);
         return this;
     }
+
 
     public UcRecordingMedia withRecordingDownloadUrl(Optional<String> recordingDownloadUrl) {
         Utils.checkNotNull(recordingDownloadUrl, "recordingDownloadUrl");
@@ -145,6 +156,7 @@ public class UcRecordingMedia {
         return this;
     }
 
+
     public UcRecordingMedia withStartAt(Optional<OffsetDateTime> startAt) {
         Utils.checkNotNull(startAt, "startAt");
         this.startAt = startAt;
@@ -156,6 +168,7 @@ public class UcRecordingMedia {
         this.transcriptDownloadUrl = Optional.ofNullable(transcriptDownloadUrl);
         return this;
     }
+
 
     public UcRecordingMedia withTranscriptDownloadUrl(Optional<String> transcriptDownloadUrl) {
         Utils.checkNotNull(transcriptDownloadUrl, "transcriptDownloadUrl");
@@ -169,13 +182,13 @@ public class UcRecordingMedia {
         return this;
     }
 
+
     public UcRecordingMedia withTranscripts(Optional<? extends List<UcRecordingTranscript>> transcripts) {
         Utils.checkNotNull(transcripts, "transcripts");
         this.transcripts = transcripts;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -197,12 +210,8 @@ public class UcRecordingMedia {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            endAt,
-            language,
-            recordingDownloadUrl,
-            startAt,
-            transcriptDownloadUrl,
-            transcripts);
+            endAt, language, recordingDownloadUrl,
+            startAt, transcriptDownloadUrl, transcripts);
     }
     
     @Override
@@ -215,24 +224,26 @@ public class UcRecordingMedia {
                 "transcriptDownloadUrl", transcriptDownloadUrl,
                 "transcripts", transcripts);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<OffsetDateTime> endAt = Optional.empty();
- 
+
         private Optional<String> language = Optional.empty();
- 
+
         private Optional<String> recordingDownloadUrl = Optional.empty();
- 
+
         private Optional<OffsetDateTime> startAt = Optional.empty();
- 
+
         private Optional<String> transcriptDownloadUrl = Optional.empty();
- 
+
         private Optional<? extends List<UcRecordingTranscript>> transcripts = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder endAt(OffsetDateTime endAt) {
             Utils.checkNotNull(endAt, "endAt");
@@ -246,6 +257,7 @@ public class UcRecordingMedia {
             return this;
         }
 
+
         public Builder language(String language) {
             Utils.checkNotNull(language, "language");
             this.language = Optional.ofNullable(language);
@@ -257,6 +269,7 @@ public class UcRecordingMedia {
             this.language = language;
             return this;
         }
+
 
         public Builder recordingDownloadUrl(String recordingDownloadUrl) {
             Utils.checkNotNull(recordingDownloadUrl, "recordingDownloadUrl");
@@ -270,6 +283,7 @@ public class UcRecordingMedia {
             return this;
         }
 
+
         public Builder startAt(OffsetDateTime startAt) {
             Utils.checkNotNull(startAt, "startAt");
             this.startAt = Optional.ofNullable(startAt);
@@ -281,6 +295,7 @@ public class UcRecordingMedia {
             this.startAt = startAt;
             return this;
         }
+
 
         public Builder transcriptDownloadUrl(String transcriptDownloadUrl) {
             Utils.checkNotNull(transcriptDownloadUrl, "transcriptDownloadUrl");
@@ -294,6 +309,7 @@ public class UcRecordingMedia {
             return this;
         }
 
+
         public Builder transcripts(List<UcRecordingTranscript> transcripts) {
             Utils.checkNotNull(transcripts, "transcripts");
             this.transcripts = Optional.ofNullable(transcripts);
@@ -305,15 +321,13 @@ public class UcRecordingMedia {
             this.transcripts = transcripts;
             return this;
         }
-        
+
         public UcRecordingMedia build() {
+
             return new UcRecordingMedia(
-                endAt,
-                language,
-                recordingDownloadUrl,
-                startAt,
-                transcriptDownloadUrl,
-                transcripts);
+                endAt, language, recordingDownloadUrl,
+                startAt, transcriptDownloadUrl, transcripts);
         }
+
     }
 }

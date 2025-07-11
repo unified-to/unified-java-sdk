@@ -28,7 +28,7 @@ public class ListCrmEventsRequestBuilder {
     public ListCrmEventsResponse call() throws Exception {
         
         RequestOperation<ListCrmEventsRequest, ListCrmEventsResponse> operation
-              = new ListCrmEventsOperation( sdkConfiguration);
+              = new ListCrmEventsOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

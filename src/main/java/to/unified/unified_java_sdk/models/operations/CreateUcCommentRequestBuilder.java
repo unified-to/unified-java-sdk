@@ -28,7 +28,7 @@ public class CreateUcCommentRequestBuilder {
     public CreateUcCommentResponse call() throws Exception {
         
         RequestOperation<CreateUcCommentRequest, CreateUcCommentResponse> operation
-              = new CreateUcCommentOperation( sdkConfiguration);
+              = new CreateUcCommentOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

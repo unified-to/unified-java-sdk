@@ -18,45 +18,56 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class MetadataMetadata {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     private Optional<? extends MetadataMetadataFormat> format;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonProperty("name")
     private String name;
 
+
     @JsonProperty("object_type")
     private String objectType;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objects")
     private Optional<? extends Map<String, Object>> objects;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     private Optional<? extends List<String>> options;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_format")
     private Optional<String> originalFormat;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     private Optional<String> slug;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -102,7 +113,10 @@ public class MetadataMetadata {
     public MetadataMetadata(
             String name,
             String objectType) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), name, objectType, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            name, objectType, Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -164,15 +178,17 @@ public class MetadataMetadata {
         return updatedAt;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public MetadataMetadata withCreatedAt(OffsetDateTime createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public MetadataMetadata withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -186,6 +202,7 @@ public class MetadataMetadata {
         return this;
     }
 
+
     public MetadataMetadata withFormat(Optional<? extends MetadataMetadataFormat> format) {
         Utils.checkNotNull(format, "format");
         this.format = format;
@@ -197,6 +214,7 @@ public class MetadataMetadata {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public MetadataMetadata withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -222,6 +240,7 @@ public class MetadataMetadata {
         return this;
     }
 
+
     public MetadataMetadata withObjects(Optional<? extends Map<String, Object>> objects) {
         Utils.checkNotNull(objects, "objects");
         this.objects = objects;
@@ -233,6 +252,7 @@ public class MetadataMetadata {
         this.options = Optional.ofNullable(options);
         return this;
     }
+
 
     public MetadataMetadata withOptions(Optional<? extends List<String>> options) {
         Utils.checkNotNull(options, "options");
@@ -246,6 +266,7 @@ public class MetadataMetadata {
         return this;
     }
 
+
     public MetadataMetadata withOriginalFormat(Optional<String> originalFormat) {
         Utils.checkNotNull(originalFormat, "originalFormat");
         this.originalFormat = originalFormat;
@@ -257,6 +278,7 @@ public class MetadataMetadata {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public MetadataMetadata withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -270,6 +292,7 @@ public class MetadataMetadata {
         return this;
     }
 
+
     public MetadataMetadata withSlug(Optional<String> slug) {
         Utils.checkNotNull(slug, "slug");
         this.slug = slug;
@@ -282,13 +305,13 @@ public class MetadataMetadata {
         return this;
     }
 
+
     public MetadataMetadata withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -315,17 +338,10 @@ public class MetadataMetadata {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt,
-            format,
-            id,
-            name,
-            objectType,
-            objects,
-            options,
-            originalFormat,
-            raw,
-            slug,
-            updatedAt);
+            createdAt, format, id,
+            name, objectType, objects,
+            options, originalFormat, raw,
+            slug, updatedAt);
     }
     
     @Override
@@ -343,34 +359,36 @@ public class MetadataMetadata {
                 "slug", slug,
                 "updatedAt", updatedAt);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<? extends MetadataMetadataFormat> format = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private String name;
- 
+
         private String objectType;
- 
+
         private Optional<? extends Map<String, Object>> objects = Optional.empty();
- 
+
         private Optional<? extends List<String>> options = Optional.empty();
- 
+
         private Optional<String> originalFormat = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<String> slug = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -384,6 +402,7 @@ public class MetadataMetadata {
             return this;
         }
 
+
         public Builder format(MetadataMetadataFormat format) {
             Utils.checkNotNull(format, "format");
             this.format = Optional.ofNullable(format);
@@ -395,6 +414,7 @@ public class MetadataMetadata {
             this.format = format;
             return this;
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -408,17 +428,20 @@ public class MetadataMetadata {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = name;
             return this;
         }
 
+
         public Builder objectType(String objectType) {
             Utils.checkNotNull(objectType, "objectType");
             this.objectType = objectType;
             return this;
         }
+
 
         public Builder objects(Map<String, Object> objects) {
             Utils.checkNotNull(objects, "objects");
@@ -432,6 +455,7 @@ public class MetadataMetadata {
             return this;
         }
 
+
         public Builder options(List<String> options) {
             Utils.checkNotNull(options, "options");
             this.options = Optional.ofNullable(options);
@@ -443,6 +467,7 @@ public class MetadataMetadata {
             this.options = options;
             return this;
         }
+
 
         public Builder originalFormat(String originalFormat) {
             Utils.checkNotNull(originalFormat, "originalFormat");
@@ -456,6 +481,7 @@ public class MetadataMetadata {
             return this;
         }
 
+
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
@@ -467,6 +493,7 @@ public class MetadataMetadata {
             this.raw = raw;
             return this;
         }
+
 
         public Builder slug(String slug) {
             Utils.checkNotNull(slug, "slug");
@@ -480,6 +507,7 @@ public class MetadataMetadata {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -491,20 +519,15 @@ public class MetadataMetadata {
             this.updatedAt = updatedAt;
             return this;
         }
-        
+
         public MetadataMetadata build() {
+
             return new MetadataMetadata(
-                createdAt,
-                format,
-                id,
-                name,
-                objectType,
-                objects,
-                options,
-                originalFormat,
-                raw,
-                slug,
-                updatedAt);
+                createdAt, format, id,
+                name, objectType, objects,
+                options, originalFormat, raw,
+                slug, updatedAt);
         }
+
     }
 }

@@ -15,14 +15,17 @@ import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class EnrichEmail {
 
     @JsonProperty("email")
     private String email;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_verified")
     private Optional<Boolean> isVerified;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
@@ -62,9 +65,10 @@ public class EnrichEmail {
         return (Optional<EnrichEmailType>) type;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public EnrichEmail withEmail(String email) {
         Utils.checkNotNull(email, "email");
@@ -78,6 +82,7 @@ public class EnrichEmail {
         return this;
     }
 
+
     public EnrichEmail withIsVerified(Optional<Boolean> isVerified) {
         Utils.checkNotNull(isVerified, "isVerified");
         this.isVerified = isVerified;
@@ -90,13 +95,13 @@ public class EnrichEmail {
         return this;
     }
 
+
     public EnrichEmail withType(Optional<? extends EnrichEmailType> type) {
         Utils.checkNotNull(type, "type");
         this.type = type;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -115,9 +120,7 @@ public class EnrichEmail {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            email,
-            isVerified,
-            type);
+            email, isVerified, type);
     }
     
     @Override
@@ -127,24 +130,27 @@ public class EnrichEmail {
                 "isVerified", isVerified,
                 "type", type);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private String email;
- 
+
         private Optional<Boolean> isVerified = Optional.empty();
- 
+
         private Optional<? extends EnrichEmailType> type = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder email(String email) {
             Utils.checkNotNull(email, "email");
             this.email = email;
             return this;
         }
+
 
         public Builder isVerified(boolean isVerified) {
             Utils.checkNotNull(isVerified, "isVerified");
@@ -158,6 +164,7 @@ public class EnrichEmail {
             return this;
         }
 
+
         public Builder type(EnrichEmailType type) {
             Utils.checkNotNull(type, "type");
             this.type = Optional.ofNullable(type);
@@ -169,12 +176,12 @@ public class EnrichEmail {
             this.type = type;
             return this;
         }
-        
+
         public EnrichEmail build() {
+
             return new EnrichEmail(
-                email,
-                isVerified,
-                type);
+                email, isVerified, type);
         }
+
     }
 }

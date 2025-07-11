@@ -28,7 +28,7 @@ public class UpdateAccountingInvoiceRequestBuilder {
     public UpdateAccountingInvoiceResponse call() throws Exception {
         
         RequestOperation<UpdateAccountingInvoiceRequest, UpdateAccountingInvoiceResponse> operation
-              = new UpdateAccountingInvoiceOperation( sdkConfiguration);
+              = new UpdateAccountingInvoiceOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

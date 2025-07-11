@@ -16,31 +16,38 @@ import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class CalendarRecordingMedia {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attendees")
     private Optional<? extends List<CalendarAttendee>> attendees;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private Optional<OffsetDateTime> endAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     private Optional<String> language;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recording_download_url")
     private Optional<String> recordingDownloadUrl;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private Optional<OffsetDateTime> startAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transcript_download_url")
     private Optional<String> transcriptDownloadUrl;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transcripts")
@@ -72,7 +79,9 @@ public class CalendarRecordingMedia {
     }
     
     public CalendarRecordingMedia() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -112,15 +121,17 @@ public class CalendarRecordingMedia {
         return (Optional<List<CalendarRecordingTranscript>>) transcripts;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public CalendarRecordingMedia withAttendees(List<CalendarAttendee> attendees) {
         Utils.checkNotNull(attendees, "attendees");
         this.attendees = Optional.ofNullable(attendees);
         return this;
     }
+
 
     public CalendarRecordingMedia withAttendees(Optional<? extends List<CalendarAttendee>> attendees) {
         Utils.checkNotNull(attendees, "attendees");
@@ -134,6 +145,7 @@ public class CalendarRecordingMedia {
         return this;
     }
 
+
     public CalendarRecordingMedia withEndAt(Optional<OffsetDateTime> endAt) {
         Utils.checkNotNull(endAt, "endAt");
         this.endAt = endAt;
@@ -145,6 +157,7 @@ public class CalendarRecordingMedia {
         this.language = Optional.ofNullable(language);
         return this;
     }
+
 
     public CalendarRecordingMedia withLanguage(Optional<String> language) {
         Utils.checkNotNull(language, "language");
@@ -158,6 +171,7 @@ public class CalendarRecordingMedia {
         return this;
     }
 
+
     public CalendarRecordingMedia withRecordingDownloadUrl(Optional<String> recordingDownloadUrl) {
         Utils.checkNotNull(recordingDownloadUrl, "recordingDownloadUrl");
         this.recordingDownloadUrl = recordingDownloadUrl;
@@ -169,6 +183,7 @@ public class CalendarRecordingMedia {
         this.startAt = Optional.ofNullable(startAt);
         return this;
     }
+
 
     public CalendarRecordingMedia withStartAt(Optional<OffsetDateTime> startAt) {
         Utils.checkNotNull(startAt, "startAt");
@@ -182,6 +197,7 @@ public class CalendarRecordingMedia {
         return this;
     }
 
+
     public CalendarRecordingMedia withTranscriptDownloadUrl(Optional<String> transcriptDownloadUrl) {
         Utils.checkNotNull(transcriptDownloadUrl, "transcriptDownloadUrl");
         this.transcriptDownloadUrl = transcriptDownloadUrl;
@@ -194,13 +210,13 @@ public class CalendarRecordingMedia {
         return this;
     }
 
+
     public CalendarRecordingMedia withTranscripts(Optional<? extends List<CalendarRecordingTranscript>> transcripts) {
         Utils.checkNotNull(transcripts, "transcripts");
         this.transcripts = transcripts;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -223,12 +239,8 @@ public class CalendarRecordingMedia {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            attendees,
-            endAt,
-            language,
-            recordingDownloadUrl,
-            startAt,
-            transcriptDownloadUrl,
+            attendees, endAt, language,
+            recordingDownloadUrl, startAt, transcriptDownloadUrl,
             transcripts);
     }
     
@@ -243,26 +255,28 @@ public class CalendarRecordingMedia {
                 "transcriptDownloadUrl", transcriptDownloadUrl,
                 "transcripts", transcripts);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<? extends List<CalendarAttendee>> attendees = Optional.empty();
- 
+
         private Optional<OffsetDateTime> endAt = Optional.empty();
- 
+
         private Optional<String> language = Optional.empty();
- 
+
         private Optional<String> recordingDownloadUrl = Optional.empty();
- 
+
         private Optional<OffsetDateTime> startAt = Optional.empty();
- 
+
         private Optional<String> transcriptDownloadUrl = Optional.empty();
- 
+
         private Optional<? extends List<CalendarRecordingTranscript>> transcripts = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder attendees(List<CalendarAttendee> attendees) {
             Utils.checkNotNull(attendees, "attendees");
@@ -276,6 +290,7 @@ public class CalendarRecordingMedia {
             return this;
         }
 
+
         public Builder endAt(OffsetDateTime endAt) {
             Utils.checkNotNull(endAt, "endAt");
             this.endAt = Optional.ofNullable(endAt);
@@ -287,6 +302,7 @@ public class CalendarRecordingMedia {
             this.endAt = endAt;
             return this;
         }
+
 
         public Builder language(String language) {
             Utils.checkNotNull(language, "language");
@@ -300,6 +316,7 @@ public class CalendarRecordingMedia {
             return this;
         }
 
+
         public Builder recordingDownloadUrl(String recordingDownloadUrl) {
             Utils.checkNotNull(recordingDownloadUrl, "recordingDownloadUrl");
             this.recordingDownloadUrl = Optional.ofNullable(recordingDownloadUrl);
@@ -311,6 +328,7 @@ public class CalendarRecordingMedia {
             this.recordingDownloadUrl = recordingDownloadUrl;
             return this;
         }
+
 
         public Builder startAt(OffsetDateTime startAt) {
             Utils.checkNotNull(startAt, "startAt");
@@ -324,6 +342,7 @@ public class CalendarRecordingMedia {
             return this;
         }
 
+
         public Builder transcriptDownloadUrl(String transcriptDownloadUrl) {
             Utils.checkNotNull(transcriptDownloadUrl, "transcriptDownloadUrl");
             this.transcriptDownloadUrl = Optional.ofNullable(transcriptDownloadUrl);
@@ -336,6 +355,7 @@ public class CalendarRecordingMedia {
             return this;
         }
 
+
         public Builder transcripts(List<CalendarRecordingTranscript> transcripts) {
             Utils.checkNotNull(transcripts, "transcripts");
             this.transcripts = Optional.ofNullable(transcripts);
@@ -347,16 +367,14 @@ public class CalendarRecordingMedia {
             this.transcripts = transcripts;
             return this;
         }
-        
+
         public CalendarRecordingMedia build() {
+
             return new CalendarRecordingMedia(
-                attendees,
-                endAt,
-                language,
-                recordingDownloadUrl,
-                startAt,
-                transcriptDownloadUrl,
+                attendees, endAt, language,
+                recordingDownloadUrl, startAt, transcriptDownloadUrl,
                 transcripts);
         }
+
     }
 }

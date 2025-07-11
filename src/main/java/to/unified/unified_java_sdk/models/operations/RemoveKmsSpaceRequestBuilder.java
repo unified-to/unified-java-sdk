@@ -28,7 +28,7 @@ public class RemoveKmsSpaceRequestBuilder {
     public RemoveKmsSpaceResponse call() throws Exception {
         
         RequestOperation<RemoveKmsSpaceRequest, RemoveKmsSpaceResponse> operation
-              = new RemoveKmsSpaceOperation( sdkConfiguration);
+              = new RemoveKmsSpaceOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

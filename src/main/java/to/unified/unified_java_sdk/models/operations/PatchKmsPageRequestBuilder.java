@@ -28,7 +28,7 @@ public class PatchKmsPageRequestBuilder {
     public PatchKmsPageResponse call() throws Exception {
         
         RequestOperation<PatchKmsPageRequest, PatchKmsPageResponse> operation
-              = new PatchKmsPageOperation( sdkConfiguration);
+              = new PatchKmsPageOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

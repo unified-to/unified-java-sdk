@@ -14,19 +14,23 @@ import java.time.OffsetDateTime;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AtsCandidateExperience {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_name")
     private Optional<String> companyName;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private Optional<OffsetDateTime> endAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private Optional<OffsetDateTime> startAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
@@ -49,7 +53,8 @@ public class AtsCandidateExperience {
     }
     
     public AtsCandidateExperience() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -72,15 +77,17 @@ public class AtsCandidateExperience {
         return title;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AtsCandidateExperience withCompanyName(String companyName) {
         Utils.checkNotNull(companyName, "companyName");
         this.companyName = Optional.ofNullable(companyName);
         return this;
     }
+
 
     public AtsCandidateExperience withCompanyName(Optional<String> companyName) {
         Utils.checkNotNull(companyName, "companyName");
@@ -94,6 +101,7 @@ public class AtsCandidateExperience {
         return this;
     }
 
+
     public AtsCandidateExperience withEndAt(Optional<OffsetDateTime> endAt) {
         Utils.checkNotNull(endAt, "endAt");
         this.endAt = endAt;
@@ -105,6 +113,7 @@ public class AtsCandidateExperience {
         this.startAt = Optional.ofNullable(startAt);
         return this;
     }
+
 
     public AtsCandidateExperience withStartAt(Optional<OffsetDateTime> startAt) {
         Utils.checkNotNull(startAt, "startAt");
@@ -118,13 +127,13 @@ public class AtsCandidateExperience {
         return this;
     }
 
+
     public AtsCandidateExperience withTitle(Optional<String> title) {
         Utils.checkNotNull(title, "title");
         this.title = title;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -144,9 +153,7 @@ public class AtsCandidateExperience {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            companyName,
-            endAt,
-            startAt,
+            companyName, endAt, startAt,
             title);
     }
     
@@ -158,20 +165,22 @@ public class AtsCandidateExperience {
                 "startAt", startAt,
                 "title", title);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> companyName = Optional.empty();
- 
+
         private Optional<OffsetDateTime> endAt = Optional.empty();
- 
+
         private Optional<OffsetDateTime> startAt = Optional.empty();
- 
+
         private Optional<String> title = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder companyName(String companyName) {
             Utils.checkNotNull(companyName, "companyName");
@@ -185,6 +194,7 @@ public class AtsCandidateExperience {
             return this;
         }
 
+
         public Builder endAt(OffsetDateTime endAt) {
             Utils.checkNotNull(endAt, "endAt");
             this.endAt = Optional.ofNullable(endAt);
@@ -196,6 +206,7 @@ public class AtsCandidateExperience {
             this.endAt = endAt;
             return this;
         }
+
 
         public Builder startAt(OffsetDateTime startAt) {
             Utils.checkNotNull(startAt, "startAt");
@@ -209,6 +220,7 @@ public class AtsCandidateExperience {
             return this;
         }
 
+
         public Builder title(String title) {
             Utils.checkNotNull(title, "title");
             this.title = Optional.ofNullable(title);
@@ -220,13 +232,13 @@ public class AtsCandidateExperience {
             this.title = title;
             return this;
         }
-        
+
         public AtsCandidateExperience build() {
+
             return new AtsCandidateExperience(
-                companyName,
-                endAt,
-                startAt,
+                companyName, endAt, startAt,
                 title);
         }
+
     }
 }

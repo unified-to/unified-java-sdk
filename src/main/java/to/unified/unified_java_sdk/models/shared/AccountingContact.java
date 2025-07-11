@@ -21,83 +21,103 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.LazySingletonValue;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AccountingContact {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associated_contacts")
     private Optional<? extends List<AccountingAssociatedContact>> associatedContacts;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billing_address")
     private Optional<? extends PropertyAccountingContactBillingAddress> billingAddress;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_name")
     private Optional<String> companyName;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private Optional<String> currency;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
     private Optional<? extends List<AccountingEmail>> emails;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identification")
     private Optional<String> identification;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     private Optional<Boolean> isActive;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_customer")
     private Optional<Boolean> isCustomer;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_supplier")
     private Optional<Boolean> isSupplier;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_methods")
     private Optional<? extends List<AccountingContactPaymentMethod>> paymentMethods;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portal_url")
     private Optional<String> portalUrl;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_address")
     private Optional<? extends PropertyAccountingContactShippingAddress> shippingAddress;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_exemption")
     private Optional<? extends TaxExemption> taxExemption;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_number")
     private Optional<String> taxNumber;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephones")
     private Optional<? extends List<AccountingTelephone>> telephones;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -168,7 +188,13 @@ public class AccountingContact {
     }
     
     public AccountingContact() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -279,15 +305,17 @@ public class AccountingContact {
         return updatedAt;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AccountingContact withAssociatedContacts(List<AccountingAssociatedContact> associatedContacts) {
         Utils.checkNotNull(associatedContacts, "associatedContacts");
         this.associatedContacts = Optional.ofNullable(associatedContacts);
         return this;
     }
+
 
     public AccountingContact withAssociatedContacts(Optional<? extends List<AccountingAssociatedContact>> associatedContacts) {
         Utils.checkNotNull(associatedContacts, "associatedContacts");
@@ -301,6 +329,7 @@ public class AccountingContact {
         return this;
     }
 
+
     public AccountingContact withBillingAddress(Optional<? extends PropertyAccountingContactBillingAddress> billingAddress) {
         Utils.checkNotNull(billingAddress, "billingAddress");
         this.billingAddress = billingAddress;
@@ -312,6 +341,7 @@ public class AccountingContact {
         this.companyName = Optional.ofNullable(companyName);
         return this;
     }
+
 
     public AccountingContact withCompanyName(Optional<String> companyName) {
         Utils.checkNotNull(companyName, "companyName");
@@ -325,6 +355,7 @@ public class AccountingContact {
         return this;
     }
 
+
     public AccountingContact withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
@@ -336,6 +367,7 @@ public class AccountingContact {
         this.currency = Optional.ofNullable(currency);
         return this;
     }
+
 
     public AccountingContact withCurrency(Optional<String> currency) {
         Utils.checkNotNull(currency, "currency");
@@ -349,6 +381,7 @@ public class AccountingContact {
         return this;
     }
 
+
     public AccountingContact withEmails(Optional<? extends List<AccountingEmail>> emails) {
         Utils.checkNotNull(emails, "emails");
         this.emails = emails;
@@ -360,6 +393,7 @@ public class AccountingContact {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public AccountingContact withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -373,6 +407,7 @@ public class AccountingContact {
         return this;
     }
 
+
     public AccountingContact withIdentification(Optional<String> identification) {
         Utils.checkNotNull(identification, "identification");
         this.identification = identification;
@@ -384,6 +419,7 @@ public class AccountingContact {
         this.isActive = Optional.ofNullable(isActive);
         return this;
     }
+
 
     public AccountingContact withIsActive(Optional<Boolean> isActive) {
         Utils.checkNotNull(isActive, "isActive");
@@ -397,6 +433,7 @@ public class AccountingContact {
         return this;
     }
 
+
     public AccountingContact withIsCustomer(Optional<Boolean> isCustomer) {
         Utils.checkNotNull(isCustomer, "isCustomer");
         this.isCustomer = isCustomer;
@@ -408,6 +445,7 @@ public class AccountingContact {
         this.isSupplier = Optional.ofNullable(isSupplier);
         return this;
     }
+
 
     public AccountingContact withIsSupplier(Optional<Boolean> isSupplier) {
         Utils.checkNotNull(isSupplier, "isSupplier");
@@ -421,6 +459,7 @@ public class AccountingContact {
         return this;
     }
 
+
     public AccountingContact withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
         this.name = name;
@@ -432,6 +471,7 @@ public class AccountingContact {
         this.paymentMethods = Optional.ofNullable(paymentMethods);
         return this;
     }
+
 
     public AccountingContact withPaymentMethods(Optional<? extends List<AccountingContactPaymentMethod>> paymentMethods) {
         Utils.checkNotNull(paymentMethods, "paymentMethods");
@@ -445,6 +485,7 @@ public class AccountingContact {
         return this;
     }
 
+
     public AccountingContact withPortalUrl(Optional<String> portalUrl) {
         Utils.checkNotNull(portalUrl, "portalUrl");
         this.portalUrl = portalUrl;
@@ -456,6 +497,7 @@ public class AccountingContact {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public AccountingContact withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -469,6 +511,7 @@ public class AccountingContact {
         return this;
     }
 
+
     public AccountingContact withShippingAddress(Optional<? extends PropertyAccountingContactShippingAddress> shippingAddress) {
         Utils.checkNotNull(shippingAddress, "shippingAddress");
         this.shippingAddress = shippingAddress;
@@ -480,6 +523,7 @@ public class AccountingContact {
         this.taxExemption = Optional.ofNullable(taxExemption);
         return this;
     }
+
 
     public AccountingContact withTaxExemption(Optional<? extends TaxExemption> taxExemption) {
         Utils.checkNotNull(taxExemption, "taxExemption");
@@ -493,6 +537,7 @@ public class AccountingContact {
         return this;
     }
 
+
     public AccountingContact withTaxNumber(Optional<String> taxNumber) {
         Utils.checkNotNull(taxNumber, "taxNumber");
         this.taxNumber = taxNumber;
@@ -504,6 +549,7 @@ public class AccountingContact {
         this.telephones = Optional.ofNullable(telephones);
         return this;
     }
+
 
     public AccountingContact withTelephones(Optional<? extends List<AccountingTelephone>> telephones) {
         Utils.checkNotNull(telephones, "telephones");
@@ -517,13 +563,13 @@ public class AccountingContact {
         return this;
     }
 
+
     public AccountingContact withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -559,26 +605,13 @@ public class AccountingContact {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            associatedContacts,
-            billingAddress,
-            companyName,
-            createdAt,
-            currency,
-            emails,
-            id,
-            identification,
-            isActive,
-            isCustomer,
-            isSupplier,
-            name,
-            paymentMethods,
-            portalUrl,
-            raw,
-            shippingAddress,
-            taxExemption,
-            taxNumber,
-            telephones,
-            updatedAt);
+            associatedContacts, billingAddress, companyName,
+            createdAt, currency, emails,
+            id, identification, isActive,
+            isCustomer, isSupplier, name,
+            paymentMethods, portalUrl, raw,
+            shippingAddress, taxExemption, taxNumber,
+            telephones, updatedAt);
     }
     
     @Override
@@ -605,52 +638,54 @@ public class AccountingContact {
                 "telephones", telephones,
                 "updatedAt", updatedAt);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<? extends List<AccountingAssociatedContact>> associatedContacts = Optional.empty();
- 
+
         private Optional<? extends PropertyAccountingContactBillingAddress> billingAddress = Optional.empty();
- 
+
         private Optional<String> companyName = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> currency;
- 
+
         private Optional<? extends List<AccountingEmail>> emails = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> identification = Optional.empty();
- 
+
         private Optional<Boolean> isActive = Optional.empty();
- 
+
         private Optional<Boolean> isCustomer = Optional.empty();
- 
+
         private Optional<Boolean> isSupplier = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<? extends List<AccountingContactPaymentMethod>> paymentMethods = Optional.empty();
- 
+
         private Optional<String> portalUrl = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<? extends PropertyAccountingContactShippingAddress> shippingAddress = Optional.empty();
- 
+
         private Optional<? extends TaxExemption> taxExemption = Optional.empty();
- 
+
         private Optional<String> taxNumber = Optional.empty();
- 
+
         private Optional<? extends List<AccountingTelephone>> telephones = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder associatedContacts(List<AccountingAssociatedContact> associatedContacts) {
             Utils.checkNotNull(associatedContacts, "associatedContacts");
@@ -664,6 +699,7 @@ public class AccountingContact {
             return this;
         }
 
+
         public Builder billingAddress(PropertyAccountingContactBillingAddress billingAddress) {
             Utils.checkNotNull(billingAddress, "billingAddress");
             this.billingAddress = Optional.ofNullable(billingAddress);
@@ -675,6 +711,7 @@ public class AccountingContact {
             this.billingAddress = billingAddress;
             return this;
         }
+
 
         public Builder companyName(String companyName) {
             Utils.checkNotNull(companyName, "companyName");
@@ -688,6 +725,7 @@ public class AccountingContact {
             return this;
         }
 
+
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
@@ -699,6 +737,7 @@ public class AccountingContact {
             this.createdAt = createdAt;
             return this;
         }
+
 
         public Builder currency(String currency) {
             Utils.checkNotNull(currency, "currency");
@@ -712,6 +751,7 @@ public class AccountingContact {
             return this;
         }
 
+
         public Builder emails(List<AccountingEmail> emails) {
             Utils.checkNotNull(emails, "emails");
             this.emails = Optional.ofNullable(emails);
@@ -723,6 +763,7 @@ public class AccountingContact {
             this.emails = emails;
             return this;
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -736,6 +777,7 @@ public class AccountingContact {
             return this;
         }
 
+
         public Builder identification(String identification) {
             Utils.checkNotNull(identification, "identification");
             this.identification = Optional.ofNullable(identification);
@@ -747,6 +789,7 @@ public class AccountingContact {
             this.identification = identification;
             return this;
         }
+
 
         public Builder isActive(boolean isActive) {
             Utils.checkNotNull(isActive, "isActive");
@@ -760,6 +803,7 @@ public class AccountingContact {
             return this;
         }
 
+
         public Builder isCustomer(boolean isCustomer) {
             Utils.checkNotNull(isCustomer, "isCustomer");
             this.isCustomer = Optional.ofNullable(isCustomer);
@@ -771,6 +815,7 @@ public class AccountingContact {
             this.isCustomer = isCustomer;
             return this;
         }
+
 
         public Builder isSupplier(boolean isSupplier) {
             Utils.checkNotNull(isSupplier, "isSupplier");
@@ -784,6 +829,7 @@ public class AccountingContact {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = Optional.ofNullable(name);
@@ -795,6 +841,7 @@ public class AccountingContact {
             this.name = name;
             return this;
         }
+
 
         public Builder paymentMethods(List<AccountingContactPaymentMethod> paymentMethods) {
             Utils.checkNotNull(paymentMethods, "paymentMethods");
@@ -808,6 +855,7 @@ public class AccountingContact {
             return this;
         }
 
+
         public Builder portalUrl(String portalUrl) {
             Utils.checkNotNull(portalUrl, "portalUrl");
             this.portalUrl = Optional.ofNullable(portalUrl);
@@ -819,6 +867,7 @@ public class AccountingContact {
             this.portalUrl = portalUrl;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -832,6 +881,7 @@ public class AccountingContact {
             return this;
         }
 
+
         public Builder shippingAddress(PropertyAccountingContactShippingAddress shippingAddress) {
             Utils.checkNotNull(shippingAddress, "shippingAddress");
             this.shippingAddress = Optional.ofNullable(shippingAddress);
@@ -843,6 +893,7 @@ public class AccountingContact {
             this.shippingAddress = shippingAddress;
             return this;
         }
+
 
         public Builder taxExemption(TaxExemption taxExemption) {
             Utils.checkNotNull(taxExemption, "taxExemption");
@@ -856,6 +907,7 @@ public class AccountingContact {
             return this;
         }
 
+
         public Builder taxNumber(String taxNumber) {
             Utils.checkNotNull(taxNumber, "taxNumber");
             this.taxNumber = Optional.ofNullable(taxNumber);
@@ -867,6 +919,7 @@ public class AccountingContact {
             this.taxNumber = taxNumber;
             return this;
         }
+
 
         public Builder telephones(List<AccountingTelephone> telephones) {
             Utils.checkNotNull(telephones, "telephones");
@@ -880,6 +933,7 @@ public class AccountingContact {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -891,33 +945,22 @@ public class AccountingContact {
             this.updatedAt = updatedAt;
             return this;
         }
-        
+
         public AccountingContact build() {
             if (currency == null) {
                 currency = _SINGLETON_VALUE_Currency.value();
             }
+
             return new AccountingContact(
-                associatedContacts,
-                billingAddress,
-                companyName,
-                createdAt,
-                currency,
-                emails,
-                id,
-                identification,
-                isActive,
-                isCustomer,
-                isSupplier,
-                name,
-                paymentMethods,
-                portalUrl,
-                raw,
-                shippingAddress,
-                taxExemption,
-                taxNumber,
-                telephones,
-                updatedAt);
+                associatedContacts, billingAddress, companyName,
+                createdAt, currency, emails,
+                id, identification, isActive,
+                isCustomer, isSupplier, name,
+                paymentMethods, portalUrl, raw,
+                shippingAddress, taxExemption, taxNumber,
+                telephones, updatedAt);
         }
+
 
         private static final LazySingletonValue<Optional<String>> _SINGLETON_VALUE_Currency =
                 new LazySingletonValue<>(

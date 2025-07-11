@@ -28,7 +28,7 @@ public class ListUnifiedConnectionsRequestBuilder {
     public ListUnifiedConnectionsResponse call() throws Exception {
         
         RequestOperation<ListUnifiedConnectionsRequest, ListUnifiedConnectionsResponse> operation
-              = new ListUnifiedConnectionsOperation( sdkConfiguration);
+              = new ListUnifiedConnectionsOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

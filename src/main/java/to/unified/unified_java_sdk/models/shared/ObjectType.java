@@ -50,10 +50,17 @@ public class ObjectType {
     public static final ObjectType ACCOUNTING_JOURNAL = new ObjectType("accounting_journal");
     public static final ObjectType ACCOUNTING_CONTACT = new ObjectType("accounting_contact");
     public static final ObjectType ACCOUNTING_INVOICE = new ObjectType("accounting_invoice");
+    public static final ObjectType ACCOUNTING_BILL = new ObjectType("accounting_bill");
+    public static final ObjectType ACCOUNTING_CREDITMEMO = new ObjectType("accounting_creditmemo");
     public static final ObjectType ACCOUNTING_TAXRATE = new ObjectType("accounting_taxrate");
     public static final ObjectType ACCOUNTING_ORGANIZATION = new ObjectType("accounting_organization");
     public static final ObjectType ACCOUNTING_ORDER = new ObjectType("accounting_order");
+    public static final ObjectType ACCOUNTING_SALESORDER = new ObjectType("accounting_salesorder");
+    public static final ObjectType ACCOUNTING_PURCHASEORDER = new ObjectType("accounting_purchaseorder");
     public static final ObjectType ACCOUNTING_REPORT = new ObjectType("accounting_report");
+    public static final ObjectType ACCOUNTING_BALANCESHEET = new ObjectType("accounting_balancesheet");
+    public static final ObjectType ACCOUNTING_PROFITLOSS = new ObjectType("accounting_profitloss");
+    public static final ObjectType ACCOUNTING_TRIALBALANCE = new ObjectType("accounting_trialbalance");
     public static final ObjectType PAYMENT_PAYMENT = new ObjectType("payment_payment");
     public static final ObjectType PAYMENT_LINK = new ObjectType("payment_link");
     public static final ObjectType PAYMENT_PAYOUT = new ObjectType("payment_payout");
@@ -203,10 +210,17 @@ public class ObjectType {
         map.put("accounting_journal", ACCOUNTING_JOURNAL);
         map.put("accounting_contact", ACCOUNTING_CONTACT);
         map.put("accounting_invoice", ACCOUNTING_INVOICE);
+        map.put("accounting_bill", ACCOUNTING_BILL);
+        map.put("accounting_creditmemo", ACCOUNTING_CREDITMEMO);
         map.put("accounting_taxrate", ACCOUNTING_TAXRATE);
         map.put("accounting_organization", ACCOUNTING_ORGANIZATION);
         map.put("accounting_order", ACCOUNTING_ORDER);
+        map.put("accounting_salesorder", ACCOUNTING_SALESORDER);
+        map.put("accounting_purchaseorder", ACCOUNTING_PURCHASEORDER);
         map.put("accounting_report", ACCOUNTING_REPORT);
+        map.put("accounting_balancesheet", ACCOUNTING_BALANCESHEET);
+        map.put("accounting_profitloss", ACCOUNTING_PROFITLOSS);
+        map.put("accounting_trialbalance", ACCOUNTING_TRIALBALANCE);
         map.put("payment_payment", PAYMENT_PAYMENT);
         map.put("payment_link", PAYMENT_LINK);
         map.put("payment_payout", PAYMENT_PAYOUT);
@@ -290,10 +304,17 @@ public class ObjectType {
         map.put("accounting_journal", ObjectTypeEnum.ACCOUNTING_JOURNAL);
         map.put("accounting_contact", ObjectTypeEnum.ACCOUNTING_CONTACT);
         map.put("accounting_invoice", ObjectTypeEnum.ACCOUNTING_INVOICE);
+        map.put("accounting_bill", ObjectTypeEnum.ACCOUNTING_BILL);
+        map.put("accounting_creditmemo", ObjectTypeEnum.ACCOUNTING_CREDITMEMO);
         map.put("accounting_taxrate", ObjectTypeEnum.ACCOUNTING_TAXRATE);
         map.put("accounting_organization", ObjectTypeEnum.ACCOUNTING_ORGANIZATION);
         map.put("accounting_order", ObjectTypeEnum.ACCOUNTING_ORDER);
+        map.put("accounting_salesorder", ObjectTypeEnum.ACCOUNTING_SALESORDER);
+        map.put("accounting_purchaseorder", ObjectTypeEnum.ACCOUNTING_PURCHASEORDER);
         map.put("accounting_report", ObjectTypeEnum.ACCOUNTING_REPORT);
+        map.put("accounting_balancesheet", ObjectTypeEnum.ACCOUNTING_BALANCESHEET);
+        map.put("accounting_profitloss", ObjectTypeEnum.ACCOUNTING_PROFITLOSS);
+        map.put("accounting_trialbalance", ObjectTypeEnum.ACCOUNTING_TRIALBALANCE);
         map.put("payment_payment", ObjectTypeEnum.PAYMENT_PAYMENT);
         map.put("payment_link", ObjectTypeEnum.PAYMENT_LINK);
         map.put("payment_payout", ObjectTypeEnum.PAYMENT_PAYOUT);
@@ -407,10 +428,17 @@ public class ObjectType {
         ACCOUNTING_JOURNAL("accounting_journal"),
         ACCOUNTING_CONTACT("accounting_contact"),
         ACCOUNTING_INVOICE("accounting_invoice"),
+        ACCOUNTING_BILL("accounting_bill"),
+        ACCOUNTING_CREDITMEMO("accounting_creditmemo"),
         ACCOUNTING_TAXRATE("accounting_taxrate"),
         ACCOUNTING_ORGANIZATION("accounting_organization"),
         ACCOUNTING_ORDER("accounting_order"),
+        ACCOUNTING_SALESORDER("accounting_salesorder"),
+        ACCOUNTING_PURCHASEORDER("accounting_purchaseorder"),
         ACCOUNTING_REPORT("accounting_report"),
+        ACCOUNTING_BALANCESHEET("accounting_balancesheet"),
+        ACCOUNTING_PROFITLOSS("accounting_profitloss"),
+        ACCOUNTING_TRIALBALANCE("accounting_trialbalance"),
         PAYMENT_PAYMENT("payment_payment"),
         PAYMENT_LINK("payment_link"),
         PAYMENT_PAYOUT("payment_payout"),

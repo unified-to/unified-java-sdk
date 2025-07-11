@@ -40,7 +40,6 @@ public class Pullrequest {
     Pullrequest(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a pullrequest
      * 
@@ -57,13 +56,11 @@ public class Pullrequest {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateRepoPullrequestResponse createRepoPullrequest(
-            CreateRepoPullrequestRequest request) throws Exception {
+    public CreateRepoPullrequestResponse createRepoPullrequest(CreateRepoPullrequestRequest request) throws Exception {
         RequestOperation<CreateRepoPullrequestRequest, CreateRepoPullrequestResponse> operation
-              = new CreateRepoPullrequestOperation( sdkConfiguration);
+              = new CreateRepoPullrequestOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a pullrequest
@@ -81,13 +78,11 @@ public class Pullrequest {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetRepoPullrequestResponse getRepoPullrequest(
-            GetRepoPullrequestRequest request) throws Exception {
+    public GetRepoPullrequestResponse getRepoPullrequest(GetRepoPullrequestRequest request) throws Exception {
         RequestOperation<GetRepoPullrequestRequest, GetRepoPullrequestResponse> operation
-              = new GetRepoPullrequestOperation( sdkConfiguration);
+              = new GetRepoPullrequestOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all pullrequests
@@ -105,13 +100,11 @@ public class Pullrequest {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListRepoPullrequestsResponse listRepoPullrequests(
-            ListRepoPullrequestsRequest request) throws Exception {
+    public ListRepoPullrequestsResponse listRepoPullrequests(ListRepoPullrequestsRequest request) throws Exception {
         RequestOperation<ListRepoPullrequestsRequest, ListRepoPullrequestsResponse> operation
-              = new ListRepoPullrequestsOperation( sdkConfiguration);
+              = new ListRepoPullrequestsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a pullrequest
@@ -129,13 +122,11 @@ public class Pullrequest {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchRepoPullrequestResponse patchRepoPullrequest(
-            PatchRepoPullrequestRequest request) throws Exception {
+    public PatchRepoPullrequestResponse patchRepoPullrequest(PatchRepoPullrequestRequest request) throws Exception {
         RequestOperation<PatchRepoPullrequestRequest, PatchRepoPullrequestResponse> operation
-              = new PatchRepoPullrequestOperation( sdkConfiguration);
+              = new PatchRepoPullrequestOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a pullrequest
@@ -153,13 +144,11 @@ public class Pullrequest {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveRepoPullrequestResponse removeRepoPullrequest(
-            RemoveRepoPullrequestRequest request) throws Exception {
+    public RemoveRepoPullrequestResponse removeRepoPullrequest(RemoveRepoPullrequestRequest request) throws Exception {
         RequestOperation<RemoveRepoPullrequestRequest, RemoveRepoPullrequestResponse> operation
-              = new RemoveRepoPullrequestOperation( sdkConfiguration);
+              = new RemoveRepoPullrequestOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a pullrequest
@@ -177,10 +166,9 @@ public class Pullrequest {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateRepoPullrequestResponse updateRepoPullrequest(
-            UpdateRepoPullrequestRequest request) throws Exception {
+    public UpdateRepoPullrequestResponse updateRepoPullrequest(UpdateRepoPullrequestRequest request) throws Exception {
         RequestOperation<UpdateRepoPullrequestRequest, UpdateRepoPullrequestResponse> operation
-              = new UpdateRepoPullrequestOperation( sdkConfiguration);
+              = new UpdateRepoPullrequestOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

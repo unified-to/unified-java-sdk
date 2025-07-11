@@ -15,23 +15,28 @@ import java.time.OffsetDateTime;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AtsJobOpening {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("application_id")
     private Optional<String> applicationId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("close_reason")
     private Optional<String> closeReason;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closed_at")
     private Optional<OffsetDateTime> closedAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opened_at")
     private Optional<OffsetDateTime> openedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
@@ -57,7 +62,8 @@ public class AtsJobOpening {
     }
     
     public AtsJobOpening() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -86,15 +92,17 @@ public class AtsJobOpening {
         return (Optional<AtsJobOpeningStatus>) status;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AtsJobOpening withApplicationId(String applicationId) {
         Utils.checkNotNull(applicationId, "applicationId");
         this.applicationId = Optional.ofNullable(applicationId);
         return this;
     }
+
 
     public AtsJobOpening withApplicationId(Optional<String> applicationId) {
         Utils.checkNotNull(applicationId, "applicationId");
@@ -108,6 +116,7 @@ public class AtsJobOpening {
         return this;
     }
 
+
     public AtsJobOpening withCloseReason(Optional<String> closeReason) {
         Utils.checkNotNull(closeReason, "closeReason");
         this.closeReason = closeReason;
@@ -119,6 +128,7 @@ public class AtsJobOpening {
         this.closedAt = Optional.ofNullable(closedAt);
         return this;
     }
+
 
     public AtsJobOpening withClosedAt(Optional<OffsetDateTime> closedAt) {
         Utils.checkNotNull(closedAt, "closedAt");
@@ -132,6 +142,7 @@ public class AtsJobOpening {
         return this;
     }
 
+
     public AtsJobOpening withOpenedAt(Optional<OffsetDateTime> openedAt) {
         Utils.checkNotNull(openedAt, "openedAt");
         this.openedAt = openedAt;
@@ -144,13 +155,13 @@ public class AtsJobOpening {
         return this;
     }
 
+
     public AtsJobOpening withStatus(Optional<? extends AtsJobOpeningStatus> status) {
         Utils.checkNotNull(status, "status");
         this.status = status;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -171,11 +182,8 @@ public class AtsJobOpening {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            applicationId,
-            closeReason,
-            closedAt,
-            openedAt,
-            status);
+            applicationId, closeReason, closedAt,
+            openedAt, status);
     }
     
     @Override
@@ -187,22 +195,24 @@ public class AtsJobOpening {
                 "openedAt", openedAt,
                 "status", status);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> applicationId = Optional.empty();
- 
+
         private Optional<String> closeReason = Optional.empty();
- 
+
         private Optional<OffsetDateTime> closedAt = Optional.empty();
- 
+
         private Optional<OffsetDateTime> openedAt = Optional.empty();
- 
+
         private Optional<? extends AtsJobOpeningStatus> status = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder applicationId(String applicationId) {
             Utils.checkNotNull(applicationId, "applicationId");
@@ -216,6 +226,7 @@ public class AtsJobOpening {
             return this;
         }
 
+
         public Builder closeReason(String closeReason) {
             Utils.checkNotNull(closeReason, "closeReason");
             this.closeReason = Optional.ofNullable(closeReason);
@@ -227,6 +238,7 @@ public class AtsJobOpening {
             this.closeReason = closeReason;
             return this;
         }
+
 
         public Builder closedAt(OffsetDateTime closedAt) {
             Utils.checkNotNull(closedAt, "closedAt");
@@ -240,6 +252,7 @@ public class AtsJobOpening {
             return this;
         }
 
+
         public Builder openedAt(OffsetDateTime openedAt) {
             Utils.checkNotNull(openedAt, "openedAt");
             this.openedAt = Optional.ofNullable(openedAt);
@@ -252,6 +265,7 @@ public class AtsJobOpening {
             return this;
         }
 
+
         public Builder status(AtsJobOpeningStatus status) {
             Utils.checkNotNull(status, "status");
             this.status = Optional.ofNullable(status);
@@ -263,14 +277,13 @@ public class AtsJobOpening {
             this.status = status;
             return this;
         }
-        
+
         public AtsJobOpening build() {
+
             return new AtsJobOpening(
-                applicationId,
-                closeReason,
-                closedAt,
-                openedAt,
-                status);
+                applicationId, closeReason, closedAt,
+                openedAt, status);
         }
+
     }
 }

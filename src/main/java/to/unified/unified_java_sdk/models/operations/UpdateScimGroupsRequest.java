@@ -11,6 +11,7 @@ import to.unified.unified_java_sdk.models.shared.ScimGroup;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class UpdateScimGroupsRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
@@ -62,9 +63,10 @@ public class UpdateScimGroupsRequest {
         return id;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public UpdateScimGroupsRequest withScimGroup(ScimGroup scimGroup) {
         Utils.checkNotNull(scimGroup, "scimGroup");
@@ -90,7 +92,6 @@ public class UpdateScimGroupsRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -109,9 +110,7 @@ public class UpdateScimGroupsRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            scimGroup,
-            connectionId,
-            id);
+            scimGroup, connectionId, id);
     }
     
     @Override
@@ -121,24 +120,27 @@ public class UpdateScimGroupsRequest {
                 "connectionId", connectionId,
                 "id", id);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private ScimGroup scimGroup;
- 
+
         private String connectionId;
- 
+
         private String id;
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder scimGroup(ScimGroup scimGroup) {
             Utils.checkNotNull(scimGroup, "scimGroup");
             this.scimGroup = scimGroup;
             return this;
         }
+
 
         /**
          * ID of the connection
@@ -149,6 +151,7 @@ public class UpdateScimGroupsRequest {
             return this;
         }
 
+
         /**
          * ID of the Group
          */
@@ -157,12 +160,12 @@ public class UpdateScimGroupsRequest {
             this.id = id;
             return this;
         }
-        
+
         public UpdateScimGroupsRequest build() {
+
             return new UpdateScimGroupsRequest(
-                scimGroup,
-                connectionId,
-                id);
+                scimGroup, connectionId, id);
         }
+
     }
 }

@@ -14,10 +14,12 @@ import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class UcEmail {
 
     @JsonProperty("email")
     private String email;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
@@ -49,9 +51,10 @@ public class UcEmail {
         return (Optional<UcEmailType>) type;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public UcEmail withEmail(String email) {
         Utils.checkNotNull(email, "email");
@@ -65,13 +68,13 @@ public class UcEmail {
         return this;
     }
 
+
     public UcEmail withType(Optional<? extends UcEmailType> type) {
         Utils.checkNotNull(type, "type");
         this.type = type;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -89,8 +92,7 @@ public class UcEmail {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            email,
-            type);
+            email, type);
     }
     
     @Override
@@ -99,22 +101,25 @@ public class UcEmail {
                 "email", email,
                 "type", type);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private String email;
- 
+
         private Optional<? extends UcEmailType> type = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder email(String email) {
             Utils.checkNotNull(email, "email");
             this.email = email;
             return this;
         }
+
 
         public Builder type(UcEmailType type) {
             Utils.checkNotNull(type, "type");
@@ -127,11 +132,12 @@ public class UcEmail {
             this.type = type;
             return this;
         }
-        
+
         public UcEmail build() {
+
             return new UcEmail(
-                email,
-                type);
+                email, type);
         }
+
     }
 }

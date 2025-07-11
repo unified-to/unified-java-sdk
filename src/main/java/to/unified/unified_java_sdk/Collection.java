@@ -40,7 +40,6 @@ public class Collection {
     Collection(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a collection
      * 
@@ -57,13 +56,11 @@ public class Collection {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateCommerceCollectionResponse createCommerceCollection(
-            CreateCommerceCollectionRequest request) throws Exception {
+    public CreateCommerceCollectionResponse createCommerceCollection(CreateCommerceCollectionRequest request) throws Exception {
         RequestOperation<CreateCommerceCollectionRequest, CreateCommerceCollectionResponse> operation
-              = new CreateCommerceCollectionOperation( sdkConfiguration);
+              = new CreateCommerceCollectionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a collection
@@ -81,13 +78,11 @@ public class Collection {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetCommerceCollectionResponse getCommerceCollection(
-            GetCommerceCollectionRequest request) throws Exception {
+    public GetCommerceCollectionResponse getCommerceCollection(GetCommerceCollectionRequest request) throws Exception {
         RequestOperation<GetCommerceCollectionRequest, GetCommerceCollectionResponse> operation
-              = new GetCommerceCollectionOperation( sdkConfiguration);
+              = new GetCommerceCollectionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all collections
@@ -105,13 +100,11 @@ public class Collection {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCommerceCollectionsResponse listCommerceCollections(
-            ListCommerceCollectionsRequest request) throws Exception {
+    public ListCommerceCollectionsResponse listCommerceCollections(ListCommerceCollectionsRequest request) throws Exception {
         RequestOperation<ListCommerceCollectionsRequest, ListCommerceCollectionsResponse> operation
-              = new ListCommerceCollectionsOperation( sdkConfiguration);
+              = new ListCommerceCollectionsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a collection
@@ -129,13 +122,11 @@ public class Collection {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchCommerceCollectionResponse patchCommerceCollection(
-            PatchCommerceCollectionRequest request) throws Exception {
+    public PatchCommerceCollectionResponse patchCommerceCollection(PatchCommerceCollectionRequest request) throws Exception {
         RequestOperation<PatchCommerceCollectionRequest, PatchCommerceCollectionResponse> operation
-              = new PatchCommerceCollectionOperation( sdkConfiguration);
+              = new PatchCommerceCollectionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a collection
@@ -153,13 +144,11 @@ public class Collection {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveCommerceCollectionResponse removeCommerceCollection(
-            RemoveCommerceCollectionRequest request) throws Exception {
+    public RemoveCommerceCollectionResponse removeCommerceCollection(RemoveCommerceCollectionRequest request) throws Exception {
         RequestOperation<RemoveCommerceCollectionRequest, RemoveCommerceCollectionResponse> operation
-              = new RemoveCommerceCollectionOperation( sdkConfiguration);
+              = new RemoveCommerceCollectionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a collection
@@ -177,10 +166,9 @@ public class Collection {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateCommerceCollectionResponse updateCommerceCollection(
-            UpdateCommerceCollectionRequest request) throws Exception {
+    public UpdateCommerceCollectionResponse updateCommerceCollection(UpdateCommerceCollectionRequest request) throws Exception {
         RequestOperation<UpdateCommerceCollectionRequest, UpdateCommerceCollectionResponse> operation
-              = new UpdateCommerceCollectionOperation( sdkConfiguration);
+              = new UpdateCommerceCollectionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

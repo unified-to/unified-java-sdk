@@ -18,43 +18,53 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class CalendarRecording {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private Optional<OffsetDateTime> endAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event_id")
     private Optional<String> eventId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires_at")
     private Optional<OffsetDateTime> expiresAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("media")
     private Optional<? extends List<CalendarRecordingMedia>> media;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private Optional<OffsetDateTime> startAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web_url")
@@ -95,7 +105,10 @@ public class CalendarRecording {
     }
     
     public CalendarRecording() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -150,15 +163,17 @@ public class CalendarRecording {
         return webUrl;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public CalendarRecording withCreatedAt(OffsetDateTime createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public CalendarRecording withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -172,6 +187,7 @@ public class CalendarRecording {
         return this;
     }
 
+
     public CalendarRecording withEndAt(Optional<OffsetDateTime> endAt) {
         Utils.checkNotNull(endAt, "endAt");
         this.endAt = endAt;
@@ -183,6 +199,7 @@ public class CalendarRecording {
         this.eventId = Optional.ofNullable(eventId);
         return this;
     }
+
 
     public CalendarRecording withEventId(Optional<String> eventId) {
         Utils.checkNotNull(eventId, "eventId");
@@ -196,6 +213,7 @@ public class CalendarRecording {
         return this;
     }
 
+
     public CalendarRecording withExpiresAt(Optional<OffsetDateTime> expiresAt) {
         Utils.checkNotNull(expiresAt, "expiresAt");
         this.expiresAt = expiresAt;
@@ -207,6 +225,7 @@ public class CalendarRecording {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public CalendarRecording withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -220,6 +239,7 @@ public class CalendarRecording {
         return this;
     }
 
+
     public CalendarRecording withMedia(Optional<? extends List<CalendarRecordingMedia>> media) {
         Utils.checkNotNull(media, "media");
         this.media = media;
@@ -231,6 +251,7 @@ public class CalendarRecording {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public CalendarRecording withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -244,6 +265,7 @@ public class CalendarRecording {
         return this;
     }
 
+
     public CalendarRecording withStartAt(Optional<OffsetDateTime> startAt) {
         Utils.checkNotNull(startAt, "startAt");
         this.startAt = startAt;
@@ -255,6 +277,7 @@ public class CalendarRecording {
         this.updatedAt = Optional.ofNullable(updatedAt);
         return this;
     }
+
 
     public CalendarRecording withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
@@ -268,13 +291,13 @@ public class CalendarRecording {
         return this;
     }
 
+
     public CalendarRecording withWebUrl(Optional<String> webUrl) {
         Utils.checkNotNull(webUrl, "webUrl");
         this.webUrl = webUrl;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -300,15 +323,9 @@ public class CalendarRecording {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt,
-            endAt,
-            eventId,
-            expiresAt,
-            id,
-            media,
-            raw,
-            startAt,
-            updatedAt,
+            createdAt, endAt, eventId,
+            expiresAt, id, media,
+            raw, startAt, updatedAt,
             webUrl);
     }
     
@@ -326,32 +343,34 @@ public class CalendarRecording {
                 "updatedAt", updatedAt,
                 "webUrl", webUrl);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<OffsetDateTime> endAt = Optional.empty();
- 
+
         private Optional<String> eventId = Optional.empty();
- 
+
         private Optional<OffsetDateTime> expiresAt = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<? extends List<CalendarRecordingMedia>> media = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<OffsetDateTime> startAt = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<String> webUrl = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -365,6 +384,7 @@ public class CalendarRecording {
             return this;
         }
 
+
         public Builder endAt(OffsetDateTime endAt) {
             Utils.checkNotNull(endAt, "endAt");
             this.endAt = Optional.ofNullable(endAt);
@@ -376,6 +396,7 @@ public class CalendarRecording {
             this.endAt = endAt;
             return this;
         }
+
 
         public Builder eventId(String eventId) {
             Utils.checkNotNull(eventId, "eventId");
@@ -389,6 +410,7 @@ public class CalendarRecording {
             return this;
         }
 
+
         public Builder expiresAt(OffsetDateTime expiresAt) {
             Utils.checkNotNull(expiresAt, "expiresAt");
             this.expiresAt = Optional.ofNullable(expiresAt);
@@ -400,6 +422,7 @@ public class CalendarRecording {
             this.expiresAt = expiresAt;
             return this;
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -413,6 +436,7 @@ public class CalendarRecording {
             return this;
         }
 
+
         public Builder media(List<CalendarRecordingMedia> media) {
             Utils.checkNotNull(media, "media");
             this.media = Optional.ofNullable(media);
@@ -424,6 +448,7 @@ public class CalendarRecording {
             this.media = media;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -437,6 +462,7 @@ public class CalendarRecording {
             return this;
         }
 
+
         public Builder startAt(OffsetDateTime startAt) {
             Utils.checkNotNull(startAt, "startAt");
             this.startAt = Optional.ofNullable(startAt);
@@ -448,6 +474,7 @@ public class CalendarRecording {
             this.startAt = startAt;
             return this;
         }
+
 
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
@@ -461,6 +488,7 @@ public class CalendarRecording {
             return this;
         }
 
+
         public Builder webUrl(String webUrl) {
             Utils.checkNotNull(webUrl, "webUrl");
             this.webUrl = Optional.ofNullable(webUrl);
@@ -472,19 +500,15 @@ public class CalendarRecording {
             this.webUrl = webUrl;
             return this;
         }
-        
+
         public CalendarRecording build() {
+
             return new CalendarRecording(
-                createdAt,
-                endAt,
-                eventId,
-                expiresAt,
-                id,
-                media,
-                raw,
-                startAt,
-                updatedAt,
+                createdAt, endAt, eventId,
+                expiresAt, id, media,
+                raw, startAt, updatedAt,
                 webUrl);
         }
+
     }
 }

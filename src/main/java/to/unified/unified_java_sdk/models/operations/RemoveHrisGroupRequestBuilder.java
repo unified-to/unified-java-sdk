@@ -28,7 +28,7 @@ public class RemoveHrisGroupRequestBuilder {
     public RemoveHrisGroupResponse call() throws Exception {
         
         RequestOperation<RemoveHrisGroupRequest, RemoveHrisGroupResponse> operation
-              = new RemoveHrisGroupOperation( sdkConfiguration);
+              = new RemoveHrisGroupOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

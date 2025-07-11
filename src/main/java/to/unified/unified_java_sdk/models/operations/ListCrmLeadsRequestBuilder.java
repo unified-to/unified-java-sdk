@@ -28,7 +28,7 @@ public class ListCrmLeadsRequestBuilder {
     public ListCrmLeadsResponse call() throws Exception {
         
         RequestOperation<ListCrmLeadsRequest, ListCrmLeadsResponse> operation
-              = new ListCrmLeadsOperation( sdkConfiguration);
+              = new ListCrmLeadsOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

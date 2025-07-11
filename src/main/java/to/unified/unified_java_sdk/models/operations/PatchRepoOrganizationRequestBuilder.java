@@ -28,7 +28,7 @@ public class PatchRepoOrganizationRequestBuilder {
     public PatchRepoOrganizationResponse call() throws Exception {
         
         RequestOperation<PatchRepoOrganizationRequest, PatchRepoOrganizationResponse> operation
-              = new PatchRepoOrganizationOperation( sdkConfiguration);
+              = new PatchRepoOrganizationOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

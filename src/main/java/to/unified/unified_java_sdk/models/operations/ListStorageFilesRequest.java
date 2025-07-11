@@ -14,8 +14,8 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class ListStorageFilesRequest {
 
+public class ListStorageFilesRequest {
     /**
      * ID of the connection
      */
@@ -28,11 +28,14 @@ public class ListStorageFilesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     private Optional<? extends List<String>> fields;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     private Optional<Double> limit;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     private Optional<Double> offset;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     private Optional<String> order;
@@ -54,6 +57,7 @@ public class ListStorageFilesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
     private Optional<String> raw;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     private Optional<String> sort;
@@ -109,7 +113,10 @@ public class ListStorageFilesRequest {
     
     public ListStorageFilesRequest(
             String connectionId) {
-        this(connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(connectionId, Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     /**
@@ -189,9 +196,10 @@ public class ListStorageFilesRequest {
         return updatedGte;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * ID of the connection
@@ -211,6 +219,7 @@ public class ListStorageFilesRequest {
         return this;
     }
 
+
     /**
      * Comma-delimited fields to return
      */
@@ -226,6 +235,7 @@ public class ListStorageFilesRequest {
         return this;
     }
 
+
     public ListStorageFilesRequest withLimit(Optional<Double> limit) {
         Utils.checkNotNull(limit, "limit");
         this.limit = limit;
@@ -238,6 +248,7 @@ public class ListStorageFilesRequest {
         return this;
     }
 
+
     public ListStorageFilesRequest withOffset(Optional<Double> offset) {
         Utils.checkNotNull(offset, "offset");
         this.offset = offset;
@@ -249,6 +260,7 @@ public class ListStorageFilesRequest {
         this.order = Optional.ofNullable(order);
         return this;
     }
+
 
     public ListStorageFilesRequest withOrder(Optional<String> order) {
         Utils.checkNotNull(order, "order");
@@ -264,6 +276,7 @@ public class ListStorageFilesRequest {
         this.parentId = Optional.ofNullable(parentId);
         return this;
     }
+
 
     /**
      * The parent ID to filter by
@@ -283,6 +296,7 @@ public class ListStorageFilesRequest {
         return this;
     }
 
+
     /**
      * Query string to search. eg. email address or name
      */
@@ -301,6 +315,7 @@ public class ListStorageFilesRequest {
         return this;
     }
 
+
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
@@ -316,6 +331,7 @@ public class ListStorageFilesRequest {
         return this;
     }
 
+
     public ListStorageFilesRequest withSort(Optional<String> sort) {
         Utils.checkNotNull(sort, "sort");
         this.sort = sort;
@@ -330,6 +346,7 @@ public class ListStorageFilesRequest {
         this.type = Optional.ofNullable(type);
         return this;
     }
+
 
     /**
      * The type to filter by
@@ -349,6 +366,7 @@ public class ListStorageFilesRequest {
         return this;
     }
 
+
     /**
      * Return only results whose updated date is equal or greater to this value
      */
@@ -358,7 +376,6 @@ public class ListStorageFilesRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -385,17 +402,10 @@ public class ListStorageFilesRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId,
-            fields,
-            limit,
-            offset,
-            order,
-            parentId,
-            query,
-            raw,
-            sort,
-            type,
-            updatedGte);
+            connectionId, fields, limit,
+            offset, order, parentId,
+            query, raw, sort,
+            type, updatedGte);
     }
     
     @Override
@@ -413,34 +423,36 @@ public class ListStorageFilesRequest {
                 "type", type,
                 "updatedGte", updatedGte);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private String connectionId;
- 
+
         private Optional<? extends List<String>> fields = Optional.empty();
- 
+
         private Optional<Double> limit = Optional.empty();
- 
+
         private Optional<Double> offset = Optional.empty();
- 
+
         private Optional<String> order = Optional.empty();
- 
+
         private Optional<String> parentId = Optional.empty();
- 
+
         private Optional<String> query = Optional.empty();
- 
+
         private Optional<String> raw = Optional.empty();
- 
+
         private Optional<String> sort = Optional.empty();
- 
+
         private Optional<String> type = Optional.empty();
- 
+
         private Optional<String> updatedGte = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * ID of the connection
@@ -450,6 +462,7 @@ public class ListStorageFilesRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         /**
          * Comma-delimited fields to return
@@ -469,6 +482,7 @@ public class ListStorageFilesRequest {
             return this;
         }
 
+
         public Builder limit(double limit) {
             Utils.checkNotNull(limit, "limit");
             this.limit = Optional.ofNullable(limit);
@@ -480,6 +494,7 @@ public class ListStorageFilesRequest {
             this.limit = limit;
             return this;
         }
+
 
         public Builder offset(double offset) {
             Utils.checkNotNull(offset, "offset");
@@ -493,6 +508,7 @@ public class ListStorageFilesRequest {
             return this;
         }
 
+
         public Builder order(String order) {
             Utils.checkNotNull(order, "order");
             this.order = Optional.ofNullable(order);
@@ -504,6 +520,7 @@ public class ListStorageFilesRequest {
             this.order = order;
             return this;
         }
+
 
         /**
          * The parent ID to filter by
@@ -523,6 +540,7 @@ public class ListStorageFilesRequest {
             return this;
         }
 
+
         /**
          * Query string to search. eg. email address or name
          */
@@ -540,6 +558,7 @@ public class ListStorageFilesRequest {
             this.query = query;
             return this;
         }
+
 
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
@@ -559,6 +578,7 @@ public class ListStorageFilesRequest {
             return this;
         }
 
+
         public Builder sort(String sort) {
             Utils.checkNotNull(sort, "sort");
             this.sort = Optional.ofNullable(sort);
@@ -570,6 +590,7 @@ public class ListStorageFilesRequest {
             this.sort = sort;
             return this;
         }
+
 
         /**
          * The type to filter by
@@ -589,6 +610,7 @@ public class ListStorageFilesRequest {
             return this;
         }
 
+
         /**
          * Return only results whose updated date is equal or greater to this value
          */
@@ -606,20 +628,15 @@ public class ListStorageFilesRequest {
             this.updatedGte = updatedGte;
             return this;
         }
-        
+
         public ListStorageFilesRequest build() {
+
             return new ListStorageFilesRequest(
-                connectionId,
-                fields,
-                limit,
-                offset,
-                order,
-                parentId,
-                query,
-                raw,
-                sort,
-                type,
-                updatedGte);
+                connectionId, fields, limit,
+                offset, order, parentId,
+                query, raw, sort,
+                type, updatedGte);
         }
+
     }
 }

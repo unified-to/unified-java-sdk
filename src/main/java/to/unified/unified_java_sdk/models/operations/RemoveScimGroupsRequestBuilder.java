@@ -28,7 +28,7 @@ public class RemoveScimGroupsRequestBuilder {
     public RemoveScimGroupsResponse call() throws Exception {
         
         RequestOperation<RemoveScimGroupsRequest, RemoveScimGroupsResponse> operation
-              = new RemoveScimGroupsOperation( sdkConfiguration);
+              = new RemoveScimGroupsOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

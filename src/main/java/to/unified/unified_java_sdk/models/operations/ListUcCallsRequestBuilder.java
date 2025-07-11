@@ -28,7 +28,7 @@ public class ListUcCallsRequestBuilder {
     public ListUcCallsResponse call() throws Exception {
         
         RequestOperation<ListUcCallsRequest, ListUcCallsResponse> operation
-              = new ListUcCallsOperation( sdkConfiguration);
+              = new ListUcCallsOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

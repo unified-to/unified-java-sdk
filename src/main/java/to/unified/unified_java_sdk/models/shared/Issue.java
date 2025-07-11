@@ -16,48 +16,60 @@ import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class Issue {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<String> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importance")
     private Optional<Double> importance;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolution_time")
     private Optional<Double> resolutionTime;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     private Optional<Double> size;
 
+
     @JsonProperty("status")
     private IssueStatus status;
+
 
     @JsonProperty("ticket_ref")
     private String ticketRef;
 
+
     @JsonProperty("title")
     private String title;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private Optional<? extends List<String>> type;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<String> updatedAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     private Optional<String> url;
+
 
     @JsonProperty("workspace_id")
     private String workspaceId;
@@ -107,7 +119,10 @@ public class Issue {
             String ticketRef,
             String title,
             String workspaceId) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), status, ticketRef, title, Optional.empty(), Optional.empty(), Optional.empty(), workspaceId);
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), status,
+            ticketRef, title, Optional.empty(),
+            Optional.empty(), Optional.empty(), workspaceId);
     }
 
     @JsonIgnore
@@ -171,15 +186,17 @@ public class Issue {
         return workspaceId;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public Issue withCreatedAt(String createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public Issue withCreatedAt(Optional<String> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -193,6 +210,7 @@ public class Issue {
         return this;
     }
 
+
     public Issue withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -204,6 +222,7 @@ public class Issue {
         this.importance = Optional.ofNullable(importance);
         return this;
     }
+
 
     public Issue withImportance(Optional<Double> importance) {
         Utils.checkNotNull(importance, "importance");
@@ -217,6 +236,7 @@ public class Issue {
         return this;
     }
 
+
     public Issue withResolutionTime(Optional<Double> resolutionTime) {
         Utils.checkNotNull(resolutionTime, "resolutionTime");
         this.resolutionTime = resolutionTime;
@@ -228,6 +248,7 @@ public class Issue {
         this.size = Optional.ofNullable(size);
         return this;
     }
+
 
     public Issue withSize(Optional<Double> size) {
         Utils.checkNotNull(size, "size");
@@ -259,6 +280,7 @@ public class Issue {
         return this;
     }
 
+
     public Issue withType(Optional<? extends List<String>> type) {
         Utils.checkNotNull(type, "type");
         this.type = type;
@@ -270,6 +292,7 @@ public class Issue {
         this.updatedAt = Optional.ofNullable(updatedAt);
         return this;
     }
+
 
     public Issue withUpdatedAt(Optional<String> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
@@ -283,6 +306,7 @@ public class Issue {
         return this;
     }
 
+
     public Issue withUrl(Optional<String> url) {
         Utils.checkNotNull(url, "url");
         this.url = url;
@@ -295,7 +319,6 @@ public class Issue {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -323,18 +346,10 @@ public class Issue {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt,
-            id,
-            importance,
-            resolutionTime,
-            size,
-            status,
-            ticketRef,
-            title,
-            type,
-            updatedAt,
-            url,
-            workspaceId);
+            createdAt, id, importance,
+            resolutionTime, size, status,
+            ticketRef, title, type,
+            updatedAt, url, workspaceId);
     }
     
     @Override
@@ -353,36 +368,38 @@ public class Issue {
                 "url", url,
                 "workspaceId", workspaceId);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> createdAt = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<Double> importance = Optional.empty();
- 
+
         private Optional<Double> resolutionTime = Optional.empty();
- 
+
         private Optional<Double> size = Optional.empty();
- 
+
         private IssueStatus status;
- 
+
         private String ticketRef;
- 
+
         private String title;
- 
+
         private Optional<? extends List<String>> type = Optional.empty();
- 
+
         private Optional<String> updatedAt = Optional.empty();
- 
+
         private Optional<String> url = Optional.empty();
- 
+
         private String workspaceId;
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder createdAt(String createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -396,6 +413,7 @@ public class Issue {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -407,6 +425,7 @@ public class Issue {
             this.id = id;
             return this;
         }
+
 
         public Builder importance(double importance) {
             Utils.checkNotNull(importance, "importance");
@@ -420,6 +439,7 @@ public class Issue {
             return this;
         }
 
+
         public Builder resolutionTime(double resolutionTime) {
             Utils.checkNotNull(resolutionTime, "resolutionTime");
             this.resolutionTime = Optional.ofNullable(resolutionTime);
@@ -431,6 +451,7 @@ public class Issue {
             this.resolutionTime = resolutionTime;
             return this;
         }
+
 
         public Builder size(double size) {
             Utils.checkNotNull(size, "size");
@@ -444,11 +465,13 @@ public class Issue {
             return this;
         }
 
+
         public Builder status(IssueStatus status) {
             Utils.checkNotNull(status, "status");
             this.status = status;
             return this;
         }
+
 
         public Builder ticketRef(String ticketRef) {
             Utils.checkNotNull(ticketRef, "ticketRef");
@@ -456,11 +479,13 @@ public class Issue {
             return this;
         }
 
+
         public Builder title(String title) {
             Utils.checkNotNull(title, "title");
             this.title = title;
             return this;
         }
+
 
         public Builder type(List<String> type) {
             Utils.checkNotNull(type, "type");
@@ -474,6 +499,7 @@ public class Issue {
             return this;
         }
 
+
         public Builder updatedAt(String updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -485,6 +511,7 @@ public class Issue {
             this.updatedAt = updatedAt;
             return this;
         }
+
 
         public Builder url(String url) {
             Utils.checkNotNull(url, "url");
@@ -498,26 +525,21 @@ public class Issue {
             return this;
         }
 
+
         public Builder workspaceId(String workspaceId) {
             Utils.checkNotNull(workspaceId, "workspaceId");
             this.workspaceId = workspaceId;
             return this;
         }
-        
+
         public Issue build() {
+
             return new Issue(
-                createdAt,
-                id,
-                importance,
-                resolutionTime,
-                size,
-                status,
-                ticketRef,
-                title,
-                type,
-                updatedAt,
-                url,
-                workspaceId);
+                createdAt, id, importance,
+                resolutionTime, size, status,
+                ticketRef, title, type,
+                updatedAt, url, workspaceId);
         }
+
     }
 }

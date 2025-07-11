@@ -28,7 +28,7 @@ public class PatchUnifiedWebhookTriggerRequestBuilder {
     public PatchUnifiedWebhookTriggerResponse call() throws Exception {
         
         RequestOperation<PatchUnifiedWebhookTriggerRequest, PatchUnifiedWebhookTriggerResponse> operation
-              = new PatchUnifiedWebhookTriggerOperation( sdkConfiguration);
+              = new PatchUnifiedWebhookTriggerOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

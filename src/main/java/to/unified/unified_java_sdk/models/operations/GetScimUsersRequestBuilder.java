@@ -28,7 +28,7 @@ public class GetScimUsersRequestBuilder {
     public GetScimUsersResponse call() throws Exception {
         
         RequestOperation<GetScimUsersRequest, GetScimUsersResponse> operation
-              = new GetScimUsersOperation( sdkConfiguration);
+              = new GetScimUsersOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -14,31 +14,38 @@ import java.time.OffsetDateTime;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class EnrichPersonWorkHistory {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_domain")
     private Optional<String> companyDomain;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
     private Optional<String> companyId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_name")
     private Optional<String> companyName;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private Optional<OffsetDateTime> endAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     private Optional<String> location;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private Optional<OffsetDateTime> startAt;
+
 
     @JsonProperty("title")
     private String title;
@@ -70,7 +77,9 @@ public class EnrichPersonWorkHistory {
     
     public EnrichPersonWorkHistory(
             String title) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), title);
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            title);
     }
 
     @JsonIgnore
@@ -108,15 +117,17 @@ public class EnrichPersonWorkHistory {
         return title;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public EnrichPersonWorkHistory withCompanyDomain(String companyDomain) {
         Utils.checkNotNull(companyDomain, "companyDomain");
         this.companyDomain = Optional.ofNullable(companyDomain);
         return this;
     }
+
 
     public EnrichPersonWorkHistory withCompanyDomain(Optional<String> companyDomain) {
         Utils.checkNotNull(companyDomain, "companyDomain");
@@ -130,6 +141,7 @@ public class EnrichPersonWorkHistory {
         return this;
     }
 
+
     public EnrichPersonWorkHistory withCompanyId(Optional<String> companyId) {
         Utils.checkNotNull(companyId, "companyId");
         this.companyId = companyId;
@@ -141,6 +153,7 @@ public class EnrichPersonWorkHistory {
         this.companyName = Optional.ofNullable(companyName);
         return this;
     }
+
 
     public EnrichPersonWorkHistory withCompanyName(Optional<String> companyName) {
         Utils.checkNotNull(companyName, "companyName");
@@ -154,6 +167,7 @@ public class EnrichPersonWorkHistory {
         return this;
     }
 
+
     public EnrichPersonWorkHistory withEndAt(Optional<OffsetDateTime> endAt) {
         Utils.checkNotNull(endAt, "endAt");
         this.endAt = endAt;
@@ -165,6 +179,7 @@ public class EnrichPersonWorkHistory {
         this.location = Optional.ofNullable(location);
         return this;
     }
+
 
     public EnrichPersonWorkHistory withLocation(Optional<String> location) {
         Utils.checkNotNull(location, "location");
@@ -178,6 +193,7 @@ public class EnrichPersonWorkHistory {
         return this;
     }
 
+
     public EnrichPersonWorkHistory withStartAt(Optional<OffsetDateTime> startAt) {
         Utils.checkNotNull(startAt, "startAt");
         this.startAt = startAt;
@@ -190,7 +206,6 @@ public class EnrichPersonWorkHistory {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -213,12 +228,8 @@ public class EnrichPersonWorkHistory {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            companyDomain,
-            companyId,
-            companyName,
-            endAt,
-            location,
-            startAt,
+            companyDomain, companyId, companyName,
+            endAt, location, startAt,
             title);
     }
     
@@ -233,26 +244,28 @@ public class EnrichPersonWorkHistory {
                 "startAt", startAt,
                 "title", title);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> companyDomain = Optional.empty();
- 
+
         private Optional<String> companyId = Optional.empty();
- 
+
         private Optional<String> companyName = Optional.empty();
- 
+
         private Optional<OffsetDateTime> endAt = Optional.empty();
- 
+
         private Optional<String> location = Optional.empty();
- 
+
         private Optional<OffsetDateTime> startAt = Optional.empty();
- 
+
         private String title;
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder companyDomain(String companyDomain) {
             Utils.checkNotNull(companyDomain, "companyDomain");
@@ -266,6 +279,7 @@ public class EnrichPersonWorkHistory {
             return this;
         }
 
+
         public Builder companyId(String companyId) {
             Utils.checkNotNull(companyId, "companyId");
             this.companyId = Optional.ofNullable(companyId);
@@ -277,6 +291,7 @@ public class EnrichPersonWorkHistory {
             this.companyId = companyId;
             return this;
         }
+
 
         public Builder companyName(String companyName) {
             Utils.checkNotNull(companyName, "companyName");
@@ -290,6 +305,7 @@ public class EnrichPersonWorkHistory {
             return this;
         }
 
+
         public Builder endAt(OffsetDateTime endAt) {
             Utils.checkNotNull(endAt, "endAt");
             this.endAt = Optional.ofNullable(endAt);
@@ -301,6 +317,7 @@ public class EnrichPersonWorkHistory {
             this.endAt = endAt;
             return this;
         }
+
 
         public Builder location(String location) {
             Utils.checkNotNull(location, "location");
@@ -314,6 +331,7 @@ public class EnrichPersonWorkHistory {
             return this;
         }
 
+
         public Builder startAt(OffsetDateTime startAt) {
             Utils.checkNotNull(startAt, "startAt");
             this.startAt = Optional.ofNullable(startAt);
@@ -326,21 +344,20 @@ public class EnrichPersonWorkHistory {
             return this;
         }
 
+
         public Builder title(String title) {
             Utils.checkNotNull(title, "title");
             this.title = title;
             return this;
         }
-        
+
         public EnrichPersonWorkHistory build() {
+
             return new EnrichPersonWorkHistory(
-                companyDomain,
-                companyId,
-                companyName,
-                endAt,
-                location,
-                startAt,
+                companyDomain, companyId, companyName,
+                endAt, location, startAt,
                 title);
         }
+
     }
 }

@@ -28,7 +28,7 @@ public class ListStorageFilesRequestBuilder {
     public ListStorageFilesResponse call() throws Exception {
         
         RequestOperation<ListStorageFilesRequest, ListStorageFilesResponse> operation
-              = new ListStorageFilesOperation( sdkConfiguration);
+              = new ListStorageFilesOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

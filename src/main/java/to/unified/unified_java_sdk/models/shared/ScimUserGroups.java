@@ -14,19 +14,23 @@ import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class ScimUserGroups {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("$ref")
     private Optional<String> dollarRef;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display")
     private Optional<String> display;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private Optional<? extends ScimUserGroupsType> type;
+
 
     @JsonProperty("value")
     private String value;
@@ -49,7 +53,8 @@ public class ScimUserGroups {
     
     public ScimUserGroups(
             String value) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), value);
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            value);
     }
 
     @JsonIgnore
@@ -73,15 +78,17 @@ public class ScimUserGroups {
         return value;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public ScimUserGroups withDollarRef(String dollarRef) {
         Utils.checkNotNull(dollarRef, "dollarRef");
         this.dollarRef = Optional.ofNullable(dollarRef);
         return this;
     }
+
 
     public ScimUserGroups withDollarRef(Optional<String> dollarRef) {
         Utils.checkNotNull(dollarRef, "dollarRef");
@@ -95,6 +102,7 @@ public class ScimUserGroups {
         return this;
     }
 
+
     public ScimUserGroups withDisplay(Optional<String> display) {
         Utils.checkNotNull(display, "display");
         this.display = display;
@@ -106,6 +114,7 @@ public class ScimUserGroups {
         this.type = Optional.ofNullable(type);
         return this;
     }
+
 
     public ScimUserGroups withType(Optional<? extends ScimUserGroupsType> type) {
         Utils.checkNotNull(type, "type");
@@ -119,7 +128,6 @@ public class ScimUserGroups {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -139,9 +147,7 @@ public class ScimUserGroups {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            dollarRef,
-            display,
-            type,
+            dollarRef, display, type,
             value);
     }
     
@@ -153,20 +159,22 @@ public class ScimUserGroups {
                 "type", type,
                 "value", value);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> dollarRef = Optional.empty();
- 
+
         private Optional<String> display = Optional.empty();
- 
+
         private Optional<? extends ScimUserGroupsType> type = Optional.empty();
- 
+
         private String value;
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder dollarRef(String dollarRef) {
             Utils.checkNotNull(dollarRef, "dollarRef");
@@ -180,6 +188,7 @@ public class ScimUserGroups {
             return this;
         }
 
+
         public Builder display(String display) {
             Utils.checkNotNull(display, "display");
             this.display = Optional.ofNullable(display);
@@ -191,6 +200,7 @@ public class ScimUserGroups {
             this.display = display;
             return this;
         }
+
 
         public Builder type(ScimUserGroupsType type) {
             Utils.checkNotNull(type, "type");
@@ -204,18 +214,19 @@ public class ScimUserGroups {
             return this;
         }
 
+
         public Builder value(String value) {
             Utils.checkNotNull(value, "value");
             this.value = value;
             return this;
         }
-        
+
         public ScimUserGroups build() {
+
             return new ScimUserGroups(
-                dollarRef,
-                display,
-                type,
+                dollarRef, display, type,
                 value);
         }
+
     }
 }

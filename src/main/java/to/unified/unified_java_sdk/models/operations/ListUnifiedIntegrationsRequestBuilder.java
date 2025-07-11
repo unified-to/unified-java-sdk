@@ -28,7 +28,7 @@ public class ListUnifiedIntegrationsRequestBuilder {
     public ListUnifiedIntegrationsResponse call() throws Exception {
         
         RequestOperation<ListUnifiedIntegrationsRequest, ListUnifiedIntegrationsResponse> operation
-              = new ListUnifiedIntegrationsOperation( sdkConfiguration);
+              = new ListUnifiedIntegrationsOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

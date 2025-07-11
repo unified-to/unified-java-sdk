@@ -27,37 +27,46 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
     @JsonProperty("additionalManagers")
     private Optional<? extends List<ScimManager>> additionalManagers;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("birthday")
     private Optional<OffsetDateTime> birthday;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costCenter")
     private Optional<String> costCenter;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("department")
     private Optional<String> department;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("division")
     private Optional<String> division;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employeeNumber")
     private Optional<String> employeeNumber;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDate")
     private Optional<OffsetDateTime> endDate;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     private Optional<? extends PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender> gender;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("level")
     private Optional<String> level;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
@@ -70,9 +79,11 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
     @JsonProperty("manager")
     private Optional<? extends PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager> manager;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     private Optional<String> organization;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDate")
@@ -122,7 +133,11 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
     }
     
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -196,15 +211,17 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
         return startDate;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User withAdditionalManagers(List<ScimManager> additionalManagers) {
         Utils.checkNotNull(additionalManagers, "additionalManagers");
         this.additionalManagers = Optional.ofNullable(additionalManagers);
         return this;
     }
+
 
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User withAdditionalManagers(Optional<? extends List<ScimManager>> additionalManagers) {
         Utils.checkNotNull(additionalManagers, "additionalManagers");
@@ -218,6 +235,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
         return this;
     }
 
+
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User withBirthday(Optional<OffsetDateTime> birthday) {
         Utils.checkNotNull(birthday, "birthday");
         this.birthday = birthday;
@@ -229,6 +247,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
         this.costCenter = Optional.ofNullable(costCenter);
         return this;
     }
+
 
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User withCostCenter(Optional<String> costCenter) {
         Utils.checkNotNull(costCenter, "costCenter");
@@ -242,6 +261,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
         return this;
     }
 
+
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User withDepartment(Optional<String> department) {
         Utils.checkNotNull(department, "department");
         this.department = department;
@@ -253,6 +273,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
         this.division = Optional.ofNullable(division);
         return this;
     }
+
 
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User withDivision(Optional<String> division) {
         Utils.checkNotNull(division, "division");
@@ -266,6 +287,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
         return this;
     }
 
+
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User withEmployeeNumber(Optional<String> employeeNumber) {
         Utils.checkNotNull(employeeNumber, "employeeNumber");
         this.employeeNumber = employeeNumber;
@@ -277,6 +299,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
         this.endDate = Optional.ofNullable(endDate);
         return this;
     }
+
 
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User withEndDate(Optional<OffsetDateTime> endDate) {
         Utils.checkNotNull(endDate, "endDate");
@@ -290,6 +313,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
         return this;
     }
 
+
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User withGender(Optional<? extends PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender> gender) {
         Utils.checkNotNull(gender, "gender");
         this.gender = gender;
@@ -302,6 +326,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
         return this;
     }
 
+
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User withLevel(Optional<String> level) {
         Utils.checkNotNull(level, "level");
         this.level = level;
@@ -313,6 +338,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
         this.location = Optional.ofNullable(location);
         return this;
     }
+
 
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User withLocation(Optional<String> location) {
         Utils.checkNotNull(location, "location");
@@ -329,6 +355,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
         return this;
     }
 
+
     /**
      * "id" attribute of another User.
      */
@@ -344,6 +371,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
         return this;
     }
 
+
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User withOrganization(Optional<String> organization) {
         Utils.checkNotNull(organization, "organization");
         this.organization = organization;
@@ -356,13 +384,13 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
         return this;
     }
 
+
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User withStartDate(Optional<OffsetDateTime> startDate) {
         Utils.checkNotNull(startDate, "startDate");
         this.startDate = startDate;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -391,18 +419,10 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            additionalManagers,
-            birthday,
-            costCenter,
-            department,
-            division,
-            employeeNumber,
-            endDate,
-            gender,
-            level,
-            location,
-            manager,
-            organization,
+            additionalManagers, birthday, costCenter,
+            department, division, employeeNumber,
+            endDate, gender, level,
+            location, manager, organization,
             startDate);
     }
     
@@ -423,38 +443,40 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
                 "organization", organization,
                 "startDate", startDate);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<? extends List<ScimManager>> additionalManagers = Optional.empty();
- 
+
         private Optional<OffsetDateTime> birthday = Optional.empty();
- 
+
         private Optional<String> costCenter = Optional.empty();
- 
+
         private Optional<String> department = Optional.empty();
- 
+
         private Optional<String> division = Optional.empty();
- 
+
         private Optional<String> employeeNumber = Optional.empty();
- 
+
         private Optional<OffsetDateTime> endDate = Optional.empty();
- 
+
         private Optional<? extends PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender> gender = Optional.empty();
- 
+
         private Optional<String> level = Optional.empty();
- 
+
         private Optional<String> location = Optional.empty();
- 
+
         private Optional<? extends PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager> manager = Optional.empty();
- 
+
         private Optional<String> organization = Optional.empty();
- 
+
         private Optional<OffsetDateTime> startDate = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder additionalManagers(List<ScimManager> additionalManagers) {
             Utils.checkNotNull(additionalManagers, "additionalManagers");
@@ -468,6 +490,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
             return this;
         }
 
+
         public Builder birthday(OffsetDateTime birthday) {
             Utils.checkNotNull(birthday, "birthday");
             this.birthday = Optional.ofNullable(birthday);
@@ -479,6 +502,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
             this.birthday = birthday;
             return this;
         }
+
 
         public Builder costCenter(String costCenter) {
             Utils.checkNotNull(costCenter, "costCenter");
@@ -492,6 +516,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
             return this;
         }
 
+
         public Builder department(String department) {
             Utils.checkNotNull(department, "department");
             this.department = Optional.ofNullable(department);
@@ -503,6 +528,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
             this.department = department;
             return this;
         }
+
 
         public Builder division(String division) {
             Utils.checkNotNull(division, "division");
@@ -516,6 +542,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
             return this;
         }
 
+
         public Builder employeeNumber(String employeeNumber) {
             Utils.checkNotNull(employeeNumber, "employeeNumber");
             this.employeeNumber = Optional.ofNullable(employeeNumber);
@@ -527,6 +554,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
             this.employeeNumber = employeeNumber;
             return this;
         }
+
 
         public Builder endDate(OffsetDateTime endDate) {
             Utils.checkNotNull(endDate, "endDate");
@@ -540,6 +568,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
             return this;
         }
 
+
         public Builder gender(PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender gender) {
             Utils.checkNotNull(gender, "gender");
             this.gender = Optional.ofNullable(gender);
@@ -551,6 +580,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
             this.gender = gender;
             return this;
         }
+
 
         public Builder level(String level) {
             Utils.checkNotNull(level, "level");
@@ -564,6 +594,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
             return this;
         }
 
+
         public Builder location(String location) {
             Utils.checkNotNull(location, "location");
             this.location = Optional.ofNullable(location);
@@ -575,6 +606,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
             this.location = location;
             return this;
         }
+
 
         /**
          * "id" attribute of another User.
@@ -594,6 +626,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
             return this;
         }
 
+
         public Builder organization(String organization) {
             Utils.checkNotNull(organization, "organization");
             this.organization = Optional.ofNullable(organization);
@@ -606,6 +639,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
             return this;
         }
 
+
         public Builder startDate(OffsetDateTime startDate) {
             Utils.checkNotNull(startDate, "startDate");
             this.startDate = Optional.ofNullable(startDate);
@@ -617,22 +651,16 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
             this.startDate = startDate;
             return this;
         }
-        
+
         public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User build() {
+
             return new PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User(
-                additionalManagers,
-                birthday,
-                costCenter,
-                department,
-                division,
-                employeeNumber,
-                endDate,
-                gender,
-                level,
-                location,
-                manager,
-                organization,
+                additionalManagers, birthday, costCenter,
+                department, division, employeeNumber,
+                endDate, gender, level,
+                location, manager, organization,
                 startDate);
         }
+
     }
 }

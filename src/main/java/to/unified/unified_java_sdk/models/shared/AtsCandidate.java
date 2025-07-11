@@ -18,47 +18,58 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AtsCandidate {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     private Optional<? extends PropertyAtsCandidateAddress> address;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
     private Optional<String> companyId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_name")
     private Optional<String> companyName;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_of_birth")
     private Optional<OffsetDateTime> dateOfBirth;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("education")
     private Optional<? extends List<AtsCandidateEducation>> education;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
     private Optional<? extends List<AtsEmail>> emails;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("experiences")
     private Optional<? extends List<AtsCandidateExperience>> experiences;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("external_identifier")
     private Optional<String> externalIdentifier;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_url")
@@ -71,49 +82,61 @@ public class AtsCandidate {
     @JsonProperty("link_urls")
     private Optional<? extends List<String>> linkUrls;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     private Optional<? extends List<AtsMetadata>> metadata;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origin")
     private Optional<? extends Origin> origin;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skills")
     private Optional<? extends List<String>> skills;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     private Optional<? extends List<String>> sources;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     private Optional<? extends List<String>> tags;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephones")
     private Optional<? extends List<AtsTelephone>> telephones;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     private Optional<String> title;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private Optional<String> userId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web_url")
@@ -196,7 +219,14 @@ public class AtsCandidate {
     }
     
     public AtsCandidate() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -334,15 +364,17 @@ public class AtsCandidate {
         return webUrl;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AtsCandidate withAddress(PropertyAtsCandidateAddress address) {
         Utils.checkNotNull(address, "address");
         this.address = Optional.ofNullable(address);
         return this;
     }
+
 
     public AtsCandidate withAddress(Optional<? extends PropertyAtsCandidateAddress> address) {
         Utils.checkNotNull(address, "address");
@@ -356,6 +388,7 @@ public class AtsCandidate {
         return this;
     }
 
+
     public AtsCandidate withCompanyId(Optional<String> companyId) {
         Utils.checkNotNull(companyId, "companyId");
         this.companyId = companyId;
@@ -367,6 +400,7 @@ public class AtsCandidate {
         this.companyName = Optional.ofNullable(companyName);
         return this;
     }
+
 
     public AtsCandidate withCompanyName(Optional<String> companyName) {
         Utils.checkNotNull(companyName, "companyName");
@@ -380,6 +414,7 @@ public class AtsCandidate {
         return this;
     }
 
+
     public AtsCandidate withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
@@ -391,6 +426,7 @@ public class AtsCandidate {
         this.dateOfBirth = Optional.ofNullable(dateOfBirth);
         return this;
     }
+
 
     public AtsCandidate withDateOfBirth(Optional<OffsetDateTime> dateOfBirth) {
         Utils.checkNotNull(dateOfBirth, "dateOfBirth");
@@ -404,6 +440,7 @@ public class AtsCandidate {
         return this;
     }
 
+
     public AtsCandidate withEducation(Optional<? extends List<AtsCandidateEducation>> education) {
         Utils.checkNotNull(education, "education");
         this.education = education;
@@ -415,6 +452,7 @@ public class AtsCandidate {
         this.emails = Optional.ofNullable(emails);
         return this;
     }
+
 
     public AtsCandidate withEmails(Optional<? extends List<AtsEmail>> emails) {
         Utils.checkNotNull(emails, "emails");
@@ -428,6 +466,7 @@ public class AtsCandidate {
         return this;
     }
 
+
     public AtsCandidate withExperiences(Optional<? extends List<AtsCandidateExperience>> experiences) {
         Utils.checkNotNull(experiences, "experiences");
         this.experiences = experiences;
@@ -439,6 +478,7 @@ public class AtsCandidate {
         this.externalIdentifier = Optional.ofNullable(externalIdentifier);
         return this;
     }
+
 
     public AtsCandidate withExternalIdentifier(Optional<String> externalIdentifier) {
         Utils.checkNotNull(externalIdentifier, "externalIdentifier");
@@ -452,6 +492,7 @@ public class AtsCandidate {
         return this;
     }
 
+
     public AtsCandidate withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -463,6 +504,7 @@ public class AtsCandidate {
         this.imageUrl = Optional.ofNullable(imageUrl);
         return this;
     }
+
 
     public AtsCandidate withImageUrl(Optional<String> imageUrl) {
         Utils.checkNotNull(imageUrl, "imageUrl");
@@ -479,6 +521,7 @@ public class AtsCandidate {
         return this;
     }
 
+
     /**
      * URLs for web pages containing additional material about the candidate (LinkedIn, other social media, articles, etc.)
      */
@@ -494,6 +537,7 @@ public class AtsCandidate {
         return this;
     }
 
+
     public AtsCandidate withMetadata(Optional<? extends List<AtsMetadata>> metadata) {
         Utils.checkNotNull(metadata, "metadata");
         this.metadata = metadata;
@@ -505,6 +549,7 @@ public class AtsCandidate {
         this.name = Optional.ofNullable(name);
         return this;
     }
+
 
     public AtsCandidate withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
@@ -518,6 +563,7 @@ public class AtsCandidate {
         return this;
     }
 
+
     public AtsCandidate withOrigin(Optional<? extends Origin> origin) {
         Utils.checkNotNull(origin, "origin");
         this.origin = origin;
@@ -529,6 +575,7 @@ public class AtsCandidate {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public AtsCandidate withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -542,6 +589,7 @@ public class AtsCandidate {
         return this;
     }
 
+
     public AtsCandidate withSkills(Optional<? extends List<String>> skills) {
         Utils.checkNotNull(skills, "skills");
         this.skills = skills;
@@ -553,6 +601,7 @@ public class AtsCandidate {
         this.sources = Optional.ofNullable(sources);
         return this;
     }
+
 
     public AtsCandidate withSources(Optional<? extends List<String>> sources) {
         Utils.checkNotNull(sources, "sources");
@@ -566,6 +615,7 @@ public class AtsCandidate {
         return this;
     }
 
+
     public AtsCandidate withTags(Optional<? extends List<String>> tags) {
         Utils.checkNotNull(tags, "tags");
         this.tags = tags;
@@ -577,6 +627,7 @@ public class AtsCandidate {
         this.telephones = Optional.ofNullable(telephones);
         return this;
     }
+
 
     public AtsCandidate withTelephones(Optional<? extends List<AtsTelephone>> telephones) {
         Utils.checkNotNull(telephones, "telephones");
@@ -590,6 +641,7 @@ public class AtsCandidate {
         return this;
     }
 
+
     public AtsCandidate withTitle(Optional<String> title) {
         Utils.checkNotNull(title, "title");
         this.title = title;
@@ -601,6 +653,7 @@ public class AtsCandidate {
         this.updatedAt = Optional.ofNullable(updatedAt);
         return this;
     }
+
 
     public AtsCandidate withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
@@ -614,6 +667,7 @@ public class AtsCandidate {
         return this;
     }
 
+
     public AtsCandidate withUserId(Optional<String> userId) {
         Utils.checkNotNull(userId, "userId");
         this.userId = userId;
@@ -626,13 +680,13 @@ public class AtsCandidate {
         return this;
     }
 
+
     public AtsCandidate withWebUrl(Optional<String> webUrl) {
         Utils.checkNotNull(webUrl, "webUrl");
         this.webUrl = webUrl;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -672,30 +726,14 @@ public class AtsCandidate {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            address,
-            companyId,
-            companyName,
-            createdAt,
-            dateOfBirth,
-            education,
-            emails,
-            experiences,
-            externalIdentifier,
-            id,
-            imageUrl,
-            linkUrls,
-            metadata,
-            name,
-            origin,
-            raw,
-            skills,
-            sources,
-            tags,
-            telephones,
-            title,
-            updatedAt,
-            userId,
-            webUrl);
+            address, companyId, companyName,
+            createdAt, dateOfBirth, education,
+            emails, experiences, externalIdentifier,
+            id, imageUrl, linkUrls,
+            metadata, name, origin,
+            raw, skills, sources,
+            tags, telephones, title,
+            updatedAt, userId, webUrl);
     }
     
     @Override
@@ -726,60 +764,62 @@ public class AtsCandidate {
                 "userId", userId,
                 "webUrl", webUrl);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<? extends PropertyAtsCandidateAddress> address = Optional.empty();
- 
+
         private Optional<String> companyId = Optional.empty();
- 
+
         private Optional<String> companyName = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<OffsetDateTime> dateOfBirth = Optional.empty();
- 
+
         private Optional<? extends List<AtsCandidateEducation>> education = Optional.empty();
- 
+
         private Optional<? extends List<AtsEmail>> emails = Optional.empty();
- 
+
         private Optional<? extends List<AtsCandidateExperience>> experiences = Optional.empty();
- 
+
         private Optional<String> externalIdentifier = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> imageUrl = Optional.empty();
- 
+
         private Optional<? extends List<String>> linkUrls = Optional.empty();
- 
+
         private Optional<? extends List<AtsMetadata>> metadata = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<? extends Origin> origin = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<? extends List<String>> skills = Optional.empty();
- 
+
         private Optional<? extends List<String>> sources = Optional.empty();
- 
+
         private Optional<? extends List<String>> tags = Optional.empty();
- 
+
         private Optional<? extends List<AtsTelephone>> telephones = Optional.empty();
- 
+
         private Optional<String> title = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<String> userId = Optional.empty();
- 
+
         private Optional<String> webUrl = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder address(PropertyAtsCandidateAddress address) {
             Utils.checkNotNull(address, "address");
@@ -793,6 +833,7 @@ public class AtsCandidate {
             return this;
         }
 
+
         public Builder companyId(String companyId) {
             Utils.checkNotNull(companyId, "companyId");
             this.companyId = Optional.ofNullable(companyId);
@@ -804,6 +845,7 @@ public class AtsCandidate {
             this.companyId = companyId;
             return this;
         }
+
 
         public Builder companyName(String companyName) {
             Utils.checkNotNull(companyName, "companyName");
@@ -817,6 +859,7 @@ public class AtsCandidate {
             return this;
         }
 
+
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
@@ -828,6 +871,7 @@ public class AtsCandidate {
             this.createdAt = createdAt;
             return this;
         }
+
 
         public Builder dateOfBirth(OffsetDateTime dateOfBirth) {
             Utils.checkNotNull(dateOfBirth, "dateOfBirth");
@@ -841,6 +885,7 @@ public class AtsCandidate {
             return this;
         }
 
+
         public Builder education(List<AtsCandidateEducation> education) {
             Utils.checkNotNull(education, "education");
             this.education = Optional.ofNullable(education);
@@ -852,6 +897,7 @@ public class AtsCandidate {
             this.education = education;
             return this;
         }
+
 
         public Builder emails(List<AtsEmail> emails) {
             Utils.checkNotNull(emails, "emails");
@@ -865,6 +911,7 @@ public class AtsCandidate {
             return this;
         }
 
+
         public Builder experiences(List<AtsCandidateExperience> experiences) {
             Utils.checkNotNull(experiences, "experiences");
             this.experiences = Optional.ofNullable(experiences);
@@ -876,6 +923,7 @@ public class AtsCandidate {
             this.experiences = experiences;
             return this;
         }
+
 
         public Builder externalIdentifier(String externalIdentifier) {
             Utils.checkNotNull(externalIdentifier, "externalIdentifier");
@@ -889,6 +937,7 @@ public class AtsCandidate {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -901,6 +950,7 @@ public class AtsCandidate {
             return this;
         }
 
+
         public Builder imageUrl(String imageUrl) {
             Utils.checkNotNull(imageUrl, "imageUrl");
             this.imageUrl = Optional.ofNullable(imageUrl);
@@ -912,6 +962,7 @@ public class AtsCandidate {
             this.imageUrl = imageUrl;
             return this;
         }
+
 
         /**
          * URLs for web pages containing additional material about the candidate (LinkedIn, other social media, articles, etc.)
@@ -931,6 +982,7 @@ public class AtsCandidate {
             return this;
         }
 
+
         public Builder metadata(List<AtsMetadata> metadata) {
             Utils.checkNotNull(metadata, "metadata");
             this.metadata = Optional.ofNullable(metadata);
@@ -942,6 +994,7 @@ public class AtsCandidate {
             this.metadata = metadata;
             return this;
         }
+
 
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
@@ -955,6 +1008,7 @@ public class AtsCandidate {
             return this;
         }
 
+
         public Builder origin(Origin origin) {
             Utils.checkNotNull(origin, "origin");
             this.origin = Optional.ofNullable(origin);
@@ -966,6 +1020,7 @@ public class AtsCandidate {
             this.origin = origin;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -979,6 +1034,7 @@ public class AtsCandidate {
             return this;
         }
 
+
         public Builder skills(List<String> skills) {
             Utils.checkNotNull(skills, "skills");
             this.skills = Optional.ofNullable(skills);
@@ -990,6 +1046,7 @@ public class AtsCandidate {
             this.skills = skills;
             return this;
         }
+
 
         public Builder sources(List<String> sources) {
             Utils.checkNotNull(sources, "sources");
@@ -1003,6 +1060,7 @@ public class AtsCandidate {
             return this;
         }
 
+
         public Builder tags(List<String> tags) {
             Utils.checkNotNull(tags, "tags");
             this.tags = Optional.ofNullable(tags);
@@ -1014,6 +1072,7 @@ public class AtsCandidate {
             this.tags = tags;
             return this;
         }
+
 
         public Builder telephones(List<AtsTelephone> telephones) {
             Utils.checkNotNull(telephones, "telephones");
@@ -1027,6 +1086,7 @@ public class AtsCandidate {
             return this;
         }
 
+
         public Builder title(String title) {
             Utils.checkNotNull(title, "title");
             this.title = Optional.ofNullable(title);
@@ -1038,6 +1098,7 @@ public class AtsCandidate {
             this.title = title;
             return this;
         }
+
 
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
@@ -1051,6 +1112,7 @@ public class AtsCandidate {
             return this;
         }
 
+
         public Builder userId(String userId) {
             Utils.checkNotNull(userId, "userId");
             this.userId = Optional.ofNullable(userId);
@@ -1063,6 +1125,7 @@ public class AtsCandidate {
             return this;
         }
 
+
         public Builder webUrl(String webUrl) {
             Utils.checkNotNull(webUrl, "webUrl");
             this.webUrl = Optional.ofNullable(webUrl);
@@ -1074,33 +1137,19 @@ public class AtsCandidate {
             this.webUrl = webUrl;
             return this;
         }
-        
+
         public AtsCandidate build() {
+
             return new AtsCandidate(
-                address,
-                companyId,
-                companyName,
-                createdAt,
-                dateOfBirth,
-                education,
-                emails,
-                experiences,
-                externalIdentifier,
-                id,
-                imageUrl,
-                linkUrls,
-                metadata,
-                name,
-                origin,
-                raw,
-                skills,
-                sources,
-                tags,
-                telephones,
-                title,
-                updatedAt,
-                userId,
-                webUrl);
+                address, companyId, companyName,
+                createdAt, dateOfBirth, education,
+                emails, experiences, externalIdentifier,
+                id, imageUrl, linkUrls,
+                metadata, name, origin,
+                raw, skills, sources,
+                tags, telephones, title,
+                updatedAt, userId, webUrl);
         }
+
     }
 }

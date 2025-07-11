@@ -40,7 +40,6 @@ public class Job {
     Job(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a job
      * 
@@ -57,13 +56,11 @@ public class Job {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAtsJobResponse createAtsJob(
-            CreateAtsJobRequest request) throws Exception {
+    public CreateAtsJobResponse createAtsJob(CreateAtsJobRequest request) throws Exception {
         RequestOperation<CreateAtsJobRequest, CreateAtsJobResponse> operation
-              = new CreateAtsJobOperation( sdkConfiguration);
+              = new CreateAtsJobOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a job
@@ -81,13 +78,11 @@ public class Job {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAtsJobResponse getAtsJob(
-            GetAtsJobRequest request) throws Exception {
+    public GetAtsJobResponse getAtsJob(GetAtsJobRequest request) throws Exception {
         RequestOperation<GetAtsJobRequest, GetAtsJobResponse> operation
-              = new GetAtsJobOperation( sdkConfiguration);
+              = new GetAtsJobOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all jobs
@@ -105,13 +100,11 @@ public class Job {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAtsJobsResponse listAtsJobs(
-            ListAtsJobsRequest request) throws Exception {
+    public ListAtsJobsResponse listAtsJobs(ListAtsJobsRequest request) throws Exception {
         RequestOperation<ListAtsJobsRequest, ListAtsJobsResponse> operation
-              = new ListAtsJobsOperation( sdkConfiguration);
+              = new ListAtsJobsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a job
@@ -129,13 +122,11 @@ public class Job {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAtsJobResponse patchAtsJob(
-            PatchAtsJobRequest request) throws Exception {
+    public PatchAtsJobResponse patchAtsJob(PatchAtsJobRequest request) throws Exception {
         RequestOperation<PatchAtsJobRequest, PatchAtsJobResponse> operation
-              = new PatchAtsJobOperation( sdkConfiguration);
+              = new PatchAtsJobOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a job
@@ -153,13 +144,11 @@ public class Job {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAtsJobResponse removeAtsJob(
-            RemoveAtsJobRequest request) throws Exception {
+    public RemoveAtsJobResponse removeAtsJob(RemoveAtsJobRequest request) throws Exception {
         RequestOperation<RemoveAtsJobRequest, RemoveAtsJobResponse> operation
-              = new RemoveAtsJobOperation( sdkConfiguration);
+              = new RemoveAtsJobOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a job
@@ -177,10 +166,9 @@ public class Job {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAtsJobResponse updateAtsJob(
-            UpdateAtsJobRequest request) throws Exception {
+    public UpdateAtsJobResponse updateAtsJob(UpdateAtsJobRequest request) throws Exception {
         RequestOperation<UpdateAtsJobRequest, UpdateAtsJobResponse> operation
-              = new UpdateAtsJobOperation( sdkConfiguration);
+              = new UpdateAtsJobOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

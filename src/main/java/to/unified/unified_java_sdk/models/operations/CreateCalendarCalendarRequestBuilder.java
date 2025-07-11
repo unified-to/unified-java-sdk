@@ -28,7 +28,7 @@ public class CreateCalendarCalendarRequestBuilder {
     public CreateCalendarCalendarResponse call() throws Exception {
         
         RequestOperation<CreateCalendarCalendarRequest, CreateCalendarCalendarResponse> operation
-              = new CreateCalendarCalendarOperation( sdkConfiguration);
+              = new CreateCalendarCalendarOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

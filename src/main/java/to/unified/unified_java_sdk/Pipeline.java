@@ -40,7 +40,6 @@ public class Pipeline {
     Pipeline(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a pipeline
      * 
@@ -57,13 +56,11 @@ public class Pipeline {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateCrmPipelineResponse createCrmPipeline(
-            CreateCrmPipelineRequest request) throws Exception {
+    public CreateCrmPipelineResponse createCrmPipeline(CreateCrmPipelineRequest request) throws Exception {
         RequestOperation<CreateCrmPipelineRequest, CreateCrmPipelineResponse> operation
-              = new CreateCrmPipelineOperation( sdkConfiguration);
+              = new CreateCrmPipelineOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a pipeline
@@ -81,13 +78,11 @@ public class Pipeline {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetCrmPipelineResponse getCrmPipeline(
-            GetCrmPipelineRequest request) throws Exception {
+    public GetCrmPipelineResponse getCrmPipeline(GetCrmPipelineRequest request) throws Exception {
         RequestOperation<GetCrmPipelineRequest, GetCrmPipelineResponse> operation
-              = new GetCrmPipelineOperation( sdkConfiguration);
+              = new GetCrmPipelineOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all pipelines
@@ -105,13 +100,11 @@ public class Pipeline {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCrmPipelinesResponse listCrmPipelines(
-            ListCrmPipelinesRequest request) throws Exception {
+    public ListCrmPipelinesResponse listCrmPipelines(ListCrmPipelinesRequest request) throws Exception {
         RequestOperation<ListCrmPipelinesRequest, ListCrmPipelinesResponse> operation
-              = new ListCrmPipelinesOperation( sdkConfiguration);
+              = new ListCrmPipelinesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a pipeline
@@ -129,13 +122,11 @@ public class Pipeline {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchCrmPipelineResponse patchCrmPipeline(
-            PatchCrmPipelineRequest request) throws Exception {
+    public PatchCrmPipelineResponse patchCrmPipeline(PatchCrmPipelineRequest request) throws Exception {
         RequestOperation<PatchCrmPipelineRequest, PatchCrmPipelineResponse> operation
-              = new PatchCrmPipelineOperation( sdkConfiguration);
+              = new PatchCrmPipelineOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a pipeline
@@ -153,13 +144,11 @@ public class Pipeline {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveCrmPipelineResponse removeCrmPipeline(
-            RemoveCrmPipelineRequest request) throws Exception {
+    public RemoveCrmPipelineResponse removeCrmPipeline(RemoveCrmPipelineRequest request) throws Exception {
         RequestOperation<RemoveCrmPipelineRequest, RemoveCrmPipelineResponse> operation
-              = new RemoveCrmPipelineOperation( sdkConfiguration);
+              = new RemoveCrmPipelineOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a pipeline
@@ -177,10 +166,9 @@ public class Pipeline {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateCrmPipelineResponse updateCrmPipeline(
-            UpdateCrmPipelineRequest request) throws Exception {
+    public UpdateCrmPipelineResponse updateCrmPipeline(UpdateCrmPipelineRequest request) throws Exception {
         RequestOperation<UpdateCrmPipelineRequest, UpdateCrmPipelineResponse> operation
-              = new UpdateCrmPipelineOperation( sdkConfiguration);
+              = new UpdateCrmPipelineOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

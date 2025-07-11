@@ -28,7 +28,7 @@ public class GetUcRecordingRequestBuilder {
     public GetUcRecordingResponse call() throws Exception {
         
         RequestOperation<GetUcRecordingRequest, GetUcRecordingResponse> operation
-              = new GetUcRecordingOperation( sdkConfiguration);
+              = new GetUcRecordingOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

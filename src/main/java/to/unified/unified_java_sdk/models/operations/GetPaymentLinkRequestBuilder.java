@@ -28,7 +28,7 @@ public class GetPaymentLinkRequestBuilder {
     public GetPaymentLinkResponse call() throws Exception {
         
         RequestOperation<GetPaymentLinkRequest, GetPaymentLinkResponse> operation
-              = new GetPaymentLinkOperation( sdkConfiguration);
+              = new GetPaymentLinkOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

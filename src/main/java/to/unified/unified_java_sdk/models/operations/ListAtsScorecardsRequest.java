@@ -14,8 +14,8 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class ListAtsScorecardsRequest {
 
+public class ListAtsScorecardsRequest {
     /**
      * The application ID to filter by
      */
@@ -52,11 +52,14 @@ public class ListAtsScorecardsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=job_id")
     private Optional<String> jobId;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     private Optional<Double> limit;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     private Optional<Double> offset;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     private Optional<String> order;
@@ -72,6 +75,7 @@ public class ListAtsScorecardsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
     private Optional<String> raw;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     private Optional<String> sort;
@@ -127,7 +131,11 @@ public class ListAtsScorecardsRequest {
     
     public ListAtsScorecardsRequest(
             String connectionId) {
-        this(Optional.empty(), Optional.empty(), connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), connectionId,
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     /**
@@ -223,9 +231,10 @@ public class ListAtsScorecardsRequest {
         return updatedGte;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * The application ID to filter by
@@ -235,6 +244,7 @@ public class ListAtsScorecardsRequest {
         this.applicationId = Optional.ofNullable(applicationId);
         return this;
     }
+
 
     /**
      * The application ID to filter by
@@ -253,6 +263,7 @@ public class ListAtsScorecardsRequest {
         this.candidateId = Optional.ofNullable(candidateId);
         return this;
     }
+
 
     /**
      * The candidate ID to filter by
@@ -281,6 +292,7 @@ public class ListAtsScorecardsRequest {
         return this;
     }
 
+
     /**
      * Comma-delimited fields to return
      */
@@ -298,6 +310,7 @@ public class ListAtsScorecardsRequest {
         this.interviewId = Optional.ofNullable(interviewId);
         return this;
     }
+
 
     /**
      * The interview ID to filter by
@@ -317,6 +330,7 @@ public class ListAtsScorecardsRequest {
         return this;
     }
 
+
     /**
      * The job ID to filter by
      */
@@ -332,6 +346,7 @@ public class ListAtsScorecardsRequest {
         return this;
     }
 
+
     public ListAtsScorecardsRequest withLimit(Optional<Double> limit) {
         Utils.checkNotNull(limit, "limit");
         this.limit = limit;
@@ -344,6 +359,7 @@ public class ListAtsScorecardsRequest {
         return this;
     }
 
+
     public ListAtsScorecardsRequest withOffset(Optional<Double> offset) {
         Utils.checkNotNull(offset, "offset");
         this.offset = offset;
@@ -355,6 +371,7 @@ public class ListAtsScorecardsRequest {
         this.order = Optional.ofNullable(order);
         return this;
     }
+
 
     public ListAtsScorecardsRequest withOrder(Optional<String> order) {
         Utils.checkNotNull(order, "order");
@@ -370,6 +387,7 @@ public class ListAtsScorecardsRequest {
         this.query = Optional.ofNullable(query);
         return this;
     }
+
 
     /**
      * Query string to search. eg. email address or name
@@ -389,6 +407,7 @@ public class ListAtsScorecardsRequest {
         return this;
     }
 
+
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
@@ -403,6 +422,7 @@ public class ListAtsScorecardsRequest {
         this.sort = Optional.ofNullable(sort);
         return this;
     }
+
 
     public ListAtsScorecardsRequest withSort(Optional<String> sort) {
         Utils.checkNotNull(sort, "sort");
@@ -419,6 +439,7 @@ public class ListAtsScorecardsRequest {
         return this;
     }
 
+
     /**
      * Return only results whose updated date is equal or greater to this value
      */
@@ -428,7 +449,6 @@ public class ListAtsScorecardsRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -457,18 +477,10 @@ public class ListAtsScorecardsRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            applicationId,
-            candidateId,
-            connectionId,
-            fields,
-            interviewId,
-            jobId,
-            limit,
-            offset,
-            order,
-            query,
-            raw,
-            sort,
+            applicationId, candidateId, connectionId,
+            fields, interviewId, jobId,
+            limit, offset, order,
+            query, raw, sort,
             updatedGte);
     }
     
@@ -489,38 +501,40 @@ public class ListAtsScorecardsRequest {
                 "sort", sort,
                 "updatedGte", updatedGte);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> applicationId = Optional.empty();
- 
+
         private Optional<String> candidateId = Optional.empty();
- 
+
         private String connectionId;
- 
+
         private Optional<? extends List<String>> fields = Optional.empty();
- 
+
         private Optional<String> interviewId = Optional.empty();
- 
+
         private Optional<String> jobId = Optional.empty();
- 
+
         private Optional<Double> limit = Optional.empty();
- 
+
         private Optional<Double> offset = Optional.empty();
- 
+
         private Optional<String> order = Optional.empty();
- 
+
         private Optional<String> query = Optional.empty();
- 
+
         private Optional<String> raw = Optional.empty();
- 
+
         private Optional<String> sort = Optional.empty();
- 
+
         private Optional<String> updatedGte = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * The application ID to filter by
@@ -540,6 +554,7 @@ public class ListAtsScorecardsRequest {
             return this;
         }
 
+
         /**
          * The candidate ID to filter by
          */
@@ -558,6 +573,7 @@ public class ListAtsScorecardsRequest {
             return this;
         }
 
+
         /**
          * ID of the connection
          */
@@ -566,6 +582,7 @@ public class ListAtsScorecardsRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         /**
          * Comma-delimited fields to return
@@ -585,6 +602,7 @@ public class ListAtsScorecardsRequest {
             return this;
         }
 
+
         /**
          * The interview ID to filter by
          */
@@ -602,6 +620,7 @@ public class ListAtsScorecardsRequest {
             this.interviewId = interviewId;
             return this;
         }
+
 
         /**
          * The job ID to filter by
@@ -621,6 +640,7 @@ public class ListAtsScorecardsRequest {
             return this;
         }
 
+
         public Builder limit(double limit) {
             Utils.checkNotNull(limit, "limit");
             this.limit = Optional.ofNullable(limit);
@@ -632,6 +652,7 @@ public class ListAtsScorecardsRequest {
             this.limit = limit;
             return this;
         }
+
 
         public Builder offset(double offset) {
             Utils.checkNotNull(offset, "offset");
@@ -645,6 +666,7 @@ public class ListAtsScorecardsRequest {
             return this;
         }
 
+
         public Builder order(String order) {
             Utils.checkNotNull(order, "order");
             this.order = Optional.ofNullable(order);
@@ -656,6 +678,7 @@ public class ListAtsScorecardsRequest {
             this.order = order;
             return this;
         }
+
 
         /**
          * Query string to search. eg. email address or name
@@ -675,6 +698,7 @@ public class ListAtsScorecardsRequest {
             return this;
         }
 
+
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
@@ -693,6 +717,7 @@ public class ListAtsScorecardsRequest {
             return this;
         }
 
+
         public Builder sort(String sort) {
             Utils.checkNotNull(sort, "sort");
             this.sort = Optional.ofNullable(sort);
@@ -704,6 +729,7 @@ public class ListAtsScorecardsRequest {
             this.sort = sort;
             return this;
         }
+
 
         /**
          * Return only results whose updated date is equal or greater to this value
@@ -722,22 +748,16 @@ public class ListAtsScorecardsRequest {
             this.updatedGte = updatedGte;
             return this;
         }
-        
+
         public ListAtsScorecardsRequest build() {
+
             return new ListAtsScorecardsRequest(
-                applicationId,
-                candidateId,
-                connectionId,
-                fields,
-                interviewId,
-                jobId,
-                limit,
-                offset,
-                order,
-                query,
-                raw,
-                sort,
+                applicationId, candidateId, connectionId,
+                fields, interviewId, jobId,
+                limit, offset, order,
+                query, raw, sort,
                 updatedGte);
         }
+
     }
 }

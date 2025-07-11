@@ -40,7 +40,6 @@ public class Message {
     Message(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a message
      * 
@@ -57,13 +56,11 @@ public class Message {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateMessagingMessageResponse createMessagingMessage(
-            CreateMessagingMessageRequest request) throws Exception {
+    public CreateMessagingMessageResponse createMessagingMessage(CreateMessagingMessageRequest request) throws Exception {
         RequestOperation<CreateMessagingMessageRequest, CreateMessagingMessageResponse> operation
-              = new CreateMessagingMessageOperation( sdkConfiguration);
+              = new CreateMessagingMessageOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a message
@@ -81,13 +78,11 @@ public class Message {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetMessagingMessageResponse getMessagingMessage(
-            GetMessagingMessageRequest request) throws Exception {
+    public GetMessagingMessageResponse getMessagingMessage(GetMessagingMessageRequest request) throws Exception {
         RequestOperation<GetMessagingMessageRequest, GetMessagingMessageResponse> operation
-              = new GetMessagingMessageOperation( sdkConfiguration);
+              = new GetMessagingMessageOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all messages
@@ -105,13 +100,11 @@ public class Message {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListMessagingMessagesResponse listMessagingMessages(
-            ListMessagingMessagesRequest request) throws Exception {
+    public ListMessagingMessagesResponse listMessagingMessages(ListMessagingMessagesRequest request) throws Exception {
         RequestOperation<ListMessagingMessagesRequest, ListMessagingMessagesResponse> operation
-              = new ListMessagingMessagesOperation( sdkConfiguration);
+              = new ListMessagingMessagesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a message
@@ -129,13 +122,11 @@ public class Message {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchMessagingMessageResponse patchMessagingMessage(
-            PatchMessagingMessageRequest request) throws Exception {
+    public PatchMessagingMessageResponse patchMessagingMessage(PatchMessagingMessageRequest request) throws Exception {
         RequestOperation<PatchMessagingMessageRequest, PatchMessagingMessageResponse> operation
-              = new PatchMessagingMessageOperation( sdkConfiguration);
+              = new PatchMessagingMessageOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a message
@@ -153,13 +144,11 @@ public class Message {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveMessagingMessageResponse removeMessagingMessage(
-            RemoveMessagingMessageRequest request) throws Exception {
+    public RemoveMessagingMessageResponse removeMessagingMessage(RemoveMessagingMessageRequest request) throws Exception {
         RequestOperation<RemoveMessagingMessageRequest, RemoveMessagingMessageResponse> operation
-              = new RemoveMessagingMessageOperation( sdkConfiguration);
+              = new RemoveMessagingMessageOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a message
@@ -177,10 +166,9 @@ public class Message {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateMessagingMessageResponse updateMessagingMessage(
-            UpdateMessagingMessageRequest request) throws Exception {
+    public UpdateMessagingMessageResponse updateMessagingMessage(UpdateMessagingMessageRequest request) throws Exception {
         RequestOperation<UpdateMessagingMessageRequest, UpdateMessagingMessageResponse> operation
-              = new UpdateMessagingMessageOperation( sdkConfiguration);
+              = new UpdateMessagingMessageOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

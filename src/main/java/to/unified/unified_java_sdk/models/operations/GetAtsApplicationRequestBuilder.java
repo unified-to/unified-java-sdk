@@ -28,7 +28,7 @@ public class GetAtsApplicationRequestBuilder {
     public GetAtsApplicationResponse call() throws Exception {
         
         RequestOperation<GetAtsApplicationRequest, GetAtsApplicationResponse> operation
-              = new GetAtsApplicationOperation( sdkConfiguration);
+              = new GetAtsApplicationOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

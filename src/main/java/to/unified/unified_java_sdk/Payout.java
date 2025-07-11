@@ -24,7 +24,6 @@ public class Payout {
     Payout(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Retrieve a payout
      * 
@@ -41,13 +40,11 @@ public class Payout {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetPaymentPayoutResponse getPaymentPayout(
-            GetPaymentPayoutRequest request) throws Exception {
+    public GetPaymentPayoutResponse getPaymentPayout(GetPaymentPayoutRequest request) throws Exception {
         RequestOperation<GetPaymentPayoutRequest, GetPaymentPayoutResponse> operation
-              = new GetPaymentPayoutOperation( sdkConfiguration);
+              = new GetPaymentPayoutOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all payouts
@@ -65,10 +62,9 @@ public class Payout {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListPaymentPayoutsResponse listPaymentPayouts(
-            ListPaymentPayoutsRequest request) throws Exception {
+    public ListPaymentPayoutsResponse listPaymentPayouts(ListPaymentPayoutsRequest request) throws Exception {
         RequestOperation<ListPaymentPayoutsRequest, ListPaymentPayoutsResponse> operation
-              = new ListPaymentPayoutsOperation( sdkConfiguration);
+              = new ListPaymentPayoutsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

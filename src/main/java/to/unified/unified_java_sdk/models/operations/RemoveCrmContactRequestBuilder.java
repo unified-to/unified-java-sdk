@@ -28,7 +28,7 @@ public class RemoveCrmContactRequestBuilder {
     public RemoveCrmContactResponse call() throws Exception {
         
         RequestOperation<RemoveCrmContactRequest, RemoveCrmContactResponse> operation
-              = new RemoveCrmContactOperation( sdkConfiguration);
+              = new RemoveCrmContactOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

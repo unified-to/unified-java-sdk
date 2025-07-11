@@ -28,7 +28,7 @@ public class CreateCommerceCollectionRequestBuilder {
     public CreateCommerceCollectionResponse call() throws Exception {
         
         RequestOperation<CreateCommerceCollectionRequest, CreateCommerceCollectionResponse> operation
-              = new CreateCommerceCollectionOperation( sdkConfiguration);
+              = new CreateCommerceCollectionOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -28,7 +28,7 @@ public class GetUnifiedIntegrationLoginRequestBuilder {
     public GetUnifiedIntegrationLoginResponse call() throws Exception {
         
         RequestOperation<GetUnifiedIntegrationLoginRequest, GetUnifiedIntegrationLoginResponse> operation
-              = new GetUnifiedIntegrationLoginOperation( sdkConfiguration);
+              = new GetUnifiedIntegrationLoginOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

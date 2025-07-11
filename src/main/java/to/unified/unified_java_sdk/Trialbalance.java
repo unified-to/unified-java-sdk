@@ -24,7 +24,6 @@ public class Trialbalance {
     Trialbalance(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Retrieve a trialbalance
      * 
@@ -41,13 +40,11 @@ public class Trialbalance {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAccountingTrialbalanceResponse getAccountingTrialbalance(
-            GetAccountingTrialbalanceRequest request) throws Exception {
+    public GetAccountingTrialbalanceResponse getAccountingTrialbalance(GetAccountingTrialbalanceRequest request) throws Exception {
         RequestOperation<GetAccountingTrialbalanceRequest, GetAccountingTrialbalanceResponse> operation
-              = new GetAccountingTrialbalanceOperation( sdkConfiguration);
+              = new GetAccountingTrialbalanceOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all trialbalances
@@ -65,10 +62,9 @@ public class Trialbalance {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAccountingTrialbalancesResponse listAccountingTrialbalances(
-            ListAccountingTrialbalancesRequest request) throws Exception {
+    public ListAccountingTrialbalancesResponse listAccountingTrialbalances(ListAccountingTrialbalancesRequest request) throws Exception {
         RequestOperation<ListAccountingTrialbalancesRequest, ListAccountingTrialbalancesResponse> operation
-              = new ListAccountingTrialbalancesOperation( sdkConfiguration);
+              = new ListAccountingTrialbalancesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

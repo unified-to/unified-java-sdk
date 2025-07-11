@@ -28,7 +28,7 @@ public class UpdatePassthroughJsonRequestBuilder {
     public UpdatePassthroughJsonResponse call() throws Exception {
         
         RequestOperation<UpdatePassthroughJsonRequest, UpdatePassthroughJsonResponse> operation
-              = new UpdatePassthroughJsonOperation( sdkConfiguration);
+              = new UpdatePassthroughJsonOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

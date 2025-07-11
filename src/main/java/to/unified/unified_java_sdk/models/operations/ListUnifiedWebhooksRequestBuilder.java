@@ -28,7 +28,7 @@ public class ListUnifiedWebhooksRequestBuilder {
     public ListUnifiedWebhooksResponse call() throws Exception {
         
         RequestOperation<ListUnifiedWebhooksRequest, ListUnifiedWebhooksResponse> operation
-              = new ListUnifiedWebhooksOperation( sdkConfiguration);
+              = new ListUnifiedWebhooksOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

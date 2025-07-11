@@ -18,65 +18,82 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.LazySingletonValue;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class ApiCall {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connection_id")
     private Optional<String> connectionId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     private Optional<String> environment;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     private Optional<String> error;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("external_xref")
     private Optional<String> externalXref;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonProperty("integration_type")
     private String integrationType;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip_address")
     private Optional<String> ipAddress;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_billable")
     private Optional<Boolean> isBillable;
 
+
     @JsonProperty("method")
     private String method;
+
 
     @JsonProperty("name")
     private String name;
 
+
     @JsonProperty("path")
     private String path;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     private Optional<Double> size;
 
+
     @JsonProperty("status")
     private String status;
+
 
     @JsonProperty("type")
     private ApiCallType type;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhook_id")
     private Optional<String> webhookId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspace_id")
@@ -144,7 +161,12 @@ public class ApiCall {
             String path,
             String status,
             ApiCallType type) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), integrationType, Optional.empty(), Optional.empty(), method, name, path, Optional.empty(), status, type, Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            integrationType, Optional.empty(), Optional.empty(),
+            method, name, path,
+            Optional.empty(), status, type,
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -232,15 +254,17 @@ public class ApiCall {
         return workspaceId;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public ApiCall withConnectionId(String connectionId) {
         Utils.checkNotNull(connectionId, "connectionId");
         this.connectionId = Optional.ofNullable(connectionId);
         return this;
     }
+
 
     public ApiCall withConnectionId(Optional<String> connectionId) {
         Utils.checkNotNull(connectionId, "connectionId");
@@ -254,6 +278,7 @@ public class ApiCall {
         return this;
     }
 
+
     public ApiCall withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
@@ -265,6 +290,7 @@ public class ApiCall {
         this.environment = Optional.ofNullable(environment);
         return this;
     }
+
 
     public ApiCall withEnvironment(Optional<String> environment) {
         Utils.checkNotNull(environment, "environment");
@@ -278,6 +304,7 @@ public class ApiCall {
         return this;
     }
 
+
     public ApiCall withError(Optional<String> error) {
         Utils.checkNotNull(error, "error");
         this.error = error;
@@ -290,6 +317,7 @@ public class ApiCall {
         return this;
     }
 
+
     public ApiCall withExternalXref(Optional<String> externalXref) {
         Utils.checkNotNull(externalXref, "externalXref");
         this.externalXref = externalXref;
@@ -301,6 +329,7 @@ public class ApiCall {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public ApiCall withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -320,6 +349,7 @@ public class ApiCall {
         return this;
     }
 
+
     public ApiCall withIpAddress(Optional<String> ipAddress) {
         Utils.checkNotNull(ipAddress, "ipAddress");
         this.ipAddress = ipAddress;
@@ -331,6 +361,7 @@ public class ApiCall {
         this.isBillable = Optional.ofNullable(isBillable);
         return this;
     }
+
 
     public ApiCall withIsBillable(Optional<Boolean> isBillable) {
         Utils.checkNotNull(isBillable, "isBillable");
@@ -362,6 +393,7 @@ public class ApiCall {
         return this;
     }
 
+
     public ApiCall withSize(Optional<Double> size) {
         Utils.checkNotNull(size, "size");
         this.size = size;
@@ -386,6 +418,7 @@ public class ApiCall {
         return this;
     }
 
+
     public ApiCall withWebhookId(Optional<String> webhookId) {
         Utils.checkNotNull(webhookId, "webhookId");
         this.webhookId = webhookId;
@@ -398,13 +431,13 @@ public class ApiCall {
         return this;
     }
 
+
     public ApiCall withWorkspaceId(Optional<String> workspaceId) {
         Utils.checkNotNull(workspaceId, "workspaceId");
         this.workspaceId = workspaceId;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -437,23 +470,12 @@ public class ApiCall {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId,
-            createdAt,
-            environment,
-            error,
-            externalXref,
-            id,
-            integrationType,
-            ipAddress,
-            isBillable,
-            method,
-            name,
-            path,
-            size,
-            status,
-            type,
-            webhookId,
-            workspaceId);
+            connectionId, createdAt, environment,
+            error, externalXref, id,
+            integrationType, ipAddress, isBillable,
+            method, name, path,
+            size, status, type,
+            webhookId, workspaceId);
     }
     
     @Override
@@ -477,46 +499,48 @@ public class ApiCall {
                 "webhookId", webhookId,
                 "workspaceId", workspaceId);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> connectionId = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> environment;
- 
+
         private Optional<String> error = Optional.empty();
- 
+
         private Optional<String> externalXref = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private String integrationType;
- 
+
         private Optional<String> ipAddress = Optional.empty();
- 
+
         private Optional<Boolean> isBillable = Optional.empty();
- 
+
         private String method;
- 
+
         private String name;
- 
+
         private String path;
- 
+
         private Optional<Double> size = Optional.empty();
- 
+
         private String status;
- 
+
         private ApiCallType type;
- 
+
         private Optional<String> webhookId = Optional.empty();
- 
+
         private Optional<String> workspaceId = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder connectionId(String connectionId) {
             Utils.checkNotNull(connectionId, "connectionId");
@@ -530,6 +554,7 @@ public class ApiCall {
             return this;
         }
 
+
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
@@ -541,6 +566,7 @@ public class ApiCall {
             this.createdAt = createdAt;
             return this;
         }
+
 
         public Builder environment(String environment) {
             Utils.checkNotNull(environment, "environment");
@@ -554,6 +580,7 @@ public class ApiCall {
             return this;
         }
 
+
         public Builder error(String error) {
             Utils.checkNotNull(error, "error");
             this.error = Optional.ofNullable(error);
@@ -565,6 +592,7 @@ public class ApiCall {
             this.error = error;
             return this;
         }
+
 
         public Builder externalXref(String externalXref) {
             Utils.checkNotNull(externalXref, "externalXref");
@@ -578,6 +606,7 @@ public class ApiCall {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -590,11 +619,13 @@ public class ApiCall {
             return this;
         }
 
+
         public Builder integrationType(String integrationType) {
             Utils.checkNotNull(integrationType, "integrationType");
             this.integrationType = integrationType;
             return this;
         }
+
 
         public Builder ipAddress(String ipAddress) {
             Utils.checkNotNull(ipAddress, "ipAddress");
@@ -608,6 +639,7 @@ public class ApiCall {
             return this;
         }
 
+
         public Builder isBillable(boolean isBillable) {
             Utils.checkNotNull(isBillable, "isBillable");
             this.isBillable = Optional.ofNullable(isBillable);
@@ -620,11 +652,13 @@ public class ApiCall {
             return this;
         }
 
+
         public Builder method(String method) {
             Utils.checkNotNull(method, "method");
             this.method = method;
             return this;
         }
+
 
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
@@ -632,11 +666,13 @@ public class ApiCall {
             return this;
         }
 
+
         public Builder path(String path) {
             Utils.checkNotNull(path, "path");
             this.path = path;
             return this;
         }
+
 
         public Builder size(double size) {
             Utils.checkNotNull(size, "size");
@@ -650,17 +686,20 @@ public class ApiCall {
             return this;
         }
 
+
         public Builder status(String status) {
             Utils.checkNotNull(status, "status");
             this.status = status;
             return this;
         }
 
+
         public Builder type(ApiCallType type) {
             Utils.checkNotNull(type, "type");
             this.type = type;
             return this;
         }
+
 
         public Builder webhookId(String webhookId) {
             Utils.checkNotNull(webhookId, "webhookId");
@@ -674,6 +713,7 @@ public class ApiCall {
             return this;
         }
 
+
         public Builder workspaceId(String workspaceId) {
             Utils.checkNotNull(workspaceId, "workspaceId");
             this.workspaceId = Optional.ofNullable(workspaceId);
@@ -685,30 +725,21 @@ public class ApiCall {
             this.workspaceId = workspaceId;
             return this;
         }
-        
+
         public ApiCall build() {
             if (environment == null) {
                 environment = _SINGLETON_VALUE_Environment.value();
             }
+
             return new ApiCall(
-                connectionId,
-                createdAt,
-                environment,
-                error,
-                externalXref,
-                id,
-                integrationType,
-                ipAddress,
-                isBillable,
-                method,
-                name,
-                path,
-                size,
-                status,
-                type,
-                webhookId,
-                workspaceId);
+                connectionId, createdAt, environment,
+                error, externalXref, id,
+                integrationType, ipAddress, isBillable,
+                method, name, path,
+                size, status, type,
+                webhookId, workspaceId);
         }
+
 
         private static final LazySingletonValue<Optional<String>> _SINGLETON_VALUE_Environment =
                 new LazySingletonValue<>(

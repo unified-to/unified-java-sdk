@@ -28,7 +28,7 @@ public class UpdateKmsPageRequestBuilder {
     public UpdateKmsPageResponse call() throws Exception {
         
         RequestOperation<UpdateKmsPageRequest, UpdateKmsPageResponse> operation
-              = new UpdateKmsPageOperation( sdkConfiguration);
+              = new UpdateKmsPageOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

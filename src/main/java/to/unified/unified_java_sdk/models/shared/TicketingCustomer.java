@@ -18,35 +18,43 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class TicketingCustomer {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
     private Optional<? extends List<TicketingEmail>> emails;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     private Optional<? extends List<String>> tags;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephones")
     private Optional<? extends List<TicketingTelephone>> telephones;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -81,7 +89,9 @@ public class TicketingCustomer {
     }
     
     public TicketingCustomer() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -128,15 +138,17 @@ public class TicketingCustomer {
         return updatedAt;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public TicketingCustomer withCreatedAt(OffsetDateTime createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public TicketingCustomer withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -150,6 +162,7 @@ public class TicketingCustomer {
         return this;
     }
 
+
     public TicketingCustomer withEmails(Optional<? extends List<TicketingEmail>> emails) {
         Utils.checkNotNull(emails, "emails");
         this.emails = emails;
@@ -161,6 +174,7 @@ public class TicketingCustomer {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public TicketingCustomer withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -174,6 +188,7 @@ public class TicketingCustomer {
         return this;
     }
 
+
     public TicketingCustomer withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
         this.name = name;
@@ -185,6 +200,7 @@ public class TicketingCustomer {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public TicketingCustomer withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -198,6 +214,7 @@ public class TicketingCustomer {
         return this;
     }
 
+
     public TicketingCustomer withTags(Optional<? extends List<String>> tags) {
         Utils.checkNotNull(tags, "tags");
         this.tags = tags;
@@ -209,6 +226,7 @@ public class TicketingCustomer {
         this.telephones = Optional.ofNullable(telephones);
         return this;
     }
+
 
     public TicketingCustomer withTelephones(Optional<? extends List<TicketingTelephone>> telephones) {
         Utils.checkNotNull(telephones, "telephones");
@@ -222,13 +240,13 @@ public class TicketingCustomer {
         return this;
     }
 
+
     public TicketingCustomer withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -252,14 +270,9 @@ public class TicketingCustomer {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt,
-            emails,
-            id,
-            name,
-            raw,
-            tags,
-            telephones,
-            updatedAt);
+            createdAt, emails, id,
+            name, raw, tags,
+            telephones, updatedAt);
     }
     
     @Override
@@ -274,28 +287,30 @@ public class TicketingCustomer {
                 "telephones", telephones,
                 "updatedAt", updatedAt);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<? extends List<TicketingEmail>> emails = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<? extends List<String>> tags = Optional.empty();
- 
+
         private Optional<? extends List<TicketingTelephone>> telephones = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -309,6 +324,7 @@ public class TicketingCustomer {
             return this;
         }
 
+
         public Builder emails(List<TicketingEmail> emails) {
             Utils.checkNotNull(emails, "emails");
             this.emails = Optional.ofNullable(emails);
@@ -320,6 +336,7 @@ public class TicketingCustomer {
             this.emails = emails;
             return this;
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -333,6 +350,7 @@ public class TicketingCustomer {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = Optional.ofNullable(name);
@@ -344,6 +362,7 @@ public class TicketingCustomer {
             this.name = name;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -357,6 +376,7 @@ public class TicketingCustomer {
             return this;
         }
 
+
         public Builder tags(List<String> tags) {
             Utils.checkNotNull(tags, "tags");
             this.tags = Optional.ofNullable(tags);
@@ -368,6 +388,7 @@ public class TicketingCustomer {
             this.tags = tags;
             return this;
         }
+
 
         public Builder telephones(List<TicketingTelephone> telephones) {
             Utils.checkNotNull(telephones, "telephones");
@@ -381,6 +402,7 @@ public class TicketingCustomer {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -392,17 +414,14 @@ public class TicketingCustomer {
             this.updatedAt = updatedAt;
             return this;
         }
-        
+
         public TicketingCustomer build() {
+
             return new TicketingCustomer(
-                createdAt,
-                emails,
-                id,
-                name,
-                raw,
-                tags,
-                telephones,
-                updatedAt);
+                createdAt, emails, id,
+                name, raw, tags,
+                telephones, updatedAt);
         }
+
     }
 }

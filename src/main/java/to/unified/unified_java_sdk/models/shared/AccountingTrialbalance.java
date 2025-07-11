@@ -19,47 +19,58 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AccountingTrialbalance {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private Optional<String> currency;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private Optional<OffsetDateTime> endAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private Optional<OffsetDateTime> startAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sub_items")
     private Optional<? extends List<AccountingTrialbalanceSubItem>> subItems;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_credit_amount")
     private Optional<Double> totalCreditAmount;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_debit_amount")
     private Optional<Double> totalDebitAmount;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -103,7 +114,10 @@ public class AccountingTrialbalance {
     }
     
     public AccountingTrialbalance() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -163,15 +177,17 @@ public class AccountingTrialbalance {
         return updatedAt;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AccountingTrialbalance withCreatedAt(OffsetDateTime createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public AccountingTrialbalance withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -185,6 +201,7 @@ public class AccountingTrialbalance {
         return this;
     }
 
+
     public AccountingTrialbalance withCurrency(Optional<String> currency) {
         Utils.checkNotNull(currency, "currency");
         this.currency = currency;
@@ -196,6 +213,7 @@ public class AccountingTrialbalance {
         this.endAt = Optional.ofNullable(endAt);
         return this;
     }
+
 
     public AccountingTrialbalance withEndAt(Optional<OffsetDateTime> endAt) {
         Utils.checkNotNull(endAt, "endAt");
@@ -209,6 +227,7 @@ public class AccountingTrialbalance {
         return this;
     }
 
+
     public AccountingTrialbalance withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -220,6 +239,7 @@ public class AccountingTrialbalance {
         this.name = Optional.ofNullable(name);
         return this;
     }
+
 
     public AccountingTrialbalance withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
@@ -233,6 +253,7 @@ public class AccountingTrialbalance {
         return this;
     }
 
+
     public AccountingTrialbalance withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
@@ -244,6 +265,7 @@ public class AccountingTrialbalance {
         this.startAt = Optional.ofNullable(startAt);
         return this;
     }
+
 
     public AccountingTrialbalance withStartAt(Optional<OffsetDateTime> startAt) {
         Utils.checkNotNull(startAt, "startAt");
@@ -257,6 +279,7 @@ public class AccountingTrialbalance {
         return this;
     }
 
+
     public AccountingTrialbalance withSubItems(Optional<? extends List<AccountingTrialbalanceSubItem>> subItems) {
         Utils.checkNotNull(subItems, "subItems");
         this.subItems = subItems;
@@ -268,6 +291,7 @@ public class AccountingTrialbalance {
         this.totalCreditAmount = Optional.ofNullable(totalCreditAmount);
         return this;
     }
+
 
     public AccountingTrialbalance withTotalCreditAmount(Optional<Double> totalCreditAmount) {
         Utils.checkNotNull(totalCreditAmount, "totalCreditAmount");
@@ -281,6 +305,7 @@ public class AccountingTrialbalance {
         return this;
     }
 
+
     public AccountingTrialbalance withTotalDebitAmount(Optional<Double> totalDebitAmount) {
         Utils.checkNotNull(totalDebitAmount, "totalDebitAmount");
         this.totalDebitAmount = totalDebitAmount;
@@ -293,13 +318,13 @@ public class AccountingTrialbalance {
         return this;
     }
 
+
     public AccountingTrialbalance withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -326,17 +351,10 @@ public class AccountingTrialbalance {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt,
-            currency,
-            endAt,
-            id,
-            name,
-            raw,
-            startAt,
-            subItems,
-            totalCreditAmount,
-            totalDebitAmount,
-            updatedAt);
+            createdAt, currency, endAt,
+            id, name, raw,
+            startAt, subItems, totalCreditAmount,
+            totalDebitAmount, updatedAt);
     }
     
     @Override
@@ -354,34 +372,36 @@ public class AccountingTrialbalance {
                 "totalDebitAmount", totalDebitAmount,
                 "updatedAt", updatedAt);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> currency = Optional.empty();
- 
+
         private Optional<OffsetDateTime> endAt = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<OffsetDateTime> startAt = Optional.empty();
- 
+
         private Optional<? extends List<AccountingTrialbalanceSubItem>> subItems = Optional.empty();
- 
+
         private Optional<Double> totalCreditAmount = Optional.empty();
- 
+
         private Optional<Double> totalDebitAmount = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -395,6 +415,7 @@ public class AccountingTrialbalance {
             return this;
         }
 
+
         public Builder currency(String currency) {
             Utils.checkNotNull(currency, "currency");
             this.currency = Optional.ofNullable(currency);
@@ -406,6 +427,7 @@ public class AccountingTrialbalance {
             this.currency = currency;
             return this;
         }
+
 
         public Builder endAt(OffsetDateTime endAt) {
             Utils.checkNotNull(endAt, "endAt");
@@ -419,6 +441,7 @@ public class AccountingTrialbalance {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -430,6 +453,7 @@ public class AccountingTrialbalance {
             this.id = id;
             return this;
         }
+
 
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
@@ -443,6 +467,7 @@ public class AccountingTrialbalance {
             return this;
         }
 
+
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
@@ -454,6 +479,7 @@ public class AccountingTrialbalance {
             this.raw = raw;
             return this;
         }
+
 
         public Builder startAt(OffsetDateTime startAt) {
             Utils.checkNotNull(startAt, "startAt");
@@ -467,6 +493,7 @@ public class AccountingTrialbalance {
             return this;
         }
 
+
         public Builder subItems(List<AccountingTrialbalanceSubItem> subItems) {
             Utils.checkNotNull(subItems, "subItems");
             this.subItems = Optional.ofNullable(subItems);
@@ -478,6 +505,7 @@ public class AccountingTrialbalance {
             this.subItems = subItems;
             return this;
         }
+
 
         public Builder totalCreditAmount(double totalCreditAmount) {
             Utils.checkNotNull(totalCreditAmount, "totalCreditAmount");
@@ -491,6 +519,7 @@ public class AccountingTrialbalance {
             return this;
         }
 
+
         public Builder totalDebitAmount(double totalDebitAmount) {
             Utils.checkNotNull(totalDebitAmount, "totalDebitAmount");
             this.totalDebitAmount = Optional.ofNullable(totalDebitAmount);
@@ -503,6 +532,7 @@ public class AccountingTrialbalance {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -514,20 +544,15 @@ public class AccountingTrialbalance {
             this.updatedAt = updatedAt;
             return this;
         }
-        
+
         public AccountingTrialbalance build() {
+
             return new AccountingTrialbalance(
-                createdAt,
-                currency,
-                endAt,
-                id,
-                name,
-                raw,
-                startAt,
-                subItems,
-                totalCreditAmount,
-                totalDebitAmount,
-                updatedAt);
+                createdAt, currency, endAt,
+                id, name, raw,
+                startAt, subItems, totalCreditAmount,
+                totalDebitAmount, updatedAt);
         }
+
     }
 }

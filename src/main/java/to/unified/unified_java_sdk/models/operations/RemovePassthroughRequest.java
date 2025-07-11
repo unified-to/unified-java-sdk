@@ -14,16 +14,18 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class RemovePassthroughRequest {
 
+public class RemovePassthroughRequest {
     /**
      * ID of the connection
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
     private String connectionId;
 
+
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
     private String path;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     private Optional<? extends Map<String, Object>> query;
@@ -66,9 +68,10 @@ public class RemovePassthroughRequest {
         return (Optional<Map<String, Object>>) query;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * ID of the connection
@@ -91,13 +94,13 @@ public class RemovePassthroughRequest {
         return this;
     }
 
+
     public RemovePassthroughRequest withQuery(Optional<? extends Map<String, Object>> query) {
         Utils.checkNotNull(query, "query");
         this.query = query;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -116,9 +119,7 @@ public class RemovePassthroughRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId,
-            path,
-            query);
+            connectionId, path, query);
     }
     
     @Override
@@ -128,18 +129,20 @@ public class RemovePassthroughRequest {
                 "path", path,
                 "query", query);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private String connectionId;
- 
+
         private String path;
- 
+
         private Optional<? extends Map<String, Object>> query = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * ID of the connection
@@ -150,11 +153,13 @@ public class RemovePassthroughRequest {
             return this;
         }
 
+
         public Builder path(String path) {
             Utils.checkNotNull(path, "path");
             this.path = path;
             return this;
         }
+
 
         public Builder query(Map<String, Object> query) {
             Utils.checkNotNull(query, "query");
@@ -167,12 +172,12 @@ public class RemovePassthroughRequest {
             this.query = query;
             return this;
         }
-        
+
         public RemovePassthroughRequest build() {
+
             return new RemovePassthroughRequest(
-                connectionId,
-                path,
-                query);
+                connectionId, path, query);
         }
+
     }
 }

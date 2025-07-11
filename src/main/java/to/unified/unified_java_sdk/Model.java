@@ -20,7 +20,6 @@ public class Model {
     Model(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * List all models
      * 
@@ -37,10 +36,9 @@ public class Model {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListGenaiModelsResponse listGenaiModels(
-            ListGenaiModelsRequest request) throws Exception {
+    public ListGenaiModelsResponse listGenaiModels(ListGenaiModelsRequest request) throws Exception {
         RequestOperation<ListGenaiModelsRequest, ListGenaiModelsResponse> operation
-              = new ListGenaiModelsOperation( sdkConfiguration);
+              = new ListGenaiModelsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

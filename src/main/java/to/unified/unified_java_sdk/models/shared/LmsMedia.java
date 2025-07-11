@@ -14,23 +14,28 @@ import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class LmsMedia {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private Optional<String> description;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnail_url")
     private Optional<String> thumbnailUrl;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private Optional<? extends LmsMediaType> type;
+
 
     @JsonProperty("url")
     private String url;
@@ -56,7 +61,8 @@ public class LmsMedia {
     
     public LmsMedia(
             String url) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), url);
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), url);
     }
 
     @JsonIgnore
@@ -85,15 +91,17 @@ public class LmsMedia {
         return url;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public LmsMedia withDescription(String description) {
         Utils.checkNotNull(description, "description");
         this.description = Optional.ofNullable(description);
         return this;
     }
+
 
     public LmsMedia withDescription(Optional<String> description) {
         Utils.checkNotNull(description, "description");
@@ -107,6 +115,7 @@ public class LmsMedia {
         return this;
     }
 
+
     public LmsMedia withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
         this.name = name;
@@ -118,6 +127,7 @@ public class LmsMedia {
         this.thumbnailUrl = Optional.ofNullable(thumbnailUrl);
         return this;
     }
+
 
     public LmsMedia withThumbnailUrl(Optional<String> thumbnailUrl) {
         Utils.checkNotNull(thumbnailUrl, "thumbnailUrl");
@@ -131,6 +141,7 @@ public class LmsMedia {
         return this;
     }
 
+
     public LmsMedia withType(Optional<? extends LmsMediaType> type) {
         Utils.checkNotNull(type, "type");
         this.type = type;
@@ -143,7 +154,6 @@ public class LmsMedia {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -164,11 +174,8 @@ public class LmsMedia {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            description,
-            name,
-            thumbnailUrl,
-            type,
-            url);
+            description, name, thumbnailUrl,
+            type, url);
     }
     
     @Override
@@ -180,22 +187,24 @@ public class LmsMedia {
                 "type", type,
                 "url", url);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> description = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<String> thumbnailUrl = Optional.empty();
- 
+
         private Optional<? extends LmsMediaType> type = Optional.empty();
- 
+
         private String url;
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder description(String description) {
             Utils.checkNotNull(description, "description");
@@ -209,6 +218,7 @@ public class LmsMedia {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = Optional.ofNullable(name);
@@ -220,6 +230,7 @@ public class LmsMedia {
             this.name = name;
             return this;
         }
+
 
         public Builder thumbnailUrl(String thumbnailUrl) {
             Utils.checkNotNull(thumbnailUrl, "thumbnailUrl");
@@ -233,6 +244,7 @@ public class LmsMedia {
             return this;
         }
 
+
         public Builder type(LmsMediaType type) {
             Utils.checkNotNull(type, "type");
             this.type = Optional.ofNullable(type);
@@ -245,19 +257,19 @@ public class LmsMedia {
             return this;
         }
 
+
         public Builder url(String url) {
             Utils.checkNotNull(url, "url");
             this.url = url;
             return this;
         }
-        
+
         public LmsMedia build() {
+
             return new LmsMedia(
-                description,
-                name,
-                thumbnailUrl,
-                type,
-                url);
+                description, name, thumbnailUrl,
+                type, url);
         }
+
     }
 }

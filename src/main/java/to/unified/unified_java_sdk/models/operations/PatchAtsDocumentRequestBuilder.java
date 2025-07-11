@@ -28,7 +28,7 @@ public class PatchAtsDocumentRequestBuilder {
     public PatchAtsDocumentResponse call() throws Exception {
         
         RequestOperation<PatchAtsDocumentRequest, PatchAtsDocumentResponse> operation
-              = new PatchAtsDocumentOperation( sdkConfiguration);
+              = new PatchAtsDocumentOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -19,51 +19,63 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AccountingBalancesheet {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assets")
     private Optional<? extends List<AccountingBalancesheetItem>> assets;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private Optional<String> currency;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private Optional<OffsetDateTime> endAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("equity")
     private Optional<? extends List<AccountingBalancesheetItem>> equity;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("liabilities")
     private Optional<? extends List<AccountingBalancesheetItem>> liabilities;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("net_assets_amount")
     private Optional<Double> netAssetsAmount;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private Optional<OffsetDateTime> startAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -110,7 +122,10 @@ public class AccountingBalancesheet {
     }
     
     public AccountingBalancesheet() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -177,15 +192,17 @@ public class AccountingBalancesheet {
         return updatedAt;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AccountingBalancesheet withAssets(List<AccountingBalancesheetItem> assets) {
         Utils.checkNotNull(assets, "assets");
         this.assets = Optional.ofNullable(assets);
         return this;
     }
+
 
     public AccountingBalancesheet withAssets(Optional<? extends List<AccountingBalancesheetItem>> assets) {
         Utils.checkNotNull(assets, "assets");
@@ -199,6 +216,7 @@ public class AccountingBalancesheet {
         return this;
     }
 
+
     public AccountingBalancesheet withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
@@ -210,6 +228,7 @@ public class AccountingBalancesheet {
         this.currency = Optional.ofNullable(currency);
         return this;
     }
+
 
     public AccountingBalancesheet withCurrency(Optional<String> currency) {
         Utils.checkNotNull(currency, "currency");
@@ -223,6 +242,7 @@ public class AccountingBalancesheet {
         return this;
     }
 
+
     public AccountingBalancesheet withEndAt(Optional<OffsetDateTime> endAt) {
         Utils.checkNotNull(endAt, "endAt");
         this.endAt = endAt;
@@ -234,6 +254,7 @@ public class AccountingBalancesheet {
         this.equity = Optional.ofNullable(equity);
         return this;
     }
+
 
     public AccountingBalancesheet withEquity(Optional<? extends List<AccountingBalancesheetItem>> equity) {
         Utils.checkNotNull(equity, "equity");
@@ -247,6 +268,7 @@ public class AccountingBalancesheet {
         return this;
     }
 
+
     public AccountingBalancesheet withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -258,6 +280,7 @@ public class AccountingBalancesheet {
         this.liabilities = Optional.ofNullable(liabilities);
         return this;
     }
+
 
     public AccountingBalancesheet withLiabilities(Optional<? extends List<AccountingBalancesheetItem>> liabilities) {
         Utils.checkNotNull(liabilities, "liabilities");
@@ -271,6 +294,7 @@ public class AccountingBalancesheet {
         return this;
     }
 
+
     public AccountingBalancesheet withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
         this.name = name;
@@ -282,6 +306,7 @@ public class AccountingBalancesheet {
         this.netAssetsAmount = Optional.ofNullable(netAssetsAmount);
         return this;
     }
+
 
     public AccountingBalancesheet withNetAssetsAmount(Optional<Double> netAssetsAmount) {
         Utils.checkNotNull(netAssetsAmount, "netAssetsAmount");
@@ -295,6 +320,7 @@ public class AccountingBalancesheet {
         return this;
     }
 
+
     public AccountingBalancesheet withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
@@ -306,6 +332,7 @@ public class AccountingBalancesheet {
         this.startAt = Optional.ofNullable(startAt);
         return this;
     }
+
 
     public AccountingBalancesheet withStartAt(Optional<OffsetDateTime> startAt) {
         Utils.checkNotNull(startAt, "startAt");
@@ -319,13 +346,13 @@ public class AccountingBalancesheet {
         return this;
     }
 
+
     public AccountingBalancesheet withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -353,18 +380,10 @@ public class AccountingBalancesheet {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            assets,
-            createdAt,
-            currency,
-            endAt,
-            equity,
-            id,
-            liabilities,
-            name,
-            netAssetsAmount,
-            raw,
-            startAt,
-            updatedAt);
+            assets, createdAt, currency,
+            endAt, equity, id,
+            liabilities, name, netAssetsAmount,
+            raw, startAt, updatedAt);
     }
     
     @Override
@@ -383,36 +402,38 @@ public class AccountingBalancesheet {
                 "startAt", startAt,
                 "updatedAt", updatedAt);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<? extends List<AccountingBalancesheetItem>> assets = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> currency = Optional.empty();
- 
+
         private Optional<OffsetDateTime> endAt = Optional.empty();
- 
+
         private Optional<? extends List<AccountingBalancesheetItem>> equity = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<? extends List<AccountingBalancesheetItem>> liabilities = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<Double> netAssetsAmount = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<OffsetDateTime> startAt = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder assets(List<AccountingBalancesheetItem> assets) {
             Utils.checkNotNull(assets, "assets");
@@ -426,6 +447,7 @@ public class AccountingBalancesheet {
             return this;
         }
 
+
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
@@ -437,6 +459,7 @@ public class AccountingBalancesheet {
             this.createdAt = createdAt;
             return this;
         }
+
 
         public Builder currency(String currency) {
             Utils.checkNotNull(currency, "currency");
@@ -450,6 +473,7 @@ public class AccountingBalancesheet {
             return this;
         }
 
+
         public Builder endAt(OffsetDateTime endAt) {
             Utils.checkNotNull(endAt, "endAt");
             this.endAt = Optional.ofNullable(endAt);
@@ -461,6 +485,7 @@ public class AccountingBalancesheet {
             this.endAt = endAt;
             return this;
         }
+
 
         public Builder equity(List<AccountingBalancesheetItem> equity) {
             Utils.checkNotNull(equity, "equity");
@@ -474,6 +499,7 @@ public class AccountingBalancesheet {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -485,6 +511,7 @@ public class AccountingBalancesheet {
             this.id = id;
             return this;
         }
+
 
         public Builder liabilities(List<AccountingBalancesheetItem> liabilities) {
             Utils.checkNotNull(liabilities, "liabilities");
@@ -498,6 +525,7 @@ public class AccountingBalancesheet {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = Optional.ofNullable(name);
@@ -509,6 +537,7 @@ public class AccountingBalancesheet {
             this.name = name;
             return this;
         }
+
 
         public Builder netAssetsAmount(double netAssetsAmount) {
             Utils.checkNotNull(netAssetsAmount, "netAssetsAmount");
@@ -522,6 +551,7 @@ public class AccountingBalancesheet {
             return this;
         }
 
+
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
@@ -533,6 +563,7 @@ public class AccountingBalancesheet {
             this.raw = raw;
             return this;
         }
+
 
         public Builder startAt(OffsetDateTime startAt) {
             Utils.checkNotNull(startAt, "startAt");
@@ -546,6 +577,7 @@ public class AccountingBalancesheet {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -557,21 +589,15 @@ public class AccountingBalancesheet {
             this.updatedAt = updatedAt;
             return this;
         }
-        
+
         public AccountingBalancesheet build() {
+
             return new AccountingBalancesheet(
-                assets,
-                createdAt,
-                currency,
-                endAt,
-                equity,
-                id,
-                liabilities,
-                name,
-                netAssetsAmount,
-                raw,
-                startAt,
-                updatedAt);
+                assets, createdAt, currency,
+                endAt, equity, id,
+                liabilities, name, netAssetsAmount,
+                raw, startAt, updatedAt);
         }
+
     }
 }

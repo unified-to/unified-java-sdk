@@ -28,7 +28,7 @@ public class ListHrisTimeoffsRequestBuilder {
     public ListHrisTimeoffsResponse call() throws Exception {
         
         RequestOperation<ListHrisTimeoffsRequest, ListHrisTimeoffsResponse> operation
-              = new ListHrisTimeoffsOperation( sdkConfiguration);
+              = new ListHrisTimeoffsOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

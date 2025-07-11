@@ -14,10 +14,12 @@ import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class GenaiContent {
 
     @JsonProperty("content")
     private String content;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
@@ -49,9 +51,10 @@ public class GenaiContent {
         return (Optional<Role>) role;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public GenaiContent withContent(String content) {
         Utils.checkNotNull(content, "content");
@@ -65,13 +68,13 @@ public class GenaiContent {
         return this;
     }
 
+
     public GenaiContent withRole(Optional<? extends Role> role) {
         Utils.checkNotNull(role, "role");
         this.role = role;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -89,8 +92,7 @@ public class GenaiContent {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            content,
-            role);
+            content, role);
     }
     
     @Override
@@ -99,22 +101,25 @@ public class GenaiContent {
                 "content", content,
                 "role", role);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private String content;
- 
+
         private Optional<? extends Role> role = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder content(String content) {
             Utils.checkNotNull(content, "content");
             this.content = content;
             return this;
         }
+
 
         public Builder role(Role role) {
             Utils.checkNotNull(role, "role");
@@ -127,11 +132,12 @@ public class GenaiContent {
             this.role = role;
             return this;
         }
-        
+
         public GenaiContent build() {
+
             return new GenaiContent(
-                content,
-                role);
+                content, role);
         }
+
     }
 }

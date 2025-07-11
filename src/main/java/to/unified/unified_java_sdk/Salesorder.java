@@ -40,7 +40,6 @@ public class Salesorder {
     Salesorder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a salesorder
      * 
@@ -57,13 +56,11 @@ public class Salesorder {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAccountingSalesorderResponse createAccountingSalesorder(
-            CreateAccountingSalesorderRequest request) throws Exception {
+    public CreateAccountingSalesorderResponse createAccountingSalesorder(CreateAccountingSalesorderRequest request) throws Exception {
         RequestOperation<CreateAccountingSalesorderRequest, CreateAccountingSalesorderResponse> operation
-              = new CreateAccountingSalesorderOperation( sdkConfiguration);
+              = new CreateAccountingSalesorderOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a salesorder
@@ -81,13 +78,11 @@ public class Salesorder {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAccountingSalesorderResponse getAccountingSalesorder(
-            GetAccountingSalesorderRequest request) throws Exception {
+    public GetAccountingSalesorderResponse getAccountingSalesorder(GetAccountingSalesorderRequest request) throws Exception {
         RequestOperation<GetAccountingSalesorderRequest, GetAccountingSalesorderResponse> operation
-              = new GetAccountingSalesorderOperation( sdkConfiguration);
+              = new GetAccountingSalesorderOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all salesorders
@@ -105,13 +100,11 @@ public class Salesorder {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAccountingSalesordersResponse listAccountingSalesorders(
-            ListAccountingSalesordersRequest request) throws Exception {
+    public ListAccountingSalesordersResponse listAccountingSalesorders(ListAccountingSalesordersRequest request) throws Exception {
         RequestOperation<ListAccountingSalesordersRequest, ListAccountingSalesordersResponse> operation
-              = new ListAccountingSalesordersOperation( sdkConfiguration);
+              = new ListAccountingSalesordersOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a salesorder
@@ -129,13 +122,11 @@ public class Salesorder {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAccountingSalesorderResponse patchAccountingSalesorder(
-            PatchAccountingSalesorderRequest request) throws Exception {
+    public PatchAccountingSalesorderResponse patchAccountingSalesorder(PatchAccountingSalesorderRequest request) throws Exception {
         RequestOperation<PatchAccountingSalesorderRequest, PatchAccountingSalesorderResponse> operation
-              = new PatchAccountingSalesorderOperation( sdkConfiguration);
+              = new PatchAccountingSalesorderOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a salesorder
@@ -153,13 +144,11 @@ public class Salesorder {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAccountingSalesorderResponse removeAccountingSalesorder(
-            RemoveAccountingSalesorderRequest request) throws Exception {
+    public RemoveAccountingSalesorderResponse removeAccountingSalesorder(RemoveAccountingSalesorderRequest request) throws Exception {
         RequestOperation<RemoveAccountingSalesorderRequest, RemoveAccountingSalesorderResponse> operation
-              = new RemoveAccountingSalesorderOperation( sdkConfiguration);
+              = new RemoveAccountingSalesorderOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a salesorder
@@ -177,10 +166,9 @@ public class Salesorder {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAccountingSalesorderResponse updateAccountingSalesorder(
-            UpdateAccountingSalesorderRequest request) throws Exception {
+    public UpdateAccountingSalesorderResponse updateAccountingSalesorder(UpdateAccountingSalesorderRequest request) throws Exception {
         RequestOperation<UpdateAccountingSalesorderRequest, UpdateAccountingSalesorderResponse> operation
-              = new UpdateAccountingSalesorderOperation( sdkConfiguration);
+              = new UpdateAccountingSalesorderOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

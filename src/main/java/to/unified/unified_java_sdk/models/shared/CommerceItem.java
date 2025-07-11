@@ -19,71 +19,88 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class CommerceItem {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     private Optional<String> accountId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collection_ids")
     private Optional<? extends List<String>> collectionIds;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private Optional<String> description;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     private Optional<Boolean> isActive;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_taxable")
     private Optional<Boolean> isTaxable;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("media")
     private Optional<? extends List<CommerceItemMedia>> media;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     private Optional<? extends List<CommerceMetadata>> metadata;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_description")
     private Optional<String> publicDescription;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_name")
     private Optional<String> publicName;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     private Optional<String> slug;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     private Optional<? extends List<String>> tags;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private Optional<String> type;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -95,6 +112,7 @@ public class CommerceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variants")
     private Optional<? extends List<CommerceItemVariant>> variants;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor_name")
@@ -162,7 +180,13 @@ public class CommerceItem {
     }
     
     public CommerceItem() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -269,15 +293,17 @@ public class CommerceItem {
         return vendorName;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public CommerceItem withAccountId(String accountId) {
         Utils.checkNotNull(accountId, "accountId");
         this.accountId = Optional.ofNullable(accountId);
         return this;
     }
+
 
     public CommerceItem withAccountId(Optional<String> accountId) {
         Utils.checkNotNull(accountId, "accountId");
@@ -291,6 +317,7 @@ public class CommerceItem {
         return this;
     }
 
+
     public CommerceItem withCollectionIds(Optional<? extends List<String>> collectionIds) {
         Utils.checkNotNull(collectionIds, "collectionIds");
         this.collectionIds = collectionIds;
@@ -302,6 +329,7 @@ public class CommerceItem {
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public CommerceItem withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -315,6 +343,7 @@ public class CommerceItem {
         return this;
     }
 
+
     public CommerceItem withDescription(Optional<String> description) {
         Utils.checkNotNull(description, "description");
         this.description = description;
@@ -326,6 +355,7 @@ public class CommerceItem {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public CommerceItem withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -339,6 +369,7 @@ public class CommerceItem {
         return this;
     }
 
+
     public CommerceItem withIsActive(Optional<Boolean> isActive) {
         Utils.checkNotNull(isActive, "isActive");
         this.isActive = isActive;
@@ -350,6 +381,7 @@ public class CommerceItem {
         this.isTaxable = Optional.ofNullable(isTaxable);
         return this;
     }
+
 
     public CommerceItem withIsTaxable(Optional<Boolean> isTaxable) {
         Utils.checkNotNull(isTaxable, "isTaxable");
@@ -363,6 +395,7 @@ public class CommerceItem {
         return this;
     }
 
+
     public CommerceItem withMedia(Optional<? extends List<CommerceItemMedia>> media) {
         Utils.checkNotNull(media, "media");
         this.media = media;
@@ -374,6 +407,7 @@ public class CommerceItem {
         this.metadata = Optional.ofNullable(metadata);
         return this;
     }
+
 
     public CommerceItem withMetadata(Optional<? extends List<CommerceMetadata>> metadata) {
         Utils.checkNotNull(metadata, "metadata");
@@ -387,6 +421,7 @@ public class CommerceItem {
         return this;
     }
 
+
     public CommerceItem withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
         this.name = name;
@@ -398,6 +433,7 @@ public class CommerceItem {
         this.publicDescription = Optional.ofNullable(publicDescription);
         return this;
     }
+
 
     public CommerceItem withPublicDescription(Optional<String> publicDescription) {
         Utils.checkNotNull(publicDescription, "publicDescription");
@@ -411,6 +447,7 @@ public class CommerceItem {
         return this;
     }
 
+
     public CommerceItem withPublicName(Optional<String> publicName) {
         Utils.checkNotNull(publicName, "publicName");
         this.publicName = publicName;
@@ -422,6 +459,7 @@ public class CommerceItem {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public CommerceItem withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -435,6 +473,7 @@ public class CommerceItem {
         return this;
     }
 
+
     public CommerceItem withSlug(Optional<String> slug) {
         Utils.checkNotNull(slug, "slug");
         this.slug = slug;
@@ -446,6 +485,7 @@ public class CommerceItem {
         this.tags = Optional.ofNullable(tags);
         return this;
     }
+
 
     public CommerceItem withTags(Optional<? extends List<String>> tags) {
         Utils.checkNotNull(tags, "tags");
@@ -459,6 +499,7 @@ public class CommerceItem {
         return this;
     }
 
+
     public CommerceItem withType(Optional<String> type) {
         Utils.checkNotNull(type, "type");
         this.type = type;
@@ -470,6 +511,7 @@ public class CommerceItem {
         this.updatedAt = Optional.ofNullable(updatedAt);
         return this;
     }
+
 
     public CommerceItem withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
@@ -486,6 +528,7 @@ public class CommerceItem {
         return this;
     }
 
+
     /**
      * first variant is the default variant
      */
@@ -501,13 +544,13 @@ public class CommerceItem {
         return this;
     }
 
+
     public CommerceItem withVendorName(Optional<String> vendorName) {
         Utils.checkNotNull(vendorName, "vendorName");
         this.vendorName = vendorName;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -542,24 +585,12 @@ public class CommerceItem {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            accountId,
-            collectionIds,
-            createdAt,
-            description,
-            id,
-            isActive,
-            isTaxable,
-            media,
-            metadata,
-            name,
-            publicDescription,
-            publicName,
-            raw,
-            slug,
-            tags,
-            type,
-            updatedAt,
-            variants,
+            accountId, collectionIds, createdAt,
+            description, id, isActive,
+            isTaxable, media, metadata,
+            name, publicDescription, publicName,
+            raw, slug, tags,
+            type, updatedAt, variants,
             vendorName);
     }
     
@@ -586,50 +617,52 @@ public class CommerceItem {
                 "variants", variants,
                 "vendorName", vendorName);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> accountId = Optional.empty();
- 
+
         private Optional<? extends List<String>> collectionIds = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> description = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<Boolean> isActive = Optional.empty();
- 
+
         private Optional<Boolean> isTaxable = Optional.empty();
- 
+
         private Optional<? extends List<CommerceItemMedia>> media = Optional.empty();
- 
+
         private Optional<? extends List<CommerceMetadata>> metadata = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<String> publicDescription = Optional.empty();
- 
+
         private Optional<String> publicName = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<String> slug = Optional.empty();
- 
+
         private Optional<? extends List<String>> tags = Optional.empty();
- 
+
         private Optional<String> type = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<? extends List<CommerceItemVariant>> variants = Optional.empty();
- 
+
         private Optional<String> vendorName = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder accountId(String accountId) {
             Utils.checkNotNull(accountId, "accountId");
@@ -643,6 +676,7 @@ public class CommerceItem {
             return this;
         }
 
+
         public Builder collectionIds(List<String> collectionIds) {
             Utils.checkNotNull(collectionIds, "collectionIds");
             this.collectionIds = Optional.ofNullable(collectionIds);
@@ -654,6 +688,7 @@ public class CommerceItem {
             this.collectionIds = collectionIds;
             return this;
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -667,6 +702,7 @@ public class CommerceItem {
             return this;
         }
 
+
         public Builder description(String description) {
             Utils.checkNotNull(description, "description");
             this.description = Optional.ofNullable(description);
@@ -678,6 +714,7 @@ public class CommerceItem {
             this.description = description;
             return this;
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -691,6 +728,7 @@ public class CommerceItem {
             return this;
         }
 
+
         public Builder isActive(boolean isActive) {
             Utils.checkNotNull(isActive, "isActive");
             this.isActive = Optional.ofNullable(isActive);
@@ -702,6 +740,7 @@ public class CommerceItem {
             this.isActive = isActive;
             return this;
         }
+
 
         public Builder isTaxable(boolean isTaxable) {
             Utils.checkNotNull(isTaxable, "isTaxable");
@@ -715,6 +754,7 @@ public class CommerceItem {
             return this;
         }
 
+
         public Builder media(List<CommerceItemMedia> media) {
             Utils.checkNotNull(media, "media");
             this.media = Optional.ofNullable(media);
@@ -726,6 +766,7 @@ public class CommerceItem {
             this.media = media;
             return this;
         }
+
 
         public Builder metadata(List<CommerceMetadata> metadata) {
             Utils.checkNotNull(metadata, "metadata");
@@ -739,6 +780,7 @@ public class CommerceItem {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = Optional.ofNullable(name);
@@ -750,6 +792,7 @@ public class CommerceItem {
             this.name = name;
             return this;
         }
+
 
         public Builder publicDescription(String publicDescription) {
             Utils.checkNotNull(publicDescription, "publicDescription");
@@ -763,6 +806,7 @@ public class CommerceItem {
             return this;
         }
 
+
         public Builder publicName(String publicName) {
             Utils.checkNotNull(publicName, "publicName");
             this.publicName = Optional.ofNullable(publicName);
@@ -774,6 +818,7 @@ public class CommerceItem {
             this.publicName = publicName;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -787,6 +832,7 @@ public class CommerceItem {
             return this;
         }
 
+
         public Builder slug(String slug) {
             Utils.checkNotNull(slug, "slug");
             this.slug = Optional.ofNullable(slug);
@@ -798,6 +844,7 @@ public class CommerceItem {
             this.slug = slug;
             return this;
         }
+
 
         public Builder tags(List<String> tags) {
             Utils.checkNotNull(tags, "tags");
@@ -811,6 +858,7 @@ public class CommerceItem {
             return this;
         }
 
+
         public Builder type(String type) {
             Utils.checkNotNull(type, "type");
             this.type = Optional.ofNullable(type);
@@ -823,6 +871,7 @@ public class CommerceItem {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -834,6 +883,7 @@ public class CommerceItem {
             this.updatedAt = updatedAt;
             return this;
         }
+
 
         /**
          * first variant is the default variant
@@ -853,6 +903,7 @@ public class CommerceItem {
             return this;
         }
 
+
         public Builder vendorName(String vendorName) {
             Utils.checkNotNull(vendorName, "vendorName");
             this.vendorName = Optional.ofNullable(vendorName);
@@ -864,28 +915,18 @@ public class CommerceItem {
             this.vendorName = vendorName;
             return this;
         }
-        
+
         public CommerceItem build() {
+
             return new CommerceItem(
-                accountId,
-                collectionIds,
-                createdAt,
-                description,
-                id,
-                isActive,
-                isTaxable,
-                media,
-                metadata,
-                name,
-                publicDescription,
-                publicName,
-                raw,
-                slug,
-                tags,
-                type,
-                updatedAt,
-                variants,
+                accountId, collectionIds, createdAt,
+                description, id, isActive,
+                isTaxable, media, metadata,
+                name, publicDescription, publicName,
+                raw, slug, tags,
+                type, updatedAt, variants,
                 vendorName);
         }
+
     }
 }

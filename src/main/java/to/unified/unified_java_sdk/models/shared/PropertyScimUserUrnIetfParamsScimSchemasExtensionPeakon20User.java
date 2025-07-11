@@ -15,19 +15,23 @@ import java.time.OffsetDateTime;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Date of Birth")
     private Optional<OffsetDateTime> dateOfBirth;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Gender")
     private Optional<? extends PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender> gender;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Manager")
     private Optional<String> manager;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
@@ -50,7 +54,8 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User {
     }
     
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -74,15 +79,17 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User {
         return team;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User withDateOfBirth(OffsetDateTime dateOfBirth) {
         Utils.checkNotNull(dateOfBirth, "dateOfBirth");
         this.dateOfBirth = Optional.ofNullable(dateOfBirth);
         return this;
     }
+
 
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User withDateOfBirth(Optional<OffsetDateTime> dateOfBirth) {
         Utils.checkNotNull(dateOfBirth, "dateOfBirth");
@@ -96,6 +103,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User {
         return this;
     }
 
+
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User withGender(Optional<? extends PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender> gender) {
         Utils.checkNotNull(gender, "gender");
         this.gender = gender;
@@ -107,6 +115,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User {
         this.manager = Optional.ofNullable(manager);
         return this;
     }
+
 
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User withManager(Optional<String> manager) {
         Utils.checkNotNull(manager, "manager");
@@ -120,13 +129,13 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User {
         return this;
     }
 
+
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User withTeam(Optional<String> team) {
         Utils.checkNotNull(team, "team");
         this.team = team;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -146,9 +155,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            dateOfBirth,
-            gender,
-            manager,
+            dateOfBirth, gender, manager,
             team);
     }
     
@@ -160,20 +167,22 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User {
                 "manager", manager,
                 "team", team);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<OffsetDateTime> dateOfBirth = Optional.empty();
- 
+
         private Optional<? extends PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender> gender = Optional.empty();
- 
+
         private Optional<String> manager = Optional.empty();
- 
+
         private Optional<String> team = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder dateOfBirth(OffsetDateTime dateOfBirth) {
             Utils.checkNotNull(dateOfBirth, "dateOfBirth");
@@ -187,6 +196,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User {
             return this;
         }
 
+
         public Builder gender(PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender gender) {
             Utils.checkNotNull(gender, "gender");
             this.gender = Optional.ofNullable(gender);
@@ -198,6 +208,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User {
             this.gender = gender;
             return this;
         }
+
 
         public Builder manager(String manager) {
             Utils.checkNotNull(manager, "manager");
@@ -211,6 +222,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User {
             return this;
         }
 
+
         public Builder team(String team) {
             Utils.checkNotNull(team, "team");
             this.team = Optional.ofNullable(team);
@@ -222,13 +234,13 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User {
             this.team = team;
             return this;
         }
-        
+
         public PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User build() {
+
             return new PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User(
-                dateOfBirth,
-                gender,
-                manager,
+                dateOfBirth, gender, manager,
                 team);
         }
+
     }
 }

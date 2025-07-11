@@ -28,7 +28,7 @@ public class UpdateStorageFileRequestBuilder {
     public UpdateStorageFileResponse call() throws Exception {
         
         RequestOperation<UpdateStorageFileRequest, UpdateStorageFileResponse> operation
-              = new UpdateStorageFileOperation( sdkConfiguration);
+              = new UpdateStorageFileOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

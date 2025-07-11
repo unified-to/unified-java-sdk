@@ -64,7 +64,6 @@ public class Martech {
     Martech(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a list
      * 
@@ -81,13 +80,11 @@ public class Martech {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateMartechListResponse createMartechList(
-            CreateMartechListRequest request) throws Exception {
+    public CreateMartechListResponse createMartechList(CreateMartechListRequest request) throws Exception {
         RequestOperation<CreateMartechListRequest, CreateMartechListResponse> operation
-              = new CreateMartechListOperation( sdkConfiguration);
+              = new CreateMartechListOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a member
@@ -105,13 +102,11 @@ public class Martech {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateMartechMemberResponse createMartechMember(
-            CreateMartechMemberRequest request) throws Exception {
+    public CreateMartechMemberResponse createMartechMember(CreateMartechMemberRequest request) throws Exception {
         RequestOperation<CreateMartechMemberRequest, CreateMartechMemberResponse> operation
-              = new CreateMartechMemberOperation( sdkConfiguration);
+              = new CreateMartechMemberOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a list
@@ -129,13 +124,11 @@ public class Martech {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetMartechListResponse getMartechList(
-            GetMartechListRequest request) throws Exception {
+    public GetMartechListResponse getMartechList(GetMartechListRequest request) throws Exception {
         RequestOperation<GetMartechListRequest, GetMartechListResponse> operation
-              = new GetMartechListOperation( sdkConfiguration);
+              = new GetMartechListOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a member
@@ -153,13 +146,11 @@ public class Martech {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetMartechMemberResponse getMartechMember(
-            GetMartechMemberRequest request) throws Exception {
+    public GetMartechMemberResponse getMartechMember(GetMartechMemberRequest request) throws Exception {
         RequestOperation<GetMartechMemberRequest, GetMartechMemberResponse> operation
-              = new GetMartechMemberOperation( sdkConfiguration);
+              = new GetMartechMemberOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all lists
@@ -177,13 +168,11 @@ public class Martech {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListMartechListsResponse listMartechLists(
-            ListMartechListsRequest request) throws Exception {
+    public ListMartechListsResponse listMartechLists(ListMartechListsRequest request) throws Exception {
         RequestOperation<ListMartechListsRequest, ListMartechListsResponse> operation
-              = new ListMartechListsOperation( sdkConfiguration);
+              = new ListMartechListsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all members
@@ -201,13 +190,11 @@ public class Martech {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListMartechMembersResponse listMartechMembers(
-            ListMartechMembersRequest request) throws Exception {
+    public ListMartechMembersResponse listMartechMembers(ListMartechMembersRequest request) throws Exception {
         RequestOperation<ListMartechMembersRequest, ListMartechMembersResponse> operation
-              = new ListMartechMembersOperation( sdkConfiguration);
+              = new ListMartechMembersOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a list
@@ -225,13 +212,11 @@ public class Martech {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchMartechListResponse patchMartechList(
-            PatchMartechListRequest request) throws Exception {
+    public PatchMartechListResponse patchMartechList(PatchMartechListRequest request) throws Exception {
         RequestOperation<PatchMartechListRequest, PatchMartechListResponse> operation
-              = new PatchMartechListOperation( sdkConfiguration);
+              = new PatchMartechListOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a member
@@ -249,13 +234,11 @@ public class Martech {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchMartechMemberResponse patchMartechMember(
-            PatchMartechMemberRequest request) throws Exception {
+    public PatchMartechMemberResponse patchMartechMember(PatchMartechMemberRequest request) throws Exception {
         RequestOperation<PatchMartechMemberRequest, PatchMartechMemberResponse> operation
-              = new PatchMartechMemberOperation( sdkConfiguration);
+              = new PatchMartechMemberOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a list
@@ -273,13 +256,11 @@ public class Martech {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveMartechListResponse removeMartechList(
-            RemoveMartechListRequest request) throws Exception {
+    public RemoveMartechListResponse removeMartechList(RemoveMartechListRequest request) throws Exception {
         RequestOperation<RemoveMartechListRequest, RemoveMartechListResponse> operation
-              = new RemoveMartechListOperation( sdkConfiguration);
+              = new RemoveMartechListOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a member
@@ -297,13 +278,11 @@ public class Martech {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveMartechMemberResponse removeMartechMember(
-            RemoveMartechMemberRequest request) throws Exception {
+    public RemoveMartechMemberResponse removeMartechMember(RemoveMartechMemberRequest request) throws Exception {
         RequestOperation<RemoveMartechMemberRequest, RemoveMartechMemberResponse> operation
-              = new RemoveMartechMemberOperation( sdkConfiguration);
+              = new RemoveMartechMemberOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a list
@@ -321,13 +300,11 @@ public class Martech {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateMartechListResponse updateMartechList(
-            UpdateMartechListRequest request) throws Exception {
+    public UpdateMartechListResponse updateMartechList(UpdateMartechListRequest request) throws Exception {
         RequestOperation<UpdateMartechListRequest, UpdateMartechListResponse> operation
-              = new UpdateMartechListOperation( sdkConfiguration);
+              = new UpdateMartechListOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a member
@@ -345,10 +322,9 @@ public class Martech {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateMartechMemberResponse updateMartechMember(
-            UpdateMartechMemberRequest request) throws Exception {
+    public UpdateMartechMemberResponse updateMartechMember(UpdateMartechMemberRequest request) throws Exception {
         RequestOperation<UpdateMartechMemberRequest, UpdateMartechMemberResponse> operation
-              = new UpdateMartechMemberOperation( sdkConfiguration);
+              = new UpdateMartechMemberOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

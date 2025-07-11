@@ -28,7 +28,7 @@ public class GetCrmContactRequestBuilder {
     public GetCrmContactResponse call() throws Exception {
         
         RequestOperation<GetCrmContactRequest, GetCrmContactResponse> operation
-              = new GetCrmContactOperation( sdkConfiguration);
+              = new GetCrmContactOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

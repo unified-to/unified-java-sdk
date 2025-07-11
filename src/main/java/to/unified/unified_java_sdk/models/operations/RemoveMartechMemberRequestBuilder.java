@@ -28,7 +28,7 @@ public class RemoveMartechMemberRequestBuilder {
     public RemoveMartechMemberResponse call() throws Exception {
         
         RequestOperation<RemoveMartechMemberRequest, RemoveMartechMemberResponse> operation
-              = new RemoveMartechMemberOperation( sdkConfiguration);
+              = new RemoveMartechMemberOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

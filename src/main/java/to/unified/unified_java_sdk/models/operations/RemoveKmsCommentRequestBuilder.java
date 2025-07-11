@@ -28,7 +28,7 @@ public class RemoveKmsCommentRequestBuilder {
     public RemoveKmsCommentResponse call() throws Exception {
         
         RequestOperation<RemoveKmsCommentRequest, RemoveKmsCommentResponse> operation
-              = new RemoveKmsCommentOperation( sdkConfiguration);
+              = new RemoveKmsCommentOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -48,7 +48,6 @@ public class Recording {
     Recording(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a recording
      * 
@@ -65,13 +64,11 @@ public class Recording {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateUcRecordingResponse createUcRecording(
-            CreateUcRecordingRequest request) throws Exception {
+    public CreateUcRecordingResponse createUcRecording(CreateUcRecordingRequest request) throws Exception {
         RequestOperation<CreateUcRecordingRequest, CreateUcRecordingResponse> operation
-              = new CreateUcRecordingOperation( sdkConfiguration);
+              = new CreateUcRecordingOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a recording
@@ -89,13 +86,11 @@ public class Recording {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetCalendarRecordingResponse getCalendarRecording(
-            GetCalendarRecordingRequest request) throws Exception {
+    public GetCalendarRecordingResponse getCalendarRecording(GetCalendarRecordingRequest request) throws Exception {
         RequestOperation<GetCalendarRecordingRequest, GetCalendarRecordingResponse> operation
-              = new GetCalendarRecordingOperation( sdkConfiguration);
+              = new GetCalendarRecordingOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a recording
@@ -113,13 +108,11 @@ public class Recording {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetUcRecordingResponse getUcRecording(
-            GetUcRecordingRequest request) throws Exception {
+    public GetUcRecordingResponse getUcRecording(GetUcRecordingRequest request) throws Exception {
         RequestOperation<GetUcRecordingRequest, GetUcRecordingResponse> operation
-              = new GetUcRecordingOperation( sdkConfiguration);
+              = new GetUcRecordingOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all recordings
@@ -137,13 +130,11 @@ public class Recording {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCalendarRecordingsResponse listCalendarRecordings(
-            ListCalendarRecordingsRequest request) throws Exception {
+    public ListCalendarRecordingsResponse listCalendarRecordings(ListCalendarRecordingsRequest request) throws Exception {
         RequestOperation<ListCalendarRecordingsRequest, ListCalendarRecordingsResponse> operation
-              = new ListCalendarRecordingsOperation( sdkConfiguration);
+              = new ListCalendarRecordingsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all recordings
@@ -161,13 +152,11 @@ public class Recording {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListUcRecordingsResponse listUcRecordings(
-            ListUcRecordingsRequest request) throws Exception {
+    public ListUcRecordingsResponse listUcRecordings(ListUcRecordingsRequest request) throws Exception {
         RequestOperation<ListUcRecordingsRequest, ListUcRecordingsResponse> operation
-              = new ListUcRecordingsOperation( sdkConfiguration);
+              = new ListUcRecordingsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a recording
@@ -185,13 +174,11 @@ public class Recording {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchUcRecordingResponse patchUcRecording(
-            PatchUcRecordingRequest request) throws Exception {
+    public PatchUcRecordingResponse patchUcRecording(PatchUcRecordingRequest request) throws Exception {
         RequestOperation<PatchUcRecordingRequest, PatchUcRecordingResponse> operation
-              = new PatchUcRecordingOperation( sdkConfiguration);
+              = new PatchUcRecordingOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a recording
@@ -209,13 +196,11 @@ public class Recording {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveUcRecordingResponse removeUcRecording(
-            RemoveUcRecordingRequest request) throws Exception {
+    public RemoveUcRecordingResponse removeUcRecording(RemoveUcRecordingRequest request) throws Exception {
         RequestOperation<RemoveUcRecordingRequest, RemoveUcRecordingResponse> operation
-              = new RemoveUcRecordingOperation( sdkConfiguration);
+              = new RemoveUcRecordingOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a recording
@@ -233,10 +218,9 @@ public class Recording {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateUcRecordingResponse updateUcRecording(
-            UpdateUcRecordingRequest request) throws Exception {
+    public UpdateUcRecordingResponse updateUcRecording(UpdateUcRecordingRequest request) throws Exception {
         RequestOperation<UpdateUcRecordingRequest, UpdateUcRecordingResponse> operation
-              = new UpdateUcRecordingOperation( sdkConfiguration);
+              = new UpdateUcRecordingOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -19,71 +19,88 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class StorageFile {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     private Optional<String> data;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private Optional<String> description;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("download_url")
     private Optional<String> downloadUrl;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hash")
     private Optional<String> hash;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mime_type")
     private Optional<String> mimeType;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     private Optional<String> parentId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     private Optional<? extends List<StoragePermission>> permissions;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     private Optional<Double> size;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private Optional<? extends StorageFileType> type;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private Optional<String> userId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     private Optional<String> version;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web_url")
@@ -145,7 +162,12 @@ public class StorageFile {
     }
     
     public StorageFile() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -236,15 +258,17 @@ public class StorageFile {
         return webUrl;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public StorageFile withCreatedAt(OffsetDateTime createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public StorageFile withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -258,6 +282,7 @@ public class StorageFile {
         return this;
     }
 
+
     public StorageFile withData(Optional<String> data) {
         Utils.checkNotNull(data, "data");
         this.data = data;
@@ -269,6 +294,7 @@ public class StorageFile {
         this.description = Optional.ofNullable(description);
         return this;
     }
+
 
     public StorageFile withDescription(Optional<String> description) {
         Utils.checkNotNull(description, "description");
@@ -282,6 +308,7 @@ public class StorageFile {
         return this;
     }
 
+
     public StorageFile withDownloadUrl(Optional<String> downloadUrl) {
         Utils.checkNotNull(downloadUrl, "downloadUrl");
         this.downloadUrl = downloadUrl;
@@ -293,6 +320,7 @@ public class StorageFile {
         this.hash = Optional.ofNullable(hash);
         return this;
     }
+
 
     public StorageFile withHash(Optional<String> hash) {
         Utils.checkNotNull(hash, "hash");
@@ -306,6 +334,7 @@ public class StorageFile {
         return this;
     }
 
+
     public StorageFile withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -317,6 +346,7 @@ public class StorageFile {
         this.mimeType = Optional.ofNullable(mimeType);
         return this;
     }
+
 
     public StorageFile withMimeType(Optional<String> mimeType) {
         Utils.checkNotNull(mimeType, "mimeType");
@@ -330,6 +360,7 @@ public class StorageFile {
         return this;
     }
 
+
     public StorageFile withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
         this.name = name;
@@ -341,6 +372,7 @@ public class StorageFile {
         this.parentId = Optional.ofNullable(parentId);
         return this;
     }
+
 
     public StorageFile withParentId(Optional<String> parentId) {
         Utils.checkNotNull(parentId, "parentId");
@@ -354,6 +386,7 @@ public class StorageFile {
         return this;
     }
 
+
     public StorageFile withPermissions(Optional<? extends List<StoragePermission>> permissions) {
         Utils.checkNotNull(permissions, "permissions");
         this.permissions = permissions;
@@ -365,6 +398,7 @@ public class StorageFile {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public StorageFile withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -378,6 +412,7 @@ public class StorageFile {
         return this;
     }
 
+
     public StorageFile withSize(Optional<Double> size) {
         Utils.checkNotNull(size, "size");
         this.size = size;
@@ -389,6 +424,7 @@ public class StorageFile {
         this.type = Optional.ofNullable(type);
         return this;
     }
+
 
     public StorageFile withType(Optional<? extends StorageFileType> type) {
         Utils.checkNotNull(type, "type");
@@ -402,6 +438,7 @@ public class StorageFile {
         return this;
     }
 
+
     public StorageFile withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
@@ -413,6 +450,7 @@ public class StorageFile {
         this.userId = Optional.ofNullable(userId);
         return this;
     }
+
 
     public StorageFile withUserId(Optional<String> userId) {
         Utils.checkNotNull(userId, "userId");
@@ -426,6 +464,7 @@ public class StorageFile {
         return this;
     }
 
+
     public StorageFile withVersion(Optional<String> version) {
         Utils.checkNotNull(version, "version");
         this.version = version;
@@ -438,13 +477,13 @@ public class StorageFile {
         return this;
     }
 
+
     public StorageFile withWebUrl(Optional<String> webUrl) {
         Utils.checkNotNull(webUrl, "webUrl");
         this.webUrl = webUrl;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -477,23 +516,12 @@ public class StorageFile {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt,
-            data,
-            description,
-            downloadUrl,
-            hash,
-            id,
-            mimeType,
-            name,
-            parentId,
-            permissions,
-            raw,
-            size,
-            type,
-            updatedAt,
-            userId,
-            version,
-            webUrl);
+            createdAt, data, description,
+            downloadUrl, hash, id,
+            mimeType, name, parentId,
+            permissions, raw, size,
+            type, updatedAt, userId,
+            version, webUrl);
     }
     
     @Override
@@ -517,46 +545,48 @@ public class StorageFile {
                 "version", version,
                 "webUrl", webUrl);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> data = Optional.empty();
- 
+
         private Optional<String> description = Optional.empty();
- 
+
         private Optional<String> downloadUrl = Optional.empty();
- 
+
         private Optional<String> hash = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> mimeType = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<String> parentId = Optional.empty();
- 
+
         private Optional<? extends List<StoragePermission>> permissions = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<Double> size = Optional.empty();
- 
+
         private Optional<? extends StorageFileType> type = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<String> userId = Optional.empty();
- 
+
         private Optional<String> version = Optional.empty();
- 
+
         private Optional<String> webUrl = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -570,6 +600,7 @@ public class StorageFile {
             return this;
         }
 
+
         public Builder data(String data) {
             Utils.checkNotNull(data, "data");
             this.data = Optional.ofNullable(data);
@@ -581,6 +612,7 @@ public class StorageFile {
             this.data = data;
             return this;
         }
+
 
         public Builder description(String description) {
             Utils.checkNotNull(description, "description");
@@ -594,6 +626,7 @@ public class StorageFile {
             return this;
         }
 
+
         public Builder downloadUrl(String downloadUrl) {
             Utils.checkNotNull(downloadUrl, "downloadUrl");
             this.downloadUrl = Optional.ofNullable(downloadUrl);
@@ -605,6 +638,7 @@ public class StorageFile {
             this.downloadUrl = downloadUrl;
             return this;
         }
+
 
         public Builder hash(String hash) {
             Utils.checkNotNull(hash, "hash");
@@ -618,6 +652,7 @@ public class StorageFile {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -629,6 +664,7 @@ public class StorageFile {
             this.id = id;
             return this;
         }
+
 
         public Builder mimeType(String mimeType) {
             Utils.checkNotNull(mimeType, "mimeType");
@@ -642,6 +678,7 @@ public class StorageFile {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = Optional.ofNullable(name);
@@ -653,6 +690,7 @@ public class StorageFile {
             this.name = name;
             return this;
         }
+
 
         public Builder parentId(String parentId) {
             Utils.checkNotNull(parentId, "parentId");
@@ -666,6 +704,7 @@ public class StorageFile {
             return this;
         }
 
+
         public Builder permissions(List<StoragePermission> permissions) {
             Utils.checkNotNull(permissions, "permissions");
             this.permissions = Optional.ofNullable(permissions);
@@ -677,6 +716,7 @@ public class StorageFile {
             this.permissions = permissions;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -690,6 +730,7 @@ public class StorageFile {
             return this;
         }
 
+
         public Builder size(double size) {
             Utils.checkNotNull(size, "size");
             this.size = Optional.ofNullable(size);
@@ -701,6 +742,7 @@ public class StorageFile {
             this.size = size;
             return this;
         }
+
 
         public Builder type(StorageFileType type) {
             Utils.checkNotNull(type, "type");
@@ -714,6 +756,7 @@ public class StorageFile {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -725,6 +768,7 @@ public class StorageFile {
             this.updatedAt = updatedAt;
             return this;
         }
+
 
         public Builder userId(String userId) {
             Utils.checkNotNull(userId, "userId");
@@ -738,6 +782,7 @@ public class StorageFile {
             return this;
         }
 
+
         public Builder version(String version) {
             Utils.checkNotNull(version, "version");
             this.version = Optional.ofNullable(version);
@@ -750,6 +795,7 @@ public class StorageFile {
             return this;
         }
 
+
         public Builder webUrl(String webUrl) {
             Utils.checkNotNull(webUrl, "webUrl");
             this.webUrl = Optional.ofNullable(webUrl);
@@ -761,26 +807,17 @@ public class StorageFile {
             this.webUrl = webUrl;
             return this;
         }
-        
+
         public StorageFile build() {
+
             return new StorageFile(
-                createdAt,
-                data,
-                description,
-                downloadUrl,
-                hash,
-                id,
-                mimeType,
-                name,
-                parentId,
-                permissions,
-                raw,
-                size,
-                type,
-                updatedAt,
-                userId,
-                version,
-                webUrl);
+                createdAt, data, description,
+                downloadUrl, hash, id,
+                mimeType, name, parentId,
+                permissions, raw, size,
+                type, updatedAt, userId,
+                version, webUrl);
         }
+
     }
 }

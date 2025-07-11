@@ -28,7 +28,7 @@ public class RemoveCommerceLocationRequestBuilder {
     public RemoveCommerceLocationResponse call() throws Exception {
         
         RequestOperation<RemoveCommerceLocationRequest, RemoveCommerceLocationResponse> operation
-              = new RemoveCommerceLocationOperation( sdkConfiguration);
+              = new RemoveCommerceLocationOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

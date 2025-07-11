@@ -16,26 +16,32 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class UcComment {
 
     @JsonProperty("content")
     private String content;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<String> createdAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<String> updatedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
@@ -65,7 +71,8 @@ public class UcComment {
     
     public UcComment(
             String content) {
-        this(content, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(content, Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -99,9 +106,10 @@ public class UcComment {
         return userId;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public UcComment withContent(String content) {
         Utils.checkNotNull(content, "content");
@@ -115,6 +123,7 @@ public class UcComment {
         return this;
     }
 
+
     public UcComment withCreatedAt(Optional<String> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
@@ -126,6 +135,7 @@ public class UcComment {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public UcComment withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -139,6 +149,7 @@ public class UcComment {
         return this;
     }
 
+
     public UcComment withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
@@ -150,6 +161,7 @@ public class UcComment {
         this.updatedAt = Optional.ofNullable(updatedAt);
         return this;
     }
+
 
     public UcComment withUpdatedAt(Optional<String> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
@@ -163,13 +175,13 @@ public class UcComment {
         return this;
     }
 
+
     public UcComment withUserId(Optional<String> userId) {
         Utils.checkNotNull(userId, "userId");
         this.userId = userId;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -191,12 +203,8 @@ public class UcComment {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            content,
-            createdAt,
-            id,
-            raw,
-            updatedAt,
-            userId);
+            content, createdAt, id,
+            raw, updatedAt, userId);
     }
     
     @Override
@@ -209,30 +217,33 @@ public class UcComment {
                 "updatedAt", updatedAt,
                 "userId", userId);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private String content;
- 
+
         private Optional<String> createdAt = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<String> updatedAt = Optional.empty();
- 
+
         private Optional<String> userId = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder content(String content) {
             Utils.checkNotNull(content, "content");
             this.content = content;
             return this;
         }
+
 
         public Builder createdAt(String createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -246,6 +257,7 @@ public class UcComment {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -257,6 +269,7 @@ public class UcComment {
             this.id = id;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -270,6 +283,7 @@ public class UcComment {
             return this;
         }
 
+
         public Builder updatedAt(String updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -282,6 +296,7 @@ public class UcComment {
             return this;
         }
 
+
         public Builder userId(String userId) {
             Utils.checkNotNull(userId, "userId");
             this.userId = Optional.ofNullable(userId);
@@ -293,15 +308,13 @@ public class UcComment {
             this.userId = userId;
             return this;
         }
-        
+
         public UcComment build() {
+
             return new UcComment(
-                content,
-                createdAt,
-                id,
-                raw,
-                updatedAt,
-                userId);
+                content, createdAt, id,
+                raw, updatedAt, userId);
         }
+
     }
 }

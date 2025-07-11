@@ -28,7 +28,7 @@ public class RemoveAccountingTaxrateRequestBuilder {
     public RemoveAccountingTaxrateResponse call() throws Exception {
         
         RequestOperation<RemoveAccountingTaxrateRequest, RemoveAccountingTaxrateResponse> operation
-              = new RemoveAccountingTaxrateOperation( sdkConfiguration);
+              = new RemoveAccountingTaxrateOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

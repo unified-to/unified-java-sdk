@@ -20,107 +20,133 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AccountingBill {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachments")
     private Optional<? extends List<AccountingAttachment>> attachments;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balance_amount")
     private Optional<Double> balanceAmount;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bill_number")
     private Optional<String> billNumber;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancelled_at")
     private Optional<OffsetDateTime> cancelledAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private Optional<String> contactId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private Optional<String> currency;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discount_amount")
     private Optional<Double> discountAmount;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("due_at")
     private Optional<OffsetDateTime> dueAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineitems")
     private Optional<? extends List<AccountingLineitem>> lineitems;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     private Optional<String> notes;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paid_amount")
     private Optional<Double> paidAmount;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paid_at")
     private Optional<OffsetDateTime> paidAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_collection_method")
     private Optional<? extends PaymentCollectionMethod> paymentCollectionMethod;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posted_at")
     private Optional<OffsetDateTime> postedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refund_amount")
     private Optional<Double> refundAmount;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refund_reason")
     private Optional<String> refundReason;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_at")
     private Optional<OffsetDateTime> refundedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("send")
     private Optional<Boolean> send;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private Optional<? extends AccountingBillStatus> status;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_amount")
     private Optional<Double> taxAmount;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
     private Optional<Double> totalAmount;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
@@ -209,7 +235,15 @@ public class AccountingBill {
     }
     
     public AccountingBill() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -347,15 +381,17 @@ public class AccountingBill {
         return url;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AccountingBill withAttachments(List<AccountingAttachment> attachments) {
         Utils.checkNotNull(attachments, "attachments");
         this.attachments = Optional.ofNullable(attachments);
         return this;
     }
+
 
     public AccountingBill withAttachments(Optional<? extends List<AccountingAttachment>> attachments) {
         Utils.checkNotNull(attachments, "attachments");
@@ -369,6 +405,7 @@ public class AccountingBill {
         return this;
     }
 
+
     public AccountingBill withBalanceAmount(Optional<Double> balanceAmount) {
         Utils.checkNotNull(balanceAmount, "balanceAmount");
         this.balanceAmount = balanceAmount;
@@ -380,6 +417,7 @@ public class AccountingBill {
         this.billNumber = Optional.ofNullable(billNumber);
         return this;
     }
+
 
     public AccountingBill withBillNumber(Optional<String> billNumber) {
         Utils.checkNotNull(billNumber, "billNumber");
@@ -393,6 +431,7 @@ public class AccountingBill {
         return this;
     }
 
+
     public AccountingBill withCancelledAt(Optional<OffsetDateTime> cancelledAt) {
         Utils.checkNotNull(cancelledAt, "cancelledAt");
         this.cancelledAt = cancelledAt;
@@ -404,6 +443,7 @@ public class AccountingBill {
         this.contactId = Optional.ofNullable(contactId);
         return this;
     }
+
 
     public AccountingBill withContactId(Optional<String> contactId) {
         Utils.checkNotNull(contactId, "contactId");
@@ -417,6 +457,7 @@ public class AccountingBill {
         return this;
     }
 
+
     public AccountingBill withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
@@ -428,6 +469,7 @@ public class AccountingBill {
         this.currency = Optional.ofNullable(currency);
         return this;
     }
+
 
     public AccountingBill withCurrency(Optional<String> currency) {
         Utils.checkNotNull(currency, "currency");
@@ -441,6 +483,7 @@ public class AccountingBill {
         return this;
     }
 
+
     public AccountingBill withDiscountAmount(Optional<Double> discountAmount) {
         Utils.checkNotNull(discountAmount, "discountAmount");
         this.discountAmount = discountAmount;
@@ -452,6 +495,7 @@ public class AccountingBill {
         this.dueAt = Optional.ofNullable(dueAt);
         return this;
     }
+
 
     public AccountingBill withDueAt(Optional<OffsetDateTime> dueAt) {
         Utils.checkNotNull(dueAt, "dueAt");
@@ -465,6 +509,7 @@ public class AccountingBill {
         return this;
     }
 
+
     public AccountingBill withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -476,6 +521,7 @@ public class AccountingBill {
         this.lineitems = Optional.ofNullable(lineitems);
         return this;
     }
+
 
     public AccountingBill withLineitems(Optional<? extends List<AccountingLineitem>> lineitems) {
         Utils.checkNotNull(lineitems, "lineitems");
@@ -489,6 +535,7 @@ public class AccountingBill {
         return this;
     }
 
+
     public AccountingBill withNotes(Optional<String> notes) {
         Utils.checkNotNull(notes, "notes");
         this.notes = notes;
@@ -500,6 +547,7 @@ public class AccountingBill {
         this.paidAmount = Optional.ofNullable(paidAmount);
         return this;
     }
+
 
     public AccountingBill withPaidAmount(Optional<Double> paidAmount) {
         Utils.checkNotNull(paidAmount, "paidAmount");
@@ -513,6 +561,7 @@ public class AccountingBill {
         return this;
     }
 
+
     public AccountingBill withPaidAt(Optional<OffsetDateTime> paidAt) {
         Utils.checkNotNull(paidAt, "paidAt");
         this.paidAt = paidAt;
@@ -524,6 +573,7 @@ public class AccountingBill {
         this.paymentCollectionMethod = Optional.ofNullable(paymentCollectionMethod);
         return this;
     }
+
 
     public AccountingBill withPaymentCollectionMethod(Optional<? extends PaymentCollectionMethod> paymentCollectionMethod) {
         Utils.checkNotNull(paymentCollectionMethod, "paymentCollectionMethod");
@@ -537,6 +587,7 @@ public class AccountingBill {
         return this;
     }
 
+
     public AccountingBill withPostedAt(Optional<OffsetDateTime> postedAt) {
         Utils.checkNotNull(postedAt, "postedAt");
         this.postedAt = postedAt;
@@ -548,6 +599,7 @@ public class AccountingBill {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public AccountingBill withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -561,6 +613,7 @@ public class AccountingBill {
         return this;
     }
 
+
     public AccountingBill withRefundAmount(Optional<Double> refundAmount) {
         Utils.checkNotNull(refundAmount, "refundAmount");
         this.refundAmount = refundAmount;
@@ -572,6 +625,7 @@ public class AccountingBill {
         this.refundReason = Optional.ofNullable(refundReason);
         return this;
     }
+
 
     public AccountingBill withRefundReason(Optional<String> refundReason) {
         Utils.checkNotNull(refundReason, "refundReason");
@@ -585,6 +639,7 @@ public class AccountingBill {
         return this;
     }
 
+
     public AccountingBill withRefundedAt(Optional<OffsetDateTime> refundedAt) {
         Utils.checkNotNull(refundedAt, "refundedAt");
         this.refundedAt = refundedAt;
@@ -596,6 +651,7 @@ public class AccountingBill {
         this.send = Optional.ofNullable(send);
         return this;
     }
+
 
     public AccountingBill withSend(Optional<Boolean> send) {
         Utils.checkNotNull(send, "send");
@@ -609,6 +665,7 @@ public class AccountingBill {
         return this;
     }
 
+
     public AccountingBill withStatus(Optional<? extends AccountingBillStatus> status) {
         Utils.checkNotNull(status, "status");
         this.status = status;
@@ -620,6 +677,7 @@ public class AccountingBill {
         this.taxAmount = Optional.ofNullable(taxAmount);
         return this;
     }
+
 
     public AccountingBill withTaxAmount(Optional<Double> taxAmount) {
         Utils.checkNotNull(taxAmount, "taxAmount");
@@ -633,6 +691,7 @@ public class AccountingBill {
         return this;
     }
 
+
     public AccountingBill withTotalAmount(Optional<Double> totalAmount) {
         Utils.checkNotNull(totalAmount, "totalAmount");
         this.totalAmount = totalAmount;
@@ -644,6 +703,7 @@ public class AccountingBill {
         this.updatedAt = Optional.ofNullable(updatedAt);
         return this;
     }
+
 
     public AccountingBill withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
@@ -657,13 +717,13 @@ public class AccountingBill {
         return this;
     }
 
+
     public AccountingBill withUrl(Optional<String> url) {
         Utils.checkNotNull(url, "url");
         this.url = url;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -705,32 +765,15 @@ public class AccountingBill {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            attachments,
-            balanceAmount,
-            billNumber,
-            cancelledAt,
-            contactId,
-            createdAt,
-            currency,
-            discountAmount,
-            dueAt,
-            id,
-            lineitems,
-            notes,
-            paidAmount,
-            paidAt,
-            paymentCollectionMethod,
-            postedAt,
-            raw,
-            refundAmount,
-            refundReason,
-            refundedAt,
-            send,
-            status,
-            taxAmount,
-            totalAmount,
-            updatedAt,
-            url);
+            attachments, balanceAmount, billNumber,
+            cancelledAt, contactId, createdAt,
+            currency, discountAmount, dueAt,
+            id, lineitems, notes,
+            paidAmount, paidAt, paymentCollectionMethod,
+            postedAt, raw, refundAmount,
+            refundReason, refundedAt, send,
+            status, taxAmount, totalAmount,
+            updatedAt, url);
     }
     
     @Override
@@ -763,64 +806,66 @@ public class AccountingBill {
                 "updatedAt", updatedAt,
                 "url", url);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<? extends List<AccountingAttachment>> attachments = Optional.empty();
- 
+
         private Optional<Double> balanceAmount = Optional.empty();
- 
+
         private Optional<String> billNumber = Optional.empty();
- 
+
         private Optional<OffsetDateTime> cancelledAt = Optional.empty();
- 
+
         private Optional<String> contactId = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> currency = Optional.empty();
- 
+
         private Optional<Double> discountAmount = Optional.empty();
- 
+
         private Optional<OffsetDateTime> dueAt = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<? extends List<AccountingLineitem>> lineitems = Optional.empty();
- 
+
         private Optional<String> notes = Optional.empty();
- 
+
         private Optional<Double> paidAmount = Optional.empty();
- 
+
         private Optional<OffsetDateTime> paidAt = Optional.empty();
- 
+
         private Optional<? extends PaymentCollectionMethod> paymentCollectionMethod = Optional.empty();
- 
+
         private Optional<OffsetDateTime> postedAt = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<Double> refundAmount = Optional.empty();
- 
+
         private Optional<String> refundReason = Optional.empty();
- 
+
         private Optional<OffsetDateTime> refundedAt = Optional.empty();
- 
+
         private Optional<Boolean> send = Optional.empty();
- 
+
         private Optional<? extends AccountingBillStatus> status = Optional.empty();
- 
+
         private Optional<Double> taxAmount = Optional.empty();
- 
+
         private Optional<Double> totalAmount = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<String> url = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder attachments(List<AccountingAttachment> attachments) {
             Utils.checkNotNull(attachments, "attachments");
@@ -834,6 +879,7 @@ public class AccountingBill {
             return this;
         }
 
+
         public Builder balanceAmount(double balanceAmount) {
             Utils.checkNotNull(balanceAmount, "balanceAmount");
             this.balanceAmount = Optional.ofNullable(balanceAmount);
@@ -845,6 +891,7 @@ public class AccountingBill {
             this.balanceAmount = balanceAmount;
             return this;
         }
+
 
         public Builder billNumber(String billNumber) {
             Utils.checkNotNull(billNumber, "billNumber");
@@ -858,6 +905,7 @@ public class AccountingBill {
             return this;
         }
 
+
         public Builder cancelledAt(OffsetDateTime cancelledAt) {
             Utils.checkNotNull(cancelledAt, "cancelledAt");
             this.cancelledAt = Optional.ofNullable(cancelledAt);
@@ -869,6 +917,7 @@ public class AccountingBill {
             this.cancelledAt = cancelledAt;
             return this;
         }
+
 
         public Builder contactId(String contactId) {
             Utils.checkNotNull(contactId, "contactId");
@@ -882,6 +931,7 @@ public class AccountingBill {
             return this;
         }
 
+
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
@@ -893,6 +943,7 @@ public class AccountingBill {
             this.createdAt = createdAt;
             return this;
         }
+
 
         public Builder currency(String currency) {
             Utils.checkNotNull(currency, "currency");
@@ -906,6 +957,7 @@ public class AccountingBill {
             return this;
         }
 
+
         public Builder discountAmount(double discountAmount) {
             Utils.checkNotNull(discountAmount, "discountAmount");
             this.discountAmount = Optional.ofNullable(discountAmount);
@@ -917,6 +969,7 @@ public class AccountingBill {
             this.discountAmount = discountAmount;
             return this;
         }
+
 
         public Builder dueAt(OffsetDateTime dueAt) {
             Utils.checkNotNull(dueAt, "dueAt");
@@ -930,6 +983,7 @@ public class AccountingBill {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -941,6 +995,7 @@ public class AccountingBill {
             this.id = id;
             return this;
         }
+
 
         public Builder lineitems(List<AccountingLineitem> lineitems) {
             Utils.checkNotNull(lineitems, "lineitems");
@@ -954,6 +1009,7 @@ public class AccountingBill {
             return this;
         }
 
+
         public Builder notes(String notes) {
             Utils.checkNotNull(notes, "notes");
             this.notes = Optional.ofNullable(notes);
@@ -965,6 +1021,7 @@ public class AccountingBill {
             this.notes = notes;
             return this;
         }
+
 
         public Builder paidAmount(double paidAmount) {
             Utils.checkNotNull(paidAmount, "paidAmount");
@@ -978,6 +1035,7 @@ public class AccountingBill {
             return this;
         }
 
+
         public Builder paidAt(OffsetDateTime paidAt) {
             Utils.checkNotNull(paidAt, "paidAt");
             this.paidAt = Optional.ofNullable(paidAt);
@@ -989,6 +1047,7 @@ public class AccountingBill {
             this.paidAt = paidAt;
             return this;
         }
+
 
         public Builder paymentCollectionMethod(PaymentCollectionMethod paymentCollectionMethod) {
             Utils.checkNotNull(paymentCollectionMethod, "paymentCollectionMethod");
@@ -1002,6 +1061,7 @@ public class AccountingBill {
             return this;
         }
 
+
         public Builder postedAt(OffsetDateTime postedAt) {
             Utils.checkNotNull(postedAt, "postedAt");
             this.postedAt = Optional.ofNullable(postedAt);
@@ -1013,6 +1073,7 @@ public class AccountingBill {
             this.postedAt = postedAt;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -1026,6 +1087,7 @@ public class AccountingBill {
             return this;
         }
 
+
         public Builder refundAmount(double refundAmount) {
             Utils.checkNotNull(refundAmount, "refundAmount");
             this.refundAmount = Optional.ofNullable(refundAmount);
@@ -1037,6 +1099,7 @@ public class AccountingBill {
             this.refundAmount = refundAmount;
             return this;
         }
+
 
         public Builder refundReason(String refundReason) {
             Utils.checkNotNull(refundReason, "refundReason");
@@ -1050,6 +1113,7 @@ public class AccountingBill {
             return this;
         }
 
+
         public Builder refundedAt(OffsetDateTime refundedAt) {
             Utils.checkNotNull(refundedAt, "refundedAt");
             this.refundedAt = Optional.ofNullable(refundedAt);
@@ -1061,6 +1125,7 @@ public class AccountingBill {
             this.refundedAt = refundedAt;
             return this;
         }
+
 
         public Builder send(boolean send) {
             Utils.checkNotNull(send, "send");
@@ -1074,6 +1139,7 @@ public class AccountingBill {
             return this;
         }
 
+
         public Builder status(AccountingBillStatus status) {
             Utils.checkNotNull(status, "status");
             this.status = Optional.ofNullable(status);
@@ -1085,6 +1151,7 @@ public class AccountingBill {
             this.status = status;
             return this;
         }
+
 
         public Builder taxAmount(double taxAmount) {
             Utils.checkNotNull(taxAmount, "taxAmount");
@@ -1098,6 +1165,7 @@ public class AccountingBill {
             return this;
         }
 
+
         public Builder totalAmount(double totalAmount) {
             Utils.checkNotNull(totalAmount, "totalAmount");
             this.totalAmount = Optional.ofNullable(totalAmount);
@@ -1109,6 +1177,7 @@ public class AccountingBill {
             this.totalAmount = totalAmount;
             return this;
         }
+
 
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
@@ -1122,6 +1191,7 @@ public class AccountingBill {
             return this;
         }
 
+
         public Builder url(String url) {
             Utils.checkNotNull(url, "url");
             this.url = Optional.ofNullable(url);
@@ -1133,35 +1203,20 @@ public class AccountingBill {
             this.url = url;
             return this;
         }
-        
+
         public AccountingBill build() {
+
             return new AccountingBill(
-                attachments,
-                balanceAmount,
-                billNumber,
-                cancelledAt,
-                contactId,
-                createdAt,
-                currency,
-                discountAmount,
-                dueAt,
-                id,
-                lineitems,
-                notes,
-                paidAmount,
-                paidAt,
-                paymentCollectionMethod,
-                postedAt,
-                raw,
-                refundAmount,
-                refundReason,
-                refundedAt,
-                send,
-                status,
-                taxAmount,
-                totalAmount,
-                updatedAt,
-                url);
+                attachments, balanceAmount, billNumber,
+                cancelledAt, contactId, createdAt,
+                currency, discountAmount, dueAt,
+                id, lineitems, notes,
+                paidAmount, paidAt, paymentCollectionMethod,
+                postedAt, raw, refundAmount,
+                refundReason, refundedAt, send,
+                status, taxAmount, totalAmount,
+                updatedAt, url);
         }
+
     }
 }

@@ -28,7 +28,7 @@ public class PatchUcContactRequestBuilder {
     public PatchUcContactResponse call() throws Exception {
         
         RequestOperation<PatchUcContactRequest, PatchUcContactResponse> operation
-              = new PatchUcContactOperation( sdkConfiguration);
+              = new PatchUcContactOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

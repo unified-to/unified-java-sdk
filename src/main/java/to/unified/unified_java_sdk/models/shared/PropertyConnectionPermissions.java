@@ -54,6 +54,10 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions ACCOUNTING_JOURNAL_WRITE = new PropertyConnectionPermissions("accounting_journal_write");
     public static final PropertyConnectionPermissions ACCOUNTING_INVOICE_READ = new PropertyConnectionPermissions("accounting_invoice_read");
     public static final PropertyConnectionPermissions ACCOUNTING_INVOICE_WRITE = new PropertyConnectionPermissions("accounting_invoice_write");
+    public static final PropertyConnectionPermissions ACCOUNTING_BILL_READ = new PropertyConnectionPermissions("accounting_bill_read");
+    public static final PropertyConnectionPermissions ACCOUNTING_BILL_WRITE = new PropertyConnectionPermissions("accounting_bill_write");
+    public static final PropertyConnectionPermissions ACCOUNTING_CREDITMEMO_READ = new PropertyConnectionPermissions("accounting_creditmemo_read");
+    public static final PropertyConnectionPermissions ACCOUNTING_CREDITMEMO_WRITE = new PropertyConnectionPermissions("accounting_creditmemo_write");
     public static final PropertyConnectionPermissions ACCOUNTING_CONTACT_READ = new PropertyConnectionPermissions("accounting_contact_read");
     public static final PropertyConnectionPermissions ACCOUNTING_CONTACT_WRITE = new PropertyConnectionPermissions("accounting_contact_write");
     public static final PropertyConnectionPermissions ACCOUNTING_TAXRATE_READ = new PropertyConnectionPermissions("accounting_taxrate_read");
@@ -61,8 +65,18 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions ACCOUNTING_ORGANIZATION_READ = new PropertyConnectionPermissions("accounting_organization_read");
     public static final PropertyConnectionPermissions ACCOUNTING_ORDER_READ = new PropertyConnectionPermissions("accounting_order_read");
     public static final PropertyConnectionPermissions ACCOUNTING_ORDER_WRITE = new PropertyConnectionPermissions("accounting_order_write");
+    public static final PropertyConnectionPermissions ACCOUNTING_PURCHASEORDER_READ = new PropertyConnectionPermissions("accounting_purchaseorder_read");
+    public static final PropertyConnectionPermissions ACCOUNTING_PURCHASEORDER_WRITE = new PropertyConnectionPermissions("accounting_purchaseorder_write");
+    public static final PropertyConnectionPermissions ACCOUNTING_SALESORDER_READ = new PropertyConnectionPermissions("accounting_salesorder_read");
+    public static final PropertyConnectionPermissions ACCOUNTING_SALESORDER_WRITE = new PropertyConnectionPermissions("accounting_salesorder_write");
     public static final PropertyConnectionPermissions ACCOUNTING_REPORT_READ = new PropertyConnectionPermissions("accounting_report_read");
     public static final PropertyConnectionPermissions ACCOUNTING_REPORT_WRITE = new PropertyConnectionPermissions("accounting_report_write");
+    public static final PropertyConnectionPermissions ACCOUNTING_TRIALBALANCE_READ = new PropertyConnectionPermissions("accounting_trialbalance_read");
+    public static final PropertyConnectionPermissions ACCOUNTING_TRIALBALANCE_WRITE = new PropertyConnectionPermissions("accounting_trialbalance_write");
+    public static final PropertyConnectionPermissions ACCOUNTING_PROFITLOSS_READ = new PropertyConnectionPermissions("accounting_profitloss_read");
+    public static final PropertyConnectionPermissions ACCOUNTING_PROFITLOSS_WRITE = new PropertyConnectionPermissions("accounting_profitloss_write");
+    public static final PropertyConnectionPermissions ACCOUNTING_BALANCESHEET_READ = new PropertyConnectionPermissions("accounting_balancesheet_read");
+    public static final PropertyConnectionPermissions ACCOUNTING_BALANCESHEET_WRITE = new PropertyConnectionPermissions("accounting_balancesheet_write");
     public static final PropertyConnectionPermissions PAYMENT_PAYMENT_READ = new PropertyConnectionPermissions("payment_payment_read");
     public static final PropertyConnectionPermissions PAYMENT_PAYMENT_WRITE = new PropertyConnectionPermissions("payment_payment_write");
     public static final PropertyConnectionPermissions PAYMENT_PAYOUT_READ = new PropertyConnectionPermissions("payment_payout_read");
@@ -277,6 +291,10 @@ public class PropertyConnectionPermissions {
         map.put("accounting_journal_write", ACCOUNTING_JOURNAL_WRITE);
         map.put("accounting_invoice_read", ACCOUNTING_INVOICE_READ);
         map.put("accounting_invoice_write", ACCOUNTING_INVOICE_WRITE);
+        map.put("accounting_bill_read", ACCOUNTING_BILL_READ);
+        map.put("accounting_bill_write", ACCOUNTING_BILL_WRITE);
+        map.put("accounting_creditmemo_read", ACCOUNTING_CREDITMEMO_READ);
+        map.put("accounting_creditmemo_write", ACCOUNTING_CREDITMEMO_WRITE);
         map.put("accounting_contact_read", ACCOUNTING_CONTACT_READ);
         map.put("accounting_contact_write", ACCOUNTING_CONTACT_WRITE);
         map.put("accounting_taxrate_read", ACCOUNTING_TAXRATE_READ);
@@ -284,8 +302,18 @@ public class PropertyConnectionPermissions {
         map.put("accounting_organization_read", ACCOUNTING_ORGANIZATION_READ);
         map.put("accounting_order_read", ACCOUNTING_ORDER_READ);
         map.put("accounting_order_write", ACCOUNTING_ORDER_WRITE);
+        map.put("accounting_purchaseorder_read", ACCOUNTING_PURCHASEORDER_READ);
+        map.put("accounting_purchaseorder_write", ACCOUNTING_PURCHASEORDER_WRITE);
+        map.put("accounting_salesorder_read", ACCOUNTING_SALESORDER_READ);
+        map.put("accounting_salesorder_write", ACCOUNTING_SALESORDER_WRITE);
         map.put("accounting_report_read", ACCOUNTING_REPORT_READ);
         map.put("accounting_report_write", ACCOUNTING_REPORT_WRITE);
+        map.put("accounting_trialbalance_read", ACCOUNTING_TRIALBALANCE_READ);
+        map.put("accounting_trialbalance_write", ACCOUNTING_TRIALBALANCE_WRITE);
+        map.put("accounting_profitloss_read", ACCOUNTING_PROFITLOSS_READ);
+        map.put("accounting_profitloss_write", ACCOUNTING_PROFITLOSS_WRITE);
+        map.put("accounting_balancesheet_read", ACCOUNTING_BALANCESHEET_READ);
+        map.put("accounting_balancesheet_write", ACCOUNTING_BALANCESHEET_WRITE);
         map.put("payment_payment_read", PAYMENT_PAYMENT_READ);
         map.put("payment_payment_write", PAYMENT_PAYMENT_WRITE);
         map.put("payment_payout_read", PAYMENT_PAYOUT_READ);
@@ -434,6 +462,10 @@ public class PropertyConnectionPermissions {
         map.put("accounting_journal_write", PropertyConnectionPermissionsEnum.ACCOUNTING_JOURNAL_WRITE);
         map.put("accounting_invoice_read", PropertyConnectionPermissionsEnum.ACCOUNTING_INVOICE_READ);
         map.put("accounting_invoice_write", PropertyConnectionPermissionsEnum.ACCOUNTING_INVOICE_WRITE);
+        map.put("accounting_bill_read", PropertyConnectionPermissionsEnum.ACCOUNTING_BILL_READ);
+        map.put("accounting_bill_write", PropertyConnectionPermissionsEnum.ACCOUNTING_BILL_WRITE);
+        map.put("accounting_creditmemo_read", PropertyConnectionPermissionsEnum.ACCOUNTING_CREDITMEMO_READ);
+        map.put("accounting_creditmemo_write", PropertyConnectionPermissionsEnum.ACCOUNTING_CREDITMEMO_WRITE);
         map.put("accounting_contact_read", PropertyConnectionPermissionsEnum.ACCOUNTING_CONTACT_READ);
         map.put("accounting_contact_write", PropertyConnectionPermissionsEnum.ACCOUNTING_CONTACT_WRITE);
         map.put("accounting_taxrate_read", PropertyConnectionPermissionsEnum.ACCOUNTING_TAXRATE_READ);
@@ -441,8 +473,18 @@ public class PropertyConnectionPermissions {
         map.put("accounting_organization_read", PropertyConnectionPermissionsEnum.ACCOUNTING_ORGANIZATION_READ);
         map.put("accounting_order_read", PropertyConnectionPermissionsEnum.ACCOUNTING_ORDER_READ);
         map.put("accounting_order_write", PropertyConnectionPermissionsEnum.ACCOUNTING_ORDER_WRITE);
+        map.put("accounting_purchaseorder_read", PropertyConnectionPermissionsEnum.ACCOUNTING_PURCHASEORDER_READ);
+        map.put("accounting_purchaseorder_write", PropertyConnectionPermissionsEnum.ACCOUNTING_PURCHASEORDER_WRITE);
+        map.put("accounting_salesorder_read", PropertyConnectionPermissionsEnum.ACCOUNTING_SALESORDER_READ);
+        map.put("accounting_salesorder_write", PropertyConnectionPermissionsEnum.ACCOUNTING_SALESORDER_WRITE);
         map.put("accounting_report_read", PropertyConnectionPermissionsEnum.ACCOUNTING_REPORT_READ);
         map.put("accounting_report_write", PropertyConnectionPermissionsEnum.ACCOUNTING_REPORT_WRITE);
+        map.put("accounting_trialbalance_read", PropertyConnectionPermissionsEnum.ACCOUNTING_TRIALBALANCE_READ);
+        map.put("accounting_trialbalance_write", PropertyConnectionPermissionsEnum.ACCOUNTING_TRIALBALANCE_WRITE);
+        map.put("accounting_profitloss_read", PropertyConnectionPermissionsEnum.ACCOUNTING_PROFITLOSS_READ);
+        map.put("accounting_profitloss_write", PropertyConnectionPermissionsEnum.ACCOUNTING_PROFITLOSS_WRITE);
+        map.put("accounting_balancesheet_read", PropertyConnectionPermissionsEnum.ACCOUNTING_BALANCESHEET_READ);
+        map.put("accounting_balancesheet_write", PropertyConnectionPermissionsEnum.ACCOUNTING_BALANCESHEET_WRITE);
         map.put("payment_payment_read", PropertyConnectionPermissionsEnum.PAYMENT_PAYMENT_READ);
         map.put("payment_payment_write", PropertyConnectionPermissionsEnum.PAYMENT_PAYMENT_WRITE);
         map.put("payment_payout_read", PropertyConnectionPermissionsEnum.PAYMENT_PAYOUT_READ);
@@ -621,6 +663,10 @@ public class PropertyConnectionPermissions {
         ACCOUNTING_JOURNAL_WRITE("accounting_journal_write"),
         ACCOUNTING_INVOICE_READ("accounting_invoice_read"),
         ACCOUNTING_INVOICE_WRITE("accounting_invoice_write"),
+        ACCOUNTING_BILL_READ("accounting_bill_read"),
+        ACCOUNTING_BILL_WRITE("accounting_bill_write"),
+        ACCOUNTING_CREDITMEMO_READ("accounting_creditmemo_read"),
+        ACCOUNTING_CREDITMEMO_WRITE("accounting_creditmemo_write"),
         ACCOUNTING_CONTACT_READ("accounting_contact_read"),
         ACCOUNTING_CONTACT_WRITE("accounting_contact_write"),
         ACCOUNTING_TAXRATE_READ("accounting_taxrate_read"),
@@ -628,8 +674,18 @@ public class PropertyConnectionPermissions {
         ACCOUNTING_ORGANIZATION_READ("accounting_organization_read"),
         ACCOUNTING_ORDER_READ("accounting_order_read"),
         ACCOUNTING_ORDER_WRITE("accounting_order_write"),
+        ACCOUNTING_PURCHASEORDER_READ("accounting_purchaseorder_read"),
+        ACCOUNTING_PURCHASEORDER_WRITE("accounting_purchaseorder_write"),
+        ACCOUNTING_SALESORDER_READ("accounting_salesorder_read"),
+        ACCOUNTING_SALESORDER_WRITE("accounting_salesorder_write"),
         ACCOUNTING_REPORT_READ("accounting_report_read"),
         ACCOUNTING_REPORT_WRITE("accounting_report_write"),
+        ACCOUNTING_TRIALBALANCE_READ("accounting_trialbalance_read"),
+        ACCOUNTING_TRIALBALANCE_WRITE("accounting_trialbalance_write"),
+        ACCOUNTING_PROFITLOSS_READ("accounting_profitloss_read"),
+        ACCOUNTING_PROFITLOSS_WRITE("accounting_profitloss_write"),
+        ACCOUNTING_BALANCESHEET_READ("accounting_balancesheet_read"),
+        ACCOUNTING_BALANCESHEET_WRITE("accounting_balancesheet_write"),
         PAYMENT_PAYMENT_READ("payment_payment_read"),
         PAYMENT_PAYMENT_WRITE("payment_payment_write"),
         PAYMENT_PAYOUT_READ("payment_payout_read"),

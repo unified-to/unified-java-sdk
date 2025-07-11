@@ -40,7 +40,6 @@ public class Class {
     Class(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a class
      * 
@@ -57,13 +56,11 @@ public class Class {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateLmsClassResponse createLmsClass(
-            CreateLmsClassRequest request) throws Exception {
+    public CreateLmsClassResponse createLmsClass(CreateLmsClassRequest request) throws Exception {
         RequestOperation<CreateLmsClassRequest, CreateLmsClassResponse> operation
-              = new CreateLmsClassOperation( sdkConfiguration);
+              = new CreateLmsClassOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a class
@@ -81,13 +78,11 @@ public class Class {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetLmsClassResponse getLmsClass(
-            GetLmsClassRequest request) throws Exception {
+    public GetLmsClassResponse getLmsClass(GetLmsClassRequest request) throws Exception {
         RequestOperation<GetLmsClassRequest, GetLmsClassResponse> operation
-              = new GetLmsClassOperation( sdkConfiguration);
+              = new GetLmsClassOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all classes
@@ -105,13 +100,11 @@ public class Class {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListLmsClassesResponse listLmsClasses(
-            ListLmsClassesRequest request) throws Exception {
+    public ListLmsClassesResponse listLmsClasses(ListLmsClassesRequest request) throws Exception {
         RequestOperation<ListLmsClassesRequest, ListLmsClassesResponse> operation
-              = new ListLmsClassesOperation( sdkConfiguration);
+              = new ListLmsClassesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a class
@@ -129,13 +122,11 @@ public class Class {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchLmsClassResponse patchLmsClass(
-            PatchLmsClassRequest request) throws Exception {
+    public PatchLmsClassResponse patchLmsClass(PatchLmsClassRequest request) throws Exception {
         RequestOperation<PatchLmsClassRequest, PatchLmsClassResponse> operation
-              = new PatchLmsClassOperation( sdkConfiguration);
+              = new PatchLmsClassOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a class
@@ -153,13 +144,11 @@ public class Class {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveLmsClassResponse removeLmsClass(
-            RemoveLmsClassRequest request) throws Exception {
+    public RemoveLmsClassResponse removeLmsClass(RemoveLmsClassRequest request) throws Exception {
         RequestOperation<RemoveLmsClassRequest, RemoveLmsClassResponse> operation
-              = new RemoveLmsClassOperation( sdkConfiguration);
+              = new RemoveLmsClassOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a class
@@ -177,10 +166,9 @@ public class Class {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateLmsClassResponse updateLmsClass(
-            UpdateLmsClassRequest request) throws Exception {
+    public UpdateLmsClassResponse updateLmsClass(UpdateLmsClassRequest request) throws Exception {
         RequestOperation<UpdateLmsClassRequest, UpdateLmsClassResponse> operation
-              = new UpdateLmsClassOperation( sdkConfiguration);
+              = new UpdateLmsClassOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

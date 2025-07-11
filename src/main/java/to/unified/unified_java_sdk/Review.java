@@ -40,7 +40,6 @@ public class Review {
     Review(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a review
      * 
@@ -57,13 +56,11 @@ public class Review {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateCommerceReviewResponse createCommerceReview(
-            CreateCommerceReviewRequest request) throws Exception {
+    public CreateCommerceReviewResponse createCommerceReview(CreateCommerceReviewRequest request) throws Exception {
         RequestOperation<CreateCommerceReviewRequest, CreateCommerceReviewResponse> operation
-              = new CreateCommerceReviewOperation( sdkConfiguration);
+              = new CreateCommerceReviewOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a review
@@ -81,13 +78,11 @@ public class Review {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetCommerceReviewResponse getCommerceReview(
-            GetCommerceReviewRequest request) throws Exception {
+    public GetCommerceReviewResponse getCommerceReview(GetCommerceReviewRequest request) throws Exception {
         RequestOperation<GetCommerceReviewRequest, GetCommerceReviewResponse> operation
-              = new GetCommerceReviewOperation( sdkConfiguration);
+              = new GetCommerceReviewOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all reviews
@@ -105,13 +100,11 @@ public class Review {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCommerceReviewsResponse listCommerceReviews(
-            ListCommerceReviewsRequest request) throws Exception {
+    public ListCommerceReviewsResponse listCommerceReviews(ListCommerceReviewsRequest request) throws Exception {
         RequestOperation<ListCommerceReviewsRequest, ListCommerceReviewsResponse> operation
-              = new ListCommerceReviewsOperation( sdkConfiguration);
+              = new ListCommerceReviewsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a review
@@ -129,13 +122,11 @@ public class Review {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchCommerceReviewResponse patchCommerceReview(
-            PatchCommerceReviewRequest request) throws Exception {
+    public PatchCommerceReviewResponse patchCommerceReview(PatchCommerceReviewRequest request) throws Exception {
         RequestOperation<PatchCommerceReviewRequest, PatchCommerceReviewResponse> operation
-              = new PatchCommerceReviewOperation( sdkConfiguration);
+              = new PatchCommerceReviewOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a review
@@ -153,13 +144,11 @@ public class Review {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveCommerceReviewResponse removeCommerceReview(
-            RemoveCommerceReviewRequest request) throws Exception {
+    public RemoveCommerceReviewResponse removeCommerceReview(RemoveCommerceReviewRequest request) throws Exception {
         RequestOperation<RemoveCommerceReviewRequest, RemoveCommerceReviewResponse> operation
-              = new RemoveCommerceReviewOperation( sdkConfiguration);
+              = new RemoveCommerceReviewOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a review
@@ -177,10 +166,9 @@ public class Review {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateCommerceReviewResponse updateCommerceReview(
-            UpdateCommerceReviewRequest request) throws Exception {
+    public UpdateCommerceReviewResponse updateCommerceReview(UpdateCommerceReviewRequest request) throws Exception {
         RequestOperation<UpdateCommerceReviewRequest, UpdateCommerceReviewResponse> operation
-              = new UpdateCommerceReviewOperation( sdkConfiguration);
+              = new UpdateCommerceReviewOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

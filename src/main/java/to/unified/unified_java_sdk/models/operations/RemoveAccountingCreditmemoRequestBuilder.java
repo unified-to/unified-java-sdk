@@ -28,7 +28,7 @@ public class RemoveAccountingCreditmemoRequestBuilder {
     public RemoveAccountingCreditmemoResponse call() throws Exception {
         
         RequestOperation<RemoveAccountingCreditmemoRequest, RemoveAccountingCreditmemoResponse> operation
-              = new RemoveAccountingCreditmemoOperation( sdkConfiguration);
+              = new RemoveAccountingCreditmemoOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

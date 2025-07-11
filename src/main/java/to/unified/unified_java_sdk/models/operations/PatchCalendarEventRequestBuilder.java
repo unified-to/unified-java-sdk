@@ -28,7 +28,7 @@ public class PatchCalendarEventRequestBuilder {
     public PatchCalendarEventResponse call() throws Exception {
         
         RequestOperation<PatchCalendarEventRequest, PatchCalendarEventResponse> operation
-              = new PatchCalendarEventOperation( sdkConfiguration);
+              = new PatchCalendarEventOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

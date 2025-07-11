@@ -10,8 +10,8 @@ import java.lang.String;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class RemoveMetadataMetadataRequest {
 
+public class RemoveMetadataMetadataRequest {
     /**
      * ID of the connection
      */
@@ -50,9 +50,10 @@ public class RemoveMetadataMetadataRequest {
         return id;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * ID of the connection
@@ -72,7 +73,6 @@ public class RemoveMetadataMetadataRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -90,8 +90,7 @@ public class RemoveMetadataMetadataRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId,
-            id);
+            connectionId, id);
     }
     
     @Override
@@ -100,16 +99,18 @@ public class RemoveMetadataMetadataRequest {
                 "connectionId", connectionId,
                 "id", id);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private String connectionId;
- 
+
         private String id;
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * ID of the connection
@@ -120,6 +121,7 @@ public class RemoveMetadataMetadataRequest {
             return this;
         }
 
+
         /**
          * ID of the Metadata
          */
@@ -128,11 +130,12 @@ public class RemoveMetadataMetadataRequest {
             this.id = id;
             return this;
         }
-        
+
         public RemoveMetadataMetadataRequest build() {
+
             return new RemoveMetadataMetadataRequest(
-                connectionId,
-                id);
+                connectionId, id);
         }
+
     }
 }

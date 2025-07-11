@@ -14,6 +14,7 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class GetUnifiedIntegrationAuthRequest {
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=env")
@@ -43,8 +44,10 @@ public class GetUnifiedIntegrationAuthRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     private Optional<String> lang;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=redirect")
     private Optional<Boolean> redirect;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scopes")
     private Optional<? extends List<String>> scopes;
@@ -54,6 +57,7 @@ public class GetUnifiedIntegrationAuthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     private Optional<String> state;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subdomain")
     private Optional<String> subdomain;
@@ -110,7 +114,10 @@ public class GetUnifiedIntegrationAuthRequest {
     public GetUnifiedIntegrationAuthRequest(
             String integrationType,
             String workspaceId) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), integrationType, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), workspaceId);
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            integrationType, Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), workspaceId);
     }
 
     @JsonIgnore
@@ -190,15 +197,17 @@ public class GetUnifiedIntegrationAuthRequest {
         return workspaceId;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public GetUnifiedIntegrationAuthRequest withEnv(String env) {
         Utils.checkNotNull(env, "env");
         this.env = Optional.ofNullable(env);
         return this;
     }
+
 
     public GetUnifiedIntegrationAuthRequest withEnv(Optional<String> env) {
         Utils.checkNotNull(env, "env");
@@ -214,6 +223,7 @@ public class GetUnifiedIntegrationAuthRequest {
         this.externalXref = Optional.ofNullable(externalXref);
         return this;
     }
+
 
     /**
      * Your user identifier to associate with the new Integration
@@ -232,6 +242,7 @@ public class GetUnifiedIntegrationAuthRequest {
         this.failureRedirect = Optional.ofNullable(failureRedirect);
         return this;
     }
+
 
     /**
      * The URL where you want the user to be redirect to after an unsuccessful authentication. An "error" variable will be appended.
@@ -260,6 +271,7 @@ public class GetUnifiedIntegrationAuthRequest {
         return this;
     }
 
+
     /**
      * Language: en, fr, es, it, pt, zh, hi
      */
@@ -275,6 +287,7 @@ public class GetUnifiedIntegrationAuthRequest {
         return this;
     }
 
+
     public GetUnifiedIntegrationAuthRequest withRedirect(Optional<Boolean> redirect) {
         Utils.checkNotNull(redirect, "redirect");
         this.redirect = redirect;
@@ -286,6 +299,7 @@ public class GetUnifiedIntegrationAuthRequest {
         this.scopes = Optional.ofNullable(scopes);
         return this;
     }
+
 
     public GetUnifiedIntegrationAuthRequest withScopes(Optional<? extends List<String>> scopes) {
         Utils.checkNotNull(scopes, "scopes");
@@ -302,6 +316,7 @@ public class GetUnifiedIntegrationAuthRequest {
         return this;
     }
 
+
     /**
      * Extra state to send back to your success URL
      */
@@ -317,6 +332,7 @@ public class GetUnifiedIntegrationAuthRequest {
         return this;
     }
 
+
     public GetUnifiedIntegrationAuthRequest withSubdomain(Optional<String> subdomain) {
         Utils.checkNotNull(subdomain, "subdomain");
         this.subdomain = subdomain;
@@ -331,6 +347,7 @@ public class GetUnifiedIntegrationAuthRequest {
         this.successRedirect = Optional.ofNullable(successRedirect);
         return this;
     }
+
 
     /**
      * The URL where you want the user to be redirect to after a successful authorization.  The connection ID will be appended with (id=&lt;connectionId&gt;) to this URL, as will the state that was provided.
@@ -350,7 +367,6 @@ public class GetUnifiedIntegrationAuthRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -377,17 +393,10 @@ public class GetUnifiedIntegrationAuthRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            env,
-            externalXref,
-            failureRedirect,
-            integrationType,
-            lang,
-            redirect,
-            scopes,
-            state,
-            subdomain,
-            successRedirect,
-            workspaceId);
+            env, externalXref, failureRedirect,
+            integrationType, lang, redirect,
+            scopes, state, subdomain,
+            successRedirect, workspaceId);
     }
     
     @Override
@@ -405,34 +414,36 @@ public class GetUnifiedIntegrationAuthRequest {
                 "successRedirect", successRedirect,
                 "workspaceId", workspaceId);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> env = Optional.empty();
- 
+
         private Optional<String> externalXref = Optional.empty();
- 
+
         private Optional<String> failureRedirect = Optional.empty();
- 
+
         private String integrationType;
- 
+
         private Optional<String> lang = Optional.empty();
- 
+
         private Optional<Boolean> redirect = Optional.empty();
- 
+
         private Optional<? extends List<String>> scopes = Optional.empty();
- 
+
         private Optional<String> state = Optional.empty();
- 
+
         private Optional<String> subdomain = Optional.empty();
- 
+
         private Optional<String> successRedirect = Optional.empty();
- 
+
         private String workspaceId;
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder env(String env) {
             Utils.checkNotNull(env, "env");
@@ -445,6 +456,7 @@ public class GetUnifiedIntegrationAuthRequest {
             this.env = env;
             return this;
         }
+
 
         /**
          * Your user identifier to associate with the new Integration
@@ -464,6 +476,7 @@ public class GetUnifiedIntegrationAuthRequest {
             return this;
         }
 
+
         /**
          * The URL where you want the user to be redirect to after an unsuccessful authentication. An "error" variable will be appended.
          */
@@ -482,6 +495,7 @@ public class GetUnifiedIntegrationAuthRequest {
             return this;
         }
 
+
         /**
          * Type of the supported integration
          */
@@ -490,6 +504,7 @@ public class GetUnifiedIntegrationAuthRequest {
             this.integrationType = integrationType;
             return this;
         }
+
 
         /**
          * Language: en, fr, es, it, pt, zh, hi
@@ -509,6 +524,7 @@ public class GetUnifiedIntegrationAuthRequest {
             return this;
         }
 
+
         public Builder redirect(boolean redirect) {
             Utils.checkNotNull(redirect, "redirect");
             this.redirect = Optional.ofNullable(redirect);
@@ -521,6 +537,7 @@ public class GetUnifiedIntegrationAuthRequest {
             return this;
         }
 
+
         public Builder scopes(List<String> scopes) {
             Utils.checkNotNull(scopes, "scopes");
             this.scopes = Optional.ofNullable(scopes);
@@ -532,6 +549,7 @@ public class GetUnifiedIntegrationAuthRequest {
             this.scopes = scopes;
             return this;
         }
+
 
         /**
          * Extra state to send back to your success URL
@@ -551,6 +569,7 @@ public class GetUnifiedIntegrationAuthRequest {
             return this;
         }
 
+
         public Builder subdomain(String subdomain) {
             Utils.checkNotNull(subdomain, "subdomain");
             this.subdomain = Optional.ofNullable(subdomain);
@@ -562,6 +581,7 @@ public class GetUnifiedIntegrationAuthRequest {
             this.subdomain = subdomain;
             return this;
         }
+
 
         /**
          * The URL where you want the user to be redirect to after a successful authorization.  The connection ID will be appended with (id=&lt;connectionId&gt;) to this URL, as will the state that was provided.
@@ -581,6 +601,7 @@ public class GetUnifiedIntegrationAuthRequest {
             return this;
         }
 
+
         /**
          * The ID of the workspace
          */
@@ -589,20 +610,15 @@ public class GetUnifiedIntegrationAuthRequest {
             this.workspaceId = workspaceId;
             return this;
         }
-        
+
         public GetUnifiedIntegrationAuthRequest build() {
+
             return new GetUnifiedIntegrationAuthRequest(
-                env,
-                externalXref,
-                failureRedirect,
-                integrationType,
-                lang,
-                redirect,
-                scopes,
-                state,
-                subdomain,
-                successRedirect,
-                workspaceId);
+                env, externalXref, failureRedirect,
+                integrationType, lang, redirect,
+                scopes, state, subdomain,
+                successRedirect, workspaceId);
         }
+
     }
 }

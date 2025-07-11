@@ -8,19 +8,17 @@ import java.lang.Override;
 import java.lang.String;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class CrmMetadataSchemasExtraData22 {
 
+public class CrmMetadataSchemasExtraData22 {
     @JsonCreator
     public CrmMetadataSchemasExtraData22() {
-        
-        
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
 
-    
+
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -42,16 +40,19 @@ public class CrmMetadataSchemasExtraData22 {
     public String toString() {
         return Utils.toString(CrmMetadataSchemasExtraData22.class);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
-        
+
         private Builder() {
           // force use of static builder() method
         }
-        
+
         public CrmMetadataSchemasExtraData22 build() {
+
             return new CrmMetadataSchemasExtraData22(
                 );
         }
+
     }
 }

@@ -92,7 +92,6 @@ public class Uc {
     Uc(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a comment
      * 
@@ -109,13 +108,11 @@ public class Uc {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateUcCommentResponse createUcComment(
-            CreateUcCommentRequest request) throws Exception {
+    public CreateUcCommentResponse createUcComment(CreateUcCommentRequest request) throws Exception {
         RequestOperation<CreateUcCommentRequest, CreateUcCommentResponse> operation
-              = new CreateUcCommentOperation( sdkConfiguration);
+              = new CreateUcCommentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a contact
@@ -133,13 +130,11 @@ public class Uc {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateUcContactResponse createUcContact(
-            CreateUcContactRequest request) throws Exception {
+    public CreateUcContactResponse createUcContact(CreateUcContactRequest request) throws Exception {
         RequestOperation<CreateUcContactRequest, CreateUcContactResponse> operation
-              = new CreateUcContactOperation( sdkConfiguration);
+              = new CreateUcContactOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a recording
@@ -157,13 +152,11 @@ public class Uc {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateUcRecordingResponse createUcRecording(
-            CreateUcRecordingRequest request) throws Exception {
+    public CreateUcRecordingResponse createUcRecording(CreateUcRecordingRequest request) throws Exception {
         RequestOperation<CreateUcRecordingRequest, CreateUcRecordingResponse> operation
-              = new CreateUcRecordingOperation( sdkConfiguration);
+              = new CreateUcRecordingOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a comment
@@ -181,13 +174,11 @@ public class Uc {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetUcCommentResponse getUcComment(
-            GetUcCommentRequest request) throws Exception {
+    public GetUcCommentResponse getUcComment(GetUcCommentRequest request) throws Exception {
         RequestOperation<GetUcCommentRequest, GetUcCommentResponse> operation
-              = new GetUcCommentOperation( sdkConfiguration);
+              = new GetUcCommentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a contact
@@ -205,13 +196,11 @@ public class Uc {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetUcContactResponse getUcContact(
-            GetUcContactRequest request) throws Exception {
+    public GetUcContactResponse getUcContact(GetUcContactRequest request) throws Exception {
         RequestOperation<GetUcContactRequest, GetUcContactResponse> operation
-              = new GetUcContactOperation( sdkConfiguration);
+              = new GetUcContactOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a recording
@@ -229,13 +218,11 @@ public class Uc {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetUcRecordingResponse getUcRecording(
-            GetUcRecordingRequest request) throws Exception {
+    public GetUcRecordingResponse getUcRecording(GetUcRecordingRequest request) throws Exception {
         RequestOperation<GetUcRecordingRequest, GetUcRecordingResponse> operation
-              = new GetUcRecordingOperation( sdkConfiguration);
+              = new GetUcRecordingOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all calls
@@ -253,13 +240,11 @@ public class Uc {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListUcCallsResponse listUcCalls(
-            ListUcCallsRequest request) throws Exception {
+    public ListUcCallsResponse listUcCalls(ListUcCallsRequest request) throws Exception {
         RequestOperation<ListUcCallsRequest, ListUcCallsResponse> operation
-              = new ListUcCallsOperation( sdkConfiguration);
+              = new ListUcCallsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all comments
@@ -277,13 +262,11 @@ public class Uc {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListUcCommentsResponse listUcComments(
-            ListUcCommentsRequest request) throws Exception {
+    public ListUcCommentsResponse listUcComments(ListUcCommentsRequest request) throws Exception {
         RequestOperation<ListUcCommentsRequest, ListUcCommentsResponse> operation
-              = new ListUcCommentsOperation( sdkConfiguration);
+              = new ListUcCommentsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all contacts
@@ -301,13 +284,11 @@ public class Uc {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListUcContactsResponse listUcContacts(
-            ListUcContactsRequest request) throws Exception {
+    public ListUcContactsResponse listUcContacts(ListUcContactsRequest request) throws Exception {
         RequestOperation<ListUcContactsRequest, ListUcContactsResponse> operation
-              = new ListUcContactsOperation( sdkConfiguration);
+              = new ListUcContactsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all recordings
@@ -325,13 +306,11 @@ public class Uc {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListUcRecordingsResponse listUcRecordings(
-            ListUcRecordingsRequest request) throws Exception {
+    public ListUcRecordingsResponse listUcRecordings(ListUcRecordingsRequest request) throws Exception {
         RequestOperation<ListUcRecordingsRequest, ListUcRecordingsResponse> operation
-              = new ListUcRecordingsOperation( sdkConfiguration);
+              = new ListUcRecordingsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a comment
@@ -349,13 +328,11 @@ public class Uc {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchUcCommentResponse patchUcComment(
-            PatchUcCommentRequest request) throws Exception {
+    public PatchUcCommentResponse patchUcComment(PatchUcCommentRequest request) throws Exception {
         RequestOperation<PatchUcCommentRequest, PatchUcCommentResponse> operation
-              = new PatchUcCommentOperation( sdkConfiguration);
+              = new PatchUcCommentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a contact
@@ -373,13 +350,11 @@ public class Uc {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchUcContactResponse patchUcContact(
-            PatchUcContactRequest request) throws Exception {
+    public PatchUcContactResponse patchUcContact(PatchUcContactRequest request) throws Exception {
         RequestOperation<PatchUcContactRequest, PatchUcContactResponse> operation
-              = new PatchUcContactOperation( sdkConfiguration);
+              = new PatchUcContactOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a recording
@@ -397,13 +372,11 @@ public class Uc {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchUcRecordingResponse patchUcRecording(
-            PatchUcRecordingRequest request) throws Exception {
+    public PatchUcRecordingResponse patchUcRecording(PatchUcRecordingRequest request) throws Exception {
         RequestOperation<PatchUcRecordingRequest, PatchUcRecordingResponse> operation
-              = new PatchUcRecordingOperation( sdkConfiguration);
+              = new PatchUcRecordingOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a comment
@@ -421,13 +394,11 @@ public class Uc {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveUcCommentResponse removeUcComment(
-            RemoveUcCommentRequest request) throws Exception {
+    public RemoveUcCommentResponse removeUcComment(RemoveUcCommentRequest request) throws Exception {
         RequestOperation<RemoveUcCommentRequest, RemoveUcCommentResponse> operation
-              = new RemoveUcCommentOperation( sdkConfiguration);
+              = new RemoveUcCommentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a contact
@@ -445,13 +416,11 @@ public class Uc {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveUcContactResponse removeUcContact(
-            RemoveUcContactRequest request) throws Exception {
+    public RemoveUcContactResponse removeUcContact(RemoveUcContactRequest request) throws Exception {
         RequestOperation<RemoveUcContactRequest, RemoveUcContactResponse> operation
-              = new RemoveUcContactOperation( sdkConfiguration);
+              = new RemoveUcContactOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a recording
@@ -469,13 +438,11 @@ public class Uc {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveUcRecordingResponse removeUcRecording(
-            RemoveUcRecordingRequest request) throws Exception {
+    public RemoveUcRecordingResponse removeUcRecording(RemoveUcRecordingRequest request) throws Exception {
         RequestOperation<RemoveUcRecordingRequest, RemoveUcRecordingResponse> operation
-              = new RemoveUcRecordingOperation( sdkConfiguration);
+              = new RemoveUcRecordingOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a comment
@@ -493,13 +460,11 @@ public class Uc {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateUcCommentResponse updateUcComment(
-            UpdateUcCommentRequest request) throws Exception {
+    public UpdateUcCommentResponse updateUcComment(UpdateUcCommentRequest request) throws Exception {
         RequestOperation<UpdateUcCommentRequest, UpdateUcCommentResponse> operation
-              = new UpdateUcCommentOperation( sdkConfiguration);
+              = new UpdateUcCommentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a contact
@@ -517,13 +482,11 @@ public class Uc {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateUcContactResponse updateUcContact(
-            UpdateUcContactRequest request) throws Exception {
+    public UpdateUcContactResponse updateUcContact(UpdateUcContactRequest request) throws Exception {
         RequestOperation<UpdateUcContactRequest, UpdateUcContactResponse> operation
-              = new UpdateUcContactOperation( sdkConfiguration);
+              = new UpdateUcContactOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a recording
@@ -541,10 +504,9 @@ public class Uc {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateUcRecordingResponse updateUcRecording(
-            UpdateUcRecordingRequest request) throws Exception {
+    public UpdateUcRecordingResponse updateUcRecording(UpdateUcRecordingRequest request) throws Exception {
         RequestOperation<UpdateUcRecordingRequest, UpdateUcRecordingResponse> operation
-              = new UpdateUcRecordingOperation( sdkConfiguration);
+              = new UpdateUcRecordingOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

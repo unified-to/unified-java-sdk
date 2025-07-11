@@ -28,7 +28,7 @@ public class UpdateUnifiedWebhookTriggerRequestBuilder {
     public UpdateUnifiedWebhookTriggerResponse call() throws Exception {
         
         RequestOperation<UpdateUnifiedWebhookTriggerRequest, UpdateUnifiedWebhookTriggerResponse> operation
-              = new UpdateUnifiedWebhookTriggerOperation( sdkConfiguration);
+              = new UpdateUnifiedWebhookTriggerOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

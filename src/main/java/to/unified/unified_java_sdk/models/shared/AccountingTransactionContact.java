@@ -14,14 +14,17 @@ import java.lang.String;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AccountingTransactionContact {
 
     @JsonProperty("id")
     private String id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_customer")
     private Optional<Boolean> isCustomer;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_supplier")
@@ -60,9 +63,10 @@ public class AccountingTransactionContact {
         return isSupplier;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AccountingTransactionContact withId(String id) {
         Utils.checkNotNull(id, "id");
@@ -76,6 +80,7 @@ public class AccountingTransactionContact {
         return this;
     }
 
+
     public AccountingTransactionContact withIsCustomer(Optional<Boolean> isCustomer) {
         Utils.checkNotNull(isCustomer, "isCustomer");
         this.isCustomer = isCustomer;
@@ -88,13 +93,13 @@ public class AccountingTransactionContact {
         return this;
     }
 
+
     public AccountingTransactionContact withIsSupplier(Optional<Boolean> isSupplier) {
         Utils.checkNotNull(isSupplier, "isSupplier");
         this.isSupplier = isSupplier;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -113,9 +118,7 @@ public class AccountingTransactionContact {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            id,
-            isCustomer,
-            isSupplier);
+            id, isCustomer, isSupplier);
     }
     
     @Override
@@ -125,24 +128,27 @@ public class AccountingTransactionContact {
                 "isCustomer", isCustomer,
                 "isSupplier", isSupplier);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private String id;
- 
+
         private Optional<Boolean> isCustomer = Optional.empty();
- 
+
         private Optional<Boolean> isSupplier = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = id;
             return this;
         }
+
 
         public Builder isCustomer(boolean isCustomer) {
             Utils.checkNotNull(isCustomer, "isCustomer");
@@ -156,6 +162,7 @@ public class AccountingTransactionContact {
             return this;
         }
 
+
         public Builder isSupplier(boolean isSupplier) {
             Utils.checkNotNull(isSupplier, "isSupplier");
             this.isSupplier = Optional.ofNullable(isSupplier);
@@ -167,12 +174,12 @@ public class AccountingTransactionContact {
             this.isSupplier = isSupplier;
             return this;
         }
-        
+
         public AccountingTransactionContact build() {
+
             return new AccountingTransactionContact(
-                id,
-                isCustomer,
-                isSupplier);
+                id, isCustomer, isSupplier);
         }
+
     }
 }

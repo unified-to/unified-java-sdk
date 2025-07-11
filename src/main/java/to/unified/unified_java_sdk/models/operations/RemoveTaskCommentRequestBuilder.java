@@ -28,7 +28,7 @@ public class RemoveTaskCommentRequestBuilder {
     public RemoveTaskCommentResponse call() throws Exception {
         
         RequestOperation<RemoveTaskCommentRequest, RemoveTaskCommentResponse> operation
-              = new RemoveTaskCommentOperation( sdkConfiguration);
+              = new RemoveTaskCommentOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

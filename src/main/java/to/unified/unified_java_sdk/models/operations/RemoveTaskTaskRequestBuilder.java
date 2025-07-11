@@ -28,7 +28,7 @@ public class RemoveTaskTaskRequestBuilder {
     public RemoveTaskTaskResponse call() throws Exception {
         
         RequestOperation<RemoveTaskTaskRequest, RemoveTaskTaskResponse> operation
-              = new RemoveTaskTaskOperation( sdkConfiguration);
+              = new RemoveTaskTaskOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

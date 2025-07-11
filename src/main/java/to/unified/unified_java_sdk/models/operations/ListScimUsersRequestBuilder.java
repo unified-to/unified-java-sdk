@@ -28,7 +28,7 @@ public class ListScimUsersRequestBuilder {
     public ListScimUsersResponse call() throws Exception {
         
         RequestOperation<ListScimUsersRequest, ListScimUsersResponse> operation
-              = new ListScimUsersOperation( sdkConfiguration);
+              = new ListScimUsersOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

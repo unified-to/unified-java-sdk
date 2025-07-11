@@ -28,7 +28,7 @@ public class UpdateAccountingAccountRequestBuilder {
     public UpdateAccountingAccountResponse call() throws Exception {
         
         RequestOperation<UpdateAccountingAccountRequest, UpdateAccountingAccountResponse> operation
-              = new UpdateAccountingAccountOperation( sdkConfiguration);
+              = new UpdateAccountingAccountOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

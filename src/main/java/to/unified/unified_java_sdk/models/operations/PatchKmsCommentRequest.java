@@ -14,6 +14,7 @@ import to.unified.unified_java_sdk.models.shared.KmsComment;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class PatchKmsCommentRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
@@ -66,7 +67,8 @@ public class PatchKmsCommentRequest {
             KmsComment kmsComment,
             String connectionId,
             String id) {
-        this(kmsComment, connectionId, Optional.empty(), id, Optional.empty());
+        this(kmsComment, connectionId, Optional.empty(),
+            id, Optional.empty());
     }
 
     @JsonIgnore
@@ -107,9 +109,10 @@ public class PatchKmsCommentRequest {
         return raw;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public PatchKmsCommentRequest withKmsComment(KmsComment kmsComment) {
         Utils.checkNotNull(kmsComment, "kmsComment");
@@ -134,6 +137,7 @@ public class PatchKmsCommentRequest {
         this.fields = Optional.ofNullable(fields);
         return this;
     }
+
 
     /**
      * Comma-delimited fields to return
@@ -162,6 +166,7 @@ public class PatchKmsCommentRequest {
         return this;
     }
 
+
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
@@ -171,7 +176,6 @@ public class PatchKmsCommentRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -192,11 +196,8 @@ public class PatchKmsCommentRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            kmsComment,
-            connectionId,
-            fields,
-            id,
-            raw);
+            kmsComment, connectionId, fields,
+            id, raw);
     }
     
     @Override
@@ -208,28 +209,31 @@ public class PatchKmsCommentRequest {
                 "id", id,
                 "raw", raw);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private KmsComment kmsComment;
- 
+
         private String connectionId;
- 
+
         private Optional<? extends List<String>> fields = Optional.empty();
- 
+
         private String id;
- 
+
         private Optional<String> raw = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder kmsComment(KmsComment kmsComment) {
             Utils.checkNotNull(kmsComment, "kmsComment");
             this.kmsComment = kmsComment;
             return this;
         }
+
 
         /**
          * ID of the connection
@@ -239,6 +243,7 @@ public class PatchKmsCommentRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         /**
          * Comma-delimited fields to return
@@ -258,6 +263,7 @@ public class PatchKmsCommentRequest {
             return this;
         }
 
+
         /**
          * ID of the Comment
          */
@@ -266,6 +272,7 @@ public class PatchKmsCommentRequest {
             this.id = id;
             return this;
         }
+
 
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
@@ -284,14 +291,13 @@ public class PatchKmsCommentRequest {
             this.raw = raw;
             return this;
         }
-        
+
         public PatchKmsCommentRequest build() {
+
             return new PatchKmsCommentRequest(
-                kmsComment,
-                connectionId,
-                fields,
-                id,
-                raw);
+                kmsComment, connectionId, fields,
+                id, raw);
         }
+
     }
 }

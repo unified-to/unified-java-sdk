@@ -14,8 +14,8 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class PatchPassthroughRawRequest {
 
+public class PatchPassthroughRawRequest {
     /**
      * integration-specific payload
      */
@@ -28,8 +28,10 @@ public class PatchPassthroughRawRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
     private String connectionId;
 
+
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
     private String path;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     private Optional<? extends Map<String, Object>> query;
@@ -53,7 +55,8 @@ public class PatchPassthroughRawRequest {
     public PatchPassthroughRawRequest(
             String connectionId,
             String path) {
-        this(Optional.empty(), connectionId, path, Optional.empty());
+        this(Optional.empty(), connectionId, path,
+            Optional.empty());
     }
 
     /**
@@ -83,9 +86,10 @@ public class PatchPassthroughRawRequest {
         return (Optional<Map<String, Object>>) query;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * integration-specific payload
@@ -95,6 +99,7 @@ public class PatchPassthroughRawRequest {
         this.requestBody = Optional.ofNullable(requestBody);
         return this;
     }
+
 
     /**
      * integration-specific payload
@@ -126,13 +131,13 @@ public class PatchPassthroughRawRequest {
         return this;
     }
 
+
     public PatchPassthroughRawRequest withQuery(Optional<? extends Map<String, Object>> query) {
         Utils.checkNotNull(query, "query");
         this.query = query;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -152,9 +157,7 @@ public class PatchPassthroughRawRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            requestBody,
-            connectionId,
-            path,
+            requestBody, connectionId, path,
             query);
     }
     
@@ -166,20 +169,22 @@ public class PatchPassthroughRawRequest {
                 "path", path,
                 "query", query);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<byte[]> requestBody = Optional.empty();
- 
+
         private String connectionId;
- 
+
         private String path;
- 
+
         private Optional<? extends Map<String, Object>> query = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * integration-specific payload
@@ -199,6 +204,7 @@ public class PatchPassthroughRawRequest {
             return this;
         }
 
+
         /**
          * ID of the connection
          */
@@ -208,11 +214,13 @@ public class PatchPassthroughRawRequest {
             return this;
         }
 
+
         public Builder path(String path) {
             Utils.checkNotNull(path, "path");
             this.path = path;
             return this;
         }
+
 
         public Builder query(Map<String, Object> query) {
             Utils.checkNotNull(query, "query");
@@ -225,13 +233,13 @@ public class PatchPassthroughRawRequest {
             this.query = query;
             return this;
         }
-        
+
         public PatchPassthroughRawRequest build() {
+
             return new PatchPassthroughRawRequest(
-                requestBody,
-                connectionId,
-                path,
+                requestBody, connectionId, path,
                 query);
         }
+
     }
 }

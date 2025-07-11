@@ -40,7 +40,6 @@ public class Storage {
     Storage(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a file
      * 
@@ -57,13 +56,11 @@ public class Storage {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateStorageFileResponse createStorageFile(
-            CreateStorageFileRequest request) throws Exception {
+    public CreateStorageFileResponse createStorageFile(CreateStorageFileRequest request) throws Exception {
         RequestOperation<CreateStorageFileRequest, CreateStorageFileResponse> operation
-              = new CreateStorageFileOperation( sdkConfiguration);
+              = new CreateStorageFileOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a file
@@ -81,13 +78,11 @@ public class Storage {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetStorageFileResponse getStorageFile(
-            GetStorageFileRequest request) throws Exception {
+    public GetStorageFileResponse getStorageFile(GetStorageFileRequest request) throws Exception {
         RequestOperation<GetStorageFileRequest, GetStorageFileResponse> operation
-              = new GetStorageFileOperation( sdkConfiguration);
+              = new GetStorageFileOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all files
@@ -105,13 +100,11 @@ public class Storage {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListStorageFilesResponse listStorageFiles(
-            ListStorageFilesRequest request) throws Exception {
+    public ListStorageFilesResponse listStorageFiles(ListStorageFilesRequest request) throws Exception {
         RequestOperation<ListStorageFilesRequest, ListStorageFilesResponse> operation
-              = new ListStorageFilesOperation( sdkConfiguration);
+              = new ListStorageFilesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a file
@@ -129,13 +122,11 @@ public class Storage {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchStorageFileResponse patchStorageFile(
-            PatchStorageFileRequest request) throws Exception {
+    public PatchStorageFileResponse patchStorageFile(PatchStorageFileRequest request) throws Exception {
         RequestOperation<PatchStorageFileRequest, PatchStorageFileResponse> operation
-              = new PatchStorageFileOperation( sdkConfiguration);
+              = new PatchStorageFileOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a file
@@ -153,13 +144,11 @@ public class Storage {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveStorageFileResponse removeStorageFile(
-            RemoveStorageFileRequest request) throws Exception {
+    public RemoveStorageFileResponse removeStorageFile(RemoveStorageFileRequest request) throws Exception {
         RequestOperation<RemoveStorageFileRequest, RemoveStorageFileResponse> operation
-              = new RemoveStorageFileOperation( sdkConfiguration);
+              = new RemoveStorageFileOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a file
@@ -177,10 +166,9 @@ public class Storage {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateStorageFileResponse updateStorageFile(
-            UpdateStorageFileRequest request) throws Exception {
+    public UpdateStorageFileResponse updateStorageFile(UpdateStorageFileRequest request) throws Exception {
         RequestOperation<UpdateStorageFileRequest, UpdateStorageFileResponse> operation
-              = new UpdateStorageFileOperation( sdkConfiguration);
+              = new UpdateStorageFileOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

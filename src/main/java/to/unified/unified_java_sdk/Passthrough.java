@@ -48,7 +48,6 @@ public class Passthrough {
     Passthrough(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Passthrough POST
      * 
@@ -65,13 +64,11 @@ public class Passthrough {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreatePassthroughJsonResponse createPassthroughJson(
-            CreatePassthroughJsonRequest request) throws Exception {
+    public CreatePassthroughJsonResponse createPassthroughJson(CreatePassthroughJsonRequest request) throws Exception {
         RequestOperation<CreatePassthroughJsonRequest, CreatePassthroughJsonResponse> operation
-              = new CreatePassthroughJsonOperation( sdkConfiguration);
+              = new CreatePassthroughJsonOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Passthrough POST
@@ -89,13 +86,11 @@ public class Passthrough {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreatePassthroughRawResponse createPassthroughRaw(
-            CreatePassthroughRawRequest request) throws Exception {
+    public CreatePassthroughRawResponse createPassthroughRaw(CreatePassthroughRawRequest request) throws Exception {
         RequestOperation<CreatePassthroughRawRequest, CreatePassthroughRawResponse> operation
-              = new CreatePassthroughRawOperation( sdkConfiguration);
+              = new CreatePassthroughRawOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Passthrough GET
@@ -113,13 +108,11 @@ public class Passthrough {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListPassthroughsResponse listPassthroughs(
-            ListPassthroughsRequest request) throws Exception {
+    public ListPassthroughsResponse listPassthroughs(ListPassthroughsRequest request) throws Exception {
         RequestOperation<ListPassthroughsRequest, ListPassthroughsResponse> operation
-              = new ListPassthroughsOperation( sdkConfiguration);
+              = new ListPassthroughsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Passthrough PUT
@@ -137,13 +130,11 @@ public class Passthrough {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchPassthroughJsonResponse patchPassthroughJson(
-            PatchPassthroughJsonRequest request) throws Exception {
+    public PatchPassthroughJsonResponse patchPassthroughJson(PatchPassthroughJsonRequest request) throws Exception {
         RequestOperation<PatchPassthroughJsonRequest, PatchPassthroughJsonResponse> operation
-              = new PatchPassthroughJsonOperation( sdkConfiguration);
+              = new PatchPassthroughJsonOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Passthrough PUT
@@ -161,13 +152,11 @@ public class Passthrough {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchPassthroughRawResponse patchPassthroughRaw(
-            PatchPassthroughRawRequest request) throws Exception {
+    public PatchPassthroughRawResponse patchPassthroughRaw(PatchPassthroughRawRequest request) throws Exception {
         RequestOperation<PatchPassthroughRawRequest, PatchPassthroughRawResponse> operation
-              = new PatchPassthroughRawOperation( sdkConfiguration);
+              = new PatchPassthroughRawOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Passthrough DELETE
@@ -185,13 +174,11 @@ public class Passthrough {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemovePassthroughResponse removePassthrough(
-            RemovePassthroughRequest request) throws Exception {
+    public RemovePassthroughResponse removePassthrough(RemovePassthroughRequest request) throws Exception {
         RequestOperation<RemovePassthroughRequest, RemovePassthroughResponse> operation
-              = new RemovePassthroughOperation( sdkConfiguration);
+              = new RemovePassthroughOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Passthrough PUT
@@ -209,13 +196,11 @@ public class Passthrough {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdatePassthroughJsonResponse updatePassthroughJson(
-            UpdatePassthroughJsonRequest request) throws Exception {
+    public UpdatePassthroughJsonResponse updatePassthroughJson(UpdatePassthroughJsonRequest request) throws Exception {
         RequestOperation<UpdatePassthroughJsonRequest, UpdatePassthroughJsonResponse> operation
-              = new UpdatePassthroughJsonOperation( sdkConfiguration);
+              = new UpdatePassthroughJsonOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Passthrough PUT
@@ -233,10 +218,9 @@ public class Passthrough {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdatePassthroughRawResponse updatePassthroughRaw(
-            UpdatePassthroughRawRequest request) throws Exception {
+    public UpdatePassthroughRawResponse updatePassthroughRaw(UpdatePassthroughRawRequest request) throws Exception {
         RequestOperation<UpdatePassthroughRawRequest, UpdatePassthroughRawResponse> operation
-              = new UpdatePassthroughRawOperation( sdkConfiguration);
+              = new UpdatePassthroughRawOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

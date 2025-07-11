@@ -28,7 +28,7 @@ public class CreateTaskTaskRequestBuilder {
     public CreateTaskTaskResponse call() throws Exception {
         
         RequestOperation<CreateTaskTaskRequest, CreateTaskTaskResponse> operation
-              = new CreateTaskTaskOperation( sdkConfiguration);
+              = new CreateTaskTaskOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

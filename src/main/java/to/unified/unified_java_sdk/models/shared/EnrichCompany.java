@@ -25,7 +25,6 @@ import to.unified.unified_java_sdk.utils.Utils;
  * <p>A company object from an enrichment integration
  */
 public class EnrichCompany {
-
     /**
      * The address of the company
      */
@@ -33,61 +32,76 @@ public class EnrichCompany {
     @JsonProperty("address")
     private Optional<? extends PropertyEnrichCompanyAddress> address;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alexa_rank")
     private Optional<Double> alexaRank;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crunchbase_url")
     private Optional<String> crunchbaseUrl;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private Optional<String> description;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     private Optional<String> domain;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employees")
     private Optional<String> employees;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exchange")
     private Optional<String> exchange;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facebook_url")
     private Optional<String> facebookUrl;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("industry")
     private Optional<String> industry;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instagram_url")
     private Optional<String> instagramUrl;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedin_url")
     private Optional<String> linkedinUrl;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo_url")
     private Optional<String> logoUrl;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("naics_code")
     private Optional<Double> naicsCode;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
@@ -100,13 +114,16 @@ public class EnrichCompany {
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revenue")
     private Optional<String> revenue;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sic_code")
     private Optional<Double> sicCode;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stock")
@@ -119,25 +136,31 @@ public class EnrichCompany {
     @JsonProperty("telephones")
     private Optional<? extends List<EnrichTelephone>> telephones;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("twitter_handle")
     private Optional<String> twitterHandle;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("twitter_url")
     private Optional<String> twitterUrl;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("year_founded")
     private Optional<Double> yearFounded;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yelp_url")
     private Optional<String> yelpUrl;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("youtube_url")
@@ -229,7 +252,15 @@ public class EnrichCompany {
     }
     
     public EnrichCompany() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     /**
@@ -379,9 +410,10 @@ public class EnrichCompany {
         return youtubeUrl;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * The address of the company
@@ -391,6 +423,7 @@ public class EnrichCompany {
         this.address = Optional.ofNullable(address);
         return this;
     }
+
 
     /**
      * The address of the company
@@ -407,6 +440,7 @@ public class EnrichCompany {
         return this;
     }
 
+
     public EnrichCompany withAlexaRank(Optional<Double> alexaRank) {
         Utils.checkNotNull(alexaRank, "alexaRank");
         this.alexaRank = alexaRank;
@@ -418,6 +452,7 @@ public class EnrichCompany {
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public EnrichCompany withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -431,6 +466,7 @@ public class EnrichCompany {
         return this;
     }
 
+
     public EnrichCompany withCrunchbaseUrl(Optional<String> crunchbaseUrl) {
         Utils.checkNotNull(crunchbaseUrl, "crunchbaseUrl");
         this.crunchbaseUrl = crunchbaseUrl;
@@ -442,6 +478,7 @@ public class EnrichCompany {
         this.description = Optional.ofNullable(description);
         return this;
     }
+
 
     public EnrichCompany withDescription(Optional<String> description) {
         Utils.checkNotNull(description, "description");
@@ -455,6 +492,7 @@ public class EnrichCompany {
         return this;
     }
 
+
     public EnrichCompany withDomain(Optional<String> domain) {
         Utils.checkNotNull(domain, "domain");
         this.domain = domain;
@@ -466,6 +504,7 @@ public class EnrichCompany {
         this.employees = Optional.ofNullable(employees);
         return this;
     }
+
 
     public EnrichCompany withEmployees(Optional<String> employees) {
         Utils.checkNotNull(employees, "employees");
@@ -479,6 +518,7 @@ public class EnrichCompany {
         return this;
     }
 
+
     public EnrichCompany withExchange(Optional<String> exchange) {
         Utils.checkNotNull(exchange, "exchange");
         this.exchange = exchange;
@@ -490,6 +530,7 @@ public class EnrichCompany {
         this.facebookUrl = Optional.ofNullable(facebookUrl);
         return this;
     }
+
 
     public EnrichCompany withFacebookUrl(Optional<String> facebookUrl) {
         Utils.checkNotNull(facebookUrl, "facebookUrl");
@@ -503,6 +544,7 @@ public class EnrichCompany {
         return this;
     }
 
+
     public EnrichCompany withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -514,6 +556,7 @@ public class EnrichCompany {
         this.industry = Optional.ofNullable(industry);
         return this;
     }
+
 
     public EnrichCompany withIndustry(Optional<String> industry) {
         Utils.checkNotNull(industry, "industry");
@@ -527,6 +570,7 @@ public class EnrichCompany {
         return this;
     }
 
+
     public EnrichCompany withInstagramUrl(Optional<String> instagramUrl) {
         Utils.checkNotNull(instagramUrl, "instagramUrl");
         this.instagramUrl = instagramUrl;
@@ -538,6 +582,7 @@ public class EnrichCompany {
         this.linkedinUrl = Optional.ofNullable(linkedinUrl);
         return this;
     }
+
 
     public EnrichCompany withLinkedinUrl(Optional<String> linkedinUrl) {
         Utils.checkNotNull(linkedinUrl, "linkedinUrl");
@@ -551,6 +596,7 @@ public class EnrichCompany {
         return this;
     }
 
+
     public EnrichCompany withLogoUrl(Optional<String> logoUrl) {
         Utils.checkNotNull(logoUrl, "logoUrl");
         this.logoUrl = logoUrl;
@@ -563,6 +609,7 @@ public class EnrichCompany {
         return this;
     }
 
+
     public EnrichCompany withNaicsCode(Optional<Double> naicsCode) {
         Utils.checkNotNull(naicsCode, "naicsCode");
         this.naicsCode = naicsCode;
@@ -574,6 +621,7 @@ public class EnrichCompany {
         this.name = Optional.ofNullable(name);
         return this;
     }
+
 
     public EnrichCompany withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
@@ -590,6 +638,7 @@ public class EnrichCompany {
         return this;
     }
 
+
     /**
      * The raw data returned by the integration for this company
      */
@@ -605,6 +654,7 @@ public class EnrichCompany {
         return this;
     }
 
+
     public EnrichCompany withRevenue(Optional<String> revenue) {
         Utils.checkNotNull(revenue, "revenue");
         this.revenue = revenue;
@@ -617,6 +667,7 @@ public class EnrichCompany {
         return this;
     }
 
+
     public EnrichCompany withSicCode(Optional<Double> sicCode) {
         Utils.checkNotNull(sicCode, "sicCode");
         this.sicCode = sicCode;
@@ -628,6 +679,7 @@ public class EnrichCompany {
         this.stock = Optional.ofNullable(stock);
         return this;
     }
+
 
     public EnrichCompany withStock(Optional<String> stock) {
         Utils.checkNotNull(stock, "stock");
@@ -644,6 +696,7 @@ public class EnrichCompany {
         return this;
     }
 
+
     /**
      * An array of telephones for this company
      */
@@ -659,6 +712,7 @@ public class EnrichCompany {
         return this;
     }
 
+
     public EnrichCompany withTwitterHandle(Optional<String> twitterHandle) {
         Utils.checkNotNull(twitterHandle, "twitterHandle");
         this.twitterHandle = twitterHandle;
@@ -670,6 +724,7 @@ public class EnrichCompany {
         this.twitterUrl = Optional.ofNullable(twitterUrl);
         return this;
     }
+
 
     public EnrichCompany withTwitterUrl(Optional<String> twitterUrl) {
         Utils.checkNotNull(twitterUrl, "twitterUrl");
@@ -683,6 +738,7 @@ public class EnrichCompany {
         return this;
     }
 
+
     public EnrichCompany withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
@@ -694,6 +750,7 @@ public class EnrichCompany {
         this.yearFounded = Optional.ofNullable(yearFounded);
         return this;
     }
+
 
     public EnrichCompany withYearFounded(Optional<Double> yearFounded) {
         Utils.checkNotNull(yearFounded, "yearFounded");
@@ -707,6 +764,7 @@ public class EnrichCompany {
         return this;
     }
 
+
     public EnrichCompany withYelpUrl(Optional<String> yelpUrl) {
         Utils.checkNotNull(yelpUrl, "yelpUrl");
         this.yelpUrl = yelpUrl;
@@ -719,13 +777,13 @@ public class EnrichCompany {
         return this;
     }
 
+
     public EnrichCompany withYoutubeUrl(Optional<String> youtubeUrl) {
         Utils.checkNotNull(youtubeUrl, "youtubeUrl");
         this.youtubeUrl = youtubeUrl;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -768,33 +826,15 @@ public class EnrichCompany {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            address,
-            alexaRank,
-            createdAt,
-            crunchbaseUrl,
-            description,
-            domain,
-            employees,
-            exchange,
-            facebookUrl,
-            id,
-            industry,
-            instagramUrl,
-            linkedinUrl,
-            logoUrl,
-            naicsCode,
-            name,
-            raw,
-            revenue,
-            sicCode,
-            stock,
-            telephones,
-            twitterHandle,
-            twitterUrl,
-            updatedAt,
-            yearFounded,
-            yelpUrl,
-            youtubeUrl);
+            address, alexaRank, createdAt,
+            crunchbaseUrl, description, domain,
+            employees, exchange, facebookUrl,
+            id, industry, instagramUrl,
+            linkedinUrl, logoUrl, naicsCode,
+            name, raw, revenue,
+            sicCode, stock, telephones,
+            twitterHandle, twitterUrl, updatedAt,
+            yearFounded, yelpUrl, youtubeUrl);
     }
     
     @Override
@@ -828,66 +868,68 @@ public class EnrichCompany {
                 "yelpUrl", yelpUrl,
                 "youtubeUrl", youtubeUrl);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<? extends PropertyEnrichCompanyAddress> address = Optional.empty();
- 
+
         private Optional<Double> alexaRank = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> crunchbaseUrl = Optional.empty();
- 
+
         private Optional<String> description = Optional.empty();
- 
+
         private Optional<String> domain = Optional.empty();
- 
+
         private Optional<String> employees = Optional.empty();
- 
+
         private Optional<String> exchange = Optional.empty();
- 
+
         private Optional<String> facebookUrl = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> industry = Optional.empty();
- 
+
         private Optional<String> instagramUrl = Optional.empty();
- 
+
         private Optional<String> linkedinUrl = Optional.empty();
- 
+
         private Optional<String> logoUrl = Optional.empty();
- 
+
         private Optional<Double> naicsCode = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<String> revenue = Optional.empty();
- 
+
         private Optional<Double> sicCode = Optional.empty();
- 
+
         private Optional<String> stock = Optional.empty();
- 
+
         private Optional<? extends List<EnrichTelephone>> telephones = Optional.empty();
- 
+
         private Optional<String> twitterHandle = Optional.empty();
- 
+
         private Optional<String> twitterUrl = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<Double> yearFounded = Optional.empty();
- 
+
         private Optional<String> yelpUrl = Optional.empty();
- 
+
         private Optional<String> youtubeUrl = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * The address of the company
@@ -907,6 +949,7 @@ public class EnrichCompany {
             return this;
         }
 
+
         public Builder alexaRank(double alexaRank) {
             Utils.checkNotNull(alexaRank, "alexaRank");
             this.alexaRank = Optional.ofNullable(alexaRank);
@@ -918,6 +961,7 @@ public class EnrichCompany {
             this.alexaRank = alexaRank;
             return this;
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -931,6 +975,7 @@ public class EnrichCompany {
             return this;
         }
 
+
         public Builder crunchbaseUrl(String crunchbaseUrl) {
             Utils.checkNotNull(crunchbaseUrl, "crunchbaseUrl");
             this.crunchbaseUrl = Optional.ofNullable(crunchbaseUrl);
@@ -942,6 +987,7 @@ public class EnrichCompany {
             this.crunchbaseUrl = crunchbaseUrl;
             return this;
         }
+
 
         public Builder description(String description) {
             Utils.checkNotNull(description, "description");
@@ -955,6 +1001,7 @@ public class EnrichCompany {
             return this;
         }
 
+
         public Builder domain(String domain) {
             Utils.checkNotNull(domain, "domain");
             this.domain = Optional.ofNullable(domain);
@@ -966,6 +1013,7 @@ public class EnrichCompany {
             this.domain = domain;
             return this;
         }
+
 
         public Builder employees(String employees) {
             Utils.checkNotNull(employees, "employees");
@@ -979,6 +1027,7 @@ public class EnrichCompany {
             return this;
         }
 
+
         public Builder exchange(String exchange) {
             Utils.checkNotNull(exchange, "exchange");
             this.exchange = Optional.ofNullable(exchange);
@@ -990,6 +1039,7 @@ public class EnrichCompany {
             this.exchange = exchange;
             return this;
         }
+
 
         public Builder facebookUrl(String facebookUrl) {
             Utils.checkNotNull(facebookUrl, "facebookUrl");
@@ -1003,6 +1053,7 @@ public class EnrichCompany {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -1014,6 +1065,7 @@ public class EnrichCompany {
             this.id = id;
             return this;
         }
+
 
         public Builder industry(String industry) {
             Utils.checkNotNull(industry, "industry");
@@ -1027,6 +1079,7 @@ public class EnrichCompany {
             return this;
         }
 
+
         public Builder instagramUrl(String instagramUrl) {
             Utils.checkNotNull(instagramUrl, "instagramUrl");
             this.instagramUrl = Optional.ofNullable(instagramUrl);
@@ -1038,6 +1091,7 @@ public class EnrichCompany {
             this.instagramUrl = instagramUrl;
             return this;
         }
+
 
         public Builder linkedinUrl(String linkedinUrl) {
             Utils.checkNotNull(linkedinUrl, "linkedinUrl");
@@ -1051,6 +1105,7 @@ public class EnrichCompany {
             return this;
         }
 
+
         public Builder logoUrl(String logoUrl) {
             Utils.checkNotNull(logoUrl, "logoUrl");
             this.logoUrl = Optional.ofNullable(logoUrl);
@@ -1062,6 +1117,7 @@ public class EnrichCompany {
             this.logoUrl = logoUrl;
             return this;
         }
+
 
         public Builder naicsCode(double naicsCode) {
             Utils.checkNotNull(naicsCode, "naicsCode");
@@ -1075,6 +1131,7 @@ public class EnrichCompany {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = Optional.ofNullable(name);
@@ -1086,6 +1143,7 @@ public class EnrichCompany {
             this.name = name;
             return this;
         }
+
 
         /**
          * The raw data returned by the integration for this company
@@ -1105,6 +1163,7 @@ public class EnrichCompany {
             return this;
         }
 
+
         public Builder revenue(String revenue) {
             Utils.checkNotNull(revenue, "revenue");
             this.revenue = Optional.ofNullable(revenue);
@@ -1116,6 +1175,7 @@ public class EnrichCompany {
             this.revenue = revenue;
             return this;
         }
+
 
         public Builder sicCode(double sicCode) {
             Utils.checkNotNull(sicCode, "sicCode");
@@ -1129,6 +1189,7 @@ public class EnrichCompany {
             return this;
         }
 
+
         public Builder stock(String stock) {
             Utils.checkNotNull(stock, "stock");
             this.stock = Optional.ofNullable(stock);
@@ -1140,6 +1201,7 @@ public class EnrichCompany {
             this.stock = stock;
             return this;
         }
+
 
         /**
          * An array of telephones for this company
@@ -1159,6 +1221,7 @@ public class EnrichCompany {
             return this;
         }
 
+
         public Builder twitterHandle(String twitterHandle) {
             Utils.checkNotNull(twitterHandle, "twitterHandle");
             this.twitterHandle = Optional.ofNullable(twitterHandle);
@@ -1170,6 +1233,7 @@ public class EnrichCompany {
             this.twitterHandle = twitterHandle;
             return this;
         }
+
 
         public Builder twitterUrl(String twitterUrl) {
             Utils.checkNotNull(twitterUrl, "twitterUrl");
@@ -1183,6 +1247,7 @@ public class EnrichCompany {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -1194,6 +1259,7 @@ public class EnrichCompany {
             this.updatedAt = updatedAt;
             return this;
         }
+
 
         public Builder yearFounded(double yearFounded) {
             Utils.checkNotNull(yearFounded, "yearFounded");
@@ -1207,6 +1273,7 @@ public class EnrichCompany {
             return this;
         }
 
+
         public Builder yelpUrl(String yelpUrl) {
             Utils.checkNotNull(yelpUrl, "yelpUrl");
             this.yelpUrl = Optional.ofNullable(yelpUrl);
@@ -1219,6 +1286,7 @@ public class EnrichCompany {
             return this;
         }
 
+
         public Builder youtubeUrl(String youtubeUrl) {
             Utils.checkNotNull(youtubeUrl, "youtubeUrl");
             this.youtubeUrl = Optional.ofNullable(youtubeUrl);
@@ -1230,36 +1298,20 @@ public class EnrichCompany {
             this.youtubeUrl = youtubeUrl;
             return this;
         }
-        
+
         public EnrichCompany build() {
+
             return new EnrichCompany(
-                address,
-                alexaRank,
-                createdAt,
-                crunchbaseUrl,
-                description,
-                domain,
-                employees,
-                exchange,
-                facebookUrl,
-                id,
-                industry,
-                instagramUrl,
-                linkedinUrl,
-                logoUrl,
-                naicsCode,
-                name,
-                raw,
-                revenue,
-                sicCode,
-                stock,
-                telephones,
-                twitterHandle,
-                twitterUrl,
-                updatedAt,
-                yearFounded,
-                yelpUrl,
-                youtubeUrl);
+                address, alexaRank, createdAt,
+                crunchbaseUrl, description, domain,
+                employees, exchange, facebookUrl,
+                id, industry, instagramUrl,
+                linkedinUrl, logoUrl, naicsCode,
+                name, raw, revenue,
+                sicCode, stock, telephones,
+                twitterHandle, twitterUrl, updatedAt,
+                yearFounded, yelpUrl, youtubeUrl);
         }
+
     }
 }

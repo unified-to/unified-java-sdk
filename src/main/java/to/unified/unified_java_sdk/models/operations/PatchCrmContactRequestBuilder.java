@@ -28,7 +28,7 @@ public class PatchCrmContactRequestBuilder {
     public PatchCrmContactResponse call() throws Exception {
         
         RequestOperation<PatchCrmContactRequest, PatchCrmContactResponse> operation
-              = new PatchCrmContactOperation( sdkConfiguration);
+              = new PatchCrmContactOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

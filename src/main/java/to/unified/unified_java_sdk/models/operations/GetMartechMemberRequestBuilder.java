@@ -28,7 +28,7 @@ public class GetMartechMemberRequestBuilder {
     public GetMartechMemberResponse call() throws Exception {
         
         RequestOperation<GetMartechMemberRequest, GetMartechMemberResponse> operation
-              = new GetMartechMemberOperation( sdkConfiguration);
+              = new GetMartechMemberOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

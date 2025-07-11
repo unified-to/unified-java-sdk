@@ -20,7 +20,6 @@ public class Login {
     Login(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Sign in a user
      * 
@@ -41,10 +40,9 @@ public class Login {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetUnifiedIntegrationLoginResponse getUnifiedIntegrationLogin(
-            GetUnifiedIntegrationLoginRequest request) throws Exception {
+    public GetUnifiedIntegrationLoginResponse getUnifiedIntegrationLogin(GetUnifiedIntegrationLoginRequest request) throws Exception {
         RequestOperation<GetUnifiedIntegrationLoginRequest, GetUnifiedIntegrationLoginResponse> operation
-              = new GetUnifiedIntegrationLoginOperation( sdkConfiguration);
+              = new GetUnifiedIntegrationLoginOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

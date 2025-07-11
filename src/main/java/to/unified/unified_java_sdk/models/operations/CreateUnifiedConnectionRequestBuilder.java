@@ -29,7 +29,7 @@ public class CreateUnifiedConnectionRequestBuilder {
     public CreateUnifiedConnectionResponse call() throws Exception {
         
         RequestOperation<Connection, CreateUnifiedConnectionResponse> operation
-              = new CreateUnifiedConnectionOperation( sdkConfiguration);
+              = new CreateUnifiedConnectionOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -28,7 +28,7 @@ public class ListAccountingContactsRequestBuilder {
     public ListAccountingContactsResponse call() throws Exception {
         
         RequestOperation<ListAccountingContactsRequest, ListAccountingContactsResponse> operation
-              = new ListAccountingContactsOperation( sdkConfiguration);
+              = new ListAccountingContactsOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

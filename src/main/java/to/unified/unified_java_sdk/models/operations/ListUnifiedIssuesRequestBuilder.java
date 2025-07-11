@@ -28,7 +28,7 @@ public class ListUnifiedIssuesRequestBuilder {
     public ListUnifiedIssuesResponse call() throws Exception {
         
         RequestOperation<ListUnifiedIssuesRequest, ListUnifiedIssuesResponse> operation
-              = new ListUnifiedIssuesOperation( sdkConfiguration);
+              = new ListUnifiedIssuesOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

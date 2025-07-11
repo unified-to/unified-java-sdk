@@ -28,7 +28,7 @@ public class UpdateTaskCommentRequestBuilder {
     public UpdateTaskCommentResponse call() throws Exception {
         
         RequestOperation<UpdateTaskCommentRequest, UpdateTaskCommentResponse> operation
-              = new UpdateTaskCommentOperation( sdkConfiguration);
+              = new UpdateTaskCommentOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -19,59 +19,73 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AccountingOrder {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     private Optional<String> accountId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billing_address")
     private Optional<? extends PropertyAccountingOrderBillingAddress> billingAddress;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private Optional<String> contactId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private Optional<String> currency;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineitems")
     private Optional<? extends List<AccountingLineitem>> lineitems;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posted_at")
     private Optional<OffsetDateTime> postedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_address")
     private Optional<? extends PropertyAccountingOrderShippingAddress> shippingAddress;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private Optional<? extends AccountingOrderStatus> status;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
     private Optional<Double> totalAmount;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private Optional<? extends AccountingOrderType> type;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -124,7 +138,11 @@ public class AccountingOrder {
     }
     
     public AccountingOrder() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -203,15 +221,17 @@ public class AccountingOrder {
         return updatedAt;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AccountingOrder withAccountId(String accountId) {
         Utils.checkNotNull(accountId, "accountId");
         this.accountId = Optional.ofNullable(accountId);
         return this;
     }
+
 
     public AccountingOrder withAccountId(Optional<String> accountId) {
         Utils.checkNotNull(accountId, "accountId");
@@ -225,6 +245,7 @@ public class AccountingOrder {
         return this;
     }
 
+
     public AccountingOrder withBillingAddress(Optional<? extends PropertyAccountingOrderBillingAddress> billingAddress) {
         Utils.checkNotNull(billingAddress, "billingAddress");
         this.billingAddress = billingAddress;
@@ -236,6 +257,7 @@ public class AccountingOrder {
         this.contactId = Optional.ofNullable(contactId);
         return this;
     }
+
 
     public AccountingOrder withContactId(Optional<String> contactId) {
         Utils.checkNotNull(contactId, "contactId");
@@ -249,6 +271,7 @@ public class AccountingOrder {
         return this;
     }
 
+
     public AccountingOrder withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
@@ -260,6 +283,7 @@ public class AccountingOrder {
         this.currency = Optional.ofNullable(currency);
         return this;
     }
+
 
     public AccountingOrder withCurrency(Optional<String> currency) {
         Utils.checkNotNull(currency, "currency");
@@ -273,6 +297,7 @@ public class AccountingOrder {
         return this;
     }
 
+
     public AccountingOrder withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -284,6 +309,7 @@ public class AccountingOrder {
         this.lineitems = Optional.ofNullable(lineitems);
         return this;
     }
+
 
     public AccountingOrder withLineitems(Optional<? extends List<AccountingLineitem>> lineitems) {
         Utils.checkNotNull(lineitems, "lineitems");
@@ -297,6 +323,7 @@ public class AccountingOrder {
         return this;
     }
 
+
     public AccountingOrder withPostedAt(Optional<OffsetDateTime> postedAt) {
         Utils.checkNotNull(postedAt, "postedAt");
         this.postedAt = postedAt;
@@ -308,6 +335,7 @@ public class AccountingOrder {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public AccountingOrder withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -321,6 +349,7 @@ public class AccountingOrder {
         return this;
     }
 
+
     public AccountingOrder withShippingAddress(Optional<? extends PropertyAccountingOrderShippingAddress> shippingAddress) {
         Utils.checkNotNull(shippingAddress, "shippingAddress");
         this.shippingAddress = shippingAddress;
@@ -332,6 +361,7 @@ public class AccountingOrder {
         this.status = Optional.ofNullable(status);
         return this;
     }
+
 
     public AccountingOrder withStatus(Optional<? extends AccountingOrderStatus> status) {
         Utils.checkNotNull(status, "status");
@@ -345,6 +375,7 @@ public class AccountingOrder {
         return this;
     }
 
+
     public AccountingOrder withTotalAmount(Optional<Double> totalAmount) {
         Utils.checkNotNull(totalAmount, "totalAmount");
         this.totalAmount = totalAmount;
@@ -356,6 +387,7 @@ public class AccountingOrder {
         this.type = Optional.ofNullable(type);
         return this;
     }
+
 
     public AccountingOrder withType(Optional<? extends AccountingOrderType> type) {
         Utils.checkNotNull(type, "type");
@@ -369,13 +401,13 @@ public class AccountingOrder {
         return this;
     }
 
+
     public AccountingOrder withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -405,20 +437,11 @@ public class AccountingOrder {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            accountId,
-            billingAddress,
-            contactId,
-            createdAt,
-            currency,
-            id,
-            lineitems,
-            postedAt,
-            raw,
-            shippingAddress,
-            status,
-            totalAmount,
-            type,
-            updatedAt);
+            accountId, billingAddress, contactId,
+            createdAt, currency, id,
+            lineitems, postedAt, raw,
+            shippingAddress, status, totalAmount,
+            type, updatedAt);
     }
     
     @Override
@@ -439,40 +462,42 @@ public class AccountingOrder {
                 "type", type,
                 "updatedAt", updatedAt);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> accountId = Optional.empty();
- 
+
         private Optional<? extends PropertyAccountingOrderBillingAddress> billingAddress = Optional.empty();
- 
+
         private Optional<String> contactId = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> currency = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<? extends List<AccountingLineitem>> lineitems = Optional.empty();
- 
+
         private Optional<OffsetDateTime> postedAt = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<? extends PropertyAccountingOrderShippingAddress> shippingAddress = Optional.empty();
- 
+
         private Optional<? extends AccountingOrderStatus> status = Optional.empty();
- 
+
         private Optional<Double> totalAmount = Optional.empty();
- 
+
         private Optional<? extends AccountingOrderType> type = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder accountId(String accountId) {
             Utils.checkNotNull(accountId, "accountId");
@@ -486,6 +511,7 @@ public class AccountingOrder {
             return this;
         }
 
+
         public Builder billingAddress(PropertyAccountingOrderBillingAddress billingAddress) {
             Utils.checkNotNull(billingAddress, "billingAddress");
             this.billingAddress = Optional.ofNullable(billingAddress);
@@ -497,6 +523,7 @@ public class AccountingOrder {
             this.billingAddress = billingAddress;
             return this;
         }
+
 
         public Builder contactId(String contactId) {
             Utils.checkNotNull(contactId, "contactId");
@@ -510,6 +537,7 @@ public class AccountingOrder {
             return this;
         }
 
+
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
@@ -521,6 +549,7 @@ public class AccountingOrder {
             this.createdAt = createdAt;
             return this;
         }
+
 
         public Builder currency(String currency) {
             Utils.checkNotNull(currency, "currency");
@@ -534,6 +563,7 @@ public class AccountingOrder {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -545,6 +575,7 @@ public class AccountingOrder {
             this.id = id;
             return this;
         }
+
 
         public Builder lineitems(List<AccountingLineitem> lineitems) {
             Utils.checkNotNull(lineitems, "lineitems");
@@ -558,6 +589,7 @@ public class AccountingOrder {
             return this;
         }
 
+
         public Builder postedAt(OffsetDateTime postedAt) {
             Utils.checkNotNull(postedAt, "postedAt");
             this.postedAt = Optional.ofNullable(postedAt);
@@ -569,6 +601,7 @@ public class AccountingOrder {
             this.postedAt = postedAt;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -582,6 +615,7 @@ public class AccountingOrder {
             return this;
         }
 
+
         public Builder shippingAddress(PropertyAccountingOrderShippingAddress shippingAddress) {
             Utils.checkNotNull(shippingAddress, "shippingAddress");
             this.shippingAddress = Optional.ofNullable(shippingAddress);
@@ -593,6 +627,7 @@ public class AccountingOrder {
             this.shippingAddress = shippingAddress;
             return this;
         }
+
 
         public Builder status(AccountingOrderStatus status) {
             Utils.checkNotNull(status, "status");
@@ -606,6 +641,7 @@ public class AccountingOrder {
             return this;
         }
 
+
         public Builder totalAmount(double totalAmount) {
             Utils.checkNotNull(totalAmount, "totalAmount");
             this.totalAmount = Optional.ofNullable(totalAmount);
@@ -617,6 +653,7 @@ public class AccountingOrder {
             this.totalAmount = totalAmount;
             return this;
         }
+
 
         public Builder type(AccountingOrderType type) {
             Utils.checkNotNull(type, "type");
@@ -630,6 +667,7 @@ public class AccountingOrder {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -641,23 +679,16 @@ public class AccountingOrder {
             this.updatedAt = updatedAt;
             return this;
         }
-        
+
         public AccountingOrder build() {
+
             return new AccountingOrder(
-                accountId,
-                billingAddress,
-                contactId,
-                createdAt,
-                currency,
-                id,
-                lineitems,
-                postedAt,
-                raw,
-                shippingAddress,
-                status,
-                totalAmount,
-                type,
-                updatedAt);
+                accountId, billingAddress, contactId,
+                createdAt, currency, id,
+                lineitems, postedAt, raw,
+                shippingAddress, status, totalAmount,
+                type, updatedAt);
         }
+
     }
 }

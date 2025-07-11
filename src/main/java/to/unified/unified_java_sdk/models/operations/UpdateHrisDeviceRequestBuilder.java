@@ -28,7 +28,7 @@ public class UpdateHrisDeviceRequestBuilder {
     public UpdateHrisDeviceResponse call() throws Exception {
         
         RequestOperation<UpdateHrisDeviceRequest, UpdateHrisDeviceResponse> operation
-              = new UpdateHrisDeviceOperation( sdkConfiguration);
+              = new UpdateHrisDeviceOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

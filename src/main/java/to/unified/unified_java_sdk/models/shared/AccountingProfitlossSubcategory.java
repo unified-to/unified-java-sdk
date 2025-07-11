@@ -27,9 +27,11 @@ public class AccountingProfitlossSubcategory {
     @JsonProperty("amount")
     private Optional<Double> amount;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction_ids")
@@ -68,15 +70,17 @@ public class AccountingProfitlossSubcategory {
         return (Optional<List<String>>) transactionIds;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AccountingProfitlossSubcategory withAmount(double amount) {
         Utils.checkNotNull(amount, "amount");
         this.amount = Optional.ofNullable(amount);
         return this;
     }
+
 
     public AccountingProfitlossSubcategory withAmount(Optional<Double> amount) {
         Utils.checkNotNull(amount, "amount");
@@ -90,6 +94,7 @@ public class AccountingProfitlossSubcategory {
         return this;
     }
 
+
     public AccountingProfitlossSubcategory withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
         this.name = name;
@@ -102,13 +107,13 @@ public class AccountingProfitlossSubcategory {
         return this;
     }
 
+
     public AccountingProfitlossSubcategory withTransactionIds(Optional<? extends List<String>> transactionIds) {
         Utils.checkNotNull(transactionIds, "transactionIds");
         this.transactionIds = transactionIds;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -127,9 +132,7 @@ public class AccountingProfitlossSubcategory {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            amount,
-            name,
-            transactionIds);
+            amount, name, transactionIds);
     }
     
     @Override
@@ -139,18 +142,20 @@ public class AccountingProfitlossSubcategory {
                 "name", name,
                 "transactionIds", transactionIds);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<Double> amount = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<? extends List<String>> transactionIds = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder amount(double amount) {
             Utils.checkNotNull(amount, "amount");
@@ -164,6 +169,7 @@ public class AccountingProfitlossSubcategory {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = Optional.ofNullable(name);
@@ -176,6 +182,7 @@ public class AccountingProfitlossSubcategory {
             return this;
         }
 
+
         public Builder transactionIds(List<String> transactionIds) {
             Utils.checkNotNull(transactionIds, "transactionIds");
             this.transactionIds = Optional.ofNullable(transactionIds);
@@ -187,12 +194,12 @@ public class AccountingProfitlossSubcategory {
             this.transactionIds = transactionIds;
             return this;
         }
-        
+
         public AccountingProfitlossSubcategory build() {
+
             return new AccountingProfitlossSubcategory(
-                amount,
-                name,
-                transactionIds);
+                amount, name, transactionIds);
         }
+
     }
 }

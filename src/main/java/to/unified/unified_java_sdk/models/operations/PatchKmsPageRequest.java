@@ -14,6 +14,7 @@ import to.unified.unified_java_sdk.models.shared.KmsPage;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class PatchKmsPageRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
@@ -66,7 +67,8 @@ public class PatchKmsPageRequest {
             KmsPage kmsPage,
             String connectionId,
             String id) {
-        this(kmsPage, connectionId, Optional.empty(), id, Optional.empty());
+        this(kmsPage, connectionId, Optional.empty(),
+            id, Optional.empty());
     }
 
     @JsonIgnore
@@ -107,9 +109,10 @@ public class PatchKmsPageRequest {
         return raw;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public PatchKmsPageRequest withKmsPage(KmsPage kmsPage) {
         Utils.checkNotNull(kmsPage, "kmsPage");
@@ -134,6 +137,7 @@ public class PatchKmsPageRequest {
         this.fields = Optional.ofNullable(fields);
         return this;
     }
+
 
     /**
      * Comma-delimited fields to return
@@ -162,6 +166,7 @@ public class PatchKmsPageRequest {
         return this;
     }
 
+
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
@@ -171,7 +176,6 @@ public class PatchKmsPageRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -192,11 +196,8 @@ public class PatchKmsPageRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            kmsPage,
-            connectionId,
-            fields,
-            id,
-            raw);
+            kmsPage, connectionId, fields,
+            id, raw);
     }
     
     @Override
@@ -208,28 +209,31 @@ public class PatchKmsPageRequest {
                 "id", id,
                 "raw", raw);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private KmsPage kmsPage;
- 
+
         private String connectionId;
- 
+
         private Optional<? extends List<String>> fields = Optional.empty();
- 
+
         private String id;
- 
+
         private Optional<String> raw = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder kmsPage(KmsPage kmsPage) {
             Utils.checkNotNull(kmsPage, "kmsPage");
             this.kmsPage = kmsPage;
             return this;
         }
+
 
         /**
          * ID of the connection
@@ -239,6 +243,7 @@ public class PatchKmsPageRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         /**
          * Comma-delimited fields to return
@@ -258,6 +263,7 @@ public class PatchKmsPageRequest {
             return this;
         }
 
+
         /**
          * ID of the Page
          */
@@ -266,6 +272,7 @@ public class PatchKmsPageRequest {
             this.id = id;
             return this;
         }
+
 
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
@@ -284,14 +291,13 @@ public class PatchKmsPageRequest {
             this.raw = raw;
             return this;
         }
-        
+
         public PatchKmsPageRequest build() {
+
             return new PatchKmsPageRequest(
-                kmsPage,
-                connectionId,
-                fields,
-                id,
-                raw);
+                kmsPage, connectionId, fields,
+                id, raw);
         }
+
     }
 }

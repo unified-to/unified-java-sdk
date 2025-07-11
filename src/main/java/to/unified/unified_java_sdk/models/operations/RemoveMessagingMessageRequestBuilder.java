@@ -28,7 +28,7 @@ public class RemoveMessagingMessageRequestBuilder {
     public RemoveMessagingMessageResponse call() throws Exception {
         
         RequestOperation<RemoveMessagingMessageRequest, RemoveMessagingMessageResponse> operation
-              = new RemoveMessagingMessageOperation( sdkConfiguration);
+              = new RemoveMessagingMessageOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

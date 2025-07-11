@@ -17,51 +17,63 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AtsDocument {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("application_id")
     private Optional<String> applicationId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_id")
     private Optional<String> candidateId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document_data")
     private Optional<String> documentData;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document_url")
     private Optional<String> documentUrl;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filename")
     private Optional<String> filename;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job_id")
     private Optional<String> jobId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private Optional<? extends AtsDocumentType> type;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
@@ -108,7 +120,10 @@ public class AtsDocument {
     }
     
     public AtsDocument() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -173,15 +188,17 @@ public class AtsDocument {
         return userId;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AtsDocument withApplicationId(String applicationId) {
         Utils.checkNotNull(applicationId, "applicationId");
         this.applicationId = Optional.ofNullable(applicationId);
         return this;
     }
+
 
     public AtsDocument withApplicationId(Optional<String> applicationId) {
         Utils.checkNotNull(applicationId, "applicationId");
@@ -195,6 +212,7 @@ public class AtsDocument {
         return this;
     }
 
+
     public AtsDocument withCandidateId(Optional<String> candidateId) {
         Utils.checkNotNull(candidateId, "candidateId");
         this.candidateId = candidateId;
@@ -206,6 +224,7 @@ public class AtsDocument {
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public AtsDocument withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -219,6 +238,7 @@ public class AtsDocument {
         return this;
     }
 
+
     public AtsDocument withDocumentData(Optional<String> documentData) {
         Utils.checkNotNull(documentData, "documentData");
         this.documentData = documentData;
@@ -230,6 +250,7 @@ public class AtsDocument {
         this.documentUrl = Optional.ofNullable(documentUrl);
         return this;
     }
+
 
     public AtsDocument withDocumentUrl(Optional<String> documentUrl) {
         Utils.checkNotNull(documentUrl, "documentUrl");
@@ -243,6 +264,7 @@ public class AtsDocument {
         return this;
     }
 
+
     public AtsDocument withFilename(Optional<String> filename) {
         Utils.checkNotNull(filename, "filename");
         this.filename = filename;
@@ -254,6 +276,7 @@ public class AtsDocument {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public AtsDocument withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -267,6 +290,7 @@ public class AtsDocument {
         return this;
     }
 
+
     public AtsDocument withJobId(Optional<String> jobId) {
         Utils.checkNotNull(jobId, "jobId");
         this.jobId = jobId;
@@ -278,6 +302,7 @@ public class AtsDocument {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public AtsDocument withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -291,6 +316,7 @@ public class AtsDocument {
         return this;
     }
 
+
     public AtsDocument withType(Optional<? extends AtsDocumentType> type) {
         Utils.checkNotNull(type, "type");
         this.type = type;
@@ -302,6 +328,7 @@ public class AtsDocument {
         this.updatedAt = Optional.ofNullable(updatedAt);
         return this;
     }
+
 
     public AtsDocument withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
@@ -315,13 +342,13 @@ public class AtsDocument {
         return this;
     }
 
+
     public AtsDocument withUserId(Optional<String> userId) {
         Utils.checkNotNull(userId, "userId");
         this.userId = userId;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -349,18 +376,10 @@ public class AtsDocument {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            applicationId,
-            candidateId,
-            createdAt,
-            documentData,
-            documentUrl,
-            filename,
-            id,
-            jobId,
-            raw,
-            type,
-            updatedAt,
-            userId);
+            applicationId, candidateId, createdAt,
+            documentData, documentUrl, filename,
+            id, jobId, raw,
+            type, updatedAt, userId);
     }
     
     @Override
@@ -379,36 +398,38 @@ public class AtsDocument {
                 "updatedAt", updatedAt,
                 "userId", userId);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> applicationId = Optional.empty();
- 
+
         private Optional<String> candidateId = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> documentData = Optional.empty();
- 
+
         private Optional<String> documentUrl = Optional.empty();
- 
+
         private Optional<String> filename = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> jobId = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<? extends AtsDocumentType> type = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<String> userId = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder applicationId(String applicationId) {
             Utils.checkNotNull(applicationId, "applicationId");
@@ -422,6 +443,7 @@ public class AtsDocument {
             return this;
         }
 
+
         public Builder candidateId(String candidateId) {
             Utils.checkNotNull(candidateId, "candidateId");
             this.candidateId = Optional.ofNullable(candidateId);
@@ -433,6 +455,7 @@ public class AtsDocument {
             this.candidateId = candidateId;
             return this;
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -446,6 +469,7 @@ public class AtsDocument {
             return this;
         }
 
+
         public Builder documentData(String documentData) {
             Utils.checkNotNull(documentData, "documentData");
             this.documentData = Optional.ofNullable(documentData);
@@ -457,6 +481,7 @@ public class AtsDocument {
             this.documentData = documentData;
             return this;
         }
+
 
         public Builder documentUrl(String documentUrl) {
             Utils.checkNotNull(documentUrl, "documentUrl");
@@ -470,6 +495,7 @@ public class AtsDocument {
             return this;
         }
 
+
         public Builder filename(String filename) {
             Utils.checkNotNull(filename, "filename");
             this.filename = Optional.ofNullable(filename);
@@ -481,6 +507,7 @@ public class AtsDocument {
             this.filename = filename;
             return this;
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -494,6 +521,7 @@ public class AtsDocument {
             return this;
         }
 
+
         public Builder jobId(String jobId) {
             Utils.checkNotNull(jobId, "jobId");
             this.jobId = Optional.ofNullable(jobId);
@@ -505,6 +533,7 @@ public class AtsDocument {
             this.jobId = jobId;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -518,6 +547,7 @@ public class AtsDocument {
             return this;
         }
 
+
         public Builder type(AtsDocumentType type) {
             Utils.checkNotNull(type, "type");
             this.type = Optional.ofNullable(type);
@@ -529,6 +559,7 @@ public class AtsDocument {
             this.type = type;
             return this;
         }
+
 
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
@@ -542,6 +573,7 @@ public class AtsDocument {
             return this;
         }
 
+
         public Builder userId(String userId) {
             Utils.checkNotNull(userId, "userId");
             this.userId = Optional.ofNullable(userId);
@@ -553,21 +585,15 @@ public class AtsDocument {
             this.userId = userId;
             return this;
         }
-        
+
         public AtsDocument build() {
+
             return new AtsDocument(
-                applicationId,
-                candidateId,
-                createdAt,
-                documentData,
-                documentUrl,
-                filename,
-                id,
-                jobId,
-                raw,
-                type,
-                updatedAt,
-                userId);
+                applicationId, candidateId, createdAt,
+                documentData, documentUrl, filename,
+                id, jobId, raw,
+                type, updatedAt, userId);
         }
+
     }
 }

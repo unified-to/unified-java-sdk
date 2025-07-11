@@ -18,41 +18,51 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class PaymentRefund {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private Optional<String> currency;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     private Optional<String> notes;
 
+
     @JsonProperty("payment_id")
     private String paymentId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     private Optional<String> reference;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private Optional<? extends PaymentRefundStatus> status;
 
+
     @JsonProperty("total_amount")
     private double totalAmount;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -95,7 +105,10 @@ public class PaymentRefund {
     public PaymentRefund(
             String paymentId,
             double totalAmount) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), paymentId, Optional.empty(), Optional.empty(), Optional.empty(), totalAmount, Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), paymentId, Optional.empty(),
+            Optional.empty(), Optional.empty(), totalAmount,
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -150,15 +163,17 @@ public class PaymentRefund {
         return updatedAt;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public PaymentRefund withCreatedAt(OffsetDateTime createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public PaymentRefund withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -172,6 +187,7 @@ public class PaymentRefund {
         return this;
     }
 
+
     public PaymentRefund withCurrency(Optional<String> currency) {
         Utils.checkNotNull(currency, "currency");
         this.currency = currency;
@@ -184,6 +200,7 @@ public class PaymentRefund {
         return this;
     }
 
+
     public PaymentRefund withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -195,6 +212,7 @@ public class PaymentRefund {
         this.notes = Optional.ofNullable(notes);
         return this;
     }
+
 
     public PaymentRefund withNotes(Optional<String> notes) {
         Utils.checkNotNull(notes, "notes");
@@ -214,6 +232,7 @@ public class PaymentRefund {
         return this;
     }
 
+
     public PaymentRefund withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
@@ -226,6 +245,7 @@ public class PaymentRefund {
         return this;
     }
 
+
     public PaymentRefund withReference(Optional<String> reference) {
         Utils.checkNotNull(reference, "reference");
         this.reference = reference;
@@ -237,6 +257,7 @@ public class PaymentRefund {
         this.status = Optional.ofNullable(status);
         return this;
     }
+
 
     public PaymentRefund withStatus(Optional<? extends PaymentRefundStatus> status) {
         Utils.checkNotNull(status, "status");
@@ -256,13 +277,13 @@ public class PaymentRefund {
         return this;
     }
 
+
     public PaymentRefund withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -288,15 +309,9 @@ public class PaymentRefund {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt,
-            currency,
-            id,
-            notes,
-            paymentId,
-            raw,
-            reference,
-            status,
-            totalAmount,
+            createdAt, currency, id,
+            notes, paymentId, raw,
+            reference, status, totalAmount,
             updatedAt);
     }
     
@@ -314,32 +329,34 @@ public class PaymentRefund {
                 "totalAmount", totalAmount,
                 "updatedAt", updatedAt);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> currency = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> notes = Optional.empty();
- 
+
         private String paymentId;
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<String> reference = Optional.empty();
- 
+
         private Optional<? extends PaymentRefundStatus> status = Optional.empty();
- 
+
         private Double totalAmount;
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -353,6 +370,7 @@ public class PaymentRefund {
             return this;
         }
 
+
         public Builder currency(String currency) {
             Utils.checkNotNull(currency, "currency");
             this.currency = Optional.ofNullable(currency);
@@ -364,6 +382,7 @@ public class PaymentRefund {
             this.currency = currency;
             return this;
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -377,6 +396,7 @@ public class PaymentRefund {
             return this;
         }
 
+
         public Builder notes(String notes) {
             Utils.checkNotNull(notes, "notes");
             this.notes = Optional.ofNullable(notes);
@@ -389,11 +409,13 @@ public class PaymentRefund {
             return this;
         }
 
+
         public Builder paymentId(String paymentId) {
             Utils.checkNotNull(paymentId, "paymentId");
             this.paymentId = paymentId;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -407,6 +429,7 @@ public class PaymentRefund {
             return this;
         }
 
+
         public Builder reference(String reference) {
             Utils.checkNotNull(reference, "reference");
             this.reference = Optional.ofNullable(reference);
@@ -418,6 +441,7 @@ public class PaymentRefund {
             this.reference = reference;
             return this;
         }
+
 
         public Builder status(PaymentRefundStatus status) {
             Utils.checkNotNull(status, "status");
@@ -431,11 +455,13 @@ public class PaymentRefund {
             return this;
         }
 
+
         public Builder totalAmount(double totalAmount) {
             Utils.checkNotNull(totalAmount, "totalAmount");
             this.totalAmount = totalAmount;
             return this;
         }
+
 
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
@@ -448,19 +474,15 @@ public class PaymentRefund {
             this.updatedAt = updatedAt;
             return this;
         }
-        
+
         public PaymentRefund build() {
+
             return new PaymentRefund(
-                createdAt,
-                currency,
-                id,
-                notes,
-                paymentId,
-                raw,
-                reference,
-                status,
-                totalAmount,
+                createdAt, currency, id,
+                notes, paymentId, raw,
+                reference, status, totalAmount,
                 updatedAt);
         }
+
     }
 }

@@ -28,7 +28,7 @@ public class UpdateCommerceInventoryRequestBuilder {
     public UpdateCommerceInventoryResponse call() throws Exception {
         
         RequestOperation<UpdateCommerceInventoryRequest, UpdateCommerceInventoryResponse> operation
-              = new UpdateCommerceInventoryOperation( sdkConfiguration);
+              = new UpdateCommerceInventoryOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

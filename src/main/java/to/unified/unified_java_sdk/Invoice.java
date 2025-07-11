@@ -40,7 +40,6 @@ public class Invoice {
     Invoice(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create an invoice
      * 
@@ -57,13 +56,11 @@ public class Invoice {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAccountingInvoiceResponse createAccountingInvoice(
-            CreateAccountingInvoiceRequest request) throws Exception {
+    public CreateAccountingInvoiceResponse createAccountingInvoice(CreateAccountingInvoiceRequest request) throws Exception {
         RequestOperation<CreateAccountingInvoiceRequest, CreateAccountingInvoiceResponse> operation
-              = new CreateAccountingInvoiceOperation( sdkConfiguration);
+              = new CreateAccountingInvoiceOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve an invoice
@@ -81,13 +78,11 @@ public class Invoice {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAccountingInvoiceResponse getAccountingInvoice(
-            GetAccountingInvoiceRequest request) throws Exception {
+    public GetAccountingInvoiceResponse getAccountingInvoice(GetAccountingInvoiceRequest request) throws Exception {
         RequestOperation<GetAccountingInvoiceRequest, GetAccountingInvoiceResponse> operation
-              = new GetAccountingInvoiceOperation( sdkConfiguration);
+              = new GetAccountingInvoiceOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all invoices
@@ -105,13 +100,11 @@ public class Invoice {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAccountingInvoicesResponse listAccountingInvoices(
-            ListAccountingInvoicesRequest request) throws Exception {
+    public ListAccountingInvoicesResponse listAccountingInvoices(ListAccountingInvoicesRequest request) throws Exception {
         RequestOperation<ListAccountingInvoicesRequest, ListAccountingInvoicesResponse> operation
-              = new ListAccountingInvoicesOperation( sdkConfiguration);
+              = new ListAccountingInvoicesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an invoice
@@ -129,13 +122,11 @@ public class Invoice {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAccountingInvoiceResponse patchAccountingInvoice(
-            PatchAccountingInvoiceRequest request) throws Exception {
+    public PatchAccountingInvoiceResponse patchAccountingInvoice(PatchAccountingInvoiceRequest request) throws Exception {
         RequestOperation<PatchAccountingInvoiceRequest, PatchAccountingInvoiceResponse> operation
-              = new PatchAccountingInvoiceOperation( sdkConfiguration);
+              = new PatchAccountingInvoiceOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove an invoice
@@ -153,13 +144,11 @@ public class Invoice {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAccountingInvoiceResponse removeAccountingInvoice(
-            RemoveAccountingInvoiceRequest request) throws Exception {
+    public RemoveAccountingInvoiceResponse removeAccountingInvoice(RemoveAccountingInvoiceRequest request) throws Exception {
         RequestOperation<RemoveAccountingInvoiceRequest, RemoveAccountingInvoiceResponse> operation
-              = new RemoveAccountingInvoiceOperation( sdkConfiguration);
+              = new RemoveAccountingInvoiceOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an invoice
@@ -177,10 +166,9 @@ public class Invoice {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAccountingInvoiceResponse updateAccountingInvoice(
-            UpdateAccountingInvoiceRequest request) throws Exception {
+    public UpdateAccountingInvoiceResponse updateAccountingInvoice(UpdateAccountingInvoiceRequest request) throws Exception {
         RequestOperation<UpdateAccountingInvoiceRequest, UpdateAccountingInvoiceResponse> operation
-              = new UpdateAccountingInvoiceOperation( sdkConfiguration);
+              = new UpdateAccountingInvoiceOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

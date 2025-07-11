@@ -28,7 +28,7 @@ public class GetCrmLeadRequestBuilder {
     public GetCrmLeadResponse call() throws Exception {
         
         RequestOperation<GetCrmLeadRequest, GetCrmLeadResponse> operation
-              = new GetCrmLeadOperation( sdkConfiguration);
+              = new GetCrmLeadOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -28,7 +28,7 @@ public class GetUnifiedWebhookRequestBuilder {
     public GetUnifiedWebhookResponse call() throws Exception {
         
         RequestOperation<GetUnifiedWebhookRequest, GetUnifiedWebhookResponse> operation
-              = new GetUnifiedWebhookOperation( sdkConfiguration);
+              = new GetUnifiedWebhookOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

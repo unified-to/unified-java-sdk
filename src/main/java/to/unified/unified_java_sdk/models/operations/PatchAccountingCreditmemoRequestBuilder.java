@@ -28,7 +28,7 @@ public class PatchAccountingCreditmemoRequestBuilder {
     public PatchAccountingCreditmemoResponse call() throws Exception {
         
         RequestOperation<PatchAccountingCreditmemoRequest, PatchAccountingCreditmemoResponse> operation
-              = new PatchAccountingCreditmemoOperation( sdkConfiguration);
+              = new PatchAccountingCreditmemoOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

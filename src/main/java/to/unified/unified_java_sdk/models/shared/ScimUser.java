@@ -16,75 +16,93 @@ import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class ScimUser {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     private Optional<Boolean> active;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addresses")
     private Optional<? extends List<ScimAddress>> addresses;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     private Optional<String> displayName;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
     private Optional<? extends List<ScimEmail>> emails;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entitlements")
     private Optional<? extends List<ScimEntitlement>> entitlements;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalId")
     private Optional<String> externalId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groups")
     private Optional<? extends List<ScimUserGroups>> groups;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ims")
     private Optional<? extends List<ScimIms>> ims;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     private Optional<String> locale;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     private Optional<? extends PropertyScimUserMeta> meta;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<? extends PropertyScimUserName> name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nickName")
     private Optional<String> nickName;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     private Optional<String> password;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumbers")
     private Optional<? extends List<ScimPhoneNumber>> phoneNumbers;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("photos")
     private Optional<? extends List<ScimPhoto>> photos;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferredLanguage")
     private Optional<String> preferredLanguage;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileUrl")
@@ -97,13 +115,16 @@ public class ScimUser {
     @JsonProperty("roles")
     private Optional<? extends List<ScimRole>> roles;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemas")
     private Optional<? extends List<PropertyScimUserSchemas>> schemas;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     private Optional<String> timezone;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
@@ -116,21 +137,26 @@ public class ScimUser {
     @JsonProperty("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User")
     private Optional<? extends PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User> urnIetfParamsScimSchemasExtensionEnterprise20User;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urn:ietf:params:scim:schemas:extension:lattice:attributes:1.0:User")
     private Optional<? extends PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User> urnIetfParamsScimSchemasExtensionLatticeAttributes10User;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urn:ietf:params:scim:schemas:extension:peakon:2.0:User")
     private Optional<? extends PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User> urnIetfParamsScimSchemasExtensionPeakon20User;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userName")
     private Optional<String> userName;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userType")
     private Optional<String> userType;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("x509Certificates")
@@ -225,7 +251,16 @@ public class ScimUser {
     }
     
     public ScimUser() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -389,15 +424,17 @@ public class ScimUser {
         return (Optional<List<ScimRole>>) x509Certificates;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public ScimUser withActive(boolean active) {
         Utils.checkNotNull(active, "active");
         this.active = Optional.ofNullable(active);
         return this;
     }
+
 
     public ScimUser withActive(Optional<Boolean> active) {
         Utils.checkNotNull(active, "active");
@@ -411,6 +448,7 @@ public class ScimUser {
         return this;
     }
 
+
     public ScimUser withAddresses(Optional<? extends List<ScimAddress>> addresses) {
         Utils.checkNotNull(addresses, "addresses");
         this.addresses = addresses;
@@ -422,6 +460,7 @@ public class ScimUser {
         this.displayName = Optional.ofNullable(displayName);
         return this;
     }
+
 
     public ScimUser withDisplayName(Optional<String> displayName) {
         Utils.checkNotNull(displayName, "displayName");
@@ -435,6 +474,7 @@ public class ScimUser {
         return this;
     }
 
+
     public ScimUser withEmails(Optional<? extends List<ScimEmail>> emails) {
         Utils.checkNotNull(emails, "emails");
         this.emails = emails;
@@ -446,6 +486,7 @@ public class ScimUser {
         this.entitlements = Optional.ofNullable(entitlements);
         return this;
     }
+
 
     public ScimUser withEntitlements(Optional<? extends List<ScimEntitlement>> entitlements) {
         Utils.checkNotNull(entitlements, "entitlements");
@@ -459,6 +500,7 @@ public class ScimUser {
         return this;
     }
 
+
     public ScimUser withExternalId(Optional<String> externalId) {
         Utils.checkNotNull(externalId, "externalId");
         this.externalId = externalId;
@@ -470,6 +512,7 @@ public class ScimUser {
         this.groups = Optional.ofNullable(groups);
         return this;
     }
+
 
     public ScimUser withGroups(Optional<? extends List<ScimUserGroups>> groups) {
         Utils.checkNotNull(groups, "groups");
@@ -483,6 +526,7 @@ public class ScimUser {
         return this;
     }
 
+
     public ScimUser withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -494,6 +538,7 @@ public class ScimUser {
         this.ims = Optional.ofNullable(ims);
         return this;
     }
+
 
     public ScimUser withIms(Optional<? extends List<ScimIms>> ims) {
         Utils.checkNotNull(ims, "ims");
@@ -507,6 +552,7 @@ public class ScimUser {
         return this;
     }
 
+
     public ScimUser withLocale(Optional<String> locale) {
         Utils.checkNotNull(locale, "locale");
         this.locale = locale;
@@ -518,6 +564,7 @@ public class ScimUser {
         this.meta = Optional.ofNullable(meta);
         return this;
     }
+
 
     public ScimUser withMeta(Optional<? extends PropertyScimUserMeta> meta) {
         Utils.checkNotNull(meta, "meta");
@@ -531,6 +578,7 @@ public class ScimUser {
         return this;
     }
 
+
     public ScimUser withName(Optional<? extends PropertyScimUserName> name) {
         Utils.checkNotNull(name, "name");
         this.name = name;
@@ -542,6 +590,7 @@ public class ScimUser {
         this.nickName = Optional.ofNullable(nickName);
         return this;
     }
+
 
     public ScimUser withNickName(Optional<String> nickName) {
         Utils.checkNotNull(nickName, "nickName");
@@ -555,6 +604,7 @@ public class ScimUser {
         return this;
     }
 
+
     public ScimUser withPassword(Optional<String> password) {
         Utils.checkNotNull(password, "password");
         this.password = password;
@@ -566,6 +616,7 @@ public class ScimUser {
         this.phoneNumbers = Optional.ofNullable(phoneNumbers);
         return this;
     }
+
 
     public ScimUser withPhoneNumbers(Optional<? extends List<ScimPhoneNumber>> phoneNumbers) {
         Utils.checkNotNull(phoneNumbers, "phoneNumbers");
@@ -579,6 +630,7 @@ public class ScimUser {
         return this;
     }
 
+
     public ScimUser withPhotos(Optional<? extends List<ScimPhoto>> photos) {
         Utils.checkNotNull(photos, "photos");
         this.photos = photos;
@@ -591,6 +643,7 @@ public class ScimUser {
         return this;
     }
 
+
     public ScimUser withPreferredLanguage(Optional<String> preferredLanguage) {
         Utils.checkNotNull(preferredLanguage, "preferredLanguage");
         this.preferredLanguage = preferredLanguage;
@@ -602,6 +655,7 @@ public class ScimUser {
         this.profileUrl = Optional.ofNullable(profileUrl);
         return this;
     }
+
 
     public ScimUser withProfileUrl(Optional<String> profileUrl) {
         Utils.checkNotNull(profileUrl, "profileUrl");
@@ -618,6 +672,7 @@ public class ScimUser {
         return this;
     }
 
+
     /**
      * Student, Faculty, ...
      */
@@ -633,6 +688,7 @@ public class ScimUser {
         return this;
     }
 
+
     public ScimUser withSchemas(Optional<? extends List<PropertyScimUserSchemas>> schemas) {
         Utils.checkNotNull(schemas, "schemas");
         this.schemas = schemas;
@@ -645,6 +701,7 @@ public class ScimUser {
         return this;
     }
 
+
     public ScimUser withTimezone(Optional<String> timezone) {
         Utils.checkNotNull(timezone, "timezone");
         this.timezone = timezone;
@@ -656,6 +713,7 @@ public class ScimUser {
         this.title = Optional.ofNullable(title);
         return this;
     }
+
 
     public ScimUser withTitle(Optional<String> title) {
         Utils.checkNotNull(title, "title");
@@ -672,6 +730,7 @@ public class ScimUser {
         return this;
     }
 
+
     /**
      * an organization.
      */
@@ -687,6 +746,7 @@ public class ScimUser {
         return this;
     }
 
+
     public ScimUser withUrnIetfParamsScimSchemasExtensionLatticeAttributes10User(Optional<? extends PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User> urnIetfParamsScimSchemasExtensionLatticeAttributes10User) {
         Utils.checkNotNull(urnIetfParamsScimSchemasExtensionLatticeAttributes10User, "urnIetfParamsScimSchemasExtensionLatticeAttributes10User");
         this.urnIetfParamsScimSchemasExtensionLatticeAttributes10User = urnIetfParamsScimSchemasExtensionLatticeAttributes10User;
@@ -698,6 +758,7 @@ public class ScimUser {
         this.urnIetfParamsScimSchemasExtensionPeakon20User = Optional.ofNullable(urnIetfParamsScimSchemasExtensionPeakon20User);
         return this;
     }
+
 
     public ScimUser withUrnIetfParamsScimSchemasExtensionPeakon20User(Optional<? extends PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User> urnIetfParamsScimSchemasExtensionPeakon20User) {
         Utils.checkNotNull(urnIetfParamsScimSchemasExtensionPeakon20User, "urnIetfParamsScimSchemasExtensionPeakon20User");
@@ -711,6 +772,7 @@ public class ScimUser {
         return this;
     }
 
+
     public ScimUser withUserName(Optional<String> userName) {
         Utils.checkNotNull(userName, "userName");
         this.userName = userName;
@@ -722,6 +784,7 @@ public class ScimUser {
         this.userType = Optional.ofNullable(userType);
         return this;
     }
+
 
     public ScimUser withUserType(Optional<String> userType) {
         Utils.checkNotNull(userType, "userType");
@@ -735,13 +798,13 @@ public class ScimUser {
         return this;
     }
 
+
     public ScimUser withX509Certificates(Optional<? extends List<ScimRole>> x509Certificates) {
         Utils.checkNotNull(x509Certificates, "x509Certificates");
         this.x509Certificates = x509Certificates;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -785,33 +848,15 @@ public class ScimUser {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            active,
-            addresses,
-            displayName,
-            emails,
-            entitlements,
-            externalId,
-            groups,
-            id,
-            ims,
-            locale,
-            meta,
-            name,
-            nickName,
-            password,
-            phoneNumbers,
-            photos,
-            preferredLanguage,
-            profileUrl,
-            roles,
-            schemas,
-            timezone,
-            title,
-            urnIetfParamsScimSchemasExtensionEnterprise20User,
-            urnIetfParamsScimSchemasExtensionLatticeAttributes10User,
-            urnIetfParamsScimSchemasExtensionPeakon20User,
-            userName,
-            userType,
+            active, addresses, displayName,
+            emails, entitlements, externalId,
+            groups, id, ims,
+            locale, meta, name,
+            nickName, password, phoneNumbers,
+            photos, preferredLanguage, profileUrl,
+            roles, schemas, timezone,
+            title, urnIetfParamsScimSchemasExtensionEnterprise20User, urnIetfParamsScimSchemasExtensionLatticeAttributes10User,
+            urnIetfParamsScimSchemasExtensionPeakon20User, userName, userType,
             x509Certificates);
     }
     
@@ -847,68 +892,70 @@ public class ScimUser {
                 "userType", userType,
                 "x509Certificates", x509Certificates);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<Boolean> active = Optional.empty();
- 
+
         private Optional<? extends List<ScimAddress>> addresses = Optional.empty();
- 
+
         private Optional<String> displayName = Optional.empty();
- 
+
         private Optional<? extends List<ScimEmail>> emails = Optional.empty();
- 
+
         private Optional<? extends List<ScimEntitlement>> entitlements = Optional.empty();
- 
+
         private Optional<String> externalId = Optional.empty();
- 
+
         private Optional<? extends List<ScimUserGroups>> groups = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<? extends List<ScimIms>> ims = Optional.empty();
- 
+
         private Optional<String> locale = Optional.empty();
- 
+
         private Optional<? extends PropertyScimUserMeta> meta = Optional.empty();
- 
+
         private Optional<? extends PropertyScimUserName> name = Optional.empty();
- 
+
         private Optional<String> nickName = Optional.empty();
- 
+
         private Optional<String> password = Optional.empty();
- 
+
         private Optional<? extends List<ScimPhoneNumber>> phoneNumbers = Optional.empty();
- 
+
         private Optional<? extends List<ScimPhoto>> photos = Optional.empty();
- 
+
         private Optional<String> preferredLanguage = Optional.empty();
- 
+
         private Optional<String> profileUrl = Optional.empty();
- 
+
         private Optional<? extends List<ScimRole>> roles = Optional.empty();
- 
+
         private Optional<? extends List<PropertyScimUserSchemas>> schemas = Optional.empty();
- 
+
         private Optional<String> timezone = Optional.empty();
- 
+
         private Optional<String> title = Optional.empty();
- 
+
         private Optional<? extends PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User> urnIetfParamsScimSchemasExtensionEnterprise20User = Optional.empty();
- 
+
         private Optional<? extends PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User> urnIetfParamsScimSchemasExtensionLatticeAttributes10User = Optional.empty();
- 
+
         private Optional<? extends PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User> urnIetfParamsScimSchemasExtensionPeakon20User = Optional.empty();
- 
+
         private Optional<String> userName = Optional.empty();
- 
+
         private Optional<String> userType = Optional.empty();
- 
+
         private Optional<? extends List<ScimRole>> x509Certificates = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder active(boolean active) {
             Utils.checkNotNull(active, "active");
@@ -922,6 +969,7 @@ public class ScimUser {
             return this;
         }
 
+
         public Builder addresses(List<ScimAddress> addresses) {
             Utils.checkNotNull(addresses, "addresses");
             this.addresses = Optional.ofNullable(addresses);
@@ -933,6 +981,7 @@ public class ScimUser {
             this.addresses = addresses;
             return this;
         }
+
 
         public Builder displayName(String displayName) {
             Utils.checkNotNull(displayName, "displayName");
@@ -946,6 +995,7 @@ public class ScimUser {
             return this;
         }
 
+
         public Builder emails(List<ScimEmail> emails) {
             Utils.checkNotNull(emails, "emails");
             this.emails = Optional.ofNullable(emails);
@@ -957,6 +1007,7 @@ public class ScimUser {
             this.emails = emails;
             return this;
         }
+
 
         public Builder entitlements(List<ScimEntitlement> entitlements) {
             Utils.checkNotNull(entitlements, "entitlements");
@@ -970,6 +1021,7 @@ public class ScimUser {
             return this;
         }
 
+
         public Builder externalId(String externalId) {
             Utils.checkNotNull(externalId, "externalId");
             this.externalId = Optional.ofNullable(externalId);
@@ -981,6 +1033,7 @@ public class ScimUser {
             this.externalId = externalId;
             return this;
         }
+
 
         public Builder groups(List<ScimUserGroups> groups) {
             Utils.checkNotNull(groups, "groups");
@@ -994,6 +1047,7 @@ public class ScimUser {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -1005,6 +1059,7 @@ public class ScimUser {
             this.id = id;
             return this;
         }
+
 
         public Builder ims(List<ScimIms> ims) {
             Utils.checkNotNull(ims, "ims");
@@ -1018,6 +1073,7 @@ public class ScimUser {
             return this;
         }
 
+
         public Builder locale(String locale) {
             Utils.checkNotNull(locale, "locale");
             this.locale = Optional.ofNullable(locale);
@@ -1029,6 +1085,7 @@ public class ScimUser {
             this.locale = locale;
             return this;
         }
+
 
         public Builder meta(PropertyScimUserMeta meta) {
             Utils.checkNotNull(meta, "meta");
@@ -1042,6 +1099,7 @@ public class ScimUser {
             return this;
         }
 
+
         public Builder name(PropertyScimUserName name) {
             Utils.checkNotNull(name, "name");
             this.name = Optional.ofNullable(name);
@@ -1053,6 +1111,7 @@ public class ScimUser {
             this.name = name;
             return this;
         }
+
 
         public Builder nickName(String nickName) {
             Utils.checkNotNull(nickName, "nickName");
@@ -1066,6 +1125,7 @@ public class ScimUser {
             return this;
         }
 
+
         public Builder password(String password) {
             Utils.checkNotNull(password, "password");
             this.password = Optional.ofNullable(password);
@@ -1077,6 +1137,7 @@ public class ScimUser {
             this.password = password;
             return this;
         }
+
 
         public Builder phoneNumbers(List<ScimPhoneNumber> phoneNumbers) {
             Utils.checkNotNull(phoneNumbers, "phoneNumbers");
@@ -1090,6 +1151,7 @@ public class ScimUser {
             return this;
         }
 
+
         public Builder photos(List<ScimPhoto> photos) {
             Utils.checkNotNull(photos, "photos");
             this.photos = Optional.ofNullable(photos);
@@ -1101,6 +1163,7 @@ public class ScimUser {
             this.photos = photos;
             return this;
         }
+
 
         public Builder preferredLanguage(String preferredLanguage) {
             Utils.checkNotNull(preferredLanguage, "preferredLanguage");
@@ -1114,6 +1177,7 @@ public class ScimUser {
             return this;
         }
 
+
         public Builder profileUrl(String profileUrl) {
             Utils.checkNotNull(profileUrl, "profileUrl");
             this.profileUrl = Optional.ofNullable(profileUrl);
@@ -1125,6 +1189,7 @@ public class ScimUser {
             this.profileUrl = profileUrl;
             return this;
         }
+
 
         /**
          * Student, Faculty, ...
@@ -1144,6 +1209,7 @@ public class ScimUser {
             return this;
         }
 
+
         public Builder schemas(List<PropertyScimUserSchemas> schemas) {
             Utils.checkNotNull(schemas, "schemas");
             this.schemas = Optional.ofNullable(schemas);
@@ -1155,6 +1221,7 @@ public class ScimUser {
             this.schemas = schemas;
             return this;
         }
+
 
         public Builder timezone(String timezone) {
             Utils.checkNotNull(timezone, "timezone");
@@ -1168,6 +1235,7 @@ public class ScimUser {
             return this;
         }
 
+
         public Builder title(String title) {
             Utils.checkNotNull(title, "title");
             this.title = Optional.ofNullable(title);
@@ -1179,6 +1247,7 @@ public class ScimUser {
             this.title = title;
             return this;
         }
+
 
         /**
          * an organization.
@@ -1198,6 +1267,7 @@ public class ScimUser {
             return this;
         }
 
+
         public Builder urnIetfParamsScimSchemasExtensionLatticeAttributes10User(PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User urnIetfParamsScimSchemasExtensionLatticeAttributes10User) {
             Utils.checkNotNull(urnIetfParamsScimSchemasExtensionLatticeAttributes10User, "urnIetfParamsScimSchemasExtensionLatticeAttributes10User");
             this.urnIetfParamsScimSchemasExtensionLatticeAttributes10User = Optional.ofNullable(urnIetfParamsScimSchemasExtensionLatticeAttributes10User);
@@ -1209,6 +1279,7 @@ public class ScimUser {
             this.urnIetfParamsScimSchemasExtensionLatticeAttributes10User = urnIetfParamsScimSchemasExtensionLatticeAttributes10User;
             return this;
         }
+
 
         public Builder urnIetfParamsScimSchemasExtensionPeakon20User(PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User urnIetfParamsScimSchemasExtensionPeakon20User) {
             Utils.checkNotNull(urnIetfParamsScimSchemasExtensionPeakon20User, "urnIetfParamsScimSchemasExtensionPeakon20User");
@@ -1222,6 +1293,7 @@ public class ScimUser {
             return this;
         }
 
+
         public Builder userName(String userName) {
             Utils.checkNotNull(userName, "userName");
             this.userName = Optional.ofNullable(userName);
@@ -1233,6 +1305,7 @@ public class ScimUser {
             this.userName = userName;
             return this;
         }
+
 
         public Builder userType(String userType) {
             Utils.checkNotNull(userType, "userType");
@@ -1246,6 +1319,7 @@ public class ScimUser {
             return this;
         }
 
+
         public Builder x509Certificates(List<ScimRole> x509Certificates) {
             Utils.checkNotNull(x509Certificates, "x509Certificates");
             this.x509Certificates = Optional.ofNullable(x509Certificates);
@@ -1257,37 +1331,21 @@ public class ScimUser {
             this.x509Certificates = x509Certificates;
             return this;
         }
-        
+
         public ScimUser build() {
+
             return new ScimUser(
-                active,
-                addresses,
-                displayName,
-                emails,
-                entitlements,
-                externalId,
-                groups,
-                id,
-                ims,
-                locale,
-                meta,
-                name,
-                nickName,
-                password,
-                phoneNumbers,
-                photos,
-                preferredLanguage,
-                profileUrl,
-                roles,
-                schemas,
-                timezone,
-                title,
-                urnIetfParamsScimSchemasExtensionEnterprise20User,
-                urnIetfParamsScimSchemasExtensionLatticeAttributes10User,
-                urnIetfParamsScimSchemasExtensionPeakon20User,
-                userName,
-                userType,
+                active, addresses, displayName,
+                emails, entitlements, externalId,
+                groups, id, ims,
+                locale, meta, name,
+                nickName, password, phoneNumbers,
+                photos, preferredLanguage, profileUrl,
+                roles, schemas, timezone,
+                title, urnIetfParamsScimSchemasExtensionEnterprise20User, urnIetfParamsScimSchemasExtensionLatticeAttributes10User,
+                urnIetfParamsScimSchemasExtensionPeakon20User, userName, userType,
                 x509Certificates);
         }
+
     }
 }

@@ -11,8 +11,8 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class ListEnrichCompaniesRequest {
 
+public class ListEnrichCompaniesRequest {
     /**
      * ID of the connection
      */
@@ -73,9 +73,10 @@ public class ListEnrichCompaniesRequest {
         return name;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * ID of the connection
@@ -95,6 +96,7 @@ public class ListEnrichCompaniesRequest {
         return this;
     }
 
+
     /**
      * The domain of the company to search
      */
@@ -113,6 +115,7 @@ public class ListEnrichCompaniesRequest {
         return this;
     }
 
+
     /**
      * The name of the company to search
      */
@@ -122,7 +125,6 @@ public class ListEnrichCompaniesRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -141,9 +143,7 @@ public class ListEnrichCompaniesRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId,
-            domain,
-            name);
+            connectionId, domain, name);
     }
     
     @Override
@@ -153,18 +153,20 @@ public class ListEnrichCompaniesRequest {
                 "domain", domain,
                 "name", name);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private String connectionId;
- 
+
         private Optional<String> domain = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * ID of the connection
@@ -174,6 +176,7 @@ public class ListEnrichCompaniesRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         /**
          * The domain of the company to search
@@ -193,6 +196,7 @@ public class ListEnrichCompaniesRequest {
             return this;
         }
 
+
         /**
          * The name of the company to search
          */
@@ -210,12 +214,12 @@ public class ListEnrichCompaniesRequest {
             this.name = name;
             return this;
         }
-        
+
         public ListEnrichCompaniesRequest build() {
+
             return new ListEnrichCompaniesRequest(
-                connectionId,
-                domain,
-                name);
+                connectionId, domain, name);
         }
+
     }
 }

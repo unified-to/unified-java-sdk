@@ -24,7 +24,6 @@ public class Balancesheet {
     Balancesheet(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Retrieve a balancesheet
      * 
@@ -41,13 +40,11 @@ public class Balancesheet {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAccountingBalancesheetResponse getAccountingBalancesheet(
-            GetAccountingBalancesheetRequest request) throws Exception {
+    public GetAccountingBalancesheetResponse getAccountingBalancesheet(GetAccountingBalancesheetRequest request) throws Exception {
         RequestOperation<GetAccountingBalancesheetRequest, GetAccountingBalancesheetResponse> operation
-              = new GetAccountingBalancesheetOperation( sdkConfiguration);
+              = new GetAccountingBalancesheetOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all balancesheets
@@ -65,10 +62,9 @@ public class Balancesheet {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAccountingBalancesheetsResponse listAccountingBalancesheets(
-            ListAccountingBalancesheetsRequest request) throws Exception {
+    public ListAccountingBalancesheetsResponse listAccountingBalancesheets(ListAccountingBalancesheetsRequest request) throws Exception {
         RequestOperation<ListAccountingBalancesheetsRequest, ListAccountingBalancesheetsResponse> operation
-              = new ListAccountingBalancesheetsOperation( sdkConfiguration);
+              = new ListAccountingBalancesheetsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

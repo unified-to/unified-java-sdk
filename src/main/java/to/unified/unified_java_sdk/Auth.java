@@ -24,7 +24,6 @@ public class Auth {
     Auth(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create connection indirectly
      * 
@@ -45,13 +44,11 @@ public class Auth {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetUnifiedIntegrationAuthResponse getUnifiedIntegrationAuth(
-            GetUnifiedIntegrationAuthRequest request) throws Exception {
+    public GetUnifiedIntegrationAuthResponse getUnifiedIntegrationAuth(GetUnifiedIntegrationAuthRequest request) throws Exception {
         RequestOperation<GetUnifiedIntegrationAuthRequest, GetUnifiedIntegrationAuthResponse> operation
-              = new GetUnifiedIntegrationAuthOperation( sdkConfiguration);
+              = new GetUnifiedIntegrationAuthOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Sign in a user
@@ -73,10 +70,9 @@ public class Auth {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetUnifiedIntegrationLoginResponse getUnifiedIntegrationLogin(
-            GetUnifiedIntegrationLoginRequest request) throws Exception {
+    public GetUnifiedIntegrationLoginResponse getUnifiedIntegrationLogin(GetUnifiedIntegrationLoginRequest request) throws Exception {
         RequestOperation<GetUnifiedIntegrationLoginRequest, GetUnifiedIntegrationLoginResponse> operation
-              = new GetUnifiedIntegrationLoginOperation( sdkConfiguration);
+              = new GetUnifiedIntegrationLoginOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

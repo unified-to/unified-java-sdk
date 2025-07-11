@@ -28,7 +28,7 @@ public class ListUcCommentsRequestBuilder {
     public ListUcCommentsResponse call() throws Exception {
         
         RequestOperation<ListUcCommentsRequest, ListUcCommentsResponse> operation
-              = new ListUcCommentsOperation( sdkConfiguration);
+              = new ListUcCommentsOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

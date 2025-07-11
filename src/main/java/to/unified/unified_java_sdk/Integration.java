@@ -28,7 +28,6 @@ public class Integration {
     Integration(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create connection indirectly
      * 
@@ -49,13 +48,11 @@ public class Integration {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetUnifiedIntegrationAuthResponse getUnifiedIntegrationAuth(
-            GetUnifiedIntegrationAuthRequest request) throws Exception {
+    public GetUnifiedIntegrationAuthResponse getUnifiedIntegrationAuth(GetUnifiedIntegrationAuthRequest request) throws Exception {
         RequestOperation<GetUnifiedIntegrationAuthRequest, GetUnifiedIntegrationAuthResponse> operation
-              = new GetUnifiedIntegrationAuthOperation( sdkConfiguration);
+              = new GetUnifiedIntegrationAuthOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Returns all activated integrations in a workspace
@@ -77,13 +74,11 @@ public class Integration {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListUnifiedIntegrationWorkspacesResponse listUnifiedIntegrationWorkspaces(
-            ListUnifiedIntegrationWorkspacesRequest request) throws Exception {
+    public ListUnifiedIntegrationWorkspacesResponse listUnifiedIntegrationWorkspaces(ListUnifiedIntegrationWorkspacesRequest request) throws Exception {
         RequestOperation<ListUnifiedIntegrationWorkspacesRequest, ListUnifiedIntegrationWorkspacesResponse> operation
-              = new ListUnifiedIntegrationWorkspacesOperation( sdkConfiguration);
+              = new ListUnifiedIntegrationWorkspacesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Returns all integrations
@@ -101,10 +96,9 @@ public class Integration {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListUnifiedIntegrationsResponse listUnifiedIntegrations(
-            ListUnifiedIntegrationsRequest request) throws Exception {
+    public ListUnifiedIntegrationsResponse listUnifiedIntegrations(ListUnifiedIntegrationsRequest request) throws Exception {
         RequestOperation<ListUnifiedIntegrationsRequest, ListUnifiedIntegrationsResponse> operation
-              = new ListUnifiedIntegrationsOperation( sdkConfiguration);
+              = new ListUnifiedIntegrationsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -136,7 +136,6 @@ public class Commerce {
     Commerce(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a collection
      * 
@@ -153,13 +152,11 @@ public class Commerce {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateCommerceCollectionResponse createCommerceCollection(
-            CreateCommerceCollectionRequest request) throws Exception {
+    public CreateCommerceCollectionResponse createCommerceCollection(CreateCommerceCollectionRequest request) throws Exception {
         RequestOperation<CreateCommerceCollectionRequest, CreateCommerceCollectionResponse> operation
-              = new CreateCommerceCollectionOperation( sdkConfiguration);
+              = new CreateCommerceCollectionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create an inventory
@@ -177,13 +174,11 @@ public class Commerce {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateCommerceInventoryResponse createCommerceInventory(
-            CreateCommerceInventoryRequest request) throws Exception {
+    public CreateCommerceInventoryResponse createCommerceInventory(CreateCommerceInventoryRequest request) throws Exception {
         RequestOperation<CreateCommerceInventoryRequest, CreateCommerceInventoryResponse> operation
-              = new CreateCommerceInventoryOperation( sdkConfiguration);
+              = new CreateCommerceInventoryOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create an item
@@ -201,13 +196,11 @@ public class Commerce {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateCommerceItemResponse createCommerceItem(
-            CreateCommerceItemRequest request) throws Exception {
+    public CreateCommerceItemResponse createCommerceItem(CreateCommerceItemRequest request) throws Exception {
         RequestOperation<CreateCommerceItemRequest, CreateCommerceItemResponse> operation
-              = new CreateCommerceItemOperation( sdkConfiguration);
+              = new CreateCommerceItemOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a location
@@ -225,13 +218,11 @@ public class Commerce {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateCommerceLocationResponse createCommerceLocation(
-            CreateCommerceLocationRequest request) throws Exception {
+    public CreateCommerceLocationResponse createCommerceLocation(CreateCommerceLocationRequest request) throws Exception {
         RequestOperation<CreateCommerceLocationRequest, CreateCommerceLocationResponse> operation
-              = new CreateCommerceLocationOperation( sdkConfiguration);
+              = new CreateCommerceLocationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a review
@@ -249,13 +240,11 @@ public class Commerce {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateCommerceReviewResponse createCommerceReview(
-            CreateCommerceReviewRequest request) throws Exception {
+    public CreateCommerceReviewResponse createCommerceReview(CreateCommerceReviewRequest request) throws Exception {
         RequestOperation<CreateCommerceReviewRequest, CreateCommerceReviewResponse> operation
-              = new CreateCommerceReviewOperation( sdkConfiguration);
+              = new CreateCommerceReviewOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a collection
@@ -273,13 +262,11 @@ public class Commerce {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetCommerceCollectionResponse getCommerceCollection(
-            GetCommerceCollectionRequest request) throws Exception {
+    public GetCommerceCollectionResponse getCommerceCollection(GetCommerceCollectionRequest request) throws Exception {
         RequestOperation<GetCommerceCollectionRequest, GetCommerceCollectionResponse> operation
-              = new GetCommerceCollectionOperation( sdkConfiguration);
+              = new GetCommerceCollectionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve an inventory
@@ -297,13 +284,11 @@ public class Commerce {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetCommerceInventoryResponse getCommerceInventory(
-            GetCommerceInventoryRequest request) throws Exception {
+    public GetCommerceInventoryResponse getCommerceInventory(GetCommerceInventoryRequest request) throws Exception {
         RequestOperation<GetCommerceInventoryRequest, GetCommerceInventoryResponse> operation
-              = new GetCommerceInventoryOperation( sdkConfiguration);
+              = new GetCommerceInventoryOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve an item
@@ -321,13 +306,11 @@ public class Commerce {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetCommerceItemResponse getCommerceItem(
-            GetCommerceItemRequest request) throws Exception {
+    public GetCommerceItemResponse getCommerceItem(GetCommerceItemRequest request) throws Exception {
         RequestOperation<GetCommerceItemRequest, GetCommerceItemResponse> operation
-              = new GetCommerceItemOperation( sdkConfiguration);
+              = new GetCommerceItemOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a location
@@ -345,13 +328,11 @@ public class Commerce {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetCommerceLocationResponse getCommerceLocation(
-            GetCommerceLocationRequest request) throws Exception {
+    public GetCommerceLocationResponse getCommerceLocation(GetCommerceLocationRequest request) throws Exception {
         RequestOperation<GetCommerceLocationRequest, GetCommerceLocationResponse> operation
-              = new GetCommerceLocationOperation( sdkConfiguration);
+              = new GetCommerceLocationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a review
@@ -369,13 +350,11 @@ public class Commerce {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetCommerceReviewResponse getCommerceReview(
-            GetCommerceReviewRequest request) throws Exception {
+    public GetCommerceReviewResponse getCommerceReview(GetCommerceReviewRequest request) throws Exception {
         RequestOperation<GetCommerceReviewRequest, GetCommerceReviewResponse> operation
-              = new GetCommerceReviewOperation( sdkConfiguration);
+              = new GetCommerceReviewOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all collections
@@ -393,13 +372,11 @@ public class Commerce {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCommerceCollectionsResponse listCommerceCollections(
-            ListCommerceCollectionsRequest request) throws Exception {
+    public ListCommerceCollectionsResponse listCommerceCollections(ListCommerceCollectionsRequest request) throws Exception {
         RequestOperation<ListCommerceCollectionsRequest, ListCommerceCollectionsResponse> operation
-              = new ListCommerceCollectionsOperation( sdkConfiguration);
+              = new ListCommerceCollectionsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all inventories
@@ -417,13 +394,11 @@ public class Commerce {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCommerceInventoriesResponse listCommerceInventories(
-            ListCommerceInventoriesRequest request) throws Exception {
+    public ListCommerceInventoriesResponse listCommerceInventories(ListCommerceInventoriesRequest request) throws Exception {
         RequestOperation<ListCommerceInventoriesRequest, ListCommerceInventoriesResponse> operation
-              = new ListCommerceInventoriesOperation( sdkConfiguration);
+              = new ListCommerceInventoriesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all items
@@ -441,13 +416,11 @@ public class Commerce {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCommerceItemsResponse listCommerceItems(
-            ListCommerceItemsRequest request) throws Exception {
+    public ListCommerceItemsResponse listCommerceItems(ListCommerceItemsRequest request) throws Exception {
         RequestOperation<ListCommerceItemsRequest, ListCommerceItemsResponse> operation
-              = new ListCommerceItemsOperation( sdkConfiguration);
+              = new ListCommerceItemsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all locations
@@ -465,13 +438,11 @@ public class Commerce {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCommerceLocationsResponse listCommerceLocations(
-            ListCommerceLocationsRequest request) throws Exception {
+    public ListCommerceLocationsResponse listCommerceLocations(ListCommerceLocationsRequest request) throws Exception {
         RequestOperation<ListCommerceLocationsRequest, ListCommerceLocationsResponse> operation
-              = new ListCommerceLocationsOperation( sdkConfiguration);
+              = new ListCommerceLocationsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all reviews
@@ -489,13 +460,11 @@ public class Commerce {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCommerceReviewsResponse listCommerceReviews(
-            ListCommerceReviewsRequest request) throws Exception {
+    public ListCommerceReviewsResponse listCommerceReviews(ListCommerceReviewsRequest request) throws Exception {
         RequestOperation<ListCommerceReviewsRequest, ListCommerceReviewsResponse> operation
-              = new ListCommerceReviewsOperation( sdkConfiguration);
+              = new ListCommerceReviewsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a collection
@@ -513,13 +482,11 @@ public class Commerce {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchCommerceCollectionResponse patchCommerceCollection(
-            PatchCommerceCollectionRequest request) throws Exception {
+    public PatchCommerceCollectionResponse patchCommerceCollection(PatchCommerceCollectionRequest request) throws Exception {
         RequestOperation<PatchCommerceCollectionRequest, PatchCommerceCollectionResponse> operation
-              = new PatchCommerceCollectionOperation( sdkConfiguration);
+              = new PatchCommerceCollectionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an inventory
@@ -537,13 +504,11 @@ public class Commerce {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchCommerceInventoryResponse patchCommerceInventory(
-            PatchCommerceInventoryRequest request) throws Exception {
+    public PatchCommerceInventoryResponse patchCommerceInventory(PatchCommerceInventoryRequest request) throws Exception {
         RequestOperation<PatchCommerceInventoryRequest, PatchCommerceInventoryResponse> operation
-              = new PatchCommerceInventoryOperation( sdkConfiguration);
+              = new PatchCommerceInventoryOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an item
@@ -561,13 +526,11 @@ public class Commerce {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchCommerceItemResponse patchCommerceItem(
-            PatchCommerceItemRequest request) throws Exception {
+    public PatchCommerceItemResponse patchCommerceItem(PatchCommerceItemRequest request) throws Exception {
         RequestOperation<PatchCommerceItemRequest, PatchCommerceItemResponse> operation
-              = new PatchCommerceItemOperation( sdkConfiguration);
+              = new PatchCommerceItemOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a location
@@ -585,13 +548,11 @@ public class Commerce {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchCommerceLocationResponse patchCommerceLocation(
-            PatchCommerceLocationRequest request) throws Exception {
+    public PatchCommerceLocationResponse patchCommerceLocation(PatchCommerceLocationRequest request) throws Exception {
         RequestOperation<PatchCommerceLocationRequest, PatchCommerceLocationResponse> operation
-              = new PatchCommerceLocationOperation( sdkConfiguration);
+              = new PatchCommerceLocationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a review
@@ -609,13 +570,11 @@ public class Commerce {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchCommerceReviewResponse patchCommerceReview(
-            PatchCommerceReviewRequest request) throws Exception {
+    public PatchCommerceReviewResponse patchCommerceReview(PatchCommerceReviewRequest request) throws Exception {
         RequestOperation<PatchCommerceReviewRequest, PatchCommerceReviewResponse> operation
-              = new PatchCommerceReviewOperation( sdkConfiguration);
+              = new PatchCommerceReviewOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a collection
@@ -633,13 +592,11 @@ public class Commerce {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveCommerceCollectionResponse removeCommerceCollection(
-            RemoveCommerceCollectionRequest request) throws Exception {
+    public RemoveCommerceCollectionResponse removeCommerceCollection(RemoveCommerceCollectionRequest request) throws Exception {
         RequestOperation<RemoveCommerceCollectionRequest, RemoveCommerceCollectionResponse> operation
-              = new RemoveCommerceCollectionOperation( sdkConfiguration);
+              = new RemoveCommerceCollectionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove an inventory
@@ -657,13 +614,11 @@ public class Commerce {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveCommerceInventoryResponse removeCommerceInventory(
-            RemoveCommerceInventoryRequest request) throws Exception {
+    public RemoveCommerceInventoryResponse removeCommerceInventory(RemoveCommerceInventoryRequest request) throws Exception {
         RequestOperation<RemoveCommerceInventoryRequest, RemoveCommerceInventoryResponse> operation
-              = new RemoveCommerceInventoryOperation( sdkConfiguration);
+              = new RemoveCommerceInventoryOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove an item
@@ -681,13 +636,11 @@ public class Commerce {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveCommerceItemResponse removeCommerceItem(
-            RemoveCommerceItemRequest request) throws Exception {
+    public RemoveCommerceItemResponse removeCommerceItem(RemoveCommerceItemRequest request) throws Exception {
         RequestOperation<RemoveCommerceItemRequest, RemoveCommerceItemResponse> operation
-              = new RemoveCommerceItemOperation( sdkConfiguration);
+              = new RemoveCommerceItemOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a location
@@ -705,13 +658,11 @@ public class Commerce {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveCommerceLocationResponse removeCommerceLocation(
-            RemoveCommerceLocationRequest request) throws Exception {
+    public RemoveCommerceLocationResponse removeCommerceLocation(RemoveCommerceLocationRequest request) throws Exception {
         RequestOperation<RemoveCommerceLocationRequest, RemoveCommerceLocationResponse> operation
-              = new RemoveCommerceLocationOperation( sdkConfiguration);
+              = new RemoveCommerceLocationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a review
@@ -729,13 +680,11 @@ public class Commerce {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveCommerceReviewResponse removeCommerceReview(
-            RemoveCommerceReviewRequest request) throws Exception {
+    public RemoveCommerceReviewResponse removeCommerceReview(RemoveCommerceReviewRequest request) throws Exception {
         RequestOperation<RemoveCommerceReviewRequest, RemoveCommerceReviewResponse> operation
-              = new RemoveCommerceReviewOperation( sdkConfiguration);
+              = new RemoveCommerceReviewOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a collection
@@ -753,13 +702,11 @@ public class Commerce {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateCommerceCollectionResponse updateCommerceCollection(
-            UpdateCommerceCollectionRequest request) throws Exception {
+    public UpdateCommerceCollectionResponse updateCommerceCollection(UpdateCommerceCollectionRequest request) throws Exception {
         RequestOperation<UpdateCommerceCollectionRequest, UpdateCommerceCollectionResponse> operation
-              = new UpdateCommerceCollectionOperation( sdkConfiguration);
+              = new UpdateCommerceCollectionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an inventory
@@ -777,13 +724,11 @@ public class Commerce {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateCommerceInventoryResponse updateCommerceInventory(
-            UpdateCommerceInventoryRequest request) throws Exception {
+    public UpdateCommerceInventoryResponse updateCommerceInventory(UpdateCommerceInventoryRequest request) throws Exception {
         RequestOperation<UpdateCommerceInventoryRequest, UpdateCommerceInventoryResponse> operation
-              = new UpdateCommerceInventoryOperation( sdkConfiguration);
+              = new UpdateCommerceInventoryOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an item
@@ -801,13 +746,11 @@ public class Commerce {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateCommerceItemResponse updateCommerceItem(
-            UpdateCommerceItemRequest request) throws Exception {
+    public UpdateCommerceItemResponse updateCommerceItem(UpdateCommerceItemRequest request) throws Exception {
         RequestOperation<UpdateCommerceItemRequest, UpdateCommerceItemResponse> operation
-              = new UpdateCommerceItemOperation( sdkConfiguration);
+              = new UpdateCommerceItemOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a location
@@ -825,13 +768,11 @@ public class Commerce {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateCommerceLocationResponse updateCommerceLocation(
-            UpdateCommerceLocationRequest request) throws Exception {
+    public UpdateCommerceLocationResponse updateCommerceLocation(UpdateCommerceLocationRequest request) throws Exception {
         RequestOperation<UpdateCommerceLocationRequest, UpdateCommerceLocationResponse> operation
-              = new UpdateCommerceLocationOperation( sdkConfiguration);
+              = new UpdateCommerceLocationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a review
@@ -849,10 +790,9 @@ public class Commerce {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateCommerceReviewResponse updateCommerceReview(
-            UpdateCommerceReviewRequest request) throws Exception {
+    public UpdateCommerceReviewResponse updateCommerceReview(UpdateCommerceReviewRequest request) throws Exception {
         RequestOperation<UpdateCommerceReviewRequest, UpdateCommerceReviewResponse> operation
-              = new UpdateCommerceReviewOperation( sdkConfiguration);
+              = new UpdateCommerceReviewOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

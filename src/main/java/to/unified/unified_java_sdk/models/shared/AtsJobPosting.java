@@ -16,8 +16,8 @@ import java.time.OffsetDateTime;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class AtsJobPosting {
 
+public class AtsJobPosting {
     /**
      * job-post-specific address
      */
@@ -25,33 +25,41 @@ public class AtsJobPosting {
     @JsonProperty("address")
     private Optional<? extends PropertyAtsJobPostingAddress> address;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private Optional<String> description;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     private Optional<Boolean> isActive;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     private Optional<String> location;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posting_url")
     private Optional<String> postingUrl;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -89,7 +97,9 @@ public class AtsJobPosting {
     }
     
     public AtsJobPosting() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     /**
@@ -141,9 +151,10 @@ public class AtsJobPosting {
         return updatedAt;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * job-post-specific address
@@ -153,6 +164,7 @@ public class AtsJobPosting {
         this.address = Optional.ofNullable(address);
         return this;
     }
+
 
     /**
      * job-post-specific address
@@ -169,6 +181,7 @@ public class AtsJobPosting {
         return this;
     }
 
+
     public AtsJobPosting withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
@@ -180,6 +193,7 @@ public class AtsJobPosting {
         this.description = Optional.ofNullable(description);
         return this;
     }
+
 
     public AtsJobPosting withDescription(Optional<String> description) {
         Utils.checkNotNull(description, "description");
@@ -193,6 +207,7 @@ public class AtsJobPosting {
         return this;
     }
 
+
     public AtsJobPosting withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -204,6 +219,7 @@ public class AtsJobPosting {
         this.isActive = Optional.ofNullable(isActive);
         return this;
     }
+
 
     public AtsJobPosting withIsActive(Optional<Boolean> isActive) {
         Utils.checkNotNull(isActive, "isActive");
@@ -217,6 +233,7 @@ public class AtsJobPosting {
         return this;
     }
 
+
     public AtsJobPosting withLocation(Optional<String> location) {
         Utils.checkNotNull(location, "location");
         this.location = location;
@@ -228,6 +245,7 @@ public class AtsJobPosting {
         this.name = Optional.ofNullable(name);
         return this;
     }
+
 
     public AtsJobPosting withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
@@ -241,6 +259,7 @@ public class AtsJobPosting {
         return this;
     }
 
+
     public AtsJobPosting withPostingUrl(Optional<String> postingUrl) {
         Utils.checkNotNull(postingUrl, "postingUrl");
         this.postingUrl = postingUrl;
@@ -253,13 +272,13 @@ public class AtsJobPosting {
         return this;
     }
 
+
     public AtsJobPosting withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -284,15 +303,9 @@ public class AtsJobPosting {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            address,
-            createdAt,
-            description,
-            id,
-            isActive,
-            location,
-            name,
-            postingUrl,
-            updatedAt);
+            address, createdAt, description,
+            id, isActive, location,
+            name, postingUrl, updatedAt);
     }
     
     @Override
@@ -308,30 +321,32 @@ public class AtsJobPosting {
                 "postingUrl", postingUrl,
                 "updatedAt", updatedAt);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<? extends PropertyAtsJobPostingAddress> address = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> description = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<Boolean> isActive = Optional.empty();
- 
+
         private Optional<String> location = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<String> postingUrl = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * job-post-specific address
@@ -351,6 +366,7 @@ public class AtsJobPosting {
             return this;
         }
 
+
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
@@ -362,6 +378,7 @@ public class AtsJobPosting {
             this.createdAt = createdAt;
             return this;
         }
+
 
         public Builder description(String description) {
             Utils.checkNotNull(description, "description");
@@ -375,6 +392,7 @@ public class AtsJobPosting {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -386,6 +404,7 @@ public class AtsJobPosting {
             this.id = id;
             return this;
         }
+
 
         public Builder isActive(boolean isActive) {
             Utils.checkNotNull(isActive, "isActive");
@@ -399,6 +418,7 @@ public class AtsJobPosting {
             return this;
         }
 
+
         public Builder location(String location) {
             Utils.checkNotNull(location, "location");
             this.location = Optional.ofNullable(location);
@@ -410,6 +430,7 @@ public class AtsJobPosting {
             this.location = location;
             return this;
         }
+
 
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
@@ -423,6 +444,7 @@ public class AtsJobPosting {
             return this;
         }
 
+
         public Builder postingUrl(String postingUrl) {
             Utils.checkNotNull(postingUrl, "postingUrl");
             this.postingUrl = Optional.ofNullable(postingUrl);
@@ -435,6 +457,7 @@ public class AtsJobPosting {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -446,18 +469,14 @@ public class AtsJobPosting {
             this.updatedAt = updatedAt;
             return this;
         }
-        
+
         public AtsJobPosting build() {
+
             return new AtsJobPosting(
-                address,
-                createdAt,
-                description,
-                id,
-                isActive,
-                location,
-                name,
-                postingUrl,
-                updatedAt);
+                address, createdAt, description,
+                id, isActive, location,
+                name, postingUrl, updatedAt);
         }
+
     }
 }

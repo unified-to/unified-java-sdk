@@ -28,7 +28,7 @@ public class PatchKmsCommentRequestBuilder {
     public PatchKmsCommentResponse call() throws Exception {
         
         RequestOperation<PatchKmsCommentRequest, PatchKmsCommentResponse> operation
-              = new PatchKmsCommentOperation( sdkConfiguration);
+              = new PatchKmsCommentOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

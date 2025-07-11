@@ -8,19 +8,17 @@ import java.lang.Override;
 import java.lang.String;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class HrisMetadataSchemasValue32 {
 
+public class HrisMetadataSchemasValue32 {
     @JsonCreator
     public HrisMetadataSchemasValue32() {
-        
-        
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
 
-    
+
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -42,16 +40,19 @@ public class HrisMetadataSchemasValue32 {
     public String toString() {
         return Utils.toString(HrisMetadataSchemasValue32.class);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
-        
+
         private Builder() {
           // force use of static builder() method
         }
-        
+
         public HrisMetadataSchemasValue32 build() {
+
             return new HrisMetadataSchemasValue32(
                 );
         }
+
     }
 }

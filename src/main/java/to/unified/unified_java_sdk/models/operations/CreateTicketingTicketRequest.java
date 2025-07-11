@@ -14,6 +14,7 @@ import to.unified.unified_java_sdk.models.shared.TicketingTicket;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class CreateTicketingTicketRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
@@ -56,7 +57,8 @@ public class CreateTicketingTicketRequest {
     public CreateTicketingTicketRequest(
             TicketingTicket ticketingTicket,
             String connectionId) {
-        this(ticketingTicket, connectionId, Optional.empty(), Optional.empty());
+        this(ticketingTicket, connectionId, Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -89,9 +91,10 @@ public class CreateTicketingTicketRequest {
         return raw;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public CreateTicketingTicketRequest withTicketingTicket(TicketingTicket ticketingTicket) {
         Utils.checkNotNull(ticketingTicket, "ticketingTicket");
@@ -117,6 +120,7 @@ public class CreateTicketingTicketRequest {
         return this;
     }
 
+
     /**
      * Comma-delimited fields to return
      */
@@ -135,6 +139,7 @@ public class CreateTicketingTicketRequest {
         return this;
     }
 
+
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
@@ -144,7 +149,6 @@ public class CreateTicketingTicketRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -164,9 +168,7 @@ public class CreateTicketingTicketRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            ticketingTicket,
-            connectionId,
-            fields,
+            ticketingTicket, connectionId, fields,
             raw);
     }
     
@@ -178,26 +180,29 @@ public class CreateTicketingTicketRequest {
                 "fields", fields,
                 "raw", raw);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private TicketingTicket ticketingTicket;
- 
+
         private String connectionId;
- 
+
         private Optional<? extends List<String>> fields = Optional.empty();
- 
+
         private Optional<String> raw = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder ticketingTicket(TicketingTicket ticketingTicket) {
             Utils.checkNotNull(ticketingTicket, "ticketingTicket");
             this.ticketingTicket = ticketingTicket;
             return this;
         }
+
 
         /**
          * ID of the connection
@@ -207,6 +212,7 @@ public class CreateTicketingTicketRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         /**
          * Comma-delimited fields to return
@@ -226,6 +232,7 @@ public class CreateTicketingTicketRequest {
             return this;
         }
 
+
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
@@ -243,13 +250,13 @@ public class CreateTicketingTicketRequest {
             this.raw = raw;
             return this;
         }
-        
+
         public CreateTicketingTicketRequest build() {
+
             return new CreateTicketingTicketRequest(
-                ticketingTicket,
-                connectionId,
-                fields,
+                ticketingTicket, connectionId, fields,
                 raw);
         }
+
     }
 }

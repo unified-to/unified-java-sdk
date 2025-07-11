@@ -28,7 +28,7 @@ public class RemoveAccountingOrderRequestBuilder {
     public RemoveAccountingOrderResponse call() throws Exception {
         
         RequestOperation<RemoveAccountingOrderRequest, RemoveAccountingOrderResponse> operation
-              = new RemoveAccountingOrderOperation( sdkConfiguration);
+              = new RemoveAccountingOrderOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

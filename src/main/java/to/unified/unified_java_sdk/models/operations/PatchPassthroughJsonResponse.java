@@ -18,12 +18,13 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Response;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class PatchPassthroughJsonResponse implements Response {
 
+public class PatchPassthroughJsonResponse implements Response {
     /**
      * HTTP response content type for this operation
      */
     private String contentType;
+
 
     private Map<String, List<String>> headers;
 
@@ -75,6 +76,7 @@ public class PatchPassthroughJsonResponse implements Response {
             Optional<String> defaultTextPlainRes) {
         Utils.checkNotNull(contentType, "contentType");
         headers = Utils.emptyMapIfNull(headers);
+        Utils.checkNotNull(headers, "headers");
         Utils.checkNotNull(statusCode, "statusCode");
         Utils.checkNotNull(rawResponse, "rawResponse");
         Utils.checkNotNull(defaultWildcardWildcardResponseStream, "defaultWildcardWildcardResponseStream");
@@ -98,7 +100,9 @@ public class PatchPassthroughJsonResponse implements Response {
             Map<String, List<String>> headers,
             int statusCode,
             HttpResponse<InputStream> rawResponse) {
-        this(contentType, headers, statusCode, rawResponse, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(contentType, headers, statusCode,
+            rawResponse, Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     /**
@@ -172,9 +176,10 @@ public class PatchPassthroughJsonResponse implements Response {
         return defaultTextPlainRes;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * HTTP response content type for this operation
@@ -218,6 +223,7 @@ public class PatchPassthroughJsonResponse implements Response {
         return this;
     }
 
+
     /**
      * Successful
      */
@@ -235,6 +241,7 @@ public class PatchPassthroughJsonResponse implements Response {
         this.defaultApplicationJsonAny = Optional.ofNullable(defaultApplicationJsonAny);
         return this;
     }
+
 
     /**
      * Successful
@@ -254,6 +261,7 @@ public class PatchPassthroughJsonResponse implements Response {
         return this;
     }
 
+
     /**
      * Successful
      */
@@ -271,6 +279,7 @@ public class PatchPassthroughJsonResponse implements Response {
         this.defaultTextCsvRes = Optional.ofNullable(defaultTextCsvRes);
         return this;
     }
+
 
     /**
      * Successful
@@ -290,6 +299,7 @@ public class PatchPassthroughJsonResponse implements Response {
         return this;
     }
 
+
     /**
      * Successful
      */
@@ -299,7 +309,6 @@ public class PatchPassthroughJsonResponse implements Response {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -324,15 +333,9 @@ public class PatchPassthroughJsonResponse implements Response {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            contentType,
-            headers,
-            statusCode,
-            rawResponse,
-            defaultWildcardWildcardResponseStream,
-            defaultApplicationJsonAny,
-            defaultApplicationXmlRes,
-            defaultTextCsvRes,
-            defaultTextPlainRes);
+            contentType, headers, statusCode,
+            rawResponse, defaultWildcardWildcardResponseStream, defaultApplicationJsonAny,
+            defaultApplicationXmlRes, defaultTextCsvRes, defaultTextPlainRes);
     }
     
     @Override
@@ -348,30 +351,32 @@ public class PatchPassthroughJsonResponse implements Response {
                 "defaultTextCsvRes", defaultTextCsvRes,
                 "defaultTextPlainRes", defaultTextPlainRes);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private String contentType;
- 
+
         private Map<String, List<String>> headers;
- 
+
         private Integer statusCode;
- 
+
         private HttpResponse<InputStream> rawResponse;
- 
+
         private Optional<? extends InputStream> defaultWildcardWildcardResponseStream = Optional.empty();
- 
+
         private Optional<? extends Object> defaultApplicationJsonAny = Optional.empty();
- 
+
         private Optional<String> defaultApplicationXmlRes = Optional.empty();
- 
+
         private Optional<String> defaultTextCsvRes = Optional.empty();
- 
+
         private Optional<String> defaultTextPlainRes = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * HTTP response content type for this operation
@@ -382,11 +387,13 @@ public class PatchPassthroughJsonResponse implements Response {
             return this;
         }
 
+
         public Builder headers(Map<String, List<String>> headers) {
             Utils.checkNotNull(headers, "headers");
             this.headers = headers;
             return this;
         }
+
 
         /**
          * HTTP response status code for this operation
@@ -397,6 +404,7 @@ public class PatchPassthroughJsonResponse implements Response {
             return this;
         }
 
+
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
@@ -405,6 +413,7 @@ public class PatchPassthroughJsonResponse implements Response {
             this.rawResponse = rawResponse;
             return this;
         }
+
 
         /**
          * Successful
@@ -424,6 +433,7 @@ public class PatchPassthroughJsonResponse implements Response {
             return this;
         }
 
+
         /**
          * Successful
          */
@@ -441,6 +451,7 @@ public class PatchPassthroughJsonResponse implements Response {
             this.defaultApplicationJsonAny = defaultApplicationJsonAny;
             return this;
         }
+
 
         /**
          * Successful
@@ -460,6 +471,7 @@ public class PatchPassthroughJsonResponse implements Response {
             return this;
         }
 
+
         /**
          * Successful
          */
@@ -478,6 +490,7 @@ public class PatchPassthroughJsonResponse implements Response {
             return this;
         }
 
+
         /**
          * Successful
          */
@@ -495,18 +508,14 @@ public class PatchPassthroughJsonResponse implements Response {
             this.defaultTextPlainRes = defaultTextPlainRes;
             return this;
         }
-        
+
         public PatchPassthroughJsonResponse build() {
+
             return new PatchPassthroughJsonResponse(
-                contentType,
-                headers,
-                statusCode,
-                rawResponse,
-                defaultWildcardWildcardResponseStream,
-                defaultApplicationJsonAny,
-                defaultApplicationXmlRes,
-                defaultTextCsvRes,
-                defaultTextPlainRes);
+                contentType, headers, statusCode,
+                rawResponse, defaultWildcardWildcardResponseStream, defaultApplicationJsonAny,
+                defaultApplicationXmlRes, defaultTextCsvRes, defaultTextPlainRes);
         }
+
     }
 }

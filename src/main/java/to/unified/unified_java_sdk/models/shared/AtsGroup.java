@@ -14,15 +14,18 @@ import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AtsGroup {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
@@ -61,15 +64,17 @@ public class AtsGroup {
         return (Optional<AtsGroupType>) type;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AtsGroup withId(String id) {
         Utils.checkNotNull(id, "id");
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public AtsGroup withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -83,6 +88,7 @@ public class AtsGroup {
         return this;
     }
 
+
     public AtsGroup withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
         this.name = name;
@@ -95,13 +101,13 @@ public class AtsGroup {
         return this;
     }
 
+
     public AtsGroup withType(Optional<? extends AtsGroupType> type) {
         Utils.checkNotNull(type, "type");
         this.type = type;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -120,9 +126,7 @@ public class AtsGroup {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            id,
-            name,
-            type);
+            id, name, type);
     }
     
     @Override
@@ -132,18 +136,20 @@ public class AtsGroup {
                 "name", name,
                 "type", type);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<? extends AtsGroupType> type = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -157,6 +163,7 @@ public class AtsGroup {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = Optional.ofNullable(name);
@@ -169,6 +176,7 @@ public class AtsGroup {
             return this;
         }
 
+
         public Builder type(AtsGroupType type) {
             Utils.checkNotNull(type, "type");
             this.type = Optional.ofNullable(type);
@@ -180,12 +188,12 @@ public class AtsGroup {
             this.type = type;
             return this;
         }
-        
+
         public AtsGroup build() {
+
             return new AtsGroup(
-                id,
-                name,
-                type);
+                id, name, type);
         }
+
     }
 }

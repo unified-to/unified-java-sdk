@@ -11,8 +11,8 @@ import to.unified.unified_java_sdk.models.shared.Webhook;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class UpdateUnifiedWebhookRequest {
 
+public class UpdateUnifiedWebhookRequest {
     /**
      * A webhook is used to POST new/updated information to your server.
      */
@@ -51,9 +51,10 @@ public class UpdateUnifiedWebhookRequest {
         return id;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * A webhook is used to POST new/updated information to your server.
@@ -73,7 +74,6 @@ public class UpdateUnifiedWebhookRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -91,8 +91,7 @@ public class UpdateUnifiedWebhookRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            webhook,
-            id);
+            webhook, id);
     }
     
     @Override
@@ -101,16 +100,18 @@ public class UpdateUnifiedWebhookRequest {
                 "webhook", webhook,
                 "id", id);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Webhook webhook;
- 
+
         private String id;
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * A webhook is used to POST new/updated information to your server.
@@ -121,6 +122,7 @@ public class UpdateUnifiedWebhookRequest {
             return this;
         }
 
+
         /**
          * ID of the Webhook
          */
@@ -129,11 +131,12 @@ public class UpdateUnifiedWebhookRequest {
             this.id = id;
             return this;
         }
-        
+
         public UpdateUnifiedWebhookRequest build() {
+
             return new UpdateUnifiedWebhookRequest(
-                webhook,
-                id);
+                webhook, id);
         }
+
     }
 }

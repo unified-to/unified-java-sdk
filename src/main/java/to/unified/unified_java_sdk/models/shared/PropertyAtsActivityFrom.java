@@ -14,14 +14,17 @@ import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class PropertyAtsActivityFrom {
 
     @JsonProperty("email")
     private String email;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
@@ -61,9 +64,10 @@ public class PropertyAtsActivityFrom {
         return (Optional<PropertyAtsActivityFromType>) type;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public PropertyAtsActivityFrom withEmail(String email) {
         Utils.checkNotNull(email, "email");
@@ -77,6 +81,7 @@ public class PropertyAtsActivityFrom {
         return this;
     }
 
+
     public PropertyAtsActivityFrom withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
         this.name = name;
@@ -89,13 +94,13 @@ public class PropertyAtsActivityFrom {
         return this;
     }
 
+
     public PropertyAtsActivityFrom withType(Optional<? extends PropertyAtsActivityFromType> type) {
         Utils.checkNotNull(type, "type");
         this.type = type;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -114,9 +119,7 @@ public class PropertyAtsActivityFrom {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            email,
-            name,
-            type);
+            email, name, type);
     }
     
     @Override
@@ -126,24 +129,27 @@ public class PropertyAtsActivityFrom {
                 "name", name,
                 "type", type);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private String email;
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<? extends PropertyAtsActivityFromType> type = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder email(String email) {
             Utils.checkNotNull(email, "email");
             this.email = email;
             return this;
         }
+
 
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
@@ -157,6 +163,7 @@ public class PropertyAtsActivityFrom {
             return this;
         }
 
+
         public Builder type(PropertyAtsActivityFromType type) {
             Utils.checkNotNull(type, "type");
             this.type = Optional.ofNullable(type);
@@ -168,12 +175,12 @@ public class PropertyAtsActivityFrom {
             this.type = type;
             return this;
         }
-        
+
         public PropertyAtsActivityFrom build() {
+
             return new PropertyAtsActivityFrom(
-                email,
-                name,
-                type);
+                email, name, type);
         }
+
     }
 }

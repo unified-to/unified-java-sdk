@@ -28,7 +28,7 @@ public class ListGenaiModelsRequestBuilder {
     public ListGenaiModelsResponse call() throws Exception {
         
         RequestOperation<ListGenaiModelsRequest, ListGenaiModelsResponse> operation
-              = new ListGenaiModelsOperation( sdkConfiguration);
+              = new ListGenaiModelsOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

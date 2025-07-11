@@ -28,7 +28,7 @@ public class PatchHrisLocationRequestBuilder {
     public PatchHrisLocationResponse call() throws Exception {
         
         RequestOperation<PatchHrisLocationRequest, PatchHrisLocationResponse> operation
-              = new PatchHrisLocationOperation( sdkConfiguration);
+              = new PatchHrisLocationOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

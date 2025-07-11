@@ -28,7 +28,7 @@ public class UpdateAtsDocumentRequestBuilder {
     public UpdateAtsDocumentResponse call() throws Exception {
         
         RequestOperation<UpdateAtsDocumentRequest, UpdateAtsDocumentResponse> operation
-              = new UpdateAtsDocumentOperation( sdkConfiguration);
+              = new UpdateAtsDocumentOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

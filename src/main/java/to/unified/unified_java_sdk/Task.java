@@ -88,7 +88,6 @@ public class Task {
     Task(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a comment
      * 
@@ -105,13 +104,11 @@ public class Task {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateTaskCommentResponse createTaskComment(
-            CreateTaskCommentRequest request) throws Exception {
+    public CreateTaskCommentResponse createTaskComment(CreateTaskCommentRequest request) throws Exception {
         RequestOperation<CreateTaskCommentRequest, CreateTaskCommentResponse> operation
-              = new CreateTaskCommentOperation( sdkConfiguration);
+              = new CreateTaskCommentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a project
@@ -129,13 +126,11 @@ public class Task {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateTaskProjectResponse createTaskProject(
-            CreateTaskProjectRequest request) throws Exception {
+    public CreateTaskProjectResponse createTaskProject(CreateTaskProjectRequest request) throws Exception {
         RequestOperation<CreateTaskProjectRequest, CreateTaskProjectResponse> operation
-              = new CreateTaskProjectOperation( sdkConfiguration);
+              = new CreateTaskProjectOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a task
@@ -153,13 +148,11 @@ public class Task {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateTaskTaskResponse createTaskTask(
-            CreateTaskTaskRequest request) throws Exception {
+    public CreateTaskTaskResponse createTaskTask(CreateTaskTaskRequest request) throws Exception {
         RequestOperation<CreateTaskTaskRequest, CreateTaskTaskResponse> operation
-              = new CreateTaskTaskOperation( sdkConfiguration);
+              = new CreateTaskTaskOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a comment
@@ -177,13 +170,11 @@ public class Task {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetTaskCommentResponse getTaskComment(
-            GetTaskCommentRequest request) throws Exception {
+    public GetTaskCommentResponse getTaskComment(GetTaskCommentRequest request) throws Exception {
         RequestOperation<GetTaskCommentRequest, GetTaskCommentResponse> operation
-              = new GetTaskCommentOperation( sdkConfiguration);
+              = new GetTaskCommentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a project
@@ -201,13 +192,11 @@ public class Task {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetTaskProjectResponse getTaskProject(
-            GetTaskProjectRequest request) throws Exception {
+    public GetTaskProjectResponse getTaskProject(GetTaskProjectRequest request) throws Exception {
         RequestOperation<GetTaskProjectRequest, GetTaskProjectResponse> operation
-              = new GetTaskProjectOperation( sdkConfiguration);
+              = new GetTaskProjectOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a task
@@ -225,13 +214,11 @@ public class Task {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetTaskTaskResponse getTaskTask(
-            GetTaskTaskRequest request) throws Exception {
+    public GetTaskTaskResponse getTaskTask(GetTaskTaskRequest request) throws Exception {
         RequestOperation<GetTaskTaskRequest, GetTaskTaskResponse> operation
-              = new GetTaskTaskOperation( sdkConfiguration);
+              = new GetTaskTaskOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all comments
@@ -249,13 +236,11 @@ public class Task {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListTaskCommentsResponse listTaskComments(
-            ListTaskCommentsRequest request) throws Exception {
+    public ListTaskCommentsResponse listTaskComments(ListTaskCommentsRequest request) throws Exception {
         RequestOperation<ListTaskCommentsRequest, ListTaskCommentsResponse> operation
-              = new ListTaskCommentsOperation( sdkConfiguration);
+              = new ListTaskCommentsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all projects
@@ -273,13 +258,11 @@ public class Task {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListTaskProjectsResponse listTaskProjects(
-            ListTaskProjectsRequest request) throws Exception {
+    public ListTaskProjectsResponse listTaskProjects(ListTaskProjectsRequest request) throws Exception {
         RequestOperation<ListTaskProjectsRequest, ListTaskProjectsResponse> operation
-              = new ListTaskProjectsOperation( sdkConfiguration);
+              = new ListTaskProjectsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all tasks
@@ -297,13 +280,11 @@ public class Task {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListTaskTasksResponse listTaskTasks(
-            ListTaskTasksRequest request) throws Exception {
+    public ListTaskTasksResponse listTaskTasks(ListTaskTasksRequest request) throws Exception {
         RequestOperation<ListTaskTasksRequest, ListTaskTasksResponse> operation
-              = new ListTaskTasksOperation( sdkConfiguration);
+              = new ListTaskTasksOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a comment
@@ -321,13 +302,11 @@ public class Task {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchTaskCommentResponse patchTaskComment(
-            PatchTaskCommentRequest request) throws Exception {
+    public PatchTaskCommentResponse patchTaskComment(PatchTaskCommentRequest request) throws Exception {
         RequestOperation<PatchTaskCommentRequest, PatchTaskCommentResponse> operation
-              = new PatchTaskCommentOperation( sdkConfiguration);
+              = new PatchTaskCommentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a project
@@ -345,13 +324,11 @@ public class Task {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchTaskProjectResponse patchTaskProject(
-            PatchTaskProjectRequest request) throws Exception {
+    public PatchTaskProjectResponse patchTaskProject(PatchTaskProjectRequest request) throws Exception {
         RequestOperation<PatchTaskProjectRequest, PatchTaskProjectResponse> operation
-              = new PatchTaskProjectOperation( sdkConfiguration);
+              = new PatchTaskProjectOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a task
@@ -369,13 +346,11 @@ public class Task {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchTaskTaskResponse patchTaskTask(
-            PatchTaskTaskRequest request) throws Exception {
+    public PatchTaskTaskResponse patchTaskTask(PatchTaskTaskRequest request) throws Exception {
         RequestOperation<PatchTaskTaskRequest, PatchTaskTaskResponse> operation
-              = new PatchTaskTaskOperation( sdkConfiguration);
+              = new PatchTaskTaskOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a comment
@@ -393,13 +368,11 @@ public class Task {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveTaskCommentResponse removeTaskComment(
-            RemoveTaskCommentRequest request) throws Exception {
+    public RemoveTaskCommentResponse removeTaskComment(RemoveTaskCommentRequest request) throws Exception {
         RequestOperation<RemoveTaskCommentRequest, RemoveTaskCommentResponse> operation
-              = new RemoveTaskCommentOperation( sdkConfiguration);
+              = new RemoveTaskCommentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a project
@@ -417,13 +390,11 @@ public class Task {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveTaskProjectResponse removeTaskProject(
-            RemoveTaskProjectRequest request) throws Exception {
+    public RemoveTaskProjectResponse removeTaskProject(RemoveTaskProjectRequest request) throws Exception {
         RequestOperation<RemoveTaskProjectRequest, RemoveTaskProjectResponse> operation
-              = new RemoveTaskProjectOperation( sdkConfiguration);
+              = new RemoveTaskProjectOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a task
@@ -441,13 +412,11 @@ public class Task {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveTaskTaskResponse removeTaskTask(
-            RemoveTaskTaskRequest request) throws Exception {
+    public RemoveTaskTaskResponse removeTaskTask(RemoveTaskTaskRequest request) throws Exception {
         RequestOperation<RemoveTaskTaskRequest, RemoveTaskTaskResponse> operation
-              = new RemoveTaskTaskOperation( sdkConfiguration);
+              = new RemoveTaskTaskOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a comment
@@ -465,13 +434,11 @@ public class Task {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateTaskCommentResponse updateTaskComment(
-            UpdateTaskCommentRequest request) throws Exception {
+    public UpdateTaskCommentResponse updateTaskComment(UpdateTaskCommentRequest request) throws Exception {
         RequestOperation<UpdateTaskCommentRequest, UpdateTaskCommentResponse> operation
-              = new UpdateTaskCommentOperation( sdkConfiguration);
+              = new UpdateTaskCommentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a project
@@ -489,13 +456,11 @@ public class Task {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateTaskProjectResponse updateTaskProject(
-            UpdateTaskProjectRequest request) throws Exception {
+    public UpdateTaskProjectResponse updateTaskProject(UpdateTaskProjectRequest request) throws Exception {
         RequestOperation<UpdateTaskProjectRequest, UpdateTaskProjectResponse> operation
-              = new UpdateTaskProjectOperation( sdkConfiguration);
+              = new UpdateTaskProjectOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a task
@@ -513,10 +478,9 @@ public class Task {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateTaskTaskResponse updateTaskTask(
-            UpdateTaskTaskRequest request) throws Exception {
+    public UpdateTaskTaskResponse updateTaskTask(UpdateTaskTaskRequest request) throws Exception {
         RequestOperation<UpdateTaskTaskRequest, UpdateTaskTaskResponse> operation
-              = new UpdateTaskTaskOperation( sdkConfiguration);
+              = new UpdateTaskTaskOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

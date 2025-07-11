@@ -40,7 +40,6 @@ public class Commit {
     Commit(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a commit
      * 
@@ -57,13 +56,11 @@ public class Commit {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateRepoCommitResponse createRepoCommit(
-            CreateRepoCommitRequest request) throws Exception {
+    public CreateRepoCommitResponse createRepoCommit(CreateRepoCommitRequest request) throws Exception {
         RequestOperation<CreateRepoCommitRequest, CreateRepoCommitResponse> operation
-              = new CreateRepoCommitOperation( sdkConfiguration);
+              = new CreateRepoCommitOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a commit
@@ -81,13 +78,11 @@ public class Commit {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetRepoCommitResponse getRepoCommit(
-            GetRepoCommitRequest request) throws Exception {
+    public GetRepoCommitResponse getRepoCommit(GetRepoCommitRequest request) throws Exception {
         RequestOperation<GetRepoCommitRequest, GetRepoCommitResponse> operation
-              = new GetRepoCommitOperation( sdkConfiguration);
+              = new GetRepoCommitOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all commits
@@ -105,13 +100,11 @@ public class Commit {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListRepoCommitsResponse listRepoCommits(
-            ListRepoCommitsRequest request) throws Exception {
+    public ListRepoCommitsResponse listRepoCommits(ListRepoCommitsRequest request) throws Exception {
         RequestOperation<ListRepoCommitsRequest, ListRepoCommitsResponse> operation
-              = new ListRepoCommitsOperation( sdkConfiguration);
+              = new ListRepoCommitsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a commit
@@ -129,13 +122,11 @@ public class Commit {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchRepoCommitResponse patchRepoCommit(
-            PatchRepoCommitRequest request) throws Exception {
+    public PatchRepoCommitResponse patchRepoCommit(PatchRepoCommitRequest request) throws Exception {
         RequestOperation<PatchRepoCommitRequest, PatchRepoCommitResponse> operation
-              = new PatchRepoCommitOperation( sdkConfiguration);
+              = new PatchRepoCommitOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a commit
@@ -153,13 +144,11 @@ public class Commit {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveRepoCommitResponse removeRepoCommit(
-            RemoveRepoCommitRequest request) throws Exception {
+    public RemoveRepoCommitResponse removeRepoCommit(RemoveRepoCommitRequest request) throws Exception {
         RequestOperation<RemoveRepoCommitRequest, RemoveRepoCommitResponse> operation
-              = new RemoveRepoCommitOperation( sdkConfiguration);
+              = new RemoveRepoCommitOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a commit
@@ -177,10 +166,9 @@ public class Commit {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateRepoCommitResponse updateRepoCommit(
-            UpdateRepoCommitRequest request) throws Exception {
+    public UpdateRepoCommitResponse updateRepoCommit(UpdateRepoCommitRequest request) throws Exception {
         RequestOperation<UpdateRepoCommitRequest, UpdateRepoCommitResponse> operation
-              = new UpdateRepoCommitOperation( sdkConfiguration);
+              = new UpdateRepoCommitOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

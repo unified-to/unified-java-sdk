@@ -39,7 +39,6 @@ public class Connection {
     Connection(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create connection
      * 
@@ -60,13 +59,11 @@ public class Connection {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateUnifiedConnectionResponse createUnifiedConnection(
-            to.unified.unified_java_sdk.models.shared.Connection request) throws Exception {
+    public CreateUnifiedConnectionResponse createUnifiedConnection(to.unified.unified_java_sdk.models.shared.Connection request) throws Exception {
         RequestOperation<to.unified.unified_java_sdk.models.shared.Connection, CreateUnifiedConnectionResponse> operation
-              = new CreateUnifiedConnectionOperation( sdkConfiguration);
+              = new CreateUnifiedConnectionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve connection
@@ -84,13 +81,11 @@ public class Connection {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetUnifiedConnectionResponse getUnifiedConnection(
-            GetUnifiedConnectionRequest request) throws Exception {
+    public GetUnifiedConnectionResponse getUnifiedConnection(GetUnifiedConnectionRequest request) throws Exception {
         RequestOperation<GetUnifiedConnectionRequest, GetUnifiedConnectionResponse> operation
-              = new GetUnifiedConnectionOperation( sdkConfiguration);
+              = new GetUnifiedConnectionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all connections
@@ -108,13 +103,11 @@ public class Connection {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListUnifiedConnectionsResponse listUnifiedConnections(
-            ListUnifiedConnectionsRequest request) throws Exception {
+    public ListUnifiedConnectionsResponse listUnifiedConnections(ListUnifiedConnectionsRequest request) throws Exception {
         RequestOperation<ListUnifiedConnectionsRequest, ListUnifiedConnectionsResponse> operation
-              = new ListUnifiedConnectionsOperation( sdkConfiguration);
+              = new ListUnifiedConnectionsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update connection
@@ -132,13 +125,11 @@ public class Connection {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchUnifiedConnectionResponse patchUnifiedConnection(
-            PatchUnifiedConnectionRequest request) throws Exception {
+    public PatchUnifiedConnectionResponse patchUnifiedConnection(PatchUnifiedConnectionRequest request) throws Exception {
         RequestOperation<PatchUnifiedConnectionRequest, PatchUnifiedConnectionResponse> operation
-              = new PatchUnifiedConnectionOperation( sdkConfiguration);
+              = new PatchUnifiedConnectionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove connection
@@ -156,13 +147,11 @@ public class Connection {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveUnifiedConnectionResponse removeUnifiedConnection(
-            RemoveUnifiedConnectionRequest request) throws Exception {
+    public RemoveUnifiedConnectionResponse removeUnifiedConnection(RemoveUnifiedConnectionRequest request) throws Exception {
         RequestOperation<RemoveUnifiedConnectionRequest, RemoveUnifiedConnectionResponse> operation
-              = new RemoveUnifiedConnectionOperation( sdkConfiguration);
+              = new RemoveUnifiedConnectionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update connection
@@ -180,10 +169,9 @@ public class Connection {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateUnifiedConnectionResponse updateUnifiedConnection(
-            UpdateUnifiedConnectionRequest request) throws Exception {
+    public UpdateUnifiedConnectionResponse updateUnifiedConnection(UpdateUnifiedConnectionRequest request) throws Exception {
         RequestOperation<UpdateUnifiedConnectionRequest, UpdateUnifiedConnectionResponse> operation
-              = new UpdateUnifiedConnectionOperation( sdkConfiguration);
+              = new UpdateUnifiedConnectionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

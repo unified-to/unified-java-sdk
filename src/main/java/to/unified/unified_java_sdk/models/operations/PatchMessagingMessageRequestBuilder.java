@@ -28,7 +28,7 @@ public class PatchMessagingMessageRequestBuilder {
     public PatchMessagingMessageResponse call() throws Exception {
         
         RequestOperation<PatchMessagingMessageRequest, PatchMessagingMessageResponse> operation
-              = new PatchMessagingMessageOperation( sdkConfiguration);
+              = new PatchMessagingMessageOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

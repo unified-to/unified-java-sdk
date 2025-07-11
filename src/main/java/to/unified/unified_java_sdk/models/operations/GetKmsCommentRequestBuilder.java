@@ -28,7 +28,7 @@ public class GetKmsCommentRequestBuilder {
     public GetKmsCommentResponse call() throws Exception {
         
         RequestOperation<GetKmsCommentRequest, GetKmsCommentResponse> operation
-              = new GetKmsCommentOperation( sdkConfiguration);
+              = new GetKmsCommentOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

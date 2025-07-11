@@ -28,7 +28,7 @@ public class ListAtsInterviewsRequestBuilder {
     public ListAtsInterviewsResponse call() throws Exception {
         
         RequestOperation<ListAtsInterviewsRequest, ListAtsInterviewsResponse> operation
-              = new ListAtsInterviewsOperation( sdkConfiguration);
+              = new ListAtsInterviewsOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

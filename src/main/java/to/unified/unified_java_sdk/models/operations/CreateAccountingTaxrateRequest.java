@@ -14,6 +14,7 @@ import to.unified.unified_java_sdk.models.shared.AccountingTaxrate;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class CreateAccountingTaxrateRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
@@ -56,7 +57,8 @@ public class CreateAccountingTaxrateRequest {
     public CreateAccountingTaxrateRequest(
             AccountingTaxrate accountingTaxrate,
             String connectionId) {
-        this(accountingTaxrate, connectionId, Optional.empty(), Optional.empty());
+        this(accountingTaxrate, connectionId, Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -89,9 +91,10 @@ public class CreateAccountingTaxrateRequest {
         return raw;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public CreateAccountingTaxrateRequest withAccountingTaxrate(AccountingTaxrate accountingTaxrate) {
         Utils.checkNotNull(accountingTaxrate, "accountingTaxrate");
@@ -117,6 +120,7 @@ public class CreateAccountingTaxrateRequest {
         return this;
     }
 
+
     /**
      * Comma-delimited fields to return
      */
@@ -135,6 +139,7 @@ public class CreateAccountingTaxrateRequest {
         return this;
     }
 
+
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
@@ -144,7 +149,6 @@ public class CreateAccountingTaxrateRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -164,9 +168,7 @@ public class CreateAccountingTaxrateRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            accountingTaxrate,
-            connectionId,
-            fields,
+            accountingTaxrate, connectionId, fields,
             raw);
     }
     
@@ -178,26 +180,29 @@ public class CreateAccountingTaxrateRequest {
                 "fields", fields,
                 "raw", raw);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private AccountingTaxrate accountingTaxrate;
- 
+
         private String connectionId;
- 
+
         private Optional<? extends List<String>> fields = Optional.empty();
- 
+
         private Optional<String> raw = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder accountingTaxrate(AccountingTaxrate accountingTaxrate) {
             Utils.checkNotNull(accountingTaxrate, "accountingTaxrate");
             this.accountingTaxrate = accountingTaxrate;
             return this;
         }
+
 
         /**
          * ID of the connection
@@ -207,6 +212,7 @@ public class CreateAccountingTaxrateRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         /**
          * Comma-delimited fields to return
@@ -226,6 +232,7 @@ public class CreateAccountingTaxrateRequest {
             return this;
         }
 
+
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
@@ -243,13 +250,13 @@ public class CreateAccountingTaxrateRequest {
             this.raw = raw;
             return this;
         }
-        
+
         public CreateAccountingTaxrateRequest build() {
+
             return new CreateAccountingTaxrateRequest(
-                accountingTaxrate,
-                connectionId,
-                fields,
+                accountingTaxrate, connectionId, fields,
                 raw);
         }
+
     }
 }

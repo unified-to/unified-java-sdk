@@ -28,7 +28,7 @@ public class ListCrmPipelinesRequestBuilder {
     public ListCrmPipelinesResponse call() throws Exception {
         
         RequestOperation<ListCrmPipelinesRequest, ListCrmPipelinesResponse> operation
-              = new ListCrmPipelinesOperation( sdkConfiguration);
+              = new ListCrmPipelinesOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

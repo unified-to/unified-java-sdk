@@ -28,7 +28,7 @@ public class GetMessagingChannelRequestBuilder {
     public GetMessagingChannelResponse call() throws Exception {
         
         RequestOperation<GetMessagingChannelRequest, GetMessagingChannelResponse> operation
-              = new GetMessagingChannelOperation( sdkConfiguration);
+              = new GetMessagingChannelOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

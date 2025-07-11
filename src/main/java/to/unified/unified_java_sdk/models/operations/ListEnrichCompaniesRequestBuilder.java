@@ -28,7 +28,7 @@ public class ListEnrichCompaniesRequestBuilder {
     public ListEnrichCompaniesResponse call() throws Exception {
         
         RequestOperation<ListEnrichCompaniesRequest, ListEnrichCompaniesResponse> operation
-              = new ListEnrichCompaniesOperation( sdkConfiguration);
+              = new ListEnrichCompaniesOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

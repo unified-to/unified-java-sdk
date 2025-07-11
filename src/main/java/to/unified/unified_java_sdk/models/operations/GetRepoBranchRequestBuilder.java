@@ -28,7 +28,7 @@ public class GetRepoBranchRequestBuilder {
     public GetRepoBranchResponse call() throws Exception {
         
         RequestOperation<GetRepoBranchRequest, GetRepoBranchResponse> operation
-              = new GetRepoBranchOperation( sdkConfiguration);
+              = new GetRepoBranchOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

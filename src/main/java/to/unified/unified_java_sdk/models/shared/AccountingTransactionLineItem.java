@@ -14,35 +14,43 @@ import java.lang.String;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AccountingTransactionLineItem {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     private Optional<String> accountId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private Optional<String> description;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object_type")
     private Optional<String> objectType;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
     private Optional<Double> totalAmount;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit_amount")
     private Optional<Double> unitAmount;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit_quantity")
@@ -77,7 +85,9 @@ public class AccountingTransactionLineItem {
     }
     
     public AccountingTransactionLineItem() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -120,15 +130,17 @@ public class AccountingTransactionLineItem {
         return unitQuantity;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AccountingTransactionLineItem withAccountId(String accountId) {
         Utils.checkNotNull(accountId, "accountId");
         this.accountId = Optional.ofNullable(accountId);
         return this;
     }
+
 
     public AccountingTransactionLineItem withAccountId(Optional<String> accountId) {
         Utils.checkNotNull(accountId, "accountId");
@@ -142,6 +154,7 @@ public class AccountingTransactionLineItem {
         return this;
     }
 
+
     public AccountingTransactionLineItem withDescription(Optional<String> description) {
         Utils.checkNotNull(description, "description");
         this.description = description;
@@ -153,6 +166,7 @@ public class AccountingTransactionLineItem {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public AccountingTransactionLineItem withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -166,6 +180,7 @@ public class AccountingTransactionLineItem {
         return this;
     }
 
+
     public AccountingTransactionLineItem withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
         this.name = name;
@@ -177,6 +192,7 @@ public class AccountingTransactionLineItem {
         this.objectType = Optional.ofNullable(objectType);
         return this;
     }
+
 
     public AccountingTransactionLineItem withObjectType(Optional<String> objectType) {
         Utils.checkNotNull(objectType, "objectType");
@@ -190,6 +206,7 @@ public class AccountingTransactionLineItem {
         return this;
     }
 
+
     public AccountingTransactionLineItem withTotalAmount(Optional<Double> totalAmount) {
         Utils.checkNotNull(totalAmount, "totalAmount");
         this.totalAmount = totalAmount;
@@ -201,6 +218,7 @@ public class AccountingTransactionLineItem {
         this.unitAmount = Optional.ofNullable(unitAmount);
         return this;
     }
+
 
     public AccountingTransactionLineItem withUnitAmount(Optional<Double> unitAmount) {
         Utils.checkNotNull(unitAmount, "unitAmount");
@@ -214,13 +232,13 @@ public class AccountingTransactionLineItem {
         return this;
     }
 
+
     public AccountingTransactionLineItem withUnitQuantity(Optional<Double> unitQuantity) {
         Utils.checkNotNull(unitQuantity, "unitQuantity");
         this.unitQuantity = unitQuantity;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -244,14 +262,9 @@ public class AccountingTransactionLineItem {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            accountId,
-            description,
-            id,
-            name,
-            objectType,
-            totalAmount,
-            unitAmount,
-            unitQuantity);
+            accountId, description, id,
+            name, objectType, totalAmount,
+            unitAmount, unitQuantity);
     }
     
     @Override
@@ -266,28 +279,30 @@ public class AccountingTransactionLineItem {
                 "unitAmount", unitAmount,
                 "unitQuantity", unitQuantity);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> accountId = Optional.empty();
- 
+
         private Optional<String> description = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<String> objectType = Optional.empty();
- 
+
         private Optional<Double> totalAmount = Optional.empty();
- 
+
         private Optional<Double> unitAmount = Optional.empty();
- 
+
         private Optional<Double> unitQuantity = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder accountId(String accountId) {
             Utils.checkNotNull(accountId, "accountId");
@@ -301,6 +316,7 @@ public class AccountingTransactionLineItem {
             return this;
         }
 
+
         public Builder description(String description) {
             Utils.checkNotNull(description, "description");
             this.description = Optional.ofNullable(description);
@@ -312,6 +328,7 @@ public class AccountingTransactionLineItem {
             this.description = description;
             return this;
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -325,6 +342,7 @@ public class AccountingTransactionLineItem {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = Optional.ofNullable(name);
@@ -336,6 +354,7 @@ public class AccountingTransactionLineItem {
             this.name = name;
             return this;
         }
+
 
         public Builder objectType(String objectType) {
             Utils.checkNotNull(objectType, "objectType");
@@ -349,6 +368,7 @@ public class AccountingTransactionLineItem {
             return this;
         }
 
+
         public Builder totalAmount(double totalAmount) {
             Utils.checkNotNull(totalAmount, "totalAmount");
             this.totalAmount = Optional.ofNullable(totalAmount);
@@ -360,6 +380,7 @@ public class AccountingTransactionLineItem {
             this.totalAmount = totalAmount;
             return this;
         }
+
 
         public Builder unitAmount(double unitAmount) {
             Utils.checkNotNull(unitAmount, "unitAmount");
@@ -373,6 +394,7 @@ public class AccountingTransactionLineItem {
             return this;
         }
 
+
         public Builder unitQuantity(double unitQuantity) {
             Utils.checkNotNull(unitQuantity, "unitQuantity");
             this.unitQuantity = Optional.ofNullable(unitQuantity);
@@ -384,17 +406,14 @@ public class AccountingTransactionLineItem {
             this.unitQuantity = unitQuantity;
             return this;
         }
-        
+
         public AccountingTransactionLineItem build() {
+
             return new AccountingTransactionLineItem(
-                accountId,
-                description,
-                id,
-                name,
-                objectType,
-                totalAmount,
-                unitAmount,
-                unitQuantity);
+                accountId, description, id,
+                name, objectType, totalAmount,
+                unitAmount, unitQuantity);
         }
+
     }
 }

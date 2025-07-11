@@ -28,7 +28,7 @@ public class RemovePaymentSubscriptionRequestBuilder {
     public RemovePaymentSubscriptionResponse call() throws Exception {
         
         RequestOperation<RemovePaymentSubscriptionRequest, RemovePaymentSubscriptionResponse> operation
-              = new RemovePaymentSubscriptionOperation( sdkConfiguration);
+              = new RemovePaymentSubscriptionOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

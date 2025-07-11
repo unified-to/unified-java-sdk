@@ -14,8 +14,8 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class ListCrmDealsRequest {
 
+public class ListCrmDealsRequest {
     /**
      * The company ID to filter by
      */
@@ -40,11 +40,14 @@ public class ListCrmDealsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     private Optional<? extends List<String>> fields;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     private Optional<Double> limit;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     private Optional<Double> offset;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     private Optional<String> order;
@@ -66,6 +69,7 @@ public class ListCrmDealsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
     private Optional<String> raw;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     private Optional<String> sort;
@@ -127,7 +131,11 @@ public class ListCrmDealsRequest {
     
     public ListCrmDealsRequest(
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), connectionId, Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     /**
@@ -223,9 +231,10 @@ public class ListCrmDealsRequest {
         return userId;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * The company ID to filter by
@@ -235,6 +244,7 @@ public class ListCrmDealsRequest {
         this.companyId = Optional.ofNullable(companyId);
         return this;
     }
+
 
     /**
      * The company ID to filter by
@@ -263,6 +273,7 @@ public class ListCrmDealsRequest {
         return this;
     }
 
+
     /**
      * The contact ID to filter by
      */
@@ -281,6 +292,7 @@ public class ListCrmDealsRequest {
         return this;
     }
 
+
     /**
      * Comma-delimited fields to return
      */
@@ -296,6 +308,7 @@ public class ListCrmDealsRequest {
         return this;
     }
 
+
     public ListCrmDealsRequest withLimit(Optional<Double> limit) {
         Utils.checkNotNull(limit, "limit");
         this.limit = limit;
@@ -308,6 +321,7 @@ public class ListCrmDealsRequest {
         return this;
     }
 
+
     public ListCrmDealsRequest withOffset(Optional<Double> offset) {
         Utils.checkNotNull(offset, "offset");
         this.offset = offset;
@@ -319,6 +333,7 @@ public class ListCrmDealsRequest {
         this.order = Optional.ofNullable(order);
         return this;
     }
+
 
     public ListCrmDealsRequest withOrder(Optional<String> order) {
         Utils.checkNotNull(order, "order");
@@ -334,6 +349,7 @@ public class ListCrmDealsRequest {
         this.pipelineId = Optional.ofNullable(pipelineId);
         return this;
     }
+
 
     /**
      * The pipeline ID to filter by
@@ -353,6 +369,7 @@ public class ListCrmDealsRequest {
         return this;
     }
 
+
     /**
      * Query string to search. eg. email address or name
      */
@@ -371,6 +388,7 @@ public class ListCrmDealsRequest {
         return this;
     }
 
+
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
@@ -386,6 +404,7 @@ public class ListCrmDealsRequest {
         return this;
     }
 
+
     public ListCrmDealsRequest withSort(Optional<String> sort) {
         Utils.checkNotNull(sort, "sort");
         this.sort = sort;
@@ -400,6 +419,7 @@ public class ListCrmDealsRequest {
         this.updatedGte = Optional.ofNullable(updatedGte);
         return this;
     }
+
 
     /**
      * Return only results whose updated date is equal or greater to this value
@@ -419,6 +439,7 @@ public class ListCrmDealsRequest {
         return this;
     }
 
+
     /**
      * The user/employee ID to filter by
      */
@@ -428,7 +449,6 @@ public class ListCrmDealsRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -457,18 +477,10 @@ public class ListCrmDealsRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            companyId,
-            connectionId,
-            contactId,
-            fields,
-            limit,
-            offset,
-            order,
-            pipelineId,
-            query,
-            raw,
-            sort,
-            updatedGte,
+            companyId, connectionId, contactId,
+            fields, limit, offset,
+            order, pipelineId, query,
+            raw, sort, updatedGte,
             userId);
     }
     
@@ -489,38 +501,40 @@ public class ListCrmDealsRequest {
                 "updatedGte", updatedGte,
                 "userId", userId);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> companyId = Optional.empty();
- 
+
         private String connectionId;
- 
+
         private Optional<String> contactId = Optional.empty();
- 
+
         private Optional<? extends List<String>> fields = Optional.empty();
- 
+
         private Optional<Double> limit = Optional.empty();
- 
+
         private Optional<Double> offset = Optional.empty();
- 
+
         private Optional<String> order = Optional.empty();
- 
+
         private Optional<String> pipelineId = Optional.empty();
- 
+
         private Optional<String> query = Optional.empty();
- 
+
         private Optional<String> raw = Optional.empty();
- 
+
         private Optional<String> sort = Optional.empty();
- 
+
         private Optional<String> updatedGte = Optional.empty();
- 
+
         private Optional<String> userId = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * The company ID to filter by
@@ -540,6 +554,7 @@ public class ListCrmDealsRequest {
             return this;
         }
 
+
         /**
          * ID of the connection
          */
@@ -548,6 +563,7 @@ public class ListCrmDealsRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         /**
          * The contact ID to filter by
@@ -567,6 +583,7 @@ public class ListCrmDealsRequest {
             return this;
         }
 
+
         /**
          * Comma-delimited fields to return
          */
@@ -585,6 +602,7 @@ public class ListCrmDealsRequest {
             return this;
         }
 
+
         public Builder limit(double limit) {
             Utils.checkNotNull(limit, "limit");
             this.limit = Optional.ofNullable(limit);
@@ -596,6 +614,7 @@ public class ListCrmDealsRequest {
             this.limit = limit;
             return this;
         }
+
 
         public Builder offset(double offset) {
             Utils.checkNotNull(offset, "offset");
@@ -609,6 +628,7 @@ public class ListCrmDealsRequest {
             return this;
         }
 
+
         public Builder order(String order) {
             Utils.checkNotNull(order, "order");
             this.order = Optional.ofNullable(order);
@@ -620,6 +640,7 @@ public class ListCrmDealsRequest {
             this.order = order;
             return this;
         }
+
 
         /**
          * The pipeline ID to filter by
@@ -639,6 +660,7 @@ public class ListCrmDealsRequest {
             return this;
         }
 
+
         /**
          * Query string to search. eg. email address or name
          */
@@ -656,6 +678,7 @@ public class ListCrmDealsRequest {
             this.query = query;
             return this;
         }
+
 
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
@@ -675,6 +698,7 @@ public class ListCrmDealsRequest {
             return this;
         }
 
+
         public Builder sort(String sort) {
             Utils.checkNotNull(sort, "sort");
             this.sort = Optional.ofNullable(sort);
@@ -686,6 +710,7 @@ public class ListCrmDealsRequest {
             this.sort = sort;
             return this;
         }
+
 
         /**
          * Return only results whose updated date is equal or greater to this value
@@ -705,6 +730,7 @@ public class ListCrmDealsRequest {
             return this;
         }
 
+
         /**
          * The user/employee ID to filter by
          */
@@ -722,22 +748,16 @@ public class ListCrmDealsRequest {
             this.userId = userId;
             return this;
         }
-        
+
         public ListCrmDealsRequest build() {
+
             return new ListCrmDealsRequest(
-                companyId,
-                connectionId,
-                contactId,
-                fields,
-                limit,
-                offset,
-                order,
-                pipelineId,
-                query,
-                raw,
-                sort,
-                updatedGte,
+                companyId, connectionId, contactId,
+                fields, limit, offset,
+                order, pipelineId, query,
+                raw, sort, updatedGte,
                 userId);
         }
+
     }
 }

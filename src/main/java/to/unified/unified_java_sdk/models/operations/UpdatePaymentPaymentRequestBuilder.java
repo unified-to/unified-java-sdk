@@ -28,7 +28,7 @@ public class UpdatePaymentPaymentRequestBuilder {
     public UpdatePaymentPaymentResponse call() throws Exception {
         
         RequestOperation<UpdatePaymentPaymentRequest, UpdatePaymentPaymentResponse> operation
-              = new UpdatePaymentPaymentOperation( sdkConfiguration);
+              = new UpdatePaymentPaymentOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

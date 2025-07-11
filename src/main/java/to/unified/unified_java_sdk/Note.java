@@ -40,7 +40,6 @@ public class Note {
     Note(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a note
      * 
@@ -57,13 +56,11 @@ public class Note {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateTicketingNoteResponse createTicketingNote(
-            CreateTicketingNoteRequest request) throws Exception {
+    public CreateTicketingNoteResponse createTicketingNote(CreateTicketingNoteRequest request) throws Exception {
         RequestOperation<CreateTicketingNoteRequest, CreateTicketingNoteResponse> operation
-              = new CreateTicketingNoteOperation( sdkConfiguration);
+              = new CreateTicketingNoteOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a note
@@ -81,13 +78,11 @@ public class Note {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetTicketingNoteResponse getTicketingNote(
-            GetTicketingNoteRequest request) throws Exception {
+    public GetTicketingNoteResponse getTicketingNote(GetTicketingNoteRequest request) throws Exception {
         RequestOperation<GetTicketingNoteRequest, GetTicketingNoteResponse> operation
-              = new GetTicketingNoteOperation( sdkConfiguration);
+              = new GetTicketingNoteOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all notes
@@ -105,13 +100,11 @@ public class Note {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListTicketingNotesResponse listTicketingNotes(
-            ListTicketingNotesRequest request) throws Exception {
+    public ListTicketingNotesResponse listTicketingNotes(ListTicketingNotesRequest request) throws Exception {
         RequestOperation<ListTicketingNotesRequest, ListTicketingNotesResponse> operation
-              = new ListTicketingNotesOperation( sdkConfiguration);
+              = new ListTicketingNotesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a note
@@ -129,13 +122,11 @@ public class Note {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchTicketingNoteResponse patchTicketingNote(
-            PatchTicketingNoteRequest request) throws Exception {
+    public PatchTicketingNoteResponse patchTicketingNote(PatchTicketingNoteRequest request) throws Exception {
         RequestOperation<PatchTicketingNoteRequest, PatchTicketingNoteResponse> operation
-              = new PatchTicketingNoteOperation( sdkConfiguration);
+              = new PatchTicketingNoteOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a note
@@ -153,13 +144,11 @@ public class Note {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveTicketingNoteResponse removeTicketingNote(
-            RemoveTicketingNoteRequest request) throws Exception {
+    public RemoveTicketingNoteResponse removeTicketingNote(RemoveTicketingNoteRequest request) throws Exception {
         RequestOperation<RemoveTicketingNoteRequest, RemoveTicketingNoteResponse> operation
-              = new RemoveTicketingNoteOperation( sdkConfiguration);
+              = new RemoveTicketingNoteOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a note
@@ -177,10 +166,9 @@ public class Note {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateTicketingNoteResponse updateTicketingNote(
-            UpdateTicketingNoteRequest request) throws Exception {
+    public UpdateTicketingNoteResponse updateTicketingNote(UpdateTicketingNoteRequest request) throws Exception {
         RequestOperation<UpdateTicketingNoteRequest, UpdateTicketingNoteResponse> operation
-              = new UpdateTicketingNoteOperation( sdkConfiguration);
+              = new UpdateTicketingNoteOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

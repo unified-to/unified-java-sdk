@@ -25,17 +25,21 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserMa
     @JsonProperty("$ref")
     private Optional<String> dollarRef;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     private Optional<String> displayName;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managerId")
     private Optional<String> managerId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private Optional<? extends PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType> type;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
@@ -61,7 +65,8 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserMa
     }
     
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -90,15 +95,17 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserMa
         return value;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager withDollarRef(String dollarRef) {
         Utils.checkNotNull(dollarRef, "dollarRef");
         this.dollarRef = Optional.ofNullable(dollarRef);
         return this;
     }
+
 
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager withDollarRef(Optional<String> dollarRef) {
         Utils.checkNotNull(dollarRef, "dollarRef");
@@ -112,6 +119,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserMa
         return this;
     }
 
+
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager withDisplayName(Optional<String> displayName) {
         Utils.checkNotNull(displayName, "displayName");
         this.displayName = displayName;
@@ -123,6 +131,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserMa
         this.managerId = Optional.ofNullable(managerId);
         return this;
     }
+
 
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager withManagerId(Optional<String> managerId) {
         Utils.checkNotNull(managerId, "managerId");
@@ -136,6 +145,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserMa
         return this;
     }
 
+
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager withType(Optional<? extends PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType> type) {
         Utils.checkNotNull(type, "type");
         this.type = type;
@@ -148,13 +158,13 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserMa
         return this;
     }
 
+
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager withValue(Optional<String> value) {
         Utils.checkNotNull(value, "value");
         this.value = value;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -175,11 +185,8 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserMa
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            dollarRef,
-            displayName,
-            managerId,
-            type,
-            value);
+            dollarRef, displayName, managerId,
+            type, value);
     }
     
     @Override
@@ -191,22 +198,24 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserMa
                 "type", type,
                 "value", value);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> dollarRef = Optional.empty();
- 
+
         private Optional<String> displayName = Optional.empty();
- 
+
         private Optional<String> managerId = Optional.empty();
- 
+
         private Optional<? extends PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType> type = Optional.empty();
- 
+
         private Optional<String> value = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder dollarRef(String dollarRef) {
             Utils.checkNotNull(dollarRef, "dollarRef");
@@ -220,6 +229,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserMa
             return this;
         }
 
+
         public Builder displayName(String displayName) {
             Utils.checkNotNull(displayName, "displayName");
             this.displayName = Optional.ofNullable(displayName);
@@ -231,6 +241,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserMa
             this.displayName = displayName;
             return this;
         }
+
 
         public Builder managerId(String managerId) {
             Utils.checkNotNull(managerId, "managerId");
@@ -244,6 +255,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserMa
             return this;
         }
 
+
         public Builder type(PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType type) {
             Utils.checkNotNull(type, "type");
             this.type = Optional.ofNullable(type);
@@ -256,6 +268,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserMa
             return this;
         }
 
+
         public Builder value(String value) {
             Utils.checkNotNull(value, "value");
             this.value = Optional.ofNullable(value);
@@ -267,14 +280,13 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserMa
             this.value = value;
             return this;
         }
-        
+
         public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager build() {
+
             return new PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager(
-                dollarRef,
-                displayName,
-                managerId,
-                type,
-                value);
+                dollarRef, displayName, managerId,
+                type, value);
         }
+
     }
 }

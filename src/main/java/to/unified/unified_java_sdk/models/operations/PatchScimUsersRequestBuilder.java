@@ -28,7 +28,7 @@ public class PatchScimUsersRequestBuilder {
     public PatchScimUsersResponse call() throws Exception {
         
         RequestOperation<PatchScimUsersRequest, PatchScimUsersResponse> operation
-              = new PatchScimUsersOperation( sdkConfiguration);
+              = new PatchScimUsersOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

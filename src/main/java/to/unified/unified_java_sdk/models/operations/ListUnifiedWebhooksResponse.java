@@ -17,8 +17,8 @@ import to.unified.unified_java_sdk.models.shared.Webhook;
 import to.unified.unified_java_sdk.utils.Response;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class ListUnifiedWebhooksResponse implements Response {
 
+public class ListUnifiedWebhooksResponse implements Response {
     /**
      * HTTP response content type for this operation
      */
@@ -59,7 +59,8 @@ public class ListUnifiedWebhooksResponse implements Response {
             String contentType,
             int statusCode,
             HttpResponse<InputStream> rawResponse) {
-        this(contentType, statusCode, rawResponse, Optional.empty());
+        this(contentType, statusCode, rawResponse,
+            Optional.empty());
     }
 
     /**
@@ -95,9 +96,10 @@ public class ListUnifiedWebhooksResponse implements Response {
         return (Optional<List<Webhook>>) webhooks;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * HTTP response content type for this operation
@@ -135,6 +137,7 @@ public class ListUnifiedWebhooksResponse implements Response {
         return this;
     }
 
+
     /**
      * Successful
      */
@@ -144,7 +147,6 @@ public class ListUnifiedWebhooksResponse implements Response {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -164,9 +166,7 @@ public class ListUnifiedWebhooksResponse implements Response {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            contentType,
-            statusCode,
-            rawResponse,
+            contentType, statusCode, rawResponse,
             webhooks);
     }
     
@@ -178,20 +178,22 @@ public class ListUnifiedWebhooksResponse implements Response {
                 "rawResponse", rawResponse,
                 "webhooks", webhooks);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private String contentType;
- 
+
         private Integer statusCode;
- 
+
         private HttpResponse<InputStream> rawResponse;
- 
+
         private Optional<? extends List<Webhook>> webhooks = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * HTTP response content type for this operation
@@ -202,6 +204,7 @@ public class ListUnifiedWebhooksResponse implements Response {
             return this;
         }
 
+
         /**
          * HTTP response status code for this operation
          */
@@ -211,6 +214,7 @@ public class ListUnifiedWebhooksResponse implements Response {
             return this;
         }
 
+
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
@@ -219,6 +223,7 @@ public class ListUnifiedWebhooksResponse implements Response {
             this.rawResponse = rawResponse;
             return this;
         }
+
 
         /**
          * Successful
@@ -237,13 +242,13 @@ public class ListUnifiedWebhooksResponse implements Response {
             this.webhooks = webhooks;
             return this;
         }
-        
+
         public ListUnifiedWebhooksResponse build() {
+
             return new ListUnifiedWebhooksResponse(
-                contentType,
-                statusCode,
-                rawResponse,
+                contentType, statusCode, rawResponse,
                 webhooks);
         }
+
     }
 }

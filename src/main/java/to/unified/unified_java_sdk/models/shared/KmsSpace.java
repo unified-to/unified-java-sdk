@@ -20,42 +20,52 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.LazySingletonValue;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class KmsSpace {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private Optional<String> description;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     private Optional<Boolean> isActive;
 
+
     @JsonProperty("name")
     private String name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_page_id")
     private Optional<String> parentPageId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_space_id")
     private Optional<String> parentSpaceId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
@@ -97,7 +107,10 @@ public class KmsSpace {
     
     public KmsSpace(
             String name) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), name, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), name, Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -151,15 +164,17 @@ public class KmsSpace {
         return userId;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public KmsSpace withCreatedAt(OffsetDateTime createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public KmsSpace withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -173,6 +188,7 @@ public class KmsSpace {
         return this;
     }
 
+
     public KmsSpace withDescription(Optional<String> description) {
         Utils.checkNotNull(description, "description");
         this.description = description;
@@ -185,6 +201,7 @@ public class KmsSpace {
         return this;
     }
 
+
     public KmsSpace withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -196,6 +213,7 @@ public class KmsSpace {
         this.isActive = Optional.ofNullable(isActive);
         return this;
     }
+
 
     public KmsSpace withIsActive(Optional<Boolean> isActive) {
         Utils.checkNotNull(isActive, "isActive");
@@ -215,6 +233,7 @@ public class KmsSpace {
         return this;
     }
 
+
     public KmsSpace withParentPageId(Optional<String> parentPageId) {
         Utils.checkNotNull(parentPageId, "parentPageId");
         this.parentPageId = parentPageId;
@@ -226,6 +245,7 @@ public class KmsSpace {
         this.parentSpaceId = Optional.ofNullable(parentSpaceId);
         return this;
     }
+
 
     public KmsSpace withParentSpaceId(Optional<String> parentSpaceId) {
         Utils.checkNotNull(parentSpaceId, "parentSpaceId");
@@ -239,6 +259,7 @@ public class KmsSpace {
         return this;
     }
 
+
     public KmsSpace withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
@@ -250,6 +271,7 @@ public class KmsSpace {
         this.updatedAt = Optional.ofNullable(updatedAt);
         return this;
     }
+
 
     public KmsSpace withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
@@ -263,13 +285,13 @@ public class KmsSpace {
         return this;
     }
 
+
     public KmsSpace withUserId(Optional<String> userId) {
         Utils.checkNotNull(userId, "userId");
         this.userId = userId;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -295,15 +317,9 @@ public class KmsSpace {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt,
-            description,
-            id,
-            isActive,
-            name,
-            parentPageId,
-            parentSpaceId,
-            raw,
-            updatedAt,
+            createdAt, description, id,
+            isActive, name, parentPageId,
+            parentSpaceId, raw, updatedAt,
             userId);
     }
     
@@ -321,32 +337,34 @@ public class KmsSpace {
                 "updatedAt", updatedAt,
                 "userId", userId);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> description = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<Boolean> isActive = Optional.empty();
- 
+
         private String name;
- 
+
         private Optional<String> parentPageId = Optional.empty();
- 
+
         private Optional<String> parentSpaceId;
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<String> userId = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -360,6 +378,7 @@ public class KmsSpace {
             return this;
         }
 
+
         public Builder description(String description) {
             Utils.checkNotNull(description, "description");
             this.description = Optional.ofNullable(description);
@@ -371,6 +390,7 @@ public class KmsSpace {
             this.description = description;
             return this;
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -384,6 +404,7 @@ public class KmsSpace {
             return this;
         }
 
+
         public Builder isActive(boolean isActive) {
             Utils.checkNotNull(isActive, "isActive");
             this.isActive = Optional.ofNullable(isActive);
@@ -396,11 +417,13 @@ public class KmsSpace {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = name;
             return this;
         }
+
 
         public Builder parentPageId(String parentPageId) {
             Utils.checkNotNull(parentPageId, "parentPageId");
@@ -414,6 +437,7 @@ public class KmsSpace {
             return this;
         }
 
+
         public Builder parentSpaceId(String parentSpaceId) {
             Utils.checkNotNull(parentSpaceId, "parentSpaceId");
             this.parentSpaceId = Optional.ofNullable(parentSpaceId);
@@ -425,6 +449,7 @@ public class KmsSpace {
             this.parentSpaceId = parentSpaceId;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -438,6 +463,7 @@ public class KmsSpace {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -450,6 +476,7 @@ public class KmsSpace {
             return this;
         }
 
+
         public Builder userId(String userId) {
             Utils.checkNotNull(userId, "userId");
             this.userId = Optional.ofNullable(userId);
@@ -461,23 +488,19 @@ public class KmsSpace {
             this.userId = userId;
             return this;
         }
-        
+
         public KmsSpace build() {
             if (parentSpaceId == null) {
                 parentSpaceId = _SINGLETON_VALUE_ParentSpaceId.value();
             }
+
             return new KmsSpace(
-                createdAt,
-                description,
-                id,
-                isActive,
-                name,
-                parentPageId,
-                parentSpaceId,
-                raw,
-                updatedAt,
+                createdAt, description, id,
+                isActive, name, parentPageId,
+                parentSpaceId, raw, updatedAt,
                 userId);
         }
+
 
         private static final LazySingletonValue<Optional<String>> _SINGLETON_VALUE_ParentSpaceId =
                 new LazySingletonValue<>(

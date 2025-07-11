@@ -28,7 +28,7 @@ public class RemoveRepoRepositoryRequestBuilder {
     public RemoveRepoRepositoryResponse call() throws Exception {
         
         RequestOperation<RemoveRepoRepositoryRequest, RemoveRepoRepositoryResponse> operation
-              = new RemoveRepoRepositoryOperation( sdkConfiguration);
+              = new RemoveRepoRepositoryOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

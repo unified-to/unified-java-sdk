@@ -28,7 +28,7 @@ public class PatchUnifiedConnectionRequestBuilder {
     public PatchUnifiedConnectionResponse call() throws Exception {
         
         RequestOperation<PatchUnifiedConnectionRequest, PatchUnifiedConnectionResponse> operation
-              = new PatchUnifiedConnectionOperation( sdkConfiguration);
+              = new PatchUnifiedConnectionOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

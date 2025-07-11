@@ -18,67 +18,83 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AtsApplication {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answers")
     private Optional<? extends List<AtsApplicationAnswer>> answers;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applied_at")
     private Optional<OffsetDateTime> appliedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_id")
     private Optional<String> candidateId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hired_at")
     private Optional<OffsetDateTime> hiredAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job_id")
     private Optional<String> jobId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     private Optional<? extends List<AtsMetadata>> metadata;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offers")
     private Optional<? extends List<AtsOffer>> offers;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_status")
     private Optional<String> originalStatus;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rejected_at")
     private Optional<OffsetDateTime> rejectedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rejected_reason")
     private Optional<String> rejectedReason;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     private Optional<String> source;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private Optional<? extends AtsApplicationStatus> status;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -137,7 +153,12 @@ public class AtsApplication {
     }
     
     public AtsApplication() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -225,15 +246,17 @@ public class AtsApplication {
         return updatedAt;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AtsApplication withAnswers(List<AtsApplicationAnswer> answers) {
         Utils.checkNotNull(answers, "answers");
         this.answers = Optional.ofNullable(answers);
         return this;
     }
+
 
     public AtsApplication withAnswers(Optional<? extends List<AtsApplicationAnswer>> answers) {
         Utils.checkNotNull(answers, "answers");
@@ -247,6 +270,7 @@ public class AtsApplication {
         return this;
     }
 
+
     public AtsApplication withAppliedAt(Optional<OffsetDateTime> appliedAt) {
         Utils.checkNotNull(appliedAt, "appliedAt");
         this.appliedAt = appliedAt;
@@ -258,6 +282,7 @@ public class AtsApplication {
         this.candidateId = Optional.ofNullable(candidateId);
         return this;
     }
+
 
     public AtsApplication withCandidateId(Optional<String> candidateId) {
         Utils.checkNotNull(candidateId, "candidateId");
@@ -271,6 +296,7 @@ public class AtsApplication {
         return this;
     }
 
+
     public AtsApplication withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
@@ -282,6 +308,7 @@ public class AtsApplication {
         this.hiredAt = Optional.ofNullable(hiredAt);
         return this;
     }
+
 
     public AtsApplication withHiredAt(Optional<OffsetDateTime> hiredAt) {
         Utils.checkNotNull(hiredAt, "hiredAt");
@@ -295,6 +322,7 @@ public class AtsApplication {
         return this;
     }
 
+
     public AtsApplication withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -306,6 +334,7 @@ public class AtsApplication {
         this.jobId = Optional.ofNullable(jobId);
         return this;
     }
+
 
     public AtsApplication withJobId(Optional<String> jobId) {
         Utils.checkNotNull(jobId, "jobId");
@@ -319,6 +348,7 @@ public class AtsApplication {
         return this;
     }
 
+
     public AtsApplication withMetadata(Optional<? extends List<AtsMetadata>> metadata) {
         Utils.checkNotNull(metadata, "metadata");
         this.metadata = metadata;
@@ -330,6 +360,7 @@ public class AtsApplication {
         this.offers = Optional.ofNullable(offers);
         return this;
     }
+
 
     public AtsApplication withOffers(Optional<? extends List<AtsOffer>> offers) {
         Utils.checkNotNull(offers, "offers");
@@ -343,6 +374,7 @@ public class AtsApplication {
         return this;
     }
 
+
     public AtsApplication withOriginalStatus(Optional<String> originalStatus) {
         Utils.checkNotNull(originalStatus, "originalStatus");
         this.originalStatus = originalStatus;
@@ -354,6 +386,7 @@ public class AtsApplication {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public AtsApplication withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -367,6 +400,7 @@ public class AtsApplication {
         return this;
     }
 
+
     public AtsApplication withRejectedAt(Optional<OffsetDateTime> rejectedAt) {
         Utils.checkNotNull(rejectedAt, "rejectedAt");
         this.rejectedAt = rejectedAt;
@@ -378,6 +412,7 @@ public class AtsApplication {
         this.rejectedReason = Optional.ofNullable(rejectedReason);
         return this;
     }
+
 
     public AtsApplication withRejectedReason(Optional<String> rejectedReason) {
         Utils.checkNotNull(rejectedReason, "rejectedReason");
@@ -391,6 +426,7 @@ public class AtsApplication {
         return this;
     }
 
+
     public AtsApplication withSource(Optional<String> source) {
         Utils.checkNotNull(source, "source");
         this.source = source;
@@ -402,6 +438,7 @@ public class AtsApplication {
         this.status = Optional.ofNullable(status);
         return this;
     }
+
 
     public AtsApplication withStatus(Optional<? extends AtsApplicationStatus> status) {
         Utils.checkNotNull(status, "status");
@@ -415,13 +452,13 @@ public class AtsApplication {
         return this;
     }
 
+
     public AtsApplication withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -453,21 +490,11 @@ public class AtsApplication {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            answers,
-            appliedAt,
-            candidateId,
-            createdAt,
-            hiredAt,
-            id,
-            jobId,
-            metadata,
-            offers,
-            originalStatus,
-            raw,
-            rejectedAt,
-            rejectedReason,
-            source,
-            status,
+            answers, appliedAt, candidateId,
+            createdAt, hiredAt, id,
+            jobId, metadata, offers,
+            originalStatus, raw, rejectedAt,
+            rejectedReason, source, status,
             updatedAt);
     }
     
@@ -491,44 +518,46 @@ public class AtsApplication {
                 "status", status,
                 "updatedAt", updatedAt);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<? extends List<AtsApplicationAnswer>> answers = Optional.empty();
- 
+
         private Optional<OffsetDateTime> appliedAt = Optional.empty();
- 
+
         private Optional<String> candidateId = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<OffsetDateTime> hiredAt = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> jobId = Optional.empty();
- 
+
         private Optional<? extends List<AtsMetadata>> metadata = Optional.empty();
- 
+
         private Optional<? extends List<AtsOffer>> offers = Optional.empty();
- 
+
         private Optional<String> originalStatus = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<OffsetDateTime> rejectedAt = Optional.empty();
- 
+
         private Optional<String> rejectedReason = Optional.empty();
- 
+
         private Optional<String> source = Optional.empty();
- 
+
         private Optional<? extends AtsApplicationStatus> status = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder answers(List<AtsApplicationAnswer> answers) {
             Utils.checkNotNull(answers, "answers");
@@ -542,6 +571,7 @@ public class AtsApplication {
             return this;
         }
 
+
         public Builder appliedAt(OffsetDateTime appliedAt) {
             Utils.checkNotNull(appliedAt, "appliedAt");
             this.appliedAt = Optional.ofNullable(appliedAt);
@@ -553,6 +583,7 @@ public class AtsApplication {
             this.appliedAt = appliedAt;
             return this;
         }
+
 
         public Builder candidateId(String candidateId) {
             Utils.checkNotNull(candidateId, "candidateId");
@@ -566,6 +597,7 @@ public class AtsApplication {
             return this;
         }
 
+
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
@@ -577,6 +609,7 @@ public class AtsApplication {
             this.createdAt = createdAt;
             return this;
         }
+
 
         public Builder hiredAt(OffsetDateTime hiredAt) {
             Utils.checkNotNull(hiredAt, "hiredAt");
@@ -590,6 +623,7 @@ public class AtsApplication {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -601,6 +635,7 @@ public class AtsApplication {
             this.id = id;
             return this;
         }
+
 
         public Builder jobId(String jobId) {
             Utils.checkNotNull(jobId, "jobId");
@@ -614,6 +649,7 @@ public class AtsApplication {
             return this;
         }
 
+
         public Builder metadata(List<AtsMetadata> metadata) {
             Utils.checkNotNull(metadata, "metadata");
             this.metadata = Optional.ofNullable(metadata);
@@ -625,6 +661,7 @@ public class AtsApplication {
             this.metadata = metadata;
             return this;
         }
+
 
         public Builder offers(List<AtsOffer> offers) {
             Utils.checkNotNull(offers, "offers");
@@ -638,6 +675,7 @@ public class AtsApplication {
             return this;
         }
 
+
         public Builder originalStatus(String originalStatus) {
             Utils.checkNotNull(originalStatus, "originalStatus");
             this.originalStatus = Optional.ofNullable(originalStatus);
@@ -649,6 +687,7 @@ public class AtsApplication {
             this.originalStatus = originalStatus;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -662,6 +701,7 @@ public class AtsApplication {
             return this;
         }
 
+
         public Builder rejectedAt(OffsetDateTime rejectedAt) {
             Utils.checkNotNull(rejectedAt, "rejectedAt");
             this.rejectedAt = Optional.ofNullable(rejectedAt);
@@ -673,6 +713,7 @@ public class AtsApplication {
             this.rejectedAt = rejectedAt;
             return this;
         }
+
 
         public Builder rejectedReason(String rejectedReason) {
             Utils.checkNotNull(rejectedReason, "rejectedReason");
@@ -686,6 +727,7 @@ public class AtsApplication {
             return this;
         }
 
+
         public Builder source(String source) {
             Utils.checkNotNull(source, "source");
             this.source = Optional.ofNullable(source);
@@ -697,6 +739,7 @@ public class AtsApplication {
             this.source = source;
             return this;
         }
+
 
         public Builder status(AtsApplicationStatus status) {
             Utils.checkNotNull(status, "status");
@@ -710,6 +753,7 @@ public class AtsApplication {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -721,25 +765,17 @@ public class AtsApplication {
             this.updatedAt = updatedAt;
             return this;
         }
-        
+
         public AtsApplication build() {
+
             return new AtsApplication(
-                answers,
-                appliedAt,
-                candidateId,
-                createdAt,
-                hiredAt,
-                id,
-                jobId,
-                metadata,
-                offers,
-                originalStatus,
-                raw,
-                rejectedAt,
-                rejectedReason,
-                source,
-                status,
+                answers, appliedAt, candidateId,
+                createdAt, hiredAt, id,
+                jobId, metadata, offers,
+                originalStatus, raw, rejectedAt,
+                rejectedReason, source, status,
                 updatedAt);
         }
+
     }
 }

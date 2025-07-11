@@ -14,8 +14,8 @@ import to.unified.unified_java_sdk.models.shared.UcContact;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class CreateUcContactRequest {
 
+public class CreateUcContactRequest {
     /**
      * A contact represents a person that optionally is associated with a call
      */
@@ -59,7 +59,8 @@ public class CreateUcContactRequest {
     public CreateUcContactRequest(
             UcContact ucContact,
             String connectionId) {
-        this(ucContact, connectionId, Optional.empty(), Optional.empty());
+        this(ucContact, connectionId, Optional.empty(),
+            Optional.empty());
     }
 
     /**
@@ -95,9 +96,10 @@ public class CreateUcContactRequest {
         return raw;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * A contact represents a person that optionally is associated with a call
@@ -126,6 +128,7 @@ public class CreateUcContactRequest {
         return this;
     }
 
+
     /**
      * Comma-delimited fields to return
      */
@@ -144,6 +147,7 @@ public class CreateUcContactRequest {
         return this;
     }
 
+
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
@@ -153,7 +157,6 @@ public class CreateUcContactRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -173,9 +176,7 @@ public class CreateUcContactRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            ucContact,
-            connectionId,
-            fields,
+            ucContact, connectionId, fields,
             raw);
     }
     
@@ -187,20 +188,22 @@ public class CreateUcContactRequest {
                 "fields", fields,
                 "raw", raw);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private UcContact ucContact;
- 
+
         private String connectionId;
- 
+
         private Optional<? extends List<String>> fields = Optional.empty();
- 
+
         private Optional<String> raw = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * A contact represents a person that optionally is associated with a call
@@ -211,6 +214,7 @@ public class CreateUcContactRequest {
             return this;
         }
 
+
         /**
          * ID of the connection
          */
@@ -219,6 +223,7 @@ public class CreateUcContactRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         /**
          * Comma-delimited fields to return
@@ -238,6 +243,7 @@ public class CreateUcContactRequest {
             return this;
         }
 
+
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
@@ -255,13 +261,13 @@ public class CreateUcContactRequest {
             this.raw = raw;
             return this;
         }
-        
+
         public CreateUcContactRequest build() {
+
             return new CreateUcContactRequest(
-                ucContact,
-                connectionId,
-                fields,
+                ucContact, connectionId, fields,
                 raw);
         }
+
     }
 }

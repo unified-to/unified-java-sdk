@@ -10,8 +10,8 @@ import java.lang.String;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class RemovePaymentLinkRequest {
 
+public class RemovePaymentLinkRequest {
     /**
      * ID of the connection
      */
@@ -50,9 +50,10 @@ public class RemovePaymentLinkRequest {
         return id;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * ID of the connection
@@ -72,7 +73,6 @@ public class RemovePaymentLinkRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -90,8 +90,7 @@ public class RemovePaymentLinkRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId,
-            id);
+            connectionId, id);
     }
     
     @Override
@@ -100,16 +99,18 @@ public class RemovePaymentLinkRequest {
                 "connectionId", connectionId,
                 "id", id);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private String connectionId;
- 
+
         private String id;
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * ID of the connection
@@ -120,6 +121,7 @@ public class RemovePaymentLinkRequest {
             return this;
         }
 
+
         /**
          * ID of the Link
          */
@@ -128,11 +130,12 @@ public class RemovePaymentLinkRequest {
             this.id = id;
             return this;
         }
-        
+
         public RemovePaymentLinkRequest build() {
+
             return new RemovePaymentLinkRequest(
-                connectionId,
-                id);
+                connectionId, id);
         }
+
     }
 }

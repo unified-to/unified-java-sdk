@@ -20,7 +20,6 @@ public class Person {
     Person(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Retrieve enrichment information for a person
      * 
@@ -37,10 +36,9 @@ public class Person {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListEnrichPeopleResponse listEnrichPeople(
-            ListEnrichPeopleRequest request) throws Exception {
+    public ListEnrichPeopleResponse listEnrichPeople(ListEnrichPeopleRequest request) throws Exception {
         RequestOperation<ListEnrichPeopleRequest, ListEnrichPeopleResponse> operation
-              = new ListEnrichPeopleOperation( sdkConfiguration);
+              = new ListEnrichPeopleOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

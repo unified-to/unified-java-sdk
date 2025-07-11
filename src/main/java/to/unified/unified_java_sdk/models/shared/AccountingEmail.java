@@ -14,11 +14,13 @@ import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AccountingEmail {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     private Optional<String> email;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
@@ -49,15 +51,17 @@ public class AccountingEmail {
         return (Optional<AccountingEmailType>) type;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AccountingEmail withEmail(String email) {
         Utils.checkNotNull(email, "email");
         this.email = Optional.ofNullable(email);
         return this;
     }
+
 
     public AccountingEmail withEmail(Optional<String> email) {
         Utils.checkNotNull(email, "email");
@@ -71,13 +75,13 @@ public class AccountingEmail {
         return this;
     }
 
+
     public AccountingEmail withType(Optional<? extends AccountingEmailType> type) {
         Utils.checkNotNull(type, "type");
         this.type = type;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -95,8 +99,7 @@ public class AccountingEmail {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            email,
-            type);
+            email, type);
     }
     
     @Override
@@ -105,16 +108,18 @@ public class AccountingEmail {
                 "email", email,
                 "type", type);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> email = Optional.empty();
- 
+
         private Optional<? extends AccountingEmailType> type = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder email(String email) {
             Utils.checkNotNull(email, "email");
@@ -128,6 +133,7 @@ public class AccountingEmail {
             return this;
         }
 
+
         public Builder type(AccountingEmailType type) {
             Utils.checkNotNull(type, "type");
             this.type = Optional.ofNullable(type);
@@ -139,11 +145,12 @@ public class AccountingEmail {
             this.type = type;
             return this;
         }
-        
+
         public AccountingEmail build() {
+
             return new AccountingEmail(
-                email,
-                type);
+                email, type);
         }
+
     }
 }

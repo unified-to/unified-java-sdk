@@ -28,7 +28,7 @@ public class GetUnifiedApicallRequestBuilder {
     public GetUnifiedApicallResponse call() throws Exception {
         
         RequestOperation<GetUnifiedApicallRequest, GetUnifiedApicallResponse> operation
-              = new GetUnifiedApicallOperation( sdkConfiguration);
+              = new GetUnifiedApicallOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

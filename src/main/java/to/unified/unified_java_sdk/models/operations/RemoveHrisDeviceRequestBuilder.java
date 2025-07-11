@@ -28,7 +28,7 @@ public class RemoveHrisDeviceRequestBuilder {
     public RemoveHrisDeviceResponse call() throws Exception {
         
         RequestOperation<RemoveHrisDeviceRequest, RemoveHrisDeviceResponse> operation
-              = new RemoveHrisDeviceOperation( sdkConfiguration);
+              = new RemoveHrisDeviceOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

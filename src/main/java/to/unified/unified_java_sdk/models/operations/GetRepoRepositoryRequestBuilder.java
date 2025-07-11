@@ -28,7 +28,7 @@ public class GetRepoRepositoryRequestBuilder {
     public GetRepoRepositoryResponse call() throws Exception {
         
         RequestOperation<GetRepoRepositoryRequest, GetRepoRepositoryResponse> operation
-              = new GetRepoRepositoryOperation( sdkConfiguration);
+              = new GetRepoRepositoryOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

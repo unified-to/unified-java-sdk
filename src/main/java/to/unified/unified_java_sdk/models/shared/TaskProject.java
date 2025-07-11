@@ -19,47 +19,58 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class TaskProject {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private Optional<String> description;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_ids")
     private Optional<? extends List<String>> groupIds;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_children")
     private Optional<Boolean> hasChildren;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_tasks")
     private Optional<Boolean> hasTasks;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     private Optional<String> parentId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_ids")
@@ -103,7 +114,10 @@ public class TaskProject {
     }
     
     public TaskProject() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -164,15 +178,17 @@ public class TaskProject {
         return (Optional<List<String>>) userIds;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public TaskProject withCreatedAt(OffsetDateTime createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public TaskProject withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -186,6 +202,7 @@ public class TaskProject {
         return this;
     }
 
+
     public TaskProject withDescription(Optional<String> description) {
         Utils.checkNotNull(description, "description");
         this.description = description;
@@ -197,6 +214,7 @@ public class TaskProject {
         this.groupIds = Optional.ofNullable(groupIds);
         return this;
     }
+
 
     public TaskProject withGroupIds(Optional<? extends List<String>> groupIds) {
         Utils.checkNotNull(groupIds, "groupIds");
@@ -210,6 +228,7 @@ public class TaskProject {
         return this;
     }
 
+
     public TaskProject withHasChildren(Optional<Boolean> hasChildren) {
         Utils.checkNotNull(hasChildren, "hasChildren");
         this.hasChildren = hasChildren;
@@ -221,6 +240,7 @@ public class TaskProject {
         this.hasTasks = Optional.ofNullable(hasTasks);
         return this;
     }
+
 
     public TaskProject withHasTasks(Optional<Boolean> hasTasks) {
         Utils.checkNotNull(hasTasks, "hasTasks");
@@ -234,6 +254,7 @@ public class TaskProject {
         return this;
     }
 
+
     public TaskProject withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -245,6 +266,7 @@ public class TaskProject {
         this.name = Optional.ofNullable(name);
         return this;
     }
+
 
     public TaskProject withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
@@ -258,6 +280,7 @@ public class TaskProject {
         return this;
     }
 
+
     public TaskProject withParentId(Optional<String> parentId) {
         Utils.checkNotNull(parentId, "parentId");
         this.parentId = parentId;
@@ -269,6 +292,7 @@ public class TaskProject {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public TaskProject withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -282,6 +306,7 @@ public class TaskProject {
         return this;
     }
 
+
     public TaskProject withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
@@ -294,13 +319,13 @@ public class TaskProject {
         return this;
     }
 
+
     public TaskProject withUserIds(Optional<? extends List<String>> userIds) {
         Utils.checkNotNull(userIds, "userIds");
         this.userIds = userIds;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -327,17 +352,10 @@ public class TaskProject {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt,
-            description,
-            groupIds,
-            hasChildren,
-            hasTasks,
-            id,
-            name,
-            parentId,
-            raw,
-            updatedAt,
-            userIds);
+            createdAt, description, groupIds,
+            hasChildren, hasTasks, id,
+            name, parentId, raw,
+            updatedAt, userIds);
     }
     
     @Override
@@ -355,34 +373,36 @@ public class TaskProject {
                 "updatedAt", updatedAt,
                 "userIds", userIds);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> description = Optional.empty();
- 
+
         private Optional<? extends List<String>> groupIds = Optional.empty();
- 
+
         private Optional<Boolean> hasChildren = Optional.empty();
- 
+
         private Optional<Boolean> hasTasks = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<String> parentId = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<? extends List<String>> userIds = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -396,6 +416,7 @@ public class TaskProject {
             return this;
         }
 
+
         public Builder description(String description) {
             Utils.checkNotNull(description, "description");
             this.description = Optional.ofNullable(description);
@@ -407,6 +428,7 @@ public class TaskProject {
             this.description = description;
             return this;
         }
+
 
         public Builder groupIds(List<String> groupIds) {
             Utils.checkNotNull(groupIds, "groupIds");
@@ -420,6 +442,7 @@ public class TaskProject {
             return this;
         }
 
+
         public Builder hasChildren(boolean hasChildren) {
             Utils.checkNotNull(hasChildren, "hasChildren");
             this.hasChildren = Optional.ofNullable(hasChildren);
@@ -431,6 +454,7 @@ public class TaskProject {
             this.hasChildren = hasChildren;
             return this;
         }
+
 
         public Builder hasTasks(boolean hasTasks) {
             Utils.checkNotNull(hasTasks, "hasTasks");
@@ -444,6 +468,7 @@ public class TaskProject {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -455,6 +480,7 @@ public class TaskProject {
             this.id = id;
             return this;
         }
+
 
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
@@ -468,6 +494,7 @@ public class TaskProject {
             return this;
         }
 
+
         public Builder parentId(String parentId) {
             Utils.checkNotNull(parentId, "parentId");
             this.parentId = Optional.ofNullable(parentId);
@@ -479,6 +506,7 @@ public class TaskProject {
             this.parentId = parentId;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -492,6 +520,7 @@ public class TaskProject {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -504,6 +533,7 @@ public class TaskProject {
             return this;
         }
 
+
         public Builder userIds(List<String> userIds) {
             Utils.checkNotNull(userIds, "userIds");
             this.userIds = Optional.ofNullable(userIds);
@@ -515,20 +545,15 @@ public class TaskProject {
             this.userIds = userIds;
             return this;
         }
-        
+
         public TaskProject build() {
+
             return new TaskProject(
-                createdAt,
-                description,
-                groupIds,
-                hasChildren,
-                hasTasks,
-                id,
-                name,
-                parentId,
-                raw,
-                updatedAt,
-                userIds);
+                createdAt, description, groupIds,
+                hasChildren, hasTasks, id,
+                name, parentId, raw,
+                updatedAt, userIds);
         }
+
     }
 }

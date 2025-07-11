@@ -28,7 +28,7 @@ public class CreateRepoCommitRequestBuilder {
     public CreateRepoCommitResponse call() throws Exception {
         
         RequestOperation<CreateRepoCommitRequest, CreateRepoCommitResponse> operation
-              = new CreateRepoCommitOperation( sdkConfiguration);
+              = new CreateRepoCommitOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

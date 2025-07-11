@@ -30,69 +30,86 @@ public class AccountingAccount {
     @JsonProperty("balance")
     private Optional<Double> balance;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private Optional<String> currency;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_defined_code")
     private Optional<String> customerDefinedCode;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private Optional<String> description;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     private Optional<String> group;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_payable")
     private Optional<Boolean> isPayable;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_account_id")
     private Optional<String> parentAccountId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     private Optional<String> parentId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("section")
     private Optional<String> section;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private Optional<? extends Status> status;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subgroup")
     private Optional<String> subgroup;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subsection")
     private Optional<String> subsection;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private Optional<? extends Type> type;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -157,7 +174,12 @@ public class AccountingAccount {
     }
     
     public AccountingAccount() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -253,15 +275,17 @@ public class AccountingAccount {
         return updatedAt;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AccountingAccount withBalance(double balance) {
         Utils.checkNotNull(balance, "balance");
         this.balance = Optional.ofNullable(balance);
         return this;
     }
+
 
     public AccountingAccount withBalance(Optional<Double> balance) {
         Utils.checkNotNull(balance, "balance");
@@ -275,6 +299,7 @@ public class AccountingAccount {
         return this;
     }
 
+
     public AccountingAccount withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
@@ -286,6 +311,7 @@ public class AccountingAccount {
         this.currency = Optional.ofNullable(currency);
         return this;
     }
+
 
     public AccountingAccount withCurrency(Optional<String> currency) {
         Utils.checkNotNull(currency, "currency");
@@ -299,6 +325,7 @@ public class AccountingAccount {
         return this;
     }
 
+
     public AccountingAccount withCustomerDefinedCode(Optional<String> customerDefinedCode) {
         Utils.checkNotNull(customerDefinedCode, "customerDefinedCode");
         this.customerDefinedCode = customerDefinedCode;
@@ -310,6 +337,7 @@ public class AccountingAccount {
         this.description = Optional.ofNullable(description);
         return this;
     }
+
 
     public AccountingAccount withDescription(Optional<String> description) {
         Utils.checkNotNull(description, "description");
@@ -323,6 +351,7 @@ public class AccountingAccount {
         return this;
     }
 
+
     public AccountingAccount withGroup(Optional<String> group) {
         Utils.checkNotNull(group, "group");
         this.group = group;
@@ -334,6 +363,7 @@ public class AccountingAccount {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public AccountingAccount withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -347,6 +377,7 @@ public class AccountingAccount {
         return this;
     }
 
+
     public AccountingAccount withIsPayable(Optional<Boolean> isPayable) {
         Utils.checkNotNull(isPayable, "isPayable");
         this.isPayable = isPayable;
@@ -358,6 +389,7 @@ public class AccountingAccount {
         this.name = Optional.ofNullable(name);
         return this;
     }
+
 
     public AccountingAccount withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
@@ -371,6 +403,7 @@ public class AccountingAccount {
         return this;
     }
 
+
     public AccountingAccount withParentAccountId(Optional<String> parentAccountId) {
         Utils.checkNotNull(parentAccountId, "parentAccountId");
         this.parentAccountId = parentAccountId;
@@ -382,6 +415,7 @@ public class AccountingAccount {
         this.parentId = Optional.ofNullable(parentId);
         return this;
     }
+
 
     public AccountingAccount withParentId(Optional<String> parentId) {
         Utils.checkNotNull(parentId, "parentId");
@@ -395,6 +429,7 @@ public class AccountingAccount {
         return this;
     }
 
+
     public AccountingAccount withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
@@ -406,6 +441,7 @@ public class AccountingAccount {
         this.section = Optional.ofNullable(section);
         return this;
     }
+
 
     public AccountingAccount withSection(Optional<String> section) {
         Utils.checkNotNull(section, "section");
@@ -419,6 +455,7 @@ public class AccountingAccount {
         return this;
     }
 
+
     public AccountingAccount withStatus(Optional<? extends Status> status) {
         Utils.checkNotNull(status, "status");
         this.status = status;
@@ -430,6 +467,7 @@ public class AccountingAccount {
         this.subgroup = Optional.ofNullable(subgroup);
         return this;
     }
+
 
     public AccountingAccount withSubgroup(Optional<String> subgroup) {
         Utils.checkNotNull(subgroup, "subgroup");
@@ -443,6 +481,7 @@ public class AccountingAccount {
         return this;
     }
 
+
     public AccountingAccount withSubsection(Optional<String> subsection) {
         Utils.checkNotNull(subsection, "subsection");
         this.subsection = subsection;
@@ -454,6 +493,7 @@ public class AccountingAccount {
         this.type = Optional.ofNullable(type);
         return this;
     }
+
 
     public AccountingAccount withType(Optional<? extends Type> type) {
         Utils.checkNotNull(type, "type");
@@ -467,13 +507,13 @@ public class AccountingAccount {
         return this;
     }
 
+
     public AccountingAccount withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -507,24 +547,12 @@ public class AccountingAccount {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            balance,
-            createdAt,
-            currency,
-            customerDefinedCode,
-            description,
-            group,
-            id,
-            isPayable,
-            name,
-            parentAccountId,
-            parentId,
-            raw,
-            section,
-            status,
-            subgroup,
-            subsection,
-            type,
-            updatedAt);
+            balance, createdAt, currency,
+            customerDefinedCode, description, group,
+            id, isPayable, name,
+            parentAccountId, parentId, raw,
+            section, status, subgroup,
+            subsection, type, updatedAt);
     }
     
     @Override
@@ -549,48 +577,50 @@ public class AccountingAccount {
                 "type", type,
                 "updatedAt", updatedAt);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<Double> balance = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> currency = Optional.empty();
- 
+
         private Optional<String> customerDefinedCode = Optional.empty();
- 
+
         private Optional<String> description = Optional.empty();
- 
+
         private Optional<String> group = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<Boolean> isPayable = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<String> parentAccountId = Optional.empty();
- 
+
         private Optional<String> parentId = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<String> section = Optional.empty();
- 
+
         private Optional<? extends Status> status = Optional.empty();
- 
+
         private Optional<String> subgroup = Optional.empty();
- 
+
         private Optional<String> subsection = Optional.empty();
- 
+
         private Optional<? extends Type> type = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder balance(double balance) {
             Utils.checkNotNull(balance, "balance");
@@ -604,6 +634,7 @@ public class AccountingAccount {
             return this;
         }
 
+
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
@@ -615,6 +646,7 @@ public class AccountingAccount {
             this.createdAt = createdAt;
             return this;
         }
+
 
         public Builder currency(String currency) {
             Utils.checkNotNull(currency, "currency");
@@ -628,6 +660,7 @@ public class AccountingAccount {
             return this;
         }
 
+
         public Builder customerDefinedCode(String customerDefinedCode) {
             Utils.checkNotNull(customerDefinedCode, "customerDefinedCode");
             this.customerDefinedCode = Optional.ofNullable(customerDefinedCode);
@@ -639,6 +672,7 @@ public class AccountingAccount {
             this.customerDefinedCode = customerDefinedCode;
             return this;
         }
+
 
         public Builder description(String description) {
             Utils.checkNotNull(description, "description");
@@ -652,6 +686,7 @@ public class AccountingAccount {
             return this;
         }
 
+
         public Builder group(String group) {
             Utils.checkNotNull(group, "group");
             this.group = Optional.ofNullable(group);
@@ -663,6 +698,7 @@ public class AccountingAccount {
             this.group = group;
             return this;
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -676,6 +712,7 @@ public class AccountingAccount {
             return this;
         }
 
+
         public Builder isPayable(boolean isPayable) {
             Utils.checkNotNull(isPayable, "isPayable");
             this.isPayable = Optional.ofNullable(isPayable);
@@ -687,6 +724,7 @@ public class AccountingAccount {
             this.isPayable = isPayable;
             return this;
         }
+
 
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
@@ -700,6 +738,7 @@ public class AccountingAccount {
             return this;
         }
 
+
         public Builder parentAccountId(String parentAccountId) {
             Utils.checkNotNull(parentAccountId, "parentAccountId");
             this.parentAccountId = Optional.ofNullable(parentAccountId);
@@ -711,6 +750,7 @@ public class AccountingAccount {
             this.parentAccountId = parentAccountId;
             return this;
         }
+
 
         public Builder parentId(String parentId) {
             Utils.checkNotNull(parentId, "parentId");
@@ -724,6 +764,7 @@ public class AccountingAccount {
             return this;
         }
 
+
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
@@ -735,6 +776,7 @@ public class AccountingAccount {
             this.raw = raw;
             return this;
         }
+
 
         public Builder section(String section) {
             Utils.checkNotNull(section, "section");
@@ -748,6 +790,7 @@ public class AccountingAccount {
             return this;
         }
 
+
         public Builder status(Status status) {
             Utils.checkNotNull(status, "status");
             this.status = Optional.ofNullable(status);
@@ -759,6 +802,7 @@ public class AccountingAccount {
             this.status = status;
             return this;
         }
+
 
         public Builder subgroup(String subgroup) {
             Utils.checkNotNull(subgroup, "subgroup");
@@ -772,6 +816,7 @@ public class AccountingAccount {
             return this;
         }
 
+
         public Builder subsection(String subsection) {
             Utils.checkNotNull(subsection, "subsection");
             this.subsection = Optional.ofNullable(subsection);
@@ -783,6 +828,7 @@ public class AccountingAccount {
             this.subsection = subsection;
             return this;
         }
+
 
         public Builder type(Type type) {
             Utils.checkNotNull(type, "type");
@@ -796,6 +842,7 @@ public class AccountingAccount {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -807,27 +854,17 @@ public class AccountingAccount {
             this.updatedAt = updatedAt;
             return this;
         }
-        
+
         public AccountingAccount build() {
+
             return new AccountingAccount(
-                balance,
-                createdAt,
-                currency,
-                customerDefinedCode,
-                description,
-                group,
-                id,
-                isPayable,
-                name,
-                parentAccountId,
-                parentId,
-                raw,
-                section,
-                status,
-                subgroup,
-                subsection,
-                type,
-                updatedAt);
+                balance, createdAt, currency,
+                customerDefinedCode, description, group,
+                id, isPayable, name,
+                parentAccountId, parentId, raw,
+                section, status, subgroup,
+                subsection, type, updatedAt);
         }
+
     }
 }

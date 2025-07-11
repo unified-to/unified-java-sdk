@@ -28,7 +28,7 @@ public class RemoveMetadataMetadataRequestBuilder {
     public RemoveMetadataMetadataResponse call() throws Exception {
         
         RequestOperation<RemoveMetadataMetadataRequest, RemoveMetadataMetadataResponse> operation
-              = new RemoveMetadataMetadataOperation( sdkConfiguration);
+              = new RemoveMetadataMetadataOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -28,7 +28,7 @@ public class PatchPaymentSubscriptionRequestBuilder {
     public PatchPaymentSubscriptionResponse call() throws Exception {
         
         RequestOperation<PatchPaymentSubscriptionRequest, PatchPaymentSubscriptionResponse> operation
-              = new PatchPaymentSubscriptionOperation( sdkConfiguration);
+              = new PatchPaymentSubscriptionOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

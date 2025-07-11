@@ -28,7 +28,7 @@ public class UpdateUcRecordingRequestBuilder {
     public UpdateUcRecordingResponse call() throws Exception {
         
         RequestOperation<UpdateUcRecordingRequest, UpdateUcRecordingResponse> operation
-              = new UpdateUcRecordingOperation( sdkConfiguration);
+              = new UpdateUcRecordingOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

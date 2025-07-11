@@ -28,7 +28,7 @@ public class ListAccountingJournalsRequestBuilder {
     public ListAccountingJournalsResponse call() throws Exception {
         
         RequestOperation<ListAccountingJournalsRequest, ListAccountingJournalsResponse> operation
-              = new ListAccountingJournalsOperation( sdkConfiguration);
+              = new ListAccountingJournalsOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

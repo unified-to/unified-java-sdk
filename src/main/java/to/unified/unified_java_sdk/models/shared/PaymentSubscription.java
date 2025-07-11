@@ -19,83 +19,103 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class PaymentSubscription {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canceled_at")
     private Optional<OffsetDateTime> canceledAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private Optional<String> contactId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private Optional<String> currency;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_period_end_at")
     private Optional<OffsetDateTime> currentPeriodEndAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_period_start_at")
     private Optional<OffsetDateTime> currentPeriodStartAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("day_of_month")
     private Optional<Double> dayOfMonth;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("day_of_week")
     private Optional<Double> dayOfWeek;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private Optional<String> description;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private Optional<OffsetDateTime> endAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interval")
     private Optional<Double> interval;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interval_unit")
     private Optional<? extends IntervalUnit> intervalUnit;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoice_id")
     private Optional<String> invoiceId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineitems")
     private Optional<? extends List<PaymentLineitem>> lineitems;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("month")
     private Optional<Double> month;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private Optional<OffsetDateTime> startAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private Optional<? extends PaymentSubscriptionStatus> status;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -166,7 +186,13 @@ public class PaymentSubscription {
     }
     
     public PaymentSubscription() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -273,15 +299,17 @@ public class PaymentSubscription {
         return updatedAt;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public PaymentSubscription withCanceledAt(OffsetDateTime canceledAt) {
         Utils.checkNotNull(canceledAt, "canceledAt");
         this.canceledAt = Optional.ofNullable(canceledAt);
         return this;
     }
+
 
     public PaymentSubscription withCanceledAt(Optional<OffsetDateTime> canceledAt) {
         Utils.checkNotNull(canceledAt, "canceledAt");
@@ -295,6 +323,7 @@ public class PaymentSubscription {
         return this;
     }
 
+
     public PaymentSubscription withContactId(Optional<String> contactId) {
         Utils.checkNotNull(contactId, "contactId");
         this.contactId = contactId;
@@ -306,6 +335,7 @@ public class PaymentSubscription {
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public PaymentSubscription withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -319,6 +349,7 @@ public class PaymentSubscription {
         return this;
     }
 
+
     public PaymentSubscription withCurrency(Optional<String> currency) {
         Utils.checkNotNull(currency, "currency");
         this.currency = currency;
@@ -330,6 +361,7 @@ public class PaymentSubscription {
         this.currentPeriodEndAt = Optional.ofNullable(currentPeriodEndAt);
         return this;
     }
+
 
     public PaymentSubscription withCurrentPeriodEndAt(Optional<OffsetDateTime> currentPeriodEndAt) {
         Utils.checkNotNull(currentPeriodEndAt, "currentPeriodEndAt");
@@ -343,6 +375,7 @@ public class PaymentSubscription {
         return this;
     }
 
+
     public PaymentSubscription withCurrentPeriodStartAt(Optional<OffsetDateTime> currentPeriodStartAt) {
         Utils.checkNotNull(currentPeriodStartAt, "currentPeriodStartAt");
         this.currentPeriodStartAt = currentPeriodStartAt;
@@ -354,6 +387,7 @@ public class PaymentSubscription {
         this.dayOfMonth = Optional.ofNullable(dayOfMonth);
         return this;
     }
+
 
     public PaymentSubscription withDayOfMonth(Optional<Double> dayOfMonth) {
         Utils.checkNotNull(dayOfMonth, "dayOfMonth");
@@ -367,6 +401,7 @@ public class PaymentSubscription {
         return this;
     }
 
+
     public PaymentSubscription withDayOfWeek(Optional<Double> dayOfWeek) {
         Utils.checkNotNull(dayOfWeek, "dayOfWeek");
         this.dayOfWeek = dayOfWeek;
@@ -378,6 +413,7 @@ public class PaymentSubscription {
         this.description = Optional.ofNullable(description);
         return this;
     }
+
 
     public PaymentSubscription withDescription(Optional<String> description) {
         Utils.checkNotNull(description, "description");
@@ -391,6 +427,7 @@ public class PaymentSubscription {
         return this;
     }
 
+
     public PaymentSubscription withEndAt(Optional<OffsetDateTime> endAt) {
         Utils.checkNotNull(endAt, "endAt");
         this.endAt = endAt;
@@ -402,6 +439,7 @@ public class PaymentSubscription {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public PaymentSubscription withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -415,6 +453,7 @@ public class PaymentSubscription {
         return this;
     }
 
+
     public PaymentSubscription withInterval(Optional<Double> interval) {
         Utils.checkNotNull(interval, "interval");
         this.interval = interval;
@@ -426,6 +465,7 @@ public class PaymentSubscription {
         this.intervalUnit = Optional.ofNullable(intervalUnit);
         return this;
     }
+
 
     public PaymentSubscription withIntervalUnit(Optional<? extends IntervalUnit> intervalUnit) {
         Utils.checkNotNull(intervalUnit, "intervalUnit");
@@ -439,6 +479,7 @@ public class PaymentSubscription {
         return this;
     }
 
+
     public PaymentSubscription withInvoiceId(Optional<String> invoiceId) {
         Utils.checkNotNull(invoiceId, "invoiceId");
         this.invoiceId = invoiceId;
@@ -450,6 +491,7 @@ public class PaymentSubscription {
         this.lineitems = Optional.ofNullable(lineitems);
         return this;
     }
+
 
     public PaymentSubscription withLineitems(Optional<? extends List<PaymentLineitem>> lineitems) {
         Utils.checkNotNull(lineitems, "lineitems");
@@ -463,6 +505,7 @@ public class PaymentSubscription {
         return this;
     }
 
+
     public PaymentSubscription withMonth(Optional<Double> month) {
         Utils.checkNotNull(month, "month");
         this.month = month;
@@ -474,6 +517,7 @@ public class PaymentSubscription {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public PaymentSubscription withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -487,6 +531,7 @@ public class PaymentSubscription {
         return this;
     }
 
+
     public PaymentSubscription withStartAt(Optional<OffsetDateTime> startAt) {
         Utils.checkNotNull(startAt, "startAt");
         this.startAt = startAt;
@@ -498,6 +543,7 @@ public class PaymentSubscription {
         this.status = Optional.ofNullable(status);
         return this;
     }
+
 
     public PaymentSubscription withStatus(Optional<? extends PaymentSubscriptionStatus> status) {
         Utils.checkNotNull(status, "status");
@@ -511,13 +557,13 @@ public class PaymentSubscription {
         return this;
     }
 
+
     public PaymentSubscription withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -553,26 +599,13 @@ public class PaymentSubscription {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            canceledAt,
-            contactId,
-            createdAt,
-            currency,
-            currentPeriodEndAt,
-            currentPeriodStartAt,
-            dayOfMonth,
-            dayOfWeek,
-            description,
-            endAt,
-            id,
-            interval,
-            intervalUnit,
-            invoiceId,
-            lineitems,
-            month,
-            raw,
-            startAt,
-            status,
-            updatedAt);
+            canceledAt, contactId, createdAt,
+            currency, currentPeriodEndAt, currentPeriodStartAt,
+            dayOfMonth, dayOfWeek, description,
+            endAt, id, interval,
+            intervalUnit, invoiceId, lineitems,
+            month, raw, startAt,
+            status, updatedAt);
     }
     
     @Override
@@ -599,52 +632,54 @@ public class PaymentSubscription {
                 "status", status,
                 "updatedAt", updatedAt);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<OffsetDateTime> canceledAt = Optional.empty();
- 
+
         private Optional<String> contactId = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> currency = Optional.empty();
- 
+
         private Optional<OffsetDateTime> currentPeriodEndAt = Optional.empty();
- 
+
         private Optional<OffsetDateTime> currentPeriodStartAt = Optional.empty();
- 
+
         private Optional<Double> dayOfMonth = Optional.empty();
- 
+
         private Optional<Double> dayOfWeek = Optional.empty();
- 
+
         private Optional<String> description = Optional.empty();
- 
+
         private Optional<OffsetDateTime> endAt = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<Double> interval = Optional.empty();
- 
+
         private Optional<? extends IntervalUnit> intervalUnit = Optional.empty();
- 
+
         private Optional<String> invoiceId = Optional.empty();
- 
+
         private Optional<? extends List<PaymentLineitem>> lineitems = Optional.empty();
- 
+
         private Optional<Double> month = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<OffsetDateTime> startAt = Optional.empty();
- 
+
         private Optional<? extends PaymentSubscriptionStatus> status = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder canceledAt(OffsetDateTime canceledAt) {
             Utils.checkNotNull(canceledAt, "canceledAt");
@@ -658,6 +693,7 @@ public class PaymentSubscription {
             return this;
         }
 
+
         public Builder contactId(String contactId) {
             Utils.checkNotNull(contactId, "contactId");
             this.contactId = Optional.ofNullable(contactId);
@@ -669,6 +705,7 @@ public class PaymentSubscription {
             this.contactId = contactId;
             return this;
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -682,6 +719,7 @@ public class PaymentSubscription {
             return this;
         }
 
+
         public Builder currency(String currency) {
             Utils.checkNotNull(currency, "currency");
             this.currency = Optional.ofNullable(currency);
@@ -693,6 +731,7 @@ public class PaymentSubscription {
             this.currency = currency;
             return this;
         }
+
 
         public Builder currentPeriodEndAt(OffsetDateTime currentPeriodEndAt) {
             Utils.checkNotNull(currentPeriodEndAt, "currentPeriodEndAt");
@@ -706,6 +745,7 @@ public class PaymentSubscription {
             return this;
         }
 
+
         public Builder currentPeriodStartAt(OffsetDateTime currentPeriodStartAt) {
             Utils.checkNotNull(currentPeriodStartAt, "currentPeriodStartAt");
             this.currentPeriodStartAt = Optional.ofNullable(currentPeriodStartAt);
@@ -717,6 +757,7 @@ public class PaymentSubscription {
             this.currentPeriodStartAt = currentPeriodStartAt;
             return this;
         }
+
 
         public Builder dayOfMonth(double dayOfMonth) {
             Utils.checkNotNull(dayOfMonth, "dayOfMonth");
@@ -730,6 +771,7 @@ public class PaymentSubscription {
             return this;
         }
 
+
         public Builder dayOfWeek(double dayOfWeek) {
             Utils.checkNotNull(dayOfWeek, "dayOfWeek");
             this.dayOfWeek = Optional.ofNullable(dayOfWeek);
@@ -741,6 +783,7 @@ public class PaymentSubscription {
             this.dayOfWeek = dayOfWeek;
             return this;
         }
+
 
         public Builder description(String description) {
             Utils.checkNotNull(description, "description");
@@ -754,6 +797,7 @@ public class PaymentSubscription {
             return this;
         }
 
+
         public Builder endAt(OffsetDateTime endAt) {
             Utils.checkNotNull(endAt, "endAt");
             this.endAt = Optional.ofNullable(endAt);
@@ -765,6 +809,7 @@ public class PaymentSubscription {
             this.endAt = endAt;
             return this;
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -778,6 +823,7 @@ public class PaymentSubscription {
             return this;
         }
 
+
         public Builder interval(double interval) {
             Utils.checkNotNull(interval, "interval");
             this.interval = Optional.ofNullable(interval);
@@ -789,6 +835,7 @@ public class PaymentSubscription {
             this.interval = interval;
             return this;
         }
+
 
         public Builder intervalUnit(IntervalUnit intervalUnit) {
             Utils.checkNotNull(intervalUnit, "intervalUnit");
@@ -802,6 +849,7 @@ public class PaymentSubscription {
             return this;
         }
 
+
         public Builder invoiceId(String invoiceId) {
             Utils.checkNotNull(invoiceId, "invoiceId");
             this.invoiceId = Optional.ofNullable(invoiceId);
@@ -813,6 +861,7 @@ public class PaymentSubscription {
             this.invoiceId = invoiceId;
             return this;
         }
+
 
         public Builder lineitems(List<PaymentLineitem> lineitems) {
             Utils.checkNotNull(lineitems, "lineitems");
@@ -826,6 +875,7 @@ public class PaymentSubscription {
             return this;
         }
 
+
         public Builder month(double month) {
             Utils.checkNotNull(month, "month");
             this.month = Optional.ofNullable(month);
@@ -837,6 +887,7 @@ public class PaymentSubscription {
             this.month = month;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -850,6 +901,7 @@ public class PaymentSubscription {
             return this;
         }
 
+
         public Builder startAt(OffsetDateTime startAt) {
             Utils.checkNotNull(startAt, "startAt");
             this.startAt = Optional.ofNullable(startAt);
@@ -861,6 +913,7 @@ public class PaymentSubscription {
             this.startAt = startAt;
             return this;
         }
+
 
         public Builder status(PaymentSubscriptionStatus status) {
             Utils.checkNotNull(status, "status");
@@ -874,6 +927,7 @@ public class PaymentSubscription {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -885,29 +939,18 @@ public class PaymentSubscription {
             this.updatedAt = updatedAt;
             return this;
         }
-        
+
         public PaymentSubscription build() {
+
             return new PaymentSubscription(
-                canceledAt,
-                contactId,
-                createdAt,
-                currency,
-                currentPeriodEndAt,
-                currentPeriodStartAt,
-                dayOfMonth,
-                dayOfWeek,
-                description,
-                endAt,
-                id,
-                interval,
-                intervalUnit,
-                invoiceId,
-                lineitems,
-                month,
-                raw,
-                startAt,
-                status,
-                updatedAt);
+                canceledAt, contactId, createdAt,
+                currency, currentPeriodEndAt, currentPeriodStartAt,
+                dayOfMonth, dayOfWeek, description,
+                endAt, id, interval,
+                intervalUnit, invoiceId, lineitems,
+                month, raw, startAt,
+                status, updatedAt);
         }
+
     }
 }

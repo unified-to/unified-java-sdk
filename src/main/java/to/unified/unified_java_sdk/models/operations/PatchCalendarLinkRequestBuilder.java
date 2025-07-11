@@ -28,7 +28,7 @@ public class PatchCalendarLinkRequestBuilder {
     public PatchCalendarLinkResponse call() throws Exception {
         
         RequestOperation<PatchCalendarLinkRequest, PatchCalendarLinkResponse> operation
-              = new PatchCalendarLinkOperation( sdkConfiguration);
+              = new PatchCalendarLinkOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

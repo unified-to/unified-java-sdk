@@ -28,7 +28,7 @@ public class GetAccountingTrialbalanceRequestBuilder {
     public GetAccountingTrialbalanceResponse call() throws Exception {
         
         RequestOperation<GetAccountingTrialbalanceRequest, GetAccountingTrialbalanceResponse> operation
-              = new GetAccountingTrialbalanceOperation( sdkConfiguration);
+              = new GetAccountingTrialbalanceOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

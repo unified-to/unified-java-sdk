@@ -28,7 +28,7 @@ public class ListLmsInstructorsRequestBuilder {
     public ListLmsInstructorsResponse call() throws Exception {
         
         RequestOperation<ListLmsInstructorsRequest, ListLmsInstructorsResponse> operation
-              = new ListLmsInstructorsOperation( sdkConfiguration);
+              = new ListLmsInstructorsOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

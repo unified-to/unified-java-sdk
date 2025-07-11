@@ -20,51 +20,63 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.LazySingletonValue;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class PaymentPayment {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     private Optional<String> accountId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private Optional<String> contactId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private Optional<String> currency;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoice_id")
     private Optional<String> invoiceId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     private Optional<String> notes;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_method")
     private Optional<String> paymentMethod;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     private Optional<String> reference;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
     private Optional<Double> totalAmount;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -111,7 +123,10 @@ public class PaymentPayment {
     }
     
     public PaymentPayment() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -175,15 +190,17 @@ public class PaymentPayment {
         return updatedAt;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public PaymentPayment withAccountId(String accountId) {
         Utils.checkNotNull(accountId, "accountId");
         this.accountId = Optional.ofNullable(accountId);
         return this;
     }
+
 
     public PaymentPayment withAccountId(Optional<String> accountId) {
         Utils.checkNotNull(accountId, "accountId");
@@ -197,6 +214,7 @@ public class PaymentPayment {
         return this;
     }
 
+
     public PaymentPayment withContactId(Optional<String> contactId) {
         Utils.checkNotNull(contactId, "contactId");
         this.contactId = contactId;
@@ -208,6 +226,7 @@ public class PaymentPayment {
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public PaymentPayment withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -221,6 +240,7 @@ public class PaymentPayment {
         return this;
     }
 
+
     public PaymentPayment withCurrency(Optional<String> currency) {
         Utils.checkNotNull(currency, "currency");
         this.currency = currency;
@@ -232,6 +252,7 @@ public class PaymentPayment {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public PaymentPayment withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -245,6 +266,7 @@ public class PaymentPayment {
         return this;
     }
 
+
     public PaymentPayment withInvoiceId(Optional<String> invoiceId) {
         Utils.checkNotNull(invoiceId, "invoiceId");
         this.invoiceId = invoiceId;
@@ -256,6 +278,7 @@ public class PaymentPayment {
         this.notes = Optional.ofNullable(notes);
         return this;
     }
+
 
     public PaymentPayment withNotes(Optional<String> notes) {
         Utils.checkNotNull(notes, "notes");
@@ -269,6 +292,7 @@ public class PaymentPayment {
         return this;
     }
 
+
     public PaymentPayment withPaymentMethod(Optional<String> paymentMethod) {
         Utils.checkNotNull(paymentMethod, "paymentMethod");
         this.paymentMethod = paymentMethod;
@@ -280,6 +304,7 @@ public class PaymentPayment {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public PaymentPayment withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -293,6 +318,7 @@ public class PaymentPayment {
         return this;
     }
 
+
     public PaymentPayment withReference(Optional<String> reference) {
         Utils.checkNotNull(reference, "reference");
         this.reference = reference;
@@ -304,6 +330,7 @@ public class PaymentPayment {
         this.totalAmount = Optional.ofNullable(totalAmount);
         return this;
     }
+
 
     public PaymentPayment withTotalAmount(Optional<Double> totalAmount) {
         Utils.checkNotNull(totalAmount, "totalAmount");
@@ -317,13 +344,13 @@ public class PaymentPayment {
         return this;
     }
 
+
     public PaymentPayment withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -351,18 +378,10 @@ public class PaymentPayment {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            accountId,
-            contactId,
-            createdAt,
-            currency,
-            id,
-            invoiceId,
-            notes,
-            paymentMethod,
-            raw,
-            reference,
-            totalAmount,
-            updatedAt);
+            accountId, contactId, createdAt,
+            currency, id, invoiceId,
+            notes, paymentMethod, raw,
+            reference, totalAmount, updatedAt);
     }
     
     @Override
@@ -381,36 +400,38 @@ public class PaymentPayment {
                 "totalAmount", totalAmount,
                 "updatedAt", updatedAt);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> accountId = Optional.empty();
- 
+
         private Optional<String> contactId = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> currency;
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> invoiceId = Optional.empty();
- 
+
         private Optional<String> notes = Optional.empty();
- 
+
         private Optional<String> paymentMethod = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<String> reference = Optional.empty();
- 
+
         private Optional<Double> totalAmount = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder accountId(String accountId) {
             Utils.checkNotNull(accountId, "accountId");
@@ -424,6 +445,7 @@ public class PaymentPayment {
             return this;
         }
 
+
         public Builder contactId(String contactId) {
             Utils.checkNotNull(contactId, "contactId");
             this.contactId = Optional.ofNullable(contactId);
@@ -435,6 +457,7 @@ public class PaymentPayment {
             this.contactId = contactId;
             return this;
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -448,6 +471,7 @@ public class PaymentPayment {
             return this;
         }
 
+
         public Builder currency(String currency) {
             Utils.checkNotNull(currency, "currency");
             this.currency = Optional.ofNullable(currency);
@@ -459,6 +483,7 @@ public class PaymentPayment {
             this.currency = currency;
             return this;
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -472,6 +497,7 @@ public class PaymentPayment {
             return this;
         }
 
+
         public Builder invoiceId(String invoiceId) {
             Utils.checkNotNull(invoiceId, "invoiceId");
             this.invoiceId = Optional.ofNullable(invoiceId);
@@ -483,6 +509,7 @@ public class PaymentPayment {
             this.invoiceId = invoiceId;
             return this;
         }
+
 
         public Builder notes(String notes) {
             Utils.checkNotNull(notes, "notes");
@@ -496,6 +523,7 @@ public class PaymentPayment {
             return this;
         }
 
+
         public Builder paymentMethod(String paymentMethod) {
             Utils.checkNotNull(paymentMethod, "paymentMethod");
             this.paymentMethod = Optional.ofNullable(paymentMethod);
@@ -507,6 +535,7 @@ public class PaymentPayment {
             this.paymentMethod = paymentMethod;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -520,6 +549,7 @@ public class PaymentPayment {
             return this;
         }
 
+
         public Builder reference(String reference) {
             Utils.checkNotNull(reference, "reference");
             this.reference = Optional.ofNullable(reference);
@@ -531,6 +561,7 @@ public class PaymentPayment {
             this.reference = reference;
             return this;
         }
+
 
         public Builder totalAmount(double totalAmount) {
             Utils.checkNotNull(totalAmount, "totalAmount");
@@ -544,6 +575,7 @@ public class PaymentPayment {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -555,25 +587,19 @@ public class PaymentPayment {
             this.updatedAt = updatedAt;
             return this;
         }
-        
+
         public PaymentPayment build() {
             if (currency == null) {
                 currency = _SINGLETON_VALUE_Currency.value();
             }
+
             return new PaymentPayment(
-                accountId,
-                contactId,
-                createdAt,
-                currency,
-                id,
-                invoiceId,
-                notes,
-                paymentMethod,
-                raw,
-                reference,
-                totalAmount,
-                updatedAt);
+                accountId, contactId, createdAt,
+                currency, id, invoiceId,
+                notes, paymentMethod, raw,
+                reference, totalAmount, updatedAt);
         }
+
 
         private static final LazySingletonValue<Optional<String>> _SINGLETON_VALUE_Currency =
                 new LazySingletonValue<>(

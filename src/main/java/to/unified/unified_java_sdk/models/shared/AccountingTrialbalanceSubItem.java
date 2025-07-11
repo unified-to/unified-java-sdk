@@ -14,15 +14,18 @@ import java.lang.String;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AccountingTrialbalanceSubItem {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     private Optional<String> accountId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_name")
     private Optional<String> accountName;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
@@ -60,15 +63,17 @@ public class AccountingTrialbalanceSubItem {
         return amount;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AccountingTrialbalanceSubItem withAccountId(String accountId) {
         Utils.checkNotNull(accountId, "accountId");
         this.accountId = Optional.ofNullable(accountId);
         return this;
     }
+
 
     public AccountingTrialbalanceSubItem withAccountId(Optional<String> accountId) {
         Utils.checkNotNull(accountId, "accountId");
@@ -82,6 +87,7 @@ public class AccountingTrialbalanceSubItem {
         return this;
     }
 
+
     public AccountingTrialbalanceSubItem withAccountName(Optional<String> accountName) {
         Utils.checkNotNull(accountName, "accountName");
         this.accountName = accountName;
@@ -94,13 +100,13 @@ public class AccountingTrialbalanceSubItem {
         return this;
     }
 
+
     public AccountingTrialbalanceSubItem withAmount(Optional<Double> amount) {
         Utils.checkNotNull(amount, "amount");
         this.amount = amount;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -119,9 +125,7 @@ public class AccountingTrialbalanceSubItem {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            accountId,
-            accountName,
-            amount);
+            accountId, accountName, amount);
     }
     
     @Override
@@ -131,18 +135,20 @@ public class AccountingTrialbalanceSubItem {
                 "accountName", accountName,
                 "amount", amount);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> accountId = Optional.empty();
- 
+
         private Optional<String> accountName = Optional.empty();
- 
+
         private Optional<Double> amount = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder accountId(String accountId) {
             Utils.checkNotNull(accountId, "accountId");
@@ -156,6 +162,7 @@ public class AccountingTrialbalanceSubItem {
             return this;
         }
 
+
         public Builder accountName(String accountName) {
             Utils.checkNotNull(accountName, "accountName");
             this.accountName = Optional.ofNullable(accountName);
@@ -168,6 +175,7 @@ public class AccountingTrialbalanceSubItem {
             return this;
         }
 
+
         public Builder amount(double amount) {
             Utils.checkNotNull(amount, "amount");
             this.amount = Optional.ofNullable(amount);
@@ -179,12 +187,12 @@ public class AccountingTrialbalanceSubItem {
             this.amount = amount;
             return this;
         }
-        
+
         public AccountingTrialbalanceSubItem build() {
+
             return new AccountingTrialbalanceSubItem(
-                accountId,
-                accountName,
-                amount);
+                accountId, accountName, amount);
         }
+
     }
 }

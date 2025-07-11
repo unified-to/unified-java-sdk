@@ -28,7 +28,7 @@ public class CreatePaymentSubscriptionRequestBuilder {
     public CreatePaymentSubscriptionResponse call() throws Exception {
         
         RequestOperation<CreatePaymentSubscriptionRequest, CreatePaymentSubscriptionResponse> operation
-              = new CreatePaymentSubscriptionOperation( sdkConfiguration);
+              = new CreatePaymentSubscriptionOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

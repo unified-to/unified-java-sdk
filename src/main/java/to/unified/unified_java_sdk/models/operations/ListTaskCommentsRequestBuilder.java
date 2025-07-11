@@ -28,7 +28,7 @@ public class ListTaskCommentsRequestBuilder {
     public ListTaskCommentsResponse call() throws Exception {
         
         RequestOperation<ListTaskCommentsRequest, ListTaskCommentsResponse> operation
-              = new ListTaskCommentsOperation( sdkConfiguration);
+              = new ListTaskCommentsOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

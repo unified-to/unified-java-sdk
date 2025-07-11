@@ -28,7 +28,7 @@ public class RemoveCrmCompanyRequestBuilder {
     public RemoveCrmCompanyResponse call() throws Exception {
         
         RequestOperation<RemoveCrmCompanyRequest, RemoveCrmCompanyResponse> operation
-              = new RemoveCrmCompanyOperation( sdkConfiguration);
+              = new RemoveCrmCompanyOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

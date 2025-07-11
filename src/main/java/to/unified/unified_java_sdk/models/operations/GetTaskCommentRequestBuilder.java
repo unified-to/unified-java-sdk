@@ -28,7 +28,7 @@ public class GetTaskCommentRequestBuilder {
     public GetTaskCommentResponse call() throws Exception {
         
         RequestOperation<GetTaskCommentRequest, GetTaskCommentResponse> operation
-              = new GetTaskCommentOperation( sdkConfiguration);
+              = new GetTaskCommentOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

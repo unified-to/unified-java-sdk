@@ -25,7 +25,6 @@ import to.unified.unified_java_sdk.utils.Utils;
  * <p>A person object from an enrichment integration
  */
 public class EnrichPerson {
-
     /**
      * The address of the person
      */
@@ -33,21 +32,26 @@ public class EnrichPerson {
     @JsonProperty("address")
     private Optional<? extends PropertyEnrichPersonAddress> address;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bio")
     private Optional<String> bio;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("birthdate")
     private Optional<String> birthdate;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company")
     private Optional<String> company;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_domain")
     private Optional<String> companyDomain;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
@@ -60,33 +64,41 @@ public class EnrichPerson {
     @JsonProperty("emails")
     private Optional<? extends List<EnrichEmail>> emails;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facebook_url")
     private Optional<String> facebookUrl;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     private Optional<? extends Gender> gender;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("github_url")
     private Optional<String> githubUrl;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("github_username")
     private Optional<String> githubUsername;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_url")
     private Optional<String> imageUrl;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedin_url")
     private Optional<String> linkedinUrl;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
@@ -106,29 +118,36 @@ public class EnrichPerson {
     @JsonProperty("telephones")
     private Optional<? extends List<EnrichTelephone>> telephones;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     private Optional<String> timezone;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     private Optional<String> title;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("twitter_handle")
     private Optional<String> twitterHandle;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("twitter_url")
     private Optional<String> twitterUrl;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utc_offset")
     private Optional<Double> utcOffset;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("work_histories")
@@ -211,7 +230,14 @@ public class EnrichPerson {
     }
     
     public EnrichPerson() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     /**
@@ -352,9 +378,10 @@ public class EnrichPerson {
         return (Optional<List<EnrichPersonWorkHistory>>) workHistories;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * The address of the person
@@ -364,6 +391,7 @@ public class EnrichPerson {
         this.address = Optional.ofNullable(address);
         return this;
     }
+
 
     /**
      * The address of the person
@@ -380,6 +408,7 @@ public class EnrichPerson {
         return this;
     }
 
+
     public EnrichPerson withBio(Optional<String> bio) {
         Utils.checkNotNull(bio, "bio");
         this.bio = bio;
@@ -391,6 +420,7 @@ public class EnrichPerson {
         this.birthdate = Optional.ofNullable(birthdate);
         return this;
     }
+
 
     public EnrichPerson withBirthdate(Optional<String> birthdate) {
         Utils.checkNotNull(birthdate, "birthdate");
@@ -404,6 +434,7 @@ public class EnrichPerson {
         return this;
     }
 
+
     public EnrichPerson withCompany(Optional<String> company) {
         Utils.checkNotNull(company, "company");
         this.company = company;
@@ -416,6 +447,7 @@ public class EnrichPerson {
         return this;
     }
 
+
     public EnrichPerson withCompanyDomain(Optional<String> companyDomain) {
         Utils.checkNotNull(companyDomain, "companyDomain");
         this.companyDomain = companyDomain;
@@ -427,6 +459,7 @@ public class EnrichPerson {
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public EnrichPerson withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -443,6 +476,7 @@ public class EnrichPerson {
         return this;
     }
 
+
     /**
      * An array of email addresses for this person
      */
@@ -458,6 +492,7 @@ public class EnrichPerson {
         return this;
     }
 
+
     public EnrichPerson withFacebookUrl(Optional<String> facebookUrl) {
         Utils.checkNotNull(facebookUrl, "facebookUrl");
         this.facebookUrl = facebookUrl;
@@ -469,6 +504,7 @@ public class EnrichPerson {
         this.gender = Optional.ofNullable(gender);
         return this;
     }
+
 
     public EnrichPerson withGender(Optional<? extends Gender> gender) {
         Utils.checkNotNull(gender, "gender");
@@ -482,6 +518,7 @@ public class EnrichPerson {
         return this;
     }
 
+
     public EnrichPerson withGithubUrl(Optional<String> githubUrl) {
         Utils.checkNotNull(githubUrl, "githubUrl");
         this.githubUrl = githubUrl;
@@ -493,6 +530,7 @@ public class EnrichPerson {
         this.githubUsername = Optional.ofNullable(githubUsername);
         return this;
     }
+
 
     public EnrichPerson withGithubUsername(Optional<String> githubUsername) {
         Utils.checkNotNull(githubUsername, "githubUsername");
@@ -506,6 +544,7 @@ public class EnrichPerson {
         return this;
     }
 
+
     public EnrichPerson withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -517,6 +556,7 @@ public class EnrichPerson {
         this.imageUrl = Optional.ofNullable(imageUrl);
         return this;
     }
+
 
     public EnrichPerson withImageUrl(Optional<String> imageUrl) {
         Utils.checkNotNull(imageUrl, "imageUrl");
@@ -530,6 +570,7 @@ public class EnrichPerson {
         return this;
     }
 
+
     public EnrichPerson withLinkedinUrl(Optional<String> linkedinUrl) {
         Utils.checkNotNull(linkedinUrl, "linkedinUrl");
         this.linkedinUrl = linkedinUrl;
@@ -541,6 +582,7 @@ public class EnrichPerson {
         this.name = Optional.ofNullable(name);
         return this;
     }
+
 
     public EnrichPerson withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
@@ -556,6 +598,7 @@ public class EnrichPerson {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     /**
      * The raw data returned by the integration for this person
@@ -575,6 +618,7 @@ public class EnrichPerson {
         return this;
     }
 
+
     /**
      * An array of telephones for this person
      */
@@ -590,6 +634,7 @@ public class EnrichPerson {
         return this;
     }
 
+
     public EnrichPerson withTimezone(Optional<String> timezone) {
         Utils.checkNotNull(timezone, "timezone");
         this.timezone = timezone;
@@ -601,6 +646,7 @@ public class EnrichPerson {
         this.title = Optional.ofNullable(title);
         return this;
     }
+
 
     public EnrichPerson withTitle(Optional<String> title) {
         Utils.checkNotNull(title, "title");
@@ -614,6 +660,7 @@ public class EnrichPerson {
         return this;
     }
 
+
     public EnrichPerson withTwitterHandle(Optional<String> twitterHandle) {
         Utils.checkNotNull(twitterHandle, "twitterHandle");
         this.twitterHandle = twitterHandle;
@@ -625,6 +672,7 @@ public class EnrichPerson {
         this.twitterUrl = Optional.ofNullable(twitterUrl);
         return this;
     }
+
 
     public EnrichPerson withTwitterUrl(Optional<String> twitterUrl) {
         Utils.checkNotNull(twitterUrl, "twitterUrl");
@@ -638,6 +686,7 @@ public class EnrichPerson {
         return this;
     }
 
+
     public EnrichPerson withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
@@ -649,6 +698,7 @@ public class EnrichPerson {
         this.utcOffset = Optional.ofNullable(utcOffset);
         return this;
     }
+
 
     public EnrichPerson withUtcOffset(Optional<Double> utcOffset) {
         Utils.checkNotNull(utcOffset, "utcOffset");
@@ -662,13 +712,13 @@ public class EnrichPerson {
         return this;
     }
 
+
     public EnrichPerson withWorkHistories(Optional<? extends List<EnrichPersonWorkHistory>> workHistories) {
         Utils.checkNotNull(workHistories, "workHistories");
         this.workHistories = workHistories;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -708,30 +758,14 @@ public class EnrichPerson {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            address,
-            bio,
-            birthdate,
-            company,
-            companyDomain,
-            createdAt,
-            emails,
-            facebookUrl,
-            gender,
-            githubUrl,
-            githubUsername,
-            id,
-            imageUrl,
-            linkedinUrl,
-            name,
-            raw,
-            telephones,
-            timezone,
-            title,
-            twitterHandle,
-            twitterUrl,
-            updatedAt,
-            utcOffset,
-            workHistories);
+            address, bio, birthdate,
+            company, companyDomain, createdAt,
+            emails, facebookUrl, gender,
+            githubUrl, githubUsername, id,
+            imageUrl, linkedinUrl, name,
+            raw, telephones, timezone,
+            title, twitterHandle, twitterUrl,
+            updatedAt, utcOffset, workHistories);
     }
     
     @Override
@@ -762,60 +796,62 @@ public class EnrichPerson {
                 "utcOffset", utcOffset,
                 "workHistories", workHistories);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<? extends PropertyEnrichPersonAddress> address = Optional.empty();
- 
+
         private Optional<String> bio = Optional.empty();
- 
+
         private Optional<String> birthdate = Optional.empty();
- 
+
         private Optional<String> company = Optional.empty();
- 
+
         private Optional<String> companyDomain = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<? extends List<EnrichEmail>> emails = Optional.empty();
- 
+
         private Optional<String> facebookUrl = Optional.empty();
- 
+
         private Optional<? extends Gender> gender = Optional.empty();
- 
+
         private Optional<String> githubUrl = Optional.empty();
- 
+
         private Optional<String> githubUsername = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> imageUrl = Optional.empty();
- 
+
         private Optional<String> linkedinUrl = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<? extends List<EnrichTelephone>> telephones = Optional.empty();
- 
+
         private Optional<String> timezone = Optional.empty();
- 
+
         private Optional<String> title = Optional.empty();
- 
+
         private Optional<String> twitterHandle = Optional.empty();
- 
+
         private Optional<String> twitterUrl = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<Double> utcOffset = Optional.empty();
- 
+
         private Optional<? extends List<EnrichPersonWorkHistory>> workHistories = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * The address of the person
@@ -835,6 +871,7 @@ public class EnrichPerson {
             return this;
         }
 
+
         public Builder bio(String bio) {
             Utils.checkNotNull(bio, "bio");
             this.bio = Optional.ofNullable(bio);
@@ -846,6 +883,7 @@ public class EnrichPerson {
             this.bio = bio;
             return this;
         }
+
 
         public Builder birthdate(String birthdate) {
             Utils.checkNotNull(birthdate, "birthdate");
@@ -859,6 +897,7 @@ public class EnrichPerson {
             return this;
         }
 
+
         public Builder company(String company) {
             Utils.checkNotNull(company, "company");
             this.company = Optional.ofNullable(company);
@@ -870,6 +909,7 @@ public class EnrichPerson {
             this.company = company;
             return this;
         }
+
 
         public Builder companyDomain(String companyDomain) {
             Utils.checkNotNull(companyDomain, "companyDomain");
@@ -883,6 +923,7 @@ public class EnrichPerson {
             return this;
         }
 
+
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
@@ -894,6 +935,7 @@ public class EnrichPerson {
             this.createdAt = createdAt;
             return this;
         }
+
 
         /**
          * An array of email addresses for this person
@@ -913,6 +955,7 @@ public class EnrichPerson {
             return this;
         }
 
+
         public Builder facebookUrl(String facebookUrl) {
             Utils.checkNotNull(facebookUrl, "facebookUrl");
             this.facebookUrl = Optional.ofNullable(facebookUrl);
@@ -924,6 +967,7 @@ public class EnrichPerson {
             this.facebookUrl = facebookUrl;
             return this;
         }
+
 
         public Builder gender(Gender gender) {
             Utils.checkNotNull(gender, "gender");
@@ -937,6 +981,7 @@ public class EnrichPerson {
             return this;
         }
 
+
         public Builder githubUrl(String githubUrl) {
             Utils.checkNotNull(githubUrl, "githubUrl");
             this.githubUrl = Optional.ofNullable(githubUrl);
@@ -948,6 +993,7 @@ public class EnrichPerson {
             this.githubUrl = githubUrl;
             return this;
         }
+
 
         public Builder githubUsername(String githubUsername) {
             Utils.checkNotNull(githubUsername, "githubUsername");
@@ -961,6 +1007,7 @@ public class EnrichPerson {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -972,6 +1019,7 @@ public class EnrichPerson {
             this.id = id;
             return this;
         }
+
 
         public Builder imageUrl(String imageUrl) {
             Utils.checkNotNull(imageUrl, "imageUrl");
@@ -985,6 +1033,7 @@ public class EnrichPerson {
             return this;
         }
 
+
         public Builder linkedinUrl(String linkedinUrl) {
             Utils.checkNotNull(linkedinUrl, "linkedinUrl");
             this.linkedinUrl = Optional.ofNullable(linkedinUrl);
@@ -997,6 +1046,7 @@ public class EnrichPerson {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = Optional.ofNullable(name);
@@ -1008,6 +1058,7 @@ public class EnrichPerson {
             this.name = name;
             return this;
         }
+
 
         /**
          * The raw data returned by the integration for this person
@@ -1027,6 +1078,7 @@ public class EnrichPerson {
             return this;
         }
 
+
         /**
          * An array of telephones for this person
          */
@@ -1045,6 +1097,7 @@ public class EnrichPerson {
             return this;
         }
 
+
         public Builder timezone(String timezone) {
             Utils.checkNotNull(timezone, "timezone");
             this.timezone = Optional.ofNullable(timezone);
@@ -1056,6 +1109,7 @@ public class EnrichPerson {
             this.timezone = timezone;
             return this;
         }
+
 
         public Builder title(String title) {
             Utils.checkNotNull(title, "title");
@@ -1069,6 +1123,7 @@ public class EnrichPerson {
             return this;
         }
 
+
         public Builder twitterHandle(String twitterHandle) {
             Utils.checkNotNull(twitterHandle, "twitterHandle");
             this.twitterHandle = Optional.ofNullable(twitterHandle);
@@ -1080,6 +1135,7 @@ public class EnrichPerson {
             this.twitterHandle = twitterHandle;
             return this;
         }
+
 
         public Builder twitterUrl(String twitterUrl) {
             Utils.checkNotNull(twitterUrl, "twitterUrl");
@@ -1093,6 +1149,7 @@ public class EnrichPerson {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -1104,6 +1161,7 @@ public class EnrichPerson {
             this.updatedAt = updatedAt;
             return this;
         }
+
 
         public Builder utcOffset(double utcOffset) {
             Utils.checkNotNull(utcOffset, "utcOffset");
@@ -1117,6 +1175,7 @@ public class EnrichPerson {
             return this;
         }
 
+
         public Builder workHistories(List<EnrichPersonWorkHistory> workHistories) {
             Utils.checkNotNull(workHistories, "workHistories");
             this.workHistories = Optional.ofNullable(workHistories);
@@ -1128,33 +1187,19 @@ public class EnrichPerson {
             this.workHistories = workHistories;
             return this;
         }
-        
+
         public EnrichPerson build() {
+
             return new EnrichPerson(
-                address,
-                bio,
-                birthdate,
-                company,
-                companyDomain,
-                createdAt,
-                emails,
-                facebookUrl,
-                gender,
-                githubUrl,
-                githubUsername,
-                id,
-                imageUrl,
-                linkedinUrl,
-                name,
-                raw,
-                telephones,
-                timezone,
-                title,
-                twitterHandle,
-                twitterUrl,
-                updatedAt,
-                utcOffset,
-                workHistories);
+                address, bio, birthdate,
+                company, companyDomain, createdAt,
+                emails, facebookUrl, gender,
+                githubUrl, githubUsername, id,
+                imageUrl, linkedinUrl, name,
+                raw, telephones, timezone,
+                title, twitterHandle, twitterUrl,
+                updatedAt, utcOffset, workHistories);
         }
+
     }
 }

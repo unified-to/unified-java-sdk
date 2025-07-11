@@ -40,7 +40,6 @@ public class Project {
     Project(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a project
      * 
@@ -57,13 +56,11 @@ public class Project {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateTaskProjectResponse createTaskProject(
-            CreateTaskProjectRequest request) throws Exception {
+    public CreateTaskProjectResponse createTaskProject(CreateTaskProjectRequest request) throws Exception {
         RequestOperation<CreateTaskProjectRequest, CreateTaskProjectResponse> operation
-              = new CreateTaskProjectOperation( sdkConfiguration);
+              = new CreateTaskProjectOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a project
@@ -81,13 +78,11 @@ public class Project {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetTaskProjectResponse getTaskProject(
-            GetTaskProjectRequest request) throws Exception {
+    public GetTaskProjectResponse getTaskProject(GetTaskProjectRequest request) throws Exception {
         RequestOperation<GetTaskProjectRequest, GetTaskProjectResponse> operation
-              = new GetTaskProjectOperation( sdkConfiguration);
+              = new GetTaskProjectOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all projects
@@ -105,13 +100,11 @@ public class Project {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListTaskProjectsResponse listTaskProjects(
-            ListTaskProjectsRequest request) throws Exception {
+    public ListTaskProjectsResponse listTaskProjects(ListTaskProjectsRequest request) throws Exception {
         RequestOperation<ListTaskProjectsRequest, ListTaskProjectsResponse> operation
-              = new ListTaskProjectsOperation( sdkConfiguration);
+              = new ListTaskProjectsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a project
@@ -129,13 +122,11 @@ public class Project {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchTaskProjectResponse patchTaskProject(
-            PatchTaskProjectRequest request) throws Exception {
+    public PatchTaskProjectResponse patchTaskProject(PatchTaskProjectRequest request) throws Exception {
         RequestOperation<PatchTaskProjectRequest, PatchTaskProjectResponse> operation
-              = new PatchTaskProjectOperation( sdkConfiguration);
+              = new PatchTaskProjectOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a project
@@ -153,13 +144,11 @@ public class Project {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveTaskProjectResponse removeTaskProject(
-            RemoveTaskProjectRequest request) throws Exception {
+    public RemoveTaskProjectResponse removeTaskProject(RemoveTaskProjectRequest request) throws Exception {
         RequestOperation<RemoveTaskProjectRequest, RemoveTaskProjectResponse> operation
-              = new RemoveTaskProjectOperation( sdkConfiguration);
+              = new RemoveTaskProjectOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a project
@@ -177,10 +166,9 @@ public class Project {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateTaskProjectResponse updateTaskProject(
-            UpdateTaskProjectRequest request) throws Exception {
+    public UpdateTaskProjectResponse updateTaskProject(UpdateTaskProjectRequest request) throws Exception {
         RequestOperation<UpdateTaskProjectRequest, UpdateTaskProjectResponse> operation
-              = new UpdateTaskProjectOperation( sdkConfiguration);
+              = new UpdateTaskProjectOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -20,7 +20,6 @@ public class Call {
     Call(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * List all calls
      * 
@@ -37,10 +36,9 @@ public class Call {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListUcCallsResponse listUcCalls(
-            ListUcCallsRequest request) throws Exception {
+    public ListUcCallsResponse listUcCalls(ListUcCallsRequest request) throws Exception {
         RequestOperation<ListUcCallsRequest, ListUcCallsResponse> operation
-              = new ListUcCallsOperation( sdkConfiguration);
+              = new ListUcCallsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -28,7 +28,7 @@ public class UpdateUcContactRequestBuilder {
     public UpdateUcContactResponse call() throws Exception {
         
         RequestOperation<UpdateUcContactRequest, UpdateUcContactResponse> operation
-              = new UpdateUcContactOperation( sdkConfiguration);
+              = new UpdateUcContactOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

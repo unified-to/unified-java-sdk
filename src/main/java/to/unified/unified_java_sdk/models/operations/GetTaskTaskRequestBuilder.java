@@ -28,7 +28,7 @@ public class GetTaskTaskRequestBuilder {
     public GetTaskTaskResponse call() throws Exception {
         
         RequestOperation<GetTaskTaskRequest, GetTaskTaskResponse> operation
-              = new GetTaskTaskOperation( sdkConfiguration);
+              = new GetTaskTaskOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -18,54 +18,67 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AccountingOrganization {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     private Optional<? extends PropertyAccountingOrganizationAddress> address;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private Optional<String> currency;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fiscal_year_end_month")
     private Optional<Double> fiscalYearEndMonth;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legal_name")
     private Optional<String> legalName;
 
+
     @JsonProperty("name")
     private String name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_code")
     private Optional<String> organizationCode;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_number")
     private Optional<String> taxNumber;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     private Optional<String> timezone;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("website")
@@ -116,7 +129,11 @@ public class AccountingOrganization {
     
     public AccountingOrganization(
             String name) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), name, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            name, Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -186,15 +203,17 @@ public class AccountingOrganization {
         return website;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AccountingOrganization withAddress(PropertyAccountingOrganizationAddress address) {
         Utils.checkNotNull(address, "address");
         this.address = Optional.ofNullable(address);
         return this;
     }
+
 
     public AccountingOrganization withAddress(Optional<? extends PropertyAccountingOrganizationAddress> address) {
         Utils.checkNotNull(address, "address");
@@ -208,6 +227,7 @@ public class AccountingOrganization {
         return this;
     }
 
+
     public AccountingOrganization withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
@@ -219,6 +239,7 @@ public class AccountingOrganization {
         this.currency = Optional.ofNullable(currency);
         return this;
     }
+
 
     public AccountingOrganization withCurrency(Optional<String> currency) {
         Utils.checkNotNull(currency, "currency");
@@ -232,6 +253,7 @@ public class AccountingOrganization {
         return this;
     }
 
+
     public AccountingOrganization withFiscalYearEndMonth(Optional<Double> fiscalYearEndMonth) {
         Utils.checkNotNull(fiscalYearEndMonth, "fiscalYearEndMonth");
         this.fiscalYearEndMonth = fiscalYearEndMonth;
@@ -244,6 +266,7 @@ public class AccountingOrganization {
         return this;
     }
 
+
     public AccountingOrganization withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -255,6 +278,7 @@ public class AccountingOrganization {
         this.legalName = Optional.ofNullable(legalName);
         return this;
     }
+
 
     public AccountingOrganization withLegalName(Optional<String> legalName) {
         Utils.checkNotNull(legalName, "legalName");
@@ -274,6 +298,7 @@ public class AccountingOrganization {
         return this;
     }
 
+
     public AccountingOrganization withOrganizationCode(Optional<String> organizationCode) {
         Utils.checkNotNull(organizationCode, "organizationCode");
         this.organizationCode = organizationCode;
@@ -285,6 +310,7 @@ public class AccountingOrganization {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public AccountingOrganization withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -298,6 +324,7 @@ public class AccountingOrganization {
         return this;
     }
 
+
     public AccountingOrganization withTaxNumber(Optional<String> taxNumber) {
         Utils.checkNotNull(taxNumber, "taxNumber");
         this.taxNumber = taxNumber;
@@ -309,6 +336,7 @@ public class AccountingOrganization {
         this.timezone = Optional.ofNullable(timezone);
         return this;
     }
+
 
     public AccountingOrganization withTimezone(Optional<String> timezone) {
         Utils.checkNotNull(timezone, "timezone");
@@ -322,6 +350,7 @@ public class AccountingOrganization {
         return this;
     }
 
+
     public AccountingOrganization withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
@@ -334,13 +363,13 @@ public class AccountingOrganization {
         return this;
     }
 
+
     public AccountingOrganization withWebsite(Optional<String> website) {
         Utils.checkNotNull(website, "website");
         this.website = website;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -369,18 +398,10 @@ public class AccountingOrganization {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            address,
-            createdAt,
-            currency,
-            fiscalYearEndMonth,
-            id,
-            legalName,
-            name,
-            organizationCode,
-            raw,
-            taxNumber,
-            timezone,
-            updatedAt,
+            address, createdAt, currency,
+            fiscalYearEndMonth, id, legalName,
+            name, organizationCode, raw,
+            taxNumber, timezone, updatedAt,
             website);
     }
     
@@ -401,38 +422,40 @@ public class AccountingOrganization {
                 "updatedAt", updatedAt,
                 "website", website);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<? extends PropertyAccountingOrganizationAddress> address = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> currency = Optional.empty();
- 
+
         private Optional<Double> fiscalYearEndMonth = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> legalName = Optional.empty();
- 
+
         private String name;
- 
+
         private Optional<String> organizationCode = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<String> taxNumber = Optional.empty();
- 
+
         private Optional<String> timezone = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<String> website = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder address(PropertyAccountingOrganizationAddress address) {
             Utils.checkNotNull(address, "address");
@@ -446,6 +469,7 @@ public class AccountingOrganization {
             return this;
         }
 
+
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
@@ -457,6 +481,7 @@ public class AccountingOrganization {
             this.createdAt = createdAt;
             return this;
         }
+
 
         public Builder currency(String currency) {
             Utils.checkNotNull(currency, "currency");
@@ -470,6 +495,7 @@ public class AccountingOrganization {
             return this;
         }
 
+
         public Builder fiscalYearEndMonth(double fiscalYearEndMonth) {
             Utils.checkNotNull(fiscalYearEndMonth, "fiscalYearEndMonth");
             this.fiscalYearEndMonth = Optional.ofNullable(fiscalYearEndMonth);
@@ -481,6 +507,7 @@ public class AccountingOrganization {
             this.fiscalYearEndMonth = fiscalYearEndMonth;
             return this;
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -494,6 +521,7 @@ public class AccountingOrganization {
             return this;
         }
 
+
         public Builder legalName(String legalName) {
             Utils.checkNotNull(legalName, "legalName");
             this.legalName = Optional.ofNullable(legalName);
@@ -506,11 +534,13 @@ public class AccountingOrganization {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = name;
             return this;
         }
+
 
         public Builder organizationCode(String organizationCode) {
             Utils.checkNotNull(organizationCode, "organizationCode");
@@ -524,6 +554,7 @@ public class AccountingOrganization {
             return this;
         }
 
+
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
@@ -535,6 +566,7 @@ public class AccountingOrganization {
             this.raw = raw;
             return this;
         }
+
 
         public Builder taxNumber(String taxNumber) {
             Utils.checkNotNull(taxNumber, "taxNumber");
@@ -548,6 +580,7 @@ public class AccountingOrganization {
             return this;
         }
 
+
         public Builder timezone(String timezone) {
             Utils.checkNotNull(timezone, "timezone");
             this.timezone = Optional.ofNullable(timezone);
@@ -559,6 +592,7 @@ public class AccountingOrganization {
             this.timezone = timezone;
             return this;
         }
+
 
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
@@ -572,6 +606,7 @@ public class AccountingOrganization {
             return this;
         }
 
+
         public Builder website(String website) {
             Utils.checkNotNull(website, "website");
             this.website = Optional.ofNullable(website);
@@ -583,22 +618,16 @@ public class AccountingOrganization {
             this.website = website;
             return this;
         }
-        
+
         public AccountingOrganization build() {
+
             return new AccountingOrganization(
-                address,
-                createdAt,
-                currency,
-                fiscalYearEndMonth,
-                id,
-                legalName,
-                name,
-                organizationCode,
-                raw,
-                taxNumber,
-                timezone,
-                updatedAt,
+                address, createdAt, currency,
+                fiscalYearEndMonth, id, legalName,
+                name, organizationCode, raw,
+                taxNumber, timezone, updatedAt,
                 website);
         }
+
     }
 }

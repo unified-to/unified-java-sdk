@@ -92,7 +92,6 @@ public class Company {
     Company(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a company
      * 
@@ -109,13 +108,11 @@ public class Company {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAtsCompanyResponse createAtsCompany(
-            CreateAtsCompanyRequest request) throws Exception {
+    public CreateAtsCompanyResponse createAtsCompany(CreateAtsCompanyRequest request) throws Exception {
         RequestOperation<CreateAtsCompanyRequest, CreateAtsCompanyResponse> operation
-              = new CreateAtsCompanyOperation( sdkConfiguration);
+              = new CreateAtsCompanyOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a company
@@ -133,13 +130,11 @@ public class Company {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateCrmCompanyResponse createCrmCompany(
-            CreateCrmCompanyRequest request) throws Exception {
+    public CreateCrmCompanyResponse createCrmCompany(CreateCrmCompanyRequest request) throws Exception {
         RequestOperation<CreateCrmCompanyRequest, CreateCrmCompanyResponse> operation
-              = new CreateCrmCompanyOperation( sdkConfiguration);
+              = new CreateCrmCompanyOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a company
@@ -157,13 +152,11 @@ public class Company {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateHrisCompanyResponse createHrisCompany(
-            CreateHrisCompanyRequest request) throws Exception {
+    public CreateHrisCompanyResponse createHrisCompany(CreateHrisCompanyRequest request) throws Exception {
         RequestOperation<CreateHrisCompanyRequest, CreateHrisCompanyResponse> operation
-              = new CreateHrisCompanyOperation( sdkConfiguration);
+              = new CreateHrisCompanyOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a company
@@ -181,13 +174,11 @@ public class Company {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAtsCompanyResponse getAtsCompany(
-            GetAtsCompanyRequest request) throws Exception {
+    public GetAtsCompanyResponse getAtsCompany(GetAtsCompanyRequest request) throws Exception {
         RequestOperation<GetAtsCompanyRequest, GetAtsCompanyResponse> operation
-              = new GetAtsCompanyOperation( sdkConfiguration);
+              = new GetAtsCompanyOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a company
@@ -205,13 +196,11 @@ public class Company {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetCrmCompanyResponse getCrmCompany(
-            GetCrmCompanyRequest request) throws Exception {
+    public GetCrmCompanyResponse getCrmCompany(GetCrmCompanyRequest request) throws Exception {
         RequestOperation<GetCrmCompanyRequest, GetCrmCompanyResponse> operation
-              = new GetCrmCompanyOperation( sdkConfiguration);
+              = new GetCrmCompanyOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a company
@@ -229,13 +218,11 @@ public class Company {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetHrisCompanyResponse getHrisCompany(
-            GetHrisCompanyRequest request) throws Exception {
+    public GetHrisCompanyResponse getHrisCompany(GetHrisCompanyRequest request) throws Exception {
         RequestOperation<GetHrisCompanyRequest, GetHrisCompanyResponse> operation
-              = new GetHrisCompanyOperation( sdkConfiguration);
+              = new GetHrisCompanyOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all companies
@@ -253,13 +240,11 @@ public class Company {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAtsCompaniesResponse listAtsCompanies(
-            ListAtsCompaniesRequest request) throws Exception {
+    public ListAtsCompaniesResponse listAtsCompanies(ListAtsCompaniesRequest request) throws Exception {
         RequestOperation<ListAtsCompaniesRequest, ListAtsCompaniesResponse> operation
-              = new ListAtsCompaniesOperation( sdkConfiguration);
+              = new ListAtsCompaniesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all companies
@@ -277,13 +262,11 @@ public class Company {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCrmCompaniesResponse listCrmCompanies(
-            ListCrmCompaniesRequest request) throws Exception {
+    public ListCrmCompaniesResponse listCrmCompanies(ListCrmCompaniesRequest request) throws Exception {
         RequestOperation<ListCrmCompaniesRequest, ListCrmCompaniesResponse> operation
-              = new ListCrmCompaniesOperation( sdkConfiguration);
+              = new ListCrmCompaniesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve enrichment information for a company
@@ -301,13 +284,11 @@ public class Company {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListEnrichCompaniesResponse listEnrichCompanies(
-            ListEnrichCompaniesRequest request) throws Exception {
+    public ListEnrichCompaniesResponse listEnrichCompanies(ListEnrichCompaniesRequest request) throws Exception {
         RequestOperation<ListEnrichCompaniesRequest, ListEnrichCompaniesResponse> operation
-              = new ListEnrichCompaniesOperation( sdkConfiguration);
+              = new ListEnrichCompaniesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all companies
@@ -325,13 +306,11 @@ public class Company {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListHrisCompaniesResponse listHrisCompanies(
-            ListHrisCompaniesRequest request) throws Exception {
+    public ListHrisCompaniesResponse listHrisCompanies(ListHrisCompaniesRequest request) throws Exception {
         RequestOperation<ListHrisCompaniesRequest, ListHrisCompaniesResponse> operation
-              = new ListHrisCompaniesOperation( sdkConfiguration);
+              = new ListHrisCompaniesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a company
@@ -349,13 +328,11 @@ public class Company {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAtsCompanyResponse patchAtsCompany(
-            PatchAtsCompanyRequest request) throws Exception {
+    public PatchAtsCompanyResponse patchAtsCompany(PatchAtsCompanyRequest request) throws Exception {
         RequestOperation<PatchAtsCompanyRequest, PatchAtsCompanyResponse> operation
-              = new PatchAtsCompanyOperation( sdkConfiguration);
+              = new PatchAtsCompanyOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a company
@@ -373,13 +350,11 @@ public class Company {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchCrmCompanyResponse patchCrmCompany(
-            PatchCrmCompanyRequest request) throws Exception {
+    public PatchCrmCompanyResponse patchCrmCompany(PatchCrmCompanyRequest request) throws Exception {
         RequestOperation<PatchCrmCompanyRequest, PatchCrmCompanyResponse> operation
-              = new PatchCrmCompanyOperation( sdkConfiguration);
+              = new PatchCrmCompanyOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a company
@@ -397,13 +372,11 @@ public class Company {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchHrisCompanyResponse patchHrisCompany(
-            PatchHrisCompanyRequest request) throws Exception {
+    public PatchHrisCompanyResponse patchHrisCompany(PatchHrisCompanyRequest request) throws Exception {
         RequestOperation<PatchHrisCompanyRequest, PatchHrisCompanyResponse> operation
-              = new PatchHrisCompanyOperation( sdkConfiguration);
+              = new PatchHrisCompanyOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a company
@@ -421,13 +394,11 @@ public class Company {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAtsCompanyResponse removeAtsCompany(
-            RemoveAtsCompanyRequest request) throws Exception {
+    public RemoveAtsCompanyResponse removeAtsCompany(RemoveAtsCompanyRequest request) throws Exception {
         RequestOperation<RemoveAtsCompanyRequest, RemoveAtsCompanyResponse> operation
-              = new RemoveAtsCompanyOperation( sdkConfiguration);
+              = new RemoveAtsCompanyOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a company
@@ -445,13 +416,11 @@ public class Company {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveCrmCompanyResponse removeCrmCompany(
-            RemoveCrmCompanyRequest request) throws Exception {
+    public RemoveCrmCompanyResponse removeCrmCompany(RemoveCrmCompanyRequest request) throws Exception {
         RequestOperation<RemoveCrmCompanyRequest, RemoveCrmCompanyResponse> operation
-              = new RemoveCrmCompanyOperation( sdkConfiguration);
+              = new RemoveCrmCompanyOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a company
@@ -469,13 +438,11 @@ public class Company {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveHrisCompanyResponse removeHrisCompany(
-            RemoveHrisCompanyRequest request) throws Exception {
+    public RemoveHrisCompanyResponse removeHrisCompany(RemoveHrisCompanyRequest request) throws Exception {
         RequestOperation<RemoveHrisCompanyRequest, RemoveHrisCompanyResponse> operation
-              = new RemoveHrisCompanyOperation( sdkConfiguration);
+              = new RemoveHrisCompanyOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a company
@@ -493,13 +460,11 @@ public class Company {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAtsCompanyResponse updateAtsCompany(
-            UpdateAtsCompanyRequest request) throws Exception {
+    public UpdateAtsCompanyResponse updateAtsCompany(UpdateAtsCompanyRequest request) throws Exception {
         RequestOperation<UpdateAtsCompanyRequest, UpdateAtsCompanyResponse> operation
-              = new UpdateAtsCompanyOperation( sdkConfiguration);
+              = new UpdateAtsCompanyOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a company
@@ -517,13 +482,11 @@ public class Company {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateCrmCompanyResponse updateCrmCompany(
-            UpdateCrmCompanyRequest request) throws Exception {
+    public UpdateCrmCompanyResponse updateCrmCompany(UpdateCrmCompanyRequest request) throws Exception {
         RequestOperation<UpdateCrmCompanyRequest, UpdateCrmCompanyResponse> operation
-              = new UpdateCrmCompanyOperation( sdkConfiguration);
+              = new UpdateCrmCompanyOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a company
@@ -541,10 +504,9 @@ public class Company {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateHrisCompanyResponse updateHrisCompany(
-            UpdateHrisCompanyRequest request) throws Exception {
+    public UpdateHrisCompanyResponse updateHrisCompany(UpdateHrisCompanyRequest request) throws Exception {
         RequestOperation<UpdateHrisCompanyRequest, UpdateHrisCompanyResponse> operation
-              = new UpdateHrisCompanyOperation( sdkConfiguration);
+              = new UpdateHrisCompanyOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

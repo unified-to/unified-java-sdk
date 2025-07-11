@@ -28,7 +28,7 @@ public class CreateHrisGroupRequestBuilder {
     public CreateHrisGroupResponse call() throws Exception {
         
         RequestOperation<CreateHrisGroupRequest, CreateHrisGroupResponse> operation
-              = new CreateHrisGroupOperation( sdkConfiguration);
+              = new CreateHrisGroupOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

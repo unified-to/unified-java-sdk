@@ -13,15 +13,18 @@ import java.lang.String;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class PropertyMessagingReactionMember {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     private Optional<String> email;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
@@ -59,15 +62,17 @@ public class PropertyMessagingReactionMember {
         return userId;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public PropertyMessagingReactionMember withEmail(String email) {
         Utils.checkNotNull(email, "email");
         this.email = Optional.ofNullable(email);
         return this;
     }
+
 
     public PropertyMessagingReactionMember withEmail(Optional<String> email) {
         Utils.checkNotNull(email, "email");
@@ -81,6 +86,7 @@ public class PropertyMessagingReactionMember {
         return this;
     }
 
+
     public PropertyMessagingReactionMember withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
         this.name = name;
@@ -93,13 +99,13 @@ public class PropertyMessagingReactionMember {
         return this;
     }
 
+
     public PropertyMessagingReactionMember withUserId(Optional<String> userId) {
         Utils.checkNotNull(userId, "userId");
         this.userId = userId;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -118,9 +124,7 @@ public class PropertyMessagingReactionMember {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            email,
-            name,
-            userId);
+            email, name, userId);
     }
     
     @Override
@@ -130,18 +134,20 @@ public class PropertyMessagingReactionMember {
                 "name", name,
                 "userId", userId);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> email = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<String> userId = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder email(String email) {
             Utils.checkNotNull(email, "email");
@@ -155,6 +161,7 @@ public class PropertyMessagingReactionMember {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = Optional.ofNullable(name);
@@ -167,6 +174,7 @@ public class PropertyMessagingReactionMember {
             return this;
         }
 
+
         public Builder userId(String userId) {
             Utils.checkNotNull(userId, "userId");
             this.userId = Optional.ofNullable(userId);
@@ -178,12 +186,12 @@ public class PropertyMessagingReactionMember {
             this.userId = userId;
             return this;
         }
-        
+
         public PropertyMessagingReactionMember build() {
+
             return new PropertyMessagingReactionMember(
-                email,
-                name,
-                userId);
+                email, name, userId);
         }
+
     }
 }

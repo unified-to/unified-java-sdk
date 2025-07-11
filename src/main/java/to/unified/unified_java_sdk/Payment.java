@@ -104,7 +104,6 @@ public class Payment {
     Payment(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a link
      * 
@@ -121,13 +120,11 @@ public class Payment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreatePaymentLinkResponse createPaymentLink(
-            CreatePaymentLinkRequest request) throws Exception {
+    public CreatePaymentLinkResponse createPaymentLink(CreatePaymentLinkRequest request) throws Exception {
         RequestOperation<CreatePaymentLinkRequest, CreatePaymentLinkResponse> operation
-              = new CreatePaymentLinkOperation( sdkConfiguration);
+              = new CreatePaymentLinkOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a payment
@@ -145,13 +142,11 @@ public class Payment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreatePaymentPaymentResponse createPaymentPayment(
-            CreatePaymentPaymentRequest request) throws Exception {
+    public CreatePaymentPaymentResponse createPaymentPayment(CreatePaymentPaymentRequest request) throws Exception {
         RequestOperation<CreatePaymentPaymentRequest, CreatePaymentPaymentResponse> operation
-              = new CreatePaymentPaymentOperation( sdkConfiguration);
+              = new CreatePaymentPaymentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a subscription
@@ -169,13 +164,11 @@ public class Payment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreatePaymentSubscriptionResponse createPaymentSubscription(
-            CreatePaymentSubscriptionRequest request) throws Exception {
+    public CreatePaymentSubscriptionResponse createPaymentSubscription(CreatePaymentSubscriptionRequest request) throws Exception {
         RequestOperation<CreatePaymentSubscriptionRequest, CreatePaymentSubscriptionResponse> operation
-              = new CreatePaymentSubscriptionOperation( sdkConfiguration);
+              = new CreatePaymentSubscriptionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a link
@@ -193,13 +186,11 @@ public class Payment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetPaymentLinkResponse getPaymentLink(
-            GetPaymentLinkRequest request) throws Exception {
+    public GetPaymentLinkResponse getPaymentLink(GetPaymentLinkRequest request) throws Exception {
         RequestOperation<GetPaymentLinkRequest, GetPaymentLinkResponse> operation
-              = new GetPaymentLinkOperation( sdkConfiguration);
+              = new GetPaymentLinkOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a payment
@@ -217,13 +208,11 @@ public class Payment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetPaymentPaymentResponse getPaymentPayment(
-            GetPaymentPaymentRequest request) throws Exception {
+    public GetPaymentPaymentResponse getPaymentPayment(GetPaymentPaymentRequest request) throws Exception {
         RequestOperation<GetPaymentPaymentRequest, GetPaymentPaymentResponse> operation
-              = new GetPaymentPaymentOperation( sdkConfiguration);
+              = new GetPaymentPaymentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a payout
@@ -241,13 +230,11 @@ public class Payment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetPaymentPayoutResponse getPaymentPayout(
-            GetPaymentPayoutRequest request) throws Exception {
+    public GetPaymentPayoutResponse getPaymentPayout(GetPaymentPayoutRequest request) throws Exception {
         RequestOperation<GetPaymentPayoutRequest, GetPaymentPayoutResponse> operation
-              = new GetPaymentPayoutOperation( sdkConfiguration);
+              = new GetPaymentPayoutOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a refund
@@ -265,13 +252,11 @@ public class Payment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetPaymentRefundResponse getPaymentRefund(
-            GetPaymentRefundRequest request) throws Exception {
+    public GetPaymentRefundResponse getPaymentRefund(GetPaymentRefundRequest request) throws Exception {
         RequestOperation<GetPaymentRefundRequest, GetPaymentRefundResponse> operation
-              = new GetPaymentRefundOperation( sdkConfiguration);
+              = new GetPaymentRefundOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a subscription
@@ -289,13 +274,11 @@ public class Payment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetPaymentSubscriptionResponse getPaymentSubscription(
-            GetPaymentSubscriptionRequest request) throws Exception {
+    public GetPaymentSubscriptionResponse getPaymentSubscription(GetPaymentSubscriptionRequest request) throws Exception {
         RequestOperation<GetPaymentSubscriptionRequest, GetPaymentSubscriptionResponse> operation
-              = new GetPaymentSubscriptionOperation( sdkConfiguration);
+              = new GetPaymentSubscriptionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all links
@@ -313,13 +296,11 @@ public class Payment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListPaymentLinksResponse listPaymentLinks(
-            ListPaymentLinksRequest request) throws Exception {
+    public ListPaymentLinksResponse listPaymentLinks(ListPaymentLinksRequest request) throws Exception {
         RequestOperation<ListPaymentLinksRequest, ListPaymentLinksResponse> operation
-              = new ListPaymentLinksOperation( sdkConfiguration);
+              = new ListPaymentLinksOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all payments
@@ -337,13 +318,11 @@ public class Payment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListPaymentPaymentsResponse listPaymentPayments(
-            ListPaymentPaymentsRequest request) throws Exception {
+    public ListPaymentPaymentsResponse listPaymentPayments(ListPaymentPaymentsRequest request) throws Exception {
         RequestOperation<ListPaymentPaymentsRequest, ListPaymentPaymentsResponse> operation
-              = new ListPaymentPaymentsOperation( sdkConfiguration);
+              = new ListPaymentPaymentsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all payouts
@@ -361,13 +340,11 @@ public class Payment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListPaymentPayoutsResponse listPaymentPayouts(
-            ListPaymentPayoutsRequest request) throws Exception {
+    public ListPaymentPayoutsResponse listPaymentPayouts(ListPaymentPayoutsRequest request) throws Exception {
         RequestOperation<ListPaymentPayoutsRequest, ListPaymentPayoutsResponse> operation
-              = new ListPaymentPayoutsOperation( sdkConfiguration);
+              = new ListPaymentPayoutsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all refunds
@@ -385,13 +362,11 @@ public class Payment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListPaymentRefundsResponse listPaymentRefunds(
-            ListPaymentRefundsRequest request) throws Exception {
+    public ListPaymentRefundsResponse listPaymentRefunds(ListPaymentRefundsRequest request) throws Exception {
         RequestOperation<ListPaymentRefundsRequest, ListPaymentRefundsResponse> operation
-              = new ListPaymentRefundsOperation( sdkConfiguration);
+              = new ListPaymentRefundsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all subscriptions
@@ -409,13 +384,11 @@ public class Payment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListPaymentSubscriptionsResponse listPaymentSubscriptions(
-            ListPaymentSubscriptionsRequest request) throws Exception {
+    public ListPaymentSubscriptionsResponse listPaymentSubscriptions(ListPaymentSubscriptionsRequest request) throws Exception {
         RequestOperation<ListPaymentSubscriptionsRequest, ListPaymentSubscriptionsResponse> operation
-              = new ListPaymentSubscriptionsOperation( sdkConfiguration);
+              = new ListPaymentSubscriptionsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a link
@@ -433,13 +406,11 @@ public class Payment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchPaymentLinkResponse patchPaymentLink(
-            PatchPaymentLinkRequest request) throws Exception {
+    public PatchPaymentLinkResponse patchPaymentLink(PatchPaymentLinkRequest request) throws Exception {
         RequestOperation<PatchPaymentLinkRequest, PatchPaymentLinkResponse> operation
-              = new PatchPaymentLinkOperation( sdkConfiguration);
+              = new PatchPaymentLinkOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a payment
@@ -457,13 +428,11 @@ public class Payment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchPaymentPaymentResponse patchPaymentPayment(
-            PatchPaymentPaymentRequest request) throws Exception {
+    public PatchPaymentPaymentResponse patchPaymentPayment(PatchPaymentPaymentRequest request) throws Exception {
         RequestOperation<PatchPaymentPaymentRequest, PatchPaymentPaymentResponse> operation
-              = new PatchPaymentPaymentOperation( sdkConfiguration);
+              = new PatchPaymentPaymentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a subscription
@@ -481,13 +450,11 @@ public class Payment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchPaymentSubscriptionResponse patchPaymentSubscription(
-            PatchPaymentSubscriptionRequest request) throws Exception {
+    public PatchPaymentSubscriptionResponse patchPaymentSubscription(PatchPaymentSubscriptionRequest request) throws Exception {
         RequestOperation<PatchPaymentSubscriptionRequest, PatchPaymentSubscriptionResponse> operation
-              = new PatchPaymentSubscriptionOperation( sdkConfiguration);
+              = new PatchPaymentSubscriptionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a link
@@ -505,13 +472,11 @@ public class Payment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemovePaymentLinkResponse removePaymentLink(
-            RemovePaymentLinkRequest request) throws Exception {
+    public RemovePaymentLinkResponse removePaymentLink(RemovePaymentLinkRequest request) throws Exception {
         RequestOperation<RemovePaymentLinkRequest, RemovePaymentLinkResponse> operation
-              = new RemovePaymentLinkOperation( sdkConfiguration);
+              = new RemovePaymentLinkOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a payment
@@ -529,13 +494,11 @@ public class Payment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemovePaymentPaymentResponse removePaymentPayment(
-            RemovePaymentPaymentRequest request) throws Exception {
+    public RemovePaymentPaymentResponse removePaymentPayment(RemovePaymentPaymentRequest request) throws Exception {
         RequestOperation<RemovePaymentPaymentRequest, RemovePaymentPaymentResponse> operation
-              = new RemovePaymentPaymentOperation( sdkConfiguration);
+              = new RemovePaymentPaymentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a subscription
@@ -553,13 +516,11 @@ public class Payment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemovePaymentSubscriptionResponse removePaymentSubscription(
-            RemovePaymentSubscriptionRequest request) throws Exception {
+    public RemovePaymentSubscriptionResponse removePaymentSubscription(RemovePaymentSubscriptionRequest request) throws Exception {
         RequestOperation<RemovePaymentSubscriptionRequest, RemovePaymentSubscriptionResponse> operation
-              = new RemovePaymentSubscriptionOperation( sdkConfiguration);
+              = new RemovePaymentSubscriptionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a link
@@ -577,13 +538,11 @@ public class Payment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdatePaymentLinkResponse updatePaymentLink(
-            UpdatePaymentLinkRequest request) throws Exception {
+    public UpdatePaymentLinkResponse updatePaymentLink(UpdatePaymentLinkRequest request) throws Exception {
         RequestOperation<UpdatePaymentLinkRequest, UpdatePaymentLinkResponse> operation
-              = new UpdatePaymentLinkOperation( sdkConfiguration);
+              = new UpdatePaymentLinkOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a payment
@@ -601,13 +560,11 @@ public class Payment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdatePaymentPaymentResponse updatePaymentPayment(
-            UpdatePaymentPaymentRequest request) throws Exception {
+    public UpdatePaymentPaymentResponse updatePaymentPayment(UpdatePaymentPaymentRequest request) throws Exception {
         RequestOperation<UpdatePaymentPaymentRequest, UpdatePaymentPaymentResponse> operation
-              = new UpdatePaymentPaymentOperation( sdkConfiguration);
+              = new UpdatePaymentPaymentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a subscription
@@ -625,10 +582,9 @@ public class Payment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdatePaymentSubscriptionResponse updatePaymentSubscription(
-            UpdatePaymentSubscriptionRequest request) throws Exception {
+    public UpdatePaymentSubscriptionResponse updatePaymentSubscription(UpdatePaymentSubscriptionRequest request) throws Exception {
         RequestOperation<UpdatePaymentSubscriptionRequest, UpdatePaymentSubscriptionResponse> operation
-              = new UpdatePaymentSubscriptionOperation( sdkConfiguration);
+              = new UpdatePaymentSubscriptionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

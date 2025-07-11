@@ -28,7 +28,7 @@ public class PatchCommerceInventoryRequestBuilder {
     public PatchCommerceInventoryResponse call() throws Exception {
         
         RequestOperation<PatchCommerceInventoryRequest, PatchCommerceInventoryResponse> operation
-              = new PatchCommerceInventoryOperation( sdkConfiguration);
+              = new PatchCommerceInventoryOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

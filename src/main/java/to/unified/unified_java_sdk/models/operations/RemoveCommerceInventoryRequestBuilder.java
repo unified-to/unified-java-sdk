@@ -28,7 +28,7 @@ public class RemoveCommerceInventoryRequestBuilder {
     public RemoveCommerceInventoryResponse call() throws Exception {
         
         RequestOperation<RemoveCommerceInventoryRequest, RemoveCommerceInventoryResponse> operation
-              = new RemoveCommerceInventoryOperation( sdkConfiguration);
+              = new RemoveCommerceInventoryOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

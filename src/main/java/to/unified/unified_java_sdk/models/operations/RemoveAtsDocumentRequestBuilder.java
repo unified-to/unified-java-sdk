@@ -28,7 +28,7 @@ public class RemoveAtsDocumentRequestBuilder {
     public RemoveAtsDocumentResponse call() throws Exception {
         
         RequestOperation<RemoveAtsDocumentRequest, RemoveAtsDocumentResponse> operation
-              = new RemoveAtsDocumentOperation( sdkConfiguration);
+              = new RemoveAtsDocumentOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

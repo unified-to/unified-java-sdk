@@ -18,31 +18,38 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class GenaiPrompt {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_tokens")
     private Optional<Double> maxTokens;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messages")
     private Optional<? extends List<GenaiContent>> messages;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model_id")
     private Optional<String> modelId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responses")
     private Optional<? extends List<String>> responses;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("temperature")
     private Optional<Double> temperature;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokens_used")
@@ -74,7 +81,9 @@ public class GenaiPrompt {
     }
     
     public GenaiPrompt() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -115,15 +124,17 @@ public class GenaiPrompt {
         return tokensUsed;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public GenaiPrompt withMaxTokens(double maxTokens) {
         Utils.checkNotNull(maxTokens, "maxTokens");
         this.maxTokens = Optional.ofNullable(maxTokens);
         return this;
     }
+
 
     public GenaiPrompt withMaxTokens(Optional<Double> maxTokens) {
         Utils.checkNotNull(maxTokens, "maxTokens");
@@ -137,6 +148,7 @@ public class GenaiPrompt {
         return this;
     }
 
+
     public GenaiPrompt withMessages(Optional<? extends List<GenaiContent>> messages) {
         Utils.checkNotNull(messages, "messages");
         this.messages = messages;
@@ -148,6 +160,7 @@ public class GenaiPrompt {
         this.modelId = Optional.ofNullable(modelId);
         return this;
     }
+
 
     public GenaiPrompt withModelId(Optional<String> modelId) {
         Utils.checkNotNull(modelId, "modelId");
@@ -161,6 +174,7 @@ public class GenaiPrompt {
         return this;
     }
 
+
     public GenaiPrompt withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
@@ -172,6 +186,7 @@ public class GenaiPrompt {
         this.responses = Optional.ofNullable(responses);
         return this;
     }
+
 
     public GenaiPrompt withResponses(Optional<? extends List<String>> responses) {
         Utils.checkNotNull(responses, "responses");
@@ -185,6 +200,7 @@ public class GenaiPrompt {
         return this;
     }
 
+
     public GenaiPrompt withTemperature(Optional<Double> temperature) {
         Utils.checkNotNull(temperature, "temperature");
         this.temperature = temperature;
@@ -197,13 +213,13 @@ public class GenaiPrompt {
         return this;
     }
 
+
     public GenaiPrompt withTokensUsed(Optional<Double> tokensUsed) {
         Utils.checkNotNull(tokensUsed, "tokensUsed");
         this.tokensUsed = tokensUsed;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -226,12 +242,8 @@ public class GenaiPrompt {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            maxTokens,
-            messages,
-            modelId,
-            raw,
-            responses,
-            temperature,
+            maxTokens, messages, modelId,
+            raw, responses, temperature,
             tokensUsed);
     }
     
@@ -246,26 +258,28 @@ public class GenaiPrompt {
                 "temperature", temperature,
                 "tokensUsed", tokensUsed);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<Double> maxTokens = Optional.empty();
- 
+
         private Optional<? extends List<GenaiContent>> messages = Optional.empty();
- 
+
         private Optional<String> modelId = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<? extends List<String>> responses = Optional.empty();
- 
+
         private Optional<Double> temperature = Optional.empty();
- 
+
         private Optional<Double> tokensUsed = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder maxTokens(double maxTokens) {
             Utils.checkNotNull(maxTokens, "maxTokens");
@@ -279,6 +293,7 @@ public class GenaiPrompt {
             return this;
         }
 
+
         public Builder messages(List<GenaiContent> messages) {
             Utils.checkNotNull(messages, "messages");
             this.messages = Optional.ofNullable(messages);
@@ -290,6 +305,7 @@ public class GenaiPrompt {
             this.messages = messages;
             return this;
         }
+
 
         public Builder modelId(String modelId) {
             Utils.checkNotNull(modelId, "modelId");
@@ -303,6 +319,7 @@ public class GenaiPrompt {
             return this;
         }
 
+
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
@@ -314,6 +331,7 @@ public class GenaiPrompt {
             this.raw = raw;
             return this;
         }
+
 
         public Builder responses(List<String> responses) {
             Utils.checkNotNull(responses, "responses");
@@ -327,6 +345,7 @@ public class GenaiPrompt {
             return this;
         }
 
+
         public Builder temperature(double temperature) {
             Utils.checkNotNull(temperature, "temperature");
             this.temperature = Optional.ofNullable(temperature);
@@ -339,6 +358,7 @@ public class GenaiPrompt {
             return this;
         }
 
+
         public Builder tokensUsed(double tokensUsed) {
             Utils.checkNotNull(tokensUsed, "tokensUsed");
             this.tokensUsed = Optional.ofNullable(tokensUsed);
@@ -350,16 +370,14 @@ public class GenaiPrompt {
             this.tokensUsed = tokensUsed;
             return this;
         }
-        
+
         public GenaiPrompt build() {
+
             return new GenaiPrompt(
-                maxTokens,
-                messages,
-                modelId,
-                raw,
-                responses,
-                temperature,
+                maxTokens, messages, modelId,
+                raw, responses, temperature,
                 tokensUsed);
         }
+
     }
 }

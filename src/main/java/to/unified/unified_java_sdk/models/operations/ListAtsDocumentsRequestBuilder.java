@@ -28,7 +28,7 @@ public class ListAtsDocumentsRequestBuilder {
     public ListAtsDocumentsResponse call() throws Exception {
         
         RequestOperation<ListAtsDocumentsRequest, ListAtsDocumentsResponse> operation
-              = new ListAtsDocumentsOperation( sdkConfiguration);
+              = new ListAtsDocumentsOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

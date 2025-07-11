@@ -28,7 +28,7 @@ public class RemoveAccountingInvoiceRequestBuilder {
     public RemoveAccountingInvoiceResponse call() throws Exception {
         
         RequestOperation<RemoveAccountingInvoiceRequest, RemoveAccountingInvoiceResponse> operation
-              = new RemoveAccountingInvoiceOperation( sdkConfiguration);
+              = new RemoveAccountingInvoiceOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

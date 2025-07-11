@@ -28,7 +28,7 @@ public class UpdateRepoCommitRequestBuilder {
     public UpdateRepoCommitResponse call() throws Exception {
         
         RequestOperation<UpdateRepoCommitRequest, UpdateRepoCommitResponse> operation
-              = new UpdateRepoCommitOperation( sdkConfiguration);
+              = new UpdateRepoCommitOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

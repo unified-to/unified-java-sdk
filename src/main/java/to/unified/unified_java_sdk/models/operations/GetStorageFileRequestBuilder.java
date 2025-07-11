@@ -28,7 +28,7 @@ public class GetStorageFileRequestBuilder {
     public GetStorageFileResponse call() throws Exception {
         
         RequestOperation<GetStorageFileRequest, GetStorageFileResponse> operation
-              = new GetStorageFileOperation( sdkConfiguration);
+              = new GetStorageFileOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

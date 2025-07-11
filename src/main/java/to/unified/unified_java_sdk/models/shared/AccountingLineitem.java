@@ -15,71 +15,88 @@ import java.time.OffsetDateTime;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AccountingLineitem {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     private Optional<String> accountId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discount_amount")
     private Optional<Double> discountAmount;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_description")
     private Optional<String> itemDescription;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_id")
     private Optional<String> itemId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_name")
     private Optional<String> itemName;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_sku")
     private Optional<String> itemSku;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     private Optional<String> notes;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refund_amount")
     private Optional<Double> refundAmount;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_at")
     private Optional<OffsetDateTime> refundedAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_amount")
     private Optional<Double> taxAmount;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxrate_id")
     private Optional<String> taxrateId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
     private Optional<Double> totalAmount;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit_amount")
     private Optional<Double> unitAmount;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit_quantity")
     private Optional<Double> unitQuantity;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -141,7 +158,12 @@ public class AccountingLineitem {
     }
     
     public AccountingLineitem() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -229,15 +251,17 @@ public class AccountingLineitem {
         return updatedAt;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AccountingLineitem withAccountId(String accountId) {
         Utils.checkNotNull(accountId, "accountId");
         this.accountId = Optional.ofNullable(accountId);
         return this;
     }
+
 
     public AccountingLineitem withAccountId(Optional<String> accountId) {
         Utils.checkNotNull(accountId, "accountId");
@@ -251,6 +275,7 @@ public class AccountingLineitem {
         return this;
     }
 
+
     public AccountingLineitem withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
@@ -262,6 +287,7 @@ public class AccountingLineitem {
         this.discountAmount = Optional.ofNullable(discountAmount);
         return this;
     }
+
 
     public AccountingLineitem withDiscountAmount(Optional<Double> discountAmount) {
         Utils.checkNotNull(discountAmount, "discountAmount");
@@ -275,6 +301,7 @@ public class AccountingLineitem {
         return this;
     }
 
+
     public AccountingLineitem withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -286,6 +313,7 @@ public class AccountingLineitem {
         this.itemDescription = Optional.ofNullable(itemDescription);
         return this;
     }
+
 
     public AccountingLineitem withItemDescription(Optional<String> itemDescription) {
         Utils.checkNotNull(itemDescription, "itemDescription");
@@ -299,6 +327,7 @@ public class AccountingLineitem {
         return this;
     }
 
+
     public AccountingLineitem withItemId(Optional<String> itemId) {
         Utils.checkNotNull(itemId, "itemId");
         this.itemId = itemId;
@@ -310,6 +339,7 @@ public class AccountingLineitem {
         this.itemName = Optional.ofNullable(itemName);
         return this;
     }
+
 
     public AccountingLineitem withItemName(Optional<String> itemName) {
         Utils.checkNotNull(itemName, "itemName");
@@ -323,6 +353,7 @@ public class AccountingLineitem {
         return this;
     }
 
+
     public AccountingLineitem withItemSku(Optional<String> itemSku) {
         Utils.checkNotNull(itemSku, "itemSku");
         this.itemSku = itemSku;
@@ -334,6 +365,7 @@ public class AccountingLineitem {
         this.notes = Optional.ofNullable(notes);
         return this;
     }
+
 
     public AccountingLineitem withNotes(Optional<String> notes) {
         Utils.checkNotNull(notes, "notes");
@@ -347,6 +379,7 @@ public class AccountingLineitem {
         return this;
     }
 
+
     public AccountingLineitem withRefundAmount(Optional<Double> refundAmount) {
         Utils.checkNotNull(refundAmount, "refundAmount");
         this.refundAmount = refundAmount;
@@ -358,6 +391,7 @@ public class AccountingLineitem {
         this.refundedAt = Optional.ofNullable(refundedAt);
         return this;
     }
+
 
     public AccountingLineitem withRefundedAt(Optional<OffsetDateTime> refundedAt) {
         Utils.checkNotNull(refundedAt, "refundedAt");
@@ -371,6 +405,7 @@ public class AccountingLineitem {
         return this;
     }
 
+
     public AccountingLineitem withTaxAmount(Optional<Double> taxAmount) {
         Utils.checkNotNull(taxAmount, "taxAmount");
         this.taxAmount = taxAmount;
@@ -382,6 +417,7 @@ public class AccountingLineitem {
         this.taxrateId = Optional.ofNullable(taxrateId);
         return this;
     }
+
 
     public AccountingLineitem withTaxrateId(Optional<String> taxrateId) {
         Utils.checkNotNull(taxrateId, "taxrateId");
@@ -395,6 +431,7 @@ public class AccountingLineitem {
         return this;
     }
 
+
     public AccountingLineitem withTotalAmount(Optional<Double> totalAmount) {
         Utils.checkNotNull(totalAmount, "totalAmount");
         this.totalAmount = totalAmount;
@@ -406,6 +443,7 @@ public class AccountingLineitem {
         this.unitAmount = Optional.ofNullable(unitAmount);
         return this;
     }
+
 
     public AccountingLineitem withUnitAmount(Optional<Double> unitAmount) {
         Utils.checkNotNull(unitAmount, "unitAmount");
@@ -419,6 +457,7 @@ public class AccountingLineitem {
         return this;
     }
 
+
     public AccountingLineitem withUnitQuantity(Optional<Double> unitQuantity) {
         Utils.checkNotNull(unitQuantity, "unitQuantity");
         this.unitQuantity = unitQuantity;
@@ -431,13 +470,13 @@ public class AccountingLineitem {
         return this;
     }
 
+
     public AccountingLineitem withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -470,23 +509,12 @@ public class AccountingLineitem {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            accountId,
-            createdAt,
-            discountAmount,
-            id,
-            itemDescription,
-            itemId,
-            itemName,
-            itemSku,
-            notes,
-            refundAmount,
-            refundedAt,
-            taxAmount,
-            taxrateId,
-            totalAmount,
-            unitAmount,
-            unitQuantity,
-            updatedAt);
+            accountId, createdAt, discountAmount,
+            id, itemDescription, itemId,
+            itemName, itemSku, notes,
+            refundAmount, refundedAt, taxAmount,
+            taxrateId, totalAmount, unitAmount,
+            unitQuantity, updatedAt);
     }
     
     @Override
@@ -510,46 +538,48 @@ public class AccountingLineitem {
                 "unitQuantity", unitQuantity,
                 "updatedAt", updatedAt);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> accountId = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<Double> discountAmount = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> itemDescription = Optional.empty();
- 
+
         private Optional<String> itemId = Optional.empty();
- 
+
         private Optional<String> itemName = Optional.empty();
- 
+
         private Optional<String> itemSku = Optional.empty();
- 
+
         private Optional<String> notes = Optional.empty();
- 
+
         private Optional<Double> refundAmount = Optional.empty();
- 
+
         private Optional<OffsetDateTime> refundedAt = Optional.empty();
- 
+
         private Optional<Double> taxAmount = Optional.empty();
- 
+
         private Optional<String> taxrateId = Optional.empty();
- 
+
         private Optional<Double> totalAmount = Optional.empty();
- 
+
         private Optional<Double> unitAmount = Optional.empty();
- 
+
         private Optional<Double> unitQuantity = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder accountId(String accountId) {
             Utils.checkNotNull(accountId, "accountId");
@@ -563,6 +593,7 @@ public class AccountingLineitem {
             return this;
         }
 
+
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
@@ -574,6 +605,7 @@ public class AccountingLineitem {
             this.createdAt = createdAt;
             return this;
         }
+
 
         public Builder discountAmount(double discountAmount) {
             Utils.checkNotNull(discountAmount, "discountAmount");
@@ -587,6 +619,7 @@ public class AccountingLineitem {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -598,6 +631,7 @@ public class AccountingLineitem {
             this.id = id;
             return this;
         }
+
 
         public Builder itemDescription(String itemDescription) {
             Utils.checkNotNull(itemDescription, "itemDescription");
@@ -611,6 +645,7 @@ public class AccountingLineitem {
             return this;
         }
 
+
         public Builder itemId(String itemId) {
             Utils.checkNotNull(itemId, "itemId");
             this.itemId = Optional.ofNullable(itemId);
@@ -622,6 +657,7 @@ public class AccountingLineitem {
             this.itemId = itemId;
             return this;
         }
+
 
         public Builder itemName(String itemName) {
             Utils.checkNotNull(itemName, "itemName");
@@ -635,6 +671,7 @@ public class AccountingLineitem {
             return this;
         }
 
+
         public Builder itemSku(String itemSku) {
             Utils.checkNotNull(itemSku, "itemSku");
             this.itemSku = Optional.ofNullable(itemSku);
@@ -646,6 +683,7 @@ public class AccountingLineitem {
             this.itemSku = itemSku;
             return this;
         }
+
 
         public Builder notes(String notes) {
             Utils.checkNotNull(notes, "notes");
@@ -659,6 +697,7 @@ public class AccountingLineitem {
             return this;
         }
 
+
         public Builder refundAmount(double refundAmount) {
             Utils.checkNotNull(refundAmount, "refundAmount");
             this.refundAmount = Optional.ofNullable(refundAmount);
@@ -670,6 +709,7 @@ public class AccountingLineitem {
             this.refundAmount = refundAmount;
             return this;
         }
+
 
         public Builder refundedAt(OffsetDateTime refundedAt) {
             Utils.checkNotNull(refundedAt, "refundedAt");
@@ -683,6 +723,7 @@ public class AccountingLineitem {
             return this;
         }
 
+
         public Builder taxAmount(double taxAmount) {
             Utils.checkNotNull(taxAmount, "taxAmount");
             this.taxAmount = Optional.ofNullable(taxAmount);
@@ -694,6 +735,7 @@ public class AccountingLineitem {
             this.taxAmount = taxAmount;
             return this;
         }
+
 
         public Builder taxrateId(String taxrateId) {
             Utils.checkNotNull(taxrateId, "taxrateId");
@@ -707,6 +749,7 @@ public class AccountingLineitem {
             return this;
         }
 
+
         public Builder totalAmount(double totalAmount) {
             Utils.checkNotNull(totalAmount, "totalAmount");
             this.totalAmount = Optional.ofNullable(totalAmount);
@@ -718,6 +761,7 @@ public class AccountingLineitem {
             this.totalAmount = totalAmount;
             return this;
         }
+
 
         public Builder unitAmount(double unitAmount) {
             Utils.checkNotNull(unitAmount, "unitAmount");
@@ -731,6 +775,7 @@ public class AccountingLineitem {
             return this;
         }
 
+
         public Builder unitQuantity(double unitQuantity) {
             Utils.checkNotNull(unitQuantity, "unitQuantity");
             this.unitQuantity = Optional.ofNullable(unitQuantity);
@@ -743,6 +788,7 @@ public class AccountingLineitem {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -754,26 +800,17 @@ public class AccountingLineitem {
             this.updatedAt = updatedAt;
             return this;
         }
-        
+
         public AccountingLineitem build() {
+
             return new AccountingLineitem(
-                accountId,
-                createdAt,
-                discountAmount,
-                id,
-                itemDescription,
-                itemId,
-                itemName,
-                itemSku,
-                notes,
-                refundAmount,
-                refundedAt,
-                taxAmount,
-                taxrateId,
-                totalAmount,
-                unitAmount,
-                unitQuantity,
-                updatedAt);
+                accountId, createdAt, discountAmount,
+                id, itemDescription, itemId,
+                itemName, itemSku, notes,
+                refundAmount, refundedAt, taxAmount,
+                taxrateId, totalAmount, unitAmount,
+                unitQuantity, updatedAt);
         }
+
     }
 }

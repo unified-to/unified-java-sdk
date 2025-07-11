@@ -28,7 +28,7 @@ public class RemoveCrmLeadRequestBuilder {
     public RemoveCrmLeadResponse call() throws Exception {
         
         RequestOperation<RemoveCrmLeadRequest, RemoveCrmLeadResponse> operation
-              = new RemoveCrmLeadOperation( sdkConfiguration);
+              = new RemoveCrmLeadOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

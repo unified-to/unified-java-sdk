@@ -11,8 +11,8 @@ import to.unified.unified_java_sdk.models.shared.Connection;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class UpdateUnifiedConnectionRequest {
 
+public class UpdateUnifiedConnectionRequest {
     /**
      * A connection represents a specific authentication of an integration.
      */
@@ -51,9 +51,10 @@ public class UpdateUnifiedConnectionRequest {
         return id;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * A connection represents a specific authentication of an integration.
@@ -73,7 +74,6 @@ public class UpdateUnifiedConnectionRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -91,8 +91,7 @@ public class UpdateUnifiedConnectionRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connection,
-            id);
+            connection, id);
     }
     
     @Override
@@ -101,16 +100,18 @@ public class UpdateUnifiedConnectionRequest {
                 "connection", connection,
                 "id", id);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Connection connection;
- 
+
         private String id;
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * A connection represents a specific authentication of an integration.
@@ -121,6 +122,7 @@ public class UpdateUnifiedConnectionRequest {
             return this;
         }
 
+
         /**
          * ID of the Connection
          */
@@ -129,11 +131,12 @@ public class UpdateUnifiedConnectionRequest {
             this.id = id;
             return this;
         }
-        
+
         public UpdateUnifiedConnectionRequest build() {
+
             return new UpdateUnifiedConnectionRequest(
-                connection,
-                id);
+                connection, id);
         }
+
     }
 }

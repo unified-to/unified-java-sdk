@@ -28,7 +28,7 @@ public class ListCrmContactsRequestBuilder {
     public ListCrmContactsResponse call() throws Exception {
         
         RequestOperation<ListCrmContactsRequest, ListCrmContactsResponse> operation
-              = new ListCrmContactsOperation( sdkConfiguration);
+              = new ListCrmContactsOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

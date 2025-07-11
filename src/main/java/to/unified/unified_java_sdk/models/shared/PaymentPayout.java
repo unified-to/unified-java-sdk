@@ -17,34 +17,42 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class PaymentPayout {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<String> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private Optional<String> currency;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     private Optional<String> notes;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private Optional<? extends PaymentPayoutStatus> status;
 
+
     @JsonProperty("total_amount")
     private double totalAmount;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -80,7 +88,9 @@ public class PaymentPayout {
     
     public PaymentPayout(
             double totalAmount) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), totalAmount, Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            totalAmount, Optional.empty());
     }
 
     @JsonIgnore
@@ -125,15 +135,17 @@ public class PaymentPayout {
         return updatedAt;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public PaymentPayout withCreatedAt(String createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public PaymentPayout withCreatedAt(Optional<String> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -147,6 +159,7 @@ public class PaymentPayout {
         return this;
     }
 
+
     public PaymentPayout withCurrency(Optional<String> currency) {
         Utils.checkNotNull(currency, "currency");
         this.currency = currency;
@@ -158,6 +171,7 @@ public class PaymentPayout {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public PaymentPayout withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -171,6 +185,7 @@ public class PaymentPayout {
         return this;
     }
 
+
     public PaymentPayout withNotes(Optional<String> notes) {
         Utils.checkNotNull(notes, "notes");
         this.notes = notes;
@@ -183,6 +198,7 @@ public class PaymentPayout {
         return this;
     }
 
+
     public PaymentPayout withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
@@ -194,6 +210,7 @@ public class PaymentPayout {
         this.status = Optional.ofNullable(status);
         return this;
     }
+
 
     public PaymentPayout withStatus(Optional<? extends PaymentPayoutStatus> status) {
         Utils.checkNotNull(status, "status");
@@ -213,13 +230,13 @@ public class PaymentPayout {
         return this;
     }
 
+
     public PaymentPayout withUpdatedAt(Optional<String> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -243,14 +260,9 @@ public class PaymentPayout {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt,
-            currency,
-            id,
-            notes,
-            raw,
-            status,
-            totalAmount,
-            updatedAt);
+            createdAt, currency, id,
+            notes, raw, status,
+            totalAmount, updatedAt);
     }
     
     @Override
@@ -265,28 +277,30 @@ public class PaymentPayout {
                 "totalAmount", totalAmount,
                 "updatedAt", updatedAt);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> createdAt = Optional.empty();
- 
+
         private Optional<String> currency = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> notes = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<? extends PaymentPayoutStatus> status = Optional.empty();
- 
+
         private Double totalAmount;
- 
+
         private Optional<String> updatedAt = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder createdAt(String createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -300,6 +314,7 @@ public class PaymentPayout {
             return this;
         }
 
+
         public Builder currency(String currency) {
             Utils.checkNotNull(currency, "currency");
             this.currency = Optional.ofNullable(currency);
@@ -311,6 +326,7 @@ public class PaymentPayout {
             this.currency = currency;
             return this;
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -324,6 +340,7 @@ public class PaymentPayout {
             return this;
         }
 
+
         public Builder notes(String notes) {
             Utils.checkNotNull(notes, "notes");
             this.notes = Optional.ofNullable(notes);
@@ -335,6 +352,7 @@ public class PaymentPayout {
             this.notes = notes;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -348,6 +366,7 @@ public class PaymentPayout {
             return this;
         }
 
+
         public Builder status(PaymentPayoutStatus status) {
             Utils.checkNotNull(status, "status");
             this.status = Optional.ofNullable(status);
@@ -360,11 +379,13 @@ public class PaymentPayout {
             return this;
         }
 
+
         public Builder totalAmount(double totalAmount) {
             Utils.checkNotNull(totalAmount, "totalAmount");
             this.totalAmount = totalAmount;
             return this;
         }
+
 
         public Builder updatedAt(String updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
@@ -377,17 +398,14 @@ public class PaymentPayout {
             this.updatedAt = updatedAt;
             return this;
         }
-        
+
         public PaymentPayout build() {
+
             return new PaymentPayout(
-                createdAt,
-                currency,
-                id,
-                notes,
-                raw,
-                status,
-                totalAmount,
-                updatedAt);
+                createdAt, currency, id,
+                notes, raw, status,
+                totalAmount, updatedAt);
         }
+
     }
 }

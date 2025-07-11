@@ -14,23 +14,28 @@ import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class ScimGroupMember {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("$ref")
     private Optional<String> dollarRef;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display")
     private Optional<String> display;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation")
     private Optional<? extends Operation> operation;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private Optional<? extends ScimGroupMemberType> type;
+
 
     @JsonProperty("value")
     private String value;
@@ -56,7 +61,8 @@ public class ScimGroupMember {
     
     public ScimGroupMember(
             String value) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), value);
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), value);
     }
 
     @JsonIgnore
@@ -86,15 +92,17 @@ public class ScimGroupMember {
         return value;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public ScimGroupMember withDollarRef(String dollarRef) {
         Utils.checkNotNull(dollarRef, "dollarRef");
         this.dollarRef = Optional.ofNullable(dollarRef);
         return this;
     }
+
 
     public ScimGroupMember withDollarRef(Optional<String> dollarRef) {
         Utils.checkNotNull(dollarRef, "dollarRef");
@@ -108,6 +116,7 @@ public class ScimGroupMember {
         return this;
     }
 
+
     public ScimGroupMember withDisplay(Optional<String> display) {
         Utils.checkNotNull(display, "display");
         this.display = display;
@@ -119,6 +128,7 @@ public class ScimGroupMember {
         this.operation = Optional.ofNullable(operation);
         return this;
     }
+
 
     public ScimGroupMember withOperation(Optional<? extends Operation> operation) {
         Utils.checkNotNull(operation, "operation");
@@ -132,6 +142,7 @@ public class ScimGroupMember {
         return this;
     }
 
+
     public ScimGroupMember withType(Optional<? extends ScimGroupMemberType> type) {
         Utils.checkNotNull(type, "type");
         this.type = type;
@@ -144,7 +155,6 @@ public class ScimGroupMember {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -165,11 +175,8 @@ public class ScimGroupMember {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            dollarRef,
-            display,
-            operation,
-            type,
-            value);
+            dollarRef, display, operation,
+            type, value);
     }
     
     @Override
@@ -181,22 +188,24 @@ public class ScimGroupMember {
                 "type", type,
                 "value", value);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> dollarRef = Optional.empty();
- 
+
         private Optional<String> display = Optional.empty();
- 
+
         private Optional<? extends Operation> operation = Optional.empty();
- 
+
         private Optional<? extends ScimGroupMemberType> type = Optional.empty();
- 
+
         private String value;
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder dollarRef(String dollarRef) {
             Utils.checkNotNull(dollarRef, "dollarRef");
@@ -210,6 +219,7 @@ public class ScimGroupMember {
             return this;
         }
 
+
         public Builder display(String display) {
             Utils.checkNotNull(display, "display");
             this.display = Optional.ofNullable(display);
@@ -221,6 +231,7 @@ public class ScimGroupMember {
             this.display = display;
             return this;
         }
+
 
         public Builder operation(Operation operation) {
             Utils.checkNotNull(operation, "operation");
@@ -234,6 +245,7 @@ public class ScimGroupMember {
             return this;
         }
 
+
         public Builder type(ScimGroupMemberType type) {
             Utils.checkNotNull(type, "type");
             this.type = Optional.ofNullable(type);
@@ -246,19 +258,19 @@ public class ScimGroupMember {
             return this;
         }
 
+
         public Builder value(String value) {
             Utils.checkNotNull(value, "value");
             this.value = value;
             return this;
         }
-        
+
         public ScimGroupMember build() {
+
             return new ScimGroupMember(
-                dollarRef,
-                display,
-                operation,
-                type,
-                value);
+                dollarRef, display, operation,
+                type, value);
         }
+
     }
 }

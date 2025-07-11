@@ -20,7 +20,6 @@ public class Applicationstatus {
     Applicationstatus(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * List all applicationstatuses
      * 
@@ -37,10 +36,9 @@ public class Applicationstatus {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAtsApplicationstatusesResponse listAtsApplicationstatuses(
-            ListAtsApplicationstatusesRequest request) throws Exception {
+    public ListAtsApplicationstatusesResponse listAtsApplicationstatuses(ListAtsApplicationstatusesRequest request) throws Exception {
         RequestOperation<ListAtsApplicationstatusesRequest, ListAtsApplicationstatusesResponse> operation
-              = new ListAtsApplicationstatusesOperation( sdkConfiguration);
+              = new ListAtsApplicationstatusesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

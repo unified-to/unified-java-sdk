@@ -40,7 +40,6 @@ public class Inventory {
     Inventory(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create an inventory
      * 
@@ -57,13 +56,11 @@ public class Inventory {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateCommerceInventoryResponse createCommerceInventory(
-            CreateCommerceInventoryRequest request) throws Exception {
+    public CreateCommerceInventoryResponse createCommerceInventory(CreateCommerceInventoryRequest request) throws Exception {
         RequestOperation<CreateCommerceInventoryRequest, CreateCommerceInventoryResponse> operation
-              = new CreateCommerceInventoryOperation( sdkConfiguration);
+              = new CreateCommerceInventoryOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve an inventory
@@ -81,13 +78,11 @@ public class Inventory {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetCommerceInventoryResponse getCommerceInventory(
-            GetCommerceInventoryRequest request) throws Exception {
+    public GetCommerceInventoryResponse getCommerceInventory(GetCommerceInventoryRequest request) throws Exception {
         RequestOperation<GetCommerceInventoryRequest, GetCommerceInventoryResponse> operation
-              = new GetCommerceInventoryOperation( sdkConfiguration);
+              = new GetCommerceInventoryOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all inventories
@@ -105,13 +100,11 @@ public class Inventory {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCommerceInventoriesResponse listCommerceInventories(
-            ListCommerceInventoriesRequest request) throws Exception {
+    public ListCommerceInventoriesResponse listCommerceInventories(ListCommerceInventoriesRequest request) throws Exception {
         RequestOperation<ListCommerceInventoriesRequest, ListCommerceInventoriesResponse> operation
-              = new ListCommerceInventoriesOperation( sdkConfiguration);
+              = new ListCommerceInventoriesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an inventory
@@ -129,13 +122,11 @@ public class Inventory {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchCommerceInventoryResponse patchCommerceInventory(
-            PatchCommerceInventoryRequest request) throws Exception {
+    public PatchCommerceInventoryResponse patchCommerceInventory(PatchCommerceInventoryRequest request) throws Exception {
         RequestOperation<PatchCommerceInventoryRequest, PatchCommerceInventoryResponse> operation
-              = new PatchCommerceInventoryOperation( sdkConfiguration);
+              = new PatchCommerceInventoryOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove an inventory
@@ -153,13 +144,11 @@ public class Inventory {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveCommerceInventoryResponse removeCommerceInventory(
-            RemoveCommerceInventoryRequest request) throws Exception {
+    public RemoveCommerceInventoryResponse removeCommerceInventory(RemoveCommerceInventoryRequest request) throws Exception {
         RequestOperation<RemoveCommerceInventoryRequest, RemoveCommerceInventoryResponse> operation
-              = new RemoveCommerceInventoryOperation( sdkConfiguration);
+              = new RemoveCommerceInventoryOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an inventory
@@ -177,10 +166,9 @@ public class Inventory {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateCommerceInventoryResponse updateCommerceInventory(
-            UpdateCommerceInventoryRequest request) throws Exception {
+    public UpdateCommerceInventoryResponse updateCommerceInventory(UpdateCommerceInventoryRequest request) throws Exception {
         RequestOperation<UpdateCommerceInventoryRequest, UpdateCommerceInventoryResponse> operation
-              = new UpdateCommerceInventoryOperation( sdkConfiguration);
+              = new UpdateCommerceInventoryOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

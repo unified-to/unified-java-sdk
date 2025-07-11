@@ -14,8 +14,8 @@ import to.unified.unified_java_sdk.models.shared.AccountingAccount;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class CreateAccountingAccountRequest {
 
+public class CreateAccountingAccountRequest {
     /**
      * Chart of accounts
      */
@@ -59,7 +59,8 @@ public class CreateAccountingAccountRequest {
     public CreateAccountingAccountRequest(
             AccountingAccount accountingAccount,
             String connectionId) {
-        this(accountingAccount, connectionId, Optional.empty(), Optional.empty());
+        this(accountingAccount, connectionId, Optional.empty(),
+            Optional.empty());
     }
 
     /**
@@ -95,9 +96,10 @@ public class CreateAccountingAccountRequest {
         return raw;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * Chart of accounts
@@ -126,6 +128,7 @@ public class CreateAccountingAccountRequest {
         return this;
     }
 
+
     /**
      * Comma-delimited fields to return
      */
@@ -144,6 +147,7 @@ public class CreateAccountingAccountRequest {
         return this;
     }
 
+
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
@@ -153,7 +157,6 @@ public class CreateAccountingAccountRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -173,9 +176,7 @@ public class CreateAccountingAccountRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            accountingAccount,
-            connectionId,
-            fields,
+            accountingAccount, connectionId, fields,
             raw);
     }
     
@@ -187,20 +188,22 @@ public class CreateAccountingAccountRequest {
                 "fields", fields,
                 "raw", raw);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private AccountingAccount accountingAccount;
- 
+
         private String connectionId;
- 
+
         private Optional<? extends List<String>> fields = Optional.empty();
- 
+
         private Optional<String> raw = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * Chart of accounts
@@ -211,6 +214,7 @@ public class CreateAccountingAccountRequest {
             return this;
         }
 
+
         /**
          * ID of the connection
          */
@@ -219,6 +223,7 @@ public class CreateAccountingAccountRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         /**
          * Comma-delimited fields to return
@@ -238,6 +243,7 @@ public class CreateAccountingAccountRequest {
             return this;
         }
 
+
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
@@ -255,13 +261,13 @@ public class CreateAccountingAccountRequest {
             this.raw = raw;
             return this;
         }
-        
+
         public CreateAccountingAccountRequest build() {
+
             return new CreateAccountingAccountRequest(
-                accountingAccount,
-                connectionId,
-                fields,
+                accountingAccount, connectionId, fields,
                 raw);
         }
+
     }
 }

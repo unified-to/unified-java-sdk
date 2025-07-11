@@ -24,7 +24,6 @@ public class Profitloss {
     Profitloss(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Retrieve a profitloss
      * 
@@ -41,13 +40,11 @@ public class Profitloss {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAccountingProfitlossResponse getAccountingProfitloss(
-            GetAccountingProfitlossRequest request) throws Exception {
+    public GetAccountingProfitlossResponse getAccountingProfitloss(GetAccountingProfitlossRequest request) throws Exception {
         RequestOperation<GetAccountingProfitlossRequest, GetAccountingProfitlossResponse> operation
-              = new GetAccountingProfitlossOperation( sdkConfiguration);
+              = new GetAccountingProfitlossOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all profitlosses
@@ -65,10 +62,9 @@ public class Profitloss {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAccountingProfitlossesResponse listAccountingProfitlosses(
-            ListAccountingProfitlossesRequest request) throws Exception {
+    public ListAccountingProfitlossesResponse listAccountingProfitlosses(ListAccountingProfitlossesRequest request) throws Exception {
         RequestOperation<ListAccountingProfitlossesRequest, ListAccountingProfitlossesResponse> operation
-              = new ListAccountingProfitlossesOperation( sdkConfiguration);
+              = new ListAccountingProfitlossesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

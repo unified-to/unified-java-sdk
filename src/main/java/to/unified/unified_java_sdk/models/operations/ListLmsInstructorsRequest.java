@@ -14,8 +14,8 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class ListLmsInstructorsRequest {
 
+public class ListLmsInstructorsRequest {
     /**
      * The class ID to filter by
      */
@@ -46,6 +46,7 @@ public class ListLmsInstructorsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     private Optional<? extends List<String>> fields;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     private Optional<Double> limit;
 
@@ -55,8 +56,10 @@ public class ListLmsInstructorsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
     private Optional<String> locationId;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     private Optional<Double> offset;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     private Optional<String> order;
@@ -72,6 +75,7 @@ public class ListLmsInstructorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
     private Optional<String> raw;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     private Optional<String> sort;
@@ -127,7 +131,11 @@ public class ListLmsInstructorsRequest {
     
     public ListLmsInstructorsRequest(
             String connectionId) {
-        this(Optional.empty(), Optional.empty(), connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), connectionId,
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     /**
@@ -223,9 +231,10 @@ public class ListLmsInstructorsRequest {
         return updatedGte;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * The class ID to filter by
@@ -235,6 +244,7 @@ public class ListLmsInstructorsRequest {
         this.classId = Optional.ofNullable(classId);
         return this;
     }
+
 
     /**
      * The class ID to filter by
@@ -253,6 +263,7 @@ public class ListLmsInstructorsRequest {
         this.companyId = Optional.ofNullable(companyId);
         return this;
     }
+
 
     /**
      * The company ID to filter by
@@ -281,6 +292,7 @@ public class ListLmsInstructorsRequest {
         return this;
     }
 
+
     /**
      * The course ID to filter by
      */
@@ -299,6 +311,7 @@ public class ListLmsInstructorsRequest {
         return this;
     }
 
+
     /**
      * Comma-delimited fields to return
      */
@@ -313,6 +326,7 @@ public class ListLmsInstructorsRequest {
         this.limit = Optional.ofNullable(limit);
         return this;
     }
+
 
     public ListLmsInstructorsRequest withLimit(Optional<Double> limit) {
         Utils.checkNotNull(limit, "limit");
@@ -329,6 +343,7 @@ public class ListLmsInstructorsRequest {
         return this;
     }
 
+
     /**
      * The location ID to filter by
      */
@@ -344,6 +359,7 @@ public class ListLmsInstructorsRequest {
         return this;
     }
 
+
     public ListLmsInstructorsRequest withOffset(Optional<Double> offset) {
         Utils.checkNotNull(offset, "offset");
         this.offset = offset;
@@ -355,6 +371,7 @@ public class ListLmsInstructorsRequest {
         this.order = Optional.ofNullable(order);
         return this;
     }
+
 
     public ListLmsInstructorsRequest withOrder(Optional<String> order) {
         Utils.checkNotNull(order, "order");
@@ -370,6 +387,7 @@ public class ListLmsInstructorsRequest {
         this.query = Optional.ofNullable(query);
         return this;
     }
+
 
     /**
      * Query string to search. eg. email address or name
@@ -389,6 +407,7 @@ public class ListLmsInstructorsRequest {
         return this;
     }
 
+
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
@@ -403,6 +422,7 @@ public class ListLmsInstructorsRequest {
         this.sort = Optional.ofNullable(sort);
         return this;
     }
+
 
     public ListLmsInstructorsRequest withSort(Optional<String> sort) {
         Utils.checkNotNull(sort, "sort");
@@ -419,6 +439,7 @@ public class ListLmsInstructorsRequest {
         return this;
     }
 
+
     /**
      * Return only results whose updated date is equal or greater to this value
      */
@@ -428,7 +449,6 @@ public class ListLmsInstructorsRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -457,18 +477,10 @@ public class ListLmsInstructorsRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            classId,
-            companyId,
-            connectionId,
-            courseId,
-            fields,
-            limit,
-            locationId,
-            offset,
-            order,
-            query,
-            raw,
-            sort,
+            classId, companyId, connectionId,
+            courseId, fields, limit,
+            locationId, offset, order,
+            query, raw, sort,
             updatedGte);
     }
     
@@ -489,38 +501,40 @@ public class ListLmsInstructorsRequest {
                 "sort", sort,
                 "updatedGte", updatedGte);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> classId = Optional.empty();
- 
+
         private Optional<String> companyId = Optional.empty();
- 
+
         private String connectionId;
- 
+
         private Optional<String> courseId = Optional.empty();
- 
+
         private Optional<? extends List<String>> fields = Optional.empty();
- 
+
         private Optional<Double> limit = Optional.empty();
- 
+
         private Optional<String> locationId = Optional.empty();
- 
+
         private Optional<Double> offset = Optional.empty();
- 
+
         private Optional<String> order = Optional.empty();
- 
+
         private Optional<String> query = Optional.empty();
- 
+
         private Optional<String> raw = Optional.empty();
- 
+
         private Optional<String> sort = Optional.empty();
- 
+
         private Optional<String> updatedGte = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * The class ID to filter by
@@ -540,6 +554,7 @@ public class ListLmsInstructorsRequest {
             return this;
         }
 
+
         /**
          * The company ID to filter by
          */
@@ -558,6 +573,7 @@ public class ListLmsInstructorsRequest {
             return this;
         }
 
+
         /**
          * ID of the connection
          */
@@ -566,6 +582,7 @@ public class ListLmsInstructorsRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         /**
          * The course ID to filter by
@@ -585,6 +602,7 @@ public class ListLmsInstructorsRequest {
             return this;
         }
 
+
         /**
          * Comma-delimited fields to return
          */
@@ -603,6 +621,7 @@ public class ListLmsInstructorsRequest {
             return this;
         }
 
+
         public Builder limit(double limit) {
             Utils.checkNotNull(limit, "limit");
             this.limit = Optional.ofNullable(limit);
@@ -614,6 +633,7 @@ public class ListLmsInstructorsRequest {
             this.limit = limit;
             return this;
         }
+
 
         /**
          * The location ID to filter by
@@ -633,6 +653,7 @@ public class ListLmsInstructorsRequest {
             return this;
         }
 
+
         public Builder offset(double offset) {
             Utils.checkNotNull(offset, "offset");
             this.offset = Optional.ofNullable(offset);
@@ -645,6 +666,7 @@ public class ListLmsInstructorsRequest {
             return this;
         }
 
+
         public Builder order(String order) {
             Utils.checkNotNull(order, "order");
             this.order = Optional.ofNullable(order);
@@ -656,6 +678,7 @@ public class ListLmsInstructorsRequest {
             this.order = order;
             return this;
         }
+
 
         /**
          * Query string to search. eg. email address or name
@@ -675,6 +698,7 @@ public class ListLmsInstructorsRequest {
             return this;
         }
 
+
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
@@ -693,6 +717,7 @@ public class ListLmsInstructorsRequest {
             return this;
         }
 
+
         public Builder sort(String sort) {
             Utils.checkNotNull(sort, "sort");
             this.sort = Optional.ofNullable(sort);
@@ -704,6 +729,7 @@ public class ListLmsInstructorsRequest {
             this.sort = sort;
             return this;
         }
+
 
         /**
          * Return only results whose updated date is equal or greater to this value
@@ -722,22 +748,16 @@ public class ListLmsInstructorsRequest {
             this.updatedGte = updatedGte;
             return this;
         }
-        
+
         public ListLmsInstructorsRequest build() {
+
             return new ListLmsInstructorsRequest(
-                classId,
-                companyId,
-                connectionId,
-                courseId,
-                fields,
-                limit,
-                locationId,
-                offset,
-                order,
-                query,
-                raw,
-                sort,
+                classId, companyId, connectionId,
+                courseId, fields, limit,
+                locationId, offset, order,
+                query, raw, sort,
                 updatedGte);
         }
+
     }
 }

@@ -28,7 +28,7 @@ public class PatchRepoPullrequestRequestBuilder {
     public PatchRepoPullrequestResponse call() throws Exception {
         
         RequestOperation<PatchRepoPullrequestRequest, PatchRepoPullrequestResponse> operation
-              = new PatchRepoPullrequestOperation( sdkConfiguration);
+              = new PatchRepoPullrequestOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

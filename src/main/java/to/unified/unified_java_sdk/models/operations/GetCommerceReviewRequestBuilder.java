@@ -28,7 +28,7 @@ public class GetCommerceReviewRequestBuilder {
     public GetCommerceReviewResponse call() throws Exception {
         
         RequestOperation<GetCommerceReviewRequest, GetCommerceReviewResponse> operation
-              = new GetCommerceReviewOperation( sdkConfiguration);
+              = new GetCommerceReviewOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

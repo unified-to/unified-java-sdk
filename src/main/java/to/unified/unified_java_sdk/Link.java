@@ -64,7 +64,6 @@ public class Link {
     Link(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a link
      * 
@@ -81,13 +80,11 @@ public class Link {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateCalendarLinkResponse createCalendarLink(
-            CreateCalendarLinkRequest request) throws Exception {
+    public CreateCalendarLinkResponse createCalendarLink(CreateCalendarLinkRequest request) throws Exception {
         RequestOperation<CreateCalendarLinkRequest, CreateCalendarLinkResponse> operation
-              = new CreateCalendarLinkOperation( sdkConfiguration);
+              = new CreateCalendarLinkOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a link
@@ -105,13 +102,11 @@ public class Link {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreatePaymentLinkResponse createPaymentLink(
-            CreatePaymentLinkRequest request) throws Exception {
+    public CreatePaymentLinkResponse createPaymentLink(CreatePaymentLinkRequest request) throws Exception {
         RequestOperation<CreatePaymentLinkRequest, CreatePaymentLinkResponse> operation
-              = new CreatePaymentLinkOperation( sdkConfiguration);
+              = new CreatePaymentLinkOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a link
@@ -129,13 +124,11 @@ public class Link {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetCalendarLinkResponse getCalendarLink(
-            GetCalendarLinkRequest request) throws Exception {
+    public GetCalendarLinkResponse getCalendarLink(GetCalendarLinkRequest request) throws Exception {
         RequestOperation<GetCalendarLinkRequest, GetCalendarLinkResponse> operation
-              = new GetCalendarLinkOperation( sdkConfiguration);
+              = new GetCalendarLinkOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a link
@@ -153,13 +146,11 @@ public class Link {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetPaymentLinkResponse getPaymentLink(
-            GetPaymentLinkRequest request) throws Exception {
+    public GetPaymentLinkResponse getPaymentLink(GetPaymentLinkRequest request) throws Exception {
         RequestOperation<GetPaymentLinkRequest, GetPaymentLinkResponse> operation
-              = new GetPaymentLinkOperation( sdkConfiguration);
+              = new GetPaymentLinkOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all links
@@ -177,13 +168,11 @@ public class Link {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCalendarLinksResponse listCalendarLinks(
-            ListCalendarLinksRequest request) throws Exception {
+    public ListCalendarLinksResponse listCalendarLinks(ListCalendarLinksRequest request) throws Exception {
         RequestOperation<ListCalendarLinksRequest, ListCalendarLinksResponse> operation
-              = new ListCalendarLinksOperation( sdkConfiguration);
+              = new ListCalendarLinksOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all links
@@ -201,13 +190,11 @@ public class Link {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListPaymentLinksResponse listPaymentLinks(
-            ListPaymentLinksRequest request) throws Exception {
+    public ListPaymentLinksResponse listPaymentLinks(ListPaymentLinksRequest request) throws Exception {
         RequestOperation<ListPaymentLinksRequest, ListPaymentLinksResponse> operation
-              = new ListPaymentLinksOperation( sdkConfiguration);
+              = new ListPaymentLinksOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a link
@@ -225,13 +212,11 @@ public class Link {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchCalendarLinkResponse patchCalendarLink(
-            PatchCalendarLinkRequest request) throws Exception {
+    public PatchCalendarLinkResponse patchCalendarLink(PatchCalendarLinkRequest request) throws Exception {
         RequestOperation<PatchCalendarLinkRequest, PatchCalendarLinkResponse> operation
-              = new PatchCalendarLinkOperation( sdkConfiguration);
+              = new PatchCalendarLinkOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a link
@@ -249,13 +234,11 @@ public class Link {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchPaymentLinkResponse patchPaymentLink(
-            PatchPaymentLinkRequest request) throws Exception {
+    public PatchPaymentLinkResponse patchPaymentLink(PatchPaymentLinkRequest request) throws Exception {
         RequestOperation<PatchPaymentLinkRequest, PatchPaymentLinkResponse> operation
-              = new PatchPaymentLinkOperation( sdkConfiguration);
+              = new PatchPaymentLinkOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a link
@@ -273,13 +256,11 @@ public class Link {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveCalendarLinkResponse removeCalendarLink(
-            RemoveCalendarLinkRequest request) throws Exception {
+    public RemoveCalendarLinkResponse removeCalendarLink(RemoveCalendarLinkRequest request) throws Exception {
         RequestOperation<RemoveCalendarLinkRequest, RemoveCalendarLinkResponse> operation
-              = new RemoveCalendarLinkOperation( sdkConfiguration);
+              = new RemoveCalendarLinkOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a link
@@ -297,13 +278,11 @@ public class Link {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemovePaymentLinkResponse removePaymentLink(
-            RemovePaymentLinkRequest request) throws Exception {
+    public RemovePaymentLinkResponse removePaymentLink(RemovePaymentLinkRequest request) throws Exception {
         RequestOperation<RemovePaymentLinkRequest, RemovePaymentLinkResponse> operation
-              = new RemovePaymentLinkOperation( sdkConfiguration);
+              = new RemovePaymentLinkOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a link
@@ -321,13 +300,11 @@ public class Link {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateCalendarLinkResponse updateCalendarLink(
-            UpdateCalendarLinkRequest request) throws Exception {
+    public UpdateCalendarLinkResponse updateCalendarLink(UpdateCalendarLinkRequest request) throws Exception {
         RequestOperation<UpdateCalendarLinkRequest, UpdateCalendarLinkResponse> operation
-              = new UpdateCalendarLinkOperation( sdkConfiguration);
+              = new UpdateCalendarLinkOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a link
@@ -345,10 +322,9 @@ public class Link {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdatePaymentLinkResponse updatePaymentLink(
-            UpdatePaymentLinkRequest request) throws Exception {
+    public UpdatePaymentLinkResponse updatePaymentLink(UpdatePaymentLinkRequest request) throws Exception {
         RequestOperation<UpdatePaymentLinkRequest, UpdatePaymentLinkResponse> operation
-              = new UpdatePaymentLinkOperation( sdkConfiguration);
+              = new UpdatePaymentLinkOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

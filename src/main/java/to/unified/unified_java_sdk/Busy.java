@@ -20,7 +20,6 @@ public class Busy {
     Busy(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * List all busies
      * 
@@ -37,10 +36,9 @@ public class Busy {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCalendarBusiesResponse listCalendarBusies(
-            ListCalendarBusiesRequest request) throws Exception {
+    public ListCalendarBusiesResponse listCalendarBusies(ListCalendarBusiesRequest request) throws Exception {
         RequestOperation<ListCalendarBusiesRequest, ListCalendarBusiesResponse> operation
-              = new ListCalendarBusiesOperation( sdkConfiguration);
+              = new ListCalendarBusiesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

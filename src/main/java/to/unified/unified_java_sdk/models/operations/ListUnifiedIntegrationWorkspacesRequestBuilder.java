@@ -28,7 +28,7 @@ public class ListUnifiedIntegrationWorkspacesRequestBuilder {
     public ListUnifiedIntegrationWorkspacesResponse call() throws Exception {
         
         RequestOperation<ListUnifiedIntegrationWorkspacesRequest, ListUnifiedIntegrationWorkspacesResponse> operation
-              = new ListUnifiedIntegrationWorkspacesOperation( sdkConfiguration);
+              = new ListUnifiedIntegrationWorkspacesOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

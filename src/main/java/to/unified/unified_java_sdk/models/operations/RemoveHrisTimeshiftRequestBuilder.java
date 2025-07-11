@@ -28,7 +28,7 @@ public class RemoveHrisTimeshiftRequestBuilder {
     public RemoveHrisTimeshiftResponse call() throws Exception {
         
         RequestOperation<RemoveHrisTimeshiftRequest, RemoveHrisTimeshiftResponse> operation
-              = new RemoveHrisTimeshiftOperation( sdkConfiguration);
+              = new RemoveHrisTimeshiftOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

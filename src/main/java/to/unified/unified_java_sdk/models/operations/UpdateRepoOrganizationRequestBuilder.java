@@ -28,7 +28,7 @@ public class UpdateRepoOrganizationRequestBuilder {
     public UpdateRepoOrganizationResponse call() throws Exception {
         
         RequestOperation<UpdateRepoOrganizationRequest, UpdateRepoOrganizationResponse> operation
-              = new UpdateRepoOrganizationOperation( sdkConfiguration);
+              = new UpdateRepoOrganizationOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

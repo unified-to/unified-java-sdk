@@ -14,22 +14,27 @@ import java.time.OffsetDateTime;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class UcRecordingTranscript {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private Optional<String> contactId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private Optional<OffsetDateTime> endAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private Optional<OffsetDateTime> startAt;
 
+
     @JsonProperty("text")
     private String text;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
@@ -56,7 +61,8 @@ public class UcRecordingTranscript {
     
     public UcRecordingTranscript(
             String text) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), text, Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            text, Optional.empty());
     }
 
     @JsonIgnore
@@ -84,15 +90,17 @@ public class UcRecordingTranscript {
         return userId;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public UcRecordingTranscript withContactId(String contactId) {
         Utils.checkNotNull(contactId, "contactId");
         this.contactId = Optional.ofNullable(contactId);
         return this;
     }
+
 
     public UcRecordingTranscript withContactId(Optional<String> contactId) {
         Utils.checkNotNull(contactId, "contactId");
@@ -106,6 +114,7 @@ public class UcRecordingTranscript {
         return this;
     }
 
+
     public UcRecordingTranscript withEndAt(Optional<OffsetDateTime> endAt) {
         Utils.checkNotNull(endAt, "endAt");
         this.endAt = endAt;
@@ -117,6 +126,7 @@ public class UcRecordingTranscript {
         this.startAt = Optional.ofNullable(startAt);
         return this;
     }
+
 
     public UcRecordingTranscript withStartAt(Optional<OffsetDateTime> startAt) {
         Utils.checkNotNull(startAt, "startAt");
@@ -136,13 +146,13 @@ public class UcRecordingTranscript {
         return this;
     }
 
+
     public UcRecordingTranscript withUserId(Optional<String> userId) {
         Utils.checkNotNull(userId, "userId");
         this.userId = userId;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -163,11 +173,8 @@ public class UcRecordingTranscript {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            contactId,
-            endAt,
-            startAt,
-            text,
-            userId);
+            contactId, endAt, startAt,
+            text, userId);
     }
     
     @Override
@@ -179,22 +186,24 @@ public class UcRecordingTranscript {
                 "text", text,
                 "userId", userId);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> contactId = Optional.empty();
- 
+
         private Optional<OffsetDateTime> endAt = Optional.empty();
- 
+
         private Optional<OffsetDateTime> startAt = Optional.empty();
- 
+
         private String text;
- 
+
         private Optional<String> userId = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder contactId(String contactId) {
             Utils.checkNotNull(contactId, "contactId");
@@ -208,6 +217,7 @@ public class UcRecordingTranscript {
             return this;
         }
 
+
         public Builder endAt(OffsetDateTime endAt) {
             Utils.checkNotNull(endAt, "endAt");
             this.endAt = Optional.ofNullable(endAt);
@@ -219,6 +229,7 @@ public class UcRecordingTranscript {
             this.endAt = endAt;
             return this;
         }
+
 
         public Builder startAt(OffsetDateTime startAt) {
             Utils.checkNotNull(startAt, "startAt");
@@ -232,11 +243,13 @@ public class UcRecordingTranscript {
             return this;
         }
 
+
         public Builder text(String text) {
             Utils.checkNotNull(text, "text");
             this.text = text;
             return this;
         }
+
 
         public Builder userId(String userId) {
             Utils.checkNotNull(userId, "userId");
@@ -249,14 +262,13 @@ public class UcRecordingTranscript {
             this.userId = userId;
             return this;
         }
-        
+
         public UcRecordingTranscript build() {
+
             return new UcRecordingTranscript(
-                contactId,
-                endAt,
-                startAt,
-                text,
-                userId);
+                contactId, endAt, startAt,
+                text, userId);
         }
+
     }
 }

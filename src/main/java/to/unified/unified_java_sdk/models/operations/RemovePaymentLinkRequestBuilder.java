@@ -28,7 +28,7 @@ public class RemovePaymentLinkRequestBuilder {
     public RemovePaymentLinkResponse call() throws Exception {
         
         RequestOperation<RemovePaymentLinkRequest, RemovePaymentLinkResponse> operation
-              = new RemovePaymentLinkOperation( sdkConfiguration);
+              = new RemovePaymentLinkOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

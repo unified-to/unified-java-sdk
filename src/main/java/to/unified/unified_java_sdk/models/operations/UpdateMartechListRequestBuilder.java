@@ -28,7 +28,7 @@ public class UpdateMartechListRequestBuilder {
     public UpdateMartechListResponse call() throws Exception {
         
         RequestOperation<UpdateMartechListRequest, UpdateMartechListResponse> operation
-              = new UpdateMartechListOperation( sdkConfiguration);
+              = new UpdateMartechListOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

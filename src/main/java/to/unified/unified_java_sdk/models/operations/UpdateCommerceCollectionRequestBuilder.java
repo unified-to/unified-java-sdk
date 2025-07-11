@@ -28,7 +28,7 @@ public class UpdateCommerceCollectionRequestBuilder {
     public UpdateCommerceCollectionResponse call() throws Exception {
         
         RequestOperation<UpdateCommerceCollectionRequest, UpdateCommerceCollectionResponse> operation
-              = new UpdateCommerceCollectionOperation( sdkConfiguration);
+              = new UpdateCommerceCollectionOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

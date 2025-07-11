@@ -28,7 +28,7 @@ public class RemoveUcCommentRequestBuilder {
     public RemoveUcCommentResponse call() throws Exception {
         
         RequestOperation<RemoveUcCommentRequest, RemoveUcCommentResponse> operation
-              = new RemoveUcCommentOperation( sdkConfiguration);
+              = new RemoveUcCommentOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

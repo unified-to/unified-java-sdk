@@ -14,10 +14,12 @@ import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class MarketingEmail {
 
     @JsonProperty("email")
     private String email;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
@@ -49,9 +51,10 @@ public class MarketingEmail {
         return (Optional<MarketingEmailType>) type;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public MarketingEmail withEmail(String email) {
         Utils.checkNotNull(email, "email");
@@ -65,13 +68,13 @@ public class MarketingEmail {
         return this;
     }
 
+
     public MarketingEmail withType(Optional<? extends MarketingEmailType> type) {
         Utils.checkNotNull(type, "type");
         this.type = type;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -89,8 +92,7 @@ public class MarketingEmail {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            email,
-            type);
+            email, type);
     }
     
     @Override
@@ -99,22 +101,25 @@ public class MarketingEmail {
                 "email", email,
                 "type", type);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private String email;
- 
+
         private Optional<? extends MarketingEmailType> type = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder email(String email) {
             Utils.checkNotNull(email, "email");
             this.email = email;
             return this;
         }
+
 
         public Builder type(MarketingEmailType type) {
             Utils.checkNotNull(type, "type");
@@ -127,11 +132,12 @@ public class MarketingEmail {
             this.type = type;
             return this;
         }
-        
+
         public MarketingEmail build() {
+
             return new MarketingEmail(
-                email,
-                type);
+                email, type);
         }
+
     }
 }

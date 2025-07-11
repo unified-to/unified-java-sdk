@@ -320,7 +320,6 @@ public class Accounting {
     Accounting(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create an account
      * 
@@ -337,13 +336,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAccountingAccountResponse createAccountingAccount(
-            CreateAccountingAccountRequest request) throws Exception {
+    public CreateAccountingAccountResponse createAccountingAccount(CreateAccountingAccountRequest request) throws Exception {
         RequestOperation<CreateAccountingAccountRequest, CreateAccountingAccountResponse> operation
-              = new CreateAccountingAccountOperation( sdkConfiguration);
+              = new CreateAccountingAccountOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a bill
@@ -361,13 +358,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAccountingBillResponse createAccountingBill(
-            CreateAccountingBillRequest request) throws Exception {
+    public CreateAccountingBillResponse createAccountingBill(CreateAccountingBillRequest request) throws Exception {
         RequestOperation<CreateAccountingBillRequest, CreateAccountingBillResponse> operation
-              = new CreateAccountingBillOperation( sdkConfiguration);
+              = new CreateAccountingBillOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a contact
@@ -385,13 +380,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAccountingContactResponse createAccountingContact(
-            CreateAccountingContactRequest request) throws Exception {
+    public CreateAccountingContactResponse createAccountingContact(CreateAccountingContactRequest request) throws Exception {
         RequestOperation<CreateAccountingContactRequest, CreateAccountingContactResponse> operation
-              = new CreateAccountingContactOperation( sdkConfiguration);
+              = new CreateAccountingContactOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a creditmemo
@@ -409,13 +402,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAccountingCreditmemoResponse createAccountingCreditmemo(
-            CreateAccountingCreditmemoRequest request) throws Exception {
+    public CreateAccountingCreditmemoResponse createAccountingCreditmemo(CreateAccountingCreditmemoRequest request) throws Exception {
         RequestOperation<CreateAccountingCreditmemoRequest, CreateAccountingCreditmemoResponse> operation
-              = new CreateAccountingCreditmemoOperation( sdkConfiguration);
+              = new CreateAccountingCreditmemoOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create an invoice
@@ -433,13 +424,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAccountingInvoiceResponse createAccountingInvoice(
-            CreateAccountingInvoiceRequest request) throws Exception {
+    public CreateAccountingInvoiceResponse createAccountingInvoice(CreateAccountingInvoiceRequest request) throws Exception {
         RequestOperation<CreateAccountingInvoiceRequest, CreateAccountingInvoiceResponse> operation
-              = new CreateAccountingInvoiceOperation( sdkConfiguration);
+              = new CreateAccountingInvoiceOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a journal
@@ -457,13 +446,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAccountingJournalResponse createAccountingJournal(
-            CreateAccountingJournalRequest request) throws Exception {
+    public CreateAccountingJournalResponse createAccountingJournal(CreateAccountingJournalRequest request) throws Exception {
         RequestOperation<CreateAccountingJournalRequest, CreateAccountingJournalResponse> operation
-              = new CreateAccountingJournalOperation( sdkConfiguration);
+              = new CreateAccountingJournalOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create an order
@@ -481,13 +468,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAccountingOrderResponse createAccountingOrder(
-            CreateAccountingOrderRequest request) throws Exception {
+    public CreateAccountingOrderResponse createAccountingOrder(CreateAccountingOrderRequest request) throws Exception {
         RequestOperation<CreateAccountingOrderRequest, CreateAccountingOrderResponse> operation
-              = new CreateAccountingOrderOperation( sdkConfiguration);
+              = new CreateAccountingOrderOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a purchaseorder
@@ -505,13 +490,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAccountingPurchaseorderResponse createAccountingPurchaseorder(
-            CreateAccountingPurchaseorderRequest request) throws Exception {
+    public CreateAccountingPurchaseorderResponse createAccountingPurchaseorder(CreateAccountingPurchaseorderRequest request) throws Exception {
         RequestOperation<CreateAccountingPurchaseorderRequest, CreateAccountingPurchaseorderResponse> operation
-              = new CreateAccountingPurchaseorderOperation( sdkConfiguration);
+              = new CreateAccountingPurchaseorderOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a salesorder
@@ -529,13 +512,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAccountingSalesorderResponse createAccountingSalesorder(
-            CreateAccountingSalesorderRequest request) throws Exception {
+    public CreateAccountingSalesorderResponse createAccountingSalesorder(CreateAccountingSalesorderRequest request) throws Exception {
         RequestOperation<CreateAccountingSalesorderRequest, CreateAccountingSalesorderResponse> operation
-              = new CreateAccountingSalesorderOperation( sdkConfiguration);
+              = new CreateAccountingSalesorderOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a taxrate
@@ -553,13 +534,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAccountingTaxrateResponse createAccountingTaxrate(
-            CreateAccountingTaxrateRequest request) throws Exception {
+    public CreateAccountingTaxrateResponse createAccountingTaxrate(CreateAccountingTaxrateRequest request) throws Exception {
         RequestOperation<CreateAccountingTaxrateRequest, CreateAccountingTaxrateResponse> operation
-              = new CreateAccountingTaxrateOperation( sdkConfiguration);
+              = new CreateAccountingTaxrateOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a transaction
@@ -577,13 +556,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAccountingTransactionResponse createAccountingTransaction(
-            CreateAccountingTransactionRequest request) throws Exception {
+    public CreateAccountingTransactionResponse createAccountingTransaction(CreateAccountingTransactionRequest request) throws Exception {
         RequestOperation<CreateAccountingTransactionRequest, CreateAccountingTransactionResponse> operation
-              = new CreateAccountingTransactionOperation( sdkConfiguration);
+              = new CreateAccountingTransactionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve an account
@@ -601,13 +578,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAccountingAccountResponse getAccountingAccount(
-            GetAccountingAccountRequest request) throws Exception {
+    public GetAccountingAccountResponse getAccountingAccount(GetAccountingAccountRequest request) throws Exception {
         RequestOperation<GetAccountingAccountRequest, GetAccountingAccountResponse> operation
-              = new GetAccountingAccountOperation( sdkConfiguration);
+              = new GetAccountingAccountOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a balancesheet
@@ -625,13 +600,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAccountingBalancesheetResponse getAccountingBalancesheet(
-            GetAccountingBalancesheetRequest request) throws Exception {
+    public GetAccountingBalancesheetResponse getAccountingBalancesheet(GetAccountingBalancesheetRequest request) throws Exception {
         RequestOperation<GetAccountingBalancesheetRequest, GetAccountingBalancesheetResponse> operation
-              = new GetAccountingBalancesheetOperation( sdkConfiguration);
+              = new GetAccountingBalancesheetOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a bill
@@ -649,13 +622,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAccountingBillResponse getAccountingBill(
-            GetAccountingBillRequest request) throws Exception {
+    public GetAccountingBillResponse getAccountingBill(GetAccountingBillRequest request) throws Exception {
         RequestOperation<GetAccountingBillRequest, GetAccountingBillResponse> operation
-              = new GetAccountingBillOperation( sdkConfiguration);
+              = new GetAccountingBillOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a contact
@@ -673,13 +644,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAccountingContactResponse getAccountingContact(
-            GetAccountingContactRequest request) throws Exception {
+    public GetAccountingContactResponse getAccountingContact(GetAccountingContactRequest request) throws Exception {
         RequestOperation<GetAccountingContactRequest, GetAccountingContactResponse> operation
-              = new GetAccountingContactOperation( sdkConfiguration);
+              = new GetAccountingContactOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a creditmemo
@@ -697,13 +666,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAccountingCreditmemoResponse getAccountingCreditmemo(
-            GetAccountingCreditmemoRequest request) throws Exception {
+    public GetAccountingCreditmemoResponse getAccountingCreditmemo(GetAccountingCreditmemoRequest request) throws Exception {
         RequestOperation<GetAccountingCreditmemoRequest, GetAccountingCreditmemoResponse> operation
-              = new GetAccountingCreditmemoOperation( sdkConfiguration);
+              = new GetAccountingCreditmemoOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve an invoice
@@ -721,13 +688,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAccountingInvoiceResponse getAccountingInvoice(
-            GetAccountingInvoiceRequest request) throws Exception {
+    public GetAccountingInvoiceResponse getAccountingInvoice(GetAccountingInvoiceRequest request) throws Exception {
         RequestOperation<GetAccountingInvoiceRequest, GetAccountingInvoiceResponse> operation
-              = new GetAccountingInvoiceOperation( sdkConfiguration);
+              = new GetAccountingInvoiceOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a journal
@@ -745,13 +710,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAccountingJournalResponse getAccountingJournal(
-            GetAccountingJournalRequest request) throws Exception {
+    public GetAccountingJournalResponse getAccountingJournal(GetAccountingJournalRequest request) throws Exception {
         RequestOperation<GetAccountingJournalRequest, GetAccountingJournalResponse> operation
-              = new GetAccountingJournalOperation( sdkConfiguration);
+              = new GetAccountingJournalOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve an order
@@ -769,13 +732,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAccountingOrderResponse getAccountingOrder(
-            GetAccountingOrderRequest request) throws Exception {
+    public GetAccountingOrderResponse getAccountingOrder(GetAccountingOrderRequest request) throws Exception {
         RequestOperation<GetAccountingOrderRequest, GetAccountingOrderResponse> operation
-              = new GetAccountingOrderOperation( sdkConfiguration);
+              = new GetAccountingOrderOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve an organization
@@ -793,13 +754,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAccountingOrganizationResponse getAccountingOrganization(
-            GetAccountingOrganizationRequest request) throws Exception {
+    public GetAccountingOrganizationResponse getAccountingOrganization(GetAccountingOrganizationRequest request) throws Exception {
         RequestOperation<GetAccountingOrganizationRequest, GetAccountingOrganizationResponse> operation
-              = new GetAccountingOrganizationOperation( sdkConfiguration);
+              = new GetAccountingOrganizationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a profitloss
@@ -817,13 +776,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAccountingProfitlossResponse getAccountingProfitloss(
-            GetAccountingProfitlossRequest request) throws Exception {
+    public GetAccountingProfitlossResponse getAccountingProfitloss(GetAccountingProfitlossRequest request) throws Exception {
         RequestOperation<GetAccountingProfitlossRequest, GetAccountingProfitlossResponse> operation
-              = new GetAccountingProfitlossOperation( sdkConfiguration);
+              = new GetAccountingProfitlossOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a purchaseorder
@@ -841,13 +798,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAccountingPurchaseorderResponse getAccountingPurchaseorder(
-            GetAccountingPurchaseorderRequest request) throws Exception {
+    public GetAccountingPurchaseorderResponse getAccountingPurchaseorder(GetAccountingPurchaseorderRequest request) throws Exception {
         RequestOperation<GetAccountingPurchaseorderRequest, GetAccountingPurchaseorderResponse> operation
-              = new GetAccountingPurchaseorderOperation( sdkConfiguration);
+              = new GetAccountingPurchaseorderOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a report
@@ -865,13 +820,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAccountingReportResponse getAccountingReport(
-            GetAccountingReportRequest request) throws Exception {
+    public GetAccountingReportResponse getAccountingReport(GetAccountingReportRequest request) throws Exception {
         RequestOperation<GetAccountingReportRequest, GetAccountingReportResponse> operation
-              = new GetAccountingReportOperation( sdkConfiguration);
+              = new GetAccountingReportOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a salesorder
@@ -889,13 +842,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAccountingSalesorderResponse getAccountingSalesorder(
-            GetAccountingSalesorderRequest request) throws Exception {
+    public GetAccountingSalesorderResponse getAccountingSalesorder(GetAccountingSalesorderRequest request) throws Exception {
         RequestOperation<GetAccountingSalesorderRequest, GetAccountingSalesorderResponse> operation
-              = new GetAccountingSalesorderOperation( sdkConfiguration);
+              = new GetAccountingSalesorderOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a taxrate
@@ -913,13 +864,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAccountingTaxrateResponse getAccountingTaxrate(
-            GetAccountingTaxrateRequest request) throws Exception {
+    public GetAccountingTaxrateResponse getAccountingTaxrate(GetAccountingTaxrateRequest request) throws Exception {
         RequestOperation<GetAccountingTaxrateRequest, GetAccountingTaxrateResponse> operation
-              = new GetAccountingTaxrateOperation( sdkConfiguration);
+              = new GetAccountingTaxrateOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a transaction
@@ -937,13 +886,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAccountingTransactionResponse getAccountingTransaction(
-            GetAccountingTransactionRequest request) throws Exception {
+    public GetAccountingTransactionResponse getAccountingTransaction(GetAccountingTransactionRequest request) throws Exception {
         RequestOperation<GetAccountingTransactionRequest, GetAccountingTransactionResponse> operation
-              = new GetAccountingTransactionOperation( sdkConfiguration);
+              = new GetAccountingTransactionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a trialbalance
@@ -961,13 +908,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAccountingTrialbalanceResponse getAccountingTrialbalance(
-            GetAccountingTrialbalanceRequest request) throws Exception {
+    public GetAccountingTrialbalanceResponse getAccountingTrialbalance(GetAccountingTrialbalanceRequest request) throws Exception {
         RequestOperation<GetAccountingTrialbalanceRequest, GetAccountingTrialbalanceResponse> operation
-              = new GetAccountingTrialbalanceOperation( sdkConfiguration);
+              = new GetAccountingTrialbalanceOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all accounts
@@ -985,13 +930,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAccountingAccountsResponse listAccountingAccounts(
-            ListAccountingAccountsRequest request) throws Exception {
+    public ListAccountingAccountsResponse listAccountingAccounts(ListAccountingAccountsRequest request) throws Exception {
         RequestOperation<ListAccountingAccountsRequest, ListAccountingAccountsResponse> operation
-              = new ListAccountingAccountsOperation( sdkConfiguration);
+              = new ListAccountingAccountsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all balancesheets
@@ -1009,13 +952,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAccountingBalancesheetsResponse listAccountingBalancesheets(
-            ListAccountingBalancesheetsRequest request) throws Exception {
+    public ListAccountingBalancesheetsResponse listAccountingBalancesheets(ListAccountingBalancesheetsRequest request) throws Exception {
         RequestOperation<ListAccountingBalancesheetsRequest, ListAccountingBalancesheetsResponse> operation
-              = new ListAccountingBalancesheetsOperation( sdkConfiguration);
+              = new ListAccountingBalancesheetsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all bills
@@ -1033,13 +974,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAccountingBillsResponse listAccountingBills(
-            ListAccountingBillsRequest request) throws Exception {
+    public ListAccountingBillsResponse listAccountingBills(ListAccountingBillsRequest request) throws Exception {
         RequestOperation<ListAccountingBillsRequest, ListAccountingBillsResponse> operation
-              = new ListAccountingBillsOperation( sdkConfiguration);
+              = new ListAccountingBillsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all contacts
@@ -1057,13 +996,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAccountingContactsResponse listAccountingContacts(
-            ListAccountingContactsRequest request) throws Exception {
+    public ListAccountingContactsResponse listAccountingContacts(ListAccountingContactsRequest request) throws Exception {
         RequestOperation<ListAccountingContactsRequest, ListAccountingContactsResponse> operation
-              = new ListAccountingContactsOperation( sdkConfiguration);
+              = new ListAccountingContactsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all creditmemoes
@@ -1081,13 +1018,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAccountingCreditmemoesResponse listAccountingCreditmemoes(
-            ListAccountingCreditmemoesRequest request) throws Exception {
+    public ListAccountingCreditmemoesResponse listAccountingCreditmemoes(ListAccountingCreditmemoesRequest request) throws Exception {
         RequestOperation<ListAccountingCreditmemoesRequest, ListAccountingCreditmemoesResponse> operation
-              = new ListAccountingCreditmemoesOperation( sdkConfiguration);
+              = new ListAccountingCreditmemoesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all invoices
@@ -1105,13 +1040,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAccountingInvoicesResponse listAccountingInvoices(
-            ListAccountingInvoicesRequest request) throws Exception {
+    public ListAccountingInvoicesResponse listAccountingInvoices(ListAccountingInvoicesRequest request) throws Exception {
         RequestOperation<ListAccountingInvoicesRequest, ListAccountingInvoicesResponse> operation
-              = new ListAccountingInvoicesOperation( sdkConfiguration);
+              = new ListAccountingInvoicesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all journals
@@ -1129,13 +1062,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAccountingJournalsResponse listAccountingJournals(
-            ListAccountingJournalsRequest request) throws Exception {
+    public ListAccountingJournalsResponse listAccountingJournals(ListAccountingJournalsRequest request) throws Exception {
         RequestOperation<ListAccountingJournalsRequest, ListAccountingJournalsResponse> operation
-              = new ListAccountingJournalsOperation( sdkConfiguration);
+              = new ListAccountingJournalsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all orders
@@ -1153,13 +1084,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAccountingOrdersResponse listAccountingOrders(
-            ListAccountingOrdersRequest request) throws Exception {
+    public ListAccountingOrdersResponse listAccountingOrders(ListAccountingOrdersRequest request) throws Exception {
         RequestOperation<ListAccountingOrdersRequest, ListAccountingOrdersResponse> operation
-              = new ListAccountingOrdersOperation( sdkConfiguration);
+              = new ListAccountingOrdersOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all organizations
@@ -1177,13 +1106,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAccountingOrganizationsResponse listAccountingOrganizations(
-            ListAccountingOrganizationsRequest request) throws Exception {
+    public ListAccountingOrganizationsResponse listAccountingOrganizations(ListAccountingOrganizationsRequest request) throws Exception {
         RequestOperation<ListAccountingOrganizationsRequest, ListAccountingOrganizationsResponse> operation
-              = new ListAccountingOrganizationsOperation( sdkConfiguration);
+              = new ListAccountingOrganizationsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all profitlosses
@@ -1201,13 +1128,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAccountingProfitlossesResponse listAccountingProfitlosses(
-            ListAccountingProfitlossesRequest request) throws Exception {
+    public ListAccountingProfitlossesResponse listAccountingProfitlosses(ListAccountingProfitlossesRequest request) throws Exception {
         RequestOperation<ListAccountingProfitlossesRequest, ListAccountingProfitlossesResponse> operation
-              = new ListAccountingProfitlossesOperation( sdkConfiguration);
+              = new ListAccountingProfitlossesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all purchaseorders
@@ -1225,13 +1150,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAccountingPurchaseordersResponse listAccountingPurchaseorders(
-            ListAccountingPurchaseordersRequest request) throws Exception {
+    public ListAccountingPurchaseordersResponse listAccountingPurchaseorders(ListAccountingPurchaseordersRequest request) throws Exception {
         RequestOperation<ListAccountingPurchaseordersRequest, ListAccountingPurchaseordersResponse> operation
-              = new ListAccountingPurchaseordersOperation( sdkConfiguration);
+              = new ListAccountingPurchaseordersOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all reports
@@ -1249,13 +1172,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAccountingReportsResponse listAccountingReports(
-            ListAccountingReportsRequest request) throws Exception {
+    public ListAccountingReportsResponse listAccountingReports(ListAccountingReportsRequest request) throws Exception {
         RequestOperation<ListAccountingReportsRequest, ListAccountingReportsResponse> operation
-              = new ListAccountingReportsOperation( sdkConfiguration);
+              = new ListAccountingReportsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all salesorders
@@ -1273,13 +1194,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAccountingSalesordersResponse listAccountingSalesorders(
-            ListAccountingSalesordersRequest request) throws Exception {
+    public ListAccountingSalesordersResponse listAccountingSalesorders(ListAccountingSalesordersRequest request) throws Exception {
         RequestOperation<ListAccountingSalesordersRequest, ListAccountingSalesordersResponse> operation
-              = new ListAccountingSalesordersOperation( sdkConfiguration);
+              = new ListAccountingSalesordersOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all taxrates
@@ -1297,13 +1216,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAccountingTaxratesResponse listAccountingTaxrates(
-            ListAccountingTaxratesRequest request) throws Exception {
+    public ListAccountingTaxratesResponse listAccountingTaxrates(ListAccountingTaxratesRequest request) throws Exception {
         RequestOperation<ListAccountingTaxratesRequest, ListAccountingTaxratesResponse> operation
-              = new ListAccountingTaxratesOperation( sdkConfiguration);
+              = new ListAccountingTaxratesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all transactions
@@ -1321,13 +1238,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAccountingTransactionsResponse listAccountingTransactions(
-            ListAccountingTransactionsRequest request) throws Exception {
+    public ListAccountingTransactionsResponse listAccountingTransactions(ListAccountingTransactionsRequest request) throws Exception {
         RequestOperation<ListAccountingTransactionsRequest, ListAccountingTransactionsResponse> operation
-              = new ListAccountingTransactionsOperation( sdkConfiguration);
+              = new ListAccountingTransactionsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all trialbalances
@@ -1345,13 +1260,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAccountingTrialbalancesResponse listAccountingTrialbalances(
-            ListAccountingTrialbalancesRequest request) throws Exception {
+    public ListAccountingTrialbalancesResponse listAccountingTrialbalances(ListAccountingTrialbalancesRequest request) throws Exception {
         RequestOperation<ListAccountingTrialbalancesRequest, ListAccountingTrialbalancesResponse> operation
-              = new ListAccountingTrialbalancesOperation( sdkConfiguration);
+              = new ListAccountingTrialbalancesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an account
@@ -1369,13 +1282,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAccountingAccountResponse patchAccountingAccount(
-            PatchAccountingAccountRequest request) throws Exception {
+    public PatchAccountingAccountResponse patchAccountingAccount(PatchAccountingAccountRequest request) throws Exception {
         RequestOperation<PatchAccountingAccountRequest, PatchAccountingAccountResponse> operation
-              = new PatchAccountingAccountOperation( sdkConfiguration);
+              = new PatchAccountingAccountOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a bill
@@ -1393,13 +1304,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAccountingBillResponse patchAccountingBill(
-            PatchAccountingBillRequest request) throws Exception {
+    public PatchAccountingBillResponse patchAccountingBill(PatchAccountingBillRequest request) throws Exception {
         RequestOperation<PatchAccountingBillRequest, PatchAccountingBillResponse> operation
-              = new PatchAccountingBillOperation( sdkConfiguration);
+              = new PatchAccountingBillOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a contact
@@ -1417,13 +1326,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAccountingContactResponse patchAccountingContact(
-            PatchAccountingContactRequest request) throws Exception {
+    public PatchAccountingContactResponse patchAccountingContact(PatchAccountingContactRequest request) throws Exception {
         RequestOperation<PatchAccountingContactRequest, PatchAccountingContactResponse> operation
-              = new PatchAccountingContactOperation( sdkConfiguration);
+              = new PatchAccountingContactOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a creditmemo
@@ -1441,13 +1348,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAccountingCreditmemoResponse patchAccountingCreditmemo(
-            PatchAccountingCreditmemoRequest request) throws Exception {
+    public PatchAccountingCreditmemoResponse patchAccountingCreditmemo(PatchAccountingCreditmemoRequest request) throws Exception {
         RequestOperation<PatchAccountingCreditmemoRequest, PatchAccountingCreditmemoResponse> operation
-              = new PatchAccountingCreditmemoOperation( sdkConfiguration);
+              = new PatchAccountingCreditmemoOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an invoice
@@ -1465,13 +1370,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAccountingInvoiceResponse patchAccountingInvoice(
-            PatchAccountingInvoiceRequest request) throws Exception {
+    public PatchAccountingInvoiceResponse patchAccountingInvoice(PatchAccountingInvoiceRequest request) throws Exception {
         RequestOperation<PatchAccountingInvoiceRequest, PatchAccountingInvoiceResponse> operation
-              = new PatchAccountingInvoiceOperation( sdkConfiguration);
+              = new PatchAccountingInvoiceOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a journal
@@ -1489,13 +1392,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAccountingJournalResponse patchAccountingJournal(
-            PatchAccountingJournalRequest request) throws Exception {
+    public PatchAccountingJournalResponse patchAccountingJournal(PatchAccountingJournalRequest request) throws Exception {
         RequestOperation<PatchAccountingJournalRequest, PatchAccountingJournalResponse> operation
-              = new PatchAccountingJournalOperation( sdkConfiguration);
+              = new PatchAccountingJournalOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an order
@@ -1513,13 +1414,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAccountingOrderResponse patchAccountingOrder(
-            PatchAccountingOrderRequest request) throws Exception {
+    public PatchAccountingOrderResponse patchAccountingOrder(PatchAccountingOrderRequest request) throws Exception {
         RequestOperation<PatchAccountingOrderRequest, PatchAccountingOrderResponse> operation
-              = new PatchAccountingOrderOperation( sdkConfiguration);
+              = new PatchAccountingOrderOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a purchaseorder
@@ -1537,13 +1436,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAccountingPurchaseorderResponse patchAccountingPurchaseorder(
-            PatchAccountingPurchaseorderRequest request) throws Exception {
+    public PatchAccountingPurchaseorderResponse patchAccountingPurchaseorder(PatchAccountingPurchaseorderRequest request) throws Exception {
         RequestOperation<PatchAccountingPurchaseorderRequest, PatchAccountingPurchaseorderResponse> operation
-              = new PatchAccountingPurchaseorderOperation( sdkConfiguration);
+              = new PatchAccountingPurchaseorderOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a salesorder
@@ -1561,13 +1458,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAccountingSalesorderResponse patchAccountingSalesorder(
-            PatchAccountingSalesorderRequest request) throws Exception {
+    public PatchAccountingSalesorderResponse patchAccountingSalesorder(PatchAccountingSalesorderRequest request) throws Exception {
         RequestOperation<PatchAccountingSalesorderRequest, PatchAccountingSalesorderResponse> operation
-              = new PatchAccountingSalesorderOperation( sdkConfiguration);
+              = new PatchAccountingSalesorderOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a taxrate
@@ -1585,13 +1480,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAccountingTaxrateResponse patchAccountingTaxrate(
-            PatchAccountingTaxrateRequest request) throws Exception {
+    public PatchAccountingTaxrateResponse patchAccountingTaxrate(PatchAccountingTaxrateRequest request) throws Exception {
         RequestOperation<PatchAccountingTaxrateRequest, PatchAccountingTaxrateResponse> operation
-              = new PatchAccountingTaxrateOperation( sdkConfiguration);
+              = new PatchAccountingTaxrateOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a transaction
@@ -1609,13 +1502,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAccountingTransactionResponse patchAccountingTransaction(
-            PatchAccountingTransactionRequest request) throws Exception {
+    public PatchAccountingTransactionResponse patchAccountingTransaction(PatchAccountingTransactionRequest request) throws Exception {
         RequestOperation<PatchAccountingTransactionRequest, PatchAccountingTransactionResponse> operation
-              = new PatchAccountingTransactionOperation( sdkConfiguration);
+              = new PatchAccountingTransactionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove an account
@@ -1633,13 +1524,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAccountingAccountResponse removeAccountingAccount(
-            RemoveAccountingAccountRequest request) throws Exception {
+    public RemoveAccountingAccountResponse removeAccountingAccount(RemoveAccountingAccountRequest request) throws Exception {
         RequestOperation<RemoveAccountingAccountRequest, RemoveAccountingAccountResponse> operation
-              = new RemoveAccountingAccountOperation( sdkConfiguration);
+              = new RemoveAccountingAccountOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a bill
@@ -1657,13 +1546,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAccountingBillResponse removeAccountingBill(
-            RemoveAccountingBillRequest request) throws Exception {
+    public RemoveAccountingBillResponse removeAccountingBill(RemoveAccountingBillRequest request) throws Exception {
         RequestOperation<RemoveAccountingBillRequest, RemoveAccountingBillResponse> operation
-              = new RemoveAccountingBillOperation( sdkConfiguration);
+              = new RemoveAccountingBillOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a contact
@@ -1681,13 +1568,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAccountingContactResponse removeAccountingContact(
-            RemoveAccountingContactRequest request) throws Exception {
+    public RemoveAccountingContactResponse removeAccountingContact(RemoveAccountingContactRequest request) throws Exception {
         RequestOperation<RemoveAccountingContactRequest, RemoveAccountingContactResponse> operation
-              = new RemoveAccountingContactOperation( sdkConfiguration);
+              = new RemoveAccountingContactOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a creditmemo
@@ -1705,13 +1590,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAccountingCreditmemoResponse removeAccountingCreditmemo(
-            RemoveAccountingCreditmemoRequest request) throws Exception {
+    public RemoveAccountingCreditmemoResponse removeAccountingCreditmemo(RemoveAccountingCreditmemoRequest request) throws Exception {
         RequestOperation<RemoveAccountingCreditmemoRequest, RemoveAccountingCreditmemoResponse> operation
-              = new RemoveAccountingCreditmemoOperation( sdkConfiguration);
+              = new RemoveAccountingCreditmemoOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove an invoice
@@ -1729,13 +1612,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAccountingInvoiceResponse removeAccountingInvoice(
-            RemoveAccountingInvoiceRequest request) throws Exception {
+    public RemoveAccountingInvoiceResponse removeAccountingInvoice(RemoveAccountingInvoiceRequest request) throws Exception {
         RequestOperation<RemoveAccountingInvoiceRequest, RemoveAccountingInvoiceResponse> operation
-              = new RemoveAccountingInvoiceOperation( sdkConfiguration);
+              = new RemoveAccountingInvoiceOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a journal
@@ -1753,13 +1634,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAccountingJournalResponse removeAccountingJournal(
-            RemoveAccountingJournalRequest request) throws Exception {
+    public RemoveAccountingJournalResponse removeAccountingJournal(RemoveAccountingJournalRequest request) throws Exception {
         RequestOperation<RemoveAccountingJournalRequest, RemoveAccountingJournalResponse> operation
-              = new RemoveAccountingJournalOperation( sdkConfiguration);
+              = new RemoveAccountingJournalOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove an order
@@ -1777,13 +1656,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAccountingOrderResponse removeAccountingOrder(
-            RemoveAccountingOrderRequest request) throws Exception {
+    public RemoveAccountingOrderResponse removeAccountingOrder(RemoveAccountingOrderRequest request) throws Exception {
         RequestOperation<RemoveAccountingOrderRequest, RemoveAccountingOrderResponse> operation
-              = new RemoveAccountingOrderOperation( sdkConfiguration);
+              = new RemoveAccountingOrderOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a purchaseorder
@@ -1801,13 +1678,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAccountingPurchaseorderResponse removeAccountingPurchaseorder(
-            RemoveAccountingPurchaseorderRequest request) throws Exception {
+    public RemoveAccountingPurchaseorderResponse removeAccountingPurchaseorder(RemoveAccountingPurchaseorderRequest request) throws Exception {
         RequestOperation<RemoveAccountingPurchaseorderRequest, RemoveAccountingPurchaseorderResponse> operation
-              = new RemoveAccountingPurchaseorderOperation( sdkConfiguration);
+              = new RemoveAccountingPurchaseorderOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a salesorder
@@ -1825,13 +1700,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAccountingSalesorderResponse removeAccountingSalesorder(
-            RemoveAccountingSalesorderRequest request) throws Exception {
+    public RemoveAccountingSalesorderResponse removeAccountingSalesorder(RemoveAccountingSalesorderRequest request) throws Exception {
         RequestOperation<RemoveAccountingSalesorderRequest, RemoveAccountingSalesorderResponse> operation
-              = new RemoveAccountingSalesorderOperation( sdkConfiguration);
+              = new RemoveAccountingSalesorderOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a taxrate
@@ -1849,13 +1722,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAccountingTaxrateResponse removeAccountingTaxrate(
-            RemoveAccountingTaxrateRequest request) throws Exception {
+    public RemoveAccountingTaxrateResponse removeAccountingTaxrate(RemoveAccountingTaxrateRequest request) throws Exception {
         RequestOperation<RemoveAccountingTaxrateRequest, RemoveAccountingTaxrateResponse> operation
-              = new RemoveAccountingTaxrateOperation( sdkConfiguration);
+              = new RemoveAccountingTaxrateOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a transaction
@@ -1873,13 +1744,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAccountingTransactionResponse removeAccountingTransaction(
-            RemoveAccountingTransactionRequest request) throws Exception {
+    public RemoveAccountingTransactionResponse removeAccountingTransaction(RemoveAccountingTransactionRequest request) throws Exception {
         RequestOperation<RemoveAccountingTransactionRequest, RemoveAccountingTransactionResponse> operation
-              = new RemoveAccountingTransactionOperation( sdkConfiguration);
+              = new RemoveAccountingTransactionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an account
@@ -1897,13 +1766,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAccountingAccountResponse updateAccountingAccount(
-            UpdateAccountingAccountRequest request) throws Exception {
+    public UpdateAccountingAccountResponse updateAccountingAccount(UpdateAccountingAccountRequest request) throws Exception {
         RequestOperation<UpdateAccountingAccountRequest, UpdateAccountingAccountResponse> operation
-              = new UpdateAccountingAccountOperation( sdkConfiguration);
+              = new UpdateAccountingAccountOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a bill
@@ -1921,13 +1788,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAccountingBillResponse updateAccountingBill(
-            UpdateAccountingBillRequest request) throws Exception {
+    public UpdateAccountingBillResponse updateAccountingBill(UpdateAccountingBillRequest request) throws Exception {
         RequestOperation<UpdateAccountingBillRequest, UpdateAccountingBillResponse> operation
-              = new UpdateAccountingBillOperation( sdkConfiguration);
+              = new UpdateAccountingBillOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a contact
@@ -1945,13 +1810,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAccountingContactResponse updateAccountingContact(
-            UpdateAccountingContactRequest request) throws Exception {
+    public UpdateAccountingContactResponse updateAccountingContact(UpdateAccountingContactRequest request) throws Exception {
         RequestOperation<UpdateAccountingContactRequest, UpdateAccountingContactResponse> operation
-              = new UpdateAccountingContactOperation( sdkConfiguration);
+              = new UpdateAccountingContactOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a creditmemo
@@ -1969,13 +1832,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAccountingCreditmemoResponse updateAccountingCreditmemo(
-            UpdateAccountingCreditmemoRequest request) throws Exception {
+    public UpdateAccountingCreditmemoResponse updateAccountingCreditmemo(UpdateAccountingCreditmemoRequest request) throws Exception {
         RequestOperation<UpdateAccountingCreditmemoRequest, UpdateAccountingCreditmemoResponse> operation
-              = new UpdateAccountingCreditmemoOperation( sdkConfiguration);
+              = new UpdateAccountingCreditmemoOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an invoice
@@ -1993,13 +1854,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAccountingInvoiceResponse updateAccountingInvoice(
-            UpdateAccountingInvoiceRequest request) throws Exception {
+    public UpdateAccountingInvoiceResponse updateAccountingInvoice(UpdateAccountingInvoiceRequest request) throws Exception {
         RequestOperation<UpdateAccountingInvoiceRequest, UpdateAccountingInvoiceResponse> operation
-              = new UpdateAccountingInvoiceOperation( sdkConfiguration);
+              = new UpdateAccountingInvoiceOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a journal
@@ -2017,13 +1876,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAccountingJournalResponse updateAccountingJournal(
-            UpdateAccountingJournalRequest request) throws Exception {
+    public UpdateAccountingJournalResponse updateAccountingJournal(UpdateAccountingJournalRequest request) throws Exception {
         RequestOperation<UpdateAccountingJournalRequest, UpdateAccountingJournalResponse> operation
-              = new UpdateAccountingJournalOperation( sdkConfiguration);
+              = new UpdateAccountingJournalOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an order
@@ -2041,13 +1898,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAccountingOrderResponse updateAccountingOrder(
-            UpdateAccountingOrderRequest request) throws Exception {
+    public UpdateAccountingOrderResponse updateAccountingOrder(UpdateAccountingOrderRequest request) throws Exception {
         RequestOperation<UpdateAccountingOrderRequest, UpdateAccountingOrderResponse> operation
-              = new UpdateAccountingOrderOperation( sdkConfiguration);
+              = new UpdateAccountingOrderOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a purchaseorder
@@ -2065,13 +1920,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAccountingPurchaseorderResponse updateAccountingPurchaseorder(
-            UpdateAccountingPurchaseorderRequest request) throws Exception {
+    public UpdateAccountingPurchaseorderResponse updateAccountingPurchaseorder(UpdateAccountingPurchaseorderRequest request) throws Exception {
         RequestOperation<UpdateAccountingPurchaseorderRequest, UpdateAccountingPurchaseorderResponse> operation
-              = new UpdateAccountingPurchaseorderOperation( sdkConfiguration);
+              = new UpdateAccountingPurchaseorderOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a salesorder
@@ -2089,13 +1942,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAccountingSalesorderResponse updateAccountingSalesorder(
-            UpdateAccountingSalesorderRequest request) throws Exception {
+    public UpdateAccountingSalesorderResponse updateAccountingSalesorder(UpdateAccountingSalesorderRequest request) throws Exception {
         RequestOperation<UpdateAccountingSalesorderRequest, UpdateAccountingSalesorderResponse> operation
-              = new UpdateAccountingSalesorderOperation( sdkConfiguration);
+              = new UpdateAccountingSalesorderOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a taxrate
@@ -2113,13 +1964,11 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAccountingTaxrateResponse updateAccountingTaxrate(
-            UpdateAccountingTaxrateRequest request) throws Exception {
+    public UpdateAccountingTaxrateResponse updateAccountingTaxrate(UpdateAccountingTaxrateRequest request) throws Exception {
         RequestOperation<UpdateAccountingTaxrateRequest, UpdateAccountingTaxrateResponse> operation
-              = new UpdateAccountingTaxrateOperation( sdkConfiguration);
+              = new UpdateAccountingTaxrateOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a transaction
@@ -2137,10 +1986,9 @@ public class Accounting {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAccountingTransactionResponse updateAccountingTransaction(
-            UpdateAccountingTransactionRequest request) throws Exception {
+    public UpdateAccountingTransactionResponse updateAccountingTransaction(UpdateAccountingTransactionRequest request) throws Exception {
         RequestOperation<UpdateAccountingTransactionRequest, UpdateAccountingTransactionResponse> operation
-              = new UpdateAccountingTransactionOperation( sdkConfiguration);
+              = new UpdateAccountingTransactionOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

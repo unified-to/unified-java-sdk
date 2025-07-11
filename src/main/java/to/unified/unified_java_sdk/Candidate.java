@@ -40,7 +40,6 @@ public class Candidate {
     Candidate(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a candidate
      * 
@@ -57,13 +56,11 @@ public class Candidate {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAtsCandidateResponse createAtsCandidate(
-            CreateAtsCandidateRequest request) throws Exception {
+    public CreateAtsCandidateResponse createAtsCandidate(CreateAtsCandidateRequest request) throws Exception {
         RequestOperation<CreateAtsCandidateRequest, CreateAtsCandidateResponse> operation
-              = new CreateAtsCandidateOperation( sdkConfiguration);
+              = new CreateAtsCandidateOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a candidate
@@ -81,13 +78,11 @@ public class Candidate {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAtsCandidateResponse getAtsCandidate(
-            GetAtsCandidateRequest request) throws Exception {
+    public GetAtsCandidateResponse getAtsCandidate(GetAtsCandidateRequest request) throws Exception {
         RequestOperation<GetAtsCandidateRequest, GetAtsCandidateResponse> operation
-              = new GetAtsCandidateOperation( sdkConfiguration);
+              = new GetAtsCandidateOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all candidates
@@ -105,13 +100,11 @@ public class Candidate {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAtsCandidatesResponse listAtsCandidates(
-            ListAtsCandidatesRequest request) throws Exception {
+    public ListAtsCandidatesResponse listAtsCandidates(ListAtsCandidatesRequest request) throws Exception {
         RequestOperation<ListAtsCandidatesRequest, ListAtsCandidatesResponse> operation
-              = new ListAtsCandidatesOperation( sdkConfiguration);
+              = new ListAtsCandidatesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a candidate
@@ -129,13 +122,11 @@ public class Candidate {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAtsCandidateResponse patchAtsCandidate(
-            PatchAtsCandidateRequest request) throws Exception {
+    public PatchAtsCandidateResponse patchAtsCandidate(PatchAtsCandidateRequest request) throws Exception {
         RequestOperation<PatchAtsCandidateRequest, PatchAtsCandidateResponse> operation
-              = new PatchAtsCandidateOperation( sdkConfiguration);
+              = new PatchAtsCandidateOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a candidate
@@ -153,13 +144,11 @@ public class Candidate {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAtsCandidateResponse removeAtsCandidate(
-            RemoveAtsCandidateRequest request) throws Exception {
+    public RemoveAtsCandidateResponse removeAtsCandidate(RemoveAtsCandidateRequest request) throws Exception {
         RequestOperation<RemoveAtsCandidateRequest, RemoveAtsCandidateResponse> operation
-              = new RemoveAtsCandidateOperation( sdkConfiguration);
+              = new RemoveAtsCandidateOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a candidate
@@ -177,10 +166,9 @@ public class Candidate {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAtsCandidateResponse updateAtsCandidate(
-            UpdateAtsCandidateRequest request) throws Exception {
+    public UpdateAtsCandidateResponse updateAtsCandidate(UpdateAtsCandidateRequest request) throws Exception {
         RequestOperation<UpdateAtsCandidateRequest, UpdateAtsCandidateResponse> operation
-              = new UpdateAtsCandidateOperation( sdkConfiguration);
+              = new UpdateAtsCandidateOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

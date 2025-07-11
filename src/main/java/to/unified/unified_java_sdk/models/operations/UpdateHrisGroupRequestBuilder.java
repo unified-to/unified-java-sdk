@@ -28,7 +28,7 @@ public class UpdateHrisGroupRequestBuilder {
     public UpdateHrisGroupResponse call() throws Exception {
         
         RequestOperation<UpdateHrisGroupRequest, UpdateHrisGroupResponse> operation
-              = new UpdateHrisGroupOperation( sdkConfiguration);
+              = new UpdateHrisGroupOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

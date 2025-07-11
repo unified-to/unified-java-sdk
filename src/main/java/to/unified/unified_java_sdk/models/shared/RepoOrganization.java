@@ -18,31 +18,38 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class RepoOrganization {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatar_url")
     private Optional<String> avatarUrl;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private Optional<String> description;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -54,6 +61,7 @@ public class RepoOrganization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_ids")
     private Optional<? extends List<String>> userIds;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web_url")
@@ -91,7 +99,9 @@ public class RepoOrganization {
     }
     
     public RepoOrganization() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -144,15 +154,17 @@ public class RepoOrganization {
         return webUrl;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public RepoOrganization withAvatarUrl(String avatarUrl) {
         Utils.checkNotNull(avatarUrl, "avatarUrl");
         this.avatarUrl = Optional.ofNullable(avatarUrl);
         return this;
     }
+
 
     public RepoOrganization withAvatarUrl(Optional<String> avatarUrl) {
         Utils.checkNotNull(avatarUrl, "avatarUrl");
@@ -166,6 +178,7 @@ public class RepoOrganization {
         return this;
     }
 
+
     public RepoOrganization withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
@@ -177,6 +190,7 @@ public class RepoOrganization {
         this.description = Optional.ofNullable(description);
         return this;
     }
+
 
     public RepoOrganization withDescription(Optional<String> description) {
         Utils.checkNotNull(description, "description");
@@ -190,6 +204,7 @@ public class RepoOrganization {
         return this;
     }
 
+
     public RepoOrganization withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -201,6 +216,7 @@ public class RepoOrganization {
         this.name = Optional.ofNullable(name);
         return this;
     }
+
 
     public RepoOrganization withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
@@ -214,6 +230,7 @@ public class RepoOrganization {
         return this;
     }
 
+
     public RepoOrganization withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
@@ -225,6 +242,7 @@ public class RepoOrganization {
         this.updatedAt = Optional.ofNullable(updatedAt);
         return this;
     }
+
 
     public RepoOrganization withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
@@ -241,6 +259,7 @@ public class RepoOrganization {
         return this;
     }
 
+
     /**
      * id values of the users/employees associated with this organization
      */
@@ -256,13 +275,13 @@ public class RepoOrganization {
         return this;
     }
 
+
     public RepoOrganization withWebUrl(Optional<String> webUrl) {
         Utils.checkNotNull(webUrl, "webUrl");
         this.webUrl = webUrl;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -287,15 +306,9 @@ public class RepoOrganization {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            avatarUrl,
-            createdAt,
-            description,
-            id,
-            name,
-            raw,
-            updatedAt,
-            userIds,
-            webUrl);
+            avatarUrl, createdAt, description,
+            id, name, raw,
+            updatedAt, userIds, webUrl);
     }
     
     @Override
@@ -311,30 +324,32 @@ public class RepoOrganization {
                 "userIds", userIds,
                 "webUrl", webUrl);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> avatarUrl = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> description = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<? extends List<String>> userIds = Optional.empty();
- 
+
         private Optional<String> webUrl = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder avatarUrl(String avatarUrl) {
             Utils.checkNotNull(avatarUrl, "avatarUrl");
@@ -348,6 +363,7 @@ public class RepoOrganization {
             return this;
         }
 
+
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
@@ -359,6 +375,7 @@ public class RepoOrganization {
             this.createdAt = createdAt;
             return this;
         }
+
 
         public Builder description(String description) {
             Utils.checkNotNull(description, "description");
@@ -372,6 +389,7 @@ public class RepoOrganization {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -383,6 +401,7 @@ public class RepoOrganization {
             this.id = id;
             return this;
         }
+
 
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
@@ -396,6 +415,7 @@ public class RepoOrganization {
             return this;
         }
 
+
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
@@ -408,6 +428,7 @@ public class RepoOrganization {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -419,6 +440,7 @@ public class RepoOrganization {
             this.updatedAt = updatedAt;
             return this;
         }
+
 
         /**
          * id values of the users/employees associated with this organization
@@ -438,6 +460,7 @@ public class RepoOrganization {
             return this;
         }
 
+
         public Builder webUrl(String webUrl) {
             Utils.checkNotNull(webUrl, "webUrl");
             this.webUrl = Optional.ofNullable(webUrl);
@@ -449,18 +472,14 @@ public class RepoOrganization {
             this.webUrl = webUrl;
             return this;
         }
-        
+
         public RepoOrganization build() {
+
             return new RepoOrganization(
-                avatarUrl,
-                createdAt,
-                description,
-                id,
-                name,
-                raw,
-                updatedAt,
-                userIds,
-                webUrl);
+                avatarUrl, createdAt, description,
+                id, name, raw,
+                updatedAt, userIds, webUrl);
         }
+
     }
 }

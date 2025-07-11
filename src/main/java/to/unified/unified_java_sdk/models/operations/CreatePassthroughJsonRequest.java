@@ -14,8 +14,8 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class CreatePassthroughJsonRequest {
 
+public class CreatePassthroughJsonRequest {
     /**
      * integration-specific payload
      */
@@ -28,8 +28,10 @@ public class CreatePassthroughJsonRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
     private String connectionId;
 
+
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
     private String path;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     private Optional<? extends Map<String, Object>> query;
@@ -53,7 +55,8 @@ public class CreatePassthroughJsonRequest {
     public CreatePassthroughJsonRequest(
             String connectionId,
             String path) {
-        this(Optional.empty(), connectionId, path, Optional.empty());
+        this(Optional.empty(), connectionId, path,
+            Optional.empty());
     }
 
     /**
@@ -84,9 +87,10 @@ public class CreatePassthroughJsonRequest {
         return (Optional<Map<String, Object>>) query;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * integration-specific payload
@@ -96,6 +100,7 @@ public class CreatePassthroughJsonRequest {
         this.requestBody = Optional.ofNullable(requestBody);
         return this;
     }
+
 
     /**
      * integration-specific payload
@@ -127,13 +132,13 @@ public class CreatePassthroughJsonRequest {
         return this;
     }
 
+
     public CreatePassthroughJsonRequest withQuery(Optional<? extends Map<String, Object>> query) {
         Utils.checkNotNull(query, "query");
         this.query = query;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -153,9 +158,7 @@ public class CreatePassthroughJsonRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            requestBody,
-            connectionId,
-            path,
+            requestBody, connectionId, path,
             query);
     }
     
@@ -167,20 +170,22 @@ public class CreatePassthroughJsonRequest {
                 "path", path,
                 "query", query);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<? extends Object> requestBody = Optional.empty();
- 
+
         private String connectionId;
- 
+
         private String path;
- 
+
         private Optional<? extends Map<String, Object>> query = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * integration-specific payload
@@ -200,6 +205,7 @@ public class CreatePassthroughJsonRequest {
             return this;
         }
 
+
         /**
          * ID of the connection
          */
@@ -209,11 +215,13 @@ public class CreatePassthroughJsonRequest {
             return this;
         }
 
+
         public Builder path(String path) {
             Utils.checkNotNull(path, "path");
             this.path = path;
             return this;
         }
+
 
         public Builder query(Map<String, Object> query) {
             Utils.checkNotNull(query, "query");
@@ -226,13 +234,13 @@ public class CreatePassthroughJsonRequest {
             this.query = query;
             return this;
         }
-        
+
         public CreatePassthroughJsonRequest build() {
+
             return new CreatePassthroughJsonRequest(
-                requestBody,
-                connectionId,
-                path,
+                requestBody, connectionId, path,
                 query);
         }
+
     }
 }

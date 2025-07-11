@@ -18,31 +18,38 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class GenaiModel {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private Optional<String> description;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_temperature")
     private Optional<Boolean> hasTemperature;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_tokens")
     private Optional<Double> maxTokens;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web_url")
@@ -74,7 +81,9 @@ public class GenaiModel {
     }
     
     public GenaiModel() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -113,15 +122,17 @@ public class GenaiModel {
         return webUrl;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public GenaiModel withDescription(String description) {
         Utils.checkNotNull(description, "description");
         this.description = Optional.ofNullable(description);
         return this;
     }
+
 
     public GenaiModel withDescription(Optional<String> description) {
         Utils.checkNotNull(description, "description");
@@ -135,6 +146,7 @@ public class GenaiModel {
         return this;
     }
 
+
     public GenaiModel withHasTemperature(Optional<Boolean> hasTemperature) {
         Utils.checkNotNull(hasTemperature, "hasTemperature");
         this.hasTemperature = hasTemperature;
@@ -146,6 +158,7 @@ public class GenaiModel {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public GenaiModel withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -159,6 +172,7 @@ public class GenaiModel {
         return this;
     }
 
+
     public GenaiModel withMaxTokens(Optional<Double> maxTokens) {
         Utils.checkNotNull(maxTokens, "maxTokens");
         this.maxTokens = maxTokens;
@@ -170,6 +184,7 @@ public class GenaiModel {
         this.name = Optional.ofNullable(name);
         return this;
     }
+
 
     public GenaiModel withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
@@ -183,6 +198,7 @@ public class GenaiModel {
         return this;
     }
 
+
     public GenaiModel withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
@@ -195,13 +211,13 @@ public class GenaiModel {
         return this;
     }
 
+
     public GenaiModel withWebUrl(Optional<String> webUrl) {
         Utils.checkNotNull(webUrl, "webUrl");
         this.webUrl = webUrl;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -224,12 +240,8 @@ public class GenaiModel {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            description,
-            hasTemperature,
-            id,
-            maxTokens,
-            name,
-            raw,
+            description, hasTemperature, id,
+            maxTokens, name, raw,
             webUrl);
     }
     
@@ -244,26 +256,28 @@ public class GenaiModel {
                 "raw", raw,
                 "webUrl", webUrl);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> description = Optional.empty();
- 
+
         private Optional<Boolean> hasTemperature = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<Double> maxTokens = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<String> webUrl = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder description(String description) {
             Utils.checkNotNull(description, "description");
@@ -277,6 +291,7 @@ public class GenaiModel {
             return this;
         }
 
+
         public Builder hasTemperature(boolean hasTemperature) {
             Utils.checkNotNull(hasTemperature, "hasTemperature");
             this.hasTemperature = Optional.ofNullable(hasTemperature);
@@ -288,6 +303,7 @@ public class GenaiModel {
             this.hasTemperature = hasTemperature;
             return this;
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -301,6 +317,7 @@ public class GenaiModel {
             return this;
         }
 
+
         public Builder maxTokens(double maxTokens) {
             Utils.checkNotNull(maxTokens, "maxTokens");
             this.maxTokens = Optional.ofNullable(maxTokens);
@@ -312,6 +329,7 @@ public class GenaiModel {
             this.maxTokens = maxTokens;
             return this;
         }
+
 
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
@@ -325,6 +343,7 @@ public class GenaiModel {
             return this;
         }
 
+
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
@@ -337,6 +356,7 @@ public class GenaiModel {
             return this;
         }
 
+
         public Builder webUrl(String webUrl) {
             Utils.checkNotNull(webUrl, "webUrl");
             this.webUrl = Optional.ofNullable(webUrl);
@@ -348,16 +368,14 @@ public class GenaiModel {
             this.webUrl = webUrl;
             return this;
         }
-        
+
         public GenaiModel build() {
+
             return new GenaiModel(
-                description,
-                hasTemperature,
-                id,
-                maxTokens,
-                name,
-                raw,
+                description, hasTemperature, id,
+                maxTokens, name, raw,
                 webUrl);
         }
+
     }
 }

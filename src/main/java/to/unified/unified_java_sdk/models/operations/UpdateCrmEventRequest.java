@@ -14,8 +14,8 @@ import to.unified.unified_java_sdk.models.shared.CrmEvent;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class UpdateCrmEventRequest {
 
+public class UpdateCrmEventRequest {
     /**
      * An event represents an event, activity, or engagement and is always associated with a deal, contact, or company
      */
@@ -69,7 +69,8 @@ public class UpdateCrmEventRequest {
             CrmEvent crmEvent,
             String connectionId,
             String id) {
-        this(crmEvent, connectionId, Optional.empty(), id, Optional.empty());
+        this(crmEvent, connectionId, Optional.empty(),
+            id, Optional.empty());
     }
 
     /**
@@ -113,9 +114,10 @@ public class UpdateCrmEventRequest {
         return raw;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * An event represents an event, activity, or engagement and is always associated with a deal, contact, or company
@@ -144,6 +146,7 @@ public class UpdateCrmEventRequest {
         return this;
     }
 
+
     /**
      * Comma-delimited fields to return
      */
@@ -171,6 +174,7 @@ public class UpdateCrmEventRequest {
         return this;
     }
 
+
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
@@ -180,7 +184,6 @@ public class UpdateCrmEventRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -201,11 +204,8 @@ public class UpdateCrmEventRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            crmEvent,
-            connectionId,
-            fields,
-            id,
-            raw);
+            crmEvent, connectionId, fields,
+            id, raw);
     }
     
     @Override
@@ -217,22 +217,24 @@ public class UpdateCrmEventRequest {
                 "id", id,
                 "raw", raw);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private CrmEvent crmEvent;
- 
+
         private String connectionId;
- 
+
         private Optional<? extends List<String>> fields = Optional.empty();
- 
+
         private String id;
- 
+
         private Optional<String> raw = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * An event represents an event, activity, or engagement and is always associated with a deal, contact, or company
@@ -243,6 +245,7 @@ public class UpdateCrmEventRequest {
             return this;
         }
 
+
         /**
          * ID of the connection
          */
@@ -251,6 +254,7 @@ public class UpdateCrmEventRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         /**
          * Comma-delimited fields to return
@@ -270,6 +274,7 @@ public class UpdateCrmEventRequest {
             return this;
         }
 
+
         /**
          * ID of the Event
          */
@@ -278,6 +283,7 @@ public class UpdateCrmEventRequest {
             this.id = id;
             return this;
         }
+
 
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
@@ -296,14 +302,13 @@ public class UpdateCrmEventRequest {
             this.raw = raw;
             return this;
         }
-        
+
         public UpdateCrmEventRequest build() {
+
             return new UpdateCrmEventRequest(
-                crmEvent,
-                connectionId,
-                fields,
-                id,
-                raw);
+                crmEvent, connectionId, fields,
+                id, raw);
         }
+
     }
 }

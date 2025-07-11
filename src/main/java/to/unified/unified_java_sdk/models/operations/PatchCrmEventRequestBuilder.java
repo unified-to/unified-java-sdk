@@ -28,7 +28,7 @@ public class PatchCrmEventRequestBuilder {
     public PatchCrmEventResponse call() throws Exception {
         
         RequestOperation<PatchCrmEventRequest, PatchCrmEventResponse> operation
-              = new PatchCrmEventOperation( sdkConfiguration);
+              = new PatchCrmEventOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

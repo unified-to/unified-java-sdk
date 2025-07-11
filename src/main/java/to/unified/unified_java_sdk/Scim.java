@@ -64,7 +64,6 @@ public class Scim {
     Scim(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create group
      * 
@@ -81,13 +80,11 @@ public class Scim {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateScimGroupsResponse createScimGroups(
-            CreateScimGroupsRequest request) throws Exception {
+    public CreateScimGroupsResponse createScimGroups(CreateScimGroupsRequest request) throws Exception {
         RequestOperation<CreateScimGroupsRequest, CreateScimGroupsResponse> operation
-              = new CreateScimGroupsOperation( sdkConfiguration);
+              = new CreateScimGroupsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create user
@@ -105,13 +102,11 @@ public class Scim {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateScimUsersResponse createScimUsers(
-            CreateScimUsersRequest request) throws Exception {
+    public CreateScimUsersResponse createScimUsers(CreateScimUsersRequest request) throws Exception {
         RequestOperation<CreateScimUsersRequest, CreateScimUsersResponse> operation
-              = new CreateScimUsersOperation( sdkConfiguration);
+              = new CreateScimUsersOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Get group
@@ -129,13 +124,11 @@ public class Scim {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetScimGroupsResponse getScimGroups(
-            GetScimGroupsRequest request) throws Exception {
+    public GetScimGroupsResponse getScimGroups(GetScimGroupsRequest request) throws Exception {
         RequestOperation<GetScimGroupsRequest, GetScimGroupsResponse> operation
-              = new GetScimGroupsOperation( sdkConfiguration);
+              = new GetScimGroupsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Get user
@@ -153,13 +146,11 @@ public class Scim {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetScimUsersResponse getScimUsers(
-            GetScimUsersRequest request) throws Exception {
+    public GetScimUsersResponse getScimUsers(GetScimUsersRequest request) throws Exception {
         RequestOperation<GetScimUsersRequest, GetScimUsersResponse> operation
-              = new GetScimUsersOperation( sdkConfiguration);
+              = new GetScimUsersOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List groups
@@ -177,13 +168,11 @@ public class Scim {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListScimGroupsResponse listScimGroups(
-            ListScimGroupsRequest request) throws Exception {
+    public ListScimGroupsResponse listScimGroups(ListScimGroupsRequest request) throws Exception {
         RequestOperation<ListScimGroupsRequest, ListScimGroupsResponse> operation
-              = new ListScimGroupsOperation( sdkConfiguration);
+              = new ListScimGroupsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List users
@@ -201,13 +190,11 @@ public class Scim {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListScimUsersResponse listScimUsers(
-            ListScimUsersRequest request) throws Exception {
+    public ListScimUsersResponse listScimUsers(ListScimUsersRequest request) throws Exception {
         RequestOperation<ListScimUsersRequest, ListScimUsersResponse> operation
-              = new ListScimUsersOperation( sdkConfiguration);
+              = new ListScimUsersOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update group
@@ -225,13 +212,11 @@ public class Scim {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchScimGroupsResponse patchScimGroups(
-            PatchScimGroupsRequest request) throws Exception {
+    public PatchScimGroupsResponse patchScimGroups(PatchScimGroupsRequest request) throws Exception {
         RequestOperation<PatchScimGroupsRequest, PatchScimGroupsResponse> operation
-              = new PatchScimGroupsOperation( sdkConfiguration);
+              = new PatchScimGroupsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update user
@@ -249,13 +234,11 @@ public class Scim {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchScimUsersResponse patchScimUsers(
-            PatchScimUsersRequest request) throws Exception {
+    public PatchScimUsersResponse patchScimUsers(PatchScimUsersRequest request) throws Exception {
         RequestOperation<PatchScimUsersRequest, PatchScimUsersResponse> operation
-              = new PatchScimUsersOperation( sdkConfiguration);
+              = new PatchScimUsersOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Delete group
@@ -273,13 +256,11 @@ public class Scim {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveScimGroupsResponse removeScimGroups(
-            RemoveScimGroupsRequest request) throws Exception {
+    public RemoveScimGroupsResponse removeScimGroups(RemoveScimGroupsRequest request) throws Exception {
         RequestOperation<RemoveScimGroupsRequest, RemoveScimGroupsResponse> operation
-              = new RemoveScimGroupsOperation( sdkConfiguration);
+              = new RemoveScimGroupsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Delete user
@@ -297,13 +278,11 @@ public class Scim {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveScimUsersResponse removeScimUsers(
-            RemoveScimUsersRequest request) throws Exception {
+    public RemoveScimUsersResponse removeScimUsers(RemoveScimUsersRequest request) throws Exception {
         RequestOperation<RemoveScimUsersRequest, RemoveScimUsersResponse> operation
-              = new RemoveScimUsersOperation( sdkConfiguration);
+              = new RemoveScimUsersOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update group
@@ -321,13 +300,11 @@ public class Scim {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateScimGroupsResponse updateScimGroups(
-            UpdateScimGroupsRequest request) throws Exception {
+    public UpdateScimGroupsResponse updateScimGroups(UpdateScimGroupsRequest request) throws Exception {
         RequestOperation<UpdateScimGroupsRequest, UpdateScimGroupsResponse> operation
-              = new UpdateScimGroupsOperation( sdkConfiguration);
+              = new UpdateScimGroupsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update user
@@ -345,10 +322,9 @@ public class Scim {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateScimUsersResponse updateScimUsers(
-            UpdateScimUsersRequest request) throws Exception {
+    public UpdateScimUsersResponse updateScimUsers(UpdateScimUsersRequest request) throws Exception {
         RequestOperation<UpdateScimUsersRequest, UpdateScimUsersResponse> operation
-              = new UpdateScimUsersOperation( sdkConfiguration);
+              = new UpdateScimUsersOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

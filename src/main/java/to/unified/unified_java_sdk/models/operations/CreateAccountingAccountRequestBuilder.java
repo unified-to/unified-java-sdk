@@ -28,7 +28,7 @@ public class CreateAccountingAccountRequestBuilder {
     public CreateAccountingAccountResponse call() throws Exception {
         
         RequestOperation<CreateAccountingAccountRequest, CreateAccountingAccountResponse> operation
-              = new CreateAccountingAccountOperation( sdkConfiguration);
+              = new CreateAccountingAccountOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -28,7 +28,7 @@ public class CreateGenaiPromptRequestBuilder {
     public CreateGenaiPromptResponse call() throws Exception {
         
         RequestOperation<CreateGenaiPromptRequest, CreateGenaiPromptResponse> operation
-              = new CreateGenaiPromptOperation( sdkConfiguration);
+              = new CreateGenaiPromptOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

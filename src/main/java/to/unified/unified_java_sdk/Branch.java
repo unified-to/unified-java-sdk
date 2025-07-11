@@ -40,7 +40,6 @@ public class Branch {
     Branch(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a branch
      * 
@@ -57,13 +56,11 @@ public class Branch {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateRepoBranchResponse createRepoBranch(
-            CreateRepoBranchRequest request) throws Exception {
+    public CreateRepoBranchResponse createRepoBranch(CreateRepoBranchRequest request) throws Exception {
         RequestOperation<CreateRepoBranchRequest, CreateRepoBranchResponse> operation
-              = new CreateRepoBranchOperation( sdkConfiguration);
+              = new CreateRepoBranchOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a branch
@@ -81,13 +78,11 @@ public class Branch {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetRepoBranchResponse getRepoBranch(
-            GetRepoBranchRequest request) throws Exception {
+    public GetRepoBranchResponse getRepoBranch(GetRepoBranchRequest request) throws Exception {
         RequestOperation<GetRepoBranchRequest, GetRepoBranchResponse> operation
-              = new GetRepoBranchOperation( sdkConfiguration);
+              = new GetRepoBranchOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all branches
@@ -105,13 +100,11 @@ public class Branch {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListRepoBranchesResponse listRepoBranches(
-            ListRepoBranchesRequest request) throws Exception {
+    public ListRepoBranchesResponse listRepoBranches(ListRepoBranchesRequest request) throws Exception {
         RequestOperation<ListRepoBranchesRequest, ListRepoBranchesResponse> operation
-              = new ListRepoBranchesOperation( sdkConfiguration);
+              = new ListRepoBranchesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a branch
@@ -129,13 +122,11 @@ public class Branch {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchRepoBranchResponse patchRepoBranch(
-            PatchRepoBranchRequest request) throws Exception {
+    public PatchRepoBranchResponse patchRepoBranch(PatchRepoBranchRequest request) throws Exception {
         RequestOperation<PatchRepoBranchRequest, PatchRepoBranchResponse> operation
-              = new PatchRepoBranchOperation( sdkConfiguration);
+              = new PatchRepoBranchOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a branch
@@ -153,13 +144,11 @@ public class Branch {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveRepoBranchResponse removeRepoBranch(
-            RemoveRepoBranchRequest request) throws Exception {
+    public RemoveRepoBranchResponse removeRepoBranch(RemoveRepoBranchRequest request) throws Exception {
         RequestOperation<RemoveRepoBranchRequest, RemoveRepoBranchResponse> operation
-              = new RemoveRepoBranchOperation( sdkConfiguration);
+              = new RemoveRepoBranchOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a branch
@@ -177,10 +166,9 @@ public class Branch {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateRepoBranchResponse updateRepoBranch(
-            UpdateRepoBranchRequest request) throws Exception {
+    public UpdateRepoBranchResponse updateRepoBranch(UpdateRepoBranchRequest request) throws Exception {
         RequestOperation<UpdateRepoBranchRequest, UpdateRepoBranchResponse> operation
-              = new UpdateRepoBranchOperation( sdkConfiguration);
+              = new UpdateRepoBranchOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

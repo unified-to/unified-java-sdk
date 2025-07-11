@@ -18,55 +18,68 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AtsInterview {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("application_id")
     private Optional<String> applicationId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_id")
     private Optional<String> candidateId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private Optional<OffsetDateTime> endAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("external_event_xref")
     private Optional<String> externalEventXref;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job_id")
     private Optional<String> jobId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     private Optional<String> location;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private Optional<OffsetDateTime> startAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private Optional<? extends AtsInterviewStatus> status;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_ids")
@@ -116,7 +129,11 @@ public class AtsInterview {
     }
     
     public AtsInterview() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -187,15 +204,17 @@ public class AtsInterview {
         return (Optional<List<String>>) userIds;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AtsInterview withApplicationId(String applicationId) {
         Utils.checkNotNull(applicationId, "applicationId");
         this.applicationId = Optional.ofNullable(applicationId);
         return this;
     }
+
 
     public AtsInterview withApplicationId(Optional<String> applicationId) {
         Utils.checkNotNull(applicationId, "applicationId");
@@ -209,6 +228,7 @@ public class AtsInterview {
         return this;
     }
 
+
     public AtsInterview withCandidateId(Optional<String> candidateId) {
         Utils.checkNotNull(candidateId, "candidateId");
         this.candidateId = candidateId;
@@ -220,6 +240,7 @@ public class AtsInterview {
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public AtsInterview withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -233,6 +254,7 @@ public class AtsInterview {
         return this;
     }
 
+
     public AtsInterview withEndAt(Optional<OffsetDateTime> endAt) {
         Utils.checkNotNull(endAt, "endAt");
         this.endAt = endAt;
@@ -244,6 +266,7 @@ public class AtsInterview {
         this.externalEventXref = Optional.ofNullable(externalEventXref);
         return this;
     }
+
 
     public AtsInterview withExternalEventXref(Optional<String> externalEventXref) {
         Utils.checkNotNull(externalEventXref, "externalEventXref");
@@ -257,6 +280,7 @@ public class AtsInterview {
         return this;
     }
 
+
     public AtsInterview withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -268,6 +292,7 @@ public class AtsInterview {
         this.jobId = Optional.ofNullable(jobId);
         return this;
     }
+
 
     public AtsInterview withJobId(Optional<String> jobId) {
         Utils.checkNotNull(jobId, "jobId");
@@ -281,6 +306,7 @@ public class AtsInterview {
         return this;
     }
 
+
     public AtsInterview withLocation(Optional<String> location) {
         Utils.checkNotNull(location, "location");
         this.location = location;
@@ -292,6 +318,7 @@ public class AtsInterview {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public AtsInterview withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -305,6 +332,7 @@ public class AtsInterview {
         return this;
     }
 
+
     public AtsInterview withStartAt(Optional<OffsetDateTime> startAt) {
         Utils.checkNotNull(startAt, "startAt");
         this.startAt = startAt;
@@ -316,6 +344,7 @@ public class AtsInterview {
         this.status = Optional.ofNullable(status);
         return this;
     }
+
 
     public AtsInterview withStatus(Optional<? extends AtsInterviewStatus> status) {
         Utils.checkNotNull(status, "status");
@@ -329,6 +358,7 @@ public class AtsInterview {
         return this;
     }
 
+
     public AtsInterview withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
@@ -341,13 +371,13 @@ public class AtsInterview {
         return this;
     }
 
+
     public AtsInterview withUserIds(Optional<? extends List<String>> userIds) {
         Utils.checkNotNull(userIds, "userIds");
         this.userIds = userIds;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -376,18 +406,10 @@ public class AtsInterview {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            applicationId,
-            candidateId,
-            createdAt,
-            endAt,
-            externalEventXref,
-            id,
-            jobId,
-            location,
-            raw,
-            startAt,
-            status,
-            updatedAt,
+            applicationId, candidateId, createdAt,
+            endAt, externalEventXref, id,
+            jobId, location, raw,
+            startAt, status, updatedAt,
             userIds);
     }
     
@@ -408,38 +430,40 @@ public class AtsInterview {
                 "updatedAt", updatedAt,
                 "userIds", userIds);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> applicationId = Optional.empty();
- 
+
         private Optional<String> candidateId = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<OffsetDateTime> endAt = Optional.empty();
- 
+
         private Optional<String> externalEventXref = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> jobId = Optional.empty();
- 
+
         private Optional<String> location = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<OffsetDateTime> startAt = Optional.empty();
- 
+
         private Optional<? extends AtsInterviewStatus> status = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<? extends List<String>> userIds = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder applicationId(String applicationId) {
             Utils.checkNotNull(applicationId, "applicationId");
@@ -453,6 +477,7 @@ public class AtsInterview {
             return this;
         }
 
+
         public Builder candidateId(String candidateId) {
             Utils.checkNotNull(candidateId, "candidateId");
             this.candidateId = Optional.ofNullable(candidateId);
@@ -464,6 +489,7 @@ public class AtsInterview {
             this.candidateId = candidateId;
             return this;
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -477,6 +503,7 @@ public class AtsInterview {
             return this;
         }
 
+
         public Builder endAt(OffsetDateTime endAt) {
             Utils.checkNotNull(endAt, "endAt");
             this.endAt = Optional.ofNullable(endAt);
@@ -488,6 +515,7 @@ public class AtsInterview {
             this.endAt = endAt;
             return this;
         }
+
 
         public Builder externalEventXref(String externalEventXref) {
             Utils.checkNotNull(externalEventXref, "externalEventXref");
@@ -501,6 +529,7 @@ public class AtsInterview {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -512,6 +541,7 @@ public class AtsInterview {
             this.id = id;
             return this;
         }
+
 
         public Builder jobId(String jobId) {
             Utils.checkNotNull(jobId, "jobId");
@@ -525,6 +555,7 @@ public class AtsInterview {
             return this;
         }
 
+
         public Builder location(String location) {
             Utils.checkNotNull(location, "location");
             this.location = Optional.ofNullable(location);
@@ -536,6 +567,7 @@ public class AtsInterview {
             this.location = location;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -549,6 +581,7 @@ public class AtsInterview {
             return this;
         }
 
+
         public Builder startAt(OffsetDateTime startAt) {
             Utils.checkNotNull(startAt, "startAt");
             this.startAt = Optional.ofNullable(startAt);
@@ -560,6 +593,7 @@ public class AtsInterview {
             this.startAt = startAt;
             return this;
         }
+
 
         public Builder status(AtsInterviewStatus status) {
             Utils.checkNotNull(status, "status");
@@ -573,6 +607,7 @@ public class AtsInterview {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -585,6 +620,7 @@ public class AtsInterview {
             return this;
         }
 
+
         public Builder userIds(List<String> userIds) {
             Utils.checkNotNull(userIds, "userIds");
             this.userIds = Optional.ofNullable(userIds);
@@ -596,22 +632,16 @@ public class AtsInterview {
             this.userIds = userIds;
             return this;
         }
-        
+
         public AtsInterview build() {
+
             return new AtsInterview(
-                applicationId,
-                candidateId,
-                createdAt,
-                endAt,
-                externalEventXref,
-                id,
-                jobId,
-                location,
-                raw,
-                startAt,
-                status,
-                updatedAt,
+                applicationId, candidateId, createdAt,
+                endAt, externalEventXref, id,
+                jobId, location, raw,
+                startAt, status, updatedAt,
                 userIds);
         }
+
     }
 }

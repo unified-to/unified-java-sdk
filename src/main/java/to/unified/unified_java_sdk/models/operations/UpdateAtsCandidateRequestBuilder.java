@@ -28,7 +28,7 @@ public class UpdateAtsCandidateRequestBuilder {
     public UpdateAtsCandidateResponse call() throws Exception {
         
         RequestOperation<UpdateAtsCandidateRequest, UpdateAtsCandidateResponse> operation
-              = new UpdateAtsCandidateOperation( sdkConfiguration);
+              = new UpdateAtsCandidateOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -28,7 +28,7 @@ public class RemoveAtsScorecardRequestBuilder {
     public RemoveAtsScorecardResponse call() throws Exception {
         
         RequestOperation<RemoveAtsScorecardRequest, RemoveAtsScorecardResponse> operation
-              = new RemoveAtsScorecardOperation( sdkConfiguration);
+              = new RemoveAtsScorecardOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

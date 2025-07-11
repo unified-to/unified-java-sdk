@@ -28,7 +28,7 @@ public class ListKmsCommentsRequestBuilder {
     public ListKmsCommentsResponse call() throws Exception {
         
         RequestOperation<ListKmsCommentsRequest, ListKmsCommentsResponse> operation
-              = new ListKmsCommentsOperation( sdkConfiguration);
+              = new ListKmsCommentsOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

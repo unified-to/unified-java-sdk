@@ -28,7 +28,7 @@ public class PatchAtsScorecardRequestBuilder {
     public PatchAtsScorecardResponse call() throws Exception {
         
         RequestOperation<PatchAtsScorecardRequest, PatchAtsScorecardResponse> operation
-              = new PatchAtsScorecardOperation( sdkConfiguration);
+              = new PatchAtsScorecardOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

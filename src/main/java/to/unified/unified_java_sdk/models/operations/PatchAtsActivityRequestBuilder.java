@@ -28,7 +28,7 @@ public class PatchAtsActivityRequestBuilder {
     public PatchAtsActivityResponse call() throws Exception {
         
         RequestOperation<PatchAtsActivityRequest, PatchAtsActivityResponse> operation
-              = new PatchAtsActivityOperation( sdkConfiguration);
+              = new PatchAtsActivityOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

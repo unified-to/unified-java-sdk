@@ -28,7 +28,7 @@ public class RemoveCrmPipelineRequestBuilder {
     public RemoveCrmPipelineResponse call() throws Exception {
         
         RequestOperation<RemoveCrmPipelineRequest, RemoveCrmPipelineResponse> operation
-              = new RemoveCrmPipelineOperation( sdkConfiguration);
+              = new RemoveCrmPipelineOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

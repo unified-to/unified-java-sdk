@@ -17,8 +17,8 @@ import to.unified.unified_java_sdk.models.shared.CrmCompany;
 import to.unified.unified_java_sdk.utils.Response;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class ListCrmCompaniesResponse implements Response {
 
+public class ListCrmCompaniesResponse implements Response {
     /**
      * HTTP response content type for this operation
      */
@@ -59,7 +59,8 @@ public class ListCrmCompaniesResponse implements Response {
             String contentType,
             int statusCode,
             HttpResponse<InputStream> rawResponse) {
-        this(contentType, Optional.empty(), statusCode, rawResponse);
+        this(contentType, Optional.empty(), statusCode,
+            rawResponse);
     }
 
     /**
@@ -95,9 +96,10 @@ public class ListCrmCompaniesResponse implements Response {
         return rawResponse;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * HTTP response content type for this operation
@@ -116,6 +118,7 @@ public class ListCrmCompaniesResponse implements Response {
         this.crmCompanies = Optional.ofNullable(crmCompanies);
         return this;
     }
+
 
     /**
      * Successful
@@ -144,7 +147,6 @@ public class ListCrmCompaniesResponse implements Response {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -164,9 +166,7 @@ public class ListCrmCompaniesResponse implements Response {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            contentType,
-            crmCompanies,
-            statusCode,
+            contentType, crmCompanies, statusCode,
             rawResponse);
     }
     
@@ -178,20 +178,22 @@ public class ListCrmCompaniesResponse implements Response {
                 "statusCode", statusCode,
                 "rawResponse", rawResponse);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private String contentType;
- 
+
         private Optional<? extends List<CrmCompany>> crmCompanies = Optional.empty();
- 
+
         private Integer statusCode;
- 
+
         private HttpResponse<InputStream> rawResponse;
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * HTTP response content type for this operation
@@ -201,6 +203,7 @@ public class ListCrmCompaniesResponse implements Response {
             this.contentType = contentType;
             return this;
         }
+
 
         /**
          * Successful
@@ -220,6 +223,7 @@ public class ListCrmCompaniesResponse implements Response {
             return this;
         }
 
+
         /**
          * HTTP response status code for this operation
          */
@@ -229,6 +233,7 @@ public class ListCrmCompaniesResponse implements Response {
             return this;
         }
 
+
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
@@ -237,13 +242,13 @@ public class ListCrmCompaniesResponse implements Response {
             this.rawResponse = rawResponse;
             return this;
         }
-        
+
         public ListCrmCompaniesResponse build() {
+
             return new ListCrmCompaniesResponse(
-                contentType,
-                crmCompanies,
-                statusCode,
+                contentType, crmCompanies, statusCode,
                 rawResponse);
         }
+
     }
 }

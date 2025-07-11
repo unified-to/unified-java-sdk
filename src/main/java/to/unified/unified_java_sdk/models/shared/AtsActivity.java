@@ -19,31 +19,38 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AtsActivity {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("application_id")
     private Optional<String> applicationId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bcc")
     private Optional<? extends List<AtsEmail>> bcc;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_id")
     private Optional<String> candidateId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cc")
     private Optional<? extends List<AtsEmail>> cc;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private Optional<String> description;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document_id")
@@ -56,45 +63,56 @@ public class AtsActivity {
     @JsonProperty("document_ids")
     private Optional<? extends List<String>> documentIds;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
     private Optional<? extends PropertyAtsActivityFrom> from;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interview_id")
     private Optional<String> interviewId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_private")
     private Optional<Boolean> isPrivate;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job_id")
     private Optional<String> jobId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sub_type")
     private Optional<String> subType;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     private Optional<String> title;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to")
     private Optional<? extends List<AtsEmail>> to;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private Optional<? extends AtsActivityType> type;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -172,7 +190,13 @@ public class AtsActivity {
     }
     
     public AtsActivity() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -289,15 +313,17 @@ public class AtsActivity {
         return (Optional<List<String>>) userIds;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AtsActivity withApplicationId(String applicationId) {
         Utils.checkNotNull(applicationId, "applicationId");
         this.applicationId = Optional.ofNullable(applicationId);
         return this;
     }
+
 
     public AtsActivity withApplicationId(Optional<String> applicationId) {
         Utils.checkNotNull(applicationId, "applicationId");
@@ -311,6 +337,7 @@ public class AtsActivity {
         return this;
     }
 
+
     public AtsActivity withBcc(Optional<? extends List<AtsEmail>> bcc) {
         Utils.checkNotNull(bcc, "bcc");
         this.bcc = bcc;
@@ -322,6 +349,7 @@ public class AtsActivity {
         this.candidateId = Optional.ofNullable(candidateId);
         return this;
     }
+
 
     public AtsActivity withCandidateId(Optional<String> candidateId) {
         Utils.checkNotNull(candidateId, "candidateId");
@@ -335,6 +363,7 @@ public class AtsActivity {
         return this;
     }
 
+
     public AtsActivity withCc(Optional<? extends List<AtsEmail>> cc) {
         Utils.checkNotNull(cc, "cc");
         this.cc = cc;
@@ -346,6 +375,7 @@ public class AtsActivity {
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public AtsActivity withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -359,6 +389,7 @@ public class AtsActivity {
         return this;
     }
 
+
     public AtsActivity withDescription(Optional<String> description) {
         Utils.checkNotNull(description, "description");
         this.description = description;
@@ -370,6 +401,7 @@ public class AtsActivity {
         this.documentId = Optional.ofNullable(documentId);
         return this;
     }
+
 
     public AtsActivity withDocumentId(Optional<String> documentId) {
         Utils.checkNotNull(documentId, "documentId");
@@ -386,6 +418,7 @@ public class AtsActivity {
         return this;
     }
 
+
     /**
      * IDs for AtsDocument.get
      */
@@ -401,6 +434,7 @@ public class AtsActivity {
         return this;
     }
 
+
     public AtsActivity withFrom(Optional<? extends PropertyAtsActivityFrom> from) {
         Utils.checkNotNull(from, "from");
         this.from = from;
@@ -412,6 +446,7 @@ public class AtsActivity {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public AtsActivity withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -425,6 +460,7 @@ public class AtsActivity {
         return this;
     }
 
+
     public AtsActivity withInterviewId(Optional<String> interviewId) {
         Utils.checkNotNull(interviewId, "interviewId");
         this.interviewId = interviewId;
@@ -436,6 +472,7 @@ public class AtsActivity {
         this.isPrivate = Optional.ofNullable(isPrivate);
         return this;
     }
+
 
     public AtsActivity withIsPrivate(Optional<Boolean> isPrivate) {
         Utils.checkNotNull(isPrivate, "isPrivate");
@@ -449,6 +486,7 @@ public class AtsActivity {
         return this;
     }
 
+
     public AtsActivity withJobId(Optional<String> jobId) {
         Utils.checkNotNull(jobId, "jobId");
         this.jobId = jobId;
@@ -460,6 +498,7 @@ public class AtsActivity {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public AtsActivity withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -473,6 +512,7 @@ public class AtsActivity {
         return this;
     }
 
+
     public AtsActivity withSubType(Optional<String> subType) {
         Utils.checkNotNull(subType, "subType");
         this.subType = subType;
@@ -484,6 +524,7 @@ public class AtsActivity {
         this.title = Optional.ofNullable(title);
         return this;
     }
+
 
     public AtsActivity withTitle(Optional<String> title) {
         Utils.checkNotNull(title, "title");
@@ -497,6 +538,7 @@ public class AtsActivity {
         return this;
     }
 
+
     public AtsActivity withTo(Optional<? extends List<AtsEmail>> to) {
         Utils.checkNotNull(to, "to");
         this.to = to;
@@ -509,6 +551,7 @@ public class AtsActivity {
         return this;
     }
 
+
     public AtsActivity withType(Optional<? extends AtsActivityType> type) {
         Utils.checkNotNull(type, "type");
         this.type = type;
@@ -520,6 +563,7 @@ public class AtsActivity {
         this.updatedAt = Optional.ofNullable(updatedAt);
         return this;
     }
+
 
     public AtsActivity withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
@@ -536,6 +580,7 @@ public class AtsActivity {
         return this;
     }
 
+
     /**
      * id values of the recruiters associated with the activity.
      */
@@ -545,7 +590,6 @@ public class AtsActivity {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -581,26 +625,13 @@ public class AtsActivity {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            applicationId,
-            bcc,
-            candidateId,
-            cc,
-            createdAt,
-            description,
-            documentId,
-            documentIds,
-            from,
-            id,
-            interviewId,
-            isPrivate,
-            jobId,
-            raw,
-            subType,
-            title,
-            to,
-            type,
-            updatedAt,
-            userIds);
+            applicationId, bcc, candidateId,
+            cc, createdAt, description,
+            documentId, documentIds, from,
+            id, interviewId, isPrivate,
+            jobId, raw, subType,
+            title, to, type,
+            updatedAt, userIds);
     }
     
     @Override
@@ -627,52 +658,54 @@ public class AtsActivity {
                 "updatedAt", updatedAt,
                 "userIds", userIds);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> applicationId = Optional.empty();
- 
+
         private Optional<? extends List<AtsEmail>> bcc = Optional.empty();
- 
+
         private Optional<String> candidateId = Optional.empty();
- 
+
         private Optional<? extends List<AtsEmail>> cc = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> description = Optional.empty();
- 
+
         private Optional<String> documentId = Optional.empty();
- 
+
         private Optional<? extends List<String>> documentIds = Optional.empty();
- 
+
         private Optional<? extends PropertyAtsActivityFrom> from = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> interviewId = Optional.empty();
- 
+
         private Optional<Boolean> isPrivate = Optional.empty();
- 
+
         private Optional<String> jobId = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<String> subType = Optional.empty();
- 
+
         private Optional<String> title = Optional.empty();
- 
+
         private Optional<? extends List<AtsEmail>> to = Optional.empty();
- 
+
         private Optional<? extends AtsActivityType> type = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<? extends List<String>> userIds = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder applicationId(String applicationId) {
             Utils.checkNotNull(applicationId, "applicationId");
@@ -686,6 +719,7 @@ public class AtsActivity {
             return this;
         }
 
+
         public Builder bcc(List<AtsEmail> bcc) {
             Utils.checkNotNull(bcc, "bcc");
             this.bcc = Optional.ofNullable(bcc);
@@ -697,6 +731,7 @@ public class AtsActivity {
             this.bcc = bcc;
             return this;
         }
+
 
         public Builder candidateId(String candidateId) {
             Utils.checkNotNull(candidateId, "candidateId");
@@ -710,6 +745,7 @@ public class AtsActivity {
             return this;
         }
 
+
         public Builder cc(List<AtsEmail> cc) {
             Utils.checkNotNull(cc, "cc");
             this.cc = Optional.ofNullable(cc);
@@ -721,6 +757,7 @@ public class AtsActivity {
             this.cc = cc;
             return this;
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -734,6 +771,7 @@ public class AtsActivity {
             return this;
         }
 
+
         public Builder description(String description) {
             Utils.checkNotNull(description, "description");
             this.description = Optional.ofNullable(description);
@@ -746,6 +784,7 @@ public class AtsActivity {
             return this;
         }
 
+
         public Builder documentId(String documentId) {
             Utils.checkNotNull(documentId, "documentId");
             this.documentId = Optional.ofNullable(documentId);
@@ -757,6 +796,7 @@ public class AtsActivity {
             this.documentId = documentId;
             return this;
         }
+
 
         /**
          * IDs for AtsDocument.get
@@ -776,6 +816,7 @@ public class AtsActivity {
             return this;
         }
 
+
         public Builder from(PropertyAtsActivityFrom from) {
             Utils.checkNotNull(from, "from");
             this.from = Optional.ofNullable(from);
@@ -787,6 +828,7 @@ public class AtsActivity {
             this.from = from;
             return this;
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -800,6 +842,7 @@ public class AtsActivity {
             return this;
         }
 
+
         public Builder interviewId(String interviewId) {
             Utils.checkNotNull(interviewId, "interviewId");
             this.interviewId = Optional.ofNullable(interviewId);
@@ -811,6 +854,7 @@ public class AtsActivity {
             this.interviewId = interviewId;
             return this;
         }
+
 
         public Builder isPrivate(boolean isPrivate) {
             Utils.checkNotNull(isPrivate, "isPrivate");
@@ -824,6 +868,7 @@ public class AtsActivity {
             return this;
         }
 
+
         public Builder jobId(String jobId) {
             Utils.checkNotNull(jobId, "jobId");
             this.jobId = Optional.ofNullable(jobId);
@@ -835,6 +880,7 @@ public class AtsActivity {
             this.jobId = jobId;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -848,6 +894,7 @@ public class AtsActivity {
             return this;
         }
 
+
         public Builder subType(String subType) {
             Utils.checkNotNull(subType, "subType");
             this.subType = Optional.ofNullable(subType);
@@ -859,6 +906,7 @@ public class AtsActivity {
             this.subType = subType;
             return this;
         }
+
 
         public Builder title(String title) {
             Utils.checkNotNull(title, "title");
@@ -872,6 +920,7 @@ public class AtsActivity {
             return this;
         }
 
+
         public Builder to(List<AtsEmail> to) {
             Utils.checkNotNull(to, "to");
             this.to = Optional.ofNullable(to);
@@ -883,6 +932,7 @@ public class AtsActivity {
             this.to = to;
             return this;
         }
+
 
         public Builder type(AtsActivityType type) {
             Utils.checkNotNull(type, "type");
@@ -896,6 +946,7 @@ public class AtsActivity {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -907,6 +958,7 @@ public class AtsActivity {
             this.updatedAt = updatedAt;
             return this;
         }
+
 
         /**
          * id values of the recruiters associated with the activity.
@@ -925,29 +977,18 @@ public class AtsActivity {
             this.userIds = userIds;
             return this;
         }
-        
+
         public AtsActivity build() {
+
             return new AtsActivity(
-                applicationId,
-                bcc,
-                candidateId,
-                cc,
-                createdAt,
-                description,
-                documentId,
-                documentIds,
-                from,
-                id,
-                interviewId,
-                isPrivate,
-                jobId,
-                raw,
-                subType,
-                title,
-                to,
-                type,
-                updatedAt,
-                userIds);
+                applicationId, bcc, candidateId,
+                cc, createdAt, description,
+                documentId, documentIds, from,
+                id, interviewId, isPrivate,
+                jobId, raw, subType,
+                title, to, type,
+                updatedAt, userIds);
         }
+
     }
 }

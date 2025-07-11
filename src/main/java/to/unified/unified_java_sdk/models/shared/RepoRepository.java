@@ -18,42 +18,52 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class RepoRepository {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private Optional<String> description;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_private")
     private Optional<Boolean> isPrivate;
 
+
     @JsonProperty("name")
     private String name;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("org_id")
     private Optional<String> orgId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     private Optional<String> owner;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web_url")
@@ -95,7 +105,10 @@ public class RepoRepository {
     
     public RepoRepository(
             String name) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), name, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), name, Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -149,15 +162,17 @@ public class RepoRepository {
         return webUrl;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public RepoRepository withCreatedAt(OffsetDateTime createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public RepoRepository withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -171,6 +186,7 @@ public class RepoRepository {
         return this;
     }
 
+
     public RepoRepository withDescription(Optional<String> description) {
         Utils.checkNotNull(description, "description");
         this.description = description;
@@ -183,6 +199,7 @@ public class RepoRepository {
         return this;
     }
 
+
     public RepoRepository withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -194,6 +211,7 @@ public class RepoRepository {
         this.isPrivate = Optional.ofNullable(isPrivate);
         return this;
     }
+
 
     public RepoRepository withIsPrivate(Optional<Boolean> isPrivate) {
         Utils.checkNotNull(isPrivate, "isPrivate");
@@ -213,6 +231,7 @@ public class RepoRepository {
         return this;
     }
 
+
     public RepoRepository withOrgId(Optional<String> orgId) {
         Utils.checkNotNull(orgId, "orgId");
         this.orgId = orgId;
@@ -224,6 +243,7 @@ public class RepoRepository {
         this.owner = Optional.ofNullable(owner);
         return this;
     }
+
 
     public RepoRepository withOwner(Optional<String> owner) {
         Utils.checkNotNull(owner, "owner");
@@ -237,6 +257,7 @@ public class RepoRepository {
         return this;
     }
 
+
     public RepoRepository withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
@@ -248,6 +269,7 @@ public class RepoRepository {
         this.updatedAt = Optional.ofNullable(updatedAt);
         return this;
     }
+
 
     public RepoRepository withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
@@ -261,13 +283,13 @@ public class RepoRepository {
         return this;
     }
 
+
     public RepoRepository withWebUrl(Optional<String> webUrl) {
         Utils.checkNotNull(webUrl, "webUrl");
         this.webUrl = webUrl;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -293,15 +315,9 @@ public class RepoRepository {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt,
-            description,
-            id,
-            isPrivate,
-            name,
-            orgId,
-            owner,
-            raw,
-            updatedAt,
+            createdAt, description, id,
+            isPrivate, name, orgId,
+            owner, raw, updatedAt,
             webUrl);
     }
     
@@ -319,32 +335,34 @@ public class RepoRepository {
                 "updatedAt", updatedAt,
                 "webUrl", webUrl);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> description = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<Boolean> isPrivate = Optional.empty();
- 
+
         private String name;
- 
+
         private Optional<String> orgId = Optional.empty();
- 
+
         private Optional<String> owner = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<String> webUrl = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -358,6 +376,7 @@ public class RepoRepository {
             return this;
         }
 
+
         public Builder description(String description) {
             Utils.checkNotNull(description, "description");
             this.description = Optional.ofNullable(description);
@@ -369,6 +388,7 @@ public class RepoRepository {
             this.description = description;
             return this;
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -382,6 +402,7 @@ public class RepoRepository {
             return this;
         }
 
+
         public Builder isPrivate(boolean isPrivate) {
             Utils.checkNotNull(isPrivate, "isPrivate");
             this.isPrivate = Optional.ofNullable(isPrivate);
@@ -394,11 +415,13 @@ public class RepoRepository {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = name;
             return this;
         }
+
 
         public Builder orgId(String orgId) {
             Utils.checkNotNull(orgId, "orgId");
@@ -412,6 +435,7 @@ public class RepoRepository {
             return this;
         }
 
+
         public Builder owner(String owner) {
             Utils.checkNotNull(owner, "owner");
             this.owner = Optional.ofNullable(owner);
@@ -423,6 +447,7 @@ public class RepoRepository {
             this.owner = owner;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -436,6 +461,7 @@ public class RepoRepository {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -448,6 +474,7 @@ public class RepoRepository {
             return this;
         }
 
+
         public Builder webUrl(String webUrl) {
             Utils.checkNotNull(webUrl, "webUrl");
             this.webUrl = Optional.ofNullable(webUrl);
@@ -459,19 +486,15 @@ public class RepoRepository {
             this.webUrl = webUrl;
             return this;
         }
-        
+
         public RepoRepository build() {
+
             return new RepoRepository(
-                createdAt,
-                description,
-                id,
-                isPrivate,
-                name,
-                orgId,
-                owner,
-                raw,
-                updatedAt,
+                createdAt, description, id,
+                isPrivate, name, orgId,
+                owner, raw, updatedAt,
                 webUrl);
         }
+
     }
 }

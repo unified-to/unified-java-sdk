@@ -28,7 +28,7 @@ public class UpdateAtsInterviewRequestBuilder {
     public UpdateAtsInterviewResponse call() throws Exception {
         
         RequestOperation<UpdateAtsInterviewRequest, UpdateAtsInterviewResponse> operation
-              = new UpdateAtsInterviewOperation( sdkConfiguration);
+              = new UpdateAtsInterviewOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

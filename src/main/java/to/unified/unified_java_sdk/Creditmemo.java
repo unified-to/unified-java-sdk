@@ -40,7 +40,6 @@ public class Creditmemo {
     Creditmemo(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a creditmemo
      * 
@@ -57,13 +56,11 @@ public class Creditmemo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAccountingCreditmemoResponse createAccountingCreditmemo(
-            CreateAccountingCreditmemoRequest request) throws Exception {
+    public CreateAccountingCreditmemoResponse createAccountingCreditmemo(CreateAccountingCreditmemoRequest request) throws Exception {
         RequestOperation<CreateAccountingCreditmemoRequest, CreateAccountingCreditmemoResponse> operation
-              = new CreateAccountingCreditmemoOperation( sdkConfiguration);
+              = new CreateAccountingCreditmemoOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a creditmemo
@@ -81,13 +78,11 @@ public class Creditmemo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAccountingCreditmemoResponse getAccountingCreditmemo(
-            GetAccountingCreditmemoRequest request) throws Exception {
+    public GetAccountingCreditmemoResponse getAccountingCreditmemo(GetAccountingCreditmemoRequest request) throws Exception {
         RequestOperation<GetAccountingCreditmemoRequest, GetAccountingCreditmemoResponse> operation
-              = new GetAccountingCreditmemoOperation( sdkConfiguration);
+              = new GetAccountingCreditmemoOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all creditmemoes
@@ -105,13 +100,11 @@ public class Creditmemo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAccountingCreditmemoesResponse listAccountingCreditmemoes(
-            ListAccountingCreditmemoesRequest request) throws Exception {
+    public ListAccountingCreditmemoesResponse listAccountingCreditmemoes(ListAccountingCreditmemoesRequest request) throws Exception {
         RequestOperation<ListAccountingCreditmemoesRequest, ListAccountingCreditmemoesResponse> operation
-              = new ListAccountingCreditmemoesOperation( sdkConfiguration);
+              = new ListAccountingCreditmemoesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a creditmemo
@@ -129,13 +122,11 @@ public class Creditmemo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAccountingCreditmemoResponse patchAccountingCreditmemo(
-            PatchAccountingCreditmemoRequest request) throws Exception {
+    public PatchAccountingCreditmemoResponse patchAccountingCreditmemo(PatchAccountingCreditmemoRequest request) throws Exception {
         RequestOperation<PatchAccountingCreditmemoRequest, PatchAccountingCreditmemoResponse> operation
-              = new PatchAccountingCreditmemoOperation( sdkConfiguration);
+              = new PatchAccountingCreditmemoOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a creditmemo
@@ -153,13 +144,11 @@ public class Creditmemo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAccountingCreditmemoResponse removeAccountingCreditmemo(
-            RemoveAccountingCreditmemoRequest request) throws Exception {
+    public RemoveAccountingCreditmemoResponse removeAccountingCreditmemo(RemoveAccountingCreditmemoRequest request) throws Exception {
         RequestOperation<RemoveAccountingCreditmemoRequest, RemoveAccountingCreditmemoResponse> operation
-              = new RemoveAccountingCreditmemoOperation( sdkConfiguration);
+              = new RemoveAccountingCreditmemoOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a creditmemo
@@ -177,10 +166,9 @@ public class Creditmemo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAccountingCreditmemoResponse updateAccountingCreditmemo(
-            UpdateAccountingCreditmemoRequest request) throws Exception {
+    public UpdateAccountingCreditmemoResponse updateAccountingCreditmemo(UpdateAccountingCreditmemoRequest request) throws Exception {
         RequestOperation<UpdateAccountingCreditmemoRequest, UpdateAccountingCreditmemoResponse> operation
-              = new UpdateAccountingCreditmemoOperation( sdkConfiguration);
+              = new UpdateAccountingCreditmemoOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

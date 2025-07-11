@@ -14,8 +14,8 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class ListUcRecordingsRequest {
 
+public class ListUcRecordingsRequest {
     /**
      * The call ID to filter by
      */
@@ -46,11 +46,14 @@ public class ListUcRecordingsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     private Optional<? extends List<String>> fields;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     private Optional<Double> limit;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     private Optional<Double> offset;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     private Optional<String> order;
@@ -66,6 +69,7 @@ public class ListUcRecordingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
     private Optional<String> raw;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     private Optional<String> sort;
@@ -136,7 +140,11 @@ public class ListUcRecordingsRequest {
     
     public ListUcRecordingsRequest(
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), connectionId, Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     /**
@@ -240,9 +248,10 @@ public class ListUcRecordingsRequest {
         return userId;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * The call ID to filter by
@@ -252,6 +261,7 @@ public class ListUcRecordingsRequest {
         this.callId = Optional.ofNullable(callId);
         return this;
     }
+
 
     /**
      * The call ID to filter by
@@ -280,6 +290,7 @@ public class ListUcRecordingsRequest {
         return this;
     }
 
+
     /**
      * The contact ID to filter by
      */
@@ -297,6 +308,7 @@ public class ListUcRecordingsRequest {
         this.endLe = Optional.ofNullable(endLe);
         return this;
     }
+
 
     /**
      * The end date to filter by
@@ -316,6 +328,7 @@ public class ListUcRecordingsRequest {
         return this;
     }
 
+
     /**
      * Comma-delimited fields to return
      */
@@ -331,6 +344,7 @@ public class ListUcRecordingsRequest {
         return this;
     }
 
+
     public ListUcRecordingsRequest withLimit(Optional<Double> limit) {
         Utils.checkNotNull(limit, "limit");
         this.limit = limit;
@@ -343,6 +357,7 @@ public class ListUcRecordingsRequest {
         return this;
     }
 
+
     public ListUcRecordingsRequest withOffset(Optional<Double> offset) {
         Utils.checkNotNull(offset, "offset");
         this.offset = offset;
@@ -354,6 +369,7 @@ public class ListUcRecordingsRequest {
         this.order = Optional.ofNullable(order);
         return this;
     }
+
 
     public ListUcRecordingsRequest withOrder(Optional<String> order) {
         Utils.checkNotNull(order, "order");
@@ -369,6 +385,7 @@ public class ListUcRecordingsRequest {
         this.query = Optional.ofNullable(query);
         return this;
     }
+
 
     /**
      * Query string to search. eg. email address or name
@@ -388,6 +405,7 @@ public class ListUcRecordingsRequest {
         return this;
     }
 
+
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
@@ -403,6 +421,7 @@ public class ListUcRecordingsRequest {
         return this;
     }
 
+
     public ListUcRecordingsRequest withSort(Optional<String> sort) {
         Utils.checkNotNull(sort, "sort");
         this.sort = sort;
@@ -417,6 +436,7 @@ public class ListUcRecordingsRequest {
         this.startGte = Optional.ofNullable(startGte);
         return this;
     }
+
 
     /**
      * The start date to filter by
@@ -436,6 +456,7 @@ public class ListUcRecordingsRequest {
         return this;
     }
 
+
     /**
      * Return only results whose updated date is equal or greater to this value
      */
@@ -454,6 +475,7 @@ public class ListUcRecordingsRequest {
         return this;
     }
 
+
     /**
      * The user/employee ID to filter by
      */
@@ -463,7 +485,6 @@ public class ListUcRecordingsRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -493,20 +514,11 @@ public class ListUcRecordingsRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            callId,
-            connectionId,
-            contactId,
-            endLe,
-            fields,
-            limit,
-            offset,
-            order,
-            query,
-            raw,
-            sort,
-            startGte,
-            updatedGte,
-            userId);
+            callId, connectionId, contactId,
+            endLe, fields, limit,
+            offset, order, query,
+            raw, sort, startGte,
+            updatedGte, userId);
     }
     
     @Override
@@ -527,40 +539,42 @@ public class ListUcRecordingsRequest {
                 "updatedGte", updatedGte,
                 "userId", userId);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> callId = Optional.empty();
- 
+
         private String connectionId;
- 
+
         private Optional<String> contactId = Optional.empty();
- 
+
         private Optional<String> endLe = Optional.empty();
- 
+
         private Optional<? extends List<String>> fields = Optional.empty();
- 
+
         private Optional<Double> limit = Optional.empty();
- 
+
         private Optional<Double> offset = Optional.empty();
- 
+
         private Optional<String> order = Optional.empty();
- 
+
         private Optional<String> query = Optional.empty();
- 
+
         private Optional<String> raw = Optional.empty();
- 
+
         private Optional<String> sort = Optional.empty();
- 
+
         private Optional<String> startGte = Optional.empty();
- 
+
         private Optional<String> updatedGte = Optional.empty();
- 
+
         private Optional<String> userId = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * The call ID to filter by
@@ -580,6 +594,7 @@ public class ListUcRecordingsRequest {
             return this;
         }
 
+
         /**
          * ID of the connection
          */
@@ -588,6 +603,7 @@ public class ListUcRecordingsRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         /**
          * The contact ID to filter by
@@ -607,6 +623,7 @@ public class ListUcRecordingsRequest {
             return this;
         }
 
+
         /**
          * The end date to filter by
          */
@@ -624,6 +641,7 @@ public class ListUcRecordingsRequest {
             this.endLe = endLe;
             return this;
         }
+
 
         /**
          * Comma-delimited fields to return
@@ -643,6 +661,7 @@ public class ListUcRecordingsRequest {
             return this;
         }
 
+
         public Builder limit(double limit) {
             Utils.checkNotNull(limit, "limit");
             this.limit = Optional.ofNullable(limit);
@@ -654,6 +673,7 @@ public class ListUcRecordingsRequest {
             this.limit = limit;
             return this;
         }
+
 
         public Builder offset(double offset) {
             Utils.checkNotNull(offset, "offset");
@@ -667,6 +687,7 @@ public class ListUcRecordingsRequest {
             return this;
         }
 
+
         public Builder order(String order) {
             Utils.checkNotNull(order, "order");
             this.order = Optional.ofNullable(order);
@@ -678,6 +699,7 @@ public class ListUcRecordingsRequest {
             this.order = order;
             return this;
         }
+
 
         /**
          * Query string to search. eg. email address or name
@@ -697,6 +719,7 @@ public class ListUcRecordingsRequest {
             return this;
         }
 
+
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
@@ -715,6 +738,7 @@ public class ListUcRecordingsRequest {
             return this;
         }
 
+
         public Builder sort(String sort) {
             Utils.checkNotNull(sort, "sort");
             this.sort = Optional.ofNullable(sort);
@@ -726,6 +750,7 @@ public class ListUcRecordingsRequest {
             this.sort = sort;
             return this;
         }
+
 
         /**
          * The start date to filter by
@@ -745,6 +770,7 @@ public class ListUcRecordingsRequest {
             return this;
         }
 
+
         /**
          * Return only results whose updated date is equal or greater to this value
          */
@@ -763,6 +789,7 @@ public class ListUcRecordingsRequest {
             return this;
         }
 
+
         /**
          * The user/employee ID to filter by
          */
@@ -780,23 +807,16 @@ public class ListUcRecordingsRequest {
             this.userId = userId;
             return this;
         }
-        
+
         public ListUcRecordingsRequest build() {
+
             return new ListUcRecordingsRequest(
-                callId,
-                connectionId,
-                contactId,
-                endLe,
-                fields,
-                limit,
-                offset,
-                order,
-                query,
-                raw,
-                sort,
-                startGte,
-                updatedGte,
-                userId);
+                callId, connectionId, contactId,
+                endLe, fields, limit,
+                offset, order, query,
+                raw, sort, startGte,
+                updatedGte, userId);
         }
+
     }
 }

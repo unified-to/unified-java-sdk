@@ -88,7 +88,6 @@ public class Comment {
     Comment(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a comment
      * 
@@ -105,13 +104,11 @@ public class Comment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateKmsCommentResponse createKmsComment(
-            CreateKmsCommentRequest request) throws Exception {
+    public CreateKmsCommentResponse createKmsComment(CreateKmsCommentRequest request) throws Exception {
         RequestOperation<CreateKmsCommentRequest, CreateKmsCommentResponse> operation
-              = new CreateKmsCommentOperation( sdkConfiguration);
+              = new CreateKmsCommentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a comment
@@ -129,13 +126,11 @@ public class Comment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateTaskCommentResponse createTaskComment(
-            CreateTaskCommentRequest request) throws Exception {
+    public CreateTaskCommentResponse createTaskComment(CreateTaskCommentRequest request) throws Exception {
         RequestOperation<CreateTaskCommentRequest, CreateTaskCommentResponse> operation
-              = new CreateTaskCommentOperation( sdkConfiguration);
+              = new CreateTaskCommentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a comment
@@ -153,13 +148,11 @@ public class Comment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateUcCommentResponse createUcComment(
-            CreateUcCommentRequest request) throws Exception {
+    public CreateUcCommentResponse createUcComment(CreateUcCommentRequest request) throws Exception {
         RequestOperation<CreateUcCommentRequest, CreateUcCommentResponse> operation
-              = new CreateUcCommentOperation( sdkConfiguration);
+              = new CreateUcCommentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a comment
@@ -177,13 +170,11 @@ public class Comment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetKmsCommentResponse getKmsComment(
-            GetKmsCommentRequest request) throws Exception {
+    public GetKmsCommentResponse getKmsComment(GetKmsCommentRequest request) throws Exception {
         RequestOperation<GetKmsCommentRequest, GetKmsCommentResponse> operation
-              = new GetKmsCommentOperation( sdkConfiguration);
+              = new GetKmsCommentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a comment
@@ -201,13 +192,11 @@ public class Comment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetTaskCommentResponse getTaskComment(
-            GetTaskCommentRequest request) throws Exception {
+    public GetTaskCommentResponse getTaskComment(GetTaskCommentRequest request) throws Exception {
         RequestOperation<GetTaskCommentRequest, GetTaskCommentResponse> operation
-              = new GetTaskCommentOperation( sdkConfiguration);
+              = new GetTaskCommentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a comment
@@ -225,13 +214,11 @@ public class Comment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetUcCommentResponse getUcComment(
-            GetUcCommentRequest request) throws Exception {
+    public GetUcCommentResponse getUcComment(GetUcCommentRequest request) throws Exception {
         RequestOperation<GetUcCommentRequest, GetUcCommentResponse> operation
-              = new GetUcCommentOperation( sdkConfiguration);
+              = new GetUcCommentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all comments
@@ -249,13 +236,11 @@ public class Comment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListKmsCommentsResponse listKmsComments(
-            ListKmsCommentsRequest request) throws Exception {
+    public ListKmsCommentsResponse listKmsComments(ListKmsCommentsRequest request) throws Exception {
         RequestOperation<ListKmsCommentsRequest, ListKmsCommentsResponse> operation
-              = new ListKmsCommentsOperation( sdkConfiguration);
+              = new ListKmsCommentsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all comments
@@ -273,13 +258,11 @@ public class Comment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListTaskCommentsResponse listTaskComments(
-            ListTaskCommentsRequest request) throws Exception {
+    public ListTaskCommentsResponse listTaskComments(ListTaskCommentsRequest request) throws Exception {
         RequestOperation<ListTaskCommentsRequest, ListTaskCommentsResponse> operation
-              = new ListTaskCommentsOperation( sdkConfiguration);
+              = new ListTaskCommentsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all comments
@@ -297,13 +280,11 @@ public class Comment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListUcCommentsResponse listUcComments(
-            ListUcCommentsRequest request) throws Exception {
+    public ListUcCommentsResponse listUcComments(ListUcCommentsRequest request) throws Exception {
         RequestOperation<ListUcCommentsRequest, ListUcCommentsResponse> operation
-              = new ListUcCommentsOperation( sdkConfiguration);
+              = new ListUcCommentsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a comment
@@ -321,13 +302,11 @@ public class Comment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchKmsCommentResponse patchKmsComment(
-            PatchKmsCommentRequest request) throws Exception {
+    public PatchKmsCommentResponse patchKmsComment(PatchKmsCommentRequest request) throws Exception {
         RequestOperation<PatchKmsCommentRequest, PatchKmsCommentResponse> operation
-              = new PatchKmsCommentOperation( sdkConfiguration);
+              = new PatchKmsCommentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a comment
@@ -345,13 +324,11 @@ public class Comment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchTaskCommentResponse patchTaskComment(
-            PatchTaskCommentRequest request) throws Exception {
+    public PatchTaskCommentResponse patchTaskComment(PatchTaskCommentRequest request) throws Exception {
         RequestOperation<PatchTaskCommentRequest, PatchTaskCommentResponse> operation
-              = new PatchTaskCommentOperation( sdkConfiguration);
+              = new PatchTaskCommentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a comment
@@ -369,13 +346,11 @@ public class Comment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchUcCommentResponse patchUcComment(
-            PatchUcCommentRequest request) throws Exception {
+    public PatchUcCommentResponse patchUcComment(PatchUcCommentRequest request) throws Exception {
         RequestOperation<PatchUcCommentRequest, PatchUcCommentResponse> operation
-              = new PatchUcCommentOperation( sdkConfiguration);
+              = new PatchUcCommentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a comment
@@ -393,13 +368,11 @@ public class Comment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveKmsCommentResponse removeKmsComment(
-            RemoveKmsCommentRequest request) throws Exception {
+    public RemoveKmsCommentResponse removeKmsComment(RemoveKmsCommentRequest request) throws Exception {
         RequestOperation<RemoveKmsCommentRequest, RemoveKmsCommentResponse> operation
-              = new RemoveKmsCommentOperation( sdkConfiguration);
+              = new RemoveKmsCommentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a comment
@@ -417,13 +390,11 @@ public class Comment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveTaskCommentResponse removeTaskComment(
-            RemoveTaskCommentRequest request) throws Exception {
+    public RemoveTaskCommentResponse removeTaskComment(RemoveTaskCommentRequest request) throws Exception {
         RequestOperation<RemoveTaskCommentRequest, RemoveTaskCommentResponse> operation
-              = new RemoveTaskCommentOperation( sdkConfiguration);
+              = new RemoveTaskCommentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a comment
@@ -441,13 +412,11 @@ public class Comment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveUcCommentResponse removeUcComment(
-            RemoveUcCommentRequest request) throws Exception {
+    public RemoveUcCommentResponse removeUcComment(RemoveUcCommentRequest request) throws Exception {
         RequestOperation<RemoveUcCommentRequest, RemoveUcCommentResponse> operation
-              = new RemoveUcCommentOperation( sdkConfiguration);
+              = new RemoveUcCommentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a comment
@@ -465,13 +434,11 @@ public class Comment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateKmsCommentResponse updateKmsComment(
-            UpdateKmsCommentRequest request) throws Exception {
+    public UpdateKmsCommentResponse updateKmsComment(UpdateKmsCommentRequest request) throws Exception {
         RequestOperation<UpdateKmsCommentRequest, UpdateKmsCommentResponse> operation
-              = new UpdateKmsCommentOperation( sdkConfiguration);
+              = new UpdateKmsCommentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a comment
@@ -489,13 +456,11 @@ public class Comment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateTaskCommentResponse updateTaskComment(
-            UpdateTaskCommentRequest request) throws Exception {
+    public UpdateTaskCommentResponse updateTaskComment(UpdateTaskCommentRequest request) throws Exception {
         RequestOperation<UpdateTaskCommentRequest, UpdateTaskCommentResponse> operation
-              = new UpdateTaskCommentOperation( sdkConfiguration);
+              = new UpdateTaskCommentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a comment
@@ -513,10 +478,9 @@ public class Comment {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateUcCommentResponse updateUcComment(
-            UpdateUcCommentRequest request) throws Exception {
+    public UpdateUcCommentResponse updateUcComment(UpdateUcCommentRequest request) throws Exception {
         RequestOperation<UpdateUcCommentRequest, UpdateUcCommentResponse> operation
-              = new UpdateUcCommentOperation( sdkConfiguration);
+              = new UpdateUcCommentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

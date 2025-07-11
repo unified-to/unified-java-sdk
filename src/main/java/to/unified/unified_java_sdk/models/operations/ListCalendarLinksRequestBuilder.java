@@ -28,7 +28,7 @@ public class ListCalendarLinksRequestBuilder {
     public ListCalendarLinksResponse call() throws Exception {
         
         RequestOperation<ListCalendarLinksRequest, ListCalendarLinksResponse> operation
-              = new ListCalendarLinksOperation( sdkConfiguration);
+              = new ListCalendarLinksOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

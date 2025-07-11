@@ -28,7 +28,7 @@ public class ListEnrichPeopleRequestBuilder {
     public ListEnrichPeopleResponse call() throws Exception {
         
         RequestOperation<ListEnrichPeopleRequest, ListEnrichPeopleResponse> operation
-              = new ListEnrichPeopleOperation( sdkConfiguration);
+              = new ListEnrichPeopleOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

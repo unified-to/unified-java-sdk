@@ -40,7 +40,6 @@ public class Interview {
     Interview(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create an interview
      * 
@@ -57,13 +56,11 @@ public class Interview {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAtsInterviewResponse createAtsInterview(
-            CreateAtsInterviewRequest request) throws Exception {
+    public CreateAtsInterviewResponse createAtsInterview(CreateAtsInterviewRequest request) throws Exception {
         RequestOperation<CreateAtsInterviewRequest, CreateAtsInterviewResponse> operation
-              = new CreateAtsInterviewOperation( sdkConfiguration);
+              = new CreateAtsInterviewOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve an interview
@@ -81,13 +78,11 @@ public class Interview {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAtsInterviewResponse getAtsInterview(
-            GetAtsInterviewRequest request) throws Exception {
+    public GetAtsInterviewResponse getAtsInterview(GetAtsInterviewRequest request) throws Exception {
         RequestOperation<GetAtsInterviewRequest, GetAtsInterviewResponse> operation
-              = new GetAtsInterviewOperation( sdkConfiguration);
+              = new GetAtsInterviewOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all interviews
@@ -105,13 +100,11 @@ public class Interview {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAtsInterviewsResponse listAtsInterviews(
-            ListAtsInterviewsRequest request) throws Exception {
+    public ListAtsInterviewsResponse listAtsInterviews(ListAtsInterviewsRequest request) throws Exception {
         RequestOperation<ListAtsInterviewsRequest, ListAtsInterviewsResponse> operation
-              = new ListAtsInterviewsOperation( sdkConfiguration);
+              = new ListAtsInterviewsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an interview
@@ -129,13 +122,11 @@ public class Interview {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAtsInterviewResponse patchAtsInterview(
-            PatchAtsInterviewRequest request) throws Exception {
+    public PatchAtsInterviewResponse patchAtsInterview(PatchAtsInterviewRequest request) throws Exception {
         RequestOperation<PatchAtsInterviewRequest, PatchAtsInterviewResponse> operation
-              = new PatchAtsInterviewOperation( sdkConfiguration);
+              = new PatchAtsInterviewOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove an interview
@@ -153,13 +144,11 @@ public class Interview {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAtsInterviewResponse removeAtsInterview(
-            RemoveAtsInterviewRequest request) throws Exception {
+    public RemoveAtsInterviewResponse removeAtsInterview(RemoveAtsInterviewRequest request) throws Exception {
         RequestOperation<RemoveAtsInterviewRequest, RemoveAtsInterviewResponse> operation
-              = new RemoveAtsInterviewOperation( sdkConfiguration);
+              = new RemoveAtsInterviewOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an interview
@@ -177,10 +166,9 @@ public class Interview {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAtsInterviewResponse updateAtsInterview(
-            UpdateAtsInterviewRequest request) throws Exception {
+    public UpdateAtsInterviewResponse updateAtsInterview(UpdateAtsInterviewRequest request) throws Exception {
         RequestOperation<UpdateAtsInterviewRequest, UpdateAtsInterviewResponse> operation
-              = new UpdateAtsInterviewOperation( sdkConfiguration);
+              = new UpdateAtsInterviewOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

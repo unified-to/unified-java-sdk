@@ -14,8 +14,8 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class ListLmsStudentsRequest {
 
+public class ListLmsStudentsRequest {
     /**
      * The class ID to filter by
      */
@@ -40,6 +40,7 @@ public class ListLmsStudentsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     private Optional<? extends List<String>> fields;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     private Optional<Double> limit;
 
@@ -49,8 +50,10 @@ public class ListLmsStudentsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
     private Optional<String> locationId;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     private Optional<Double> offset;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     private Optional<String> order;
@@ -66,6 +69,7 @@ public class ListLmsStudentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
     private Optional<String> raw;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     private Optional<String> sort;
@@ -118,7 +122,10 @@ public class ListLmsStudentsRequest {
     
     public ListLmsStudentsRequest(
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), connectionId, Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     /**
@@ -206,9 +213,10 @@ public class ListLmsStudentsRequest {
         return updatedGte;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * The class ID to filter by
@@ -218,6 +226,7 @@ public class ListLmsStudentsRequest {
         this.classId = Optional.ofNullable(classId);
         return this;
     }
+
 
     /**
      * The class ID to filter by
@@ -246,6 +255,7 @@ public class ListLmsStudentsRequest {
         return this;
     }
 
+
     /**
      * The course ID to filter by
      */
@@ -264,6 +274,7 @@ public class ListLmsStudentsRequest {
         return this;
     }
 
+
     /**
      * Comma-delimited fields to return
      */
@@ -278,6 +289,7 @@ public class ListLmsStudentsRequest {
         this.limit = Optional.ofNullable(limit);
         return this;
     }
+
 
     public ListLmsStudentsRequest withLimit(Optional<Double> limit) {
         Utils.checkNotNull(limit, "limit");
@@ -294,6 +306,7 @@ public class ListLmsStudentsRequest {
         return this;
     }
 
+
     /**
      * The location ID to filter by
      */
@@ -309,6 +322,7 @@ public class ListLmsStudentsRequest {
         return this;
     }
 
+
     public ListLmsStudentsRequest withOffset(Optional<Double> offset) {
         Utils.checkNotNull(offset, "offset");
         this.offset = offset;
@@ -320,6 +334,7 @@ public class ListLmsStudentsRequest {
         this.order = Optional.ofNullable(order);
         return this;
     }
+
 
     public ListLmsStudentsRequest withOrder(Optional<String> order) {
         Utils.checkNotNull(order, "order");
@@ -335,6 +350,7 @@ public class ListLmsStudentsRequest {
         this.query = Optional.ofNullable(query);
         return this;
     }
+
 
     /**
      * Query string to search. eg. email address or name
@@ -354,6 +370,7 @@ public class ListLmsStudentsRequest {
         return this;
     }
 
+
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
@@ -368,6 +385,7 @@ public class ListLmsStudentsRequest {
         this.sort = Optional.ofNullable(sort);
         return this;
     }
+
 
     public ListLmsStudentsRequest withSort(Optional<String> sort) {
         Utils.checkNotNull(sort, "sort");
@@ -384,6 +402,7 @@ public class ListLmsStudentsRequest {
         return this;
     }
 
+
     /**
      * Return only results whose updated date is equal or greater to this value
      */
@@ -393,7 +412,6 @@ public class ListLmsStudentsRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -421,18 +439,10 @@ public class ListLmsStudentsRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            classId,
-            connectionId,
-            courseId,
-            fields,
-            limit,
-            locationId,
-            offset,
-            order,
-            query,
-            raw,
-            sort,
-            updatedGte);
+            classId, connectionId, courseId,
+            fields, limit, locationId,
+            offset, order, query,
+            raw, sort, updatedGte);
     }
     
     @Override
@@ -451,36 +461,38 @@ public class ListLmsStudentsRequest {
                 "sort", sort,
                 "updatedGte", updatedGte);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> classId = Optional.empty();
- 
+
         private String connectionId;
- 
+
         private Optional<String> courseId = Optional.empty();
- 
+
         private Optional<? extends List<String>> fields = Optional.empty();
- 
+
         private Optional<Double> limit = Optional.empty();
- 
+
         private Optional<String> locationId = Optional.empty();
- 
+
         private Optional<Double> offset = Optional.empty();
- 
+
         private Optional<String> order = Optional.empty();
- 
+
         private Optional<String> query = Optional.empty();
- 
+
         private Optional<String> raw = Optional.empty();
- 
+
         private Optional<String> sort = Optional.empty();
- 
+
         private Optional<String> updatedGte = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * The class ID to filter by
@@ -500,6 +512,7 @@ public class ListLmsStudentsRequest {
             return this;
         }
 
+
         /**
          * ID of the connection
          */
@@ -508,6 +521,7 @@ public class ListLmsStudentsRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         /**
          * The course ID to filter by
@@ -527,6 +541,7 @@ public class ListLmsStudentsRequest {
             return this;
         }
 
+
         /**
          * Comma-delimited fields to return
          */
@@ -545,6 +560,7 @@ public class ListLmsStudentsRequest {
             return this;
         }
 
+
         public Builder limit(double limit) {
             Utils.checkNotNull(limit, "limit");
             this.limit = Optional.ofNullable(limit);
@@ -556,6 +572,7 @@ public class ListLmsStudentsRequest {
             this.limit = limit;
             return this;
         }
+
 
         /**
          * The location ID to filter by
@@ -575,6 +592,7 @@ public class ListLmsStudentsRequest {
             return this;
         }
 
+
         public Builder offset(double offset) {
             Utils.checkNotNull(offset, "offset");
             this.offset = Optional.ofNullable(offset);
@@ -587,6 +605,7 @@ public class ListLmsStudentsRequest {
             return this;
         }
 
+
         public Builder order(String order) {
             Utils.checkNotNull(order, "order");
             this.order = Optional.ofNullable(order);
@@ -598,6 +617,7 @@ public class ListLmsStudentsRequest {
             this.order = order;
             return this;
         }
+
 
         /**
          * Query string to search. eg. email address or name
@@ -617,6 +637,7 @@ public class ListLmsStudentsRequest {
             return this;
         }
 
+
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
@@ -635,6 +656,7 @@ public class ListLmsStudentsRequest {
             return this;
         }
 
+
         public Builder sort(String sort) {
             Utils.checkNotNull(sort, "sort");
             this.sort = Optional.ofNullable(sort);
@@ -646,6 +668,7 @@ public class ListLmsStudentsRequest {
             this.sort = sort;
             return this;
         }
+
 
         /**
          * Return only results whose updated date is equal or greater to this value
@@ -664,21 +687,15 @@ public class ListLmsStudentsRequest {
             this.updatedGte = updatedGte;
             return this;
         }
-        
+
         public ListLmsStudentsRequest build() {
+
             return new ListLmsStudentsRequest(
-                classId,
-                connectionId,
-                courseId,
-                fields,
-                limit,
-                locationId,
-                offset,
-                order,
-                query,
-                raw,
-                sort,
-                updatedGte);
+                classId, connectionId, courseId,
+                fields, limit, locationId,
+                offset, order, query,
+                raw, sort, updatedGte);
         }
+
     }
 }

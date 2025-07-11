@@ -28,7 +28,7 @@ public class ListAccountingTransactionsRequestBuilder {
     public ListAccountingTransactionsResponse call() throws Exception {
         
         RequestOperation<ListAccountingTransactionsRequest, ListAccountingTransactionsResponse> operation
-              = new ListAccountingTransactionsOperation( sdkConfiguration);
+              = new ListAccountingTransactionsOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

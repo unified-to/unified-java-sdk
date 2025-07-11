@@ -160,7 +160,6 @@ public class Crm {
     Crm(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a company
      * 
@@ -177,13 +176,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateCrmCompanyResponse createCrmCompany(
-            CreateCrmCompanyRequest request) throws Exception {
+    public CreateCrmCompanyResponse createCrmCompany(CreateCrmCompanyRequest request) throws Exception {
         RequestOperation<CreateCrmCompanyRequest, CreateCrmCompanyResponse> operation
-              = new CreateCrmCompanyOperation( sdkConfiguration);
+              = new CreateCrmCompanyOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a contact
@@ -201,13 +198,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateCrmContactResponse createCrmContact(
-            CreateCrmContactRequest request) throws Exception {
+    public CreateCrmContactResponse createCrmContact(CreateCrmContactRequest request) throws Exception {
         RequestOperation<CreateCrmContactRequest, CreateCrmContactResponse> operation
-              = new CreateCrmContactOperation( sdkConfiguration);
+              = new CreateCrmContactOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a deal
@@ -225,13 +220,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateCrmDealResponse createCrmDeal(
-            CreateCrmDealRequest request) throws Exception {
+    public CreateCrmDealResponse createCrmDeal(CreateCrmDealRequest request) throws Exception {
         RequestOperation<CreateCrmDealRequest, CreateCrmDealResponse> operation
-              = new CreateCrmDealOperation( sdkConfiguration);
+              = new CreateCrmDealOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create an event
@@ -249,13 +242,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateCrmEventResponse createCrmEvent(
-            CreateCrmEventRequest request) throws Exception {
+    public CreateCrmEventResponse createCrmEvent(CreateCrmEventRequest request) throws Exception {
         RequestOperation<CreateCrmEventRequest, CreateCrmEventResponse> operation
-              = new CreateCrmEventOperation( sdkConfiguration);
+              = new CreateCrmEventOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a lead
@@ -273,13 +264,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateCrmLeadResponse createCrmLead(
-            CreateCrmLeadRequest request) throws Exception {
+    public CreateCrmLeadResponse createCrmLead(CreateCrmLeadRequest request) throws Exception {
         RequestOperation<CreateCrmLeadRequest, CreateCrmLeadResponse> operation
-              = new CreateCrmLeadOperation( sdkConfiguration);
+              = new CreateCrmLeadOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a pipeline
@@ -297,13 +286,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateCrmPipelineResponse createCrmPipeline(
-            CreateCrmPipelineRequest request) throws Exception {
+    public CreateCrmPipelineResponse createCrmPipeline(CreateCrmPipelineRequest request) throws Exception {
         RequestOperation<CreateCrmPipelineRequest, CreateCrmPipelineResponse> operation
-              = new CreateCrmPipelineOperation( sdkConfiguration);
+              = new CreateCrmPipelineOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a company
@@ -321,13 +308,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetCrmCompanyResponse getCrmCompany(
-            GetCrmCompanyRequest request) throws Exception {
+    public GetCrmCompanyResponse getCrmCompany(GetCrmCompanyRequest request) throws Exception {
         RequestOperation<GetCrmCompanyRequest, GetCrmCompanyResponse> operation
-              = new GetCrmCompanyOperation( sdkConfiguration);
+              = new GetCrmCompanyOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a contact
@@ -345,13 +330,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetCrmContactResponse getCrmContact(
-            GetCrmContactRequest request) throws Exception {
+    public GetCrmContactResponse getCrmContact(GetCrmContactRequest request) throws Exception {
         RequestOperation<GetCrmContactRequest, GetCrmContactResponse> operation
-              = new GetCrmContactOperation( sdkConfiguration);
+              = new GetCrmContactOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a deal
@@ -369,13 +352,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetCrmDealResponse getCrmDeal(
-            GetCrmDealRequest request) throws Exception {
+    public GetCrmDealResponse getCrmDeal(GetCrmDealRequest request) throws Exception {
         RequestOperation<GetCrmDealRequest, GetCrmDealResponse> operation
-              = new GetCrmDealOperation( sdkConfiguration);
+              = new GetCrmDealOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve an event
@@ -393,13 +374,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetCrmEventResponse getCrmEvent(
-            GetCrmEventRequest request) throws Exception {
+    public GetCrmEventResponse getCrmEvent(GetCrmEventRequest request) throws Exception {
         RequestOperation<GetCrmEventRequest, GetCrmEventResponse> operation
-              = new GetCrmEventOperation( sdkConfiguration);
+              = new GetCrmEventOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a lead
@@ -417,13 +396,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetCrmLeadResponse getCrmLead(
-            GetCrmLeadRequest request) throws Exception {
+    public GetCrmLeadResponse getCrmLead(GetCrmLeadRequest request) throws Exception {
         RequestOperation<GetCrmLeadRequest, GetCrmLeadResponse> operation
-              = new GetCrmLeadOperation( sdkConfiguration);
+              = new GetCrmLeadOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a pipeline
@@ -441,13 +418,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetCrmPipelineResponse getCrmPipeline(
-            GetCrmPipelineRequest request) throws Exception {
+    public GetCrmPipelineResponse getCrmPipeline(GetCrmPipelineRequest request) throws Exception {
         RequestOperation<GetCrmPipelineRequest, GetCrmPipelineResponse> operation
-              = new GetCrmPipelineOperation( sdkConfiguration);
+              = new GetCrmPipelineOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all companies
@@ -465,13 +440,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCrmCompaniesResponse listCrmCompanies(
-            ListCrmCompaniesRequest request) throws Exception {
+    public ListCrmCompaniesResponse listCrmCompanies(ListCrmCompaniesRequest request) throws Exception {
         RequestOperation<ListCrmCompaniesRequest, ListCrmCompaniesResponse> operation
-              = new ListCrmCompaniesOperation( sdkConfiguration);
+              = new ListCrmCompaniesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all contacts
@@ -489,13 +462,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCrmContactsResponse listCrmContacts(
-            ListCrmContactsRequest request) throws Exception {
+    public ListCrmContactsResponse listCrmContacts(ListCrmContactsRequest request) throws Exception {
         RequestOperation<ListCrmContactsRequest, ListCrmContactsResponse> operation
-              = new ListCrmContactsOperation( sdkConfiguration);
+              = new ListCrmContactsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all deals
@@ -513,13 +484,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCrmDealsResponse listCrmDeals(
-            ListCrmDealsRequest request) throws Exception {
+    public ListCrmDealsResponse listCrmDeals(ListCrmDealsRequest request) throws Exception {
         RequestOperation<ListCrmDealsRequest, ListCrmDealsResponse> operation
-              = new ListCrmDealsOperation( sdkConfiguration);
+              = new ListCrmDealsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all events
@@ -537,13 +506,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCrmEventsResponse listCrmEvents(
-            ListCrmEventsRequest request) throws Exception {
+    public ListCrmEventsResponse listCrmEvents(ListCrmEventsRequest request) throws Exception {
         RequestOperation<ListCrmEventsRequest, ListCrmEventsResponse> operation
-              = new ListCrmEventsOperation( sdkConfiguration);
+              = new ListCrmEventsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all leads
@@ -561,13 +528,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCrmLeadsResponse listCrmLeads(
-            ListCrmLeadsRequest request) throws Exception {
+    public ListCrmLeadsResponse listCrmLeads(ListCrmLeadsRequest request) throws Exception {
         RequestOperation<ListCrmLeadsRequest, ListCrmLeadsResponse> operation
-              = new ListCrmLeadsOperation( sdkConfiguration);
+              = new ListCrmLeadsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all pipelines
@@ -585,13 +550,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCrmPipelinesResponse listCrmPipelines(
-            ListCrmPipelinesRequest request) throws Exception {
+    public ListCrmPipelinesResponse listCrmPipelines(ListCrmPipelinesRequest request) throws Exception {
         RequestOperation<ListCrmPipelinesRequest, ListCrmPipelinesResponse> operation
-              = new ListCrmPipelinesOperation( sdkConfiguration);
+              = new ListCrmPipelinesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a company
@@ -609,13 +572,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchCrmCompanyResponse patchCrmCompany(
-            PatchCrmCompanyRequest request) throws Exception {
+    public PatchCrmCompanyResponse patchCrmCompany(PatchCrmCompanyRequest request) throws Exception {
         RequestOperation<PatchCrmCompanyRequest, PatchCrmCompanyResponse> operation
-              = new PatchCrmCompanyOperation( sdkConfiguration);
+              = new PatchCrmCompanyOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a contact
@@ -633,13 +594,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchCrmContactResponse patchCrmContact(
-            PatchCrmContactRequest request) throws Exception {
+    public PatchCrmContactResponse patchCrmContact(PatchCrmContactRequest request) throws Exception {
         RequestOperation<PatchCrmContactRequest, PatchCrmContactResponse> operation
-              = new PatchCrmContactOperation( sdkConfiguration);
+              = new PatchCrmContactOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a deal
@@ -657,13 +616,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchCrmDealResponse patchCrmDeal(
-            PatchCrmDealRequest request) throws Exception {
+    public PatchCrmDealResponse patchCrmDeal(PatchCrmDealRequest request) throws Exception {
         RequestOperation<PatchCrmDealRequest, PatchCrmDealResponse> operation
-              = new PatchCrmDealOperation( sdkConfiguration);
+              = new PatchCrmDealOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an event
@@ -681,13 +638,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchCrmEventResponse patchCrmEvent(
-            PatchCrmEventRequest request) throws Exception {
+    public PatchCrmEventResponse patchCrmEvent(PatchCrmEventRequest request) throws Exception {
         RequestOperation<PatchCrmEventRequest, PatchCrmEventResponse> operation
-              = new PatchCrmEventOperation( sdkConfiguration);
+              = new PatchCrmEventOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a lead
@@ -705,13 +660,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchCrmLeadResponse patchCrmLead(
-            PatchCrmLeadRequest request) throws Exception {
+    public PatchCrmLeadResponse patchCrmLead(PatchCrmLeadRequest request) throws Exception {
         RequestOperation<PatchCrmLeadRequest, PatchCrmLeadResponse> operation
-              = new PatchCrmLeadOperation( sdkConfiguration);
+              = new PatchCrmLeadOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a pipeline
@@ -729,13 +682,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchCrmPipelineResponse patchCrmPipeline(
-            PatchCrmPipelineRequest request) throws Exception {
+    public PatchCrmPipelineResponse patchCrmPipeline(PatchCrmPipelineRequest request) throws Exception {
         RequestOperation<PatchCrmPipelineRequest, PatchCrmPipelineResponse> operation
-              = new PatchCrmPipelineOperation( sdkConfiguration);
+              = new PatchCrmPipelineOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a company
@@ -753,13 +704,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveCrmCompanyResponse removeCrmCompany(
-            RemoveCrmCompanyRequest request) throws Exception {
+    public RemoveCrmCompanyResponse removeCrmCompany(RemoveCrmCompanyRequest request) throws Exception {
         RequestOperation<RemoveCrmCompanyRequest, RemoveCrmCompanyResponse> operation
-              = new RemoveCrmCompanyOperation( sdkConfiguration);
+              = new RemoveCrmCompanyOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a contact
@@ -777,13 +726,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveCrmContactResponse removeCrmContact(
-            RemoveCrmContactRequest request) throws Exception {
+    public RemoveCrmContactResponse removeCrmContact(RemoveCrmContactRequest request) throws Exception {
         RequestOperation<RemoveCrmContactRequest, RemoveCrmContactResponse> operation
-              = new RemoveCrmContactOperation( sdkConfiguration);
+              = new RemoveCrmContactOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a deal
@@ -801,13 +748,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveCrmDealResponse removeCrmDeal(
-            RemoveCrmDealRequest request) throws Exception {
+    public RemoveCrmDealResponse removeCrmDeal(RemoveCrmDealRequest request) throws Exception {
         RequestOperation<RemoveCrmDealRequest, RemoveCrmDealResponse> operation
-              = new RemoveCrmDealOperation( sdkConfiguration);
+              = new RemoveCrmDealOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove an event
@@ -825,13 +770,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveCrmEventResponse removeCrmEvent(
-            RemoveCrmEventRequest request) throws Exception {
+    public RemoveCrmEventResponse removeCrmEvent(RemoveCrmEventRequest request) throws Exception {
         RequestOperation<RemoveCrmEventRequest, RemoveCrmEventResponse> operation
-              = new RemoveCrmEventOperation( sdkConfiguration);
+              = new RemoveCrmEventOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a lead
@@ -849,13 +792,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveCrmLeadResponse removeCrmLead(
-            RemoveCrmLeadRequest request) throws Exception {
+    public RemoveCrmLeadResponse removeCrmLead(RemoveCrmLeadRequest request) throws Exception {
         RequestOperation<RemoveCrmLeadRequest, RemoveCrmLeadResponse> operation
-              = new RemoveCrmLeadOperation( sdkConfiguration);
+              = new RemoveCrmLeadOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a pipeline
@@ -873,13 +814,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveCrmPipelineResponse removeCrmPipeline(
-            RemoveCrmPipelineRequest request) throws Exception {
+    public RemoveCrmPipelineResponse removeCrmPipeline(RemoveCrmPipelineRequest request) throws Exception {
         RequestOperation<RemoveCrmPipelineRequest, RemoveCrmPipelineResponse> operation
-              = new RemoveCrmPipelineOperation( sdkConfiguration);
+              = new RemoveCrmPipelineOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a company
@@ -897,13 +836,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateCrmCompanyResponse updateCrmCompany(
-            UpdateCrmCompanyRequest request) throws Exception {
+    public UpdateCrmCompanyResponse updateCrmCompany(UpdateCrmCompanyRequest request) throws Exception {
         RequestOperation<UpdateCrmCompanyRequest, UpdateCrmCompanyResponse> operation
-              = new UpdateCrmCompanyOperation( sdkConfiguration);
+              = new UpdateCrmCompanyOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a contact
@@ -921,13 +858,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateCrmContactResponse updateCrmContact(
-            UpdateCrmContactRequest request) throws Exception {
+    public UpdateCrmContactResponse updateCrmContact(UpdateCrmContactRequest request) throws Exception {
         RequestOperation<UpdateCrmContactRequest, UpdateCrmContactResponse> operation
-              = new UpdateCrmContactOperation( sdkConfiguration);
+              = new UpdateCrmContactOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a deal
@@ -945,13 +880,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateCrmDealResponse updateCrmDeal(
-            UpdateCrmDealRequest request) throws Exception {
+    public UpdateCrmDealResponse updateCrmDeal(UpdateCrmDealRequest request) throws Exception {
         RequestOperation<UpdateCrmDealRequest, UpdateCrmDealResponse> operation
-              = new UpdateCrmDealOperation( sdkConfiguration);
+              = new UpdateCrmDealOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an event
@@ -969,13 +902,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateCrmEventResponse updateCrmEvent(
-            UpdateCrmEventRequest request) throws Exception {
+    public UpdateCrmEventResponse updateCrmEvent(UpdateCrmEventRequest request) throws Exception {
         RequestOperation<UpdateCrmEventRequest, UpdateCrmEventResponse> operation
-              = new UpdateCrmEventOperation( sdkConfiguration);
+              = new UpdateCrmEventOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a lead
@@ -993,13 +924,11 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateCrmLeadResponse updateCrmLead(
-            UpdateCrmLeadRequest request) throws Exception {
+    public UpdateCrmLeadResponse updateCrmLead(UpdateCrmLeadRequest request) throws Exception {
         RequestOperation<UpdateCrmLeadRequest, UpdateCrmLeadResponse> operation
-              = new UpdateCrmLeadOperation( sdkConfiguration);
+              = new UpdateCrmLeadOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a pipeline
@@ -1017,10 +946,9 @@ public class Crm {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateCrmPipelineResponse updateCrmPipeline(
-            UpdateCrmPipelineRequest request) throws Exception {
+    public UpdateCrmPipelineResponse updateCrmPipeline(UpdateCrmPipelineRequest request) throws Exception {
         RequestOperation<UpdateCrmPipelineRequest, UpdateCrmPipelineResponse> operation
-              = new UpdateCrmPipelineOperation( sdkConfiguration);
+              = new UpdateCrmPipelineOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

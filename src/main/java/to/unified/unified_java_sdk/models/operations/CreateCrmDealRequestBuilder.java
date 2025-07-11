@@ -28,7 +28,7 @@ public class CreateCrmDealRequestBuilder {
     public CreateCrmDealResponse call() throws Exception {
         
         RequestOperation<CreateCrmDealRequest, CreateCrmDealResponse> operation
-              = new CreateCrmDealOperation( sdkConfiguration);
+              = new CreateCrmDealOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

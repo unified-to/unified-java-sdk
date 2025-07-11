@@ -28,7 +28,7 @@ public class PatchRepoBranchRequestBuilder {
     public PatchRepoBranchResponse call() throws Exception {
         
         RequestOperation<PatchRepoBranchRequest, PatchRepoBranchResponse> operation
-              = new PatchRepoBranchOperation( sdkConfiguration);
+              = new PatchRepoBranchOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

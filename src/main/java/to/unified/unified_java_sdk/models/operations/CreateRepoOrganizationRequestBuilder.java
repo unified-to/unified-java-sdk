@@ -28,7 +28,7 @@ public class CreateRepoOrganizationRequestBuilder {
     public CreateRepoOrganizationResponse call() throws Exception {
         
         RequestOperation<CreateRepoOrganizationRequest, CreateRepoOrganizationResponse> operation
-              = new CreateRepoOrganizationOperation( sdkConfiguration);
+              = new CreateRepoOrganizationOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

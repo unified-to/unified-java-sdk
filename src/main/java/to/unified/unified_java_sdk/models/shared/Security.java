@@ -11,6 +11,7 @@ import to.unified.unified_java_sdk.utils.HasSecurity;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class Security implements HasSecurity {
 
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=authorization")
@@ -28,9 +29,10 @@ public class Security implements HasSecurity {
         return jwt;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public Security withJwt(String jwt) {
         Utils.checkNotNull(jwt, "jwt");
@@ -38,7 +40,6 @@ public class Security implements HasSecurity {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -63,24 +64,28 @@ public class Security implements HasSecurity {
         return Utils.toString(Security.class,
                 "jwt", jwt);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private String jwt;
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder jwt(String jwt) {
             Utils.checkNotNull(jwt, "jwt");
             this.jwt = jwt;
             return this;
         }
-        
+
         public Security build() {
+
             return new Security(
                 jwt);
         }
+
     }
 }

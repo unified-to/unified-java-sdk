@@ -17,34 +17,42 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class RepoCommit {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branch_id")
     private Optional<String> branchId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     private Optional<String> message;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonProperty("repo_id")
     private String repoId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
+
 
     @JsonProperty("user_id")
     private String userId;
@@ -80,7 +88,9 @@ public class RepoCommit {
     public RepoCommit(
             String repoId,
             String userId) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), repoId, Optional.empty(), userId);
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), repoId,
+            Optional.empty(), userId);
     }
 
     @JsonIgnore
@@ -124,15 +134,17 @@ public class RepoCommit {
         return userId;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public RepoCommit withBranchId(String branchId) {
         Utils.checkNotNull(branchId, "branchId");
         this.branchId = Optional.ofNullable(branchId);
         return this;
     }
+
 
     public RepoCommit withBranchId(Optional<String> branchId) {
         Utils.checkNotNull(branchId, "branchId");
@@ -146,6 +158,7 @@ public class RepoCommit {
         return this;
     }
 
+
     public RepoCommit withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
@@ -157,6 +170,7 @@ public class RepoCommit {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public RepoCommit withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -170,6 +184,7 @@ public class RepoCommit {
         return this;
     }
 
+
     public RepoCommit withMessage(Optional<String> message) {
         Utils.checkNotNull(message, "message");
         this.message = message;
@@ -181,6 +196,7 @@ public class RepoCommit {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public RepoCommit withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -200,6 +216,7 @@ public class RepoCommit {
         return this;
     }
 
+
     public RepoCommit withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
@@ -212,7 +229,6 @@ public class RepoCommit {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -236,14 +252,9 @@ public class RepoCommit {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            branchId,
-            createdAt,
-            id,
-            message,
-            raw,
-            repoId,
-            updatedAt,
-            userId);
+            branchId, createdAt, id,
+            message, raw, repoId,
+            updatedAt, userId);
     }
     
     @Override
@@ -258,28 +269,30 @@ public class RepoCommit {
                 "updatedAt", updatedAt,
                 "userId", userId);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> branchId = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> message = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private String repoId;
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private String userId;
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder branchId(String branchId) {
             Utils.checkNotNull(branchId, "branchId");
@@ -293,6 +306,7 @@ public class RepoCommit {
             return this;
         }
 
+
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
@@ -304,6 +318,7 @@ public class RepoCommit {
             this.createdAt = createdAt;
             return this;
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -317,6 +332,7 @@ public class RepoCommit {
             return this;
         }
 
+
         public Builder message(String message) {
             Utils.checkNotNull(message, "message");
             this.message = Optional.ofNullable(message);
@@ -328,6 +344,7 @@ public class RepoCommit {
             this.message = message;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -341,11 +358,13 @@ public class RepoCommit {
             return this;
         }
 
+
         public Builder repoId(String repoId) {
             Utils.checkNotNull(repoId, "repoId");
             this.repoId = repoId;
             return this;
         }
+
 
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
@@ -359,22 +378,20 @@ public class RepoCommit {
             return this;
         }
 
+
         public Builder userId(String userId) {
             Utils.checkNotNull(userId, "userId");
             this.userId = userId;
             return this;
         }
-        
+
         public RepoCommit build() {
+
             return new RepoCommit(
-                branchId,
-                createdAt,
-                id,
-                message,
-                raw,
-                repoId,
-                updatedAt,
-                userId);
+                branchId, createdAt, id,
+                message, raw, repoId,
+                updatedAt, userId);
         }
+
     }
 }

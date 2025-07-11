@@ -40,7 +40,6 @@ public class Scorecard {
     Scorecard(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a scorecard
      * 
@@ -57,13 +56,11 @@ public class Scorecard {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAtsScorecardResponse createAtsScorecard(
-            CreateAtsScorecardRequest request) throws Exception {
+    public CreateAtsScorecardResponse createAtsScorecard(CreateAtsScorecardRequest request) throws Exception {
         RequestOperation<CreateAtsScorecardRequest, CreateAtsScorecardResponse> operation
-              = new CreateAtsScorecardOperation( sdkConfiguration);
+              = new CreateAtsScorecardOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a scorecard
@@ -81,13 +78,11 @@ public class Scorecard {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAtsScorecardResponse getAtsScorecard(
-            GetAtsScorecardRequest request) throws Exception {
+    public GetAtsScorecardResponse getAtsScorecard(GetAtsScorecardRequest request) throws Exception {
         RequestOperation<GetAtsScorecardRequest, GetAtsScorecardResponse> operation
-              = new GetAtsScorecardOperation( sdkConfiguration);
+              = new GetAtsScorecardOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all scorecards
@@ -105,13 +100,11 @@ public class Scorecard {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAtsScorecardsResponse listAtsScorecards(
-            ListAtsScorecardsRequest request) throws Exception {
+    public ListAtsScorecardsResponse listAtsScorecards(ListAtsScorecardsRequest request) throws Exception {
         RequestOperation<ListAtsScorecardsRequest, ListAtsScorecardsResponse> operation
-              = new ListAtsScorecardsOperation( sdkConfiguration);
+              = new ListAtsScorecardsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a scorecard
@@ -129,13 +122,11 @@ public class Scorecard {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAtsScorecardResponse patchAtsScorecard(
-            PatchAtsScorecardRequest request) throws Exception {
+    public PatchAtsScorecardResponse patchAtsScorecard(PatchAtsScorecardRequest request) throws Exception {
         RequestOperation<PatchAtsScorecardRequest, PatchAtsScorecardResponse> operation
-              = new PatchAtsScorecardOperation( sdkConfiguration);
+              = new PatchAtsScorecardOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a scorecard
@@ -153,13 +144,11 @@ public class Scorecard {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAtsScorecardResponse removeAtsScorecard(
-            RemoveAtsScorecardRequest request) throws Exception {
+    public RemoveAtsScorecardResponse removeAtsScorecard(RemoveAtsScorecardRequest request) throws Exception {
         RequestOperation<RemoveAtsScorecardRequest, RemoveAtsScorecardResponse> operation
-              = new RemoveAtsScorecardOperation( sdkConfiguration);
+              = new RemoveAtsScorecardOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a scorecard
@@ -177,10 +166,9 @@ public class Scorecard {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAtsScorecardResponse updateAtsScorecard(
-            UpdateAtsScorecardRequest request) throws Exception {
+    public UpdateAtsScorecardResponse updateAtsScorecard(UpdateAtsScorecardRequest request) throws Exception {
         RequestOperation<UpdateAtsScorecardRequest, UpdateAtsScorecardResponse> operation
-              = new UpdateAtsScorecardOperation( sdkConfiguration);
+              = new UpdateAtsScorecardOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

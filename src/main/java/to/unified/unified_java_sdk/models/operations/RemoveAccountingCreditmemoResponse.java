@@ -15,12 +15,13 @@ import java.util.Map;
 import to.unified.unified_java_sdk.utils.Response;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class RemoveAccountingCreditmemoResponse implements Response {
 
+public class RemoveAccountingCreditmemoResponse implements Response {
     /**
      * HTTP response content type for this operation
      */
     private String contentType;
+
 
     private Map<String, List<String>> headers;
 
@@ -42,6 +43,7 @@ public class RemoveAccountingCreditmemoResponse implements Response {
             HttpResponse<InputStream> rawResponse) {
         Utils.checkNotNull(contentType, "contentType");
         headers = Utils.emptyMapIfNull(headers);
+        Utils.checkNotNull(headers, "headers");
         Utils.checkNotNull(statusCode, "statusCode");
         Utils.checkNotNull(rawResponse, "rawResponse");
         this.contentType = contentType;
@@ -79,9 +81,10 @@ public class RemoveAccountingCreditmemoResponse implements Response {
         return rawResponse;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * HTTP response content type for this operation
@@ -116,7 +119,6 @@ public class RemoveAccountingCreditmemoResponse implements Response {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -136,9 +138,7 @@ public class RemoveAccountingCreditmemoResponse implements Response {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            contentType,
-            headers,
-            statusCode,
+            contentType, headers, statusCode,
             rawResponse);
     }
     
@@ -150,20 +150,22 @@ public class RemoveAccountingCreditmemoResponse implements Response {
                 "statusCode", statusCode,
                 "rawResponse", rawResponse);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private String contentType;
- 
+
         private Map<String, List<String>> headers;
- 
+
         private Integer statusCode;
- 
+
         private HttpResponse<InputStream> rawResponse;
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * HTTP response content type for this operation
@@ -174,11 +176,13 @@ public class RemoveAccountingCreditmemoResponse implements Response {
             return this;
         }
 
+
         public Builder headers(Map<String, List<String>> headers) {
             Utils.checkNotNull(headers, "headers");
             this.headers = headers;
             return this;
         }
+
 
         /**
          * HTTP response status code for this operation
@@ -189,6 +193,7 @@ public class RemoveAccountingCreditmemoResponse implements Response {
             return this;
         }
 
+
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
@@ -197,13 +202,13 @@ public class RemoveAccountingCreditmemoResponse implements Response {
             this.rawResponse = rawResponse;
             return this;
         }
-        
+
         public RemoveAccountingCreditmemoResponse build() {
+
             return new RemoveAccountingCreditmemoResponse(
-                contentType,
-                headers,
-                statusCode,
+                contentType, headers, statusCode,
                 rawResponse);
         }
+
     }
 }

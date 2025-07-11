@@ -40,7 +40,6 @@ public class Repository {
     Repository(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a repository
      * 
@@ -57,13 +56,11 @@ public class Repository {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateRepoRepositoryResponse createRepoRepository(
-            CreateRepoRepositoryRequest request) throws Exception {
+    public CreateRepoRepositoryResponse createRepoRepository(CreateRepoRepositoryRequest request) throws Exception {
         RequestOperation<CreateRepoRepositoryRequest, CreateRepoRepositoryResponse> operation
-              = new CreateRepoRepositoryOperation( sdkConfiguration);
+              = new CreateRepoRepositoryOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a repository
@@ -81,13 +78,11 @@ public class Repository {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetRepoRepositoryResponse getRepoRepository(
-            GetRepoRepositoryRequest request) throws Exception {
+    public GetRepoRepositoryResponse getRepoRepository(GetRepoRepositoryRequest request) throws Exception {
         RequestOperation<GetRepoRepositoryRequest, GetRepoRepositoryResponse> operation
-              = new GetRepoRepositoryOperation( sdkConfiguration);
+              = new GetRepoRepositoryOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all repositories
@@ -105,13 +100,11 @@ public class Repository {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListRepoRepositoriesResponse listRepoRepositories(
-            ListRepoRepositoriesRequest request) throws Exception {
+    public ListRepoRepositoriesResponse listRepoRepositories(ListRepoRepositoriesRequest request) throws Exception {
         RequestOperation<ListRepoRepositoriesRequest, ListRepoRepositoriesResponse> operation
-              = new ListRepoRepositoriesOperation( sdkConfiguration);
+              = new ListRepoRepositoriesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a repository
@@ -129,13 +122,11 @@ public class Repository {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchRepoRepositoryResponse patchRepoRepository(
-            PatchRepoRepositoryRequest request) throws Exception {
+    public PatchRepoRepositoryResponse patchRepoRepository(PatchRepoRepositoryRequest request) throws Exception {
         RequestOperation<PatchRepoRepositoryRequest, PatchRepoRepositoryResponse> operation
-              = new PatchRepoRepositoryOperation( sdkConfiguration);
+              = new PatchRepoRepositoryOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a repository
@@ -153,13 +144,11 @@ public class Repository {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveRepoRepositoryResponse removeRepoRepository(
-            RemoveRepoRepositoryRequest request) throws Exception {
+    public RemoveRepoRepositoryResponse removeRepoRepository(RemoveRepoRepositoryRequest request) throws Exception {
         RequestOperation<RemoveRepoRepositoryRequest, RemoveRepoRepositoryResponse> operation
-              = new RemoveRepoRepositoryOperation( sdkConfiguration);
+              = new RemoveRepoRepositoryOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a repository
@@ -177,10 +166,9 @@ public class Repository {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateRepoRepositoryResponse updateRepoRepository(
-            UpdateRepoRepositoryRequest request) throws Exception {
+    public UpdateRepoRepositoryResponse updateRepoRepository(UpdateRepoRepositoryRequest request) throws Exception {
         RequestOperation<UpdateRepoRepositoryRequest, UpdateRepoRepositoryResponse> operation
-              = new UpdateRepoRepositoryOperation( sdkConfiguration);
+              = new UpdateRepoRepositoryOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

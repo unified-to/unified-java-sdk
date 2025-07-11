@@ -40,7 +40,6 @@ public class Device {
     Device(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a device
      * 
@@ -57,13 +56,11 @@ public class Device {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateHrisDeviceResponse createHrisDevice(
-            CreateHrisDeviceRequest request) throws Exception {
+    public CreateHrisDeviceResponse createHrisDevice(CreateHrisDeviceRequest request) throws Exception {
         RequestOperation<CreateHrisDeviceRequest, CreateHrisDeviceResponse> operation
-              = new CreateHrisDeviceOperation( sdkConfiguration);
+              = new CreateHrisDeviceOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a device
@@ -81,13 +78,11 @@ public class Device {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetHrisDeviceResponse getHrisDevice(
-            GetHrisDeviceRequest request) throws Exception {
+    public GetHrisDeviceResponse getHrisDevice(GetHrisDeviceRequest request) throws Exception {
         RequestOperation<GetHrisDeviceRequest, GetHrisDeviceResponse> operation
-              = new GetHrisDeviceOperation( sdkConfiguration);
+              = new GetHrisDeviceOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all devices
@@ -105,13 +100,11 @@ public class Device {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListHrisDevicesResponse listHrisDevices(
-            ListHrisDevicesRequest request) throws Exception {
+    public ListHrisDevicesResponse listHrisDevices(ListHrisDevicesRequest request) throws Exception {
         RequestOperation<ListHrisDevicesRequest, ListHrisDevicesResponse> operation
-              = new ListHrisDevicesOperation( sdkConfiguration);
+              = new ListHrisDevicesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a device
@@ -129,13 +122,11 @@ public class Device {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchHrisDeviceResponse patchHrisDevice(
-            PatchHrisDeviceRequest request) throws Exception {
+    public PatchHrisDeviceResponse patchHrisDevice(PatchHrisDeviceRequest request) throws Exception {
         RequestOperation<PatchHrisDeviceRequest, PatchHrisDeviceResponse> operation
-              = new PatchHrisDeviceOperation( sdkConfiguration);
+              = new PatchHrisDeviceOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a device
@@ -153,13 +144,11 @@ public class Device {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveHrisDeviceResponse removeHrisDevice(
-            RemoveHrisDeviceRequest request) throws Exception {
+    public RemoveHrisDeviceResponse removeHrisDevice(RemoveHrisDeviceRequest request) throws Exception {
         RequestOperation<RemoveHrisDeviceRequest, RemoveHrisDeviceResponse> operation
-              = new RemoveHrisDeviceOperation( sdkConfiguration);
+              = new RemoveHrisDeviceOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a device
@@ -177,10 +166,9 @@ public class Device {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateHrisDeviceResponse updateHrisDevice(
-            UpdateHrisDeviceRequest request) throws Exception {
+    public UpdateHrisDeviceResponse updateHrisDevice(UpdateHrisDeviceRequest request) throws Exception {
         RequestOperation<UpdateHrisDeviceRequest, UpdateHrisDeviceResponse> operation
-              = new UpdateHrisDeviceOperation( sdkConfiguration);
+              = new UpdateHrisDeviceOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

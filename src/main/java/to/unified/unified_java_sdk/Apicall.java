@@ -24,7 +24,6 @@ public class Apicall {
     Apicall(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Retrieve specific API Call by its ID
      * 
@@ -41,13 +40,11 @@ public class Apicall {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetUnifiedApicallResponse getUnifiedApicall(
-            GetUnifiedApicallRequest request) throws Exception {
+    public GetUnifiedApicallResponse getUnifiedApicall(GetUnifiedApicallRequest request) throws Exception {
         RequestOperation<GetUnifiedApicallRequest, GetUnifiedApicallResponse> operation
-              = new GetUnifiedApicallOperation( sdkConfiguration);
+              = new GetUnifiedApicallOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Returns API Calls
@@ -65,10 +62,9 @@ public class Apicall {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListUnifiedApicallsResponse listUnifiedApicalls(
-            ListUnifiedApicallsRequest request) throws Exception {
+    public ListUnifiedApicallsResponse listUnifiedApicalls(ListUnifiedApicallsRequest request) throws Exception {
         RequestOperation<ListUnifiedApicallsRequest, ListUnifiedApicallsResponse> operation
-              = new ListUnifiedApicallsOperation( sdkConfiguration);
+              = new ListUnifiedApicallsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

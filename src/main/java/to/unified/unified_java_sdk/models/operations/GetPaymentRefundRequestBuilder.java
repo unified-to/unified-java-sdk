@@ -28,7 +28,7 @@ public class GetPaymentRefundRequestBuilder {
     public GetPaymentRefundResponse call() throws Exception {
         
         RequestOperation<GetPaymentRefundRequest, GetPaymentRefundResponse> operation
-              = new GetPaymentRefundOperation( sdkConfiguration);
+              = new GetPaymentRefundOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

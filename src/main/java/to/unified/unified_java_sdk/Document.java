@@ -40,7 +40,6 @@ public class Document {
     Document(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a document
      * 
@@ -57,13 +56,11 @@ public class Document {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAtsDocumentResponse createAtsDocument(
-            CreateAtsDocumentRequest request) throws Exception {
+    public CreateAtsDocumentResponse createAtsDocument(CreateAtsDocumentRequest request) throws Exception {
         RequestOperation<CreateAtsDocumentRequest, CreateAtsDocumentResponse> operation
-              = new CreateAtsDocumentOperation( sdkConfiguration);
+              = new CreateAtsDocumentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a document
@@ -81,13 +78,11 @@ public class Document {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAtsDocumentResponse getAtsDocument(
-            GetAtsDocumentRequest request) throws Exception {
+    public GetAtsDocumentResponse getAtsDocument(GetAtsDocumentRequest request) throws Exception {
         RequestOperation<GetAtsDocumentRequest, GetAtsDocumentResponse> operation
-              = new GetAtsDocumentOperation( sdkConfiguration);
+              = new GetAtsDocumentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all documents
@@ -105,13 +100,11 @@ public class Document {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAtsDocumentsResponse listAtsDocuments(
-            ListAtsDocumentsRequest request) throws Exception {
+    public ListAtsDocumentsResponse listAtsDocuments(ListAtsDocumentsRequest request) throws Exception {
         RequestOperation<ListAtsDocumentsRequest, ListAtsDocumentsResponse> operation
-              = new ListAtsDocumentsOperation( sdkConfiguration);
+              = new ListAtsDocumentsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a document
@@ -129,13 +122,11 @@ public class Document {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAtsDocumentResponse patchAtsDocument(
-            PatchAtsDocumentRequest request) throws Exception {
+    public PatchAtsDocumentResponse patchAtsDocument(PatchAtsDocumentRequest request) throws Exception {
         RequestOperation<PatchAtsDocumentRequest, PatchAtsDocumentResponse> operation
-              = new PatchAtsDocumentOperation( sdkConfiguration);
+              = new PatchAtsDocumentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a document
@@ -153,13 +144,11 @@ public class Document {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAtsDocumentResponse removeAtsDocument(
-            RemoveAtsDocumentRequest request) throws Exception {
+    public RemoveAtsDocumentResponse removeAtsDocument(RemoveAtsDocumentRequest request) throws Exception {
         RequestOperation<RemoveAtsDocumentRequest, RemoveAtsDocumentResponse> operation
-              = new RemoveAtsDocumentOperation( sdkConfiguration);
+              = new RemoveAtsDocumentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a document
@@ -177,10 +166,9 @@ public class Document {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAtsDocumentResponse updateAtsDocument(
-            UpdateAtsDocumentRequest request) throws Exception {
+    public UpdateAtsDocumentResponse updateAtsDocument(UpdateAtsDocumentRequest request) throws Exception {
         RequestOperation<UpdateAtsDocumentRequest, UpdateAtsDocumentResponse> operation
-              = new UpdateAtsDocumentOperation( sdkConfiguration);
+              = new UpdateAtsDocumentOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -19,15 +19,18 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class MessagingMessage {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachments")
     private Optional<? extends List<MessagingAttachment>> attachments;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author_member")
     private Optional<? extends PropertyMessagingMessageAuthorMember> authorMember;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel_id")
@@ -40,69 +43,86 @@ public class MessagingMessage {
     @JsonProperty("channel_ids")
     private Optional<? extends List<String>> channelIds;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination_members")
     private Optional<? extends List<MessagingMember>> destinationMembers;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_children")
     private Optional<Boolean> hasChildren;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hidden_members")
     private Optional<? extends List<MessagingMember>> hiddenMembers;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mentioned_members")
     private Optional<? extends List<MessagingMember>> mentionedMembers;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     private Optional<String> message;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message_html")
     private Optional<String> messageHtml;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message_markdown")
     private Optional<String> messageMarkdown;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_message_id")
     private Optional<String> parentMessageId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reactions")
     private Optional<? extends List<MessagingReaction>> reactions;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     private Optional<String> reference;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("root_message_id")
     private Optional<String> rootMessageId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject")
     private Optional<String> subject;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web_url")
@@ -176,7 +196,13 @@ public class MessagingMessage {
     }
     
     public MessagingMessage() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -295,15 +321,17 @@ public class MessagingMessage {
         return webUrl;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public MessagingMessage withAttachments(List<MessagingAttachment> attachments) {
         Utils.checkNotNull(attachments, "attachments");
         this.attachments = Optional.ofNullable(attachments);
         return this;
     }
+
 
     public MessagingMessage withAttachments(Optional<? extends List<MessagingAttachment>> attachments) {
         Utils.checkNotNull(attachments, "attachments");
@@ -317,6 +345,7 @@ public class MessagingMessage {
         return this;
     }
 
+
     public MessagingMessage withAuthorMember(Optional<? extends PropertyMessagingMessageAuthorMember> authorMember) {
         Utils.checkNotNull(authorMember, "authorMember");
         this.authorMember = authorMember;
@@ -328,6 +357,7 @@ public class MessagingMessage {
         this.channelId = Optional.ofNullable(channelId);
         return this;
     }
+
 
     public MessagingMessage withChannelId(Optional<String> channelId) {
         Utils.checkNotNull(channelId, "channelId");
@@ -344,6 +374,7 @@ public class MessagingMessage {
         return this;
     }
 
+
     /**
      * Represents the IDs of all channels to which the message is sent. Identifies the channels where the message is posted.
      */
@@ -359,6 +390,7 @@ public class MessagingMessage {
         return this;
     }
 
+
     public MessagingMessage withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
@@ -370,6 +402,7 @@ public class MessagingMessage {
         this.destinationMembers = Optional.ofNullable(destinationMembers);
         return this;
     }
+
 
     public MessagingMessage withDestinationMembers(Optional<? extends List<MessagingMember>> destinationMembers) {
         Utils.checkNotNull(destinationMembers, "destinationMembers");
@@ -383,6 +416,7 @@ public class MessagingMessage {
         return this;
     }
 
+
     public MessagingMessage withHasChildren(Optional<Boolean> hasChildren) {
         Utils.checkNotNull(hasChildren, "hasChildren");
         this.hasChildren = hasChildren;
@@ -394,6 +428,7 @@ public class MessagingMessage {
         this.hiddenMembers = Optional.ofNullable(hiddenMembers);
         return this;
     }
+
 
     public MessagingMessage withHiddenMembers(Optional<? extends List<MessagingMember>> hiddenMembers) {
         Utils.checkNotNull(hiddenMembers, "hiddenMembers");
@@ -407,6 +442,7 @@ public class MessagingMessage {
         return this;
     }
 
+
     public MessagingMessage withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -418,6 +454,7 @@ public class MessagingMessage {
         this.mentionedMembers = Optional.ofNullable(mentionedMembers);
         return this;
     }
+
 
     public MessagingMessage withMentionedMembers(Optional<? extends List<MessagingMember>> mentionedMembers) {
         Utils.checkNotNull(mentionedMembers, "mentionedMembers");
@@ -431,6 +468,7 @@ public class MessagingMessage {
         return this;
     }
 
+
     public MessagingMessage withMessage(Optional<String> message) {
         Utils.checkNotNull(message, "message");
         this.message = message;
@@ -442,6 +480,7 @@ public class MessagingMessage {
         this.messageHtml = Optional.ofNullable(messageHtml);
         return this;
     }
+
 
     public MessagingMessage withMessageHtml(Optional<String> messageHtml) {
         Utils.checkNotNull(messageHtml, "messageHtml");
@@ -455,6 +494,7 @@ public class MessagingMessage {
         return this;
     }
 
+
     public MessagingMessage withMessageMarkdown(Optional<String> messageMarkdown) {
         Utils.checkNotNull(messageMarkdown, "messageMarkdown");
         this.messageMarkdown = messageMarkdown;
@@ -466,6 +506,7 @@ public class MessagingMessage {
         this.parentMessageId = Optional.ofNullable(parentMessageId);
         return this;
     }
+
 
     public MessagingMessage withParentMessageId(Optional<String> parentMessageId) {
         Utils.checkNotNull(parentMessageId, "parentMessageId");
@@ -479,6 +520,7 @@ public class MessagingMessage {
         return this;
     }
 
+
     public MessagingMessage withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
@@ -490,6 +532,7 @@ public class MessagingMessage {
         this.reactions = Optional.ofNullable(reactions);
         return this;
     }
+
 
     public MessagingMessage withReactions(Optional<? extends List<MessagingReaction>> reactions) {
         Utils.checkNotNull(reactions, "reactions");
@@ -503,6 +546,7 @@ public class MessagingMessage {
         return this;
     }
 
+
     public MessagingMessage withReference(Optional<String> reference) {
         Utils.checkNotNull(reference, "reference");
         this.reference = reference;
@@ -514,6 +558,7 @@ public class MessagingMessage {
         this.rootMessageId = Optional.ofNullable(rootMessageId);
         return this;
     }
+
 
     public MessagingMessage withRootMessageId(Optional<String> rootMessageId) {
         Utils.checkNotNull(rootMessageId, "rootMessageId");
@@ -527,6 +572,7 @@ public class MessagingMessage {
         return this;
     }
 
+
     public MessagingMessage withSubject(Optional<String> subject) {
         Utils.checkNotNull(subject, "subject");
         this.subject = subject;
@@ -538,6 +584,7 @@ public class MessagingMessage {
         this.updatedAt = Optional.ofNullable(updatedAt);
         return this;
     }
+
 
     public MessagingMessage withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
@@ -551,13 +598,13 @@ public class MessagingMessage {
         return this;
     }
 
+
     public MessagingMessage withWebUrl(Optional<String> webUrl) {
         Utils.checkNotNull(webUrl, "webUrl");
         this.webUrl = webUrl;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -594,27 +641,13 @@ public class MessagingMessage {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            attachments,
-            authorMember,
-            channelId,
-            channelIds,
-            createdAt,
-            destinationMembers,
-            hasChildren,
-            hiddenMembers,
-            id,
-            mentionedMembers,
-            message,
-            messageHtml,
-            messageMarkdown,
-            parentMessageId,
-            raw,
-            reactions,
-            reference,
-            rootMessageId,
-            subject,
-            updatedAt,
-            webUrl);
+            attachments, authorMember, channelId,
+            channelIds, createdAt, destinationMembers,
+            hasChildren, hiddenMembers, id,
+            mentionedMembers, message, messageHtml,
+            messageMarkdown, parentMessageId, raw,
+            reactions, reference, rootMessageId,
+            subject, updatedAt, webUrl);
     }
     
     @Override
@@ -642,54 +675,56 @@ public class MessagingMessage {
                 "updatedAt", updatedAt,
                 "webUrl", webUrl);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<? extends List<MessagingAttachment>> attachments = Optional.empty();
- 
+
         private Optional<? extends PropertyMessagingMessageAuthorMember> authorMember = Optional.empty();
- 
+
         private Optional<String> channelId = Optional.empty();
- 
+
         private Optional<? extends List<String>> channelIds = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<? extends List<MessagingMember>> destinationMembers = Optional.empty();
- 
+
         private Optional<Boolean> hasChildren = Optional.empty();
- 
+
         private Optional<? extends List<MessagingMember>> hiddenMembers = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<? extends List<MessagingMember>> mentionedMembers = Optional.empty();
- 
+
         private Optional<String> message = Optional.empty();
- 
+
         private Optional<String> messageHtml = Optional.empty();
- 
+
         private Optional<String> messageMarkdown = Optional.empty();
- 
+
         private Optional<String> parentMessageId = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<? extends List<MessagingReaction>> reactions = Optional.empty();
- 
+
         private Optional<String> reference = Optional.empty();
- 
+
         private Optional<String> rootMessageId = Optional.empty();
- 
+
         private Optional<String> subject = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<String> webUrl = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder attachments(List<MessagingAttachment> attachments) {
             Utils.checkNotNull(attachments, "attachments");
@@ -703,6 +738,7 @@ public class MessagingMessage {
             return this;
         }
 
+
         public Builder authorMember(PropertyMessagingMessageAuthorMember authorMember) {
             Utils.checkNotNull(authorMember, "authorMember");
             this.authorMember = Optional.ofNullable(authorMember);
@@ -715,6 +751,7 @@ public class MessagingMessage {
             return this;
         }
 
+
         public Builder channelId(String channelId) {
             Utils.checkNotNull(channelId, "channelId");
             this.channelId = Optional.ofNullable(channelId);
@@ -726,6 +763,7 @@ public class MessagingMessage {
             this.channelId = channelId;
             return this;
         }
+
 
         /**
          * Represents the IDs of all channels to which the message is sent. Identifies the channels where the message is posted.
@@ -745,6 +783,7 @@ public class MessagingMessage {
             return this;
         }
 
+
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
@@ -756,6 +795,7 @@ public class MessagingMessage {
             this.createdAt = createdAt;
             return this;
         }
+
 
         public Builder destinationMembers(List<MessagingMember> destinationMembers) {
             Utils.checkNotNull(destinationMembers, "destinationMembers");
@@ -769,6 +809,7 @@ public class MessagingMessage {
             return this;
         }
 
+
         public Builder hasChildren(boolean hasChildren) {
             Utils.checkNotNull(hasChildren, "hasChildren");
             this.hasChildren = Optional.ofNullable(hasChildren);
@@ -780,6 +821,7 @@ public class MessagingMessage {
             this.hasChildren = hasChildren;
             return this;
         }
+
 
         public Builder hiddenMembers(List<MessagingMember> hiddenMembers) {
             Utils.checkNotNull(hiddenMembers, "hiddenMembers");
@@ -793,6 +835,7 @@ public class MessagingMessage {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -804,6 +847,7 @@ public class MessagingMessage {
             this.id = id;
             return this;
         }
+
 
         public Builder mentionedMembers(List<MessagingMember> mentionedMembers) {
             Utils.checkNotNull(mentionedMembers, "mentionedMembers");
@@ -817,6 +861,7 @@ public class MessagingMessage {
             return this;
         }
 
+
         public Builder message(String message) {
             Utils.checkNotNull(message, "message");
             this.message = Optional.ofNullable(message);
@@ -828,6 +873,7 @@ public class MessagingMessage {
             this.message = message;
             return this;
         }
+
 
         public Builder messageHtml(String messageHtml) {
             Utils.checkNotNull(messageHtml, "messageHtml");
@@ -841,6 +887,7 @@ public class MessagingMessage {
             return this;
         }
 
+
         public Builder messageMarkdown(String messageMarkdown) {
             Utils.checkNotNull(messageMarkdown, "messageMarkdown");
             this.messageMarkdown = Optional.ofNullable(messageMarkdown);
@@ -852,6 +899,7 @@ public class MessagingMessage {
             this.messageMarkdown = messageMarkdown;
             return this;
         }
+
 
         public Builder parentMessageId(String parentMessageId) {
             Utils.checkNotNull(parentMessageId, "parentMessageId");
@@ -865,6 +913,7 @@ public class MessagingMessage {
             return this;
         }
 
+
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
@@ -876,6 +925,7 @@ public class MessagingMessage {
             this.raw = raw;
             return this;
         }
+
 
         public Builder reactions(List<MessagingReaction> reactions) {
             Utils.checkNotNull(reactions, "reactions");
@@ -889,6 +939,7 @@ public class MessagingMessage {
             return this;
         }
 
+
         public Builder reference(String reference) {
             Utils.checkNotNull(reference, "reference");
             this.reference = Optional.ofNullable(reference);
@@ -900,6 +951,7 @@ public class MessagingMessage {
             this.reference = reference;
             return this;
         }
+
 
         public Builder rootMessageId(String rootMessageId) {
             Utils.checkNotNull(rootMessageId, "rootMessageId");
@@ -913,6 +965,7 @@ public class MessagingMessage {
             return this;
         }
 
+
         public Builder subject(String subject) {
             Utils.checkNotNull(subject, "subject");
             this.subject = Optional.ofNullable(subject);
@@ -924,6 +977,7 @@ public class MessagingMessage {
             this.subject = subject;
             return this;
         }
+
 
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
@@ -937,6 +991,7 @@ public class MessagingMessage {
             return this;
         }
 
+
         public Builder webUrl(String webUrl) {
             Utils.checkNotNull(webUrl, "webUrl");
             this.webUrl = Optional.ofNullable(webUrl);
@@ -948,30 +1003,18 @@ public class MessagingMessage {
             this.webUrl = webUrl;
             return this;
         }
-        
+
         public MessagingMessage build() {
+
             return new MessagingMessage(
-                attachments,
-                authorMember,
-                channelId,
-                channelIds,
-                createdAt,
-                destinationMembers,
-                hasChildren,
-                hiddenMembers,
-                id,
-                mentionedMembers,
-                message,
-                messageHtml,
-                messageMarkdown,
-                parentMessageId,
-                raw,
-                reactions,
-                reference,
-                rootMessageId,
-                subject,
-                updatedAt,
-                webUrl);
+                attachments, authorMember, channelId,
+                channelIds, createdAt, destinationMembers,
+                hasChildren, hiddenMembers, id,
+                mentionedMembers, message, messageHtml,
+                messageMarkdown, parentMessageId, raw,
+                reactions, reference, rootMessageId,
+                subject, updatedAt, webUrl);
         }
+
     }
 }

@@ -28,7 +28,7 @@ public class GetAccountingCreditmemoRequestBuilder {
     public GetAccountingCreditmemoResponse call() throws Exception {
         
         RequestOperation<GetAccountingCreditmemoRequest, GetAccountingCreditmemoResponse> operation
-              = new GetAccountingCreditmemoOperation( sdkConfiguration);
+              = new GetAccountingCreditmemoOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

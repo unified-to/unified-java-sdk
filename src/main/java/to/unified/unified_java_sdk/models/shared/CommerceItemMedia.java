@@ -16,34 +16,42 @@ import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class CommerceItemMedia {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alt")
     private Optional<String> alt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     private Optional<Double> height;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     private Optional<? extends List<CommerceMetadata>> metadata;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     private Optional<Double> position;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private Optional<? extends CommerceItemMediaType> type;
 
+
     @JsonProperty("url")
     private String url;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
@@ -79,7 +87,9 @@ public class CommerceItemMedia {
     
     public CommerceItemMedia(
             String url) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), url, Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            url, Optional.empty());
     }
 
     @JsonIgnore
@@ -124,15 +134,17 @@ public class CommerceItemMedia {
         return width;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public CommerceItemMedia withAlt(String alt) {
         Utils.checkNotNull(alt, "alt");
         this.alt = Optional.ofNullable(alt);
         return this;
     }
+
 
     public CommerceItemMedia withAlt(Optional<String> alt) {
         Utils.checkNotNull(alt, "alt");
@@ -146,6 +158,7 @@ public class CommerceItemMedia {
         return this;
     }
 
+
     public CommerceItemMedia withHeight(Optional<Double> height) {
         Utils.checkNotNull(height, "height");
         this.height = height;
@@ -157,6 +170,7 @@ public class CommerceItemMedia {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public CommerceItemMedia withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -170,6 +184,7 @@ public class CommerceItemMedia {
         return this;
     }
 
+
     public CommerceItemMedia withMetadata(Optional<? extends List<CommerceMetadata>> metadata) {
         Utils.checkNotNull(metadata, "metadata");
         this.metadata = metadata;
@@ -182,6 +197,7 @@ public class CommerceItemMedia {
         return this;
     }
 
+
     public CommerceItemMedia withPosition(Optional<Double> position) {
         Utils.checkNotNull(position, "position");
         this.position = position;
@@ -193,6 +209,7 @@ public class CommerceItemMedia {
         this.type = Optional.ofNullable(type);
         return this;
     }
+
 
     public CommerceItemMedia withType(Optional<? extends CommerceItemMediaType> type) {
         Utils.checkNotNull(type, "type");
@@ -212,13 +229,13 @@ public class CommerceItemMedia {
         return this;
     }
 
+
     public CommerceItemMedia withWidth(Optional<Double> width) {
         Utils.checkNotNull(width, "width");
         this.width = width;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -242,14 +259,9 @@ public class CommerceItemMedia {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            alt,
-            height,
-            id,
-            metadata,
-            position,
-            type,
-            url,
-            width);
+            alt, height, id,
+            metadata, position, type,
+            url, width);
     }
     
     @Override
@@ -264,28 +276,30 @@ public class CommerceItemMedia {
                 "url", url,
                 "width", width);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> alt = Optional.empty();
- 
+
         private Optional<Double> height = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<? extends List<CommerceMetadata>> metadata = Optional.empty();
- 
+
         private Optional<Double> position = Optional.empty();
- 
+
         private Optional<? extends CommerceItemMediaType> type = Optional.empty();
- 
+
         private String url;
- 
+
         private Optional<Double> width = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder alt(String alt) {
             Utils.checkNotNull(alt, "alt");
@@ -299,6 +313,7 @@ public class CommerceItemMedia {
             return this;
         }
 
+
         public Builder height(double height) {
             Utils.checkNotNull(height, "height");
             this.height = Optional.ofNullable(height);
@@ -310,6 +325,7 @@ public class CommerceItemMedia {
             this.height = height;
             return this;
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -323,6 +339,7 @@ public class CommerceItemMedia {
             return this;
         }
 
+
         public Builder metadata(List<CommerceMetadata> metadata) {
             Utils.checkNotNull(metadata, "metadata");
             this.metadata = Optional.ofNullable(metadata);
@@ -334,6 +351,7 @@ public class CommerceItemMedia {
             this.metadata = metadata;
             return this;
         }
+
 
         public Builder position(double position) {
             Utils.checkNotNull(position, "position");
@@ -347,6 +365,7 @@ public class CommerceItemMedia {
             return this;
         }
 
+
         public Builder type(CommerceItemMediaType type) {
             Utils.checkNotNull(type, "type");
             this.type = Optional.ofNullable(type);
@@ -359,11 +378,13 @@ public class CommerceItemMedia {
             return this;
         }
 
+
         public Builder url(String url) {
             Utils.checkNotNull(url, "url");
             this.url = url;
             return this;
         }
+
 
         public Builder width(double width) {
             Utils.checkNotNull(width, "width");
@@ -376,17 +397,14 @@ public class CommerceItemMedia {
             this.width = width;
             return this;
         }
-        
+
         public CommerceItemMedia build() {
+
             return new CommerceItemMedia(
-                alt,
-                height,
-                id,
-                metadata,
-                position,
-                type,
-                url,
-                width);
+                alt, height, id,
+                metadata, position, type,
+                url, width);
         }
+
     }
 }

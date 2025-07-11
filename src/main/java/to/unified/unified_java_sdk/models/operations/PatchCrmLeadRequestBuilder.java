@@ -28,7 +28,7 @@ public class PatchCrmLeadRequestBuilder {
     public PatchCrmLeadResponse call() throws Exception {
         
         RequestOperation<PatchCrmLeadRequest, PatchCrmLeadResponse> operation
-              = new PatchCrmLeadOperation( sdkConfiguration);
+              = new PatchCrmLeadOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

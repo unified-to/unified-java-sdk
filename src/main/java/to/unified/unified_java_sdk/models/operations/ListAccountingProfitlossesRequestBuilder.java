@@ -28,7 +28,7 @@ public class ListAccountingProfitlossesRequestBuilder {
     public ListAccountingProfitlossesResponse call() throws Exception {
         
         RequestOperation<ListAccountingProfitlossesRequest, ListAccountingProfitlossesResponse> operation
-              = new ListAccountingProfitlossesOperation( sdkConfiguration);
+              = new ListAccountingProfitlossesOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

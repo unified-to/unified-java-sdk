@@ -28,7 +28,7 @@ public class RemovePassthroughRequestBuilder {
     public RemovePassthroughResponse call() throws Exception {
         
         RequestOperation<RemovePassthroughRequest, RemovePassthroughResponse> operation
-              = new RemovePassthroughOperation( sdkConfiguration);
+              = new RemovePassthroughOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

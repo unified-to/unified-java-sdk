@@ -25,13 +25,13 @@ import to.unified.unified_java_sdk.utils.Utils;
  * <p>A connection represents a specific authentication of an integration.
  */
 public class Connection {
-
     /**
      * An authentication object that represents a specific authorized user's connection to an integration.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auth")
     private Optional<? extends PropertyConnectionAuth> auth;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auth_aws_arn")
@@ -43,47 +43,59 @@ public class Connection {
     @JsonProperty("categories")
     private List<PropertyConnectionCategories> categories;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     private Optional<String> environment;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("external_xref")
     private Optional<String> externalXref;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integration_name")
     private Optional<String> integrationName;
 
+
     @JsonProperty("integration_type")
     private String integrationType;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_paused")
     private Optional<Boolean> isPaused;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_healthy_at")
     private Optional<OffsetDateTime> lastHealthyAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_unhealthy_at")
     private Optional<OffsetDateTime> lastUnhealthyAt;
 
+
     @JsonProperty("permissions")
     private List<PropertyConnectionPermissions> permissions;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspace_id")
@@ -142,7 +154,11 @@ public class Connection {
             List<PropertyConnectionCategories> categories,
             String integrationType,
             List<PropertyConnectionPermissions> permissions) {
-        this(Optional.empty(), Optional.empty(), categories, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), integrationType, Optional.empty(), Optional.empty(), Optional.empty(), permissions, Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), categories,
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), integrationType,
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            permissions, Optional.empty(), Optional.empty());
     }
 
     /**
@@ -227,9 +243,10 @@ public class Connection {
         return workspaceId;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * An authentication object that represents a specific authorized user's connection to an integration.
@@ -239,6 +256,7 @@ public class Connection {
         this.auth = Optional.ofNullable(auth);
         return this;
     }
+
 
     /**
      * An authentication object that represents a specific authorized user's connection to an integration.
@@ -254,6 +272,7 @@ public class Connection {
         this.authAwsArn = Optional.ofNullable(authAwsArn);
         return this;
     }
+
 
     public Connection withAuthAwsArn(Optional<String> authAwsArn) {
         Utils.checkNotNull(authAwsArn, "authAwsArn");
@@ -276,6 +295,7 @@ public class Connection {
         return this;
     }
 
+
     public Connection withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
@@ -287,6 +307,7 @@ public class Connection {
         this.environment = Optional.ofNullable(environment);
         return this;
     }
+
 
     public Connection withEnvironment(Optional<String> environment) {
         Utils.checkNotNull(environment, "environment");
@@ -300,6 +321,7 @@ public class Connection {
         return this;
     }
 
+
     public Connection withExternalXref(Optional<String> externalXref) {
         Utils.checkNotNull(externalXref, "externalXref");
         this.externalXref = externalXref;
@@ -312,6 +334,7 @@ public class Connection {
         return this;
     }
 
+
     public Connection withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -323,6 +346,7 @@ public class Connection {
         this.integrationName = Optional.ofNullable(integrationName);
         return this;
     }
+
 
     public Connection withIntegrationName(Optional<String> integrationName) {
         Utils.checkNotNull(integrationName, "integrationName");
@@ -342,6 +366,7 @@ public class Connection {
         return this;
     }
 
+
     public Connection withIsPaused(Optional<Boolean> isPaused) {
         Utils.checkNotNull(isPaused, "isPaused");
         this.isPaused = isPaused;
@@ -354,6 +379,7 @@ public class Connection {
         return this;
     }
 
+
     public Connection withLastHealthyAt(Optional<OffsetDateTime> lastHealthyAt) {
         Utils.checkNotNull(lastHealthyAt, "lastHealthyAt");
         this.lastHealthyAt = lastHealthyAt;
@@ -365,6 +391,7 @@ public class Connection {
         this.lastUnhealthyAt = Optional.ofNullable(lastUnhealthyAt);
         return this;
     }
+
 
     public Connection withLastUnhealthyAt(Optional<OffsetDateTime> lastUnhealthyAt) {
         Utils.checkNotNull(lastUnhealthyAt, "lastUnhealthyAt");
@@ -384,6 +411,7 @@ public class Connection {
         return this;
     }
 
+
     public Connection withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
@@ -396,13 +424,13 @@ public class Connection {
         return this;
     }
 
+
     public Connection withWorkspaceId(Optional<String> workspaceId) {
         Utils.checkNotNull(workspaceId, "workspaceId");
         this.workspaceId = workspaceId;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -433,21 +461,11 @@ public class Connection {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            auth,
-            authAwsArn,
-            categories,
-            createdAt,
-            environment,
-            externalXref,
-            id,
-            integrationName,
-            integrationType,
-            isPaused,
-            lastHealthyAt,
-            lastUnhealthyAt,
-            permissions,
-            updatedAt,
-            workspaceId);
+            auth, authAwsArn, categories,
+            createdAt, environment, externalXref,
+            id, integrationName, integrationType,
+            isPaused, lastHealthyAt, lastUnhealthyAt,
+            permissions, updatedAt, workspaceId);
     }
     
     @Override
@@ -469,42 +487,44 @@ public class Connection {
                 "updatedAt", updatedAt,
                 "workspaceId", workspaceId);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<? extends PropertyConnectionAuth> auth = Optional.empty();
- 
+
         private Optional<String> authAwsArn = Optional.empty();
- 
+
         private List<PropertyConnectionCategories> categories;
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> environment;
- 
+
         private Optional<String> externalXref = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> integrationName = Optional.empty();
- 
+
         private String integrationType;
- 
+
         private Optional<Boolean> isPaused = Optional.empty();
- 
+
         private Optional<OffsetDateTime> lastHealthyAt = Optional.empty();
- 
+
         private Optional<OffsetDateTime> lastUnhealthyAt = Optional.empty();
- 
+
         private List<PropertyConnectionPermissions> permissions;
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<String> workspaceId = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * An authentication object that represents a specific authorized user's connection to an integration.
@@ -524,6 +544,7 @@ public class Connection {
             return this;
         }
 
+
         public Builder authAwsArn(String authAwsArn) {
             Utils.checkNotNull(authAwsArn, "authAwsArn");
             this.authAwsArn = Optional.ofNullable(authAwsArn);
@@ -536,6 +557,7 @@ public class Connection {
             return this;
         }
 
+
         /**
          * The Integration categories that this connection supports
          */
@@ -544,6 +566,7 @@ public class Connection {
             this.categories = categories;
             return this;
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -557,6 +580,7 @@ public class Connection {
             return this;
         }
 
+
         public Builder environment(String environment) {
             Utils.checkNotNull(environment, "environment");
             this.environment = Optional.ofNullable(environment);
@@ -568,6 +592,7 @@ public class Connection {
             this.environment = environment;
             return this;
         }
+
 
         public Builder externalXref(String externalXref) {
             Utils.checkNotNull(externalXref, "externalXref");
@@ -581,6 +606,7 @@ public class Connection {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -592,6 +618,7 @@ public class Connection {
             this.id = id;
             return this;
         }
+
 
         public Builder integrationName(String integrationName) {
             Utils.checkNotNull(integrationName, "integrationName");
@@ -605,11 +632,13 @@ public class Connection {
             return this;
         }
 
+
         public Builder integrationType(String integrationType) {
             Utils.checkNotNull(integrationType, "integrationType");
             this.integrationType = integrationType;
             return this;
         }
+
 
         public Builder isPaused(boolean isPaused) {
             Utils.checkNotNull(isPaused, "isPaused");
@@ -623,6 +652,7 @@ public class Connection {
             return this;
         }
 
+
         public Builder lastHealthyAt(OffsetDateTime lastHealthyAt) {
             Utils.checkNotNull(lastHealthyAt, "lastHealthyAt");
             this.lastHealthyAt = Optional.ofNullable(lastHealthyAt);
@@ -634,6 +664,7 @@ public class Connection {
             this.lastHealthyAt = lastHealthyAt;
             return this;
         }
+
 
         public Builder lastUnhealthyAt(OffsetDateTime lastUnhealthyAt) {
             Utils.checkNotNull(lastUnhealthyAt, "lastUnhealthyAt");
@@ -647,11 +678,13 @@ public class Connection {
             return this;
         }
 
+
         public Builder permissions(List<PropertyConnectionPermissions> permissions) {
             Utils.checkNotNull(permissions, "permissions");
             this.permissions = permissions;
             return this;
         }
+
 
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
@@ -665,6 +698,7 @@ public class Connection {
             return this;
         }
 
+
         public Builder workspaceId(String workspaceId) {
             Utils.checkNotNull(workspaceId, "workspaceId");
             this.workspaceId = Optional.ofNullable(workspaceId);
@@ -676,28 +710,20 @@ public class Connection {
             this.workspaceId = workspaceId;
             return this;
         }
-        
+
         public Connection build() {
             if (environment == null) {
                 environment = _SINGLETON_VALUE_Environment.value();
             }
+
             return new Connection(
-                auth,
-                authAwsArn,
-                categories,
-                createdAt,
-                environment,
-                externalXref,
-                id,
-                integrationName,
-                integrationType,
-                isPaused,
-                lastHealthyAt,
-                lastUnhealthyAt,
-                permissions,
-                updatedAt,
-                workspaceId);
+                auth, authAwsArn, categories,
+                createdAt, environment, externalXref,
+                id, integrationName, integrationType,
+                isPaused, lastHealthyAt, lastUnhealthyAt,
+                permissions, updatedAt, workspaceId);
         }
+
 
         private static final LazySingletonValue<Optional<String>> _SINGLETON_VALUE_Environment =
                 new LazySingletonValue<>(

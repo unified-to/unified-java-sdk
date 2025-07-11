@@ -136,7 +136,6 @@ public class Repo {
     Repo(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a branch
      * 
@@ -153,13 +152,11 @@ public class Repo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateRepoBranchResponse createRepoBranch(
-            CreateRepoBranchRequest request) throws Exception {
+    public CreateRepoBranchResponse createRepoBranch(CreateRepoBranchRequest request) throws Exception {
         RequestOperation<CreateRepoBranchRequest, CreateRepoBranchResponse> operation
-              = new CreateRepoBranchOperation( sdkConfiguration);
+              = new CreateRepoBranchOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a commit
@@ -177,13 +174,11 @@ public class Repo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateRepoCommitResponse createRepoCommit(
-            CreateRepoCommitRequest request) throws Exception {
+    public CreateRepoCommitResponse createRepoCommit(CreateRepoCommitRequest request) throws Exception {
         RequestOperation<CreateRepoCommitRequest, CreateRepoCommitResponse> operation
-              = new CreateRepoCommitOperation( sdkConfiguration);
+              = new CreateRepoCommitOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create an organization
@@ -201,13 +196,11 @@ public class Repo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateRepoOrganizationResponse createRepoOrganization(
-            CreateRepoOrganizationRequest request) throws Exception {
+    public CreateRepoOrganizationResponse createRepoOrganization(CreateRepoOrganizationRequest request) throws Exception {
         RequestOperation<CreateRepoOrganizationRequest, CreateRepoOrganizationResponse> operation
-              = new CreateRepoOrganizationOperation( sdkConfiguration);
+              = new CreateRepoOrganizationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a pullrequest
@@ -225,13 +218,11 @@ public class Repo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateRepoPullrequestResponse createRepoPullrequest(
-            CreateRepoPullrequestRequest request) throws Exception {
+    public CreateRepoPullrequestResponse createRepoPullrequest(CreateRepoPullrequestRequest request) throws Exception {
         RequestOperation<CreateRepoPullrequestRequest, CreateRepoPullrequestResponse> operation
-              = new CreateRepoPullrequestOperation( sdkConfiguration);
+              = new CreateRepoPullrequestOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a repository
@@ -249,13 +240,11 @@ public class Repo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateRepoRepositoryResponse createRepoRepository(
-            CreateRepoRepositoryRequest request) throws Exception {
+    public CreateRepoRepositoryResponse createRepoRepository(CreateRepoRepositoryRequest request) throws Exception {
         RequestOperation<CreateRepoRepositoryRequest, CreateRepoRepositoryResponse> operation
-              = new CreateRepoRepositoryOperation( sdkConfiguration);
+              = new CreateRepoRepositoryOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a branch
@@ -273,13 +262,11 @@ public class Repo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetRepoBranchResponse getRepoBranch(
-            GetRepoBranchRequest request) throws Exception {
+    public GetRepoBranchResponse getRepoBranch(GetRepoBranchRequest request) throws Exception {
         RequestOperation<GetRepoBranchRequest, GetRepoBranchResponse> operation
-              = new GetRepoBranchOperation( sdkConfiguration);
+              = new GetRepoBranchOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a commit
@@ -297,13 +284,11 @@ public class Repo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetRepoCommitResponse getRepoCommit(
-            GetRepoCommitRequest request) throws Exception {
+    public GetRepoCommitResponse getRepoCommit(GetRepoCommitRequest request) throws Exception {
         RequestOperation<GetRepoCommitRequest, GetRepoCommitResponse> operation
-              = new GetRepoCommitOperation( sdkConfiguration);
+              = new GetRepoCommitOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve an organization
@@ -321,13 +306,11 @@ public class Repo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetRepoOrganizationResponse getRepoOrganization(
-            GetRepoOrganizationRequest request) throws Exception {
+    public GetRepoOrganizationResponse getRepoOrganization(GetRepoOrganizationRequest request) throws Exception {
         RequestOperation<GetRepoOrganizationRequest, GetRepoOrganizationResponse> operation
-              = new GetRepoOrganizationOperation( sdkConfiguration);
+              = new GetRepoOrganizationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a pullrequest
@@ -345,13 +328,11 @@ public class Repo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetRepoPullrequestResponse getRepoPullrequest(
-            GetRepoPullrequestRequest request) throws Exception {
+    public GetRepoPullrequestResponse getRepoPullrequest(GetRepoPullrequestRequest request) throws Exception {
         RequestOperation<GetRepoPullrequestRequest, GetRepoPullrequestResponse> operation
-              = new GetRepoPullrequestOperation( sdkConfiguration);
+              = new GetRepoPullrequestOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a repository
@@ -369,13 +350,11 @@ public class Repo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetRepoRepositoryResponse getRepoRepository(
-            GetRepoRepositoryRequest request) throws Exception {
+    public GetRepoRepositoryResponse getRepoRepository(GetRepoRepositoryRequest request) throws Exception {
         RequestOperation<GetRepoRepositoryRequest, GetRepoRepositoryResponse> operation
-              = new GetRepoRepositoryOperation( sdkConfiguration);
+              = new GetRepoRepositoryOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all branches
@@ -393,13 +372,11 @@ public class Repo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListRepoBranchesResponse listRepoBranches(
-            ListRepoBranchesRequest request) throws Exception {
+    public ListRepoBranchesResponse listRepoBranches(ListRepoBranchesRequest request) throws Exception {
         RequestOperation<ListRepoBranchesRequest, ListRepoBranchesResponse> operation
-              = new ListRepoBranchesOperation( sdkConfiguration);
+              = new ListRepoBranchesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all commits
@@ -417,13 +394,11 @@ public class Repo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListRepoCommitsResponse listRepoCommits(
-            ListRepoCommitsRequest request) throws Exception {
+    public ListRepoCommitsResponse listRepoCommits(ListRepoCommitsRequest request) throws Exception {
         RequestOperation<ListRepoCommitsRequest, ListRepoCommitsResponse> operation
-              = new ListRepoCommitsOperation( sdkConfiguration);
+              = new ListRepoCommitsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all organizations
@@ -441,13 +416,11 @@ public class Repo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListRepoOrganizationsResponse listRepoOrganizations(
-            ListRepoOrganizationsRequest request) throws Exception {
+    public ListRepoOrganizationsResponse listRepoOrganizations(ListRepoOrganizationsRequest request) throws Exception {
         RequestOperation<ListRepoOrganizationsRequest, ListRepoOrganizationsResponse> operation
-              = new ListRepoOrganizationsOperation( sdkConfiguration);
+              = new ListRepoOrganizationsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all pullrequests
@@ -465,13 +438,11 @@ public class Repo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListRepoPullrequestsResponse listRepoPullrequests(
-            ListRepoPullrequestsRequest request) throws Exception {
+    public ListRepoPullrequestsResponse listRepoPullrequests(ListRepoPullrequestsRequest request) throws Exception {
         RequestOperation<ListRepoPullrequestsRequest, ListRepoPullrequestsResponse> operation
-              = new ListRepoPullrequestsOperation( sdkConfiguration);
+              = new ListRepoPullrequestsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all repositories
@@ -489,13 +460,11 @@ public class Repo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListRepoRepositoriesResponse listRepoRepositories(
-            ListRepoRepositoriesRequest request) throws Exception {
+    public ListRepoRepositoriesResponse listRepoRepositories(ListRepoRepositoriesRequest request) throws Exception {
         RequestOperation<ListRepoRepositoriesRequest, ListRepoRepositoriesResponse> operation
-              = new ListRepoRepositoriesOperation( sdkConfiguration);
+              = new ListRepoRepositoriesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a branch
@@ -513,13 +482,11 @@ public class Repo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchRepoBranchResponse patchRepoBranch(
-            PatchRepoBranchRequest request) throws Exception {
+    public PatchRepoBranchResponse patchRepoBranch(PatchRepoBranchRequest request) throws Exception {
         RequestOperation<PatchRepoBranchRequest, PatchRepoBranchResponse> operation
-              = new PatchRepoBranchOperation( sdkConfiguration);
+              = new PatchRepoBranchOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a commit
@@ -537,13 +504,11 @@ public class Repo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchRepoCommitResponse patchRepoCommit(
-            PatchRepoCommitRequest request) throws Exception {
+    public PatchRepoCommitResponse patchRepoCommit(PatchRepoCommitRequest request) throws Exception {
         RequestOperation<PatchRepoCommitRequest, PatchRepoCommitResponse> operation
-              = new PatchRepoCommitOperation( sdkConfiguration);
+              = new PatchRepoCommitOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an organization
@@ -561,13 +526,11 @@ public class Repo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchRepoOrganizationResponse patchRepoOrganization(
-            PatchRepoOrganizationRequest request) throws Exception {
+    public PatchRepoOrganizationResponse patchRepoOrganization(PatchRepoOrganizationRequest request) throws Exception {
         RequestOperation<PatchRepoOrganizationRequest, PatchRepoOrganizationResponse> operation
-              = new PatchRepoOrganizationOperation( sdkConfiguration);
+              = new PatchRepoOrganizationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a pullrequest
@@ -585,13 +548,11 @@ public class Repo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchRepoPullrequestResponse patchRepoPullrequest(
-            PatchRepoPullrequestRequest request) throws Exception {
+    public PatchRepoPullrequestResponse patchRepoPullrequest(PatchRepoPullrequestRequest request) throws Exception {
         RequestOperation<PatchRepoPullrequestRequest, PatchRepoPullrequestResponse> operation
-              = new PatchRepoPullrequestOperation( sdkConfiguration);
+              = new PatchRepoPullrequestOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a repository
@@ -609,13 +570,11 @@ public class Repo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchRepoRepositoryResponse patchRepoRepository(
-            PatchRepoRepositoryRequest request) throws Exception {
+    public PatchRepoRepositoryResponse patchRepoRepository(PatchRepoRepositoryRequest request) throws Exception {
         RequestOperation<PatchRepoRepositoryRequest, PatchRepoRepositoryResponse> operation
-              = new PatchRepoRepositoryOperation( sdkConfiguration);
+              = new PatchRepoRepositoryOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a branch
@@ -633,13 +592,11 @@ public class Repo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveRepoBranchResponse removeRepoBranch(
-            RemoveRepoBranchRequest request) throws Exception {
+    public RemoveRepoBranchResponse removeRepoBranch(RemoveRepoBranchRequest request) throws Exception {
         RequestOperation<RemoveRepoBranchRequest, RemoveRepoBranchResponse> operation
-              = new RemoveRepoBranchOperation( sdkConfiguration);
+              = new RemoveRepoBranchOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a commit
@@ -657,13 +614,11 @@ public class Repo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveRepoCommitResponse removeRepoCommit(
-            RemoveRepoCommitRequest request) throws Exception {
+    public RemoveRepoCommitResponse removeRepoCommit(RemoveRepoCommitRequest request) throws Exception {
         RequestOperation<RemoveRepoCommitRequest, RemoveRepoCommitResponse> operation
-              = new RemoveRepoCommitOperation( sdkConfiguration);
+              = new RemoveRepoCommitOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove an organization
@@ -681,13 +636,11 @@ public class Repo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveRepoOrganizationResponse removeRepoOrganization(
-            RemoveRepoOrganizationRequest request) throws Exception {
+    public RemoveRepoOrganizationResponse removeRepoOrganization(RemoveRepoOrganizationRequest request) throws Exception {
         RequestOperation<RemoveRepoOrganizationRequest, RemoveRepoOrganizationResponse> operation
-              = new RemoveRepoOrganizationOperation( sdkConfiguration);
+              = new RemoveRepoOrganizationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a pullrequest
@@ -705,13 +658,11 @@ public class Repo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveRepoPullrequestResponse removeRepoPullrequest(
-            RemoveRepoPullrequestRequest request) throws Exception {
+    public RemoveRepoPullrequestResponse removeRepoPullrequest(RemoveRepoPullrequestRequest request) throws Exception {
         RequestOperation<RemoveRepoPullrequestRequest, RemoveRepoPullrequestResponse> operation
-              = new RemoveRepoPullrequestOperation( sdkConfiguration);
+              = new RemoveRepoPullrequestOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a repository
@@ -729,13 +680,11 @@ public class Repo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveRepoRepositoryResponse removeRepoRepository(
-            RemoveRepoRepositoryRequest request) throws Exception {
+    public RemoveRepoRepositoryResponse removeRepoRepository(RemoveRepoRepositoryRequest request) throws Exception {
         RequestOperation<RemoveRepoRepositoryRequest, RemoveRepoRepositoryResponse> operation
-              = new RemoveRepoRepositoryOperation( sdkConfiguration);
+              = new RemoveRepoRepositoryOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a branch
@@ -753,13 +702,11 @@ public class Repo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateRepoBranchResponse updateRepoBranch(
-            UpdateRepoBranchRequest request) throws Exception {
+    public UpdateRepoBranchResponse updateRepoBranch(UpdateRepoBranchRequest request) throws Exception {
         RequestOperation<UpdateRepoBranchRequest, UpdateRepoBranchResponse> operation
-              = new UpdateRepoBranchOperation( sdkConfiguration);
+              = new UpdateRepoBranchOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a commit
@@ -777,13 +724,11 @@ public class Repo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateRepoCommitResponse updateRepoCommit(
-            UpdateRepoCommitRequest request) throws Exception {
+    public UpdateRepoCommitResponse updateRepoCommit(UpdateRepoCommitRequest request) throws Exception {
         RequestOperation<UpdateRepoCommitRequest, UpdateRepoCommitResponse> operation
-              = new UpdateRepoCommitOperation( sdkConfiguration);
+              = new UpdateRepoCommitOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an organization
@@ -801,13 +746,11 @@ public class Repo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateRepoOrganizationResponse updateRepoOrganization(
-            UpdateRepoOrganizationRequest request) throws Exception {
+    public UpdateRepoOrganizationResponse updateRepoOrganization(UpdateRepoOrganizationRequest request) throws Exception {
         RequestOperation<UpdateRepoOrganizationRequest, UpdateRepoOrganizationResponse> operation
-              = new UpdateRepoOrganizationOperation( sdkConfiguration);
+              = new UpdateRepoOrganizationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a pullrequest
@@ -825,13 +768,11 @@ public class Repo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateRepoPullrequestResponse updateRepoPullrequest(
-            UpdateRepoPullrequestRequest request) throws Exception {
+    public UpdateRepoPullrequestResponse updateRepoPullrequest(UpdateRepoPullrequestRequest request) throws Exception {
         RequestOperation<UpdateRepoPullrequestRequest, UpdateRepoPullrequestResponse> operation
-              = new UpdateRepoPullrequestOperation( sdkConfiguration);
+              = new UpdateRepoPullrequestOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a repository
@@ -849,10 +790,9 @@ public class Repo {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateRepoRepositoryResponse updateRepoRepository(
-            UpdateRepoRepositoryRequest request) throws Exception {
+    public UpdateRepoRepositoryResponse updateRepoRepository(UpdateRepoRepositoryRequest request) throws Exception {
         RequestOperation<UpdateRepoRepositoryRequest, UpdateRepoRepositoryResponse> operation
-              = new UpdateRepoRepositoryOperation( sdkConfiguration);
+              = new UpdateRepoRepositoryOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

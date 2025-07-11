@@ -28,7 +28,7 @@ public class ListCalendarBusiesRequestBuilder {
     public ListCalendarBusiesResponse call() throws Exception {
         
         RequestOperation<ListCalendarBusiesRequest, ListCalendarBusiesResponse> operation
-              = new ListCalendarBusiesOperation( sdkConfiguration);
+              = new ListCalendarBusiesOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

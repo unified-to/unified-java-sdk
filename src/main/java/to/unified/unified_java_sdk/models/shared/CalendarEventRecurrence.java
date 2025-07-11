@@ -17,11 +17,13 @@ import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class CalendarEventRecurrence {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     private Optional<Double> count;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
@@ -34,8 +36,10 @@ public class CalendarEventRecurrence {
     @JsonProperty("excluded_dates")
     private Optional<? extends List<String>> excludedDates;
 
+
     @JsonProperty("frequency")
     private CalendarEventRecurrenceFrequency frequency;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interval")
@@ -92,7 +96,9 @@ public class CalendarEventRecurrence {
     
     public CalendarEventRecurrence(
             CalendarEventRecurrenceFrequency frequency) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), frequency, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            frequency, Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -151,15 +157,17 @@ public class CalendarEventRecurrence {
         return (Optional<List<Double>>) onMonths;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public CalendarEventRecurrence withCount(double count) {
         Utils.checkNotNull(count, "count");
         this.count = Optional.ofNullable(count);
         return this;
     }
+
 
     public CalendarEventRecurrence withCount(Optional<Double> count) {
         Utils.checkNotNull(count, "count");
@@ -172,6 +180,7 @@ public class CalendarEventRecurrence {
         this.endAt = Optional.ofNullable(endAt);
         return this;
     }
+
 
     public CalendarEventRecurrence withEndAt(Optional<OffsetDateTime> endAt) {
         Utils.checkNotNull(endAt, "endAt");
@@ -187,6 +196,7 @@ public class CalendarEventRecurrence {
         this.excludedDates = Optional.ofNullable(excludedDates);
         return this;
     }
+
 
     /**
      * dates to exclude from the recurrence, defaults to undefined (no exclusions)
@@ -209,6 +219,7 @@ public class CalendarEventRecurrence {
         return this;
     }
 
+
     public CalendarEventRecurrence withInterval(Optional<Double> interval) {
         Utils.checkNotNull(interval, "interval");
         this.interval = interval;
@@ -223,6 +234,7 @@ public class CalendarEventRecurrence {
         this.onDays = Optional.ofNullable(onDays);
         return this;
     }
+
 
     /**
      * days of the week to repeat on, defaults to undefined (every day), only used if frequency is WEEKLY
@@ -242,6 +254,7 @@ public class CalendarEventRecurrence {
         return this;
     }
 
+
     /**
      * days of the month to repeat on, defaults to undefined (every day), only used if frequency is MONTHLY
      */
@@ -260,6 +273,7 @@ public class CalendarEventRecurrence {
         return this;
     }
 
+
     /**
      * months of the year to repeat on, defaults to undefined (every month), only used if frequency is YEARLY, January is 1
      */
@@ -269,7 +283,6 @@ public class CalendarEventRecurrence {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -293,14 +306,9 @@ public class CalendarEventRecurrence {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            count,
-            endAt,
-            excludedDates,
-            frequency,
-            interval,
-            onDays,
-            onMonthDays,
-            onMonths);
+            count, endAt, excludedDates,
+            frequency, interval, onDays,
+            onMonthDays, onMonths);
     }
     
     @Override
@@ -315,28 +323,30 @@ public class CalendarEventRecurrence {
                 "onMonthDays", onMonthDays,
                 "onMonths", onMonths);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<Double> count = Optional.empty();
- 
+
         private Optional<OffsetDateTime> endAt = Optional.empty();
- 
+
         private Optional<? extends List<String>> excludedDates = Optional.empty();
- 
+
         private CalendarEventRecurrenceFrequency frequency;
- 
+
         private Optional<Double> interval = Optional.empty();
- 
+
         private Optional<? extends List<PropertyCalendarEventRecurrenceOnDays>> onDays = Optional.empty();
- 
+
         private Optional<? extends List<Double>> onMonthDays = Optional.empty();
- 
+
         private Optional<? extends List<Double>> onMonths = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder count(double count) {
             Utils.checkNotNull(count, "count");
@@ -350,6 +360,7 @@ public class CalendarEventRecurrence {
             return this;
         }
 
+
         public Builder endAt(OffsetDateTime endAt) {
             Utils.checkNotNull(endAt, "endAt");
             this.endAt = Optional.ofNullable(endAt);
@@ -361,6 +372,7 @@ public class CalendarEventRecurrence {
             this.endAt = endAt;
             return this;
         }
+
 
         /**
          * dates to exclude from the recurrence, defaults to undefined (no exclusions)
@@ -380,11 +392,13 @@ public class CalendarEventRecurrence {
             return this;
         }
 
+
         public Builder frequency(CalendarEventRecurrenceFrequency frequency) {
             Utils.checkNotNull(frequency, "frequency");
             this.frequency = frequency;
             return this;
         }
+
 
         public Builder interval(double interval) {
             Utils.checkNotNull(interval, "interval");
@@ -397,6 +411,7 @@ public class CalendarEventRecurrence {
             this.interval = interval;
             return this;
         }
+
 
         /**
          * days of the week to repeat on, defaults to undefined (every day), only used if frequency is WEEKLY
@@ -416,6 +431,7 @@ public class CalendarEventRecurrence {
             return this;
         }
 
+
         /**
          * days of the month to repeat on, defaults to undefined (every day), only used if frequency is MONTHLY
          */
@@ -434,6 +450,7 @@ public class CalendarEventRecurrence {
             return this;
         }
 
+
         /**
          * months of the year to repeat on, defaults to undefined (every month), only used if frequency is YEARLY, January is 1
          */
@@ -451,17 +468,14 @@ public class CalendarEventRecurrence {
             this.onMonths = onMonths;
             return this;
         }
-        
+
         public CalendarEventRecurrence build() {
+
             return new CalendarEventRecurrence(
-                count,
-                endAt,
-                excludedDates,
-                frequency,
-                interval,
-                onDays,
-                onMonthDays,
-                onMonths);
+                count, endAt, excludedDates,
+                frequency, interval, onDays,
+                onMonthDays, onMonths);
         }
+
     }
 }

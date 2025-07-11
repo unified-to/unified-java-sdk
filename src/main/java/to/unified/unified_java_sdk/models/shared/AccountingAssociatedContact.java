@@ -15,15 +15,18 @@ import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AccountingAssociatedContact {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
     private Optional<? extends List<AccountingEmail>> emails;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
@@ -62,15 +65,17 @@ public class AccountingAssociatedContact {
         return name;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AccountingAssociatedContact withEmails(List<AccountingEmail> emails) {
         Utils.checkNotNull(emails, "emails");
         this.emails = Optional.ofNullable(emails);
         return this;
     }
+
 
     public AccountingAssociatedContact withEmails(Optional<? extends List<AccountingEmail>> emails) {
         Utils.checkNotNull(emails, "emails");
@@ -84,6 +89,7 @@ public class AccountingAssociatedContact {
         return this;
     }
 
+
     public AccountingAssociatedContact withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -96,13 +102,13 @@ public class AccountingAssociatedContact {
         return this;
     }
 
+
     public AccountingAssociatedContact withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
         this.name = name;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -121,9 +127,7 @@ public class AccountingAssociatedContact {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            emails,
-            id,
-            name);
+            emails, id, name);
     }
     
     @Override
@@ -133,18 +137,20 @@ public class AccountingAssociatedContact {
                 "id", id,
                 "name", name);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<? extends List<AccountingEmail>> emails = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder emails(List<AccountingEmail> emails) {
             Utils.checkNotNull(emails, "emails");
@@ -158,6 +164,7 @@ public class AccountingAssociatedContact {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -170,6 +177,7 @@ public class AccountingAssociatedContact {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = Optional.ofNullable(name);
@@ -181,12 +189,12 @@ public class AccountingAssociatedContact {
             this.name = name;
             return this;
         }
-        
+
         public AccountingAssociatedContact build() {
+
             return new AccountingAssociatedContact(
-                emails,
-                id,
-                name);
+                emails, id, name);
         }
+
     }
 }

@@ -14,31 +14,38 @@ import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class ScimAddress {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     private Optional<String> country;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formatted")
     private Optional<String> formatted;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locality")
     private Optional<String> locality;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     private Optional<String> postalCode;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     private Optional<String> region;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streetAddress")
     private Optional<String> streetAddress;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
@@ -70,7 +77,9 @@ public class ScimAddress {
     }
     
     public ScimAddress() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -109,15 +118,17 @@ public class ScimAddress {
         return (Optional<ScimAddressType>) type;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public ScimAddress withCountry(String country) {
         Utils.checkNotNull(country, "country");
         this.country = Optional.ofNullable(country);
         return this;
     }
+
 
     public ScimAddress withCountry(Optional<String> country) {
         Utils.checkNotNull(country, "country");
@@ -131,6 +142,7 @@ public class ScimAddress {
         return this;
     }
 
+
     public ScimAddress withFormatted(Optional<String> formatted) {
         Utils.checkNotNull(formatted, "formatted");
         this.formatted = formatted;
@@ -142,6 +154,7 @@ public class ScimAddress {
         this.locality = Optional.ofNullable(locality);
         return this;
     }
+
 
     public ScimAddress withLocality(Optional<String> locality) {
         Utils.checkNotNull(locality, "locality");
@@ -155,6 +168,7 @@ public class ScimAddress {
         return this;
     }
 
+
     public ScimAddress withPostalCode(Optional<String> postalCode) {
         Utils.checkNotNull(postalCode, "postalCode");
         this.postalCode = postalCode;
@@ -166,6 +180,7 @@ public class ScimAddress {
         this.region = Optional.ofNullable(region);
         return this;
     }
+
 
     public ScimAddress withRegion(Optional<String> region) {
         Utils.checkNotNull(region, "region");
@@ -179,6 +194,7 @@ public class ScimAddress {
         return this;
     }
 
+
     public ScimAddress withStreetAddress(Optional<String> streetAddress) {
         Utils.checkNotNull(streetAddress, "streetAddress");
         this.streetAddress = streetAddress;
@@ -191,13 +207,13 @@ public class ScimAddress {
         return this;
     }
 
+
     public ScimAddress withType(Optional<? extends ScimAddressType> type) {
         Utils.checkNotNull(type, "type");
         this.type = type;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -220,12 +236,8 @@ public class ScimAddress {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            country,
-            formatted,
-            locality,
-            postalCode,
-            region,
-            streetAddress,
+            country, formatted, locality,
+            postalCode, region, streetAddress,
             type);
     }
     
@@ -240,26 +252,28 @@ public class ScimAddress {
                 "streetAddress", streetAddress,
                 "type", type);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> country = Optional.empty();
- 
+
         private Optional<String> formatted = Optional.empty();
- 
+
         private Optional<String> locality = Optional.empty();
- 
+
         private Optional<String> postalCode = Optional.empty();
- 
+
         private Optional<String> region = Optional.empty();
- 
+
         private Optional<String> streetAddress = Optional.empty();
- 
+
         private Optional<? extends ScimAddressType> type = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder country(String country) {
             Utils.checkNotNull(country, "country");
@@ -273,6 +287,7 @@ public class ScimAddress {
             return this;
         }
 
+
         public Builder formatted(String formatted) {
             Utils.checkNotNull(formatted, "formatted");
             this.formatted = Optional.ofNullable(formatted);
@@ -284,6 +299,7 @@ public class ScimAddress {
             this.formatted = formatted;
             return this;
         }
+
 
         public Builder locality(String locality) {
             Utils.checkNotNull(locality, "locality");
@@ -297,6 +313,7 @@ public class ScimAddress {
             return this;
         }
 
+
         public Builder postalCode(String postalCode) {
             Utils.checkNotNull(postalCode, "postalCode");
             this.postalCode = Optional.ofNullable(postalCode);
@@ -308,6 +325,7 @@ public class ScimAddress {
             this.postalCode = postalCode;
             return this;
         }
+
 
         public Builder region(String region) {
             Utils.checkNotNull(region, "region");
@@ -321,6 +339,7 @@ public class ScimAddress {
             return this;
         }
 
+
         public Builder streetAddress(String streetAddress) {
             Utils.checkNotNull(streetAddress, "streetAddress");
             this.streetAddress = Optional.ofNullable(streetAddress);
@@ -333,6 +352,7 @@ public class ScimAddress {
             return this;
         }
 
+
         public Builder type(ScimAddressType type) {
             Utils.checkNotNull(type, "type");
             this.type = Optional.ofNullable(type);
@@ -344,16 +364,14 @@ public class ScimAddress {
             this.type = type;
             return this;
         }
-        
+
         public ScimAddress build() {
+
             return new ScimAddress(
-                country,
-                formatted,
-                locality,
-                postalCode,
-                region,
-                streetAddress,
+                country, formatted, locality,
+                postalCode, region, streetAddress,
                 type);
         }
+
     }
 }

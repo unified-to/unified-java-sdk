@@ -16,19 +16,23 @@ import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class CrmEventFormField {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     private Optional<? extends List<CrmEventFormOption>> options;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     private Optional<Boolean> required;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
@@ -51,7 +55,8 @@ public class CrmEventFormField {
     }
     
     public CrmEventFormField() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -76,15 +81,17 @@ public class CrmEventFormField {
         return (Optional<CrmEventFormFieldType>) type;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public CrmEventFormField withName(String name) {
         Utils.checkNotNull(name, "name");
         this.name = Optional.ofNullable(name);
         return this;
     }
+
 
     public CrmEventFormField withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
@@ -98,6 +105,7 @@ public class CrmEventFormField {
         return this;
     }
 
+
     public CrmEventFormField withOptions(Optional<? extends List<CrmEventFormOption>> options) {
         Utils.checkNotNull(options, "options");
         this.options = options;
@@ -109,6 +117,7 @@ public class CrmEventFormField {
         this.required = Optional.ofNullable(required);
         return this;
     }
+
 
     public CrmEventFormField withRequired(Optional<Boolean> required) {
         Utils.checkNotNull(required, "required");
@@ -122,13 +131,13 @@ public class CrmEventFormField {
         return this;
     }
 
+
     public CrmEventFormField withType(Optional<? extends CrmEventFormFieldType> type) {
         Utils.checkNotNull(type, "type");
         this.type = type;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -148,9 +157,7 @@ public class CrmEventFormField {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            name,
-            options,
-            required,
+            name, options, required,
             type);
     }
     
@@ -162,20 +169,22 @@ public class CrmEventFormField {
                 "required", required,
                 "type", type);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<? extends List<CrmEventFormOption>> options = Optional.empty();
- 
+
         private Optional<Boolean> required = Optional.empty();
- 
+
         private Optional<? extends CrmEventFormFieldType> type = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
@@ -189,6 +198,7 @@ public class CrmEventFormField {
             return this;
         }
 
+
         public Builder options(List<CrmEventFormOption> options) {
             Utils.checkNotNull(options, "options");
             this.options = Optional.ofNullable(options);
@@ -200,6 +210,7 @@ public class CrmEventFormField {
             this.options = options;
             return this;
         }
+
 
         public Builder required(boolean required) {
             Utils.checkNotNull(required, "required");
@@ -213,6 +224,7 @@ public class CrmEventFormField {
             return this;
         }
 
+
         public Builder type(CrmEventFormFieldType type) {
             Utils.checkNotNull(type, "type");
             this.type = Optional.ofNullable(type);
@@ -224,13 +236,13 @@ public class CrmEventFormField {
             this.type = type;
             return this;
         }
-        
+
         public CrmEventFormField build() {
+
             return new CrmEventFormField(
-                name,
-                options,
-                required,
+                name, options, required,
                 type);
         }
+
     }
 }

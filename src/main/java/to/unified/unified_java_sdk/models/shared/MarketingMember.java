@@ -36,6 +36,7 @@ public class MarketingMember {
     @JsonProperty("emails")
     private Optional<? extends List<MarketingEmail>> emails;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
@@ -46,6 +47,7 @@ public class MarketingMember {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_ids")
     private Optional<? extends List<String>> listIds;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
@@ -64,6 +66,7 @@ public class MarketingMember {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     private Optional<? extends List<String>> tags;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -98,7 +101,9 @@ public class MarketingMember {
     }
     
     public MarketingMember() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -157,15 +162,17 @@ public class MarketingMember {
         return updatedAt;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public MarketingMember withCreatedAt(OffsetDateTime createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public MarketingMember withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -182,6 +189,7 @@ public class MarketingMember {
         return this;
     }
 
+
     /**
      * An array of email addresses for this member
      */
@@ -196,6 +204,7 @@ public class MarketingMember {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public MarketingMember withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -212,6 +221,7 @@ public class MarketingMember {
         return this;
     }
 
+
     /**
      * An array of list IDs associated with this member
      */
@@ -227,6 +237,7 @@ public class MarketingMember {
         return this;
     }
 
+
     public MarketingMember withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
         this.name = name;
@@ -241,6 +252,7 @@ public class MarketingMember {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     /**
      * The raw data returned by the integration for this member
@@ -260,6 +272,7 @@ public class MarketingMember {
         return this;
     }
 
+
     /**
      * An array of tags associated with this member
      */
@@ -275,13 +288,13 @@ public class MarketingMember {
         return this;
     }
 
+
     public MarketingMember withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -305,14 +318,9 @@ public class MarketingMember {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt,
-            emails,
-            id,
-            listIds,
-            name,
-            raw,
-            tags,
-            updatedAt);
+            createdAt, emails, id,
+            listIds, name, raw,
+            tags, updatedAt);
     }
     
     @Override
@@ -327,28 +335,30 @@ public class MarketingMember {
                 "tags", tags,
                 "updatedAt", updatedAt);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<? extends List<MarketingEmail>> emails = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<? extends List<String>> listIds = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<? extends List<String>> tags = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -361,6 +371,7 @@ public class MarketingMember {
             this.createdAt = createdAt;
             return this;
         }
+
 
         /**
          * An array of email addresses for this member
@@ -380,6 +391,7 @@ public class MarketingMember {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -391,6 +403,7 @@ public class MarketingMember {
             this.id = id;
             return this;
         }
+
 
         /**
          * An array of list IDs associated with this member
@@ -410,6 +423,7 @@ public class MarketingMember {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = Optional.ofNullable(name);
@@ -421,6 +435,7 @@ public class MarketingMember {
             this.name = name;
             return this;
         }
+
 
         /**
          * The raw data returned by the integration for this member
@@ -440,6 +455,7 @@ public class MarketingMember {
             return this;
         }
 
+
         /**
          * An array of tags associated with this member
          */
@@ -458,6 +474,7 @@ public class MarketingMember {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -469,17 +486,14 @@ public class MarketingMember {
             this.updatedAt = updatedAt;
             return this;
         }
-        
+
         public MarketingMember build() {
+
             return new MarketingMember(
-                createdAt,
-                emails,
-                id,
-                listIds,
-                name,
-                raw,
-                tags,
-                updatedAt);
+                createdAt, emails, id,
+                listIds, name, raw,
+                tags, updatedAt);
         }
+
     }
 }

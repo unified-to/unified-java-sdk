@@ -39,7 +39,6 @@ public class List {
     List(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a list
      * 
@@ -56,13 +55,11 @@ public class List {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateMartechListResponse createMartechList(
-            CreateMartechListRequest request) throws Exception {
+    public CreateMartechListResponse createMartechList(CreateMartechListRequest request) throws Exception {
         RequestOperation<CreateMartechListRequest, CreateMartechListResponse> operation
-              = new CreateMartechListOperation( sdkConfiguration);
+              = new CreateMartechListOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a list
@@ -80,13 +77,11 @@ public class List {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetMartechListResponse getMartechList(
-            GetMartechListRequest request) throws Exception {
+    public GetMartechListResponse getMartechList(GetMartechListRequest request) throws Exception {
         RequestOperation<GetMartechListRequest, GetMartechListResponse> operation
-              = new GetMartechListOperation( sdkConfiguration);
+              = new GetMartechListOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all lists
@@ -104,13 +99,11 @@ public class List {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListMartechListsResponse listMartechLists(
-            ListMartechListsRequest request) throws Exception {
+    public ListMartechListsResponse listMartechLists(ListMartechListsRequest request) throws Exception {
         RequestOperation<ListMartechListsRequest, ListMartechListsResponse> operation
-              = new ListMartechListsOperation( sdkConfiguration);
+              = new ListMartechListsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a list
@@ -128,13 +121,11 @@ public class List {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchMartechListResponse patchMartechList(
-            PatchMartechListRequest request) throws Exception {
+    public PatchMartechListResponse patchMartechList(PatchMartechListRequest request) throws Exception {
         RequestOperation<PatchMartechListRequest, PatchMartechListResponse> operation
-              = new PatchMartechListOperation( sdkConfiguration);
+              = new PatchMartechListOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a list
@@ -152,13 +143,11 @@ public class List {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveMartechListResponse removeMartechList(
-            RemoveMartechListRequest request) throws Exception {
+    public RemoveMartechListResponse removeMartechList(RemoveMartechListRequest request) throws Exception {
         RequestOperation<RemoveMartechListRequest, RemoveMartechListResponse> operation
-              = new RemoveMartechListOperation( sdkConfiguration);
+              = new RemoveMartechListOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a list
@@ -176,10 +165,9 @@ public class List {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateMartechListResponse updateMartechList(
-            UpdateMartechListRequest request) throws Exception {
+    public UpdateMartechListResponse updateMartechList(UpdateMartechListRequest request) throws Exception {
         RequestOperation<UpdateMartechListRequest, UpdateMartechListResponse> operation
-              = new UpdateMartechListOperation( sdkConfiguration);
+              = new UpdateMartechListOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

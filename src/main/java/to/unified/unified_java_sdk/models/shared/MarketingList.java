@@ -29,21 +29,26 @@ public class MarketingList {
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private Optional<String> description;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private Optional<OffsetDateTime> endAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     private Optional<Boolean> isActive;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
@@ -56,13 +61,16 @@ public class MarketingList {
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private Optional<OffsetDateTime> startAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
@@ -103,7 +111,10 @@ public class MarketingList {
     }
     
     public MarketingList() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -160,15 +171,17 @@ public class MarketingList {
         return userId;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public MarketingList withCreatedAt(OffsetDateTime createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public MarketingList withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -182,6 +195,7 @@ public class MarketingList {
         return this;
     }
 
+
     public MarketingList withDescription(Optional<String> description) {
         Utils.checkNotNull(description, "description");
         this.description = description;
@@ -193,6 +207,7 @@ public class MarketingList {
         this.endAt = Optional.ofNullable(endAt);
         return this;
     }
+
 
     public MarketingList withEndAt(Optional<OffsetDateTime> endAt) {
         Utils.checkNotNull(endAt, "endAt");
@@ -206,6 +221,7 @@ public class MarketingList {
         return this;
     }
 
+
     public MarketingList withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -218,6 +234,7 @@ public class MarketingList {
         return this;
     }
 
+
     public MarketingList withIsActive(Optional<Boolean> isActive) {
         Utils.checkNotNull(isActive, "isActive");
         this.isActive = isActive;
@@ -229,6 +246,7 @@ public class MarketingList {
         this.name = Optional.ofNullable(name);
         return this;
     }
+
 
     public MarketingList withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
@@ -245,6 +263,7 @@ public class MarketingList {
         return this;
     }
 
+
     /**
      * The raw data returned by the integration for this list
      */
@@ -260,6 +279,7 @@ public class MarketingList {
         return this;
     }
 
+
     public MarketingList withStartAt(Optional<OffsetDateTime> startAt) {
         Utils.checkNotNull(startAt, "startAt");
         this.startAt = startAt;
@@ -271,6 +291,7 @@ public class MarketingList {
         this.updatedAt = Optional.ofNullable(updatedAt);
         return this;
     }
+
 
     public MarketingList withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
@@ -284,13 +305,13 @@ public class MarketingList {
         return this;
     }
 
+
     public MarketingList withUserId(Optional<String> userId) {
         Utils.checkNotNull(userId, "userId");
         this.userId = userId;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -316,15 +337,9 @@ public class MarketingList {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt,
-            description,
-            endAt,
-            id,
-            isActive,
-            name,
-            raw,
-            startAt,
-            updatedAt,
+            createdAt, description, endAt,
+            id, isActive, name,
+            raw, startAt, updatedAt,
             userId);
     }
     
@@ -342,32 +357,34 @@ public class MarketingList {
                 "updatedAt", updatedAt,
                 "userId", userId);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> description = Optional.empty();
- 
+
         private Optional<OffsetDateTime> endAt = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<Boolean> isActive = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<OffsetDateTime> startAt = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<String> userId = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -381,6 +398,7 @@ public class MarketingList {
             return this;
         }
 
+
         public Builder description(String description) {
             Utils.checkNotNull(description, "description");
             this.description = Optional.ofNullable(description);
@@ -392,6 +410,7 @@ public class MarketingList {
             this.description = description;
             return this;
         }
+
 
         public Builder endAt(OffsetDateTime endAt) {
             Utils.checkNotNull(endAt, "endAt");
@@ -405,6 +424,7 @@ public class MarketingList {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -416,6 +436,7 @@ public class MarketingList {
             this.id = id;
             return this;
         }
+
 
         public Builder isActive(boolean isActive) {
             Utils.checkNotNull(isActive, "isActive");
@@ -429,6 +450,7 @@ public class MarketingList {
             return this;
         }
 
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = Optional.ofNullable(name);
@@ -440,6 +462,7 @@ public class MarketingList {
             this.name = name;
             return this;
         }
+
 
         /**
          * The raw data returned by the integration for this list
@@ -459,6 +482,7 @@ public class MarketingList {
             return this;
         }
 
+
         public Builder startAt(OffsetDateTime startAt) {
             Utils.checkNotNull(startAt, "startAt");
             this.startAt = Optional.ofNullable(startAt);
@@ -470,6 +494,7 @@ public class MarketingList {
             this.startAt = startAt;
             return this;
         }
+
 
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
@@ -483,6 +508,7 @@ public class MarketingList {
             return this;
         }
 
+
         public Builder userId(String userId) {
             Utils.checkNotNull(userId, "userId");
             this.userId = Optional.ofNullable(userId);
@@ -494,19 +520,15 @@ public class MarketingList {
             this.userId = userId;
             return this;
         }
-        
+
         public MarketingList build() {
+
             return new MarketingList(
-                createdAt,
-                description,
-                endAt,
-                id,
-                isActive,
-                name,
-                raw,
-                startAt,
-                updatedAt,
+                createdAt, description, endAt,
+                id, isActive, name,
+                raw, startAt, updatedAt,
                 userId);
         }
+
     }
 }

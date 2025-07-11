@@ -28,7 +28,7 @@ public class PatchHrisTimeshiftRequestBuilder {
     public PatchHrisTimeshiftResponse call() throws Exception {
         
         RequestOperation<PatchHrisTimeshiftRequest, PatchHrisTimeshiftResponse> operation
-              = new PatchHrisTimeshiftOperation( sdkConfiguration);
+              = new PatchHrisTimeshiftOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

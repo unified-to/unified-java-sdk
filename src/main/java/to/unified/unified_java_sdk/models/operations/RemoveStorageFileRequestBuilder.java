@@ -28,7 +28,7 @@ public class RemoveStorageFileRequestBuilder {
     public RemoveStorageFileResponse call() throws Exception {
         
         RequestOperation<RemoveStorageFileRequest, RemoveStorageFileResponse> operation
-              = new RemoveStorageFileOperation( sdkConfiguration);
+              = new RemoveStorageFileOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

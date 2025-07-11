@@ -40,7 +40,6 @@ public class Purchaseorder {
     Purchaseorder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a purchaseorder
      * 
@@ -57,13 +56,11 @@ public class Purchaseorder {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateAccountingPurchaseorderResponse createAccountingPurchaseorder(
-            CreateAccountingPurchaseorderRequest request) throws Exception {
+    public CreateAccountingPurchaseorderResponse createAccountingPurchaseorder(CreateAccountingPurchaseorderRequest request) throws Exception {
         RequestOperation<CreateAccountingPurchaseorderRequest, CreateAccountingPurchaseorderResponse> operation
-              = new CreateAccountingPurchaseorderOperation( sdkConfiguration);
+              = new CreateAccountingPurchaseorderOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a purchaseorder
@@ -81,13 +78,11 @@ public class Purchaseorder {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetAccountingPurchaseorderResponse getAccountingPurchaseorder(
-            GetAccountingPurchaseorderRequest request) throws Exception {
+    public GetAccountingPurchaseorderResponse getAccountingPurchaseorder(GetAccountingPurchaseorderRequest request) throws Exception {
         RequestOperation<GetAccountingPurchaseorderRequest, GetAccountingPurchaseorderResponse> operation
-              = new GetAccountingPurchaseorderOperation( sdkConfiguration);
+              = new GetAccountingPurchaseorderOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all purchaseorders
@@ -105,13 +100,11 @@ public class Purchaseorder {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListAccountingPurchaseordersResponse listAccountingPurchaseorders(
-            ListAccountingPurchaseordersRequest request) throws Exception {
+    public ListAccountingPurchaseordersResponse listAccountingPurchaseorders(ListAccountingPurchaseordersRequest request) throws Exception {
         RequestOperation<ListAccountingPurchaseordersRequest, ListAccountingPurchaseordersResponse> operation
-              = new ListAccountingPurchaseordersOperation( sdkConfiguration);
+              = new ListAccountingPurchaseordersOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a purchaseorder
@@ -129,13 +122,11 @@ public class Purchaseorder {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchAccountingPurchaseorderResponse patchAccountingPurchaseorder(
-            PatchAccountingPurchaseorderRequest request) throws Exception {
+    public PatchAccountingPurchaseorderResponse patchAccountingPurchaseorder(PatchAccountingPurchaseorderRequest request) throws Exception {
         RequestOperation<PatchAccountingPurchaseorderRequest, PatchAccountingPurchaseorderResponse> operation
-              = new PatchAccountingPurchaseorderOperation( sdkConfiguration);
+              = new PatchAccountingPurchaseorderOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a purchaseorder
@@ -153,13 +144,11 @@ public class Purchaseorder {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveAccountingPurchaseorderResponse removeAccountingPurchaseorder(
-            RemoveAccountingPurchaseorderRequest request) throws Exception {
+    public RemoveAccountingPurchaseorderResponse removeAccountingPurchaseorder(RemoveAccountingPurchaseorderRequest request) throws Exception {
         RequestOperation<RemoveAccountingPurchaseorderRequest, RemoveAccountingPurchaseorderResponse> operation
-              = new RemoveAccountingPurchaseorderOperation( sdkConfiguration);
+              = new RemoveAccountingPurchaseorderOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a purchaseorder
@@ -177,10 +166,9 @@ public class Purchaseorder {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateAccountingPurchaseorderResponse updateAccountingPurchaseorder(
-            UpdateAccountingPurchaseorderRequest request) throws Exception {
+    public UpdateAccountingPurchaseorderResponse updateAccountingPurchaseorder(UpdateAccountingPurchaseorderRequest request) throws Exception {
         RequestOperation<UpdateAccountingPurchaseorderRequest, UpdateAccountingPurchaseorderResponse> operation
-              = new UpdateAccountingPurchaseorderOperation( sdkConfiguration);
+              = new UpdateAccountingPurchaseorderOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

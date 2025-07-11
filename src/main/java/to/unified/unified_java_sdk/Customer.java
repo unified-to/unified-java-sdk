@@ -40,7 +40,6 @@ public class Customer {
     Customer(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a customer
      * 
@@ -57,13 +56,11 @@ public class Customer {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateTicketingCustomerResponse createTicketingCustomer(
-            CreateTicketingCustomerRequest request) throws Exception {
+    public CreateTicketingCustomerResponse createTicketingCustomer(CreateTicketingCustomerRequest request) throws Exception {
         RequestOperation<CreateTicketingCustomerRequest, CreateTicketingCustomerResponse> operation
-              = new CreateTicketingCustomerOperation( sdkConfiguration);
+              = new CreateTicketingCustomerOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a customer
@@ -81,13 +78,11 @@ public class Customer {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetTicketingCustomerResponse getTicketingCustomer(
-            GetTicketingCustomerRequest request) throws Exception {
+    public GetTicketingCustomerResponse getTicketingCustomer(GetTicketingCustomerRequest request) throws Exception {
         RequestOperation<GetTicketingCustomerRequest, GetTicketingCustomerResponse> operation
-              = new GetTicketingCustomerOperation( sdkConfiguration);
+              = new GetTicketingCustomerOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all customers
@@ -105,13 +100,11 @@ public class Customer {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListTicketingCustomersResponse listTicketingCustomers(
-            ListTicketingCustomersRequest request) throws Exception {
+    public ListTicketingCustomersResponse listTicketingCustomers(ListTicketingCustomersRequest request) throws Exception {
         RequestOperation<ListTicketingCustomersRequest, ListTicketingCustomersResponse> operation
-              = new ListTicketingCustomersOperation( sdkConfiguration);
+              = new ListTicketingCustomersOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a customer
@@ -129,13 +122,11 @@ public class Customer {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchTicketingCustomerResponse patchTicketingCustomer(
-            PatchTicketingCustomerRequest request) throws Exception {
+    public PatchTicketingCustomerResponse patchTicketingCustomer(PatchTicketingCustomerRequest request) throws Exception {
         RequestOperation<PatchTicketingCustomerRequest, PatchTicketingCustomerResponse> operation
-              = new PatchTicketingCustomerOperation( sdkConfiguration);
+              = new PatchTicketingCustomerOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a customer
@@ -153,13 +144,11 @@ public class Customer {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveTicketingCustomerResponse removeTicketingCustomer(
-            RemoveTicketingCustomerRequest request) throws Exception {
+    public RemoveTicketingCustomerResponse removeTicketingCustomer(RemoveTicketingCustomerRequest request) throws Exception {
         RequestOperation<RemoveTicketingCustomerRequest, RemoveTicketingCustomerResponse> operation
-              = new RemoveTicketingCustomerOperation( sdkConfiguration);
+              = new RemoveTicketingCustomerOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a customer
@@ -177,10 +166,9 @@ public class Customer {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateTicketingCustomerResponse updateTicketingCustomer(
-            UpdateTicketingCustomerRequest request) throws Exception {
+    public UpdateTicketingCustomerResponse updateTicketingCustomer(UpdateTicketingCustomerRequest request) throws Exception {
         RequestOperation<UpdateTicketingCustomerRequest, UpdateTicketingCustomerResponse> operation
-              = new UpdateTicketingCustomerOperation( sdkConfiguration);
+              = new UpdateTicketingCustomerOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

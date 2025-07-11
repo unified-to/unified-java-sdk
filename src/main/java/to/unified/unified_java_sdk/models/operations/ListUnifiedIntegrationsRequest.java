@@ -15,8 +15,8 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class ListUnifiedIntegrationsRequest {
 
+public class ListUnifiedIntegrationsRequest {
     /**
      * Filter the results for only the workspace's active integrations
      */
@@ -29,14 +29,18 @@ public class ListUnifiedIntegrationsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=categories")
     private Optional<? extends List<ListUnifiedIntegrationsQueryParamCategories>> categories;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=env")
     private Optional<String> env;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     private Optional<Double> limit;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     private Optional<Double> offset;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=summary")
     private Optional<Boolean> summary;
@@ -46,6 +50,7 @@ public class ListUnifiedIntegrationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     private Optional<String> type;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private Optional<String> updatedGte;
@@ -79,7 +84,9 @@ public class ListUnifiedIntegrationsRequest {
     }
     
     public ListUnifiedIntegrationsRequest() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     /**
@@ -132,9 +139,10 @@ public class ListUnifiedIntegrationsRequest {
         return updatedGte;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * Filter the results for only the workspace's active integrations
@@ -144,6 +152,7 @@ public class ListUnifiedIntegrationsRequest {
         this.active = Optional.ofNullable(active);
         return this;
     }
+
 
     /**
      * Filter the results for only the workspace's active integrations
@@ -163,6 +172,7 @@ public class ListUnifiedIntegrationsRequest {
         return this;
     }
 
+
     /**
      * Filter the results on these categories
      */
@@ -178,6 +188,7 @@ public class ListUnifiedIntegrationsRequest {
         return this;
     }
 
+
     public ListUnifiedIntegrationsRequest withEnv(Optional<String> env) {
         Utils.checkNotNull(env, "env");
         this.env = env;
@@ -189,6 +200,7 @@ public class ListUnifiedIntegrationsRequest {
         this.limit = Optional.ofNullable(limit);
         return this;
     }
+
 
     public ListUnifiedIntegrationsRequest withLimit(Optional<Double> limit) {
         Utils.checkNotNull(limit, "limit");
@@ -202,6 +214,7 @@ public class ListUnifiedIntegrationsRequest {
         return this;
     }
 
+
     public ListUnifiedIntegrationsRequest withOffset(Optional<Double> offset) {
         Utils.checkNotNull(offset, "offset");
         this.offset = offset;
@@ -213,6 +226,7 @@ public class ListUnifiedIntegrationsRequest {
         this.summary = Optional.ofNullable(summary);
         return this;
     }
+
 
     public ListUnifiedIntegrationsRequest withSummary(Optional<Boolean> summary) {
         Utils.checkNotNull(summary, "summary");
@@ -229,6 +243,7 @@ public class ListUnifiedIntegrationsRequest {
         return this;
     }
 
+
     /**
      * Filter the results for only this integration type
      */
@@ -244,13 +259,13 @@ public class ListUnifiedIntegrationsRequest {
         return this;
     }
 
+
     public ListUnifiedIntegrationsRequest withUpdatedGte(Optional<String> updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
         this.updatedGte = updatedGte;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -274,14 +289,9 @@ public class ListUnifiedIntegrationsRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            active,
-            categories,
-            env,
-            limit,
-            offset,
-            summary,
-            type,
-            updatedGte);
+            active, categories, env,
+            limit, offset, summary,
+            type, updatedGte);
     }
     
     @Override
@@ -296,28 +306,30 @@ public class ListUnifiedIntegrationsRequest {
                 "type", type,
                 "updatedGte", updatedGte);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<Boolean> active = Optional.empty();
- 
+
         private Optional<? extends List<ListUnifiedIntegrationsQueryParamCategories>> categories = Optional.empty();
- 
+
         private Optional<String> env = Optional.empty();
- 
+
         private Optional<Double> limit = Optional.empty();
- 
+
         private Optional<Double> offset = Optional.empty();
- 
+
         private Optional<Boolean> summary = Optional.empty();
- 
+
         private Optional<String> type = Optional.empty();
- 
+
         private Optional<String> updatedGte = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * Filter the results for only the workspace's active integrations
@@ -337,6 +349,7 @@ public class ListUnifiedIntegrationsRequest {
             return this;
         }
 
+
         /**
          * Filter the results on these categories
          */
@@ -355,6 +368,7 @@ public class ListUnifiedIntegrationsRequest {
             return this;
         }
 
+
         public Builder env(String env) {
             Utils.checkNotNull(env, "env");
             this.env = Optional.ofNullable(env);
@@ -366,6 +380,7 @@ public class ListUnifiedIntegrationsRequest {
             this.env = env;
             return this;
         }
+
 
         public Builder limit(double limit) {
             Utils.checkNotNull(limit, "limit");
@@ -379,6 +394,7 @@ public class ListUnifiedIntegrationsRequest {
             return this;
         }
 
+
         public Builder offset(double offset) {
             Utils.checkNotNull(offset, "offset");
             this.offset = Optional.ofNullable(offset);
@@ -391,6 +407,7 @@ public class ListUnifiedIntegrationsRequest {
             return this;
         }
 
+
         public Builder summary(boolean summary) {
             Utils.checkNotNull(summary, "summary");
             this.summary = Optional.ofNullable(summary);
@@ -402,6 +419,7 @@ public class ListUnifiedIntegrationsRequest {
             this.summary = summary;
             return this;
         }
+
 
         /**
          * Filter the results for only this integration type
@@ -421,6 +439,7 @@ public class ListUnifiedIntegrationsRequest {
             return this;
         }
 
+
         public Builder updatedGte(String updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
             this.updatedGte = Optional.ofNullable(updatedGte);
@@ -432,17 +451,14 @@ public class ListUnifiedIntegrationsRequest {
             this.updatedGte = updatedGte;
             return this;
         }
-        
+
         public ListUnifiedIntegrationsRequest build() {
+
             return new ListUnifiedIntegrationsRequest(
-                active,
-                categories,
-                env,
-                limit,
-                offset,
-                summary,
-                type,
-                updatedGte);
+                active, categories, env,
+                limit, offset, summary,
+                type, updatedGte);
         }
+
     }
 }

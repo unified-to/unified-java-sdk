@@ -28,7 +28,7 @@ public class GetHrisDeviceRequestBuilder {
     public GetHrisDeviceResponse call() throws Exception {
         
         RequestOperation<GetHrisDeviceRequest, GetHrisDeviceResponse> operation
-              = new GetHrisDeviceOperation( sdkConfiguration);
+              = new GetHrisDeviceOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

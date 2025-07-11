@@ -14,35 +14,43 @@ import java.lang.String;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AccountingJournalLineitem {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     private Optional<String> accountId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private Optional<String> contactId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private Optional<String> description;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoice_id")
     private Optional<String> invoiceId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_id")
     private Optional<String> paymentId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_amount")
     private Optional<Double> taxAmount;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
@@ -77,7 +85,9 @@ public class AccountingJournalLineitem {
     }
     
     public AccountingJournalLineitem() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -120,15 +130,17 @@ public class AccountingJournalLineitem {
         return totalAmount;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AccountingJournalLineitem withAccountId(String accountId) {
         Utils.checkNotNull(accountId, "accountId");
         this.accountId = Optional.ofNullable(accountId);
         return this;
     }
+
 
     public AccountingJournalLineitem withAccountId(Optional<String> accountId) {
         Utils.checkNotNull(accountId, "accountId");
@@ -142,6 +154,7 @@ public class AccountingJournalLineitem {
         return this;
     }
 
+
     public AccountingJournalLineitem withContactId(Optional<String> contactId) {
         Utils.checkNotNull(contactId, "contactId");
         this.contactId = contactId;
@@ -153,6 +166,7 @@ public class AccountingJournalLineitem {
         this.description = Optional.ofNullable(description);
         return this;
     }
+
 
     public AccountingJournalLineitem withDescription(Optional<String> description) {
         Utils.checkNotNull(description, "description");
@@ -166,6 +180,7 @@ public class AccountingJournalLineitem {
         return this;
     }
 
+
     public AccountingJournalLineitem withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -177,6 +192,7 @@ public class AccountingJournalLineitem {
         this.invoiceId = Optional.ofNullable(invoiceId);
         return this;
     }
+
 
     public AccountingJournalLineitem withInvoiceId(Optional<String> invoiceId) {
         Utils.checkNotNull(invoiceId, "invoiceId");
@@ -190,6 +206,7 @@ public class AccountingJournalLineitem {
         return this;
     }
 
+
     public AccountingJournalLineitem withPaymentId(Optional<String> paymentId) {
         Utils.checkNotNull(paymentId, "paymentId");
         this.paymentId = paymentId;
@@ -201,6 +218,7 @@ public class AccountingJournalLineitem {
         this.taxAmount = Optional.ofNullable(taxAmount);
         return this;
     }
+
 
     public AccountingJournalLineitem withTaxAmount(Optional<Double> taxAmount) {
         Utils.checkNotNull(taxAmount, "taxAmount");
@@ -214,13 +232,13 @@ public class AccountingJournalLineitem {
         return this;
     }
 
+
     public AccountingJournalLineitem withTotalAmount(Optional<Double> totalAmount) {
         Utils.checkNotNull(totalAmount, "totalAmount");
         this.totalAmount = totalAmount;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -244,14 +262,9 @@ public class AccountingJournalLineitem {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            accountId,
-            contactId,
-            description,
-            id,
-            invoiceId,
-            paymentId,
-            taxAmount,
-            totalAmount);
+            accountId, contactId, description,
+            id, invoiceId, paymentId,
+            taxAmount, totalAmount);
     }
     
     @Override
@@ -266,28 +279,30 @@ public class AccountingJournalLineitem {
                 "taxAmount", taxAmount,
                 "totalAmount", totalAmount);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> accountId = Optional.empty();
- 
+
         private Optional<String> contactId = Optional.empty();
- 
+
         private Optional<String> description = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<String> invoiceId = Optional.empty();
- 
+
         private Optional<String> paymentId = Optional.empty();
- 
+
         private Optional<Double> taxAmount = Optional.empty();
- 
+
         private Optional<Double> totalAmount = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder accountId(String accountId) {
             Utils.checkNotNull(accountId, "accountId");
@@ -301,6 +316,7 @@ public class AccountingJournalLineitem {
             return this;
         }
 
+
         public Builder contactId(String contactId) {
             Utils.checkNotNull(contactId, "contactId");
             this.contactId = Optional.ofNullable(contactId);
@@ -312,6 +328,7 @@ public class AccountingJournalLineitem {
             this.contactId = contactId;
             return this;
         }
+
 
         public Builder description(String description) {
             Utils.checkNotNull(description, "description");
@@ -325,6 +342,7 @@ public class AccountingJournalLineitem {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -336,6 +354,7 @@ public class AccountingJournalLineitem {
             this.id = id;
             return this;
         }
+
 
         public Builder invoiceId(String invoiceId) {
             Utils.checkNotNull(invoiceId, "invoiceId");
@@ -349,6 +368,7 @@ public class AccountingJournalLineitem {
             return this;
         }
 
+
         public Builder paymentId(String paymentId) {
             Utils.checkNotNull(paymentId, "paymentId");
             this.paymentId = Optional.ofNullable(paymentId);
@@ -360,6 +380,7 @@ public class AccountingJournalLineitem {
             this.paymentId = paymentId;
             return this;
         }
+
 
         public Builder taxAmount(double taxAmount) {
             Utils.checkNotNull(taxAmount, "taxAmount");
@@ -373,6 +394,7 @@ public class AccountingJournalLineitem {
             return this;
         }
 
+
         public Builder totalAmount(double totalAmount) {
             Utils.checkNotNull(totalAmount, "totalAmount");
             this.totalAmount = Optional.ofNullable(totalAmount);
@@ -384,17 +406,14 @@ public class AccountingJournalLineitem {
             this.totalAmount = totalAmount;
             return this;
         }
-        
+
         public AccountingJournalLineitem build() {
+
             return new AccountingJournalLineitem(
-                accountId,
-                contactId,
-                description,
-                id,
-                invoiceId,
-                paymentId,
-                taxAmount,
-                totalAmount);
+                accountId, contactId, description,
+                id, invoiceId, paymentId,
+                taxAmount, totalAmount);
         }
+
     }
 }

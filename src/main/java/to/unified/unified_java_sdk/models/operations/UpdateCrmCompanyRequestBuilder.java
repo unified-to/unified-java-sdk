@@ -28,7 +28,7 @@ public class UpdateCrmCompanyRequestBuilder {
     public UpdateCrmCompanyResponse call() throws Exception {
         
         RequestOperation<UpdateCrmCompanyRequest, UpdateCrmCompanyResponse> operation
-              = new UpdateCrmCompanyOperation( sdkConfiguration);
+              = new UpdateCrmCompanyOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

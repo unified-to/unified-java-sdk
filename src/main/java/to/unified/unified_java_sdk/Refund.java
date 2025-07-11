@@ -24,7 +24,6 @@ public class Refund {
     Refund(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Retrieve a refund
      * 
@@ -41,13 +40,11 @@ public class Refund {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetPaymentRefundResponse getPaymentRefund(
-            GetPaymentRefundRequest request) throws Exception {
+    public GetPaymentRefundResponse getPaymentRefund(GetPaymentRefundRequest request) throws Exception {
         RequestOperation<GetPaymentRefundRequest, GetPaymentRefundResponse> operation
-              = new GetPaymentRefundOperation( sdkConfiguration);
+              = new GetPaymentRefundOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all refunds
@@ -65,10 +62,9 @@ public class Refund {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListPaymentRefundsResponse listPaymentRefunds(
-            ListPaymentRefundsRequest request) throws Exception {
+    public ListPaymentRefundsResponse listPaymentRefunds(ListPaymentRefundsRequest request) throws Exception {
         RequestOperation<ListPaymentRefundsRequest, ListPaymentRefundsResponse> operation
-              = new ListPaymentRefundsOperation( sdkConfiguration);
+              = new ListPaymentRefundsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

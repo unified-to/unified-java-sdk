@@ -28,7 +28,7 @@ public class PatchAtsInterviewRequestBuilder {
     public PatchAtsInterviewResponse call() throws Exception {
         
         RequestOperation<PatchAtsInterviewRequest, PatchAtsInterviewResponse> operation
-              = new PatchAtsInterviewOperation( sdkConfiguration);
+              = new PatchAtsInterviewOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

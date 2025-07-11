@@ -28,7 +28,7 @@ public class UpdateCommerceLocationRequestBuilder {
     public UpdateCommerceLocationResponse call() throws Exception {
         
         RequestOperation<UpdateCommerceLocationRequest, UpdateCommerceLocationResponse> operation
-              = new UpdateCommerceLocationOperation( sdkConfiguration);
+              = new UpdateCommerceLocationOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

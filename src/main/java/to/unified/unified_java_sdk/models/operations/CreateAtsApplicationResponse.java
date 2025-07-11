@@ -16,8 +16,8 @@ import to.unified.unified_java_sdk.models.shared.AtsApplication;
 import to.unified.unified_java_sdk.utils.Response;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class CreateAtsApplicationResponse implements Response {
 
+public class CreateAtsApplicationResponse implements Response {
     /**
      * Successful
      */
@@ -58,7 +58,8 @@ public class CreateAtsApplicationResponse implements Response {
             String contentType,
             int statusCode,
             HttpResponse<InputStream> rawResponse) {
-        this(Optional.empty(), contentType, statusCode, rawResponse);
+        this(Optional.empty(), contentType, statusCode,
+            rawResponse);
     }
 
     /**
@@ -94,9 +95,10 @@ public class CreateAtsApplicationResponse implements Response {
         return rawResponse;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * Successful
@@ -106,6 +108,7 @@ public class CreateAtsApplicationResponse implements Response {
         this.atsApplication = Optional.ofNullable(atsApplication);
         return this;
     }
+
 
     /**
      * Successful
@@ -143,7 +146,6 @@ public class CreateAtsApplicationResponse implements Response {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -163,9 +165,7 @@ public class CreateAtsApplicationResponse implements Response {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            atsApplication,
-            contentType,
-            statusCode,
+            atsApplication, contentType, statusCode,
             rawResponse);
     }
     
@@ -177,20 +177,22 @@ public class CreateAtsApplicationResponse implements Response {
                 "statusCode", statusCode,
                 "rawResponse", rawResponse);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<? extends AtsApplication> atsApplication = Optional.empty();
- 
+
         private String contentType;
- 
+
         private Integer statusCode;
- 
+
         private HttpResponse<InputStream> rawResponse;
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * Successful
@@ -210,6 +212,7 @@ public class CreateAtsApplicationResponse implements Response {
             return this;
         }
 
+
         /**
          * HTTP response content type for this operation
          */
@@ -218,6 +221,7 @@ public class CreateAtsApplicationResponse implements Response {
             this.contentType = contentType;
             return this;
         }
+
 
         /**
          * HTTP response status code for this operation
@@ -228,6 +232,7 @@ public class CreateAtsApplicationResponse implements Response {
             return this;
         }
 
+
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
@@ -236,13 +241,13 @@ public class CreateAtsApplicationResponse implements Response {
             this.rawResponse = rawResponse;
             return this;
         }
-        
+
         public CreateAtsApplicationResponse build() {
+
             return new CreateAtsApplicationResponse(
-                atsApplication,
-                contentType,
-                statusCode,
+                atsApplication, contentType, statusCode,
                 rawResponse);
         }
+
     }
 }

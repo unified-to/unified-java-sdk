@@ -10,10 +10,12 @@ import java.lang.Override;
 import java.lang.String;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class MessagingReaction {
 
     @JsonProperty("member")
     private PropertyMessagingReactionMember member;
+
 
     @JsonProperty("reaction")
     private String reaction;
@@ -38,9 +40,10 @@ public class MessagingReaction {
         return reaction;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public MessagingReaction withMember(PropertyMessagingReactionMember member) {
         Utils.checkNotNull(member, "member");
@@ -54,7 +57,6 @@ public class MessagingReaction {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -72,8 +74,7 @@ public class MessagingReaction {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            member,
-            reaction);
+            member, reaction);
     }
     
     @Override
@@ -82,16 +83,18 @@ public class MessagingReaction {
                 "member", member,
                 "reaction", reaction);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private PropertyMessagingReactionMember member;
- 
+
         private String reaction;
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder member(PropertyMessagingReactionMember member) {
             Utils.checkNotNull(member, "member");
@@ -99,16 +102,18 @@ public class MessagingReaction {
             return this;
         }
 
+
         public Builder reaction(String reaction) {
             Utils.checkNotNull(reaction, "reaction");
             this.reaction = reaction;
             return this;
         }
-        
+
         public MessagingReaction build() {
+
             return new MessagingReaction(
-                member,
-                reaction);
+                member, reaction);
         }
+
     }
 }

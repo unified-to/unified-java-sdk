@@ -28,7 +28,7 @@ public class RemoveAtsInterviewRequestBuilder {
     public RemoveAtsInterviewResponse call() throws Exception {
         
         RequestOperation<RemoveAtsInterviewRequest, RemoveAtsInterviewResponse> operation
-              = new RemoveAtsInterviewOperation( sdkConfiguration);
+              = new RemoveAtsInterviewOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

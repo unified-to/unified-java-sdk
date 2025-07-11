@@ -28,7 +28,7 @@ public class GetHrisTimeoffRequestBuilder {
     public GetHrisTimeoffResponse call() throws Exception {
         
         RequestOperation<GetHrisTimeoffRequest, GetHrisTimeoffResponse> operation
-              = new GetHrisTimeoffOperation( sdkConfiguration);
+              = new GetHrisTimeoffOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

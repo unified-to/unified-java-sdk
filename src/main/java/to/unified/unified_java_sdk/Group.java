@@ -64,7 +64,6 @@ public class Group {
     Group(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a group
      * 
@@ -81,13 +80,11 @@ public class Group {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateHrisGroupResponse createHrisGroup(
-            CreateHrisGroupRequest request) throws Exception {
+    public CreateHrisGroupResponse createHrisGroup(CreateHrisGroupRequest request) throws Exception {
         RequestOperation<CreateHrisGroupRequest, CreateHrisGroupResponse> operation
-              = new CreateHrisGroupOperation( sdkConfiguration);
+              = new CreateHrisGroupOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create group
@@ -105,13 +102,11 @@ public class Group {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateScimGroupsResponse createScimGroups(
-            CreateScimGroupsRequest request) throws Exception {
+    public CreateScimGroupsResponse createScimGroups(CreateScimGroupsRequest request) throws Exception {
         RequestOperation<CreateScimGroupsRequest, CreateScimGroupsResponse> operation
-              = new CreateScimGroupsOperation( sdkConfiguration);
+              = new CreateScimGroupsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a group
@@ -129,13 +124,11 @@ public class Group {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetHrisGroupResponse getHrisGroup(
-            GetHrisGroupRequest request) throws Exception {
+    public GetHrisGroupResponse getHrisGroup(GetHrisGroupRequest request) throws Exception {
         RequestOperation<GetHrisGroupRequest, GetHrisGroupResponse> operation
-              = new GetHrisGroupOperation( sdkConfiguration);
+              = new GetHrisGroupOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Get group
@@ -153,13 +146,11 @@ public class Group {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetScimGroupsResponse getScimGroups(
-            GetScimGroupsRequest request) throws Exception {
+    public GetScimGroupsResponse getScimGroups(GetScimGroupsRequest request) throws Exception {
         RequestOperation<GetScimGroupsRequest, GetScimGroupsResponse> operation
-              = new GetScimGroupsOperation( sdkConfiguration);
+              = new GetScimGroupsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all groups
@@ -177,13 +168,11 @@ public class Group {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListHrisGroupsResponse listHrisGroups(
-            ListHrisGroupsRequest request) throws Exception {
+    public ListHrisGroupsResponse listHrisGroups(ListHrisGroupsRequest request) throws Exception {
         RequestOperation<ListHrisGroupsRequest, ListHrisGroupsResponse> operation
-              = new ListHrisGroupsOperation( sdkConfiguration);
+              = new ListHrisGroupsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List groups
@@ -201,13 +190,11 @@ public class Group {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListScimGroupsResponse listScimGroups(
-            ListScimGroupsRequest request) throws Exception {
+    public ListScimGroupsResponse listScimGroups(ListScimGroupsRequest request) throws Exception {
         RequestOperation<ListScimGroupsRequest, ListScimGroupsResponse> operation
-              = new ListScimGroupsOperation( sdkConfiguration);
+              = new ListScimGroupsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a group
@@ -225,13 +212,11 @@ public class Group {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchHrisGroupResponse patchHrisGroup(
-            PatchHrisGroupRequest request) throws Exception {
+    public PatchHrisGroupResponse patchHrisGroup(PatchHrisGroupRequest request) throws Exception {
         RequestOperation<PatchHrisGroupRequest, PatchHrisGroupResponse> operation
-              = new PatchHrisGroupOperation( sdkConfiguration);
+              = new PatchHrisGroupOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update group
@@ -249,13 +234,11 @@ public class Group {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchScimGroupsResponse patchScimGroups(
-            PatchScimGroupsRequest request) throws Exception {
+    public PatchScimGroupsResponse patchScimGroups(PatchScimGroupsRequest request) throws Exception {
         RequestOperation<PatchScimGroupsRequest, PatchScimGroupsResponse> operation
-              = new PatchScimGroupsOperation( sdkConfiguration);
+              = new PatchScimGroupsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a group
@@ -273,13 +256,11 @@ public class Group {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveHrisGroupResponse removeHrisGroup(
-            RemoveHrisGroupRequest request) throws Exception {
+    public RemoveHrisGroupResponse removeHrisGroup(RemoveHrisGroupRequest request) throws Exception {
         RequestOperation<RemoveHrisGroupRequest, RemoveHrisGroupResponse> operation
-              = new RemoveHrisGroupOperation( sdkConfiguration);
+              = new RemoveHrisGroupOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Delete group
@@ -297,13 +278,11 @@ public class Group {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveScimGroupsResponse removeScimGroups(
-            RemoveScimGroupsRequest request) throws Exception {
+    public RemoveScimGroupsResponse removeScimGroups(RemoveScimGroupsRequest request) throws Exception {
         RequestOperation<RemoveScimGroupsRequest, RemoveScimGroupsResponse> operation
-              = new RemoveScimGroupsOperation( sdkConfiguration);
+              = new RemoveScimGroupsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a group
@@ -321,13 +300,11 @@ public class Group {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateHrisGroupResponse updateHrisGroup(
-            UpdateHrisGroupRequest request) throws Exception {
+    public UpdateHrisGroupResponse updateHrisGroup(UpdateHrisGroupRequest request) throws Exception {
         RequestOperation<UpdateHrisGroupRequest, UpdateHrisGroupResponse> operation
-              = new UpdateHrisGroupOperation( sdkConfiguration);
+              = new UpdateHrisGroupOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update group
@@ -345,10 +322,9 @@ public class Group {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateScimGroupsResponse updateScimGroups(
-            UpdateScimGroupsRequest request) throws Exception {
+    public UpdateScimGroupsResponse updateScimGroups(UpdateScimGroupsRequest request) throws Exception {
         RequestOperation<UpdateScimGroupsRequest, UpdateScimGroupsResponse> operation
-              = new UpdateScimGroupsOperation( sdkConfiguration);
+              = new UpdateScimGroupsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

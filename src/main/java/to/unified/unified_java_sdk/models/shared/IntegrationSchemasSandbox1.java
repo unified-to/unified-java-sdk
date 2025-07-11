@@ -8,19 +8,17 @@ import java.lang.Override;
 import java.lang.String;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class IntegrationSchemasSandbox1 {
 
+public class IntegrationSchemasSandbox1 {
     @JsonCreator
     public IntegrationSchemasSandbox1() {
-        
-        
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
 
-    
+
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -42,16 +40,19 @@ public class IntegrationSchemasSandbox1 {
     public String toString() {
         return Utils.toString(IntegrationSchemasSandbox1.class);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
-        
+
         private Builder() {
           // force use of static builder() method
         }
-        
+
         public IntegrationSchemasSandbox1 build() {
+
             return new IntegrationSchemasSandbox1(
                 );
         }
+
     }
 }

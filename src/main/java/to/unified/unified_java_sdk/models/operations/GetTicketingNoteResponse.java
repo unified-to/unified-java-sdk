@@ -16,8 +16,8 @@ import to.unified.unified_java_sdk.models.shared.TicketingNote;
 import to.unified.unified_java_sdk.utils.Response;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class GetTicketingNoteResponse implements Response {
 
+public class GetTicketingNoteResponse implements Response {
     /**
      * HTTP response content type for this operation
      */
@@ -58,7 +58,8 @@ public class GetTicketingNoteResponse implements Response {
             String contentType,
             int statusCode,
             HttpResponse<InputStream> rawResponse) {
-        this(contentType, statusCode, rawResponse, Optional.empty());
+        this(contentType, statusCode, rawResponse,
+            Optional.empty());
     }
 
     /**
@@ -94,9 +95,10 @@ public class GetTicketingNoteResponse implements Response {
         return (Optional<TicketingNote>) ticketingNote;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * HTTP response content type for this operation
@@ -134,6 +136,7 @@ public class GetTicketingNoteResponse implements Response {
         return this;
     }
 
+
     /**
      * Successful
      */
@@ -143,7 +146,6 @@ public class GetTicketingNoteResponse implements Response {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -163,9 +165,7 @@ public class GetTicketingNoteResponse implements Response {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            contentType,
-            statusCode,
-            rawResponse,
+            contentType, statusCode, rawResponse,
             ticketingNote);
     }
     
@@ -177,20 +177,22 @@ public class GetTicketingNoteResponse implements Response {
                 "rawResponse", rawResponse,
                 "ticketingNote", ticketingNote);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private String contentType;
- 
+
         private Integer statusCode;
- 
+
         private HttpResponse<InputStream> rawResponse;
- 
+
         private Optional<? extends TicketingNote> ticketingNote = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * HTTP response content type for this operation
@@ -201,6 +203,7 @@ public class GetTicketingNoteResponse implements Response {
             return this;
         }
 
+
         /**
          * HTTP response status code for this operation
          */
@@ -210,6 +213,7 @@ public class GetTicketingNoteResponse implements Response {
             return this;
         }
 
+
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
@@ -218,6 +222,7 @@ public class GetTicketingNoteResponse implements Response {
             this.rawResponse = rawResponse;
             return this;
         }
+
 
         /**
          * Successful
@@ -236,13 +241,13 @@ public class GetTicketingNoteResponse implements Response {
             this.ticketingNote = ticketingNote;
             return this;
         }
-        
+
         public GetTicketingNoteResponse build() {
+
             return new GetTicketingNoteResponse(
-                contentType,
-                statusCode,
-                rawResponse,
+                contentType, statusCode, rawResponse,
                 ticketingNote);
         }
+
     }
 }

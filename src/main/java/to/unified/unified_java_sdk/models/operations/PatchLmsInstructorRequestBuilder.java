@@ -28,7 +28,7 @@ public class PatchLmsInstructorRequestBuilder {
     public PatchLmsInstructorResponse call() throws Exception {
         
         RequestOperation<PatchLmsInstructorRequest, PatchLmsInstructorResponse> operation
-              = new PatchLmsInstructorOperation( sdkConfiguration);
+              = new PatchLmsInstructorOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

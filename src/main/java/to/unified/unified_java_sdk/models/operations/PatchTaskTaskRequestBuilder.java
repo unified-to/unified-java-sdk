@@ -28,7 +28,7 @@ public class PatchTaskTaskRequestBuilder {
     public PatchTaskTaskResponse call() throws Exception {
         
         RequestOperation<PatchTaskTaskRequest, PatchTaskTaskResponse> operation
-              = new PatchTaskTaskOperation( sdkConfiguration);
+              = new PatchTaskTaskOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -40,7 +40,6 @@ public class Metadata {
     Metadata(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a metadata
      * 
@@ -57,13 +56,11 @@ public class Metadata {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateMetadataMetadataResponse createMetadataMetadata(
-            CreateMetadataMetadataRequest request) throws Exception {
+    public CreateMetadataMetadataResponse createMetadataMetadata(CreateMetadataMetadataRequest request) throws Exception {
         RequestOperation<CreateMetadataMetadataRequest, CreateMetadataMetadataResponse> operation
-              = new CreateMetadataMetadataOperation( sdkConfiguration);
+              = new CreateMetadataMetadataOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a metadata
@@ -81,13 +78,11 @@ public class Metadata {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetMetadataMetadataResponse getMetadataMetadata(
-            GetMetadataMetadataRequest request) throws Exception {
+    public GetMetadataMetadataResponse getMetadataMetadata(GetMetadataMetadataRequest request) throws Exception {
         RequestOperation<GetMetadataMetadataRequest, GetMetadataMetadataResponse> operation
-              = new GetMetadataMetadataOperation( sdkConfiguration);
+              = new GetMetadataMetadataOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all metadatas
@@ -105,13 +100,11 @@ public class Metadata {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListMetadataMetadatasResponse listMetadataMetadatas(
-            ListMetadataMetadatasRequest request) throws Exception {
+    public ListMetadataMetadatasResponse listMetadataMetadatas(ListMetadataMetadatasRequest request) throws Exception {
         RequestOperation<ListMetadataMetadatasRequest, ListMetadataMetadatasResponse> operation
-              = new ListMetadataMetadatasOperation( sdkConfiguration);
+              = new ListMetadataMetadatasOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a metadata
@@ -129,13 +122,11 @@ public class Metadata {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchMetadataMetadataResponse patchMetadataMetadata(
-            PatchMetadataMetadataRequest request) throws Exception {
+    public PatchMetadataMetadataResponse patchMetadataMetadata(PatchMetadataMetadataRequest request) throws Exception {
         RequestOperation<PatchMetadataMetadataRequest, PatchMetadataMetadataResponse> operation
-              = new PatchMetadataMetadataOperation( sdkConfiguration);
+              = new PatchMetadataMetadataOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a metadata
@@ -153,13 +144,11 @@ public class Metadata {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveMetadataMetadataResponse removeMetadataMetadata(
-            RemoveMetadataMetadataRequest request) throws Exception {
+    public RemoveMetadataMetadataResponse removeMetadataMetadata(RemoveMetadataMetadataRequest request) throws Exception {
         RequestOperation<RemoveMetadataMetadataRequest, RemoveMetadataMetadataResponse> operation
-              = new RemoveMetadataMetadataOperation( sdkConfiguration);
+              = new RemoveMetadataMetadataOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a metadata
@@ -177,10 +166,9 @@ public class Metadata {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateMetadataMetadataResponse updateMetadataMetadata(
-            UpdateMetadataMetadataRequest request) throws Exception {
+    public UpdateMetadataMetadataResponse updateMetadataMetadata(UpdateMetadataMetadataRequest request) throws Exception {
         RequestOperation<UpdateMetadataMetadataRequest, UpdateMetadataMetadataResponse> operation
-              = new UpdateMetadataMetadataOperation( sdkConfiguration);
+              = new UpdateMetadataMetadataOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

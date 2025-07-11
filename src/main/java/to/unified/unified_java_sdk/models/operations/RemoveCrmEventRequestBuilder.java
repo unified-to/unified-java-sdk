@@ -28,7 +28,7 @@ public class RemoveCrmEventRequestBuilder {
     public RemoveCrmEventResponse call() throws Exception {
         
         RequestOperation<RemoveCrmEventRequest, RemoveCrmEventResponse> operation
-              = new RemoveCrmEventOperation( sdkConfiguration);
+              = new RemoveCrmEventOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

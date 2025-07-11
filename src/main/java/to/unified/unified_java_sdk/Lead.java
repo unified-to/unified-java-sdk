@@ -40,7 +40,6 @@ public class Lead {
     Lead(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a lead
      * 
@@ -57,13 +56,11 @@ public class Lead {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateCrmLeadResponse createCrmLead(
-            CreateCrmLeadRequest request) throws Exception {
+    public CreateCrmLeadResponse createCrmLead(CreateCrmLeadRequest request) throws Exception {
         RequestOperation<CreateCrmLeadRequest, CreateCrmLeadResponse> operation
-              = new CreateCrmLeadOperation( sdkConfiguration);
+              = new CreateCrmLeadOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a lead
@@ -81,13 +78,11 @@ public class Lead {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetCrmLeadResponse getCrmLead(
-            GetCrmLeadRequest request) throws Exception {
+    public GetCrmLeadResponse getCrmLead(GetCrmLeadRequest request) throws Exception {
         RequestOperation<GetCrmLeadRequest, GetCrmLeadResponse> operation
-              = new GetCrmLeadOperation( sdkConfiguration);
+              = new GetCrmLeadOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all leads
@@ -105,13 +100,11 @@ public class Lead {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCrmLeadsResponse listCrmLeads(
-            ListCrmLeadsRequest request) throws Exception {
+    public ListCrmLeadsResponse listCrmLeads(ListCrmLeadsRequest request) throws Exception {
         RequestOperation<ListCrmLeadsRequest, ListCrmLeadsResponse> operation
-              = new ListCrmLeadsOperation( sdkConfiguration);
+              = new ListCrmLeadsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a lead
@@ -129,13 +122,11 @@ public class Lead {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchCrmLeadResponse patchCrmLead(
-            PatchCrmLeadRequest request) throws Exception {
+    public PatchCrmLeadResponse patchCrmLead(PatchCrmLeadRequest request) throws Exception {
         RequestOperation<PatchCrmLeadRequest, PatchCrmLeadResponse> operation
-              = new PatchCrmLeadOperation( sdkConfiguration);
+              = new PatchCrmLeadOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a lead
@@ -153,13 +144,11 @@ public class Lead {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveCrmLeadResponse removeCrmLead(
-            RemoveCrmLeadRequest request) throws Exception {
+    public RemoveCrmLeadResponse removeCrmLead(RemoveCrmLeadRequest request) throws Exception {
         RequestOperation<RemoveCrmLeadRequest, RemoveCrmLeadResponse> operation
-              = new RemoveCrmLeadOperation( sdkConfiguration);
+              = new RemoveCrmLeadOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a lead
@@ -177,10 +166,9 @@ public class Lead {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateCrmLeadResponse updateCrmLead(
-            UpdateCrmLeadRequest request) throws Exception {
+    public UpdateCrmLeadResponse updateCrmLead(UpdateCrmLeadRequest request) throws Exception {
         RequestOperation<UpdateCrmLeadRequest, UpdateCrmLeadResponse> operation
-              = new UpdateCrmLeadOperation( sdkConfiguration);
+              = new UpdateCrmLeadOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

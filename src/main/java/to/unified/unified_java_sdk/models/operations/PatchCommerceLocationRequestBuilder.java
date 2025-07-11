@@ -28,7 +28,7 @@ public class PatchCommerceLocationRequestBuilder {
     public PatchCommerceLocationResponse call() throws Exception {
         
         RequestOperation<PatchCommerceLocationRequest, PatchCommerceLocationResponse> operation
-              = new PatchCommerceLocationOperation( sdkConfiguration);
+              = new PatchCommerceLocationOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

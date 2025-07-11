@@ -28,7 +28,7 @@ public class PatchHrisGroupRequestBuilder {
     public PatchHrisGroupResponse call() throws Exception {
         
         RequestOperation<PatchHrisGroupRequest, PatchHrisGroupResponse> operation
-              = new PatchHrisGroupOperation( sdkConfiguration);
+              = new PatchHrisGroupOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

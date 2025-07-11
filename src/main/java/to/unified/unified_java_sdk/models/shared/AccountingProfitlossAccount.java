@@ -16,19 +16,23 @@ import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AccountingProfitlossAccount {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     private Optional<String> accountId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_name")
     private Optional<String> accountName;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
     private Optional<Double> totalAmount;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction_ids")
@@ -51,7 +55,8 @@ public class AccountingProfitlossAccount {
     }
     
     public AccountingProfitlossAccount() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -75,15 +80,17 @@ public class AccountingProfitlossAccount {
         return (Optional<List<String>>) transactionIds;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AccountingProfitlossAccount withAccountId(String accountId) {
         Utils.checkNotNull(accountId, "accountId");
         this.accountId = Optional.ofNullable(accountId);
         return this;
     }
+
 
     public AccountingProfitlossAccount withAccountId(Optional<String> accountId) {
         Utils.checkNotNull(accountId, "accountId");
@@ -97,6 +104,7 @@ public class AccountingProfitlossAccount {
         return this;
     }
 
+
     public AccountingProfitlossAccount withAccountName(Optional<String> accountName) {
         Utils.checkNotNull(accountName, "accountName");
         this.accountName = accountName;
@@ -108,6 +116,7 @@ public class AccountingProfitlossAccount {
         this.totalAmount = Optional.ofNullable(totalAmount);
         return this;
     }
+
 
     public AccountingProfitlossAccount withTotalAmount(Optional<Double> totalAmount) {
         Utils.checkNotNull(totalAmount, "totalAmount");
@@ -121,13 +130,13 @@ public class AccountingProfitlossAccount {
         return this;
     }
 
+
     public AccountingProfitlossAccount withTransactionIds(Optional<? extends List<String>> transactionIds) {
         Utils.checkNotNull(transactionIds, "transactionIds");
         this.transactionIds = transactionIds;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -147,9 +156,7 @@ public class AccountingProfitlossAccount {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            accountId,
-            accountName,
-            totalAmount,
+            accountId, accountName, totalAmount,
             transactionIds);
     }
     
@@ -161,20 +168,22 @@ public class AccountingProfitlossAccount {
                 "totalAmount", totalAmount,
                 "transactionIds", transactionIds);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> accountId = Optional.empty();
- 
+
         private Optional<String> accountName = Optional.empty();
- 
+
         private Optional<Double> totalAmount = Optional.empty();
- 
+
         private Optional<? extends List<String>> transactionIds = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder accountId(String accountId) {
             Utils.checkNotNull(accountId, "accountId");
@@ -188,6 +197,7 @@ public class AccountingProfitlossAccount {
             return this;
         }
 
+
         public Builder accountName(String accountName) {
             Utils.checkNotNull(accountName, "accountName");
             this.accountName = Optional.ofNullable(accountName);
@@ -199,6 +209,7 @@ public class AccountingProfitlossAccount {
             this.accountName = accountName;
             return this;
         }
+
 
         public Builder totalAmount(double totalAmount) {
             Utils.checkNotNull(totalAmount, "totalAmount");
@@ -212,6 +223,7 @@ public class AccountingProfitlossAccount {
             return this;
         }
 
+
         public Builder transactionIds(List<String> transactionIds) {
             Utils.checkNotNull(transactionIds, "transactionIds");
             this.transactionIds = Optional.ofNullable(transactionIds);
@@ -223,13 +235,13 @@ public class AccountingProfitlossAccount {
             this.transactionIds = transactionIds;
             return this;
         }
-        
+
         public AccountingProfitlossAccount build() {
+
             return new AccountingProfitlossAccount(
-                accountId,
-                accountName,
-                totalAmount,
+                accountId, accountName, totalAmount,
                 transactionIds);
         }
+
     }
 }

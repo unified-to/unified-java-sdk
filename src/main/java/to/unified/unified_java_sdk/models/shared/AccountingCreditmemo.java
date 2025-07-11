@@ -20,107 +20,133 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AccountingCreditmemo {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachments")
     private Optional<? extends List<AccountingAttachment>> attachments;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balance_amount")
     private Optional<Double> balanceAmount;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancelled_at")
     private Optional<OffsetDateTime> cancelledAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private Optional<String> contactId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditmemo_number")
     private Optional<String> creditmemoNumber;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private Optional<String> currency;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discount_amount")
     private Optional<Double> discountAmount;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("due_at")
     private Optional<OffsetDateTime> dueAt;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineitems")
     private Optional<? extends List<AccountingLineitem>> lineitems;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     private Optional<String> notes;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paid_amount")
     private Optional<Double> paidAmount;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paid_at")
     private Optional<OffsetDateTime> paidAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_collection_method")
     private Optional<? extends AccountingCreditmemoPaymentCollectionMethod> paymentCollectionMethod;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posted_at")
     private Optional<OffsetDateTime> postedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refund_amount")
     private Optional<Double> refundAmount;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refund_reason")
     private Optional<String> refundReason;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_at")
     private Optional<OffsetDateTime> refundedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("send")
     private Optional<Boolean> send;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private Optional<? extends AccountingCreditmemoStatus> status;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_amount")
     private Optional<Double> taxAmount;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
     private Optional<Double> totalAmount;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
@@ -209,7 +235,15 @@ public class AccountingCreditmemo {
     }
     
     public AccountingCreditmemo() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -347,15 +381,17 @@ public class AccountingCreditmemo {
         return url;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AccountingCreditmemo withAttachments(List<AccountingAttachment> attachments) {
         Utils.checkNotNull(attachments, "attachments");
         this.attachments = Optional.ofNullable(attachments);
         return this;
     }
+
 
     public AccountingCreditmemo withAttachments(Optional<? extends List<AccountingAttachment>> attachments) {
         Utils.checkNotNull(attachments, "attachments");
@@ -369,6 +405,7 @@ public class AccountingCreditmemo {
         return this;
     }
 
+
     public AccountingCreditmemo withBalanceAmount(Optional<Double> balanceAmount) {
         Utils.checkNotNull(balanceAmount, "balanceAmount");
         this.balanceAmount = balanceAmount;
@@ -380,6 +417,7 @@ public class AccountingCreditmemo {
         this.cancelledAt = Optional.ofNullable(cancelledAt);
         return this;
     }
+
 
     public AccountingCreditmemo withCancelledAt(Optional<OffsetDateTime> cancelledAt) {
         Utils.checkNotNull(cancelledAt, "cancelledAt");
@@ -393,6 +431,7 @@ public class AccountingCreditmemo {
         return this;
     }
 
+
     public AccountingCreditmemo withContactId(Optional<String> contactId) {
         Utils.checkNotNull(contactId, "contactId");
         this.contactId = contactId;
@@ -404,6 +443,7 @@ public class AccountingCreditmemo {
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
+
 
     public AccountingCreditmemo withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -417,6 +457,7 @@ public class AccountingCreditmemo {
         return this;
     }
 
+
     public AccountingCreditmemo withCreditmemoNumber(Optional<String> creditmemoNumber) {
         Utils.checkNotNull(creditmemoNumber, "creditmemoNumber");
         this.creditmemoNumber = creditmemoNumber;
@@ -428,6 +469,7 @@ public class AccountingCreditmemo {
         this.currency = Optional.ofNullable(currency);
         return this;
     }
+
 
     public AccountingCreditmemo withCurrency(Optional<String> currency) {
         Utils.checkNotNull(currency, "currency");
@@ -441,6 +483,7 @@ public class AccountingCreditmemo {
         return this;
     }
 
+
     public AccountingCreditmemo withDiscountAmount(Optional<Double> discountAmount) {
         Utils.checkNotNull(discountAmount, "discountAmount");
         this.discountAmount = discountAmount;
@@ -452,6 +495,7 @@ public class AccountingCreditmemo {
         this.dueAt = Optional.ofNullable(dueAt);
         return this;
     }
+
 
     public AccountingCreditmemo withDueAt(Optional<OffsetDateTime> dueAt) {
         Utils.checkNotNull(dueAt, "dueAt");
@@ -465,6 +509,7 @@ public class AccountingCreditmemo {
         return this;
     }
 
+
     public AccountingCreditmemo withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -476,6 +521,7 @@ public class AccountingCreditmemo {
         this.lineitems = Optional.ofNullable(lineitems);
         return this;
     }
+
 
     public AccountingCreditmemo withLineitems(Optional<? extends List<AccountingLineitem>> lineitems) {
         Utils.checkNotNull(lineitems, "lineitems");
@@ -489,6 +535,7 @@ public class AccountingCreditmemo {
         return this;
     }
 
+
     public AccountingCreditmemo withNotes(Optional<String> notes) {
         Utils.checkNotNull(notes, "notes");
         this.notes = notes;
@@ -500,6 +547,7 @@ public class AccountingCreditmemo {
         this.paidAmount = Optional.ofNullable(paidAmount);
         return this;
     }
+
 
     public AccountingCreditmemo withPaidAmount(Optional<Double> paidAmount) {
         Utils.checkNotNull(paidAmount, "paidAmount");
@@ -513,6 +561,7 @@ public class AccountingCreditmemo {
         return this;
     }
 
+
     public AccountingCreditmemo withPaidAt(Optional<OffsetDateTime> paidAt) {
         Utils.checkNotNull(paidAt, "paidAt");
         this.paidAt = paidAt;
@@ -524,6 +573,7 @@ public class AccountingCreditmemo {
         this.paymentCollectionMethod = Optional.ofNullable(paymentCollectionMethod);
         return this;
     }
+
 
     public AccountingCreditmemo withPaymentCollectionMethod(Optional<? extends AccountingCreditmemoPaymentCollectionMethod> paymentCollectionMethod) {
         Utils.checkNotNull(paymentCollectionMethod, "paymentCollectionMethod");
@@ -537,6 +587,7 @@ public class AccountingCreditmemo {
         return this;
     }
 
+
     public AccountingCreditmemo withPostedAt(Optional<OffsetDateTime> postedAt) {
         Utils.checkNotNull(postedAt, "postedAt");
         this.postedAt = postedAt;
@@ -548,6 +599,7 @@ public class AccountingCreditmemo {
         this.raw = Optional.ofNullable(raw);
         return this;
     }
+
 
     public AccountingCreditmemo withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -561,6 +613,7 @@ public class AccountingCreditmemo {
         return this;
     }
 
+
     public AccountingCreditmemo withRefundAmount(Optional<Double> refundAmount) {
         Utils.checkNotNull(refundAmount, "refundAmount");
         this.refundAmount = refundAmount;
@@ -572,6 +625,7 @@ public class AccountingCreditmemo {
         this.refundReason = Optional.ofNullable(refundReason);
         return this;
     }
+
 
     public AccountingCreditmemo withRefundReason(Optional<String> refundReason) {
         Utils.checkNotNull(refundReason, "refundReason");
@@ -585,6 +639,7 @@ public class AccountingCreditmemo {
         return this;
     }
 
+
     public AccountingCreditmemo withRefundedAt(Optional<OffsetDateTime> refundedAt) {
         Utils.checkNotNull(refundedAt, "refundedAt");
         this.refundedAt = refundedAt;
@@ -596,6 +651,7 @@ public class AccountingCreditmemo {
         this.send = Optional.ofNullable(send);
         return this;
     }
+
 
     public AccountingCreditmemo withSend(Optional<Boolean> send) {
         Utils.checkNotNull(send, "send");
@@ -609,6 +665,7 @@ public class AccountingCreditmemo {
         return this;
     }
 
+
     public AccountingCreditmemo withStatus(Optional<? extends AccountingCreditmemoStatus> status) {
         Utils.checkNotNull(status, "status");
         this.status = status;
@@ -620,6 +677,7 @@ public class AccountingCreditmemo {
         this.taxAmount = Optional.ofNullable(taxAmount);
         return this;
     }
+
 
     public AccountingCreditmemo withTaxAmount(Optional<Double> taxAmount) {
         Utils.checkNotNull(taxAmount, "taxAmount");
@@ -633,6 +691,7 @@ public class AccountingCreditmemo {
         return this;
     }
 
+
     public AccountingCreditmemo withTotalAmount(Optional<Double> totalAmount) {
         Utils.checkNotNull(totalAmount, "totalAmount");
         this.totalAmount = totalAmount;
@@ -644,6 +703,7 @@ public class AccountingCreditmemo {
         this.updatedAt = Optional.ofNullable(updatedAt);
         return this;
     }
+
 
     public AccountingCreditmemo withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
@@ -657,13 +717,13 @@ public class AccountingCreditmemo {
         return this;
     }
 
+
     public AccountingCreditmemo withUrl(Optional<String> url) {
         Utils.checkNotNull(url, "url");
         this.url = url;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -705,32 +765,15 @@ public class AccountingCreditmemo {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            attachments,
-            balanceAmount,
-            cancelledAt,
-            contactId,
-            createdAt,
-            creditmemoNumber,
-            currency,
-            discountAmount,
-            dueAt,
-            id,
-            lineitems,
-            notes,
-            paidAmount,
-            paidAt,
-            paymentCollectionMethod,
-            postedAt,
-            raw,
-            refundAmount,
-            refundReason,
-            refundedAt,
-            send,
-            status,
-            taxAmount,
-            totalAmount,
-            updatedAt,
-            url);
+            attachments, balanceAmount, cancelledAt,
+            contactId, createdAt, creditmemoNumber,
+            currency, discountAmount, dueAt,
+            id, lineitems, notes,
+            paidAmount, paidAt, paymentCollectionMethod,
+            postedAt, raw, refundAmount,
+            refundReason, refundedAt, send,
+            status, taxAmount, totalAmount,
+            updatedAt, url);
     }
     
     @Override
@@ -763,64 +806,66 @@ public class AccountingCreditmemo {
                 "updatedAt", updatedAt,
                 "url", url);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<? extends List<AccountingAttachment>> attachments = Optional.empty();
- 
+
         private Optional<Double> balanceAmount = Optional.empty();
- 
+
         private Optional<OffsetDateTime> cancelledAt = Optional.empty();
- 
+
         private Optional<String> contactId = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> creditmemoNumber = Optional.empty();
- 
+
         private Optional<String> currency = Optional.empty();
- 
+
         private Optional<Double> discountAmount = Optional.empty();
- 
+
         private Optional<OffsetDateTime> dueAt = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<? extends List<AccountingLineitem>> lineitems = Optional.empty();
- 
+
         private Optional<String> notes = Optional.empty();
- 
+
         private Optional<Double> paidAmount = Optional.empty();
- 
+
         private Optional<OffsetDateTime> paidAt = Optional.empty();
- 
+
         private Optional<? extends AccountingCreditmemoPaymentCollectionMethod> paymentCollectionMethod = Optional.empty();
- 
+
         private Optional<OffsetDateTime> postedAt = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<Double> refundAmount = Optional.empty();
- 
+
         private Optional<String> refundReason = Optional.empty();
- 
+
         private Optional<OffsetDateTime> refundedAt = Optional.empty();
- 
+
         private Optional<Boolean> send = Optional.empty();
- 
+
         private Optional<? extends AccountingCreditmemoStatus> status = Optional.empty();
- 
+
         private Optional<Double> taxAmount = Optional.empty();
- 
+
         private Optional<Double> totalAmount = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
- 
+
         private Optional<String> url = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder attachments(List<AccountingAttachment> attachments) {
             Utils.checkNotNull(attachments, "attachments");
@@ -834,6 +879,7 @@ public class AccountingCreditmemo {
             return this;
         }
 
+
         public Builder balanceAmount(double balanceAmount) {
             Utils.checkNotNull(balanceAmount, "balanceAmount");
             this.balanceAmount = Optional.ofNullable(balanceAmount);
@@ -845,6 +891,7 @@ public class AccountingCreditmemo {
             this.balanceAmount = balanceAmount;
             return this;
         }
+
 
         public Builder cancelledAt(OffsetDateTime cancelledAt) {
             Utils.checkNotNull(cancelledAt, "cancelledAt");
@@ -858,6 +905,7 @@ public class AccountingCreditmemo {
             return this;
         }
 
+
         public Builder contactId(String contactId) {
             Utils.checkNotNull(contactId, "contactId");
             this.contactId = Optional.ofNullable(contactId);
@@ -869,6 +917,7 @@ public class AccountingCreditmemo {
             this.contactId = contactId;
             return this;
         }
+
 
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
@@ -882,6 +931,7 @@ public class AccountingCreditmemo {
             return this;
         }
 
+
         public Builder creditmemoNumber(String creditmemoNumber) {
             Utils.checkNotNull(creditmemoNumber, "creditmemoNumber");
             this.creditmemoNumber = Optional.ofNullable(creditmemoNumber);
@@ -893,6 +943,7 @@ public class AccountingCreditmemo {
             this.creditmemoNumber = creditmemoNumber;
             return this;
         }
+
 
         public Builder currency(String currency) {
             Utils.checkNotNull(currency, "currency");
@@ -906,6 +957,7 @@ public class AccountingCreditmemo {
             return this;
         }
 
+
         public Builder discountAmount(double discountAmount) {
             Utils.checkNotNull(discountAmount, "discountAmount");
             this.discountAmount = Optional.ofNullable(discountAmount);
@@ -917,6 +969,7 @@ public class AccountingCreditmemo {
             this.discountAmount = discountAmount;
             return this;
         }
+
 
         public Builder dueAt(OffsetDateTime dueAt) {
             Utils.checkNotNull(dueAt, "dueAt");
@@ -930,6 +983,7 @@ public class AccountingCreditmemo {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -941,6 +995,7 @@ public class AccountingCreditmemo {
             this.id = id;
             return this;
         }
+
 
         public Builder lineitems(List<AccountingLineitem> lineitems) {
             Utils.checkNotNull(lineitems, "lineitems");
@@ -954,6 +1009,7 @@ public class AccountingCreditmemo {
             return this;
         }
 
+
         public Builder notes(String notes) {
             Utils.checkNotNull(notes, "notes");
             this.notes = Optional.ofNullable(notes);
@@ -965,6 +1021,7 @@ public class AccountingCreditmemo {
             this.notes = notes;
             return this;
         }
+
 
         public Builder paidAmount(double paidAmount) {
             Utils.checkNotNull(paidAmount, "paidAmount");
@@ -978,6 +1035,7 @@ public class AccountingCreditmemo {
             return this;
         }
 
+
         public Builder paidAt(OffsetDateTime paidAt) {
             Utils.checkNotNull(paidAt, "paidAt");
             this.paidAt = Optional.ofNullable(paidAt);
@@ -989,6 +1047,7 @@ public class AccountingCreditmemo {
             this.paidAt = paidAt;
             return this;
         }
+
 
         public Builder paymentCollectionMethod(AccountingCreditmemoPaymentCollectionMethod paymentCollectionMethod) {
             Utils.checkNotNull(paymentCollectionMethod, "paymentCollectionMethod");
@@ -1002,6 +1061,7 @@ public class AccountingCreditmemo {
             return this;
         }
 
+
         public Builder postedAt(OffsetDateTime postedAt) {
             Utils.checkNotNull(postedAt, "postedAt");
             this.postedAt = Optional.ofNullable(postedAt);
@@ -1013,6 +1073,7 @@ public class AccountingCreditmemo {
             this.postedAt = postedAt;
             return this;
         }
+
 
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
@@ -1026,6 +1087,7 @@ public class AccountingCreditmemo {
             return this;
         }
 
+
         public Builder refundAmount(double refundAmount) {
             Utils.checkNotNull(refundAmount, "refundAmount");
             this.refundAmount = Optional.ofNullable(refundAmount);
@@ -1037,6 +1099,7 @@ public class AccountingCreditmemo {
             this.refundAmount = refundAmount;
             return this;
         }
+
 
         public Builder refundReason(String refundReason) {
             Utils.checkNotNull(refundReason, "refundReason");
@@ -1050,6 +1113,7 @@ public class AccountingCreditmemo {
             return this;
         }
 
+
         public Builder refundedAt(OffsetDateTime refundedAt) {
             Utils.checkNotNull(refundedAt, "refundedAt");
             this.refundedAt = Optional.ofNullable(refundedAt);
@@ -1061,6 +1125,7 @@ public class AccountingCreditmemo {
             this.refundedAt = refundedAt;
             return this;
         }
+
 
         public Builder send(boolean send) {
             Utils.checkNotNull(send, "send");
@@ -1074,6 +1139,7 @@ public class AccountingCreditmemo {
             return this;
         }
 
+
         public Builder status(AccountingCreditmemoStatus status) {
             Utils.checkNotNull(status, "status");
             this.status = Optional.ofNullable(status);
@@ -1085,6 +1151,7 @@ public class AccountingCreditmemo {
             this.status = status;
             return this;
         }
+
 
         public Builder taxAmount(double taxAmount) {
             Utils.checkNotNull(taxAmount, "taxAmount");
@@ -1098,6 +1165,7 @@ public class AccountingCreditmemo {
             return this;
         }
 
+
         public Builder totalAmount(double totalAmount) {
             Utils.checkNotNull(totalAmount, "totalAmount");
             this.totalAmount = Optional.ofNullable(totalAmount);
@@ -1109,6 +1177,7 @@ public class AccountingCreditmemo {
             this.totalAmount = totalAmount;
             return this;
         }
+
 
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
@@ -1122,6 +1191,7 @@ public class AccountingCreditmemo {
             return this;
         }
 
+
         public Builder url(String url) {
             Utils.checkNotNull(url, "url");
             this.url = Optional.ofNullable(url);
@@ -1133,35 +1203,20 @@ public class AccountingCreditmemo {
             this.url = url;
             return this;
         }
-        
+
         public AccountingCreditmemo build() {
+
             return new AccountingCreditmemo(
-                attachments,
-                balanceAmount,
-                cancelledAt,
-                contactId,
-                createdAt,
-                creditmemoNumber,
-                currency,
-                discountAmount,
-                dueAt,
-                id,
-                lineitems,
-                notes,
-                paidAmount,
-                paidAt,
-                paymentCollectionMethod,
-                postedAt,
-                raw,
-                refundAmount,
-                refundReason,
-                refundedAt,
-                send,
-                status,
-                taxAmount,
-                totalAmount,
-                updatedAt,
-                url);
+                attachments, balanceAmount, cancelledAt,
+                contactId, createdAt, creditmemoNumber,
+                currency, discountAmount, dueAt,
+                id, lineitems, notes,
+                paidAmount, paidAt, paymentCollectionMethod,
+                postedAt, raw, refundAmount,
+                refundReason, refundedAt, send,
+                status, taxAmount, totalAmount,
+                updatedAt, url);
         }
+
     }
 }

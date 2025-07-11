@@ -64,7 +64,6 @@ public class Location {
     Location(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create a location
      * 
@@ -81,13 +80,11 @@ public class Location {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateCommerceLocationResponse createCommerceLocation(
-            CreateCommerceLocationRequest request) throws Exception {
+    public CreateCommerceLocationResponse createCommerceLocation(CreateCommerceLocationRequest request) throws Exception {
         RequestOperation<CreateCommerceLocationRequest, CreateCommerceLocationResponse> operation
-              = new CreateCommerceLocationOperation( sdkConfiguration);
+              = new CreateCommerceLocationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Create a location
@@ -105,13 +102,11 @@ public class Location {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateHrisLocationResponse createHrisLocation(
-            CreateHrisLocationRequest request) throws Exception {
+    public CreateHrisLocationResponse createHrisLocation(CreateHrisLocationRequest request) throws Exception {
         RequestOperation<CreateHrisLocationRequest, CreateHrisLocationResponse> operation
-              = new CreateHrisLocationOperation( sdkConfiguration);
+              = new CreateHrisLocationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a location
@@ -129,13 +124,11 @@ public class Location {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetCommerceLocationResponse getCommerceLocation(
-            GetCommerceLocationRequest request) throws Exception {
+    public GetCommerceLocationResponse getCommerceLocation(GetCommerceLocationRequest request) throws Exception {
         RequestOperation<GetCommerceLocationRequest, GetCommerceLocationResponse> operation
-              = new GetCommerceLocationOperation( sdkConfiguration);
+              = new GetCommerceLocationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve a location
@@ -153,13 +146,11 @@ public class Location {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetHrisLocationResponse getHrisLocation(
-            GetHrisLocationRequest request) throws Exception {
+    public GetHrisLocationResponse getHrisLocation(GetHrisLocationRequest request) throws Exception {
         RequestOperation<GetHrisLocationRequest, GetHrisLocationResponse> operation
-              = new GetHrisLocationOperation( sdkConfiguration);
+              = new GetHrisLocationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all locations
@@ -177,13 +168,11 @@ public class Location {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCommerceLocationsResponse listCommerceLocations(
-            ListCommerceLocationsRequest request) throws Exception {
+    public ListCommerceLocationsResponse listCommerceLocations(ListCommerceLocationsRequest request) throws Exception {
         RequestOperation<ListCommerceLocationsRequest, ListCommerceLocationsResponse> operation
-              = new ListCommerceLocationsOperation( sdkConfiguration);
+              = new ListCommerceLocationsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all locations
@@ -201,13 +190,11 @@ public class Location {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListHrisLocationsResponse listHrisLocations(
-            ListHrisLocationsRequest request) throws Exception {
+    public ListHrisLocationsResponse listHrisLocations(ListHrisLocationsRequest request) throws Exception {
         RequestOperation<ListHrisLocationsRequest, ListHrisLocationsResponse> operation
-              = new ListHrisLocationsOperation( sdkConfiguration);
+              = new ListHrisLocationsOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a location
@@ -225,13 +212,11 @@ public class Location {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchCommerceLocationResponse patchCommerceLocation(
-            PatchCommerceLocationRequest request) throws Exception {
+    public PatchCommerceLocationResponse patchCommerceLocation(PatchCommerceLocationRequest request) throws Exception {
         RequestOperation<PatchCommerceLocationRequest, PatchCommerceLocationResponse> operation
-              = new PatchCommerceLocationOperation( sdkConfiguration);
+              = new PatchCommerceLocationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a location
@@ -249,13 +234,11 @@ public class Location {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchHrisLocationResponse patchHrisLocation(
-            PatchHrisLocationRequest request) throws Exception {
+    public PatchHrisLocationResponse patchHrisLocation(PatchHrisLocationRequest request) throws Exception {
         RequestOperation<PatchHrisLocationRequest, PatchHrisLocationResponse> operation
-              = new PatchHrisLocationOperation( sdkConfiguration);
+              = new PatchHrisLocationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a location
@@ -273,13 +256,11 @@ public class Location {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveCommerceLocationResponse removeCommerceLocation(
-            RemoveCommerceLocationRequest request) throws Exception {
+    public RemoveCommerceLocationResponse removeCommerceLocation(RemoveCommerceLocationRequest request) throws Exception {
         RequestOperation<RemoveCommerceLocationRequest, RemoveCommerceLocationResponse> operation
-              = new RemoveCommerceLocationOperation( sdkConfiguration);
+              = new RemoveCommerceLocationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove a location
@@ -297,13 +278,11 @@ public class Location {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveHrisLocationResponse removeHrisLocation(
-            RemoveHrisLocationRequest request) throws Exception {
+    public RemoveHrisLocationResponse removeHrisLocation(RemoveHrisLocationRequest request) throws Exception {
         RequestOperation<RemoveHrisLocationRequest, RemoveHrisLocationResponse> operation
-              = new RemoveHrisLocationOperation( sdkConfiguration);
+              = new RemoveHrisLocationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a location
@@ -321,13 +300,11 @@ public class Location {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateCommerceLocationResponse updateCommerceLocation(
-            UpdateCommerceLocationRequest request) throws Exception {
+    public UpdateCommerceLocationResponse updateCommerceLocation(UpdateCommerceLocationRequest request) throws Exception {
         RequestOperation<UpdateCommerceLocationRequest, UpdateCommerceLocationResponse> operation
-              = new UpdateCommerceLocationOperation( sdkConfiguration);
+              = new UpdateCommerceLocationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update a location
@@ -345,10 +322,9 @@ public class Location {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateHrisLocationResponse updateHrisLocation(
-            UpdateHrisLocationRequest request) throws Exception {
+    public UpdateHrisLocationResponse updateHrisLocation(UpdateHrisLocationRequest request) throws Exception {
         RequestOperation<UpdateHrisLocationRequest, UpdateHrisLocationResponse> operation
-              = new UpdateHrisLocationOperation( sdkConfiguration);
+              = new UpdateHrisLocationOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

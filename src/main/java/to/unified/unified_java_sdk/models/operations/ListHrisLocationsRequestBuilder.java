@@ -28,7 +28,7 @@ public class ListHrisLocationsRequestBuilder {
     public ListHrisLocationsResponse call() throws Exception {
         
         RequestOperation<ListHrisLocationsRequest, ListHrisLocationsResponse> operation
-              = new ListHrisLocationsOperation( sdkConfiguration);
+              = new ListHrisLocationsOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

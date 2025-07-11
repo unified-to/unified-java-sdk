@@ -28,7 +28,7 @@ public class RemoveScimUsersRequestBuilder {
     public RemoveScimUsersResponse call() throws Exception {
         
         RequestOperation<RemoveScimUsersRequest, RemoveScimUsersResponse> operation
-              = new RemoveScimUsersOperation( sdkConfiguration);
+              = new RemoveScimUsersOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

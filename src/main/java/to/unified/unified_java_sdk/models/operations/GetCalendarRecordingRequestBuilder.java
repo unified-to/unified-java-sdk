@@ -28,7 +28,7 @@ public class GetCalendarRecordingRequestBuilder {
     public GetCalendarRecordingResponse call() throws Exception {
         
         RequestOperation<GetCalendarRecordingRequest, GetCalendarRecordingResponse> operation
-              = new GetCalendarRecordingOperation( sdkConfiguration);
+              = new GetCalendarRecordingOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

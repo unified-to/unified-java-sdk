@@ -28,7 +28,7 @@ public class PatchMetadataMetadataRequestBuilder {
     public PatchMetadataMetadataResponse call() throws Exception {
         
         RequestOperation<PatchMetadataMetadataRequest, PatchMetadataMetadataResponse> operation
-              = new PatchMetadataMetadataOperation( sdkConfiguration);
+              = new PatchMetadataMetadataOperation(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

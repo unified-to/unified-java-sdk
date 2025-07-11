@@ -11,8 +11,8 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class ListEnrichPeopleRequest {
 
+public class ListEnrichPeopleRequest {
     /**
      * The name of the company the person is associated with.  Not valid by itself.
      */
@@ -73,7 +73,8 @@ public class ListEnrichPeopleRequest {
     
     public ListEnrichPeopleRequest(
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), connectionId, Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     /**
@@ -124,9 +125,10 @@ public class ListEnrichPeopleRequest {
         return twitter;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * The name of the company the person is associated with.  Not valid by itself.
@@ -136,6 +138,7 @@ public class ListEnrichPeopleRequest {
         this.companyName = Optional.ofNullable(companyName);
         return this;
     }
+
 
     /**
      * The name of the company the person is associated with.  Not valid by itself.
@@ -164,6 +167,7 @@ public class ListEnrichPeopleRequest {
         return this;
     }
 
+
     /**
      * The email of the person to search
      */
@@ -181,6 +185,7 @@ public class ListEnrichPeopleRequest {
         this.linkedinUrl = Optional.ofNullable(linkedinUrl);
         return this;
     }
+
 
     /**
      * The LinkedIn URL of the person to search
@@ -200,6 +205,7 @@ public class ListEnrichPeopleRequest {
         return this;
     }
 
+
     /**
      * The name of the person to search
      */
@@ -218,6 +224,7 @@ public class ListEnrichPeopleRequest {
         return this;
     }
 
+
     /**
      * The twitter handle of the person to search
      */
@@ -227,7 +234,6 @@ public class ListEnrichPeopleRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -249,12 +255,8 @@ public class ListEnrichPeopleRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            companyName,
-            connectionId,
-            email,
-            linkedinUrl,
-            name,
-            twitter);
+            companyName, connectionId, email,
+            linkedinUrl, name, twitter);
     }
     
     @Override
@@ -267,24 +269,26 @@ public class ListEnrichPeopleRequest {
                 "name", name,
                 "twitter", twitter);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> companyName = Optional.empty();
- 
+
         private String connectionId;
- 
+
         private Optional<String> email = Optional.empty();
- 
+
         private Optional<String> linkedinUrl = Optional.empty();
- 
+
         private Optional<String> name = Optional.empty();
- 
+
         private Optional<String> twitter = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * The name of the company the person is associated with.  Not valid by itself.
@@ -304,6 +308,7 @@ public class ListEnrichPeopleRequest {
             return this;
         }
 
+
         /**
          * ID of the connection
          */
@@ -312,6 +317,7 @@ public class ListEnrichPeopleRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         /**
          * The email of the person to search
@@ -331,6 +337,7 @@ public class ListEnrichPeopleRequest {
             return this;
         }
 
+
         /**
          * The LinkedIn URL of the person to search
          */
@@ -348,6 +355,7 @@ public class ListEnrichPeopleRequest {
             this.linkedinUrl = linkedinUrl;
             return this;
         }
+
 
         /**
          * The name of the person to search
@@ -367,6 +375,7 @@ public class ListEnrichPeopleRequest {
             return this;
         }
 
+
         /**
          * The twitter handle of the person to search
          */
@@ -384,15 +393,13 @@ public class ListEnrichPeopleRequest {
             this.twitter = twitter;
             return this;
         }
-        
+
         public ListEnrichPeopleRequest build() {
+
             return new ListEnrichPeopleRequest(
-                companyName,
-                connectionId,
-                email,
-                linkedinUrl,
-                name,
-                twitter);
+                companyName, connectionId, email,
+                linkedinUrl, name, twitter);
         }
+
     }
 }

@@ -16,30 +16,37 @@ import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AtsJobQuestion {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private Optional<String> description;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     private Optional<? extends List<String>> options;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prompt")
     private Optional<String> prompt;
 
+
     @JsonProperty("question")
     private String question;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     private Optional<Boolean> required;
+
 
     @JsonProperty("type")
     private AtsJobQuestionType type;
@@ -72,7 +79,9 @@ public class AtsJobQuestion {
     public AtsJobQuestion(
             String question,
             AtsJobQuestionType type) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), question, Optional.empty(), type);
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), question, Optional.empty(),
+            type);
     }
 
     @JsonIgnore
@@ -111,15 +120,17 @@ public class AtsJobQuestion {
         return type;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AtsJobQuestion withDescription(String description) {
         Utils.checkNotNull(description, "description");
         this.description = Optional.ofNullable(description);
         return this;
     }
+
 
     public AtsJobQuestion withDescription(Optional<String> description) {
         Utils.checkNotNull(description, "description");
@@ -133,6 +144,7 @@ public class AtsJobQuestion {
         return this;
     }
 
+
     public AtsJobQuestion withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
@@ -145,6 +157,7 @@ public class AtsJobQuestion {
         return this;
     }
 
+
     public AtsJobQuestion withOptions(Optional<? extends List<String>> options) {
         Utils.checkNotNull(options, "options");
         this.options = options;
@@ -156,6 +169,7 @@ public class AtsJobQuestion {
         this.prompt = Optional.ofNullable(prompt);
         return this;
     }
+
 
     public AtsJobQuestion withPrompt(Optional<String> prompt) {
         Utils.checkNotNull(prompt, "prompt");
@@ -175,6 +189,7 @@ public class AtsJobQuestion {
         return this;
     }
 
+
     public AtsJobQuestion withRequired(Optional<Boolean> required) {
         Utils.checkNotNull(required, "required");
         this.required = required;
@@ -187,7 +202,6 @@ public class AtsJobQuestion {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -210,12 +224,8 @@ public class AtsJobQuestion {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            description,
-            id,
-            options,
-            prompt,
-            question,
-            required,
+            description, id, options,
+            prompt, question, required,
             type);
     }
     
@@ -230,26 +240,28 @@ public class AtsJobQuestion {
                 "required", required,
                 "type", type);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> description = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<? extends List<String>> options = Optional.empty();
- 
+
         private Optional<String> prompt = Optional.empty();
- 
+
         private String question;
- 
+
         private Optional<Boolean> required = Optional.empty();
- 
+
         private AtsJobQuestionType type;
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder description(String description) {
             Utils.checkNotNull(description, "description");
@@ -263,6 +275,7 @@ public class AtsJobQuestion {
             return this;
         }
 
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -274,6 +287,7 @@ public class AtsJobQuestion {
             this.id = id;
             return this;
         }
+
 
         public Builder options(List<String> options) {
             Utils.checkNotNull(options, "options");
@@ -287,6 +301,7 @@ public class AtsJobQuestion {
             return this;
         }
 
+
         public Builder prompt(String prompt) {
             Utils.checkNotNull(prompt, "prompt");
             this.prompt = Optional.ofNullable(prompt);
@@ -299,11 +314,13 @@ public class AtsJobQuestion {
             return this;
         }
 
+
         public Builder question(String question) {
             Utils.checkNotNull(question, "question");
             this.question = question;
             return this;
         }
+
 
         public Builder required(boolean required) {
             Utils.checkNotNull(required, "required");
@@ -317,21 +334,20 @@ public class AtsJobQuestion {
             return this;
         }
 
+
         public Builder type(AtsJobQuestionType type) {
             Utils.checkNotNull(type, "type");
             this.type = type;
             return this;
         }
-        
+
         public AtsJobQuestion build() {
+
             return new AtsJobQuestion(
-                description,
-                id,
-                options,
-                prompt,
-                question,
-                required,
+                description, id, options,
+                prompt, question, required,
                 type);
         }
+
     }
 }

@@ -14,8 +14,8 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class ListCommerceInventoriesRequest {
 
+public class ListCommerceInventoriesRequest {
     /**
      * ID of the connection
      */
@@ -34,6 +34,7 @@ public class ListCommerceInventoriesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=item_variant_id")
     private Optional<String> itemVariantId;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     private Optional<Double> limit;
 
@@ -43,8 +44,10 @@ public class ListCommerceInventoriesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
     private Optional<String> locationId;
 
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     private Optional<Double> offset;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     private Optional<String> order;
@@ -60,6 +63,7 @@ public class ListCommerceInventoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
     private Optional<String> raw;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     private Optional<String> sort;
@@ -109,7 +113,10 @@ public class ListCommerceInventoriesRequest {
     
     public ListCommerceInventoriesRequest(
             String connectionId) {
-        this(connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(connectionId, Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     /**
@@ -189,9 +196,10 @@ public class ListCommerceInventoriesRequest {
         return updatedGte;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     /**
      * ID of the connection
@@ -211,6 +219,7 @@ public class ListCommerceInventoriesRequest {
         return this;
     }
 
+
     /**
      * Comma-delimited fields to return
      */
@@ -229,6 +238,7 @@ public class ListCommerceInventoriesRequest {
         return this;
     }
 
+
     /**
      * The item variant ID to filter by
      */
@@ -243,6 +253,7 @@ public class ListCommerceInventoriesRequest {
         this.limit = Optional.ofNullable(limit);
         return this;
     }
+
 
     public ListCommerceInventoriesRequest withLimit(Optional<Double> limit) {
         Utils.checkNotNull(limit, "limit");
@@ -259,6 +270,7 @@ public class ListCommerceInventoriesRequest {
         return this;
     }
 
+
     /**
      * The location ID to filter by
      */
@@ -274,6 +286,7 @@ public class ListCommerceInventoriesRequest {
         return this;
     }
 
+
     public ListCommerceInventoriesRequest withOffset(Optional<Double> offset) {
         Utils.checkNotNull(offset, "offset");
         this.offset = offset;
@@ -285,6 +298,7 @@ public class ListCommerceInventoriesRequest {
         this.order = Optional.ofNullable(order);
         return this;
     }
+
 
     public ListCommerceInventoriesRequest withOrder(Optional<String> order) {
         Utils.checkNotNull(order, "order");
@@ -300,6 +314,7 @@ public class ListCommerceInventoriesRequest {
         this.query = Optional.ofNullable(query);
         return this;
     }
+
 
     /**
      * Query string to search. eg. email address or name
@@ -319,6 +334,7 @@ public class ListCommerceInventoriesRequest {
         return this;
     }
 
+
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
@@ -333,6 +349,7 @@ public class ListCommerceInventoriesRequest {
         this.sort = Optional.ofNullable(sort);
         return this;
     }
+
 
     public ListCommerceInventoriesRequest withSort(Optional<String> sort) {
         Utils.checkNotNull(sort, "sort");
@@ -349,6 +366,7 @@ public class ListCommerceInventoriesRequest {
         return this;
     }
 
+
     /**
      * Return only results whose updated date is equal or greater to this value
      */
@@ -358,7 +376,6 @@ public class ListCommerceInventoriesRequest {
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -385,17 +402,10 @@ public class ListCommerceInventoriesRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId,
-            fields,
-            itemVariantId,
-            limit,
-            locationId,
-            offset,
-            order,
-            query,
-            raw,
-            sort,
-            updatedGte);
+            connectionId, fields, itemVariantId,
+            limit, locationId, offset,
+            order, query, raw,
+            sort, updatedGte);
     }
     
     @Override
@@ -413,34 +423,36 @@ public class ListCommerceInventoriesRequest {
                 "sort", sort,
                 "updatedGte", updatedGte);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private String connectionId;
- 
+
         private Optional<? extends List<String>> fields = Optional.empty();
- 
+
         private Optional<String> itemVariantId = Optional.empty();
- 
+
         private Optional<Double> limit = Optional.empty();
- 
+
         private Optional<String> locationId = Optional.empty();
- 
+
         private Optional<Double> offset = Optional.empty();
- 
+
         private Optional<String> order = Optional.empty();
- 
+
         private Optional<String> query = Optional.empty();
- 
+
         private Optional<String> raw = Optional.empty();
- 
+
         private Optional<String> sort = Optional.empty();
- 
+
         private Optional<String> updatedGte = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         /**
          * ID of the connection
@@ -450,6 +462,7 @@ public class ListCommerceInventoriesRequest {
             this.connectionId = connectionId;
             return this;
         }
+
 
         /**
          * Comma-delimited fields to return
@@ -469,6 +482,7 @@ public class ListCommerceInventoriesRequest {
             return this;
         }
 
+
         /**
          * The item variant ID to filter by
          */
@@ -487,6 +501,7 @@ public class ListCommerceInventoriesRequest {
             return this;
         }
 
+
         public Builder limit(double limit) {
             Utils.checkNotNull(limit, "limit");
             this.limit = Optional.ofNullable(limit);
@@ -498,6 +513,7 @@ public class ListCommerceInventoriesRequest {
             this.limit = limit;
             return this;
         }
+
 
         /**
          * The location ID to filter by
@@ -517,6 +533,7 @@ public class ListCommerceInventoriesRequest {
             return this;
         }
 
+
         public Builder offset(double offset) {
             Utils.checkNotNull(offset, "offset");
             this.offset = Optional.ofNullable(offset);
@@ -529,6 +546,7 @@ public class ListCommerceInventoriesRequest {
             return this;
         }
 
+
         public Builder order(String order) {
             Utils.checkNotNull(order, "order");
             this.order = Optional.ofNullable(order);
@@ -540,6 +558,7 @@ public class ListCommerceInventoriesRequest {
             this.order = order;
             return this;
         }
+
 
         /**
          * Query string to search. eg. email address or name
@@ -559,6 +578,7 @@ public class ListCommerceInventoriesRequest {
             return this;
         }
 
+
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
@@ -577,6 +597,7 @@ public class ListCommerceInventoriesRequest {
             return this;
         }
 
+
         public Builder sort(String sort) {
             Utils.checkNotNull(sort, "sort");
             this.sort = Optional.ofNullable(sort);
@@ -588,6 +609,7 @@ public class ListCommerceInventoriesRequest {
             this.sort = sort;
             return this;
         }
+
 
         /**
          * Return only results whose updated date is equal or greater to this value
@@ -606,20 +628,15 @@ public class ListCommerceInventoriesRequest {
             this.updatedGte = updatedGte;
             return this;
         }
-        
+
         public ListCommerceInventoriesRequest build() {
+
             return new ListCommerceInventoriesRequest(
-                connectionId,
-                fields,
-                itemVariantId,
-                limit,
-                locationId,
-                offset,
-                order,
-                query,
-                raw,
-                sort,
-                updatedGte);
+                connectionId, fields, itemVariantId,
+                limit, locationId, offset,
+                order, query, raw,
+                sort, updatedGte);
         }
+
     }
 }

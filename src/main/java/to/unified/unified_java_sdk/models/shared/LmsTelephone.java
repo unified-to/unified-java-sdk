@@ -14,10 +14,12 @@ import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class LmsTelephone {
 
     @JsonProperty("telephone")
     private String telephone;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
@@ -49,9 +51,10 @@ public class LmsTelephone {
         return (Optional<LmsTelephoneType>) type;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public LmsTelephone withTelephone(String telephone) {
         Utils.checkNotNull(telephone, "telephone");
@@ -65,13 +68,13 @@ public class LmsTelephone {
         return this;
     }
 
+
     public LmsTelephone withType(Optional<? extends LmsTelephoneType> type) {
         Utils.checkNotNull(type, "type");
         this.type = type;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -89,8 +92,7 @@ public class LmsTelephone {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            telephone,
-            type);
+            telephone, type);
     }
     
     @Override
@@ -99,22 +101,25 @@ public class LmsTelephone {
                 "telephone", telephone,
                 "type", type);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private String telephone;
- 
+
         private Optional<? extends LmsTelephoneType> type = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder telephone(String telephone) {
             Utils.checkNotNull(telephone, "telephone");
             this.telephone = telephone;
             return this;
         }
+
 
         public Builder type(LmsTelephoneType type) {
             Utils.checkNotNull(type, "type");
@@ -127,11 +132,12 @@ public class LmsTelephone {
             this.type = type;
             return this;
         }
-        
+
         public LmsTelephone build() {
+
             return new LmsTelephone(
-                telephone,
-                type);
+                telephone, type);
         }
+
     }
 }

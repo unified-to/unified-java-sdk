@@ -40,7 +40,6 @@ public class Employee {
     Employee(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
-
     /**
      * Create an employee
      * 
@@ -57,13 +56,11 @@ public class Employee {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateHrisEmployeeResponse createHrisEmployee(
-            CreateHrisEmployeeRequest request) throws Exception {
+    public CreateHrisEmployeeResponse createHrisEmployee(CreateHrisEmployeeRequest request) throws Exception {
         RequestOperation<CreateHrisEmployeeRequest, CreateHrisEmployeeResponse> operation
-              = new CreateHrisEmployeeOperation( sdkConfiguration);
+              = new CreateHrisEmployeeOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Retrieve an employee
@@ -81,13 +78,11 @@ public class Employee {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetHrisEmployeeResponse getHrisEmployee(
-            GetHrisEmployeeRequest request) throws Exception {
+    public GetHrisEmployeeResponse getHrisEmployee(GetHrisEmployeeRequest request) throws Exception {
         RequestOperation<GetHrisEmployeeRequest, GetHrisEmployeeResponse> operation
-              = new GetHrisEmployeeOperation( sdkConfiguration);
+              = new GetHrisEmployeeOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * List all employees
@@ -105,13 +100,11 @@ public class Employee {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListHrisEmployeesResponse listHrisEmployees(
-            ListHrisEmployeesRequest request) throws Exception {
+    public ListHrisEmployeesResponse listHrisEmployees(ListHrisEmployeesRequest request) throws Exception {
         RequestOperation<ListHrisEmployeesRequest, ListHrisEmployeesResponse> operation
-              = new ListHrisEmployeesOperation( sdkConfiguration);
+              = new ListHrisEmployeesOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an employee
@@ -129,13 +122,11 @@ public class Employee {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchHrisEmployeeResponse patchHrisEmployee(
-            PatchHrisEmployeeRequest request) throws Exception {
+    public PatchHrisEmployeeResponse patchHrisEmployee(PatchHrisEmployeeRequest request) throws Exception {
         RequestOperation<PatchHrisEmployeeRequest, PatchHrisEmployeeResponse> operation
-              = new PatchHrisEmployeeOperation( sdkConfiguration);
+              = new PatchHrisEmployeeOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Remove an employee
@@ -153,13 +144,11 @@ public class Employee {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveHrisEmployeeResponse removeHrisEmployee(
-            RemoveHrisEmployeeRequest request) throws Exception {
+    public RemoveHrisEmployeeResponse removeHrisEmployee(RemoveHrisEmployeeRequest request) throws Exception {
         RequestOperation<RemoveHrisEmployeeRequest, RemoveHrisEmployeeResponse> operation
-              = new RemoveHrisEmployeeOperation( sdkConfiguration);
+              = new RemoveHrisEmployeeOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
-
 
     /**
      * Update an employee
@@ -177,10 +166,9 @@ public class Employee {
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateHrisEmployeeResponse updateHrisEmployee(
-            UpdateHrisEmployeeRequest request) throws Exception {
+    public UpdateHrisEmployeeResponse updateHrisEmployee(UpdateHrisEmployeeRequest request) throws Exception {
         RequestOperation<UpdateHrisEmployeeRequest, UpdateHrisEmployeeResponse> operation
-              = new UpdateHrisEmployeeOperation( sdkConfiguration);
+              = new UpdateHrisEmployeeOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

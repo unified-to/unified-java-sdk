@@ -13,11 +13,13 @@ import java.lang.String;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class CrmEventFormOption {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     private Optional<String> label;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
@@ -47,15 +49,17 @@ public class CrmEventFormOption {
         return value;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public CrmEventFormOption withLabel(String label) {
         Utils.checkNotNull(label, "label");
         this.label = Optional.ofNullable(label);
         return this;
     }
+
 
     public CrmEventFormOption withLabel(Optional<String> label) {
         Utils.checkNotNull(label, "label");
@@ -69,13 +73,13 @@ public class CrmEventFormOption {
         return this;
     }
 
+
     public CrmEventFormOption withValue(Optional<String> value) {
         Utils.checkNotNull(value, "value");
         this.value = value;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -93,8 +97,7 @@ public class CrmEventFormOption {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            label,
-            value);
+            label, value);
     }
     
     @Override
@@ -103,16 +106,18 @@ public class CrmEventFormOption {
                 "label", label,
                 "value", value);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> label = Optional.empty();
- 
+
         private Optional<String> value = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder label(String label) {
             Utils.checkNotNull(label, "label");
@@ -126,6 +131,7 @@ public class CrmEventFormOption {
             return this;
         }
 
+
         public Builder value(String value) {
             Utils.checkNotNull(value, "value");
             this.value = Optional.ofNullable(value);
@@ -137,11 +143,12 @@ public class CrmEventFormOption {
             this.value = value;
             return this;
         }
-        
+
         public CrmEventFormOption build() {
+
             return new CrmEventFormOption(
-                label,
-                value);
+                label, value);
         }
+
     }
 }

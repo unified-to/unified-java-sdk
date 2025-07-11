@@ -19,79 +19,98 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
+
 public class AccountingTransaction {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     private Optional<String> accountId;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private Optional<String> contactId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contacts")
     private Optional<? extends List<AccountingTransactionContact>> contacts;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private Optional<String> currency;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_message")
     private Optional<String> customerMessage;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineitems")
     private Optional<? extends List<AccountingTransactionLineItem>> lineitems;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memo")
     private Optional<String> memo;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_method")
     private Optional<String> paymentMethod;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_terms")
     private Optional<String> paymentTerms;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     private Optional<String> reference;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("split_account_id")
     private Optional<String> splitAccountId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sub_total_amount")
     private Optional<Double> subTotalAmount;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_amount")
     private Optional<Double> taxAmount;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
     private Optional<Double> totalAmount;
 
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private Optional<String> type;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -159,7 +178,13 @@ public class AccountingTransaction {
     }
     
     public AccountingTransaction() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -260,15 +285,17 @@ public class AccountingTransaction {
         return updatedAt;
     }
 
-    public final static Builder builder() {
+    public static Builder builder() {
         return new Builder();
-    }    
+    }
+
 
     public AccountingTransaction withAccountId(String accountId) {
         Utils.checkNotNull(accountId, "accountId");
         this.accountId = Optional.ofNullable(accountId);
         return this;
     }
+
 
     public AccountingTransaction withAccountId(Optional<String> accountId) {
         Utils.checkNotNull(accountId, "accountId");
@@ -282,6 +309,7 @@ public class AccountingTransaction {
         return this;
     }
 
+
     public AccountingTransaction withContactId(Optional<String> contactId) {
         Utils.checkNotNull(contactId, "contactId");
         this.contactId = contactId;
@@ -293,6 +321,7 @@ public class AccountingTransaction {
         this.contacts = Optional.ofNullable(contacts);
         return this;
     }
+
 
     public AccountingTransaction withContacts(Optional<? extends List<AccountingTransactionContact>> contacts) {
         Utils.checkNotNull(contacts, "contacts");
@@ -306,6 +335,7 @@ public class AccountingTransaction {
         return this;
     }
 
+
     public AccountingTransaction withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
@@ -317,6 +347,7 @@ public class AccountingTransaction {
         this.currency = Optional.ofNullable(currency);
         return this;
     }
+
 
     public AccountingTransaction withCurrency(Optional<String> currency) {
         Utils.checkNotNull(currency, "currency");
@@ -330,6 +361,7 @@ public class AccountingTransaction {
         return this;
     }
 
+
     public AccountingTransaction withCustomerMessage(Optional<String> customerMessage) {
         Utils.checkNotNull(customerMessage, "customerMessage");
         this.customerMessage = customerMessage;
@@ -341,6 +373,7 @@ public class AccountingTransaction {
         this.id = Optional.ofNullable(id);
         return this;
     }
+
 
     public AccountingTransaction withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
@@ -354,6 +387,7 @@ public class AccountingTransaction {
         return this;
     }
 
+
     public AccountingTransaction withLineitems(Optional<? extends List<AccountingTransactionLineItem>> lineitems) {
         Utils.checkNotNull(lineitems, "lineitems");
         this.lineitems = lineitems;
@@ -365,6 +399,7 @@ public class AccountingTransaction {
         this.memo = Optional.ofNullable(memo);
         return this;
     }
+
 
     public AccountingTransaction withMemo(Optional<String> memo) {
         Utils.checkNotNull(memo, "memo");
@@ -378,6 +413,7 @@ public class AccountingTransaction {
         return this;
     }
 
+
     public AccountingTransaction withPaymentMethod(Optional<String> paymentMethod) {
         Utils.checkNotNull(paymentMethod, "paymentMethod");
         this.paymentMethod = paymentMethod;
@@ -389,6 +425,7 @@ public class AccountingTransaction {
         this.paymentTerms = Optional.ofNullable(paymentTerms);
         return this;
     }
+
 
     public AccountingTransaction withPaymentTerms(Optional<String> paymentTerms) {
         Utils.checkNotNull(paymentTerms, "paymentTerms");
@@ -402,6 +439,7 @@ public class AccountingTransaction {
         return this;
     }
 
+
     public AccountingTransaction withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
@@ -413,6 +451,7 @@ public class AccountingTransaction {
         this.reference = Optional.ofNullable(reference);
         return this;
     }
+
 
     public AccountingTransaction withReference(Optional<String> reference) {
         Utils.checkNotNull(reference, "reference");
@@ -426,6 +465,7 @@ public class AccountingTransaction {
         return this;
     }
 
+
     public AccountingTransaction withSplitAccountId(Optional<String> splitAccountId) {
         Utils.checkNotNull(splitAccountId, "splitAccountId");
         this.splitAccountId = splitAccountId;
@@ -437,6 +477,7 @@ public class AccountingTransaction {
         this.subTotalAmount = Optional.ofNullable(subTotalAmount);
         return this;
     }
+
 
     public AccountingTransaction withSubTotalAmount(Optional<Double> subTotalAmount) {
         Utils.checkNotNull(subTotalAmount, "subTotalAmount");
@@ -450,6 +491,7 @@ public class AccountingTransaction {
         return this;
     }
 
+
     public AccountingTransaction withTaxAmount(Optional<Double> taxAmount) {
         Utils.checkNotNull(taxAmount, "taxAmount");
         this.taxAmount = taxAmount;
@@ -461,6 +503,7 @@ public class AccountingTransaction {
         this.totalAmount = Optional.ofNullable(totalAmount);
         return this;
     }
+
 
     public AccountingTransaction withTotalAmount(Optional<Double> totalAmount) {
         Utils.checkNotNull(totalAmount, "totalAmount");
@@ -474,6 +517,7 @@ public class AccountingTransaction {
         return this;
     }
 
+
     public AccountingTransaction withType(Optional<String> type) {
         Utils.checkNotNull(type, "type");
         this.type = type;
@@ -486,13 +530,13 @@ public class AccountingTransaction {
         return this;
     }
 
+
     public AccountingTransaction withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
     }
 
-    
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -527,24 +571,12 @@ public class AccountingTransaction {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            accountId,
-            contactId,
-            contacts,
-            createdAt,
-            currency,
-            customerMessage,
-            id,
-            lineitems,
-            memo,
-            paymentMethod,
-            paymentTerms,
-            raw,
-            reference,
-            splitAccountId,
-            subTotalAmount,
-            taxAmount,
-            totalAmount,
-            type,
+            accountId, contactId, contacts,
+            createdAt, currency, customerMessage,
+            id, lineitems, memo,
+            paymentMethod, paymentTerms, raw,
+            reference, splitAccountId, subTotalAmount,
+            taxAmount, totalAmount, type,
             updatedAt);
     }
     
@@ -571,50 +603,52 @@ public class AccountingTransaction {
                 "type", type,
                 "updatedAt", updatedAt);
     }
-    
+
+    @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
- 
+
         private Optional<String> accountId = Optional.empty();
- 
+
         private Optional<String> contactId = Optional.empty();
- 
+
         private Optional<? extends List<AccountingTransactionContact>> contacts = Optional.empty();
- 
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
+
         private Optional<String> currency = Optional.empty();
- 
+
         private Optional<String> customerMessage = Optional.empty();
- 
+
         private Optional<String> id = Optional.empty();
- 
+
         private Optional<? extends List<AccountingTransactionLineItem>> lineitems = Optional.empty();
- 
+
         private Optional<String> memo = Optional.empty();
- 
+
         private Optional<String> paymentMethod = Optional.empty();
- 
+
         private Optional<String> paymentTerms = Optional.empty();
- 
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
- 
+
         private Optional<String> reference = Optional.empty();
- 
+
         private Optional<String> splitAccountId = Optional.empty();
- 
+
         private Optional<Double> subTotalAmount = Optional.empty();
- 
+
         private Optional<Double> taxAmount = Optional.empty();
- 
+
         private Optional<Double> totalAmount = Optional.empty();
- 
+
         private Optional<String> type = Optional.empty();
- 
+
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
-        
+
         private Builder() {
           // force use of static builder() method
         }
+
 
         public Builder accountId(String accountId) {
             Utils.checkNotNull(accountId, "accountId");
@@ -628,6 +662,7 @@ public class AccountingTransaction {
             return this;
         }
 
+
         public Builder contactId(String contactId) {
             Utils.checkNotNull(contactId, "contactId");
             this.contactId = Optional.ofNullable(contactId);
@@ -639,6 +674,7 @@ public class AccountingTransaction {
             this.contactId = contactId;
             return this;
         }
+
 
         public Builder contacts(List<AccountingTransactionContact> contacts) {
             Utils.checkNotNull(contacts, "contacts");
@@ -652,6 +688,7 @@ public class AccountingTransaction {
             return this;
         }
 
+
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
@@ -663,6 +700,7 @@ public class AccountingTransaction {
             this.createdAt = createdAt;
             return this;
         }
+
 
         public Builder currency(String currency) {
             Utils.checkNotNull(currency, "currency");
@@ -676,6 +714,7 @@ public class AccountingTransaction {
             return this;
         }
 
+
         public Builder customerMessage(String customerMessage) {
             Utils.checkNotNull(customerMessage, "customerMessage");
             this.customerMessage = Optional.ofNullable(customerMessage);
@@ -687,6 +726,7 @@ public class AccountingTransaction {
             this.customerMessage = customerMessage;
             return this;
         }
+
 
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
@@ -700,6 +740,7 @@ public class AccountingTransaction {
             return this;
         }
 
+
         public Builder lineitems(List<AccountingTransactionLineItem> lineitems) {
             Utils.checkNotNull(lineitems, "lineitems");
             this.lineitems = Optional.ofNullable(lineitems);
@@ -711,6 +752,7 @@ public class AccountingTransaction {
             this.lineitems = lineitems;
             return this;
         }
+
 
         public Builder memo(String memo) {
             Utils.checkNotNull(memo, "memo");
@@ -724,6 +766,7 @@ public class AccountingTransaction {
             return this;
         }
 
+
         public Builder paymentMethod(String paymentMethod) {
             Utils.checkNotNull(paymentMethod, "paymentMethod");
             this.paymentMethod = Optional.ofNullable(paymentMethod);
@@ -735,6 +778,7 @@ public class AccountingTransaction {
             this.paymentMethod = paymentMethod;
             return this;
         }
+
 
         public Builder paymentTerms(String paymentTerms) {
             Utils.checkNotNull(paymentTerms, "paymentTerms");
@@ -748,6 +792,7 @@ public class AccountingTransaction {
             return this;
         }
 
+
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
@@ -759,6 +804,7 @@ public class AccountingTransaction {
             this.raw = raw;
             return this;
         }
+
 
         public Builder reference(String reference) {
             Utils.checkNotNull(reference, "reference");
@@ -772,6 +818,7 @@ public class AccountingTransaction {
             return this;
         }
 
+
         public Builder splitAccountId(String splitAccountId) {
             Utils.checkNotNull(splitAccountId, "splitAccountId");
             this.splitAccountId = Optional.ofNullable(splitAccountId);
@@ -783,6 +830,7 @@ public class AccountingTransaction {
             this.splitAccountId = splitAccountId;
             return this;
         }
+
 
         public Builder subTotalAmount(double subTotalAmount) {
             Utils.checkNotNull(subTotalAmount, "subTotalAmount");
@@ -796,6 +844,7 @@ public class AccountingTransaction {
             return this;
         }
 
+
         public Builder taxAmount(double taxAmount) {
             Utils.checkNotNull(taxAmount, "taxAmount");
             this.taxAmount = Optional.ofNullable(taxAmount);
@@ -807,6 +856,7 @@ public class AccountingTransaction {
             this.taxAmount = taxAmount;
             return this;
         }
+
 
         public Builder totalAmount(double totalAmount) {
             Utils.checkNotNull(totalAmount, "totalAmount");
@@ -820,6 +870,7 @@ public class AccountingTransaction {
             return this;
         }
 
+
         public Builder type(String type) {
             Utils.checkNotNull(type, "type");
             this.type = Optional.ofNullable(type);
@@ -832,6 +883,7 @@ public class AccountingTransaction {
             return this;
         }
 
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -843,28 +895,18 @@ public class AccountingTransaction {
             this.updatedAt = updatedAt;
             return this;
         }
-        
+
         public AccountingTransaction build() {
+
             return new AccountingTransaction(
-                accountId,
-                contactId,
-                contacts,
-                createdAt,
-                currency,
-                customerMessage,
-                id,
-                lineitems,
-                memo,
-                paymentMethod,
-                paymentTerms,
-                raw,
-                reference,
-                splitAccountId,
-                subTotalAmount,
-                taxAmount,
-                totalAmount,
-                type,
+                accountId, contactId, contacts,
+                createdAt, currency, customerMessage,
+                id, lineitems, memo,
+                paymentMethod, paymentTerms, raw,
+                reference, splitAccountId, subTotalAmount,
+                taxAmount, totalAmount, type,
                 updatedAt);
         }
+
     }
 }
