@@ -6,8 +6,6 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import java.lang.Exception;
-import java.util.List;
-import java.util.Optional;
 import to.unified.unified_java_sdk.models.operations.CreatePassthroughJsonRequest;
 import to.unified.unified_java_sdk.models.operations.CreatePassthroughJsonRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreatePassthroughJsonResponse;
@@ -48,6 +46,7 @@ public class Passthrough {
     Passthrough(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
+
     /**
      * Passthrough POST
      * 

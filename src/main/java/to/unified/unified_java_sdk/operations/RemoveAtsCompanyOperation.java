@@ -25,81 +25,88 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class RemoveAtsCompanyOperation implements RequestOperation<RemoveAtsCompanyRequest, RemoveAtsCompanyResponse> {
-    
+
     private final SDKConfiguration sdkConfiguration;
+    private final String baseUrl;
+    private final SecuritySource securitySource;
+    private final HTTPClient client;
 
     public RemoveAtsCompanyOperation(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.baseUrl = this.sdkConfiguration.serverUrl();
+        this.securitySource = this.sdkConfiguration.securitySource();
+        this.client = this.sdkConfiguration.client();
     }
-    
-    @Override
-    public HttpResponse<InputStream> doRequest(RemoveAtsCompanyRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl();
+
+    private Optional<SecuritySource> securitySource() {
+        return Optional.ofNullable(this.securitySource);
+    }
+
+    public HttpRequest buildRequest(RemoveAtsCompanyRequest request) throws Exception {
         String url = Utils.generateURL(
                 RemoveAtsCompanyRequest.class,
-                baseUrl,
+                this.baseUrl,
                 "/ats/{connection_id}/company/{id}",
                 request, null);
-        
         HTTPRequest req = new HTTPRequest(url, "DELETE");
         req.addHeader("Accept", "*/*")
-            .addHeader("user-agent", 
-                SDKConfiguration.USER_AGENT);
-        
-        Optional<SecuritySource> hookSecuritySource = Optional.of(this.sdkConfiguration.securitySource());
-        Utils.configureSecurity(req,  
-                this.sdkConfiguration.securitySource().getSecurity());
-        HTTPClient client = this.sdkConfiguration.client();
-        HttpRequest r = 
-            sdkConfiguration.hooks()
-               .beforeRequest(
-                  new BeforeRequestContextImpl(
-                      this.sdkConfiguration,
-                      baseUrl,
-                      "removeAtsCompany", 
-                      java.util.Optional.of(java.util.List.of()), 
-                      hookSecuritySource),
-                  req.build());
+                .addHeader("user-agent", SDKConfiguration.USER_AGENT);
+        Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
+
+        return sdkConfiguration.hooks().beforeRequest(
+              new BeforeRequestContextImpl(
+                  this.sdkConfiguration,
+                  this.baseUrl,
+                  "removeAtsCompany",
+                  java.util.Optional.of(java.util.List.of()),
+                  securitySource()),
+              req.build());
+    }
+
+    private HttpResponse<InputStream> onError(HttpResponse<InputStream> response,
+                                              Exception error) throws Exception {
+        return sdkConfiguration.hooks()
+            .afterError(
+                new AfterErrorContextImpl(
+                    this.sdkConfiguration,
+                    this.baseUrl,
+                    "removeAtsCompany",
+                    java.util.Optional.of(java.util.List.of()),
+                    securitySource()),
+                Optional.ofNullable(response),
+                Optional.ofNullable(error));
+    }
+
+    private HttpResponse<InputStream> onSuccess(HttpResponse<InputStream> response) throws Exception {
+        return sdkConfiguration.hooks()
+            .afterSuccess(
+                new AfterSuccessContextImpl(
+                    this.sdkConfiguration,
+                    this.baseUrl,
+                    "removeAtsCompany",
+                    java.util.Optional.of(java.util.List.of()),
+                    securitySource()),
+                response);
+    }
+
+    @Override
+    public HttpResponse<InputStream> doRequest(RemoveAtsCompanyRequest request) throws Exception {
+        HttpRequest r = buildRequest(request);
         HttpResponse<InputStream> httpRes;
         try {
             httpRes = client.send(r);
             if (Utils.statusCodeMatches(httpRes.statusCode(), "4XX", "5XX")) {
-                httpRes = sdkConfiguration.hooks()
-                    .afterError(
-                        new AfterErrorContextImpl(
-                            this.sdkConfiguration,
-                            baseUrl,
-                            "removeAtsCompany",
-                            java.util.Optional.of(java.util.List.of()),
-                            hookSecuritySource),
-                        Optional.of(httpRes),
-                        Optional.empty());
+                httpRes = onError(httpRes, null);
             } else {
-                httpRes = sdkConfiguration.hooks()
-                    .afterSuccess(
-                        new AfterSuccessContextImpl(
-                            this.sdkConfiguration,
-                            baseUrl,
-                            "removeAtsCompany",
-                            java.util.Optional.of(java.util.List.of()), 
-                            hookSecuritySource),
-                         httpRes);
+                httpRes = onSuccess(httpRes);
             }
         } catch (Exception e) {
-            httpRes = sdkConfiguration.hooks()
-                    .afterError(
-                        new AfterErrorContextImpl(
-                            this.sdkConfiguration,
-                            baseUrl,
-                            "removeAtsCompany",
-                            java.util.Optional.of(java.util.List.of()),
-                            hookSecuritySource), 
-                        Optional.empty(),
-                        Optional.of(e));
+            httpRes = onError(null, e);
         }
-    
+
         return httpRes;
     }
+
 
     @Override
     public RemoveAtsCompanyResponse handleResponse(HttpResponse<InputStream> response) throws Exception {

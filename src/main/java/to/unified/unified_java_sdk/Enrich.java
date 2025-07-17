@@ -6,8 +6,6 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import java.lang.Exception;
-import java.util.List;
-import java.util.Optional;
 import to.unified.unified_java_sdk.models.operations.ListEnrichCompaniesRequest;
 import to.unified.unified_java_sdk.models.operations.ListEnrichCompaniesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListEnrichCompaniesResponse;
@@ -24,6 +22,7 @@ public class Enrich {
     Enrich(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
+
     /**
      * Retrieve enrichment information for a company
      * 

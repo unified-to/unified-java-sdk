@@ -6,8 +6,6 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import java.lang.Exception;
-import java.util.List;
-import java.util.Optional;
 import to.unified.unified_java_sdk.models.operations.CreateScimUsersRequest;
 import to.unified.unified_java_sdk.models.operations.CreateScimUsersRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateScimUsersResponse;
@@ -40,6 +38,7 @@ public class User {
     User(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
+
     /**
      * Create user
      * 

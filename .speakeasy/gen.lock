@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: dc8b8b9132e8749ec8c7686b6384177f
+  docChecksum: a8fe650f09e411054ff20cdef36cc669
   docVersion: "1.0"
-  speakeasyVersion: 1.580.2
-  generationVersion: 2.656.5
-  releaseVersion: 0.33.0
-  configChecksum: 3fa899aa4af7afa0d3b09a6f0c58395f
+  speakeasyVersion: 1.582.0
+  generationVersion: 2.657.1
+  releaseVersion: 0.33.1
+  configChecksum: a2636b12e07ec642e878de2b22948718
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -8125,7 +8125,7 @@ examples:
     speakeasy-default-list-unified-issues:
       responses:
         "200":
-          application/json: [{"status": "UP_NEXT", "ticket_ref": "<value>", "title": "<value>", "workspace_id": "<id>"}]
+          application/json: [{"status": "REJECTED", "ticket_ref": "<value>", "title": "<value>", "workspace_id": "<id>"}]
   listUnifiedWebhooks:
     speakeasy-default-list-unified-webhooks:
       responses:

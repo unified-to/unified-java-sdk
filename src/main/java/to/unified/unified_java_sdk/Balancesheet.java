@@ -6,8 +6,6 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import java.lang.Exception;
-import java.util.List;
-import java.util.Optional;
 import to.unified.unified_java_sdk.models.operations.GetAccountingBalancesheetRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingBalancesheetRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAccountingBalancesheetResponse;
@@ -24,6 +22,7 @@ public class Balancesheet {
     Balancesheet(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
+
     /**
      * Retrieve a balancesheet
      * 

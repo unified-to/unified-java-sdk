@@ -30,22 +30,29 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class PatchRepoBranchOperation implements RequestOperation<PatchRepoBranchRequest, PatchRepoBranchResponse> {
-    
+
     private final SDKConfiguration sdkConfiguration;
+    private final String baseUrl;
+    private final SecuritySource securitySource;
+    private final HTTPClient client;
 
     public PatchRepoBranchOperation(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.baseUrl = this.sdkConfiguration.serverUrl();
+        this.securitySource = this.sdkConfiguration.securitySource();
+        this.client = this.sdkConfiguration.client();
     }
-    
-    @Override
-    public HttpResponse<InputStream> doRequest(PatchRepoBranchRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl();
+
+    private Optional<SecuritySource> securitySource() {
+        return Optional.ofNullable(this.securitySource);
+    }
+
+    public HttpRequest buildRequest(PatchRepoBranchRequest request) throws Exception {
         String url = Utils.generateURL(
                 PatchRepoBranchRequest.class,
-                baseUrl,
+                this.baseUrl,
                 "/repo/{connection_id}/branch/{id}",
                 request, null);
-        
         HTTPRequest req = new HTTPRequest(url, "PATCH");
         Object convertedRequest = Utils.convertToShape(
                 request, 
@@ -61,68 +68,68 @@ public class PatchRepoBranchOperation implements RequestOperation<PatchRepoBranc
         }
         req.setBody(Optional.ofNullable(serializedRequestBody));
         req.addHeader("Accept", "application/json")
-            .addHeader("user-agent", 
-                SDKConfiguration.USER_AGENT);
+                .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
         req.addQueryParams(Utils.getQueryParams(
                 PatchRepoBranchRequest.class,
                 request, 
                 null));
-        
-        Optional<SecuritySource> hookSecuritySource = Optional.of(this.sdkConfiguration.securitySource());
-        Utils.configureSecurity(req,  
-                this.sdkConfiguration.securitySource().getSecurity());
-        HTTPClient client = this.sdkConfiguration.client();
-        HttpRequest r = 
-            sdkConfiguration.hooks()
-               .beforeRequest(
-                  new BeforeRequestContextImpl(
-                      this.sdkConfiguration,
-                      baseUrl,
-                      "patchRepoBranch", 
-                      java.util.Optional.of(java.util.List.of()), 
-                      hookSecuritySource),
-                  req.build());
+        Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
+
+        return sdkConfiguration.hooks().beforeRequest(
+              new BeforeRequestContextImpl(
+                  this.sdkConfiguration,
+                  this.baseUrl,
+                  "patchRepoBranch",
+                  java.util.Optional.of(java.util.List.of()),
+                  securitySource()),
+              req.build());
+    }
+
+    private HttpResponse<InputStream> onError(HttpResponse<InputStream> response,
+                                              Exception error) throws Exception {
+        return sdkConfiguration.hooks()
+            .afterError(
+                new AfterErrorContextImpl(
+                    this.sdkConfiguration,
+                    this.baseUrl,
+                    "patchRepoBranch",
+                    java.util.Optional.of(java.util.List.of()),
+                    securitySource()),
+                Optional.ofNullable(response),
+                Optional.ofNullable(error));
+    }
+
+    private HttpResponse<InputStream> onSuccess(HttpResponse<InputStream> response) throws Exception {
+        return sdkConfiguration.hooks()
+            .afterSuccess(
+                new AfterSuccessContextImpl(
+                    this.sdkConfiguration,
+                    this.baseUrl,
+                    "patchRepoBranch",
+                    java.util.Optional.of(java.util.List.of()),
+                    securitySource()),
+                response);
+    }
+
+    @Override
+    public HttpResponse<InputStream> doRequest(PatchRepoBranchRequest request) throws Exception {
+        HttpRequest r = buildRequest(request);
         HttpResponse<InputStream> httpRes;
         try {
             httpRes = client.send(r);
             if (Utils.statusCodeMatches(httpRes.statusCode(), "4XX", "5XX")) {
-                httpRes = sdkConfiguration.hooks()
-                    .afterError(
-                        new AfterErrorContextImpl(
-                            this.sdkConfiguration,
-                            baseUrl,
-                            "patchRepoBranch",
-                            java.util.Optional.of(java.util.List.of()),
-                            hookSecuritySource),
-                        Optional.of(httpRes),
-                        Optional.empty());
+                httpRes = onError(httpRes, null);
             } else {
-                httpRes = sdkConfiguration.hooks()
-                    .afterSuccess(
-                        new AfterSuccessContextImpl(
-                            this.sdkConfiguration,
-                            baseUrl,
-                            "patchRepoBranch",
-                            java.util.Optional.of(java.util.List.of()), 
-                            hookSecuritySource),
-                         httpRes);
+                httpRes = onSuccess(httpRes);
             }
         } catch (Exception e) {
-            httpRes = sdkConfiguration.hooks()
-                    .afterError(
-                        new AfterErrorContextImpl(
-                            this.sdkConfiguration,
-                            baseUrl,
-                            "patchRepoBranch",
-                            java.util.Optional.of(java.util.List.of()),
-                            hookSecuritySource), 
-                        Optional.empty(),
-                        Optional.of(e));
+            httpRes = onError(null, e);
         }
-    
+
         return httpRes;
     }
+
 
     @Override
     public PatchRepoBranchResponse handleResponse(HttpResponse<InputStream> response) throws Exception {

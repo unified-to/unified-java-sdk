@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
@@ -61,6 +62,11 @@ public class TaskTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_ids")
     private Optional<? extends List<String>> groupIds;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("has_children")
+    private Optional<Boolean> hasChildren;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -132,6 +138,7 @@ public class TaskTask {
             @JsonProperty("due_at") Optional<OffsetDateTime> dueAt,
             @JsonProperty("follower_user_ids") Optional<? extends List<String>> followerUserIds,
             @JsonProperty("group_ids") Optional<? extends List<String>> groupIds,
+            @JsonProperty("has_children") Optional<Boolean> hasChildren,
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("metadata") Optional<? extends List<TaskMetadata>> metadata,
             @JsonProperty("name") Optional<String> name,
@@ -152,6 +159,7 @@ public class TaskTask {
         Utils.checkNotNull(dueAt, "dueAt");
         Utils.checkNotNull(followerUserIds, "followerUserIds");
         Utils.checkNotNull(groupIds, "groupIds");
+        Utils.checkNotNull(hasChildren, "hasChildren");
         Utils.checkNotNull(id, "id");
         Utils.checkNotNull(metadata, "metadata");
         Utils.checkNotNull(name, "name");
@@ -172,6 +180,7 @@ public class TaskTask {
         this.dueAt = dueAt;
         this.followerUserIds = followerUserIds;
         this.groupIds = groupIds;
+        this.hasChildren = hasChildren;
         this.id = id;
         this.metadata = metadata;
         this.name = name;
@@ -193,7 +202,7 @@ public class TaskTask {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -241,6 +250,11 @@ public class TaskTask {
     @JsonIgnore
     public Optional<List<String>> groupIds() {
         return (Optional<List<String>>) groupIds;
+    }
+
+    @JsonIgnore
+    public Optional<Boolean> hasChildren() {
+        return hasChildren;
     }
 
     @JsonIgnore
@@ -422,6 +436,19 @@ public class TaskTask {
         return this;
     }
 
+    public TaskTask withHasChildren(boolean hasChildren) {
+        Utils.checkNotNull(hasChildren, "hasChildren");
+        this.hasChildren = Optional.ofNullable(hasChildren);
+        return this;
+    }
+
+
+    public TaskTask withHasChildren(Optional<Boolean> hasChildren) {
+        Utils.checkNotNull(hasChildren, "hasChildren");
+        this.hasChildren = hasChildren;
+        return this;
+    }
+
     public TaskTask withId(String id) {
         Utils.checkNotNull(id, "id");
         this.id = Optional.ofNullable(id);
@@ -596,6 +623,7 @@ public class TaskTask {
             Utils.enhancedDeepEquals(this.dueAt, other.dueAt) &&
             Utils.enhancedDeepEquals(this.followerUserIds, other.followerUserIds) &&
             Utils.enhancedDeepEquals(this.groupIds, other.groupIds) &&
+            Utils.enhancedDeepEquals(this.hasChildren, other.hasChildren) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
@@ -615,11 +643,11 @@ public class TaskTask {
         return Utils.enhancedHash(
             assignedUserIds, attachmentIds, completedAt,
             createdAt, creatorUserId, dueAt,
-            followerUserIds, groupIds, id,
-            metadata, name, notes,
-            parentId, priority, projectId,
-            raw, status, tags,
-            updatedAt, url);
+            followerUserIds, groupIds, hasChildren,
+            id, metadata, name,
+            notes, parentId, priority,
+            projectId, raw, status,
+            tags, updatedAt, url);
     }
     
     @Override
@@ -633,6 +661,7 @@ public class TaskTask {
                 "dueAt", dueAt,
                 "followerUserIds", followerUserIds,
                 "groupIds", groupIds,
+                "hasChildren", hasChildren,
                 "id", id,
                 "metadata", metadata,
                 "name", name,
@@ -665,6 +694,8 @@ public class TaskTask {
         private Optional<? extends List<String>> followerUserIds = Optional.empty();
 
         private Optional<? extends List<String>> groupIds = Optional.empty();
+
+        private Optional<Boolean> hasChildren = Optional.empty();
 
         private Optional<String> id = Optional.empty();
 
@@ -801,6 +832,19 @@ public class TaskTask {
         public Builder groupIds(Optional<? extends List<String>> groupIds) {
             Utils.checkNotNull(groupIds, "groupIds");
             this.groupIds = groupIds;
+            return this;
+        }
+
+
+        public Builder hasChildren(boolean hasChildren) {
+            Utils.checkNotNull(hasChildren, "hasChildren");
+            this.hasChildren = Optional.ofNullable(hasChildren);
+            return this;
+        }
+
+        public Builder hasChildren(Optional<Boolean> hasChildren) {
+            Utils.checkNotNull(hasChildren, "hasChildren");
+            this.hasChildren = hasChildren;
             return this;
         }
 
@@ -965,11 +1009,11 @@ public class TaskTask {
             return new TaskTask(
                 assignedUserIds, attachmentIds, completedAt,
                 createdAt, creatorUserId, dueAt,
-                followerUserIds, groupIds, id,
-                metadata, name, notes,
-                parentId, priority, projectId,
-                raw, status, tags,
-                updatedAt, url);
+                followerUserIds, groupIds, hasChildren,
+                id, metadata, name,
+                notes, parentId, priority,
+                projectId, raw, status,
+                tags, updatedAt, url);
         }
 
     }

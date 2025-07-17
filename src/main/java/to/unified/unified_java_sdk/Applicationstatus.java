@@ -6,8 +6,6 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import java.lang.Exception;
-import java.util.List;
-import java.util.Optional;
 import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatusesRequest;
 import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatusesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatusesResponse;
@@ -20,6 +18,7 @@ public class Applicationstatus {
     Applicationstatus(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
+
     /**
      * List all applicationstatuses
      * 

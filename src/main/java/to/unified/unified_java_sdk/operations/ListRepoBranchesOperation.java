@@ -28,86 +28,93 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class ListRepoBranchesOperation implements RequestOperation<ListRepoBranchesRequest, ListRepoBranchesResponse> {
-    
+
     private final SDKConfiguration sdkConfiguration;
+    private final String baseUrl;
+    private final SecuritySource securitySource;
+    private final HTTPClient client;
 
     public ListRepoBranchesOperation(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.baseUrl = this.sdkConfiguration.serverUrl();
+        this.securitySource = this.sdkConfiguration.securitySource();
+        this.client = this.sdkConfiguration.client();
     }
-    
-    @Override
-    public HttpResponse<InputStream> doRequest(ListRepoBranchesRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl();
+
+    private Optional<SecuritySource> securitySource() {
+        return Optional.ofNullable(this.securitySource);
+    }
+
+    public HttpRequest buildRequest(ListRepoBranchesRequest request) throws Exception {
         String url = Utils.generateURL(
                 ListRepoBranchesRequest.class,
-                baseUrl,
+                this.baseUrl,
                 "/repo/{connection_id}/branch",
                 request, null);
-        
         HTTPRequest req = new HTTPRequest(url, "GET");
         req.addHeader("Accept", "application/json")
-            .addHeader("user-agent", 
-                SDKConfiguration.USER_AGENT);
+                .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
         req.addQueryParams(Utils.getQueryParams(
                 ListRepoBranchesRequest.class,
                 request, 
                 null));
-        
-        Optional<SecuritySource> hookSecuritySource = Optional.of(this.sdkConfiguration.securitySource());
-        Utils.configureSecurity(req,  
-                this.sdkConfiguration.securitySource().getSecurity());
-        HTTPClient client = this.sdkConfiguration.client();
-        HttpRequest r = 
-            sdkConfiguration.hooks()
-               .beforeRequest(
-                  new BeforeRequestContextImpl(
-                      this.sdkConfiguration,
-                      baseUrl,
-                      "listRepoBranches", 
-                      java.util.Optional.of(java.util.List.of()), 
-                      hookSecuritySource),
-                  req.build());
+        Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
+
+        return sdkConfiguration.hooks().beforeRequest(
+              new BeforeRequestContextImpl(
+                  this.sdkConfiguration,
+                  this.baseUrl,
+                  "listRepoBranches",
+                  java.util.Optional.of(java.util.List.of()),
+                  securitySource()),
+              req.build());
+    }
+
+    private HttpResponse<InputStream> onError(HttpResponse<InputStream> response,
+                                              Exception error) throws Exception {
+        return sdkConfiguration.hooks()
+            .afterError(
+                new AfterErrorContextImpl(
+                    this.sdkConfiguration,
+                    this.baseUrl,
+                    "listRepoBranches",
+                    java.util.Optional.of(java.util.List.of()),
+                    securitySource()),
+                Optional.ofNullable(response),
+                Optional.ofNullable(error));
+    }
+
+    private HttpResponse<InputStream> onSuccess(HttpResponse<InputStream> response) throws Exception {
+        return sdkConfiguration.hooks()
+            .afterSuccess(
+                new AfterSuccessContextImpl(
+                    this.sdkConfiguration,
+                    this.baseUrl,
+                    "listRepoBranches",
+                    java.util.Optional.of(java.util.List.of()),
+                    securitySource()),
+                response);
+    }
+
+    @Override
+    public HttpResponse<InputStream> doRequest(ListRepoBranchesRequest request) throws Exception {
+        HttpRequest r = buildRequest(request);
         HttpResponse<InputStream> httpRes;
         try {
             httpRes = client.send(r);
             if (Utils.statusCodeMatches(httpRes.statusCode(), "4XX", "5XX")) {
-                httpRes = sdkConfiguration.hooks()
-                    .afterError(
-                        new AfterErrorContextImpl(
-                            this.sdkConfiguration,
-                            baseUrl,
-                            "listRepoBranches",
-                            java.util.Optional.of(java.util.List.of()),
-                            hookSecuritySource),
-                        Optional.of(httpRes),
-                        Optional.empty());
+                httpRes = onError(httpRes, null);
             } else {
-                httpRes = sdkConfiguration.hooks()
-                    .afterSuccess(
-                        new AfterSuccessContextImpl(
-                            this.sdkConfiguration,
-                            baseUrl,
-                            "listRepoBranches",
-                            java.util.Optional.of(java.util.List.of()), 
-                            hookSecuritySource),
-                         httpRes);
+                httpRes = onSuccess(httpRes);
             }
         } catch (Exception e) {
-            httpRes = sdkConfiguration.hooks()
-                    .afterError(
-                        new AfterErrorContextImpl(
-                            this.sdkConfiguration,
-                            baseUrl,
-                            "listRepoBranches",
-                            java.util.Optional.of(java.util.List.of()),
-                            hookSecuritySource), 
-                        Optional.empty(),
-                        Optional.of(e));
+            httpRes = onError(null, e);
         }
-    
+
         return httpRes;
     }
+
 
     @Override
     public ListRepoBranchesResponse handleResponse(HttpResponse<InputStream> response) throws Exception {

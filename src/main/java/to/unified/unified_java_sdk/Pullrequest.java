@@ -6,8 +6,6 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import java.lang.Exception;
-import java.util.List;
-import java.util.Optional;
 import to.unified.unified_java_sdk.models.operations.CreateRepoPullrequestRequest;
 import to.unified.unified_java_sdk.models.operations.CreateRepoPullrequestRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateRepoPullrequestResponse;
@@ -40,6 +38,7 @@ public class Pullrequest {
     Pullrequest(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
+
     /**
      * Create a pullrequest
      * 

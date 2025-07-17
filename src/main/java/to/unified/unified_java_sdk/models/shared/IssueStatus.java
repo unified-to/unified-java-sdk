@@ -52,7 +52,6 @@ public class IssueStatus {
     public static final IssueStatus ON_HOLD = new IssueStatus("ON_HOLD");
     public static final IssueStatus VALIDATING = new IssueStatus("VALIDATING");
     public static final IssueStatus REJECTED = new IssueStatus("REJECTED");
-    public static final IssueStatus UP_NEXT = new IssueStatus("UP_NEXT");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -131,7 +130,6 @@ public class IssueStatus {
         map.put("ON_HOLD", ON_HOLD);
         map.put("VALIDATING", VALIDATING);
         map.put("REJECTED", REJECTED);
-        map.put("UP_NEXT", UP_NEXT);
         return map;
     }
 
@@ -144,7 +142,6 @@ public class IssueStatus {
         map.put("ON_HOLD", IssueStatusEnum.ON_HOLD);
         map.put("VALIDATING", IssueStatusEnum.VALIDATING);
         map.put("REJECTED", IssueStatusEnum.REJECTED);
-        map.put("UP_NEXT", IssueStatusEnum.UP_NEXT);
         return map;
     }
     
@@ -186,8 +183,7 @@ public class IssueStatus {
         IN_PROGRESS("IN_PROGRESS"),
         ON_HOLD("ON_HOLD"),
         VALIDATING("VALIDATING"),
-        REJECTED("REJECTED"),
-        UP_NEXT("UP_NEXT"),;
+        REJECTED("REJECTED"),;
 
         private final String value;
 
