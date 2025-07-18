@@ -98,7 +98,7 @@ public class Unified {
     /**
      * Create connection
      * 
-     * <p>Used only to import existing customer credentials; use "Create connection indirectly" instead
+     * <p>Used only to import existing customer credentials; use "Authorize new connection" instead
      * 
      * @return The call builder
      */
@@ -109,7 +109,7 @@ public class Unified {
     /**
      * Create connection
      * 
-     * <p>Used only to import existing customer credentials; use "Create connection indirectly" instead
+     * <p>Used only to import existing customer credentials; use "Authorize new connection" instead
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -192,7 +192,7 @@ public class Unified {
     }
 
     /**
-     * Create connection indirectly
+     * Authorize new connection
      * 
      * <p>Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
      * 
@@ -203,7 +203,7 @@ public class Unified {
     }
 
     /**
-     * Create connection indirectly
+     * Authorize new connection
      * 
      * <p>Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
      * 

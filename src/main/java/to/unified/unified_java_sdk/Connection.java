@@ -41,7 +41,7 @@ public class Connection {
     /**
      * Create connection
      * 
-     * <p>Used only to import existing customer credentials; use "Create connection indirectly" instead
+     * <p>Used only to import existing customer credentials; use "Authorize new connection" instead
      * 
      * @return The call builder
      */
@@ -52,7 +52,7 @@ public class Connection {
     /**
      * Create connection
      * 
-     * <p>Used only to import existing customer credentials; use "Create connection indirectly" instead
+     * <p>Used only to import existing customer credentials; use "Authorize new connection" instead
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

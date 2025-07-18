@@ -28,7 +28,7 @@ public class Integration {
     }
 
     /**
-     * Create connection indirectly
+     * Authorize new connection
      * 
      * <p>Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
      * 
@@ -39,7 +39,7 @@ public class Integration {
     }
 
     /**
-     * Create connection indirectly
+     * Authorize new connection
      * 
      * <p>Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
      * 
