@@ -18,6 +18,7 @@ Create a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAccountingTransaction" method="post" path="/accounting/{connection_id}/transaction" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingTransaction" method="get" path="/accounting/{connection_id}/transaction/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List all transactions
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingTransactions" method="get" path="/accounting/{connection_id}/transaction" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAccountingTransaction" method="patch" path="/accounting/{connection_id}/transaction/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Remove a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAccountingTransaction" method="delete" path="/accounting/{connection_id}/transaction/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAccountingTransaction" method="put" path="/accounting/{connection_id}/transaction/{id}" -->
 ```java
 package hello.world;
 

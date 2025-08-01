@@ -14,6 +14,7 @@ Retrieve a timeoff
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getHrisTimeoff" method="get" path="/hris/{connection_id}/timeoff/{id}" -->
 ```java
 package hello.world;
 
@@ -71,6 +72,7 @@ List all timeoffs
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listHrisTimeoffs" method="get" path="/hris/{connection_id}/timeoff" -->
 ```java
 package hello.world;
 

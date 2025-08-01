@@ -18,6 +18,7 @@ Create a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" -->
 ```java
 package hello.world;
 
@@ -79,6 +80,7 @@ Retrieve a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getRepoBranch" method="get" path="/repo/{connection_id}/branch/{id}" -->
 ```java
 package hello.world;
 
@@ -136,6 +138,7 @@ List all branches
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listRepoBranches" method="get" path="/repo/{connection_id}/branch" -->
 ```java
 package hello.world;
 
@@ -192,6 +195,7 @@ Update a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" -->
 ```java
 package hello.world;
 
@@ -254,6 +258,7 @@ Remove a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeRepoBranch" method="delete" path="/repo/{connection_id}/branch/{id}" -->
 ```java
 package hello.world;
 
@@ -309,6 +314,7 @@ Update a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" -->
 ```java
 package hello.world;
 

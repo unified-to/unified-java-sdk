@@ -18,6 +18,7 @@ Create a review
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createCommerceReview" method="post" path="/commerce/{connection_id}/review" -->
 ```java
 package hello.world;
 
@@ -78,6 +79,7 @@ Retrieve a review
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getCommerceReview" method="get" path="/commerce/{connection_id}/review/{id}" -->
 ```java
 package hello.world;
 
@@ -135,6 +137,7 @@ List all reviews
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listCommerceReviews" method="get" path="/commerce/{connection_id}/review" -->
 ```java
 package hello.world;
 
@@ -191,6 +194,7 @@ Update a review
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchCommerceReview" method="patch" path="/commerce/{connection_id}/review/{id}" -->
 ```java
 package hello.world;
 
@@ -252,6 +256,7 @@ Remove a review
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeCommerceReview" method="delete" path="/commerce/{connection_id}/review/{id}" -->
 ```java
 package hello.world;
 
@@ -307,6 +312,7 @@ Update a review
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateCommerceReview" method="put" path="/commerce/{connection_id}/review/{id}" -->
 ```java
 package hello.world;
 

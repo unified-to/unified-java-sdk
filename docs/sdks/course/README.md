@@ -18,6 +18,7 @@ Create a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createLmsCourse" method="post" path="/lms/{connection_id}/course" -->
 ```java
 package hello.world;
 
@@ -78,6 +79,7 @@ Retrieve a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getLmsCourse" method="get" path="/lms/{connection_id}/course/{id}" -->
 ```java
 package hello.world;
 
@@ -135,6 +137,7 @@ List all courses
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listLmsCourses" method="get" path="/lms/{connection_id}/course" -->
 ```java
 package hello.world;
 
@@ -191,6 +194,7 @@ Update a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchLmsCourse" method="patch" path="/lms/{connection_id}/course/{id}" -->
 ```java
 package hello.world;
 
@@ -252,6 +256,7 @@ Remove a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeLmsCourse" method="delete" path="/lms/{connection_id}/course/{id}" -->
 ```java
 package hello.world;
 
@@ -307,6 +312,7 @@ Update a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateLmsCourse" method="put" path="/lms/{connection_id}/course/{id}" -->
 ```java
 package hello.world;
 

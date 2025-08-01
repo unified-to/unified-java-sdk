@@ -20,6 +20,7 @@ Create a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" -->
 ```java
 package hello.world;
 
@@ -79,6 +80,7 @@ Retrieve a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getCalendarRecording" method="get" path="/calendar/{connection_id}/recording/{id}" -->
 ```java
 package hello.world;
 
@@ -136,6 +138,7 @@ Retrieve a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getUcRecording" method="get" path="/uc/{connection_id}/recording/{id}" -->
 ```java
 package hello.world;
 
@@ -193,6 +196,7 @@ List all recordings
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listCalendarRecordings" method="get" path="/calendar/{connection_id}/recording" -->
 ```java
 package hello.world;
 
@@ -249,6 +253,7 @@ List all recordings
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listUcRecordings" method="get" path="/uc/{connection_id}/recording" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" -->
 ```java
 package hello.world;
 
@@ -365,6 +371,7 @@ Remove a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeUcRecording" method="delete" path="/uc/{connection_id}/recording/{id}" -->
 ```java
 package hello.world;
 
@@ -420,6 +427,7 @@ Update a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" -->
 ```java
 package hello.world;
 

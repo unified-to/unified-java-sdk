@@ -14,6 +14,7 @@ Retrieve a refund
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getPaymentRefund" method="get" path="/payment/{connection_id}/refund/{id}" -->
 ```java
 package hello.world;
 
@@ -71,6 +72,7 @@ List all refunds
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listPaymentRefunds" method="get" path="/payment/{connection_id}/refund" -->
 ```java
 package hello.world;
 

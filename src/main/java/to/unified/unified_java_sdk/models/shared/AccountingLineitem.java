@@ -11,7 +11,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
+import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -21,6 +23,11 @@ public class AccountingLineitem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     private Optional<String> accountId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("category_ids")
+    private Optional<? extends List<String>> categoryIds;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -105,6 +112,7 @@ public class AccountingLineitem {
     @JsonCreator
     public AccountingLineitem(
             @JsonProperty("account_id") Optional<String> accountId,
+            @JsonProperty("category_ids") Optional<? extends List<String>> categoryIds,
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("discount_amount") Optional<Double> discountAmount,
             @JsonProperty("id") Optional<String> id,
@@ -122,6 +130,7 @@ public class AccountingLineitem {
             @JsonProperty("unit_quantity") Optional<Double> unitQuantity,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(accountId, "accountId");
+        Utils.checkNotNull(categoryIds, "categoryIds");
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(discountAmount, "discountAmount");
         Utils.checkNotNull(id, "id");
@@ -139,6 +148,7 @@ public class AccountingLineitem {
         Utils.checkNotNull(unitQuantity, "unitQuantity");
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.accountId = accountId;
+        this.categoryIds = categoryIds;
         this.createdAt = createdAt;
         this.discountAmount = discountAmount;
         this.id = id;
@@ -163,12 +173,18 @@ public class AccountingLineitem {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
     public Optional<String> accountId() {
         return accountId;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<String>> categoryIds() {
+        return (Optional<List<String>>) categoryIds;
     }
 
     @JsonIgnore
@@ -266,6 +282,19 @@ public class AccountingLineitem {
     public AccountingLineitem withAccountId(Optional<String> accountId) {
         Utils.checkNotNull(accountId, "accountId");
         this.accountId = accountId;
+        return this;
+    }
+
+    public AccountingLineitem withCategoryIds(List<String> categoryIds) {
+        Utils.checkNotNull(categoryIds, "categoryIds");
+        this.categoryIds = Optional.ofNullable(categoryIds);
+        return this;
+    }
+
+
+    public AccountingLineitem withCategoryIds(Optional<? extends List<String>> categoryIds) {
+        Utils.checkNotNull(categoryIds, "categoryIds");
+        this.categoryIds = categoryIds;
         return this;
     }
 
@@ -488,6 +517,7 @@ public class AccountingLineitem {
         AccountingLineitem other = (AccountingLineitem) o;
         return 
             Utils.enhancedDeepEquals(this.accountId, other.accountId) &&
+            Utils.enhancedDeepEquals(this.categoryIds, other.categoryIds) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.discountAmount, other.discountAmount) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
@@ -509,18 +539,19 @@ public class AccountingLineitem {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            accountId, createdAt, discountAmount,
-            id, itemDescription, itemId,
-            itemName, itemSku, notes,
-            refundAmount, refundedAt, taxAmount,
-            taxrateId, totalAmount, unitAmount,
-            unitQuantity, updatedAt);
+            accountId, categoryIds, createdAt,
+            discountAmount, id, itemDescription,
+            itemId, itemName, itemSku,
+            notes, refundAmount, refundedAt,
+            taxAmount, taxrateId, totalAmount,
+            unitAmount, unitQuantity, updatedAt);
     }
     
     @Override
     public String toString() {
         return Utils.toString(AccountingLineitem.class,
                 "accountId", accountId,
+                "categoryIds", categoryIds,
                 "createdAt", createdAt,
                 "discountAmount", discountAmount,
                 "id", id,
@@ -543,6 +574,8 @@ public class AccountingLineitem {
     public final static class Builder {
 
         private Optional<String> accountId = Optional.empty();
+
+        private Optional<? extends List<String>> categoryIds = Optional.empty();
 
         private Optional<OffsetDateTime> createdAt = Optional.empty();
 
@@ -590,6 +623,19 @@ public class AccountingLineitem {
         public Builder accountId(Optional<String> accountId) {
             Utils.checkNotNull(accountId, "accountId");
             this.accountId = accountId;
+            return this;
+        }
+
+
+        public Builder categoryIds(List<String> categoryIds) {
+            Utils.checkNotNull(categoryIds, "categoryIds");
+            this.categoryIds = Optional.ofNullable(categoryIds);
+            return this;
+        }
+
+        public Builder categoryIds(Optional<? extends List<String>> categoryIds) {
+            Utils.checkNotNull(categoryIds, "categoryIds");
+            this.categoryIds = categoryIds;
             return this;
         }
 
@@ -804,12 +850,12 @@ public class AccountingLineitem {
         public AccountingLineitem build() {
 
             return new AccountingLineitem(
-                accountId, createdAt, discountAmount,
-                id, itemDescription, itemId,
-                itemName, itemSku, notes,
-                refundAmount, refundedAt, taxAmount,
-                taxrateId, totalAmount, unitAmount,
-                unitQuantity, updatedAt);
+                accountId, categoryIds, createdAt,
+                discountAmount, id, itemDescription,
+                itemId, itemName, itemSku,
+                notes, refundAmount, refundedAt,
+                taxAmount, taxrateId, totalAmount,
+                unitAmount, unitQuantity, updatedAt);
         }
 
     }

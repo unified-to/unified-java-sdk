@@ -7,6 +7,7 @@
 
 * [createAccountingAccount](#createaccountingaccount) - Create an account
 * [createAccountingBill](#createaccountingbill) - Create a bill
+* [createAccountingCategory](#createaccountingcategory) - Create a category
 * [createAccountingContact](#createaccountingcontact) - Create a contact
 * [createAccountingCreditmemo](#createaccountingcreditmemo) - Create a creditmemo
 * [createAccountingInvoice](#createaccountinginvoice) - Create an invoice
@@ -19,6 +20,7 @@
 * [getAccountingAccount](#getaccountingaccount) - Retrieve an account
 * [getAccountingBalancesheet](#getaccountingbalancesheet) - Retrieve a balancesheet
 * [getAccountingBill](#getaccountingbill) - Retrieve a bill
+* [getAccountingCategory](#getaccountingcategory) - Retrieve a category
 * [getAccountingContact](#getaccountingcontact) - Retrieve a contact
 * [getAccountingCreditmemo](#getaccountingcreditmemo) - Retrieve a creditmemo
 * [getAccountingInvoice](#getaccountinginvoice) - Retrieve an invoice
@@ -35,6 +37,7 @@
 * [listAccountingAccounts](#listaccountingaccounts) - List all accounts
 * [listAccountingBalancesheets](#listaccountingbalancesheets) - List all balancesheets
 * [listAccountingBills](#listaccountingbills) - List all bills
+* [listAccountingCategories](#listaccountingcategories) - List all categories
 * [listAccountingContacts](#listaccountingcontacts) - List all contacts
 * [listAccountingCreditmemoes](#listaccountingcreditmemoes) - List all creditmemoes
 * [listAccountingInvoices](#listaccountinginvoices) - List all invoices
@@ -50,6 +53,7 @@
 * [listAccountingTrialbalances](#listaccountingtrialbalances) - List all trialbalances
 * [patchAccountingAccount](#patchaccountingaccount) - Update an account
 * [patchAccountingBill](#patchaccountingbill) - Update a bill
+* [patchAccountingCategory](#patchaccountingcategory) - Update a category
 * [patchAccountingContact](#patchaccountingcontact) - Update a contact
 * [patchAccountingCreditmemo](#patchaccountingcreditmemo) - Update a creditmemo
 * [patchAccountingInvoice](#patchaccountinginvoice) - Update an invoice
@@ -61,6 +65,7 @@
 * [patchAccountingTransaction](#patchaccountingtransaction) - Update a transaction
 * [removeAccountingAccount](#removeaccountingaccount) - Remove an account
 * [removeAccountingBill](#removeaccountingbill) - Remove a bill
+* [removeAccountingCategory](#removeaccountingcategory) - Remove a category
 * [removeAccountingContact](#removeaccountingcontact) - Remove a contact
 * [removeAccountingCreditmemo](#removeaccountingcreditmemo) - Remove a creditmemo
 * [removeAccountingInvoice](#removeaccountinginvoice) - Remove an invoice
@@ -72,6 +77,7 @@
 * [removeAccountingTransaction](#removeaccountingtransaction) - Remove a transaction
 * [updateAccountingAccount](#updateaccountingaccount) - Update an account
 * [updateAccountingBill](#updateaccountingbill) - Update a bill
+* [updateAccountingCategory](#updateaccountingcategory) - Update a category
 * [updateAccountingContact](#updateaccountingcontact) - Update a contact
 * [updateAccountingCreditmemo](#updateaccountingcreditmemo) - Update a creditmemo
 * [updateAccountingInvoice](#updateaccountinginvoice) - Update an invoice
@@ -88,6 +94,7 @@ Create an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" -->
 ```java
 package hello.world;
 
@@ -147,6 +154,7 @@ Create a bill
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAccountingBill" method="post" path="/accounting/{connection_id}/bill" -->
 ```java
 package hello.world;
 
@@ -200,12 +208,73 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## createAccountingCategory
+
+Create a category
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createAccountingCategory" method="post" path="/accounting/{connection_id}/category" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingCategoryRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingCategoryResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingCategory;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateAccountingCategoryRequest req = CreateAccountingCategoryRequest.builder()
+                .accountingCategory(AccountingCategory.builder()
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateAccountingCategoryResponse res = sdk.accounting().createAccountingCategory()
+                .request(req)
+                .call();
+
+        if (res.accountingCategory().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [CreateAccountingCategoryRequest](../../models/operations/CreateAccountingCategoryRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+
+### Response
+
+**[CreateAccountingCategoryResponse](../../models/operations/CreateAccountingCategoryResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## createAccountingContact
 
 Create a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAccountingContact" method="post" path="/accounting/{connection_id}/contact" -->
 ```java
 package hello.world;
 
@@ -265,6 +334,7 @@ Create a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAccountingCreditmemo" method="post" path="/accounting/{connection_id}/creditmemo" -->
 ```java
 package hello.world;
 
@@ -324,6 +394,7 @@ Create an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAccountingInvoice" method="post" path="/accounting/{connection_id}/invoice" -->
 ```java
 package hello.world;
 
@@ -383,6 +454,7 @@ Create a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" -->
 ```java
 package hello.world;
 
@@ -442,6 +514,7 @@ Create an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAccountingOrder" method="post" path="/accounting/{connection_id}/order" -->
 ```java
 package hello.world;
 
@@ -501,6 +574,7 @@ Create a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAccountingPurchaseorder" method="post" path="/accounting/{connection_id}/purchaseorder" -->
 ```java
 package hello.world;
 
@@ -560,6 +634,7 @@ Create a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAccountingSalesorder" method="post" path="/accounting/{connection_id}/salesorder" -->
 ```java
 package hello.world;
 
@@ -619,6 +694,7 @@ Create a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" -->
 ```java
 package hello.world;
 
@@ -678,6 +754,7 @@ Create a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAccountingTransaction" method="post" path="/accounting/{connection_id}/transaction" -->
 ```java
 package hello.world;
 
@@ -737,6 +814,7 @@ Retrieve an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingAccount" method="get" path="/accounting/{connection_id}/account/{id}" -->
 ```java
 package hello.world;
 
@@ -794,6 +872,7 @@ Retrieve a balancesheet
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingBalancesheet" method="get" path="/accounting/{connection_id}/balancesheet/{id}" -->
 ```java
 package hello.world;
 
@@ -851,6 +930,7 @@ Retrieve a bill
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingBill" method="get" path="/accounting/{connection_id}/bill/{id}" -->
 ```java
 package hello.world;
 
@@ -902,12 +982,71 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getAccountingCategory
+
+Retrieve a category
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getAccountingCategory" method="get" path="/accounting/{connection_id}/category/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAccountingCategoryRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingCategoryResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetAccountingCategoryRequest req = GetAccountingCategoryRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetAccountingCategoryResponse res = sdk.accounting().getAccountingCategory()
+                .request(req)
+                .call();
+
+        if (res.accountingCategory().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [GetAccountingCategoryRequest](../../models/operations/GetAccountingCategoryRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[GetAccountingCategoryResponse](../../models/operations/GetAccountingCategoryResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## getAccountingContact
 
 Retrieve a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingContact" method="get" path="/accounting/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
@@ -965,6 +1104,7 @@ Retrieve a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingCreditmemo" method="get" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```java
 package hello.world;
 
@@ -1022,6 +1162,7 @@ Retrieve an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingInvoice" method="get" path="/accounting/{connection_id}/invoice/{id}" -->
 ```java
 package hello.world;
 
@@ -1079,6 +1220,7 @@ Retrieve a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingJournal" method="get" path="/accounting/{connection_id}/journal/{id}" -->
 ```java
 package hello.world;
 
@@ -1136,6 +1278,7 @@ Retrieve an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingOrder" method="get" path="/accounting/{connection_id}/order/{id}" -->
 ```java
 package hello.world;
 
@@ -1193,6 +1336,7 @@ Retrieve an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingOrganization" method="get" path="/accounting/{connection_id}/organization/{id}" -->
 ```java
 package hello.world;
 
@@ -1250,6 +1394,7 @@ Retrieve a profitloss
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingProfitloss" method="get" path="/accounting/{connection_id}/profitloss/{id}" -->
 ```java
 package hello.world;
 
@@ -1307,6 +1452,7 @@ Retrieve a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingPurchaseorder" method="get" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```java
 package hello.world;
 
@@ -1364,6 +1510,7 @@ Retrieve a report
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingReport" method="get" path="/accounting/{connection_id}/report/{id}" -->
 ```java
 package hello.world;
 
@@ -1421,6 +1568,7 @@ Retrieve a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingSalesorder" method="get" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```java
 package hello.world;
 
@@ -1478,6 +1626,7 @@ Retrieve a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingTaxrate" method="get" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```java
 package hello.world;
 
@@ -1535,6 +1684,7 @@ Retrieve a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingTransaction" method="get" path="/accounting/{connection_id}/transaction/{id}" -->
 ```java
 package hello.world;
 
@@ -1592,6 +1742,7 @@ Retrieve a trialbalance
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingTrialbalance" method="get" path="/accounting/{connection_id}/trialbalance/{id}" -->
 ```java
 package hello.world;
 
@@ -1649,6 +1800,7 @@ List all accounts
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingAccounts" method="get" path="/accounting/{connection_id}/account" -->
 ```java
 package hello.world;
 
@@ -1705,6 +1857,7 @@ List all balancesheets
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingBalancesheets" method="get" path="/accounting/{connection_id}/balancesheet" -->
 ```java
 package hello.world;
 
@@ -1761,6 +1914,7 @@ List all bills
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingBills" method="get" path="/accounting/{connection_id}/bill" -->
 ```java
 package hello.world;
 
@@ -1811,12 +1965,70 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listAccountingCategories
+
+List all categories
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listAccountingCategories" method="get" path="/accounting/{connection_id}/category" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAccountingCategoriesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingCategoriesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListAccountingCategoriesRequest req = ListAccountingCategoriesRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListAccountingCategoriesResponse res = sdk.accounting().listAccountingCategories()
+                .request(req)
+                .call();
+
+        if (res.accountingCategories().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [ListAccountingCategoriesRequest](../../models/operations/ListAccountingCategoriesRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+
+### Response
+
+**[ListAccountingCategoriesResponse](../../models/operations/ListAccountingCategoriesResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listAccountingContacts
 
 List all contacts
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingContacts" method="get" path="/accounting/{connection_id}/contact" -->
 ```java
 package hello.world;
 
@@ -1873,6 +2085,7 @@ List all creditmemoes
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingCreditmemoes" method="get" path="/accounting/{connection_id}/creditmemo" -->
 ```java
 package hello.world;
 
@@ -1929,6 +2142,7 @@ List all invoices
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingInvoices" method="get" path="/accounting/{connection_id}/invoice" -->
 ```java
 package hello.world;
 
@@ -1985,6 +2199,7 @@ List all journals
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingJournals" method="get" path="/accounting/{connection_id}/journal" -->
 ```java
 package hello.world;
 
@@ -2041,6 +2256,7 @@ List all orders
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingOrders" method="get" path="/accounting/{connection_id}/order" -->
 ```java
 package hello.world;
 
@@ -2097,6 +2313,7 @@ List all organizations
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingOrganizations" method="get" path="/accounting/{connection_id}/organization" -->
 ```java
 package hello.world;
 
@@ -2153,6 +2370,7 @@ List all profitlosses
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingProfitlosses" method="get" path="/accounting/{connection_id}/profitloss" -->
 ```java
 package hello.world;
 
@@ -2209,6 +2427,7 @@ List all purchaseorders
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingPurchaseorders" method="get" path="/accounting/{connection_id}/purchaseorder" -->
 ```java
 package hello.world;
 
@@ -2265,6 +2484,7 @@ List all reports
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingReports" method="get" path="/accounting/{connection_id}/report" -->
 ```java
 package hello.world;
 
@@ -2321,6 +2541,7 @@ List all salesorders
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingSalesorders" method="get" path="/accounting/{connection_id}/salesorder" -->
 ```java
 package hello.world;
 
@@ -2377,6 +2598,7 @@ List all taxrates
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingTaxrates" method="get" path="/accounting/{connection_id}/taxrate" -->
 ```java
 package hello.world;
 
@@ -2433,6 +2655,7 @@ List all transactions
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingTransactions" method="get" path="/accounting/{connection_id}/transaction" -->
 ```java
 package hello.world;
 
@@ -2489,6 +2712,7 @@ List all trialbalances
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingTrialbalances" method="get" path="/accounting/{connection_id}/trialbalance" -->
 ```java
 package hello.world;
 
@@ -2545,6 +2769,7 @@ Update an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" -->
 ```java
 package hello.world;
 
@@ -2605,6 +2830,7 @@ Update a bill
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAccountingBill" method="patch" path="/accounting/{connection_id}/bill/{id}" -->
 ```java
 package hello.world;
 
@@ -2659,12 +2885,74 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## patchAccountingCategory
+
+Update a category
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchAccountingCategory" method="patch" path="/accounting/{connection_id}/category/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingCategoryRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingCategoryResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingCategory;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchAccountingCategoryRequest req = PatchAccountingCategoryRequest.builder()
+                .accountingCategory(AccountingCategory.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchAccountingCategoryResponse res = sdk.accounting().patchAccountingCategory()
+                .request(req)
+                .call();
+
+        if (res.accountingCategory().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [PatchAccountingCategoryRequest](../../models/operations/PatchAccountingCategoryRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+
+### Response
+
+**[PatchAccountingCategoryResponse](../../models/operations/PatchAccountingCategoryResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## patchAccountingContact
 
 Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAccountingContact" method="patch" path="/accounting/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
@@ -2725,6 +3013,7 @@ Update a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAccountingCreditmemo" method="patch" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```java
 package hello.world;
 
@@ -2785,6 +3074,7 @@ Update an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAccountingInvoice" method="patch" path="/accounting/{connection_id}/invoice/{id}" -->
 ```java
 package hello.world;
 
@@ -2845,6 +3135,7 @@ Update a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" -->
 ```java
 package hello.world;
 
@@ -2905,6 +3196,7 @@ Update an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAccountingOrder" method="patch" path="/accounting/{connection_id}/order/{id}" -->
 ```java
 package hello.world;
 
@@ -2965,6 +3257,7 @@ Update a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAccountingPurchaseorder" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```java
 package hello.world;
 
@@ -3025,6 +3318,7 @@ Update a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAccountingSalesorder" method="patch" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```java
 package hello.world;
 
@@ -3085,6 +3379,7 @@ Update a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```java
 package hello.world;
 
@@ -3145,6 +3440,7 @@ Update a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAccountingTransaction" method="patch" path="/accounting/{connection_id}/transaction/{id}" -->
 ```java
 package hello.world;
 
@@ -3205,6 +3501,7 @@ Remove an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAccountingAccount" method="delete" path="/accounting/{connection_id}/account/{id}" -->
 ```java
 package hello.world;
 
@@ -3260,6 +3557,7 @@ Remove a bill
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAccountingBill" method="delete" path="/accounting/{connection_id}/bill/{id}" -->
 ```java
 package hello.world;
 
@@ -3309,12 +3607,69 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removeAccountingCategory
+
+Remove a category
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAccountingCategory" method="delete" path="/accounting/{connection_id}/category/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingCategoryRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingCategoryResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAccountingCategoryRequest req = RemoveAccountingCategoryRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAccountingCategoryResponse res = sdk.accounting().removeAccountingCategory()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [RemoveAccountingCategoryRequest](../../models/operations/RemoveAccountingCategoryRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+
+### Response
+
+**[RemoveAccountingCategoryResponse](../../models/operations/RemoveAccountingCategoryResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## removeAccountingContact
 
 Remove a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAccountingContact" method="delete" path="/accounting/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
@@ -3370,6 +3725,7 @@ Remove a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAccountingCreditmemo" method="delete" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```java
 package hello.world;
 
@@ -3425,6 +3781,7 @@ Remove an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAccountingInvoice" method="delete" path="/accounting/{connection_id}/invoice/{id}" -->
 ```java
 package hello.world;
 
@@ -3480,6 +3837,7 @@ Remove a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAccountingJournal" method="delete" path="/accounting/{connection_id}/journal/{id}" -->
 ```java
 package hello.world;
 
@@ -3535,6 +3893,7 @@ Remove an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAccountingOrder" method="delete" path="/accounting/{connection_id}/order/{id}" -->
 ```java
 package hello.world;
 
@@ -3590,6 +3949,7 @@ Remove a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAccountingPurchaseorder" method="delete" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```java
 package hello.world;
 
@@ -3645,6 +4005,7 @@ Remove a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAccountingSalesorder" method="delete" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```java
 package hello.world;
 
@@ -3700,6 +4061,7 @@ Remove a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAccountingTaxrate" method="delete" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```java
 package hello.world;
 
@@ -3755,6 +4117,7 @@ Remove a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAccountingTransaction" method="delete" path="/accounting/{connection_id}/transaction/{id}" -->
 ```java
 package hello.world;
 
@@ -3810,6 +4173,7 @@ Update an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" -->
 ```java
 package hello.world;
 
@@ -3870,6 +4234,7 @@ Update a bill
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAccountingBill" method="put" path="/accounting/{connection_id}/bill/{id}" -->
 ```java
 package hello.world;
 
@@ -3924,12 +4289,74 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## updateAccountingCategory
+
+Update a category
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateAccountingCategory" method="put" path="/accounting/{connection_id}/category/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingCategoryRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingCategoryResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingCategory;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateAccountingCategoryRequest req = UpdateAccountingCategoryRequest.builder()
+                .accountingCategory(AccountingCategory.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateAccountingCategoryResponse res = sdk.accounting().updateAccountingCategory()
+                .request(req)
+                .call();
+
+        if (res.accountingCategory().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [UpdateAccountingCategoryRequest](../../models/operations/UpdateAccountingCategoryRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+
+### Response
+
+**[UpdateAccountingCategoryResponse](../../models/operations/UpdateAccountingCategoryResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## updateAccountingContact
 
 Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAccountingContact" method="put" path="/accounting/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
@@ -3990,6 +4417,7 @@ Update a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAccountingCreditmemo" method="put" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```java
 package hello.world;
 
@@ -4050,6 +4478,7 @@ Update an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAccountingInvoice" method="put" path="/accounting/{connection_id}/invoice/{id}" -->
 ```java
 package hello.world;
 
@@ -4110,6 +4539,7 @@ Update a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" -->
 ```java
 package hello.world;
 
@@ -4170,6 +4600,7 @@ Update an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAccountingOrder" method="put" path="/accounting/{connection_id}/order/{id}" -->
 ```java
 package hello.world;
 
@@ -4230,6 +4661,7 @@ Update a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAccountingPurchaseorder" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```java
 package hello.world;
 
@@ -4290,6 +4722,7 @@ Update a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAccountingSalesorder" method="put" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```java
 package hello.world;
 
@@ -4350,6 +4783,7 @@ Update a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```java
 package hello.world;
 
@@ -4410,6 +4844,7 @@ Update a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAccountingTransaction" method="put" path="/accounting/{connection_id}/transaction/{id}" -->
 ```java
 package hello.world;
 

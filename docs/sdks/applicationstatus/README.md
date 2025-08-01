@@ -13,6 +13,7 @@ List all applicationstatuses
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAtsApplicationstatuses" method="get" path="/ats/{connection_id}/applicationstatus" -->
 ```java
 package hello.world;
 

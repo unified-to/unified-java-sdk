@@ -24,6 +24,7 @@ Create a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" -->
 ```java
 package hello.world;
 
@@ -83,6 +84,7 @@ Create group
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createScimGroups" method="post" path="/scim/{connection_id}/groups" -->
 ```java
 package hello.world;
 
@@ -143,6 +145,7 @@ Retrieve a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getHrisGroup" method="get" path="/hris/{connection_id}/group/{id}" -->
 ```java
 package hello.world;
 
@@ -200,6 +203,7 @@ Get group
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getScimGroups" method="get" path="/scim/{connection_id}/groups/{id}" -->
 ```java
 package hello.world;
 
@@ -257,6 +261,7 @@ List all groups
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listHrisGroups" method="get" path="/hris/{connection_id}/group" -->
 ```java
 package hello.world;
 
@@ -313,6 +318,7 @@ List groups
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listScimGroups" method="get" path="/scim/{connection_id}/groups" -->
 ```java
 package hello.world;
 
@@ -369,6 +375,7 @@ Update a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" -->
 ```java
 package hello.world;
 
@@ -429,6 +436,7 @@ Update group
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchScimGroups" method="patch" path="/scim/{connection_id}/groups/{id}" -->
 ```java
 package hello.world;
 
@@ -490,6 +498,7 @@ Remove a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeHrisGroup" method="delete" path="/hris/{connection_id}/group/{id}" -->
 ```java
 package hello.world;
 
@@ -545,6 +554,7 @@ Delete group
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeScimGroups" method="delete" path="/scim/{connection_id}/groups/{id}" -->
 ```java
 package hello.world;
 
@@ -600,6 +610,7 @@ Update a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" -->
 ```java
 package hello.world;
 
@@ -660,6 +671,7 @@ Update group
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateScimGroups" method="put" path="/scim/{connection_id}/groups/{id}" -->
 ```java
 package hello.world;
 

@@ -18,6 +18,7 @@ Create an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAtsInterview" method="post" path="/ats/{connection_id}/interview" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAtsInterview" method="get" path="/ats/{connection_id}/interview/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List all interviews
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAtsInterviews" method="get" path="/ats/{connection_id}/interview" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAtsInterview" method="patch" path="/ats/{connection_id}/interview/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Remove an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAtsInterview" method="delete" path="/ats/{connection_id}/interview/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAtsInterview" method="put" path="/ats/{connection_id}/interview/{id}" -->
 ```java
 package hello.world;
 

@@ -13,6 +13,7 @@ List support issues
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listUnifiedIssues" method="get" path="/unified/issue" -->
 ```java
 package hello.world;
 

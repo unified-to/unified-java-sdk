@@ -18,6 +18,7 @@ Create an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAccountingOrder" method="post" path="/accounting/{connection_id}/order" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingOrder" method="get" path="/accounting/{connection_id}/order/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List all orders
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingOrders" method="get" path="/accounting/{connection_id}/order" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAccountingOrder" method="patch" path="/accounting/{connection_id}/order/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Remove an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAccountingOrder" method="delete" path="/accounting/{connection_id}/order/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAccountingOrder" method="put" path="/accounting/{connection_id}/order/{id}" -->
 ```java
 package hello.world;
 

@@ -18,6 +18,7 @@ Create an application
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAtsApplication" method="post" path="/ats/{connection_id}/application" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve an application
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAtsApplication" method="get" path="/ats/{connection_id}/application/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List all applications
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAtsApplications" method="get" path="/ats/{connection_id}/application" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update an application
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAtsApplication" method="patch" path="/ats/{connection_id}/application/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Remove an application
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAtsApplication" method="delete" path="/ats/{connection_id}/application/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update an application
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAtsApplication" method="put" path="/ats/{connection_id}/application/{id}" -->
 ```java
 package hello.world;
 

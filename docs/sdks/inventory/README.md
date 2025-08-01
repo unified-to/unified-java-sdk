@@ -18,6 +18,7 @@ Create an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createCommerceInventory" method="post" path="/commerce/{connection_id}/inventory" -->
 ```java
 package hello.world;
 
@@ -78,6 +79,7 @@ Retrieve an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getCommerceInventory" method="get" path="/commerce/{connection_id}/inventory/{id}" -->
 ```java
 package hello.world;
 
@@ -135,6 +137,7 @@ List all inventories
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listCommerceInventories" method="get" path="/commerce/{connection_id}/inventory" -->
 ```java
 package hello.world;
 
@@ -191,6 +194,7 @@ Update an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchCommerceInventory" method="patch" path="/commerce/{connection_id}/inventory/{id}" -->
 ```java
 package hello.world;
 
@@ -252,6 +256,7 @@ Remove an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeCommerceInventory" method="delete" path="/commerce/{connection_id}/inventory/{id}" -->
 ```java
 package hello.world;
 
@@ -307,6 +312,7 @@ Update an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateCommerceInventory" method="put" path="/commerce/{connection_id}/inventory/{id}" -->
 ```java
 package hello.world;
 

@@ -13,6 +13,7 @@ Create a prompt
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createGenaiPrompt" method="post" path="/genai/{connection_id}/prompt" -->
 ```java
 package hello.world;
 

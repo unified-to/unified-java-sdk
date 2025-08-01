@@ -48,6 +48,9 @@ public class UnifiedTo {
     private final Bill bill;
 
 
+    private final Category category;
+
+
     private final Contact contact;
 
 
@@ -353,6 +356,11 @@ public class UnifiedTo {
 
     public Bill bill() {
         return bill;
+    }
+
+
+    public Category category() {
+        return category;
     }
 
 
@@ -977,6 +985,7 @@ public class UnifiedTo {
         this.account = new Account(sdkConfiguration);
         this.balancesheet = new Balancesheet(sdkConfiguration);
         this.bill = new Bill(sdkConfiguration);
+        this.category = new Category(sdkConfiguration);
         this.contact = new Contact(sdkConfiguration);
         this.creditmemo = new Creditmemo(sdkConfiguration);
         this.invoice = new Invoice(sdkConfiguration);

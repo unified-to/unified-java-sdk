@@ -36,6 +36,7 @@ Create a class
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createLmsClass" method="post" path="/lms/{connection_id}/class" -->
 ```java
 package hello.world;
 
@@ -97,6 +98,7 @@ Create a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createLmsCourse" method="post" path="/lms/{connection_id}/course" -->
 ```java
 package hello.world;
 
@@ -157,6 +159,7 @@ Create an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createLmsInstructor" method="post" path="/lms/{connection_id}/instructor" -->
 ```java
 package hello.world;
 
@@ -216,6 +219,7 @@ Create a student
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createLmsStudent" method="post" path="/lms/{connection_id}/student" -->
 ```java
 package hello.world;
 
@@ -275,6 +279,7 @@ Retrieve a class
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getLmsClass" method="get" path="/lms/{connection_id}/class/{id}" -->
 ```java
 package hello.world;
 
@@ -332,6 +337,7 @@ Retrieve a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getLmsCourse" method="get" path="/lms/{connection_id}/course/{id}" -->
 ```java
 package hello.world;
 
@@ -389,6 +395,7 @@ Retrieve an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getLmsInstructor" method="get" path="/lms/{connection_id}/instructor/{id}" -->
 ```java
 package hello.world;
 
@@ -446,6 +453,7 @@ Retrieve a student
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getLmsStudent" method="get" path="/lms/{connection_id}/student/{id}" -->
 ```java
 package hello.world;
 
@@ -503,6 +511,7 @@ List all classes
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listLmsClasses" method="get" path="/lms/{connection_id}/class" -->
 ```java
 package hello.world;
 
@@ -559,6 +568,7 @@ List all courses
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listLmsCourses" method="get" path="/lms/{connection_id}/course" -->
 ```java
 package hello.world;
 
@@ -615,6 +625,7 @@ List all instructors
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listLmsInstructors" method="get" path="/lms/{connection_id}/instructor" -->
 ```java
 package hello.world;
 
@@ -671,6 +682,7 @@ List all students
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listLmsStudents" method="get" path="/lms/{connection_id}/student" -->
 ```java
 package hello.world;
 
@@ -727,6 +739,7 @@ Update a class
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchLmsClass" method="patch" path="/lms/{connection_id}/class/{id}" -->
 ```java
 package hello.world;
 
@@ -789,6 +802,7 @@ Update a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchLmsCourse" method="patch" path="/lms/{connection_id}/course/{id}" -->
 ```java
 package hello.world;
 
@@ -850,6 +864,7 @@ Update an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchLmsInstructor" method="patch" path="/lms/{connection_id}/instructor/{id}" -->
 ```java
 package hello.world;
 
@@ -910,6 +925,7 @@ Update a student
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchLmsStudent" method="patch" path="/lms/{connection_id}/student/{id}" -->
 ```java
 package hello.world;
 
@@ -970,6 +986,7 @@ Remove a class
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeLmsClass" method="delete" path="/lms/{connection_id}/class/{id}" -->
 ```java
 package hello.world;
 
@@ -1025,6 +1042,7 @@ Remove a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeLmsCourse" method="delete" path="/lms/{connection_id}/course/{id}" -->
 ```java
 package hello.world;
 
@@ -1080,6 +1098,7 @@ Remove an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeLmsInstructor" method="delete" path="/lms/{connection_id}/instructor/{id}" -->
 ```java
 package hello.world;
 
@@ -1135,6 +1154,7 @@ Remove a student
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeLmsStudent" method="delete" path="/lms/{connection_id}/student/{id}" -->
 ```java
 package hello.world;
 
@@ -1190,6 +1210,7 @@ Update a class
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateLmsClass" method="put" path="/lms/{connection_id}/class/{id}" -->
 ```java
 package hello.world;
 
@@ -1252,6 +1273,7 @@ Update a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateLmsCourse" method="put" path="/lms/{connection_id}/course/{id}" -->
 ```java
 package hello.world;
 
@@ -1313,6 +1335,7 @@ Update an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateLmsInstructor" method="put" path="/lms/{connection_id}/instructor/{id}" -->
 ```java
 package hello.world;
 
@@ -1373,6 +1396,7 @@ Update a student
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateLmsStudent" method="put" path="/lms/{connection_id}/student/{id}" -->
 ```java
 package hello.world;
 

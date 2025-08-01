@@ -18,6 +18,7 @@ Create a scorecard
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAtsScorecard" method="post" path="/ats/{connection_id}/scorecard" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve a scorecard
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAtsScorecard" method="get" path="/ats/{connection_id}/scorecard/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List all scorecards
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAtsScorecards" method="get" path="/ats/{connection_id}/scorecard" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update a scorecard
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAtsScorecard" method="patch" path="/ats/{connection_id}/scorecard/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Remove a scorecard
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAtsScorecard" method="delete" path="/ats/{connection_id}/scorecard/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update a scorecard
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAtsScorecard" method="put" path="/ats/{connection_id}/scorecard/{id}" -->
 ```java
 package hello.world;
 

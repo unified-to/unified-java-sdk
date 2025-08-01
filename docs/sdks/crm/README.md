@@ -48,6 +48,7 @@ Create a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createCrmCompany" method="post" path="/crm/{connection_id}/company" -->
 ```java
 package hello.world;
 
@@ -107,6 +108,7 @@ Create a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createCrmContact" method="post" path="/crm/{connection_id}/contact" -->
 ```java
 package hello.world;
 
@@ -166,6 +168,7 @@ Create a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createCrmDeal" method="post" path="/crm/{connection_id}/deal" -->
 ```java
 package hello.world;
 
@@ -225,6 +228,7 @@ Create an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createCrmEvent" method="post" path="/crm/{connection_id}/event" -->
 ```java
 package hello.world;
 
@@ -284,6 +288,7 @@ Create a lead
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createCrmLead" method="post" path="/crm/{connection_id}/lead" -->
 ```java
 package hello.world;
 
@@ -343,6 +348,7 @@ Create a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createCrmPipeline" method="post" path="/crm/{connection_id}/pipeline" -->
 ```java
 package hello.world;
 
@@ -402,6 +408,7 @@ Retrieve a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getCrmCompany" method="get" path="/crm/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 
@@ -459,6 +466,7 @@ Retrieve a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getCrmContact" method="get" path="/crm/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
@@ -516,6 +524,7 @@ Retrieve a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getCrmDeal" method="get" path="/crm/{connection_id}/deal/{id}" -->
 ```java
 package hello.world;
 
@@ -573,6 +582,7 @@ Retrieve an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getCrmEvent" method="get" path="/crm/{connection_id}/event/{id}" -->
 ```java
 package hello.world;
 
@@ -630,6 +640,7 @@ Retrieve a lead
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getCrmLead" method="get" path="/crm/{connection_id}/lead/{id}" -->
 ```java
 package hello.world;
 
@@ -687,6 +698,7 @@ Retrieve a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getCrmPipeline" method="get" path="/crm/{connection_id}/pipeline/{id}" -->
 ```java
 package hello.world;
 
@@ -744,6 +756,7 @@ List all companies
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listCrmCompanies" method="get" path="/crm/{connection_id}/company" -->
 ```java
 package hello.world;
 
@@ -800,6 +813,7 @@ List all contacts
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listCrmContacts" method="get" path="/crm/{connection_id}/contact" -->
 ```java
 package hello.world;
 
@@ -856,6 +870,7 @@ List all deals
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listCrmDeals" method="get" path="/crm/{connection_id}/deal" -->
 ```java
 package hello.world;
 
@@ -912,6 +927,7 @@ List all events
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listCrmEvents" method="get" path="/crm/{connection_id}/event" -->
 ```java
 package hello.world;
 
@@ -968,6 +984,7 @@ List all leads
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listCrmLeads" method="get" path="/crm/{connection_id}/lead" -->
 ```java
 package hello.world;
 
@@ -1024,6 +1041,7 @@ List all pipelines
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listCrmPipelines" method="get" path="/crm/{connection_id}/pipeline" -->
 ```java
 package hello.world;
 
@@ -1080,6 +1098,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchCrmCompany" method="patch" path="/crm/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 
@@ -1140,6 +1159,7 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchCrmContact" method="patch" path="/crm/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
@@ -1200,6 +1220,7 @@ Update a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchCrmDeal" method="patch" path="/crm/{connection_id}/deal/{id}" -->
 ```java
 package hello.world;
 
@@ -1260,6 +1281,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchCrmEvent" method="patch" path="/crm/{connection_id}/event/{id}" -->
 ```java
 package hello.world;
 
@@ -1320,6 +1342,7 @@ Update a lead
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchCrmLead" method="patch" path="/crm/{connection_id}/lead/{id}" -->
 ```java
 package hello.world;
 
@@ -1380,6 +1403,7 @@ Update a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchCrmPipeline" method="patch" path="/crm/{connection_id}/pipeline/{id}" -->
 ```java
 package hello.world;
 
@@ -1440,6 +1464,7 @@ Remove a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeCrmCompany" method="delete" path="/crm/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 
@@ -1495,6 +1520,7 @@ Remove a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeCrmContact" method="delete" path="/crm/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
@@ -1550,6 +1576,7 @@ Remove a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeCrmDeal" method="delete" path="/crm/{connection_id}/deal/{id}" -->
 ```java
 package hello.world;
 
@@ -1605,6 +1632,7 @@ Remove an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeCrmEvent" method="delete" path="/crm/{connection_id}/event/{id}" -->
 ```java
 package hello.world;
 
@@ -1660,6 +1688,7 @@ Remove a lead
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeCrmLead" method="delete" path="/crm/{connection_id}/lead/{id}" -->
 ```java
 package hello.world;
 
@@ -1715,6 +1744,7 @@ Remove a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeCrmPipeline" method="delete" path="/crm/{connection_id}/pipeline/{id}" -->
 ```java
 package hello.world;
 
@@ -1770,6 +1800,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateCrmCompany" method="put" path="/crm/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 
@@ -1830,6 +1861,7 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateCrmContact" method="put" path="/crm/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
@@ -1890,6 +1922,7 @@ Update a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateCrmDeal" method="put" path="/crm/{connection_id}/deal/{id}" -->
 ```java
 package hello.world;
 
@@ -1950,6 +1983,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateCrmEvent" method="put" path="/crm/{connection_id}/event/{id}" -->
 ```java
 package hello.world;
 
@@ -2010,6 +2044,7 @@ Update a lead
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateCrmLead" method="put" path="/crm/{connection_id}/lead/{id}" -->
 ```java
 package hello.world;
 
@@ -2070,6 +2105,7 @@ Update a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateCrmPipeline" method="put" path="/crm/{connection_id}/pipeline/{id}" -->
 ```java
 package hello.world;
 

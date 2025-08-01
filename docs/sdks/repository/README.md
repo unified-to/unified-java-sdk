@@ -18,6 +18,7 @@ Create a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createRepoRepository" method="post" path="/repo/{connection_id}/repository" -->
 ```java
 package hello.world;
 
@@ -78,6 +79,7 @@ Retrieve a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getRepoRepository" method="get" path="/repo/{connection_id}/repository/{id}" -->
 ```java
 package hello.world;
 
@@ -135,6 +137,7 @@ List all repositories
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listRepoRepositories" method="get" path="/repo/{connection_id}/repository" -->
 ```java
 package hello.world;
 
@@ -191,6 +194,7 @@ Update a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchRepoRepository" method="patch" path="/repo/{connection_id}/repository/{id}" -->
 ```java
 package hello.world;
 
@@ -252,6 +256,7 @@ Remove a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeRepoRepository" method="delete" path="/repo/{connection_id}/repository/{id}" -->
 ```java
 package hello.world;
 
@@ -307,6 +312,7 @@ Update a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateRepoRepository" method="put" path="/repo/{connection_id}/repository/{id}" -->
 ```java
 package hello.world;
 

@@ -18,6 +18,7 @@ Create an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingAccount" method="get" path="/accounting/{connection_id}/account/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List all accounts
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingAccounts" method="get" path="/accounting/{connection_id}/account" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Remove an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAccountingAccount" method="delete" path="/accounting/{connection_id}/account/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" -->
 ```java
 package hello.world;
 

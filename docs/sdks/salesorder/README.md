@@ -18,6 +18,7 @@ Create a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAccountingSalesorder" method="post" path="/accounting/{connection_id}/salesorder" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingSalesorder" method="get" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List all salesorders
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingSalesorders" method="get" path="/accounting/{connection_id}/salesorder" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAccountingSalesorder" method="patch" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Remove a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAccountingSalesorder" method="delete" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAccountingSalesorder" method="put" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```java
 package hello.world;
 

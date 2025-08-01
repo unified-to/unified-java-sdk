@@ -18,6 +18,7 @@ Create a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingJournal" method="get" path="/accounting/{connection_id}/journal/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List all journals
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingJournals" method="get" path="/accounting/{connection_id}/journal" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Remove a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAccountingJournal" method="delete" path="/accounting/{connection_id}/journal/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" -->
 ```java
 package hello.world;
 

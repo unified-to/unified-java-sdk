@@ -20,6 +20,7 @@ Create a message
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createMessagingMessage" method="post" path="/messaging/{connection_id}/message" -->
 ```java
 package hello.world;
 
@@ -79,6 +80,7 @@ Retrieve a channel
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getMessagingChannel" method="get" path="/messaging/{connection_id}/channel/{id}" -->
 ```java
 package hello.world;
 
@@ -136,6 +138,7 @@ Retrieve a message
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getMessagingMessage" method="get" path="/messaging/{connection_id}/message/{id}" -->
 ```java
 package hello.world;
 
@@ -193,6 +196,7 @@ List all channels
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listMessagingChannels" method="get" path="/messaging/{connection_id}/channel" -->
 ```java
 package hello.world;
 
@@ -249,6 +253,7 @@ List all messages
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listMessagingMessages" method="get" path="/messaging/{connection_id}/message" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update a message
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchMessagingMessage" method="patch" path="/messaging/{connection_id}/message/{id}" -->
 ```java
 package hello.world;
 
@@ -365,6 +371,7 @@ Remove a message
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeMessagingMessage" method="delete" path="/messaging/{connection_id}/message/{id}" -->
 ```java
 package hello.world;
 
@@ -420,6 +427,7 @@ Update a message
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateMessagingMessage" method="put" path="/messaging/{connection_id}/message/{id}" -->
 ```java
 package hello.world;
 

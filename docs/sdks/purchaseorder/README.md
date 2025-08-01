@@ -18,6 +18,7 @@ Create a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAccountingPurchaseorder" method="post" path="/accounting/{connection_id}/purchaseorder" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingPurchaseorder" method="get" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List all purchaseorders
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingPurchaseorders" method="get" path="/accounting/{connection_id}/purchaseorder" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAccountingPurchaseorder" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Remove a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAccountingPurchaseorder" method="delete" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAccountingPurchaseorder" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```java
 package hello.world;
 

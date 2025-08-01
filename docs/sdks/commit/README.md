@@ -18,6 +18,7 @@ Create a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createRepoCommit" method="post" path="/repo/{connection_id}/commit" -->
 ```java
 package hello.world;
 
@@ -79,6 +80,7 @@ Retrieve a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getRepoCommit" method="get" path="/repo/{connection_id}/commit/{id}" -->
 ```java
 package hello.world;
 
@@ -136,6 +138,7 @@ List all commits
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listRepoCommits" method="get" path="/repo/{connection_id}/commit" -->
 ```java
 package hello.world;
 
@@ -192,6 +195,7 @@ Update a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchRepoCommit" method="patch" path="/repo/{connection_id}/commit/{id}" -->
 ```java
 package hello.world;
 
@@ -254,6 +258,7 @@ Remove a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeRepoCommit" method="delete" path="/repo/{connection_id}/commit/{id}" -->
 ```java
 package hello.world;
 
@@ -309,6 +314,7 @@ Update a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateRepoCommit" method="put" path="/repo/{connection_id}/commit/{id}" -->
 ```java
 package hello.world;
 

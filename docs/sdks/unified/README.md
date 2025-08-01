@@ -32,6 +32,7 @@ Used only to import existing customer credentials; use "Authorize new connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createUnifiedConnection" method="post" path="/unified/connection" -->
 ```java
 package hello.world;
 
@@ -91,6 +92,7 @@ The data payload received by your server is described at https://docs.unified.to
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createUnifiedWebhook" method="post" path="/unified/webhook" -->
 ```java
 package hello.world;
 
@@ -151,6 +153,7 @@ Retrieve specific API Call by its ID
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getUnifiedApicall" method="get" path="/unified/apicall/{id}" -->
 ```java
 package hello.world;
 
@@ -207,6 +210,7 @@ Retrieve connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getUnifiedConnection" method="get" path="/unified/connection/{id}" -->
 ```java
 package hello.world;
 
@@ -263,6 +267,7 @@ Returns an authorization URL for the specified integration.  Once a successful a
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getUnifiedIntegrationAuth" method="get" path="/unified/integration/auth/{workspace_id}/{integration_type}" -->
 ```java
 package hello.world;
 
@@ -320,6 +325,7 @@ Retrieve webhook by its ID
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getUnifiedWebhook" method="get" path="/unified/webhook/{id}" -->
 ```java
 package hello.world;
 
@@ -376,6 +382,7 @@ Returns API Calls
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listUnifiedApicalls" method="get" path="/unified/apicall" -->
 ```java
 package hello.world;
 
@@ -426,6 +433,7 @@ List all connections
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listUnifiedConnections" method="get" path="/unified/connection" -->
 ```java
 package hello.world;
 
@@ -476,6 +484,7 @@ No authentication required as this is to be used by front-end interface
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listUnifiedIntegrationWorkspaces" method="get" path="/unified/integration/workspace/{workspace_id}" -->
 ```java
 package hello.world;
 
@@ -532,6 +541,7 @@ Returns all integrations
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listUnifiedIntegrations" method="get" path="/unified/integration" -->
 ```java
 package hello.world;
 
@@ -582,6 +592,7 @@ List support issues
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listUnifiedIssues" method="get" path="/unified/issue" -->
 ```java
 package hello.world;
 
@@ -632,6 +643,7 @@ Returns all registered webhooks
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listUnifiedWebhooks" method="get" path="/unified/webhook" -->
 ```java
 package hello.world;
 
@@ -682,6 +694,7 @@ Update connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchUnifiedConnection" method="patch" path="/unified/connection/{id}" -->
 ```java
 package hello.world;
 
@@ -745,6 +758,7 @@ Update webhook subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchUnifiedWebhook" method="patch" path="/unified/webhook/{id}" -->
 ```java
 package hello.world;
 
@@ -806,6 +820,7 @@ Trigger webhook
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchUnifiedWebhookTrigger" method="patch" path="/unified/webhook/{id}/trigger" -->
 ```java
 package hello.world;
 
@@ -860,6 +875,7 @@ Remove connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeUnifiedConnection" method="delete" path="/unified/connection/{id}" -->
 ```java
 package hello.world;
 
@@ -914,6 +930,7 @@ Remove webhook subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeUnifiedWebhook" method="delete" path="/unified/webhook/{id}" -->
 ```java
 package hello.world;
 
@@ -968,6 +985,7 @@ Update connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateUnifiedConnection" method="put" path="/unified/connection/{id}" -->
 ```java
 package hello.world;
 
@@ -1031,6 +1049,7 @@ Update webhook subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateUnifiedWebhook" method="put" path="/unified/webhook/{id}" -->
 ```java
 package hello.world;
 
@@ -1092,6 +1111,7 @@ Trigger webhook
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateUnifiedWebhookTrigger" method="put" path="/unified/webhook/{id}/trigger" -->
 ```java
 package hello.world;
 

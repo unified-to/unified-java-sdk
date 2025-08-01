@@ -18,6 +18,7 @@ Create a document
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAtsDocument" method="post" path="/ats/{connection_id}/document" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve a document
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAtsDocument" method="get" path="/ats/{connection_id}/document/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List all documents
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAtsDocuments" method="get" path="/ats/{connection_id}/document" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update a document
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAtsDocument" method="patch" path="/ats/{connection_id}/document/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Remove a document
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAtsDocument" method="delete" path="/ats/{connection_id}/document/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update a document
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAtsDocument" method="put" path="/ats/{connection_id}/document/{id}" -->
 ```java
 package hello.world;
 

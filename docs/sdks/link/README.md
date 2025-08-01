@@ -24,6 +24,7 @@ Create a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createCalendarLink" method="post" path="/calendar/{connection_id}/link" -->
 ```java
 package hello.world;
 
@@ -84,6 +85,7 @@ Create a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createPaymentLink" method="post" path="/payment/{connection_id}/link" -->
 ```java
 package hello.world;
 
@@ -143,6 +145,7 @@ Retrieve a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getCalendarLink" method="get" path="/calendar/{connection_id}/link/{id}" -->
 ```java
 package hello.world;
 
@@ -200,6 +203,7 @@ Retrieve a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getPaymentLink" method="get" path="/payment/{connection_id}/link/{id}" -->
 ```java
 package hello.world;
 
@@ -257,6 +261,7 @@ List all links
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listCalendarLinks" method="get" path="/calendar/{connection_id}/link" -->
 ```java
 package hello.world;
 
@@ -313,6 +318,7 @@ List all links
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listPaymentLinks" method="get" path="/payment/{connection_id}/link" -->
 ```java
 package hello.world;
 
@@ -369,6 +375,7 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchCalendarLink" method="patch" path="/calendar/{connection_id}/link/{id}" -->
 ```java
 package hello.world;
 
@@ -430,6 +437,7 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchPaymentLink" method="patch" path="/payment/{connection_id}/link/{id}" -->
 ```java
 package hello.world;
 
@@ -490,6 +498,7 @@ Remove a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeCalendarLink" method="delete" path="/calendar/{connection_id}/link/{id}" -->
 ```java
 package hello.world;
 
@@ -545,6 +554,7 @@ Remove a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removePaymentLink" method="delete" path="/payment/{connection_id}/link/{id}" -->
 ```java
 package hello.world;
 
@@ -600,6 +610,7 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateCalendarLink" method="put" path="/calendar/{connection_id}/link/{id}" -->
 ```java
 package hello.world;
 
@@ -661,6 +672,7 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updatePaymentLink" method="put" path="/payment/{connection_id}/link/{id}" -->
 ```java
 package hello.world;
 

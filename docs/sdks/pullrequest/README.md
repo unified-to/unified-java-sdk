@@ -18,6 +18,7 @@ Create a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createRepoPullrequest" method="post" path="/repo/{connection_id}/pullrequest" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getRepoPullrequest" method="get" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List all pullrequests
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listRepoPullrequests" method="get" path="/repo/{connection_id}/pullrequest" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchRepoPullrequest" method="patch" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Remove a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeRepoPullrequest" method="delete" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateRepoPullrequest" method="put" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```java
 package hello.world;
 

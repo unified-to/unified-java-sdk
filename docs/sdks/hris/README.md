@@ -52,6 +52,7 @@ Create a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createHrisCompany" method="post" path="/hris/{connection_id}/company" -->
 ```java
 package hello.world;
 
@@ -111,6 +112,7 @@ Create a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" -->
 ```java
 package hello.world;
 
@@ -171,6 +173,7 @@ Create an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createHrisEmployee" method="post" path="/hris/{connection_id}/employee" -->
 ```java
 package hello.world;
 
@@ -230,6 +233,7 @@ Create a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" -->
 ```java
 package hello.world;
 
@@ -289,6 +293,7 @@ Create a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" -->
 ```java
 package hello.world;
 
@@ -348,6 +353,7 @@ Create a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createHrisTimeshift" method="post" path="/hris/{connection_id}/timeshift" -->
 ```java
 package hello.world;
 
@@ -407,6 +413,7 @@ Retrieve a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getHrisCompany" method="get" path="/hris/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 
@@ -464,6 +471,7 @@ Retrieve a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getHrisDevice" method="get" path="/hris/{connection_id}/device/{id}" -->
 ```java
 package hello.world;
 
@@ -521,6 +529,7 @@ Retrieve an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getHrisEmployee" method="get" path="/hris/{connection_id}/employee/{id}" -->
 ```java
 package hello.world;
 
@@ -578,6 +587,7 @@ Retrieve a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getHrisGroup" method="get" path="/hris/{connection_id}/group/{id}" -->
 ```java
 package hello.world;
 
@@ -635,6 +645,7 @@ Retrieve a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getHrisLocation" method="get" path="/hris/{connection_id}/location/{id}" -->
 ```java
 package hello.world;
 
@@ -692,6 +703,7 @@ Retrieve a payslip
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getHrisPayslip" method="get" path="/hris/{connection_id}/payslip/{id}" -->
 ```java
 package hello.world;
 
@@ -749,6 +761,7 @@ Retrieve a timeoff
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getHrisTimeoff" method="get" path="/hris/{connection_id}/timeoff/{id}" -->
 ```java
 package hello.world;
 
@@ -806,6 +819,7 @@ Retrieve a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getHrisTimeshift" method="get" path="/hris/{connection_id}/timeshift/{id}" -->
 ```java
 package hello.world;
 
@@ -863,6 +877,7 @@ List all companies
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listHrisCompanies" method="get" path="/hris/{connection_id}/company" -->
 ```java
 package hello.world;
 
@@ -919,6 +934,7 @@ List all devices
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listHrisDevices" method="get" path="/hris/{connection_id}/device" -->
 ```java
 package hello.world;
 
@@ -975,6 +991,7 @@ List all employees
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listHrisEmployees" method="get" path="/hris/{connection_id}/employee" -->
 ```java
 package hello.world;
 
@@ -1031,6 +1048,7 @@ List all groups
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listHrisGroups" method="get" path="/hris/{connection_id}/group" -->
 ```java
 package hello.world;
 
@@ -1087,6 +1105,7 @@ List all locations
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listHrisLocations" method="get" path="/hris/{connection_id}/location" -->
 ```java
 package hello.world;
 
@@ -1143,6 +1162,7 @@ List all payslips
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listHrisPayslips" method="get" path="/hris/{connection_id}/payslip" -->
 ```java
 package hello.world;
 
@@ -1199,6 +1219,7 @@ List all timeoffs
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listHrisTimeoffs" method="get" path="/hris/{connection_id}/timeoff" -->
 ```java
 package hello.world;
 
@@ -1255,6 +1276,7 @@ List all timeshifts
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listHrisTimeshifts" method="get" path="/hris/{connection_id}/timeshift" -->
 ```java
 package hello.world;
 
@@ -1311,6 +1333,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchHrisCompany" method="patch" path="/hris/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 
@@ -1371,6 +1394,7 @@ Update a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" -->
 ```java
 package hello.world;
 
@@ -1432,6 +1456,7 @@ Update an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchHrisEmployee" method="patch" path="/hris/{connection_id}/employee/{id}" -->
 ```java
 package hello.world;
 
@@ -1492,6 +1517,7 @@ Update a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" -->
 ```java
 package hello.world;
 
@@ -1552,6 +1578,7 @@ Update a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" -->
 ```java
 package hello.world;
 
@@ -1612,6 +1639,7 @@ Update a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchHrisTimeshift" method="patch" path="/hris/{connection_id}/timeshift/{id}" -->
 ```java
 package hello.world;
 
@@ -1672,6 +1700,7 @@ Remove a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeHrisCompany" method="delete" path="/hris/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 
@@ -1727,6 +1756,7 @@ Remove a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeHrisDevice" method="delete" path="/hris/{connection_id}/device/{id}" -->
 ```java
 package hello.world;
 
@@ -1782,6 +1812,7 @@ Remove an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeHrisEmployee" method="delete" path="/hris/{connection_id}/employee/{id}" -->
 ```java
 package hello.world;
 
@@ -1837,6 +1868,7 @@ Remove a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeHrisGroup" method="delete" path="/hris/{connection_id}/group/{id}" -->
 ```java
 package hello.world;
 
@@ -1892,6 +1924,7 @@ Remove a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeHrisLocation" method="delete" path="/hris/{connection_id}/location/{id}" -->
 ```java
 package hello.world;
 
@@ -1947,6 +1980,7 @@ Remove a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeHrisTimeshift" method="delete" path="/hris/{connection_id}/timeshift/{id}" -->
 ```java
 package hello.world;
 
@@ -2002,6 +2036,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateHrisCompany" method="put" path="/hris/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 
@@ -2062,6 +2097,7 @@ Update a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" -->
 ```java
 package hello.world;
 
@@ -2123,6 +2159,7 @@ Update an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateHrisEmployee" method="put" path="/hris/{connection_id}/employee/{id}" -->
 ```java
 package hello.world;
 
@@ -2183,6 +2220,7 @@ Update a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" -->
 ```java
 package hello.world;
 
@@ -2243,6 +2281,7 @@ Update a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" -->
 ```java
 package hello.world;
 
@@ -2303,6 +2342,7 @@ Update a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateHrisTimeshift" method="put" path="/hris/{connection_id}/timeshift/{id}" -->
 ```java
 package hello.world;
 

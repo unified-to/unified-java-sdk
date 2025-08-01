@@ -18,6 +18,7 @@ Create a lead
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createCrmLead" method="post" path="/crm/{connection_id}/lead" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve a lead
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getCrmLead" method="get" path="/crm/{connection_id}/lead/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List all leads
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listCrmLeads" method="get" path="/crm/{connection_id}/lead" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update a lead
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchCrmLead" method="patch" path="/crm/{connection_id}/lead/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Remove a lead
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeCrmLead" method="delete" path="/crm/{connection_id}/lead/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update a lead
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateCrmLead" method="put" path="/crm/{connection_id}/lead/{id}" -->
 ```java
 package hello.world;
 

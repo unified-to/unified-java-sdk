@@ -24,6 +24,7 @@ Create a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createCommerceLocation" method="post" path="/commerce/{connection_id}/location" -->
 ```java
 package hello.world;
 
@@ -84,6 +85,7 @@ Create a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" -->
 ```java
 package hello.world;
 
@@ -143,6 +145,7 @@ Retrieve a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getCommerceLocation" method="get" path="/commerce/{connection_id}/location/{id}" -->
 ```java
 package hello.world;
 
@@ -200,6 +203,7 @@ Retrieve a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getHrisLocation" method="get" path="/hris/{connection_id}/location/{id}" -->
 ```java
 package hello.world;
 
@@ -257,6 +261,7 @@ List all locations
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listCommerceLocations" method="get" path="/commerce/{connection_id}/location" -->
 ```java
 package hello.world;
 
@@ -313,6 +318,7 @@ List all locations
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listHrisLocations" method="get" path="/hris/{connection_id}/location" -->
 ```java
 package hello.world;
 
@@ -369,6 +375,7 @@ Update a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchCommerceLocation" method="patch" path="/commerce/{connection_id}/location/{id}" -->
 ```java
 package hello.world;
 
@@ -430,6 +437,7 @@ Update a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" -->
 ```java
 package hello.world;
 
@@ -490,6 +498,7 @@ Remove a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeCommerceLocation" method="delete" path="/commerce/{connection_id}/location/{id}" -->
 ```java
 package hello.world;
 
@@ -545,6 +554,7 @@ Remove a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeHrisLocation" method="delete" path="/hris/{connection_id}/location/{id}" -->
 ```java
 package hello.world;
 
@@ -600,6 +610,7 @@ Update a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateCommerceLocation" method="put" path="/commerce/{connection_id}/location/{id}" -->
 ```java
 package hello.world;
 
@@ -661,6 +672,7 @@ Update a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" -->
 ```java
 package hello.world;
 

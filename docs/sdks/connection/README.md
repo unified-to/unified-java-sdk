@@ -18,6 +18,7 @@ Used only to import existing customer credentials; use "Authorize new connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createUnifiedConnection" method="post" path="/unified/connection" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getUnifiedConnection" method="get" path="/unified/connection/{id}" -->
 ```java
 package hello.world;
 
@@ -133,6 +135,7 @@ List all connections
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listUnifiedConnections" method="get" path="/unified/connection" -->
 ```java
 package hello.world;
 
@@ -183,6 +186,7 @@ Update connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchUnifiedConnection" method="patch" path="/unified/connection/{id}" -->
 ```java
 package hello.world;
 
@@ -246,6 +250,7 @@ Remove connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeUnifiedConnection" method="delete" path="/unified/connection/{id}" -->
 ```java
 package hello.world;
 
@@ -300,6 +305,7 @@ Update connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateUnifiedConnection" method="put" path="/unified/connection/{id}" -->
 ```java
 package hello.world;
 

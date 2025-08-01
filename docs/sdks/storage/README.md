@@ -18,6 +18,7 @@ Create a file
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createStorageFile" method="post" path="/storage/{connection_id}/file" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve a file
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getStorageFile" method="get" path="/storage/{connection_id}/file/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List all files
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listStorageFiles" method="get" path="/storage/{connection_id}/file" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update a file
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchStorageFile" method="patch" path="/storage/{connection_id}/file/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Remove a file
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeStorageFile" method="delete" path="/storage/{connection_id}/file/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update a file
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateStorageFile" method="put" path="/storage/{connection_id}/file/{id}" -->
 ```java
 package hello.world;
 

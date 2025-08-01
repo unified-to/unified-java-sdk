@@ -42,6 +42,7 @@ Create a collection
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createCommerceCollection" method="post" path="/commerce/{connection_id}/collection" -->
 ```java
 package hello.world;
 
@@ -102,6 +103,7 @@ Create an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createCommerceInventory" method="post" path="/commerce/{connection_id}/inventory" -->
 ```java
 package hello.world;
 
@@ -162,6 +164,7 @@ Create an item
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createCommerceItem" method="post" path="/commerce/{connection_id}/item" -->
 ```java
 package hello.world;
 
@@ -221,6 +224,7 @@ Create a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createCommerceLocation" method="post" path="/commerce/{connection_id}/location" -->
 ```java
 package hello.world;
 
@@ -281,6 +285,7 @@ Create a review
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createCommerceReview" method="post" path="/commerce/{connection_id}/review" -->
 ```java
 package hello.world;
 
@@ -341,6 +346,7 @@ Retrieve a collection
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getCommerceCollection" method="get" path="/commerce/{connection_id}/collection/{id}" -->
 ```java
 package hello.world;
 
@@ -398,6 +404,7 @@ Retrieve an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getCommerceInventory" method="get" path="/commerce/{connection_id}/inventory/{id}" -->
 ```java
 package hello.world;
 
@@ -455,6 +462,7 @@ Retrieve an item
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getCommerceItem" method="get" path="/commerce/{connection_id}/item/{id}" -->
 ```java
 package hello.world;
 
@@ -512,6 +520,7 @@ Retrieve a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getCommerceLocation" method="get" path="/commerce/{connection_id}/location/{id}" -->
 ```java
 package hello.world;
 
@@ -569,6 +578,7 @@ Retrieve a review
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getCommerceReview" method="get" path="/commerce/{connection_id}/review/{id}" -->
 ```java
 package hello.world;
 
@@ -626,6 +636,7 @@ List all collections
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listCommerceCollections" method="get" path="/commerce/{connection_id}/collection" -->
 ```java
 package hello.world;
 
@@ -682,6 +693,7 @@ List all inventories
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listCommerceInventories" method="get" path="/commerce/{connection_id}/inventory" -->
 ```java
 package hello.world;
 
@@ -738,6 +750,7 @@ List all items
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listCommerceItems" method="get" path="/commerce/{connection_id}/item" -->
 ```java
 package hello.world;
 
@@ -794,6 +807,7 @@ List all locations
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listCommerceLocations" method="get" path="/commerce/{connection_id}/location" -->
 ```java
 package hello.world;
 
@@ -850,6 +864,7 @@ List all reviews
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listCommerceReviews" method="get" path="/commerce/{connection_id}/review" -->
 ```java
 package hello.world;
 
@@ -906,6 +921,7 @@ Update a collection
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchCommerceCollection" method="patch" path="/commerce/{connection_id}/collection/{id}" -->
 ```java
 package hello.world;
 
@@ -967,6 +983,7 @@ Update an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchCommerceInventory" method="patch" path="/commerce/{connection_id}/inventory/{id}" -->
 ```java
 package hello.world;
 
@@ -1028,6 +1045,7 @@ Update an item
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchCommerceItem" method="patch" path="/commerce/{connection_id}/item/{id}" -->
 ```java
 package hello.world;
 
@@ -1088,6 +1106,7 @@ Update a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchCommerceLocation" method="patch" path="/commerce/{connection_id}/location/{id}" -->
 ```java
 package hello.world;
 
@@ -1149,6 +1168,7 @@ Update a review
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchCommerceReview" method="patch" path="/commerce/{connection_id}/review/{id}" -->
 ```java
 package hello.world;
 
@@ -1210,6 +1230,7 @@ Remove a collection
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeCommerceCollection" method="delete" path="/commerce/{connection_id}/collection/{id}" -->
 ```java
 package hello.world;
 
@@ -1265,6 +1286,7 @@ Remove an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeCommerceInventory" method="delete" path="/commerce/{connection_id}/inventory/{id}" -->
 ```java
 package hello.world;
 
@@ -1320,6 +1342,7 @@ Remove an item
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeCommerceItem" method="delete" path="/commerce/{connection_id}/item/{id}" -->
 ```java
 package hello.world;
 
@@ -1375,6 +1398,7 @@ Remove a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeCommerceLocation" method="delete" path="/commerce/{connection_id}/location/{id}" -->
 ```java
 package hello.world;
 
@@ -1430,6 +1454,7 @@ Remove a review
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeCommerceReview" method="delete" path="/commerce/{connection_id}/review/{id}" -->
 ```java
 package hello.world;
 
@@ -1485,6 +1510,7 @@ Update a collection
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateCommerceCollection" method="put" path="/commerce/{connection_id}/collection/{id}" -->
 ```java
 package hello.world;
 
@@ -1546,6 +1572,7 @@ Update an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateCommerceInventory" method="put" path="/commerce/{connection_id}/inventory/{id}" -->
 ```java
 package hello.world;
 
@@ -1607,6 +1634,7 @@ Update an item
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateCommerceItem" method="put" path="/commerce/{connection_id}/item/{id}" -->
 ```java
 package hello.world;
 
@@ -1667,6 +1695,7 @@ Update a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateCommerceLocation" method="put" path="/commerce/{connection_id}/location/{id}" -->
 ```java
 package hello.world;
 
@@ -1728,6 +1757,7 @@ Update a review
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateCommerceReview" method="put" path="/commerce/{connection_id}/review/{id}" -->
 ```java
 package hello.world;
 

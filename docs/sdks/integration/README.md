@@ -15,6 +15,7 @@ Returns an authorization URL for the specified integration.  Once a successful a
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getUnifiedIntegrationAuth" method="get" path="/unified/integration/auth/{workspace_id}/{integration_type}" -->
 ```java
 package hello.world;
 
@@ -72,6 +73,7 @@ No authentication required as this is to be used by front-end interface
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listUnifiedIntegrationWorkspaces" method="get" path="/unified/integration/workspace/{workspace_id}" -->
 ```java
 package hello.world;
 
@@ -128,6 +130,7 @@ Returns all integrations
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listUnifiedIntegrations" method="get" path="/unified/integration" -->
 ```java
 package hello.world;
 

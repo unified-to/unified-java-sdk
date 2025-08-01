@@ -34,6 +34,7 @@ Create a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createPaymentLink" method="post" path="/payment/{connection_id}/link" -->
 ```java
 package hello.world;
 
@@ -93,6 +94,7 @@ Create a payment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createPaymentPayment" method="post" path="/payment/{connection_id}/payment" -->
 ```java
 package hello.world;
 
@@ -152,6 +154,7 @@ Create a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createPaymentSubscription" method="post" path="/payment/{connection_id}/subscription" -->
 ```java
 package hello.world;
 
@@ -211,6 +214,7 @@ Retrieve a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getPaymentLink" method="get" path="/payment/{connection_id}/link/{id}" -->
 ```java
 package hello.world;
 
@@ -268,6 +272,7 @@ Retrieve a payment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getPaymentPayment" method="get" path="/payment/{connection_id}/payment/{id}" -->
 ```java
 package hello.world;
 
@@ -325,6 +330,7 @@ Retrieve a payout
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getPaymentPayout" method="get" path="/payment/{connection_id}/payout/{id}" -->
 ```java
 package hello.world;
 
@@ -382,6 +388,7 @@ Retrieve a refund
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getPaymentRefund" method="get" path="/payment/{connection_id}/refund/{id}" -->
 ```java
 package hello.world;
 
@@ -439,6 +446,7 @@ Retrieve a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getPaymentSubscription" method="get" path="/payment/{connection_id}/subscription/{id}" -->
 ```java
 package hello.world;
 
@@ -496,6 +504,7 @@ List all links
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listPaymentLinks" method="get" path="/payment/{connection_id}/link" -->
 ```java
 package hello.world;
 
@@ -552,6 +561,7 @@ List all payments
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listPaymentPayments" method="get" path="/payment/{connection_id}/payment" -->
 ```java
 package hello.world;
 
@@ -608,6 +618,7 @@ List all payouts
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listPaymentPayouts" method="get" path="/payment/{connection_id}/payout" -->
 ```java
 package hello.world;
 
@@ -664,6 +675,7 @@ List all refunds
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listPaymentRefunds" method="get" path="/payment/{connection_id}/refund" -->
 ```java
 package hello.world;
 
@@ -720,6 +732,7 @@ List all subscriptions
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listPaymentSubscriptions" method="get" path="/payment/{connection_id}/subscription" -->
 ```java
 package hello.world;
 
@@ -776,6 +789,7 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchPaymentLink" method="patch" path="/payment/{connection_id}/link/{id}" -->
 ```java
 package hello.world;
 
@@ -836,6 +850,7 @@ Update a payment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchPaymentPayment" method="patch" path="/payment/{connection_id}/payment/{id}" -->
 ```java
 package hello.world;
 
@@ -896,6 +911,7 @@ Update a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchPaymentSubscription" method="patch" path="/payment/{connection_id}/subscription/{id}" -->
 ```java
 package hello.world;
 
@@ -956,6 +972,7 @@ Remove a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removePaymentLink" method="delete" path="/payment/{connection_id}/link/{id}" -->
 ```java
 package hello.world;
 
@@ -1011,6 +1028,7 @@ Remove a payment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removePaymentPayment" method="delete" path="/payment/{connection_id}/payment/{id}" -->
 ```java
 package hello.world;
 
@@ -1066,6 +1084,7 @@ Remove a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removePaymentSubscription" method="delete" path="/payment/{connection_id}/subscription/{id}" -->
 ```java
 package hello.world;
 
@@ -1121,6 +1140,7 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updatePaymentLink" method="put" path="/payment/{connection_id}/link/{id}" -->
 ```java
 package hello.world;
 
@@ -1181,6 +1201,7 @@ Update a payment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updatePaymentPayment" method="put" path="/payment/{connection_id}/payment/{id}" -->
 ```java
 package hello.world;
 
@@ -1241,6 +1262,7 @@ Update a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updatePaymentSubscription" method="put" path="/payment/{connection_id}/subscription/{id}" -->
 ```java
 package hello.world;
 

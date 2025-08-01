@@ -18,6 +18,7 @@ Create a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingTaxrate" method="get" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List all taxrates
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingTaxrates" method="get" path="/accounting/{connection_id}/taxrate" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Remove a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAccountingTaxrate" method="delete" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```java
 package hello.world;
 

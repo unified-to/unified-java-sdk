@@ -20,6 +20,7 @@ Passthrough POST
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createPassthrough_json" method="post" path="/passthrough/{connection_id}/{path}" -->
 ```java
 package hello.world;
 
@@ -75,6 +76,7 @@ Passthrough POST
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createPassthrough_raw" method="post" path="/passthrough/{connection_id}/{path}" -->
 ```java
 package hello.world;
 
@@ -130,6 +132,7 @@ Passthrough GET
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listPassthroughs" method="get" path="/passthrough/{connection_id}/{path}" -->
 ```java
 package hello.world;
 
@@ -185,6 +188,7 @@ Passthrough PUT
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchPassthrough_json" method="patch" path="/passthrough/{connection_id}/{path}" -->
 ```java
 package hello.world;
 
@@ -240,6 +244,7 @@ Passthrough PUT
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchPassthrough_raw" method="patch" path="/passthrough/{connection_id}/{path}" -->
 ```java
 package hello.world;
 
@@ -295,6 +300,7 @@ Passthrough DELETE
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removePassthrough" method="delete" path="/passthrough/{connection_id}/{path}" -->
 ```java
 package hello.world;
 
@@ -350,6 +356,7 @@ Passthrough PUT
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updatePassthrough_json" method="put" path="/passthrough/{connection_id}/{path}" -->
 ```java
 package hello.world;
 
@@ -405,6 +412,7 @@ Passthrough PUT
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updatePassthrough_raw" method="put" path="/passthrough/{connection_id}/{path}" -->
 ```java
 package hello.world;
 

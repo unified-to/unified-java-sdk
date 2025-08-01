@@ -18,6 +18,7 @@ Create a metadata
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createMetadataMetadata" method="post" path="/metadata/{connection_id}/metadata" -->
 ```java
 package hello.world;
 
@@ -79,6 +80,7 @@ Retrieve a metadata
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getMetadataMetadata" method="get" path="/metadata/{connection_id}/metadata/{id}" -->
 ```java
 package hello.world;
 
@@ -136,6 +138,7 @@ List all metadatas
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listMetadataMetadatas" method="get" path="/metadata/{connection_id}/metadata" -->
 ```java
 package hello.world;
 
@@ -192,6 +195,7 @@ Update a metadata
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchMetadataMetadata" method="patch" path="/metadata/{connection_id}/metadata/{id}" -->
 ```java
 package hello.world;
 
@@ -254,6 +258,7 @@ Remove a metadata
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeMetadataMetadata" method="delete" path="/metadata/{connection_id}/metadata/{id}" -->
 ```java
 package hello.world;
 
@@ -309,6 +314,7 @@ Update a metadata
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateMetadataMetadata" method="put" path="/metadata/{connection_id}/metadata/{id}" -->
 ```java
 package hello.world;
 

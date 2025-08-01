@@ -18,6 +18,7 @@ Create a bill
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAccountingBill" method="post" path="/accounting/{connection_id}/bill" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve a bill
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingBill" method="get" path="/accounting/{connection_id}/bill/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List all bills
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingBills" method="get" path="/accounting/{connection_id}/bill" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update a bill
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAccountingBill" method="patch" path="/accounting/{connection_id}/bill/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Remove a bill
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAccountingBill" method="delete" path="/accounting/{connection_id}/bill/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update a bill
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAccountingBill" method="put" path="/accounting/{connection_id}/bill/{id}" -->
 ```java
 package hello.world;
 

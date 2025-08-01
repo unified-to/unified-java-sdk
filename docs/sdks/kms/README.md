@@ -30,6 +30,7 @@ Create a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createKmsComment" method="post" path="/kms/{connection_id}/comment" -->
 ```java
 package hello.world;
 
@@ -90,6 +91,7 @@ Create a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createKmsPage" method="post" path="/kms/{connection_id}/page" -->
 ```java
 package hello.world;
 
@@ -150,6 +152,7 @@ Create a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createKmsSpace" method="post" path="/kms/{connection_id}/space" -->
 ```java
 package hello.world;
 
@@ -210,6 +213,7 @@ Retrieve a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getKmsComment" method="get" path="/kms/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
@@ -267,6 +271,7 @@ Retrieve a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getKmsPage" method="get" path="/kms/{connection_id}/page/{id}" -->
 ```java
 package hello.world;
 
@@ -324,6 +329,7 @@ Retrieve a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getKmsSpace" method="get" path="/kms/{connection_id}/space/{id}" -->
 ```java
 package hello.world;
 
@@ -381,6 +387,7 @@ List all comments
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listKmsComments" method="get" path="/kms/{connection_id}/comment" -->
 ```java
 package hello.world;
 
@@ -437,6 +444,7 @@ List all pages
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listKmsPages" method="get" path="/kms/{connection_id}/page" -->
 ```java
 package hello.world;
 
@@ -493,6 +501,7 @@ List all spaces
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listKmsSpaces" method="get" path="/kms/{connection_id}/space" -->
 ```java
 package hello.world;
 
@@ -549,6 +558,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchKmsComment" method="patch" path="/kms/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
@@ -610,6 +620,7 @@ Update a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchKmsPage" method="patch" path="/kms/{connection_id}/page/{id}" -->
 ```java
 package hello.world;
 
@@ -671,6 +682,7 @@ Update a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchKmsSpace" method="patch" path="/kms/{connection_id}/space/{id}" -->
 ```java
 package hello.world;
 
@@ -732,6 +744,7 @@ Remove a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeKmsComment" method="delete" path="/kms/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
@@ -787,6 +800,7 @@ Remove a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeKmsPage" method="delete" path="/kms/{connection_id}/page/{id}" -->
 ```java
 package hello.world;
 
@@ -842,6 +856,7 @@ Remove a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeKmsSpace" method="delete" path="/kms/{connection_id}/space/{id}" -->
 ```java
 package hello.world;
 
@@ -897,6 +912,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateKmsComment" method="put" path="/kms/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
@@ -958,6 +974,7 @@ Update a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateKmsPage" method="put" path="/kms/{connection_id}/page/{id}" -->
 ```java
 package hello.world;
 
@@ -1019,6 +1036,7 @@ Update a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateKmsSpace" method="put" path="/kms/{connection_id}/space/{id}" -->
 ```java
 package hello.world;
 

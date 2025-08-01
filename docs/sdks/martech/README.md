@@ -24,6 +24,7 @@ Create a list
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createMartechList" method="post" path="/martech/{connection_id}/list" -->
 ```java
 package hello.world;
 
@@ -83,6 +84,7 @@ Create a member
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createMartechMember" method="post" path="/martech/{connection_id}/member" -->
 ```java
 package hello.world;
 
@@ -142,6 +144,7 @@ Retrieve a list
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getMartechList" method="get" path="/martech/{connection_id}/list/{id}" -->
 ```java
 package hello.world;
 
@@ -199,6 +202,7 @@ Retrieve a member
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getMartechMember" method="get" path="/martech/{connection_id}/member/{id}" -->
 ```java
 package hello.world;
 
@@ -256,6 +260,7 @@ List all lists
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listMartechLists" method="get" path="/martech/{connection_id}/list" -->
 ```java
 package hello.world;
 
@@ -312,6 +317,7 @@ List all members
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listMartechMembers" method="get" path="/martech/{connection_id}/member" -->
 ```java
 package hello.world;
 
@@ -368,6 +374,7 @@ Update a list
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchMartechList" method="patch" path="/martech/{connection_id}/list/{id}" -->
 ```java
 package hello.world;
 
@@ -428,6 +435,7 @@ Update a member
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchMartechMember" method="patch" path="/martech/{connection_id}/member/{id}" -->
 ```java
 package hello.world;
 
@@ -488,6 +496,7 @@ Remove a list
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeMartechList" method="delete" path="/martech/{connection_id}/list/{id}" -->
 ```java
 package hello.world;
 
@@ -543,6 +552,7 @@ Remove a member
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeMartechMember" method="delete" path="/martech/{connection_id}/member/{id}" -->
 ```java
 package hello.world;
 
@@ -598,6 +608,7 @@ Update a list
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateMartechList" method="put" path="/martech/{connection_id}/list/{id}" -->
 ```java
 package hello.world;
 
@@ -658,6 +669,7 @@ Update a member
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateMartechMember" method="put" path="/martech/{connection_id}/member/{id}" -->
 ```java
 package hello.world;
 

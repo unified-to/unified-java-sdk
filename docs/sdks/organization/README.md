@@ -20,6 +20,7 @@ Create an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createRepoOrganization" method="post" path="/repo/{connection_id}/organization" -->
 ```java
 package hello.world;
 
@@ -79,6 +80,7 @@ Retrieve an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingOrganization" method="get" path="/accounting/{connection_id}/organization/{id}" -->
 ```java
 package hello.world;
 
@@ -136,6 +138,7 @@ Retrieve an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getRepoOrganization" method="get" path="/repo/{connection_id}/organization/{id}" -->
 ```java
 package hello.world;
 
@@ -193,6 +196,7 @@ List all organizations
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingOrganizations" method="get" path="/accounting/{connection_id}/organization" -->
 ```java
 package hello.world;
 
@@ -249,6 +253,7 @@ List all organizations
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listRepoOrganizations" method="get" path="/repo/{connection_id}/organization" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchRepoOrganization" method="patch" path="/repo/{connection_id}/organization/{id}" -->
 ```java
 package hello.world;
 
@@ -365,6 +371,7 @@ Remove an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeRepoOrganization" method="delete" path="/repo/{connection_id}/organization/{id}" -->
 ```java
 package hello.world;
 
@@ -420,6 +427,7 @@ Update an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateRepoOrganization" method="put" path="/repo/{connection_id}/organization/{id}" -->
 ```java
 package hello.world;
 

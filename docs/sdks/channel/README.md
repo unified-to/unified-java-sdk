@@ -14,6 +14,7 @@ Retrieve a channel
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getMessagingChannel" method="get" path="/messaging/{connection_id}/channel/{id}" -->
 ```java
 package hello.world;
 
@@ -71,6 +72,7 @@ List all channels
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listMessagingChannels" method="get" path="/messaging/{connection_id}/channel" -->
 ```java
 package hello.world;
 

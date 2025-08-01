@@ -18,6 +18,7 @@ Create a job
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAtsJob" method="post" path="/ats/{connection_id}/job" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve a job
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAtsJob" method="get" path="/ats/{connection_id}/job/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List all jobs
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAtsJobs" method="get" path="/ats/{connection_id}/job" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update a job
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAtsJob" method="patch" path="/ats/{connection_id}/job/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Remove a job
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAtsJob" method="delete" path="/ats/{connection_id}/job/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update a job
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAtsJob" method="put" path="/ats/{connection_id}/job/{id}" -->
 ```java
 package hello.world;
 

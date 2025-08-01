@@ -24,6 +24,7 @@ Create group
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createScimGroups" method="post" path="/scim/{connection_id}/groups" -->
 ```java
 package hello.world;
 
@@ -84,6 +85,7 @@ Create user
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createScimUsers" method="post" path="/scim/{connection_id}/users" -->
 ```java
 package hello.world;
 
@@ -143,6 +145,7 @@ Get group
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getScimGroups" method="get" path="/scim/{connection_id}/groups/{id}" -->
 ```java
 package hello.world;
 
@@ -200,6 +203,7 @@ Get user
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getScimUsers" method="get" path="/scim/{connection_id}/users/{id}" -->
 ```java
 package hello.world;
 
@@ -257,6 +261,7 @@ List groups
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listScimGroups" method="get" path="/scim/{connection_id}/groups" -->
 ```java
 package hello.world;
 
@@ -313,6 +318,7 @@ List users
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listScimUsers" method="get" path="/scim/{connection_id}/users" -->
 ```java
 package hello.world;
 
@@ -369,6 +375,7 @@ Update group
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchScimGroups" method="patch" path="/scim/{connection_id}/groups/{id}" -->
 ```java
 package hello.world;
 
@@ -430,6 +437,7 @@ Update user
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchScimUsers" method="patch" path="/scim/{connection_id}/users/{id}" -->
 ```java
 package hello.world;
 
@@ -490,6 +498,7 @@ Delete group
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeScimGroups" method="delete" path="/scim/{connection_id}/groups/{id}" -->
 ```java
 package hello.world;
 
@@ -545,6 +554,7 @@ Delete user
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeScimUsers" method="delete" path="/scim/{connection_id}/users/{id}" -->
 ```java
 package hello.world;
 
@@ -600,6 +610,7 @@ Update group
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateScimGroups" method="put" path="/scim/{connection_id}/groups/{id}" -->
 ```java
 package hello.world;
 
@@ -661,6 +672,7 @@ Update user
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateScimUsers" method="put" path="/scim/{connection_id}/users/{id}" -->
 ```java
 package hello.world;
 

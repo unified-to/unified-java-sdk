@@ -18,6 +18,7 @@ Create an item
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createCommerceItem" method="post" path="/commerce/{connection_id}/item" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve an item
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getCommerceItem" method="get" path="/commerce/{connection_id}/item/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List all items
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listCommerceItems" method="get" path="/commerce/{connection_id}/item" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update an item
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchCommerceItem" method="patch" path="/commerce/{connection_id}/item/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Remove an item
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeCommerceItem" method="delete" path="/commerce/{connection_id}/item/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update an item
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateCommerceItem" method="put" path="/commerce/{connection_id}/item/{id}" -->
 ```java
 package hello.world;
 

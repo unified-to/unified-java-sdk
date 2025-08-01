@@ -42,6 +42,7 @@ Create a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" -->
 ```java
 package hello.world;
 
@@ -103,6 +104,7 @@ Create a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createRepoCommit" method="post" path="/repo/{connection_id}/commit" -->
 ```java
 package hello.world;
 
@@ -164,6 +166,7 @@ Create an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createRepoOrganization" method="post" path="/repo/{connection_id}/organization" -->
 ```java
 package hello.world;
 
@@ -223,6 +226,7 @@ Create a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createRepoPullrequest" method="post" path="/repo/{connection_id}/pullrequest" -->
 ```java
 package hello.world;
 
@@ -282,6 +286,7 @@ Create a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createRepoRepository" method="post" path="/repo/{connection_id}/repository" -->
 ```java
 package hello.world;
 
@@ -342,6 +347,7 @@ Retrieve a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getRepoBranch" method="get" path="/repo/{connection_id}/branch/{id}" -->
 ```java
 package hello.world;
 
@@ -399,6 +405,7 @@ Retrieve a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getRepoCommit" method="get" path="/repo/{connection_id}/commit/{id}" -->
 ```java
 package hello.world;
 
@@ -456,6 +463,7 @@ Retrieve an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getRepoOrganization" method="get" path="/repo/{connection_id}/organization/{id}" -->
 ```java
 package hello.world;
 
@@ -513,6 +521,7 @@ Retrieve a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getRepoPullrequest" method="get" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```java
 package hello.world;
 
@@ -570,6 +579,7 @@ Retrieve a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getRepoRepository" method="get" path="/repo/{connection_id}/repository/{id}" -->
 ```java
 package hello.world;
 
@@ -627,6 +637,7 @@ List all branches
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listRepoBranches" method="get" path="/repo/{connection_id}/branch" -->
 ```java
 package hello.world;
 
@@ -683,6 +694,7 @@ List all commits
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listRepoCommits" method="get" path="/repo/{connection_id}/commit" -->
 ```java
 package hello.world;
 
@@ -739,6 +751,7 @@ List all organizations
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listRepoOrganizations" method="get" path="/repo/{connection_id}/organization" -->
 ```java
 package hello.world;
 
@@ -795,6 +808,7 @@ List all pullrequests
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listRepoPullrequests" method="get" path="/repo/{connection_id}/pullrequest" -->
 ```java
 package hello.world;
 
@@ -851,6 +865,7 @@ List all repositories
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listRepoRepositories" method="get" path="/repo/{connection_id}/repository" -->
 ```java
 package hello.world;
 
@@ -907,6 +922,7 @@ Update a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" -->
 ```java
 package hello.world;
 
@@ -969,6 +985,7 @@ Update a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchRepoCommit" method="patch" path="/repo/{connection_id}/commit/{id}" -->
 ```java
 package hello.world;
 
@@ -1031,6 +1048,7 @@ Update an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchRepoOrganization" method="patch" path="/repo/{connection_id}/organization/{id}" -->
 ```java
 package hello.world;
 
@@ -1091,6 +1109,7 @@ Update a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchRepoPullrequest" method="patch" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```java
 package hello.world;
 
@@ -1151,6 +1170,7 @@ Update a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchRepoRepository" method="patch" path="/repo/{connection_id}/repository/{id}" -->
 ```java
 package hello.world;
 
@@ -1212,6 +1232,7 @@ Remove a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeRepoBranch" method="delete" path="/repo/{connection_id}/branch/{id}" -->
 ```java
 package hello.world;
 
@@ -1267,6 +1288,7 @@ Remove a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeRepoCommit" method="delete" path="/repo/{connection_id}/commit/{id}" -->
 ```java
 package hello.world;
 
@@ -1322,6 +1344,7 @@ Remove an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeRepoOrganization" method="delete" path="/repo/{connection_id}/organization/{id}" -->
 ```java
 package hello.world;
 
@@ -1377,6 +1400,7 @@ Remove a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeRepoPullrequest" method="delete" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```java
 package hello.world;
 
@@ -1432,6 +1456,7 @@ Remove a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeRepoRepository" method="delete" path="/repo/{connection_id}/repository/{id}" -->
 ```java
 package hello.world;
 
@@ -1487,6 +1512,7 @@ Update a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" -->
 ```java
 package hello.world;
 
@@ -1549,6 +1575,7 @@ Update a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateRepoCommit" method="put" path="/repo/{connection_id}/commit/{id}" -->
 ```java
 package hello.world;
 
@@ -1611,6 +1638,7 @@ Update an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateRepoOrganization" method="put" path="/repo/{connection_id}/organization/{id}" -->
 ```java
 package hello.world;
 
@@ -1671,6 +1699,7 @@ Update a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateRepoPullrequest" method="put" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```java
 package hello.world;
 
@@ -1731,6 +1760,7 @@ Update a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateRepoRepository" method="put" path="/repo/{connection_id}/repository/{id}" -->
 ```java
 package hello.world;
 

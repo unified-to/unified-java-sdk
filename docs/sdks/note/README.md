@@ -18,6 +18,7 @@ Create a note
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createTicketingNote" method="post" path="/ticketing/{connection_id}/note" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve a note
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getTicketingNote" method="get" path="/ticketing/{connection_id}/note/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List all notes
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listTicketingNotes" method="get" path="/ticketing/{connection_id}/note" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update a note
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchTicketingNote" method="patch" path="/ticketing/{connection_id}/note/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Remove a note
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeTicketingNote" method="delete" path="/ticketing/{connection_id}/note/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update a note
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateTicketingNote" method="put" path="/ticketing/{connection_id}/note/{id}" -->
 ```java
 package hello.world;
 

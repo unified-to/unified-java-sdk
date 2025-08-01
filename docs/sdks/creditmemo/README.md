@@ -18,6 +18,7 @@ Create a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAccountingCreditmemo" method="post" path="/accounting/{connection_id}/creditmemo" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingCreditmemo" method="get" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List all creditmemoes
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingCreditmemoes" method="get" path="/accounting/{connection_id}/creditmemo" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAccountingCreditmemo" method="patch" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Remove a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAccountingCreditmemo" method="delete" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAccountingCreditmemo" method="put" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```java
 package hello.world;
 

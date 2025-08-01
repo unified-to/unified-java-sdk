@@ -18,6 +18,7 @@ Create a collection
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createCommerceCollection" method="post" path="/commerce/{connection_id}/collection" -->
 ```java
 package hello.world;
 
@@ -78,6 +79,7 @@ Retrieve a collection
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getCommerceCollection" method="get" path="/commerce/{connection_id}/collection/{id}" -->
 ```java
 package hello.world;
 
@@ -135,6 +137,7 @@ List all collections
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listCommerceCollections" method="get" path="/commerce/{connection_id}/collection" -->
 ```java
 package hello.world;
 
@@ -191,6 +194,7 @@ Update a collection
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchCommerceCollection" method="patch" path="/commerce/{connection_id}/collection/{id}" -->
 ```java
 package hello.world;
 
@@ -252,6 +256,7 @@ Remove a collection
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeCommerceCollection" method="delete" path="/commerce/{connection_id}/collection/{id}" -->
 ```java
 package hello.world;
 
@@ -307,6 +312,7 @@ Update a collection
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateCommerceCollection" method="put" path="/commerce/{connection_id}/collection/{id}" -->
 ```java
 package hello.world;
 

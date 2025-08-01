@@ -13,6 +13,7 @@ List all calls
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listUcCalls" method="get" path="/uc/{connection_id}/call" -->
 ```java
 package hello.world;
 

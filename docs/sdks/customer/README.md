@@ -18,6 +18,7 @@ Create a customer
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createTicketingCustomer" method="post" path="/ticketing/{connection_id}/customer" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve a customer
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getTicketingCustomer" method="get" path="/ticketing/{connection_id}/customer/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List all customers
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listTicketingCustomers" method="get" path="/ticketing/{connection_id}/customer" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update a customer
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchTicketingCustomer" method="patch" path="/ticketing/{connection_id}/customer/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Remove a customer
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeTicketingCustomer" method="delete" path="/ticketing/{connection_id}/customer/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update a customer
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateTicketingCustomer" method="put" path="/ticketing/{connection_id}/customer/{id}" -->
 ```java
 package hello.world;
 

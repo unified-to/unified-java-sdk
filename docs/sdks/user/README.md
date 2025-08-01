@@ -18,6 +18,7 @@ Create user
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createScimUsers" method="post" path="/scim/{connection_id}/users" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Get user
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getScimUsers" method="get" path="/scim/{connection_id}/users/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List users
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listScimUsers" method="get" path="/scim/{connection_id}/users" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update user
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchScimUsers" method="patch" path="/scim/{connection_id}/users/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Delete user
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeScimUsers" method="delete" path="/scim/{connection_id}/users/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update user
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateScimUsers" method="put" path="/scim/{connection_id}/users/{id}" -->
 ```java
 package hello.world;
 

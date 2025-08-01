@@ -14,6 +14,7 @@ Create a prompt
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createGenaiPrompt" method="post" path="/genai/{connection_id}/prompt" -->
 ```java
 package hello.world;
 
@@ -73,6 +74,7 @@ List all models
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listGenaiModels" method="get" path="/genai/{connection_id}/model" -->
 ```java
 package hello.world;
 

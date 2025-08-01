@@ -18,6 +18,7 @@ Create a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createKmsPage" method="post" path="/kms/{connection_id}/page" -->
 ```java
 package hello.world;
 
@@ -78,6 +79,7 @@ Retrieve a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getKmsPage" method="get" path="/kms/{connection_id}/page/{id}" -->
 ```java
 package hello.world;
 
@@ -135,6 +137,7 @@ List all pages
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listKmsPages" method="get" path="/kms/{connection_id}/page" -->
 ```java
 package hello.world;
 
@@ -191,6 +194,7 @@ Update a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchKmsPage" method="patch" path="/kms/{connection_id}/page/{id}" -->
 ```java
 package hello.world;
 
@@ -252,6 +256,7 @@ Remove a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeKmsPage" method="delete" path="/kms/{connection_id}/page/{id}" -->
 ```java
 package hello.world;
 
@@ -307,6 +312,7 @@ Update a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateKmsPage" method="put" path="/kms/{connection_id}/page/{id}" -->
 ```java
 package hello.world;
 

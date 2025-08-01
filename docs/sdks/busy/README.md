@@ -13,6 +13,7 @@ List all busies
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listCalendarBusies" method="get" path="/calendar/{connection_id}/busy" -->
 ```java
 package hello.world;
 

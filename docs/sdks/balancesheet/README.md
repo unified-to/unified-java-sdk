@@ -14,6 +14,7 @@ Retrieve a balancesheet
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingBalancesheet" method="get" path="/accounting/{connection_id}/balancesheet/{id}" -->
 ```java
 package hello.world;
 
@@ -71,6 +72,7 @@ List all balancesheets
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingBalancesheets" method="get" path="/accounting/{connection_id}/balancesheet" -->
 ```java
 package hello.world;
 

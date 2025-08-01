@@ -18,6 +18,7 @@ Create a ticket
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createTicketingTicket" method="post" path="/ticketing/{connection_id}/ticket" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve a ticket
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getTicketingTicket" method="get" path="/ticketing/{connection_id}/ticket/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List all tickets
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listTicketingTickets" method="get" path="/ticketing/{connection_id}/ticket" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update a ticket
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchTicketingTicket" method="patch" path="/ticketing/{connection_id}/ticket/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Remove a ticket
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeTicketingTicket" method="delete" path="/ticketing/{connection_id}/ticket/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update a ticket
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateTicketingTicket" method="put" path="/ticketing/{connection_id}/ticket/{id}" -->
 ```java
 package hello.world;
 

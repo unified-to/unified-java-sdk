@@ -20,6 +20,7 @@ The data payload received by your server is described at https://docs.unified.to
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createUnifiedWebhook" method="post" path="/unified/webhook" -->
 ```java
 package hello.world;
 
@@ -80,6 +81,7 @@ Retrieve webhook by its ID
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getUnifiedWebhook" method="get" path="/unified/webhook/{id}" -->
 ```java
 package hello.world;
 
@@ -136,6 +138,7 @@ Returns all registered webhooks
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listUnifiedWebhooks" method="get" path="/unified/webhook" -->
 ```java
 package hello.world;
 
@@ -186,6 +189,7 @@ Update webhook subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchUnifiedWebhook" method="patch" path="/unified/webhook/{id}" -->
 ```java
 package hello.world;
 
@@ -247,6 +251,7 @@ Trigger webhook
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchUnifiedWebhookTrigger" method="patch" path="/unified/webhook/{id}/trigger" -->
 ```java
 package hello.world;
 
@@ -301,6 +306,7 @@ Remove webhook subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeUnifiedWebhook" method="delete" path="/unified/webhook/{id}" -->
 ```java
 package hello.world;
 
@@ -355,6 +361,7 @@ Update webhook subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateUnifiedWebhook" method="put" path="/unified/webhook/{id}" -->
 ```java
 package hello.world;
 
@@ -416,6 +423,7 @@ Trigger webhook
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateUnifiedWebhookTrigger" method="put" path="/unified/webhook/{id}/trigger" -->
 ```java
 package hello.world;
 

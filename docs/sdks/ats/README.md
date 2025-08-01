@@ -61,6 +61,7 @@ Create an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAtsActivity" method="post" path="/ats/{connection_id}/activity" -->
 ```java
 package hello.world;
 
@@ -120,6 +121,7 @@ Create an application
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAtsApplication" method="post" path="/ats/{connection_id}/application" -->
 ```java
 package hello.world;
 
@@ -179,6 +181,7 @@ Create a candidate
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAtsCandidate" method="post" path="/ats/{connection_id}/candidate" -->
 ```java
 package hello.world;
 
@@ -238,6 +241,7 @@ Create a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAtsCompany" method="post" path="/ats/{connection_id}/company" -->
 ```java
 package hello.world;
 
@@ -298,6 +302,7 @@ Create a document
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAtsDocument" method="post" path="/ats/{connection_id}/document" -->
 ```java
 package hello.world;
 
@@ -357,6 +362,7 @@ Create an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAtsInterview" method="post" path="/ats/{connection_id}/interview" -->
 ```java
 package hello.world;
 
@@ -416,6 +422,7 @@ Create a job
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAtsJob" method="post" path="/ats/{connection_id}/job" -->
 ```java
 package hello.world;
 
@@ -475,6 +482,7 @@ Create a scorecard
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAtsScorecard" method="post" path="/ats/{connection_id}/scorecard" -->
 ```java
 package hello.world;
 
@@ -534,6 +542,7 @@ Retrieve an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAtsActivity" method="get" path="/ats/{connection_id}/activity/{id}" -->
 ```java
 package hello.world;
 
@@ -591,6 +600,7 @@ Retrieve an application
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAtsApplication" method="get" path="/ats/{connection_id}/application/{id}" -->
 ```java
 package hello.world;
 
@@ -648,6 +658,7 @@ Retrieve a candidate
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAtsCandidate" method="get" path="/ats/{connection_id}/candidate/{id}" -->
 ```java
 package hello.world;
 
@@ -705,6 +716,7 @@ Retrieve a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAtsCompany" method="get" path="/ats/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 
@@ -762,6 +774,7 @@ Retrieve a document
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAtsDocument" method="get" path="/ats/{connection_id}/document/{id}" -->
 ```java
 package hello.world;
 
@@ -819,6 +832,7 @@ Retrieve an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAtsInterview" method="get" path="/ats/{connection_id}/interview/{id}" -->
 ```java
 package hello.world;
 
@@ -876,6 +890,7 @@ Retrieve a job
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAtsJob" method="get" path="/ats/{connection_id}/job/{id}" -->
 ```java
 package hello.world;
 
@@ -933,6 +948,7 @@ Retrieve a scorecard
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAtsScorecard" method="get" path="/ats/{connection_id}/scorecard/{id}" -->
 ```java
 package hello.world;
 
@@ -990,6 +1006,7 @@ List all activities
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAtsActivities" method="get" path="/ats/{connection_id}/activity" -->
 ```java
 package hello.world;
 
@@ -1046,6 +1063,7 @@ List all applications
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAtsApplications" method="get" path="/ats/{connection_id}/application" -->
 ```java
 package hello.world;
 
@@ -1102,6 +1120,7 @@ List all applicationstatuses
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAtsApplicationstatuses" method="get" path="/ats/{connection_id}/applicationstatus" -->
 ```java
 package hello.world;
 
@@ -1158,6 +1177,7 @@ List all candidates
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAtsCandidates" method="get" path="/ats/{connection_id}/candidate" -->
 ```java
 package hello.world;
 
@@ -1214,6 +1234,7 @@ List all companies
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAtsCompanies" method="get" path="/ats/{connection_id}/company" -->
 ```java
 package hello.world;
 
@@ -1270,6 +1291,7 @@ List all documents
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAtsDocuments" method="get" path="/ats/{connection_id}/document" -->
 ```java
 package hello.world;
 
@@ -1326,6 +1348,7 @@ List all interviews
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAtsInterviews" method="get" path="/ats/{connection_id}/interview" -->
 ```java
 package hello.world;
 
@@ -1382,6 +1405,7 @@ List all jobs
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAtsJobs" method="get" path="/ats/{connection_id}/job" -->
 ```java
 package hello.world;
 
@@ -1438,6 +1462,7 @@ List all scorecards
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAtsScorecards" method="get" path="/ats/{connection_id}/scorecard" -->
 ```java
 package hello.world;
 
@@ -1494,6 +1519,7 @@ Update an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAtsActivity" method="patch" path="/ats/{connection_id}/activity/{id}" -->
 ```java
 package hello.world;
 
@@ -1554,6 +1580,7 @@ Update an application
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAtsApplication" method="patch" path="/ats/{connection_id}/application/{id}" -->
 ```java
 package hello.world;
 
@@ -1614,6 +1641,7 @@ Update a candidate
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAtsCandidate" method="patch" path="/ats/{connection_id}/candidate/{id}" -->
 ```java
 package hello.world;
 
@@ -1674,6 +1702,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAtsCompany" method="patch" path="/ats/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 
@@ -1735,6 +1764,7 @@ Update a document
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAtsDocument" method="patch" path="/ats/{connection_id}/document/{id}" -->
 ```java
 package hello.world;
 
@@ -1795,6 +1825,7 @@ Update an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAtsInterview" method="patch" path="/ats/{connection_id}/interview/{id}" -->
 ```java
 package hello.world;
 
@@ -1855,6 +1886,7 @@ Update a job
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAtsJob" method="patch" path="/ats/{connection_id}/job/{id}" -->
 ```java
 package hello.world;
 
@@ -1915,6 +1947,7 @@ Update a scorecard
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAtsScorecard" method="patch" path="/ats/{connection_id}/scorecard/{id}" -->
 ```java
 package hello.world;
 
@@ -1975,6 +2008,7 @@ Remove an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAtsActivity" method="delete" path="/ats/{connection_id}/activity/{id}" -->
 ```java
 package hello.world;
 
@@ -2030,6 +2064,7 @@ Remove an application
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAtsApplication" method="delete" path="/ats/{connection_id}/application/{id}" -->
 ```java
 package hello.world;
 
@@ -2085,6 +2120,7 @@ Remove a candidate
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAtsCandidate" method="delete" path="/ats/{connection_id}/candidate/{id}" -->
 ```java
 package hello.world;
 
@@ -2140,6 +2176,7 @@ Remove a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAtsCompany" method="delete" path="/ats/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 
@@ -2195,6 +2232,7 @@ Remove a document
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAtsDocument" method="delete" path="/ats/{connection_id}/document/{id}" -->
 ```java
 package hello.world;
 
@@ -2250,6 +2288,7 @@ Remove an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAtsInterview" method="delete" path="/ats/{connection_id}/interview/{id}" -->
 ```java
 package hello.world;
 
@@ -2305,6 +2344,7 @@ Remove a job
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAtsJob" method="delete" path="/ats/{connection_id}/job/{id}" -->
 ```java
 package hello.world;
 
@@ -2360,6 +2400,7 @@ Remove a scorecard
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAtsScorecard" method="delete" path="/ats/{connection_id}/scorecard/{id}" -->
 ```java
 package hello.world;
 
@@ -2415,6 +2456,7 @@ Update an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAtsActivity" method="put" path="/ats/{connection_id}/activity/{id}" -->
 ```java
 package hello.world;
 
@@ -2475,6 +2517,7 @@ Update an application
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAtsApplication" method="put" path="/ats/{connection_id}/application/{id}" -->
 ```java
 package hello.world;
 
@@ -2535,6 +2578,7 @@ Update a candidate
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAtsCandidate" method="put" path="/ats/{connection_id}/candidate/{id}" -->
 ```java
 package hello.world;
 
@@ -2595,6 +2639,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAtsCompany" method="put" path="/ats/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 
@@ -2656,6 +2701,7 @@ Update a document
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAtsDocument" method="put" path="/ats/{connection_id}/document/{id}" -->
 ```java
 package hello.world;
 
@@ -2716,6 +2762,7 @@ Update an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAtsInterview" method="put" path="/ats/{connection_id}/interview/{id}" -->
 ```java
 package hello.world;
 
@@ -2776,6 +2823,7 @@ Update a job
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAtsJob" method="put" path="/ats/{connection_id}/job/{id}" -->
 ```java
 package hello.world;
 
@@ -2836,6 +2884,7 @@ Update a scorecard
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAtsScorecard" method="put" path="/ats/{connection_id}/scorecard/{id}" -->
 ```java
 package hello.world;
 

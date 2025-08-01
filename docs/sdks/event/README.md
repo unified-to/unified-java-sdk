@@ -24,6 +24,7 @@ Create an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createCalendarEvent" method="post" path="/calendar/{connection_id}/event" -->
 ```java
 package hello.world;
 
@@ -83,6 +84,7 @@ Create an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createCrmEvent" method="post" path="/crm/{connection_id}/event" -->
 ```java
 package hello.world;
 
@@ -142,6 +144,7 @@ Retrieve an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getCalendarEvent" method="get" path="/calendar/{connection_id}/event/{id}" -->
 ```java
 package hello.world;
 
@@ -199,6 +202,7 @@ Retrieve an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getCrmEvent" method="get" path="/crm/{connection_id}/event/{id}" -->
 ```java
 package hello.world;
 
@@ -256,6 +260,7 @@ List all events
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listCalendarEvents" method="get" path="/calendar/{connection_id}/event" -->
 ```java
 package hello.world;
 
@@ -312,6 +317,7 @@ List all events
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listCrmEvents" method="get" path="/crm/{connection_id}/event" -->
 ```java
 package hello.world;
 
@@ -368,6 +374,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchCalendarEvent" method="patch" path="/calendar/{connection_id}/event/{id}" -->
 ```java
 package hello.world;
 
@@ -428,6 +435,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchCrmEvent" method="patch" path="/crm/{connection_id}/event/{id}" -->
 ```java
 package hello.world;
 
@@ -488,6 +496,7 @@ Remove an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeCalendarEvent" method="delete" path="/calendar/{connection_id}/event/{id}" -->
 ```java
 package hello.world;
 
@@ -543,6 +552,7 @@ Remove an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeCrmEvent" method="delete" path="/crm/{connection_id}/event/{id}" -->
 ```java
 package hello.world;
 
@@ -598,6 +608,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateCalendarEvent" method="put" path="/calendar/{connection_id}/event/{id}" -->
 ```java
 package hello.world;
 
@@ -658,6 +669,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateCrmEvent" method="put" path="/crm/{connection_id}/event/{id}" -->
 ```java
 package hello.world;
 

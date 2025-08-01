@@ -18,6 +18,7 @@ Create an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAtsActivity" method="post" path="/ats/{connection_id}/activity" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAtsActivity" method="get" path="/ats/{connection_id}/activity/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List all activities
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAtsActivities" method="get" path="/ats/{connection_id}/activity" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAtsActivity" method="patch" path="/ats/{connection_id}/activity/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Remove an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAtsActivity" method="delete" path="/ats/{connection_id}/activity/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAtsActivity" method="put" path="/ats/{connection_id}/activity/{id}" -->
 ```java
 package hello.world;
 

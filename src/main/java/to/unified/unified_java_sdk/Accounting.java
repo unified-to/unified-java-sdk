@@ -12,6 +12,9 @@ import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountResp
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBillRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBillRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBillResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingCategoryRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingCategoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingCategoryResponse;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingContactRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingContactRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingContactResponse;
@@ -48,6 +51,9 @@ import to.unified.unified_java_sdk.models.operations.GetAccountingBalancesheetRe
 import to.unified.unified_java_sdk.models.operations.GetAccountingBillRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingBillRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAccountingBillResponse;
+import to.unified.unified_java_sdk.models.operations.GetAccountingCategoryRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingCategoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAccountingCategoryResponse;
 import to.unified.unified_java_sdk.models.operations.GetAccountingContactRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingContactRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAccountingContactResponse;
@@ -96,6 +102,9 @@ import to.unified.unified_java_sdk.models.operations.ListAccountingBalancesheets
 import to.unified.unified_java_sdk.models.operations.ListAccountingBillsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingBillsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAccountingBillsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAccountingCategoriesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingCategoriesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAccountingCategoriesResponse;
 import to.unified.unified_java_sdk.models.operations.ListAccountingContactsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingContactsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAccountingContactsResponse;
@@ -141,6 +150,9 @@ import to.unified.unified_java_sdk.models.operations.PatchAccountingAccountRespo
 import to.unified.unified_java_sdk.models.operations.PatchAccountingBillRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingBillRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingBillResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingCategoryRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingCategoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingCategoryResponse;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingContactRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingContactRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingContactResponse;
@@ -174,6 +186,9 @@ import to.unified.unified_java_sdk.models.operations.RemoveAccountingAccountResp
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingBillRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingBillRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingBillResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingCategoryRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingCategoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingCategoryResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingContactRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingContactRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingContactResponse;
@@ -207,6 +222,9 @@ import to.unified.unified_java_sdk.models.operations.UpdateAccountingAccountResp
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingBillRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingBillRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingBillResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingCategoryRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingCategoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingCategoryResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingContactRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingContactRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingContactResponse;
@@ -236,6 +254,7 @@ import to.unified.unified_java_sdk.models.operations.UpdateAccountingTransaction
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingTransactionResponse;
 import to.unified.unified_java_sdk.operations.CreateAccountingAccountOperation;
 import to.unified.unified_java_sdk.operations.CreateAccountingBillOperation;
+import to.unified.unified_java_sdk.operations.CreateAccountingCategoryOperation;
 import to.unified.unified_java_sdk.operations.CreateAccountingContactOperation;
 import to.unified.unified_java_sdk.operations.CreateAccountingCreditmemoOperation;
 import to.unified.unified_java_sdk.operations.CreateAccountingInvoiceOperation;
@@ -248,6 +267,7 @@ import to.unified.unified_java_sdk.operations.CreateAccountingTransactionOperati
 import to.unified.unified_java_sdk.operations.GetAccountingAccountOperation;
 import to.unified.unified_java_sdk.operations.GetAccountingBalancesheetOperation;
 import to.unified.unified_java_sdk.operations.GetAccountingBillOperation;
+import to.unified.unified_java_sdk.operations.GetAccountingCategoryOperation;
 import to.unified.unified_java_sdk.operations.GetAccountingContactOperation;
 import to.unified.unified_java_sdk.operations.GetAccountingCreditmemoOperation;
 import to.unified.unified_java_sdk.operations.GetAccountingInvoiceOperation;
@@ -264,6 +284,7 @@ import to.unified.unified_java_sdk.operations.GetAccountingTrialbalanceOperation
 import to.unified.unified_java_sdk.operations.ListAccountingAccountsOperation;
 import to.unified.unified_java_sdk.operations.ListAccountingBalancesheetsOperation;
 import to.unified.unified_java_sdk.operations.ListAccountingBillsOperation;
+import to.unified.unified_java_sdk.operations.ListAccountingCategoriesOperation;
 import to.unified.unified_java_sdk.operations.ListAccountingContactsOperation;
 import to.unified.unified_java_sdk.operations.ListAccountingCreditmemoesOperation;
 import to.unified.unified_java_sdk.operations.ListAccountingInvoicesOperation;
@@ -279,6 +300,7 @@ import to.unified.unified_java_sdk.operations.ListAccountingTransactionsOperatio
 import to.unified.unified_java_sdk.operations.ListAccountingTrialbalancesOperation;
 import to.unified.unified_java_sdk.operations.PatchAccountingAccountOperation;
 import to.unified.unified_java_sdk.operations.PatchAccountingBillOperation;
+import to.unified.unified_java_sdk.operations.PatchAccountingCategoryOperation;
 import to.unified.unified_java_sdk.operations.PatchAccountingContactOperation;
 import to.unified.unified_java_sdk.operations.PatchAccountingCreditmemoOperation;
 import to.unified.unified_java_sdk.operations.PatchAccountingInvoiceOperation;
@@ -290,6 +312,7 @@ import to.unified.unified_java_sdk.operations.PatchAccountingTaxrateOperation;
 import to.unified.unified_java_sdk.operations.PatchAccountingTransactionOperation;
 import to.unified.unified_java_sdk.operations.RemoveAccountingAccountOperation;
 import to.unified.unified_java_sdk.operations.RemoveAccountingBillOperation;
+import to.unified.unified_java_sdk.operations.RemoveAccountingCategoryOperation;
 import to.unified.unified_java_sdk.operations.RemoveAccountingContactOperation;
 import to.unified.unified_java_sdk.operations.RemoveAccountingCreditmemoOperation;
 import to.unified.unified_java_sdk.operations.RemoveAccountingInvoiceOperation;
@@ -301,6 +324,7 @@ import to.unified.unified_java_sdk.operations.RemoveAccountingTaxrateOperation;
 import to.unified.unified_java_sdk.operations.RemoveAccountingTransactionOperation;
 import to.unified.unified_java_sdk.operations.UpdateAccountingAccountOperation;
 import to.unified.unified_java_sdk.operations.UpdateAccountingBillOperation;
+import to.unified.unified_java_sdk.operations.UpdateAccountingCategoryOperation;
 import to.unified.unified_java_sdk.operations.UpdateAccountingContactOperation;
 import to.unified.unified_java_sdk.operations.UpdateAccountingCreditmemoOperation;
 import to.unified.unified_java_sdk.operations.UpdateAccountingInvoiceOperation;
@@ -360,6 +384,28 @@ public class Accounting {
     public CreateAccountingBillResponse createAccountingBill(CreateAccountingBillRequest request) throws Exception {
         RequestOperation<CreateAccountingBillRequest, CreateAccountingBillResponse> operation
               = new CreateAccountingBillOperation(sdkConfiguration);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Create a category
+     * 
+     * @return The call builder
+     */
+    public CreateAccountingCategoryRequestBuilder createAccountingCategory() {
+        return new CreateAccountingCategoryRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a category
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public CreateAccountingCategoryResponse createAccountingCategory(CreateAccountingCategoryRequest request) throws Exception {
+        RequestOperation<CreateAccountingCategoryRequest, CreateAccountingCategoryResponse> operation
+              = new CreateAccountingCategoryOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -624,6 +670,28 @@ public class Accounting {
     public GetAccountingBillResponse getAccountingBill(GetAccountingBillRequest request) throws Exception {
         RequestOperation<GetAccountingBillRequest, GetAccountingBillResponse> operation
               = new GetAccountingBillOperation(sdkConfiguration);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a category
+     * 
+     * @return The call builder
+     */
+    public GetAccountingCategoryRequestBuilder getAccountingCategory() {
+        return new GetAccountingCategoryRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a category
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public GetAccountingCategoryResponse getAccountingCategory(GetAccountingCategoryRequest request) throws Exception {
+        RequestOperation<GetAccountingCategoryRequest, GetAccountingCategoryResponse> operation
+              = new GetAccountingCategoryOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -980,6 +1048,28 @@ public class Accounting {
     }
 
     /**
+     * List all categories
+     * 
+     * @return The call builder
+     */
+    public ListAccountingCategoriesRequestBuilder listAccountingCategories() {
+        return new ListAccountingCategoriesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all categories
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public ListAccountingCategoriesResponse listAccountingCategories(ListAccountingCategoriesRequest request) throws Exception {
+        RequestOperation<ListAccountingCategoriesRequest, ListAccountingCategoriesResponse> operation
+              = new ListAccountingCategoriesOperation(sdkConfiguration);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * List all contacts
      * 
      * @return The call builder
@@ -1310,6 +1400,28 @@ public class Accounting {
     }
 
     /**
+     * Update a category
+     * 
+     * @return The call builder
+     */
+    public PatchAccountingCategoryRequestBuilder patchAccountingCategory() {
+        return new PatchAccountingCategoryRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a category
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public PatchAccountingCategoryResponse patchAccountingCategory(PatchAccountingCategoryRequest request) throws Exception {
+        RequestOperation<PatchAccountingCategoryRequest, PatchAccountingCategoryResponse> operation
+              = new PatchAccountingCategoryOperation(sdkConfiguration);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Update a contact
      * 
      * @return The call builder
@@ -1552,6 +1664,28 @@ public class Accounting {
     }
 
     /**
+     * Remove a category
+     * 
+     * @return The call builder
+     */
+    public RemoveAccountingCategoryRequestBuilder removeAccountingCategory() {
+        return new RemoveAccountingCategoryRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a category
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public RemoveAccountingCategoryResponse removeAccountingCategory(RemoveAccountingCategoryRequest request) throws Exception {
+        RequestOperation<RemoveAccountingCategoryRequest, RemoveAccountingCategoryResponse> operation
+              = new RemoveAccountingCategoryOperation(sdkConfiguration);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Remove a contact
      * 
      * @return The call builder
@@ -1790,6 +1924,28 @@ public class Accounting {
     public UpdateAccountingBillResponse updateAccountingBill(UpdateAccountingBillRequest request) throws Exception {
         RequestOperation<UpdateAccountingBillRequest, UpdateAccountingBillResponse> operation
               = new UpdateAccountingBillOperation(sdkConfiguration);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a category
+     * 
+     * @return The call builder
+     */
+    public UpdateAccountingCategoryRequestBuilder updateAccountingCategory() {
+        return new UpdateAccountingCategoryRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a category
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public UpdateAccountingCategoryResponse updateAccountingCategory(UpdateAccountingCategoryRequest request) throws Exception {
+        RequestOperation<UpdateAccountingCategoryRequest, UpdateAccountingCategoryResponse> operation
+              = new UpdateAccountingCategoryOperation(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

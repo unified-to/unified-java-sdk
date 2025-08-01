@@ -14,6 +14,7 @@ Retrieve a payslip
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getHrisPayslip" method="get" path="/hris/{connection_id}/payslip/{id}" -->
 ```java
 package hello.world;
 
@@ -71,6 +72,7 @@ List all payslips
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listHrisPayslips" method="get" path="/hris/{connection_id}/payslip" -->
 ```java
 package hello.world;
 

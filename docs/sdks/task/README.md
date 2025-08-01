@@ -30,6 +30,7 @@ Create a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" -->
 ```java
 package hello.world;
 
@@ -91,6 +92,7 @@ Create a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createTaskProject" method="post" path="/task/{connection_id}/project" -->
 ```java
 package hello.world;
 
@@ -150,6 +152,7 @@ Create a task
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createTaskTask" method="post" path="/task/{connection_id}/task" -->
 ```java
 package hello.world;
 
@@ -209,6 +212,7 @@ Retrieve a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getTaskComment" method="get" path="/task/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
@@ -266,6 +270,7 @@ Retrieve a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getTaskProject" method="get" path="/task/{connection_id}/project/{id}" -->
 ```java
 package hello.world;
 
@@ -323,6 +328,7 @@ Retrieve a task
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getTaskTask" method="get" path="/task/{connection_id}/task/{id}" -->
 ```java
 package hello.world;
 
@@ -380,6 +386,7 @@ List all comments
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listTaskComments" method="get" path="/task/{connection_id}/comment" -->
 ```java
 package hello.world;
 
@@ -436,6 +443,7 @@ List all projects
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listTaskProjects" method="get" path="/task/{connection_id}/project" -->
 ```java
 package hello.world;
 
@@ -492,6 +500,7 @@ List all tasks
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listTaskTasks" method="get" path="/task/{connection_id}/task" -->
 ```java
 package hello.world;
 
@@ -548,6 +557,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
@@ -610,6 +620,7 @@ Update a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchTaskProject" method="patch" path="/task/{connection_id}/project/{id}" -->
 ```java
 package hello.world;
 
@@ -670,6 +681,7 @@ Update a task
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchTaskTask" method="patch" path="/task/{connection_id}/task/{id}" -->
 ```java
 package hello.world;
 
@@ -730,6 +742,7 @@ Remove a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeTaskComment" method="delete" path="/task/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
@@ -785,6 +798,7 @@ Remove a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeTaskProject" method="delete" path="/task/{connection_id}/project/{id}" -->
 ```java
 package hello.world;
 
@@ -840,6 +854,7 @@ Remove a task
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeTaskTask" method="delete" path="/task/{connection_id}/task/{id}" -->
 ```java
 package hello.world;
 
@@ -895,6 +910,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
@@ -957,6 +973,7 @@ Update a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateTaskProject" method="put" path="/task/{connection_id}/project/{id}" -->
 ```java
 package hello.world;
 
@@ -1017,6 +1034,7 @@ Update a task
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateTaskTask" method="put" path="/task/{connection_id}/task/{id}" -->
 ```java
 package hello.world;
 

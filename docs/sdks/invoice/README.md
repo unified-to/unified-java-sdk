@@ -18,6 +18,7 @@ Create an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAccountingInvoice" method="post" path="/accounting/{connection_id}/invoice" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingInvoice" method="get" path="/accounting/{connection_id}/invoice/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List all invoices
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingInvoices" method="get" path="/accounting/{connection_id}/invoice" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAccountingInvoice" method="patch" path="/accounting/{connection_id}/invoice/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Remove an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAccountingInvoice" method="delete" path="/accounting/{connection_id}/invoice/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAccountingInvoice" method="put" path="/accounting/{connection_id}/invoice/{id}" -->
 ```java
 package hello.world;
 

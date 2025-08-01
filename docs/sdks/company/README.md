@@ -31,6 +31,7 @@ Create a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAtsCompany" method="post" path="/ats/{connection_id}/company" -->
 ```java
 package hello.world;
 
@@ -91,6 +92,7 @@ Create a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createCrmCompany" method="post" path="/crm/{connection_id}/company" -->
 ```java
 package hello.world;
 
@@ -150,6 +152,7 @@ Create a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createHrisCompany" method="post" path="/hris/{connection_id}/company" -->
 ```java
 package hello.world;
 
@@ -209,6 +212,7 @@ Retrieve a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAtsCompany" method="get" path="/ats/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 
@@ -266,6 +270,7 @@ Retrieve a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getCrmCompany" method="get" path="/crm/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 
@@ -323,6 +328,7 @@ Retrieve a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getHrisCompany" method="get" path="/hris/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 
@@ -380,6 +386,7 @@ List all companies
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAtsCompanies" method="get" path="/ats/{connection_id}/company" -->
 ```java
 package hello.world;
 
@@ -436,6 +443,7 @@ List all companies
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listCrmCompanies" method="get" path="/crm/{connection_id}/company" -->
 ```java
 package hello.world;
 
@@ -492,6 +500,7 @@ Retrieve enrichment information for a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listEnrichCompanies" method="get" path="/enrich/{connection_id}/company" -->
 ```java
 package hello.world;
 
@@ -548,6 +557,7 @@ List all companies
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listHrisCompanies" method="get" path="/hris/{connection_id}/company" -->
 ```java
 package hello.world;
 
@@ -604,6 +614,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAtsCompany" method="patch" path="/ats/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 
@@ -665,6 +676,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchCrmCompany" method="patch" path="/crm/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 
@@ -725,6 +737,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchHrisCompany" method="patch" path="/hris/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 
@@ -785,6 +798,7 @@ Remove a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAtsCompany" method="delete" path="/ats/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 
@@ -840,6 +854,7 @@ Remove a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeCrmCompany" method="delete" path="/crm/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 
@@ -895,6 +910,7 @@ Remove a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeHrisCompany" method="delete" path="/hris/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 
@@ -950,6 +966,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAtsCompany" method="put" path="/ats/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 
@@ -1011,6 +1028,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateCrmCompany" method="put" path="/crm/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 
@@ -1071,6 +1089,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateHrisCompany" method="put" path="/hris/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 

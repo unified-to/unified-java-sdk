@@ -30,6 +30,7 @@ Create a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAccountingContact" method="post" path="/accounting/{connection_id}/contact" -->
 ```java
 package hello.world;
 
@@ -89,6 +90,7 @@ Create a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createCrmContact" method="post" path="/crm/{connection_id}/contact" -->
 ```java
 package hello.world;
 
@@ -148,6 +150,7 @@ Create a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createUcContact" method="post" path="/uc/{connection_id}/contact" -->
 ```java
 package hello.world;
 
@@ -207,6 +210,7 @@ Retrieve a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingContact" method="get" path="/accounting/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
@@ -264,6 +268,7 @@ Retrieve a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getCrmContact" method="get" path="/crm/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
@@ -321,6 +326,7 @@ Retrieve a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getUcContact" method="get" path="/uc/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
@@ -378,6 +384,7 @@ List all contacts
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingContacts" method="get" path="/accounting/{connection_id}/contact" -->
 ```java
 package hello.world;
 
@@ -434,6 +441,7 @@ List all contacts
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listCrmContacts" method="get" path="/crm/{connection_id}/contact" -->
 ```java
 package hello.world;
 
@@ -490,6 +498,7 @@ List all contacts
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listUcContacts" method="get" path="/uc/{connection_id}/contact" -->
 ```java
 package hello.world;
 
@@ -546,6 +555,7 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAccountingContact" method="patch" path="/accounting/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
@@ -606,6 +616,7 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchCrmContact" method="patch" path="/crm/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
@@ -666,6 +677,7 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchUcContact" method="patch" path="/uc/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
@@ -726,6 +738,7 @@ Remove a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAccountingContact" method="delete" path="/accounting/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
@@ -781,6 +794,7 @@ Remove a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeCrmContact" method="delete" path="/crm/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
@@ -836,6 +850,7 @@ Remove a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeUcContact" method="delete" path="/uc/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
@@ -891,6 +906,7 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAccountingContact" method="put" path="/accounting/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
@@ -951,6 +967,7 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateCrmContact" method="put" path="/crm/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
@@ -1011,6 +1028,7 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateUcContact" method="put" path="/uc/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 

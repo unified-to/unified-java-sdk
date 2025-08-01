@@ -18,6 +18,7 @@ Create a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createKmsSpace" method="post" path="/kms/{connection_id}/space" -->
 ```java
 package hello.world;
 
@@ -78,6 +79,7 @@ Retrieve a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getKmsSpace" method="get" path="/kms/{connection_id}/space/{id}" -->
 ```java
 package hello.world;
 
@@ -135,6 +137,7 @@ List all spaces
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listKmsSpaces" method="get" path="/kms/{connection_id}/space" -->
 ```java
 package hello.world;
 
@@ -191,6 +194,7 @@ Update a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchKmsSpace" method="patch" path="/kms/{connection_id}/space/{id}" -->
 ```java
 package hello.world;
 
@@ -252,6 +256,7 @@ Remove a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeKmsSpace" method="delete" path="/kms/{connection_id}/space/{id}" -->
 ```java
 package hello.world;
 
@@ -307,6 +312,7 @@ Update a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateKmsSpace" method="put" path="/kms/{connection_id}/space/{id}" -->
 ```java
 package hello.world;
 

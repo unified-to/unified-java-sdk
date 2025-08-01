@@ -33,6 +33,7 @@ Create a calendar
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createCalendarCalendar" method="post" path="/calendar/{connection_id}/calendar" -->
 ```java
 package hello.world;
 
@@ -93,6 +94,7 @@ Create an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createCalendarEvent" method="post" path="/calendar/{connection_id}/event" -->
 ```java
 package hello.world;
 
@@ -152,6 +154,7 @@ Create a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createCalendarLink" method="post" path="/calendar/{connection_id}/link" -->
 ```java
 package hello.world;
 
@@ -212,6 +215,7 @@ Retrieve a calendar
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getCalendarCalendar" method="get" path="/calendar/{connection_id}/calendar/{id}" -->
 ```java
 package hello.world;
 
@@ -269,6 +273,7 @@ Retrieve an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getCalendarEvent" method="get" path="/calendar/{connection_id}/event/{id}" -->
 ```java
 package hello.world;
 
@@ -326,6 +331,7 @@ Retrieve a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getCalendarLink" method="get" path="/calendar/{connection_id}/link/{id}" -->
 ```java
 package hello.world;
 
@@ -383,6 +389,7 @@ Retrieve a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getCalendarRecording" method="get" path="/calendar/{connection_id}/recording/{id}" -->
 ```java
 package hello.world;
 
@@ -440,6 +447,7 @@ List all busies
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listCalendarBusies" method="get" path="/calendar/{connection_id}/busy" -->
 ```java
 package hello.world;
 
@@ -496,6 +504,7 @@ List all calendars
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listCalendarCalendars" method="get" path="/calendar/{connection_id}/calendar" -->
 ```java
 package hello.world;
 
@@ -552,6 +561,7 @@ List all events
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listCalendarEvents" method="get" path="/calendar/{connection_id}/event" -->
 ```java
 package hello.world;
 
@@ -608,6 +618,7 @@ List all links
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listCalendarLinks" method="get" path="/calendar/{connection_id}/link" -->
 ```java
 package hello.world;
 
@@ -664,6 +675,7 @@ List all recordings
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listCalendarRecordings" method="get" path="/calendar/{connection_id}/recording" -->
 ```java
 package hello.world;
 
@@ -720,6 +732,7 @@ Update a calendar
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchCalendarCalendar" method="patch" path="/calendar/{connection_id}/calendar/{id}" -->
 ```java
 package hello.world;
 
@@ -781,6 +794,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchCalendarEvent" method="patch" path="/calendar/{connection_id}/event/{id}" -->
 ```java
 package hello.world;
 
@@ -841,6 +855,7 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchCalendarLink" method="patch" path="/calendar/{connection_id}/link/{id}" -->
 ```java
 package hello.world;
 
@@ -902,6 +917,7 @@ Remove a calendar
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeCalendarCalendar" method="delete" path="/calendar/{connection_id}/calendar/{id}" -->
 ```java
 package hello.world;
 
@@ -957,6 +973,7 @@ Remove an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeCalendarEvent" method="delete" path="/calendar/{connection_id}/event/{id}" -->
 ```java
 package hello.world;
 
@@ -1012,6 +1029,7 @@ Remove a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeCalendarLink" method="delete" path="/calendar/{connection_id}/link/{id}" -->
 ```java
 package hello.world;
 
@@ -1067,6 +1085,7 @@ Update a calendar
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateCalendarCalendar" method="put" path="/calendar/{connection_id}/calendar/{id}" -->
 ```java
 package hello.world;
 
@@ -1128,6 +1147,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateCalendarEvent" method="put" path="/calendar/{connection_id}/event/{id}" -->
 ```java
 package hello.world;
 
@@ -1188,6 +1208,7 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateCalendarLink" method="put" path="/calendar/{connection_id}/link/{id}" -->
 ```java
 package hello.world;
 

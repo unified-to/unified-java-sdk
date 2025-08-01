@@ -18,6 +18,7 @@ Create a candidate
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createAtsCandidate" method="post" path="/ats/{connection_id}/candidate" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve a candidate
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAtsCandidate" method="get" path="/ats/{connection_id}/candidate/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List all candidates
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAtsCandidates" method="get" path="/ats/{connection_id}/candidate" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update a candidate
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchAtsCandidate" method="patch" path="/ats/{connection_id}/candidate/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Remove a candidate
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeAtsCandidate" method="delete" path="/ats/{connection_id}/candidate/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update a candidate
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateAtsCandidate" method="put" path="/ats/{connection_id}/candidate/{id}" -->
 ```java
 package hello.world;
 

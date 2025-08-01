@@ -31,6 +31,7 @@ Create a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" -->
 ```java
 package hello.world;
 
@@ -91,6 +92,7 @@ Create a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createUcContact" method="post" path="/uc/{connection_id}/contact" -->
 ```java
 package hello.world;
 
@@ -150,6 +152,7 @@ Create a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" -->
 ```java
 package hello.world;
 
@@ -209,6 +212,7 @@ Retrieve a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getUcComment" method="get" path="/uc/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
@@ -266,6 +270,7 @@ Retrieve a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getUcContact" method="get" path="/uc/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
@@ -323,6 +328,7 @@ Retrieve a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getUcRecording" method="get" path="/uc/{connection_id}/recording/{id}" -->
 ```java
 package hello.world;
 
@@ -380,6 +386,7 @@ List all calls
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listUcCalls" method="get" path="/uc/{connection_id}/call" -->
 ```java
 package hello.world;
 
@@ -436,6 +443,7 @@ List all comments
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listUcComments" method="get" path="/uc/{connection_id}/comment" -->
 ```java
 package hello.world;
 
@@ -492,6 +500,7 @@ List all contacts
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listUcContacts" method="get" path="/uc/{connection_id}/contact" -->
 ```java
 package hello.world;
 
@@ -548,6 +557,7 @@ List all recordings
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listUcRecordings" method="get" path="/uc/{connection_id}/recording" -->
 ```java
 package hello.world;
 
@@ -604,6 +614,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
@@ -665,6 +676,7 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchUcContact" method="patch" path="/uc/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
@@ -725,6 +737,7 @@ Update a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" -->
 ```java
 package hello.world;
 
@@ -785,6 +798,7 @@ Remove a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeUcComment" method="delete" path="/uc/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
@@ -840,6 +854,7 @@ Remove a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeUcContact" method="delete" path="/uc/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
@@ -895,6 +910,7 @@ Remove a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeUcRecording" method="delete" path="/uc/{connection_id}/recording/{id}" -->
 ```java
 package hello.world;
 
@@ -950,6 +966,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
@@ -1011,6 +1028,7 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateUcContact" method="put" path="/uc/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
@@ -1071,6 +1089,7 @@ Update a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" -->
 ```java
 package hello.world;
 

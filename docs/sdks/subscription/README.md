@@ -18,6 +18,7 @@ Create a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createPaymentSubscription" method="post" path="/payment/{connection_id}/subscription" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getPaymentSubscription" method="get" path="/payment/{connection_id}/subscription/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List all subscriptions
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listPaymentSubscriptions" method="get" path="/payment/{connection_id}/subscription" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchPaymentSubscription" method="patch" path="/payment/{connection_id}/subscription/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Remove a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removePaymentSubscription" method="delete" path="/payment/{connection_id}/subscription/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updatePaymentSubscription" method="put" path="/payment/{connection_id}/subscription/{id}" -->
 ```java
 package hello.world;
 

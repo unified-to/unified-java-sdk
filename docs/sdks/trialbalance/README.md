@@ -14,6 +14,7 @@ Retrieve a trialbalance
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingTrialbalance" method="get" path="/accounting/{connection_id}/trialbalance/{id}" -->
 ```java
 package hello.world;
 
@@ -71,6 +72,7 @@ List all trialbalances
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingTrialbalances" method="get" path="/accounting/{connection_id}/trialbalance" -->
 ```java
 package hello.world;
 

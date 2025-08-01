@@ -14,6 +14,7 @@ Retrieve specific API Call by its ID
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getUnifiedApicall" method="get" path="/unified/apicall/{id}" -->
 ```java
 package hello.world;
 
@@ -70,6 +71,7 @@ Returns API Calls
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listUnifiedApicalls" method="get" path="/unified/apicall" -->
 ```java
 package hello.world;
 

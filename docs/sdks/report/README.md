@@ -14,6 +14,7 @@ Retrieve a report
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingReport" method="get" path="/accounting/{connection_id}/report/{id}" -->
 ```java
 package hello.world;
 
@@ -71,6 +72,7 @@ List all reports
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingReports" method="get" path="/accounting/{connection_id}/report" -->
 ```java
 package hello.world;
 

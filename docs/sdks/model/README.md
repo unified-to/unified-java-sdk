@@ -13,6 +13,7 @@ List all models
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listGenaiModels" method="get" path="/genai/{connection_id}/model" -->
 ```java
 package hello.world;
 

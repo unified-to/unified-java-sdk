@@ -30,6 +30,7 @@ Create a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createKmsComment" method="post" path="/kms/{connection_id}/comment" -->
 ```java
 package hello.world;
 
@@ -90,6 +91,7 @@ Create a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" -->
 ```java
 package hello.world;
 
@@ -151,6 +153,7 @@ Create a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" -->
 ```java
 package hello.world;
 
@@ -211,6 +214,7 @@ Retrieve a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getKmsComment" method="get" path="/kms/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
@@ -268,6 +272,7 @@ Retrieve a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getTaskComment" method="get" path="/task/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
@@ -325,6 +330,7 @@ Retrieve a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getUcComment" method="get" path="/uc/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
@@ -382,6 +388,7 @@ List all comments
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listKmsComments" method="get" path="/kms/{connection_id}/comment" -->
 ```java
 package hello.world;
 
@@ -438,6 +445,7 @@ List all comments
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listTaskComments" method="get" path="/task/{connection_id}/comment" -->
 ```java
 package hello.world;
 
@@ -494,6 +502,7 @@ List all comments
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listUcComments" method="get" path="/uc/{connection_id}/comment" -->
 ```java
 package hello.world;
 
@@ -550,6 +559,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchKmsComment" method="patch" path="/kms/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
@@ -611,6 +621,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
@@ -673,6 +684,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
@@ -734,6 +746,7 @@ Remove a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeKmsComment" method="delete" path="/kms/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
@@ -789,6 +802,7 @@ Remove a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeTaskComment" method="delete" path="/task/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
@@ -844,6 +858,7 @@ Remove a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeUcComment" method="delete" path="/uc/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
@@ -899,6 +914,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateKmsComment" method="put" path="/kms/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
@@ -960,6 +976,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
@@ -1022,6 +1039,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 

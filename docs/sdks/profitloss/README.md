@@ -14,6 +14,7 @@ Retrieve a profitloss
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getAccountingProfitloss" method="get" path="/accounting/{connection_id}/profitloss/{id}" -->
 ```java
 package hello.world;
 
@@ -71,6 +72,7 @@ List all profitlosses
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listAccountingProfitlosses" method="get" path="/accounting/{connection_id}/profitloss" -->
 ```java
 package hello.world;
 

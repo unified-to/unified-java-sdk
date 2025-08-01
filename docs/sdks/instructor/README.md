@@ -18,6 +18,7 @@ Create an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createLmsInstructor" method="post" path="/lms/{connection_id}/instructor" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getLmsInstructor" method="get" path="/lms/{connection_id}/instructor/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List all instructors
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listLmsInstructors" method="get" path="/lms/{connection_id}/instructor" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchLmsInstructor" method="patch" path="/lms/{connection_id}/instructor/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Remove an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeLmsInstructor" method="delete" path="/lms/{connection_id}/instructor/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateLmsInstructor" method="put" path="/lms/{connection_id}/instructor/{id}" -->
 ```java
 package hello.world;
 

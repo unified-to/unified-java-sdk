@@ -18,6 +18,7 @@ Create a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createTaskProject" method="post" path="/task/{connection_id}/project" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getTaskProject" method="get" path="/task/{connection_id}/project/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List all projects
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listTaskProjects" method="get" path="/task/{connection_id}/project" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchTaskProject" method="patch" path="/task/{connection_id}/project/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Remove a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeTaskProject" method="delete" path="/task/{connection_id}/project/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateTaskProject" method="put" path="/task/{connection_id}/project/{id}" -->
 ```java
 package hello.world;
 

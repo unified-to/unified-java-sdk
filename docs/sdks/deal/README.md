@@ -18,6 +18,7 @@ Create a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createCrmDeal" method="post" path="/crm/{connection_id}/deal" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getCrmDeal" method="get" path="/crm/{connection_id}/deal/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List all deals
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listCrmDeals" method="get" path="/crm/{connection_id}/deal" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchCrmDeal" method="patch" path="/crm/{connection_id}/deal/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Remove a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeCrmDeal" method="delete" path="/crm/{connection_id}/deal/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateCrmDeal" method="put" path="/crm/{connection_id}/deal/{id}" -->
 ```java
 package hello.world;
 

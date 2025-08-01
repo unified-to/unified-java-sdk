@@ -18,6 +18,7 @@ Create a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" -->
 ```java
 package hello.world;
 
@@ -78,6 +79,7 @@ Retrieve a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getHrisDevice" method="get" path="/hris/{connection_id}/device/{id}" -->
 ```java
 package hello.world;
 
@@ -135,6 +137,7 @@ List all devices
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listHrisDevices" method="get" path="/hris/{connection_id}/device" -->
 ```java
 package hello.world;
 
@@ -191,6 +194,7 @@ Update a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" -->
 ```java
 package hello.world;
 
@@ -252,6 +256,7 @@ Remove a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeHrisDevice" method="delete" path="/hris/{connection_id}/device/{id}" -->
 ```java
 package hello.world;
 
@@ -307,6 +312,7 @@ Update a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" -->
 ```java
 package hello.world;
 

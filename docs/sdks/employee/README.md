@@ -18,6 +18,7 @@ Create an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createHrisEmployee" method="post" path="/hris/{connection_id}/employee" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getHrisEmployee" method="get" path="/hris/{connection_id}/employee/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List all employees
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listHrisEmployees" method="get" path="/hris/{connection_id}/employee" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchHrisEmployee" method="patch" path="/hris/{connection_id}/employee/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Remove an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeHrisEmployee" method="delete" path="/hris/{connection_id}/employee/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateHrisEmployee" method="put" path="/hris/{connection_id}/employee/{id}" -->
 ```java
 package hello.world;
 

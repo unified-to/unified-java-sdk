@@ -18,6 +18,7 @@ Create a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createCrmPipeline" method="post" path="/crm/{connection_id}/pipeline" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getCrmPipeline" method="get" path="/crm/{connection_id}/pipeline/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List all pipelines
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listCrmPipelines" method="get" path="/crm/{connection_id}/pipeline" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchCrmPipeline" method="patch" path="/crm/{connection_id}/pipeline/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Remove a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeCrmPipeline" method="delete" path="/crm/{connection_id}/pipeline/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateCrmPipeline" method="put" path="/crm/{connection_id}/pipeline/{id}" -->
 ```java
 package hello.world;
 

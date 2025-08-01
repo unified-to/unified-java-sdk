@@ -14,6 +14,7 @@ Retrieve enrichment information for a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listEnrichCompanies" method="get" path="/enrich/{connection_id}/company" -->
 ```java
 package hello.world;
 
@@ -70,6 +71,7 @@ Retrieve enrichment information for a person
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listEnrichPeople" method="get" path="/enrich/{connection_id}/person" -->
 ```java
 package hello.world;
 

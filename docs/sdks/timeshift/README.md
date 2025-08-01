@@ -18,6 +18,7 @@ Create a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="createHrisTimeshift" method="post" path="/hris/{connection_id}/timeshift" -->
 ```java
 package hello.world;
 
@@ -77,6 +78,7 @@ Retrieve a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="getHrisTimeshift" method="get" path="/hris/{connection_id}/timeshift/{id}" -->
 ```java
 package hello.world;
 
@@ -134,6 +136,7 @@ List all timeshifts
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="listHrisTimeshifts" method="get" path="/hris/{connection_id}/timeshift" -->
 ```java
 package hello.world;
 
@@ -190,6 +193,7 @@ Update a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="patchHrisTimeshift" method="patch" path="/hris/{connection_id}/timeshift/{id}" -->
 ```java
 package hello.world;
 
@@ -250,6 +254,7 @@ Remove a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="removeHrisTimeshift" method="delete" path="/hris/{connection_id}/timeshift/{id}" -->
 ```java
 package hello.world;
 
@@ -305,6 +310,7 @@ Update a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="java" operationID="updateHrisTimeshift" method="put" path="/hris/{connection_id}/timeshift/{id}" -->
 ```java
 package hello.world;
 

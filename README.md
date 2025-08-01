@@ -34,7 +34,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.33.2'
+implementation 'to.unified:unified-java-sdk:0.34.0'
 ```
 
 Maven:
@@ -42,7 +42,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.33.2</version>
+    <version>0.34.0</version>
 </dependency>
 ```
 
@@ -123,6 +123,7 @@ public class Application {
 
 * [createAccountingAccount](docs/sdks/accounting/README.md#createaccountingaccount) - Create an account
 * [createAccountingBill](docs/sdks/accounting/README.md#createaccountingbill) - Create a bill
+* [createAccountingCategory](docs/sdks/accounting/README.md#createaccountingcategory) - Create a category
 * [createAccountingContact](docs/sdks/accounting/README.md#createaccountingcontact) - Create a contact
 * [createAccountingCreditmemo](docs/sdks/accounting/README.md#createaccountingcreditmemo) - Create a creditmemo
 * [createAccountingInvoice](docs/sdks/accounting/README.md#createaccountinginvoice) - Create an invoice
@@ -135,6 +136,7 @@ public class Application {
 * [getAccountingAccount](docs/sdks/accounting/README.md#getaccountingaccount) - Retrieve an account
 * [getAccountingBalancesheet](docs/sdks/accounting/README.md#getaccountingbalancesheet) - Retrieve a balancesheet
 * [getAccountingBill](docs/sdks/accounting/README.md#getaccountingbill) - Retrieve a bill
+* [getAccountingCategory](docs/sdks/accounting/README.md#getaccountingcategory) - Retrieve a category
 * [getAccountingContact](docs/sdks/accounting/README.md#getaccountingcontact) - Retrieve a contact
 * [getAccountingCreditmemo](docs/sdks/accounting/README.md#getaccountingcreditmemo) - Retrieve a creditmemo
 * [getAccountingInvoice](docs/sdks/accounting/README.md#getaccountinginvoice) - Retrieve an invoice
@@ -151,6 +153,7 @@ public class Application {
 * [listAccountingAccounts](docs/sdks/accounting/README.md#listaccountingaccounts) - List all accounts
 * [listAccountingBalancesheets](docs/sdks/accounting/README.md#listaccountingbalancesheets) - List all balancesheets
 * [listAccountingBills](docs/sdks/accounting/README.md#listaccountingbills) - List all bills
+* [listAccountingCategories](docs/sdks/accounting/README.md#listaccountingcategories) - List all categories
 * [listAccountingContacts](docs/sdks/accounting/README.md#listaccountingcontacts) - List all contacts
 * [listAccountingCreditmemoes](docs/sdks/accounting/README.md#listaccountingcreditmemoes) - List all creditmemoes
 * [listAccountingInvoices](docs/sdks/accounting/README.md#listaccountinginvoices) - List all invoices
@@ -166,6 +169,7 @@ public class Application {
 * [listAccountingTrialbalances](docs/sdks/accounting/README.md#listaccountingtrialbalances) - List all trialbalances
 * [patchAccountingAccount](docs/sdks/accounting/README.md#patchaccountingaccount) - Update an account
 * [patchAccountingBill](docs/sdks/accounting/README.md#patchaccountingbill) - Update a bill
+* [patchAccountingCategory](docs/sdks/accounting/README.md#patchaccountingcategory) - Update a category
 * [patchAccountingContact](docs/sdks/accounting/README.md#patchaccountingcontact) - Update a contact
 * [patchAccountingCreditmemo](docs/sdks/accounting/README.md#patchaccountingcreditmemo) - Update a creditmemo
 * [patchAccountingInvoice](docs/sdks/accounting/README.md#patchaccountinginvoice) - Update an invoice
@@ -177,6 +181,7 @@ public class Application {
 * [patchAccountingTransaction](docs/sdks/accounting/README.md#patchaccountingtransaction) - Update a transaction
 * [removeAccountingAccount](docs/sdks/accounting/README.md#removeaccountingaccount) - Remove an account
 * [removeAccountingBill](docs/sdks/accounting/README.md#removeaccountingbill) - Remove a bill
+* [removeAccountingCategory](docs/sdks/accounting/README.md#removeaccountingcategory) - Remove a category
 * [removeAccountingContact](docs/sdks/accounting/README.md#removeaccountingcontact) - Remove a contact
 * [removeAccountingCreditmemo](docs/sdks/accounting/README.md#removeaccountingcreditmemo) - Remove a creditmemo
 * [removeAccountingInvoice](docs/sdks/accounting/README.md#removeaccountinginvoice) - Remove an invoice
@@ -188,6 +193,7 @@ public class Application {
 * [removeAccountingTransaction](docs/sdks/accounting/README.md#removeaccountingtransaction) - Remove a transaction
 * [updateAccountingAccount](docs/sdks/accounting/README.md#updateaccountingaccount) - Update an account
 * [updateAccountingBill](docs/sdks/accounting/README.md#updateaccountingbill) - Update a bill
+* [updateAccountingCategory](docs/sdks/accounting/README.md#updateaccountingcategory) - Update a category
 * [updateAccountingContact](docs/sdks/accounting/README.md#updateaccountingcontact) - Update a contact
 * [updateAccountingCreditmemo](docs/sdks/accounting/README.md#updateaccountingcreditmemo) - Update a creditmemo
 * [updateAccountingInvoice](docs/sdks/accounting/README.md#updateaccountinginvoice) - Update an invoice
@@ -345,6 +351,15 @@ public class Application {
 * [patchAtsCandidate](docs/sdks/candidate/README.md#patchatscandidate) - Update a candidate
 * [removeAtsCandidate](docs/sdks/candidate/README.md#removeatscandidate) - Remove a candidate
 * [updateAtsCandidate](docs/sdks/candidate/README.md#updateatscandidate) - Update a candidate
+
+### [category()](docs/sdks/category/README.md)
+
+* [createAccountingCategory](docs/sdks/category/README.md#createaccountingcategory) - Create a category
+* [getAccountingCategory](docs/sdks/category/README.md#getaccountingcategory) - Retrieve a category
+* [listAccountingCategories](docs/sdks/category/README.md#listaccountingcategories) - List all categories
+* [patchAccountingCategory](docs/sdks/category/README.md#patchaccountingcategory) - Update a category
+* [removeAccountingCategory](docs/sdks/category/README.md#removeaccountingcategory) - Remove a category
+* [updateAccountingCategory](docs/sdks/category/README.md#updateaccountingcategory) - Update a category
 
 ### [channel()](docs/sdks/channel/README.md)
 
