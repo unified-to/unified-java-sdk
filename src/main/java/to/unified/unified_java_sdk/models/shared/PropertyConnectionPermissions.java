@@ -77,6 +77,8 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions ACCOUNTING_PROFITLOSS_WRITE = new PropertyConnectionPermissions("accounting_profitloss_write");
     public static final PropertyConnectionPermissions ACCOUNTING_BALANCESHEET_READ = new PropertyConnectionPermissions("accounting_balancesheet_read");
     public static final PropertyConnectionPermissions ACCOUNTING_BALANCESHEET_WRITE = new PropertyConnectionPermissions("accounting_balancesheet_write");
+    public static final PropertyConnectionPermissions ACCOUNTING_CATEGORY_READ = new PropertyConnectionPermissions("accounting_category_read");
+    public static final PropertyConnectionPermissions ACCOUNTING_CATEGORY_WRITE = new PropertyConnectionPermissions("accounting_category_write");
     public static final PropertyConnectionPermissions PAYMENT_PAYMENT_READ = new PropertyConnectionPermissions("payment_payment_read");
     public static final PropertyConnectionPermissions PAYMENT_PAYMENT_WRITE = new PropertyConnectionPermissions("payment_payment_write");
     public static final PropertyConnectionPermissions PAYMENT_PAYOUT_READ = new PropertyConnectionPermissions("payment_payout_read");
@@ -314,6 +316,8 @@ public class PropertyConnectionPermissions {
         map.put("accounting_profitloss_write", ACCOUNTING_PROFITLOSS_WRITE);
         map.put("accounting_balancesheet_read", ACCOUNTING_BALANCESHEET_READ);
         map.put("accounting_balancesheet_write", ACCOUNTING_BALANCESHEET_WRITE);
+        map.put("accounting_category_read", ACCOUNTING_CATEGORY_READ);
+        map.put("accounting_category_write", ACCOUNTING_CATEGORY_WRITE);
         map.put("payment_payment_read", PAYMENT_PAYMENT_READ);
         map.put("payment_payment_write", PAYMENT_PAYMENT_WRITE);
         map.put("payment_payout_read", PAYMENT_PAYOUT_READ);
@@ -485,6 +489,8 @@ public class PropertyConnectionPermissions {
         map.put("accounting_profitloss_write", PropertyConnectionPermissionsEnum.ACCOUNTING_PROFITLOSS_WRITE);
         map.put("accounting_balancesheet_read", PropertyConnectionPermissionsEnum.ACCOUNTING_BALANCESHEET_READ);
         map.put("accounting_balancesheet_write", PropertyConnectionPermissionsEnum.ACCOUNTING_BALANCESHEET_WRITE);
+        map.put("accounting_category_read", PropertyConnectionPermissionsEnum.ACCOUNTING_CATEGORY_READ);
+        map.put("accounting_category_write", PropertyConnectionPermissionsEnum.ACCOUNTING_CATEGORY_WRITE);
         map.put("payment_payment_read", PropertyConnectionPermissionsEnum.PAYMENT_PAYMENT_READ);
         map.put("payment_payment_write", PropertyConnectionPermissionsEnum.PAYMENT_PAYMENT_WRITE);
         map.put("payment_payout_read", PropertyConnectionPermissionsEnum.PAYMENT_PAYOUT_READ);
@@ -686,6 +692,8 @@ public class PropertyConnectionPermissions {
         ACCOUNTING_PROFITLOSS_WRITE("accounting_profitloss_write"),
         ACCOUNTING_BALANCESHEET_READ("accounting_balancesheet_read"),
         ACCOUNTING_BALANCESHEET_WRITE("accounting_balancesheet_write"),
+        ACCOUNTING_CATEGORY_READ("accounting_category_read"),
+        ACCOUNTING_CATEGORY_WRITE("accounting_category_write"),
         PAYMENT_PAYMENT_READ("payment_payment_read"),
         PAYMENT_PAYMENT_WRITE("payment_payment_write"),
         PAYMENT_PAYOUT_READ("payment_payout_read"),

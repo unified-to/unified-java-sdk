@@ -22,7 +22,7 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class PropertyAccountingReportProfitAndLoss {
     /**
-     * &#64;deprecated
+     * &#64;deprecated – use cost_of_goods_sold_sections instead
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cost_of_goods_sold")
@@ -54,7 +54,7 @@ public class PropertyAccountingReportProfitAndLoss {
     private Optional<OffsetDateTime> endAt;
 
     /**
-     * &#64;deprecated
+     * &#64;deprecated – use expenses_sections instead
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expenses")
@@ -81,7 +81,7 @@ public class PropertyAccountingReportProfitAndLoss {
     private Optional<String> id;
 
     /**
-     * &#64;deprecated
+     * &#64;deprecated – use income_sections instead
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("income")
@@ -202,7 +202,7 @@ public class PropertyAccountingReportProfitAndLoss {
     }
 
     /**
-     * &#64;deprecated
+     * &#64;deprecated – use cost_of_goods_sold_sections instead
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
@@ -237,7 +237,7 @@ public class PropertyAccountingReportProfitAndLoss {
     }
 
     /**
-     * &#64;deprecated
+     * &#64;deprecated – use expenses_sections instead
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
@@ -267,7 +267,7 @@ public class PropertyAccountingReportProfitAndLoss {
     }
 
     /**
-     * &#64;deprecated
+     * &#64;deprecated – use income_sections instead
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
@@ -323,7 +323,7 @@ public class PropertyAccountingReportProfitAndLoss {
 
 
     /**
-     * &#64;deprecated
+     * &#64;deprecated – use cost_of_goods_sold_sections instead
      */
     public PropertyAccountingReportProfitAndLoss withCostOfGoodsSold(List<AccountingProfitlossCategory> costOfGoodsSold) {
         Utils.checkNotNull(costOfGoodsSold, "costOfGoodsSold");
@@ -333,7 +333,7 @@ public class PropertyAccountingReportProfitAndLoss {
 
 
     /**
-     * &#64;deprecated
+     * &#64;deprecated – use cost_of_goods_sold_sections instead
      */
     public PropertyAccountingReportProfitAndLoss withCostOfGoodsSold(Optional<? extends List<AccountingProfitlossCategory>> costOfGoodsSold) {
         Utils.checkNotNull(costOfGoodsSold, "costOfGoodsSold");
@@ -407,7 +407,7 @@ public class PropertyAccountingReportProfitAndLoss {
     }
 
     /**
-     * &#64;deprecated
+     * &#64;deprecated – use expenses_sections instead
      */
     public PropertyAccountingReportProfitAndLoss withExpenses(List<AccountingProfitlossCategory> expenses) {
         Utils.checkNotNull(expenses, "expenses");
@@ -417,7 +417,7 @@ public class PropertyAccountingReportProfitAndLoss {
 
 
     /**
-     * &#64;deprecated
+     * &#64;deprecated – use expenses_sections instead
      */
     public PropertyAccountingReportProfitAndLoss withExpenses(Optional<? extends List<AccountingProfitlossCategory>> expenses) {
         Utils.checkNotNull(expenses, "expenses");
@@ -478,7 +478,7 @@ public class PropertyAccountingReportProfitAndLoss {
     }
 
     /**
-     * &#64;deprecated
+     * &#64;deprecated – use income_sections instead
      */
     public PropertyAccountingReportProfitAndLoss withIncome(List<AccountingProfitlossCategory> income) {
         Utils.checkNotNull(income, "income");
@@ -488,7 +488,7 @@ public class PropertyAccountingReportProfitAndLoss {
 
 
     /**
-     * &#64;deprecated
+     * &#64;deprecated – use income_sections instead
      */
     public PropertyAccountingReportProfitAndLoss withIncome(Optional<? extends List<AccountingProfitlossCategory>> income) {
         Utils.checkNotNull(income, "income");
@@ -718,7 +718,7 @@ public class PropertyAccountingReportProfitAndLoss {
 
 
         /**
-         * &#64;deprecated
+         * &#64;deprecated – use cost_of_goods_sold_sections instead
          */
         public Builder costOfGoodsSold(List<AccountingProfitlossCategory> costOfGoodsSold) {
             Utils.checkNotNull(costOfGoodsSold, "costOfGoodsSold");
@@ -727,7 +727,7 @@ public class PropertyAccountingReportProfitAndLoss {
         }
 
         /**
-         * &#64;deprecated
+         * &#64;deprecated – use cost_of_goods_sold_sections instead
          */
         public Builder costOfGoodsSold(Optional<? extends List<AccountingProfitlossCategory>> costOfGoodsSold) {
             Utils.checkNotNull(costOfGoodsSold, "costOfGoodsSold");
@@ -802,7 +802,7 @@ public class PropertyAccountingReportProfitAndLoss {
 
 
         /**
-         * &#64;deprecated
+         * &#64;deprecated – use expenses_sections instead
          */
         public Builder expenses(List<AccountingProfitlossCategory> expenses) {
             Utils.checkNotNull(expenses, "expenses");
@@ -811,7 +811,7 @@ public class PropertyAccountingReportProfitAndLoss {
         }
 
         /**
-         * &#64;deprecated
+         * &#64;deprecated – use expenses_sections instead
          */
         public Builder expenses(Optional<? extends List<AccountingProfitlossCategory>> expenses) {
             Utils.checkNotNull(expenses, "expenses");
@@ -873,7 +873,7 @@ public class PropertyAccountingReportProfitAndLoss {
 
 
         /**
-         * &#64;deprecated
+         * &#64;deprecated – use income_sections instead
          */
         public Builder income(List<AccountingProfitlossCategory> income) {
             Utils.checkNotNull(income, "income");
@@ -882,7 +882,7 @@ public class PropertyAccountingReportProfitAndLoss {
         }
 
         /**
-         * &#64;deprecated
+         * &#64;deprecated – use income_sections instead
          */
         public Builder income(Optional<? extends List<AccountingProfitlossCategory>> income) {
             Utils.checkNotNull(income, "income");
