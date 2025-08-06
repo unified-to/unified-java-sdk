@@ -96,36 +96,36 @@ import to.unified.unified_java_sdk.models.operations.UpdateRepoPullrequestRespon
 import to.unified.unified_java_sdk.models.operations.UpdateRepoRepositoryRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoRepositoryRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoRepositoryResponse;
-import to.unified.unified_java_sdk.operations.CreateRepoBranchOperation;
-import to.unified.unified_java_sdk.operations.CreateRepoCommitOperation;
-import to.unified.unified_java_sdk.operations.CreateRepoOrganizationOperation;
-import to.unified.unified_java_sdk.operations.CreateRepoPullrequestOperation;
-import to.unified.unified_java_sdk.operations.CreateRepoRepositoryOperation;
-import to.unified.unified_java_sdk.operations.GetRepoBranchOperation;
-import to.unified.unified_java_sdk.operations.GetRepoCommitOperation;
-import to.unified.unified_java_sdk.operations.GetRepoOrganizationOperation;
-import to.unified.unified_java_sdk.operations.GetRepoPullrequestOperation;
-import to.unified.unified_java_sdk.operations.GetRepoRepositoryOperation;
-import to.unified.unified_java_sdk.operations.ListRepoBranchesOperation;
-import to.unified.unified_java_sdk.operations.ListRepoCommitsOperation;
-import to.unified.unified_java_sdk.operations.ListRepoOrganizationsOperation;
-import to.unified.unified_java_sdk.operations.ListRepoPullrequestsOperation;
-import to.unified.unified_java_sdk.operations.ListRepoRepositoriesOperation;
-import to.unified.unified_java_sdk.operations.PatchRepoBranchOperation;
-import to.unified.unified_java_sdk.operations.PatchRepoCommitOperation;
-import to.unified.unified_java_sdk.operations.PatchRepoOrganizationOperation;
-import to.unified.unified_java_sdk.operations.PatchRepoPullrequestOperation;
-import to.unified.unified_java_sdk.operations.PatchRepoRepositoryOperation;
-import to.unified.unified_java_sdk.operations.RemoveRepoBranchOperation;
-import to.unified.unified_java_sdk.operations.RemoveRepoCommitOperation;
-import to.unified.unified_java_sdk.operations.RemoveRepoOrganizationOperation;
-import to.unified.unified_java_sdk.operations.RemoveRepoPullrequestOperation;
-import to.unified.unified_java_sdk.operations.RemoveRepoRepositoryOperation;
-import to.unified.unified_java_sdk.operations.UpdateRepoBranchOperation;
-import to.unified.unified_java_sdk.operations.UpdateRepoCommitOperation;
-import to.unified.unified_java_sdk.operations.UpdateRepoOrganizationOperation;
-import to.unified.unified_java_sdk.operations.UpdateRepoPullrequestOperation;
-import to.unified.unified_java_sdk.operations.UpdateRepoRepositoryOperation;
+import to.unified.unified_java_sdk.operations.CreateRepoBranch;
+import to.unified.unified_java_sdk.operations.CreateRepoCommit;
+import to.unified.unified_java_sdk.operations.CreateRepoOrganization;
+import to.unified.unified_java_sdk.operations.CreateRepoPullrequest;
+import to.unified.unified_java_sdk.operations.CreateRepoRepository;
+import to.unified.unified_java_sdk.operations.GetRepoBranch;
+import to.unified.unified_java_sdk.operations.GetRepoCommit;
+import to.unified.unified_java_sdk.operations.GetRepoOrganization;
+import to.unified.unified_java_sdk.operations.GetRepoPullrequest;
+import to.unified.unified_java_sdk.operations.GetRepoRepository;
+import to.unified.unified_java_sdk.operations.ListRepoBranches;
+import to.unified.unified_java_sdk.operations.ListRepoCommits;
+import to.unified.unified_java_sdk.operations.ListRepoOrganizations;
+import to.unified.unified_java_sdk.operations.ListRepoPullrequests;
+import to.unified.unified_java_sdk.operations.ListRepoRepositories;
+import to.unified.unified_java_sdk.operations.PatchRepoBranch;
+import to.unified.unified_java_sdk.operations.PatchRepoCommit;
+import to.unified.unified_java_sdk.operations.PatchRepoOrganization;
+import to.unified.unified_java_sdk.operations.PatchRepoPullrequest;
+import to.unified.unified_java_sdk.operations.PatchRepoRepository;
+import to.unified.unified_java_sdk.operations.RemoveRepoBranch;
+import to.unified.unified_java_sdk.operations.RemoveRepoCommit;
+import to.unified.unified_java_sdk.operations.RemoveRepoOrganization;
+import to.unified.unified_java_sdk.operations.RemoveRepoPullrequest;
+import to.unified.unified_java_sdk.operations.RemoveRepoRepository;
+import to.unified.unified_java_sdk.operations.UpdateRepoBranch;
+import to.unified.unified_java_sdk.operations.UpdateRepoCommit;
+import to.unified.unified_java_sdk.operations.UpdateRepoOrganization;
+import to.unified.unified_java_sdk.operations.UpdateRepoPullrequest;
+import to.unified.unified_java_sdk.operations.UpdateRepoRepository;
 
 
 public class Repo {
@@ -153,7 +153,7 @@ public class Repo {
      */
     public CreateRepoBranchResponse createRepoBranch(CreateRepoBranchRequest request) throws Exception {
         RequestOperation<CreateRepoBranchRequest, CreateRepoBranchResponse> operation
-              = new CreateRepoBranchOperation(sdkConfiguration);
+              = new CreateRepoBranch.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -175,7 +175,7 @@ public class Repo {
      */
     public CreateRepoCommitResponse createRepoCommit(CreateRepoCommitRequest request) throws Exception {
         RequestOperation<CreateRepoCommitRequest, CreateRepoCommitResponse> operation
-              = new CreateRepoCommitOperation(sdkConfiguration);
+              = new CreateRepoCommit.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -197,7 +197,7 @@ public class Repo {
      */
     public CreateRepoOrganizationResponse createRepoOrganization(CreateRepoOrganizationRequest request) throws Exception {
         RequestOperation<CreateRepoOrganizationRequest, CreateRepoOrganizationResponse> operation
-              = new CreateRepoOrganizationOperation(sdkConfiguration);
+              = new CreateRepoOrganization.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -219,7 +219,7 @@ public class Repo {
      */
     public CreateRepoPullrequestResponse createRepoPullrequest(CreateRepoPullrequestRequest request) throws Exception {
         RequestOperation<CreateRepoPullrequestRequest, CreateRepoPullrequestResponse> operation
-              = new CreateRepoPullrequestOperation(sdkConfiguration);
+              = new CreateRepoPullrequest.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -241,7 +241,7 @@ public class Repo {
      */
     public CreateRepoRepositoryResponse createRepoRepository(CreateRepoRepositoryRequest request) throws Exception {
         RequestOperation<CreateRepoRepositoryRequest, CreateRepoRepositoryResponse> operation
-              = new CreateRepoRepositoryOperation(sdkConfiguration);
+              = new CreateRepoRepository.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -263,7 +263,7 @@ public class Repo {
      */
     public GetRepoBranchResponse getRepoBranch(GetRepoBranchRequest request) throws Exception {
         RequestOperation<GetRepoBranchRequest, GetRepoBranchResponse> operation
-              = new GetRepoBranchOperation(sdkConfiguration);
+              = new GetRepoBranch.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -285,7 +285,7 @@ public class Repo {
      */
     public GetRepoCommitResponse getRepoCommit(GetRepoCommitRequest request) throws Exception {
         RequestOperation<GetRepoCommitRequest, GetRepoCommitResponse> operation
-              = new GetRepoCommitOperation(sdkConfiguration);
+              = new GetRepoCommit.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -307,7 +307,7 @@ public class Repo {
      */
     public GetRepoOrganizationResponse getRepoOrganization(GetRepoOrganizationRequest request) throws Exception {
         RequestOperation<GetRepoOrganizationRequest, GetRepoOrganizationResponse> operation
-              = new GetRepoOrganizationOperation(sdkConfiguration);
+              = new GetRepoOrganization.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -329,7 +329,7 @@ public class Repo {
      */
     public GetRepoPullrequestResponse getRepoPullrequest(GetRepoPullrequestRequest request) throws Exception {
         RequestOperation<GetRepoPullrequestRequest, GetRepoPullrequestResponse> operation
-              = new GetRepoPullrequestOperation(sdkConfiguration);
+              = new GetRepoPullrequest.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -351,7 +351,7 @@ public class Repo {
      */
     public GetRepoRepositoryResponse getRepoRepository(GetRepoRepositoryRequest request) throws Exception {
         RequestOperation<GetRepoRepositoryRequest, GetRepoRepositoryResponse> operation
-              = new GetRepoRepositoryOperation(sdkConfiguration);
+              = new GetRepoRepository.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -373,7 +373,7 @@ public class Repo {
      */
     public ListRepoBranchesResponse listRepoBranches(ListRepoBranchesRequest request) throws Exception {
         RequestOperation<ListRepoBranchesRequest, ListRepoBranchesResponse> operation
-              = new ListRepoBranchesOperation(sdkConfiguration);
+              = new ListRepoBranches.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -395,7 +395,7 @@ public class Repo {
      */
     public ListRepoCommitsResponse listRepoCommits(ListRepoCommitsRequest request) throws Exception {
         RequestOperation<ListRepoCommitsRequest, ListRepoCommitsResponse> operation
-              = new ListRepoCommitsOperation(sdkConfiguration);
+              = new ListRepoCommits.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -417,7 +417,7 @@ public class Repo {
      */
     public ListRepoOrganizationsResponse listRepoOrganizations(ListRepoOrganizationsRequest request) throws Exception {
         RequestOperation<ListRepoOrganizationsRequest, ListRepoOrganizationsResponse> operation
-              = new ListRepoOrganizationsOperation(sdkConfiguration);
+              = new ListRepoOrganizations.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -439,7 +439,7 @@ public class Repo {
      */
     public ListRepoPullrequestsResponse listRepoPullrequests(ListRepoPullrequestsRequest request) throws Exception {
         RequestOperation<ListRepoPullrequestsRequest, ListRepoPullrequestsResponse> operation
-              = new ListRepoPullrequestsOperation(sdkConfiguration);
+              = new ListRepoPullrequests.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -461,7 +461,7 @@ public class Repo {
      */
     public ListRepoRepositoriesResponse listRepoRepositories(ListRepoRepositoriesRequest request) throws Exception {
         RequestOperation<ListRepoRepositoriesRequest, ListRepoRepositoriesResponse> operation
-              = new ListRepoRepositoriesOperation(sdkConfiguration);
+              = new ListRepoRepositories.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -483,7 +483,7 @@ public class Repo {
      */
     public PatchRepoBranchResponse patchRepoBranch(PatchRepoBranchRequest request) throws Exception {
         RequestOperation<PatchRepoBranchRequest, PatchRepoBranchResponse> operation
-              = new PatchRepoBranchOperation(sdkConfiguration);
+              = new PatchRepoBranch.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -505,7 +505,7 @@ public class Repo {
      */
     public PatchRepoCommitResponse patchRepoCommit(PatchRepoCommitRequest request) throws Exception {
         RequestOperation<PatchRepoCommitRequest, PatchRepoCommitResponse> operation
-              = new PatchRepoCommitOperation(sdkConfiguration);
+              = new PatchRepoCommit.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -527,7 +527,7 @@ public class Repo {
      */
     public PatchRepoOrganizationResponse patchRepoOrganization(PatchRepoOrganizationRequest request) throws Exception {
         RequestOperation<PatchRepoOrganizationRequest, PatchRepoOrganizationResponse> operation
-              = new PatchRepoOrganizationOperation(sdkConfiguration);
+              = new PatchRepoOrganization.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -549,7 +549,7 @@ public class Repo {
      */
     public PatchRepoPullrequestResponse patchRepoPullrequest(PatchRepoPullrequestRequest request) throws Exception {
         RequestOperation<PatchRepoPullrequestRequest, PatchRepoPullrequestResponse> operation
-              = new PatchRepoPullrequestOperation(sdkConfiguration);
+              = new PatchRepoPullrequest.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -571,7 +571,7 @@ public class Repo {
      */
     public PatchRepoRepositoryResponse patchRepoRepository(PatchRepoRepositoryRequest request) throws Exception {
         RequestOperation<PatchRepoRepositoryRequest, PatchRepoRepositoryResponse> operation
-              = new PatchRepoRepositoryOperation(sdkConfiguration);
+              = new PatchRepoRepository.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -593,7 +593,7 @@ public class Repo {
      */
     public RemoveRepoBranchResponse removeRepoBranch(RemoveRepoBranchRequest request) throws Exception {
         RequestOperation<RemoveRepoBranchRequest, RemoveRepoBranchResponse> operation
-              = new RemoveRepoBranchOperation(sdkConfiguration);
+              = new RemoveRepoBranch.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -615,7 +615,7 @@ public class Repo {
      */
     public RemoveRepoCommitResponse removeRepoCommit(RemoveRepoCommitRequest request) throws Exception {
         RequestOperation<RemoveRepoCommitRequest, RemoveRepoCommitResponse> operation
-              = new RemoveRepoCommitOperation(sdkConfiguration);
+              = new RemoveRepoCommit.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -637,7 +637,7 @@ public class Repo {
      */
     public RemoveRepoOrganizationResponse removeRepoOrganization(RemoveRepoOrganizationRequest request) throws Exception {
         RequestOperation<RemoveRepoOrganizationRequest, RemoveRepoOrganizationResponse> operation
-              = new RemoveRepoOrganizationOperation(sdkConfiguration);
+              = new RemoveRepoOrganization.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -659,7 +659,7 @@ public class Repo {
      */
     public RemoveRepoPullrequestResponse removeRepoPullrequest(RemoveRepoPullrequestRequest request) throws Exception {
         RequestOperation<RemoveRepoPullrequestRequest, RemoveRepoPullrequestResponse> operation
-              = new RemoveRepoPullrequestOperation(sdkConfiguration);
+              = new RemoveRepoPullrequest.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -681,7 +681,7 @@ public class Repo {
      */
     public RemoveRepoRepositoryResponse removeRepoRepository(RemoveRepoRepositoryRequest request) throws Exception {
         RequestOperation<RemoveRepoRepositoryRequest, RemoveRepoRepositoryResponse> operation
-              = new RemoveRepoRepositoryOperation(sdkConfiguration);
+              = new RemoveRepoRepository.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -703,7 +703,7 @@ public class Repo {
      */
     public UpdateRepoBranchResponse updateRepoBranch(UpdateRepoBranchRequest request) throws Exception {
         RequestOperation<UpdateRepoBranchRequest, UpdateRepoBranchResponse> operation
-              = new UpdateRepoBranchOperation(sdkConfiguration);
+              = new UpdateRepoBranch.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -725,7 +725,7 @@ public class Repo {
      */
     public UpdateRepoCommitResponse updateRepoCommit(UpdateRepoCommitRequest request) throws Exception {
         RequestOperation<UpdateRepoCommitRequest, UpdateRepoCommitResponse> operation
-              = new UpdateRepoCommitOperation(sdkConfiguration);
+              = new UpdateRepoCommit.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -747,7 +747,7 @@ public class Repo {
      */
     public UpdateRepoOrganizationResponse updateRepoOrganization(UpdateRepoOrganizationRequest request) throws Exception {
         RequestOperation<UpdateRepoOrganizationRequest, UpdateRepoOrganizationResponse> operation
-              = new UpdateRepoOrganizationOperation(sdkConfiguration);
+              = new UpdateRepoOrganization.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -769,7 +769,7 @@ public class Repo {
      */
     public UpdateRepoPullrequestResponse updateRepoPullrequest(UpdateRepoPullrequestRequest request) throws Exception {
         RequestOperation<UpdateRepoPullrequestRequest, UpdateRepoPullrequestResponse> operation
-              = new UpdateRepoPullrequestOperation(sdkConfiguration);
+              = new UpdateRepoPullrequest.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -791,7 +791,7 @@ public class Repo {
      */
     public UpdateRepoRepositoryResponse updateRepoRepository(UpdateRepoRepositoryRequest request) throws Exception {
         RequestOperation<UpdateRepoRepositoryRequest, UpdateRepoRepositoryResponse> operation
-              = new UpdateRepoRepositoryOperation(sdkConfiguration);
+              = new UpdateRepoRepository.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

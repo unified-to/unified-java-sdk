@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeshiftResponse
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftResponse;
-import to.unified.unified_java_sdk.operations.CreateHrisTimeshiftOperation;
-import to.unified.unified_java_sdk.operations.GetHrisTimeshiftOperation;
-import to.unified.unified_java_sdk.operations.ListHrisTimeshiftsOperation;
-import to.unified.unified_java_sdk.operations.PatchHrisTimeshiftOperation;
-import to.unified.unified_java_sdk.operations.RemoveHrisTimeshiftOperation;
-import to.unified.unified_java_sdk.operations.UpdateHrisTimeshiftOperation;
+import to.unified.unified_java_sdk.operations.CreateHrisTimeshift;
+import to.unified.unified_java_sdk.operations.GetHrisTimeshift;
+import to.unified.unified_java_sdk.operations.ListHrisTimeshifts;
+import to.unified.unified_java_sdk.operations.PatchHrisTimeshift;
+import to.unified.unified_java_sdk.operations.RemoveHrisTimeshift;
+import to.unified.unified_java_sdk.operations.UpdateHrisTimeshift;
 
 
 public class Timeshift {
@@ -57,7 +57,7 @@ public class Timeshift {
      */
     public CreateHrisTimeshiftResponse createHrisTimeshift(CreateHrisTimeshiftRequest request) throws Exception {
         RequestOperation<CreateHrisTimeshiftRequest, CreateHrisTimeshiftResponse> operation
-              = new CreateHrisTimeshiftOperation(sdkConfiguration);
+              = new CreateHrisTimeshift.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Timeshift {
      */
     public GetHrisTimeshiftResponse getHrisTimeshift(GetHrisTimeshiftRequest request) throws Exception {
         RequestOperation<GetHrisTimeshiftRequest, GetHrisTimeshiftResponse> operation
-              = new GetHrisTimeshiftOperation(sdkConfiguration);
+              = new GetHrisTimeshift.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Timeshift {
      */
     public ListHrisTimeshiftsResponse listHrisTimeshifts(ListHrisTimeshiftsRequest request) throws Exception {
         RequestOperation<ListHrisTimeshiftsRequest, ListHrisTimeshiftsResponse> operation
-              = new ListHrisTimeshiftsOperation(sdkConfiguration);
+              = new ListHrisTimeshifts.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Timeshift {
      */
     public PatchHrisTimeshiftResponse patchHrisTimeshift(PatchHrisTimeshiftRequest request) throws Exception {
         RequestOperation<PatchHrisTimeshiftRequest, PatchHrisTimeshiftResponse> operation
-              = new PatchHrisTimeshiftOperation(sdkConfiguration);
+              = new PatchHrisTimeshift.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Timeshift {
      */
     public RemoveHrisTimeshiftResponse removeHrisTimeshift(RemoveHrisTimeshiftRequest request) throws Exception {
         RequestOperation<RemoveHrisTimeshiftRequest, RemoveHrisTimeshiftResponse> operation
-              = new RemoveHrisTimeshiftOperation(sdkConfiguration);
+              = new RemoveHrisTimeshift.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Timeshift {
      */
     public UpdateHrisTimeshiftResponse updateHrisTimeshift(UpdateHrisTimeshiftRequest request) throws Exception {
         RequestOperation<UpdateHrisTimeshiftRequest, UpdateHrisTimeshiftResponse> operation
-              = new UpdateHrisTimeshiftOperation(sdkConfiguration);
+              = new UpdateHrisTimeshift.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

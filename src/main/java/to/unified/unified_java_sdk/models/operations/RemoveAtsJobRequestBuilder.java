@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.RemoveAtsJobOperation;
+import to.unified.unified_java_sdk.operations.RemoveAtsJob;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveAtsJobRequestBuilder {
@@ -28,7 +28,7 @@ public class RemoveAtsJobRequestBuilder {
     public RemoveAtsJobResponse call() throws Exception {
         
         RequestOperation<RemoveAtsJobRequest, RemoveAtsJobResponse> operation
-              = new RemoveAtsJobOperation(sdkConfiguration);
+              = new RemoveAtsJob.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

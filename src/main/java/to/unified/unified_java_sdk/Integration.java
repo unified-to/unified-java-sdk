@@ -15,9 +15,9 @@ import to.unified.unified_java_sdk.models.operations.ListUnifiedIntegrationWorks
 import to.unified.unified_java_sdk.models.operations.ListUnifiedIntegrationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedIntegrationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedIntegrationsResponse;
-import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationAuthOperation;
-import to.unified.unified_java_sdk.operations.ListUnifiedIntegrationWorkspacesOperation;
-import to.unified.unified_java_sdk.operations.ListUnifiedIntegrationsOperation;
+import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationAuth;
+import to.unified.unified_java_sdk.operations.ListUnifiedIntegrationWorkspaces;
+import to.unified.unified_java_sdk.operations.ListUnifiedIntegrations;
 
 
 public class Integration {
@@ -49,7 +49,7 @@ public class Integration {
      */
     public GetUnifiedIntegrationAuthResponse getUnifiedIntegrationAuth(GetUnifiedIntegrationAuthRequest request) throws Exception {
         RequestOperation<GetUnifiedIntegrationAuthRequest, GetUnifiedIntegrationAuthResponse> operation
-              = new GetUnifiedIntegrationAuthOperation(sdkConfiguration);
+              = new GetUnifiedIntegrationAuth.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -75,7 +75,7 @@ public class Integration {
      */
     public ListUnifiedIntegrationWorkspacesResponse listUnifiedIntegrationWorkspaces(ListUnifiedIntegrationWorkspacesRequest request) throws Exception {
         RequestOperation<ListUnifiedIntegrationWorkspacesRequest, ListUnifiedIntegrationWorkspacesResponse> operation
-              = new ListUnifiedIntegrationWorkspacesOperation(sdkConfiguration);
+              = new ListUnifiedIntegrationWorkspaces.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -97,7 +97,7 @@ public class Integration {
      */
     public ListUnifiedIntegrationsResponse listUnifiedIntegrations(ListUnifiedIntegrationsRequest request) throws Exception {
         RequestOperation<ListUnifiedIntegrationsRequest, ListUnifiedIntegrationsResponse> operation
-              = new ListUnifiedIntegrationsOperation(sdkConfiguration);
+              = new ListUnifiedIntegrations.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

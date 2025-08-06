@@ -114,42 +114,42 @@ import to.unified.unified_java_sdk.models.operations.UpdateCrmLeadResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmPipelineRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmPipelineRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmPipelineResponse;
-import to.unified.unified_java_sdk.operations.CreateCrmCompanyOperation;
-import to.unified.unified_java_sdk.operations.CreateCrmContactOperation;
-import to.unified.unified_java_sdk.operations.CreateCrmDealOperation;
-import to.unified.unified_java_sdk.operations.CreateCrmEventOperation;
-import to.unified.unified_java_sdk.operations.CreateCrmLeadOperation;
-import to.unified.unified_java_sdk.operations.CreateCrmPipelineOperation;
-import to.unified.unified_java_sdk.operations.GetCrmCompanyOperation;
-import to.unified.unified_java_sdk.operations.GetCrmContactOperation;
-import to.unified.unified_java_sdk.operations.GetCrmDealOperation;
-import to.unified.unified_java_sdk.operations.GetCrmEventOperation;
-import to.unified.unified_java_sdk.operations.GetCrmLeadOperation;
-import to.unified.unified_java_sdk.operations.GetCrmPipelineOperation;
-import to.unified.unified_java_sdk.operations.ListCrmCompaniesOperation;
-import to.unified.unified_java_sdk.operations.ListCrmContactsOperation;
-import to.unified.unified_java_sdk.operations.ListCrmDealsOperation;
-import to.unified.unified_java_sdk.operations.ListCrmEventsOperation;
-import to.unified.unified_java_sdk.operations.ListCrmLeadsOperation;
-import to.unified.unified_java_sdk.operations.ListCrmPipelinesOperation;
-import to.unified.unified_java_sdk.operations.PatchCrmCompanyOperation;
-import to.unified.unified_java_sdk.operations.PatchCrmContactOperation;
-import to.unified.unified_java_sdk.operations.PatchCrmDealOperation;
-import to.unified.unified_java_sdk.operations.PatchCrmEventOperation;
-import to.unified.unified_java_sdk.operations.PatchCrmLeadOperation;
-import to.unified.unified_java_sdk.operations.PatchCrmPipelineOperation;
-import to.unified.unified_java_sdk.operations.RemoveCrmCompanyOperation;
-import to.unified.unified_java_sdk.operations.RemoveCrmContactOperation;
-import to.unified.unified_java_sdk.operations.RemoveCrmDealOperation;
-import to.unified.unified_java_sdk.operations.RemoveCrmEventOperation;
-import to.unified.unified_java_sdk.operations.RemoveCrmLeadOperation;
-import to.unified.unified_java_sdk.operations.RemoveCrmPipelineOperation;
-import to.unified.unified_java_sdk.operations.UpdateCrmCompanyOperation;
-import to.unified.unified_java_sdk.operations.UpdateCrmContactOperation;
-import to.unified.unified_java_sdk.operations.UpdateCrmDealOperation;
-import to.unified.unified_java_sdk.operations.UpdateCrmEventOperation;
-import to.unified.unified_java_sdk.operations.UpdateCrmLeadOperation;
-import to.unified.unified_java_sdk.operations.UpdateCrmPipelineOperation;
+import to.unified.unified_java_sdk.operations.CreateCrmCompany;
+import to.unified.unified_java_sdk.operations.CreateCrmContact;
+import to.unified.unified_java_sdk.operations.CreateCrmDeal;
+import to.unified.unified_java_sdk.operations.CreateCrmEvent;
+import to.unified.unified_java_sdk.operations.CreateCrmLead;
+import to.unified.unified_java_sdk.operations.CreateCrmPipeline;
+import to.unified.unified_java_sdk.operations.GetCrmCompany;
+import to.unified.unified_java_sdk.operations.GetCrmContact;
+import to.unified.unified_java_sdk.operations.GetCrmDeal;
+import to.unified.unified_java_sdk.operations.GetCrmEvent;
+import to.unified.unified_java_sdk.operations.GetCrmLead;
+import to.unified.unified_java_sdk.operations.GetCrmPipeline;
+import to.unified.unified_java_sdk.operations.ListCrmCompanies;
+import to.unified.unified_java_sdk.operations.ListCrmContacts;
+import to.unified.unified_java_sdk.operations.ListCrmDeals;
+import to.unified.unified_java_sdk.operations.ListCrmEvents;
+import to.unified.unified_java_sdk.operations.ListCrmLeads;
+import to.unified.unified_java_sdk.operations.ListCrmPipelines;
+import to.unified.unified_java_sdk.operations.PatchCrmCompany;
+import to.unified.unified_java_sdk.operations.PatchCrmContact;
+import to.unified.unified_java_sdk.operations.PatchCrmDeal;
+import to.unified.unified_java_sdk.operations.PatchCrmEvent;
+import to.unified.unified_java_sdk.operations.PatchCrmLead;
+import to.unified.unified_java_sdk.operations.PatchCrmPipeline;
+import to.unified.unified_java_sdk.operations.RemoveCrmCompany;
+import to.unified.unified_java_sdk.operations.RemoveCrmContact;
+import to.unified.unified_java_sdk.operations.RemoveCrmDeal;
+import to.unified.unified_java_sdk.operations.RemoveCrmEvent;
+import to.unified.unified_java_sdk.operations.RemoveCrmLead;
+import to.unified.unified_java_sdk.operations.RemoveCrmPipeline;
+import to.unified.unified_java_sdk.operations.UpdateCrmCompany;
+import to.unified.unified_java_sdk.operations.UpdateCrmContact;
+import to.unified.unified_java_sdk.operations.UpdateCrmDeal;
+import to.unified.unified_java_sdk.operations.UpdateCrmEvent;
+import to.unified.unified_java_sdk.operations.UpdateCrmLead;
+import to.unified.unified_java_sdk.operations.UpdateCrmPipeline;
 
 
 public class Crm {
@@ -177,7 +177,7 @@ public class Crm {
      */
     public CreateCrmCompanyResponse createCrmCompany(CreateCrmCompanyRequest request) throws Exception {
         RequestOperation<CreateCrmCompanyRequest, CreateCrmCompanyResponse> operation
-              = new CreateCrmCompanyOperation(sdkConfiguration);
+              = new CreateCrmCompany.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -199,7 +199,7 @@ public class Crm {
      */
     public CreateCrmContactResponse createCrmContact(CreateCrmContactRequest request) throws Exception {
         RequestOperation<CreateCrmContactRequest, CreateCrmContactResponse> operation
-              = new CreateCrmContactOperation(sdkConfiguration);
+              = new CreateCrmContact.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,7 +221,7 @@ public class Crm {
      */
     public CreateCrmDealResponse createCrmDeal(CreateCrmDealRequest request) throws Exception {
         RequestOperation<CreateCrmDealRequest, CreateCrmDealResponse> operation
-              = new CreateCrmDealOperation(sdkConfiguration);
+              = new CreateCrmDeal.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -243,7 +243,7 @@ public class Crm {
      */
     public CreateCrmEventResponse createCrmEvent(CreateCrmEventRequest request) throws Exception {
         RequestOperation<CreateCrmEventRequest, CreateCrmEventResponse> operation
-              = new CreateCrmEventOperation(sdkConfiguration);
+              = new CreateCrmEvent.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -265,7 +265,7 @@ public class Crm {
      */
     public CreateCrmLeadResponse createCrmLead(CreateCrmLeadRequest request) throws Exception {
         RequestOperation<CreateCrmLeadRequest, CreateCrmLeadResponse> operation
-              = new CreateCrmLeadOperation(sdkConfiguration);
+              = new CreateCrmLead.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -287,7 +287,7 @@ public class Crm {
      */
     public CreateCrmPipelineResponse createCrmPipeline(CreateCrmPipelineRequest request) throws Exception {
         RequestOperation<CreateCrmPipelineRequest, CreateCrmPipelineResponse> operation
-              = new CreateCrmPipelineOperation(sdkConfiguration);
+              = new CreateCrmPipeline.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -309,7 +309,7 @@ public class Crm {
      */
     public GetCrmCompanyResponse getCrmCompany(GetCrmCompanyRequest request) throws Exception {
         RequestOperation<GetCrmCompanyRequest, GetCrmCompanyResponse> operation
-              = new GetCrmCompanyOperation(sdkConfiguration);
+              = new GetCrmCompany.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -331,7 +331,7 @@ public class Crm {
      */
     public GetCrmContactResponse getCrmContact(GetCrmContactRequest request) throws Exception {
         RequestOperation<GetCrmContactRequest, GetCrmContactResponse> operation
-              = new GetCrmContactOperation(sdkConfiguration);
+              = new GetCrmContact.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -353,7 +353,7 @@ public class Crm {
      */
     public GetCrmDealResponse getCrmDeal(GetCrmDealRequest request) throws Exception {
         RequestOperation<GetCrmDealRequest, GetCrmDealResponse> operation
-              = new GetCrmDealOperation(sdkConfiguration);
+              = new GetCrmDeal.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -375,7 +375,7 @@ public class Crm {
      */
     public GetCrmEventResponse getCrmEvent(GetCrmEventRequest request) throws Exception {
         RequestOperation<GetCrmEventRequest, GetCrmEventResponse> operation
-              = new GetCrmEventOperation(sdkConfiguration);
+              = new GetCrmEvent.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -397,7 +397,7 @@ public class Crm {
      */
     public GetCrmLeadResponse getCrmLead(GetCrmLeadRequest request) throws Exception {
         RequestOperation<GetCrmLeadRequest, GetCrmLeadResponse> operation
-              = new GetCrmLeadOperation(sdkConfiguration);
+              = new GetCrmLead.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -419,7 +419,7 @@ public class Crm {
      */
     public GetCrmPipelineResponse getCrmPipeline(GetCrmPipelineRequest request) throws Exception {
         RequestOperation<GetCrmPipelineRequest, GetCrmPipelineResponse> operation
-              = new GetCrmPipelineOperation(sdkConfiguration);
+              = new GetCrmPipeline.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -441,7 +441,7 @@ public class Crm {
      */
     public ListCrmCompaniesResponse listCrmCompanies(ListCrmCompaniesRequest request) throws Exception {
         RequestOperation<ListCrmCompaniesRequest, ListCrmCompaniesResponse> operation
-              = new ListCrmCompaniesOperation(sdkConfiguration);
+              = new ListCrmCompanies.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -463,7 +463,7 @@ public class Crm {
      */
     public ListCrmContactsResponse listCrmContacts(ListCrmContactsRequest request) throws Exception {
         RequestOperation<ListCrmContactsRequest, ListCrmContactsResponse> operation
-              = new ListCrmContactsOperation(sdkConfiguration);
+              = new ListCrmContacts.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -485,7 +485,7 @@ public class Crm {
      */
     public ListCrmDealsResponse listCrmDeals(ListCrmDealsRequest request) throws Exception {
         RequestOperation<ListCrmDealsRequest, ListCrmDealsResponse> operation
-              = new ListCrmDealsOperation(sdkConfiguration);
+              = new ListCrmDeals.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -507,7 +507,7 @@ public class Crm {
      */
     public ListCrmEventsResponse listCrmEvents(ListCrmEventsRequest request) throws Exception {
         RequestOperation<ListCrmEventsRequest, ListCrmEventsResponse> operation
-              = new ListCrmEventsOperation(sdkConfiguration);
+              = new ListCrmEvents.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -529,7 +529,7 @@ public class Crm {
      */
     public ListCrmLeadsResponse listCrmLeads(ListCrmLeadsRequest request) throws Exception {
         RequestOperation<ListCrmLeadsRequest, ListCrmLeadsResponse> operation
-              = new ListCrmLeadsOperation(sdkConfiguration);
+              = new ListCrmLeads.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -551,7 +551,7 @@ public class Crm {
      */
     public ListCrmPipelinesResponse listCrmPipelines(ListCrmPipelinesRequest request) throws Exception {
         RequestOperation<ListCrmPipelinesRequest, ListCrmPipelinesResponse> operation
-              = new ListCrmPipelinesOperation(sdkConfiguration);
+              = new ListCrmPipelines.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -573,7 +573,7 @@ public class Crm {
      */
     public PatchCrmCompanyResponse patchCrmCompany(PatchCrmCompanyRequest request) throws Exception {
         RequestOperation<PatchCrmCompanyRequest, PatchCrmCompanyResponse> operation
-              = new PatchCrmCompanyOperation(sdkConfiguration);
+              = new PatchCrmCompany.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -595,7 +595,7 @@ public class Crm {
      */
     public PatchCrmContactResponse patchCrmContact(PatchCrmContactRequest request) throws Exception {
         RequestOperation<PatchCrmContactRequest, PatchCrmContactResponse> operation
-              = new PatchCrmContactOperation(sdkConfiguration);
+              = new PatchCrmContact.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -617,7 +617,7 @@ public class Crm {
      */
     public PatchCrmDealResponse patchCrmDeal(PatchCrmDealRequest request) throws Exception {
         RequestOperation<PatchCrmDealRequest, PatchCrmDealResponse> operation
-              = new PatchCrmDealOperation(sdkConfiguration);
+              = new PatchCrmDeal.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -639,7 +639,7 @@ public class Crm {
      */
     public PatchCrmEventResponse patchCrmEvent(PatchCrmEventRequest request) throws Exception {
         RequestOperation<PatchCrmEventRequest, PatchCrmEventResponse> operation
-              = new PatchCrmEventOperation(sdkConfiguration);
+              = new PatchCrmEvent.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -661,7 +661,7 @@ public class Crm {
      */
     public PatchCrmLeadResponse patchCrmLead(PatchCrmLeadRequest request) throws Exception {
         RequestOperation<PatchCrmLeadRequest, PatchCrmLeadResponse> operation
-              = new PatchCrmLeadOperation(sdkConfiguration);
+              = new PatchCrmLead.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -683,7 +683,7 @@ public class Crm {
      */
     public PatchCrmPipelineResponse patchCrmPipeline(PatchCrmPipelineRequest request) throws Exception {
         RequestOperation<PatchCrmPipelineRequest, PatchCrmPipelineResponse> operation
-              = new PatchCrmPipelineOperation(sdkConfiguration);
+              = new PatchCrmPipeline.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -705,7 +705,7 @@ public class Crm {
      */
     public RemoveCrmCompanyResponse removeCrmCompany(RemoveCrmCompanyRequest request) throws Exception {
         RequestOperation<RemoveCrmCompanyRequest, RemoveCrmCompanyResponse> operation
-              = new RemoveCrmCompanyOperation(sdkConfiguration);
+              = new RemoveCrmCompany.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -727,7 +727,7 @@ public class Crm {
      */
     public RemoveCrmContactResponse removeCrmContact(RemoveCrmContactRequest request) throws Exception {
         RequestOperation<RemoveCrmContactRequest, RemoveCrmContactResponse> operation
-              = new RemoveCrmContactOperation(sdkConfiguration);
+              = new RemoveCrmContact.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -749,7 +749,7 @@ public class Crm {
      */
     public RemoveCrmDealResponse removeCrmDeal(RemoveCrmDealRequest request) throws Exception {
         RequestOperation<RemoveCrmDealRequest, RemoveCrmDealResponse> operation
-              = new RemoveCrmDealOperation(sdkConfiguration);
+              = new RemoveCrmDeal.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -771,7 +771,7 @@ public class Crm {
      */
     public RemoveCrmEventResponse removeCrmEvent(RemoveCrmEventRequest request) throws Exception {
         RequestOperation<RemoveCrmEventRequest, RemoveCrmEventResponse> operation
-              = new RemoveCrmEventOperation(sdkConfiguration);
+              = new RemoveCrmEvent.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -793,7 +793,7 @@ public class Crm {
      */
     public RemoveCrmLeadResponse removeCrmLead(RemoveCrmLeadRequest request) throws Exception {
         RequestOperation<RemoveCrmLeadRequest, RemoveCrmLeadResponse> operation
-              = new RemoveCrmLeadOperation(sdkConfiguration);
+              = new RemoveCrmLead.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -815,7 +815,7 @@ public class Crm {
      */
     public RemoveCrmPipelineResponse removeCrmPipeline(RemoveCrmPipelineRequest request) throws Exception {
         RequestOperation<RemoveCrmPipelineRequest, RemoveCrmPipelineResponse> operation
-              = new RemoveCrmPipelineOperation(sdkConfiguration);
+              = new RemoveCrmPipeline.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -837,7 +837,7 @@ public class Crm {
      */
     public UpdateCrmCompanyResponse updateCrmCompany(UpdateCrmCompanyRequest request) throws Exception {
         RequestOperation<UpdateCrmCompanyRequest, UpdateCrmCompanyResponse> operation
-              = new UpdateCrmCompanyOperation(sdkConfiguration);
+              = new UpdateCrmCompany.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -859,7 +859,7 @@ public class Crm {
      */
     public UpdateCrmContactResponse updateCrmContact(UpdateCrmContactRequest request) throws Exception {
         RequestOperation<UpdateCrmContactRequest, UpdateCrmContactResponse> operation
-              = new UpdateCrmContactOperation(sdkConfiguration);
+              = new UpdateCrmContact.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -881,7 +881,7 @@ public class Crm {
      */
     public UpdateCrmDealResponse updateCrmDeal(UpdateCrmDealRequest request) throws Exception {
         RequestOperation<UpdateCrmDealRequest, UpdateCrmDealResponse> operation
-              = new UpdateCrmDealOperation(sdkConfiguration);
+              = new UpdateCrmDeal.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -903,7 +903,7 @@ public class Crm {
      */
     public UpdateCrmEventResponse updateCrmEvent(UpdateCrmEventRequest request) throws Exception {
         RequestOperation<UpdateCrmEventRequest, UpdateCrmEventResponse> operation
-              = new UpdateCrmEventOperation(sdkConfiguration);
+              = new UpdateCrmEvent.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -925,7 +925,7 @@ public class Crm {
      */
     public UpdateCrmLeadResponse updateCrmLead(UpdateCrmLeadRequest request) throws Exception {
         RequestOperation<UpdateCrmLeadRequest, UpdateCrmLeadResponse> operation
-              = new UpdateCrmLeadOperation(sdkConfiguration);
+              = new UpdateCrmLead.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -947,7 +947,7 @@ public class Crm {
      */
     public UpdateCrmPipelineResponse updateCrmPipeline(UpdateCrmPipelineRequest request) throws Exception {
         RequestOperation<UpdateCrmPipelineRequest, UpdateCrmPipelineResponse> operation
-              = new UpdateCrmPipelineOperation(sdkConfiguration);
+              = new UpdateCrmPipeline.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

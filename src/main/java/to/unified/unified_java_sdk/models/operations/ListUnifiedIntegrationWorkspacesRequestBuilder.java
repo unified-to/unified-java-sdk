@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.ListUnifiedIntegrationWorkspacesOperation;
+import to.unified.unified_java_sdk.operations.ListUnifiedIntegrationWorkspaces;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListUnifiedIntegrationWorkspacesRequestBuilder {
@@ -28,7 +28,7 @@ public class ListUnifiedIntegrationWorkspacesRequestBuilder {
     public ListUnifiedIntegrationWorkspacesResponse call() throws Exception {
         
         RequestOperation<ListUnifiedIntegrationWorkspacesRequest, ListUnifiedIntegrationWorkspacesResponse> operation
-              = new ListUnifiedIntegrationWorkspacesOperation(sdkConfiguration);
+              = new ListUnifiedIntegrationWorkspaces.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

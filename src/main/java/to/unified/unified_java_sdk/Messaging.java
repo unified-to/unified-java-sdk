@@ -30,14 +30,14 @@ import to.unified.unified_java_sdk.models.operations.RemoveMessagingMessageRespo
 import to.unified.unified_java_sdk.models.operations.UpdateMessagingMessageRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateMessagingMessageRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateMessagingMessageResponse;
-import to.unified.unified_java_sdk.operations.CreateMessagingMessageOperation;
-import to.unified.unified_java_sdk.operations.GetMessagingChannelOperation;
-import to.unified.unified_java_sdk.operations.GetMessagingMessageOperation;
-import to.unified.unified_java_sdk.operations.ListMessagingChannelsOperation;
-import to.unified.unified_java_sdk.operations.ListMessagingMessagesOperation;
-import to.unified.unified_java_sdk.operations.PatchMessagingMessageOperation;
-import to.unified.unified_java_sdk.operations.RemoveMessagingMessageOperation;
-import to.unified.unified_java_sdk.operations.UpdateMessagingMessageOperation;
+import to.unified.unified_java_sdk.operations.CreateMessagingMessage;
+import to.unified.unified_java_sdk.operations.GetMessagingChannel;
+import to.unified.unified_java_sdk.operations.GetMessagingMessage;
+import to.unified.unified_java_sdk.operations.ListMessagingChannels;
+import to.unified.unified_java_sdk.operations.ListMessagingMessages;
+import to.unified.unified_java_sdk.operations.PatchMessagingMessage;
+import to.unified.unified_java_sdk.operations.RemoveMessagingMessage;
+import to.unified.unified_java_sdk.operations.UpdateMessagingMessage;
 
 
 public class Messaging {
@@ -65,7 +65,7 @@ public class Messaging {
      */
     public CreateMessagingMessageResponse createMessagingMessage(CreateMessagingMessageRequest request) throws Exception {
         RequestOperation<CreateMessagingMessageRequest, CreateMessagingMessageResponse> operation
-              = new CreateMessagingMessageOperation(sdkConfiguration);
+              = new CreateMessagingMessage.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -87,7 +87,7 @@ public class Messaging {
      */
     public GetMessagingChannelResponse getMessagingChannel(GetMessagingChannelRequest request) throws Exception {
         RequestOperation<GetMessagingChannelRequest, GetMessagingChannelResponse> operation
-              = new GetMessagingChannelOperation(sdkConfiguration);
+              = new GetMessagingChannel.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -109,7 +109,7 @@ public class Messaging {
      */
     public GetMessagingMessageResponse getMessagingMessage(GetMessagingMessageRequest request) throws Exception {
         RequestOperation<GetMessagingMessageRequest, GetMessagingMessageResponse> operation
-              = new GetMessagingMessageOperation(sdkConfiguration);
+              = new GetMessagingMessage.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -131,7 +131,7 @@ public class Messaging {
      */
     public ListMessagingChannelsResponse listMessagingChannels(ListMessagingChannelsRequest request) throws Exception {
         RequestOperation<ListMessagingChannelsRequest, ListMessagingChannelsResponse> operation
-              = new ListMessagingChannelsOperation(sdkConfiguration);
+              = new ListMessagingChannels.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -153,7 +153,7 @@ public class Messaging {
      */
     public ListMessagingMessagesResponse listMessagingMessages(ListMessagingMessagesRequest request) throws Exception {
         RequestOperation<ListMessagingMessagesRequest, ListMessagingMessagesResponse> operation
-              = new ListMessagingMessagesOperation(sdkConfiguration);
+              = new ListMessagingMessages.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -175,7 +175,7 @@ public class Messaging {
      */
     public PatchMessagingMessageResponse patchMessagingMessage(PatchMessagingMessageRequest request) throws Exception {
         RequestOperation<PatchMessagingMessageRequest, PatchMessagingMessageResponse> operation
-              = new PatchMessagingMessageOperation(sdkConfiguration);
+              = new PatchMessagingMessage.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -197,7 +197,7 @@ public class Messaging {
      */
     public RemoveMessagingMessageResponse removeMessagingMessage(RemoveMessagingMessageRequest request) throws Exception {
         RequestOperation<RemoveMessagingMessageRequest, RemoveMessagingMessageResponse> operation
-              = new RemoveMessagingMessageOperation(sdkConfiguration);
+              = new RemoveMessagingMessage.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -219,7 +219,7 @@ public class Messaging {
      */
     public UpdateMessagingMessageResponse updateMessagingMessage(UpdateMessagingMessageRequest request) throws Exception {
         RequestOperation<UpdateMessagingMessageRequest, UpdateMessagingMessageResponse> operation
-              = new UpdateMessagingMessageOperation(sdkConfiguration);
+              = new UpdateMessagingMessage.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

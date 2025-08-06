@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.ListAtsApplicationstatusesOperation;
+import to.unified.unified_java_sdk.operations.ListAtsApplicationstatuses;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListAtsApplicationstatusesRequestBuilder {
@@ -28,7 +28,7 @@ public class ListAtsApplicationstatusesRequestBuilder {
     public ListAtsApplicationstatusesResponse call() throws Exception {
         
         RequestOperation<ListAtsApplicationstatusesRequest, ListAtsApplicationstatusesResponse> operation
-              = new ListAtsApplicationstatusesOperation(sdkConfiguration);
+              = new ListAtsApplicationstatuses.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

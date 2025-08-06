@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.GetCommerceItemOperation;
+import to.unified.unified_java_sdk.operations.GetCommerceItem;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetCommerceItemRequestBuilder {
@@ -28,7 +28,7 @@ public class GetCommerceItemRequestBuilder {
     public GetCommerceItemResponse call() throws Exception {
         
         RequestOperation<GetCommerceItemRequest, GetCommerceItemResponse> operation
-              = new GetCommerceItemOperation(sdkConfiguration);
+              = new GetCommerceItem.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

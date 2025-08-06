@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.ListAccountingBalancesheetsOperation;
+import to.unified.unified_java_sdk.operations.ListAccountingBalancesheets;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListAccountingBalancesheetsRequestBuilder {
@@ -28,7 +28,7 @@ public class ListAccountingBalancesheetsRequestBuilder {
     public ListAccountingBalancesheetsResponse call() throws Exception {
         
         RequestOperation<ListAccountingBalancesheetsRequest, ListAccountingBalancesheetsResponse> operation
-              = new ListAccountingBalancesheetsOperation(sdkConfiguration);
+              = new ListAccountingBalancesheets.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

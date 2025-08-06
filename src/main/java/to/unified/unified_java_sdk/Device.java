@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveHrisDeviceResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDeviceRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDeviceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDeviceResponse;
-import to.unified.unified_java_sdk.operations.CreateHrisDeviceOperation;
-import to.unified.unified_java_sdk.operations.GetHrisDeviceOperation;
-import to.unified.unified_java_sdk.operations.ListHrisDevicesOperation;
-import to.unified.unified_java_sdk.operations.PatchHrisDeviceOperation;
-import to.unified.unified_java_sdk.operations.RemoveHrisDeviceOperation;
-import to.unified.unified_java_sdk.operations.UpdateHrisDeviceOperation;
+import to.unified.unified_java_sdk.operations.CreateHrisDevice;
+import to.unified.unified_java_sdk.operations.GetHrisDevice;
+import to.unified.unified_java_sdk.operations.ListHrisDevices;
+import to.unified.unified_java_sdk.operations.PatchHrisDevice;
+import to.unified.unified_java_sdk.operations.RemoveHrisDevice;
+import to.unified.unified_java_sdk.operations.UpdateHrisDevice;
 
 
 public class Device {
@@ -57,7 +57,7 @@ public class Device {
      */
     public CreateHrisDeviceResponse createHrisDevice(CreateHrisDeviceRequest request) throws Exception {
         RequestOperation<CreateHrisDeviceRequest, CreateHrisDeviceResponse> operation
-              = new CreateHrisDeviceOperation(sdkConfiguration);
+              = new CreateHrisDevice.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Device {
      */
     public GetHrisDeviceResponse getHrisDevice(GetHrisDeviceRequest request) throws Exception {
         RequestOperation<GetHrisDeviceRequest, GetHrisDeviceResponse> operation
-              = new GetHrisDeviceOperation(sdkConfiguration);
+              = new GetHrisDevice.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Device {
      */
     public ListHrisDevicesResponse listHrisDevices(ListHrisDevicesRequest request) throws Exception {
         RequestOperation<ListHrisDevicesRequest, ListHrisDevicesResponse> operation
-              = new ListHrisDevicesOperation(sdkConfiguration);
+              = new ListHrisDevices.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Device {
      */
     public PatchHrisDeviceResponse patchHrisDevice(PatchHrisDeviceRequest request) throws Exception {
         RequestOperation<PatchHrisDeviceRequest, PatchHrisDeviceResponse> operation
-              = new PatchHrisDeviceOperation(sdkConfiguration);
+              = new PatchHrisDevice.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Device {
      */
     public RemoveHrisDeviceResponse removeHrisDevice(RemoveHrisDeviceRequest request) throws Exception {
         RequestOperation<RemoveHrisDeviceRequest, RemoveHrisDeviceResponse> operation
-              = new RemoveHrisDeviceOperation(sdkConfiguration);
+              = new RemoveHrisDevice.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Device {
      */
     public UpdateHrisDeviceResponse updateHrisDevice(UpdateHrisDeviceRequest request) throws Exception {
         RequestOperation<UpdateHrisDeviceRequest, UpdateHrisDeviceResponse> operation
-              = new UpdateHrisDeviceOperation(sdkConfiguration);
+              = new UpdateHrisDevice.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

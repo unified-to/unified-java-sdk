@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveAccountingBillRespons
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingBillRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingBillRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingBillResponse;
-import to.unified.unified_java_sdk.operations.CreateAccountingBillOperation;
-import to.unified.unified_java_sdk.operations.GetAccountingBillOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingBillsOperation;
-import to.unified.unified_java_sdk.operations.PatchAccountingBillOperation;
-import to.unified.unified_java_sdk.operations.RemoveAccountingBillOperation;
-import to.unified.unified_java_sdk.operations.UpdateAccountingBillOperation;
+import to.unified.unified_java_sdk.operations.CreateAccountingBill;
+import to.unified.unified_java_sdk.operations.GetAccountingBill;
+import to.unified.unified_java_sdk.operations.ListAccountingBills;
+import to.unified.unified_java_sdk.operations.PatchAccountingBill;
+import to.unified.unified_java_sdk.operations.RemoveAccountingBill;
+import to.unified.unified_java_sdk.operations.UpdateAccountingBill;
 
 
 public class Bill {
@@ -57,7 +57,7 @@ public class Bill {
      */
     public CreateAccountingBillResponse createAccountingBill(CreateAccountingBillRequest request) throws Exception {
         RequestOperation<CreateAccountingBillRequest, CreateAccountingBillResponse> operation
-              = new CreateAccountingBillOperation(sdkConfiguration);
+              = new CreateAccountingBill.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Bill {
      */
     public GetAccountingBillResponse getAccountingBill(GetAccountingBillRequest request) throws Exception {
         RequestOperation<GetAccountingBillRequest, GetAccountingBillResponse> operation
-              = new GetAccountingBillOperation(sdkConfiguration);
+              = new GetAccountingBill.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Bill {
      */
     public ListAccountingBillsResponse listAccountingBills(ListAccountingBillsRequest request) throws Exception {
         RequestOperation<ListAccountingBillsRequest, ListAccountingBillsResponse> operation
-              = new ListAccountingBillsOperation(sdkConfiguration);
+              = new ListAccountingBills.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Bill {
      */
     public PatchAccountingBillResponse patchAccountingBill(PatchAccountingBillRequest request) throws Exception {
         RequestOperation<PatchAccountingBillRequest, PatchAccountingBillResponse> operation
-              = new PatchAccountingBillOperation(sdkConfiguration);
+              = new PatchAccountingBill.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Bill {
      */
     public RemoveAccountingBillResponse removeAccountingBill(RemoveAccountingBillRequest request) throws Exception {
         RequestOperation<RemoveAccountingBillRequest, RemoveAccountingBillResponse> operation
-              = new RemoveAccountingBillOperation(sdkConfiguration);
+              = new RemoveAccountingBill.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Bill {
      */
     public UpdateAccountingBillResponse updateAccountingBill(UpdateAccountingBillRequest request) throws Exception {
         RequestOperation<UpdateAccountingBillRequest, UpdateAccountingBillResponse> operation
-              = new UpdateAccountingBillOperation(sdkConfiguration);
+              = new UpdateAccountingBill.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -72,28 +72,28 @@ import to.unified.unified_java_sdk.models.operations.UpdatePaymentPaymentRespons
 import to.unified.unified_java_sdk.models.operations.UpdatePaymentSubscriptionRequest;
 import to.unified.unified_java_sdk.models.operations.UpdatePaymentSubscriptionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdatePaymentSubscriptionResponse;
-import to.unified.unified_java_sdk.operations.CreatePaymentLinkOperation;
-import to.unified.unified_java_sdk.operations.CreatePaymentPaymentOperation;
-import to.unified.unified_java_sdk.operations.CreatePaymentSubscriptionOperation;
-import to.unified.unified_java_sdk.operations.GetPaymentLinkOperation;
-import to.unified.unified_java_sdk.operations.GetPaymentPaymentOperation;
-import to.unified.unified_java_sdk.operations.GetPaymentPayoutOperation;
-import to.unified.unified_java_sdk.operations.GetPaymentRefundOperation;
-import to.unified.unified_java_sdk.operations.GetPaymentSubscriptionOperation;
-import to.unified.unified_java_sdk.operations.ListPaymentLinksOperation;
-import to.unified.unified_java_sdk.operations.ListPaymentPaymentsOperation;
-import to.unified.unified_java_sdk.operations.ListPaymentPayoutsOperation;
-import to.unified.unified_java_sdk.operations.ListPaymentRefundsOperation;
-import to.unified.unified_java_sdk.operations.ListPaymentSubscriptionsOperation;
-import to.unified.unified_java_sdk.operations.PatchPaymentLinkOperation;
-import to.unified.unified_java_sdk.operations.PatchPaymentPaymentOperation;
-import to.unified.unified_java_sdk.operations.PatchPaymentSubscriptionOperation;
-import to.unified.unified_java_sdk.operations.RemovePaymentLinkOperation;
-import to.unified.unified_java_sdk.operations.RemovePaymentPaymentOperation;
-import to.unified.unified_java_sdk.operations.RemovePaymentSubscriptionOperation;
-import to.unified.unified_java_sdk.operations.UpdatePaymentLinkOperation;
-import to.unified.unified_java_sdk.operations.UpdatePaymentPaymentOperation;
-import to.unified.unified_java_sdk.operations.UpdatePaymentSubscriptionOperation;
+import to.unified.unified_java_sdk.operations.CreatePaymentLink;
+import to.unified.unified_java_sdk.operations.CreatePaymentPayment;
+import to.unified.unified_java_sdk.operations.CreatePaymentSubscription;
+import to.unified.unified_java_sdk.operations.GetPaymentLink;
+import to.unified.unified_java_sdk.operations.GetPaymentPayment;
+import to.unified.unified_java_sdk.operations.GetPaymentPayout;
+import to.unified.unified_java_sdk.operations.GetPaymentRefund;
+import to.unified.unified_java_sdk.operations.GetPaymentSubscription;
+import to.unified.unified_java_sdk.operations.ListPaymentLinks;
+import to.unified.unified_java_sdk.operations.ListPaymentPayments;
+import to.unified.unified_java_sdk.operations.ListPaymentPayouts;
+import to.unified.unified_java_sdk.operations.ListPaymentRefunds;
+import to.unified.unified_java_sdk.operations.ListPaymentSubscriptions;
+import to.unified.unified_java_sdk.operations.PatchPaymentLink;
+import to.unified.unified_java_sdk.operations.PatchPaymentPayment;
+import to.unified.unified_java_sdk.operations.PatchPaymentSubscription;
+import to.unified.unified_java_sdk.operations.RemovePaymentLink;
+import to.unified.unified_java_sdk.operations.RemovePaymentPayment;
+import to.unified.unified_java_sdk.operations.RemovePaymentSubscription;
+import to.unified.unified_java_sdk.operations.UpdatePaymentLink;
+import to.unified.unified_java_sdk.operations.UpdatePaymentPayment;
+import to.unified.unified_java_sdk.operations.UpdatePaymentSubscription;
 
 
 public class Payment {
@@ -121,7 +121,7 @@ public class Payment {
      */
     public CreatePaymentLinkResponse createPaymentLink(CreatePaymentLinkRequest request) throws Exception {
         RequestOperation<CreatePaymentLinkRequest, CreatePaymentLinkResponse> operation
-              = new CreatePaymentLinkOperation(sdkConfiguration);
+              = new CreatePaymentLink.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -143,7 +143,7 @@ public class Payment {
      */
     public CreatePaymentPaymentResponse createPaymentPayment(CreatePaymentPaymentRequest request) throws Exception {
         RequestOperation<CreatePaymentPaymentRequest, CreatePaymentPaymentResponse> operation
-              = new CreatePaymentPaymentOperation(sdkConfiguration);
+              = new CreatePaymentPayment.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -165,7 +165,7 @@ public class Payment {
      */
     public CreatePaymentSubscriptionResponse createPaymentSubscription(CreatePaymentSubscriptionRequest request) throws Exception {
         RequestOperation<CreatePaymentSubscriptionRequest, CreatePaymentSubscriptionResponse> operation
-              = new CreatePaymentSubscriptionOperation(sdkConfiguration);
+              = new CreatePaymentSubscription.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -187,7 +187,7 @@ public class Payment {
      */
     public GetPaymentLinkResponse getPaymentLink(GetPaymentLinkRequest request) throws Exception {
         RequestOperation<GetPaymentLinkRequest, GetPaymentLinkResponse> operation
-              = new GetPaymentLinkOperation(sdkConfiguration);
+              = new GetPaymentLink.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -209,7 +209,7 @@ public class Payment {
      */
     public GetPaymentPaymentResponse getPaymentPayment(GetPaymentPaymentRequest request) throws Exception {
         RequestOperation<GetPaymentPaymentRequest, GetPaymentPaymentResponse> operation
-              = new GetPaymentPaymentOperation(sdkConfiguration);
+              = new GetPaymentPayment.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -231,7 +231,7 @@ public class Payment {
      */
     public GetPaymentPayoutResponse getPaymentPayout(GetPaymentPayoutRequest request) throws Exception {
         RequestOperation<GetPaymentPayoutRequest, GetPaymentPayoutResponse> operation
-              = new GetPaymentPayoutOperation(sdkConfiguration);
+              = new GetPaymentPayout.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -253,7 +253,7 @@ public class Payment {
      */
     public GetPaymentRefundResponse getPaymentRefund(GetPaymentRefundRequest request) throws Exception {
         RequestOperation<GetPaymentRefundRequest, GetPaymentRefundResponse> operation
-              = new GetPaymentRefundOperation(sdkConfiguration);
+              = new GetPaymentRefund.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -275,7 +275,7 @@ public class Payment {
      */
     public GetPaymentSubscriptionResponse getPaymentSubscription(GetPaymentSubscriptionRequest request) throws Exception {
         RequestOperation<GetPaymentSubscriptionRequest, GetPaymentSubscriptionResponse> operation
-              = new GetPaymentSubscriptionOperation(sdkConfiguration);
+              = new GetPaymentSubscription.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -297,7 +297,7 @@ public class Payment {
      */
     public ListPaymentLinksResponse listPaymentLinks(ListPaymentLinksRequest request) throws Exception {
         RequestOperation<ListPaymentLinksRequest, ListPaymentLinksResponse> operation
-              = new ListPaymentLinksOperation(sdkConfiguration);
+              = new ListPaymentLinks.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -319,7 +319,7 @@ public class Payment {
      */
     public ListPaymentPaymentsResponse listPaymentPayments(ListPaymentPaymentsRequest request) throws Exception {
         RequestOperation<ListPaymentPaymentsRequest, ListPaymentPaymentsResponse> operation
-              = new ListPaymentPaymentsOperation(sdkConfiguration);
+              = new ListPaymentPayments.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -341,7 +341,7 @@ public class Payment {
      */
     public ListPaymentPayoutsResponse listPaymentPayouts(ListPaymentPayoutsRequest request) throws Exception {
         RequestOperation<ListPaymentPayoutsRequest, ListPaymentPayoutsResponse> operation
-              = new ListPaymentPayoutsOperation(sdkConfiguration);
+              = new ListPaymentPayouts.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -363,7 +363,7 @@ public class Payment {
      */
     public ListPaymentRefundsResponse listPaymentRefunds(ListPaymentRefundsRequest request) throws Exception {
         RequestOperation<ListPaymentRefundsRequest, ListPaymentRefundsResponse> operation
-              = new ListPaymentRefundsOperation(sdkConfiguration);
+              = new ListPaymentRefunds.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -385,7 +385,7 @@ public class Payment {
      */
     public ListPaymentSubscriptionsResponse listPaymentSubscriptions(ListPaymentSubscriptionsRequest request) throws Exception {
         RequestOperation<ListPaymentSubscriptionsRequest, ListPaymentSubscriptionsResponse> operation
-              = new ListPaymentSubscriptionsOperation(sdkConfiguration);
+              = new ListPaymentSubscriptions.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -407,7 +407,7 @@ public class Payment {
      */
     public PatchPaymentLinkResponse patchPaymentLink(PatchPaymentLinkRequest request) throws Exception {
         RequestOperation<PatchPaymentLinkRequest, PatchPaymentLinkResponse> operation
-              = new PatchPaymentLinkOperation(sdkConfiguration);
+              = new PatchPaymentLink.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -429,7 +429,7 @@ public class Payment {
      */
     public PatchPaymentPaymentResponse patchPaymentPayment(PatchPaymentPaymentRequest request) throws Exception {
         RequestOperation<PatchPaymentPaymentRequest, PatchPaymentPaymentResponse> operation
-              = new PatchPaymentPaymentOperation(sdkConfiguration);
+              = new PatchPaymentPayment.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -451,7 +451,7 @@ public class Payment {
      */
     public PatchPaymentSubscriptionResponse patchPaymentSubscription(PatchPaymentSubscriptionRequest request) throws Exception {
         RequestOperation<PatchPaymentSubscriptionRequest, PatchPaymentSubscriptionResponse> operation
-              = new PatchPaymentSubscriptionOperation(sdkConfiguration);
+              = new PatchPaymentSubscription.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -473,7 +473,7 @@ public class Payment {
      */
     public RemovePaymentLinkResponse removePaymentLink(RemovePaymentLinkRequest request) throws Exception {
         RequestOperation<RemovePaymentLinkRequest, RemovePaymentLinkResponse> operation
-              = new RemovePaymentLinkOperation(sdkConfiguration);
+              = new RemovePaymentLink.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -495,7 +495,7 @@ public class Payment {
      */
     public RemovePaymentPaymentResponse removePaymentPayment(RemovePaymentPaymentRequest request) throws Exception {
         RequestOperation<RemovePaymentPaymentRequest, RemovePaymentPaymentResponse> operation
-              = new RemovePaymentPaymentOperation(sdkConfiguration);
+              = new RemovePaymentPayment.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -517,7 +517,7 @@ public class Payment {
      */
     public RemovePaymentSubscriptionResponse removePaymentSubscription(RemovePaymentSubscriptionRequest request) throws Exception {
         RequestOperation<RemovePaymentSubscriptionRequest, RemovePaymentSubscriptionResponse> operation
-              = new RemovePaymentSubscriptionOperation(sdkConfiguration);
+              = new RemovePaymentSubscription.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -539,7 +539,7 @@ public class Payment {
      */
     public UpdatePaymentLinkResponse updatePaymentLink(UpdatePaymentLinkRequest request) throws Exception {
         RequestOperation<UpdatePaymentLinkRequest, UpdatePaymentLinkResponse> operation
-              = new UpdatePaymentLinkOperation(sdkConfiguration);
+              = new UpdatePaymentLink.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -561,7 +561,7 @@ public class Payment {
      */
     public UpdatePaymentPaymentResponse updatePaymentPayment(UpdatePaymentPaymentRequest request) throws Exception {
         RequestOperation<UpdatePaymentPaymentRequest, UpdatePaymentPaymentResponse> operation
-              = new UpdatePaymentPaymentOperation(sdkConfiguration);
+              = new UpdatePaymentPayment.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -583,7 +583,7 @@ public class Payment {
      */
     public UpdatePaymentSubscriptionResponse updatePaymentSubscription(UpdatePaymentSubscriptionRequest request) throws Exception {
         RequestOperation<UpdatePaymentSubscriptionRequest, UpdatePaymentSubscriptionResponse> operation
-              = new UpdatePaymentSubscriptionOperation(sdkConfiguration);
+              = new UpdatePaymentSubscription.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

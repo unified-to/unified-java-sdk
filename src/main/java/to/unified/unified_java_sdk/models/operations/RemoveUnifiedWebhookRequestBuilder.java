@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.RemoveUnifiedWebhookOperation;
+import to.unified.unified_java_sdk.operations.RemoveUnifiedWebhook;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveUnifiedWebhookRequestBuilder {
@@ -28,7 +28,7 @@ public class RemoveUnifiedWebhookRequestBuilder {
     public RemoveUnifiedWebhookResponse call() throws Exception {
         
         RequestOperation<RemoveUnifiedWebhookRequest, RemoveUnifiedWebhookResponse> operation
-              = new RemoveUnifiedWebhookOperation(sdkConfiguration);
+              = new RemoveUnifiedWebhook.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

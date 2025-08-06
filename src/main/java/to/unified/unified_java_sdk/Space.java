@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveKmsSpaceResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateKmsSpaceRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateKmsSpaceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateKmsSpaceResponse;
-import to.unified.unified_java_sdk.operations.CreateKmsSpaceOperation;
-import to.unified.unified_java_sdk.operations.GetKmsSpaceOperation;
-import to.unified.unified_java_sdk.operations.ListKmsSpacesOperation;
-import to.unified.unified_java_sdk.operations.PatchKmsSpaceOperation;
-import to.unified.unified_java_sdk.operations.RemoveKmsSpaceOperation;
-import to.unified.unified_java_sdk.operations.UpdateKmsSpaceOperation;
+import to.unified.unified_java_sdk.operations.CreateKmsSpace;
+import to.unified.unified_java_sdk.operations.GetKmsSpace;
+import to.unified.unified_java_sdk.operations.ListKmsSpaces;
+import to.unified.unified_java_sdk.operations.PatchKmsSpace;
+import to.unified.unified_java_sdk.operations.RemoveKmsSpace;
+import to.unified.unified_java_sdk.operations.UpdateKmsSpace;
 
 
 public class Space {
@@ -57,7 +57,7 @@ public class Space {
      */
     public CreateKmsSpaceResponse createKmsSpace(CreateKmsSpaceRequest request) throws Exception {
         RequestOperation<CreateKmsSpaceRequest, CreateKmsSpaceResponse> operation
-              = new CreateKmsSpaceOperation(sdkConfiguration);
+              = new CreateKmsSpace.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Space {
      */
     public GetKmsSpaceResponse getKmsSpace(GetKmsSpaceRequest request) throws Exception {
         RequestOperation<GetKmsSpaceRequest, GetKmsSpaceResponse> operation
-              = new GetKmsSpaceOperation(sdkConfiguration);
+              = new GetKmsSpace.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Space {
      */
     public ListKmsSpacesResponse listKmsSpaces(ListKmsSpacesRequest request) throws Exception {
         RequestOperation<ListKmsSpacesRequest, ListKmsSpacesResponse> operation
-              = new ListKmsSpacesOperation(sdkConfiguration);
+              = new ListKmsSpaces.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Space {
      */
     public PatchKmsSpaceResponse patchKmsSpace(PatchKmsSpaceRequest request) throws Exception {
         RequestOperation<PatchKmsSpaceRequest, PatchKmsSpaceResponse> operation
-              = new PatchKmsSpaceOperation(sdkConfiguration);
+              = new PatchKmsSpace.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Space {
      */
     public RemoveKmsSpaceResponse removeKmsSpace(RemoveKmsSpaceRequest request) throws Exception {
         RequestOperation<RemoveKmsSpaceRequest, RemoveKmsSpaceResponse> operation
-              = new RemoveKmsSpaceOperation(sdkConfiguration);
+              = new RemoveKmsSpace.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Space {
      */
     public UpdateKmsSpaceResponse updateKmsSpace(UpdateKmsSpaceRequest request) throws Exception {
         RequestOperation<UpdateKmsSpaceRequest, UpdateKmsSpaceResponse> operation
-              = new UpdateKmsSpaceOperation(sdkConfiguration);
+              = new UpdateKmsSpace.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

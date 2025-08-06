@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.ListPaymentPaymentsOperation;
+import to.unified.unified_java_sdk.operations.ListPaymentPayments;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListPaymentPaymentsRequestBuilder {
@@ -28,7 +28,7 @@ public class ListPaymentPaymentsRequestBuilder {
     public ListPaymentPaymentsResponse call() throws Exception {
         
         RequestOperation<ListPaymentPaymentsRequest, ListPaymentPaymentsResponse> operation
-              = new ListPaymentPaymentsOperation(sdkConfiguration);
+              = new ListPaymentPayments.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

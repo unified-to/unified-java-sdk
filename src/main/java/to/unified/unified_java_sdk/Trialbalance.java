@@ -12,8 +12,8 @@ import to.unified.unified_java_sdk.models.operations.GetAccountingTrialbalanceRe
 import to.unified.unified_java_sdk.models.operations.ListAccountingTrialbalancesRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingTrialbalancesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAccountingTrialbalancesResponse;
-import to.unified.unified_java_sdk.operations.GetAccountingTrialbalanceOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingTrialbalancesOperation;
+import to.unified.unified_java_sdk.operations.GetAccountingTrialbalance;
+import to.unified.unified_java_sdk.operations.ListAccountingTrialbalances;
 
 
 public class Trialbalance {
@@ -41,7 +41,7 @@ public class Trialbalance {
      */
     public GetAccountingTrialbalanceResponse getAccountingTrialbalance(GetAccountingTrialbalanceRequest request) throws Exception {
         RequestOperation<GetAccountingTrialbalanceRequest, GetAccountingTrialbalanceResponse> operation
-              = new GetAccountingTrialbalanceOperation(sdkConfiguration);
+              = new GetAccountingTrialbalance.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -63,7 +63,7 @@ public class Trialbalance {
      */
     public ListAccountingTrialbalancesResponse listAccountingTrialbalances(ListAccountingTrialbalancesRequest request) throws Exception {
         RequestOperation<ListAccountingTrialbalancesRequest, ListAccountingTrialbalancesResponse> operation
-              = new ListAccountingTrialbalancesOperation(sdkConfiguration);
+              = new ListAccountingTrialbalances.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

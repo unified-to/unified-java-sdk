@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.ListMartechMembersOperation;
+import to.unified.unified_java_sdk.operations.ListMartechMembers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListMartechMembersRequestBuilder {
@@ -28,7 +28,7 @@ public class ListMartechMembersRequestBuilder {
     public ListMartechMembersResponse call() throws Exception {
         
         RequestOperation<ListMartechMembersRequest, ListMartechMembersResponse> operation
-              = new ListMartechMembersOperation(sdkConfiguration);
+              = new ListMartechMembers.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

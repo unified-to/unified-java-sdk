@@ -6,9 +6,14 @@ package to.unified.unified_java_sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import java.lang.Boolean;
+import java.lang.Double;
+import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.utils.OneOfDeserializer;
 import to.unified.unified_java_sdk.utils.TypedObject;
 import to.unified.unified_java_sdk.utils.Utils.JsonShape;
@@ -25,39 +30,39 @@ public class TaskMetadataValue {
         this.value = value;
     }
 
-    public static TaskMetadataValue of(TaskMetadataSchemas1 value) {
+    public static TaskMetadataValue of(Map<String, Object> value) {
         Utils.checkNotNull(value, "value");
-        return new TaskMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<TaskMetadataSchemas1>(){}));
+        return new TaskMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<Map<String, Object>>(){}));
     }
 
-    public static TaskMetadataValue of(TaskMetadataSchemas2 value) {
+    public static TaskMetadataValue of(String value) {
         Utils.checkNotNull(value, "value");
-        return new TaskMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<TaskMetadataSchemas2>(){}));
+        return new TaskMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<String>(){}));
     }
 
-    public static TaskMetadataValue of(TaskMetadataSchemas3 value) {
+    public static TaskMetadataValue of(double value) {
         Utils.checkNotNull(value, "value");
-        return new TaskMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<TaskMetadataSchemas3>(){}));
+        return new TaskMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Double>(){}));
     }
 
-    public static TaskMetadataValue of(TaskMetadataSchemas4 value) {
+    public static TaskMetadataValue of(boolean value) {
         Utils.checkNotNull(value, "value");
-        return new TaskMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<TaskMetadataSchemas4>(){}));
+        return new TaskMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Boolean>(){}));
     }
 
-    public static TaskMetadataValue of(TaskMetadataSchemas5 value) {
+    public static TaskMetadataValue of(List<TaskMetadataSchemas5> value) {
         Utils.checkNotNull(value, "value");
-        return new TaskMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<TaskMetadataSchemas5>(){}));
+        return new TaskMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<List<TaskMetadataSchemas5>>(){}));
     }
     
     /**
      * Returns an instance of one of these types:
      * <ul>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.TaskMetadataSchemas1}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.TaskMetadataSchemas2}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.TaskMetadataSchemas3}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.TaskMetadataSchemas4}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.TaskMetadataSchemas5}</li>
+     * <li>{@code java.util.Map<java.lang.String, java.lang.Object>}</li>
+     * <li>{@code java.lang.String}</li>
+     * <li>{@code double}</li>
+     * <li>{@code boolean}</li>
+     * <li>{@code java.util.List<to.unified.unified_java_sdk.models.shared.TaskMetadataSchemas5>}</li>
      * </ul>
      * 
      * <p>Use {@code instanceof} to determine what type is returned. For example:
@@ -97,11 +102,11 @@ public class TaskMetadataValue {
 
         public _Deserializer() {
             super(TaskMetadataValue.class, false,
-                  TypeReferenceWithShape.of(new TypeReference<TaskMetadataSchemas5>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<TaskMetadataSchemas4>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<TaskMetadataSchemas3>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<TaskMetadataSchemas2>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<TaskMetadataSchemas1>() {}, JsonShape.DEFAULT));
+                  TypeReferenceWithShape.of(new TypeReference<List<TaskMetadataSchemas5>>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<Boolean>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<Double>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<String>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<Map<String, Object>>() {}, JsonShape.DEFAULT));
         }
     }
     

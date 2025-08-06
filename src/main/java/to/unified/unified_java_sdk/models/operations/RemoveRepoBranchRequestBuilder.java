@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.RemoveRepoBranchOperation;
+import to.unified.unified_java_sdk.operations.RemoveRepoBranch;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveRepoBranchRequestBuilder {
@@ -28,7 +28,7 @@ public class RemoveRepoBranchRequestBuilder {
     public RemoveRepoBranchResponse call() throws Exception {
         
         RequestOperation<RemoveRepoBranchRequest, RemoveRepoBranchResponse> operation
-              = new RemoveRepoBranchOperation(sdkConfiguration);
+              = new RemoveRepoBranch.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

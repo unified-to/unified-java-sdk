@@ -9,7 +9,7 @@ import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.ListGenaiModelsRequest;
 import to.unified.unified_java_sdk.models.operations.ListGenaiModelsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListGenaiModelsResponse;
-import to.unified.unified_java_sdk.operations.ListGenaiModelsOperation;
+import to.unified.unified_java_sdk.operations.ListGenaiModels;
 
 
 public class Model {
@@ -37,7 +37,7 @@ public class Model {
      */
     public ListGenaiModelsResponse listGenaiModels(ListGenaiModelsRequest request) throws Exception {
         RequestOperation<ListGenaiModelsRequest, ListGenaiModelsResponse> operation
-              = new ListGenaiModelsOperation(sdkConfiguration);
+              = new ListGenaiModels.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

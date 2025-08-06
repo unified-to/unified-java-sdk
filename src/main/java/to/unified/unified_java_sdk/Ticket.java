@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveTicketingTicketRespon
 import to.unified.unified_java_sdk.models.operations.UpdateTicketingTicketRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateTicketingTicketRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateTicketingTicketResponse;
-import to.unified.unified_java_sdk.operations.CreateTicketingTicketOperation;
-import to.unified.unified_java_sdk.operations.GetTicketingTicketOperation;
-import to.unified.unified_java_sdk.operations.ListTicketingTicketsOperation;
-import to.unified.unified_java_sdk.operations.PatchTicketingTicketOperation;
-import to.unified.unified_java_sdk.operations.RemoveTicketingTicketOperation;
-import to.unified.unified_java_sdk.operations.UpdateTicketingTicketOperation;
+import to.unified.unified_java_sdk.operations.CreateTicketingTicket;
+import to.unified.unified_java_sdk.operations.GetTicketingTicket;
+import to.unified.unified_java_sdk.operations.ListTicketingTickets;
+import to.unified.unified_java_sdk.operations.PatchTicketingTicket;
+import to.unified.unified_java_sdk.operations.RemoveTicketingTicket;
+import to.unified.unified_java_sdk.operations.UpdateTicketingTicket;
 
 
 public class Ticket {
@@ -57,7 +57,7 @@ public class Ticket {
      */
     public CreateTicketingTicketResponse createTicketingTicket(CreateTicketingTicketRequest request) throws Exception {
         RequestOperation<CreateTicketingTicketRequest, CreateTicketingTicketResponse> operation
-              = new CreateTicketingTicketOperation(sdkConfiguration);
+              = new CreateTicketingTicket.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Ticket {
      */
     public GetTicketingTicketResponse getTicketingTicket(GetTicketingTicketRequest request) throws Exception {
         RequestOperation<GetTicketingTicketRequest, GetTicketingTicketResponse> operation
-              = new GetTicketingTicketOperation(sdkConfiguration);
+              = new GetTicketingTicket.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Ticket {
      */
     public ListTicketingTicketsResponse listTicketingTickets(ListTicketingTicketsRequest request) throws Exception {
         RequestOperation<ListTicketingTicketsRequest, ListTicketingTicketsResponse> operation
-              = new ListTicketingTicketsOperation(sdkConfiguration);
+              = new ListTicketingTickets.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Ticket {
      */
     public PatchTicketingTicketResponse patchTicketingTicket(PatchTicketingTicketRequest request) throws Exception {
         RequestOperation<PatchTicketingTicketRequest, PatchTicketingTicketResponse> operation
-              = new PatchTicketingTicketOperation(sdkConfiguration);
+              = new PatchTicketingTicket.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Ticket {
      */
     public RemoveTicketingTicketResponse removeTicketingTicket(RemoveTicketingTicketRequest request) throws Exception {
         RequestOperation<RemoveTicketingTicketRequest, RemoveTicketingTicketResponse> operation
-              = new RemoveTicketingTicketOperation(sdkConfiguration);
+              = new RemoveTicketingTicket.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Ticket {
      */
     public UpdateTicketingTicketResponse updateTicketingTicket(UpdateTicketingTicketRequest request) throws Exception {
         RequestOperation<UpdateTicketingTicketRequest, UpdateTicketingTicketResponse> operation
-              = new UpdateTicketingTicketOperation(sdkConfiguration);
+              = new UpdateTicketingTicket.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

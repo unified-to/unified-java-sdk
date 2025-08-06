@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.PatchCrmContactOperation;
+import to.unified.unified_java_sdk.operations.PatchCrmContact;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchCrmContactRequestBuilder {
@@ -28,7 +28,7 @@ public class PatchCrmContactRequestBuilder {
     public PatchCrmContactResponse call() throws Exception {
         
         RequestOperation<PatchCrmContactRequest, PatchCrmContactResponse> operation
-              = new PatchCrmContactOperation(sdkConfiguration);
+              = new PatchCrmContact.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

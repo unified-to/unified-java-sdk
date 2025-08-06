@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.ListUcContactsOperation;
+import to.unified.unified_java_sdk.operations.ListUcContacts;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListUcContactsRequestBuilder {
@@ -28,7 +28,7 @@ public class ListUcContactsRequestBuilder {
     public ListUcContactsResponse call() throws Exception {
         
         RequestOperation<ListUcContactsRequest, ListUcContactsResponse> operation
-              = new ListUcContactsOperation(sdkConfiguration);
+              = new ListUcContacts.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

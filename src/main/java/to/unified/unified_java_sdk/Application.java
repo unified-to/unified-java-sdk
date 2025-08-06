@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveAtsApplicationRespons
 import to.unified.unified_java_sdk.models.operations.UpdateAtsApplicationRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsApplicationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsApplicationResponse;
-import to.unified.unified_java_sdk.operations.CreateAtsApplicationOperation;
-import to.unified.unified_java_sdk.operations.GetAtsApplicationOperation;
-import to.unified.unified_java_sdk.operations.ListAtsApplicationsOperation;
-import to.unified.unified_java_sdk.operations.PatchAtsApplicationOperation;
-import to.unified.unified_java_sdk.operations.RemoveAtsApplicationOperation;
-import to.unified.unified_java_sdk.operations.UpdateAtsApplicationOperation;
+import to.unified.unified_java_sdk.operations.CreateAtsApplication;
+import to.unified.unified_java_sdk.operations.GetAtsApplication;
+import to.unified.unified_java_sdk.operations.ListAtsApplications;
+import to.unified.unified_java_sdk.operations.PatchAtsApplication;
+import to.unified.unified_java_sdk.operations.RemoveAtsApplication;
+import to.unified.unified_java_sdk.operations.UpdateAtsApplication;
 
 
 public class Application {
@@ -57,7 +57,7 @@ public class Application {
      */
     public CreateAtsApplicationResponse createAtsApplication(CreateAtsApplicationRequest request) throws Exception {
         RequestOperation<CreateAtsApplicationRequest, CreateAtsApplicationResponse> operation
-              = new CreateAtsApplicationOperation(sdkConfiguration);
+              = new CreateAtsApplication.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Application {
      */
     public GetAtsApplicationResponse getAtsApplication(GetAtsApplicationRequest request) throws Exception {
         RequestOperation<GetAtsApplicationRequest, GetAtsApplicationResponse> operation
-              = new GetAtsApplicationOperation(sdkConfiguration);
+              = new GetAtsApplication.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Application {
      */
     public ListAtsApplicationsResponse listAtsApplications(ListAtsApplicationsRequest request) throws Exception {
         RequestOperation<ListAtsApplicationsRequest, ListAtsApplicationsResponse> operation
-              = new ListAtsApplicationsOperation(sdkConfiguration);
+              = new ListAtsApplications.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Application {
      */
     public PatchAtsApplicationResponse patchAtsApplication(PatchAtsApplicationRequest request) throws Exception {
         RequestOperation<PatchAtsApplicationRequest, PatchAtsApplicationResponse> operation
-              = new PatchAtsApplicationOperation(sdkConfiguration);
+              = new PatchAtsApplication.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Application {
      */
     public RemoveAtsApplicationResponse removeAtsApplication(RemoveAtsApplicationRequest request) throws Exception {
         RequestOperation<RemoveAtsApplicationRequest, RemoveAtsApplicationResponse> operation
-              = new RemoveAtsApplicationOperation(sdkConfiguration);
+              = new RemoveAtsApplication.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Application {
      */
     public UpdateAtsApplicationResponse updateAtsApplication(UpdateAtsApplicationRequest request) throws Exception {
         RequestOperation<UpdateAtsApplicationRequest, UpdateAtsApplicationResponse> operation
-              = new UpdateAtsApplicationOperation(sdkConfiguration);
+              = new UpdateAtsApplication.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

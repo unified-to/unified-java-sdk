@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.ListCrmLeadsOperation;
+import to.unified.unified_java_sdk.operations.ListCrmLeads;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListCrmLeadsRequestBuilder {
@@ -28,7 +28,7 @@ public class ListCrmLeadsRequestBuilder {
     public ListCrmLeadsResponse call() throws Exception {
         
         RequestOperation<ListCrmLeadsRequest, ListCrmLeadsResponse> operation
-              = new ListCrmLeadsOperation(sdkConfiguration);
+              = new ListCrmLeads.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

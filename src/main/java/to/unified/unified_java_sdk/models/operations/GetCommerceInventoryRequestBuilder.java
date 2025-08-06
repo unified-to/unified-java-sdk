@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.GetCommerceInventoryOperation;
+import to.unified.unified_java_sdk.operations.GetCommerceInventory;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetCommerceInventoryRequestBuilder {
@@ -28,7 +28,7 @@ public class GetCommerceInventoryRequestBuilder {
     public GetCommerceInventoryResponse call() throws Exception {
         
         RequestOperation<GetCommerceInventoryRequest, GetCommerceInventoryResponse> operation
-              = new GetCommerceInventoryOperation(sdkConfiguration);
+              = new GetCommerceInventory.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.GetStorageFileOperation;
+import to.unified.unified_java_sdk.operations.GetStorageFile;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetStorageFileRequestBuilder {
@@ -28,7 +28,7 @@ public class GetStorageFileRequestBuilder {
     public GetStorageFileResponse call() throws Exception {
         
         RequestOperation<GetStorageFileRequest, GetStorageFileResponse> operation
-              = new GetStorageFileOperation(sdkConfiguration);
+              = new GetStorageFile.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

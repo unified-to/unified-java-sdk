@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.PatchAtsApplicationOperation;
+import to.unified.unified_java_sdk.operations.PatchAtsApplication;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchAtsApplicationRequestBuilder {
@@ -28,7 +28,7 @@ public class PatchAtsApplicationRequestBuilder {
     public PatchAtsApplicationResponse call() throws Exception {
         
         RequestOperation<PatchAtsApplicationRequest, PatchAtsApplicationResponse> operation
-              = new PatchAtsApplicationOperation(sdkConfiguration);
+              = new PatchAtsApplication.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

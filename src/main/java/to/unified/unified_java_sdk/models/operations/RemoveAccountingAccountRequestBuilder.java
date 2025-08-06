@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.RemoveAccountingAccountOperation;
+import to.unified.unified_java_sdk.operations.RemoveAccountingAccount;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveAccountingAccountRequestBuilder {
@@ -28,7 +28,7 @@ public class RemoveAccountingAccountRequestBuilder {
     public RemoveAccountingAccountResponse call() throws Exception {
         
         RequestOperation<RemoveAccountingAccountRequest, RemoveAccountingAccountResponse> operation
-              = new RemoveAccountingAccountOperation(sdkConfiguration);
+              = new RemoveAccountingAccount.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

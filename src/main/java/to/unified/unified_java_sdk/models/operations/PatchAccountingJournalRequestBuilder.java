@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.PatchAccountingJournalOperation;
+import to.unified.unified_java_sdk.operations.PatchAccountingJournal;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchAccountingJournalRequestBuilder {
@@ -28,7 +28,7 @@ public class PatchAccountingJournalRequestBuilder {
     public PatchAccountingJournalResponse call() throws Exception {
         
         RequestOperation<PatchAccountingJournalRequest, PatchAccountingJournalResponse> operation
-              = new PatchAccountingJournalOperation(sdkConfiguration);
+              = new PatchAccountingJournal.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

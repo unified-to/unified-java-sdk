@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.RemoveCrmLeadOperation;
+import to.unified.unified_java_sdk.operations.RemoveCrmLead;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveCrmLeadRequestBuilder {
@@ -28,7 +28,7 @@ public class RemoveCrmLeadRequestBuilder {
     public RemoveCrmLeadResponse call() throws Exception {
         
         RequestOperation<RemoveCrmLeadRequest, RemoveCrmLeadResponse> operation
-              = new RemoveCrmLeadOperation(sdkConfiguration);
+              = new RemoveCrmLead.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

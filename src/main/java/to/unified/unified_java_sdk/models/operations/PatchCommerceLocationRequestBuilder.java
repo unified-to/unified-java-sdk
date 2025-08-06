@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.PatchCommerceLocationOperation;
+import to.unified.unified_java_sdk.operations.PatchCommerceLocation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchCommerceLocationRequestBuilder {
@@ -28,7 +28,7 @@ public class PatchCommerceLocationRequestBuilder {
     public PatchCommerceLocationResponse call() throws Exception {
         
         RequestOperation<PatchCommerceLocationRequest, PatchCommerceLocationResponse> operation
-              = new PatchCommerceLocationOperation(sdkConfiguration);
+              = new PatchCommerceLocation.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

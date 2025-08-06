@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.PatchCalendarCalendarOperation;
+import to.unified.unified_java_sdk.operations.PatchCalendarCalendar;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchCalendarCalendarRequestBuilder {
@@ -28,7 +28,7 @@ public class PatchCalendarCalendarRequestBuilder {
     public PatchCalendarCalendarResponse call() throws Exception {
         
         RequestOperation<PatchCalendarCalendarRequest, PatchCalendarCalendarResponse> operation
-              = new PatchCalendarCalendarOperation(sdkConfiguration);
+              = new PatchCalendarCalendar.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

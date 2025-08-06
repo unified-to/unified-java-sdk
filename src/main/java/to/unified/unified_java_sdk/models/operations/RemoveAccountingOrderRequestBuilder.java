@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.RemoveAccountingOrderOperation;
+import to.unified.unified_java_sdk.operations.RemoveAccountingOrder;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveAccountingOrderRequestBuilder {
@@ -28,7 +28,7 @@ public class RemoveAccountingOrderRequestBuilder {
     public RemoveAccountingOrderResponse call() throws Exception {
         
         RequestOperation<RemoveAccountingOrderRequest, RemoveAccountingOrderResponse> operation
-              = new RemoveAccountingOrderOperation(sdkConfiguration);
+              = new RemoveAccountingOrder.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

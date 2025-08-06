@@ -12,8 +12,8 @@ import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationAuthRe
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationLoginRequest;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationLoginRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationLoginResponse;
-import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationAuthOperation;
-import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationLoginOperation;
+import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationAuth;
+import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationLogin;
 
 
 public class Auth {
@@ -45,7 +45,7 @@ public class Auth {
      */
     public GetUnifiedIntegrationAuthResponse getUnifiedIntegrationAuth(GetUnifiedIntegrationAuthRequest request) throws Exception {
         RequestOperation<GetUnifiedIntegrationAuthRequest, GetUnifiedIntegrationAuthResponse> operation
-              = new GetUnifiedIntegrationAuthOperation(sdkConfiguration);
+              = new GetUnifiedIntegrationAuth.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -71,7 +71,7 @@ public class Auth {
      */
     public GetUnifiedIntegrationLoginResponse getUnifiedIntegrationLogin(GetUnifiedIntegrationLoginRequest request) throws Exception {
         RequestOperation<GetUnifiedIntegrationLoginRequest, GetUnifiedIntegrationLoginResponse> operation
-              = new GetUnifiedIntegrationLoginOperation(sdkConfiguration);
+              = new GetUnifiedIntegrationLogin.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

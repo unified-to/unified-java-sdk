@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.PatchUcRecordingOperation;
+import to.unified.unified_java_sdk.operations.PatchUcRecording;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchUcRecordingRequestBuilder {
@@ -28,7 +28,7 @@ public class PatchUcRecordingRequestBuilder {
     public PatchUcRecordingResponse call() throws Exception {
         
         RequestOperation<PatchUcRecordingRequest, PatchUcRecordingResponse> operation
-              = new PatchUcRecordingOperation(sdkConfiguration);
+              = new PatchUcRecording.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.RemoveAtsDocumentOperation;
+import to.unified.unified_java_sdk.operations.RemoveAtsDocument;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveAtsDocumentRequestBuilder {
@@ -28,7 +28,7 @@ public class RemoveAtsDocumentRequestBuilder {
     public RemoveAtsDocumentResponse call() throws Exception {
         
         RequestOperation<RemoveAtsDocumentRequest, RemoveAtsDocumentResponse> operation
-              = new RemoveAtsDocumentOperation(sdkConfiguration);
+              = new RemoveAtsDocument.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

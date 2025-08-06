@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.GetAccountingOrderOperation;
+import to.unified.unified_java_sdk.operations.GetAccountingOrder;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetAccountingOrderRequestBuilder {
@@ -28,7 +28,7 @@ public class GetAccountingOrderRequestBuilder {
     public GetAccountingOrderResponse call() throws Exception {
         
         RequestOperation<GetAccountingOrderRequest, GetAccountingOrderResponse> operation
-              = new GetAccountingOrderOperation(sdkConfiguration);
+              = new GetAccountingOrder.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

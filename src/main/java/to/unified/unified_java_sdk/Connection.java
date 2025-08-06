@@ -23,12 +23,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveUnifiedConnectionResp
 import to.unified.unified_java_sdk.models.operations.UpdateUnifiedConnectionRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateUnifiedConnectionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateUnifiedConnectionResponse;
-import to.unified.unified_java_sdk.operations.CreateUnifiedConnectionOperation;
-import to.unified.unified_java_sdk.operations.GetUnifiedConnectionOperation;
-import to.unified.unified_java_sdk.operations.ListUnifiedConnectionsOperation;
-import to.unified.unified_java_sdk.operations.PatchUnifiedConnectionOperation;
-import to.unified.unified_java_sdk.operations.RemoveUnifiedConnectionOperation;
-import to.unified.unified_java_sdk.operations.UpdateUnifiedConnectionOperation;
+import to.unified.unified_java_sdk.operations.CreateUnifiedConnection;
+import to.unified.unified_java_sdk.operations.GetUnifiedConnection;
+import to.unified.unified_java_sdk.operations.ListUnifiedConnections;
+import to.unified.unified_java_sdk.operations.PatchUnifiedConnection;
+import to.unified.unified_java_sdk.operations.RemoveUnifiedConnection;
+import to.unified.unified_java_sdk.operations.UpdateUnifiedConnection;
 
 
 public class Connection {
@@ -60,7 +60,7 @@ public class Connection {
      */
     public CreateUnifiedConnectionResponse createUnifiedConnection(to.unified.unified_java_sdk.models.shared.Connection request) throws Exception {
         RequestOperation<to.unified.unified_java_sdk.models.shared.Connection, CreateUnifiedConnectionResponse> operation
-              = new CreateUnifiedConnectionOperation(sdkConfiguration);
+              = new CreateUnifiedConnection.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -82,7 +82,7 @@ public class Connection {
      */
     public GetUnifiedConnectionResponse getUnifiedConnection(GetUnifiedConnectionRequest request) throws Exception {
         RequestOperation<GetUnifiedConnectionRequest, GetUnifiedConnectionResponse> operation
-              = new GetUnifiedConnectionOperation(sdkConfiguration);
+              = new GetUnifiedConnection.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -104,7 +104,7 @@ public class Connection {
      */
     public ListUnifiedConnectionsResponse listUnifiedConnections(ListUnifiedConnectionsRequest request) throws Exception {
         RequestOperation<ListUnifiedConnectionsRequest, ListUnifiedConnectionsResponse> operation
-              = new ListUnifiedConnectionsOperation(sdkConfiguration);
+              = new ListUnifiedConnections.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -126,7 +126,7 @@ public class Connection {
      */
     public PatchUnifiedConnectionResponse patchUnifiedConnection(PatchUnifiedConnectionRequest request) throws Exception {
         RequestOperation<PatchUnifiedConnectionRequest, PatchUnifiedConnectionResponse> operation
-              = new PatchUnifiedConnectionOperation(sdkConfiguration);
+              = new PatchUnifiedConnection.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -148,7 +148,7 @@ public class Connection {
      */
     public RemoveUnifiedConnectionResponse removeUnifiedConnection(RemoveUnifiedConnectionRequest request) throws Exception {
         RequestOperation<RemoveUnifiedConnectionRequest, RemoveUnifiedConnectionResponse> operation
-              = new RemoveUnifiedConnectionOperation(sdkConfiguration);
+              = new RemoveUnifiedConnection.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -170,7 +170,7 @@ public class Connection {
      */
     public UpdateUnifiedConnectionResponse updateUnifiedConnection(UpdateUnifiedConnectionRequest request) throws Exception {
         RequestOperation<UpdateUnifiedConnectionRequest, UpdateUnifiedConnectionResponse> operation
-              = new UpdateUnifiedConnectionOperation(sdkConfiguration);
+              = new UpdateUnifiedConnection.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

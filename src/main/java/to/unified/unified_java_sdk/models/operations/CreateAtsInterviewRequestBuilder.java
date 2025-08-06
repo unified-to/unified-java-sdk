@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.CreateAtsInterviewOperation;
+import to.unified.unified_java_sdk.operations.CreateAtsInterview;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateAtsInterviewRequestBuilder {
@@ -28,7 +28,7 @@ public class CreateAtsInterviewRequestBuilder {
     public CreateAtsInterviewResponse call() throws Exception {
         
         RequestOperation<CreateAtsInterviewRequest, CreateAtsInterviewResponse> operation
-              = new CreateAtsInterviewOperation(sdkConfiguration);
+              = new CreateAtsInterview.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

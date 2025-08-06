@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveRepoRepositoryRespons
 import to.unified.unified_java_sdk.models.operations.UpdateRepoRepositoryRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoRepositoryRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoRepositoryResponse;
-import to.unified.unified_java_sdk.operations.CreateRepoRepositoryOperation;
-import to.unified.unified_java_sdk.operations.GetRepoRepositoryOperation;
-import to.unified.unified_java_sdk.operations.ListRepoRepositoriesOperation;
-import to.unified.unified_java_sdk.operations.PatchRepoRepositoryOperation;
-import to.unified.unified_java_sdk.operations.RemoveRepoRepositoryOperation;
-import to.unified.unified_java_sdk.operations.UpdateRepoRepositoryOperation;
+import to.unified.unified_java_sdk.operations.CreateRepoRepository;
+import to.unified.unified_java_sdk.operations.GetRepoRepository;
+import to.unified.unified_java_sdk.operations.ListRepoRepositories;
+import to.unified.unified_java_sdk.operations.PatchRepoRepository;
+import to.unified.unified_java_sdk.operations.RemoveRepoRepository;
+import to.unified.unified_java_sdk.operations.UpdateRepoRepository;
 
 
 public class Repository {
@@ -57,7 +57,7 @@ public class Repository {
      */
     public CreateRepoRepositoryResponse createRepoRepository(CreateRepoRepositoryRequest request) throws Exception {
         RequestOperation<CreateRepoRepositoryRequest, CreateRepoRepositoryResponse> operation
-              = new CreateRepoRepositoryOperation(sdkConfiguration);
+              = new CreateRepoRepository.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Repository {
      */
     public GetRepoRepositoryResponse getRepoRepository(GetRepoRepositoryRequest request) throws Exception {
         RequestOperation<GetRepoRepositoryRequest, GetRepoRepositoryResponse> operation
-              = new GetRepoRepositoryOperation(sdkConfiguration);
+              = new GetRepoRepository.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Repository {
      */
     public ListRepoRepositoriesResponse listRepoRepositories(ListRepoRepositoriesRequest request) throws Exception {
         RequestOperation<ListRepoRepositoriesRequest, ListRepoRepositoriesResponse> operation
-              = new ListRepoRepositoriesOperation(sdkConfiguration);
+              = new ListRepoRepositories.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Repository {
      */
     public PatchRepoRepositoryResponse patchRepoRepository(PatchRepoRepositoryRequest request) throws Exception {
         RequestOperation<PatchRepoRepositoryRequest, PatchRepoRepositoryResponse> operation
-              = new PatchRepoRepositoryOperation(sdkConfiguration);
+              = new PatchRepoRepository.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Repository {
      */
     public RemoveRepoRepositoryResponse removeRepoRepository(RemoveRepoRepositoryRequest request) throws Exception {
         RequestOperation<RemoveRepoRepositoryRequest, RemoveRepoRepositoryResponse> operation
-              = new RemoveRepoRepositoryOperation(sdkConfiguration);
+              = new RemoveRepoRepository.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Repository {
      */
     public UpdateRepoRepositoryResponse updateRepoRepository(UpdateRepoRepositoryRequest request) throws Exception {
         RequestOperation<UpdateRepoRepositoryRequest, UpdateRepoRepositoryResponse> operation
-              = new UpdateRepoRepositoryOperation(sdkConfiguration);
+              = new UpdateRepoRepository.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

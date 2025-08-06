@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveAtsJobResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsJobRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsJobRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsJobResponse;
-import to.unified.unified_java_sdk.operations.CreateAtsJobOperation;
-import to.unified.unified_java_sdk.operations.GetAtsJobOperation;
-import to.unified.unified_java_sdk.operations.ListAtsJobsOperation;
-import to.unified.unified_java_sdk.operations.PatchAtsJobOperation;
-import to.unified.unified_java_sdk.operations.RemoveAtsJobOperation;
-import to.unified.unified_java_sdk.operations.UpdateAtsJobOperation;
+import to.unified.unified_java_sdk.operations.CreateAtsJob;
+import to.unified.unified_java_sdk.operations.GetAtsJob;
+import to.unified.unified_java_sdk.operations.ListAtsJobs;
+import to.unified.unified_java_sdk.operations.PatchAtsJob;
+import to.unified.unified_java_sdk.operations.RemoveAtsJob;
+import to.unified.unified_java_sdk.operations.UpdateAtsJob;
 
 
 public class Job {
@@ -57,7 +57,7 @@ public class Job {
      */
     public CreateAtsJobResponse createAtsJob(CreateAtsJobRequest request) throws Exception {
         RequestOperation<CreateAtsJobRequest, CreateAtsJobResponse> operation
-              = new CreateAtsJobOperation(sdkConfiguration);
+              = new CreateAtsJob.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Job {
      */
     public GetAtsJobResponse getAtsJob(GetAtsJobRequest request) throws Exception {
         RequestOperation<GetAtsJobRequest, GetAtsJobResponse> operation
-              = new GetAtsJobOperation(sdkConfiguration);
+              = new GetAtsJob.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Job {
      */
     public ListAtsJobsResponse listAtsJobs(ListAtsJobsRequest request) throws Exception {
         RequestOperation<ListAtsJobsRequest, ListAtsJobsResponse> operation
-              = new ListAtsJobsOperation(sdkConfiguration);
+              = new ListAtsJobs.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Job {
      */
     public PatchAtsJobResponse patchAtsJob(PatchAtsJobRequest request) throws Exception {
         RequestOperation<PatchAtsJobRequest, PatchAtsJobResponse> operation
-              = new PatchAtsJobOperation(sdkConfiguration);
+              = new PatchAtsJob.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Job {
      */
     public RemoveAtsJobResponse removeAtsJob(RemoveAtsJobRequest request) throws Exception {
         RequestOperation<RemoveAtsJobRequest, RemoveAtsJobResponse> operation
-              = new RemoveAtsJobOperation(sdkConfiguration);
+              = new RemoveAtsJob.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Job {
      */
     public UpdateAtsJobResponse updateAtsJob(UpdateAtsJobRequest request) throws Exception {
         RequestOperation<UpdateAtsJobRequest, UpdateAtsJobResponse> operation
-              = new UpdateAtsJobOperation(sdkConfiguration);
+              = new UpdateAtsJob.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.GetHrisEmployeeOperation;
+import to.unified.unified_java_sdk.operations.GetHrisEmployee;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetHrisEmployeeRequestBuilder {
@@ -28,7 +28,7 @@ public class GetHrisEmployeeRequestBuilder {
     public GetHrisEmployeeResponse call() throws Exception {
         
         RequestOperation<GetHrisEmployeeRequest, GetHrisEmployeeResponse> operation
-              = new GetHrisEmployeeOperation(sdkConfiguration);
+              = new GetHrisEmployee.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

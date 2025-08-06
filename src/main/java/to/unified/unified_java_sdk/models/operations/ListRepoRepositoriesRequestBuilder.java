@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.ListRepoRepositoriesOperation;
+import to.unified.unified_java_sdk.operations.ListRepoRepositories;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListRepoRepositoriesRequestBuilder {
@@ -28,7 +28,7 @@ public class ListRepoRepositoriesRequestBuilder {
     public ListRepoRepositoriesResponse call() throws Exception {
         
         RequestOperation<ListRepoRepositoriesRequest, ListRepoRepositoriesResponse> operation
-              = new ListRepoRepositoriesOperation(sdkConfiguration);
+              = new ListRepoRepositories.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

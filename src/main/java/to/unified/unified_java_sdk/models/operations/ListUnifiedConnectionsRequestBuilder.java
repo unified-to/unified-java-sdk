@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.ListUnifiedConnectionsOperation;
+import to.unified.unified_java_sdk.operations.ListUnifiedConnections;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListUnifiedConnectionsRequestBuilder {
@@ -28,7 +28,7 @@ public class ListUnifiedConnectionsRequestBuilder {
     public ListUnifiedConnectionsResponse call() throws Exception {
         
         RequestOperation<ListUnifiedConnectionsRequest, ListUnifiedConnectionsResponse> operation
-              = new ListUnifiedConnectionsOperation(sdkConfiguration);
+              = new ListUnifiedConnections.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

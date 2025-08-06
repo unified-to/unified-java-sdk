@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveScimUsersResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateScimUsersRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateScimUsersRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateScimUsersResponse;
-import to.unified.unified_java_sdk.operations.CreateScimUsersOperation;
-import to.unified.unified_java_sdk.operations.GetScimUsersOperation;
-import to.unified.unified_java_sdk.operations.ListScimUsersOperation;
-import to.unified.unified_java_sdk.operations.PatchScimUsersOperation;
-import to.unified.unified_java_sdk.operations.RemoveScimUsersOperation;
-import to.unified.unified_java_sdk.operations.UpdateScimUsersOperation;
+import to.unified.unified_java_sdk.operations.CreateScimUsers;
+import to.unified.unified_java_sdk.operations.GetScimUsers;
+import to.unified.unified_java_sdk.operations.ListScimUsers;
+import to.unified.unified_java_sdk.operations.PatchScimUsers;
+import to.unified.unified_java_sdk.operations.RemoveScimUsers;
+import to.unified.unified_java_sdk.operations.UpdateScimUsers;
 
 
 public class User {
@@ -57,7 +57,7 @@ public class User {
      */
     public CreateScimUsersResponse createScimUsers(CreateScimUsersRequest request) throws Exception {
         RequestOperation<CreateScimUsersRequest, CreateScimUsersResponse> operation
-              = new CreateScimUsersOperation(sdkConfiguration);
+              = new CreateScimUsers.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class User {
      */
     public GetScimUsersResponse getScimUsers(GetScimUsersRequest request) throws Exception {
         RequestOperation<GetScimUsersRequest, GetScimUsersResponse> operation
-              = new GetScimUsersOperation(sdkConfiguration);
+              = new GetScimUsers.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class User {
      */
     public ListScimUsersResponse listScimUsers(ListScimUsersRequest request) throws Exception {
         RequestOperation<ListScimUsersRequest, ListScimUsersResponse> operation
-              = new ListScimUsersOperation(sdkConfiguration);
+              = new ListScimUsers.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class User {
      */
     public PatchScimUsersResponse patchScimUsers(PatchScimUsersRequest request) throws Exception {
         RequestOperation<PatchScimUsersRequest, PatchScimUsersResponse> operation
-              = new PatchScimUsersOperation(sdkConfiguration);
+              = new PatchScimUsers.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class User {
      */
     public RemoveScimUsersResponse removeScimUsers(RemoveScimUsersRequest request) throws Exception {
         RequestOperation<RemoveScimUsersRequest, RemoveScimUsersResponse> operation
-              = new RemoveScimUsersOperation(sdkConfiguration);
+              = new RemoveScimUsers.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class User {
      */
     public UpdateScimUsersResponse updateScimUsers(UpdateScimUsersRequest request) throws Exception {
         RequestOperation<UpdateScimUsersRequest, UpdateScimUsersResponse> operation
-              = new UpdateScimUsersOperation(sdkConfiguration);
+              = new UpdateScimUsers.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

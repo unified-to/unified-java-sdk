@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveAccountingSalesorderR
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingSalesorderRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingSalesorderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingSalesorderResponse;
-import to.unified.unified_java_sdk.operations.CreateAccountingSalesorderOperation;
-import to.unified.unified_java_sdk.operations.GetAccountingSalesorderOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingSalesordersOperation;
-import to.unified.unified_java_sdk.operations.PatchAccountingSalesorderOperation;
-import to.unified.unified_java_sdk.operations.RemoveAccountingSalesorderOperation;
-import to.unified.unified_java_sdk.operations.UpdateAccountingSalesorderOperation;
+import to.unified.unified_java_sdk.operations.CreateAccountingSalesorder;
+import to.unified.unified_java_sdk.operations.GetAccountingSalesorder;
+import to.unified.unified_java_sdk.operations.ListAccountingSalesorders;
+import to.unified.unified_java_sdk.operations.PatchAccountingSalesorder;
+import to.unified.unified_java_sdk.operations.RemoveAccountingSalesorder;
+import to.unified.unified_java_sdk.operations.UpdateAccountingSalesorder;
 
 
 public class Salesorder {
@@ -57,7 +57,7 @@ public class Salesorder {
      */
     public CreateAccountingSalesorderResponse createAccountingSalesorder(CreateAccountingSalesorderRequest request) throws Exception {
         RequestOperation<CreateAccountingSalesorderRequest, CreateAccountingSalesorderResponse> operation
-              = new CreateAccountingSalesorderOperation(sdkConfiguration);
+              = new CreateAccountingSalesorder.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Salesorder {
      */
     public GetAccountingSalesorderResponse getAccountingSalesorder(GetAccountingSalesorderRequest request) throws Exception {
         RequestOperation<GetAccountingSalesorderRequest, GetAccountingSalesorderResponse> operation
-              = new GetAccountingSalesorderOperation(sdkConfiguration);
+              = new GetAccountingSalesorder.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Salesorder {
      */
     public ListAccountingSalesordersResponse listAccountingSalesorders(ListAccountingSalesordersRequest request) throws Exception {
         RequestOperation<ListAccountingSalesordersRequest, ListAccountingSalesordersResponse> operation
-              = new ListAccountingSalesordersOperation(sdkConfiguration);
+              = new ListAccountingSalesorders.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Salesorder {
      */
     public PatchAccountingSalesorderResponse patchAccountingSalesorder(PatchAccountingSalesorderRequest request) throws Exception {
         RequestOperation<PatchAccountingSalesorderRequest, PatchAccountingSalesorderResponse> operation
-              = new PatchAccountingSalesorderOperation(sdkConfiguration);
+              = new PatchAccountingSalesorder.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Salesorder {
      */
     public RemoveAccountingSalesorderResponse removeAccountingSalesorder(RemoveAccountingSalesorderRequest request) throws Exception {
         RequestOperation<RemoveAccountingSalesorderRequest, RemoveAccountingSalesorderResponse> operation
-              = new RemoveAccountingSalesorderOperation(sdkConfiguration);
+              = new RemoveAccountingSalesorder.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Salesorder {
      */
     public UpdateAccountingSalesorderResponse updateAccountingSalesorder(UpdateAccountingSalesorderRequest request) throws Exception {
         RequestOperation<UpdateAccountingSalesorderRequest, UpdateAccountingSalesorderResponse> operation
-              = new UpdateAccountingSalesorderOperation(sdkConfiguration);
+              = new UpdateAccountingSalesorder.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

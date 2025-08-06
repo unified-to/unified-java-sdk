@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.PatchUnifiedWebhookTriggerOperation;
+import to.unified.unified_java_sdk.operations.PatchUnifiedWebhookTrigger;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchUnifiedWebhookTriggerRequestBuilder {
@@ -28,7 +28,7 @@ public class PatchUnifiedWebhookTriggerRequestBuilder {
     public PatchUnifiedWebhookTriggerResponse call() throws Exception {
         
         RequestOperation<PatchUnifiedWebhookTriggerRequest, PatchUnifiedWebhookTriggerResponse> operation
-              = new PatchUnifiedWebhookTriggerOperation(sdkConfiguration);
+              = new PatchUnifiedWebhookTrigger.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.GetAccountingCreditmemoOperation;
+import to.unified.unified_java_sdk.operations.GetAccountingCreditmemo;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetAccountingCreditmemoRequestBuilder {
@@ -28,7 +28,7 @@ public class GetAccountingCreditmemoRequestBuilder {
     public GetAccountingCreditmemoResponse call() throws Exception {
         
         RequestOperation<GetAccountingCreditmemoRequest, GetAccountingCreditmemoResponse> operation
-              = new GetAccountingCreditmemoOperation(sdkConfiguration);
+              = new GetAccountingCreditmemo.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -30,14 +30,14 @@ import to.unified.unified_java_sdk.models.operations.RemoveUcRecordingResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateUcRecordingRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateUcRecordingRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateUcRecordingResponse;
-import to.unified.unified_java_sdk.operations.CreateUcRecordingOperation;
-import to.unified.unified_java_sdk.operations.GetCalendarRecordingOperation;
-import to.unified.unified_java_sdk.operations.GetUcRecordingOperation;
-import to.unified.unified_java_sdk.operations.ListCalendarRecordingsOperation;
-import to.unified.unified_java_sdk.operations.ListUcRecordingsOperation;
-import to.unified.unified_java_sdk.operations.PatchUcRecordingOperation;
-import to.unified.unified_java_sdk.operations.RemoveUcRecordingOperation;
-import to.unified.unified_java_sdk.operations.UpdateUcRecordingOperation;
+import to.unified.unified_java_sdk.operations.CreateUcRecording;
+import to.unified.unified_java_sdk.operations.GetCalendarRecording;
+import to.unified.unified_java_sdk.operations.GetUcRecording;
+import to.unified.unified_java_sdk.operations.ListCalendarRecordings;
+import to.unified.unified_java_sdk.operations.ListUcRecordings;
+import to.unified.unified_java_sdk.operations.PatchUcRecording;
+import to.unified.unified_java_sdk.operations.RemoveUcRecording;
+import to.unified.unified_java_sdk.operations.UpdateUcRecording;
 
 
 public class Recording {
@@ -65,7 +65,7 @@ public class Recording {
      */
     public CreateUcRecordingResponse createUcRecording(CreateUcRecordingRequest request) throws Exception {
         RequestOperation<CreateUcRecordingRequest, CreateUcRecordingResponse> operation
-              = new CreateUcRecordingOperation(sdkConfiguration);
+              = new CreateUcRecording.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -87,7 +87,7 @@ public class Recording {
      */
     public GetCalendarRecordingResponse getCalendarRecording(GetCalendarRecordingRequest request) throws Exception {
         RequestOperation<GetCalendarRecordingRequest, GetCalendarRecordingResponse> operation
-              = new GetCalendarRecordingOperation(sdkConfiguration);
+              = new GetCalendarRecording.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -109,7 +109,7 @@ public class Recording {
      */
     public GetUcRecordingResponse getUcRecording(GetUcRecordingRequest request) throws Exception {
         RequestOperation<GetUcRecordingRequest, GetUcRecordingResponse> operation
-              = new GetUcRecordingOperation(sdkConfiguration);
+              = new GetUcRecording.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -131,7 +131,7 @@ public class Recording {
      */
     public ListCalendarRecordingsResponse listCalendarRecordings(ListCalendarRecordingsRequest request) throws Exception {
         RequestOperation<ListCalendarRecordingsRequest, ListCalendarRecordingsResponse> operation
-              = new ListCalendarRecordingsOperation(sdkConfiguration);
+              = new ListCalendarRecordings.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -153,7 +153,7 @@ public class Recording {
      */
     public ListUcRecordingsResponse listUcRecordings(ListUcRecordingsRequest request) throws Exception {
         RequestOperation<ListUcRecordingsRequest, ListUcRecordingsResponse> operation
-              = new ListUcRecordingsOperation(sdkConfiguration);
+              = new ListUcRecordings.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -175,7 +175,7 @@ public class Recording {
      */
     public PatchUcRecordingResponse patchUcRecording(PatchUcRecordingRequest request) throws Exception {
         RequestOperation<PatchUcRecordingRequest, PatchUcRecordingResponse> operation
-              = new PatchUcRecordingOperation(sdkConfiguration);
+              = new PatchUcRecording.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -197,7 +197,7 @@ public class Recording {
      */
     public RemoveUcRecordingResponse removeUcRecording(RemoveUcRecordingRequest request) throws Exception {
         RequestOperation<RemoveUcRecordingRequest, RemoveUcRecordingResponse> operation
-              = new RemoveUcRecordingOperation(sdkConfiguration);
+              = new RemoveUcRecording.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -219,7 +219,7 @@ public class Recording {
      */
     public UpdateUcRecordingResponse updateUcRecording(UpdateUcRecordingRequest request) throws Exception {
         RequestOperation<UpdateUcRecordingRequest, UpdateUcRecordingResponse> operation
-              = new UpdateUcRecordingOperation(sdkConfiguration);
+              = new UpdateUcRecording.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

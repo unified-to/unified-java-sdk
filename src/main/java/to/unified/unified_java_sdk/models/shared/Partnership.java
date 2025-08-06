@@ -6,9 +6,14 @@ package to.unified.unified_java_sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import java.lang.Boolean;
+import java.lang.Double;
+import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.utils.OneOfDeserializer;
 import to.unified.unified_java_sdk.utils.TypedObject;
 import to.unified.unified_java_sdk.utils.Utils.JsonShape;
@@ -25,39 +30,39 @@ public class Partnership {
         this.value = value;
     }
 
-    public static Partnership of(IntegrationSchemas1 value) {
+    public static Partnership of(Map<String, Object> value) {
         Utils.checkNotNull(value, "value");
-        return new Partnership(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<IntegrationSchemas1>(){}));
+        return new Partnership(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<Map<String, Object>>(){}));
     }
 
-    public static Partnership of(IntegrationSchemas2 value) {
+    public static Partnership of(String value) {
         Utils.checkNotNull(value, "value");
-        return new Partnership(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<IntegrationSchemas2>(){}));
+        return new Partnership(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<String>(){}));
     }
 
-    public static Partnership of(IntegrationSchemas3 value) {
+    public static Partnership of(double value) {
         Utils.checkNotNull(value, "value");
-        return new Partnership(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<IntegrationSchemas3>(){}));
+        return new Partnership(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Double>(){}));
     }
 
-    public static Partnership of(IntegrationSchemas4 value) {
+    public static Partnership of(boolean value) {
         Utils.checkNotNull(value, "value");
-        return new Partnership(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<IntegrationSchemas4>(){}));
+        return new Partnership(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Boolean>(){}));
     }
 
-    public static Partnership of(IntegrationSchemas5 value) {
+    public static Partnership of(List<IntegrationSchemas5> value) {
         Utils.checkNotNull(value, "value");
-        return new Partnership(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<IntegrationSchemas5>(){}));
+        return new Partnership(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<List<IntegrationSchemas5>>(){}));
     }
     
     /**
      * Returns an instance of one of these types:
      * <ul>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.IntegrationSchemas1}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.IntegrationSchemas2}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.IntegrationSchemas3}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.IntegrationSchemas4}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.IntegrationSchemas5}</li>
+     * <li>{@code java.util.Map<java.lang.String, java.lang.Object>}</li>
+     * <li>{@code java.lang.String}</li>
+     * <li>{@code double}</li>
+     * <li>{@code boolean}</li>
+     * <li>{@code java.util.List<to.unified.unified_java_sdk.models.shared.IntegrationSchemas5>}</li>
      * </ul>
      * 
      * <p>Use {@code instanceof} to determine what type is returned. For example:
@@ -97,11 +102,11 @@ public class Partnership {
 
         public _Deserializer() {
             super(Partnership.class, false,
-                  TypeReferenceWithShape.of(new TypeReference<IntegrationSchemas5>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<IntegrationSchemas4>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<IntegrationSchemas3>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<IntegrationSchemas2>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<IntegrationSchemas1>() {}, JsonShape.DEFAULT));
+                  TypeReferenceWithShape.of(new TypeReference<List<IntegrationSchemas5>>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<Boolean>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<Double>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<String>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<Map<String, Object>>() {}, JsonShape.DEFAULT));
         }
     }
     

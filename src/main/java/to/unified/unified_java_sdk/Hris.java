@@ -126,46 +126,46 @@ import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftResponse;
-import to.unified.unified_java_sdk.operations.CreateHrisCompanyOperation;
-import to.unified.unified_java_sdk.operations.CreateHrisDeviceOperation;
-import to.unified.unified_java_sdk.operations.CreateHrisEmployeeOperation;
-import to.unified.unified_java_sdk.operations.CreateHrisGroupOperation;
-import to.unified.unified_java_sdk.operations.CreateHrisLocationOperation;
-import to.unified.unified_java_sdk.operations.CreateHrisTimeshiftOperation;
-import to.unified.unified_java_sdk.operations.GetHrisCompanyOperation;
-import to.unified.unified_java_sdk.operations.GetHrisDeviceOperation;
-import to.unified.unified_java_sdk.operations.GetHrisEmployeeOperation;
-import to.unified.unified_java_sdk.operations.GetHrisGroupOperation;
-import to.unified.unified_java_sdk.operations.GetHrisLocationOperation;
-import to.unified.unified_java_sdk.operations.GetHrisPayslipOperation;
-import to.unified.unified_java_sdk.operations.GetHrisTimeoffOperation;
-import to.unified.unified_java_sdk.operations.GetHrisTimeshiftOperation;
-import to.unified.unified_java_sdk.operations.ListHrisCompaniesOperation;
-import to.unified.unified_java_sdk.operations.ListHrisDevicesOperation;
-import to.unified.unified_java_sdk.operations.ListHrisEmployeesOperation;
-import to.unified.unified_java_sdk.operations.ListHrisGroupsOperation;
-import to.unified.unified_java_sdk.operations.ListHrisLocationsOperation;
-import to.unified.unified_java_sdk.operations.ListHrisPayslipsOperation;
-import to.unified.unified_java_sdk.operations.ListHrisTimeoffsOperation;
-import to.unified.unified_java_sdk.operations.ListHrisTimeshiftsOperation;
-import to.unified.unified_java_sdk.operations.PatchHrisCompanyOperation;
-import to.unified.unified_java_sdk.operations.PatchHrisDeviceOperation;
-import to.unified.unified_java_sdk.operations.PatchHrisEmployeeOperation;
-import to.unified.unified_java_sdk.operations.PatchHrisGroupOperation;
-import to.unified.unified_java_sdk.operations.PatchHrisLocationOperation;
-import to.unified.unified_java_sdk.operations.PatchHrisTimeshiftOperation;
-import to.unified.unified_java_sdk.operations.RemoveHrisCompanyOperation;
-import to.unified.unified_java_sdk.operations.RemoveHrisDeviceOperation;
-import to.unified.unified_java_sdk.operations.RemoveHrisEmployeeOperation;
-import to.unified.unified_java_sdk.operations.RemoveHrisGroupOperation;
-import to.unified.unified_java_sdk.operations.RemoveHrisLocationOperation;
-import to.unified.unified_java_sdk.operations.RemoveHrisTimeshiftOperation;
-import to.unified.unified_java_sdk.operations.UpdateHrisCompanyOperation;
-import to.unified.unified_java_sdk.operations.UpdateHrisDeviceOperation;
-import to.unified.unified_java_sdk.operations.UpdateHrisEmployeeOperation;
-import to.unified.unified_java_sdk.operations.UpdateHrisGroupOperation;
-import to.unified.unified_java_sdk.operations.UpdateHrisLocationOperation;
-import to.unified.unified_java_sdk.operations.UpdateHrisTimeshiftOperation;
+import to.unified.unified_java_sdk.operations.CreateHrisCompany;
+import to.unified.unified_java_sdk.operations.CreateHrisDevice;
+import to.unified.unified_java_sdk.operations.CreateHrisEmployee;
+import to.unified.unified_java_sdk.operations.CreateHrisGroup;
+import to.unified.unified_java_sdk.operations.CreateHrisLocation;
+import to.unified.unified_java_sdk.operations.CreateHrisTimeshift;
+import to.unified.unified_java_sdk.operations.GetHrisCompany;
+import to.unified.unified_java_sdk.operations.GetHrisDevice;
+import to.unified.unified_java_sdk.operations.GetHrisEmployee;
+import to.unified.unified_java_sdk.operations.GetHrisGroup;
+import to.unified.unified_java_sdk.operations.GetHrisLocation;
+import to.unified.unified_java_sdk.operations.GetHrisPayslip;
+import to.unified.unified_java_sdk.operations.GetHrisTimeoff;
+import to.unified.unified_java_sdk.operations.GetHrisTimeshift;
+import to.unified.unified_java_sdk.operations.ListHrisCompanies;
+import to.unified.unified_java_sdk.operations.ListHrisDevices;
+import to.unified.unified_java_sdk.operations.ListHrisEmployees;
+import to.unified.unified_java_sdk.operations.ListHrisGroups;
+import to.unified.unified_java_sdk.operations.ListHrisLocations;
+import to.unified.unified_java_sdk.operations.ListHrisPayslips;
+import to.unified.unified_java_sdk.operations.ListHrisTimeoffs;
+import to.unified.unified_java_sdk.operations.ListHrisTimeshifts;
+import to.unified.unified_java_sdk.operations.PatchHrisCompany;
+import to.unified.unified_java_sdk.operations.PatchHrisDevice;
+import to.unified.unified_java_sdk.operations.PatchHrisEmployee;
+import to.unified.unified_java_sdk.operations.PatchHrisGroup;
+import to.unified.unified_java_sdk.operations.PatchHrisLocation;
+import to.unified.unified_java_sdk.operations.PatchHrisTimeshift;
+import to.unified.unified_java_sdk.operations.RemoveHrisCompany;
+import to.unified.unified_java_sdk.operations.RemoveHrisDevice;
+import to.unified.unified_java_sdk.operations.RemoveHrisEmployee;
+import to.unified.unified_java_sdk.operations.RemoveHrisGroup;
+import to.unified.unified_java_sdk.operations.RemoveHrisLocation;
+import to.unified.unified_java_sdk.operations.RemoveHrisTimeshift;
+import to.unified.unified_java_sdk.operations.UpdateHrisCompany;
+import to.unified.unified_java_sdk.operations.UpdateHrisDevice;
+import to.unified.unified_java_sdk.operations.UpdateHrisEmployee;
+import to.unified.unified_java_sdk.operations.UpdateHrisGroup;
+import to.unified.unified_java_sdk.operations.UpdateHrisLocation;
+import to.unified.unified_java_sdk.operations.UpdateHrisTimeshift;
 
 
 public class Hris {
@@ -193,7 +193,7 @@ public class Hris {
      */
     public CreateHrisCompanyResponse createHrisCompany(CreateHrisCompanyRequest request) throws Exception {
         RequestOperation<CreateHrisCompanyRequest, CreateHrisCompanyResponse> operation
-              = new CreateHrisCompanyOperation(sdkConfiguration);
+              = new CreateHrisCompany.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -215,7 +215,7 @@ public class Hris {
      */
     public CreateHrisDeviceResponse createHrisDevice(CreateHrisDeviceRequest request) throws Exception {
         RequestOperation<CreateHrisDeviceRequest, CreateHrisDeviceResponse> operation
-              = new CreateHrisDeviceOperation(sdkConfiguration);
+              = new CreateHrisDevice.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -237,7 +237,7 @@ public class Hris {
      */
     public CreateHrisEmployeeResponse createHrisEmployee(CreateHrisEmployeeRequest request) throws Exception {
         RequestOperation<CreateHrisEmployeeRequest, CreateHrisEmployeeResponse> operation
-              = new CreateHrisEmployeeOperation(sdkConfiguration);
+              = new CreateHrisEmployee.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -259,7 +259,7 @@ public class Hris {
      */
     public CreateHrisGroupResponse createHrisGroup(CreateHrisGroupRequest request) throws Exception {
         RequestOperation<CreateHrisGroupRequest, CreateHrisGroupResponse> operation
-              = new CreateHrisGroupOperation(sdkConfiguration);
+              = new CreateHrisGroup.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -281,7 +281,7 @@ public class Hris {
      */
     public CreateHrisLocationResponse createHrisLocation(CreateHrisLocationRequest request) throws Exception {
         RequestOperation<CreateHrisLocationRequest, CreateHrisLocationResponse> operation
-              = new CreateHrisLocationOperation(sdkConfiguration);
+              = new CreateHrisLocation.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -303,7 +303,7 @@ public class Hris {
      */
     public CreateHrisTimeshiftResponse createHrisTimeshift(CreateHrisTimeshiftRequest request) throws Exception {
         RequestOperation<CreateHrisTimeshiftRequest, CreateHrisTimeshiftResponse> operation
-              = new CreateHrisTimeshiftOperation(sdkConfiguration);
+              = new CreateHrisTimeshift.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -325,7 +325,7 @@ public class Hris {
      */
     public GetHrisCompanyResponse getHrisCompany(GetHrisCompanyRequest request) throws Exception {
         RequestOperation<GetHrisCompanyRequest, GetHrisCompanyResponse> operation
-              = new GetHrisCompanyOperation(sdkConfiguration);
+              = new GetHrisCompany.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -347,7 +347,7 @@ public class Hris {
      */
     public GetHrisDeviceResponse getHrisDevice(GetHrisDeviceRequest request) throws Exception {
         RequestOperation<GetHrisDeviceRequest, GetHrisDeviceResponse> operation
-              = new GetHrisDeviceOperation(sdkConfiguration);
+              = new GetHrisDevice.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -369,7 +369,7 @@ public class Hris {
      */
     public GetHrisEmployeeResponse getHrisEmployee(GetHrisEmployeeRequest request) throws Exception {
         RequestOperation<GetHrisEmployeeRequest, GetHrisEmployeeResponse> operation
-              = new GetHrisEmployeeOperation(sdkConfiguration);
+              = new GetHrisEmployee.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -391,7 +391,7 @@ public class Hris {
      */
     public GetHrisGroupResponse getHrisGroup(GetHrisGroupRequest request) throws Exception {
         RequestOperation<GetHrisGroupRequest, GetHrisGroupResponse> operation
-              = new GetHrisGroupOperation(sdkConfiguration);
+              = new GetHrisGroup.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -413,7 +413,7 @@ public class Hris {
      */
     public GetHrisLocationResponse getHrisLocation(GetHrisLocationRequest request) throws Exception {
         RequestOperation<GetHrisLocationRequest, GetHrisLocationResponse> operation
-              = new GetHrisLocationOperation(sdkConfiguration);
+              = new GetHrisLocation.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -435,7 +435,7 @@ public class Hris {
      */
     public GetHrisPayslipResponse getHrisPayslip(GetHrisPayslipRequest request) throws Exception {
         RequestOperation<GetHrisPayslipRequest, GetHrisPayslipResponse> operation
-              = new GetHrisPayslipOperation(sdkConfiguration);
+              = new GetHrisPayslip.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -457,7 +457,7 @@ public class Hris {
      */
     public GetHrisTimeoffResponse getHrisTimeoff(GetHrisTimeoffRequest request) throws Exception {
         RequestOperation<GetHrisTimeoffRequest, GetHrisTimeoffResponse> operation
-              = new GetHrisTimeoffOperation(sdkConfiguration);
+              = new GetHrisTimeoff.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -479,7 +479,7 @@ public class Hris {
      */
     public GetHrisTimeshiftResponse getHrisTimeshift(GetHrisTimeshiftRequest request) throws Exception {
         RequestOperation<GetHrisTimeshiftRequest, GetHrisTimeshiftResponse> operation
-              = new GetHrisTimeshiftOperation(sdkConfiguration);
+              = new GetHrisTimeshift.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -501,7 +501,7 @@ public class Hris {
      */
     public ListHrisCompaniesResponse listHrisCompanies(ListHrisCompaniesRequest request) throws Exception {
         RequestOperation<ListHrisCompaniesRequest, ListHrisCompaniesResponse> operation
-              = new ListHrisCompaniesOperation(sdkConfiguration);
+              = new ListHrisCompanies.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -523,7 +523,7 @@ public class Hris {
      */
     public ListHrisDevicesResponse listHrisDevices(ListHrisDevicesRequest request) throws Exception {
         RequestOperation<ListHrisDevicesRequest, ListHrisDevicesResponse> operation
-              = new ListHrisDevicesOperation(sdkConfiguration);
+              = new ListHrisDevices.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -545,7 +545,7 @@ public class Hris {
      */
     public ListHrisEmployeesResponse listHrisEmployees(ListHrisEmployeesRequest request) throws Exception {
         RequestOperation<ListHrisEmployeesRequest, ListHrisEmployeesResponse> operation
-              = new ListHrisEmployeesOperation(sdkConfiguration);
+              = new ListHrisEmployees.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -567,7 +567,7 @@ public class Hris {
      */
     public ListHrisGroupsResponse listHrisGroups(ListHrisGroupsRequest request) throws Exception {
         RequestOperation<ListHrisGroupsRequest, ListHrisGroupsResponse> operation
-              = new ListHrisGroupsOperation(sdkConfiguration);
+              = new ListHrisGroups.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -589,7 +589,7 @@ public class Hris {
      */
     public ListHrisLocationsResponse listHrisLocations(ListHrisLocationsRequest request) throws Exception {
         RequestOperation<ListHrisLocationsRequest, ListHrisLocationsResponse> operation
-              = new ListHrisLocationsOperation(sdkConfiguration);
+              = new ListHrisLocations.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -611,7 +611,7 @@ public class Hris {
      */
     public ListHrisPayslipsResponse listHrisPayslips(ListHrisPayslipsRequest request) throws Exception {
         RequestOperation<ListHrisPayslipsRequest, ListHrisPayslipsResponse> operation
-              = new ListHrisPayslipsOperation(sdkConfiguration);
+              = new ListHrisPayslips.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -633,7 +633,7 @@ public class Hris {
      */
     public ListHrisTimeoffsResponse listHrisTimeoffs(ListHrisTimeoffsRequest request) throws Exception {
         RequestOperation<ListHrisTimeoffsRequest, ListHrisTimeoffsResponse> operation
-              = new ListHrisTimeoffsOperation(sdkConfiguration);
+              = new ListHrisTimeoffs.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -655,7 +655,7 @@ public class Hris {
      */
     public ListHrisTimeshiftsResponse listHrisTimeshifts(ListHrisTimeshiftsRequest request) throws Exception {
         RequestOperation<ListHrisTimeshiftsRequest, ListHrisTimeshiftsResponse> operation
-              = new ListHrisTimeshiftsOperation(sdkConfiguration);
+              = new ListHrisTimeshifts.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -677,7 +677,7 @@ public class Hris {
      */
     public PatchHrisCompanyResponse patchHrisCompany(PatchHrisCompanyRequest request) throws Exception {
         RequestOperation<PatchHrisCompanyRequest, PatchHrisCompanyResponse> operation
-              = new PatchHrisCompanyOperation(sdkConfiguration);
+              = new PatchHrisCompany.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -699,7 +699,7 @@ public class Hris {
      */
     public PatchHrisDeviceResponse patchHrisDevice(PatchHrisDeviceRequest request) throws Exception {
         RequestOperation<PatchHrisDeviceRequest, PatchHrisDeviceResponse> operation
-              = new PatchHrisDeviceOperation(sdkConfiguration);
+              = new PatchHrisDevice.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -721,7 +721,7 @@ public class Hris {
      */
     public PatchHrisEmployeeResponse patchHrisEmployee(PatchHrisEmployeeRequest request) throws Exception {
         RequestOperation<PatchHrisEmployeeRequest, PatchHrisEmployeeResponse> operation
-              = new PatchHrisEmployeeOperation(sdkConfiguration);
+              = new PatchHrisEmployee.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -743,7 +743,7 @@ public class Hris {
      */
     public PatchHrisGroupResponse patchHrisGroup(PatchHrisGroupRequest request) throws Exception {
         RequestOperation<PatchHrisGroupRequest, PatchHrisGroupResponse> operation
-              = new PatchHrisGroupOperation(sdkConfiguration);
+              = new PatchHrisGroup.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -765,7 +765,7 @@ public class Hris {
      */
     public PatchHrisLocationResponse patchHrisLocation(PatchHrisLocationRequest request) throws Exception {
         RequestOperation<PatchHrisLocationRequest, PatchHrisLocationResponse> operation
-              = new PatchHrisLocationOperation(sdkConfiguration);
+              = new PatchHrisLocation.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -787,7 +787,7 @@ public class Hris {
      */
     public PatchHrisTimeshiftResponse patchHrisTimeshift(PatchHrisTimeshiftRequest request) throws Exception {
         RequestOperation<PatchHrisTimeshiftRequest, PatchHrisTimeshiftResponse> operation
-              = new PatchHrisTimeshiftOperation(sdkConfiguration);
+              = new PatchHrisTimeshift.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -809,7 +809,7 @@ public class Hris {
      */
     public RemoveHrisCompanyResponse removeHrisCompany(RemoveHrisCompanyRequest request) throws Exception {
         RequestOperation<RemoveHrisCompanyRequest, RemoveHrisCompanyResponse> operation
-              = new RemoveHrisCompanyOperation(sdkConfiguration);
+              = new RemoveHrisCompany.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -831,7 +831,7 @@ public class Hris {
      */
     public RemoveHrisDeviceResponse removeHrisDevice(RemoveHrisDeviceRequest request) throws Exception {
         RequestOperation<RemoveHrisDeviceRequest, RemoveHrisDeviceResponse> operation
-              = new RemoveHrisDeviceOperation(sdkConfiguration);
+              = new RemoveHrisDevice.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -853,7 +853,7 @@ public class Hris {
      */
     public RemoveHrisEmployeeResponse removeHrisEmployee(RemoveHrisEmployeeRequest request) throws Exception {
         RequestOperation<RemoveHrisEmployeeRequest, RemoveHrisEmployeeResponse> operation
-              = new RemoveHrisEmployeeOperation(sdkConfiguration);
+              = new RemoveHrisEmployee.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -875,7 +875,7 @@ public class Hris {
      */
     public RemoveHrisGroupResponse removeHrisGroup(RemoveHrisGroupRequest request) throws Exception {
         RequestOperation<RemoveHrisGroupRequest, RemoveHrisGroupResponse> operation
-              = new RemoveHrisGroupOperation(sdkConfiguration);
+              = new RemoveHrisGroup.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -897,7 +897,7 @@ public class Hris {
      */
     public RemoveHrisLocationResponse removeHrisLocation(RemoveHrisLocationRequest request) throws Exception {
         RequestOperation<RemoveHrisLocationRequest, RemoveHrisLocationResponse> operation
-              = new RemoveHrisLocationOperation(sdkConfiguration);
+              = new RemoveHrisLocation.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -919,7 +919,7 @@ public class Hris {
      */
     public RemoveHrisTimeshiftResponse removeHrisTimeshift(RemoveHrisTimeshiftRequest request) throws Exception {
         RequestOperation<RemoveHrisTimeshiftRequest, RemoveHrisTimeshiftResponse> operation
-              = new RemoveHrisTimeshiftOperation(sdkConfiguration);
+              = new RemoveHrisTimeshift.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -941,7 +941,7 @@ public class Hris {
      */
     public UpdateHrisCompanyResponse updateHrisCompany(UpdateHrisCompanyRequest request) throws Exception {
         RequestOperation<UpdateHrisCompanyRequest, UpdateHrisCompanyResponse> operation
-              = new UpdateHrisCompanyOperation(sdkConfiguration);
+              = new UpdateHrisCompany.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -963,7 +963,7 @@ public class Hris {
      */
     public UpdateHrisDeviceResponse updateHrisDevice(UpdateHrisDeviceRequest request) throws Exception {
         RequestOperation<UpdateHrisDeviceRequest, UpdateHrisDeviceResponse> operation
-              = new UpdateHrisDeviceOperation(sdkConfiguration);
+              = new UpdateHrisDevice.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -985,7 +985,7 @@ public class Hris {
      */
     public UpdateHrisEmployeeResponse updateHrisEmployee(UpdateHrisEmployeeRequest request) throws Exception {
         RequestOperation<UpdateHrisEmployeeRequest, UpdateHrisEmployeeResponse> operation
-              = new UpdateHrisEmployeeOperation(sdkConfiguration);
+              = new UpdateHrisEmployee.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1007,7 +1007,7 @@ public class Hris {
      */
     public UpdateHrisGroupResponse updateHrisGroup(UpdateHrisGroupRequest request) throws Exception {
         RequestOperation<UpdateHrisGroupRequest, UpdateHrisGroupResponse> operation
-              = new UpdateHrisGroupOperation(sdkConfiguration);
+              = new UpdateHrisGroup.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1029,7 +1029,7 @@ public class Hris {
      */
     public UpdateHrisLocationResponse updateHrisLocation(UpdateHrisLocationRequest request) throws Exception {
         RequestOperation<UpdateHrisLocationRequest, UpdateHrisLocationResponse> operation
-              = new UpdateHrisLocationOperation(sdkConfiguration);
+              = new UpdateHrisLocation.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1051,7 +1051,7 @@ public class Hris {
      */
     public UpdateHrisTimeshiftResponse updateHrisTimeshift(UpdateHrisTimeshiftRequest request) throws Exception {
         RequestOperation<UpdateHrisTimeshiftRequest, UpdateHrisTimeshiftResponse> operation
-              = new UpdateHrisTimeshiftOperation(sdkConfiguration);
+              = new UpdateHrisTimeshift.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

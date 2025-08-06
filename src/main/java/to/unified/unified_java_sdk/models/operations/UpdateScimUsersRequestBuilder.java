@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.UpdateScimUsersOperation;
+import to.unified.unified_java_sdk.operations.UpdateScimUsers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdateScimUsersRequestBuilder {
@@ -28,7 +28,7 @@ public class UpdateScimUsersRequestBuilder {
     public UpdateScimUsersResponse call() throws Exception {
         
         RequestOperation<UpdateScimUsersRequest, UpdateScimUsersResponse> operation
-              = new UpdateScimUsersOperation(sdkConfiguration);
+              = new UpdateScimUsers.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

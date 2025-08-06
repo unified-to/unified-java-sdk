@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: b6f8759fcd352896dee2c06af3a41011
+  docChecksum: 4e030d7f36ab8414e41ea8ca6c2df396
   docVersion: "1.0"
-  speakeasyVersion: 1.596.0
-  generationVersion: 2.672.0
-  releaseVersion: 0.34.1
-  configChecksum: 2a1f094b643e0ebd955864ac5ae57b85
+  speakeasyVersion: 1.598.0
+  generationVersion: 2.674.1
+  releaseVersion: 0.34.2
+  configChecksum: cc448f54f672e02c435a1a95fdc971f7
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -1075,18 +1075,7 @@ generatedFiles:
   - docs/models/shared/AtsJobStatus.md
   - docs/models/shared/AtsMetadata.md
   - docs/models/shared/AtsMetadata1.md
-  - docs/models/shared/AtsMetadata2.md
-  - docs/models/shared/AtsMetadata3.md
-  - docs/models/shared/AtsMetadata4.md
   - docs/models/shared/AtsMetadata5.md
-  - docs/models/shared/AtsMetadataSchemas2.md
-  - docs/models/shared/AtsMetadataSchemasExtraData2.md
-  - docs/models/shared/AtsMetadataSchemasExtraData22.md
-  - docs/models/shared/AtsMetadataSchemasExtraData32.md
-  - docs/models/shared/AtsMetadataSchemasValue2.md
-  - docs/models/shared/AtsMetadataSchemasValue32.md
-  - docs/models/shared/AtsMetadataSchemasValue42.md
-  - docs/models/shared/AtsMetadataSchemasValue52.md
   - docs/models/shared/AtsOffer.md
   - docs/models/shared/AtsOfferStatus.md
   - docs/models/shared/AtsScorecard.md
@@ -1121,25 +1110,11 @@ generatedFiles:
   - docs/models/shared/CommerceLocation.md
   - docs/models/shared/CommerceMetadata.md
   - docs/models/shared/CommerceMetadata1.md
-  - docs/models/shared/CommerceMetadata2.md
-  - docs/models/shared/CommerceMetadata3.md
-  - docs/models/shared/CommerceMetadata4.md
   - docs/models/shared/CommerceMetadata5.md
   - docs/models/shared/CommerceMetadataExtraData.md
   - docs/models/shared/CommerceMetadataFormat.md
   - docs/models/shared/CommerceMetadataSchemas1.md
-  - docs/models/shared/CommerceMetadataSchemas2.md
-  - docs/models/shared/CommerceMetadataSchemas3.md
-  - docs/models/shared/CommerceMetadataSchemas4.md
   - docs/models/shared/CommerceMetadataSchemas5.md
-  - docs/models/shared/CommerceMetadataSchemasExtraData2.md
-  - docs/models/shared/CommerceMetadataSchemasExtraData22.md
-  - docs/models/shared/CommerceMetadataSchemasExtraData32.md
-  - docs/models/shared/CommerceMetadataSchemasExtraData52.md
-  - docs/models/shared/CommerceMetadataSchemasValue2.md
-  - docs/models/shared/CommerceMetadataSchemasValue32.md
-  - docs/models/shared/CommerceMetadataSchemasValue42.md
-  - docs/models/shared/CommerceMetadataSchemasValue52.md
   - docs/models/shared/CommerceMetadataValue.md
   - docs/models/shared/CommerceReview.md
   - docs/models/shared/CommerceReviewComment.md
@@ -1160,24 +1135,10 @@ generatedFiles:
   - docs/models/shared/CrmLead.md
   - docs/models/shared/CrmMetadata.md
   - docs/models/shared/CrmMetadata1.md
-  - docs/models/shared/CrmMetadata2.md
-  - docs/models/shared/CrmMetadata3.md
-  - docs/models/shared/CrmMetadata4.md
   - docs/models/shared/CrmMetadata5.md
   - docs/models/shared/CrmMetadataExtraData.md
   - docs/models/shared/CrmMetadataSchemas1.md
-  - docs/models/shared/CrmMetadataSchemas2.md
-  - docs/models/shared/CrmMetadataSchemas3.md
-  - docs/models/shared/CrmMetadataSchemas4.md
   - docs/models/shared/CrmMetadataSchemas5.md
-  - docs/models/shared/CrmMetadataSchemasExtraData2.md
-  - docs/models/shared/CrmMetadataSchemasExtraData22.md
-  - docs/models/shared/CrmMetadataSchemasExtraData32.md
-  - docs/models/shared/CrmMetadataSchemasExtraData52.md
-  - docs/models/shared/CrmMetadataSchemasValue2.md
-  - docs/models/shared/CrmMetadataSchemasValue32.md
-  - docs/models/shared/CrmMetadataSchemasValue42.md
-  - docs/models/shared/CrmMetadataSchemasValue52.md
   - docs/models/shared/CrmMetadataValue.md
   - docs/models/shared/CrmPipeline.md
   - docs/models/shared/CrmStage.md
@@ -1198,7 +1159,6 @@ generatedFiles:
   - docs/models/shared/ExtraData.md
   - docs/models/shared/Five.md
   - docs/models/shared/Format.md
-  - docs/models/shared/Four.md
   - docs/models/shared/Frequency.md
   - docs/models/shared/GenaiContent.md
   - docs/models/shared/GenaiModel.md
@@ -1219,25 +1179,11 @@ generatedFiles:
   - docs/models/shared/HrisLocation.md
   - docs/models/shared/HrisMetadata.md
   - docs/models/shared/HrisMetadata1.md
-  - docs/models/shared/HrisMetadata2.md
-  - docs/models/shared/HrisMetadata3.md
-  - docs/models/shared/HrisMetadata4.md
   - docs/models/shared/HrisMetadata5.md
   - docs/models/shared/HrisMetadataExtraData.md
   - docs/models/shared/HrisMetadataFormat.md
   - docs/models/shared/HrisMetadataSchemas1.md
-  - docs/models/shared/HrisMetadataSchemas2.md
-  - docs/models/shared/HrisMetadataSchemas3.md
-  - docs/models/shared/HrisMetadataSchemas4.md
   - docs/models/shared/HrisMetadataSchemas5.md
-  - docs/models/shared/HrisMetadataSchemasExtraData2.md
-  - docs/models/shared/HrisMetadataSchemasExtraData22.md
-  - docs/models/shared/HrisMetadataSchemasExtraData32.md
-  - docs/models/shared/HrisMetadataSchemasExtraData52.md
-  - docs/models/shared/HrisMetadataSchemasValue2.md
-  - docs/models/shared/HrisMetadataSchemasValue32.md
-  - docs/models/shared/HrisMetadataSchemasValue42.md
-  - docs/models/shared/HrisMetadataSchemasValue52.md
   - docs/models/shared/HrisMetadataValue.md
   - docs/models/shared/HrisPayslip.md
   - docs/models/shared/HrisPayslipDetail.md
@@ -1250,32 +1196,11 @@ generatedFiles:
   - docs/models/shared/HrisTimeshift.md
   - docs/models/shared/Integration.md
   - docs/models/shared/Integration1.md
-  - docs/models/shared/Integration2.md
-  - docs/models/shared/Integration3.md
-  - docs/models/shared/Integration4.md
   - docs/models/shared/Integration5.md
   - docs/models/shared/IntegrationSchemas1.md
-  - docs/models/shared/IntegrationSchemas2.md
-  - docs/models/shared/IntegrationSchemas3.md
-  - docs/models/shared/IntegrationSchemas4.md
   - docs/models/shared/IntegrationSchemas5.md
-  - docs/models/shared/IntegrationSchemasApi2.md
-  - docs/models/shared/IntegrationSchemasApi22.md
-  - docs/models/shared/IntegrationSchemasApi32.md
-  - docs/models/shared/IntegrationSchemasApi52.md
-  - docs/models/shared/IntegrationSchemasPartnership2.md
-  - docs/models/shared/IntegrationSchemasPartnership32.md
-  - docs/models/shared/IntegrationSchemasPartnership42.md
-  - docs/models/shared/IntegrationSchemasPartnership52.md
   - docs/models/shared/IntegrationSchemasSandbox1.md
-  - docs/models/shared/IntegrationSchemasSandbox2.md
-  - docs/models/shared/IntegrationSchemasSandbox22.md
-  - docs/models/shared/IntegrationSchemasSandbox3.md
-  - docs/models/shared/IntegrationSchemasSandbox32.md
-  - docs/models/shared/IntegrationSchemasSandbox4.md
-  - docs/models/shared/IntegrationSchemasSandbox42.md
   - docs/models/shared/IntegrationSchemasSandbox5.md
-  - docs/models/shared/IntegrationSchemasSandbox52.md
   - docs/models/shared/IntervalUnit.md
   - docs/models/shared/Issue.md
   - docs/models/shared/IssueStatus.md
@@ -1284,25 +1209,11 @@ generatedFiles:
   - docs/models/shared/KmsPage.md
   - docs/models/shared/KmsPageMetadata.md
   - docs/models/shared/KmsPageMetadata1.md
-  - docs/models/shared/KmsPageMetadata2.md
-  - docs/models/shared/KmsPageMetadata3.md
-  - docs/models/shared/KmsPageMetadata4.md
   - docs/models/shared/KmsPageMetadata5.md
   - docs/models/shared/KmsPageMetadataExtraData.md
   - docs/models/shared/KmsPageMetadataFormat.md
   - docs/models/shared/KmsPageMetadataSchemas1.md
-  - docs/models/shared/KmsPageMetadataSchemas2.md
-  - docs/models/shared/KmsPageMetadataSchemas3.md
-  - docs/models/shared/KmsPageMetadataSchemas4.md
   - docs/models/shared/KmsPageMetadataSchemas5.md
-  - docs/models/shared/KmsPageMetadataSchemasExtraData2.md
-  - docs/models/shared/KmsPageMetadataSchemasExtraData22.md
-  - docs/models/shared/KmsPageMetadataSchemasExtraData32.md
-  - docs/models/shared/KmsPageMetadataSchemasExtraData52.md
-  - docs/models/shared/KmsPageMetadataSchemasValue2.md
-  - docs/models/shared/KmsPageMetadataSchemasValue32.md
-  - docs/models/shared/KmsPageMetadataSchemasValue42.md
-  - docs/models/shared/KmsPageMetadataSchemasValue52.md
   - docs/models/shared/KmsPageMetadataValue.md
   - docs/models/shared/KmsPageType.md
   - docs/models/shared/KmsSpace.md
@@ -1450,31 +1361,16 @@ generatedFiles:
   - docs/models/shared/TaskComment.md
   - docs/models/shared/TaskMetadata.md
   - docs/models/shared/TaskMetadata1.md
-  - docs/models/shared/TaskMetadata2.md
-  - docs/models/shared/TaskMetadata3.md
-  - docs/models/shared/TaskMetadata4.md
   - docs/models/shared/TaskMetadata5.md
   - docs/models/shared/TaskMetadataExtraData.md
   - docs/models/shared/TaskMetadataFormat.md
   - docs/models/shared/TaskMetadataSchemas1.md
-  - docs/models/shared/TaskMetadataSchemas2.md
-  - docs/models/shared/TaskMetadataSchemas3.md
-  - docs/models/shared/TaskMetadataSchemas4.md
   - docs/models/shared/TaskMetadataSchemas5.md
-  - docs/models/shared/TaskMetadataSchemasExtraData2.md
-  - docs/models/shared/TaskMetadataSchemasExtraData22.md
-  - docs/models/shared/TaskMetadataSchemasExtraData32.md
-  - docs/models/shared/TaskMetadataSchemasExtraData52.md
-  - docs/models/shared/TaskMetadataSchemasValue2.md
-  - docs/models/shared/TaskMetadataSchemasValue32.md
-  - docs/models/shared/TaskMetadataSchemasValue42.md
-  - docs/models/shared/TaskMetadataSchemasValue52.md
   - docs/models/shared/TaskMetadataValue.md
   - docs/models/shared/TaskProject.md
   - docs/models/shared/TaskTask.md
   - docs/models/shared/TaskTaskStatus.md
   - docs/models/shared/TaxExemption.md
-  - docs/models/shared/Three.md
   - docs/models/shared/TicketingCustomer.md
   - docs/models/shared/TicketingEmail.md
   - docs/models/shared/TicketingEmailType.md
@@ -1483,7 +1379,6 @@ generatedFiles:
   - docs/models/shared/TicketingTelephoneType.md
   - docs/models/shared/TicketingTicket.md
   - docs/models/shared/TicketingTicketStatus.md
-  - docs/models/shared/Two.md
   - docs/models/shared/Type.md
   - docs/models/shared/UcCall.md
   - docs/models/shared/UcComment.md
@@ -3246,18 +3141,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/AtsJobStatus.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AtsMetadata.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AtsMetadata1.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/AtsMetadata2.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/AtsMetadata3.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/AtsMetadata4.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AtsMetadata5.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/AtsMetadataSchemas2.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/AtsMetadataSchemasExtraData2.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/AtsMetadataSchemasExtraData22.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/AtsMetadataSchemasExtraData32.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/AtsMetadataSchemasValue2.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/AtsMetadataSchemasValue32.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/AtsMetadataSchemasValue42.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/AtsMetadataSchemasValue52.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AtsOffer.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AtsOfferStatus.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AtsScorecard.java
@@ -3292,25 +3176,11 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceLocation.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceMetadata.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceMetadata1.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceMetadata2.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceMetadata3.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceMetadata4.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceMetadata5.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceMetadataExtraData.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceMetadataFormat.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceMetadataSchemas1.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceMetadataSchemas2.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceMetadataSchemas3.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceMetadataSchemas4.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceMetadataSchemas5.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceMetadataSchemasExtraData2.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceMetadataSchemasExtraData22.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceMetadataSchemasExtraData32.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceMetadataSchemasExtraData52.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceMetadataSchemasValue2.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceMetadataSchemasValue32.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceMetadataSchemasValue42.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceMetadataSchemasValue52.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceMetadataValue.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceReview.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceReviewComment.java
@@ -3331,24 +3201,10 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/CrmLead.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/CrmMetadata.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/CrmMetadata1.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/CrmMetadata2.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/CrmMetadata3.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/CrmMetadata4.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/CrmMetadata5.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/CrmMetadataExtraData.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/CrmMetadataSchemas1.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/CrmMetadataSchemas2.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/CrmMetadataSchemas3.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/CrmMetadataSchemas4.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/CrmMetadataSchemas5.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/CrmMetadataSchemasExtraData2.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/CrmMetadataSchemasExtraData22.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/CrmMetadataSchemasExtraData32.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/CrmMetadataSchemasExtraData52.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/CrmMetadataSchemasValue2.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/CrmMetadataSchemasValue32.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/CrmMetadataSchemasValue42.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/CrmMetadataSchemasValue52.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/CrmMetadataValue.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/CrmPipeline.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/CrmStage.java
@@ -3369,7 +3225,6 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/ExtraData.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/Five.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/Format.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/Four.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/Frequency.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/GenaiContent.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/GenaiModel.java
@@ -3390,25 +3245,11 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/HrisLocation.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/HrisMetadata.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/HrisMetadata1.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/HrisMetadata2.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/HrisMetadata3.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/HrisMetadata4.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/HrisMetadata5.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/HrisMetadataExtraData.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/HrisMetadataFormat.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/HrisMetadataSchemas1.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/HrisMetadataSchemas2.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/HrisMetadataSchemas3.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/HrisMetadataSchemas4.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/HrisMetadataSchemas5.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/HrisMetadataSchemasExtraData2.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/HrisMetadataSchemasExtraData22.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/HrisMetadataSchemasExtraData32.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/HrisMetadataSchemasExtraData52.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/HrisMetadataSchemasValue2.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/HrisMetadataSchemasValue32.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/HrisMetadataSchemasValue42.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/HrisMetadataSchemasValue52.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/HrisMetadataValue.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/HrisPayslip.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/HrisPayslipDetail.java
@@ -3421,32 +3262,11 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/HrisTimeshift.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/Integration.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/Integration1.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/Integration2.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/Integration3.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/Integration4.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/Integration5.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/IntegrationSchemas1.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/IntegrationSchemas2.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/IntegrationSchemas3.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/IntegrationSchemas4.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/IntegrationSchemas5.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/IntegrationSchemasApi2.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/IntegrationSchemasApi22.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/IntegrationSchemasApi32.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/IntegrationSchemasApi52.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/IntegrationSchemasPartnership2.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/IntegrationSchemasPartnership32.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/IntegrationSchemasPartnership42.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/IntegrationSchemasPartnership52.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/IntegrationSchemasSandbox1.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/IntegrationSchemasSandbox2.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/IntegrationSchemasSandbox22.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/IntegrationSchemasSandbox3.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/IntegrationSchemasSandbox32.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/IntegrationSchemasSandbox4.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/IntegrationSchemasSandbox42.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/IntegrationSchemasSandbox5.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/IntegrationSchemasSandbox52.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/IntervalUnit.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/Issue.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/IssueStatus.java
@@ -3455,25 +3275,11 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/KmsPage.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/KmsPageMetadata.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/KmsPageMetadata1.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/KmsPageMetadata2.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/KmsPageMetadata3.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/KmsPageMetadata4.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/KmsPageMetadata5.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/KmsPageMetadataExtraData.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/KmsPageMetadataFormat.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/KmsPageMetadataSchemas1.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/KmsPageMetadataSchemas2.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/KmsPageMetadataSchemas3.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/KmsPageMetadataSchemas4.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/KmsPageMetadataSchemas5.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/KmsPageMetadataSchemasExtraData2.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/KmsPageMetadataSchemasExtraData22.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/KmsPageMetadataSchemasExtraData32.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/KmsPageMetadataSchemasExtraData52.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/KmsPageMetadataSchemasValue2.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/KmsPageMetadataSchemasValue32.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/KmsPageMetadataSchemasValue42.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/KmsPageMetadataSchemasValue52.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/KmsPageMetadataValue.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/KmsPageType.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/KmsSpace.java
@@ -3621,31 +3427,16 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/TaskComment.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/TaskMetadata.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/TaskMetadata1.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/TaskMetadata2.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/TaskMetadata3.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/TaskMetadata4.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/TaskMetadata5.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/TaskMetadataExtraData.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/TaskMetadataFormat.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/TaskMetadataSchemas1.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/TaskMetadataSchemas2.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/TaskMetadataSchemas3.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/TaskMetadataSchemas4.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/TaskMetadataSchemas5.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/TaskMetadataSchemasExtraData2.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/TaskMetadataSchemasExtraData22.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/TaskMetadataSchemasExtraData32.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/TaskMetadataSchemasExtraData52.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/TaskMetadataSchemasValue2.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/TaskMetadataSchemasValue32.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/TaskMetadataSchemasValue42.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/TaskMetadataSchemasValue52.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/TaskMetadataValue.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/TaskProject.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/TaskTask.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/TaskTaskStatus.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/TaxExemption.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/Three.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/TicketingCustomer.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/TicketingEmail.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/TicketingEmailType.java
@@ -3654,7 +3445,6 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/TicketingTelephoneType.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/TicketingTicket.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/TicketingTicketStatus.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/Two.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/Type.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/UcCall.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/UcComment.java
@@ -3671,491 +3461,491 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/WebhookType.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/WeekStart.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/WeightUnit.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingAccountOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingBillOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingCategoryOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingContactOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingCreditmemoOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingInvoiceOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingJournalOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingOrderOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingPurchaseorderOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingSalesorderOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingTaxrateOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingTransactionOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateAtsActivityOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateAtsApplicationOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateAtsCandidateOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateAtsCompanyOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateAtsDocumentOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateAtsInterviewOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateAtsJobOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateAtsScorecardOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateCalendarCalendarOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateCalendarEventOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateCalendarLinkOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateCommerceCollectionOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateCommerceInventoryOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateCommerceItemOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateCommerceLocationOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateCommerceReviewOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateCrmCompanyOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateCrmContactOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateCrmDealOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateCrmEventOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateCrmLeadOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateCrmPipelineOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateGenaiPromptOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateHrisCompanyOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateHrisDeviceOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateHrisEmployeeOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateHrisGroupOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateHrisLocationOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateHrisTimeshiftOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateKmsCommentOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateKmsPageOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateKmsSpaceOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateLmsClassOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateLmsCourseOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateLmsInstructorOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateLmsStudentOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateMartechListOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateMartechMemberOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateMessagingMessageOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateMetadataMetadataOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreatePassthroughJsonOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreatePassthroughRawOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreatePaymentLinkOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreatePaymentPaymentOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreatePaymentSubscriptionOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateRepoBranchOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateRepoCommitOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateRepoOrganizationOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateRepoPullrequestOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateRepoRepositoryOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateScimGroupsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateScimUsersOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateStorageFileOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateTaskCommentOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateTaskProjectOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateTaskTaskOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateTicketingCustomerOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateTicketingNoteOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateTicketingTicketOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateUcCommentOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateUcContactOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateUcRecordingOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateUnifiedConnectionOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/CreateUnifiedWebhookOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingAccountOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingBalancesheetOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingBillOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingCategoryOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingContactOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingCreditmemoOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingInvoiceOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingJournalOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingOrderOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingOrganizationOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingProfitlossOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingPurchaseorderOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingReportOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingSalesorderOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingTaxrateOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingTransactionOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingTrialbalanceOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetAtsActivityOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetAtsApplicationOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetAtsCandidateOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetAtsCompanyOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetAtsDocumentOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetAtsInterviewOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetAtsJobOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetAtsScorecardOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetCalendarCalendarOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetCalendarEventOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetCalendarLinkOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetCalendarRecordingOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetCommerceCollectionOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetCommerceInventoryOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetCommerceItemOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetCommerceLocationOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetCommerceReviewOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetCrmCompanyOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetCrmContactOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetCrmDealOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetCrmEventOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetCrmLeadOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetCrmPipelineOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetHrisCompanyOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetHrisDeviceOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetHrisEmployeeOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetHrisGroupOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetHrisLocationOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetHrisPayslipOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetHrisTimeoffOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetHrisTimeshiftOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetKmsCommentOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetKmsPageOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetKmsSpaceOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetLmsClassOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetLmsCourseOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetLmsInstructorOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetLmsStudentOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetMartechListOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetMartechMemberOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetMessagingChannelOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetMessagingMessageOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetMetadataMetadataOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetPaymentLinkOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetPaymentPaymentOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetPaymentPayoutOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetPaymentRefundOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetPaymentSubscriptionOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetRepoBranchOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetRepoCommitOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetRepoOrganizationOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetRepoPullrequestOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetRepoRepositoryOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetScimGroupsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetScimUsersOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetStorageFileOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetTaskCommentOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetTaskProjectOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetTaskTaskOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetTicketingCustomerOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetTicketingNoteOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetTicketingTicketOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetUcCommentOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetUcContactOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetUcRecordingOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetUnifiedApicallOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetUnifiedConnectionOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetUnifiedIntegrationAuthOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetUnifiedIntegrationLoginOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/GetUnifiedWebhookOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingAccountsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingBalancesheetsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingBillsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingCategoriesOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingContactsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingCreditmemoesOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingInvoicesOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingJournalsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingOrdersOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingOrganizationsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingProfitlossesOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingPurchaseordersOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingReportsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingSalesordersOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingTaxratesOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingTransactionsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingTrialbalancesOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListAtsActivitiesOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListAtsApplicationsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListAtsApplicationstatusesOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListAtsCandidatesOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListAtsCompaniesOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListAtsDocumentsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListAtsInterviewsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListAtsJobsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListAtsScorecardsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListCalendarBusiesOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListCalendarCalendarsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListCalendarEventsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListCalendarLinksOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListCalendarRecordingsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListCommerceCollectionsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListCommerceInventoriesOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListCommerceItemsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListCommerceLocationsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListCommerceReviewsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListCrmCompaniesOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListCrmContactsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListCrmDealsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListCrmEventsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListCrmLeadsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListCrmPipelinesOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListEnrichCompaniesOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListEnrichPeopleOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListGenaiModelsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListHrisCompaniesOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListHrisDevicesOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListHrisEmployeesOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListHrisGroupsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListHrisLocationsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListHrisPayslipsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListHrisTimeoffsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListHrisTimeshiftsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListKmsCommentsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListKmsPagesOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListKmsSpacesOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListLmsClassesOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListLmsCoursesOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListLmsInstructorsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListLmsStudentsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListMartechListsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListMartechMembersOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListMessagingChannelsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListMessagingMessagesOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListMetadataMetadatasOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListPassthroughsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListPaymentLinksOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListPaymentPaymentsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListPaymentPayoutsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListPaymentRefundsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListPaymentSubscriptionsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListRepoBranchesOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListRepoCommitsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListRepoOrganizationsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListRepoPullrequestsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListRepoRepositoriesOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListScimGroupsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListScimUsersOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListStorageFilesOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListTaskCommentsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListTaskProjectsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListTaskTasksOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListTicketingCustomersOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListTicketingNotesOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListTicketingTicketsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListUcCallsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListUcCommentsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListUcContactsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListUcRecordingsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListUnifiedApicallsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListUnifiedConnectionsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListUnifiedIntegrationWorkspacesOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListUnifiedIntegrationsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListUnifiedIssuesOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/ListUnifiedWebhooksOperation.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingAccount.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingBill.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingCategory.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingContact.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingCreditmemo.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingInvoice.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingJournal.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingOrder.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingPurchaseorder.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingSalesorder.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingTaxrate.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingTransaction.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateAtsActivity.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateAtsApplication.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateAtsCandidate.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateAtsCompany.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateAtsDocument.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateAtsInterview.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateAtsJob.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateAtsScorecard.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateCalendarCalendar.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateCalendarEvent.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateCalendarLink.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateCommerceCollection.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateCommerceInventory.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateCommerceItem.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateCommerceLocation.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateCommerceReview.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateCrmCompany.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateCrmContact.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateCrmDeal.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateCrmEvent.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateCrmLead.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateCrmPipeline.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateGenaiPrompt.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateHrisCompany.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateHrisDevice.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateHrisEmployee.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateHrisGroup.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateHrisLocation.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateHrisTimeshift.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateKmsComment.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateKmsPage.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateKmsSpace.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateLmsClass.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateLmsCourse.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateLmsInstructor.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateLmsStudent.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateMartechList.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateMartechMember.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateMessagingMessage.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateMetadataMetadata.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreatePassthroughJson.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreatePassthroughRaw.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreatePaymentLink.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreatePaymentPayment.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreatePaymentSubscription.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateRepoBranch.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateRepoCommit.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateRepoOrganization.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateRepoPullrequest.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateRepoRepository.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateScimGroups.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateScimUsers.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateStorageFile.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateTaskComment.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateTaskProject.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateTaskTask.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateTicketingCustomer.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateTicketingNote.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateTicketingTicket.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateUcComment.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateUcContact.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateUcRecording.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateUnifiedConnection.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateUnifiedWebhook.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingAccount.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingBalancesheet.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingBill.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingCategory.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingContact.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingCreditmemo.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingInvoice.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingJournal.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingOrder.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingOrganization.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingProfitloss.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingPurchaseorder.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingReport.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingSalesorder.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingTaxrate.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingTransaction.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingTrialbalance.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetAtsActivity.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetAtsApplication.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetAtsCandidate.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetAtsCompany.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetAtsDocument.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetAtsInterview.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetAtsJob.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetAtsScorecard.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetCalendarCalendar.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetCalendarEvent.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetCalendarLink.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetCalendarRecording.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetCommerceCollection.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetCommerceInventory.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetCommerceItem.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetCommerceLocation.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetCommerceReview.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetCrmCompany.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetCrmContact.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetCrmDeal.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetCrmEvent.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetCrmLead.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetCrmPipeline.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetHrisCompany.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetHrisDevice.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetHrisEmployee.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetHrisGroup.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetHrisLocation.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetHrisPayslip.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetHrisTimeoff.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetHrisTimeshift.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetKmsComment.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetKmsPage.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetKmsSpace.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetLmsClass.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetLmsCourse.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetLmsInstructor.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetLmsStudent.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetMartechList.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetMartechMember.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetMessagingChannel.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetMessagingMessage.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetMetadataMetadata.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetPaymentLink.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetPaymentPayment.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetPaymentPayout.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetPaymentRefund.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetPaymentSubscription.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetRepoBranch.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetRepoCommit.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetRepoOrganization.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetRepoPullrequest.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetRepoRepository.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetScimGroups.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetScimUsers.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetStorageFile.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetTaskComment.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetTaskProject.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetTaskTask.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetTicketingCustomer.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetTicketingNote.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetTicketingTicket.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetUcComment.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetUcContact.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetUcRecording.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetUnifiedApicall.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetUnifiedConnection.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetUnifiedIntegrationAuth.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetUnifiedIntegrationLogin.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetUnifiedWebhook.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingAccounts.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingBalancesheets.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingBills.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingCategories.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingContacts.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingCreditmemoes.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingInvoices.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingJournals.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingOrders.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingOrganizations.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingProfitlosses.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingPurchaseorders.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingReports.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingSalesorders.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingTaxrates.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingTransactions.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingTrialbalances.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListAtsActivities.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListAtsApplications.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListAtsApplicationstatuses.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListAtsCandidates.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListAtsCompanies.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListAtsDocuments.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListAtsInterviews.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListAtsJobs.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListAtsScorecards.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListCalendarBusies.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListCalendarCalendars.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListCalendarEvents.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListCalendarLinks.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListCalendarRecordings.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListCommerceCollections.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListCommerceInventories.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListCommerceItems.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListCommerceLocations.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListCommerceReviews.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListCrmCompanies.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListCrmContacts.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListCrmDeals.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListCrmEvents.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListCrmLeads.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListCrmPipelines.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListEnrichCompanies.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListEnrichPeople.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListGenaiModels.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListHrisCompanies.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListHrisDevices.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListHrisEmployees.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListHrisGroups.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListHrisLocations.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListHrisPayslips.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListHrisTimeoffs.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListHrisTimeshifts.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListKmsComments.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListKmsPages.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListKmsSpaces.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListLmsClasses.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListLmsCourses.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListLmsInstructors.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListLmsStudents.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListMartechLists.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListMartechMembers.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListMessagingChannels.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListMessagingMessages.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListMetadataMetadatas.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListPassthroughs.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListPaymentLinks.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListPaymentPayments.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListPaymentPayouts.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListPaymentRefunds.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListPaymentSubscriptions.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListRepoBranches.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListRepoCommits.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListRepoOrganizations.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListRepoPullrequests.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListRepoRepositories.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListScimGroups.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListScimUsers.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListStorageFiles.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListTaskComments.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListTaskProjects.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListTaskTasks.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListTicketingCustomers.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListTicketingNotes.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListTicketingTickets.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListUcCalls.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListUcComments.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListUcContacts.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListUcRecordings.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListUnifiedApicalls.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListUnifiedConnections.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListUnifiedIntegrationWorkspaces.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListUnifiedIntegrations.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListUnifiedIssues.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListUnifiedWebhooks.java
   - src/main/java/to/unified/unified_java_sdk/operations/Operations.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingAccountOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingBillOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingCategoryOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingContactOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingCreditmemoOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingInvoiceOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingJournalOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingOrderOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingPurchaseorderOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingSalesorderOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingTaxrateOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingTransactionOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchAtsActivityOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchAtsApplicationOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchAtsCandidateOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchAtsCompanyOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchAtsDocumentOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchAtsInterviewOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchAtsJobOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchAtsScorecardOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchCalendarCalendarOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchCalendarEventOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchCalendarLinkOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchCommerceCollectionOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchCommerceInventoryOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchCommerceItemOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchCommerceLocationOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchCommerceReviewOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchCrmCompanyOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchCrmContactOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchCrmDealOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchCrmEventOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchCrmLeadOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchCrmPipelineOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchHrisCompanyOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchHrisDeviceOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchHrisEmployeeOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchHrisGroupOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchHrisLocationOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchHrisTimeshiftOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchKmsCommentOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchKmsPageOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchKmsSpaceOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchLmsClassOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchLmsCourseOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchLmsInstructorOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchLmsStudentOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchMartechListOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchMartechMemberOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchMessagingMessageOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchMetadataMetadataOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchPassthroughJsonOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchPassthroughRawOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchPaymentLinkOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchPaymentPaymentOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchPaymentSubscriptionOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchRepoBranchOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchRepoCommitOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchRepoOrganizationOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchRepoPullrequestOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchRepoRepositoryOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchScimGroupsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchScimUsersOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchStorageFileOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchTaskCommentOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchTaskProjectOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchTaskTaskOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchTicketingCustomerOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchTicketingNoteOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchTicketingTicketOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchUcCommentOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchUcContactOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchUcRecordingOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchUnifiedConnectionOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchUnifiedWebhookOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/PatchUnifiedWebhookTriggerOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingAccountOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingBillOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingCategoryOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingContactOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingCreditmemoOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingInvoiceOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingJournalOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingOrderOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingPurchaseorderOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingSalesorderOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingTaxrateOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingTransactionOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAtsActivityOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAtsApplicationOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAtsCandidateOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAtsCompanyOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAtsDocumentOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAtsInterviewOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAtsJobOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAtsScorecardOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveCalendarCalendarOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveCalendarEventOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveCalendarLinkOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveCommerceCollectionOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveCommerceInventoryOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveCommerceItemOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveCommerceLocationOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveCommerceReviewOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveCrmCompanyOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveCrmContactOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveCrmDealOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveCrmEventOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveCrmLeadOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveCrmPipelineOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveHrisCompanyOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveHrisDeviceOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveHrisEmployeeOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveHrisGroupOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveHrisLocationOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveHrisTimeshiftOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveKmsCommentOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveKmsPageOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveKmsSpaceOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveLmsClassOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveLmsCourseOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveLmsInstructorOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveLmsStudentOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveMartechListOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveMartechMemberOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveMessagingMessageOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveMetadataMetadataOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemovePassthroughOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemovePaymentLinkOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemovePaymentPaymentOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemovePaymentSubscriptionOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveRepoBranchOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveRepoCommitOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveRepoOrganizationOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveRepoPullrequestOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveRepoRepositoryOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveScimGroupsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveScimUsersOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveStorageFileOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveTaskCommentOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveTaskProjectOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveTaskTaskOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveTicketingCustomerOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveTicketingNoteOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveTicketingTicketOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveUcCommentOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveUcContactOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveUcRecordingOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveUnifiedConnectionOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/RemoveUnifiedWebhookOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingAccountOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingBillOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingCategoryOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingContactOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingCreditmemoOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingInvoiceOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingJournalOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingOrderOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingPurchaseorderOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingSalesorderOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingTaxrateOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingTransactionOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAtsActivityOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAtsApplicationOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAtsCandidateOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAtsCompanyOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAtsDocumentOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAtsInterviewOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAtsJobOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAtsScorecardOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateCalendarCalendarOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateCalendarEventOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateCalendarLinkOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateCommerceCollectionOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateCommerceInventoryOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateCommerceItemOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateCommerceLocationOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateCommerceReviewOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateCrmCompanyOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateCrmContactOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateCrmDealOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateCrmEventOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateCrmLeadOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateCrmPipelineOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateHrisCompanyOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateHrisDeviceOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateHrisEmployeeOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateHrisGroupOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateHrisLocationOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateHrisTimeshiftOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateKmsCommentOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateKmsPageOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateKmsSpaceOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateLmsClassOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateLmsCourseOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateLmsInstructorOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateLmsStudentOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateMartechListOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateMartechMemberOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateMessagingMessageOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateMetadataMetadataOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdatePassthroughJsonOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdatePassthroughRawOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdatePaymentLinkOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdatePaymentPaymentOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdatePaymentSubscriptionOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateRepoBranchOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateRepoCommitOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateRepoOrganizationOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateRepoPullrequestOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateRepoRepositoryOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateScimGroupsOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateScimUsersOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateStorageFileOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateTaskCommentOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateTaskProjectOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateTaskTaskOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateTicketingCustomerOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateTicketingNoteOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateTicketingTicketOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateUcCommentOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateUcContactOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateUcRecordingOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateUnifiedConnectionOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateUnifiedWebhookOperation.java
-  - src/main/java/to/unified/unified_java_sdk/operations/UpdateUnifiedWebhookTriggerOperation.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingAccount.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingBill.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingCategory.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingContact.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingCreditmemo.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingInvoice.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingJournal.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingOrder.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingPurchaseorder.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingSalesorder.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingTaxrate.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingTransaction.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchAtsActivity.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchAtsApplication.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchAtsCandidate.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchAtsCompany.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchAtsDocument.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchAtsInterview.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchAtsJob.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchAtsScorecard.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchCalendarCalendar.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchCalendarEvent.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchCalendarLink.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchCommerceCollection.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchCommerceInventory.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchCommerceItem.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchCommerceLocation.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchCommerceReview.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchCrmCompany.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchCrmContact.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchCrmDeal.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchCrmEvent.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchCrmLead.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchCrmPipeline.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchHrisCompany.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchHrisDevice.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchHrisEmployee.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchHrisGroup.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchHrisLocation.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchHrisTimeshift.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchKmsComment.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchKmsPage.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchKmsSpace.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchLmsClass.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchLmsCourse.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchLmsInstructor.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchLmsStudent.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchMartechList.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchMartechMember.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchMessagingMessage.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchMetadataMetadata.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchPassthroughJson.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchPassthroughRaw.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchPaymentLink.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchPaymentPayment.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchPaymentSubscription.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchRepoBranch.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchRepoCommit.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchRepoOrganization.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchRepoPullrequest.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchRepoRepository.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchScimGroups.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchScimUsers.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchStorageFile.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchTaskComment.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchTaskProject.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchTaskTask.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchTicketingCustomer.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchTicketingNote.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchTicketingTicket.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchUcComment.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchUcContact.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchUcRecording.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchUnifiedConnection.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchUnifiedWebhook.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchUnifiedWebhookTrigger.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingAccount.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingBill.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingCategory.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingContact.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingCreditmemo.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingInvoice.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingJournal.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingOrder.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingPurchaseorder.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingSalesorder.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingTaxrate.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingTransaction.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAtsActivity.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAtsApplication.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAtsCandidate.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAtsCompany.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAtsDocument.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAtsInterview.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAtsJob.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAtsScorecard.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveCalendarCalendar.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveCalendarEvent.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveCalendarLink.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveCommerceCollection.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveCommerceInventory.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveCommerceItem.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveCommerceLocation.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveCommerceReview.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveCrmCompany.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveCrmContact.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveCrmDeal.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveCrmEvent.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveCrmLead.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveCrmPipeline.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveHrisCompany.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveHrisDevice.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveHrisEmployee.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveHrisGroup.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveHrisLocation.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveHrisTimeshift.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveKmsComment.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveKmsPage.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveKmsSpace.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveLmsClass.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveLmsCourse.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveLmsInstructor.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveLmsStudent.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveMartechList.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveMartechMember.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveMessagingMessage.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveMetadataMetadata.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemovePassthrough.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemovePaymentLink.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemovePaymentPayment.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemovePaymentSubscription.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveRepoBranch.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveRepoCommit.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveRepoOrganization.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveRepoPullrequest.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveRepoRepository.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveScimGroups.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveScimUsers.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveStorageFile.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveTaskComment.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveTaskProject.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveTaskTask.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveTicketingCustomer.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveTicketingNote.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveTicketingTicket.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveUcComment.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveUcContact.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveUcRecording.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveUnifiedConnection.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveUnifiedWebhook.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingAccount.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingBill.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingCategory.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingContact.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingCreditmemo.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingInvoice.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingJournal.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingOrder.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingPurchaseorder.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingSalesorder.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingTaxrate.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingTransaction.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAtsActivity.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAtsApplication.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAtsCandidate.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAtsCompany.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAtsDocument.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAtsInterview.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAtsJob.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAtsScorecard.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateCalendarCalendar.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateCalendarEvent.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateCalendarLink.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateCommerceCollection.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateCommerceInventory.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateCommerceItem.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateCommerceLocation.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateCommerceReview.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateCrmCompany.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateCrmContact.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateCrmDeal.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateCrmEvent.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateCrmLead.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateCrmPipeline.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateHrisCompany.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateHrisDevice.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateHrisEmployee.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateHrisGroup.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateHrisLocation.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateHrisTimeshift.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateKmsComment.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateKmsPage.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateKmsSpace.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateLmsClass.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateLmsCourse.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateLmsInstructor.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateLmsStudent.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateMartechList.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateMartechMember.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateMessagingMessage.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateMetadataMetadata.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdatePassthroughJson.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdatePassthroughRaw.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdatePaymentLink.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdatePaymentPayment.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdatePaymentSubscription.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateRepoBranch.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateRepoCommit.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateRepoOrganization.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateRepoPullrequest.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateRepoRepository.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateScimGroups.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateScimUsers.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateStorageFile.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateTaskComment.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateTaskProject.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateTaskTask.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateTicketingCustomer.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateTicketingNote.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateTicketingTicket.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateUcComment.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateUcContact.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateUcRecording.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateUnifiedConnection.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateUnifiedWebhook.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateUnifiedWebhookTrigger.java
   - src/main/java/to/unified/unified_java_sdk/utils/BackoffStrategy.java
   - src/main/java/to/unified/unified_java_sdk/utils/BigDecimalString.java
   - src/main/java/to/unified/unified_java_sdk/utils/BigIntegerString.java
@@ -4193,6 +3983,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/utils/RequestBody.java
   - src/main/java/to/unified/unified_java_sdk/utils/RequestMetadata.java
   - src/main/java/to/unified/unified_java_sdk/utils/Response.java
+  - src/main/java/to/unified/unified_java_sdk/utils/ResponseWithBody.java
   - src/main/java/to/unified/unified_java_sdk/utils/Retries.java
   - src/main/java/to/unified/unified_java_sdk/utils/RetryConfig.java
   - src/main/java/to/unified/unified_java_sdk/utils/Security.java

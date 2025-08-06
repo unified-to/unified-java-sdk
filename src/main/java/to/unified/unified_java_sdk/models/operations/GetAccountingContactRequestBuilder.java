@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.GetAccountingContactOperation;
+import to.unified.unified_java_sdk.operations.GetAccountingContact;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetAccountingContactRequestBuilder {
@@ -28,7 +28,7 @@ public class GetAccountingContactRequestBuilder {
     public GetAccountingContactResponse call() throws Exception {
         
         RequestOperation<GetAccountingContactRequest, GetAccountingContactResponse> operation
-              = new GetAccountingContactOperation(sdkConfiguration);
+              = new GetAccountingContact.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

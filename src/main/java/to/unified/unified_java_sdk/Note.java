@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveTicketingNoteResponse
 import to.unified.unified_java_sdk.models.operations.UpdateTicketingNoteRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateTicketingNoteRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateTicketingNoteResponse;
-import to.unified.unified_java_sdk.operations.CreateTicketingNoteOperation;
-import to.unified.unified_java_sdk.operations.GetTicketingNoteOperation;
-import to.unified.unified_java_sdk.operations.ListTicketingNotesOperation;
-import to.unified.unified_java_sdk.operations.PatchTicketingNoteOperation;
-import to.unified.unified_java_sdk.operations.RemoveTicketingNoteOperation;
-import to.unified.unified_java_sdk.operations.UpdateTicketingNoteOperation;
+import to.unified.unified_java_sdk.operations.CreateTicketingNote;
+import to.unified.unified_java_sdk.operations.GetTicketingNote;
+import to.unified.unified_java_sdk.operations.ListTicketingNotes;
+import to.unified.unified_java_sdk.operations.PatchTicketingNote;
+import to.unified.unified_java_sdk.operations.RemoveTicketingNote;
+import to.unified.unified_java_sdk.operations.UpdateTicketingNote;
 
 
 public class Note {
@@ -57,7 +57,7 @@ public class Note {
      */
     public CreateTicketingNoteResponse createTicketingNote(CreateTicketingNoteRequest request) throws Exception {
         RequestOperation<CreateTicketingNoteRequest, CreateTicketingNoteResponse> operation
-              = new CreateTicketingNoteOperation(sdkConfiguration);
+              = new CreateTicketingNote.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Note {
      */
     public GetTicketingNoteResponse getTicketingNote(GetTicketingNoteRequest request) throws Exception {
         RequestOperation<GetTicketingNoteRequest, GetTicketingNoteResponse> operation
-              = new GetTicketingNoteOperation(sdkConfiguration);
+              = new GetTicketingNote.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Note {
      */
     public ListTicketingNotesResponse listTicketingNotes(ListTicketingNotesRequest request) throws Exception {
         RequestOperation<ListTicketingNotesRequest, ListTicketingNotesResponse> operation
-              = new ListTicketingNotesOperation(sdkConfiguration);
+              = new ListTicketingNotes.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Note {
      */
     public PatchTicketingNoteResponse patchTicketingNote(PatchTicketingNoteRequest request) throws Exception {
         RequestOperation<PatchTicketingNoteRequest, PatchTicketingNoteResponse> operation
-              = new PatchTicketingNoteOperation(sdkConfiguration);
+              = new PatchTicketingNote.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Note {
      */
     public RemoveTicketingNoteResponse removeTicketingNote(RemoveTicketingNoteRequest request) throws Exception {
         RequestOperation<RemoveTicketingNoteRequest, RemoveTicketingNoteResponse> operation
-              = new RemoveTicketingNoteOperation(sdkConfiguration);
+              = new RemoveTicketingNote.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Note {
      */
     public UpdateTicketingNoteResponse updateTicketingNote(UpdateTicketingNoteRequest request) throws Exception {
         RequestOperation<UpdateTicketingNoteRequest, UpdateTicketingNoteResponse> operation
-              = new UpdateTicketingNoteOperation(sdkConfiguration);
+              = new UpdateTicketingNote.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

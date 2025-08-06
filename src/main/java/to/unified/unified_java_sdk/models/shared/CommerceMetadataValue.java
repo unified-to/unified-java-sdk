@@ -6,9 +6,14 @@ package to.unified.unified_java_sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import java.lang.Boolean;
+import java.lang.Double;
+import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.utils.OneOfDeserializer;
 import to.unified.unified_java_sdk.utils.TypedObject;
 import to.unified.unified_java_sdk.utils.Utils.JsonShape;
@@ -25,39 +30,39 @@ public class CommerceMetadataValue {
         this.value = value;
     }
 
-    public static CommerceMetadataValue of(CommerceMetadataSchemas1 value) {
+    public static CommerceMetadataValue of(Map<String, Object> value) {
         Utils.checkNotNull(value, "value");
-        return new CommerceMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<CommerceMetadataSchemas1>(){}));
+        return new CommerceMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<Map<String, Object>>(){}));
     }
 
-    public static CommerceMetadataValue of(CommerceMetadataSchemas2 value) {
+    public static CommerceMetadataValue of(String value) {
         Utils.checkNotNull(value, "value");
-        return new CommerceMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<CommerceMetadataSchemas2>(){}));
+        return new CommerceMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<String>(){}));
     }
 
-    public static CommerceMetadataValue of(CommerceMetadataSchemas3 value) {
+    public static CommerceMetadataValue of(double value) {
         Utils.checkNotNull(value, "value");
-        return new CommerceMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<CommerceMetadataSchemas3>(){}));
+        return new CommerceMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Double>(){}));
     }
 
-    public static CommerceMetadataValue of(CommerceMetadataSchemas4 value) {
+    public static CommerceMetadataValue of(boolean value) {
         Utils.checkNotNull(value, "value");
-        return new CommerceMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<CommerceMetadataSchemas4>(){}));
+        return new CommerceMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Boolean>(){}));
     }
 
-    public static CommerceMetadataValue of(CommerceMetadataSchemas5 value) {
+    public static CommerceMetadataValue of(List<CommerceMetadataSchemas5> value) {
         Utils.checkNotNull(value, "value");
-        return new CommerceMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<CommerceMetadataSchemas5>(){}));
+        return new CommerceMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<List<CommerceMetadataSchemas5>>(){}));
     }
     
     /**
      * Returns an instance of one of these types:
      * <ul>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.CommerceMetadataSchemas1}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.CommerceMetadataSchemas2}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.CommerceMetadataSchemas3}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.CommerceMetadataSchemas4}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.CommerceMetadataSchemas5}</li>
+     * <li>{@code java.util.Map<java.lang.String, java.lang.Object>}</li>
+     * <li>{@code java.lang.String}</li>
+     * <li>{@code double}</li>
+     * <li>{@code boolean}</li>
+     * <li>{@code java.util.List<to.unified.unified_java_sdk.models.shared.CommerceMetadataSchemas5>}</li>
      * </ul>
      * 
      * <p>Use {@code instanceof} to determine what type is returned. For example:
@@ -97,11 +102,11 @@ public class CommerceMetadataValue {
 
         public _Deserializer() {
             super(CommerceMetadataValue.class, false,
-                  TypeReferenceWithShape.of(new TypeReference<CommerceMetadataSchemas5>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<CommerceMetadataSchemas4>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<CommerceMetadataSchemas3>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<CommerceMetadataSchemas2>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<CommerceMetadataSchemas1>() {}, JsonShape.DEFAULT));
+                  TypeReferenceWithShape.of(new TypeReference<List<CommerceMetadataSchemas5>>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<Boolean>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<Double>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<String>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<Map<String, Object>>() {}, JsonShape.DEFAULT));
         }
     }
     

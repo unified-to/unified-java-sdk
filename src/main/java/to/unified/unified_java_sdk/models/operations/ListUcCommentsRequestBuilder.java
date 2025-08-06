@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.ListUcCommentsOperation;
+import to.unified.unified_java_sdk.operations.ListUcComments;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListUcCommentsRequestBuilder {
@@ -28,7 +28,7 @@ public class ListUcCommentsRequestBuilder {
     public ListUcCommentsResponse call() throws Exception {
         
         RequestOperation<ListUcCommentsRequest, ListUcCommentsResponse> operation
-              = new ListUcCommentsOperation(sdkConfiguration);
+              = new ListUcComments.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

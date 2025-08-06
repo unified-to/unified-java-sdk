@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.RemoveTicketingCustomerOperation;
+import to.unified.unified_java_sdk.operations.RemoveTicketingCustomer;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveTicketingCustomerRequestBuilder {
@@ -28,7 +28,7 @@ public class RemoveTicketingCustomerRequestBuilder {
     public RemoveTicketingCustomerResponse call() throws Exception {
         
         RequestOperation<RemoveTicketingCustomerRequest, RemoveTicketingCustomerResponse> operation
-              = new RemoveTicketingCustomerOperation(sdkConfiguration);
+              = new RemoveTicketingCustomer.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

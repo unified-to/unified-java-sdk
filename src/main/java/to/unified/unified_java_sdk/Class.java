@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveLmsClassResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsClassRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsClassRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsClassResponse;
-import to.unified.unified_java_sdk.operations.CreateLmsClassOperation;
-import to.unified.unified_java_sdk.operations.GetLmsClassOperation;
-import to.unified.unified_java_sdk.operations.ListLmsClassesOperation;
-import to.unified.unified_java_sdk.operations.PatchLmsClassOperation;
-import to.unified.unified_java_sdk.operations.RemoveLmsClassOperation;
-import to.unified.unified_java_sdk.operations.UpdateLmsClassOperation;
+import to.unified.unified_java_sdk.operations.CreateLmsClass;
+import to.unified.unified_java_sdk.operations.GetLmsClass;
+import to.unified.unified_java_sdk.operations.ListLmsClasses;
+import to.unified.unified_java_sdk.operations.PatchLmsClass;
+import to.unified.unified_java_sdk.operations.RemoveLmsClass;
+import to.unified.unified_java_sdk.operations.UpdateLmsClass;
 
 
 public class Class {
@@ -57,7 +57,7 @@ public class Class {
      */
     public CreateLmsClassResponse createLmsClass(CreateLmsClassRequest request) throws Exception {
         RequestOperation<CreateLmsClassRequest, CreateLmsClassResponse> operation
-              = new CreateLmsClassOperation(sdkConfiguration);
+              = new CreateLmsClass.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Class {
      */
     public GetLmsClassResponse getLmsClass(GetLmsClassRequest request) throws Exception {
         RequestOperation<GetLmsClassRequest, GetLmsClassResponse> operation
-              = new GetLmsClassOperation(sdkConfiguration);
+              = new GetLmsClass.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Class {
      */
     public ListLmsClassesResponse listLmsClasses(ListLmsClassesRequest request) throws Exception {
         RequestOperation<ListLmsClassesRequest, ListLmsClassesResponse> operation
-              = new ListLmsClassesOperation(sdkConfiguration);
+              = new ListLmsClasses.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Class {
      */
     public PatchLmsClassResponse patchLmsClass(PatchLmsClassRequest request) throws Exception {
         RequestOperation<PatchLmsClassRequest, PatchLmsClassResponse> operation
-              = new PatchLmsClassOperation(sdkConfiguration);
+              = new PatchLmsClass.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Class {
      */
     public RemoveLmsClassResponse removeLmsClass(RemoveLmsClassRequest request) throws Exception {
         RequestOperation<RemoveLmsClassRequest, RemoveLmsClassResponse> operation
-              = new RemoveLmsClassOperation(sdkConfiguration);
+              = new RemoveLmsClass.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Class {
      */
     public UpdateLmsClassResponse updateLmsClass(UpdateLmsClassRequest request) throws Exception {
         RequestOperation<UpdateLmsClassRequest, UpdateLmsClassResponse> operation
-              = new UpdateLmsClassOperation(sdkConfiguration);
+              = new UpdateLmsClass.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

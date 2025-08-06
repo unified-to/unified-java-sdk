@@ -9,7 +9,7 @@ import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationLoginRequest;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationLoginRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationLoginResponse;
-import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationLoginOperation;
+import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationLogin;
 
 
 public class Login {
@@ -41,7 +41,7 @@ public class Login {
      */
     public GetUnifiedIntegrationLoginResponse getUnifiedIntegrationLogin(GetUnifiedIntegrationLoginRequest request) throws Exception {
         RequestOperation<GetUnifiedIntegrationLoginRequest, GetUnifiedIntegrationLoginResponse> operation
-              = new GetUnifiedIntegrationLoginOperation(sdkConfiguration);
+              = new GetUnifiedIntegrationLogin.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

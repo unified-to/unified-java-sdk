@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.GetUnifiedWebhookOperation;
+import to.unified.unified_java_sdk.operations.GetUnifiedWebhook;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetUnifiedWebhookRequestBuilder {
@@ -28,7 +28,7 @@ public class GetUnifiedWebhookRequestBuilder {
     public GetUnifiedWebhookResponse call() throws Exception {
         
         RequestOperation<GetUnifiedWebhookRequest, GetUnifiedWebhookResponse> operation
-              = new GetUnifiedWebhookOperation(sdkConfiguration);
+              = new GetUnifiedWebhook.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

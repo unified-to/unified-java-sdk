@@ -6,9 +6,14 @@ package to.unified.unified_java_sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import java.lang.Boolean;
+import java.lang.Double;
+import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.utils.OneOfDeserializer;
 import to.unified.unified_java_sdk.utils.TypedObject;
 import to.unified.unified_java_sdk.utils.Utils.JsonShape;
@@ -25,39 +30,39 @@ public class KmsPageMetadataValue {
         this.value = value;
     }
 
-    public static KmsPageMetadataValue of(KmsPageMetadataSchemas1 value) {
+    public static KmsPageMetadataValue of(Map<String, Object> value) {
         Utils.checkNotNull(value, "value");
-        return new KmsPageMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<KmsPageMetadataSchemas1>(){}));
+        return new KmsPageMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<Map<String, Object>>(){}));
     }
 
-    public static KmsPageMetadataValue of(KmsPageMetadataSchemas2 value) {
+    public static KmsPageMetadataValue of(String value) {
         Utils.checkNotNull(value, "value");
-        return new KmsPageMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<KmsPageMetadataSchemas2>(){}));
+        return new KmsPageMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<String>(){}));
     }
 
-    public static KmsPageMetadataValue of(KmsPageMetadataSchemas3 value) {
+    public static KmsPageMetadataValue of(double value) {
         Utils.checkNotNull(value, "value");
-        return new KmsPageMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<KmsPageMetadataSchemas3>(){}));
+        return new KmsPageMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Double>(){}));
     }
 
-    public static KmsPageMetadataValue of(KmsPageMetadataSchemas4 value) {
+    public static KmsPageMetadataValue of(boolean value) {
         Utils.checkNotNull(value, "value");
-        return new KmsPageMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<KmsPageMetadataSchemas4>(){}));
+        return new KmsPageMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Boolean>(){}));
     }
 
-    public static KmsPageMetadataValue of(KmsPageMetadataSchemas5 value) {
+    public static KmsPageMetadataValue of(List<KmsPageMetadataSchemas5> value) {
         Utils.checkNotNull(value, "value");
-        return new KmsPageMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<KmsPageMetadataSchemas5>(){}));
+        return new KmsPageMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<List<KmsPageMetadataSchemas5>>(){}));
     }
     
     /**
      * Returns an instance of one of these types:
      * <ul>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.KmsPageMetadataSchemas1}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.KmsPageMetadataSchemas2}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.KmsPageMetadataSchemas3}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.KmsPageMetadataSchemas4}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.KmsPageMetadataSchemas5}</li>
+     * <li>{@code java.util.Map<java.lang.String, java.lang.Object>}</li>
+     * <li>{@code java.lang.String}</li>
+     * <li>{@code double}</li>
+     * <li>{@code boolean}</li>
+     * <li>{@code java.util.List<to.unified.unified_java_sdk.models.shared.KmsPageMetadataSchemas5>}</li>
      * </ul>
      * 
      * <p>Use {@code instanceof} to determine what type is returned. For example:
@@ -97,11 +102,11 @@ public class KmsPageMetadataValue {
 
         public _Deserializer() {
             super(KmsPageMetadataValue.class, false,
-                  TypeReferenceWithShape.of(new TypeReference<KmsPageMetadataSchemas5>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<KmsPageMetadataSchemas4>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<KmsPageMetadataSchemas3>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<KmsPageMetadataSchemas2>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<KmsPageMetadataSchemas1>() {}, JsonShape.DEFAULT));
+                  TypeReferenceWithShape.of(new TypeReference<List<KmsPageMetadataSchemas5>>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<Boolean>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<Double>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<String>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<Map<String, Object>>() {}, JsonShape.DEFAULT));
         }
     }
     

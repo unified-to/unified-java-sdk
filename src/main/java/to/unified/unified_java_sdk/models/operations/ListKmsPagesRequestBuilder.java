@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.ListKmsPagesOperation;
+import to.unified.unified_java_sdk.operations.ListKmsPages;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListKmsPagesRequestBuilder {
@@ -28,7 +28,7 @@ public class ListKmsPagesRequestBuilder {
     public ListKmsPagesResponse call() throws Exception {
         
         RequestOperation<ListKmsPagesRequest, ListKmsPagesResponse> operation
-              = new ListKmsPagesOperation(sdkConfiguration);
+              = new ListKmsPages.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

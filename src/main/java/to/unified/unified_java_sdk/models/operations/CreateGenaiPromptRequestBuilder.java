@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.CreateGenaiPromptOperation;
+import to.unified.unified_java_sdk.operations.CreateGenaiPrompt;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateGenaiPromptRequestBuilder {
@@ -28,7 +28,7 @@ public class CreateGenaiPromptRequestBuilder {
     public CreateGenaiPromptResponse call() throws Exception {
         
         RequestOperation<CreateGenaiPromptRequest, CreateGenaiPromptResponse> operation
-              = new CreateGenaiPromptOperation(sdkConfiguration);
+              = new CreateGenaiPrompt.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

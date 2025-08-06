@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.ListHrisPayslipsOperation;
+import to.unified.unified_java_sdk.operations.ListHrisPayslips;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListHrisPayslipsRequestBuilder {
@@ -28,7 +28,7 @@ public class ListHrisPayslipsRequestBuilder {
     public ListHrisPayslipsResponse call() throws Exception {
         
         RequestOperation<ListHrisPayslipsRequest, ListHrisPayslipsResponse> operation
-              = new ListHrisPayslipsOperation(sdkConfiguration);
+              = new ListHrisPayslips.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

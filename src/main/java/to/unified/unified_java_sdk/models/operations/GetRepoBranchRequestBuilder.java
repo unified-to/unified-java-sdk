@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.GetRepoBranchOperation;
+import to.unified.unified_java_sdk.operations.GetRepoBranch;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetRepoBranchRequestBuilder {
@@ -28,7 +28,7 @@ public class GetRepoBranchRequestBuilder {
     public GetRepoBranchResponse call() throws Exception {
         
         RequestOperation<GetRepoBranchRequest, GetRepoBranchResponse> operation
-              = new GetRepoBranchOperation(sdkConfiguration);
+              = new GetRepoBranch.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

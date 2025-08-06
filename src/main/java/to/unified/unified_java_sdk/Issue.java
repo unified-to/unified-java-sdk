@@ -9,7 +9,7 @@ import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedIssuesRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedIssuesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedIssuesResponse;
-import to.unified.unified_java_sdk.operations.ListUnifiedIssuesOperation;
+import to.unified.unified_java_sdk.operations.ListUnifiedIssues;
 
 
 public class Issue {
@@ -37,7 +37,7 @@ public class Issue {
      */
     public ListUnifiedIssuesResponse listUnifiedIssues(ListUnifiedIssuesRequest request) throws Exception {
         RequestOperation<ListUnifiedIssuesRequest, ListUnifiedIssuesResponse> operation
-              = new ListUnifiedIssuesOperation(sdkConfiguration);
+              = new ListUnifiedIssues.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

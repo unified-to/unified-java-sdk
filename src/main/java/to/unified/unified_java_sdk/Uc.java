@@ -63,25 +63,25 @@ import to.unified.unified_java_sdk.models.operations.UpdateUcContactResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateUcRecordingRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateUcRecordingRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateUcRecordingResponse;
-import to.unified.unified_java_sdk.operations.CreateUcCommentOperation;
-import to.unified.unified_java_sdk.operations.CreateUcContactOperation;
-import to.unified.unified_java_sdk.operations.CreateUcRecordingOperation;
-import to.unified.unified_java_sdk.operations.GetUcCommentOperation;
-import to.unified.unified_java_sdk.operations.GetUcContactOperation;
-import to.unified.unified_java_sdk.operations.GetUcRecordingOperation;
-import to.unified.unified_java_sdk.operations.ListUcCallsOperation;
-import to.unified.unified_java_sdk.operations.ListUcCommentsOperation;
-import to.unified.unified_java_sdk.operations.ListUcContactsOperation;
-import to.unified.unified_java_sdk.operations.ListUcRecordingsOperation;
-import to.unified.unified_java_sdk.operations.PatchUcCommentOperation;
-import to.unified.unified_java_sdk.operations.PatchUcContactOperation;
-import to.unified.unified_java_sdk.operations.PatchUcRecordingOperation;
-import to.unified.unified_java_sdk.operations.RemoveUcCommentOperation;
-import to.unified.unified_java_sdk.operations.RemoveUcContactOperation;
-import to.unified.unified_java_sdk.operations.RemoveUcRecordingOperation;
-import to.unified.unified_java_sdk.operations.UpdateUcCommentOperation;
-import to.unified.unified_java_sdk.operations.UpdateUcContactOperation;
-import to.unified.unified_java_sdk.operations.UpdateUcRecordingOperation;
+import to.unified.unified_java_sdk.operations.CreateUcComment;
+import to.unified.unified_java_sdk.operations.CreateUcContact;
+import to.unified.unified_java_sdk.operations.CreateUcRecording;
+import to.unified.unified_java_sdk.operations.GetUcComment;
+import to.unified.unified_java_sdk.operations.GetUcContact;
+import to.unified.unified_java_sdk.operations.GetUcRecording;
+import to.unified.unified_java_sdk.operations.ListUcCalls;
+import to.unified.unified_java_sdk.operations.ListUcComments;
+import to.unified.unified_java_sdk.operations.ListUcContacts;
+import to.unified.unified_java_sdk.operations.ListUcRecordings;
+import to.unified.unified_java_sdk.operations.PatchUcComment;
+import to.unified.unified_java_sdk.operations.PatchUcContact;
+import to.unified.unified_java_sdk.operations.PatchUcRecording;
+import to.unified.unified_java_sdk.operations.RemoveUcComment;
+import to.unified.unified_java_sdk.operations.RemoveUcContact;
+import to.unified.unified_java_sdk.operations.RemoveUcRecording;
+import to.unified.unified_java_sdk.operations.UpdateUcComment;
+import to.unified.unified_java_sdk.operations.UpdateUcContact;
+import to.unified.unified_java_sdk.operations.UpdateUcRecording;
 
 
 public class Uc {
@@ -109,7 +109,7 @@ public class Uc {
      */
     public CreateUcCommentResponse createUcComment(CreateUcCommentRequest request) throws Exception {
         RequestOperation<CreateUcCommentRequest, CreateUcCommentResponse> operation
-              = new CreateUcCommentOperation(sdkConfiguration);
+              = new CreateUcComment.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -131,7 +131,7 @@ public class Uc {
      */
     public CreateUcContactResponse createUcContact(CreateUcContactRequest request) throws Exception {
         RequestOperation<CreateUcContactRequest, CreateUcContactResponse> operation
-              = new CreateUcContactOperation(sdkConfiguration);
+              = new CreateUcContact.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -153,7 +153,7 @@ public class Uc {
      */
     public CreateUcRecordingResponse createUcRecording(CreateUcRecordingRequest request) throws Exception {
         RequestOperation<CreateUcRecordingRequest, CreateUcRecordingResponse> operation
-              = new CreateUcRecordingOperation(sdkConfiguration);
+              = new CreateUcRecording.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -175,7 +175,7 @@ public class Uc {
      */
     public GetUcCommentResponse getUcComment(GetUcCommentRequest request) throws Exception {
         RequestOperation<GetUcCommentRequest, GetUcCommentResponse> operation
-              = new GetUcCommentOperation(sdkConfiguration);
+              = new GetUcComment.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -197,7 +197,7 @@ public class Uc {
      */
     public GetUcContactResponse getUcContact(GetUcContactRequest request) throws Exception {
         RequestOperation<GetUcContactRequest, GetUcContactResponse> operation
-              = new GetUcContactOperation(sdkConfiguration);
+              = new GetUcContact.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -219,7 +219,7 @@ public class Uc {
      */
     public GetUcRecordingResponse getUcRecording(GetUcRecordingRequest request) throws Exception {
         RequestOperation<GetUcRecordingRequest, GetUcRecordingResponse> operation
-              = new GetUcRecordingOperation(sdkConfiguration);
+              = new GetUcRecording.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -241,7 +241,7 @@ public class Uc {
      */
     public ListUcCallsResponse listUcCalls(ListUcCallsRequest request) throws Exception {
         RequestOperation<ListUcCallsRequest, ListUcCallsResponse> operation
-              = new ListUcCallsOperation(sdkConfiguration);
+              = new ListUcCalls.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -263,7 +263,7 @@ public class Uc {
      */
     public ListUcCommentsResponse listUcComments(ListUcCommentsRequest request) throws Exception {
         RequestOperation<ListUcCommentsRequest, ListUcCommentsResponse> operation
-              = new ListUcCommentsOperation(sdkConfiguration);
+              = new ListUcComments.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -285,7 +285,7 @@ public class Uc {
      */
     public ListUcContactsResponse listUcContacts(ListUcContactsRequest request) throws Exception {
         RequestOperation<ListUcContactsRequest, ListUcContactsResponse> operation
-              = new ListUcContactsOperation(sdkConfiguration);
+              = new ListUcContacts.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -307,7 +307,7 @@ public class Uc {
      */
     public ListUcRecordingsResponse listUcRecordings(ListUcRecordingsRequest request) throws Exception {
         RequestOperation<ListUcRecordingsRequest, ListUcRecordingsResponse> operation
-              = new ListUcRecordingsOperation(sdkConfiguration);
+              = new ListUcRecordings.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -329,7 +329,7 @@ public class Uc {
      */
     public PatchUcCommentResponse patchUcComment(PatchUcCommentRequest request) throws Exception {
         RequestOperation<PatchUcCommentRequest, PatchUcCommentResponse> operation
-              = new PatchUcCommentOperation(sdkConfiguration);
+              = new PatchUcComment.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -351,7 +351,7 @@ public class Uc {
      */
     public PatchUcContactResponse patchUcContact(PatchUcContactRequest request) throws Exception {
         RequestOperation<PatchUcContactRequest, PatchUcContactResponse> operation
-              = new PatchUcContactOperation(sdkConfiguration);
+              = new PatchUcContact.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -373,7 +373,7 @@ public class Uc {
      */
     public PatchUcRecordingResponse patchUcRecording(PatchUcRecordingRequest request) throws Exception {
         RequestOperation<PatchUcRecordingRequest, PatchUcRecordingResponse> operation
-              = new PatchUcRecordingOperation(sdkConfiguration);
+              = new PatchUcRecording.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -395,7 +395,7 @@ public class Uc {
      */
     public RemoveUcCommentResponse removeUcComment(RemoveUcCommentRequest request) throws Exception {
         RequestOperation<RemoveUcCommentRequest, RemoveUcCommentResponse> operation
-              = new RemoveUcCommentOperation(sdkConfiguration);
+              = new RemoveUcComment.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -417,7 +417,7 @@ public class Uc {
      */
     public RemoveUcContactResponse removeUcContact(RemoveUcContactRequest request) throws Exception {
         RequestOperation<RemoveUcContactRequest, RemoveUcContactResponse> operation
-              = new RemoveUcContactOperation(sdkConfiguration);
+              = new RemoveUcContact.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -439,7 +439,7 @@ public class Uc {
      */
     public RemoveUcRecordingResponse removeUcRecording(RemoveUcRecordingRequest request) throws Exception {
         RequestOperation<RemoveUcRecordingRequest, RemoveUcRecordingResponse> operation
-              = new RemoveUcRecordingOperation(sdkConfiguration);
+              = new RemoveUcRecording.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -461,7 +461,7 @@ public class Uc {
      */
     public UpdateUcCommentResponse updateUcComment(UpdateUcCommentRequest request) throws Exception {
         RequestOperation<UpdateUcCommentRequest, UpdateUcCommentResponse> operation
-              = new UpdateUcCommentOperation(sdkConfiguration);
+              = new UpdateUcComment.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -483,7 +483,7 @@ public class Uc {
      */
     public UpdateUcContactResponse updateUcContact(UpdateUcContactRequest request) throws Exception {
         RequestOperation<UpdateUcContactRequest, UpdateUcContactResponse> operation
-              = new UpdateUcContactOperation(sdkConfiguration);
+              = new UpdateUcContact.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -505,7 +505,7 @@ public class Uc {
      */
     public UpdateUcRecordingResponse updateUcRecording(UpdateUcRecordingRequest request) throws Exception {
         RequestOperation<UpdateUcRecordingRequest, UpdateUcRecordingResponse> operation
-              = new UpdateUcRecordingOperation(sdkConfiguration);
+              = new UpdateUcRecording.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

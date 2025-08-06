@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.ListAccountingCategoriesOperation;
+import to.unified.unified_java_sdk.operations.ListAccountingCategories;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListAccountingCategoriesRequestBuilder {
@@ -28,7 +28,7 @@ public class ListAccountingCategoriesRequestBuilder {
     public ListAccountingCategoriesResponse call() throws Exception {
         
         RequestOperation<ListAccountingCategoriesRequest, ListAccountingCategoriesResponse> operation
-              = new ListAccountingCategoriesOperation(sdkConfiguration);
+              = new ListAccountingCategories.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.CreateAccountingJournalOperation;
+import to.unified.unified_java_sdk.operations.CreateAccountingJournal;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateAccountingJournalRequestBuilder {
@@ -28,7 +28,7 @@ public class CreateAccountingJournalRequestBuilder {
     public CreateAccountingJournalResponse call() throws Exception {
         
         RequestOperation<CreateAccountingJournalRequest, CreateAccountingJournalResponse> operation
-              = new CreateAccountingJournalOperation(sdkConfiguration);
+              = new CreateAccountingJournal.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

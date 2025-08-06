@@ -12,8 +12,8 @@ import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptResponse;
 import to.unified.unified_java_sdk.models.operations.ListGenaiModelsRequest;
 import to.unified.unified_java_sdk.models.operations.ListGenaiModelsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListGenaiModelsResponse;
-import to.unified.unified_java_sdk.operations.CreateGenaiPromptOperation;
-import to.unified.unified_java_sdk.operations.ListGenaiModelsOperation;
+import to.unified.unified_java_sdk.operations.CreateGenaiPrompt;
+import to.unified.unified_java_sdk.operations.ListGenaiModels;
 
 
 public class Genai {
@@ -41,7 +41,7 @@ public class Genai {
      */
     public CreateGenaiPromptResponse createGenaiPrompt(CreateGenaiPromptRequest request) throws Exception {
         RequestOperation<CreateGenaiPromptRequest, CreateGenaiPromptResponse> operation
-              = new CreateGenaiPromptOperation(sdkConfiguration);
+              = new CreateGenaiPrompt.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -63,7 +63,7 @@ public class Genai {
      */
     public ListGenaiModelsResponse listGenaiModels(ListGenaiModelsRequest request) throws Exception {
         RequestOperation<ListGenaiModelsRequest, ListGenaiModelsResponse> operation
-              = new ListGenaiModelsOperation(sdkConfiguration);
+              = new ListGenaiModels.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

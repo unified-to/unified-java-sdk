@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.ListEnrichPeopleOperation;
+import to.unified.unified_java_sdk.operations.ListEnrichPeople;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListEnrichPeopleRequestBuilder {
@@ -28,7 +28,7 @@ public class ListEnrichPeopleRequestBuilder {
     public ListEnrichPeopleResponse call() throws Exception {
         
         RequestOperation<ListEnrichPeopleRequest, ListEnrichPeopleResponse> operation
-              = new ListEnrichPeopleOperation(sdkConfiguration);
+              = new ListEnrichPeople.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

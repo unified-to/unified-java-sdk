@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.UpdateCrmLeadOperation;
+import to.unified.unified_java_sdk.operations.UpdateCrmLead;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdateCrmLeadRequestBuilder {
@@ -28,7 +28,7 @@ public class UpdateCrmLeadRequestBuilder {
     public UpdateCrmLeadResponse call() throws Exception {
         
         RequestOperation<UpdateCrmLeadRequest, UpdateCrmLeadResponse> operation
-              = new UpdateCrmLeadOperation(sdkConfiguration);
+              = new UpdateCrmLead.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

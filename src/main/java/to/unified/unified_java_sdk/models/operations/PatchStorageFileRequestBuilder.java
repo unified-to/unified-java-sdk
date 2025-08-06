@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.PatchStorageFileOperation;
+import to.unified.unified_java_sdk.operations.PatchStorageFile;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchStorageFileRequestBuilder {
@@ -28,7 +28,7 @@ public class PatchStorageFileRequestBuilder {
     public PatchStorageFileResponse call() throws Exception {
         
         RequestOperation<PatchStorageFileRequest, PatchStorageFileResponse> operation
-              = new PatchStorageFileOperation(sdkConfiguration);
+              = new PatchStorageFile.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

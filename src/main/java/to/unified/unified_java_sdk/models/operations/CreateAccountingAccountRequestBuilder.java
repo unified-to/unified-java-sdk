@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.CreateAccountingAccountOperation;
+import to.unified.unified_java_sdk.operations.CreateAccountingAccount;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateAccountingAccountRequestBuilder {
@@ -28,7 +28,7 @@ public class CreateAccountingAccountRequestBuilder {
     public CreateAccountingAccountResponse call() throws Exception {
         
         RequestOperation<CreateAccountingAccountRequest, CreateAccountingAccountResponse> operation
-              = new CreateAccountingAccountOperation(sdkConfiguration);
+              = new CreateAccountingAccount.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

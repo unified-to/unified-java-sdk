@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveCrmLeadResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmLeadRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmLeadRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmLeadResponse;
-import to.unified.unified_java_sdk.operations.CreateCrmLeadOperation;
-import to.unified.unified_java_sdk.operations.GetCrmLeadOperation;
-import to.unified.unified_java_sdk.operations.ListCrmLeadsOperation;
-import to.unified.unified_java_sdk.operations.PatchCrmLeadOperation;
-import to.unified.unified_java_sdk.operations.RemoveCrmLeadOperation;
-import to.unified.unified_java_sdk.operations.UpdateCrmLeadOperation;
+import to.unified.unified_java_sdk.operations.CreateCrmLead;
+import to.unified.unified_java_sdk.operations.GetCrmLead;
+import to.unified.unified_java_sdk.operations.ListCrmLeads;
+import to.unified.unified_java_sdk.operations.PatchCrmLead;
+import to.unified.unified_java_sdk.operations.RemoveCrmLead;
+import to.unified.unified_java_sdk.operations.UpdateCrmLead;
 
 
 public class Lead {
@@ -57,7 +57,7 @@ public class Lead {
      */
     public CreateCrmLeadResponse createCrmLead(CreateCrmLeadRequest request) throws Exception {
         RequestOperation<CreateCrmLeadRequest, CreateCrmLeadResponse> operation
-              = new CreateCrmLeadOperation(sdkConfiguration);
+              = new CreateCrmLead.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Lead {
      */
     public GetCrmLeadResponse getCrmLead(GetCrmLeadRequest request) throws Exception {
         RequestOperation<GetCrmLeadRequest, GetCrmLeadResponse> operation
-              = new GetCrmLeadOperation(sdkConfiguration);
+              = new GetCrmLead.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Lead {
      */
     public ListCrmLeadsResponse listCrmLeads(ListCrmLeadsRequest request) throws Exception {
         RequestOperation<ListCrmLeadsRequest, ListCrmLeadsResponse> operation
-              = new ListCrmLeadsOperation(sdkConfiguration);
+              = new ListCrmLeads.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Lead {
      */
     public PatchCrmLeadResponse patchCrmLead(PatchCrmLeadRequest request) throws Exception {
         RequestOperation<PatchCrmLeadRequest, PatchCrmLeadResponse> operation
-              = new PatchCrmLeadOperation(sdkConfiguration);
+              = new PatchCrmLead.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Lead {
      */
     public RemoveCrmLeadResponse removeCrmLead(RemoveCrmLeadRequest request) throws Exception {
         RequestOperation<RemoveCrmLeadRequest, RemoveCrmLeadResponse> operation
-              = new RemoveCrmLeadOperation(sdkConfiguration);
+              = new RemoveCrmLead.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Lead {
      */
     public UpdateCrmLeadResponse updateCrmLead(UpdateCrmLeadRequest request) throws Exception {
         RequestOperation<UpdateCrmLeadRequest, UpdateCrmLeadResponse> operation
-              = new UpdateCrmLeadOperation(sdkConfiguration);
+              = new UpdateCrmLead.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -9,7 +9,7 @@ import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptRequest;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptResponse;
-import to.unified.unified_java_sdk.operations.CreateGenaiPromptOperation;
+import to.unified.unified_java_sdk.operations.CreateGenaiPrompt;
 
 
 public class Prompt {
@@ -37,7 +37,7 @@ public class Prompt {
      */
     public CreateGenaiPromptResponse createGenaiPrompt(CreateGenaiPromptRequest request) throws Exception {
         RequestOperation<CreateGenaiPromptRequest, CreateGenaiPromptResponse> operation
-              = new CreateGenaiPromptOperation(sdkConfiguration);
+              = new CreateGenaiPrompt.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

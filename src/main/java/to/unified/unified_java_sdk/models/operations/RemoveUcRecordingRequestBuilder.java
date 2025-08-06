@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.RemoveUcRecordingOperation;
+import to.unified.unified_java_sdk.operations.RemoveUcRecording;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveUcRecordingRequestBuilder {
@@ -28,7 +28,7 @@ public class RemoveUcRecordingRequestBuilder {
     public RemoveUcRecordingResponse call() throws Exception {
         
         RequestOperation<RemoveUcRecordingRequest, RemoveUcRecordingResponse> operation
-              = new RemoveUcRecordingOperation(sdkConfiguration);
+              = new RemoveUcRecording.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

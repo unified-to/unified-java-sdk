@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveRepoCommitResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoCommitRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoCommitRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoCommitResponse;
-import to.unified.unified_java_sdk.operations.CreateRepoCommitOperation;
-import to.unified.unified_java_sdk.operations.GetRepoCommitOperation;
-import to.unified.unified_java_sdk.operations.ListRepoCommitsOperation;
-import to.unified.unified_java_sdk.operations.PatchRepoCommitOperation;
-import to.unified.unified_java_sdk.operations.RemoveRepoCommitOperation;
-import to.unified.unified_java_sdk.operations.UpdateRepoCommitOperation;
+import to.unified.unified_java_sdk.operations.CreateRepoCommit;
+import to.unified.unified_java_sdk.operations.GetRepoCommit;
+import to.unified.unified_java_sdk.operations.ListRepoCommits;
+import to.unified.unified_java_sdk.operations.PatchRepoCommit;
+import to.unified.unified_java_sdk.operations.RemoveRepoCommit;
+import to.unified.unified_java_sdk.operations.UpdateRepoCommit;
 
 
 public class Commit {
@@ -57,7 +57,7 @@ public class Commit {
      */
     public CreateRepoCommitResponse createRepoCommit(CreateRepoCommitRequest request) throws Exception {
         RequestOperation<CreateRepoCommitRequest, CreateRepoCommitResponse> operation
-              = new CreateRepoCommitOperation(sdkConfiguration);
+              = new CreateRepoCommit.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Commit {
      */
     public GetRepoCommitResponse getRepoCommit(GetRepoCommitRequest request) throws Exception {
         RequestOperation<GetRepoCommitRequest, GetRepoCommitResponse> operation
-              = new GetRepoCommitOperation(sdkConfiguration);
+              = new GetRepoCommit.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Commit {
      */
     public ListRepoCommitsResponse listRepoCommits(ListRepoCommitsRequest request) throws Exception {
         RequestOperation<ListRepoCommitsRequest, ListRepoCommitsResponse> operation
-              = new ListRepoCommitsOperation(sdkConfiguration);
+              = new ListRepoCommits.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Commit {
      */
     public PatchRepoCommitResponse patchRepoCommit(PatchRepoCommitRequest request) throws Exception {
         RequestOperation<PatchRepoCommitRequest, PatchRepoCommitResponse> operation
-              = new PatchRepoCommitOperation(sdkConfiguration);
+              = new PatchRepoCommit.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Commit {
      */
     public RemoveRepoCommitResponse removeRepoCommit(RemoveRepoCommitRequest request) throws Exception {
         RequestOperation<RemoveRepoCommitRequest, RemoveRepoCommitResponse> operation
-              = new RemoveRepoCommitOperation(sdkConfiguration);
+              = new RemoveRepoCommit.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Commit {
      */
     public UpdateRepoCommitResponse updateRepoCommit(UpdateRepoCommitRequest request) throws Exception {
         RequestOperation<UpdateRepoCommitRequest, UpdateRepoCommitResponse> operation
-              = new UpdateRepoCommitOperation(sdkConfiguration);
+              = new UpdateRepoCommit.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

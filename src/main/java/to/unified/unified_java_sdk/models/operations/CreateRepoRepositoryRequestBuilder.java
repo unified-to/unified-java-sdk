@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.CreateRepoRepositoryOperation;
+import to.unified.unified_java_sdk.operations.CreateRepoRepository;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateRepoRepositoryRequestBuilder {
@@ -28,7 +28,7 @@ public class CreateRepoRepositoryRequestBuilder {
     public CreateRepoRepositoryResponse call() throws Exception {
         
         RequestOperation<CreateRepoRepositoryRequest, CreateRepoRepositoryResponse> operation
-              = new CreateRepoRepositoryOperation(sdkConfiguration);
+              = new CreateRepoRepository.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

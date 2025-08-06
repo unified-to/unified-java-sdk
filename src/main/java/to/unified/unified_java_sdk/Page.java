@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveKmsPageResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateKmsPageRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateKmsPageRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateKmsPageResponse;
-import to.unified.unified_java_sdk.operations.CreateKmsPageOperation;
-import to.unified.unified_java_sdk.operations.GetKmsPageOperation;
-import to.unified.unified_java_sdk.operations.ListKmsPagesOperation;
-import to.unified.unified_java_sdk.operations.PatchKmsPageOperation;
-import to.unified.unified_java_sdk.operations.RemoveKmsPageOperation;
-import to.unified.unified_java_sdk.operations.UpdateKmsPageOperation;
+import to.unified.unified_java_sdk.operations.CreateKmsPage;
+import to.unified.unified_java_sdk.operations.GetKmsPage;
+import to.unified.unified_java_sdk.operations.ListKmsPages;
+import to.unified.unified_java_sdk.operations.PatchKmsPage;
+import to.unified.unified_java_sdk.operations.RemoveKmsPage;
+import to.unified.unified_java_sdk.operations.UpdateKmsPage;
 
 
 public class Page {
@@ -57,7 +57,7 @@ public class Page {
      */
     public CreateKmsPageResponse createKmsPage(CreateKmsPageRequest request) throws Exception {
         RequestOperation<CreateKmsPageRequest, CreateKmsPageResponse> operation
-              = new CreateKmsPageOperation(sdkConfiguration);
+              = new CreateKmsPage.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Page {
      */
     public GetKmsPageResponse getKmsPage(GetKmsPageRequest request) throws Exception {
         RequestOperation<GetKmsPageRequest, GetKmsPageResponse> operation
-              = new GetKmsPageOperation(sdkConfiguration);
+              = new GetKmsPage.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Page {
      */
     public ListKmsPagesResponse listKmsPages(ListKmsPagesRequest request) throws Exception {
         RequestOperation<ListKmsPagesRequest, ListKmsPagesResponse> operation
-              = new ListKmsPagesOperation(sdkConfiguration);
+              = new ListKmsPages.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Page {
      */
     public PatchKmsPageResponse patchKmsPage(PatchKmsPageRequest request) throws Exception {
         RequestOperation<PatchKmsPageRequest, PatchKmsPageResponse> operation
-              = new PatchKmsPageOperation(sdkConfiguration);
+              = new PatchKmsPage.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Page {
      */
     public RemoveKmsPageResponse removeKmsPage(RemoveKmsPageRequest request) throws Exception {
         RequestOperation<RemoveKmsPageRequest, RemoveKmsPageResponse> operation
-              = new RemoveKmsPageOperation(sdkConfiguration);
+              = new RemoveKmsPage.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Page {
      */
     public UpdateKmsPageResponse updateKmsPage(UpdateKmsPageRequest request) throws Exception {
         RequestOperation<UpdateKmsPageRequest, UpdateKmsPageResponse> operation
-              = new UpdateKmsPageOperation(sdkConfiguration);
+              = new UpdateKmsPage.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

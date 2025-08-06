@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveCommerceCollectionRes
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceCollectionRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceCollectionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceCollectionResponse;
-import to.unified.unified_java_sdk.operations.CreateCommerceCollectionOperation;
-import to.unified.unified_java_sdk.operations.GetCommerceCollectionOperation;
-import to.unified.unified_java_sdk.operations.ListCommerceCollectionsOperation;
-import to.unified.unified_java_sdk.operations.PatchCommerceCollectionOperation;
-import to.unified.unified_java_sdk.operations.RemoveCommerceCollectionOperation;
-import to.unified.unified_java_sdk.operations.UpdateCommerceCollectionOperation;
+import to.unified.unified_java_sdk.operations.CreateCommerceCollection;
+import to.unified.unified_java_sdk.operations.GetCommerceCollection;
+import to.unified.unified_java_sdk.operations.ListCommerceCollections;
+import to.unified.unified_java_sdk.operations.PatchCommerceCollection;
+import to.unified.unified_java_sdk.operations.RemoveCommerceCollection;
+import to.unified.unified_java_sdk.operations.UpdateCommerceCollection;
 
 
 public class Collection {
@@ -57,7 +57,7 @@ public class Collection {
      */
     public CreateCommerceCollectionResponse createCommerceCollection(CreateCommerceCollectionRequest request) throws Exception {
         RequestOperation<CreateCommerceCollectionRequest, CreateCommerceCollectionResponse> operation
-              = new CreateCommerceCollectionOperation(sdkConfiguration);
+              = new CreateCommerceCollection.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Collection {
      */
     public GetCommerceCollectionResponse getCommerceCollection(GetCommerceCollectionRequest request) throws Exception {
         RequestOperation<GetCommerceCollectionRequest, GetCommerceCollectionResponse> operation
-              = new GetCommerceCollectionOperation(sdkConfiguration);
+              = new GetCommerceCollection.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Collection {
      */
     public ListCommerceCollectionsResponse listCommerceCollections(ListCommerceCollectionsRequest request) throws Exception {
         RequestOperation<ListCommerceCollectionsRequest, ListCommerceCollectionsResponse> operation
-              = new ListCommerceCollectionsOperation(sdkConfiguration);
+              = new ListCommerceCollections.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Collection {
      */
     public PatchCommerceCollectionResponse patchCommerceCollection(PatchCommerceCollectionRequest request) throws Exception {
         RequestOperation<PatchCommerceCollectionRequest, PatchCommerceCollectionResponse> operation
-              = new PatchCommerceCollectionOperation(sdkConfiguration);
+              = new PatchCommerceCollection.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Collection {
      */
     public RemoveCommerceCollectionResponse removeCommerceCollection(RemoveCommerceCollectionRequest request) throws Exception {
         RequestOperation<RemoveCommerceCollectionRequest, RemoveCommerceCollectionResponse> operation
-              = new RemoveCommerceCollectionOperation(sdkConfiguration);
+              = new RemoveCommerceCollection.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Collection {
      */
     public UpdateCommerceCollectionResponse updateCommerceCollection(UpdateCommerceCollectionRequest request) throws Exception {
         RequestOperation<UpdateCommerceCollectionRequest, UpdateCommerceCollectionResponse> operation
-              = new UpdateCommerceCollectionOperation(sdkConfiguration);
+              = new UpdateCommerceCollection.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

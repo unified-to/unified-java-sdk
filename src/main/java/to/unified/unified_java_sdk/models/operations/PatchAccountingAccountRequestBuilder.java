@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.PatchAccountingAccountOperation;
+import to.unified.unified_java_sdk.operations.PatchAccountingAccount;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchAccountingAccountRequestBuilder {
@@ -28,7 +28,7 @@ public class PatchAccountingAccountRequestBuilder {
     public PatchAccountingAccountResponse call() throws Exception {
         
         RequestOperation<PatchAccountingAccountRequest, PatchAccountingAccountResponse> operation
-              = new PatchAccountingAccountOperation(sdkConfiguration);
+              = new PatchAccountingAccount.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

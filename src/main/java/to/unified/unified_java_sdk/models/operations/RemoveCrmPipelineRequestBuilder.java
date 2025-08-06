@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.RemoveCrmPipelineOperation;
+import to.unified.unified_java_sdk.operations.RemoveCrmPipeline;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveCrmPipelineRequestBuilder {
@@ -28,7 +28,7 @@ public class RemoveCrmPipelineRequestBuilder {
     public RemoveCrmPipelineResponse call() throws Exception {
         
         RequestOperation<RemoveCrmPipelineRequest, RemoveCrmPipelineResponse> operation
-              = new RemoveCrmPipelineOperation(sdkConfiguration);
+              = new RemoveCrmPipeline.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

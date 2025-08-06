@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.CreatePassthroughJsonOperation;
+import to.unified.unified_java_sdk.operations.CreatePassthroughJson;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreatePassthroughJsonRequestBuilder {
@@ -28,7 +28,7 @@ public class CreatePassthroughJsonRequestBuilder {
     public CreatePassthroughJsonResponse call() throws Exception {
         
         RequestOperation<CreatePassthroughJsonRequest, CreatePassthroughJsonResponse> operation
-              = new CreatePassthroughJsonOperation(sdkConfiguration);
+              = new CreatePassthroughJson.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -12,8 +12,8 @@ import to.unified.unified_java_sdk.models.operations.GetAccountingBalancesheetRe
 import to.unified.unified_java_sdk.models.operations.ListAccountingBalancesheetsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingBalancesheetsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAccountingBalancesheetsResponse;
-import to.unified.unified_java_sdk.operations.GetAccountingBalancesheetOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingBalancesheetsOperation;
+import to.unified.unified_java_sdk.operations.GetAccountingBalancesheet;
+import to.unified.unified_java_sdk.operations.ListAccountingBalancesheets;
 
 
 public class Balancesheet {
@@ -41,7 +41,7 @@ public class Balancesheet {
      */
     public GetAccountingBalancesheetResponse getAccountingBalancesheet(GetAccountingBalancesheetRequest request) throws Exception {
         RequestOperation<GetAccountingBalancesheetRequest, GetAccountingBalancesheetResponse> operation
-              = new GetAccountingBalancesheetOperation(sdkConfiguration);
+              = new GetAccountingBalancesheet.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -63,7 +63,7 @@ public class Balancesheet {
      */
     public ListAccountingBalancesheetsResponse listAccountingBalancesheets(ListAccountingBalancesheetsRequest request) throws Exception {
         RequestOperation<ListAccountingBalancesheetsRequest, ListAccountingBalancesheetsResponse> operation
-              = new ListAccountingBalancesheetsOperation(sdkConfiguration);
+              = new ListAccountingBalancesheets.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

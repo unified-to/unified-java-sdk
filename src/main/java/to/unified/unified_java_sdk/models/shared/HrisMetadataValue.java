@@ -6,9 +6,14 @@ package to.unified.unified_java_sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import java.lang.Boolean;
+import java.lang.Double;
+import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.utils.OneOfDeserializer;
 import to.unified.unified_java_sdk.utils.TypedObject;
 import to.unified.unified_java_sdk.utils.Utils.JsonShape;
@@ -25,39 +30,39 @@ public class HrisMetadataValue {
         this.value = value;
     }
 
-    public static HrisMetadataValue of(HrisMetadataSchemas1 value) {
+    public static HrisMetadataValue of(Map<String, Object> value) {
         Utils.checkNotNull(value, "value");
-        return new HrisMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<HrisMetadataSchemas1>(){}));
+        return new HrisMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<Map<String, Object>>(){}));
     }
 
-    public static HrisMetadataValue of(HrisMetadataSchemas2 value) {
+    public static HrisMetadataValue of(String value) {
         Utils.checkNotNull(value, "value");
-        return new HrisMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<HrisMetadataSchemas2>(){}));
+        return new HrisMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<String>(){}));
     }
 
-    public static HrisMetadataValue of(HrisMetadataSchemas3 value) {
+    public static HrisMetadataValue of(double value) {
         Utils.checkNotNull(value, "value");
-        return new HrisMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<HrisMetadataSchemas3>(){}));
+        return new HrisMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Double>(){}));
     }
 
-    public static HrisMetadataValue of(HrisMetadataSchemas4 value) {
+    public static HrisMetadataValue of(boolean value) {
         Utils.checkNotNull(value, "value");
-        return new HrisMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<HrisMetadataSchemas4>(){}));
+        return new HrisMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Boolean>(){}));
     }
 
-    public static HrisMetadataValue of(HrisMetadataSchemas5 value) {
+    public static HrisMetadataValue of(List<HrisMetadataSchemas5> value) {
         Utils.checkNotNull(value, "value");
-        return new HrisMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<HrisMetadataSchemas5>(){}));
+        return new HrisMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<List<HrisMetadataSchemas5>>(){}));
     }
     
     /**
      * Returns an instance of one of these types:
      * <ul>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.HrisMetadataSchemas1}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.HrisMetadataSchemas2}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.HrisMetadataSchemas3}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.HrisMetadataSchemas4}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.HrisMetadataSchemas5}</li>
+     * <li>{@code java.util.Map<java.lang.String, java.lang.Object>}</li>
+     * <li>{@code java.lang.String}</li>
+     * <li>{@code double}</li>
+     * <li>{@code boolean}</li>
+     * <li>{@code java.util.List<to.unified.unified_java_sdk.models.shared.HrisMetadataSchemas5>}</li>
      * </ul>
      * 
      * <p>Use {@code instanceof} to determine what type is returned. For example:
@@ -97,11 +102,11 @@ public class HrisMetadataValue {
 
         public _Deserializer() {
             super(HrisMetadataValue.class, false,
-                  TypeReferenceWithShape.of(new TypeReference<HrisMetadataSchemas5>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<HrisMetadataSchemas4>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<HrisMetadataSchemas3>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<HrisMetadataSchemas2>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<HrisMetadataSchemas1>() {}, JsonShape.DEFAULT));
+                  TypeReferenceWithShape.of(new TypeReference<List<HrisMetadataSchemas5>>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<Boolean>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<Double>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<String>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<Map<String, Object>>() {}, JsonShape.DEFAULT));
         }
     }
     

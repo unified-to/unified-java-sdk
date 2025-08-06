@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.RemoveScimUsersOperation;
+import to.unified.unified_java_sdk.operations.RemoveScimUsers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveScimUsersRequestBuilder {
@@ -28,7 +28,7 @@ public class RemoveScimUsersRequestBuilder {
     public RemoveScimUsersResponse call() throws Exception {
         
         RequestOperation<RemoveScimUsersRequest, RemoveScimUsersResponse> operation
-              = new RemoveScimUsersOperation(sdkConfiguration);
+              = new RemoveScimUsers.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

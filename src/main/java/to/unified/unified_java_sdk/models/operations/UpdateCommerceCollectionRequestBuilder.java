@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.UpdateCommerceCollectionOperation;
+import to.unified.unified_java_sdk.operations.UpdateCommerceCollection;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdateCommerceCollectionRequestBuilder {
@@ -28,7 +28,7 @@ public class UpdateCommerceCollectionRequestBuilder {
     public UpdateCommerceCollectionResponse call() throws Exception {
         
         RequestOperation<UpdateCommerceCollectionRequest, UpdateCommerceCollectionResponse> operation
-              = new UpdateCommerceCollectionOperation(sdkConfiguration);
+              = new UpdateCommerceCollection.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

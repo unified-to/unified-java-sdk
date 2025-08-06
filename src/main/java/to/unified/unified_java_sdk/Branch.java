@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveRepoBranchResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoBranchRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoBranchRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoBranchResponse;
-import to.unified.unified_java_sdk.operations.CreateRepoBranchOperation;
-import to.unified.unified_java_sdk.operations.GetRepoBranchOperation;
-import to.unified.unified_java_sdk.operations.ListRepoBranchesOperation;
-import to.unified.unified_java_sdk.operations.PatchRepoBranchOperation;
-import to.unified.unified_java_sdk.operations.RemoveRepoBranchOperation;
-import to.unified.unified_java_sdk.operations.UpdateRepoBranchOperation;
+import to.unified.unified_java_sdk.operations.CreateRepoBranch;
+import to.unified.unified_java_sdk.operations.GetRepoBranch;
+import to.unified.unified_java_sdk.operations.ListRepoBranches;
+import to.unified.unified_java_sdk.operations.PatchRepoBranch;
+import to.unified.unified_java_sdk.operations.RemoveRepoBranch;
+import to.unified.unified_java_sdk.operations.UpdateRepoBranch;
 
 
 public class Branch {
@@ -57,7 +57,7 @@ public class Branch {
      */
     public CreateRepoBranchResponse createRepoBranch(CreateRepoBranchRequest request) throws Exception {
         RequestOperation<CreateRepoBranchRequest, CreateRepoBranchResponse> operation
-              = new CreateRepoBranchOperation(sdkConfiguration);
+              = new CreateRepoBranch.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Branch {
      */
     public GetRepoBranchResponse getRepoBranch(GetRepoBranchRequest request) throws Exception {
         RequestOperation<GetRepoBranchRequest, GetRepoBranchResponse> operation
-              = new GetRepoBranchOperation(sdkConfiguration);
+              = new GetRepoBranch.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Branch {
      */
     public ListRepoBranchesResponse listRepoBranches(ListRepoBranchesRequest request) throws Exception {
         RequestOperation<ListRepoBranchesRequest, ListRepoBranchesResponse> operation
-              = new ListRepoBranchesOperation(sdkConfiguration);
+              = new ListRepoBranches.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Branch {
      */
     public PatchRepoBranchResponse patchRepoBranch(PatchRepoBranchRequest request) throws Exception {
         RequestOperation<PatchRepoBranchRequest, PatchRepoBranchResponse> operation
-              = new PatchRepoBranchOperation(sdkConfiguration);
+              = new PatchRepoBranch.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Branch {
      */
     public RemoveRepoBranchResponse removeRepoBranch(RemoveRepoBranchRequest request) throws Exception {
         RequestOperation<RemoveRepoBranchRequest, RemoveRepoBranchResponse> operation
-              = new RemoveRepoBranchOperation(sdkConfiguration);
+              = new RemoveRepoBranch.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Branch {
      */
     public UpdateRepoBranchResponse updateRepoBranch(UpdateRepoBranchRequest request) throws Exception {
         RequestOperation<UpdateRepoBranchRequest, UpdateRepoBranchResponse> operation
-              = new UpdateRepoBranchOperation(sdkConfiguration);
+              = new UpdateRepoBranch.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

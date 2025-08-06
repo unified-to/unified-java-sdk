@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.UpdateStorageFileOperation;
+import to.unified.unified_java_sdk.operations.UpdateStorageFile;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdateStorageFileRequestBuilder {
@@ -28,7 +28,7 @@ public class UpdateStorageFileRequestBuilder {
     public UpdateStorageFileResponse call() throws Exception {
         
         RequestOperation<UpdateStorageFileRequest, UpdateStorageFileResponse> operation
-              = new UpdateStorageFileOperation(sdkConfiguration);
+              = new UpdateStorageFile.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

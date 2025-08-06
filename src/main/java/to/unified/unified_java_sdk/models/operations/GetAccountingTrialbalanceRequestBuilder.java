@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.GetAccountingTrialbalanceOperation;
+import to.unified.unified_java_sdk.operations.GetAccountingTrialbalance;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetAccountingTrialbalanceRequestBuilder {
@@ -28,7 +28,7 @@ public class GetAccountingTrialbalanceRequestBuilder {
     public GetAccountingTrialbalanceResponse call() throws Exception {
         
         RequestOperation<GetAccountingTrialbalanceRequest, GetAccountingTrialbalanceResponse> operation
-              = new GetAccountingTrialbalanceOperation(sdkConfiguration);
+              = new GetAccountingTrialbalance.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

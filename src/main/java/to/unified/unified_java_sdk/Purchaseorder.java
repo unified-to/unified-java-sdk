@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveAccountingPurchaseord
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingPurchaseorderRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingPurchaseorderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingPurchaseorderResponse;
-import to.unified.unified_java_sdk.operations.CreateAccountingPurchaseorderOperation;
-import to.unified.unified_java_sdk.operations.GetAccountingPurchaseorderOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingPurchaseordersOperation;
-import to.unified.unified_java_sdk.operations.PatchAccountingPurchaseorderOperation;
-import to.unified.unified_java_sdk.operations.RemoveAccountingPurchaseorderOperation;
-import to.unified.unified_java_sdk.operations.UpdateAccountingPurchaseorderOperation;
+import to.unified.unified_java_sdk.operations.CreateAccountingPurchaseorder;
+import to.unified.unified_java_sdk.operations.GetAccountingPurchaseorder;
+import to.unified.unified_java_sdk.operations.ListAccountingPurchaseorders;
+import to.unified.unified_java_sdk.operations.PatchAccountingPurchaseorder;
+import to.unified.unified_java_sdk.operations.RemoveAccountingPurchaseorder;
+import to.unified.unified_java_sdk.operations.UpdateAccountingPurchaseorder;
 
 
 public class Purchaseorder {
@@ -57,7 +57,7 @@ public class Purchaseorder {
      */
     public CreateAccountingPurchaseorderResponse createAccountingPurchaseorder(CreateAccountingPurchaseorderRequest request) throws Exception {
         RequestOperation<CreateAccountingPurchaseorderRequest, CreateAccountingPurchaseorderResponse> operation
-              = new CreateAccountingPurchaseorderOperation(sdkConfiguration);
+              = new CreateAccountingPurchaseorder.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Purchaseorder {
      */
     public GetAccountingPurchaseorderResponse getAccountingPurchaseorder(GetAccountingPurchaseorderRequest request) throws Exception {
         RequestOperation<GetAccountingPurchaseorderRequest, GetAccountingPurchaseorderResponse> operation
-              = new GetAccountingPurchaseorderOperation(sdkConfiguration);
+              = new GetAccountingPurchaseorder.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Purchaseorder {
      */
     public ListAccountingPurchaseordersResponse listAccountingPurchaseorders(ListAccountingPurchaseordersRequest request) throws Exception {
         RequestOperation<ListAccountingPurchaseordersRequest, ListAccountingPurchaseordersResponse> operation
-              = new ListAccountingPurchaseordersOperation(sdkConfiguration);
+              = new ListAccountingPurchaseorders.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Purchaseorder {
      */
     public PatchAccountingPurchaseorderResponse patchAccountingPurchaseorder(PatchAccountingPurchaseorderRequest request) throws Exception {
         RequestOperation<PatchAccountingPurchaseorderRequest, PatchAccountingPurchaseorderResponse> operation
-              = new PatchAccountingPurchaseorderOperation(sdkConfiguration);
+              = new PatchAccountingPurchaseorder.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Purchaseorder {
      */
     public RemoveAccountingPurchaseorderResponse removeAccountingPurchaseorder(RemoveAccountingPurchaseorderRequest request) throws Exception {
         RequestOperation<RemoveAccountingPurchaseorderRequest, RemoveAccountingPurchaseorderResponse> operation
-              = new RemoveAccountingPurchaseorderOperation(sdkConfiguration);
+              = new RemoveAccountingPurchaseorder.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Purchaseorder {
      */
     public UpdateAccountingPurchaseorderResponse updateAccountingPurchaseorder(UpdateAccountingPurchaseorderRequest request) throws Exception {
         RequestOperation<UpdateAccountingPurchaseorderRequest, UpdateAccountingPurchaseorderResponse> operation
-              = new UpdateAccountingPurchaseorderOperation(sdkConfiguration);
+              = new UpdateAccountingPurchaseorder.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

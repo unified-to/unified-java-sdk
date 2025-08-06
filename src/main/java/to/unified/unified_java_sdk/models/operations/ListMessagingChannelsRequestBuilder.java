@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.ListMessagingChannelsOperation;
+import to.unified.unified_java_sdk.operations.ListMessagingChannels;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListMessagingChannelsRequestBuilder {
@@ -28,7 +28,7 @@ public class ListMessagingChannelsRequestBuilder {
     public ListMessagingChannelsResponse call() throws Exception {
         
         RequestOperation<ListMessagingChannelsRequest, ListMessagingChannelsResponse> operation
-              = new ListMessagingChannelsOperation(sdkConfiguration);
+              = new ListMessagingChannels.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -9,7 +9,7 @@ import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.ListCalendarBusiesRequest;
 import to.unified.unified_java_sdk.models.operations.ListCalendarBusiesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListCalendarBusiesResponse;
-import to.unified.unified_java_sdk.operations.ListCalendarBusiesOperation;
+import to.unified.unified_java_sdk.operations.ListCalendarBusies;
 
 
 public class Busy {
@@ -37,7 +37,7 @@ public class Busy {
      */
     public ListCalendarBusiesResponse listCalendarBusies(ListCalendarBusiesRequest request) throws Exception {
         RequestOperation<ListCalendarBusiesRequest, ListCalendarBusiesResponse> operation
-              = new ListCalendarBusiesOperation(sdkConfiguration);
+              = new ListCalendarBusies.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

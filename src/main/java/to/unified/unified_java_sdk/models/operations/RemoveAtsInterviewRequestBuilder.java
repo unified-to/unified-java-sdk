@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.RemoveAtsInterviewOperation;
+import to.unified.unified_java_sdk.operations.RemoveAtsInterview;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveAtsInterviewRequestBuilder {
@@ -28,7 +28,7 @@ public class RemoveAtsInterviewRequestBuilder {
     public RemoveAtsInterviewResponse call() throws Exception {
         
         RequestOperation<RemoveAtsInterviewRequest, RemoveAtsInterviewResponse> operation
-              = new RemoveAtsInterviewOperation(sdkConfiguration);
+              = new RemoveAtsInterview.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveAtsCandidateResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsCandidateRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsCandidateRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsCandidateResponse;
-import to.unified.unified_java_sdk.operations.CreateAtsCandidateOperation;
-import to.unified.unified_java_sdk.operations.GetAtsCandidateOperation;
-import to.unified.unified_java_sdk.operations.ListAtsCandidatesOperation;
-import to.unified.unified_java_sdk.operations.PatchAtsCandidateOperation;
-import to.unified.unified_java_sdk.operations.RemoveAtsCandidateOperation;
-import to.unified.unified_java_sdk.operations.UpdateAtsCandidateOperation;
+import to.unified.unified_java_sdk.operations.CreateAtsCandidate;
+import to.unified.unified_java_sdk.operations.GetAtsCandidate;
+import to.unified.unified_java_sdk.operations.ListAtsCandidates;
+import to.unified.unified_java_sdk.operations.PatchAtsCandidate;
+import to.unified.unified_java_sdk.operations.RemoveAtsCandidate;
+import to.unified.unified_java_sdk.operations.UpdateAtsCandidate;
 
 
 public class Candidate {
@@ -57,7 +57,7 @@ public class Candidate {
      */
     public CreateAtsCandidateResponse createAtsCandidate(CreateAtsCandidateRequest request) throws Exception {
         RequestOperation<CreateAtsCandidateRequest, CreateAtsCandidateResponse> operation
-              = new CreateAtsCandidateOperation(sdkConfiguration);
+              = new CreateAtsCandidate.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Candidate {
      */
     public GetAtsCandidateResponse getAtsCandidate(GetAtsCandidateRequest request) throws Exception {
         RequestOperation<GetAtsCandidateRequest, GetAtsCandidateResponse> operation
-              = new GetAtsCandidateOperation(sdkConfiguration);
+              = new GetAtsCandidate.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Candidate {
      */
     public ListAtsCandidatesResponse listAtsCandidates(ListAtsCandidatesRequest request) throws Exception {
         RequestOperation<ListAtsCandidatesRequest, ListAtsCandidatesResponse> operation
-              = new ListAtsCandidatesOperation(sdkConfiguration);
+              = new ListAtsCandidates.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Candidate {
      */
     public PatchAtsCandidateResponse patchAtsCandidate(PatchAtsCandidateRequest request) throws Exception {
         RequestOperation<PatchAtsCandidateRequest, PatchAtsCandidateResponse> operation
-              = new PatchAtsCandidateOperation(sdkConfiguration);
+              = new PatchAtsCandidate.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Candidate {
      */
     public RemoveAtsCandidateResponse removeAtsCandidate(RemoveAtsCandidateRequest request) throws Exception {
         RequestOperation<RemoveAtsCandidateRequest, RemoveAtsCandidateResponse> operation
-              = new RemoveAtsCandidateOperation(sdkConfiguration);
+              = new RemoveAtsCandidate.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Candidate {
      */
     public UpdateAtsCandidateResponse updateAtsCandidate(UpdateAtsCandidateRequest request) throws Exception {
         RequestOperation<UpdateAtsCandidateRequest, UpdateAtsCandidateResponse> operation
-              = new UpdateAtsCandidateOperation(sdkConfiguration);
+              = new UpdateAtsCandidate.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.RemoveAccountingCategoryOperation;
+import to.unified.unified_java_sdk.operations.RemoveAccountingCategory;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveAccountingCategoryRequestBuilder {
@@ -28,7 +28,7 @@ public class RemoveAccountingCategoryRequestBuilder {
     public RemoveAccountingCategoryResponse call() throws Exception {
         
         RequestOperation<RemoveAccountingCategoryRequest, RemoveAccountingCategoryResponse> operation
-              = new RemoveAccountingCategoryOperation(sdkConfiguration);
+              = new RemoveAccountingCategory.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

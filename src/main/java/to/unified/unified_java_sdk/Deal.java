@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveCrmDealResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmDealRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmDealRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmDealResponse;
-import to.unified.unified_java_sdk.operations.CreateCrmDealOperation;
-import to.unified.unified_java_sdk.operations.GetCrmDealOperation;
-import to.unified.unified_java_sdk.operations.ListCrmDealsOperation;
-import to.unified.unified_java_sdk.operations.PatchCrmDealOperation;
-import to.unified.unified_java_sdk.operations.RemoveCrmDealOperation;
-import to.unified.unified_java_sdk.operations.UpdateCrmDealOperation;
+import to.unified.unified_java_sdk.operations.CreateCrmDeal;
+import to.unified.unified_java_sdk.operations.GetCrmDeal;
+import to.unified.unified_java_sdk.operations.ListCrmDeals;
+import to.unified.unified_java_sdk.operations.PatchCrmDeal;
+import to.unified.unified_java_sdk.operations.RemoveCrmDeal;
+import to.unified.unified_java_sdk.operations.UpdateCrmDeal;
 
 
 public class Deal {
@@ -57,7 +57,7 @@ public class Deal {
      */
     public CreateCrmDealResponse createCrmDeal(CreateCrmDealRequest request) throws Exception {
         RequestOperation<CreateCrmDealRequest, CreateCrmDealResponse> operation
-              = new CreateCrmDealOperation(sdkConfiguration);
+              = new CreateCrmDeal.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Deal {
      */
     public GetCrmDealResponse getCrmDeal(GetCrmDealRequest request) throws Exception {
         RequestOperation<GetCrmDealRequest, GetCrmDealResponse> operation
-              = new GetCrmDealOperation(sdkConfiguration);
+              = new GetCrmDeal.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Deal {
      */
     public ListCrmDealsResponse listCrmDeals(ListCrmDealsRequest request) throws Exception {
         RequestOperation<ListCrmDealsRequest, ListCrmDealsResponse> operation
-              = new ListCrmDealsOperation(sdkConfiguration);
+              = new ListCrmDeals.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Deal {
      */
     public PatchCrmDealResponse patchCrmDeal(PatchCrmDealRequest request) throws Exception {
         RequestOperation<PatchCrmDealRequest, PatchCrmDealResponse> operation
-              = new PatchCrmDealOperation(sdkConfiguration);
+              = new PatchCrmDeal.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Deal {
      */
     public RemoveCrmDealResponse removeCrmDeal(RemoveCrmDealRequest request) throws Exception {
         RequestOperation<RemoveCrmDealRequest, RemoveCrmDealResponse> operation
-              = new RemoveCrmDealOperation(sdkConfiguration);
+              = new RemoveCrmDeal.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Deal {
      */
     public UpdateCrmDealResponse updateCrmDeal(UpdateCrmDealRequest request) throws Exception {
         RequestOperation<UpdateCrmDealRequest, UpdateCrmDealResponse> operation
-              = new UpdateCrmDealOperation(sdkConfiguration);
+              = new UpdateCrmDeal.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

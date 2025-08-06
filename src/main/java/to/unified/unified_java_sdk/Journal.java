@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveAccountingJournalResp
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingJournalRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingJournalRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingJournalResponse;
-import to.unified.unified_java_sdk.operations.CreateAccountingJournalOperation;
-import to.unified.unified_java_sdk.operations.GetAccountingJournalOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingJournalsOperation;
-import to.unified.unified_java_sdk.operations.PatchAccountingJournalOperation;
-import to.unified.unified_java_sdk.operations.RemoveAccountingJournalOperation;
-import to.unified.unified_java_sdk.operations.UpdateAccountingJournalOperation;
+import to.unified.unified_java_sdk.operations.CreateAccountingJournal;
+import to.unified.unified_java_sdk.operations.GetAccountingJournal;
+import to.unified.unified_java_sdk.operations.ListAccountingJournals;
+import to.unified.unified_java_sdk.operations.PatchAccountingJournal;
+import to.unified.unified_java_sdk.operations.RemoveAccountingJournal;
+import to.unified.unified_java_sdk.operations.UpdateAccountingJournal;
 
 
 public class Journal {
@@ -57,7 +57,7 @@ public class Journal {
      */
     public CreateAccountingJournalResponse createAccountingJournal(CreateAccountingJournalRequest request) throws Exception {
         RequestOperation<CreateAccountingJournalRequest, CreateAccountingJournalResponse> operation
-              = new CreateAccountingJournalOperation(sdkConfiguration);
+              = new CreateAccountingJournal.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Journal {
      */
     public GetAccountingJournalResponse getAccountingJournal(GetAccountingJournalRequest request) throws Exception {
         RequestOperation<GetAccountingJournalRequest, GetAccountingJournalResponse> operation
-              = new GetAccountingJournalOperation(sdkConfiguration);
+              = new GetAccountingJournal.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Journal {
      */
     public ListAccountingJournalsResponse listAccountingJournals(ListAccountingJournalsRequest request) throws Exception {
         RequestOperation<ListAccountingJournalsRequest, ListAccountingJournalsResponse> operation
-              = new ListAccountingJournalsOperation(sdkConfiguration);
+              = new ListAccountingJournals.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Journal {
      */
     public PatchAccountingJournalResponse patchAccountingJournal(PatchAccountingJournalRequest request) throws Exception {
         RequestOperation<PatchAccountingJournalRequest, PatchAccountingJournalResponse> operation
-              = new PatchAccountingJournalOperation(sdkConfiguration);
+              = new PatchAccountingJournal.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Journal {
      */
     public RemoveAccountingJournalResponse removeAccountingJournal(RemoveAccountingJournalRequest request) throws Exception {
         RequestOperation<RemoveAccountingJournalRequest, RemoveAccountingJournalResponse> operation
-              = new RemoveAccountingJournalOperation(sdkConfiguration);
+              = new RemoveAccountingJournal.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Journal {
      */
     public UpdateAccountingJournalResponse updateAccountingJournal(UpdateAccountingJournalRequest request) throws Exception {
         RequestOperation<UpdateAccountingJournalRequest, UpdateAccountingJournalResponse> operation
-              = new UpdateAccountingJournalOperation(sdkConfiguration);
+              = new UpdateAccountingJournal.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveAccountingTransaction
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingTransactionRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingTransactionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingTransactionResponse;
-import to.unified.unified_java_sdk.operations.CreateAccountingTransactionOperation;
-import to.unified.unified_java_sdk.operations.GetAccountingTransactionOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingTransactionsOperation;
-import to.unified.unified_java_sdk.operations.PatchAccountingTransactionOperation;
-import to.unified.unified_java_sdk.operations.RemoveAccountingTransactionOperation;
-import to.unified.unified_java_sdk.operations.UpdateAccountingTransactionOperation;
+import to.unified.unified_java_sdk.operations.CreateAccountingTransaction;
+import to.unified.unified_java_sdk.operations.GetAccountingTransaction;
+import to.unified.unified_java_sdk.operations.ListAccountingTransactions;
+import to.unified.unified_java_sdk.operations.PatchAccountingTransaction;
+import to.unified.unified_java_sdk.operations.RemoveAccountingTransaction;
+import to.unified.unified_java_sdk.operations.UpdateAccountingTransaction;
 
 
 public class Transaction {
@@ -57,7 +57,7 @@ public class Transaction {
      */
     public CreateAccountingTransactionResponse createAccountingTransaction(CreateAccountingTransactionRequest request) throws Exception {
         RequestOperation<CreateAccountingTransactionRequest, CreateAccountingTransactionResponse> operation
-              = new CreateAccountingTransactionOperation(sdkConfiguration);
+              = new CreateAccountingTransaction.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Transaction {
      */
     public GetAccountingTransactionResponse getAccountingTransaction(GetAccountingTransactionRequest request) throws Exception {
         RequestOperation<GetAccountingTransactionRequest, GetAccountingTransactionResponse> operation
-              = new GetAccountingTransactionOperation(sdkConfiguration);
+              = new GetAccountingTransaction.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Transaction {
      */
     public ListAccountingTransactionsResponse listAccountingTransactions(ListAccountingTransactionsRequest request) throws Exception {
         RequestOperation<ListAccountingTransactionsRequest, ListAccountingTransactionsResponse> operation
-              = new ListAccountingTransactionsOperation(sdkConfiguration);
+              = new ListAccountingTransactions.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Transaction {
      */
     public PatchAccountingTransactionResponse patchAccountingTransaction(PatchAccountingTransactionRequest request) throws Exception {
         RequestOperation<PatchAccountingTransactionRequest, PatchAccountingTransactionResponse> operation
-              = new PatchAccountingTransactionOperation(sdkConfiguration);
+              = new PatchAccountingTransaction.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Transaction {
      */
     public RemoveAccountingTransactionResponse removeAccountingTransaction(RemoveAccountingTransactionRequest request) throws Exception {
         RequestOperation<RemoveAccountingTransactionRequest, RemoveAccountingTransactionResponse> operation
-              = new RemoveAccountingTransactionOperation(sdkConfiguration);
+              = new RemoveAccountingTransaction.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Transaction {
      */
     public UpdateAccountingTransactionResponse updateAccountingTransaction(UpdateAccountingTransactionRequest request) throws Exception {
         RequestOperation<UpdateAccountingTransactionRequest, UpdateAccountingTransactionResponse> operation
-              = new UpdateAccountingTransactionOperation(sdkConfiguration);
+              = new UpdateAccountingTransaction.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

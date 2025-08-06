@@ -6,11 +6,11 @@ package to.unified.unified_java_sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import java.lang.Object;
+import java.lang.Boolean;
+import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
-import java.util.List;
 import to.unified.unified_java_sdk.utils.OneOfDeserializer;
 import to.unified.unified_java_sdk.utils.TypedObject;
 import to.unified.unified_java_sdk.utils.Utils.JsonShape;
@@ -27,21 +27,33 @@ public class KmsPageMetadata5 {
         this.value = value;
     }
 
-    public static KmsPageMetadata5 of(List<Object> value) {
+    public static KmsPageMetadata5 of(KmsPageMetadata1 value) {
         Utils.checkNotNull(value, "value");
-        return new KmsPageMetadata5(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<List<Object>>(){}));
+        return new KmsPageMetadata5(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<KmsPageMetadata1>(){}));
     }
 
-    public static KmsPageMetadata5 of(KmsPageMetadataSchemasExtraData52 value) {
+    public static KmsPageMetadata5 of(String value) {
         Utils.checkNotNull(value, "value");
-        return new KmsPageMetadata5(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<KmsPageMetadataSchemasExtraData52>(){}));
+        return new KmsPageMetadata5(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<String>(){}));
+    }
+
+    public static KmsPageMetadata5 of(double value) {
+        Utils.checkNotNull(value, "value");
+        return new KmsPageMetadata5(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Double>(){}));
+    }
+
+    public static KmsPageMetadata5 of(boolean value) {
+        Utils.checkNotNull(value, "value");
+        return new KmsPageMetadata5(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Boolean>(){}));
     }
     
     /**
      * Returns an instance of one of these types:
      * <ul>
-     * <li>{@code java.util.List<java.lang.Object>}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.KmsPageMetadataSchemasExtraData52}</li>
+     * <li>{@code to.unified.unified_java_sdk.models.shared.KmsPageMetadata1}</li>
+     * <li>{@code java.lang.String}</li>
+     * <li>{@code double}</li>
+     * <li>{@code boolean}</li>
      * </ul>
      * 
      * <p>Use {@code instanceof} to determine what type is returned. For example:
@@ -81,8 +93,10 @@ public class KmsPageMetadata5 {
 
         public _Deserializer() {
             super(KmsPageMetadata5.class, false,
-                  TypeReferenceWithShape.of(new TypeReference<List<Object>>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<KmsPageMetadataSchemasExtraData52>() {}, JsonShape.DEFAULT));
+                  TypeReferenceWithShape.of(new TypeReference<Boolean>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<Double>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<String>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<KmsPageMetadata1>() {}, JsonShape.DEFAULT));
         }
     }
     

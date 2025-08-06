@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveAtsInterviewResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsInterviewRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsInterviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsInterviewResponse;
-import to.unified.unified_java_sdk.operations.CreateAtsInterviewOperation;
-import to.unified.unified_java_sdk.operations.GetAtsInterviewOperation;
-import to.unified.unified_java_sdk.operations.ListAtsInterviewsOperation;
-import to.unified.unified_java_sdk.operations.PatchAtsInterviewOperation;
-import to.unified.unified_java_sdk.operations.RemoveAtsInterviewOperation;
-import to.unified.unified_java_sdk.operations.UpdateAtsInterviewOperation;
+import to.unified.unified_java_sdk.operations.CreateAtsInterview;
+import to.unified.unified_java_sdk.operations.GetAtsInterview;
+import to.unified.unified_java_sdk.operations.ListAtsInterviews;
+import to.unified.unified_java_sdk.operations.PatchAtsInterview;
+import to.unified.unified_java_sdk.operations.RemoveAtsInterview;
+import to.unified.unified_java_sdk.operations.UpdateAtsInterview;
 
 
 public class Interview {
@@ -57,7 +57,7 @@ public class Interview {
      */
     public CreateAtsInterviewResponse createAtsInterview(CreateAtsInterviewRequest request) throws Exception {
         RequestOperation<CreateAtsInterviewRequest, CreateAtsInterviewResponse> operation
-              = new CreateAtsInterviewOperation(sdkConfiguration);
+              = new CreateAtsInterview.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Interview {
      */
     public GetAtsInterviewResponse getAtsInterview(GetAtsInterviewRequest request) throws Exception {
         RequestOperation<GetAtsInterviewRequest, GetAtsInterviewResponse> operation
-              = new GetAtsInterviewOperation(sdkConfiguration);
+              = new GetAtsInterview.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Interview {
      */
     public ListAtsInterviewsResponse listAtsInterviews(ListAtsInterviewsRequest request) throws Exception {
         RequestOperation<ListAtsInterviewsRequest, ListAtsInterviewsResponse> operation
-              = new ListAtsInterviewsOperation(sdkConfiguration);
+              = new ListAtsInterviews.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Interview {
      */
     public PatchAtsInterviewResponse patchAtsInterview(PatchAtsInterviewRequest request) throws Exception {
         RequestOperation<PatchAtsInterviewRequest, PatchAtsInterviewResponse> operation
-              = new PatchAtsInterviewOperation(sdkConfiguration);
+              = new PatchAtsInterview.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Interview {
      */
     public RemoveAtsInterviewResponse removeAtsInterview(RemoveAtsInterviewRequest request) throws Exception {
         RequestOperation<RemoveAtsInterviewRequest, RemoveAtsInterviewResponse> operation
-              = new RemoveAtsInterviewOperation(sdkConfiguration);
+              = new RemoveAtsInterview.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Interview {
      */
     public UpdateAtsInterviewResponse updateAtsInterview(UpdateAtsInterviewRequest request) throws Exception {
         RequestOperation<UpdateAtsInterviewRequest, UpdateAtsInterviewResponse> operation
-              = new UpdateAtsInterviewOperation(sdkConfiguration);
+              = new UpdateAtsInterview.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

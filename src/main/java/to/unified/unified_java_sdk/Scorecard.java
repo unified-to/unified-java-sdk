@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveAtsScorecardResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecardRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecardRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecardResponse;
-import to.unified.unified_java_sdk.operations.CreateAtsScorecardOperation;
-import to.unified.unified_java_sdk.operations.GetAtsScorecardOperation;
-import to.unified.unified_java_sdk.operations.ListAtsScorecardsOperation;
-import to.unified.unified_java_sdk.operations.PatchAtsScorecardOperation;
-import to.unified.unified_java_sdk.operations.RemoveAtsScorecardOperation;
-import to.unified.unified_java_sdk.operations.UpdateAtsScorecardOperation;
+import to.unified.unified_java_sdk.operations.CreateAtsScorecard;
+import to.unified.unified_java_sdk.operations.GetAtsScorecard;
+import to.unified.unified_java_sdk.operations.ListAtsScorecards;
+import to.unified.unified_java_sdk.operations.PatchAtsScorecard;
+import to.unified.unified_java_sdk.operations.RemoveAtsScorecard;
+import to.unified.unified_java_sdk.operations.UpdateAtsScorecard;
 
 
 public class Scorecard {
@@ -57,7 +57,7 @@ public class Scorecard {
      */
     public CreateAtsScorecardResponse createAtsScorecard(CreateAtsScorecardRequest request) throws Exception {
         RequestOperation<CreateAtsScorecardRequest, CreateAtsScorecardResponse> operation
-              = new CreateAtsScorecardOperation(sdkConfiguration);
+              = new CreateAtsScorecard.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Scorecard {
      */
     public GetAtsScorecardResponse getAtsScorecard(GetAtsScorecardRequest request) throws Exception {
         RequestOperation<GetAtsScorecardRequest, GetAtsScorecardResponse> operation
-              = new GetAtsScorecardOperation(sdkConfiguration);
+              = new GetAtsScorecard.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Scorecard {
      */
     public ListAtsScorecardsResponse listAtsScorecards(ListAtsScorecardsRequest request) throws Exception {
         RequestOperation<ListAtsScorecardsRequest, ListAtsScorecardsResponse> operation
-              = new ListAtsScorecardsOperation(sdkConfiguration);
+              = new ListAtsScorecards.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Scorecard {
      */
     public PatchAtsScorecardResponse patchAtsScorecard(PatchAtsScorecardRequest request) throws Exception {
         RequestOperation<PatchAtsScorecardRequest, PatchAtsScorecardResponse> operation
-              = new PatchAtsScorecardOperation(sdkConfiguration);
+              = new PatchAtsScorecard.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Scorecard {
      */
     public RemoveAtsScorecardResponse removeAtsScorecard(RemoveAtsScorecardRequest request) throws Exception {
         RequestOperation<RemoveAtsScorecardRequest, RemoveAtsScorecardResponse> operation
-              = new RemoveAtsScorecardOperation(sdkConfiguration);
+              = new RemoveAtsScorecard.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Scorecard {
      */
     public UpdateAtsScorecardResponse updateAtsScorecard(UpdateAtsScorecardRequest request) throws Exception {
         RequestOperation<UpdateAtsScorecardRequest, UpdateAtsScorecardResponse> operation
-              = new UpdateAtsScorecardOperation(sdkConfiguration);
+              = new UpdateAtsScorecard.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

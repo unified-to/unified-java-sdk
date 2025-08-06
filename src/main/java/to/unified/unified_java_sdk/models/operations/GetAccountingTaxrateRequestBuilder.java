@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.GetAccountingTaxrateOperation;
+import to.unified.unified_java_sdk.operations.GetAccountingTaxrate;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetAccountingTaxrateRequestBuilder {
@@ -28,7 +28,7 @@ public class GetAccountingTaxrateRequestBuilder {
     public GetAccountingTaxrateResponse call() throws Exception {
         
         RequestOperation<GetAccountingTaxrateRequest, GetAccountingTaxrateResponse> operation
-              = new GetAccountingTaxrateOperation(sdkConfiguration);
+              = new GetAccountingTaxrate.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

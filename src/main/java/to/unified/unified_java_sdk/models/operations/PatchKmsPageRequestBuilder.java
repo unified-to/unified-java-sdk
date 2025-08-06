@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.PatchKmsPageOperation;
+import to.unified.unified_java_sdk.operations.PatchKmsPage;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchKmsPageRequestBuilder {
@@ -28,7 +28,7 @@ public class PatchKmsPageRequestBuilder {
     public PatchKmsPageResponse call() throws Exception {
         
         RequestOperation<PatchKmsPageRequest, PatchKmsPageResponse> operation
-              = new PatchKmsPageOperation(sdkConfiguration);
+              = new PatchKmsPage.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

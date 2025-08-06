@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.UpdateUnifiedConnectionOperation;
+import to.unified.unified_java_sdk.operations.UpdateUnifiedConnection;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdateUnifiedConnectionRequestBuilder {
@@ -28,7 +28,7 @@ public class UpdateUnifiedConnectionRequestBuilder {
     public UpdateUnifiedConnectionResponse call() throws Exception {
         
         RequestOperation<UpdateUnifiedConnectionRequest, UpdateUnifiedConnectionResponse> operation
-              = new UpdateUnifiedConnectionOperation(sdkConfiguration);
+              = new UpdateUnifiedConnection.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.RemoveTaskCommentOperation;
+import to.unified.unified_java_sdk.operations.RemoveTaskComment;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveTaskCommentRequestBuilder {
@@ -28,7 +28,7 @@ public class RemoveTaskCommentRequestBuilder {
     public RemoveTaskCommentResponse call() throws Exception {
         
         RequestOperation<RemoveTaskCommentRequest, RemoveTaskCommentResponse> operation
-              = new RemoveTaskCommentOperation(sdkConfiguration);
+              = new RemoveTaskComment.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

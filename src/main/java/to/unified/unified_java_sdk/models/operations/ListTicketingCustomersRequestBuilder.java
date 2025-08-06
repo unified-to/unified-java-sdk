@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.ListTicketingCustomersOperation;
+import to.unified.unified_java_sdk.operations.ListTicketingCustomers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListTicketingCustomersRequestBuilder {
@@ -28,7 +28,7 @@ public class ListTicketingCustomersRequestBuilder {
     public ListTicketingCustomersResponse call() throws Exception {
         
         RequestOperation<ListTicketingCustomersRequest, ListTicketingCustomersResponse> operation
-              = new ListTicketingCustomersOperation(sdkConfiguration);
+              = new ListTicketingCustomers.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

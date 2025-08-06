@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.CreatePassthroughRawOperation;
+import to.unified.unified_java_sdk.operations.CreatePassthroughRaw;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreatePassthroughRawRequestBuilder {
@@ -28,7 +28,7 @@ public class CreatePassthroughRawRequestBuilder {
     public CreatePassthroughRawResponse call() throws Exception {
         
         RequestOperation<CreatePassthroughRawRequest, CreatePassthroughRawResponse> operation
-              = new CreatePassthroughRawOperation(sdkConfiguration);
+              = new CreatePassthroughRaw.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

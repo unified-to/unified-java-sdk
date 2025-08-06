@@ -153,55 +153,55 @@ import to.unified.unified_java_sdk.models.operations.UpdateAtsJobResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecardRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecardRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecardResponse;
-import to.unified.unified_java_sdk.operations.CreateAtsActivityOperation;
-import to.unified.unified_java_sdk.operations.CreateAtsApplicationOperation;
-import to.unified.unified_java_sdk.operations.CreateAtsCandidateOperation;
-import to.unified.unified_java_sdk.operations.CreateAtsCompanyOperation;
-import to.unified.unified_java_sdk.operations.CreateAtsDocumentOperation;
-import to.unified.unified_java_sdk.operations.CreateAtsInterviewOperation;
-import to.unified.unified_java_sdk.operations.CreateAtsJobOperation;
-import to.unified.unified_java_sdk.operations.CreateAtsScorecardOperation;
-import to.unified.unified_java_sdk.operations.GetAtsActivityOperation;
-import to.unified.unified_java_sdk.operations.GetAtsApplicationOperation;
-import to.unified.unified_java_sdk.operations.GetAtsCandidateOperation;
-import to.unified.unified_java_sdk.operations.GetAtsCompanyOperation;
-import to.unified.unified_java_sdk.operations.GetAtsDocumentOperation;
-import to.unified.unified_java_sdk.operations.GetAtsInterviewOperation;
-import to.unified.unified_java_sdk.operations.GetAtsJobOperation;
-import to.unified.unified_java_sdk.operations.GetAtsScorecardOperation;
-import to.unified.unified_java_sdk.operations.ListAtsActivitiesOperation;
-import to.unified.unified_java_sdk.operations.ListAtsApplicationsOperation;
-import to.unified.unified_java_sdk.operations.ListAtsApplicationstatusesOperation;
-import to.unified.unified_java_sdk.operations.ListAtsCandidatesOperation;
-import to.unified.unified_java_sdk.operations.ListAtsCompaniesOperation;
-import to.unified.unified_java_sdk.operations.ListAtsDocumentsOperation;
-import to.unified.unified_java_sdk.operations.ListAtsInterviewsOperation;
-import to.unified.unified_java_sdk.operations.ListAtsJobsOperation;
-import to.unified.unified_java_sdk.operations.ListAtsScorecardsOperation;
-import to.unified.unified_java_sdk.operations.PatchAtsActivityOperation;
-import to.unified.unified_java_sdk.operations.PatchAtsApplicationOperation;
-import to.unified.unified_java_sdk.operations.PatchAtsCandidateOperation;
-import to.unified.unified_java_sdk.operations.PatchAtsCompanyOperation;
-import to.unified.unified_java_sdk.operations.PatchAtsDocumentOperation;
-import to.unified.unified_java_sdk.operations.PatchAtsInterviewOperation;
-import to.unified.unified_java_sdk.operations.PatchAtsJobOperation;
-import to.unified.unified_java_sdk.operations.PatchAtsScorecardOperation;
-import to.unified.unified_java_sdk.operations.RemoveAtsActivityOperation;
-import to.unified.unified_java_sdk.operations.RemoveAtsApplicationOperation;
-import to.unified.unified_java_sdk.operations.RemoveAtsCandidateOperation;
-import to.unified.unified_java_sdk.operations.RemoveAtsCompanyOperation;
-import to.unified.unified_java_sdk.operations.RemoveAtsDocumentOperation;
-import to.unified.unified_java_sdk.operations.RemoveAtsInterviewOperation;
-import to.unified.unified_java_sdk.operations.RemoveAtsJobOperation;
-import to.unified.unified_java_sdk.operations.RemoveAtsScorecardOperation;
-import to.unified.unified_java_sdk.operations.UpdateAtsActivityOperation;
-import to.unified.unified_java_sdk.operations.UpdateAtsApplicationOperation;
-import to.unified.unified_java_sdk.operations.UpdateAtsCandidateOperation;
-import to.unified.unified_java_sdk.operations.UpdateAtsCompanyOperation;
-import to.unified.unified_java_sdk.operations.UpdateAtsDocumentOperation;
-import to.unified.unified_java_sdk.operations.UpdateAtsInterviewOperation;
-import to.unified.unified_java_sdk.operations.UpdateAtsJobOperation;
-import to.unified.unified_java_sdk.operations.UpdateAtsScorecardOperation;
+import to.unified.unified_java_sdk.operations.CreateAtsActivity;
+import to.unified.unified_java_sdk.operations.CreateAtsApplication;
+import to.unified.unified_java_sdk.operations.CreateAtsCandidate;
+import to.unified.unified_java_sdk.operations.CreateAtsCompany;
+import to.unified.unified_java_sdk.operations.CreateAtsDocument;
+import to.unified.unified_java_sdk.operations.CreateAtsInterview;
+import to.unified.unified_java_sdk.operations.CreateAtsJob;
+import to.unified.unified_java_sdk.operations.CreateAtsScorecard;
+import to.unified.unified_java_sdk.operations.GetAtsActivity;
+import to.unified.unified_java_sdk.operations.GetAtsApplication;
+import to.unified.unified_java_sdk.operations.GetAtsCandidate;
+import to.unified.unified_java_sdk.operations.GetAtsCompany;
+import to.unified.unified_java_sdk.operations.GetAtsDocument;
+import to.unified.unified_java_sdk.operations.GetAtsInterview;
+import to.unified.unified_java_sdk.operations.GetAtsJob;
+import to.unified.unified_java_sdk.operations.GetAtsScorecard;
+import to.unified.unified_java_sdk.operations.ListAtsActivities;
+import to.unified.unified_java_sdk.operations.ListAtsApplications;
+import to.unified.unified_java_sdk.operations.ListAtsApplicationstatuses;
+import to.unified.unified_java_sdk.operations.ListAtsCandidates;
+import to.unified.unified_java_sdk.operations.ListAtsCompanies;
+import to.unified.unified_java_sdk.operations.ListAtsDocuments;
+import to.unified.unified_java_sdk.operations.ListAtsInterviews;
+import to.unified.unified_java_sdk.operations.ListAtsJobs;
+import to.unified.unified_java_sdk.operations.ListAtsScorecards;
+import to.unified.unified_java_sdk.operations.PatchAtsActivity;
+import to.unified.unified_java_sdk.operations.PatchAtsApplication;
+import to.unified.unified_java_sdk.operations.PatchAtsCandidate;
+import to.unified.unified_java_sdk.operations.PatchAtsCompany;
+import to.unified.unified_java_sdk.operations.PatchAtsDocument;
+import to.unified.unified_java_sdk.operations.PatchAtsInterview;
+import to.unified.unified_java_sdk.operations.PatchAtsJob;
+import to.unified.unified_java_sdk.operations.PatchAtsScorecard;
+import to.unified.unified_java_sdk.operations.RemoveAtsActivity;
+import to.unified.unified_java_sdk.operations.RemoveAtsApplication;
+import to.unified.unified_java_sdk.operations.RemoveAtsCandidate;
+import to.unified.unified_java_sdk.operations.RemoveAtsCompany;
+import to.unified.unified_java_sdk.operations.RemoveAtsDocument;
+import to.unified.unified_java_sdk.operations.RemoveAtsInterview;
+import to.unified.unified_java_sdk.operations.RemoveAtsJob;
+import to.unified.unified_java_sdk.operations.RemoveAtsScorecard;
+import to.unified.unified_java_sdk.operations.UpdateAtsActivity;
+import to.unified.unified_java_sdk.operations.UpdateAtsApplication;
+import to.unified.unified_java_sdk.operations.UpdateAtsCandidate;
+import to.unified.unified_java_sdk.operations.UpdateAtsCompany;
+import to.unified.unified_java_sdk.operations.UpdateAtsDocument;
+import to.unified.unified_java_sdk.operations.UpdateAtsInterview;
+import to.unified.unified_java_sdk.operations.UpdateAtsJob;
+import to.unified.unified_java_sdk.operations.UpdateAtsScorecard;
 
 
 public class Ats {
@@ -229,7 +229,7 @@ public class Ats {
      */
     public CreateAtsActivityResponse createAtsActivity(CreateAtsActivityRequest request) throws Exception {
         RequestOperation<CreateAtsActivityRequest, CreateAtsActivityResponse> operation
-              = new CreateAtsActivityOperation(sdkConfiguration);
+              = new CreateAtsActivity.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -251,7 +251,7 @@ public class Ats {
      */
     public CreateAtsApplicationResponse createAtsApplication(CreateAtsApplicationRequest request) throws Exception {
         RequestOperation<CreateAtsApplicationRequest, CreateAtsApplicationResponse> operation
-              = new CreateAtsApplicationOperation(sdkConfiguration);
+              = new CreateAtsApplication.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -273,7 +273,7 @@ public class Ats {
      */
     public CreateAtsCandidateResponse createAtsCandidate(CreateAtsCandidateRequest request) throws Exception {
         RequestOperation<CreateAtsCandidateRequest, CreateAtsCandidateResponse> operation
-              = new CreateAtsCandidateOperation(sdkConfiguration);
+              = new CreateAtsCandidate.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -295,7 +295,7 @@ public class Ats {
      */
     public CreateAtsCompanyResponse createAtsCompany(CreateAtsCompanyRequest request) throws Exception {
         RequestOperation<CreateAtsCompanyRequest, CreateAtsCompanyResponse> operation
-              = new CreateAtsCompanyOperation(sdkConfiguration);
+              = new CreateAtsCompany.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -317,7 +317,7 @@ public class Ats {
      */
     public CreateAtsDocumentResponse createAtsDocument(CreateAtsDocumentRequest request) throws Exception {
         RequestOperation<CreateAtsDocumentRequest, CreateAtsDocumentResponse> operation
-              = new CreateAtsDocumentOperation(sdkConfiguration);
+              = new CreateAtsDocument.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -339,7 +339,7 @@ public class Ats {
      */
     public CreateAtsInterviewResponse createAtsInterview(CreateAtsInterviewRequest request) throws Exception {
         RequestOperation<CreateAtsInterviewRequest, CreateAtsInterviewResponse> operation
-              = new CreateAtsInterviewOperation(sdkConfiguration);
+              = new CreateAtsInterview.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -361,7 +361,7 @@ public class Ats {
      */
     public CreateAtsJobResponse createAtsJob(CreateAtsJobRequest request) throws Exception {
         RequestOperation<CreateAtsJobRequest, CreateAtsJobResponse> operation
-              = new CreateAtsJobOperation(sdkConfiguration);
+              = new CreateAtsJob.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -383,7 +383,7 @@ public class Ats {
      */
     public CreateAtsScorecardResponse createAtsScorecard(CreateAtsScorecardRequest request) throws Exception {
         RequestOperation<CreateAtsScorecardRequest, CreateAtsScorecardResponse> operation
-              = new CreateAtsScorecardOperation(sdkConfiguration);
+              = new CreateAtsScorecard.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -405,7 +405,7 @@ public class Ats {
      */
     public GetAtsActivityResponse getAtsActivity(GetAtsActivityRequest request) throws Exception {
         RequestOperation<GetAtsActivityRequest, GetAtsActivityResponse> operation
-              = new GetAtsActivityOperation(sdkConfiguration);
+              = new GetAtsActivity.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -427,7 +427,7 @@ public class Ats {
      */
     public GetAtsApplicationResponse getAtsApplication(GetAtsApplicationRequest request) throws Exception {
         RequestOperation<GetAtsApplicationRequest, GetAtsApplicationResponse> operation
-              = new GetAtsApplicationOperation(sdkConfiguration);
+              = new GetAtsApplication.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -449,7 +449,7 @@ public class Ats {
      */
     public GetAtsCandidateResponse getAtsCandidate(GetAtsCandidateRequest request) throws Exception {
         RequestOperation<GetAtsCandidateRequest, GetAtsCandidateResponse> operation
-              = new GetAtsCandidateOperation(sdkConfiguration);
+              = new GetAtsCandidate.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -471,7 +471,7 @@ public class Ats {
      */
     public GetAtsCompanyResponse getAtsCompany(GetAtsCompanyRequest request) throws Exception {
         RequestOperation<GetAtsCompanyRequest, GetAtsCompanyResponse> operation
-              = new GetAtsCompanyOperation(sdkConfiguration);
+              = new GetAtsCompany.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -493,7 +493,7 @@ public class Ats {
      */
     public GetAtsDocumentResponse getAtsDocument(GetAtsDocumentRequest request) throws Exception {
         RequestOperation<GetAtsDocumentRequest, GetAtsDocumentResponse> operation
-              = new GetAtsDocumentOperation(sdkConfiguration);
+              = new GetAtsDocument.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -515,7 +515,7 @@ public class Ats {
      */
     public GetAtsInterviewResponse getAtsInterview(GetAtsInterviewRequest request) throws Exception {
         RequestOperation<GetAtsInterviewRequest, GetAtsInterviewResponse> operation
-              = new GetAtsInterviewOperation(sdkConfiguration);
+              = new GetAtsInterview.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -537,7 +537,7 @@ public class Ats {
      */
     public GetAtsJobResponse getAtsJob(GetAtsJobRequest request) throws Exception {
         RequestOperation<GetAtsJobRequest, GetAtsJobResponse> operation
-              = new GetAtsJobOperation(sdkConfiguration);
+              = new GetAtsJob.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -559,7 +559,7 @@ public class Ats {
      */
     public GetAtsScorecardResponse getAtsScorecard(GetAtsScorecardRequest request) throws Exception {
         RequestOperation<GetAtsScorecardRequest, GetAtsScorecardResponse> operation
-              = new GetAtsScorecardOperation(sdkConfiguration);
+              = new GetAtsScorecard.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -581,7 +581,7 @@ public class Ats {
      */
     public ListAtsActivitiesResponse listAtsActivities(ListAtsActivitiesRequest request) throws Exception {
         RequestOperation<ListAtsActivitiesRequest, ListAtsActivitiesResponse> operation
-              = new ListAtsActivitiesOperation(sdkConfiguration);
+              = new ListAtsActivities.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -603,7 +603,7 @@ public class Ats {
      */
     public ListAtsApplicationsResponse listAtsApplications(ListAtsApplicationsRequest request) throws Exception {
         RequestOperation<ListAtsApplicationsRequest, ListAtsApplicationsResponse> operation
-              = new ListAtsApplicationsOperation(sdkConfiguration);
+              = new ListAtsApplications.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -625,7 +625,7 @@ public class Ats {
      */
     public ListAtsApplicationstatusesResponse listAtsApplicationstatuses(ListAtsApplicationstatusesRequest request) throws Exception {
         RequestOperation<ListAtsApplicationstatusesRequest, ListAtsApplicationstatusesResponse> operation
-              = new ListAtsApplicationstatusesOperation(sdkConfiguration);
+              = new ListAtsApplicationstatuses.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -647,7 +647,7 @@ public class Ats {
      */
     public ListAtsCandidatesResponse listAtsCandidates(ListAtsCandidatesRequest request) throws Exception {
         RequestOperation<ListAtsCandidatesRequest, ListAtsCandidatesResponse> operation
-              = new ListAtsCandidatesOperation(sdkConfiguration);
+              = new ListAtsCandidates.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -669,7 +669,7 @@ public class Ats {
      */
     public ListAtsCompaniesResponse listAtsCompanies(ListAtsCompaniesRequest request) throws Exception {
         RequestOperation<ListAtsCompaniesRequest, ListAtsCompaniesResponse> operation
-              = new ListAtsCompaniesOperation(sdkConfiguration);
+              = new ListAtsCompanies.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -691,7 +691,7 @@ public class Ats {
      */
     public ListAtsDocumentsResponse listAtsDocuments(ListAtsDocumentsRequest request) throws Exception {
         RequestOperation<ListAtsDocumentsRequest, ListAtsDocumentsResponse> operation
-              = new ListAtsDocumentsOperation(sdkConfiguration);
+              = new ListAtsDocuments.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -713,7 +713,7 @@ public class Ats {
      */
     public ListAtsInterviewsResponse listAtsInterviews(ListAtsInterviewsRequest request) throws Exception {
         RequestOperation<ListAtsInterviewsRequest, ListAtsInterviewsResponse> operation
-              = new ListAtsInterviewsOperation(sdkConfiguration);
+              = new ListAtsInterviews.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -735,7 +735,7 @@ public class Ats {
      */
     public ListAtsJobsResponse listAtsJobs(ListAtsJobsRequest request) throws Exception {
         RequestOperation<ListAtsJobsRequest, ListAtsJobsResponse> operation
-              = new ListAtsJobsOperation(sdkConfiguration);
+              = new ListAtsJobs.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -757,7 +757,7 @@ public class Ats {
      */
     public ListAtsScorecardsResponse listAtsScorecards(ListAtsScorecardsRequest request) throws Exception {
         RequestOperation<ListAtsScorecardsRequest, ListAtsScorecardsResponse> operation
-              = new ListAtsScorecardsOperation(sdkConfiguration);
+              = new ListAtsScorecards.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -779,7 +779,7 @@ public class Ats {
      */
     public PatchAtsActivityResponse patchAtsActivity(PatchAtsActivityRequest request) throws Exception {
         RequestOperation<PatchAtsActivityRequest, PatchAtsActivityResponse> operation
-              = new PatchAtsActivityOperation(sdkConfiguration);
+              = new PatchAtsActivity.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -801,7 +801,7 @@ public class Ats {
      */
     public PatchAtsApplicationResponse patchAtsApplication(PatchAtsApplicationRequest request) throws Exception {
         RequestOperation<PatchAtsApplicationRequest, PatchAtsApplicationResponse> operation
-              = new PatchAtsApplicationOperation(sdkConfiguration);
+              = new PatchAtsApplication.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -823,7 +823,7 @@ public class Ats {
      */
     public PatchAtsCandidateResponse patchAtsCandidate(PatchAtsCandidateRequest request) throws Exception {
         RequestOperation<PatchAtsCandidateRequest, PatchAtsCandidateResponse> operation
-              = new PatchAtsCandidateOperation(sdkConfiguration);
+              = new PatchAtsCandidate.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -845,7 +845,7 @@ public class Ats {
      */
     public PatchAtsCompanyResponse patchAtsCompany(PatchAtsCompanyRequest request) throws Exception {
         RequestOperation<PatchAtsCompanyRequest, PatchAtsCompanyResponse> operation
-              = new PatchAtsCompanyOperation(sdkConfiguration);
+              = new PatchAtsCompany.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -867,7 +867,7 @@ public class Ats {
      */
     public PatchAtsDocumentResponse patchAtsDocument(PatchAtsDocumentRequest request) throws Exception {
         RequestOperation<PatchAtsDocumentRequest, PatchAtsDocumentResponse> operation
-              = new PatchAtsDocumentOperation(sdkConfiguration);
+              = new PatchAtsDocument.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -889,7 +889,7 @@ public class Ats {
      */
     public PatchAtsInterviewResponse patchAtsInterview(PatchAtsInterviewRequest request) throws Exception {
         RequestOperation<PatchAtsInterviewRequest, PatchAtsInterviewResponse> operation
-              = new PatchAtsInterviewOperation(sdkConfiguration);
+              = new PatchAtsInterview.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -911,7 +911,7 @@ public class Ats {
      */
     public PatchAtsJobResponse patchAtsJob(PatchAtsJobRequest request) throws Exception {
         RequestOperation<PatchAtsJobRequest, PatchAtsJobResponse> operation
-              = new PatchAtsJobOperation(sdkConfiguration);
+              = new PatchAtsJob.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -933,7 +933,7 @@ public class Ats {
      */
     public PatchAtsScorecardResponse patchAtsScorecard(PatchAtsScorecardRequest request) throws Exception {
         RequestOperation<PatchAtsScorecardRequest, PatchAtsScorecardResponse> operation
-              = new PatchAtsScorecardOperation(sdkConfiguration);
+              = new PatchAtsScorecard.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -955,7 +955,7 @@ public class Ats {
      */
     public RemoveAtsActivityResponse removeAtsActivity(RemoveAtsActivityRequest request) throws Exception {
         RequestOperation<RemoveAtsActivityRequest, RemoveAtsActivityResponse> operation
-              = new RemoveAtsActivityOperation(sdkConfiguration);
+              = new RemoveAtsActivity.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -977,7 +977,7 @@ public class Ats {
      */
     public RemoveAtsApplicationResponse removeAtsApplication(RemoveAtsApplicationRequest request) throws Exception {
         RequestOperation<RemoveAtsApplicationRequest, RemoveAtsApplicationResponse> operation
-              = new RemoveAtsApplicationOperation(sdkConfiguration);
+              = new RemoveAtsApplication.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -999,7 +999,7 @@ public class Ats {
      */
     public RemoveAtsCandidateResponse removeAtsCandidate(RemoveAtsCandidateRequest request) throws Exception {
         RequestOperation<RemoveAtsCandidateRequest, RemoveAtsCandidateResponse> operation
-              = new RemoveAtsCandidateOperation(sdkConfiguration);
+              = new RemoveAtsCandidate.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1021,7 +1021,7 @@ public class Ats {
      */
     public RemoveAtsCompanyResponse removeAtsCompany(RemoveAtsCompanyRequest request) throws Exception {
         RequestOperation<RemoveAtsCompanyRequest, RemoveAtsCompanyResponse> operation
-              = new RemoveAtsCompanyOperation(sdkConfiguration);
+              = new RemoveAtsCompany.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1043,7 +1043,7 @@ public class Ats {
      */
     public RemoveAtsDocumentResponse removeAtsDocument(RemoveAtsDocumentRequest request) throws Exception {
         RequestOperation<RemoveAtsDocumentRequest, RemoveAtsDocumentResponse> operation
-              = new RemoveAtsDocumentOperation(sdkConfiguration);
+              = new RemoveAtsDocument.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1065,7 +1065,7 @@ public class Ats {
      */
     public RemoveAtsInterviewResponse removeAtsInterview(RemoveAtsInterviewRequest request) throws Exception {
         RequestOperation<RemoveAtsInterviewRequest, RemoveAtsInterviewResponse> operation
-              = new RemoveAtsInterviewOperation(sdkConfiguration);
+              = new RemoveAtsInterview.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1087,7 +1087,7 @@ public class Ats {
      */
     public RemoveAtsJobResponse removeAtsJob(RemoveAtsJobRequest request) throws Exception {
         RequestOperation<RemoveAtsJobRequest, RemoveAtsJobResponse> operation
-              = new RemoveAtsJobOperation(sdkConfiguration);
+              = new RemoveAtsJob.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1109,7 +1109,7 @@ public class Ats {
      */
     public RemoveAtsScorecardResponse removeAtsScorecard(RemoveAtsScorecardRequest request) throws Exception {
         RequestOperation<RemoveAtsScorecardRequest, RemoveAtsScorecardResponse> operation
-              = new RemoveAtsScorecardOperation(sdkConfiguration);
+              = new RemoveAtsScorecard.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1131,7 +1131,7 @@ public class Ats {
      */
     public UpdateAtsActivityResponse updateAtsActivity(UpdateAtsActivityRequest request) throws Exception {
         RequestOperation<UpdateAtsActivityRequest, UpdateAtsActivityResponse> operation
-              = new UpdateAtsActivityOperation(sdkConfiguration);
+              = new UpdateAtsActivity.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1153,7 +1153,7 @@ public class Ats {
      */
     public UpdateAtsApplicationResponse updateAtsApplication(UpdateAtsApplicationRequest request) throws Exception {
         RequestOperation<UpdateAtsApplicationRequest, UpdateAtsApplicationResponse> operation
-              = new UpdateAtsApplicationOperation(sdkConfiguration);
+              = new UpdateAtsApplication.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1175,7 +1175,7 @@ public class Ats {
      */
     public UpdateAtsCandidateResponse updateAtsCandidate(UpdateAtsCandidateRequest request) throws Exception {
         RequestOperation<UpdateAtsCandidateRequest, UpdateAtsCandidateResponse> operation
-              = new UpdateAtsCandidateOperation(sdkConfiguration);
+              = new UpdateAtsCandidate.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1197,7 +1197,7 @@ public class Ats {
      */
     public UpdateAtsCompanyResponse updateAtsCompany(UpdateAtsCompanyRequest request) throws Exception {
         RequestOperation<UpdateAtsCompanyRequest, UpdateAtsCompanyResponse> operation
-              = new UpdateAtsCompanyOperation(sdkConfiguration);
+              = new UpdateAtsCompany.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1219,7 +1219,7 @@ public class Ats {
      */
     public UpdateAtsDocumentResponse updateAtsDocument(UpdateAtsDocumentRequest request) throws Exception {
         RequestOperation<UpdateAtsDocumentRequest, UpdateAtsDocumentResponse> operation
-              = new UpdateAtsDocumentOperation(sdkConfiguration);
+              = new UpdateAtsDocument.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1241,7 +1241,7 @@ public class Ats {
      */
     public UpdateAtsInterviewResponse updateAtsInterview(UpdateAtsInterviewRequest request) throws Exception {
         RequestOperation<UpdateAtsInterviewRequest, UpdateAtsInterviewResponse> operation
-              = new UpdateAtsInterviewOperation(sdkConfiguration);
+              = new UpdateAtsInterview.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1263,7 +1263,7 @@ public class Ats {
      */
     public UpdateAtsJobResponse updateAtsJob(UpdateAtsJobRequest request) throws Exception {
         RequestOperation<UpdateAtsJobRequest, UpdateAtsJobResponse> operation
-              = new UpdateAtsJobOperation(sdkConfiguration);
+              = new UpdateAtsJob.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1285,7 +1285,7 @@ public class Ats {
      */
     public UpdateAtsScorecardResponse updateAtsScorecard(UpdateAtsScorecardRequest request) throws Exception {
         RequestOperation<UpdateAtsScorecardRequest, UpdateAtsScorecardResponse> operation
-              = new UpdateAtsScorecardOperation(sdkConfiguration);
+              = new UpdateAtsScorecard.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

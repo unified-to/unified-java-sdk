@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.RemoveMetadataMetadataOperation;
+import to.unified.unified_java_sdk.operations.RemoveMetadataMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveMetadataMetadataRequestBuilder {
@@ -28,7 +28,7 @@ public class RemoveMetadataMetadataRequestBuilder {
     public RemoveMetadataMetadataResponse call() throws Exception {
         
         RequestOperation<RemoveMetadataMetadataRequest, RemoveMetadataMetadataResponse> operation
-              = new RemoveMetadataMetadataOperation(sdkConfiguration);
+              = new RemoveMetadataMetadata.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

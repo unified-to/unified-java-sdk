@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationLoginOperation;
+import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationLogin;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetUnifiedIntegrationLoginRequestBuilder {
@@ -28,7 +28,7 @@ public class GetUnifiedIntegrationLoginRequestBuilder {
     public GetUnifiedIntegrationLoginResponse call() throws Exception {
         
         RequestOperation<GetUnifiedIntegrationLoginRequest, GetUnifiedIntegrationLoginResponse> operation
-              = new GetUnifiedIntegrationLoginOperation(sdkConfiguration);
+              = new GetUnifiedIntegrationLogin.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

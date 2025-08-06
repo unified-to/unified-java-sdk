@@ -60,24 +60,24 @@ import to.unified.unified_java_sdk.models.operations.UpdateTaskCommentResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateUcCommentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateUcCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateUcCommentResponse;
-import to.unified.unified_java_sdk.operations.CreateKmsCommentOperation;
-import to.unified.unified_java_sdk.operations.CreateTaskCommentOperation;
-import to.unified.unified_java_sdk.operations.CreateUcCommentOperation;
-import to.unified.unified_java_sdk.operations.GetKmsCommentOperation;
-import to.unified.unified_java_sdk.operations.GetTaskCommentOperation;
-import to.unified.unified_java_sdk.operations.GetUcCommentOperation;
-import to.unified.unified_java_sdk.operations.ListKmsCommentsOperation;
-import to.unified.unified_java_sdk.operations.ListTaskCommentsOperation;
-import to.unified.unified_java_sdk.operations.ListUcCommentsOperation;
-import to.unified.unified_java_sdk.operations.PatchKmsCommentOperation;
-import to.unified.unified_java_sdk.operations.PatchTaskCommentOperation;
-import to.unified.unified_java_sdk.operations.PatchUcCommentOperation;
-import to.unified.unified_java_sdk.operations.RemoveKmsCommentOperation;
-import to.unified.unified_java_sdk.operations.RemoveTaskCommentOperation;
-import to.unified.unified_java_sdk.operations.RemoveUcCommentOperation;
-import to.unified.unified_java_sdk.operations.UpdateKmsCommentOperation;
-import to.unified.unified_java_sdk.operations.UpdateTaskCommentOperation;
-import to.unified.unified_java_sdk.operations.UpdateUcCommentOperation;
+import to.unified.unified_java_sdk.operations.CreateKmsComment;
+import to.unified.unified_java_sdk.operations.CreateTaskComment;
+import to.unified.unified_java_sdk.operations.CreateUcComment;
+import to.unified.unified_java_sdk.operations.GetKmsComment;
+import to.unified.unified_java_sdk.operations.GetTaskComment;
+import to.unified.unified_java_sdk.operations.GetUcComment;
+import to.unified.unified_java_sdk.operations.ListKmsComments;
+import to.unified.unified_java_sdk.operations.ListTaskComments;
+import to.unified.unified_java_sdk.operations.ListUcComments;
+import to.unified.unified_java_sdk.operations.PatchKmsComment;
+import to.unified.unified_java_sdk.operations.PatchTaskComment;
+import to.unified.unified_java_sdk.operations.PatchUcComment;
+import to.unified.unified_java_sdk.operations.RemoveKmsComment;
+import to.unified.unified_java_sdk.operations.RemoveTaskComment;
+import to.unified.unified_java_sdk.operations.RemoveUcComment;
+import to.unified.unified_java_sdk.operations.UpdateKmsComment;
+import to.unified.unified_java_sdk.operations.UpdateTaskComment;
+import to.unified.unified_java_sdk.operations.UpdateUcComment;
 
 
 public class Comment {
@@ -105,7 +105,7 @@ public class Comment {
      */
     public CreateKmsCommentResponse createKmsComment(CreateKmsCommentRequest request) throws Exception {
         RequestOperation<CreateKmsCommentRequest, CreateKmsCommentResponse> operation
-              = new CreateKmsCommentOperation(sdkConfiguration);
+              = new CreateKmsComment.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -127,7 +127,7 @@ public class Comment {
      */
     public CreateTaskCommentResponse createTaskComment(CreateTaskCommentRequest request) throws Exception {
         RequestOperation<CreateTaskCommentRequest, CreateTaskCommentResponse> operation
-              = new CreateTaskCommentOperation(sdkConfiguration);
+              = new CreateTaskComment.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -149,7 +149,7 @@ public class Comment {
      */
     public CreateUcCommentResponse createUcComment(CreateUcCommentRequest request) throws Exception {
         RequestOperation<CreateUcCommentRequest, CreateUcCommentResponse> operation
-              = new CreateUcCommentOperation(sdkConfiguration);
+              = new CreateUcComment.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -171,7 +171,7 @@ public class Comment {
      */
     public GetKmsCommentResponse getKmsComment(GetKmsCommentRequest request) throws Exception {
         RequestOperation<GetKmsCommentRequest, GetKmsCommentResponse> operation
-              = new GetKmsCommentOperation(sdkConfiguration);
+              = new GetKmsComment.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,7 +193,7 @@ public class Comment {
      */
     public GetTaskCommentResponse getTaskComment(GetTaskCommentRequest request) throws Exception {
         RequestOperation<GetTaskCommentRequest, GetTaskCommentResponse> operation
-              = new GetTaskCommentOperation(sdkConfiguration);
+              = new GetTaskComment.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -215,7 +215,7 @@ public class Comment {
      */
     public GetUcCommentResponse getUcComment(GetUcCommentRequest request) throws Exception {
         RequestOperation<GetUcCommentRequest, GetUcCommentResponse> operation
-              = new GetUcCommentOperation(sdkConfiguration);
+              = new GetUcComment.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -237,7 +237,7 @@ public class Comment {
      */
     public ListKmsCommentsResponse listKmsComments(ListKmsCommentsRequest request) throws Exception {
         RequestOperation<ListKmsCommentsRequest, ListKmsCommentsResponse> operation
-              = new ListKmsCommentsOperation(sdkConfiguration);
+              = new ListKmsComments.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -259,7 +259,7 @@ public class Comment {
      */
     public ListTaskCommentsResponse listTaskComments(ListTaskCommentsRequest request) throws Exception {
         RequestOperation<ListTaskCommentsRequest, ListTaskCommentsResponse> operation
-              = new ListTaskCommentsOperation(sdkConfiguration);
+              = new ListTaskComments.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -281,7 +281,7 @@ public class Comment {
      */
     public ListUcCommentsResponse listUcComments(ListUcCommentsRequest request) throws Exception {
         RequestOperation<ListUcCommentsRequest, ListUcCommentsResponse> operation
-              = new ListUcCommentsOperation(sdkConfiguration);
+              = new ListUcComments.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -303,7 +303,7 @@ public class Comment {
      */
     public PatchKmsCommentResponse patchKmsComment(PatchKmsCommentRequest request) throws Exception {
         RequestOperation<PatchKmsCommentRequest, PatchKmsCommentResponse> operation
-              = new PatchKmsCommentOperation(sdkConfiguration);
+              = new PatchKmsComment.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -325,7 +325,7 @@ public class Comment {
      */
     public PatchTaskCommentResponse patchTaskComment(PatchTaskCommentRequest request) throws Exception {
         RequestOperation<PatchTaskCommentRequest, PatchTaskCommentResponse> operation
-              = new PatchTaskCommentOperation(sdkConfiguration);
+              = new PatchTaskComment.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -347,7 +347,7 @@ public class Comment {
      */
     public PatchUcCommentResponse patchUcComment(PatchUcCommentRequest request) throws Exception {
         RequestOperation<PatchUcCommentRequest, PatchUcCommentResponse> operation
-              = new PatchUcCommentOperation(sdkConfiguration);
+              = new PatchUcComment.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -369,7 +369,7 @@ public class Comment {
      */
     public RemoveKmsCommentResponse removeKmsComment(RemoveKmsCommentRequest request) throws Exception {
         RequestOperation<RemoveKmsCommentRequest, RemoveKmsCommentResponse> operation
-              = new RemoveKmsCommentOperation(sdkConfiguration);
+              = new RemoveKmsComment.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -391,7 +391,7 @@ public class Comment {
      */
     public RemoveTaskCommentResponse removeTaskComment(RemoveTaskCommentRequest request) throws Exception {
         RequestOperation<RemoveTaskCommentRequest, RemoveTaskCommentResponse> operation
-              = new RemoveTaskCommentOperation(sdkConfiguration);
+              = new RemoveTaskComment.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -413,7 +413,7 @@ public class Comment {
      */
     public RemoveUcCommentResponse removeUcComment(RemoveUcCommentRequest request) throws Exception {
         RequestOperation<RemoveUcCommentRequest, RemoveUcCommentResponse> operation
-              = new RemoveUcCommentOperation(sdkConfiguration);
+              = new RemoveUcComment.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -435,7 +435,7 @@ public class Comment {
      */
     public UpdateKmsCommentResponse updateKmsComment(UpdateKmsCommentRequest request) throws Exception {
         RequestOperation<UpdateKmsCommentRequest, UpdateKmsCommentResponse> operation
-              = new UpdateKmsCommentOperation(sdkConfiguration);
+              = new UpdateKmsComment.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -457,7 +457,7 @@ public class Comment {
      */
     public UpdateTaskCommentResponse updateTaskComment(UpdateTaskCommentRequest request) throws Exception {
         RequestOperation<UpdateTaskCommentRequest, UpdateTaskCommentResponse> operation
-              = new UpdateTaskCommentOperation(sdkConfiguration);
+              = new UpdateTaskComment.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -479,7 +479,7 @@ public class Comment {
      */
     public UpdateUcCommentResponse updateUcComment(UpdateUcCommentRequest request) throws Exception {
         RequestOperation<UpdateUcCommentRequest, UpdateUcCommentResponse> operation
-              = new UpdateUcCommentOperation(sdkConfiguration);
+              = new UpdateUcComment.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

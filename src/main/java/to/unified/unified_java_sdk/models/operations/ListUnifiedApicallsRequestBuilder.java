@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.ListUnifiedApicallsOperation;
+import to.unified.unified_java_sdk.operations.ListUnifiedApicalls;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListUnifiedApicallsRequestBuilder {
@@ -28,7 +28,7 @@ public class ListUnifiedApicallsRequestBuilder {
     public ListUnifiedApicallsResponse call() throws Exception {
         
         RequestOperation<ListUnifiedApicallsRequest, ListUnifiedApicallsResponse> operation
-              = new ListUnifiedApicallsOperation(sdkConfiguration);
+              = new ListUnifiedApicalls.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

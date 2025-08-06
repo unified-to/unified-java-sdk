@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveMetadataMetadataRespo
 import to.unified.unified_java_sdk.models.operations.UpdateMetadataMetadataRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateMetadataMetadataRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateMetadataMetadataResponse;
-import to.unified.unified_java_sdk.operations.CreateMetadataMetadataOperation;
-import to.unified.unified_java_sdk.operations.GetMetadataMetadataOperation;
-import to.unified.unified_java_sdk.operations.ListMetadataMetadatasOperation;
-import to.unified.unified_java_sdk.operations.PatchMetadataMetadataOperation;
-import to.unified.unified_java_sdk.operations.RemoveMetadataMetadataOperation;
-import to.unified.unified_java_sdk.operations.UpdateMetadataMetadataOperation;
+import to.unified.unified_java_sdk.operations.CreateMetadataMetadata;
+import to.unified.unified_java_sdk.operations.GetMetadataMetadata;
+import to.unified.unified_java_sdk.operations.ListMetadataMetadatas;
+import to.unified.unified_java_sdk.operations.PatchMetadataMetadata;
+import to.unified.unified_java_sdk.operations.RemoveMetadataMetadata;
+import to.unified.unified_java_sdk.operations.UpdateMetadataMetadata;
 
 
 public class Metadata {
@@ -57,7 +57,7 @@ public class Metadata {
      */
     public CreateMetadataMetadataResponse createMetadataMetadata(CreateMetadataMetadataRequest request) throws Exception {
         RequestOperation<CreateMetadataMetadataRequest, CreateMetadataMetadataResponse> operation
-              = new CreateMetadataMetadataOperation(sdkConfiguration);
+              = new CreateMetadataMetadata.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Metadata {
      */
     public GetMetadataMetadataResponse getMetadataMetadata(GetMetadataMetadataRequest request) throws Exception {
         RequestOperation<GetMetadataMetadataRequest, GetMetadataMetadataResponse> operation
-              = new GetMetadataMetadataOperation(sdkConfiguration);
+              = new GetMetadataMetadata.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Metadata {
      */
     public ListMetadataMetadatasResponse listMetadataMetadatas(ListMetadataMetadatasRequest request) throws Exception {
         RequestOperation<ListMetadataMetadatasRequest, ListMetadataMetadatasResponse> operation
-              = new ListMetadataMetadatasOperation(sdkConfiguration);
+              = new ListMetadataMetadatas.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Metadata {
      */
     public PatchMetadataMetadataResponse patchMetadataMetadata(PatchMetadataMetadataRequest request) throws Exception {
         RequestOperation<PatchMetadataMetadataRequest, PatchMetadataMetadataResponse> operation
-              = new PatchMetadataMetadataOperation(sdkConfiguration);
+              = new PatchMetadataMetadata.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Metadata {
      */
     public RemoveMetadataMetadataResponse removeMetadataMetadata(RemoveMetadataMetadataRequest request) throws Exception {
         RequestOperation<RemoveMetadataMetadataRequest, RemoveMetadataMetadataResponse> operation
-              = new RemoveMetadataMetadataOperation(sdkConfiguration);
+              = new RemoveMetadataMetadata.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Metadata {
      */
     public UpdateMetadataMetadataResponse updateMetadataMetadata(UpdateMetadataMetadataRequest request) throws Exception {
         RequestOperation<UpdateMetadataMetadataRequest, UpdateMetadataMetadataResponse> operation
-              = new UpdateMetadataMetadataOperation(sdkConfiguration);
+              = new UpdateMetadataMetadata.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

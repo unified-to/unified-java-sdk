@@ -96,36 +96,36 @@ import to.unified.unified_java_sdk.models.operations.UpdateCommerceLocationRespo
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceReviewRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceReviewResponse;
-import to.unified.unified_java_sdk.operations.CreateCommerceCollectionOperation;
-import to.unified.unified_java_sdk.operations.CreateCommerceInventoryOperation;
-import to.unified.unified_java_sdk.operations.CreateCommerceItemOperation;
-import to.unified.unified_java_sdk.operations.CreateCommerceLocationOperation;
-import to.unified.unified_java_sdk.operations.CreateCommerceReviewOperation;
-import to.unified.unified_java_sdk.operations.GetCommerceCollectionOperation;
-import to.unified.unified_java_sdk.operations.GetCommerceInventoryOperation;
-import to.unified.unified_java_sdk.operations.GetCommerceItemOperation;
-import to.unified.unified_java_sdk.operations.GetCommerceLocationOperation;
-import to.unified.unified_java_sdk.operations.GetCommerceReviewOperation;
-import to.unified.unified_java_sdk.operations.ListCommerceCollectionsOperation;
-import to.unified.unified_java_sdk.operations.ListCommerceInventoriesOperation;
-import to.unified.unified_java_sdk.operations.ListCommerceItemsOperation;
-import to.unified.unified_java_sdk.operations.ListCommerceLocationsOperation;
-import to.unified.unified_java_sdk.operations.ListCommerceReviewsOperation;
-import to.unified.unified_java_sdk.operations.PatchCommerceCollectionOperation;
-import to.unified.unified_java_sdk.operations.PatchCommerceInventoryOperation;
-import to.unified.unified_java_sdk.operations.PatchCommerceItemOperation;
-import to.unified.unified_java_sdk.operations.PatchCommerceLocationOperation;
-import to.unified.unified_java_sdk.operations.PatchCommerceReviewOperation;
-import to.unified.unified_java_sdk.operations.RemoveCommerceCollectionOperation;
-import to.unified.unified_java_sdk.operations.RemoveCommerceInventoryOperation;
-import to.unified.unified_java_sdk.operations.RemoveCommerceItemOperation;
-import to.unified.unified_java_sdk.operations.RemoveCommerceLocationOperation;
-import to.unified.unified_java_sdk.operations.RemoveCommerceReviewOperation;
-import to.unified.unified_java_sdk.operations.UpdateCommerceCollectionOperation;
-import to.unified.unified_java_sdk.operations.UpdateCommerceInventoryOperation;
-import to.unified.unified_java_sdk.operations.UpdateCommerceItemOperation;
-import to.unified.unified_java_sdk.operations.UpdateCommerceLocationOperation;
-import to.unified.unified_java_sdk.operations.UpdateCommerceReviewOperation;
+import to.unified.unified_java_sdk.operations.CreateCommerceCollection;
+import to.unified.unified_java_sdk.operations.CreateCommerceInventory;
+import to.unified.unified_java_sdk.operations.CreateCommerceItem;
+import to.unified.unified_java_sdk.operations.CreateCommerceLocation;
+import to.unified.unified_java_sdk.operations.CreateCommerceReview;
+import to.unified.unified_java_sdk.operations.GetCommerceCollection;
+import to.unified.unified_java_sdk.operations.GetCommerceInventory;
+import to.unified.unified_java_sdk.operations.GetCommerceItem;
+import to.unified.unified_java_sdk.operations.GetCommerceLocation;
+import to.unified.unified_java_sdk.operations.GetCommerceReview;
+import to.unified.unified_java_sdk.operations.ListCommerceCollections;
+import to.unified.unified_java_sdk.operations.ListCommerceInventories;
+import to.unified.unified_java_sdk.operations.ListCommerceItems;
+import to.unified.unified_java_sdk.operations.ListCommerceLocations;
+import to.unified.unified_java_sdk.operations.ListCommerceReviews;
+import to.unified.unified_java_sdk.operations.PatchCommerceCollection;
+import to.unified.unified_java_sdk.operations.PatchCommerceInventory;
+import to.unified.unified_java_sdk.operations.PatchCommerceItem;
+import to.unified.unified_java_sdk.operations.PatchCommerceLocation;
+import to.unified.unified_java_sdk.operations.PatchCommerceReview;
+import to.unified.unified_java_sdk.operations.RemoveCommerceCollection;
+import to.unified.unified_java_sdk.operations.RemoveCommerceInventory;
+import to.unified.unified_java_sdk.operations.RemoveCommerceItem;
+import to.unified.unified_java_sdk.operations.RemoveCommerceLocation;
+import to.unified.unified_java_sdk.operations.RemoveCommerceReview;
+import to.unified.unified_java_sdk.operations.UpdateCommerceCollection;
+import to.unified.unified_java_sdk.operations.UpdateCommerceInventory;
+import to.unified.unified_java_sdk.operations.UpdateCommerceItem;
+import to.unified.unified_java_sdk.operations.UpdateCommerceLocation;
+import to.unified.unified_java_sdk.operations.UpdateCommerceReview;
 
 
 public class Commerce {
@@ -153,7 +153,7 @@ public class Commerce {
      */
     public CreateCommerceCollectionResponse createCommerceCollection(CreateCommerceCollectionRequest request) throws Exception {
         RequestOperation<CreateCommerceCollectionRequest, CreateCommerceCollectionResponse> operation
-              = new CreateCommerceCollectionOperation(sdkConfiguration);
+              = new CreateCommerceCollection.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -175,7 +175,7 @@ public class Commerce {
      */
     public CreateCommerceInventoryResponse createCommerceInventory(CreateCommerceInventoryRequest request) throws Exception {
         RequestOperation<CreateCommerceInventoryRequest, CreateCommerceInventoryResponse> operation
-              = new CreateCommerceInventoryOperation(sdkConfiguration);
+              = new CreateCommerceInventory.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -197,7 +197,7 @@ public class Commerce {
      */
     public CreateCommerceItemResponse createCommerceItem(CreateCommerceItemRequest request) throws Exception {
         RequestOperation<CreateCommerceItemRequest, CreateCommerceItemResponse> operation
-              = new CreateCommerceItemOperation(sdkConfiguration);
+              = new CreateCommerceItem.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -219,7 +219,7 @@ public class Commerce {
      */
     public CreateCommerceLocationResponse createCommerceLocation(CreateCommerceLocationRequest request) throws Exception {
         RequestOperation<CreateCommerceLocationRequest, CreateCommerceLocationResponse> operation
-              = new CreateCommerceLocationOperation(sdkConfiguration);
+              = new CreateCommerceLocation.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -241,7 +241,7 @@ public class Commerce {
      */
     public CreateCommerceReviewResponse createCommerceReview(CreateCommerceReviewRequest request) throws Exception {
         RequestOperation<CreateCommerceReviewRequest, CreateCommerceReviewResponse> operation
-              = new CreateCommerceReviewOperation(sdkConfiguration);
+              = new CreateCommerceReview.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -263,7 +263,7 @@ public class Commerce {
      */
     public GetCommerceCollectionResponse getCommerceCollection(GetCommerceCollectionRequest request) throws Exception {
         RequestOperation<GetCommerceCollectionRequest, GetCommerceCollectionResponse> operation
-              = new GetCommerceCollectionOperation(sdkConfiguration);
+              = new GetCommerceCollection.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -285,7 +285,7 @@ public class Commerce {
      */
     public GetCommerceInventoryResponse getCommerceInventory(GetCommerceInventoryRequest request) throws Exception {
         RequestOperation<GetCommerceInventoryRequest, GetCommerceInventoryResponse> operation
-              = new GetCommerceInventoryOperation(sdkConfiguration);
+              = new GetCommerceInventory.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -307,7 +307,7 @@ public class Commerce {
      */
     public GetCommerceItemResponse getCommerceItem(GetCommerceItemRequest request) throws Exception {
         RequestOperation<GetCommerceItemRequest, GetCommerceItemResponse> operation
-              = new GetCommerceItemOperation(sdkConfiguration);
+              = new GetCommerceItem.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -329,7 +329,7 @@ public class Commerce {
      */
     public GetCommerceLocationResponse getCommerceLocation(GetCommerceLocationRequest request) throws Exception {
         RequestOperation<GetCommerceLocationRequest, GetCommerceLocationResponse> operation
-              = new GetCommerceLocationOperation(sdkConfiguration);
+              = new GetCommerceLocation.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -351,7 +351,7 @@ public class Commerce {
      */
     public GetCommerceReviewResponse getCommerceReview(GetCommerceReviewRequest request) throws Exception {
         RequestOperation<GetCommerceReviewRequest, GetCommerceReviewResponse> operation
-              = new GetCommerceReviewOperation(sdkConfiguration);
+              = new GetCommerceReview.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -373,7 +373,7 @@ public class Commerce {
      */
     public ListCommerceCollectionsResponse listCommerceCollections(ListCommerceCollectionsRequest request) throws Exception {
         RequestOperation<ListCommerceCollectionsRequest, ListCommerceCollectionsResponse> operation
-              = new ListCommerceCollectionsOperation(sdkConfiguration);
+              = new ListCommerceCollections.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -395,7 +395,7 @@ public class Commerce {
      */
     public ListCommerceInventoriesResponse listCommerceInventories(ListCommerceInventoriesRequest request) throws Exception {
         RequestOperation<ListCommerceInventoriesRequest, ListCommerceInventoriesResponse> operation
-              = new ListCommerceInventoriesOperation(sdkConfiguration);
+              = new ListCommerceInventories.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -417,7 +417,7 @@ public class Commerce {
      */
     public ListCommerceItemsResponse listCommerceItems(ListCommerceItemsRequest request) throws Exception {
         RequestOperation<ListCommerceItemsRequest, ListCommerceItemsResponse> operation
-              = new ListCommerceItemsOperation(sdkConfiguration);
+              = new ListCommerceItems.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -439,7 +439,7 @@ public class Commerce {
      */
     public ListCommerceLocationsResponse listCommerceLocations(ListCommerceLocationsRequest request) throws Exception {
         RequestOperation<ListCommerceLocationsRequest, ListCommerceLocationsResponse> operation
-              = new ListCommerceLocationsOperation(sdkConfiguration);
+              = new ListCommerceLocations.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -461,7 +461,7 @@ public class Commerce {
      */
     public ListCommerceReviewsResponse listCommerceReviews(ListCommerceReviewsRequest request) throws Exception {
         RequestOperation<ListCommerceReviewsRequest, ListCommerceReviewsResponse> operation
-              = new ListCommerceReviewsOperation(sdkConfiguration);
+              = new ListCommerceReviews.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -483,7 +483,7 @@ public class Commerce {
      */
     public PatchCommerceCollectionResponse patchCommerceCollection(PatchCommerceCollectionRequest request) throws Exception {
         RequestOperation<PatchCommerceCollectionRequest, PatchCommerceCollectionResponse> operation
-              = new PatchCommerceCollectionOperation(sdkConfiguration);
+              = new PatchCommerceCollection.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -505,7 +505,7 @@ public class Commerce {
      */
     public PatchCommerceInventoryResponse patchCommerceInventory(PatchCommerceInventoryRequest request) throws Exception {
         RequestOperation<PatchCommerceInventoryRequest, PatchCommerceInventoryResponse> operation
-              = new PatchCommerceInventoryOperation(sdkConfiguration);
+              = new PatchCommerceInventory.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -527,7 +527,7 @@ public class Commerce {
      */
     public PatchCommerceItemResponse patchCommerceItem(PatchCommerceItemRequest request) throws Exception {
         RequestOperation<PatchCommerceItemRequest, PatchCommerceItemResponse> operation
-              = new PatchCommerceItemOperation(sdkConfiguration);
+              = new PatchCommerceItem.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -549,7 +549,7 @@ public class Commerce {
      */
     public PatchCommerceLocationResponse patchCommerceLocation(PatchCommerceLocationRequest request) throws Exception {
         RequestOperation<PatchCommerceLocationRequest, PatchCommerceLocationResponse> operation
-              = new PatchCommerceLocationOperation(sdkConfiguration);
+              = new PatchCommerceLocation.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -571,7 +571,7 @@ public class Commerce {
      */
     public PatchCommerceReviewResponse patchCommerceReview(PatchCommerceReviewRequest request) throws Exception {
         RequestOperation<PatchCommerceReviewRequest, PatchCommerceReviewResponse> operation
-              = new PatchCommerceReviewOperation(sdkConfiguration);
+              = new PatchCommerceReview.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -593,7 +593,7 @@ public class Commerce {
      */
     public RemoveCommerceCollectionResponse removeCommerceCollection(RemoveCommerceCollectionRequest request) throws Exception {
         RequestOperation<RemoveCommerceCollectionRequest, RemoveCommerceCollectionResponse> operation
-              = new RemoveCommerceCollectionOperation(sdkConfiguration);
+              = new RemoveCommerceCollection.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -615,7 +615,7 @@ public class Commerce {
      */
     public RemoveCommerceInventoryResponse removeCommerceInventory(RemoveCommerceInventoryRequest request) throws Exception {
         RequestOperation<RemoveCommerceInventoryRequest, RemoveCommerceInventoryResponse> operation
-              = new RemoveCommerceInventoryOperation(sdkConfiguration);
+              = new RemoveCommerceInventory.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -637,7 +637,7 @@ public class Commerce {
      */
     public RemoveCommerceItemResponse removeCommerceItem(RemoveCommerceItemRequest request) throws Exception {
         RequestOperation<RemoveCommerceItemRequest, RemoveCommerceItemResponse> operation
-              = new RemoveCommerceItemOperation(sdkConfiguration);
+              = new RemoveCommerceItem.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -659,7 +659,7 @@ public class Commerce {
      */
     public RemoveCommerceLocationResponse removeCommerceLocation(RemoveCommerceLocationRequest request) throws Exception {
         RequestOperation<RemoveCommerceLocationRequest, RemoveCommerceLocationResponse> operation
-              = new RemoveCommerceLocationOperation(sdkConfiguration);
+              = new RemoveCommerceLocation.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -681,7 +681,7 @@ public class Commerce {
      */
     public RemoveCommerceReviewResponse removeCommerceReview(RemoveCommerceReviewRequest request) throws Exception {
         RequestOperation<RemoveCommerceReviewRequest, RemoveCommerceReviewResponse> operation
-              = new RemoveCommerceReviewOperation(sdkConfiguration);
+              = new RemoveCommerceReview.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -703,7 +703,7 @@ public class Commerce {
      */
     public UpdateCommerceCollectionResponse updateCommerceCollection(UpdateCommerceCollectionRequest request) throws Exception {
         RequestOperation<UpdateCommerceCollectionRequest, UpdateCommerceCollectionResponse> operation
-              = new UpdateCommerceCollectionOperation(sdkConfiguration);
+              = new UpdateCommerceCollection.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -725,7 +725,7 @@ public class Commerce {
      */
     public UpdateCommerceInventoryResponse updateCommerceInventory(UpdateCommerceInventoryRequest request) throws Exception {
         RequestOperation<UpdateCommerceInventoryRequest, UpdateCommerceInventoryResponse> operation
-              = new UpdateCommerceInventoryOperation(sdkConfiguration);
+              = new UpdateCommerceInventory.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -747,7 +747,7 @@ public class Commerce {
      */
     public UpdateCommerceItemResponse updateCommerceItem(UpdateCommerceItemRequest request) throws Exception {
         RequestOperation<UpdateCommerceItemRequest, UpdateCommerceItemResponse> operation
-              = new UpdateCommerceItemOperation(sdkConfiguration);
+              = new UpdateCommerceItem.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -769,7 +769,7 @@ public class Commerce {
      */
     public UpdateCommerceLocationResponse updateCommerceLocation(UpdateCommerceLocationRequest request) throws Exception {
         RequestOperation<UpdateCommerceLocationRequest, UpdateCommerceLocationResponse> operation
-              = new UpdateCommerceLocationOperation(sdkConfiguration);
+              = new UpdateCommerceLocation.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -791,7 +791,7 @@ public class Commerce {
      */
     public UpdateCommerceReviewResponse updateCommerceReview(UpdateCommerceReviewRequest request) throws Exception {
         RequestOperation<UpdateCommerceReviewRequest, UpdateCommerceReviewResponse> operation
-              = new UpdateCommerceReviewOperation(sdkConfiguration);
+              = new UpdateCommerceReview.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

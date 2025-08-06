@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveAccountingAccountResp
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingAccountRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingAccountRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingAccountResponse;
-import to.unified.unified_java_sdk.operations.CreateAccountingAccountOperation;
-import to.unified.unified_java_sdk.operations.GetAccountingAccountOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingAccountsOperation;
-import to.unified.unified_java_sdk.operations.PatchAccountingAccountOperation;
-import to.unified.unified_java_sdk.operations.RemoveAccountingAccountOperation;
-import to.unified.unified_java_sdk.operations.UpdateAccountingAccountOperation;
+import to.unified.unified_java_sdk.operations.CreateAccountingAccount;
+import to.unified.unified_java_sdk.operations.GetAccountingAccount;
+import to.unified.unified_java_sdk.operations.ListAccountingAccounts;
+import to.unified.unified_java_sdk.operations.PatchAccountingAccount;
+import to.unified.unified_java_sdk.operations.RemoveAccountingAccount;
+import to.unified.unified_java_sdk.operations.UpdateAccountingAccount;
 
 
 public class Account {
@@ -57,7 +57,7 @@ public class Account {
      */
     public CreateAccountingAccountResponse createAccountingAccount(CreateAccountingAccountRequest request) throws Exception {
         RequestOperation<CreateAccountingAccountRequest, CreateAccountingAccountResponse> operation
-              = new CreateAccountingAccountOperation(sdkConfiguration);
+              = new CreateAccountingAccount.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Account {
      */
     public GetAccountingAccountResponse getAccountingAccount(GetAccountingAccountRequest request) throws Exception {
         RequestOperation<GetAccountingAccountRequest, GetAccountingAccountResponse> operation
-              = new GetAccountingAccountOperation(sdkConfiguration);
+              = new GetAccountingAccount.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Account {
      */
     public ListAccountingAccountsResponse listAccountingAccounts(ListAccountingAccountsRequest request) throws Exception {
         RequestOperation<ListAccountingAccountsRequest, ListAccountingAccountsResponse> operation
-              = new ListAccountingAccountsOperation(sdkConfiguration);
+              = new ListAccountingAccounts.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Account {
      */
     public PatchAccountingAccountResponse patchAccountingAccount(PatchAccountingAccountRequest request) throws Exception {
         RequestOperation<PatchAccountingAccountRequest, PatchAccountingAccountResponse> operation
-              = new PatchAccountingAccountOperation(sdkConfiguration);
+              = new PatchAccountingAccount.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Account {
      */
     public RemoveAccountingAccountResponse removeAccountingAccount(RemoveAccountingAccountRequest request) throws Exception {
         RequestOperation<RemoveAccountingAccountRequest, RemoveAccountingAccountResponse> operation
-              = new RemoveAccountingAccountOperation(sdkConfiguration);
+              = new RemoveAccountingAccount.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Account {
      */
     public UpdateAccountingAccountResponse updateAccountingAccount(UpdateAccountingAccountRequest request) throws Exception {
         RequestOperation<UpdateAccountingAccountRequest, UpdateAccountingAccountResponse> operation
-              = new UpdateAccountingAccountOperation(sdkConfiguration);
+              = new UpdateAccountingAccount.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

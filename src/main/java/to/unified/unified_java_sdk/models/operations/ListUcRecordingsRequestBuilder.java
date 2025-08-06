@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.ListUcRecordingsOperation;
+import to.unified.unified_java_sdk.operations.ListUcRecordings;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListUcRecordingsRequestBuilder {
@@ -28,7 +28,7 @@ public class ListUcRecordingsRequestBuilder {
     public ListUcRecordingsResponse call() throws Exception {
         
         RequestOperation<ListUcRecordingsRequest, ListUcRecordingsResponse> operation
-              = new ListUcRecordingsOperation(sdkConfiguration);
+              = new ListUcRecordings.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

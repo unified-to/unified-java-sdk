@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.RemoveLmsStudentOperation;
+import to.unified.unified_java_sdk.operations.RemoveLmsStudent;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveLmsStudentRequestBuilder {
@@ -28,7 +28,7 @@ public class RemoveLmsStudentRequestBuilder {
     public RemoveLmsStudentResponse call() throws Exception {
         
         RequestOperation<RemoveLmsStudentRequest, RemoveLmsStudentResponse> operation
-              = new RemoveLmsStudentOperation(sdkConfiguration);
+              = new RemoveLmsStudent.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

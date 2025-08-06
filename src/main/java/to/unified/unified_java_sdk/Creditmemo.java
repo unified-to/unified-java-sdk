@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveAccountingCreditmemoR
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingCreditmemoRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingCreditmemoRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingCreditmemoResponse;
-import to.unified.unified_java_sdk.operations.CreateAccountingCreditmemoOperation;
-import to.unified.unified_java_sdk.operations.GetAccountingCreditmemoOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingCreditmemoesOperation;
-import to.unified.unified_java_sdk.operations.PatchAccountingCreditmemoOperation;
-import to.unified.unified_java_sdk.operations.RemoveAccountingCreditmemoOperation;
-import to.unified.unified_java_sdk.operations.UpdateAccountingCreditmemoOperation;
+import to.unified.unified_java_sdk.operations.CreateAccountingCreditmemo;
+import to.unified.unified_java_sdk.operations.GetAccountingCreditmemo;
+import to.unified.unified_java_sdk.operations.ListAccountingCreditmemoes;
+import to.unified.unified_java_sdk.operations.PatchAccountingCreditmemo;
+import to.unified.unified_java_sdk.operations.RemoveAccountingCreditmemo;
+import to.unified.unified_java_sdk.operations.UpdateAccountingCreditmemo;
 
 
 public class Creditmemo {
@@ -57,7 +57,7 @@ public class Creditmemo {
      */
     public CreateAccountingCreditmemoResponse createAccountingCreditmemo(CreateAccountingCreditmemoRequest request) throws Exception {
         RequestOperation<CreateAccountingCreditmemoRequest, CreateAccountingCreditmemoResponse> operation
-              = new CreateAccountingCreditmemoOperation(sdkConfiguration);
+              = new CreateAccountingCreditmemo.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Creditmemo {
      */
     public GetAccountingCreditmemoResponse getAccountingCreditmemo(GetAccountingCreditmemoRequest request) throws Exception {
         RequestOperation<GetAccountingCreditmemoRequest, GetAccountingCreditmemoResponse> operation
-              = new GetAccountingCreditmemoOperation(sdkConfiguration);
+              = new GetAccountingCreditmemo.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Creditmemo {
      */
     public ListAccountingCreditmemoesResponse listAccountingCreditmemoes(ListAccountingCreditmemoesRequest request) throws Exception {
         RequestOperation<ListAccountingCreditmemoesRequest, ListAccountingCreditmemoesResponse> operation
-              = new ListAccountingCreditmemoesOperation(sdkConfiguration);
+              = new ListAccountingCreditmemoes.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Creditmemo {
      */
     public PatchAccountingCreditmemoResponse patchAccountingCreditmemo(PatchAccountingCreditmemoRequest request) throws Exception {
         RequestOperation<PatchAccountingCreditmemoRequest, PatchAccountingCreditmemoResponse> operation
-              = new PatchAccountingCreditmemoOperation(sdkConfiguration);
+              = new PatchAccountingCreditmemo.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Creditmemo {
      */
     public RemoveAccountingCreditmemoResponse removeAccountingCreditmemo(RemoveAccountingCreditmemoRequest request) throws Exception {
         RequestOperation<RemoveAccountingCreditmemoRequest, RemoveAccountingCreditmemoResponse> operation
-              = new RemoveAccountingCreditmemoOperation(sdkConfiguration);
+              = new RemoveAccountingCreditmemo.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Creditmemo {
      */
     public UpdateAccountingCreditmemoResponse updateAccountingCreditmemo(UpdateAccountingCreditmemoRequest request) throws Exception {
         RequestOperation<UpdateAccountingCreditmemoRequest, UpdateAccountingCreditmemoResponse> operation
-              = new UpdateAccountingCreditmemoOperation(sdkConfiguration);
+              = new UpdateAccountingCreditmemo.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -60,24 +60,24 @@ import to.unified.unified_java_sdk.models.operations.UpdateCrmContactResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateUcContactRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateUcContactRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateUcContactResponse;
-import to.unified.unified_java_sdk.operations.CreateAccountingContactOperation;
-import to.unified.unified_java_sdk.operations.CreateCrmContactOperation;
-import to.unified.unified_java_sdk.operations.CreateUcContactOperation;
-import to.unified.unified_java_sdk.operations.GetAccountingContactOperation;
-import to.unified.unified_java_sdk.operations.GetCrmContactOperation;
-import to.unified.unified_java_sdk.operations.GetUcContactOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingContactsOperation;
-import to.unified.unified_java_sdk.operations.ListCrmContactsOperation;
-import to.unified.unified_java_sdk.operations.ListUcContactsOperation;
-import to.unified.unified_java_sdk.operations.PatchAccountingContactOperation;
-import to.unified.unified_java_sdk.operations.PatchCrmContactOperation;
-import to.unified.unified_java_sdk.operations.PatchUcContactOperation;
-import to.unified.unified_java_sdk.operations.RemoveAccountingContactOperation;
-import to.unified.unified_java_sdk.operations.RemoveCrmContactOperation;
-import to.unified.unified_java_sdk.operations.RemoveUcContactOperation;
-import to.unified.unified_java_sdk.operations.UpdateAccountingContactOperation;
-import to.unified.unified_java_sdk.operations.UpdateCrmContactOperation;
-import to.unified.unified_java_sdk.operations.UpdateUcContactOperation;
+import to.unified.unified_java_sdk.operations.CreateAccountingContact;
+import to.unified.unified_java_sdk.operations.CreateCrmContact;
+import to.unified.unified_java_sdk.operations.CreateUcContact;
+import to.unified.unified_java_sdk.operations.GetAccountingContact;
+import to.unified.unified_java_sdk.operations.GetCrmContact;
+import to.unified.unified_java_sdk.operations.GetUcContact;
+import to.unified.unified_java_sdk.operations.ListAccountingContacts;
+import to.unified.unified_java_sdk.operations.ListCrmContacts;
+import to.unified.unified_java_sdk.operations.ListUcContacts;
+import to.unified.unified_java_sdk.operations.PatchAccountingContact;
+import to.unified.unified_java_sdk.operations.PatchCrmContact;
+import to.unified.unified_java_sdk.operations.PatchUcContact;
+import to.unified.unified_java_sdk.operations.RemoveAccountingContact;
+import to.unified.unified_java_sdk.operations.RemoveCrmContact;
+import to.unified.unified_java_sdk.operations.RemoveUcContact;
+import to.unified.unified_java_sdk.operations.UpdateAccountingContact;
+import to.unified.unified_java_sdk.operations.UpdateCrmContact;
+import to.unified.unified_java_sdk.operations.UpdateUcContact;
 
 
 public class Contact {
@@ -105,7 +105,7 @@ public class Contact {
      */
     public CreateAccountingContactResponse createAccountingContact(CreateAccountingContactRequest request) throws Exception {
         RequestOperation<CreateAccountingContactRequest, CreateAccountingContactResponse> operation
-              = new CreateAccountingContactOperation(sdkConfiguration);
+              = new CreateAccountingContact.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -127,7 +127,7 @@ public class Contact {
      */
     public CreateCrmContactResponse createCrmContact(CreateCrmContactRequest request) throws Exception {
         RequestOperation<CreateCrmContactRequest, CreateCrmContactResponse> operation
-              = new CreateCrmContactOperation(sdkConfiguration);
+              = new CreateCrmContact.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -149,7 +149,7 @@ public class Contact {
      */
     public CreateUcContactResponse createUcContact(CreateUcContactRequest request) throws Exception {
         RequestOperation<CreateUcContactRequest, CreateUcContactResponse> operation
-              = new CreateUcContactOperation(sdkConfiguration);
+              = new CreateUcContact.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -171,7 +171,7 @@ public class Contact {
      */
     public GetAccountingContactResponse getAccountingContact(GetAccountingContactRequest request) throws Exception {
         RequestOperation<GetAccountingContactRequest, GetAccountingContactResponse> operation
-              = new GetAccountingContactOperation(sdkConfiguration);
+              = new GetAccountingContact.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,7 +193,7 @@ public class Contact {
      */
     public GetCrmContactResponse getCrmContact(GetCrmContactRequest request) throws Exception {
         RequestOperation<GetCrmContactRequest, GetCrmContactResponse> operation
-              = new GetCrmContactOperation(sdkConfiguration);
+              = new GetCrmContact.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -215,7 +215,7 @@ public class Contact {
      */
     public GetUcContactResponse getUcContact(GetUcContactRequest request) throws Exception {
         RequestOperation<GetUcContactRequest, GetUcContactResponse> operation
-              = new GetUcContactOperation(sdkConfiguration);
+              = new GetUcContact.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -237,7 +237,7 @@ public class Contact {
      */
     public ListAccountingContactsResponse listAccountingContacts(ListAccountingContactsRequest request) throws Exception {
         RequestOperation<ListAccountingContactsRequest, ListAccountingContactsResponse> operation
-              = new ListAccountingContactsOperation(sdkConfiguration);
+              = new ListAccountingContacts.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -259,7 +259,7 @@ public class Contact {
      */
     public ListCrmContactsResponse listCrmContacts(ListCrmContactsRequest request) throws Exception {
         RequestOperation<ListCrmContactsRequest, ListCrmContactsResponse> operation
-              = new ListCrmContactsOperation(sdkConfiguration);
+              = new ListCrmContacts.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -281,7 +281,7 @@ public class Contact {
      */
     public ListUcContactsResponse listUcContacts(ListUcContactsRequest request) throws Exception {
         RequestOperation<ListUcContactsRequest, ListUcContactsResponse> operation
-              = new ListUcContactsOperation(sdkConfiguration);
+              = new ListUcContacts.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -303,7 +303,7 @@ public class Contact {
      */
     public PatchAccountingContactResponse patchAccountingContact(PatchAccountingContactRequest request) throws Exception {
         RequestOperation<PatchAccountingContactRequest, PatchAccountingContactResponse> operation
-              = new PatchAccountingContactOperation(sdkConfiguration);
+              = new PatchAccountingContact.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -325,7 +325,7 @@ public class Contact {
      */
     public PatchCrmContactResponse patchCrmContact(PatchCrmContactRequest request) throws Exception {
         RequestOperation<PatchCrmContactRequest, PatchCrmContactResponse> operation
-              = new PatchCrmContactOperation(sdkConfiguration);
+              = new PatchCrmContact.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -347,7 +347,7 @@ public class Contact {
      */
     public PatchUcContactResponse patchUcContact(PatchUcContactRequest request) throws Exception {
         RequestOperation<PatchUcContactRequest, PatchUcContactResponse> operation
-              = new PatchUcContactOperation(sdkConfiguration);
+              = new PatchUcContact.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -369,7 +369,7 @@ public class Contact {
      */
     public RemoveAccountingContactResponse removeAccountingContact(RemoveAccountingContactRequest request) throws Exception {
         RequestOperation<RemoveAccountingContactRequest, RemoveAccountingContactResponse> operation
-              = new RemoveAccountingContactOperation(sdkConfiguration);
+              = new RemoveAccountingContact.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -391,7 +391,7 @@ public class Contact {
      */
     public RemoveCrmContactResponse removeCrmContact(RemoveCrmContactRequest request) throws Exception {
         RequestOperation<RemoveCrmContactRequest, RemoveCrmContactResponse> operation
-              = new RemoveCrmContactOperation(sdkConfiguration);
+              = new RemoveCrmContact.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -413,7 +413,7 @@ public class Contact {
      */
     public RemoveUcContactResponse removeUcContact(RemoveUcContactRequest request) throws Exception {
         RequestOperation<RemoveUcContactRequest, RemoveUcContactResponse> operation
-              = new RemoveUcContactOperation(sdkConfiguration);
+              = new RemoveUcContact.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -435,7 +435,7 @@ public class Contact {
      */
     public UpdateAccountingContactResponse updateAccountingContact(UpdateAccountingContactRequest request) throws Exception {
         RequestOperation<UpdateAccountingContactRequest, UpdateAccountingContactResponse> operation
-              = new UpdateAccountingContactOperation(sdkConfiguration);
+              = new UpdateAccountingContact.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -457,7 +457,7 @@ public class Contact {
      */
     public UpdateCrmContactResponse updateCrmContact(UpdateCrmContactRequest request) throws Exception {
         RequestOperation<UpdateCrmContactRequest, UpdateCrmContactResponse> operation
-              = new UpdateCrmContactOperation(sdkConfiguration);
+              = new UpdateCrmContact.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -479,7 +479,7 @@ public class Contact {
      */
     public UpdateUcContactResponse updateUcContact(UpdateUcContactRequest request) throws Exception {
         RequestOperation<UpdateUcContactRequest, UpdateUcContactResponse> operation
-              = new UpdateUcContactOperation(sdkConfiguration);
+              = new UpdateUcContact.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

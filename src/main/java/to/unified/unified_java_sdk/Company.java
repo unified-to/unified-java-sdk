@@ -63,25 +63,25 @@ import to.unified.unified_java_sdk.models.operations.UpdateCrmCompanyResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisCompanyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisCompanyResponse;
-import to.unified.unified_java_sdk.operations.CreateAtsCompanyOperation;
-import to.unified.unified_java_sdk.operations.CreateCrmCompanyOperation;
-import to.unified.unified_java_sdk.operations.CreateHrisCompanyOperation;
-import to.unified.unified_java_sdk.operations.GetAtsCompanyOperation;
-import to.unified.unified_java_sdk.operations.GetCrmCompanyOperation;
-import to.unified.unified_java_sdk.operations.GetHrisCompanyOperation;
-import to.unified.unified_java_sdk.operations.ListAtsCompaniesOperation;
-import to.unified.unified_java_sdk.operations.ListCrmCompaniesOperation;
-import to.unified.unified_java_sdk.operations.ListEnrichCompaniesOperation;
-import to.unified.unified_java_sdk.operations.ListHrisCompaniesOperation;
-import to.unified.unified_java_sdk.operations.PatchAtsCompanyOperation;
-import to.unified.unified_java_sdk.operations.PatchCrmCompanyOperation;
-import to.unified.unified_java_sdk.operations.PatchHrisCompanyOperation;
-import to.unified.unified_java_sdk.operations.RemoveAtsCompanyOperation;
-import to.unified.unified_java_sdk.operations.RemoveCrmCompanyOperation;
-import to.unified.unified_java_sdk.operations.RemoveHrisCompanyOperation;
-import to.unified.unified_java_sdk.operations.UpdateAtsCompanyOperation;
-import to.unified.unified_java_sdk.operations.UpdateCrmCompanyOperation;
-import to.unified.unified_java_sdk.operations.UpdateHrisCompanyOperation;
+import to.unified.unified_java_sdk.operations.CreateAtsCompany;
+import to.unified.unified_java_sdk.operations.CreateCrmCompany;
+import to.unified.unified_java_sdk.operations.CreateHrisCompany;
+import to.unified.unified_java_sdk.operations.GetAtsCompany;
+import to.unified.unified_java_sdk.operations.GetCrmCompany;
+import to.unified.unified_java_sdk.operations.GetHrisCompany;
+import to.unified.unified_java_sdk.operations.ListAtsCompanies;
+import to.unified.unified_java_sdk.operations.ListCrmCompanies;
+import to.unified.unified_java_sdk.operations.ListEnrichCompanies;
+import to.unified.unified_java_sdk.operations.ListHrisCompanies;
+import to.unified.unified_java_sdk.operations.PatchAtsCompany;
+import to.unified.unified_java_sdk.operations.PatchCrmCompany;
+import to.unified.unified_java_sdk.operations.PatchHrisCompany;
+import to.unified.unified_java_sdk.operations.RemoveAtsCompany;
+import to.unified.unified_java_sdk.operations.RemoveCrmCompany;
+import to.unified.unified_java_sdk.operations.RemoveHrisCompany;
+import to.unified.unified_java_sdk.operations.UpdateAtsCompany;
+import to.unified.unified_java_sdk.operations.UpdateCrmCompany;
+import to.unified.unified_java_sdk.operations.UpdateHrisCompany;
 
 
 public class Company {
@@ -109,7 +109,7 @@ public class Company {
      */
     public CreateAtsCompanyResponse createAtsCompany(CreateAtsCompanyRequest request) throws Exception {
         RequestOperation<CreateAtsCompanyRequest, CreateAtsCompanyResponse> operation
-              = new CreateAtsCompanyOperation(sdkConfiguration);
+              = new CreateAtsCompany.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -131,7 +131,7 @@ public class Company {
      */
     public CreateCrmCompanyResponse createCrmCompany(CreateCrmCompanyRequest request) throws Exception {
         RequestOperation<CreateCrmCompanyRequest, CreateCrmCompanyResponse> operation
-              = new CreateCrmCompanyOperation(sdkConfiguration);
+              = new CreateCrmCompany.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -153,7 +153,7 @@ public class Company {
      */
     public CreateHrisCompanyResponse createHrisCompany(CreateHrisCompanyRequest request) throws Exception {
         RequestOperation<CreateHrisCompanyRequest, CreateHrisCompanyResponse> operation
-              = new CreateHrisCompanyOperation(sdkConfiguration);
+              = new CreateHrisCompany.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -175,7 +175,7 @@ public class Company {
      */
     public GetAtsCompanyResponse getAtsCompany(GetAtsCompanyRequest request) throws Exception {
         RequestOperation<GetAtsCompanyRequest, GetAtsCompanyResponse> operation
-              = new GetAtsCompanyOperation(sdkConfiguration);
+              = new GetAtsCompany.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -197,7 +197,7 @@ public class Company {
      */
     public GetCrmCompanyResponse getCrmCompany(GetCrmCompanyRequest request) throws Exception {
         RequestOperation<GetCrmCompanyRequest, GetCrmCompanyResponse> operation
-              = new GetCrmCompanyOperation(sdkConfiguration);
+              = new GetCrmCompany.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -219,7 +219,7 @@ public class Company {
      */
     public GetHrisCompanyResponse getHrisCompany(GetHrisCompanyRequest request) throws Exception {
         RequestOperation<GetHrisCompanyRequest, GetHrisCompanyResponse> operation
-              = new GetHrisCompanyOperation(sdkConfiguration);
+              = new GetHrisCompany.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -241,7 +241,7 @@ public class Company {
      */
     public ListAtsCompaniesResponse listAtsCompanies(ListAtsCompaniesRequest request) throws Exception {
         RequestOperation<ListAtsCompaniesRequest, ListAtsCompaniesResponse> operation
-              = new ListAtsCompaniesOperation(sdkConfiguration);
+              = new ListAtsCompanies.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -263,7 +263,7 @@ public class Company {
      */
     public ListCrmCompaniesResponse listCrmCompanies(ListCrmCompaniesRequest request) throws Exception {
         RequestOperation<ListCrmCompaniesRequest, ListCrmCompaniesResponse> operation
-              = new ListCrmCompaniesOperation(sdkConfiguration);
+              = new ListCrmCompanies.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -285,7 +285,7 @@ public class Company {
      */
     public ListEnrichCompaniesResponse listEnrichCompanies(ListEnrichCompaniesRequest request) throws Exception {
         RequestOperation<ListEnrichCompaniesRequest, ListEnrichCompaniesResponse> operation
-              = new ListEnrichCompaniesOperation(sdkConfiguration);
+              = new ListEnrichCompanies.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -307,7 +307,7 @@ public class Company {
      */
     public ListHrisCompaniesResponse listHrisCompanies(ListHrisCompaniesRequest request) throws Exception {
         RequestOperation<ListHrisCompaniesRequest, ListHrisCompaniesResponse> operation
-              = new ListHrisCompaniesOperation(sdkConfiguration);
+              = new ListHrisCompanies.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -329,7 +329,7 @@ public class Company {
      */
     public PatchAtsCompanyResponse patchAtsCompany(PatchAtsCompanyRequest request) throws Exception {
         RequestOperation<PatchAtsCompanyRequest, PatchAtsCompanyResponse> operation
-              = new PatchAtsCompanyOperation(sdkConfiguration);
+              = new PatchAtsCompany.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -351,7 +351,7 @@ public class Company {
      */
     public PatchCrmCompanyResponse patchCrmCompany(PatchCrmCompanyRequest request) throws Exception {
         RequestOperation<PatchCrmCompanyRequest, PatchCrmCompanyResponse> operation
-              = new PatchCrmCompanyOperation(sdkConfiguration);
+              = new PatchCrmCompany.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -373,7 +373,7 @@ public class Company {
      */
     public PatchHrisCompanyResponse patchHrisCompany(PatchHrisCompanyRequest request) throws Exception {
         RequestOperation<PatchHrisCompanyRequest, PatchHrisCompanyResponse> operation
-              = new PatchHrisCompanyOperation(sdkConfiguration);
+              = new PatchHrisCompany.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -395,7 +395,7 @@ public class Company {
      */
     public RemoveAtsCompanyResponse removeAtsCompany(RemoveAtsCompanyRequest request) throws Exception {
         RequestOperation<RemoveAtsCompanyRequest, RemoveAtsCompanyResponse> operation
-              = new RemoveAtsCompanyOperation(sdkConfiguration);
+              = new RemoveAtsCompany.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -417,7 +417,7 @@ public class Company {
      */
     public RemoveCrmCompanyResponse removeCrmCompany(RemoveCrmCompanyRequest request) throws Exception {
         RequestOperation<RemoveCrmCompanyRequest, RemoveCrmCompanyResponse> operation
-              = new RemoveCrmCompanyOperation(sdkConfiguration);
+              = new RemoveCrmCompany.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -439,7 +439,7 @@ public class Company {
      */
     public RemoveHrisCompanyResponse removeHrisCompany(RemoveHrisCompanyRequest request) throws Exception {
         RequestOperation<RemoveHrisCompanyRequest, RemoveHrisCompanyResponse> operation
-              = new RemoveHrisCompanyOperation(sdkConfiguration);
+              = new RemoveHrisCompany.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -461,7 +461,7 @@ public class Company {
      */
     public UpdateAtsCompanyResponse updateAtsCompany(UpdateAtsCompanyRequest request) throws Exception {
         RequestOperation<UpdateAtsCompanyRequest, UpdateAtsCompanyResponse> operation
-              = new UpdateAtsCompanyOperation(sdkConfiguration);
+              = new UpdateAtsCompany.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -483,7 +483,7 @@ public class Company {
      */
     public UpdateCrmCompanyResponse updateCrmCompany(UpdateCrmCompanyRequest request) throws Exception {
         RequestOperation<UpdateCrmCompanyRequest, UpdateCrmCompanyResponse> operation
-              = new UpdateCrmCompanyOperation(sdkConfiguration);
+              = new UpdateCrmCompany.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -505,7 +505,7 @@ public class Company {
      */
     public UpdateHrisCompanyResponse updateHrisCompany(UpdateHrisCompanyRequest request) throws Exception {
         RequestOperation<UpdateHrisCompanyRequest, UpdateHrisCompanyResponse> operation
-              = new UpdateHrisCompanyOperation(sdkConfiguration);
+              = new UpdateHrisCompany.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

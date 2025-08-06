@@ -69,27 +69,27 @@ import to.unified.unified_java_sdk.models.operations.UpdateCalendarEventResponse
 import to.unified.unified_java_sdk.models.operations.UpdateCalendarLinkRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCalendarLinkRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateCalendarLinkResponse;
-import to.unified.unified_java_sdk.operations.CreateCalendarCalendarOperation;
-import to.unified.unified_java_sdk.operations.CreateCalendarEventOperation;
-import to.unified.unified_java_sdk.operations.CreateCalendarLinkOperation;
-import to.unified.unified_java_sdk.operations.GetCalendarCalendarOperation;
-import to.unified.unified_java_sdk.operations.GetCalendarEventOperation;
-import to.unified.unified_java_sdk.operations.GetCalendarLinkOperation;
-import to.unified.unified_java_sdk.operations.GetCalendarRecordingOperation;
-import to.unified.unified_java_sdk.operations.ListCalendarBusiesOperation;
-import to.unified.unified_java_sdk.operations.ListCalendarCalendarsOperation;
-import to.unified.unified_java_sdk.operations.ListCalendarEventsOperation;
-import to.unified.unified_java_sdk.operations.ListCalendarLinksOperation;
-import to.unified.unified_java_sdk.operations.ListCalendarRecordingsOperation;
-import to.unified.unified_java_sdk.operations.PatchCalendarCalendarOperation;
-import to.unified.unified_java_sdk.operations.PatchCalendarEventOperation;
-import to.unified.unified_java_sdk.operations.PatchCalendarLinkOperation;
-import to.unified.unified_java_sdk.operations.RemoveCalendarCalendarOperation;
-import to.unified.unified_java_sdk.operations.RemoveCalendarEventOperation;
-import to.unified.unified_java_sdk.operations.RemoveCalendarLinkOperation;
-import to.unified.unified_java_sdk.operations.UpdateCalendarCalendarOperation;
-import to.unified.unified_java_sdk.operations.UpdateCalendarEventOperation;
-import to.unified.unified_java_sdk.operations.UpdateCalendarLinkOperation;
+import to.unified.unified_java_sdk.operations.CreateCalendarCalendar;
+import to.unified.unified_java_sdk.operations.CreateCalendarEvent;
+import to.unified.unified_java_sdk.operations.CreateCalendarLink;
+import to.unified.unified_java_sdk.operations.GetCalendarCalendar;
+import to.unified.unified_java_sdk.operations.GetCalendarEvent;
+import to.unified.unified_java_sdk.operations.GetCalendarLink;
+import to.unified.unified_java_sdk.operations.GetCalendarRecording;
+import to.unified.unified_java_sdk.operations.ListCalendarBusies;
+import to.unified.unified_java_sdk.operations.ListCalendarCalendars;
+import to.unified.unified_java_sdk.operations.ListCalendarEvents;
+import to.unified.unified_java_sdk.operations.ListCalendarLinks;
+import to.unified.unified_java_sdk.operations.ListCalendarRecordings;
+import to.unified.unified_java_sdk.operations.PatchCalendarCalendar;
+import to.unified.unified_java_sdk.operations.PatchCalendarEvent;
+import to.unified.unified_java_sdk.operations.PatchCalendarLink;
+import to.unified.unified_java_sdk.operations.RemoveCalendarCalendar;
+import to.unified.unified_java_sdk.operations.RemoveCalendarEvent;
+import to.unified.unified_java_sdk.operations.RemoveCalendarLink;
+import to.unified.unified_java_sdk.operations.UpdateCalendarCalendar;
+import to.unified.unified_java_sdk.operations.UpdateCalendarEvent;
+import to.unified.unified_java_sdk.operations.UpdateCalendarLink;
 
 
 public class Calendar {
@@ -117,7 +117,7 @@ public class Calendar {
      */
     public CreateCalendarCalendarResponse createCalendarCalendar(CreateCalendarCalendarRequest request) throws Exception {
         RequestOperation<CreateCalendarCalendarRequest, CreateCalendarCalendarResponse> operation
-              = new CreateCalendarCalendarOperation(sdkConfiguration);
+              = new CreateCalendarCalendar.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,7 +139,7 @@ public class Calendar {
      */
     public CreateCalendarEventResponse createCalendarEvent(CreateCalendarEventRequest request) throws Exception {
         RequestOperation<CreateCalendarEventRequest, CreateCalendarEventResponse> operation
-              = new CreateCalendarEventOperation(sdkConfiguration);
+              = new CreateCalendarEvent.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -161,7 +161,7 @@ public class Calendar {
      */
     public CreateCalendarLinkResponse createCalendarLink(CreateCalendarLinkRequest request) throws Exception {
         RequestOperation<CreateCalendarLinkRequest, CreateCalendarLinkResponse> operation
-              = new CreateCalendarLinkOperation(sdkConfiguration);
+              = new CreateCalendarLink.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -183,7 +183,7 @@ public class Calendar {
      */
     public GetCalendarCalendarResponse getCalendarCalendar(GetCalendarCalendarRequest request) throws Exception {
         RequestOperation<GetCalendarCalendarRequest, GetCalendarCalendarResponse> operation
-              = new GetCalendarCalendarOperation(sdkConfiguration);
+              = new GetCalendarCalendar.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -205,7 +205,7 @@ public class Calendar {
      */
     public GetCalendarEventResponse getCalendarEvent(GetCalendarEventRequest request) throws Exception {
         RequestOperation<GetCalendarEventRequest, GetCalendarEventResponse> operation
-              = new GetCalendarEventOperation(sdkConfiguration);
+              = new GetCalendarEvent.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -227,7 +227,7 @@ public class Calendar {
      */
     public GetCalendarLinkResponse getCalendarLink(GetCalendarLinkRequest request) throws Exception {
         RequestOperation<GetCalendarLinkRequest, GetCalendarLinkResponse> operation
-              = new GetCalendarLinkOperation(sdkConfiguration);
+              = new GetCalendarLink.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -249,7 +249,7 @@ public class Calendar {
      */
     public GetCalendarRecordingResponse getCalendarRecording(GetCalendarRecordingRequest request) throws Exception {
         RequestOperation<GetCalendarRecordingRequest, GetCalendarRecordingResponse> operation
-              = new GetCalendarRecordingOperation(sdkConfiguration);
+              = new GetCalendarRecording.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -271,7 +271,7 @@ public class Calendar {
      */
     public ListCalendarBusiesResponse listCalendarBusies(ListCalendarBusiesRequest request) throws Exception {
         RequestOperation<ListCalendarBusiesRequest, ListCalendarBusiesResponse> operation
-              = new ListCalendarBusiesOperation(sdkConfiguration);
+              = new ListCalendarBusies.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -293,7 +293,7 @@ public class Calendar {
      */
     public ListCalendarCalendarsResponse listCalendarCalendars(ListCalendarCalendarsRequest request) throws Exception {
         RequestOperation<ListCalendarCalendarsRequest, ListCalendarCalendarsResponse> operation
-              = new ListCalendarCalendarsOperation(sdkConfiguration);
+              = new ListCalendarCalendars.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -315,7 +315,7 @@ public class Calendar {
      */
     public ListCalendarEventsResponse listCalendarEvents(ListCalendarEventsRequest request) throws Exception {
         RequestOperation<ListCalendarEventsRequest, ListCalendarEventsResponse> operation
-              = new ListCalendarEventsOperation(sdkConfiguration);
+              = new ListCalendarEvents.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -337,7 +337,7 @@ public class Calendar {
      */
     public ListCalendarLinksResponse listCalendarLinks(ListCalendarLinksRequest request) throws Exception {
         RequestOperation<ListCalendarLinksRequest, ListCalendarLinksResponse> operation
-              = new ListCalendarLinksOperation(sdkConfiguration);
+              = new ListCalendarLinks.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -359,7 +359,7 @@ public class Calendar {
      */
     public ListCalendarRecordingsResponse listCalendarRecordings(ListCalendarRecordingsRequest request) throws Exception {
         RequestOperation<ListCalendarRecordingsRequest, ListCalendarRecordingsResponse> operation
-              = new ListCalendarRecordingsOperation(sdkConfiguration);
+              = new ListCalendarRecordings.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -381,7 +381,7 @@ public class Calendar {
      */
     public PatchCalendarCalendarResponse patchCalendarCalendar(PatchCalendarCalendarRequest request) throws Exception {
         RequestOperation<PatchCalendarCalendarRequest, PatchCalendarCalendarResponse> operation
-              = new PatchCalendarCalendarOperation(sdkConfiguration);
+              = new PatchCalendarCalendar.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -403,7 +403,7 @@ public class Calendar {
      */
     public PatchCalendarEventResponse patchCalendarEvent(PatchCalendarEventRequest request) throws Exception {
         RequestOperation<PatchCalendarEventRequest, PatchCalendarEventResponse> operation
-              = new PatchCalendarEventOperation(sdkConfiguration);
+              = new PatchCalendarEvent.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -425,7 +425,7 @@ public class Calendar {
      */
     public PatchCalendarLinkResponse patchCalendarLink(PatchCalendarLinkRequest request) throws Exception {
         RequestOperation<PatchCalendarLinkRequest, PatchCalendarLinkResponse> operation
-              = new PatchCalendarLinkOperation(sdkConfiguration);
+              = new PatchCalendarLink.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -447,7 +447,7 @@ public class Calendar {
      */
     public RemoveCalendarCalendarResponse removeCalendarCalendar(RemoveCalendarCalendarRequest request) throws Exception {
         RequestOperation<RemoveCalendarCalendarRequest, RemoveCalendarCalendarResponse> operation
-              = new RemoveCalendarCalendarOperation(sdkConfiguration);
+              = new RemoveCalendarCalendar.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -469,7 +469,7 @@ public class Calendar {
      */
     public RemoveCalendarEventResponse removeCalendarEvent(RemoveCalendarEventRequest request) throws Exception {
         RequestOperation<RemoveCalendarEventRequest, RemoveCalendarEventResponse> operation
-              = new RemoveCalendarEventOperation(sdkConfiguration);
+              = new RemoveCalendarEvent.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -491,7 +491,7 @@ public class Calendar {
      */
     public RemoveCalendarLinkResponse removeCalendarLink(RemoveCalendarLinkRequest request) throws Exception {
         RequestOperation<RemoveCalendarLinkRequest, RemoveCalendarLinkResponse> operation
-              = new RemoveCalendarLinkOperation(sdkConfiguration);
+              = new RemoveCalendarLink.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -513,7 +513,7 @@ public class Calendar {
      */
     public UpdateCalendarCalendarResponse updateCalendarCalendar(UpdateCalendarCalendarRequest request) throws Exception {
         RequestOperation<UpdateCalendarCalendarRequest, UpdateCalendarCalendarResponse> operation
-              = new UpdateCalendarCalendarOperation(sdkConfiguration);
+              = new UpdateCalendarCalendar.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -535,7 +535,7 @@ public class Calendar {
      */
     public UpdateCalendarEventResponse updateCalendarEvent(UpdateCalendarEventRequest request) throws Exception {
         RequestOperation<UpdateCalendarEventRequest, UpdateCalendarEventResponse> operation
-              = new UpdateCalendarEventOperation(sdkConfiguration);
+              = new UpdateCalendarEvent.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -557,7 +557,7 @@ public class Calendar {
      */
     public UpdateCalendarLinkResponse updateCalendarLink(UpdateCalendarLinkRequest request) throws Exception {
         RequestOperation<UpdateCalendarLinkRequest, UpdateCalendarLinkResponse> operation
-              = new UpdateCalendarLinkOperation(sdkConfiguration);
+              = new UpdateCalendarLink.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

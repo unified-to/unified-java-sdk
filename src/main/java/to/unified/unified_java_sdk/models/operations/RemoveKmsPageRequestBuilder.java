@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.RemoveKmsPageOperation;
+import to.unified.unified_java_sdk.operations.RemoveKmsPage;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveKmsPageRequestBuilder {
@@ -28,7 +28,7 @@ public class RemoveKmsPageRequestBuilder {
     public RemoveKmsPageResponse call() throws Exception {
         
         RequestOperation<RemoveKmsPageRequest, RemoveKmsPageResponse> operation
-              = new RemoveKmsPageOperation(sdkConfiguration);
+              = new RemoveKmsPage.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

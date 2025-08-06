@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.RemoveHrisTimeshiftOperation;
+import to.unified.unified_java_sdk.operations.RemoveHrisTimeshift;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveHrisTimeshiftRequestBuilder {
@@ -28,7 +28,7 @@ public class RemoveHrisTimeshiftRequestBuilder {
     public RemoveHrisTimeshiftResponse call() throws Exception {
         
         RequestOperation<RemoveHrisTimeshiftRequest, RemoveHrisTimeshiftResponse> operation
-              = new RemoveHrisTimeshiftOperation(sdkConfiguration);
+              = new RemoveHrisTimeshift.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

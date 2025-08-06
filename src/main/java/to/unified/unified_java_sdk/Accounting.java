@@ -252,88 +252,88 @@ import to.unified.unified_java_sdk.models.operations.UpdateAccountingTaxrateResp
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingTransactionRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingTransactionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingTransactionResponse;
-import to.unified.unified_java_sdk.operations.CreateAccountingAccountOperation;
-import to.unified.unified_java_sdk.operations.CreateAccountingBillOperation;
-import to.unified.unified_java_sdk.operations.CreateAccountingCategoryOperation;
-import to.unified.unified_java_sdk.operations.CreateAccountingContactOperation;
-import to.unified.unified_java_sdk.operations.CreateAccountingCreditmemoOperation;
-import to.unified.unified_java_sdk.operations.CreateAccountingInvoiceOperation;
-import to.unified.unified_java_sdk.operations.CreateAccountingJournalOperation;
-import to.unified.unified_java_sdk.operations.CreateAccountingOrderOperation;
-import to.unified.unified_java_sdk.operations.CreateAccountingPurchaseorderOperation;
-import to.unified.unified_java_sdk.operations.CreateAccountingSalesorderOperation;
-import to.unified.unified_java_sdk.operations.CreateAccountingTaxrateOperation;
-import to.unified.unified_java_sdk.operations.CreateAccountingTransactionOperation;
-import to.unified.unified_java_sdk.operations.GetAccountingAccountOperation;
-import to.unified.unified_java_sdk.operations.GetAccountingBalancesheetOperation;
-import to.unified.unified_java_sdk.operations.GetAccountingBillOperation;
-import to.unified.unified_java_sdk.operations.GetAccountingCategoryOperation;
-import to.unified.unified_java_sdk.operations.GetAccountingContactOperation;
-import to.unified.unified_java_sdk.operations.GetAccountingCreditmemoOperation;
-import to.unified.unified_java_sdk.operations.GetAccountingInvoiceOperation;
-import to.unified.unified_java_sdk.operations.GetAccountingJournalOperation;
-import to.unified.unified_java_sdk.operations.GetAccountingOrderOperation;
-import to.unified.unified_java_sdk.operations.GetAccountingOrganizationOperation;
-import to.unified.unified_java_sdk.operations.GetAccountingProfitlossOperation;
-import to.unified.unified_java_sdk.operations.GetAccountingPurchaseorderOperation;
-import to.unified.unified_java_sdk.operations.GetAccountingReportOperation;
-import to.unified.unified_java_sdk.operations.GetAccountingSalesorderOperation;
-import to.unified.unified_java_sdk.operations.GetAccountingTaxrateOperation;
-import to.unified.unified_java_sdk.operations.GetAccountingTransactionOperation;
-import to.unified.unified_java_sdk.operations.GetAccountingTrialbalanceOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingAccountsOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingBalancesheetsOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingBillsOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingCategoriesOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingContactsOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingCreditmemoesOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingInvoicesOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingJournalsOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingOrdersOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingOrganizationsOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingProfitlossesOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingPurchaseordersOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingReportsOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingSalesordersOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingTaxratesOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingTransactionsOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingTrialbalancesOperation;
-import to.unified.unified_java_sdk.operations.PatchAccountingAccountOperation;
-import to.unified.unified_java_sdk.operations.PatchAccountingBillOperation;
-import to.unified.unified_java_sdk.operations.PatchAccountingCategoryOperation;
-import to.unified.unified_java_sdk.operations.PatchAccountingContactOperation;
-import to.unified.unified_java_sdk.operations.PatchAccountingCreditmemoOperation;
-import to.unified.unified_java_sdk.operations.PatchAccountingInvoiceOperation;
-import to.unified.unified_java_sdk.operations.PatchAccountingJournalOperation;
-import to.unified.unified_java_sdk.operations.PatchAccountingOrderOperation;
-import to.unified.unified_java_sdk.operations.PatchAccountingPurchaseorderOperation;
-import to.unified.unified_java_sdk.operations.PatchAccountingSalesorderOperation;
-import to.unified.unified_java_sdk.operations.PatchAccountingTaxrateOperation;
-import to.unified.unified_java_sdk.operations.PatchAccountingTransactionOperation;
-import to.unified.unified_java_sdk.operations.RemoveAccountingAccountOperation;
-import to.unified.unified_java_sdk.operations.RemoveAccountingBillOperation;
-import to.unified.unified_java_sdk.operations.RemoveAccountingCategoryOperation;
-import to.unified.unified_java_sdk.operations.RemoveAccountingContactOperation;
-import to.unified.unified_java_sdk.operations.RemoveAccountingCreditmemoOperation;
-import to.unified.unified_java_sdk.operations.RemoveAccountingInvoiceOperation;
-import to.unified.unified_java_sdk.operations.RemoveAccountingJournalOperation;
-import to.unified.unified_java_sdk.operations.RemoveAccountingOrderOperation;
-import to.unified.unified_java_sdk.operations.RemoveAccountingPurchaseorderOperation;
-import to.unified.unified_java_sdk.operations.RemoveAccountingSalesorderOperation;
-import to.unified.unified_java_sdk.operations.RemoveAccountingTaxrateOperation;
-import to.unified.unified_java_sdk.operations.RemoveAccountingTransactionOperation;
-import to.unified.unified_java_sdk.operations.UpdateAccountingAccountOperation;
-import to.unified.unified_java_sdk.operations.UpdateAccountingBillOperation;
-import to.unified.unified_java_sdk.operations.UpdateAccountingCategoryOperation;
-import to.unified.unified_java_sdk.operations.UpdateAccountingContactOperation;
-import to.unified.unified_java_sdk.operations.UpdateAccountingCreditmemoOperation;
-import to.unified.unified_java_sdk.operations.UpdateAccountingInvoiceOperation;
-import to.unified.unified_java_sdk.operations.UpdateAccountingJournalOperation;
-import to.unified.unified_java_sdk.operations.UpdateAccountingOrderOperation;
-import to.unified.unified_java_sdk.operations.UpdateAccountingPurchaseorderOperation;
-import to.unified.unified_java_sdk.operations.UpdateAccountingSalesorderOperation;
-import to.unified.unified_java_sdk.operations.UpdateAccountingTaxrateOperation;
-import to.unified.unified_java_sdk.operations.UpdateAccountingTransactionOperation;
+import to.unified.unified_java_sdk.operations.CreateAccountingAccount;
+import to.unified.unified_java_sdk.operations.CreateAccountingBill;
+import to.unified.unified_java_sdk.operations.CreateAccountingCategory;
+import to.unified.unified_java_sdk.operations.CreateAccountingContact;
+import to.unified.unified_java_sdk.operations.CreateAccountingCreditmemo;
+import to.unified.unified_java_sdk.operations.CreateAccountingInvoice;
+import to.unified.unified_java_sdk.operations.CreateAccountingJournal;
+import to.unified.unified_java_sdk.operations.CreateAccountingOrder;
+import to.unified.unified_java_sdk.operations.CreateAccountingPurchaseorder;
+import to.unified.unified_java_sdk.operations.CreateAccountingSalesorder;
+import to.unified.unified_java_sdk.operations.CreateAccountingTaxrate;
+import to.unified.unified_java_sdk.operations.CreateAccountingTransaction;
+import to.unified.unified_java_sdk.operations.GetAccountingAccount;
+import to.unified.unified_java_sdk.operations.GetAccountingBalancesheet;
+import to.unified.unified_java_sdk.operations.GetAccountingBill;
+import to.unified.unified_java_sdk.operations.GetAccountingCategory;
+import to.unified.unified_java_sdk.operations.GetAccountingContact;
+import to.unified.unified_java_sdk.operations.GetAccountingCreditmemo;
+import to.unified.unified_java_sdk.operations.GetAccountingInvoice;
+import to.unified.unified_java_sdk.operations.GetAccountingJournal;
+import to.unified.unified_java_sdk.operations.GetAccountingOrder;
+import to.unified.unified_java_sdk.operations.GetAccountingOrganization;
+import to.unified.unified_java_sdk.operations.GetAccountingProfitloss;
+import to.unified.unified_java_sdk.operations.GetAccountingPurchaseorder;
+import to.unified.unified_java_sdk.operations.GetAccountingReport;
+import to.unified.unified_java_sdk.operations.GetAccountingSalesorder;
+import to.unified.unified_java_sdk.operations.GetAccountingTaxrate;
+import to.unified.unified_java_sdk.operations.GetAccountingTransaction;
+import to.unified.unified_java_sdk.operations.GetAccountingTrialbalance;
+import to.unified.unified_java_sdk.operations.ListAccountingAccounts;
+import to.unified.unified_java_sdk.operations.ListAccountingBalancesheets;
+import to.unified.unified_java_sdk.operations.ListAccountingBills;
+import to.unified.unified_java_sdk.operations.ListAccountingCategories;
+import to.unified.unified_java_sdk.operations.ListAccountingContacts;
+import to.unified.unified_java_sdk.operations.ListAccountingCreditmemoes;
+import to.unified.unified_java_sdk.operations.ListAccountingInvoices;
+import to.unified.unified_java_sdk.operations.ListAccountingJournals;
+import to.unified.unified_java_sdk.operations.ListAccountingOrders;
+import to.unified.unified_java_sdk.operations.ListAccountingOrganizations;
+import to.unified.unified_java_sdk.operations.ListAccountingProfitlosses;
+import to.unified.unified_java_sdk.operations.ListAccountingPurchaseorders;
+import to.unified.unified_java_sdk.operations.ListAccountingReports;
+import to.unified.unified_java_sdk.operations.ListAccountingSalesorders;
+import to.unified.unified_java_sdk.operations.ListAccountingTaxrates;
+import to.unified.unified_java_sdk.operations.ListAccountingTransactions;
+import to.unified.unified_java_sdk.operations.ListAccountingTrialbalances;
+import to.unified.unified_java_sdk.operations.PatchAccountingAccount;
+import to.unified.unified_java_sdk.operations.PatchAccountingBill;
+import to.unified.unified_java_sdk.operations.PatchAccountingCategory;
+import to.unified.unified_java_sdk.operations.PatchAccountingContact;
+import to.unified.unified_java_sdk.operations.PatchAccountingCreditmemo;
+import to.unified.unified_java_sdk.operations.PatchAccountingInvoice;
+import to.unified.unified_java_sdk.operations.PatchAccountingJournal;
+import to.unified.unified_java_sdk.operations.PatchAccountingOrder;
+import to.unified.unified_java_sdk.operations.PatchAccountingPurchaseorder;
+import to.unified.unified_java_sdk.operations.PatchAccountingSalesorder;
+import to.unified.unified_java_sdk.operations.PatchAccountingTaxrate;
+import to.unified.unified_java_sdk.operations.PatchAccountingTransaction;
+import to.unified.unified_java_sdk.operations.RemoveAccountingAccount;
+import to.unified.unified_java_sdk.operations.RemoveAccountingBill;
+import to.unified.unified_java_sdk.operations.RemoveAccountingCategory;
+import to.unified.unified_java_sdk.operations.RemoveAccountingContact;
+import to.unified.unified_java_sdk.operations.RemoveAccountingCreditmemo;
+import to.unified.unified_java_sdk.operations.RemoveAccountingInvoice;
+import to.unified.unified_java_sdk.operations.RemoveAccountingJournal;
+import to.unified.unified_java_sdk.operations.RemoveAccountingOrder;
+import to.unified.unified_java_sdk.operations.RemoveAccountingPurchaseorder;
+import to.unified.unified_java_sdk.operations.RemoveAccountingSalesorder;
+import to.unified.unified_java_sdk.operations.RemoveAccountingTaxrate;
+import to.unified.unified_java_sdk.operations.RemoveAccountingTransaction;
+import to.unified.unified_java_sdk.operations.UpdateAccountingAccount;
+import to.unified.unified_java_sdk.operations.UpdateAccountingBill;
+import to.unified.unified_java_sdk.operations.UpdateAccountingCategory;
+import to.unified.unified_java_sdk.operations.UpdateAccountingContact;
+import to.unified.unified_java_sdk.operations.UpdateAccountingCreditmemo;
+import to.unified.unified_java_sdk.operations.UpdateAccountingInvoice;
+import to.unified.unified_java_sdk.operations.UpdateAccountingJournal;
+import to.unified.unified_java_sdk.operations.UpdateAccountingOrder;
+import to.unified.unified_java_sdk.operations.UpdateAccountingPurchaseorder;
+import to.unified.unified_java_sdk.operations.UpdateAccountingSalesorder;
+import to.unified.unified_java_sdk.operations.UpdateAccountingTaxrate;
+import to.unified.unified_java_sdk.operations.UpdateAccountingTransaction;
 
 
 public class Accounting {
@@ -361,7 +361,7 @@ public class Accounting {
      */
     public CreateAccountingAccountResponse createAccountingAccount(CreateAccountingAccountRequest request) throws Exception {
         RequestOperation<CreateAccountingAccountRequest, CreateAccountingAccountResponse> operation
-              = new CreateAccountingAccountOperation(sdkConfiguration);
+              = new CreateAccountingAccount.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -383,7 +383,7 @@ public class Accounting {
      */
     public CreateAccountingBillResponse createAccountingBill(CreateAccountingBillRequest request) throws Exception {
         RequestOperation<CreateAccountingBillRequest, CreateAccountingBillResponse> operation
-              = new CreateAccountingBillOperation(sdkConfiguration);
+              = new CreateAccountingBill.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -405,7 +405,7 @@ public class Accounting {
      */
     public CreateAccountingCategoryResponse createAccountingCategory(CreateAccountingCategoryRequest request) throws Exception {
         RequestOperation<CreateAccountingCategoryRequest, CreateAccountingCategoryResponse> operation
-              = new CreateAccountingCategoryOperation(sdkConfiguration);
+              = new CreateAccountingCategory.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -427,7 +427,7 @@ public class Accounting {
      */
     public CreateAccountingContactResponse createAccountingContact(CreateAccountingContactRequest request) throws Exception {
         RequestOperation<CreateAccountingContactRequest, CreateAccountingContactResponse> operation
-              = new CreateAccountingContactOperation(sdkConfiguration);
+              = new CreateAccountingContact.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -449,7 +449,7 @@ public class Accounting {
      */
     public CreateAccountingCreditmemoResponse createAccountingCreditmemo(CreateAccountingCreditmemoRequest request) throws Exception {
         RequestOperation<CreateAccountingCreditmemoRequest, CreateAccountingCreditmemoResponse> operation
-              = new CreateAccountingCreditmemoOperation(sdkConfiguration);
+              = new CreateAccountingCreditmemo.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -471,7 +471,7 @@ public class Accounting {
      */
     public CreateAccountingInvoiceResponse createAccountingInvoice(CreateAccountingInvoiceRequest request) throws Exception {
         RequestOperation<CreateAccountingInvoiceRequest, CreateAccountingInvoiceResponse> operation
-              = new CreateAccountingInvoiceOperation(sdkConfiguration);
+              = new CreateAccountingInvoice.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -493,7 +493,7 @@ public class Accounting {
      */
     public CreateAccountingJournalResponse createAccountingJournal(CreateAccountingJournalRequest request) throws Exception {
         RequestOperation<CreateAccountingJournalRequest, CreateAccountingJournalResponse> operation
-              = new CreateAccountingJournalOperation(sdkConfiguration);
+              = new CreateAccountingJournal.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -515,7 +515,7 @@ public class Accounting {
      */
     public CreateAccountingOrderResponse createAccountingOrder(CreateAccountingOrderRequest request) throws Exception {
         RequestOperation<CreateAccountingOrderRequest, CreateAccountingOrderResponse> operation
-              = new CreateAccountingOrderOperation(sdkConfiguration);
+              = new CreateAccountingOrder.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -537,7 +537,7 @@ public class Accounting {
      */
     public CreateAccountingPurchaseorderResponse createAccountingPurchaseorder(CreateAccountingPurchaseorderRequest request) throws Exception {
         RequestOperation<CreateAccountingPurchaseorderRequest, CreateAccountingPurchaseorderResponse> operation
-              = new CreateAccountingPurchaseorderOperation(sdkConfiguration);
+              = new CreateAccountingPurchaseorder.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -559,7 +559,7 @@ public class Accounting {
      */
     public CreateAccountingSalesorderResponse createAccountingSalesorder(CreateAccountingSalesorderRequest request) throws Exception {
         RequestOperation<CreateAccountingSalesorderRequest, CreateAccountingSalesorderResponse> operation
-              = new CreateAccountingSalesorderOperation(sdkConfiguration);
+              = new CreateAccountingSalesorder.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -581,7 +581,7 @@ public class Accounting {
      */
     public CreateAccountingTaxrateResponse createAccountingTaxrate(CreateAccountingTaxrateRequest request) throws Exception {
         RequestOperation<CreateAccountingTaxrateRequest, CreateAccountingTaxrateResponse> operation
-              = new CreateAccountingTaxrateOperation(sdkConfiguration);
+              = new CreateAccountingTaxrate.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -603,7 +603,7 @@ public class Accounting {
      */
     public CreateAccountingTransactionResponse createAccountingTransaction(CreateAccountingTransactionRequest request) throws Exception {
         RequestOperation<CreateAccountingTransactionRequest, CreateAccountingTransactionResponse> operation
-              = new CreateAccountingTransactionOperation(sdkConfiguration);
+              = new CreateAccountingTransaction.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -625,7 +625,7 @@ public class Accounting {
      */
     public GetAccountingAccountResponse getAccountingAccount(GetAccountingAccountRequest request) throws Exception {
         RequestOperation<GetAccountingAccountRequest, GetAccountingAccountResponse> operation
-              = new GetAccountingAccountOperation(sdkConfiguration);
+              = new GetAccountingAccount.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -647,7 +647,7 @@ public class Accounting {
      */
     public GetAccountingBalancesheetResponse getAccountingBalancesheet(GetAccountingBalancesheetRequest request) throws Exception {
         RequestOperation<GetAccountingBalancesheetRequest, GetAccountingBalancesheetResponse> operation
-              = new GetAccountingBalancesheetOperation(sdkConfiguration);
+              = new GetAccountingBalancesheet.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -669,7 +669,7 @@ public class Accounting {
      */
     public GetAccountingBillResponse getAccountingBill(GetAccountingBillRequest request) throws Exception {
         RequestOperation<GetAccountingBillRequest, GetAccountingBillResponse> operation
-              = new GetAccountingBillOperation(sdkConfiguration);
+              = new GetAccountingBill.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -691,7 +691,7 @@ public class Accounting {
      */
     public GetAccountingCategoryResponse getAccountingCategory(GetAccountingCategoryRequest request) throws Exception {
         RequestOperation<GetAccountingCategoryRequest, GetAccountingCategoryResponse> operation
-              = new GetAccountingCategoryOperation(sdkConfiguration);
+              = new GetAccountingCategory.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -713,7 +713,7 @@ public class Accounting {
      */
     public GetAccountingContactResponse getAccountingContact(GetAccountingContactRequest request) throws Exception {
         RequestOperation<GetAccountingContactRequest, GetAccountingContactResponse> operation
-              = new GetAccountingContactOperation(sdkConfiguration);
+              = new GetAccountingContact.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -735,7 +735,7 @@ public class Accounting {
      */
     public GetAccountingCreditmemoResponse getAccountingCreditmemo(GetAccountingCreditmemoRequest request) throws Exception {
         RequestOperation<GetAccountingCreditmemoRequest, GetAccountingCreditmemoResponse> operation
-              = new GetAccountingCreditmemoOperation(sdkConfiguration);
+              = new GetAccountingCreditmemo.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -757,7 +757,7 @@ public class Accounting {
      */
     public GetAccountingInvoiceResponse getAccountingInvoice(GetAccountingInvoiceRequest request) throws Exception {
         RequestOperation<GetAccountingInvoiceRequest, GetAccountingInvoiceResponse> operation
-              = new GetAccountingInvoiceOperation(sdkConfiguration);
+              = new GetAccountingInvoice.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -779,7 +779,7 @@ public class Accounting {
      */
     public GetAccountingJournalResponse getAccountingJournal(GetAccountingJournalRequest request) throws Exception {
         RequestOperation<GetAccountingJournalRequest, GetAccountingJournalResponse> operation
-              = new GetAccountingJournalOperation(sdkConfiguration);
+              = new GetAccountingJournal.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -801,7 +801,7 @@ public class Accounting {
      */
     public GetAccountingOrderResponse getAccountingOrder(GetAccountingOrderRequest request) throws Exception {
         RequestOperation<GetAccountingOrderRequest, GetAccountingOrderResponse> operation
-              = new GetAccountingOrderOperation(sdkConfiguration);
+              = new GetAccountingOrder.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -823,7 +823,7 @@ public class Accounting {
      */
     public GetAccountingOrganizationResponse getAccountingOrganization(GetAccountingOrganizationRequest request) throws Exception {
         RequestOperation<GetAccountingOrganizationRequest, GetAccountingOrganizationResponse> operation
-              = new GetAccountingOrganizationOperation(sdkConfiguration);
+              = new GetAccountingOrganization.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -845,7 +845,7 @@ public class Accounting {
      */
     public GetAccountingProfitlossResponse getAccountingProfitloss(GetAccountingProfitlossRequest request) throws Exception {
         RequestOperation<GetAccountingProfitlossRequest, GetAccountingProfitlossResponse> operation
-              = new GetAccountingProfitlossOperation(sdkConfiguration);
+              = new GetAccountingProfitloss.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -867,7 +867,7 @@ public class Accounting {
      */
     public GetAccountingPurchaseorderResponse getAccountingPurchaseorder(GetAccountingPurchaseorderRequest request) throws Exception {
         RequestOperation<GetAccountingPurchaseorderRequest, GetAccountingPurchaseorderResponse> operation
-              = new GetAccountingPurchaseorderOperation(sdkConfiguration);
+              = new GetAccountingPurchaseorder.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -889,7 +889,7 @@ public class Accounting {
      */
     public GetAccountingReportResponse getAccountingReport(GetAccountingReportRequest request) throws Exception {
         RequestOperation<GetAccountingReportRequest, GetAccountingReportResponse> operation
-              = new GetAccountingReportOperation(sdkConfiguration);
+              = new GetAccountingReport.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -911,7 +911,7 @@ public class Accounting {
      */
     public GetAccountingSalesorderResponse getAccountingSalesorder(GetAccountingSalesorderRequest request) throws Exception {
         RequestOperation<GetAccountingSalesorderRequest, GetAccountingSalesorderResponse> operation
-              = new GetAccountingSalesorderOperation(sdkConfiguration);
+              = new GetAccountingSalesorder.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -933,7 +933,7 @@ public class Accounting {
      */
     public GetAccountingTaxrateResponse getAccountingTaxrate(GetAccountingTaxrateRequest request) throws Exception {
         RequestOperation<GetAccountingTaxrateRequest, GetAccountingTaxrateResponse> operation
-              = new GetAccountingTaxrateOperation(sdkConfiguration);
+              = new GetAccountingTaxrate.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -955,7 +955,7 @@ public class Accounting {
      */
     public GetAccountingTransactionResponse getAccountingTransaction(GetAccountingTransactionRequest request) throws Exception {
         RequestOperation<GetAccountingTransactionRequest, GetAccountingTransactionResponse> operation
-              = new GetAccountingTransactionOperation(sdkConfiguration);
+              = new GetAccountingTransaction.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -977,7 +977,7 @@ public class Accounting {
      */
     public GetAccountingTrialbalanceResponse getAccountingTrialbalance(GetAccountingTrialbalanceRequest request) throws Exception {
         RequestOperation<GetAccountingTrialbalanceRequest, GetAccountingTrialbalanceResponse> operation
-              = new GetAccountingTrialbalanceOperation(sdkConfiguration);
+              = new GetAccountingTrialbalance.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -999,7 +999,7 @@ public class Accounting {
      */
     public ListAccountingAccountsResponse listAccountingAccounts(ListAccountingAccountsRequest request) throws Exception {
         RequestOperation<ListAccountingAccountsRequest, ListAccountingAccountsResponse> operation
-              = new ListAccountingAccountsOperation(sdkConfiguration);
+              = new ListAccountingAccounts.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1021,7 +1021,7 @@ public class Accounting {
      */
     public ListAccountingBalancesheetsResponse listAccountingBalancesheets(ListAccountingBalancesheetsRequest request) throws Exception {
         RequestOperation<ListAccountingBalancesheetsRequest, ListAccountingBalancesheetsResponse> operation
-              = new ListAccountingBalancesheetsOperation(sdkConfiguration);
+              = new ListAccountingBalancesheets.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1043,7 +1043,7 @@ public class Accounting {
      */
     public ListAccountingBillsResponse listAccountingBills(ListAccountingBillsRequest request) throws Exception {
         RequestOperation<ListAccountingBillsRequest, ListAccountingBillsResponse> operation
-              = new ListAccountingBillsOperation(sdkConfiguration);
+              = new ListAccountingBills.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1065,7 +1065,7 @@ public class Accounting {
      */
     public ListAccountingCategoriesResponse listAccountingCategories(ListAccountingCategoriesRequest request) throws Exception {
         RequestOperation<ListAccountingCategoriesRequest, ListAccountingCategoriesResponse> operation
-              = new ListAccountingCategoriesOperation(sdkConfiguration);
+              = new ListAccountingCategories.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1087,7 +1087,7 @@ public class Accounting {
      */
     public ListAccountingContactsResponse listAccountingContacts(ListAccountingContactsRequest request) throws Exception {
         RequestOperation<ListAccountingContactsRequest, ListAccountingContactsResponse> operation
-              = new ListAccountingContactsOperation(sdkConfiguration);
+              = new ListAccountingContacts.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1109,7 +1109,7 @@ public class Accounting {
      */
     public ListAccountingCreditmemoesResponse listAccountingCreditmemoes(ListAccountingCreditmemoesRequest request) throws Exception {
         RequestOperation<ListAccountingCreditmemoesRequest, ListAccountingCreditmemoesResponse> operation
-              = new ListAccountingCreditmemoesOperation(sdkConfiguration);
+              = new ListAccountingCreditmemoes.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1131,7 +1131,7 @@ public class Accounting {
      */
     public ListAccountingInvoicesResponse listAccountingInvoices(ListAccountingInvoicesRequest request) throws Exception {
         RequestOperation<ListAccountingInvoicesRequest, ListAccountingInvoicesResponse> operation
-              = new ListAccountingInvoicesOperation(sdkConfiguration);
+              = new ListAccountingInvoices.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1153,7 +1153,7 @@ public class Accounting {
      */
     public ListAccountingJournalsResponse listAccountingJournals(ListAccountingJournalsRequest request) throws Exception {
         RequestOperation<ListAccountingJournalsRequest, ListAccountingJournalsResponse> operation
-              = new ListAccountingJournalsOperation(sdkConfiguration);
+              = new ListAccountingJournals.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1175,7 +1175,7 @@ public class Accounting {
      */
     public ListAccountingOrdersResponse listAccountingOrders(ListAccountingOrdersRequest request) throws Exception {
         RequestOperation<ListAccountingOrdersRequest, ListAccountingOrdersResponse> operation
-              = new ListAccountingOrdersOperation(sdkConfiguration);
+              = new ListAccountingOrders.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1197,7 +1197,7 @@ public class Accounting {
      */
     public ListAccountingOrganizationsResponse listAccountingOrganizations(ListAccountingOrganizationsRequest request) throws Exception {
         RequestOperation<ListAccountingOrganizationsRequest, ListAccountingOrganizationsResponse> operation
-              = new ListAccountingOrganizationsOperation(sdkConfiguration);
+              = new ListAccountingOrganizations.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1219,7 +1219,7 @@ public class Accounting {
      */
     public ListAccountingProfitlossesResponse listAccountingProfitlosses(ListAccountingProfitlossesRequest request) throws Exception {
         RequestOperation<ListAccountingProfitlossesRequest, ListAccountingProfitlossesResponse> operation
-              = new ListAccountingProfitlossesOperation(sdkConfiguration);
+              = new ListAccountingProfitlosses.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1241,7 +1241,7 @@ public class Accounting {
      */
     public ListAccountingPurchaseordersResponse listAccountingPurchaseorders(ListAccountingPurchaseordersRequest request) throws Exception {
         RequestOperation<ListAccountingPurchaseordersRequest, ListAccountingPurchaseordersResponse> operation
-              = new ListAccountingPurchaseordersOperation(sdkConfiguration);
+              = new ListAccountingPurchaseorders.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1263,7 +1263,7 @@ public class Accounting {
      */
     public ListAccountingReportsResponse listAccountingReports(ListAccountingReportsRequest request) throws Exception {
         RequestOperation<ListAccountingReportsRequest, ListAccountingReportsResponse> operation
-              = new ListAccountingReportsOperation(sdkConfiguration);
+              = new ListAccountingReports.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1285,7 +1285,7 @@ public class Accounting {
      */
     public ListAccountingSalesordersResponse listAccountingSalesorders(ListAccountingSalesordersRequest request) throws Exception {
         RequestOperation<ListAccountingSalesordersRequest, ListAccountingSalesordersResponse> operation
-              = new ListAccountingSalesordersOperation(sdkConfiguration);
+              = new ListAccountingSalesorders.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1307,7 +1307,7 @@ public class Accounting {
      */
     public ListAccountingTaxratesResponse listAccountingTaxrates(ListAccountingTaxratesRequest request) throws Exception {
         RequestOperation<ListAccountingTaxratesRequest, ListAccountingTaxratesResponse> operation
-              = new ListAccountingTaxratesOperation(sdkConfiguration);
+              = new ListAccountingTaxrates.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1329,7 +1329,7 @@ public class Accounting {
      */
     public ListAccountingTransactionsResponse listAccountingTransactions(ListAccountingTransactionsRequest request) throws Exception {
         RequestOperation<ListAccountingTransactionsRequest, ListAccountingTransactionsResponse> operation
-              = new ListAccountingTransactionsOperation(sdkConfiguration);
+              = new ListAccountingTransactions.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1351,7 +1351,7 @@ public class Accounting {
      */
     public ListAccountingTrialbalancesResponse listAccountingTrialbalances(ListAccountingTrialbalancesRequest request) throws Exception {
         RequestOperation<ListAccountingTrialbalancesRequest, ListAccountingTrialbalancesResponse> operation
-              = new ListAccountingTrialbalancesOperation(sdkConfiguration);
+              = new ListAccountingTrialbalances.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1373,7 +1373,7 @@ public class Accounting {
      */
     public PatchAccountingAccountResponse patchAccountingAccount(PatchAccountingAccountRequest request) throws Exception {
         RequestOperation<PatchAccountingAccountRequest, PatchAccountingAccountResponse> operation
-              = new PatchAccountingAccountOperation(sdkConfiguration);
+              = new PatchAccountingAccount.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1395,7 +1395,7 @@ public class Accounting {
      */
     public PatchAccountingBillResponse patchAccountingBill(PatchAccountingBillRequest request) throws Exception {
         RequestOperation<PatchAccountingBillRequest, PatchAccountingBillResponse> operation
-              = new PatchAccountingBillOperation(sdkConfiguration);
+              = new PatchAccountingBill.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1417,7 +1417,7 @@ public class Accounting {
      */
     public PatchAccountingCategoryResponse patchAccountingCategory(PatchAccountingCategoryRequest request) throws Exception {
         RequestOperation<PatchAccountingCategoryRequest, PatchAccountingCategoryResponse> operation
-              = new PatchAccountingCategoryOperation(sdkConfiguration);
+              = new PatchAccountingCategory.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1439,7 +1439,7 @@ public class Accounting {
      */
     public PatchAccountingContactResponse patchAccountingContact(PatchAccountingContactRequest request) throws Exception {
         RequestOperation<PatchAccountingContactRequest, PatchAccountingContactResponse> operation
-              = new PatchAccountingContactOperation(sdkConfiguration);
+              = new PatchAccountingContact.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1461,7 +1461,7 @@ public class Accounting {
      */
     public PatchAccountingCreditmemoResponse patchAccountingCreditmemo(PatchAccountingCreditmemoRequest request) throws Exception {
         RequestOperation<PatchAccountingCreditmemoRequest, PatchAccountingCreditmemoResponse> operation
-              = new PatchAccountingCreditmemoOperation(sdkConfiguration);
+              = new PatchAccountingCreditmemo.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1483,7 +1483,7 @@ public class Accounting {
      */
     public PatchAccountingInvoiceResponse patchAccountingInvoice(PatchAccountingInvoiceRequest request) throws Exception {
         RequestOperation<PatchAccountingInvoiceRequest, PatchAccountingInvoiceResponse> operation
-              = new PatchAccountingInvoiceOperation(sdkConfiguration);
+              = new PatchAccountingInvoice.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1505,7 +1505,7 @@ public class Accounting {
      */
     public PatchAccountingJournalResponse patchAccountingJournal(PatchAccountingJournalRequest request) throws Exception {
         RequestOperation<PatchAccountingJournalRequest, PatchAccountingJournalResponse> operation
-              = new PatchAccountingJournalOperation(sdkConfiguration);
+              = new PatchAccountingJournal.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1527,7 +1527,7 @@ public class Accounting {
      */
     public PatchAccountingOrderResponse patchAccountingOrder(PatchAccountingOrderRequest request) throws Exception {
         RequestOperation<PatchAccountingOrderRequest, PatchAccountingOrderResponse> operation
-              = new PatchAccountingOrderOperation(sdkConfiguration);
+              = new PatchAccountingOrder.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1549,7 +1549,7 @@ public class Accounting {
      */
     public PatchAccountingPurchaseorderResponse patchAccountingPurchaseorder(PatchAccountingPurchaseorderRequest request) throws Exception {
         RequestOperation<PatchAccountingPurchaseorderRequest, PatchAccountingPurchaseorderResponse> operation
-              = new PatchAccountingPurchaseorderOperation(sdkConfiguration);
+              = new PatchAccountingPurchaseorder.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1571,7 +1571,7 @@ public class Accounting {
      */
     public PatchAccountingSalesorderResponse patchAccountingSalesorder(PatchAccountingSalesorderRequest request) throws Exception {
         RequestOperation<PatchAccountingSalesorderRequest, PatchAccountingSalesorderResponse> operation
-              = new PatchAccountingSalesorderOperation(sdkConfiguration);
+              = new PatchAccountingSalesorder.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1593,7 +1593,7 @@ public class Accounting {
      */
     public PatchAccountingTaxrateResponse patchAccountingTaxrate(PatchAccountingTaxrateRequest request) throws Exception {
         RequestOperation<PatchAccountingTaxrateRequest, PatchAccountingTaxrateResponse> operation
-              = new PatchAccountingTaxrateOperation(sdkConfiguration);
+              = new PatchAccountingTaxrate.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1615,7 +1615,7 @@ public class Accounting {
      */
     public PatchAccountingTransactionResponse patchAccountingTransaction(PatchAccountingTransactionRequest request) throws Exception {
         RequestOperation<PatchAccountingTransactionRequest, PatchAccountingTransactionResponse> operation
-              = new PatchAccountingTransactionOperation(sdkConfiguration);
+              = new PatchAccountingTransaction.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1637,7 +1637,7 @@ public class Accounting {
      */
     public RemoveAccountingAccountResponse removeAccountingAccount(RemoveAccountingAccountRequest request) throws Exception {
         RequestOperation<RemoveAccountingAccountRequest, RemoveAccountingAccountResponse> operation
-              = new RemoveAccountingAccountOperation(sdkConfiguration);
+              = new RemoveAccountingAccount.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1659,7 +1659,7 @@ public class Accounting {
      */
     public RemoveAccountingBillResponse removeAccountingBill(RemoveAccountingBillRequest request) throws Exception {
         RequestOperation<RemoveAccountingBillRequest, RemoveAccountingBillResponse> operation
-              = new RemoveAccountingBillOperation(sdkConfiguration);
+              = new RemoveAccountingBill.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1681,7 +1681,7 @@ public class Accounting {
      */
     public RemoveAccountingCategoryResponse removeAccountingCategory(RemoveAccountingCategoryRequest request) throws Exception {
         RequestOperation<RemoveAccountingCategoryRequest, RemoveAccountingCategoryResponse> operation
-              = new RemoveAccountingCategoryOperation(sdkConfiguration);
+              = new RemoveAccountingCategory.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1703,7 +1703,7 @@ public class Accounting {
      */
     public RemoveAccountingContactResponse removeAccountingContact(RemoveAccountingContactRequest request) throws Exception {
         RequestOperation<RemoveAccountingContactRequest, RemoveAccountingContactResponse> operation
-              = new RemoveAccountingContactOperation(sdkConfiguration);
+              = new RemoveAccountingContact.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1725,7 +1725,7 @@ public class Accounting {
      */
     public RemoveAccountingCreditmemoResponse removeAccountingCreditmemo(RemoveAccountingCreditmemoRequest request) throws Exception {
         RequestOperation<RemoveAccountingCreditmemoRequest, RemoveAccountingCreditmemoResponse> operation
-              = new RemoveAccountingCreditmemoOperation(sdkConfiguration);
+              = new RemoveAccountingCreditmemo.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1747,7 +1747,7 @@ public class Accounting {
      */
     public RemoveAccountingInvoiceResponse removeAccountingInvoice(RemoveAccountingInvoiceRequest request) throws Exception {
         RequestOperation<RemoveAccountingInvoiceRequest, RemoveAccountingInvoiceResponse> operation
-              = new RemoveAccountingInvoiceOperation(sdkConfiguration);
+              = new RemoveAccountingInvoice.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1769,7 +1769,7 @@ public class Accounting {
      */
     public RemoveAccountingJournalResponse removeAccountingJournal(RemoveAccountingJournalRequest request) throws Exception {
         RequestOperation<RemoveAccountingJournalRequest, RemoveAccountingJournalResponse> operation
-              = new RemoveAccountingJournalOperation(sdkConfiguration);
+              = new RemoveAccountingJournal.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1791,7 +1791,7 @@ public class Accounting {
      */
     public RemoveAccountingOrderResponse removeAccountingOrder(RemoveAccountingOrderRequest request) throws Exception {
         RequestOperation<RemoveAccountingOrderRequest, RemoveAccountingOrderResponse> operation
-              = new RemoveAccountingOrderOperation(sdkConfiguration);
+              = new RemoveAccountingOrder.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1813,7 +1813,7 @@ public class Accounting {
      */
     public RemoveAccountingPurchaseorderResponse removeAccountingPurchaseorder(RemoveAccountingPurchaseorderRequest request) throws Exception {
         RequestOperation<RemoveAccountingPurchaseorderRequest, RemoveAccountingPurchaseorderResponse> operation
-              = new RemoveAccountingPurchaseorderOperation(sdkConfiguration);
+              = new RemoveAccountingPurchaseorder.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1835,7 +1835,7 @@ public class Accounting {
      */
     public RemoveAccountingSalesorderResponse removeAccountingSalesorder(RemoveAccountingSalesorderRequest request) throws Exception {
         RequestOperation<RemoveAccountingSalesorderRequest, RemoveAccountingSalesorderResponse> operation
-              = new RemoveAccountingSalesorderOperation(sdkConfiguration);
+              = new RemoveAccountingSalesorder.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1857,7 +1857,7 @@ public class Accounting {
      */
     public RemoveAccountingTaxrateResponse removeAccountingTaxrate(RemoveAccountingTaxrateRequest request) throws Exception {
         RequestOperation<RemoveAccountingTaxrateRequest, RemoveAccountingTaxrateResponse> operation
-              = new RemoveAccountingTaxrateOperation(sdkConfiguration);
+              = new RemoveAccountingTaxrate.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1879,7 +1879,7 @@ public class Accounting {
      */
     public RemoveAccountingTransactionResponse removeAccountingTransaction(RemoveAccountingTransactionRequest request) throws Exception {
         RequestOperation<RemoveAccountingTransactionRequest, RemoveAccountingTransactionResponse> operation
-              = new RemoveAccountingTransactionOperation(sdkConfiguration);
+              = new RemoveAccountingTransaction.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1901,7 +1901,7 @@ public class Accounting {
      */
     public UpdateAccountingAccountResponse updateAccountingAccount(UpdateAccountingAccountRequest request) throws Exception {
         RequestOperation<UpdateAccountingAccountRequest, UpdateAccountingAccountResponse> operation
-              = new UpdateAccountingAccountOperation(sdkConfiguration);
+              = new UpdateAccountingAccount.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1923,7 +1923,7 @@ public class Accounting {
      */
     public UpdateAccountingBillResponse updateAccountingBill(UpdateAccountingBillRequest request) throws Exception {
         RequestOperation<UpdateAccountingBillRequest, UpdateAccountingBillResponse> operation
-              = new UpdateAccountingBillOperation(sdkConfiguration);
+              = new UpdateAccountingBill.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1945,7 +1945,7 @@ public class Accounting {
      */
     public UpdateAccountingCategoryResponse updateAccountingCategory(UpdateAccountingCategoryRequest request) throws Exception {
         RequestOperation<UpdateAccountingCategoryRequest, UpdateAccountingCategoryResponse> operation
-              = new UpdateAccountingCategoryOperation(sdkConfiguration);
+              = new UpdateAccountingCategory.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1967,7 +1967,7 @@ public class Accounting {
      */
     public UpdateAccountingContactResponse updateAccountingContact(UpdateAccountingContactRequest request) throws Exception {
         RequestOperation<UpdateAccountingContactRequest, UpdateAccountingContactResponse> operation
-              = new UpdateAccountingContactOperation(sdkConfiguration);
+              = new UpdateAccountingContact.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1989,7 +1989,7 @@ public class Accounting {
      */
     public UpdateAccountingCreditmemoResponse updateAccountingCreditmemo(UpdateAccountingCreditmemoRequest request) throws Exception {
         RequestOperation<UpdateAccountingCreditmemoRequest, UpdateAccountingCreditmemoResponse> operation
-              = new UpdateAccountingCreditmemoOperation(sdkConfiguration);
+              = new UpdateAccountingCreditmemo.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2011,7 +2011,7 @@ public class Accounting {
      */
     public UpdateAccountingInvoiceResponse updateAccountingInvoice(UpdateAccountingInvoiceRequest request) throws Exception {
         RequestOperation<UpdateAccountingInvoiceRequest, UpdateAccountingInvoiceResponse> operation
-              = new UpdateAccountingInvoiceOperation(sdkConfiguration);
+              = new UpdateAccountingInvoice.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2033,7 +2033,7 @@ public class Accounting {
      */
     public UpdateAccountingJournalResponse updateAccountingJournal(UpdateAccountingJournalRequest request) throws Exception {
         RequestOperation<UpdateAccountingJournalRequest, UpdateAccountingJournalResponse> operation
-              = new UpdateAccountingJournalOperation(sdkConfiguration);
+              = new UpdateAccountingJournal.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2055,7 +2055,7 @@ public class Accounting {
      */
     public UpdateAccountingOrderResponse updateAccountingOrder(UpdateAccountingOrderRequest request) throws Exception {
         RequestOperation<UpdateAccountingOrderRequest, UpdateAccountingOrderResponse> operation
-              = new UpdateAccountingOrderOperation(sdkConfiguration);
+              = new UpdateAccountingOrder.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2077,7 +2077,7 @@ public class Accounting {
      */
     public UpdateAccountingPurchaseorderResponse updateAccountingPurchaseorder(UpdateAccountingPurchaseorderRequest request) throws Exception {
         RequestOperation<UpdateAccountingPurchaseorderRequest, UpdateAccountingPurchaseorderResponse> operation
-              = new UpdateAccountingPurchaseorderOperation(sdkConfiguration);
+              = new UpdateAccountingPurchaseorder.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2099,7 +2099,7 @@ public class Accounting {
      */
     public UpdateAccountingSalesorderResponse updateAccountingSalesorder(UpdateAccountingSalesorderRequest request) throws Exception {
         RequestOperation<UpdateAccountingSalesorderRequest, UpdateAccountingSalesorderResponse> operation
-              = new UpdateAccountingSalesorderOperation(sdkConfiguration);
+              = new UpdateAccountingSalesorder.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2121,7 +2121,7 @@ public class Accounting {
      */
     public UpdateAccountingTaxrateResponse updateAccountingTaxrate(UpdateAccountingTaxrateRequest request) throws Exception {
         RequestOperation<UpdateAccountingTaxrateRequest, UpdateAccountingTaxrateResponse> operation
-              = new UpdateAccountingTaxrateOperation(sdkConfiguration);
+              = new UpdateAccountingTaxrate.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2143,7 +2143,7 @@ public class Accounting {
      */
     public UpdateAccountingTransactionResponse updateAccountingTransaction(UpdateAccountingTransactionRequest request) throws Exception {
         RequestOperation<UpdateAccountingTransactionRequest, UpdateAccountingTransactionResponse> operation
-              = new UpdateAccountingTransactionOperation(sdkConfiguration);
+              = new UpdateAccountingTransaction.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

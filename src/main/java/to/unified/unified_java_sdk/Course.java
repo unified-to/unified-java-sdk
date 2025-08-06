@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveLmsCourseResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsCourseRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsCourseRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsCourseResponse;
-import to.unified.unified_java_sdk.operations.CreateLmsCourseOperation;
-import to.unified.unified_java_sdk.operations.GetLmsCourseOperation;
-import to.unified.unified_java_sdk.operations.ListLmsCoursesOperation;
-import to.unified.unified_java_sdk.operations.PatchLmsCourseOperation;
-import to.unified.unified_java_sdk.operations.RemoveLmsCourseOperation;
-import to.unified.unified_java_sdk.operations.UpdateLmsCourseOperation;
+import to.unified.unified_java_sdk.operations.CreateLmsCourse;
+import to.unified.unified_java_sdk.operations.GetLmsCourse;
+import to.unified.unified_java_sdk.operations.ListLmsCourses;
+import to.unified.unified_java_sdk.operations.PatchLmsCourse;
+import to.unified.unified_java_sdk.operations.RemoveLmsCourse;
+import to.unified.unified_java_sdk.operations.UpdateLmsCourse;
 
 
 public class Course {
@@ -57,7 +57,7 @@ public class Course {
      */
     public CreateLmsCourseResponse createLmsCourse(CreateLmsCourseRequest request) throws Exception {
         RequestOperation<CreateLmsCourseRequest, CreateLmsCourseResponse> operation
-              = new CreateLmsCourseOperation(sdkConfiguration);
+              = new CreateLmsCourse.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Course {
      */
     public GetLmsCourseResponse getLmsCourse(GetLmsCourseRequest request) throws Exception {
         RequestOperation<GetLmsCourseRequest, GetLmsCourseResponse> operation
-              = new GetLmsCourseOperation(sdkConfiguration);
+              = new GetLmsCourse.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Course {
      */
     public ListLmsCoursesResponse listLmsCourses(ListLmsCoursesRequest request) throws Exception {
         RequestOperation<ListLmsCoursesRequest, ListLmsCoursesResponse> operation
-              = new ListLmsCoursesOperation(sdkConfiguration);
+              = new ListLmsCourses.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Course {
      */
     public PatchLmsCourseResponse patchLmsCourse(PatchLmsCourseRequest request) throws Exception {
         RequestOperation<PatchLmsCourseRequest, PatchLmsCourseResponse> operation
-              = new PatchLmsCourseOperation(sdkConfiguration);
+              = new PatchLmsCourse.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Course {
      */
     public RemoveLmsCourseResponse removeLmsCourse(RemoveLmsCourseRequest request) throws Exception {
         RequestOperation<RemoveLmsCourseRequest, RemoveLmsCourseResponse> operation
-              = new RemoveLmsCourseOperation(sdkConfiguration);
+              = new RemoveLmsCourse.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Course {
      */
     public UpdateLmsCourseResponse updateLmsCourse(UpdateLmsCourseRequest request) throws Exception {
         RequestOperation<UpdateLmsCourseRequest, UpdateLmsCourseResponse> operation
-              = new UpdateLmsCourseOperation(sdkConfiguration);
+              = new UpdateLmsCourse.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

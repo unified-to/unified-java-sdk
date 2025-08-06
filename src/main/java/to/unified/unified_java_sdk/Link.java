@@ -42,18 +42,18 @@ import to.unified.unified_java_sdk.models.operations.UpdateCalendarLinkResponse;
 import to.unified.unified_java_sdk.models.operations.UpdatePaymentLinkRequest;
 import to.unified.unified_java_sdk.models.operations.UpdatePaymentLinkRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdatePaymentLinkResponse;
-import to.unified.unified_java_sdk.operations.CreateCalendarLinkOperation;
-import to.unified.unified_java_sdk.operations.CreatePaymentLinkOperation;
-import to.unified.unified_java_sdk.operations.GetCalendarLinkOperation;
-import to.unified.unified_java_sdk.operations.GetPaymentLinkOperation;
-import to.unified.unified_java_sdk.operations.ListCalendarLinksOperation;
-import to.unified.unified_java_sdk.operations.ListPaymentLinksOperation;
-import to.unified.unified_java_sdk.operations.PatchCalendarLinkOperation;
-import to.unified.unified_java_sdk.operations.PatchPaymentLinkOperation;
-import to.unified.unified_java_sdk.operations.RemoveCalendarLinkOperation;
-import to.unified.unified_java_sdk.operations.RemovePaymentLinkOperation;
-import to.unified.unified_java_sdk.operations.UpdateCalendarLinkOperation;
-import to.unified.unified_java_sdk.operations.UpdatePaymentLinkOperation;
+import to.unified.unified_java_sdk.operations.CreateCalendarLink;
+import to.unified.unified_java_sdk.operations.CreatePaymentLink;
+import to.unified.unified_java_sdk.operations.GetCalendarLink;
+import to.unified.unified_java_sdk.operations.GetPaymentLink;
+import to.unified.unified_java_sdk.operations.ListCalendarLinks;
+import to.unified.unified_java_sdk.operations.ListPaymentLinks;
+import to.unified.unified_java_sdk.operations.PatchCalendarLink;
+import to.unified.unified_java_sdk.operations.PatchPaymentLink;
+import to.unified.unified_java_sdk.operations.RemoveCalendarLink;
+import to.unified.unified_java_sdk.operations.RemovePaymentLink;
+import to.unified.unified_java_sdk.operations.UpdateCalendarLink;
+import to.unified.unified_java_sdk.operations.UpdatePaymentLink;
 
 
 public class Link {
@@ -81,7 +81,7 @@ public class Link {
      */
     public CreateCalendarLinkResponse createCalendarLink(CreateCalendarLinkRequest request) throws Exception {
         RequestOperation<CreateCalendarLinkRequest, CreateCalendarLinkResponse> operation
-              = new CreateCalendarLinkOperation(sdkConfiguration);
+              = new CreateCalendarLink.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,7 +103,7 @@ public class Link {
      */
     public CreatePaymentLinkResponse createPaymentLink(CreatePaymentLinkRequest request) throws Exception {
         RequestOperation<CreatePaymentLinkRequest, CreatePaymentLinkResponse> operation
-              = new CreatePaymentLinkOperation(sdkConfiguration);
+              = new CreatePaymentLink.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -125,7 +125,7 @@ public class Link {
      */
     public GetCalendarLinkResponse getCalendarLink(GetCalendarLinkRequest request) throws Exception {
         RequestOperation<GetCalendarLinkRequest, GetCalendarLinkResponse> operation
-              = new GetCalendarLinkOperation(sdkConfiguration);
+              = new GetCalendarLink.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -147,7 +147,7 @@ public class Link {
      */
     public GetPaymentLinkResponse getPaymentLink(GetPaymentLinkRequest request) throws Exception {
         RequestOperation<GetPaymentLinkRequest, GetPaymentLinkResponse> operation
-              = new GetPaymentLinkOperation(sdkConfiguration);
+              = new GetPaymentLink.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -169,7 +169,7 @@ public class Link {
      */
     public ListCalendarLinksResponse listCalendarLinks(ListCalendarLinksRequest request) throws Exception {
         RequestOperation<ListCalendarLinksRequest, ListCalendarLinksResponse> operation
-              = new ListCalendarLinksOperation(sdkConfiguration);
+              = new ListCalendarLinks.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -191,7 +191,7 @@ public class Link {
      */
     public ListPaymentLinksResponse listPaymentLinks(ListPaymentLinksRequest request) throws Exception {
         RequestOperation<ListPaymentLinksRequest, ListPaymentLinksResponse> operation
-              = new ListPaymentLinksOperation(sdkConfiguration);
+              = new ListPaymentLinks.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -213,7 +213,7 @@ public class Link {
      */
     public PatchCalendarLinkResponse patchCalendarLink(PatchCalendarLinkRequest request) throws Exception {
         RequestOperation<PatchCalendarLinkRequest, PatchCalendarLinkResponse> operation
-              = new PatchCalendarLinkOperation(sdkConfiguration);
+              = new PatchCalendarLink.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -235,7 +235,7 @@ public class Link {
      */
     public PatchPaymentLinkResponse patchPaymentLink(PatchPaymentLinkRequest request) throws Exception {
         RequestOperation<PatchPaymentLinkRequest, PatchPaymentLinkResponse> operation
-              = new PatchPaymentLinkOperation(sdkConfiguration);
+              = new PatchPaymentLink.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -257,7 +257,7 @@ public class Link {
      */
     public RemoveCalendarLinkResponse removeCalendarLink(RemoveCalendarLinkRequest request) throws Exception {
         RequestOperation<RemoveCalendarLinkRequest, RemoveCalendarLinkResponse> operation
-              = new RemoveCalendarLinkOperation(sdkConfiguration);
+              = new RemoveCalendarLink.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -279,7 +279,7 @@ public class Link {
      */
     public RemovePaymentLinkResponse removePaymentLink(RemovePaymentLinkRequest request) throws Exception {
         RequestOperation<RemovePaymentLinkRequest, RemovePaymentLinkResponse> operation
-              = new RemovePaymentLinkOperation(sdkConfiguration);
+              = new RemovePaymentLink.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -301,7 +301,7 @@ public class Link {
      */
     public UpdateCalendarLinkResponse updateCalendarLink(UpdateCalendarLinkRequest request) throws Exception {
         RequestOperation<UpdateCalendarLinkRequest, UpdateCalendarLinkResponse> operation
-              = new UpdateCalendarLinkOperation(sdkConfiguration);
+              = new UpdateCalendarLink.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -323,7 +323,7 @@ public class Link {
      */
     public UpdatePaymentLinkResponse updatePaymentLink(UpdatePaymentLinkRequest request) throws Exception {
         RequestOperation<UpdatePaymentLinkRequest, UpdatePaymentLinkResponse> operation
-              = new UpdatePaymentLinkOperation(sdkConfiguration);
+              = new UpdatePaymentLink.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

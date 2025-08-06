@@ -9,7 +9,7 @@ import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.ListUcCallsRequest;
 import to.unified.unified_java_sdk.models.operations.ListUcCallsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListUcCallsResponse;
-import to.unified.unified_java_sdk.operations.ListUcCallsOperation;
+import to.unified.unified_java_sdk.operations.ListUcCalls;
 
 
 public class Call {
@@ -37,7 +37,7 @@ public class Call {
      */
     public ListUcCallsResponse listUcCalls(ListUcCallsRequest request) throws Exception {
         RequestOperation<ListUcCallsRequest, ListUcCallsResponse> operation
-              = new ListUcCallsOperation(sdkConfiguration);
+              = new ListUcCalls.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

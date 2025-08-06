@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.PatchPassthroughRawOperation;
+import to.unified.unified_java_sdk.operations.PatchPassthroughRaw;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchPassthroughRawRequestBuilder {
@@ -28,7 +28,7 @@ public class PatchPassthroughRawRequestBuilder {
     public PatchPassthroughRawResponse call() throws Exception {
         
         RequestOperation<PatchPassthroughRawRequest, PatchPassthroughRawResponse> operation
-              = new PatchPassthroughRawOperation(sdkConfiguration);
+              = new PatchPassthroughRaw.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

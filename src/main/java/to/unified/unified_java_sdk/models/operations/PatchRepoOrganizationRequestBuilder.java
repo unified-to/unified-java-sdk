@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.PatchRepoOrganizationOperation;
+import to.unified.unified_java_sdk.operations.PatchRepoOrganization;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchRepoOrganizationRequestBuilder {
@@ -28,7 +28,7 @@ public class PatchRepoOrganizationRequestBuilder {
     public PatchRepoOrganizationResponse call() throws Exception {
         
         RequestOperation<PatchRepoOrganizationRequest, PatchRepoOrganizationResponse> operation
-              = new PatchRepoOrganizationOperation(sdkConfiguration);
+              = new PatchRepoOrganization.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

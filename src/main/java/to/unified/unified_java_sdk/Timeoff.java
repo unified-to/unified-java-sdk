@@ -12,8 +12,8 @@ import to.unified.unified_java_sdk.models.operations.GetHrisTimeoffResponse;
 import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffsResponse;
-import to.unified.unified_java_sdk.operations.GetHrisTimeoffOperation;
-import to.unified.unified_java_sdk.operations.ListHrisTimeoffsOperation;
+import to.unified.unified_java_sdk.operations.GetHrisTimeoff;
+import to.unified.unified_java_sdk.operations.ListHrisTimeoffs;
 
 
 public class Timeoff {
@@ -41,7 +41,7 @@ public class Timeoff {
      */
     public GetHrisTimeoffResponse getHrisTimeoff(GetHrisTimeoffRequest request) throws Exception {
         RequestOperation<GetHrisTimeoffRequest, GetHrisTimeoffResponse> operation
-              = new GetHrisTimeoffOperation(sdkConfiguration);
+              = new GetHrisTimeoff.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -63,7 +63,7 @@ public class Timeoff {
      */
     public ListHrisTimeoffsResponse listHrisTimeoffs(ListHrisTimeoffsRequest request) throws Exception {
         RequestOperation<ListHrisTimeoffsRequest, ListHrisTimeoffsResponse> operation
-              = new ListHrisTimeoffsOperation(sdkConfiguration);
+              = new ListHrisTimeoffs.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

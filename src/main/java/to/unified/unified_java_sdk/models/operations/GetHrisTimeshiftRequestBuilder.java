@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.GetHrisTimeshiftOperation;
+import to.unified.unified_java_sdk.operations.GetHrisTimeshift;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetHrisTimeshiftRequestBuilder {
@@ -28,7 +28,7 @@ public class GetHrisTimeshiftRequestBuilder {
     public GetHrisTimeshiftResponse call() throws Exception {
         
         RequestOperation<GetHrisTimeshiftRequest, GetHrisTimeshiftResponse> operation
-              = new GetHrisTimeshiftOperation(sdkConfiguration);
+              = new GetHrisTimeshift.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.PatchPassthroughJsonOperation;
+import to.unified.unified_java_sdk.operations.PatchPassthroughJson;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchPassthroughJsonRequestBuilder {
@@ -28,7 +28,7 @@ public class PatchPassthroughJsonRequestBuilder {
     public PatchPassthroughJsonResponse call() throws Exception {
         
         RequestOperation<PatchPassthroughJsonRequest, PatchPassthroughJsonResponse> operation
-              = new PatchPassthroughJsonOperation(sdkConfiguration);
+              = new PatchPassthroughJson.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

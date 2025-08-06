@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveAtsDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsDocumentResponse;
-import to.unified.unified_java_sdk.operations.CreateAtsDocumentOperation;
-import to.unified.unified_java_sdk.operations.GetAtsDocumentOperation;
-import to.unified.unified_java_sdk.operations.ListAtsDocumentsOperation;
-import to.unified.unified_java_sdk.operations.PatchAtsDocumentOperation;
-import to.unified.unified_java_sdk.operations.RemoveAtsDocumentOperation;
-import to.unified.unified_java_sdk.operations.UpdateAtsDocumentOperation;
+import to.unified.unified_java_sdk.operations.CreateAtsDocument;
+import to.unified.unified_java_sdk.operations.GetAtsDocument;
+import to.unified.unified_java_sdk.operations.ListAtsDocuments;
+import to.unified.unified_java_sdk.operations.PatchAtsDocument;
+import to.unified.unified_java_sdk.operations.RemoveAtsDocument;
+import to.unified.unified_java_sdk.operations.UpdateAtsDocument;
 
 
 public class Document {
@@ -57,7 +57,7 @@ public class Document {
      */
     public CreateAtsDocumentResponse createAtsDocument(CreateAtsDocumentRequest request) throws Exception {
         RequestOperation<CreateAtsDocumentRequest, CreateAtsDocumentResponse> operation
-              = new CreateAtsDocumentOperation(sdkConfiguration);
+              = new CreateAtsDocument.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Document {
      */
     public GetAtsDocumentResponse getAtsDocument(GetAtsDocumentRequest request) throws Exception {
         RequestOperation<GetAtsDocumentRequest, GetAtsDocumentResponse> operation
-              = new GetAtsDocumentOperation(sdkConfiguration);
+              = new GetAtsDocument.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Document {
      */
     public ListAtsDocumentsResponse listAtsDocuments(ListAtsDocumentsRequest request) throws Exception {
         RequestOperation<ListAtsDocumentsRequest, ListAtsDocumentsResponse> operation
-              = new ListAtsDocumentsOperation(sdkConfiguration);
+              = new ListAtsDocuments.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Document {
      */
     public PatchAtsDocumentResponse patchAtsDocument(PatchAtsDocumentRequest request) throws Exception {
         RequestOperation<PatchAtsDocumentRequest, PatchAtsDocumentResponse> operation
-              = new PatchAtsDocumentOperation(sdkConfiguration);
+              = new PatchAtsDocument.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Document {
      */
     public RemoveAtsDocumentResponse removeAtsDocument(RemoveAtsDocumentRequest request) throws Exception {
         RequestOperation<RemoveAtsDocumentRequest, RemoveAtsDocumentResponse> operation
-              = new RemoveAtsDocumentOperation(sdkConfiguration);
+              = new RemoveAtsDocument.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Document {
      */
     public UpdateAtsDocumentResponse updateAtsDocument(UpdateAtsDocumentRequest request) throws Exception {
         RequestOperation<UpdateAtsDocumentRequest, UpdateAtsDocumentResponse> operation
-              = new UpdateAtsDocumentOperation(sdkConfiguration);
+              = new UpdateAtsDocument.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

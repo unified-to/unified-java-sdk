@@ -12,8 +12,8 @@ import to.unified.unified_java_sdk.models.operations.GetMessagingChannelResponse
 import to.unified.unified_java_sdk.models.operations.ListMessagingChannelsRequest;
 import to.unified.unified_java_sdk.models.operations.ListMessagingChannelsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListMessagingChannelsResponse;
-import to.unified.unified_java_sdk.operations.GetMessagingChannelOperation;
-import to.unified.unified_java_sdk.operations.ListMessagingChannelsOperation;
+import to.unified.unified_java_sdk.operations.GetMessagingChannel;
+import to.unified.unified_java_sdk.operations.ListMessagingChannels;
 
 
 public class Channel {
@@ -41,7 +41,7 @@ public class Channel {
      */
     public GetMessagingChannelResponse getMessagingChannel(GetMessagingChannelRequest request) throws Exception {
         RequestOperation<GetMessagingChannelRequest, GetMessagingChannelResponse> operation
-              = new GetMessagingChannelOperation(sdkConfiguration);
+              = new GetMessagingChannel.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -63,7 +63,7 @@ public class Channel {
      */
     public ListMessagingChannelsResponse listMessagingChannels(ListMessagingChannelsRequest request) throws Exception {
         RequestOperation<ListMessagingChannelsRequest, ListMessagingChannelsResponse> operation
-              = new ListMessagingChannelsOperation(sdkConfiguration);
+              = new ListMessagingChannels.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

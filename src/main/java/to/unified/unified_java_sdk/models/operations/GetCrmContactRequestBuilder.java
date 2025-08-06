@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.GetCrmContactOperation;
+import to.unified.unified_java_sdk.operations.GetCrmContact;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetCrmContactRequestBuilder {
@@ -28,7 +28,7 @@ public class GetCrmContactRequestBuilder {
     public GetCrmContactResponse call() throws Exception {
         
         RequestOperation<GetCrmContactRequest, GetCrmContactResponse> operation
-              = new GetCrmContactOperation(sdkConfiguration);
+              = new GetCrmContact.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

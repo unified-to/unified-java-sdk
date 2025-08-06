@@ -12,8 +12,8 @@ import to.unified.unified_java_sdk.models.operations.GetAccountingReportResponse
 import to.unified.unified_java_sdk.models.operations.ListAccountingReportsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingReportsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAccountingReportsResponse;
-import to.unified.unified_java_sdk.operations.GetAccountingReportOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingReportsOperation;
+import to.unified.unified_java_sdk.operations.GetAccountingReport;
+import to.unified.unified_java_sdk.operations.ListAccountingReports;
 
 
 public class Report {
@@ -41,7 +41,7 @@ public class Report {
      */
     public GetAccountingReportResponse getAccountingReport(GetAccountingReportRequest request) throws Exception {
         RequestOperation<GetAccountingReportRequest, GetAccountingReportResponse> operation
-              = new GetAccountingReportOperation(sdkConfiguration);
+              = new GetAccountingReport.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -63,7 +63,7 @@ public class Report {
      */
     public ListAccountingReportsResponse listAccountingReports(ListAccountingReportsRequest request) throws Exception {
         RequestOperation<ListAccountingReportsRequest, ListAccountingReportsResponse> operation
-              = new ListAccountingReportsOperation(sdkConfiguration);
+              = new ListAccountingReports.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

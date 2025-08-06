@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.RemoveAccountingTaxrateOperation;
+import to.unified.unified_java_sdk.operations.RemoveAccountingTaxrate;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveAccountingTaxrateRequestBuilder {
@@ -28,7 +28,7 @@ public class RemoveAccountingTaxrateRequestBuilder {
     public RemoveAccountingTaxrateResponse call() throws Exception {
         
         RequestOperation<RemoveAccountingTaxrateRequest, RemoveAccountingTaxrateResponse> operation
-              = new RemoveAccountingTaxrateOperation(sdkConfiguration);
+              = new RemoveAccountingTaxrate.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.RemoveCalendarEventOperation;
+import to.unified.unified_java_sdk.operations.RemoveCalendarEvent;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveCalendarEventRequestBuilder {
@@ -28,7 +28,7 @@ public class RemoveCalendarEventRequestBuilder {
     public RemoveCalendarEventResponse call() throws Exception {
         
         RequestOperation<RemoveCalendarEventRequest, RemoveCalendarEventResponse> operation
-              = new RemoveCalendarEventOperation(sdkConfiguration);
+              = new RemoveCalendarEvent.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

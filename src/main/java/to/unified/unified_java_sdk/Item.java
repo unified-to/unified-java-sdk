@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveCommerceItemResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemResponse;
-import to.unified.unified_java_sdk.operations.CreateCommerceItemOperation;
-import to.unified.unified_java_sdk.operations.GetCommerceItemOperation;
-import to.unified.unified_java_sdk.operations.ListCommerceItemsOperation;
-import to.unified.unified_java_sdk.operations.PatchCommerceItemOperation;
-import to.unified.unified_java_sdk.operations.RemoveCommerceItemOperation;
-import to.unified.unified_java_sdk.operations.UpdateCommerceItemOperation;
+import to.unified.unified_java_sdk.operations.CreateCommerceItem;
+import to.unified.unified_java_sdk.operations.GetCommerceItem;
+import to.unified.unified_java_sdk.operations.ListCommerceItems;
+import to.unified.unified_java_sdk.operations.PatchCommerceItem;
+import to.unified.unified_java_sdk.operations.RemoveCommerceItem;
+import to.unified.unified_java_sdk.operations.UpdateCommerceItem;
 
 
 public class Item {
@@ -57,7 +57,7 @@ public class Item {
      */
     public CreateCommerceItemResponse createCommerceItem(CreateCommerceItemRequest request) throws Exception {
         RequestOperation<CreateCommerceItemRequest, CreateCommerceItemResponse> operation
-              = new CreateCommerceItemOperation(sdkConfiguration);
+              = new CreateCommerceItem.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Item {
      */
     public GetCommerceItemResponse getCommerceItem(GetCommerceItemRequest request) throws Exception {
         RequestOperation<GetCommerceItemRequest, GetCommerceItemResponse> operation
-              = new GetCommerceItemOperation(sdkConfiguration);
+              = new GetCommerceItem.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Item {
      */
     public ListCommerceItemsResponse listCommerceItems(ListCommerceItemsRequest request) throws Exception {
         RequestOperation<ListCommerceItemsRequest, ListCommerceItemsResponse> operation
-              = new ListCommerceItemsOperation(sdkConfiguration);
+              = new ListCommerceItems.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Item {
      */
     public PatchCommerceItemResponse patchCommerceItem(PatchCommerceItemRequest request) throws Exception {
         RequestOperation<PatchCommerceItemRequest, PatchCommerceItemResponse> operation
-              = new PatchCommerceItemOperation(sdkConfiguration);
+              = new PatchCommerceItem.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Item {
      */
     public RemoveCommerceItemResponse removeCommerceItem(RemoveCommerceItemRequest request) throws Exception {
         RequestOperation<RemoveCommerceItemRequest, RemoveCommerceItemResponse> operation
-              = new RemoveCommerceItemOperation(sdkConfiguration);
+              = new RemoveCommerceItem.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Item {
      */
     public UpdateCommerceItemResponse updateCommerceItem(UpdateCommerceItemRequest request) throws Exception {
         RequestOperation<UpdateCommerceItemRequest, UpdateCommerceItemResponse> operation
-              = new UpdateCommerceItemOperation(sdkConfiguration);
+              = new UpdateCommerceItem.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

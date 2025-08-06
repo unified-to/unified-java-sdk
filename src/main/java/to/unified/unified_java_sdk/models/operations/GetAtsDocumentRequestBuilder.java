@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.GetAtsDocumentOperation;
+import to.unified.unified_java_sdk.operations.GetAtsDocument;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetAtsDocumentRequestBuilder {
@@ -28,7 +28,7 @@ public class GetAtsDocumentRequestBuilder {
     public GetAtsDocumentResponse call() throws Exception {
         
         RequestOperation<GetAtsDocumentRequest, GetAtsDocumentResponse> operation
-              = new GetAtsDocumentOperation(sdkConfiguration);
+              = new GetAtsDocument.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.RemoveUnifiedConnectionOperation;
+import to.unified.unified_java_sdk.operations.RemoveUnifiedConnection;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveUnifiedConnectionRequestBuilder {
@@ -28,7 +28,7 @@ public class RemoveUnifiedConnectionRequestBuilder {
     public RemoveUnifiedConnectionResponse call() throws Exception {
         
         RequestOperation<RemoveUnifiedConnectionRequest, RemoveUnifiedConnectionResponse> operation
-              = new RemoveUnifiedConnectionOperation(sdkConfiguration);
+              = new RemoveUnifiedConnection.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

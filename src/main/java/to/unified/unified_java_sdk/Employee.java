@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveHrisEmployeeResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployeeRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployeeResponse;
-import to.unified.unified_java_sdk.operations.CreateHrisEmployeeOperation;
-import to.unified.unified_java_sdk.operations.GetHrisEmployeeOperation;
-import to.unified.unified_java_sdk.operations.ListHrisEmployeesOperation;
-import to.unified.unified_java_sdk.operations.PatchHrisEmployeeOperation;
-import to.unified.unified_java_sdk.operations.RemoveHrisEmployeeOperation;
-import to.unified.unified_java_sdk.operations.UpdateHrisEmployeeOperation;
+import to.unified.unified_java_sdk.operations.CreateHrisEmployee;
+import to.unified.unified_java_sdk.operations.GetHrisEmployee;
+import to.unified.unified_java_sdk.operations.ListHrisEmployees;
+import to.unified.unified_java_sdk.operations.PatchHrisEmployee;
+import to.unified.unified_java_sdk.operations.RemoveHrisEmployee;
+import to.unified.unified_java_sdk.operations.UpdateHrisEmployee;
 
 
 public class Employee {
@@ -57,7 +57,7 @@ public class Employee {
      */
     public CreateHrisEmployeeResponse createHrisEmployee(CreateHrisEmployeeRequest request) throws Exception {
         RequestOperation<CreateHrisEmployeeRequest, CreateHrisEmployeeResponse> operation
-              = new CreateHrisEmployeeOperation(sdkConfiguration);
+              = new CreateHrisEmployee.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Employee {
      */
     public GetHrisEmployeeResponse getHrisEmployee(GetHrisEmployeeRequest request) throws Exception {
         RequestOperation<GetHrisEmployeeRequest, GetHrisEmployeeResponse> operation
-              = new GetHrisEmployeeOperation(sdkConfiguration);
+              = new GetHrisEmployee.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Employee {
      */
     public ListHrisEmployeesResponse listHrisEmployees(ListHrisEmployeesRequest request) throws Exception {
         RequestOperation<ListHrisEmployeesRequest, ListHrisEmployeesResponse> operation
-              = new ListHrisEmployeesOperation(sdkConfiguration);
+              = new ListHrisEmployees.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Employee {
      */
     public PatchHrisEmployeeResponse patchHrisEmployee(PatchHrisEmployeeRequest request) throws Exception {
         RequestOperation<PatchHrisEmployeeRequest, PatchHrisEmployeeResponse> operation
-              = new PatchHrisEmployeeOperation(sdkConfiguration);
+              = new PatchHrisEmployee.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Employee {
      */
     public RemoveHrisEmployeeResponse removeHrisEmployee(RemoveHrisEmployeeRequest request) throws Exception {
         RequestOperation<RemoveHrisEmployeeRequest, RemoveHrisEmployeeResponse> operation
-              = new RemoveHrisEmployeeOperation(sdkConfiguration);
+              = new RemoveHrisEmployee.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Employee {
      */
     public UpdateHrisEmployeeResponse updateHrisEmployee(UpdateHrisEmployeeRequest request) throws Exception {
         RequestOperation<UpdateHrisEmployeeRequest, UpdateHrisEmployeeResponse> operation
-              = new UpdateHrisEmployeeOperation(sdkConfiguration);
+              = new UpdateHrisEmployee.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

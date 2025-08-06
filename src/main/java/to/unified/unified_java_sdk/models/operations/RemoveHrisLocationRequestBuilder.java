@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.RemoveHrisLocationOperation;
+import to.unified.unified_java_sdk.operations.RemoveHrisLocation;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveHrisLocationRequestBuilder {
@@ -28,7 +28,7 @@ public class RemoveHrisLocationRequestBuilder {
     public RemoveHrisLocationResponse call() throws Exception {
         
         RequestOperation<RemoveHrisLocationRequest, RemoveHrisLocationResponse> operation
-              = new RemoveHrisLocationOperation(sdkConfiguration);
+              = new RemoveHrisLocation.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

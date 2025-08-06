@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.GetAccountingProfitlossOperation;
+import to.unified.unified_java_sdk.operations.GetAccountingProfitloss;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetAccountingProfitlossRequestBuilder {
@@ -28,7 +28,7 @@ public class GetAccountingProfitlossRequestBuilder {
     public GetAccountingProfitlossResponse call() throws Exception {
         
         RequestOperation<GetAccountingProfitlossRequest, GetAccountingProfitlossResponse> operation
-              = new GetAccountingProfitlossOperation(sdkConfiguration);
+              = new GetAccountingProfitloss.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

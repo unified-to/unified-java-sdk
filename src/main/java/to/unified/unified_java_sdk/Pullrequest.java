@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveRepoPullrequestRespon
 import to.unified.unified_java_sdk.models.operations.UpdateRepoPullrequestRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoPullrequestRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoPullrequestResponse;
-import to.unified.unified_java_sdk.operations.CreateRepoPullrequestOperation;
-import to.unified.unified_java_sdk.operations.GetRepoPullrequestOperation;
-import to.unified.unified_java_sdk.operations.ListRepoPullrequestsOperation;
-import to.unified.unified_java_sdk.operations.PatchRepoPullrequestOperation;
-import to.unified.unified_java_sdk.operations.RemoveRepoPullrequestOperation;
-import to.unified.unified_java_sdk.operations.UpdateRepoPullrequestOperation;
+import to.unified.unified_java_sdk.operations.CreateRepoPullrequest;
+import to.unified.unified_java_sdk.operations.GetRepoPullrequest;
+import to.unified.unified_java_sdk.operations.ListRepoPullrequests;
+import to.unified.unified_java_sdk.operations.PatchRepoPullrequest;
+import to.unified.unified_java_sdk.operations.RemoveRepoPullrequest;
+import to.unified.unified_java_sdk.operations.UpdateRepoPullrequest;
 
 
 public class Pullrequest {
@@ -57,7 +57,7 @@ public class Pullrequest {
      */
     public CreateRepoPullrequestResponse createRepoPullrequest(CreateRepoPullrequestRequest request) throws Exception {
         RequestOperation<CreateRepoPullrequestRequest, CreateRepoPullrequestResponse> operation
-              = new CreateRepoPullrequestOperation(sdkConfiguration);
+              = new CreateRepoPullrequest.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Pullrequest {
      */
     public GetRepoPullrequestResponse getRepoPullrequest(GetRepoPullrequestRequest request) throws Exception {
         RequestOperation<GetRepoPullrequestRequest, GetRepoPullrequestResponse> operation
-              = new GetRepoPullrequestOperation(sdkConfiguration);
+              = new GetRepoPullrequest.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Pullrequest {
      */
     public ListRepoPullrequestsResponse listRepoPullrequests(ListRepoPullrequestsRequest request) throws Exception {
         RequestOperation<ListRepoPullrequestsRequest, ListRepoPullrequestsResponse> operation
-              = new ListRepoPullrequestsOperation(sdkConfiguration);
+              = new ListRepoPullrequests.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Pullrequest {
      */
     public PatchRepoPullrequestResponse patchRepoPullrequest(PatchRepoPullrequestRequest request) throws Exception {
         RequestOperation<PatchRepoPullrequestRequest, PatchRepoPullrequestResponse> operation
-              = new PatchRepoPullrequestOperation(sdkConfiguration);
+              = new PatchRepoPullrequest.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Pullrequest {
      */
     public RemoveRepoPullrequestResponse removeRepoPullrequest(RemoveRepoPullrequestRequest request) throws Exception {
         RequestOperation<RemoveRepoPullrequestRequest, RemoveRepoPullrequestResponse> operation
-              = new RemoveRepoPullrequestOperation(sdkConfiguration);
+              = new RemoveRepoPullrequest.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Pullrequest {
      */
     public UpdateRepoPullrequestResponse updateRepoPullrequest(UpdateRepoPullrequestRequest request) throws Exception {
         RequestOperation<UpdateRepoPullrequestRequest, UpdateRepoPullrequestResponse> operation
-              = new UpdateRepoPullrequestOperation(sdkConfiguration);
+              = new UpdateRepoPullrequest.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

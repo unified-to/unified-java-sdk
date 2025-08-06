@@ -30,14 +30,14 @@ import to.unified.unified_java_sdk.models.operations.UpdatePassthroughJsonRespon
 import to.unified.unified_java_sdk.models.operations.UpdatePassthroughRawRequest;
 import to.unified.unified_java_sdk.models.operations.UpdatePassthroughRawRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdatePassthroughRawResponse;
-import to.unified.unified_java_sdk.operations.CreatePassthroughJsonOperation;
-import to.unified.unified_java_sdk.operations.CreatePassthroughRawOperation;
-import to.unified.unified_java_sdk.operations.ListPassthroughsOperation;
-import to.unified.unified_java_sdk.operations.PatchPassthroughJsonOperation;
-import to.unified.unified_java_sdk.operations.PatchPassthroughRawOperation;
-import to.unified.unified_java_sdk.operations.RemovePassthroughOperation;
-import to.unified.unified_java_sdk.operations.UpdatePassthroughJsonOperation;
-import to.unified.unified_java_sdk.operations.UpdatePassthroughRawOperation;
+import to.unified.unified_java_sdk.operations.CreatePassthroughJson;
+import to.unified.unified_java_sdk.operations.CreatePassthroughRaw;
+import to.unified.unified_java_sdk.operations.ListPassthroughs;
+import to.unified.unified_java_sdk.operations.PatchPassthroughJson;
+import to.unified.unified_java_sdk.operations.PatchPassthroughRaw;
+import to.unified.unified_java_sdk.operations.RemovePassthrough;
+import to.unified.unified_java_sdk.operations.UpdatePassthroughJson;
+import to.unified.unified_java_sdk.operations.UpdatePassthroughRaw;
 
 
 public class Passthrough {
@@ -65,7 +65,7 @@ public class Passthrough {
      */
     public CreatePassthroughJsonResponse createPassthroughJson(CreatePassthroughJsonRequest request) throws Exception {
         RequestOperation<CreatePassthroughJsonRequest, CreatePassthroughJsonResponse> operation
-              = new CreatePassthroughJsonOperation(sdkConfiguration);
+              = new CreatePassthroughJson.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -87,7 +87,7 @@ public class Passthrough {
      */
     public CreatePassthroughRawResponse createPassthroughRaw(CreatePassthroughRawRequest request) throws Exception {
         RequestOperation<CreatePassthroughRawRequest, CreatePassthroughRawResponse> operation
-              = new CreatePassthroughRawOperation(sdkConfiguration);
+              = new CreatePassthroughRaw.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -109,7 +109,7 @@ public class Passthrough {
      */
     public ListPassthroughsResponse listPassthroughs(ListPassthroughsRequest request) throws Exception {
         RequestOperation<ListPassthroughsRequest, ListPassthroughsResponse> operation
-              = new ListPassthroughsOperation(sdkConfiguration);
+              = new ListPassthroughs.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -131,7 +131,7 @@ public class Passthrough {
      */
     public PatchPassthroughJsonResponse patchPassthroughJson(PatchPassthroughJsonRequest request) throws Exception {
         RequestOperation<PatchPassthroughJsonRequest, PatchPassthroughJsonResponse> operation
-              = new PatchPassthroughJsonOperation(sdkConfiguration);
+              = new PatchPassthroughJson.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -153,7 +153,7 @@ public class Passthrough {
      */
     public PatchPassthroughRawResponse patchPassthroughRaw(PatchPassthroughRawRequest request) throws Exception {
         RequestOperation<PatchPassthroughRawRequest, PatchPassthroughRawResponse> operation
-              = new PatchPassthroughRawOperation(sdkConfiguration);
+              = new PatchPassthroughRaw.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -175,7 +175,7 @@ public class Passthrough {
      */
     public RemovePassthroughResponse removePassthrough(RemovePassthroughRequest request) throws Exception {
         RequestOperation<RemovePassthroughRequest, RemovePassthroughResponse> operation
-              = new RemovePassthroughOperation(sdkConfiguration);
+              = new RemovePassthrough.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -197,7 +197,7 @@ public class Passthrough {
      */
     public UpdatePassthroughJsonResponse updatePassthroughJson(UpdatePassthroughJsonRequest request) throws Exception {
         RequestOperation<UpdatePassthroughJsonRequest, UpdatePassthroughJsonResponse> operation
-              = new UpdatePassthroughJsonOperation(sdkConfiguration);
+              = new UpdatePassthroughJson.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -219,7 +219,7 @@ public class Passthrough {
      */
     public UpdatePassthroughRawResponse updatePassthroughRaw(UpdatePassthroughRawRequest request) throws Exception {
         RequestOperation<UpdatePassthroughRawRequest, UpdatePassthroughRawResponse> operation
-              = new UpdatePassthroughRawOperation(sdkConfiguration);
+              = new UpdatePassthroughRaw.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

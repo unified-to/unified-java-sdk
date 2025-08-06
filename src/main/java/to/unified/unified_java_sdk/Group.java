@@ -42,18 +42,18 @@ import to.unified.unified_java_sdk.models.operations.UpdateHrisGroupResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateScimGroupsRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateScimGroupsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateScimGroupsResponse;
-import to.unified.unified_java_sdk.operations.CreateHrisGroupOperation;
-import to.unified.unified_java_sdk.operations.CreateScimGroupsOperation;
-import to.unified.unified_java_sdk.operations.GetHrisGroupOperation;
-import to.unified.unified_java_sdk.operations.GetScimGroupsOperation;
-import to.unified.unified_java_sdk.operations.ListHrisGroupsOperation;
-import to.unified.unified_java_sdk.operations.ListScimGroupsOperation;
-import to.unified.unified_java_sdk.operations.PatchHrisGroupOperation;
-import to.unified.unified_java_sdk.operations.PatchScimGroupsOperation;
-import to.unified.unified_java_sdk.operations.RemoveHrisGroupOperation;
-import to.unified.unified_java_sdk.operations.RemoveScimGroupsOperation;
-import to.unified.unified_java_sdk.operations.UpdateHrisGroupOperation;
-import to.unified.unified_java_sdk.operations.UpdateScimGroupsOperation;
+import to.unified.unified_java_sdk.operations.CreateHrisGroup;
+import to.unified.unified_java_sdk.operations.CreateScimGroups;
+import to.unified.unified_java_sdk.operations.GetHrisGroup;
+import to.unified.unified_java_sdk.operations.GetScimGroups;
+import to.unified.unified_java_sdk.operations.ListHrisGroups;
+import to.unified.unified_java_sdk.operations.ListScimGroups;
+import to.unified.unified_java_sdk.operations.PatchHrisGroup;
+import to.unified.unified_java_sdk.operations.PatchScimGroups;
+import to.unified.unified_java_sdk.operations.RemoveHrisGroup;
+import to.unified.unified_java_sdk.operations.RemoveScimGroups;
+import to.unified.unified_java_sdk.operations.UpdateHrisGroup;
+import to.unified.unified_java_sdk.operations.UpdateScimGroups;
 
 
 public class Group {
@@ -81,7 +81,7 @@ public class Group {
      */
     public CreateHrisGroupResponse createHrisGroup(CreateHrisGroupRequest request) throws Exception {
         RequestOperation<CreateHrisGroupRequest, CreateHrisGroupResponse> operation
-              = new CreateHrisGroupOperation(sdkConfiguration);
+              = new CreateHrisGroup.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,7 +103,7 @@ public class Group {
      */
     public CreateScimGroupsResponse createScimGroups(CreateScimGroupsRequest request) throws Exception {
         RequestOperation<CreateScimGroupsRequest, CreateScimGroupsResponse> operation
-              = new CreateScimGroupsOperation(sdkConfiguration);
+              = new CreateScimGroups.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -125,7 +125,7 @@ public class Group {
      */
     public GetHrisGroupResponse getHrisGroup(GetHrisGroupRequest request) throws Exception {
         RequestOperation<GetHrisGroupRequest, GetHrisGroupResponse> operation
-              = new GetHrisGroupOperation(sdkConfiguration);
+              = new GetHrisGroup.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -147,7 +147,7 @@ public class Group {
      */
     public GetScimGroupsResponse getScimGroups(GetScimGroupsRequest request) throws Exception {
         RequestOperation<GetScimGroupsRequest, GetScimGroupsResponse> operation
-              = new GetScimGroupsOperation(sdkConfiguration);
+              = new GetScimGroups.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -169,7 +169,7 @@ public class Group {
      */
     public ListHrisGroupsResponse listHrisGroups(ListHrisGroupsRequest request) throws Exception {
         RequestOperation<ListHrisGroupsRequest, ListHrisGroupsResponse> operation
-              = new ListHrisGroupsOperation(sdkConfiguration);
+              = new ListHrisGroups.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -191,7 +191,7 @@ public class Group {
      */
     public ListScimGroupsResponse listScimGroups(ListScimGroupsRequest request) throws Exception {
         RequestOperation<ListScimGroupsRequest, ListScimGroupsResponse> operation
-              = new ListScimGroupsOperation(sdkConfiguration);
+              = new ListScimGroups.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -213,7 +213,7 @@ public class Group {
      */
     public PatchHrisGroupResponse patchHrisGroup(PatchHrisGroupRequest request) throws Exception {
         RequestOperation<PatchHrisGroupRequest, PatchHrisGroupResponse> operation
-              = new PatchHrisGroupOperation(sdkConfiguration);
+              = new PatchHrisGroup.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -235,7 +235,7 @@ public class Group {
      */
     public PatchScimGroupsResponse patchScimGroups(PatchScimGroupsRequest request) throws Exception {
         RequestOperation<PatchScimGroupsRequest, PatchScimGroupsResponse> operation
-              = new PatchScimGroupsOperation(sdkConfiguration);
+              = new PatchScimGroups.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -257,7 +257,7 @@ public class Group {
      */
     public RemoveHrisGroupResponse removeHrisGroup(RemoveHrisGroupRequest request) throws Exception {
         RequestOperation<RemoveHrisGroupRequest, RemoveHrisGroupResponse> operation
-              = new RemoveHrisGroupOperation(sdkConfiguration);
+              = new RemoveHrisGroup.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -279,7 +279,7 @@ public class Group {
      */
     public RemoveScimGroupsResponse removeScimGroups(RemoveScimGroupsRequest request) throws Exception {
         RequestOperation<RemoveScimGroupsRequest, RemoveScimGroupsResponse> operation
-              = new RemoveScimGroupsOperation(sdkConfiguration);
+              = new RemoveScimGroups.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -301,7 +301,7 @@ public class Group {
      */
     public UpdateHrisGroupResponse updateHrisGroup(UpdateHrisGroupRequest request) throws Exception {
         RequestOperation<UpdateHrisGroupRequest, UpdateHrisGroupResponse> operation
-              = new UpdateHrisGroupOperation(sdkConfiguration);
+              = new UpdateHrisGroup.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -323,7 +323,7 @@ public class Group {
      */
     public UpdateScimGroupsResponse updateScimGroups(UpdateScimGroupsRequest request) throws Exception {
         RequestOperation<UpdateScimGroupsRequest, UpdateScimGroupsResponse> operation
-              = new UpdateScimGroupsOperation(sdkConfiguration);
+              = new UpdateScimGroups.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

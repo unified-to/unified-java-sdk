@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.RemoveAccountingCreditmemoOperation;
+import to.unified.unified_java_sdk.operations.RemoveAccountingCreditmemo;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveAccountingCreditmemoRequestBuilder {
@@ -28,7 +28,7 @@ public class RemoveAccountingCreditmemoRequestBuilder {
     public RemoveAccountingCreditmemoResponse call() throws Exception {
         
         RequestOperation<RemoveAccountingCreditmemoRequest, RemoveAccountingCreditmemoResponse> operation
-              = new RemoveAccountingCreditmemoOperation(sdkConfiguration);
+              = new RemoveAccountingCreditmemo.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

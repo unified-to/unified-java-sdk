@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.PatchHrisGroupOperation;
+import to.unified.unified_java_sdk.operations.PatchHrisGroup;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchHrisGroupRequestBuilder {
@@ -28,7 +28,7 @@ public class PatchHrisGroupRequestBuilder {
     public PatchHrisGroupResponse call() throws Exception {
         
         RequestOperation<PatchHrisGroupRequest, PatchHrisGroupResponse> operation
-              = new PatchHrisGroupOperation(sdkConfiguration);
+              = new PatchHrisGroup.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

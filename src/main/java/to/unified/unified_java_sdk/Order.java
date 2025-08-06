@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveAccountingOrderRespon
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingOrderRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingOrderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingOrderResponse;
-import to.unified.unified_java_sdk.operations.CreateAccountingOrderOperation;
-import to.unified.unified_java_sdk.operations.GetAccountingOrderOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingOrdersOperation;
-import to.unified.unified_java_sdk.operations.PatchAccountingOrderOperation;
-import to.unified.unified_java_sdk.operations.RemoveAccountingOrderOperation;
-import to.unified.unified_java_sdk.operations.UpdateAccountingOrderOperation;
+import to.unified.unified_java_sdk.operations.CreateAccountingOrder;
+import to.unified.unified_java_sdk.operations.GetAccountingOrder;
+import to.unified.unified_java_sdk.operations.ListAccountingOrders;
+import to.unified.unified_java_sdk.operations.PatchAccountingOrder;
+import to.unified.unified_java_sdk.operations.RemoveAccountingOrder;
+import to.unified.unified_java_sdk.operations.UpdateAccountingOrder;
 
 
 public class Order {
@@ -57,7 +57,7 @@ public class Order {
      */
     public CreateAccountingOrderResponse createAccountingOrder(CreateAccountingOrderRequest request) throws Exception {
         RequestOperation<CreateAccountingOrderRequest, CreateAccountingOrderResponse> operation
-              = new CreateAccountingOrderOperation(sdkConfiguration);
+              = new CreateAccountingOrder.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Order {
      */
     public GetAccountingOrderResponse getAccountingOrder(GetAccountingOrderRequest request) throws Exception {
         RequestOperation<GetAccountingOrderRequest, GetAccountingOrderResponse> operation
-              = new GetAccountingOrderOperation(sdkConfiguration);
+              = new GetAccountingOrder.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Order {
      */
     public ListAccountingOrdersResponse listAccountingOrders(ListAccountingOrdersRequest request) throws Exception {
         RequestOperation<ListAccountingOrdersRequest, ListAccountingOrdersResponse> operation
-              = new ListAccountingOrdersOperation(sdkConfiguration);
+              = new ListAccountingOrders.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Order {
      */
     public PatchAccountingOrderResponse patchAccountingOrder(PatchAccountingOrderRequest request) throws Exception {
         RequestOperation<PatchAccountingOrderRequest, PatchAccountingOrderResponse> operation
-              = new PatchAccountingOrderOperation(sdkConfiguration);
+              = new PatchAccountingOrder.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Order {
      */
     public RemoveAccountingOrderResponse removeAccountingOrder(RemoveAccountingOrderRequest request) throws Exception {
         RequestOperation<RemoveAccountingOrderRequest, RemoveAccountingOrderResponse> operation
-              = new RemoveAccountingOrderOperation(sdkConfiguration);
+              = new RemoveAccountingOrder.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Order {
      */
     public UpdateAccountingOrderResponse updateAccountingOrder(UpdateAccountingOrderRequest request) throws Exception {
         RequestOperation<UpdateAccountingOrderRequest, UpdateAccountingOrderResponse> operation
-              = new UpdateAccountingOrderOperation(sdkConfiguration);
+              = new UpdateAccountingOrder.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveCommerceReviewRespons
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceReviewRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceReviewResponse;
-import to.unified.unified_java_sdk.operations.CreateCommerceReviewOperation;
-import to.unified.unified_java_sdk.operations.GetCommerceReviewOperation;
-import to.unified.unified_java_sdk.operations.ListCommerceReviewsOperation;
-import to.unified.unified_java_sdk.operations.PatchCommerceReviewOperation;
-import to.unified.unified_java_sdk.operations.RemoveCommerceReviewOperation;
-import to.unified.unified_java_sdk.operations.UpdateCommerceReviewOperation;
+import to.unified.unified_java_sdk.operations.CreateCommerceReview;
+import to.unified.unified_java_sdk.operations.GetCommerceReview;
+import to.unified.unified_java_sdk.operations.ListCommerceReviews;
+import to.unified.unified_java_sdk.operations.PatchCommerceReview;
+import to.unified.unified_java_sdk.operations.RemoveCommerceReview;
+import to.unified.unified_java_sdk.operations.UpdateCommerceReview;
 
 
 public class Review {
@@ -57,7 +57,7 @@ public class Review {
      */
     public CreateCommerceReviewResponse createCommerceReview(CreateCommerceReviewRequest request) throws Exception {
         RequestOperation<CreateCommerceReviewRequest, CreateCommerceReviewResponse> operation
-              = new CreateCommerceReviewOperation(sdkConfiguration);
+              = new CreateCommerceReview.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Review {
      */
     public GetCommerceReviewResponse getCommerceReview(GetCommerceReviewRequest request) throws Exception {
         RequestOperation<GetCommerceReviewRequest, GetCommerceReviewResponse> operation
-              = new GetCommerceReviewOperation(sdkConfiguration);
+              = new GetCommerceReview.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Review {
      */
     public ListCommerceReviewsResponse listCommerceReviews(ListCommerceReviewsRequest request) throws Exception {
         RequestOperation<ListCommerceReviewsRequest, ListCommerceReviewsResponse> operation
-              = new ListCommerceReviewsOperation(sdkConfiguration);
+              = new ListCommerceReviews.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Review {
      */
     public PatchCommerceReviewResponse patchCommerceReview(PatchCommerceReviewRequest request) throws Exception {
         RequestOperation<PatchCommerceReviewRequest, PatchCommerceReviewResponse> operation
-              = new PatchCommerceReviewOperation(sdkConfiguration);
+              = new PatchCommerceReview.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Review {
      */
     public RemoveCommerceReviewResponse removeCommerceReview(RemoveCommerceReviewRequest request) throws Exception {
         RequestOperation<RemoveCommerceReviewRequest, RemoveCommerceReviewResponse> operation
-              = new RemoveCommerceReviewOperation(sdkConfiguration);
+              = new RemoveCommerceReview.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Review {
      */
     public UpdateCommerceReviewResponse updateCommerceReview(UpdateCommerceReviewRequest request) throws Exception {
         RequestOperation<UpdateCommerceReviewRequest, UpdateCommerceReviewResponse> operation
-              = new UpdateCommerceReviewOperation(sdkConfiguration);
+              = new UpdateCommerceReview.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

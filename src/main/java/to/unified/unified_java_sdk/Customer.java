@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveTicketingCustomerResp
 import to.unified.unified_java_sdk.models.operations.UpdateTicketingCustomerRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateTicketingCustomerRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateTicketingCustomerResponse;
-import to.unified.unified_java_sdk.operations.CreateTicketingCustomerOperation;
-import to.unified.unified_java_sdk.operations.GetTicketingCustomerOperation;
-import to.unified.unified_java_sdk.operations.ListTicketingCustomersOperation;
-import to.unified.unified_java_sdk.operations.PatchTicketingCustomerOperation;
-import to.unified.unified_java_sdk.operations.RemoveTicketingCustomerOperation;
-import to.unified.unified_java_sdk.operations.UpdateTicketingCustomerOperation;
+import to.unified.unified_java_sdk.operations.CreateTicketingCustomer;
+import to.unified.unified_java_sdk.operations.GetTicketingCustomer;
+import to.unified.unified_java_sdk.operations.ListTicketingCustomers;
+import to.unified.unified_java_sdk.operations.PatchTicketingCustomer;
+import to.unified.unified_java_sdk.operations.RemoveTicketingCustomer;
+import to.unified.unified_java_sdk.operations.UpdateTicketingCustomer;
 
 
 public class Customer {
@@ -57,7 +57,7 @@ public class Customer {
      */
     public CreateTicketingCustomerResponse createTicketingCustomer(CreateTicketingCustomerRequest request) throws Exception {
         RequestOperation<CreateTicketingCustomerRequest, CreateTicketingCustomerResponse> operation
-              = new CreateTicketingCustomerOperation(sdkConfiguration);
+              = new CreateTicketingCustomer.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Customer {
      */
     public GetTicketingCustomerResponse getTicketingCustomer(GetTicketingCustomerRequest request) throws Exception {
         RequestOperation<GetTicketingCustomerRequest, GetTicketingCustomerResponse> operation
-              = new GetTicketingCustomerOperation(sdkConfiguration);
+              = new GetTicketingCustomer.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Customer {
      */
     public ListTicketingCustomersResponse listTicketingCustomers(ListTicketingCustomersRequest request) throws Exception {
         RequestOperation<ListTicketingCustomersRequest, ListTicketingCustomersResponse> operation
-              = new ListTicketingCustomersOperation(sdkConfiguration);
+              = new ListTicketingCustomers.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Customer {
      */
     public PatchTicketingCustomerResponse patchTicketingCustomer(PatchTicketingCustomerRequest request) throws Exception {
         RequestOperation<PatchTicketingCustomerRequest, PatchTicketingCustomerResponse> operation
-              = new PatchTicketingCustomerOperation(sdkConfiguration);
+              = new PatchTicketingCustomer.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Customer {
      */
     public RemoveTicketingCustomerResponse removeTicketingCustomer(RemoveTicketingCustomerRequest request) throws Exception {
         RequestOperation<RemoveTicketingCustomerRequest, RemoveTicketingCustomerResponse> operation
-              = new RemoveTicketingCustomerOperation(sdkConfiguration);
+              = new RemoveTicketingCustomer.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Customer {
      */
     public UpdateTicketingCustomerResponse updateTicketingCustomer(UpdateTicketingCustomerRequest request) throws Exception {
         RequestOperation<UpdateTicketingCustomerRequest, UpdateTicketingCustomerResponse> operation
-              = new UpdateTicketingCustomerOperation(sdkConfiguration);
+              = new UpdateTicketingCustomer.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

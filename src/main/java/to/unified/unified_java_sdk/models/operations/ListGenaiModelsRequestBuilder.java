@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.ListGenaiModelsOperation;
+import to.unified.unified_java_sdk.operations.ListGenaiModels;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListGenaiModelsRequestBuilder {
@@ -28,7 +28,7 @@ public class ListGenaiModelsRequestBuilder {
     public ListGenaiModelsResponse call() throws Exception {
         
         RequestOperation<ListGenaiModelsRequest, ListGenaiModelsResponse> operation
-              = new ListGenaiModelsOperation(sdkConfiguration);
+              = new ListGenaiModels.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

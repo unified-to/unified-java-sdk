@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.GetTaskTaskOperation;
+import to.unified.unified_java_sdk.operations.GetTaskTask;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetTaskTaskRequestBuilder {
@@ -28,7 +28,7 @@ public class GetTaskTaskRequestBuilder {
     public GetTaskTaskResponse call() throws Exception {
         
         RequestOperation<GetTaskTaskRequest, GetTaskTaskResponse> operation
-              = new GetTaskTaskOperation(sdkConfiguration);
+              = new GetTaskTask.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

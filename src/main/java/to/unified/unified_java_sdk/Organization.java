@@ -30,14 +30,14 @@ import to.unified.unified_java_sdk.models.operations.RemoveRepoOrganizationRespo
 import to.unified.unified_java_sdk.models.operations.UpdateRepoOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoOrganizationResponse;
-import to.unified.unified_java_sdk.operations.CreateRepoOrganizationOperation;
-import to.unified.unified_java_sdk.operations.GetAccountingOrganizationOperation;
-import to.unified.unified_java_sdk.operations.GetRepoOrganizationOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingOrganizationsOperation;
-import to.unified.unified_java_sdk.operations.ListRepoOrganizationsOperation;
-import to.unified.unified_java_sdk.operations.PatchRepoOrganizationOperation;
-import to.unified.unified_java_sdk.operations.RemoveRepoOrganizationOperation;
-import to.unified.unified_java_sdk.operations.UpdateRepoOrganizationOperation;
+import to.unified.unified_java_sdk.operations.CreateRepoOrganization;
+import to.unified.unified_java_sdk.operations.GetAccountingOrganization;
+import to.unified.unified_java_sdk.operations.GetRepoOrganization;
+import to.unified.unified_java_sdk.operations.ListAccountingOrganizations;
+import to.unified.unified_java_sdk.operations.ListRepoOrganizations;
+import to.unified.unified_java_sdk.operations.PatchRepoOrganization;
+import to.unified.unified_java_sdk.operations.RemoveRepoOrganization;
+import to.unified.unified_java_sdk.operations.UpdateRepoOrganization;
 
 
 public class Organization {
@@ -65,7 +65,7 @@ public class Organization {
      */
     public CreateRepoOrganizationResponse createRepoOrganization(CreateRepoOrganizationRequest request) throws Exception {
         RequestOperation<CreateRepoOrganizationRequest, CreateRepoOrganizationResponse> operation
-              = new CreateRepoOrganizationOperation(sdkConfiguration);
+              = new CreateRepoOrganization.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -87,7 +87,7 @@ public class Organization {
      */
     public GetAccountingOrganizationResponse getAccountingOrganization(GetAccountingOrganizationRequest request) throws Exception {
         RequestOperation<GetAccountingOrganizationRequest, GetAccountingOrganizationResponse> operation
-              = new GetAccountingOrganizationOperation(sdkConfiguration);
+              = new GetAccountingOrganization.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -109,7 +109,7 @@ public class Organization {
      */
     public GetRepoOrganizationResponse getRepoOrganization(GetRepoOrganizationRequest request) throws Exception {
         RequestOperation<GetRepoOrganizationRequest, GetRepoOrganizationResponse> operation
-              = new GetRepoOrganizationOperation(sdkConfiguration);
+              = new GetRepoOrganization.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -131,7 +131,7 @@ public class Organization {
      */
     public ListAccountingOrganizationsResponse listAccountingOrganizations(ListAccountingOrganizationsRequest request) throws Exception {
         RequestOperation<ListAccountingOrganizationsRequest, ListAccountingOrganizationsResponse> operation
-              = new ListAccountingOrganizationsOperation(sdkConfiguration);
+              = new ListAccountingOrganizations.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -153,7 +153,7 @@ public class Organization {
      */
     public ListRepoOrganizationsResponse listRepoOrganizations(ListRepoOrganizationsRequest request) throws Exception {
         RequestOperation<ListRepoOrganizationsRequest, ListRepoOrganizationsResponse> operation
-              = new ListRepoOrganizationsOperation(sdkConfiguration);
+              = new ListRepoOrganizations.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -175,7 +175,7 @@ public class Organization {
      */
     public PatchRepoOrganizationResponse patchRepoOrganization(PatchRepoOrganizationRequest request) throws Exception {
         RequestOperation<PatchRepoOrganizationRequest, PatchRepoOrganizationResponse> operation
-              = new PatchRepoOrganizationOperation(sdkConfiguration);
+              = new PatchRepoOrganization.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -197,7 +197,7 @@ public class Organization {
      */
     public RemoveRepoOrganizationResponse removeRepoOrganization(RemoveRepoOrganizationRequest request) throws Exception {
         RequestOperation<RemoveRepoOrganizationRequest, RemoveRepoOrganizationResponse> operation
-              = new RemoveRepoOrganizationOperation(sdkConfiguration);
+              = new RemoveRepoOrganization.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -219,7 +219,7 @@ public class Organization {
      */
     public UpdateRepoOrganizationResponse updateRepoOrganization(UpdateRepoOrganizationRequest request) throws Exception {
         RequestOperation<UpdateRepoOrganizationRequest, UpdateRepoOrganizationResponse> operation
-              = new UpdateRepoOrganizationOperation(sdkConfiguration);
+              = new UpdateRepoOrganization.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

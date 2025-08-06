@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.RemoveHrisCompanyOperation;
+import to.unified.unified_java_sdk.operations.RemoveHrisCompany;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveHrisCompanyRequestBuilder {
@@ -28,7 +28,7 @@ public class RemoveHrisCompanyRequestBuilder {
     public RemoveHrisCompanyResponse call() throws Exception {
         
         RequestOperation<RemoveHrisCompanyRequest, RemoveHrisCompanyResponse> operation
-              = new RemoveHrisCompanyOperation(sdkConfiguration);
+              = new RemoveHrisCompany.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

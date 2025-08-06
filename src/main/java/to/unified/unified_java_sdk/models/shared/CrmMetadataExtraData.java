@@ -6,9 +6,14 @@ package to.unified.unified_java_sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import java.lang.Boolean;
+import java.lang.Double;
+import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.utils.OneOfDeserializer;
 import to.unified.unified_java_sdk.utils.TypedObject;
 import to.unified.unified_java_sdk.utils.Utils.JsonShape;
@@ -25,39 +30,39 @@ public class CrmMetadataExtraData {
         this.value = value;
     }
 
-    public static CrmMetadataExtraData of(CrmMetadata1 value) {
+    public static CrmMetadataExtraData of(Map<String, Object> value) {
         Utils.checkNotNull(value, "value");
-        return new CrmMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<CrmMetadata1>(){}));
+        return new CrmMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<Map<String, Object>>(){}));
     }
 
-    public static CrmMetadataExtraData of(CrmMetadata2 value) {
+    public static CrmMetadataExtraData of(String value) {
         Utils.checkNotNull(value, "value");
-        return new CrmMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<CrmMetadata2>(){}));
+        return new CrmMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<String>(){}));
     }
 
-    public static CrmMetadataExtraData of(CrmMetadata3 value) {
+    public static CrmMetadataExtraData of(double value) {
         Utils.checkNotNull(value, "value");
-        return new CrmMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<CrmMetadata3>(){}));
+        return new CrmMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Double>(){}));
     }
 
-    public static CrmMetadataExtraData of(CrmMetadata4 value) {
+    public static CrmMetadataExtraData of(boolean value) {
         Utils.checkNotNull(value, "value");
-        return new CrmMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<CrmMetadata4>(){}));
+        return new CrmMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Boolean>(){}));
     }
 
-    public static CrmMetadataExtraData of(CrmMetadata5 value) {
+    public static CrmMetadataExtraData of(List<CrmMetadata5> value) {
         Utils.checkNotNull(value, "value");
-        return new CrmMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<CrmMetadata5>(){}));
+        return new CrmMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<List<CrmMetadata5>>(){}));
     }
     
     /**
      * Returns an instance of one of these types:
      * <ul>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.CrmMetadata1}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.CrmMetadata2}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.CrmMetadata3}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.CrmMetadata4}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.CrmMetadata5}</li>
+     * <li>{@code java.util.Map<java.lang.String, java.lang.Object>}</li>
+     * <li>{@code java.lang.String}</li>
+     * <li>{@code double}</li>
+     * <li>{@code boolean}</li>
+     * <li>{@code java.util.List<to.unified.unified_java_sdk.models.shared.CrmMetadata5>}</li>
      * </ul>
      * 
      * <p>Use {@code instanceof} to determine what type is returned. For example:
@@ -97,11 +102,11 @@ public class CrmMetadataExtraData {
 
         public _Deserializer() {
             super(CrmMetadataExtraData.class, false,
-                  TypeReferenceWithShape.of(new TypeReference<CrmMetadata5>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<CrmMetadata4>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<CrmMetadata3>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<CrmMetadata2>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<CrmMetadata1>() {}, JsonShape.DEFAULT));
+                  TypeReferenceWithShape.of(new TypeReference<List<CrmMetadata5>>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<Boolean>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<Double>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<String>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<Map<String, Object>>() {}, JsonShape.DEFAULT));
         }
     }
     

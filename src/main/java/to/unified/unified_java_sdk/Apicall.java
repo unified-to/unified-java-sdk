@@ -12,8 +12,8 @@ import to.unified.unified_java_sdk.models.operations.GetUnifiedApicallResponse;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedApicallsRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedApicallsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedApicallsResponse;
-import to.unified.unified_java_sdk.operations.GetUnifiedApicallOperation;
-import to.unified.unified_java_sdk.operations.ListUnifiedApicallsOperation;
+import to.unified.unified_java_sdk.operations.GetUnifiedApicall;
+import to.unified.unified_java_sdk.operations.ListUnifiedApicalls;
 
 
 public class Apicall {
@@ -41,7 +41,7 @@ public class Apicall {
      */
     public GetUnifiedApicallResponse getUnifiedApicall(GetUnifiedApicallRequest request) throws Exception {
         RequestOperation<GetUnifiedApicallRequest, GetUnifiedApicallResponse> operation
-              = new GetUnifiedApicallOperation(sdkConfiguration);
+              = new GetUnifiedApicall.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -63,7 +63,7 @@ public class Apicall {
      */
     public ListUnifiedApicallsResponse listUnifiedApicalls(ListUnifiedApicallsRequest request) throws Exception {
         RequestOperation<ListUnifiedApicallsRequest, ListUnifiedApicallsResponse> operation
-              = new ListUnifiedApicallsOperation(sdkConfiguration);
+              = new ListUnifiedApicalls.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

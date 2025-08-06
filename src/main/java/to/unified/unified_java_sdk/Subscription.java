@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemovePaymentSubscriptionRe
 import to.unified.unified_java_sdk.models.operations.UpdatePaymentSubscriptionRequest;
 import to.unified.unified_java_sdk.models.operations.UpdatePaymentSubscriptionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdatePaymentSubscriptionResponse;
-import to.unified.unified_java_sdk.operations.CreatePaymentSubscriptionOperation;
-import to.unified.unified_java_sdk.operations.GetPaymentSubscriptionOperation;
-import to.unified.unified_java_sdk.operations.ListPaymentSubscriptionsOperation;
-import to.unified.unified_java_sdk.operations.PatchPaymentSubscriptionOperation;
-import to.unified.unified_java_sdk.operations.RemovePaymentSubscriptionOperation;
-import to.unified.unified_java_sdk.operations.UpdatePaymentSubscriptionOperation;
+import to.unified.unified_java_sdk.operations.CreatePaymentSubscription;
+import to.unified.unified_java_sdk.operations.GetPaymentSubscription;
+import to.unified.unified_java_sdk.operations.ListPaymentSubscriptions;
+import to.unified.unified_java_sdk.operations.PatchPaymentSubscription;
+import to.unified.unified_java_sdk.operations.RemovePaymentSubscription;
+import to.unified.unified_java_sdk.operations.UpdatePaymentSubscription;
 
 
 public class Subscription {
@@ -57,7 +57,7 @@ public class Subscription {
      */
     public CreatePaymentSubscriptionResponse createPaymentSubscription(CreatePaymentSubscriptionRequest request) throws Exception {
         RequestOperation<CreatePaymentSubscriptionRequest, CreatePaymentSubscriptionResponse> operation
-              = new CreatePaymentSubscriptionOperation(sdkConfiguration);
+              = new CreatePaymentSubscription.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Subscription {
      */
     public GetPaymentSubscriptionResponse getPaymentSubscription(GetPaymentSubscriptionRequest request) throws Exception {
         RequestOperation<GetPaymentSubscriptionRequest, GetPaymentSubscriptionResponse> operation
-              = new GetPaymentSubscriptionOperation(sdkConfiguration);
+              = new GetPaymentSubscription.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Subscription {
      */
     public ListPaymentSubscriptionsResponse listPaymentSubscriptions(ListPaymentSubscriptionsRequest request) throws Exception {
         RequestOperation<ListPaymentSubscriptionsRequest, ListPaymentSubscriptionsResponse> operation
-              = new ListPaymentSubscriptionsOperation(sdkConfiguration);
+              = new ListPaymentSubscriptions.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Subscription {
      */
     public PatchPaymentSubscriptionResponse patchPaymentSubscription(PatchPaymentSubscriptionRequest request) throws Exception {
         RequestOperation<PatchPaymentSubscriptionRequest, PatchPaymentSubscriptionResponse> operation
-              = new PatchPaymentSubscriptionOperation(sdkConfiguration);
+              = new PatchPaymentSubscription.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Subscription {
      */
     public RemovePaymentSubscriptionResponse removePaymentSubscription(RemovePaymentSubscriptionRequest request) throws Exception {
         RequestOperation<RemovePaymentSubscriptionRequest, RemovePaymentSubscriptionResponse> operation
-              = new RemovePaymentSubscriptionOperation(sdkConfiguration);
+              = new RemovePaymentSubscription.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Subscription {
      */
     public UpdatePaymentSubscriptionResponse updatePaymentSubscription(UpdatePaymentSubscriptionRequest request) throws Exception {
         RequestOperation<UpdatePaymentSubscriptionRequest, UpdatePaymentSubscriptionResponse> operation
-              = new UpdatePaymentSubscriptionOperation(sdkConfiguration);
+              = new UpdatePaymentSubscription.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

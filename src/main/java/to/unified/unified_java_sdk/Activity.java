@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveAtsActivityResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsActivityRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsActivityResponse;
-import to.unified.unified_java_sdk.operations.CreateAtsActivityOperation;
-import to.unified.unified_java_sdk.operations.GetAtsActivityOperation;
-import to.unified.unified_java_sdk.operations.ListAtsActivitiesOperation;
-import to.unified.unified_java_sdk.operations.PatchAtsActivityOperation;
-import to.unified.unified_java_sdk.operations.RemoveAtsActivityOperation;
-import to.unified.unified_java_sdk.operations.UpdateAtsActivityOperation;
+import to.unified.unified_java_sdk.operations.CreateAtsActivity;
+import to.unified.unified_java_sdk.operations.GetAtsActivity;
+import to.unified.unified_java_sdk.operations.ListAtsActivities;
+import to.unified.unified_java_sdk.operations.PatchAtsActivity;
+import to.unified.unified_java_sdk.operations.RemoveAtsActivity;
+import to.unified.unified_java_sdk.operations.UpdateAtsActivity;
 
 
 public class Activity {
@@ -57,7 +57,7 @@ public class Activity {
      */
     public CreateAtsActivityResponse createAtsActivity(CreateAtsActivityRequest request) throws Exception {
         RequestOperation<CreateAtsActivityRequest, CreateAtsActivityResponse> operation
-              = new CreateAtsActivityOperation(sdkConfiguration);
+              = new CreateAtsActivity.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Activity {
      */
     public GetAtsActivityResponse getAtsActivity(GetAtsActivityRequest request) throws Exception {
         RequestOperation<GetAtsActivityRequest, GetAtsActivityResponse> operation
-              = new GetAtsActivityOperation(sdkConfiguration);
+              = new GetAtsActivity.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Activity {
      */
     public ListAtsActivitiesResponse listAtsActivities(ListAtsActivitiesRequest request) throws Exception {
         RequestOperation<ListAtsActivitiesRequest, ListAtsActivitiesResponse> operation
-              = new ListAtsActivitiesOperation(sdkConfiguration);
+              = new ListAtsActivities.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Activity {
      */
     public PatchAtsActivityResponse patchAtsActivity(PatchAtsActivityRequest request) throws Exception {
         RequestOperation<PatchAtsActivityRequest, PatchAtsActivityResponse> operation
-              = new PatchAtsActivityOperation(sdkConfiguration);
+              = new PatchAtsActivity.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Activity {
      */
     public RemoveAtsActivityResponse removeAtsActivity(RemoveAtsActivityRequest request) throws Exception {
         RequestOperation<RemoveAtsActivityRequest, RemoveAtsActivityResponse> operation
-              = new RemoveAtsActivityOperation(sdkConfiguration);
+              = new RemoveAtsActivity.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Activity {
      */
     public UpdateAtsActivityResponse updateAtsActivity(UpdateAtsActivityRequest request) throws Exception {
         RequestOperation<UpdateAtsActivityRequest, UpdateAtsActivityResponse> operation
-              = new UpdateAtsActivityOperation(sdkConfiguration);
+              = new UpdateAtsActivity.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

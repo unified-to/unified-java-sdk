@@ -12,8 +12,8 @@ import to.unified.unified_java_sdk.models.operations.GetPaymentPayoutResponse;
 import to.unified.unified_java_sdk.models.operations.ListPaymentPayoutsRequest;
 import to.unified.unified_java_sdk.models.operations.ListPaymentPayoutsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListPaymentPayoutsResponse;
-import to.unified.unified_java_sdk.operations.GetPaymentPayoutOperation;
-import to.unified.unified_java_sdk.operations.ListPaymentPayoutsOperation;
+import to.unified.unified_java_sdk.operations.GetPaymentPayout;
+import to.unified.unified_java_sdk.operations.ListPaymentPayouts;
 
 
 public class Payout {
@@ -41,7 +41,7 @@ public class Payout {
      */
     public GetPaymentPayoutResponse getPaymentPayout(GetPaymentPayoutRequest request) throws Exception {
         RequestOperation<GetPaymentPayoutRequest, GetPaymentPayoutResponse> operation
-              = new GetPaymentPayoutOperation(sdkConfiguration);
+              = new GetPaymentPayout.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -63,7 +63,7 @@ public class Payout {
      */
     public ListPaymentPayoutsResponse listPaymentPayouts(ListPaymentPayoutsRequest request) throws Exception {
         RequestOperation<ListPaymentPayoutsRequest, ListPaymentPayoutsResponse> operation
-              = new ListPaymentPayoutsOperation(sdkConfiguration);
+              = new ListPaymentPayouts.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

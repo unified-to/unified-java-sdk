@@ -12,8 +12,8 @@ import to.unified.unified_java_sdk.models.operations.GetAccountingProfitlossResp
 import to.unified.unified_java_sdk.models.operations.ListAccountingProfitlossesRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingProfitlossesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAccountingProfitlossesResponse;
-import to.unified.unified_java_sdk.operations.GetAccountingProfitlossOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingProfitlossesOperation;
+import to.unified.unified_java_sdk.operations.GetAccountingProfitloss;
+import to.unified.unified_java_sdk.operations.ListAccountingProfitlosses;
 
 
 public class Profitloss {
@@ -41,7 +41,7 @@ public class Profitloss {
      */
     public GetAccountingProfitlossResponse getAccountingProfitloss(GetAccountingProfitlossRequest request) throws Exception {
         RequestOperation<GetAccountingProfitlossRequest, GetAccountingProfitlossResponse> operation
-              = new GetAccountingProfitlossOperation(sdkConfiguration);
+              = new GetAccountingProfitloss.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -63,7 +63,7 @@ public class Profitloss {
      */
     public ListAccountingProfitlossesResponse listAccountingProfitlosses(ListAccountingProfitlossesRequest request) throws Exception {
         RequestOperation<ListAccountingProfitlossesRequest, ListAccountingProfitlossesResponse> operation
-              = new ListAccountingProfitlossesOperation(sdkConfiguration);
+              = new ListAccountingProfitlosses.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

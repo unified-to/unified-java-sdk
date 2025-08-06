@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.RemoveCrmEventOperation;
+import to.unified.unified_java_sdk.operations.RemoveCrmEvent;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveCrmEventRequestBuilder {
@@ -28,7 +28,7 @@ public class RemoveCrmEventRequestBuilder {
     public RemoveCrmEventResponse call() throws Exception {
         
         RequestOperation<RemoveCrmEventRequest, RemoveCrmEventResponse> operation
-              = new RemoveCrmEventOperation(sdkConfiguration);
+              = new RemoveCrmEvent.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

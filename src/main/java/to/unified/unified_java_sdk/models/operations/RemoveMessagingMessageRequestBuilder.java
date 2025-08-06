@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.RemoveMessagingMessageOperation;
+import to.unified.unified_java_sdk.operations.RemoveMessagingMessage;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveMessagingMessageRequestBuilder {
@@ -28,7 +28,7 @@ public class RemoveMessagingMessageRequestBuilder {
     public RemoveMessagingMessageResponse call() throws Exception {
         
         RequestOperation<RemoveMessagingMessageRequest, RemoveMessagingMessageResponse> operation
-              = new RemoveMessagingMessageOperation(sdkConfiguration);
+              = new RemoveMessagingMessage.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

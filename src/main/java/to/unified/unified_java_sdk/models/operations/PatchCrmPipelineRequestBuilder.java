@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.PatchCrmPipelineOperation;
+import to.unified.unified_java_sdk.operations.PatchCrmPipeline;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchCrmPipelineRequestBuilder {
@@ -28,7 +28,7 @@ public class PatchCrmPipelineRequestBuilder {
     public PatchCrmPipelineResponse call() throws Exception {
         
         RequestOperation<PatchCrmPipelineRequest, PatchCrmPipelineResponse> operation
-              = new PatchCrmPipelineOperation(sdkConfiguration);
+              = new PatchCrmPipeline.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

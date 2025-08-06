@@ -12,8 +12,8 @@ import to.unified.unified_java_sdk.models.operations.ListEnrichCompaniesResponse
 import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleRequest;
 import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleResponse;
-import to.unified.unified_java_sdk.operations.ListEnrichCompaniesOperation;
-import to.unified.unified_java_sdk.operations.ListEnrichPeopleOperation;
+import to.unified.unified_java_sdk.operations.ListEnrichCompanies;
+import to.unified.unified_java_sdk.operations.ListEnrichPeople;
 
 
 public class Enrich {
@@ -41,7 +41,7 @@ public class Enrich {
      */
     public ListEnrichCompaniesResponse listEnrichCompanies(ListEnrichCompaniesRequest request) throws Exception {
         RequestOperation<ListEnrichCompaniesRequest, ListEnrichCompaniesResponse> operation
-              = new ListEnrichCompaniesOperation(sdkConfiguration);
+              = new ListEnrichCompanies.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -63,7 +63,7 @@ public class Enrich {
      */
     public ListEnrichPeopleResponse listEnrichPeople(ListEnrichPeopleRequest request) throws Exception {
         RequestOperation<ListEnrichPeopleRequest, ListEnrichPeopleResponse> operation
-              = new ListEnrichPeopleOperation(sdkConfiguration);
+              = new ListEnrichPeople.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

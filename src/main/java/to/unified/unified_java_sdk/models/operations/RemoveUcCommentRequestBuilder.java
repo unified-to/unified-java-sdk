@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.RemoveUcCommentOperation;
+import to.unified.unified_java_sdk.operations.RemoveUcComment;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveUcCommentRequestBuilder {
@@ -28,7 +28,7 @@ public class RemoveUcCommentRequestBuilder {
     public RemoveUcCommentResponse call() throws Exception {
         
         RequestOperation<RemoveUcCommentRequest, RemoveUcCommentResponse> operation
-              = new RemoveUcCommentOperation(sdkConfiguration);
+              = new RemoveUcComment.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

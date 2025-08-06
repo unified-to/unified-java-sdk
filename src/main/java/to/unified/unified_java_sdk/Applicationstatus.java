@@ -9,7 +9,7 @@ import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatusesRequest;
 import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatusesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatusesResponse;
-import to.unified.unified_java_sdk.operations.ListAtsApplicationstatusesOperation;
+import to.unified.unified_java_sdk.operations.ListAtsApplicationstatuses;
 
 
 public class Applicationstatus {
@@ -37,7 +37,7 @@ public class Applicationstatus {
      */
     public ListAtsApplicationstatusesResponse listAtsApplicationstatuses(ListAtsApplicationstatusesRequest request) throws Exception {
         RequestOperation<ListAtsApplicationstatusesRequest, ListAtsApplicationstatusesResponse> operation
-              = new ListAtsApplicationstatusesOperation(sdkConfiguration);
+              = new ListAtsApplicationstatuses.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

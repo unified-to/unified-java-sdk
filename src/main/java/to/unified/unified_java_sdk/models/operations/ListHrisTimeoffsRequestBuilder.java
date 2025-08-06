@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.ListHrisTimeoffsOperation;
+import to.unified.unified_java_sdk.operations.ListHrisTimeoffs;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListHrisTimeoffsRequestBuilder {
@@ -28,7 +28,7 @@ public class ListHrisTimeoffsRequestBuilder {
     public ListHrisTimeoffsResponse call() throws Exception {
         
         RequestOperation<ListHrisTimeoffsRequest, ListHrisTimeoffsResponse> operation
-              = new ListHrisTimeoffsOperation(sdkConfiguration);
+              = new ListHrisTimeoffs.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

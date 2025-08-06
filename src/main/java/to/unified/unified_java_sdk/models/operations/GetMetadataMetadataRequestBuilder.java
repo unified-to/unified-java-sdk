@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.GetMetadataMetadataOperation;
+import to.unified.unified_java_sdk.operations.GetMetadataMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetMetadataMetadataRequestBuilder {
@@ -28,7 +28,7 @@ public class GetMetadataMetadataRequestBuilder {
     public GetMetadataMetadataResponse call() throws Exception {
         
         RequestOperation<GetMetadataMetadataRequest, GetMetadataMetadataResponse> operation
-              = new GetMetadataMetadataOperation(sdkConfiguration);
+              = new GetMetadataMetadata.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

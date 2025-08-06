@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.GetAtsCandidateOperation;
+import to.unified.unified_java_sdk.operations.GetAtsCandidate;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetAtsCandidateRequestBuilder {
@@ -28,7 +28,7 @@ public class GetAtsCandidateRequestBuilder {
     public GetAtsCandidateResponse call() throws Exception {
         
         RequestOperation<GetAtsCandidateRequest, GetAtsCandidateResponse> operation
-              = new GetAtsCandidateOperation(sdkConfiguration);
+              = new GetAtsCandidate.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

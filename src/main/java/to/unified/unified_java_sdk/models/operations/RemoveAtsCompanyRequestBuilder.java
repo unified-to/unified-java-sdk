@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.RemoveAtsCompanyOperation;
+import to.unified.unified_java_sdk.operations.RemoveAtsCompany;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveAtsCompanyRequestBuilder {
@@ -28,7 +28,7 @@ public class RemoveAtsCompanyRequestBuilder {
     public RemoveAtsCompanyResponse call() throws Exception {
         
         RequestOperation<RemoveAtsCompanyRequest, RemoveAtsCompanyResponse> operation
-              = new RemoveAtsCompanyOperation(sdkConfiguration);
+              = new RemoveAtsCompany.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

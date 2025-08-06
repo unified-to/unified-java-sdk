@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.ListHrisCompaniesOperation;
+import to.unified.unified_java_sdk.operations.ListHrisCompanies;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListHrisCompaniesRequestBuilder {
@@ -28,7 +28,7 @@ public class ListHrisCompaniesRequestBuilder {
     public ListHrisCompaniesResponse call() throws Exception {
         
         RequestOperation<ListHrisCompaniesRequest, ListHrisCompaniesResponse> operation
-              = new ListHrisCompaniesOperation(sdkConfiguration);
+              = new ListHrisCompanies.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

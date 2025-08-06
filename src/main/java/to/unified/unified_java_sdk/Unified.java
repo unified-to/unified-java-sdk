@@ -66,26 +66,26 @@ import to.unified.unified_java_sdk.models.operations.UpdateUnifiedWebhookTrigger
 import to.unified.unified_java_sdk.models.operations.UpdateUnifiedWebhookTriggerRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateUnifiedWebhookTriggerResponse;
 import to.unified.unified_java_sdk.models.shared.Connection;
-import to.unified.unified_java_sdk.operations.CreateUnifiedConnectionOperation;
-import to.unified.unified_java_sdk.operations.CreateUnifiedWebhookOperation;
-import to.unified.unified_java_sdk.operations.GetUnifiedApicallOperation;
-import to.unified.unified_java_sdk.operations.GetUnifiedConnectionOperation;
-import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationAuthOperation;
-import to.unified.unified_java_sdk.operations.GetUnifiedWebhookOperation;
-import to.unified.unified_java_sdk.operations.ListUnifiedApicallsOperation;
-import to.unified.unified_java_sdk.operations.ListUnifiedConnectionsOperation;
-import to.unified.unified_java_sdk.operations.ListUnifiedIntegrationWorkspacesOperation;
-import to.unified.unified_java_sdk.operations.ListUnifiedIntegrationsOperation;
-import to.unified.unified_java_sdk.operations.ListUnifiedIssuesOperation;
-import to.unified.unified_java_sdk.operations.ListUnifiedWebhooksOperation;
-import to.unified.unified_java_sdk.operations.PatchUnifiedConnectionOperation;
-import to.unified.unified_java_sdk.operations.PatchUnifiedWebhookOperation;
-import to.unified.unified_java_sdk.operations.PatchUnifiedWebhookTriggerOperation;
-import to.unified.unified_java_sdk.operations.RemoveUnifiedConnectionOperation;
-import to.unified.unified_java_sdk.operations.RemoveUnifiedWebhookOperation;
-import to.unified.unified_java_sdk.operations.UpdateUnifiedConnectionOperation;
-import to.unified.unified_java_sdk.operations.UpdateUnifiedWebhookOperation;
-import to.unified.unified_java_sdk.operations.UpdateUnifiedWebhookTriggerOperation;
+import to.unified.unified_java_sdk.operations.CreateUnifiedConnection;
+import to.unified.unified_java_sdk.operations.CreateUnifiedWebhook;
+import to.unified.unified_java_sdk.operations.GetUnifiedApicall;
+import to.unified.unified_java_sdk.operations.GetUnifiedConnection;
+import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationAuth;
+import to.unified.unified_java_sdk.operations.GetUnifiedWebhook;
+import to.unified.unified_java_sdk.operations.ListUnifiedApicalls;
+import to.unified.unified_java_sdk.operations.ListUnifiedConnections;
+import to.unified.unified_java_sdk.operations.ListUnifiedIntegrationWorkspaces;
+import to.unified.unified_java_sdk.operations.ListUnifiedIntegrations;
+import to.unified.unified_java_sdk.operations.ListUnifiedIssues;
+import to.unified.unified_java_sdk.operations.ListUnifiedWebhooks;
+import to.unified.unified_java_sdk.operations.PatchUnifiedConnection;
+import to.unified.unified_java_sdk.operations.PatchUnifiedWebhook;
+import to.unified.unified_java_sdk.operations.PatchUnifiedWebhookTrigger;
+import to.unified.unified_java_sdk.operations.RemoveUnifiedConnection;
+import to.unified.unified_java_sdk.operations.RemoveUnifiedWebhook;
+import to.unified.unified_java_sdk.operations.UpdateUnifiedConnection;
+import to.unified.unified_java_sdk.operations.UpdateUnifiedWebhook;
+import to.unified.unified_java_sdk.operations.UpdateUnifiedWebhookTrigger;
 
 
 public class Unified {
@@ -117,7 +117,7 @@ public class Unified {
      */
     public CreateUnifiedConnectionResponse createUnifiedConnection(Connection request) throws Exception {
         RequestOperation<Connection, CreateUnifiedConnectionResponse> operation
-              = new CreateUnifiedConnectionOperation(sdkConfiguration);
+              = new CreateUnifiedConnection.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -143,7 +143,7 @@ public class Unified {
      */
     public CreateUnifiedWebhookResponse createUnifiedWebhook(CreateUnifiedWebhookRequest request) throws Exception {
         RequestOperation<CreateUnifiedWebhookRequest, CreateUnifiedWebhookResponse> operation
-              = new CreateUnifiedWebhookOperation(sdkConfiguration);
+              = new CreateUnifiedWebhook.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -165,7 +165,7 @@ public class Unified {
      */
     public GetUnifiedApicallResponse getUnifiedApicall(GetUnifiedApicallRequest request) throws Exception {
         RequestOperation<GetUnifiedApicallRequest, GetUnifiedApicallResponse> operation
-              = new GetUnifiedApicallOperation(sdkConfiguration);
+              = new GetUnifiedApicall.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -187,7 +187,7 @@ public class Unified {
      */
     public GetUnifiedConnectionResponse getUnifiedConnection(GetUnifiedConnectionRequest request) throws Exception {
         RequestOperation<GetUnifiedConnectionRequest, GetUnifiedConnectionResponse> operation
-              = new GetUnifiedConnectionOperation(sdkConfiguration);
+              = new GetUnifiedConnection.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -213,7 +213,7 @@ public class Unified {
      */
     public GetUnifiedIntegrationAuthResponse getUnifiedIntegrationAuth(GetUnifiedIntegrationAuthRequest request) throws Exception {
         RequestOperation<GetUnifiedIntegrationAuthRequest, GetUnifiedIntegrationAuthResponse> operation
-              = new GetUnifiedIntegrationAuthOperation(sdkConfiguration);
+              = new GetUnifiedIntegrationAuth.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -235,7 +235,7 @@ public class Unified {
      */
     public GetUnifiedWebhookResponse getUnifiedWebhook(GetUnifiedWebhookRequest request) throws Exception {
         RequestOperation<GetUnifiedWebhookRequest, GetUnifiedWebhookResponse> operation
-              = new GetUnifiedWebhookOperation(sdkConfiguration);
+              = new GetUnifiedWebhook.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -257,7 +257,7 @@ public class Unified {
      */
     public ListUnifiedApicallsResponse listUnifiedApicalls(ListUnifiedApicallsRequest request) throws Exception {
         RequestOperation<ListUnifiedApicallsRequest, ListUnifiedApicallsResponse> operation
-              = new ListUnifiedApicallsOperation(sdkConfiguration);
+              = new ListUnifiedApicalls.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -279,7 +279,7 @@ public class Unified {
      */
     public ListUnifiedConnectionsResponse listUnifiedConnections(ListUnifiedConnectionsRequest request) throws Exception {
         RequestOperation<ListUnifiedConnectionsRequest, ListUnifiedConnectionsResponse> operation
-              = new ListUnifiedConnectionsOperation(sdkConfiguration);
+              = new ListUnifiedConnections.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -305,7 +305,7 @@ public class Unified {
      */
     public ListUnifiedIntegrationWorkspacesResponse listUnifiedIntegrationWorkspaces(ListUnifiedIntegrationWorkspacesRequest request) throws Exception {
         RequestOperation<ListUnifiedIntegrationWorkspacesRequest, ListUnifiedIntegrationWorkspacesResponse> operation
-              = new ListUnifiedIntegrationWorkspacesOperation(sdkConfiguration);
+              = new ListUnifiedIntegrationWorkspaces.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -327,7 +327,7 @@ public class Unified {
      */
     public ListUnifiedIntegrationsResponse listUnifiedIntegrations(ListUnifiedIntegrationsRequest request) throws Exception {
         RequestOperation<ListUnifiedIntegrationsRequest, ListUnifiedIntegrationsResponse> operation
-              = new ListUnifiedIntegrationsOperation(sdkConfiguration);
+              = new ListUnifiedIntegrations.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -349,7 +349,7 @@ public class Unified {
      */
     public ListUnifiedIssuesResponse listUnifiedIssues(ListUnifiedIssuesRequest request) throws Exception {
         RequestOperation<ListUnifiedIssuesRequest, ListUnifiedIssuesResponse> operation
-              = new ListUnifiedIssuesOperation(sdkConfiguration);
+              = new ListUnifiedIssues.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -371,7 +371,7 @@ public class Unified {
      */
     public ListUnifiedWebhooksResponse listUnifiedWebhooks(ListUnifiedWebhooksRequest request) throws Exception {
         RequestOperation<ListUnifiedWebhooksRequest, ListUnifiedWebhooksResponse> operation
-              = new ListUnifiedWebhooksOperation(sdkConfiguration);
+              = new ListUnifiedWebhooks.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -393,7 +393,7 @@ public class Unified {
      */
     public PatchUnifiedConnectionResponse patchUnifiedConnection(PatchUnifiedConnectionRequest request) throws Exception {
         RequestOperation<PatchUnifiedConnectionRequest, PatchUnifiedConnectionResponse> operation
-              = new PatchUnifiedConnectionOperation(sdkConfiguration);
+              = new PatchUnifiedConnection.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -415,7 +415,7 @@ public class Unified {
      */
     public PatchUnifiedWebhookResponse patchUnifiedWebhook(PatchUnifiedWebhookRequest request) throws Exception {
         RequestOperation<PatchUnifiedWebhookRequest, PatchUnifiedWebhookResponse> operation
-              = new PatchUnifiedWebhookOperation(sdkConfiguration);
+              = new PatchUnifiedWebhook.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -437,7 +437,7 @@ public class Unified {
      */
     public PatchUnifiedWebhookTriggerResponse patchUnifiedWebhookTrigger(PatchUnifiedWebhookTriggerRequest request) throws Exception {
         RequestOperation<PatchUnifiedWebhookTriggerRequest, PatchUnifiedWebhookTriggerResponse> operation
-              = new PatchUnifiedWebhookTriggerOperation(sdkConfiguration);
+              = new PatchUnifiedWebhookTrigger.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -459,7 +459,7 @@ public class Unified {
      */
     public RemoveUnifiedConnectionResponse removeUnifiedConnection(RemoveUnifiedConnectionRequest request) throws Exception {
         RequestOperation<RemoveUnifiedConnectionRequest, RemoveUnifiedConnectionResponse> operation
-              = new RemoveUnifiedConnectionOperation(sdkConfiguration);
+              = new RemoveUnifiedConnection.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -481,7 +481,7 @@ public class Unified {
      */
     public RemoveUnifiedWebhookResponse removeUnifiedWebhook(RemoveUnifiedWebhookRequest request) throws Exception {
         RequestOperation<RemoveUnifiedWebhookRequest, RemoveUnifiedWebhookResponse> operation
-              = new RemoveUnifiedWebhookOperation(sdkConfiguration);
+              = new RemoveUnifiedWebhook.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -503,7 +503,7 @@ public class Unified {
      */
     public UpdateUnifiedConnectionResponse updateUnifiedConnection(UpdateUnifiedConnectionRequest request) throws Exception {
         RequestOperation<UpdateUnifiedConnectionRequest, UpdateUnifiedConnectionResponse> operation
-              = new UpdateUnifiedConnectionOperation(sdkConfiguration);
+              = new UpdateUnifiedConnection.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -525,7 +525,7 @@ public class Unified {
      */
     public UpdateUnifiedWebhookResponse updateUnifiedWebhook(UpdateUnifiedWebhookRequest request) throws Exception {
         RequestOperation<UpdateUnifiedWebhookRequest, UpdateUnifiedWebhookResponse> operation
-              = new UpdateUnifiedWebhookOperation(sdkConfiguration);
+              = new UpdateUnifiedWebhook.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -547,7 +547,7 @@ public class Unified {
      */
     public UpdateUnifiedWebhookTriggerResponse updateUnifiedWebhookTrigger(UpdateUnifiedWebhookTriggerRequest request) throws Exception {
         RequestOperation<UpdateUnifiedWebhookTriggerRequest, UpdateUnifiedWebhookTriggerResponse> operation
-              = new UpdateUnifiedWebhookTriggerOperation(sdkConfiguration);
+              = new UpdateUnifiedWebhookTrigger.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

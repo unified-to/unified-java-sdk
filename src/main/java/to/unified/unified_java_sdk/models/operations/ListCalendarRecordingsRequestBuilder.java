@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.ListCalendarRecordingsOperation;
+import to.unified.unified_java_sdk.operations.ListCalendarRecordings;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListCalendarRecordingsRequestBuilder {
@@ -28,7 +28,7 @@ public class ListCalendarRecordingsRequestBuilder {
     public ListCalendarRecordingsResponse call() throws Exception {
         
         RequestOperation<ListCalendarRecordingsRequest, ListCalendarRecordingsResponse> operation
-              = new ListCalendarRecordingsOperation(sdkConfiguration);
+              = new ListCalendarRecordings.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

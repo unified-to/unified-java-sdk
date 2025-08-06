@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.RemoveRepoCommitOperation;
+import to.unified.unified_java_sdk.operations.RemoveRepoCommit;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveRepoCommitRequestBuilder {
@@ -28,7 +28,7 @@ public class RemoveRepoCommitRequestBuilder {
     public RemoveRepoCommitResponse call() throws Exception {
         
         RequestOperation<RemoveRepoCommitRequest, RemoveRepoCommitResponse> operation
-              = new RemoveRepoCommitOperation(sdkConfiguration);
+              = new RemoveRepoCommit.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

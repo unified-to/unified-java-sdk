@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.GetCrmCompanyOperation;
+import to.unified.unified_java_sdk.operations.GetCrmCompany;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetCrmCompanyRequestBuilder {
@@ -28,7 +28,7 @@ public class GetCrmCompanyRequestBuilder {
     public GetCrmCompanyResponse call() throws Exception {
         
         RequestOperation<GetCrmCompanyRequest, GetCrmCompanyResponse> operation
-              = new GetCrmCompanyOperation(sdkConfiguration);
+              = new GetCrmCompany.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.GetAtsJobOperation;
+import to.unified.unified_java_sdk.operations.GetAtsJob;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetAtsJobRequestBuilder {
@@ -28,7 +28,7 @@ public class GetAtsJobRequestBuilder {
     public GetAtsJobResponse call() throws Exception {
         
         RequestOperation<GetAtsJobRequest, GetAtsJobResponse> operation
-              = new GetAtsJobOperation(sdkConfiguration);
+              = new GetAtsJob.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

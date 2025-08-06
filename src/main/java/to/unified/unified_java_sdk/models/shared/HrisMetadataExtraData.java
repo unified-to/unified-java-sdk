@@ -6,9 +6,14 @@ package to.unified.unified_java_sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import java.lang.Boolean;
+import java.lang.Double;
+import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.utils.OneOfDeserializer;
 import to.unified.unified_java_sdk.utils.TypedObject;
 import to.unified.unified_java_sdk.utils.Utils.JsonShape;
@@ -25,39 +30,39 @@ public class HrisMetadataExtraData {
         this.value = value;
     }
 
-    public static HrisMetadataExtraData of(HrisMetadata1 value) {
+    public static HrisMetadataExtraData of(Map<String, Object> value) {
         Utils.checkNotNull(value, "value");
-        return new HrisMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<HrisMetadata1>(){}));
+        return new HrisMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<Map<String, Object>>(){}));
     }
 
-    public static HrisMetadataExtraData of(HrisMetadata2 value) {
+    public static HrisMetadataExtraData of(String value) {
         Utils.checkNotNull(value, "value");
-        return new HrisMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<HrisMetadata2>(){}));
+        return new HrisMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<String>(){}));
     }
 
-    public static HrisMetadataExtraData of(HrisMetadata3 value) {
+    public static HrisMetadataExtraData of(double value) {
         Utils.checkNotNull(value, "value");
-        return new HrisMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<HrisMetadata3>(){}));
+        return new HrisMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Double>(){}));
     }
 
-    public static HrisMetadataExtraData of(HrisMetadata4 value) {
+    public static HrisMetadataExtraData of(boolean value) {
         Utils.checkNotNull(value, "value");
-        return new HrisMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<HrisMetadata4>(){}));
+        return new HrisMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Boolean>(){}));
     }
 
-    public static HrisMetadataExtraData of(HrisMetadata5 value) {
+    public static HrisMetadataExtraData of(List<HrisMetadata5> value) {
         Utils.checkNotNull(value, "value");
-        return new HrisMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<HrisMetadata5>(){}));
+        return new HrisMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<List<HrisMetadata5>>(){}));
     }
     
     /**
      * Returns an instance of one of these types:
      * <ul>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.HrisMetadata1}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.HrisMetadata2}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.HrisMetadata3}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.HrisMetadata4}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.HrisMetadata5}</li>
+     * <li>{@code java.util.Map<java.lang.String, java.lang.Object>}</li>
+     * <li>{@code java.lang.String}</li>
+     * <li>{@code double}</li>
+     * <li>{@code boolean}</li>
+     * <li>{@code java.util.List<to.unified.unified_java_sdk.models.shared.HrisMetadata5>}</li>
      * </ul>
      * 
      * <p>Use {@code instanceof} to determine what type is returned. For example:
@@ -97,11 +102,11 @@ public class HrisMetadataExtraData {
 
         public _Deserializer() {
             super(HrisMetadataExtraData.class, false,
-                  TypeReferenceWithShape.of(new TypeReference<HrisMetadata5>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<HrisMetadata4>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<HrisMetadata3>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<HrisMetadata2>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<HrisMetadata1>() {}, JsonShape.DEFAULT));
+                  TypeReferenceWithShape.of(new TypeReference<List<HrisMetadata5>>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<Boolean>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<Double>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<String>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<Map<String, Object>>() {}, JsonShape.DEFAULT));
         }
     }
     

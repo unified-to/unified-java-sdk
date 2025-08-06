@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveStorageFileResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateStorageFileRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateStorageFileRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateStorageFileResponse;
-import to.unified.unified_java_sdk.operations.CreateStorageFileOperation;
-import to.unified.unified_java_sdk.operations.GetStorageFileOperation;
-import to.unified.unified_java_sdk.operations.ListStorageFilesOperation;
-import to.unified.unified_java_sdk.operations.PatchStorageFileOperation;
-import to.unified.unified_java_sdk.operations.RemoveStorageFileOperation;
-import to.unified.unified_java_sdk.operations.UpdateStorageFileOperation;
+import to.unified.unified_java_sdk.operations.CreateStorageFile;
+import to.unified.unified_java_sdk.operations.GetStorageFile;
+import to.unified.unified_java_sdk.operations.ListStorageFiles;
+import to.unified.unified_java_sdk.operations.PatchStorageFile;
+import to.unified.unified_java_sdk.operations.RemoveStorageFile;
+import to.unified.unified_java_sdk.operations.UpdateStorageFile;
 
 
 public class Storage {
@@ -57,7 +57,7 @@ public class Storage {
      */
     public CreateStorageFileResponse createStorageFile(CreateStorageFileRequest request) throws Exception {
         RequestOperation<CreateStorageFileRequest, CreateStorageFileResponse> operation
-              = new CreateStorageFileOperation(sdkConfiguration);
+              = new CreateStorageFile.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Storage {
      */
     public GetStorageFileResponse getStorageFile(GetStorageFileRequest request) throws Exception {
         RequestOperation<GetStorageFileRequest, GetStorageFileResponse> operation
-              = new GetStorageFileOperation(sdkConfiguration);
+              = new GetStorageFile.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Storage {
      */
     public ListStorageFilesResponse listStorageFiles(ListStorageFilesRequest request) throws Exception {
         RequestOperation<ListStorageFilesRequest, ListStorageFilesResponse> operation
-              = new ListStorageFilesOperation(sdkConfiguration);
+              = new ListStorageFiles.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Storage {
      */
     public PatchStorageFileResponse patchStorageFile(PatchStorageFileRequest request) throws Exception {
         RequestOperation<PatchStorageFileRequest, PatchStorageFileResponse> operation
-              = new PatchStorageFileOperation(sdkConfiguration);
+              = new PatchStorageFile.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Storage {
      */
     public RemoveStorageFileResponse removeStorageFile(RemoveStorageFileRequest request) throws Exception {
         RequestOperation<RemoveStorageFileRequest, RemoveStorageFileResponse> operation
-              = new RemoveStorageFileOperation(sdkConfiguration);
+              = new RemoveStorageFile.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Storage {
      */
     public UpdateStorageFileResponse updateStorageFile(UpdateStorageFileRequest request) throws Exception {
         RequestOperation<UpdateStorageFileRequest, UpdateStorageFileResponse> operation
-              = new UpdateStorageFileOperation(sdkConfiguration);
+              = new UpdateStorageFile.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

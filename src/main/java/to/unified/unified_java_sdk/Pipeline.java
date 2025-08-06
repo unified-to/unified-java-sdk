@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveCrmPipelineResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmPipelineRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmPipelineRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmPipelineResponse;
-import to.unified.unified_java_sdk.operations.CreateCrmPipelineOperation;
-import to.unified.unified_java_sdk.operations.GetCrmPipelineOperation;
-import to.unified.unified_java_sdk.operations.ListCrmPipelinesOperation;
-import to.unified.unified_java_sdk.operations.PatchCrmPipelineOperation;
-import to.unified.unified_java_sdk.operations.RemoveCrmPipelineOperation;
-import to.unified.unified_java_sdk.operations.UpdateCrmPipelineOperation;
+import to.unified.unified_java_sdk.operations.CreateCrmPipeline;
+import to.unified.unified_java_sdk.operations.GetCrmPipeline;
+import to.unified.unified_java_sdk.operations.ListCrmPipelines;
+import to.unified.unified_java_sdk.operations.PatchCrmPipeline;
+import to.unified.unified_java_sdk.operations.RemoveCrmPipeline;
+import to.unified.unified_java_sdk.operations.UpdateCrmPipeline;
 
 
 public class Pipeline {
@@ -57,7 +57,7 @@ public class Pipeline {
      */
     public CreateCrmPipelineResponse createCrmPipeline(CreateCrmPipelineRequest request) throws Exception {
         RequestOperation<CreateCrmPipelineRequest, CreateCrmPipelineResponse> operation
-              = new CreateCrmPipelineOperation(sdkConfiguration);
+              = new CreateCrmPipeline.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Pipeline {
      */
     public GetCrmPipelineResponse getCrmPipeline(GetCrmPipelineRequest request) throws Exception {
         RequestOperation<GetCrmPipelineRequest, GetCrmPipelineResponse> operation
-              = new GetCrmPipelineOperation(sdkConfiguration);
+              = new GetCrmPipeline.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Pipeline {
      */
     public ListCrmPipelinesResponse listCrmPipelines(ListCrmPipelinesRequest request) throws Exception {
         RequestOperation<ListCrmPipelinesRequest, ListCrmPipelinesResponse> operation
-              = new ListCrmPipelinesOperation(sdkConfiguration);
+              = new ListCrmPipelines.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Pipeline {
      */
     public PatchCrmPipelineResponse patchCrmPipeline(PatchCrmPipelineRequest request) throws Exception {
         RequestOperation<PatchCrmPipelineRequest, PatchCrmPipelineResponse> operation
-              = new PatchCrmPipelineOperation(sdkConfiguration);
+              = new PatchCrmPipeline.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Pipeline {
      */
     public RemoveCrmPipelineResponse removeCrmPipeline(RemoveCrmPipelineRequest request) throws Exception {
         RequestOperation<RemoveCrmPipelineRequest, RemoveCrmPipelineResponse> operation
-              = new RemoveCrmPipelineOperation(sdkConfiguration);
+              = new RemoveCrmPipeline.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Pipeline {
      */
     public UpdateCrmPipelineResponse updateCrmPipeline(UpdateCrmPipelineRequest request) throws Exception {
         RequestOperation<UpdateCrmPipelineRequest, UpdateCrmPipelineResponse> operation
-              = new UpdateCrmPipelineOperation(sdkConfiguration);
+              = new UpdateCrmPipeline.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

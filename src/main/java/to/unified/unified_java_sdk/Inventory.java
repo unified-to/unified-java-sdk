@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveCommerceInventoryResp
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceInventoryRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceInventoryRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceInventoryResponse;
-import to.unified.unified_java_sdk.operations.CreateCommerceInventoryOperation;
-import to.unified.unified_java_sdk.operations.GetCommerceInventoryOperation;
-import to.unified.unified_java_sdk.operations.ListCommerceInventoriesOperation;
-import to.unified.unified_java_sdk.operations.PatchCommerceInventoryOperation;
-import to.unified.unified_java_sdk.operations.RemoveCommerceInventoryOperation;
-import to.unified.unified_java_sdk.operations.UpdateCommerceInventoryOperation;
+import to.unified.unified_java_sdk.operations.CreateCommerceInventory;
+import to.unified.unified_java_sdk.operations.GetCommerceInventory;
+import to.unified.unified_java_sdk.operations.ListCommerceInventories;
+import to.unified.unified_java_sdk.operations.PatchCommerceInventory;
+import to.unified.unified_java_sdk.operations.RemoveCommerceInventory;
+import to.unified.unified_java_sdk.operations.UpdateCommerceInventory;
 
 
 public class Inventory {
@@ -57,7 +57,7 @@ public class Inventory {
      */
     public CreateCommerceInventoryResponse createCommerceInventory(CreateCommerceInventoryRequest request) throws Exception {
         RequestOperation<CreateCommerceInventoryRequest, CreateCommerceInventoryResponse> operation
-              = new CreateCommerceInventoryOperation(sdkConfiguration);
+              = new CreateCommerceInventory.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Inventory {
      */
     public GetCommerceInventoryResponse getCommerceInventory(GetCommerceInventoryRequest request) throws Exception {
         RequestOperation<GetCommerceInventoryRequest, GetCommerceInventoryResponse> operation
-              = new GetCommerceInventoryOperation(sdkConfiguration);
+              = new GetCommerceInventory.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Inventory {
      */
     public ListCommerceInventoriesResponse listCommerceInventories(ListCommerceInventoriesRequest request) throws Exception {
         RequestOperation<ListCommerceInventoriesRequest, ListCommerceInventoriesResponse> operation
-              = new ListCommerceInventoriesOperation(sdkConfiguration);
+              = new ListCommerceInventories.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Inventory {
      */
     public PatchCommerceInventoryResponse patchCommerceInventory(PatchCommerceInventoryRequest request) throws Exception {
         RequestOperation<PatchCommerceInventoryRequest, PatchCommerceInventoryResponse> operation
-              = new PatchCommerceInventoryOperation(sdkConfiguration);
+              = new PatchCommerceInventory.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Inventory {
      */
     public RemoveCommerceInventoryResponse removeCommerceInventory(RemoveCommerceInventoryRequest request) throws Exception {
         RequestOperation<RemoveCommerceInventoryRequest, RemoveCommerceInventoryResponse> operation
-              = new RemoveCommerceInventoryOperation(sdkConfiguration);
+              = new RemoveCommerceInventory.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Inventory {
      */
     public UpdateCommerceInventoryResponse updateCommerceInventory(UpdateCommerceInventoryRequest request) throws Exception {
         RequestOperation<UpdateCommerceInventoryRequest, UpdateCommerceInventoryResponse> operation
-              = new UpdateCommerceInventoryOperation(sdkConfiguration);
+              = new UpdateCommerceInventory.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

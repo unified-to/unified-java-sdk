@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.PatchHrisTimeshiftOperation;
+import to.unified.unified_java_sdk.operations.PatchHrisTimeshift;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchHrisTimeshiftRequestBuilder {
@@ -28,7 +28,7 @@ public class PatchHrisTimeshiftRequestBuilder {
     public PatchHrisTimeshiftResponse call() throws Exception {
         
         RequestOperation<PatchHrisTimeshiftRequest, PatchHrisTimeshiftResponse> operation
-              = new PatchHrisTimeshiftOperation(sdkConfiguration);
+              = new PatchHrisTimeshift.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

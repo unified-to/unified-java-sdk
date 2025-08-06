@@ -6,9 +6,14 @@ package to.unified.unified_java_sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import java.lang.Boolean;
+import java.lang.Double;
+import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.utils.OneOfDeserializer;
 import to.unified.unified_java_sdk.utils.TypedObject;
 import to.unified.unified_java_sdk.utils.Utils.JsonShape;
@@ -25,39 +30,39 @@ public class Api {
         this.value = value;
     }
 
-    public static Api of(Integration1 value) {
+    public static Api of(Map<String, Object> value) {
         Utils.checkNotNull(value, "value");
-        return new Api(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<Integration1>(){}));
+        return new Api(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<Map<String, Object>>(){}));
     }
 
-    public static Api of(Integration2 value) {
+    public static Api of(String value) {
         Utils.checkNotNull(value, "value");
-        return new Api(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<Integration2>(){}));
+        return new Api(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<String>(){}));
     }
 
-    public static Api of(Integration3 value) {
+    public static Api of(double value) {
         Utils.checkNotNull(value, "value");
-        return new Api(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<Integration3>(){}));
+        return new Api(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Double>(){}));
     }
 
-    public static Api of(Integration4 value) {
+    public static Api of(boolean value) {
         Utils.checkNotNull(value, "value");
-        return new Api(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<Integration4>(){}));
+        return new Api(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Boolean>(){}));
     }
 
-    public static Api of(Integration5 value) {
+    public static Api of(List<Integration5> value) {
         Utils.checkNotNull(value, "value");
-        return new Api(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<Integration5>(){}));
+        return new Api(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<List<Integration5>>(){}));
     }
     
     /**
      * Returns an instance of one of these types:
      * <ul>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.Integration1}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.Integration2}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.Integration3}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.Integration4}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.Integration5}</li>
+     * <li>{@code java.util.Map<java.lang.String, java.lang.Object>}</li>
+     * <li>{@code java.lang.String}</li>
+     * <li>{@code double}</li>
+     * <li>{@code boolean}</li>
+     * <li>{@code java.util.List<to.unified.unified_java_sdk.models.shared.Integration5>}</li>
      * </ul>
      * 
      * <p>Use {@code instanceof} to determine what type is returned. For example:
@@ -97,11 +102,11 @@ public class Api {
 
         public _Deserializer() {
             super(Api.class, false,
-                  TypeReferenceWithShape.of(new TypeReference<Integration5>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<Integration4>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<Integration3>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<Integration2>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<Integration1>() {}, JsonShape.DEFAULT));
+                  TypeReferenceWithShape.of(new TypeReference<List<Integration5>>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<Boolean>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<Double>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<String>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<Map<String, Object>>() {}, JsonShape.DEFAULT));
         }
     }
     

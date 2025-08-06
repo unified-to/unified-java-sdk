@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.PatchLmsCourseOperation;
+import to.unified.unified_java_sdk.operations.PatchLmsCourse;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchLmsCourseRequestBuilder {
@@ -28,7 +28,7 @@ public class PatchLmsCourseRequestBuilder {
     public PatchLmsCourseResponse call() throws Exception {
         
         RequestOperation<PatchLmsCourseRequest, PatchLmsCourseResponse> operation
-              = new PatchLmsCourseOperation(sdkConfiguration);
+              = new PatchLmsCourse.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

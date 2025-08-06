@@ -42,18 +42,18 @@ import to.unified.unified_java_sdk.models.operations.UpdateCommerceLocationRespo
 import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationResponse;
-import to.unified.unified_java_sdk.operations.CreateCommerceLocationOperation;
-import to.unified.unified_java_sdk.operations.CreateHrisLocationOperation;
-import to.unified.unified_java_sdk.operations.GetCommerceLocationOperation;
-import to.unified.unified_java_sdk.operations.GetHrisLocationOperation;
-import to.unified.unified_java_sdk.operations.ListCommerceLocationsOperation;
-import to.unified.unified_java_sdk.operations.ListHrisLocationsOperation;
-import to.unified.unified_java_sdk.operations.PatchCommerceLocationOperation;
-import to.unified.unified_java_sdk.operations.PatchHrisLocationOperation;
-import to.unified.unified_java_sdk.operations.RemoveCommerceLocationOperation;
-import to.unified.unified_java_sdk.operations.RemoveHrisLocationOperation;
-import to.unified.unified_java_sdk.operations.UpdateCommerceLocationOperation;
-import to.unified.unified_java_sdk.operations.UpdateHrisLocationOperation;
+import to.unified.unified_java_sdk.operations.CreateCommerceLocation;
+import to.unified.unified_java_sdk.operations.CreateHrisLocation;
+import to.unified.unified_java_sdk.operations.GetCommerceLocation;
+import to.unified.unified_java_sdk.operations.GetHrisLocation;
+import to.unified.unified_java_sdk.operations.ListCommerceLocations;
+import to.unified.unified_java_sdk.operations.ListHrisLocations;
+import to.unified.unified_java_sdk.operations.PatchCommerceLocation;
+import to.unified.unified_java_sdk.operations.PatchHrisLocation;
+import to.unified.unified_java_sdk.operations.RemoveCommerceLocation;
+import to.unified.unified_java_sdk.operations.RemoveHrisLocation;
+import to.unified.unified_java_sdk.operations.UpdateCommerceLocation;
+import to.unified.unified_java_sdk.operations.UpdateHrisLocation;
 
 
 public class Location {
@@ -81,7 +81,7 @@ public class Location {
      */
     public CreateCommerceLocationResponse createCommerceLocation(CreateCommerceLocationRequest request) throws Exception {
         RequestOperation<CreateCommerceLocationRequest, CreateCommerceLocationResponse> operation
-              = new CreateCommerceLocationOperation(sdkConfiguration);
+              = new CreateCommerceLocation.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,7 +103,7 @@ public class Location {
      */
     public CreateHrisLocationResponse createHrisLocation(CreateHrisLocationRequest request) throws Exception {
         RequestOperation<CreateHrisLocationRequest, CreateHrisLocationResponse> operation
-              = new CreateHrisLocationOperation(sdkConfiguration);
+              = new CreateHrisLocation.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -125,7 +125,7 @@ public class Location {
      */
     public GetCommerceLocationResponse getCommerceLocation(GetCommerceLocationRequest request) throws Exception {
         RequestOperation<GetCommerceLocationRequest, GetCommerceLocationResponse> operation
-              = new GetCommerceLocationOperation(sdkConfiguration);
+              = new GetCommerceLocation.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -147,7 +147,7 @@ public class Location {
      */
     public GetHrisLocationResponse getHrisLocation(GetHrisLocationRequest request) throws Exception {
         RequestOperation<GetHrisLocationRequest, GetHrisLocationResponse> operation
-              = new GetHrisLocationOperation(sdkConfiguration);
+              = new GetHrisLocation.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -169,7 +169,7 @@ public class Location {
      */
     public ListCommerceLocationsResponse listCommerceLocations(ListCommerceLocationsRequest request) throws Exception {
         RequestOperation<ListCommerceLocationsRequest, ListCommerceLocationsResponse> operation
-              = new ListCommerceLocationsOperation(sdkConfiguration);
+              = new ListCommerceLocations.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -191,7 +191,7 @@ public class Location {
      */
     public ListHrisLocationsResponse listHrisLocations(ListHrisLocationsRequest request) throws Exception {
         RequestOperation<ListHrisLocationsRequest, ListHrisLocationsResponse> operation
-              = new ListHrisLocationsOperation(sdkConfiguration);
+              = new ListHrisLocations.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -213,7 +213,7 @@ public class Location {
      */
     public PatchCommerceLocationResponse patchCommerceLocation(PatchCommerceLocationRequest request) throws Exception {
         RequestOperation<PatchCommerceLocationRequest, PatchCommerceLocationResponse> operation
-              = new PatchCommerceLocationOperation(sdkConfiguration);
+              = new PatchCommerceLocation.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -235,7 +235,7 @@ public class Location {
      */
     public PatchHrisLocationResponse patchHrisLocation(PatchHrisLocationRequest request) throws Exception {
         RequestOperation<PatchHrisLocationRequest, PatchHrisLocationResponse> operation
-              = new PatchHrisLocationOperation(sdkConfiguration);
+              = new PatchHrisLocation.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -257,7 +257,7 @@ public class Location {
      */
     public RemoveCommerceLocationResponse removeCommerceLocation(RemoveCommerceLocationRequest request) throws Exception {
         RequestOperation<RemoveCommerceLocationRequest, RemoveCommerceLocationResponse> operation
-              = new RemoveCommerceLocationOperation(sdkConfiguration);
+              = new RemoveCommerceLocation.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -279,7 +279,7 @@ public class Location {
      */
     public RemoveHrisLocationResponse removeHrisLocation(RemoveHrisLocationRequest request) throws Exception {
         RequestOperation<RemoveHrisLocationRequest, RemoveHrisLocationResponse> operation
-              = new RemoveHrisLocationOperation(sdkConfiguration);
+              = new RemoveHrisLocation.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -301,7 +301,7 @@ public class Location {
      */
     public UpdateCommerceLocationResponse updateCommerceLocation(UpdateCommerceLocationRequest request) throws Exception {
         RequestOperation<UpdateCommerceLocationRequest, UpdateCommerceLocationResponse> operation
-              = new UpdateCommerceLocationOperation(sdkConfiguration);
+              = new UpdateCommerceLocation.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -323,7 +323,7 @@ public class Location {
      */
     public UpdateHrisLocationResponse updateHrisLocation(UpdateHrisLocationRequest request) throws Exception {
         RequestOperation<UpdateHrisLocationRequest, UpdateHrisLocationResponse> operation
-              = new UpdateHrisLocationOperation(sdkConfiguration);
+              = new UpdateHrisLocation.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

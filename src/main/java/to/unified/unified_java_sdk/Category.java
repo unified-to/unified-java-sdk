@@ -24,12 +24,12 @@ import to.unified.unified_java_sdk.models.operations.RemoveAccountingCategoryRes
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingCategoryRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingCategoryResponse;
-import to.unified.unified_java_sdk.operations.CreateAccountingCategoryOperation;
-import to.unified.unified_java_sdk.operations.GetAccountingCategoryOperation;
-import to.unified.unified_java_sdk.operations.ListAccountingCategoriesOperation;
-import to.unified.unified_java_sdk.operations.PatchAccountingCategoryOperation;
-import to.unified.unified_java_sdk.operations.RemoveAccountingCategoryOperation;
-import to.unified.unified_java_sdk.operations.UpdateAccountingCategoryOperation;
+import to.unified.unified_java_sdk.operations.CreateAccountingCategory;
+import to.unified.unified_java_sdk.operations.GetAccountingCategory;
+import to.unified.unified_java_sdk.operations.ListAccountingCategories;
+import to.unified.unified_java_sdk.operations.PatchAccountingCategory;
+import to.unified.unified_java_sdk.operations.RemoveAccountingCategory;
+import to.unified.unified_java_sdk.operations.UpdateAccountingCategory;
 
 
 public class Category {
@@ -57,7 +57,7 @@ public class Category {
      */
     public CreateAccountingCategoryResponse createAccountingCategory(CreateAccountingCategoryRequest request) throws Exception {
         RequestOperation<CreateAccountingCategoryRequest, CreateAccountingCategoryResponse> operation
-              = new CreateAccountingCategoryOperation(sdkConfiguration);
+              = new CreateAccountingCategory.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,7 +79,7 @@ public class Category {
      */
     public GetAccountingCategoryResponse getAccountingCategory(GetAccountingCategoryRequest request) throws Exception {
         RequestOperation<GetAccountingCategoryRequest, GetAccountingCategoryResponse> operation
-              = new GetAccountingCategoryOperation(sdkConfiguration);
+              = new GetAccountingCategory.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,7 +101,7 @@ public class Category {
      */
     public ListAccountingCategoriesResponse listAccountingCategories(ListAccountingCategoriesRequest request) throws Exception {
         RequestOperation<ListAccountingCategoriesRequest, ListAccountingCategoriesResponse> operation
-              = new ListAccountingCategoriesOperation(sdkConfiguration);
+              = new ListAccountingCategories.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,7 +123,7 @@ public class Category {
      */
     public PatchAccountingCategoryResponse patchAccountingCategory(PatchAccountingCategoryRequest request) throws Exception {
         RequestOperation<PatchAccountingCategoryRequest, PatchAccountingCategoryResponse> operation
-              = new PatchAccountingCategoryOperation(sdkConfiguration);
+              = new PatchAccountingCategory.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,7 +145,7 @@ public class Category {
      */
     public RemoveAccountingCategoryResponse removeAccountingCategory(RemoveAccountingCategoryRequest request) throws Exception {
         RequestOperation<RemoveAccountingCategoryRequest, RemoveAccountingCategoryResponse> operation
-              = new RemoveAccountingCategoryOperation(sdkConfiguration);
+              = new RemoveAccountingCategory.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,7 +167,7 @@ public class Category {
      */
     public UpdateAccountingCategoryResponse updateAccountingCategory(UpdateAccountingCategoryRequest request) throws Exception {
         RequestOperation<UpdateAccountingCategoryRequest, UpdateAccountingCategoryResponse> operation
-              = new UpdateAccountingCategoryOperation(sdkConfiguration);
+              = new UpdateAccountingCategory.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

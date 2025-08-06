@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.UpdateHrisDeviceOperation;
+import to.unified.unified_java_sdk.operations.UpdateHrisDevice;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdateHrisDeviceRequestBuilder {
@@ -28,7 +28,7 @@ public class UpdateHrisDeviceRequestBuilder {
     public UpdateHrisDeviceResponse call() throws Exception {
         
         RequestOperation<UpdateHrisDeviceRequest, UpdateHrisDeviceResponse> operation
-              = new UpdateHrisDeviceOperation(sdkConfiguration);
+              = new UpdateHrisDevice.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

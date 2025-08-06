@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.CreateKmsSpaceOperation;
+import to.unified.unified_java_sdk.operations.CreateKmsSpace;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateKmsSpaceRequestBuilder {
@@ -28,7 +28,7 @@ public class CreateKmsSpaceRequestBuilder {
     public CreateKmsSpaceResponse call() throws Exception {
         
         RequestOperation<CreateKmsSpaceRequest, CreateKmsSpaceResponse> operation
-              = new CreateKmsSpaceOperation(sdkConfiguration);
+              = new CreateKmsSpace.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

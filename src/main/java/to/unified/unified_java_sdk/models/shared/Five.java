@@ -6,11 +6,11 @@ package to.unified.unified_java_sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import java.lang.Object;
+import java.lang.Boolean;
+import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
-import java.util.List;
 import to.unified.unified_java_sdk.utils.OneOfDeserializer;
 import to.unified.unified_java_sdk.utils.TypedObject;
 import to.unified.unified_java_sdk.utils.Utils.JsonShape;
@@ -27,21 +27,33 @@ public class Five {
         this.value = value;
     }
 
-    public static Five of(List<Object> value) {
+    public static Five of(One value) {
         Utils.checkNotNull(value, "value");
-        return new Five(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<List<Object>>(){}));
+        return new Five(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<One>(){}));
     }
 
-    public static Five of(AtsMetadataSchemasExtraData2 value) {
+    public static Five of(String value) {
         Utils.checkNotNull(value, "value");
-        return new Five(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<AtsMetadataSchemasExtraData2>(){}));
+        return new Five(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<String>(){}));
+    }
+
+    public static Five of(double value) {
+        Utils.checkNotNull(value, "value");
+        return new Five(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Double>(){}));
+    }
+
+    public static Five of(boolean value) {
+        Utils.checkNotNull(value, "value");
+        return new Five(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Boolean>(){}));
     }
     
     /**
      * Returns an instance of one of these types:
      * <ul>
-     * <li>{@code java.util.List<java.lang.Object>}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.AtsMetadataSchemasExtraData2}</li>
+     * <li>{@code to.unified.unified_java_sdk.models.shared.One}</li>
+     * <li>{@code java.lang.String}</li>
+     * <li>{@code double}</li>
+     * <li>{@code boolean}</li>
      * </ul>
      * 
      * <p>Use {@code instanceof} to determine what type is returned. For example:
@@ -81,8 +93,10 @@ public class Five {
 
         public _Deserializer() {
             super(Five.class, false,
-                  TypeReferenceWithShape.of(new TypeReference<List<Object>>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<AtsMetadataSchemasExtraData2>() {}, JsonShape.DEFAULT));
+                  TypeReferenceWithShape.of(new TypeReference<Boolean>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<Double>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<String>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<One>() {}, JsonShape.DEFAULT));
         }
     }
     

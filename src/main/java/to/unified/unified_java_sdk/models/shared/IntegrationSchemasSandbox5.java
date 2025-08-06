@@ -6,11 +6,11 @@ package to.unified.unified_java_sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import java.lang.Object;
+import java.lang.Boolean;
+import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
-import java.util.List;
 import to.unified.unified_java_sdk.utils.OneOfDeserializer;
 import to.unified.unified_java_sdk.utils.TypedObject;
 import to.unified.unified_java_sdk.utils.Utils.JsonShape;
@@ -27,21 +27,33 @@ public class IntegrationSchemasSandbox5 {
         this.value = value;
     }
 
-    public static IntegrationSchemasSandbox5 of(List<Object> value) {
+    public static IntegrationSchemasSandbox5 of(IntegrationSchemasSandbox1 value) {
         Utils.checkNotNull(value, "value");
-        return new IntegrationSchemasSandbox5(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<List<Object>>(){}));
+        return new IntegrationSchemasSandbox5(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<IntegrationSchemasSandbox1>(){}));
     }
 
-    public static IntegrationSchemasSandbox5 of(IntegrationSchemasSandbox52 value) {
+    public static IntegrationSchemasSandbox5 of(String value) {
         Utils.checkNotNull(value, "value");
-        return new IntegrationSchemasSandbox5(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<IntegrationSchemasSandbox52>(){}));
+        return new IntegrationSchemasSandbox5(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<String>(){}));
+    }
+
+    public static IntegrationSchemasSandbox5 of(double value) {
+        Utils.checkNotNull(value, "value");
+        return new IntegrationSchemasSandbox5(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Double>(){}));
+    }
+
+    public static IntegrationSchemasSandbox5 of(boolean value) {
+        Utils.checkNotNull(value, "value");
+        return new IntegrationSchemasSandbox5(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Boolean>(){}));
     }
     
     /**
      * Returns an instance of one of these types:
      * <ul>
-     * <li>{@code java.util.List<java.lang.Object>}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.IntegrationSchemasSandbox52}</li>
+     * <li>{@code to.unified.unified_java_sdk.models.shared.IntegrationSchemasSandbox1}</li>
+     * <li>{@code java.lang.String}</li>
+     * <li>{@code double}</li>
+     * <li>{@code boolean}</li>
      * </ul>
      * 
      * <p>Use {@code instanceof} to determine what type is returned. For example:
@@ -81,8 +93,10 @@ public class IntegrationSchemasSandbox5 {
 
         public _Deserializer() {
             super(IntegrationSchemasSandbox5.class, false,
-                  TypeReferenceWithShape.of(new TypeReference<List<Object>>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<IntegrationSchemasSandbox52>() {}, JsonShape.DEFAULT));
+                  TypeReferenceWithShape.of(new TypeReference<Boolean>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<Double>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<String>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<IntegrationSchemasSandbox1>() {}, JsonShape.DEFAULT));
         }
     }
     

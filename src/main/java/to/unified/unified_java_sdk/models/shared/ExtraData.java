@@ -6,9 +6,14 @@ package to.unified.unified_java_sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import java.lang.Boolean;
+import java.lang.Double;
+import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.utils.OneOfDeserializer;
 import to.unified.unified_java_sdk.utils.TypedObject;
 import to.unified.unified_java_sdk.utils.Utils.JsonShape;
@@ -25,39 +30,39 @@ public class ExtraData {
         this.value = value;
     }
 
-    public static ExtraData of(One value) {
+    public static ExtraData of(Map<String, Object> value) {
         Utils.checkNotNull(value, "value");
-        return new ExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<One>(){}));
+        return new ExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<Map<String, Object>>(){}));
     }
 
-    public static ExtraData of(Two value) {
+    public static ExtraData of(String value) {
         Utils.checkNotNull(value, "value");
-        return new ExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<Two>(){}));
+        return new ExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<String>(){}));
     }
 
-    public static ExtraData of(Three value) {
+    public static ExtraData of(double value) {
         Utils.checkNotNull(value, "value");
-        return new ExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<Three>(){}));
+        return new ExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Double>(){}));
     }
 
-    public static ExtraData of(Four value) {
+    public static ExtraData of(boolean value) {
         Utils.checkNotNull(value, "value");
-        return new ExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<Four>(){}));
+        return new ExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Boolean>(){}));
     }
 
-    public static ExtraData of(Five value) {
+    public static ExtraData of(List<Five> value) {
         Utils.checkNotNull(value, "value");
-        return new ExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<Five>(){}));
+        return new ExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<List<Five>>(){}));
     }
     
     /**
      * Returns an instance of one of these types:
      * <ul>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.One}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.Two}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.Three}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.Four}</li>
-     * <li>{@code to.unified.unified_java_sdk.models.shared.Five}</li>
+     * <li>{@code java.util.Map<java.lang.String, java.lang.Object>}</li>
+     * <li>{@code java.lang.String}</li>
+     * <li>{@code double}</li>
+     * <li>{@code boolean}</li>
+     * <li>{@code java.util.List<to.unified.unified_java_sdk.models.shared.Five>}</li>
      * </ul>
      * 
      * <p>Use {@code instanceof} to determine what type is returned. For example:
@@ -97,11 +102,11 @@ public class ExtraData {
 
         public _Deserializer() {
             super(ExtraData.class, false,
-                  TypeReferenceWithShape.of(new TypeReference<Five>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<Four>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<Three>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<Two>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<One>() {}, JsonShape.DEFAULT));
+                  TypeReferenceWithShape.of(new TypeReference<List<Five>>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<Boolean>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<Double>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<String>() {}, JsonShape.DEFAULT),
+                  TypeReferenceWithShape.of(new TypeReference<Map<String, Object>>() {}, JsonShape.DEFAULT));
         }
     }
     

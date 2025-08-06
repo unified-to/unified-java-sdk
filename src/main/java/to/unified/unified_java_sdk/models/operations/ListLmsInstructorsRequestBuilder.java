@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.ListLmsInstructorsOperation;
+import to.unified.unified_java_sdk.operations.ListLmsInstructors;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListLmsInstructorsRequestBuilder {
@@ -28,7 +28,7 @@ public class ListLmsInstructorsRequestBuilder {
     public ListLmsInstructorsResponse call() throws Exception {
         
         RequestOperation<ListLmsInstructorsRequest, ListLmsInstructorsResponse> operation
-              = new ListLmsInstructorsOperation(sdkConfiguration);
+              = new ListLmsInstructors.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

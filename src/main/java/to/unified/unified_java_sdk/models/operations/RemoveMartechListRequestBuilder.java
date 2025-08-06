@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.RemoveMartechListOperation;
+import to.unified.unified_java_sdk.operations.RemoveMartechList;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveMartechListRequestBuilder {
@@ -28,7 +28,7 @@ public class RemoveMartechListRequestBuilder {
     public RemoveMartechListResponse call() throws Exception {
         
         RequestOperation<RemoveMartechListRequest, RemoveMartechListResponse> operation
-              = new RemoveMartechListOperation(sdkConfiguration);
+              = new RemoveMartechList.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

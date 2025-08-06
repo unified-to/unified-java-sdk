@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.ListKmsCommentsOperation;
+import to.unified.unified_java_sdk.operations.ListKmsComments;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListKmsCommentsRequestBuilder {
@@ -28,7 +28,7 @@ public class ListKmsCommentsRequestBuilder {
     public ListKmsCommentsResponse call() throws Exception {
         
         RequestOperation<ListKmsCommentsRequest, ListKmsCommentsResponse> operation
-              = new ListKmsCommentsOperation(sdkConfiguration);
+              = new ListKmsComments.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

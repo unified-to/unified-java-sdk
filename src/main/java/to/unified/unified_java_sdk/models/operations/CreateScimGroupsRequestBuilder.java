@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.CreateScimGroupsOperation;
+import to.unified.unified_java_sdk.operations.CreateScimGroups;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateScimGroupsRequestBuilder {
@@ -28,7 +28,7 @@ public class CreateScimGroupsRequestBuilder {
     public CreateScimGroupsResponse call() throws Exception {
         
         RequestOperation<CreateScimGroupsRequest, CreateScimGroupsResponse> operation
-              = new CreateScimGroupsOperation(sdkConfiguration);
+              = new CreateScimGroups.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

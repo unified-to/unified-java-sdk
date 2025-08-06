@@ -9,7 +9,7 @@ import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleRequest;
 import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleResponse;
-import to.unified.unified_java_sdk.operations.ListEnrichPeopleOperation;
+import to.unified.unified_java_sdk.operations.ListEnrichPeople;
 
 
 public class Person {
@@ -37,7 +37,7 @@ public class Person {
      */
     public ListEnrichPeopleResponse listEnrichPeople(ListEnrichPeopleRequest request) throws Exception {
         RequestOperation<ListEnrichPeopleRequest, ListEnrichPeopleResponse> operation
-              = new ListEnrichPeopleOperation(sdkConfiguration);
+              = new ListEnrichPeople.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

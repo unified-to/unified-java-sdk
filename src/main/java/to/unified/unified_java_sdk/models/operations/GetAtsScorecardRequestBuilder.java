@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.GetAtsScorecardOperation;
+import to.unified.unified_java_sdk.operations.GetAtsScorecard;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetAtsScorecardRequestBuilder {
@@ -28,7 +28,7 @@ public class GetAtsScorecardRequestBuilder {
     public GetAtsScorecardResponse call() throws Exception {
         
         RequestOperation<GetAtsScorecardRequest, GetAtsScorecardResponse> operation
-              = new GetAtsScorecardOperation(sdkConfiguration);
+              = new GetAtsScorecard.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }

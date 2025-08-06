@@ -7,7 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.GetCalendarLinkOperation;
+import to.unified.unified_java_sdk.operations.GetCalendarLink;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetCalendarLinkRequestBuilder {
@@ -28,7 +28,7 @@ public class GetCalendarLinkRequestBuilder {
     public GetCalendarLinkResponse call() throws Exception {
         
         RequestOperation<GetCalendarLinkRequest, GetCalendarLinkResponse> operation
-              = new GetCalendarLinkOperation(sdkConfiguration);
+              = new GetCalendarLink.Sync(sdkConfiguration);
 
         return operation.handleResponse(operation.doRequest(request));
     }
