@@ -43,6 +43,11 @@ public class CommerceItem {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("global_code")
+    private Optional<String> globalCode;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
@@ -124,6 +129,7 @@ public class CommerceItem {
             @JsonProperty("collection_ids") Optional<? extends List<String>> collectionIds,
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("description") Optional<String> description,
+            @JsonProperty("global_code") Optional<String> globalCode,
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("is_active") Optional<Boolean> isActive,
             @JsonProperty("is_taxable") Optional<Boolean> isTaxable,
@@ -143,6 +149,7 @@ public class CommerceItem {
         Utils.checkNotNull(collectionIds, "collectionIds");
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(description, "description");
+        Utils.checkNotNull(globalCode, "globalCode");
         Utils.checkNotNull(id, "id");
         Utils.checkNotNull(isActive, "isActive");
         Utils.checkNotNull(isTaxable, "isTaxable");
@@ -162,6 +169,7 @@ public class CommerceItem {
         this.collectionIds = collectionIds;
         this.createdAt = createdAt;
         this.description = description;
+        this.globalCode = globalCode;
         this.id = id;
         this.isActive = isActive;
         this.isTaxable = isTaxable;
@@ -186,7 +194,7 @@ public class CommerceItem {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -208,6 +216,11 @@ public class CommerceItem {
     @JsonIgnore
     public Optional<String> description() {
         return description;
+    }
+
+    @JsonIgnore
+    public Optional<String> globalCode() {
+        return globalCode;
     }
 
     @JsonIgnore
@@ -347,6 +360,19 @@ public class CommerceItem {
     public CommerceItem withDescription(Optional<String> description) {
         Utils.checkNotNull(description, "description");
         this.description = description;
+        return this;
+    }
+
+    public CommerceItem withGlobalCode(String globalCode) {
+        Utils.checkNotNull(globalCode, "globalCode");
+        this.globalCode = Optional.ofNullable(globalCode);
+        return this;
+    }
+
+
+    public CommerceItem withGlobalCode(Optional<String> globalCode) {
+        Utils.checkNotNull(globalCode, "globalCode");
+        this.globalCode = globalCode;
         return this;
     }
 
@@ -565,6 +591,7 @@ public class CommerceItem {
             Utils.enhancedDeepEquals(this.collectionIds, other.collectionIds) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
+            Utils.enhancedDeepEquals(this.globalCode, other.globalCode) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
             Utils.enhancedDeepEquals(this.isTaxable, other.isTaxable) &&
@@ -586,12 +613,12 @@ public class CommerceItem {
     public int hashCode() {
         return Utils.enhancedHash(
             accountId, collectionIds, createdAt,
-            description, id, isActive,
-            isTaxable, media, metadata,
-            name, publicDescription, publicName,
-            raw, slug, tags,
-            type, updatedAt, variants,
-            vendorName);
+            description, globalCode, id,
+            isActive, isTaxable, media,
+            metadata, name, publicDescription,
+            publicName, raw, slug,
+            tags, type, updatedAt,
+            variants, vendorName);
     }
     
     @Override
@@ -601,6 +628,7 @@ public class CommerceItem {
                 "collectionIds", collectionIds,
                 "createdAt", createdAt,
                 "description", description,
+                "globalCode", globalCode,
                 "id", id,
                 "isActive", isActive,
                 "isTaxable", isTaxable,
@@ -628,6 +656,8 @@ public class CommerceItem {
         private Optional<OffsetDateTime> createdAt = Optional.empty();
 
         private Optional<String> description = Optional.empty();
+
+        private Optional<String> globalCode = Optional.empty();
 
         private Optional<String> id = Optional.empty();
 
@@ -712,6 +742,19 @@ public class CommerceItem {
         public Builder description(Optional<String> description) {
             Utils.checkNotNull(description, "description");
             this.description = description;
+            return this;
+        }
+
+
+        public Builder globalCode(String globalCode) {
+            Utils.checkNotNull(globalCode, "globalCode");
+            this.globalCode = Optional.ofNullable(globalCode);
+            return this;
+        }
+
+        public Builder globalCode(Optional<String> globalCode) {
+            Utils.checkNotNull(globalCode, "globalCode");
+            this.globalCode = globalCode;
             return this;
         }
 
@@ -920,12 +963,12 @@ public class CommerceItem {
 
             return new CommerceItem(
                 accountId, collectionIds, createdAt,
-                description, id, isActive,
-                isTaxable, media, metadata,
-                name, publicDescription, publicName,
-                raw, slug, tags,
-                type, updatedAt, variants,
-                vendorName);
+                description, globalCode, id,
+                isActive, isTaxable, media,
+                metadata, name, publicDescription,
+                publicName, raw, slug,
+                tags, type, updatedAt,
+                variants, vendorName);
         }
 
     }
