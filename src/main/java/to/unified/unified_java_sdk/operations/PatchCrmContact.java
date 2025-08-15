@@ -49,6 +49,33 @@ public class PatchCrmContact {
             return Optional.ofNullable(this.securitySource);
         }
 
+        BeforeRequestContextImpl createBeforeRequestContext() {
+            return new BeforeRequestContextImpl(
+                    this.sdkConfiguration,
+                    this.baseUrl,
+                    "patchCrmContact",
+                    java.util.Optional.of(java.util.List.of()),
+                    securitySource());
+        }
+
+        AfterSuccessContextImpl createAfterSuccessContext() {
+            return new AfterSuccessContextImpl(
+                    this.sdkConfiguration,
+                    this.baseUrl,
+                    "patchCrmContact",
+                    java.util.Optional.of(java.util.List.of()),
+                    securitySource());
+        }
+
+        AfterErrorContextImpl createAfterErrorContext() {
+            return new AfterErrorContextImpl(
+                    this.sdkConfiguration,
+                    this.baseUrl,
+                    "patchCrmContact",
+                    java.util.Optional.of(java.util.List.of()),
+                    securitySource());
+        }
+
         HttpRequest buildRequest(PatchCrmContactRequest request) throws Exception {
             String url = Utils.generateURL(
                     PatchCrmContactRequest.class,
@@ -79,14 +106,7 @@ public class PatchCrmContact {
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
 
-            return sdkConfiguration.hooks().beforeRequest(
-                    new BeforeRequestContextImpl(
-                            this.sdkConfiguration,
-                            this.baseUrl,
-                            "patchCrmContact",
-                            java.util.Optional.of(java.util.List.of()),
-                            securitySource()),
-                    req.build());
+            return req.build();
         }
     }
 
@@ -96,34 +116,25 @@ public class PatchCrmContact {
             super(sdkConfiguration);
         }
 
+        private HttpRequest onBuildRequest(PatchCrmContactRequest request) throws Exception {
+            HttpRequest req = buildRequest(request);
+            return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
+        }
+
         private HttpResponse<InputStream> onError(HttpResponse<InputStream> response, Exception error) throws Exception {
-            return sdkConfiguration.hooks()
-                    .afterError(
-                            new AfterErrorContextImpl(
-                                    this.sdkConfiguration,
-                                    this.baseUrl,
-                                    "patchCrmContact",
-                                    java.util.Optional.of(java.util.List.of()),
-                                    securitySource()),
-                            Optional.ofNullable(response),
-                            Optional.ofNullable(error));
+            return sdkConfiguration.hooks().afterError(
+                    createAfterErrorContext(),
+                    Optional.ofNullable(response),
+                    Optional.ofNullable(error));
         }
 
         private HttpResponse<InputStream> onSuccess(HttpResponse<InputStream> response) throws Exception {
-            return sdkConfiguration.hooks()
-                    .afterSuccess(
-                            new AfterSuccessContextImpl(
-                                    this.sdkConfiguration,
-                                    this.baseUrl,
-                                    "patchCrmContact",
-                                    java.util.Optional.of(java.util.List.of()),
-                                    securitySource()),
-                            response);
+            return sdkConfiguration.hooks().afterSuccess(createAfterSuccessContext(), response);
         }
 
         @Override
         public HttpResponse<InputStream> doRequest(PatchCrmContactRequest request) throws Exception {
-            HttpRequest r = buildRequest(request);
+            HttpRequest r = onBuildRequest(request);
             HttpResponse<InputStream> httpRes;
             try {
                 httpRes = client.send(r);

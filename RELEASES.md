@@ -1815,3 +1815,13 @@ Based on:
 - [java v0.34.3] .
 ### Releases
 - [Maven Central v0.34.3] https://central.sonatype.com/artifact/to.unified/unified-java-sdk/0.34.3 - .
+
+## 2025-08-15 00:29:12
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.604.1 (2.683.1) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [java v0.34.4] .
+### Releases
+- [Maven Central v0.34.4] https://central.sonatype.com/artifact/to.unified/unified-java-sdk/0.34.4 - .

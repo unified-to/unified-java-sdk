@@ -45,7 +45,6 @@ import java.util.Optional;
 @JsonSerialize(using = PropertyConnectionPermissions._Serializer.class)
 public class PropertyConnectionPermissions {
 
-    public static final PropertyConnectionPermissions AUTH_LOGIN = new PropertyConnectionPermissions("auth_login");
     public static final PropertyConnectionPermissions ACCOUNTING_ACCOUNT_READ = new PropertyConnectionPermissions("accounting_account_read");
     public static final PropertyConnectionPermissions ACCOUNTING_ACCOUNT_WRITE = new PropertyConnectionPermissions("accounting_account_write");
     public static final PropertyConnectionPermissions ACCOUNTING_TRANSACTION_READ = new PropertyConnectionPermissions("accounting_transaction_read");
@@ -284,7 +283,6 @@ public class PropertyConnectionPermissions {
 
     private static final Map<String, PropertyConnectionPermissions> createValuesMap() {
         Map<String, PropertyConnectionPermissions> map = new LinkedHashMap<>();
-        map.put("auth_login", AUTH_LOGIN);
         map.put("accounting_account_read", ACCOUNTING_ACCOUNT_READ);
         map.put("accounting_account_write", ACCOUNTING_ACCOUNT_WRITE);
         map.put("accounting_transaction_read", ACCOUNTING_TRANSACTION_READ);
@@ -457,7 +455,6 @@ public class PropertyConnectionPermissions {
 
     private static final Map<String, PropertyConnectionPermissionsEnum> createEnumsMap() {
         Map<String, PropertyConnectionPermissionsEnum> map = new HashMap<>();
-        map.put("auth_login", PropertyConnectionPermissionsEnum.AUTH_LOGIN);
         map.put("accounting_account_read", PropertyConnectionPermissionsEnum.ACCOUNTING_ACCOUNT_READ);
         map.put("accounting_account_write", PropertyConnectionPermissionsEnum.ACCOUNTING_ACCOUNT_WRITE);
         map.put("accounting_transaction_read", PropertyConnectionPermissionsEnum.ACCOUNTING_TRANSACTION_READ);
@@ -660,7 +657,6 @@ public class PropertyConnectionPermissions {
     
     public enum PropertyConnectionPermissionsEnum {
 
-        AUTH_LOGIN("auth_login"),
         ACCOUNTING_ACCOUNT_READ("accounting_account_read"),
         ACCOUNTING_ACCOUNT_WRITE("accounting_account_write"),
         ACCOUNTING_TRANSACTION_READ("accounting_transaction_read"),
