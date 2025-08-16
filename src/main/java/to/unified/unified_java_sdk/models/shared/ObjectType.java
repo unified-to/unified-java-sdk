@@ -118,6 +118,7 @@ public class ObjectType {
     public static final ObjectType TASK_PROJECT = new ObjectType("task_project");
     public static final ObjectType TASK_TASK = new ObjectType("task_task");
     public static final ObjectType TASK_COMMENT = new ObjectType("task_comment");
+    public static final ObjectType TASK_CHANGE = new ObjectType("task_change");
     public static final ObjectType SCIM_USERS = new ObjectType("scim_users");
     public static final ObjectType SCIM_GROUPS = new ObjectType("scim_groups");
     public static final ObjectType LMS_COURSE = new ObjectType("lms_course");
@@ -279,6 +280,7 @@ public class ObjectType {
         map.put("task_project", TASK_PROJECT);
         map.put("task_task", TASK_TASK);
         map.put("task_comment", TASK_COMMENT);
+        map.put("task_change", TASK_CHANGE);
         map.put("scim_users", SCIM_USERS);
         map.put("scim_groups", SCIM_GROUPS);
         map.put("lms_course", LMS_COURSE);
@@ -374,6 +376,7 @@ public class ObjectType {
         map.put("task_project", ObjectTypeEnum.TASK_PROJECT);
         map.put("task_task", ObjectTypeEnum.TASK_TASK);
         map.put("task_comment", ObjectTypeEnum.TASK_COMMENT);
+        map.put("task_change", ObjectTypeEnum.TASK_CHANGE);
         map.put("scim_users", ObjectTypeEnum.SCIM_USERS);
         map.put("scim_groups", ObjectTypeEnum.SCIM_GROUPS);
         map.put("lms_course", ObjectTypeEnum.LMS_COURSE);
@@ -499,6 +502,7 @@ public class ObjectType {
         TASK_PROJECT("task_project"),
         TASK_TASK("task_task"),
         TASK_COMMENT("task_comment"),
+        TASK_CHANGE("task_change"),
         SCIM_USERS("scim_users"),
         SCIM_GROUPS("scim_groups"),
         LMS_COURSE("lms_course"),

@@ -15,6 +15,9 @@ import to.unified.unified_java_sdk.models.operations.CreateTaskProjectResponse;
 import to.unified.unified_java_sdk.models.operations.CreateTaskTaskRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTaskTaskRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateTaskTaskResponse;
+import to.unified.unified_java_sdk.models.operations.GetTaskChangeRequest;
+import to.unified.unified_java_sdk.models.operations.GetTaskChangeRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetTaskChangeResponse;
 import to.unified.unified_java_sdk.models.operations.GetTaskCommentRequest;
 import to.unified.unified_java_sdk.models.operations.GetTaskCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetTaskCommentResponse;
@@ -24,6 +27,9 @@ import to.unified.unified_java_sdk.models.operations.GetTaskProjectResponse;
 import to.unified.unified_java_sdk.models.operations.GetTaskTaskRequest;
 import to.unified.unified_java_sdk.models.operations.GetTaskTaskRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetTaskTaskResponse;
+import to.unified.unified_java_sdk.models.operations.ListTaskChangesRequest;
+import to.unified.unified_java_sdk.models.operations.ListTaskChangesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListTaskChangesResponse;
 import to.unified.unified_java_sdk.models.operations.ListTaskCommentsRequest;
 import to.unified.unified_java_sdk.models.operations.ListTaskCommentsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListTaskCommentsResponse;
@@ -63,9 +69,11 @@ import to.unified.unified_java_sdk.models.operations.UpdateTaskTaskResponse;
 import to.unified.unified_java_sdk.operations.CreateTaskComment;
 import to.unified.unified_java_sdk.operations.CreateTaskProject;
 import to.unified.unified_java_sdk.operations.CreateTaskTask;
+import to.unified.unified_java_sdk.operations.GetTaskChange;
 import to.unified.unified_java_sdk.operations.GetTaskComment;
 import to.unified.unified_java_sdk.operations.GetTaskProject;
 import to.unified.unified_java_sdk.operations.GetTaskTask;
+import to.unified.unified_java_sdk.operations.ListTaskChanges;
 import to.unified.unified_java_sdk.operations.ListTaskComments;
 import to.unified.unified_java_sdk.operations.ListTaskProjects;
 import to.unified.unified_java_sdk.operations.ListTaskTasks;
@@ -154,6 +162,28 @@ public class Task {
     }
 
     /**
+     * Retrieve a change
+     * 
+     * @return The call builder
+     */
+    public GetTaskChangeRequestBuilder getTaskChange() {
+        return new GetTaskChangeRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a change
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public GetTaskChangeResponse getTaskChange(GetTaskChangeRequest request) throws Exception {
+        RequestOperation<GetTaskChangeRequest, GetTaskChangeResponse> operation
+              = new GetTaskChange.Sync(sdkConfiguration);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Retrieve a comment
      * 
      * @return The call builder
@@ -216,6 +246,28 @@ public class Task {
     public GetTaskTaskResponse getTaskTask(GetTaskTaskRequest request) throws Exception {
         RequestOperation<GetTaskTaskRequest, GetTaskTaskResponse> operation
               = new GetTaskTask.Sync(sdkConfiguration);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all changes
+     * 
+     * @return The call builder
+     */
+    public ListTaskChangesRequestBuilder listTaskChanges() {
+        return new ListTaskChangesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all changes
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public ListTaskChangesResponse listTaskChanges(ListTaskChangesRequest request) throws Exception {
+        RequestOperation<ListTaskChangesRequest, ListTaskChangesResponse> operation
+              = new ListTaskChanges.Sync(sdkConfiguration);
         return operation.handleResponse(operation.doRequest(request));
     }
 

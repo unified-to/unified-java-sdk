@@ -175,6 +175,7 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions TASK_PROJECT_WRITE = new PropertyConnectionPermissions("task_project_write");
     public static final PropertyConnectionPermissions TASK_TASK_READ = new PropertyConnectionPermissions("task_task_read");
     public static final PropertyConnectionPermissions TASK_TASK_WRITE = new PropertyConnectionPermissions("task_task_write");
+    public static final PropertyConnectionPermissions TASK_CHANGE_READ = new PropertyConnectionPermissions("task_change_read");
     public static final PropertyConnectionPermissions TASK_COMMENT_READ = new PropertyConnectionPermissions("task_comment_read");
     public static final PropertyConnectionPermissions TASK_COMMENT_WRITE = new PropertyConnectionPermissions("task_comment_write");
     public static final PropertyConnectionPermissions SCIM_USERS_READ = new PropertyConnectionPermissions("scim_users_read");
@@ -413,6 +414,7 @@ public class PropertyConnectionPermissions {
         map.put("task_project_write", TASK_PROJECT_WRITE);
         map.put("task_task_read", TASK_TASK_READ);
         map.put("task_task_write", TASK_TASK_WRITE);
+        map.put("task_change_read", TASK_CHANGE_READ);
         map.put("task_comment_read", TASK_COMMENT_READ);
         map.put("task_comment_write", TASK_COMMENT_WRITE);
         map.put("scim_users_read", SCIM_USERS_READ);
@@ -585,6 +587,7 @@ public class PropertyConnectionPermissions {
         map.put("task_project_write", PropertyConnectionPermissionsEnum.TASK_PROJECT_WRITE);
         map.put("task_task_read", PropertyConnectionPermissionsEnum.TASK_TASK_READ);
         map.put("task_task_write", PropertyConnectionPermissionsEnum.TASK_TASK_WRITE);
+        map.put("task_change_read", PropertyConnectionPermissionsEnum.TASK_CHANGE_READ);
         map.put("task_comment_read", PropertyConnectionPermissionsEnum.TASK_COMMENT_READ);
         map.put("task_comment_write", PropertyConnectionPermissionsEnum.TASK_COMMENT_WRITE);
         map.put("scim_users_read", PropertyConnectionPermissionsEnum.SCIM_USERS_READ);
@@ -787,6 +790,7 @@ public class PropertyConnectionPermissions {
         TASK_PROJECT_WRITE("task_project_write"),
         TASK_TASK_READ("task_task_read"),
         TASK_TASK_WRITE("task_task_write"),
+        TASK_CHANGE_READ("task_change_read"),
         TASK_COMMENT_READ("task_comment_read"),
         TASK_COMMENT_WRITE("task_comment_write"),
         SCIM_USERS_READ("scim_users_read"),

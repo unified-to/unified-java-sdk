@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 3a5734f3a7c4cfbbb830e6e58476de9b
+  docChecksum: 190c325c2a6a2949d578db67163791d8
   docVersion: "1.0"
-  speakeasyVersion: 1.604.1
-  generationVersion: 2.683.1
-  releaseVersion: 0.34.4
-  configChecksum: ca1583c346ca80e1ec64a973680f2518
+  speakeasyVersion: 1.605.0
+  generationVersion: 2.684.0
+  releaseVersion: 0.34.5
+  configChecksum: 9b971f98f8443b7b10939c34b7777a75
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -325,6 +325,8 @@ generatedFiles:
   - docs/models/operations/GetScimUsersResponse.md
   - docs/models/operations/GetStorageFileRequest.md
   - docs/models/operations/GetStorageFileResponse.md
+  - docs/models/operations/GetTaskChangeRequest.md
+  - docs/models/operations/GetTaskChangeResponse.md
   - docs/models/operations/GetTaskCommentRequest.md
   - docs/models/operations/GetTaskCommentResponse.md
   - docs/models/operations/GetTaskProjectRequest.md
@@ -511,6 +513,8 @@ generatedFiles:
   - docs/models/operations/ListScimUsersResponse.md
   - docs/models/operations/ListStorageFilesRequest.md
   - docs/models/operations/ListStorageFilesResponse.md
+  - docs/models/operations/ListTaskChangesRequest.md
+  - docs/models/operations/ListTaskChangesResponse.md
   - docs/models/operations/ListTaskCommentsRequest.md
   - docs/models/operations/ListTaskCommentsResponse.md
   - docs/models/operations/ListTaskProjectsRequest.md
@@ -1358,6 +1362,8 @@ generatedFiles:
   - docs/models/shared/StorageFile.md
   - docs/models/shared/StorageFileType.md
   - docs/models/shared/StoragePermission.md
+  - docs/models/shared/TaskChange.md
+  - docs/models/shared/TaskChangeItem.md
   - docs/models/shared/TaskComment.md
   - docs/models/shared/TaskMetadata.md
   - docs/models/shared/TaskMetadata1.md
@@ -1411,6 +1417,7 @@ generatedFiles:
   - docs/sdks/call/README.md
   - docs/sdks/candidate/README.md
   - docs/sdks/category/README.md
+  - docs/sdks/change/README.md
   - docs/sdks/channel/README.md
   - docs/sdks/class/README.md
   - docs/sdks/collection/README.md
@@ -1519,6 +1526,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/Call.java
   - src/main/java/to/unified/unified_java_sdk/Candidate.java
   - src/main/java/to/unified/unified_java_sdk/Category.java
+  - src/main/java/to/unified/unified_java_sdk/Change.java
   - src/main/java/to/unified/unified_java_sdk/Channel.java
   - src/main/java/to/unified/unified_java_sdk/Class.java
   - src/main/java/to/unified/unified_java_sdk/Collection.java
@@ -2056,6 +2064,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetStorageFileRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetStorageFileRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetStorageFileResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetTaskChangeRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetTaskChangeRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetTaskChangeResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetTaskCommentRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetTaskCommentRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetTaskCommentResponse.java
@@ -2335,6 +2346,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListStorageFilesRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListStorageFilesRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListStorageFilesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/ListTaskChangesRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/ListTaskChangesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/ListTaskChangesResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListTaskCommentsRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListTaskCommentsRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListTaskCommentsResponse.java
@@ -3424,6 +3438,8 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/StorageFile.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/StorageFileType.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/StoragePermission.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/TaskChange.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/TaskChangeItem.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/TaskComment.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/TaskMetadata.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/TaskMetadata1.java
@@ -3610,6 +3626,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/GetScimGroups.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetScimUsers.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetStorageFile.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetTaskChange.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetTaskComment.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetTaskProject.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetTaskTask.java
@@ -3703,6 +3720,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/ListScimGroups.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListScimUsers.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListStorageFiles.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListTaskChanges.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListTaskComments.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListTaskProjects.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListTaskTasks.java
@@ -8397,5 +8415,28 @@ examples:
       responses:
         "200":
           application/json: {}
+  getTaskChange:
+    speakeasy-default-get-task-change:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listTaskChanges:
+    speakeasy-default-list-task-changes:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
+releaseNotes: |
+  ## SDK Changes Detected:
+  * `unified-to.task.getTaskChange()`: **Added**
+  * `unified-to.task.listTaskChanges()`: **Added**
+  * `unified-to.change.getTaskChange()`: **Added**
+  * `unified-to.change.listTaskChanges()`: **Added**
