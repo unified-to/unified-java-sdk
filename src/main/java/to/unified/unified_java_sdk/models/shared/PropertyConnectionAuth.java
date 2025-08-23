@@ -129,6 +129,11 @@ public class PropertyConnectionAuth {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("refresh_url")
+    private Optional<String> refreshUrl;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     private Optional<String> state;
 
@@ -169,6 +174,7 @@ public class PropertyConnectionAuth {
             @JsonProperty("refresh_token") Optional<String> refreshToken,
             @JsonProperty("refresh_token_expires_date") Optional<OffsetDateTime> refreshTokenExpiresDate,
             @JsonProperty("refresh_token_expires_in") Optional<Double> refreshTokenExpiresIn,
+            @JsonProperty("refresh_url") Optional<String> refreshUrl,
             @JsonProperty("state") Optional<String> state,
             @JsonProperty("token") Optional<String> token,
             @JsonProperty("token_url") Optional<String> tokenUrl,
@@ -193,6 +199,7 @@ public class PropertyConnectionAuth {
         Utils.checkNotNull(refreshToken, "refreshToken");
         Utils.checkNotNull(refreshTokenExpiresDate, "refreshTokenExpiresDate");
         Utils.checkNotNull(refreshTokenExpiresIn, "refreshTokenExpiresIn");
+        Utils.checkNotNull(refreshUrl, "refreshUrl");
         Utils.checkNotNull(state, "state");
         Utils.checkNotNull(token, "token");
         Utils.checkNotNull(tokenUrl, "tokenUrl");
@@ -217,6 +224,7 @@ public class PropertyConnectionAuth {
         this.refreshToken = refreshToken;
         this.refreshTokenExpiresDate = refreshTokenExpiresDate;
         this.refreshTokenExpiresIn = refreshTokenExpiresIn;
+        this.refreshUrl = refreshUrl;
         this.state = state;
         this.token = token;
         this.tokenUrl = tokenUrl;
@@ -231,7 +239,8 @@ public class PropertyConnectionAuth {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -338,6 +347,11 @@ public class PropertyConnectionAuth {
     @JsonIgnore
     public Optional<Double> refreshTokenExpiresIn() {
         return refreshTokenExpiresIn;
+    }
+
+    @JsonIgnore
+    public Optional<String> refreshUrl() {
+        return refreshUrl;
     }
 
     @JsonIgnore
@@ -631,6 +645,19 @@ public class PropertyConnectionAuth {
         return this;
     }
 
+    public PropertyConnectionAuth withRefreshUrl(String refreshUrl) {
+        Utils.checkNotNull(refreshUrl, "refreshUrl");
+        this.refreshUrl = Optional.ofNullable(refreshUrl);
+        return this;
+    }
+
+
+    public PropertyConnectionAuth withRefreshUrl(Optional<String> refreshUrl) {
+        Utils.checkNotNull(refreshUrl, "refreshUrl");
+        this.refreshUrl = refreshUrl;
+        return this;
+    }
+
     public PropertyConnectionAuth withState(String state) {
         Utils.checkNotNull(state, "state");
         this.state = Optional.ofNullable(state);
@@ -713,6 +740,7 @@ public class PropertyConnectionAuth {
             Utils.enhancedDeepEquals(this.refreshToken, other.refreshToken) &&
             Utils.enhancedDeepEquals(this.refreshTokenExpiresDate, other.refreshTokenExpiresDate) &&
             Utils.enhancedDeepEquals(this.refreshTokenExpiresIn, other.refreshTokenExpiresIn) &&
+            Utils.enhancedDeepEquals(this.refreshUrl, other.refreshUrl) &&
             Utils.enhancedDeepEquals(this.state, other.state) &&
             Utils.enhancedDeepEquals(this.token, other.token) &&
             Utils.enhancedDeepEquals(this.tokenUrl, other.tokenUrl) &&
@@ -728,8 +756,9 @@ public class PropertyConnectionAuth {
             emails, expiresIn, expiryDate,
             key, meta, name,
             otherAuthInfo, pem, refreshToken,
-            refreshTokenExpiresDate, refreshTokenExpiresIn, state,
-            token, tokenUrl, userId);
+            refreshTokenExpiresDate, refreshTokenExpiresIn, refreshUrl,
+            state, token, tokenUrl,
+            userId);
     }
     
     @Override
@@ -755,6 +784,7 @@ public class PropertyConnectionAuth {
                 "refreshToken", refreshToken,
                 "refreshTokenExpiresDate", refreshTokenExpiresDate,
                 "refreshTokenExpiresIn", refreshTokenExpiresIn,
+                "refreshUrl", refreshUrl,
                 "state", state,
                 "token", token,
                 "tokenUrl", tokenUrl,
@@ -803,6 +833,8 @@ public class PropertyConnectionAuth {
         private Optional<OffsetDateTime> refreshTokenExpiresDate = Optional.empty();
 
         private Optional<Double> refreshTokenExpiresIn = Optional.empty();
+
+        private Optional<String> refreshUrl = Optional.empty();
 
         private Optional<String> state = Optional.empty();
 
@@ -1083,6 +1115,19 @@ public class PropertyConnectionAuth {
         }
 
 
+        public Builder refreshUrl(String refreshUrl) {
+            Utils.checkNotNull(refreshUrl, "refreshUrl");
+            this.refreshUrl = Optional.ofNullable(refreshUrl);
+            return this;
+        }
+
+        public Builder refreshUrl(Optional<String> refreshUrl) {
+            Utils.checkNotNull(refreshUrl, "refreshUrl");
+            this.refreshUrl = refreshUrl;
+            return this;
+        }
+
+
         public Builder state(String state) {
             Utils.checkNotNull(state, "state");
             this.state = Optional.ofNullable(state);
@@ -1143,8 +1188,9 @@ public class PropertyConnectionAuth {
                 emails, expiresIn, expiryDate,
                 key, meta, name,
                 otherAuthInfo, pem, refreshToken,
-                refreshTokenExpiresDate, refreshTokenExpiresIn, state,
-                token, tokenUrl, userId);
+                refreshTokenExpiresDate, refreshTokenExpiresIn, refreshUrl,
+                state, token, tokenUrl,
+                userId);
         }
 
     }

@@ -49,6 +49,11 @@ public class Webhook {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("db_schema")
+    private Optional<String> dbSchema;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("db_type")
     private Optional<? extends DbType> dbType;
 
@@ -148,6 +153,7 @@ public class Webhook {
             @JsonProperty("connection_id") String connectionId,
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("db_name_prefix") Optional<String> dbNamePrefix,
+            @JsonProperty("db_schema") Optional<String> dbSchema,
             @JsonProperty("db_type") Optional<? extends DbType> dbType,
             @JsonProperty("db_url") Optional<String> dbUrl,
             @JsonProperty("environment") Optional<String> environment,
@@ -171,6 +177,7 @@ public class Webhook {
         Utils.checkNotNull(connectionId, "connectionId");
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(dbNamePrefix, "dbNamePrefix");
+        Utils.checkNotNull(dbSchema, "dbSchema");
         Utils.checkNotNull(dbType, "dbType");
         Utils.checkNotNull(dbUrl, "dbUrl");
         Utils.checkNotNull(environment, "environment");
@@ -194,6 +201,7 @@ public class Webhook {
         this.connectionId = connectionId;
         this.createdAt = createdAt;
         this.dbNamePrefix = dbNamePrefix;
+        this.dbSchema = dbSchema;
         this.dbType = dbType;
         this.dbUrl = dbUrl;
         this.environment = environment;
@@ -221,12 +229,12 @@ public class Webhook {
             ObjectType objectType) {
         this(Optional.empty(), connectionId, Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), event, Optional.empty(),
+            Optional.empty(), Optional.empty(), event,
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), objectType,
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            objectType, Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -247,6 +255,11 @@ public class Webhook {
     @JsonIgnore
     public Optional<String> dbNamePrefix() {
         return dbNamePrefix;
+    }
+
+    @JsonIgnore
+    public Optional<String> dbSchema() {
+        return dbSchema;
     }
 
     @SuppressWarnings("unchecked")
@@ -399,6 +412,19 @@ public class Webhook {
     public Webhook withDbNamePrefix(Optional<String> dbNamePrefix) {
         Utils.checkNotNull(dbNamePrefix, "dbNamePrefix");
         this.dbNamePrefix = dbNamePrefix;
+        return this;
+    }
+
+    public Webhook withDbSchema(String dbSchema) {
+        Utils.checkNotNull(dbSchema, "dbSchema");
+        this.dbSchema = Optional.ofNullable(dbSchema);
+        return this;
+    }
+
+
+    public Webhook withDbSchema(Optional<String> dbSchema) {
+        Utils.checkNotNull(dbSchema, "dbSchema");
+        this.dbSchema = dbSchema;
         return this;
     }
 
@@ -655,6 +681,7 @@ public class Webhook {
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.dbNamePrefix, other.dbNamePrefix) &&
+            Utils.enhancedDeepEquals(this.dbSchema, other.dbSchema) &&
             Utils.enhancedDeepEquals(this.dbType, other.dbType) &&
             Utils.enhancedDeepEquals(this.dbUrl, other.dbUrl) &&
             Utils.enhancedDeepEquals(this.environment, other.environment) &&
@@ -680,13 +707,13 @@ public class Webhook {
     public int hashCode() {
         return Utils.enhancedHash(
             checkedAt, connectionId, createdAt,
-            dbNamePrefix, dbType, dbUrl,
-            environment, event, fields,
-            filters, hookUrl, id,
-            integrationType, interval, isHealthy,
-            isPaused, meta, objectType,
-            pageMaxLimit, runs, updatedAt,
-            webhookType, workspaceId);
+            dbNamePrefix, dbSchema, dbType,
+            dbUrl, environment, event,
+            fields, filters, hookUrl,
+            id, integrationType, interval,
+            isHealthy, isPaused, meta,
+            objectType, pageMaxLimit, runs,
+            updatedAt, webhookType, workspaceId);
     }
     
     @Override
@@ -696,6 +723,7 @@ public class Webhook {
                 "connectionId", connectionId,
                 "createdAt", createdAt,
                 "dbNamePrefix", dbNamePrefix,
+                "dbSchema", dbSchema,
                 "dbType", dbType,
                 "dbUrl", dbUrl,
                 "environment", environment,
@@ -727,6 +755,8 @@ public class Webhook {
         private Optional<OffsetDateTime> createdAt = Optional.empty();
 
         private Optional<String> dbNamePrefix = Optional.empty();
+
+        private Optional<String> dbSchema = Optional.empty();
 
         private Optional<? extends DbType> dbType = Optional.empty();
 
@@ -813,6 +843,19 @@ public class Webhook {
         public Builder dbNamePrefix(Optional<String> dbNamePrefix) {
             Utils.checkNotNull(dbNamePrefix, "dbNamePrefix");
             this.dbNamePrefix = dbNamePrefix;
+            return this;
+        }
+
+
+        public Builder dbSchema(String dbSchema) {
+            Utils.checkNotNull(dbSchema, "dbSchema");
+            this.dbSchema = Optional.ofNullable(dbSchema);
+            return this;
+        }
+
+        public Builder dbSchema(Optional<String> dbSchema) {
+            Utils.checkNotNull(dbSchema, "dbSchema");
+            this.dbSchema = dbSchema;
             return this;
         }
 
@@ -1064,13 +1107,13 @@ public class Webhook {
 
             return new Webhook(
                 checkedAt, connectionId, createdAt,
-                dbNamePrefix, dbType, dbUrl,
-                environment, event, fields,
-                filters, hookUrl, id,
-                integrationType, interval, isHealthy,
-                isPaused, meta, objectType,
-                pageMaxLimit, runs, updatedAt,
-                webhookType, workspaceId);
+                dbNamePrefix, dbSchema, dbType,
+                dbUrl, environment, event,
+                fields, filters, hookUrl,
+                id, integrationType, interval,
+                isHealthy, isPaused, meta,
+                objectType, pageMaxLimit, runs,
+                updatedAt, webhookType, workspaceId);
         }
 
 
