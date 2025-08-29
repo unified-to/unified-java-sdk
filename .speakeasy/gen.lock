@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 4f3132855d15c32adf7ca6526ca7469f
+  docChecksum: b7b8f3e6ae3a4420539b46d5e0a59d99
   docVersion: "1.0"
-  speakeasyVersion: 1.606.3
-  generationVersion: 2.687.1
-  releaseVersion: 0.34.6
-  configChecksum: 911d28a83e3dd03f2e6f392d68ea517e
+  speakeasyVersion: 1.606.8
+  generationVersion: 2.687.13
+  releaseVersion: 0.35.0
+  configChecksum: e0f6654b895927a650a010a2ecea216a
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -15,7 +15,7 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.1
-    core: 3.45.4
+    core: 3.46.0
     downloadStreams: 0.1.1
     globalSecurity: 2.83.0
     globalSecurityCallbacks: 0.1.0
@@ -179,6 +179,8 @@ generatedFiles:
   - docs/models/operations/CreateUnifiedConnectionResponse.md
   - docs/models/operations/CreateUnifiedWebhookRequest.md
   - docs/models/operations/CreateUnifiedWebhookResponse.md
+  - docs/models/operations/CreateVerificationRequestRequest.md
+  - docs/models/operations/CreateVerificationRequestResponse.md
   - docs/models/operations/GetAccountingAccountRequest.md
   - docs/models/operations/GetAccountingAccountResponse.md
   - docs/models/operations/GetAccountingBalancesheetRequest.md
@@ -355,6 +357,10 @@ generatedFiles:
   - docs/models/operations/GetUnifiedIntegrationLoginResponse.md
   - docs/models/operations/GetUnifiedWebhookRequest.md
   - docs/models/operations/GetUnifiedWebhookResponse.md
+  - docs/models/operations/GetVerificationPackageRequest.md
+  - docs/models/operations/GetVerificationPackageResponse.md
+  - docs/models/operations/GetVerificationRequestRequest.md
+  - docs/models/operations/GetVerificationRequestResponse.md
   - docs/models/operations/ListAccountingAccountsRequest.md
   - docs/models/operations/ListAccountingAccountsResponse.md
   - docs/models/operations/ListAccountingBalancesheetsRequest.md
@@ -548,6 +554,10 @@ generatedFiles:
   - docs/models/operations/ListUnifiedIssuesResponse.md
   - docs/models/operations/ListUnifiedWebhooksRequest.md
   - docs/models/operations/ListUnifiedWebhooksResponse.md
+  - docs/models/operations/ListVerificationPackagesRequest.md
+  - docs/models/operations/ListVerificationPackagesResponse.md
+  - docs/models/operations/ListVerificationRequestsRequest.md
+  - docs/models/operations/ListVerificationRequestsResponse.md
   - docs/models/operations/PatchAccountingAccountRequest.md
   - docs/models/operations/PatchAccountingAccountResponse.md
   - docs/models/operations/PatchAccountingBillRequest.md
@@ -700,6 +710,8 @@ generatedFiles:
   - docs/models/operations/PatchUnifiedWebhookResponse.md
   - docs/models/operations/PatchUnifiedWebhookTriggerRequest.md
   - docs/models/operations/PatchUnifiedWebhookTriggerResponse.md
+  - docs/models/operations/PatchVerificationRequestRequest.md
+  - docs/models/operations/PatchVerificationRequestResponse.md
   - docs/models/operations/QueryParamCategories.md
   - docs/models/operations/RemoveAccountingAccountRequest.md
   - docs/models/operations/RemoveAccountingAccountResponse.md
@@ -849,6 +861,8 @@ generatedFiles:
   - docs/models/operations/RemoveUnifiedConnectionResponse.md
   - docs/models/operations/RemoveUnifiedWebhookRequest.md
   - docs/models/operations/RemoveUnifiedWebhookResponse.md
+  - docs/models/operations/RemoveVerificationRequestRequest.md
+  - docs/models/operations/RemoveVerificationRequestResponse.md
   - docs/models/operations/UpdateAccountingAccountRequest.md
   - docs/models/operations/UpdateAccountingAccountResponse.md
   - docs/models/operations/UpdateAccountingBillRequest.md
@@ -1001,6 +1015,8 @@ generatedFiles:
   - docs/models/operations/UpdateUnifiedWebhookResponse.md
   - docs/models/operations/UpdateUnifiedWebhookTriggerRequest.md
   - docs/models/operations/UpdateUnifiedWebhookTriggerResponse.md
+  - docs/models/operations/UpdateVerificationRequestRequest.md
+  - docs/models/operations/UpdateVerificationRequestResponse.md
   - docs/models/shared/AccountingAccount.md
   - docs/models/shared/AccountingAssociatedContact.md
   - docs/models/shared/AccountingAttachment.md
@@ -1259,6 +1275,7 @@ generatedFiles:
   - docs/models/shared/PaymentSubscriptionStatus.md
   - docs/models/shared/PaymentType.md
   - docs/models/shared/Priority.md
+  - docs/models/shared/ProfileGender.md
   - docs/models/shared/PropertyAccountingBalancesheetItemSubItems.md
   - docs/models/shared/PropertyAccountingContactBillingAddress.md
   - docs/models/shared/PropertyAccountingContactShippingAddress.md
@@ -1333,6 +1350,7 @@ generatedFiles:
   - docs/models/shared/RepoPullrequestStatus.md
   - docs/models/shared/RepoRepository.md
   - docs/models/shared/ResourceType.md
+  - docs/models/shared/ResponseStatus.md
   - docs/models/shared/Role.md
   - docs/models/shared/Sandbox.md
   - docs/models/shared/ScimAddress.md
@@ -1397,6 +1415,15 @@ generatedFiles:
   - docs/models/shared/UcTelephone.md
   - docs/models/shared/UcTelephoneType.md
   - docs/models/shared/Value.md
+  - docs/models/shared/VerificationAddress.md
+  - docs/models/shared/VerificationPackage.md
+  - docs/models/shared/VerificationPackageType.md
+  - docs/models/shared/VerificationParameter.md
+  - docs/models/shared/VerificationParameterInput.md
+  - docs/models/shared/VerificationParameterType.md
+  - docs/models/shared/VerificationRequest.md
+  - docs/models/shared/VerificationResponseDetail.md
+  - docs/models/shared/VerificationTime.md
   - docs/models/shared/Webhook.md
   - docs/models/shared/WebhookType.md
   - docs/models/shared/WeekStart.md
@@ -1466,6 +1493,7 @@ generatedFiles:
   - docs/sdks/note/README.md
   - docs/sdks/order/README.md
   - docs/sdks/organization/README.md
+  - docs/sdks/package/README.md
   - docs/sdks/page/README.md
   - docs/sdks/passthrough/README.md
   - docs/sdks/payment/README.md
@@ -1483,6 +1511,7 @@ generatedFiles:
   - docs/sdks/repo/README.md
   - docs/sdks/report/README.md
   - docs/sdks/repository/README.md
+  - docs/sdks/request/README.md
   - docs/sdks/review/README.md
   - docs/sdks/salesorder/README.md
   - docs/sdks/scim/README.md
@@ -1503,6 +1532,7 @@ generatedFiles:
   - docs/sdks/unified/README.md
   - docs/sdks/unifiedto/README.md
   - docs/sdks/user/README.md
+  - docs/sdks/verification/README.md
   - docs/sdks/webhook/README.md
   - gradle.properties
   - gradle/wrapper/gradle-wrapper.jar
@@ -1575,6 +1605,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/Note.java
   - src/main/java/to/unified/unified_java_sdk/Order.java
   - src/main/java/to/unified/unified_java_sdk/Organization.java
+  - src/main/java/to/unified/unified_java_sdk/Package.java
   - src/main/java/to/unified/unified_java_sdk/Page.java
   - src/main/java/to/unified/unified_java_sdk/Passthrough.java
   - src/main/java/to/unified/unified_java_sdk/Payment.java
@@ -1592,6 +1623,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/Repo.java
   - src/main/java/to/unified/unified_java_sdk/Report.java
   - src/main/java/to/unified/unified_java_sdk/Repository.java
+  - src/main/java/to/unified/unified_java_sdk/Request.java
   - src/main/java/to/unified/unified_java_sdk/Review.java
   - src/main/java/to/unified/unified_java_sdk/SDKConfiguration.java
   - src/main/java/to/unified/unified_java_sdk/Salesorder.java
@@ -1614,6 +1646,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/Unified.java
   - src/main/java/to/unified/unified_java_sdk/UnifiedTo.java
   - src/main/java/to/unified/unified_java_sdk/User.java
+  - src/main/java/to/unified/unified_java_sdk/Verification.java
   - src/main/java/to/unified/unified_java_sdk/Webhook.java
   - src/main/java/to/unified/unified_java_sdk/models/errors/AuthException.java
   - src/main/java/to/unified/unified_java_sdk/models/errors/SDKError.java
@@ -1845,6 +1878,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateUnifiedWebhookRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateUnifiedWebhookRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateUnifiedWebhookResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/CreateVerificationRequestRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/CreateVerificationRequestRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/CreateVerificationRequestResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingAccountRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingAccountRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingAccountResponse.java
@@ -2109,6 +2145,12 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetUnifiedWebhookRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetUnifiedWebhookRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetUnifiedWebhookResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetVerificationPackageRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetVerificationPackageRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetVerificationPackageResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetVerificationRequestRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetVerificationRequestRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetVerificationRequestResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingAccountsRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingAccountsRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingAccountsResponse.java
@@ -2398,6 +2440,12 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListUnifiedWebhooksRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListUnifiedWebhooksRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListUnifiedWebhooksResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/ListVerificationPackagesRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/ListVerificationPackagesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/ListVerificationPackagesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/ListVerificationRequestsRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/ListVerificationRequestsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/ListVerificationRequestsResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchAccountingAccountRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchAccountingAccountRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchAccountingAccountResponse.java
@@ -2626,6 +2674,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchUnifiedWebhookTriggerRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchUnifiedWebhookTriggerRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchUnifiedWebhookTriggerResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/PatchVerificationRequestRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/PatchVerificationRequestRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/PatchVerificationRequestResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/QueryParamCategories.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveAccountingAccountRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveAccountingAccountRequestBuilder.java
@@ -2849,6 +2900,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveUnifiedWebhookRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveUnifiedWebhookRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveUnifiedWebhookResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveVerificationRequestRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveVerificationRequestRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveVerificationRequestResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateAccountingAccountRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateAccountingAccountRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateAccountingAccountResponse.java
@@ -3077,6 +3131,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateUnifiedWebhookTriggerRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateUnifiedWebhookTriggerRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateUnifiedWebhookTriggerResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateVerificationRequestRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateVerificationRequestRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateVerificationRequestResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingAccount.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingAssociatedContact.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingAttachment.java
@@ -3335,6 +3392,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/PaymentSubscriptionStatus.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/PaymentType.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/Priority.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/ProfileGender.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAccountingBalancesheetItemSubItems.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAccountingContactBillingAddress.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAccountingContactShippingAddress.java
@@ -3409,6 +3467,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/RepoPullrequestStatus.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/RepoRepository.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/ResourceType.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/ResponseStatus.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/Role.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/Sandbox.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/ScimAddress.java
@@ -3473,6 +3532,15 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/UcTelephone.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/UcTelephoneType.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/Value.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/VerificationAddress.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/VerificationPackage.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/VerificationPackageType.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/VerificationParameter.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/VerificationParameterInput.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/VerificationParameterType.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/VerificationRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/VerificationResponseDetail.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/VerificationTime.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/Webhook.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/WebhookType.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/WeekStart.java
@@ -3553,6 +3621,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/CreateUcRecording.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateUnifiedConnection.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateUnifiedWebhook.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateVerificationRequest.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingAccount.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingBalancesheet.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingBill.java
@@ -3641,6 +3710,8 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/GetUnifiedIntegrationAuth.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetUnifiedIntegrationLogin.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetUnifiedWebhook.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetVerificationPackage.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetVerificationRequest.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingAccounts.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingBalancesheets.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingBills.java
@@ -3737,6 +3808,8 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/ListUnifiedIntegrations.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListUnifiedIssues.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListUnifiedWebhooks.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListVerificationPackages.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListVerificationRequests.java
   - src/main/java/to/unified/unified_java_sdk/operations/Operations.java
   - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingAccount.java
   - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingBill.java
@@ -3814,6 +3887,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/PatchUnifiedConnection.java
   - src/main/java/to/unified/unified_java_sdk/operations/PatchUnifiedWebhook.java
   - src/main/java/to/unified/unified_java_sdk/operations/PatchUnifiedWebhookTrigger.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchVerificationRequest.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingAccount.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingBill.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingCategory.java
@@ -3888,6 +3962,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveUcRecording.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveUnifiedConnection.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveUnifiedWebhook.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveVerificationRequest.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingAccount.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingBill.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingCategory.java
@@ -3964,6 +4039,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateUnifiedConnection.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateUnifiedWebhook.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateUnifiedWebhookTrigger.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateVerificationRequest.java
   - src/main/java/to/unified/unified_java_sdk/utils/BackoffStrategy.java
   - src/main/java/to/unified/unified_java_sdk/utils/BigDecimalString.java
   - src/main/java/to/unified/unified_java_sdk/utils/BigIntegerString.java
@@ -3997,6 +4073,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/utils/QueryParameters.java
   - src/main/java/to/unified/unified_java_sdk/utils/QueryParamsMetadata.java
   - src/main/java/to/unified/unified_java_sdk/utils/RecordingClient.java
+  - src/main/java/to/unified/unified_java_sdk/utils/Reflections.java
   - src/main/java/to/unified/unified_java_sdk/utils/RequestBody.java
   - src/main/java/to/unified/unified_java_sdk/utils/RequestMetadata.java
   - src/main/java/to/unified/unified_java_sdk/utils/Response.java
@@ -8432,6 +8509,78 @@ examples:
       responses:
         "200":
           application/json: [{}]
+  createVerificationRequest:
+    speakeasy-default-create-verification-request:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getVerificationPackage:
+    speakeasy-default-get-verification-package:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {"id": "<id>", "name": "<value>", "type": "EMPLOYMENT_VERIFICATION"}
+  getVerificationRequest:
+    speakeasy-default-get-verification-request:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listVerificationPackages:
+    speakeasy-default-list-verification-packages:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{"id": "<id>", "name": "<value>", "type": "FRAUD_PREVENTION"}]
+  listVerificationRequests:
+    speakeasy-default-list-verification-requests:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchVerificationRequest:
+    speakeasy-default-patch-verification-request:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeVerificationRequest:
+    speakeasy-default-remove-verification-request:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateVerificationRequest:
+    speakeasy-default-update-verification-request:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## SDK Changes Detected:\n* `unified-to.unified.createUnifiedConnection()`: \n  *  `request.auth.refreshUrl` **Added**\n  *  `response.auth.refreshUrl` **Added**\n* `unified-to.unified.createUnifiedWebhook()`: \n  *  `request.webhook.dbSchema` **Added**\n  *  `response.db_schema` **Added**\n* `unified-to.unified.getUnifiedConnection()`:  `response.auth.refreshUrl` **Added**\n* `unified-to.unified.getUnifiedWebhook()`:  `response.db_schema` **Added**\n* `unified-to.unified.listUnifiedConnections()`:  `response.[].auth.refreshUrl` **Added**\n* `unified-to.unified.listUnifiedWebhooks()`:  `response.[].dbSchema` **Added**\n* `unified-to.unified.patchUnifiedConnection()`: \n  *  `request.connection.auth.refreshUrl` **Added**\n  *  `response.auth.refreshUrl` **Added**\n* `unified-to.unified.patchUnifiedWebhook()`: \n  *  `request.webhook.dbSchema` **Added**\n  *  `response.db_schema` **Added**\n* `unified-to.unified.updateUnifiedConnection()`: \n  *  `request.connection.auth.refreshUrl` **Added**\n  *  `response.auth.refreshUrl` **Added**\n* `unified-to.unified.updateUnifiedWebhook()`: \n  *  `request.webhook.dbSchema` **Added**\n  *  `response.db_schema` **Added**\n* `unified-to.connection.createUnifiedConnection()`: \n  *  `request.auth.refreshUrl` **Added**\n  *  `response.auth.refreshUrl` **Added**\n* `unified-to.connection.getUnifiedConnection()`:  `response.auth.refreshUrl` **Added**\n* `unified-to.connection.listUnifiedConnections()`:  `response.[].auth.refreshUrl` **Added**\n* `unified-to.connection.patchUnifiedConnection()`: \n  *  `request.connection.auth.refreshUrl` **Added**\n  *  `response.auth.refreshUrl` **Added**\n* `unified-to.connection.updateUnifiedConnection()`: \n  *  `request.connection.auth.refreshUrl` **Added**\n  *  `response.auth.refreshUrl` **Added**\n* `unified-to.webhook.createUnifiedWebhook()`: \n  *  `request.webhook.dbSchema` **Added**\n  *  `response.db_schema` **Added**\n* `unified-to.webhook.getUnifiedWebhook()`:  `response.db_schema` **Added**\n* `unified-to.webhook.listUnifiedWebhooks()`:  `response.[].dbSchema` **Added**\n* `unified-to.webhook.patchUnifiedWebhook()`: \n  *  `request.webhook.dbSchema` **Added**\n  *  `response.db_schema` **Added**\n* `unified-to.webhook.updateUnifiedWebhook()`: \n  *  `request.webhook.dbSchema` **Added**\n  *  `response.db_schema` **Added**\n"
+releaseNotes: "## SDK Changes Detected:\n* `unified-to.verification.createVerificationRequest()`: **Added**\n* `unified-to.verification.getVerificationPackage()`: **Added**\n* `unified-to.verification.getVerificationRequest()`: **Added**\n* `unified-to.verification.listVerificationPackages()`: **Added**\n* `unified-to.verification.listVerificationRequests()`: **Added**\n* `unified-to.verification.patchVerificationRequest()`: **Added**\n* `unified-to.verification.removeVerificationRequest()`: **Added**\n* `unified-to.verification.updateVerificationRequest()`: **Added**\n* `unified-to.package.getVerificationPackage()`: **Added**\n* `unified-to.package.listVerificationPackages()`: **Added**\n* `unified-to.request.createVerificationRequest()`: **Added**\n* `unified-to.request.getVerificationRequest()`: **Added**\n* `unified-to.request.listVerificationRequests()`: **Added**\n* `unified-to.request.patchVerificationRequest()`: **Added**\n* `unified-to.request.removeVerificationRequest()`: **Added**\n* `unified-to.request.updateVerificationRequest()`: **Added**\n* `unified-to.accounting.listAccountingBalancesheets()`:  `request` **Changed**\n* `unified-to.accounting.listAccountingProfitlosses()`:  `request` **Changed**\n* `unified-to.balancesheet.listAccountingBalancesheets()`:  `request` **Changed**\n* `unified-to.profitloss.listAccountingProfitlosses()`:  `request` **Changed**\n* `unified-to.unified.listUnifiedConnections()`: \n  *  `request.categories` **Changed**\n* `unified-to.unified.listUnifiedIntegrationWorkspaces()`: \n  *  `request.categories` **Changed**\n* `unified-to.unified.listUnifiedIntegrations()`: \n  *  `request.categories` **Changed**\n* `unified-to.connection.listUnifiedConnections()`: \n  *  `request.categories` **Changed**\n* `unified-to.integration.listUnifiedIntegrationWorkspaces()`: \n  *  `request.categories` **Changed**\n* `unified-to.integration.listUnifiedIntegrations()`: \n  *  `request.categories` **Changed**\n"

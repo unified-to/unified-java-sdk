@@ -17,10 +17,22 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListAccountingProfitlossesRequest {
     /**
+     * The category ID to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category_id")
+    private Optional<String> categoryId;
+
+    /**
      * ID of the connection
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
     private String connectionId;
+
+    /**
+     * The contact ID to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contact_id")
+    private Optional<String> contactId;
 
     /**
      * The end date to filter by
@@ -76,7 +88,9 @@ public class ListAccountingProfitlossesRequest {
 
     @JsonCreator
     public ListAccountingProfitlossesRequest(
+            Optional<String> categoryId,
             String connectionId,
+            Optional<String> contactId,
             Optional<String> endLe,
             Optional<? extends List<String>> fields,
             Optional<Double> limit,
@@ -87,7 +101,9 @@ public class ListAccountingProfitlossesRequest {
             Optional<String> sort,
             Optional<String> startGte,
             Optional<String> updatedGte) {
+        Utils.checkNotNull(categoryId, "categoryId");
         Utils.checkNotNull(connectionId, "connectionId");
+        Utils.checkNotNull(contactId, "contactId");
         Utils.checkNotNull(endLe, "endLe");
         Utils.checkNotNull(fields, "fields");
         Utils.checkNotNull(limit, "limit");
@@ -98,7 +114,9 @@ public class ListAccountingProfitlossesRequest {
         Utils.checkNotNull(sort, "sort");
         Utils.checkNotNull(startGte, "startGte");
         Utils.checkNotNull(updatedGte, "updatedGte");
+        this.categoryId = categoryId;
         this.connectionId = connectionId;
+        this.contactId = contactId;
         this.endLe = endLe;
         this.fields = fields;
         this.limit = limit;
@@ -113,10 +131,19 @@ public class ListAccountingProfitlossesRequest {
     
     public ListAccountingProfitlossesRequest(
             String connectionId) {
-        this(connectionId, Optional.empty(), Optional.empty(),
+        this(Optional.empty(), connectionId, Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
+    }
+
+    /**
+     * The category ID to filter by
+     */
+    @JsonIgnore
+    public Optional<String> categoryId() {
+        return categoryId;
     }
 
     /**
@@ -125,6 +152,14 @@ public class ListAccountingProfitlossesRequest {
     @JsonIgnore
     public String connectionId() {
         return connectionId;
+    }
+
+    /**
+     * The contact ID to filter by
+     */
+    @JsonIgnore
+    public Optional<String> contactId() {
+        return contactId;
     }
 
     /**
@@ -202,11 +237,49 @@ public class ListAccountingProfitlossesRequest {
 
 
     /**
+     * The category ID to filter by
+     */
+    public ListAccountingProfitlossesRequest withCategoryId(String categoryId) {
+        Utils.checkNotNull(categoryId, "categoryId");
+        this.categoryId = Optional.ofNullable(categoryId);
+        return this;
+    }
+
+
+    /**
+     * The category ID to filter by
+     */
+    public ListAccountingProfitlossesRequest withCategoryId(Optional<String> categoryId) {
+        Utils.checkNotNull(categoryId, "categoryId");
+        this.categoryId = categoryId;
+        return this;
+    }
+
+    /**
      * ID of the connection
      */
     public ListAccountingProfitlossesRequest withConnectionId(String connectionId) {
         Utils.checkNotNull(connectionId, "connectionId");
         this.connectionId = connectionId;
+        return this;
+    }
+
+    /**
+     * The contact ID to filter by
+     */
+    public ListAccountingProfitlossesRequest withContactId(String contactId) {
+        Utils.checkNotNull(contactId, "contactId");
+        this.contactId = Optional.ofNullable(contactId);
+        return this;
+    }
+
+
+    /**
+     * The contact ID to filter by
+     */
+    public ListAccountingProfitlossesRequest withContactId(Optional<String> contactId) {
+        Utils.checkNotNull(contactId, "contactId");
+        this.contactId = contactId;
         return this;
     }
 
@@ -386,7 +459,9 @@ public class ListAccountingProfitlossesRequest {
         }
         ListAccountingProfitlossesRequest other = (ListAccountingProfitlossesRequest) o;
         return 
+            Utils.enhancedDeepEquals(this.categoryId, other.categoryId) &&
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
+            Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
             Utils.enhancedDeepEquals(this.endLe, other.endLe) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
@@ -402,16 +477,19 @@ public class ListAccountingProfitlossesRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId, endLe, fields,
-            limit, offset, order,
-            query, raw, sort,
-            startGte, updatedGte);
+            categoryId, connectionId, contactId,
+            endLe, fields, limit,
+            offset, order, query,
+            raw, sort, startGte,
+            updatedGte);
     }
     
     @Override
     public String toString() {
         return Utils.toString(ListAccountingProfitlossesRequest.class,
+                "categoryId", categoryId,
                 "connectionId", connectionId,
+                "contactId", contactId,
                 "endLe", endLe,
                 "fields", fields,
                 "limit", limit,
@@ -427,7 +505,11 @@ public class ListAccountingProfitlossesRequest {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
+        private Optional<String> categoryId = Optional.empty();
+
         private String connectionId;
+
+        private Optional<String> contactId = Optional.empty();
 
         private Optional<String> endLe = Optional.empty();
 
@@ -455,11 +537,49 @@ public class ListAccountingProfitlossesRequest {
 
 
         /**
+         * The category ID to filter by
+         */
+        public Builder categoryId(String categoryId) {
+            Utils.checkNotNull(categoryId, "categoryId");
+            this.categoryId = Optional.ofNullable(categoryId);
+            return this;
+        }
+
+        /**
+         * The category ID to filter by
+         */
+        public Builder categoryId(Optional<String> categoryId) {
+            Utils.checkNotNull(categoryId, "categoryId");
+            this.categoryId = categoryId;
+            return this;
+        }
+
+
+        /**
          * ID of the connection
          */
         public Builder connectionId(String connectionId) {
             Utils.checkNotNull(connectionId, "connectionId");
             this.connectionId = connectionId;
+            return this;
+        }
+
+
+        /**
+         * The contact ID to filter by
+         */
+        public Builder contactId(String contactId) {
+            Utils.checkNotNull(contactId, "contactId");
+            this.contactId = Optional.ofNullable(contactId);
+            return this;
+        }
+
+        /**
+         * The contact ID to filter by
+         */
+        public Builder contactId(Optional<String> contactId) {
+            Utils.checkNotNull(contactId, "contactId");
+            this.contactId = contactId;
             return this;
         }
 
@@ -632,10 +752,11 @@ public class ListAccountingProfitlossesRequest {
         public ListAccountingProfitlossesRequest build() {
 
             return new ListAccountingProfitlossesRequest(
-                connectionId, endLe, fields,
-                limit, offset, order,
-                query, raw, sort,
-                startGte, updatedGte);
+                categoryId, connectionId, contactId,
+                endLe, fields, limit,
+                offset, order, query,
+                raw, sort, startGte,
+                updatedGte);
         }
 
     }

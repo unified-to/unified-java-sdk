@@ -342,6 +342,15 @@ public class UnifiedTo {
     private final Webhook webhook;
 
 
+    private final Verification verification;
+
+
+    private final Package package_;
+
+
+    private final Request request;
+
+
     public Accounting accounting() {
         return accounting;
     }
@@ -851,6 +860,21 @@ public class UnifiedTo {
         return webhook;
     }
 
+
+    public Verification verification() {
+        return verification;
+    }
+
+
+    public Package package_() {
+        return package_;
+    }
+
+
+    public Request request() {
+        return request;
+    }
+
     private final SDKConfiguration sdkConfiguration;
 
     /**
@@ -1091,5 +1115,8 @@ public class UnifiedTo {
         this.login = new Login(sdkConfiguration);
         this.issue = new Issue(sdkConfiguration);
         this.webhook = new Webhook(sdkConfiguration);
+        this.verification = new Verification(sdkConfiguration);
+        this.package_ = new Package(sdkConfiguration);
+        this.request = new Request(sdkConfiguration);
     }
 }

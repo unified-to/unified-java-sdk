@@ -96,6 +96,9 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions COMMERCE_LOCATION_WRITE = new PropertyConnectionPermissions("commerce_location_write");
     public static final PropertyConnectionPermissions COMMERCE_REVIEW_READ = new PropertyConnectionPermissions("commerce_review_read");
     public static final PropertyConnectionPermissions COMMERCE_REVIEW_WRITE = new PropertyConnectionPermissions("commerce_review_write");
+    public static final PropertyConnectionPermissions VERIFICATION_PACKAGE_READ = new PropertyConnectionPermissions("verification_package_read");
+    public static final PropertyConnectionPermissions VERIFICATION_REQUEST_READ = new PropertyConnectionPermissions("verification_request_read");
+    public static final PropertyConnectionPermissions VERIFICATION_REQUEST_WRITE = new PropertyConnectionPermissions("verification_request_write");
     public static final PropertyConnectionPermissions ATS_ACTIVITY_READ = new PropertyConnectionPermissions("ats_activity_read");
     public static final PropertyConnectionPermissions ATS_ACTIVITY_WRITE = new PropertyConnectionPermissions("ats_activity_write");
     public static final PropertyConnectionPermissions ATS_APPLICATION_READ = new PropertyConnectionPermissions("ats_application_read");
@@ -335,6 +338,9 @@ public class PropertyConnectionPermissions {
         map.put("commerce_location_write", COMMERCE_LOCATION_WRITE);
         map.put("commerce_review_read", COMMERCE_REVIEW_READ);
         map.put("commerce_review_write", COMMERCE_REVIEW_WRITE);
+        map.put("verification_package_read", VERIFICATION_PACKAGE_READ);
+        map.put("verification_request_read", VERIFICATION_REQUEST_READ);
+        map.put("verification_request_write", VERIFICATION_REQUEST_WRITE);
         map.put("ats_activity_read", ATS_ACTIVITY_READ);
         map.put("ats_activity_write", ATS_ACTIVITY_WRITE);
         map.put("ats_application_read", ATS_APPLICATION_READ);
@@ -508,6 +514,9 @@ public class PropertyConnectionPermissions {
         map.put("commerce_location_write", PropertyConnectionPermissionsEnum.COMMERCE_LOCATION_WRITE);
         map.put("commerce_review_read", PropertyConnectionPermissionsEnum.COMMERCE_REVIEW_READ);
         map.put("commerce_review_write", PropertyConnectionPermissionsEnum.COMMERCE_REVIEW_WRITE);
+        map.put("verification_package_read", PropertyConnectionPermissionsEnum.VERIFICATION_PACKAGE_READ);
+        map.put("verification_request_read", PropertyConnectionPermissionsEnum.VERIFICATION_REQUEST_READ);
+        map.put("verification_request_write", PropertyConnectionPermissionsEnum.VERIFICATION_REQUEST_WRITE);
         map.put("ats_activity_read", PropertyConnectionPermissionsEnum.ATS_ACTIVITY_READ);
         map.put("ats_activity_write", PropertyConnectionPermissionsEnum.ATS_ACTIVITY_WRITE);
         map.put("ats_application_read", PropertyConnectionPermissionsEnum.ATS_APPLICATION_READ);
@@ -711,6 +720,9 @@ public class PropertyConnectionPermissions {
         COMMERCE_LOCATION_WRITE("commerce_location_write"),
         COMMERCE_REVIEW_READ("commerce_review_read"),
         COMMERCE_REVIEW_WRITE("commerce_review_write"),
+        VERIFICATION_PACKAGE_READ("verification_package_read"),
+        VERIFICATION_REQUEST_READ("verification_request_read"),
+        VERIFICATION_REQUEST_WRITE("verification_request_write"),
         ATS_ACTIVITY_READ("ats_activity_read"),
         ATS_ACTIVITY_WRITE("ats_activity_write"),
         ATS_APPLICATION_READ("ats_application_read"),

@@ -34,7 +34,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.34.6'
+implementation 'to.unified:unified-java-sdk:0.35.0'
 ```
 
 Maven:
@@ -42,7 +42,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.34.6</version>
+    <version>0.35.0</version>
 </dependency>
 ```
 
@@ -957,6 +957,11 @@ public class Application {
 * [removeRepoOrganization](docs/sdks/organization/README.md#removerepoorganization) - Remove an organization
 * [updateRepoOrganization](docs/sdks/organization/README.md#updaterepoorganization) - Update an organization
 
+### [package_()](docs/sdks/package/README.md)
+
+* [getVerificationPackage](docs/sdks/package/README.md#getverificationpackage) - Retrieve a package
+* [listVerificationPackages](docs/sdks/package/README.md#listverificationpackages) - List all packages
+
 ### [page()](docs/sdks/page/README.md)
 
 * [createKmsPage](docs/sdks/page/README.md#createkmspage) - Create a page
@@ -1123,6 +1128,15 @@ public class Application {
 * [patchRepoRepository](docs/sdks/repository/README.md#patchreporepository) - Update a repository
 * [removeRepoRepository](docs/sdks/repository/README.md#removereporepository) - Remove a repository
 * [updateRepoRepository](docs/sdks/repository/README.md#updatereporepository) - Update a repository
+
+### [request()](docs/sdks/request/README.md)
+
+* [createVerificationRequest](docs/sdks/request/README.md#createverificationrequest) - Create a request
+* [getVerificationRequest](docs/sdks/request/README.md#getverificationrequest) - Retrieve a request
+* [listVerificationRequests](docs/sdks/request/README.md#listverificationrequests) - List all requests
+* [patchVerificationRequest](docs/sdks/request/README.md#patchverificationrequest) - Update a request
+* [removeVerificationRequest](docs/sdks/request/README.md#removeverificationrequest) - Remove a request
+* [updateVerificationRequest](docs/sdks/request/README.md#updateverificationrequest) - Update a request
 
 ### [review()](docs/sdks/review/README.md)
 
@@ -1346,6 +1360,17 @@ public class Application {
 * [patchScimUsers](docs/sdks/user/README.md#patchscimusers) - Update user
 * [removeScimUsers](docs/sdks/user/README.md#removescimusers) - Delete user
 * [updateScimUsers](docs/sdks/user/README.md#updatescimusers) - Update user
+
+### [verification()](docs/sdks/verification/README.md)
+
+* [createVerificationRequest](docs/sdks/verification/README.md#createverificationrequest) - Create a request
+* [getVerificationPackage](docs/sdks/verification/README.md#getverificationpackage) - Retrieve a package
+* [getVerificationRequest](docs/sdks/verification/README.md#getverificationrequest) - Retrieve a request
+* [listVerificationPackages](docs/sdks/verification/README.md#listverificationpackages) - List all packages
+* [listVerificationRequests](docs/sdks/verification/README.md#listverificationrequests) - List all requests
+* [patchVerificationRequest](docs/sdks/verification/README.md#patchverificationrequest) - Update a request
+* [removeVerificationRequest](docs/sdks/verification/README.md#removeverificationrequest) - Remove a request
+* [updateVerificationRequest](docs/sdks/verification/README.md#updateverificationrequest) - Update a request
 
 ### [webhook()](docs/sdks/webhook/README.md)
 

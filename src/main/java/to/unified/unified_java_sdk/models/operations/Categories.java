@@ -30,7 +30,8 @@ public enum Categories {
     LMS("lms"),
     REPO("repo"),
     METADATA("metadata"),
-    CALENDAR("calendar");
+    CALENDAR("calendar"),
+    VERIFICATION("verification");
 
     @JsonValue
     private final String value;

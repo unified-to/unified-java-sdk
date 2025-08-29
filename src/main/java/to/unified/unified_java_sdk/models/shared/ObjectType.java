@@ -72,6 +72,8 @@ public class ObjectType {
     public static final ObjectType COMMERCE_INVENTORY = new ObjectType("commerce_inventory");
     public static final ObjectType COMMERCE_LOCATION = new ObjectType("commerce_location");
     public static final ObjectType COMMERCE_REVIEW = new ObjectType("commerce_review");
+    public static final ObjectType VERIFICATION_PACKAGE = new ObjectType("verification_package");
+    public static final ObjectType VERIFICATION_REQUEST = new ObjectType("verification_request");
     public static final ObjectType ATS_ACTIVITY = new ObjectType("ats_activity");
     public static final ObjectType ATS_APPLICATION = new ObjectType("ats_application");
     public static final ObjectType ATS_APPLICATIONSTATUS = new ObjectType("ats_applicationstatus");
@@ -234,6 +236,8 @@ public class ObjectType {
         map.put("commerce_inventory", COMMERCE_INVENTORY);
         map.put("commerce_location", COMMERCE_LOCATION);
         map.put("commerce_review", COMMERCE_REVIEW);
+        map.put("verification_package", VERIFICATION_PACKAGE);
+        map.put("verification_request", VERIFICATION_REQUEST);
         map.put("ats_activity", ATS_ACTIVITY);
         map.put("ats_application", ATS_APPLICATION);
         map.put("ats_applicationstatus", ATS_APPLICATIONSTATUS);
@@ -330,6 +334,8 @@ public class ObjectType {
         map.put("commerce_inventory", ObjectTypeEnum.COMMERCE_INVENTORY);
         map.put("commerce_location", ObjectTypeEnum.COMMERCE_LOCATION);
         map.put("commerce_review", ObjectTypeEnum.COMMERCE_REVIEW);
+        map.put("verification_package", ObjectTypeEnum.VERIFICATION_PACKAGE);
+        map.put("verification_request", ObjectTypeEnum.VERIFICATION_REQUEST);
         map.put("ats_activity", ObjectTypeEnum.ATS_ACTIVITY);
         map.put("ats_application", ObjectTypeEnum.ATS_APPLICATION);
         map.put("ats_applicationstatus", ObjectTypeEnum.ATS_APPLICATIONSTATUS);
@@ -456,6 +462,8 @@ public class ObjectType {
         COMMERCE_INVENTORY("commerce_inventory"),
         COMMERCE_LOCATION("commerce_location"),
         COMMERCE_REVIEW("commerce_review"),
+        VERIFICATION_PACKAGE("verification_package"),
+        VERIFICATION_REQUEST("verification_request"),
         ATS_ACTIVITY("ats_activity"),
         ATS_APPLICATION("ats_application"),
         ATS_APPLICATIONSTATUS("ats_applicationstatus"),
