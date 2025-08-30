@@ -27,6 +27,11 @@ public class GenaiPrompt {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("mcp_url")
+    private Optional<String> mcpUrl;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messages")
     private Optional<? extends List<GenaiContent>> messages;
 
@@ -58,6 +63,7 @@ public class GenaiPrompt {
     @JsonCreator
     public GenaiPrompt(
             @JsonProperty("max_tokens") Optional<Double> maxTokens,
+            @JsonProperty("mcp_url") Optional<String> mcpUrl,
             @JsonProperty("messages") Optional<? extends List<GenaiContent>> messages,
             @JsonProperty("model_id") Optional<String> modelId,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
@@ -65,6 +71,7 @@ public class GenaiPrompt {
             @JsonProperty("temperature") Optional<Double> temperature,
             @JsonProperty("tokens_used") Optional<Double> tokensUsed) {
         Utils.checkNotNull(maxTokens, "maxTokens");
+        Utils.checkNotNull(mcpUrl, "mcpUrl");
         Utils.checkNotNull(messages, "messages");
         Utils.checkNotNull(modelId, "modelId");
         Utils.checkNotNull(raw, "raw");
@@ -72,6 +79,7 @@ public class GenaiPrompt {
         Utils.checkNotNull(temperature, "temperature");
         Utils.checkNotNull(tokensUsed, "tokensUsed");
         this.maxTokens = maxTokens;
+        this.mcpUrl = mcpUrl;
         this.messages = messages;
         this.modelId = modelId;
         this.raw = raw;
@@ -83,12 +91,17 @@ public class GenaiPrompt {
     public GenaiPrompt() {
         this(Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
     public Optional<Double> maxTokens() {
         return maxTokens;
+    }
+
+    @JsonIgnore
+    public Optional<String> mcpUrl() {
+        return mcpUrl;
     }
 
     @SuppressWarnings("unchecked")
@@ -139,6 +152,19 @@ public class GenaiPrompt {
     public GenaiPrompt withMaxTokens(Optional<Double> maxTokens) {
         Utils.checkNotNull(maxTokens, "maxTokens");
         this.maxTokens = maxTokens;
+        return this;
+    }
+
+    public GenaiPrompt withMcpUrl(String mcpUrl) {
+        Utils.checkNotNull(mcpUrl, "mcpUrl");
+        this.mcpUrl = Optional.ofNullable(mcpUrl);
+        return this;
+    }
+
+
+    public GenaiPrompt withMcpUrl(Optional<String> mcpUrl) {
+        Utils.checkNotNull(mcpUrl, "mcpUrl");
+        this.mcpUrl = mcpUrl;
         return this;
     }
 
@@ -231,6 +257,7 @@ public class GenaiPrompt {
         GenaiPrompt other = (GenaiPrompt) o;
         return 
             Utils.enhancedDeepEquals(this.maxTokens, other.maxTokens) &&
+            Utils.enhancedDeepEquals(this.mcpUrl, other.mcpUrl) &&
             Utils.enhancedDeepEquals(this.messages, other.messages) &&
             Utils.enhancedDeepEquals(this.modelId, other.modelId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -242,15 +269,16 @@ public class GenaiPrompt {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            maxTokens, messages, modelId,
-            raw, responses, temperature,
-            tokensUsed);
+            maxTokens, mcpUrl, messages,
+            modelId, raw, responses,
+            temperature, tokensUsed);
     }
     
     @Override
     public String toString() {
         return Utils.toString(GenaiPrompt.class,
                 "maxTokens", maxTokens,
+                "mcpUrl", mcpUrl,
                 "messages", messages,
                 "modelId", modelId,
                 "raw", raw,
@@ -263,6 +291,8 @@ public class GenaiPrompt {
     public final static class Builder {
 
         private Optional<Double> maxTokens = Optional.empty();
+
+        private Optional<String> mcpUrl = Optional.empty();
 
         private Optional<? extends List<GenaiContent>> messages = Optional.empty();
 
@@ -290,6 +320,19 @@ public class GenaiPrompt {
         public Builder maxTokens(Optional<Double> maxTokens) {
             Utils.checkNotNull(maxTokens, "maxTokens");
             this.maxTokens = maxTokens;
+            return this;
+        }
+
+
+        public Builder mcpUrl(String mcpUrl) {
+            Utils.checkNotNull(mcpUrl, "mcpUrl");
+            this.mcpUrl = Optional.ofNullable(mcpUrl);
+            return this;
+        }
+
+        public Builder mcpUrl(Optional<String> mcpUrl) {
+            Utils.checkNotNull(mcpUrl, "mcpUrl");
+            this.mcpUrl = mcpUrl;
             return this;
         }
 
@@ -374,9 +417,9 @@ public class GenaiPrompt {
         public GenaiPrompt build() {
 
             return new GenaiPrompt(
-                maxTokens, messages, modelId,
-                raw, responses, temperature,
-                tokensUsed);
+                maxTokens, mcpUrl, messages,
+                modelId, raw, responses,
+                temperature, tokensUsed);
         }
 
     }
