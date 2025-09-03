@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class PatchAccountingInvoice {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class PatchAccountingInvoice {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(PatchAccountingInvoiceRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    PatchAccountingInvoiceRequest.class,
+                    klass,
                     this.baseUrl,
                     "/accounting/{connection_id}/invoice/{id}",
                     request, null);
@@ -86,8 +84,7 @@ public class PatchAccountingInvoice {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<PatchAccountingInvoiceRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "accountingInvoice",
@@ -101,7 +98,7 @@ public class PatchAccountingInvoice {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    PatchAccountingInvoiceRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class PatchAccountingInvoice {
         }
 
         private HttpRequest onBuildRequest(PatchAccountingInvoiceRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, PatchAccountingInvoiceRequest.class, new TypeReference<PatchAccountingInvoiceRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

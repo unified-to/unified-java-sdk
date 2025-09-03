@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class PatchAccountingJournal {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class PatchAccountingJournal {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(PatchAccountingJournalRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    PatchAccountingJournalRequest.class,
+                    klass,
                     this.baseUrl,
                     "/accounting/{connection_id}/journal/{id}",
                     request, null);
@@ -86,8 +84,7 @@ public class PatchAccountingJournal {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<PatchAccountingJournalRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "accountingJournal",
@@ -101,7 +98,7 @@ public class PatchAccountingJournal {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    PatchAccountingJournalRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class PatchAccountingJournal {
         }
 
         private HttpRequest onBuildRequest(PatchAccountingJournalRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, PatchAccountingJournalRequest.class, new TypeReference<PatchAccountingJournalRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

@@ -26,7 +26,6 @@ import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class GetAtsCandidate {
 
     static abstract class Base {
@@ -72,10 +71,9 @@ public class GetAtsCandidate {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(GetAtsCandidateRequest request) throws Exception {
+        <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {
             String url = Utils.generateURL(
-                    GetAtsCandidateRequest.class,
+                    klass,
                     this.baseUrl,
                     "/ats/{connection_id}/candidate/{id}",
                     request, null);
@@ -84,7 +82,7 @@ public class GetAtsCandidate {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    GetAtsCandidateRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -100,7 +98,7 @@ public class GetAtsCandidate {
         }
 
         private HttpRequest onBuildRequest(GetAtsCandidateRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, GetAtsCandidateRequest.class);
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

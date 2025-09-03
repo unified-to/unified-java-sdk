@@ -27,7 +27,6 @@ import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class ListTaskTasks {
 
     static abstract class Base {
@@ -73,10 +72,9 @@ public class ListTaskTasks {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(ListTaskTasksRequest request) throws Exception {
+        <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {
             String url = Utils.generateURL(
-                    ListTaskTasksRequest.class,
+                    klass,
                     this.baseUrl,
                     "/task/{connection_id}/task",
                     request, null);
@@ -85,7 +83,7 @@ public class ListTaskTasks {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    ListTaskTasksRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -101,7 +99,7 @@ public class ListTaskTasks {
         }
 
         private HttpRequest onBuildRequest(ListTaskTasksRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, ListTaskTasksRequest.class);
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

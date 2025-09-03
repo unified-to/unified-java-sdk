@@ -26,7 +26,6 @@ import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class GetKmsPage {
 
     static abstract class Base {
@@ -72,10 +71,9 @@ public class GetKmsPage {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(GetKmsPageRequest request) throws Exception {
+        <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {
             String url = Utils.generateURL(
-                    GetKmsPageRequest.class,
+                    klass,
                     this.baseUrl,
                     "/kms/{connection_id}/page/{id}",
                     request, null);
@@ -84,7 +82,7 @@ public class GetKmsPage {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    GetKmsPageRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -100,7 +98,7 @@ public class GetKmsPage {
         }
 
         private HttpRequest onBuildRequest(GetKmsPageRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, GetKmsPageRequest.class);
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

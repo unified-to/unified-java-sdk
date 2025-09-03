@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class CreateGenaiPrompt {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class CreateGenaiPrompt {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(CreateGenaiPromptRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    CreateGenaiPromptRequest.class,
+                    klass,
                     this.baseUrl,
                     "/genai/{connection_id}/prompt",
                     request, null);
@@ -86,8 +84,7 @@ public class CreateGenaiPrompt {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<CreateGenaiPromptRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "genaiPrompt",
@@ -101,7 +98,7 @@ public class CreateGenaiPrompt {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    CreateGenaiPromptRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class CreateGenaiPrompt {
         }
 
         private HttpRequest onBuildRequest(CreateGenaiPromptRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, CreateGenaiPromptRequest.class, new TypeReference<CreateGenaiPromptRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

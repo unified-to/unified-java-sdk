@@ -26,7 +26,6 @@ import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class GetCommerceItem {
 
     static abstract class Base {
@@ -72,10 +71,9 @@ public class GetCommerceItem {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(GetCommerceItemRequest request) throws Exception {
+        <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {
             String url = Utils.generateURL(
-                    GetCommerceItemRequest.class,
+                    klass,
                     this.baseUrl,
                     "/commerce/{connection_id}/item/{id}",
                     request, null);
@@ -84,7 +82,7 @@ public class GetCommerceItem {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    GetCommerceItemRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -100,7 +98,7 @@ public class GetCommerceItem {
         }
 
         private HttpRequest onBuildRequest(GetCommerceItemRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, GetCommerceItemRequest.class);
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class UpdateStorageFile {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class UpdateStorageFile {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(UpdateStorageFileRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    UpdateStorageFileRequest.class,
+                    klass,
                     this.baseUrl,
                     "/storage/{connection_id}/file/{id}",
                     request, null);
@@ -86,8 +84,7 @@ public class UpdateStorageFile {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<UpdateStorageFileRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "storageFile",
@@ -101,7 +98,7 @@ public class UpdateStorageFile {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    UpdateStorageFileRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class UpdateStorageFile {
         }
 
         private HttpRequest onBuildRequest(UpdateStorageFileRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, UpdateStorageFileRequest.class, new TypeReference<UpdateStorageFileRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

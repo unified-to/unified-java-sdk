@@ -27,7 +27,6 @@ import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class ListHrisCompanies {
 
     static abstract class Base {
@@ -73,10 +72,9 @@ public class ListHrisCompanies {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(ListHrisCompaniesRequest request) throws Exception {
+        <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {
             String url = Utils.generateURL(
-                    ListHrisCompaniesRequest.class,
+                    klass,
                     this.baseUrl,
                     "/hris/{connection_id}/company",
                     request, null);
@@ -85,7 +83,7 @@ public class ListHrisCompanies {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    ListHrisCompaniesRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -101,7 +99,7 @@ public class ListHrisCompanies {
         }
 
         private HttpRequest onBuildRequest(ListHrisCompaniesRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, ListHrisCompaniesRequest.class);
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

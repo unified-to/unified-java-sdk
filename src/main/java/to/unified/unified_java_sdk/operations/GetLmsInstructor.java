@@ -26,7 +26,6 @@ import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class GetLmsInstructor {
 
     static abstract class Base {
@@ -72,10 +71,9 @@ public class GetLmsInstructor {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(GetLmsInstructorRequest request) throws Exception {
+        <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {
             String url = Utils.generateURL(
-                    GetLmsInstructorRequest.class,
+                    klass,
                     this.baseUrl,
                     "/lms/{connection_id}/instructor/{id}",
                     request, null);
@@ -84,7 +82,7 @@ public class GetLmsInstructor {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    GetLmsInstructorRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -100,7 +98,7 @@ public class GetLmsInstructor {
         }
 
         private HttpRequest onBuildRequest(GetLmsInstructorRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, GetLmsInstructorRequest.class);
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

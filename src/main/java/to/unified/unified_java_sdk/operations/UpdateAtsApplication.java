@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class UpdateAtsApplication {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class UpdateAtsApplication {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(UpdateAtsApplicationRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    UpdateAtsApplicationRequest.class,
+                    klass,
                     this.baseUrl,
                     "/ats/{connection_id}/application/{id}",
                     request, null);
@@ -86,8 +84,7 @@ public class UpdateAtsApplication {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<UpdateAtsApplicationRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "atsApplication",
@@ -101,7 +98,7 @@ public class UpdateAtsApplication {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    UpdateAtsApplicationRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class UpdateAtsApplication {
         }
 
         private HttpRequest onBuildRequest(UpdateAtsApplicationRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, UpdateAtsApplicationRequest.class, new TypeReference<UpdateAtsApplicationRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

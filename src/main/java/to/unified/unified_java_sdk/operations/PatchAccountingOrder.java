@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class PatchAccountingOrder {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class PatchAccountingOrder {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(PatchAccountingOrderRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    PatchAccountingOrderRequest.class,
+                    klass,
                     this.baseUrl,
                     "/accounting/{connection_id}/order/{id}",
                     request, null);
@@ -86,8 +84,7 @@ public class PatchAccountingOrder {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<PatchAccountingOrderRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "accountingOrder",
@@ -101,7 +98,7 @@ public class PatchAccountingOrder {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    PatchAccountingOrderRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class PatchAccountingOrder {
         }
 
         private HttpRequest onBuildRequest(PatchAccountingOrderRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, PatchAccountingOrderRequest.class, new TypeReference<PatchAccountingOrderRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

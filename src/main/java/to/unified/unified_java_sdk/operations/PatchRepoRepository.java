@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class PatchRepoRepository {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class PatchRepoRepository {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(PatchRepoRepositoryRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    PatchRepoRepositoryRequest.class,
+                    klass,
                     this.baseUrl,
                     "/repo/{connection_id}/repository/{id}",
                     request, null);
@@ -86,8 +84,7 @@ public class PatchRepoRepository {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<PatchRepoRepositoryRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "repoRepository",
@@ -101,7 +98,7 @@ public class PatchRepoRepository {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    PatchRepoRepositoryRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class PatchRepoRepository {
         }
 
         private HttpRequest onBuildRequest(PatchRepoRepositoryRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, PatchRepoRepositoryRequest.class, new TypeReference<PatchRepoRepositoryRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

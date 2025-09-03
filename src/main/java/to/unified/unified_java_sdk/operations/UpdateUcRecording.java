@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class UpdateUcRecording {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class UpdateUcRecording {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(UpdateUcRecordingRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    UpdateUcRecordingRequest.class,
+                    klass,
                     this.baseUrl,
                     "/uc/{connection_id}/recording/{id}",
                     request, null);
@@ -86,8 +84,7 @@ public class UpdateUcRecording {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<UpdateUcRecordingRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "ucRecording",
@@ -101,7 +98,7 @@ public class UpdateUcRecording {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    UpdateUcRecordingRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class UpdateUcRecording {
         }
 
         private HttpRequest onBuildRequest(UpdateUcRecordingRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, UpdateUcRecordingRequest.class, new TypeReference<UpdateUcRecordingRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

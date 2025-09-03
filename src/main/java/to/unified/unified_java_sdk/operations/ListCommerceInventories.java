@@ -27,7 +27,6 @@ import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class ListCommerceInventories {
 
     static abstract class Base {
@@ -73,10 +72,9 @@ public class ListCommerceInventories {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(ListCommerceInventoriesRequest request) throws Exception {
+        <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {
             String url = Utils.generateURL(
-                    ListCommerceInventoriesRequest.class,
+                    klass,
                     this.baseUrl,
                     "/commerce/{connection_id}/inventory",
                     request, null);
@@ -85,7 +83,7 @@ public class ListCommerceInventories {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    ListCommerceInventoriesRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -101,7 +99,7 @@ public class ListCommerceInventories {
         }
 
         private HttpRequest onBuildRequest(ListCommerceInventoriesRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, ListCommerceInventoriesRequest.class);
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

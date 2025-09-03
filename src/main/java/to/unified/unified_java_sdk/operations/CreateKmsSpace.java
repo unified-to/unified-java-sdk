@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class CreateKmsSpace {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class CreateKmsSpace {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(CreateKmsSpaceRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    CreateKmsSpaceRequest.class,
+                    klass,
                     this.baseUrl,
                     "/kms/{connection_id}/space",
                     request, null);
@@ -86,8 +84,7 @@ public class CreateKmsSpace {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<CreateKmsSpaceRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "kmsSpace",
@@ -101,7 +98,7 @@ public class CreateKmsSpace {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    CreateKmsSpaceRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class CreateKmsSpace {
         }
 
         private HttpRequest onBuildRequest(CreateKmsSpaceRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, CreateKmsSpaceRequest.class, new TypeReference<CreateKmsSpaceRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

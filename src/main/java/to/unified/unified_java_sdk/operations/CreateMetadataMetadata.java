@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class CreateMetadataMetadata {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class CreateMetadataMetadata {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(CreateMetadataMetadataRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    CreateMetadataMetadataRequest.class,
+                    klass,
                     this.baseUrl,
                     "/metadata/{connection_id}/metadata",
                     request, null);
@@ -86,8 +84,7 @@ public class CreateMetadataMetadata {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<CreateMetadataMetadataRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "metadataMetadata",
@@ -101,7 +98,7 @@ public class CreateMetadataMetadata {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    CreateMetadataMetadataRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class CreateMetadataMetadata {
         }
 
         private HttpRequest onBuildRequest(CreateMetadataMetadataRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, CreateMetadataMetadataRequest.class, new TypeReference<CreateMetadataMetadataRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

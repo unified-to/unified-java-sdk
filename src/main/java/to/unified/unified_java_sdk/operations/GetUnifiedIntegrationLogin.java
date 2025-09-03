@@ -24,7 +24,6 @@ import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class GetUnifiedIntegrationLogin {
 
     static abstract class Base {
@@ -70,10 +69,9 @@ public class GetUnifiedIntegrationLogin {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(GetUnifiedIntegrationLoginRequest request) throws Exception {
+        <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {
             String url = Utils.generateURL(
-                    GetUnifiedIntegrationLoginRequest.class,
+                    klass,
                     this.baseUrl,
                     "/unified/integration/login/{workspace_id}/{integration_type}",
                     request, null);
@@ -82,7 +80,7 @@ public class GetUnifiedIntegrationLogin {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    GetUnifiedIntegrationLoginRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -98,7 +96,7 @@ public class GetUnifiedIntegrationLogin {
         }
 
         private HttpRequest onBuildRequest(GetUnifiedIntegrationLoginRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, GetUnifiedIntegrationLoginRequest.class);
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

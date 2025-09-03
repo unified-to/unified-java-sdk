@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class CreateAtsScorecard {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class CreateAtsScorecard {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(CreateAtsScorecardRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    CreateAtsScorecardRequest.class,
+                    klass,
                     this.baseUrl,
                     "/ats/{connection_id}/scorecard",
                     request, null);
@@ -86,8 +84,7 @@ public class CreateAtsScorecard {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<CreateAtsScorecardRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "atsScorecard",
@@ -101,7 +98,7 @@ public class CreateAtsScorecard {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    CreateAtsScorecardRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class CreateAtsScorecard {
         }
 
         private HttpRequest onBuildRequest(CreateAtsScorecardRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, CreateAtsScorecardRequest.class, new TypeReference<CreateAtsScorecardRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

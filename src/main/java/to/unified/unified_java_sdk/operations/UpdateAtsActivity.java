@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class UpdateAtsActivity {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class UpdateAtsActivity {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(UpdateAtsActivityRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    UpdateAtsActivityRequest.class,
+                    klass,
                     this.baseUrl,
                     "/ats/{connection_id}/activity/{id}",
                     request, null);
@@ -86,8 +84,7 @@ public class UpdateAtsActivity {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<UpdateAtsActivityRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "atsActivity",
@@ -101,7 +98,7 @@ public class UpdateAtsActivity {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    UpdateAtsActivityRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class UpdateAtsActivity {
         }
 
         private HttpRequest onBuildRequest(UpdateAtsActivityRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, UpdateAtsActivityRequest.class, new TypeReference<UpdateAtsActivityRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

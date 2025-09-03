@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class PatchAtsActivity {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class PatchAtsActivity {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(PatchAtsActivityRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    PatchAtsActivityRequest.class,
+                    klass,
                     this.baseUrl,
                     "/ats/{connection_id}/activity/{id}",
                     request, null);
@@ -86,8 +84,7 @@ public class PatchAtsActivity {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<PatchAtsActivityRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "atsActivity",
@@ -101,7 +98,7 @@ public class PatchAtsActivity {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    PatchAtsActivityRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class PatchAtsActivity {
         }
 
         private HttpRequest onBuildRequest(PatchAtsActivityRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, PatchAtsActivityRequest.class, new TypeReference<PatchAtsActivityRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

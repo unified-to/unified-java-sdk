@@ -24,7 +24,6 @@ import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class RemoveRepoCommit {
 
     static abstract class Base {
@@ -70,10 +69,9 @@ public class RemoveRepoCommit {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(RemoveRepoCommitRequest request) throws Exception {
+        <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {
             String url = Utils.generateURL(
-                    RemoveRepoCommitRequest.class,
+                    klass,
                     this.baseUrl,
                     "/repo/{connection_id}/commit/{id}",
                     request, null);
@@ -93,7 +91,7 @@ public class RemoveRepoCommit {
         }
 
         private HttpRequest onBuildRequest(RemoveRepoCommitRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, RemoveRepoCommitRequest.class);
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

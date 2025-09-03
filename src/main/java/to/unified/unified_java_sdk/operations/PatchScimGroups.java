@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class PatchScimGroups {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class PatchScimGroups {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(PatchScimGroupsRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    PatchScimGroupsRequest.class,
+                    klass,
                     this.baseUrl,
                     "/scim/{connection_id}/groups/{id}",
                     request, null);
@@ -86,8 +84,7 @@ public class PatchScimGroups {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<PatchScimGroupsRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "scimGroup",
@@ -112,7 +109,7 @@ public class PatchScimGroups {
         }
 
         private HttpRequest onBuildRequest(PatchScimGroupsRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, PatchScimGroupsRequest.class, new TypeReference<PatchScimGroupsRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

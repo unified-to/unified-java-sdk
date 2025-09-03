@@ -26,7 +26,6 @@ import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class GetCalendarCalendar {
 
     static abstract class Base {
@@ -72,10 +71,9 @@ public class GetCalendarCalendar {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(GetCalendarCalendarRequest request) throws Exception {
+        <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {
             String url = Utils.generateURL(
-                    GetCalendarCalendarRequest.class,
+                    klass,
                     this.baseUrl,
                     "/calendar/{connection_id}/calendar/{id}",
                     request, null);
@@ -84,7 +82,7 @@ public class GetCalendarCalendar {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    GetCalendarCalendarRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -100,7 +98,7 @@ public class GetCalendarCalendar {
         }
 
         private HttpRequest onBuildRequest(GetCalendarCalendarRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, GetCalendarCalendarRequest.class);
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

@@ -26,7 +26,6 @@ import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class GetUnifiedConnection {
 
     static abstract class Base {
@@ -72,10 +71,9 @@ public class GetUnifiedConnection {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(GetUnifiedConnectionRequest request) throws Exception {
+        <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {
             String url = Utils.generateURL(
-                    GetUnifiedConnectionRequest.class,
+                    klass,
                     this.baseUrl,
                     "/unified/connection/{id}",
                     request, null);
@@ -95,7 +93,7 @@ public class GetUnifiedConnection {
         }
 
         private HttpRequest onBuildRequest(GetUnifiedConnectionRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, GetUnifiedConnectionRequest.class);
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

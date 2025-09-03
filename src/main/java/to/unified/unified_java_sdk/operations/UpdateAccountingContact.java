@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class UpdateAccountingContact {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class UpdateAccountingContact {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(UpdateAccountingContactRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    UpdateAccountingContactRequest.class,
+                    klass,
                     this.baseUrl,
                     "/accounting/{connection_id}/contact/{id}",
                     request, null);
@@ -86,8 +84,7 @@ public class UpdateAccountingContact {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<UpdateAccountingContactRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "accountingContact",
@@ -101,7 +98,7 @@ public class UpdateAccountingContact {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    UpdateAccountingContactRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class UpdateAccountingContact {
         }
 
         private HttpRequest onBuildRequest(UpdateAccountingContactRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, UpdateAccountingContactRequest.class, new TypeReference<UpdateAccountingContactRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

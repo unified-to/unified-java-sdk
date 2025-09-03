@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class UpdateMessagingMessage {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class UpdateMessagingMessage {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(UpdateMessagingMessageRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    UpdateMessagingMessageRequest.class,
+                    klass,
                     this.baseUrl,
                     "/messaging/{connection_id}/message/{id}",
                     request, null);
@@ -86,8 +84,7 @@ public class UpdateMessagingMessage {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<UpdateMessagingMessageRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "messagingMessage",
@@ -101,7 +98,7 @@ public class UpdateMessagingMessage {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    UpdateMessagingMessageRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class UpdateMessagingMessage {
         }
 
         private HttpRequest onBuildRequest(UpdateMessagingMessageRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, UpdateMessagingMessageRequest.class, new TypeReference<UpdateMessagingMessageRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

@@ -24,7 +24,6 @@ import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class RemoveAtsCompany {
 
     static abstract class Base {
@@ -70,10 +69,9 @@ public class RemoveAtsCompany {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(RemoveAtsCompanyRequest request) throws Exception {
+        <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {
             String url = Utils.generateURL(
-                    RemoveAtsCompanyRequest.class,
+                    klass,
                     this.baseUrl,
                     "/ats/{connection_id}/company/{id}",
                     request, null);
@@ -93,7 +91,7 @@ public class RemoveAtsCompany {
         }
 
         private HttpRequest onBuildRequest(RemoveAtsCompanyRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, RemoveAtsCompanyRequest.class);
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

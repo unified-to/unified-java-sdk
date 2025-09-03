@@ -26,7 +26,6 @@ import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class GetScimUsers {
 
     static abstract class Base {
@@ -72,10 +71,9 @@ public class GetScimUsers {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(GetScimUsersRequest request) throws Exception {
+        <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {
             String url = Utils.generateURL(
-                    GetScimUsersRequest.class,
+                    klass,
                     this.baseUrl,
                     "/scim/{connection_id}/users/{id}",
                     request, null);
@@ -95,7 +93,7 @@ public class GetScimUsers {
         }
 
         private HttpRequest onBuildRequest(GetScimUsersRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, GetScimUsersRequest.class);
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

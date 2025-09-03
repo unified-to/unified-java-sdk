@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class UpdateRepoPullrequest {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class UpdateRepoPullrequest {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(UpdateRepoPullrequestRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    UpdateRepoPullrequestRequest.class,
+                    klass,
                     this.baseUrl,
                     "/repo/{connection_id}/pullrequest/{id}",
                     request, null);
@@ -86,8 +84,7 @@ public class UpdateRepoPullrequest {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<UpdateRepoPullrequestRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "repoPullrequest",
@@ -101,7 +98,7 @@ public class UpdateRepoPullrequest {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    UpdateRepoPullrequestRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class UpdateRepoPullrequest {
         }
 
         private HttpRequest onBuildRequest(UpdateRepoPullrequestRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, UpdateRepoPullrequestRequest.class, new TypeReference<UpdateRepoPullrequestRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class CreateAccountingOrder {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class CreateAccountingOrder {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(CreateAccountingOrderRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    CreateAccountingOrderRequest.class,
+                    klass,
                     this.baseUrl,
                     "/accounting/{connection_id}/order",
                     request, null);
@@ -86,8 +84,7 @@ public class CreateAccountingOrder {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<CreateAccountingOrderRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "accountingOrder",
@@ -101,7 +98,7 @@ public class CreateAccountingOrder {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    CreateAccountingOrderRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class CreateAccountingOrder {
         }
 
         private HttpRequest onBuildRequest(CreateAccountingOrderRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, CreateAccountingOrderRequest.class, new TypeReference<CreateAccountingOrderRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

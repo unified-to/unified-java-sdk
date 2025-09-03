@@ -174,6 +174,9 @@ public class UnifiedTo {
     private final Genai genai;
 
 
+    private final Embedding embedding;
+
+
     private final Model model;
 
 
@@ -578,6 +581,11 @@ public class UnifiedTo {
 
     public Genai genai() {
         return genai;
+    }
+
+
+    public Embedding embedding() {
+        return embedding;
     }
 
 
@@ -1059,6 +1067,7 @@ public class UnifiedTo {
         this.enrich = new Enrich(sdkConfiguration);
         this.person = new Person(sdkConfiguration);
         this.genai = new Genai(sdkConfiguration);
+        this.embedding = new Embedding(sdkConfiguration);
         this.model = new Model(sdkConfiguration);
         this.prompt = new Prompt(sdkConfiguration);
         this.hris = new Hris(sdkConfiguration);

@@ -24,7 +24,6 @@ import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class RemoveHrisTimeshift {
 
     static abstract class Base {
@@ -70,10 +69,9 @@ public class RemoveHrisTimeshift {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(RemoveHrisTimeshiftRequest request) throws Exception {
+        <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {
             String url = Utils.generateURL(
-                    RemoveHrisTimeshiftRequest.class,
+                    klass,
                     this.baseUrl,
                     "/hris/{connection_id}/timeshift/{id}",
                     request, null);
@@ -93,7 +91,7 @@ public class RemoveHrisTimeshift {
         }
 
         private HttpRequest onBuildRequest(RemoveHrisTimeshiftRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, RemoveHrisTimeshiftRequest.class);
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

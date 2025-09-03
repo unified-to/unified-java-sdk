@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class PatchCommerceCollection {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class PatchCommerceCollection {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(PatchCommerceCollectionRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    PatchCommerceCollectionRequest.class,
+                    klass,
                     this.baseUrl,
                     "/commerce/{connection_id}/collection/{id}",
                     request, null);
@@ -86,8 +84,7 @@ public class PatchCommerceCollection {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<PatchCommerceCollectionRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "commerceCollection",
@@ -101,7 +98,7 @@ public class PatchCommerceCollection {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    PatchCommerceCollectionRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class PatchCommerceCollection {
         }
 
         private HttpRequest onBuildRequest(PatchCommerceCollectionRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, PatchCommerceCollectionRequest.class, new TypeReference<PatchCommerceCollectionRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

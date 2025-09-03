@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class CreateCommerceReview {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class CreateCommerceReview {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(CreateCommerceReviewRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    CreateCommerceReviewRequest.class,
+                    klass,
                     this.baseUrl,
                     "/commerce/{connection_id}/review",
                     request, null);
@@ -86,8 +84,7 @@ public class CreateCommerceReview {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<CreateCommerceReviewRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "commerceReview",
@@ -101,7 +98,7 @@ public class CreateCommerceReview {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    CreateCommerceReviewRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class CreateCommerceReview {
         }
 
         private HttpRequest onBuildRequest(CreateCommerceReviewRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, CreateCommerceReviewRequest.class, new TypeReference<CreateCommerceReviewRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

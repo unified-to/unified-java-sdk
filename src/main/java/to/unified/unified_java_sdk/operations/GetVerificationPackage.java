@@ -26,7 +26,6 @@ import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class GetVerificationPackage {
 
     static abstract class Base {
@@ -72,10 +71,9 @@ public class GetVerificationPackage {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(GetVerificationPackageRequest request) throws Exception {
+        <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {
             String url = Utils.generateURL(
-                    GetVerificationPackageRequest.class,
+                    klass,
                     this.baseUrl,
                     "/verification/{connection_id}/package/{id}",
                     request, null);
@@ -84,7 +82,7 @@ public class GetVerificationPackage {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    GetVerificationPackageRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -100,7 +98,7 @@ public class GetVerificationPackage {
         }
 
         private HttpRequest onBuildRequest(GetVerificationPackageRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, GetVerificationPackageRequest.class);
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class CreateAccountingPurchaseorder {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class CreateAccountingPurchaseorder {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(CreateAccountingPurchaseorderRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    CreateAccountingPurchaseorderRequest.class,
+                    klass,
                     this.baseUrl,
                     "/accounting/{connection_id}/purchaseorder",
                     request, null);
@@ -86,8 +84,7 @@ public class CreateAccountingPurchaseorder {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<CreateAccountingPurchaseorderRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "accountingPurchaseorder",
@@ -101,7 +98,7 @@ public class CreateAccountingPurchaseorder {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    CreateAccountingPurchaseorderRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class CreateAccountingPurchaseorder {
         }
 
         private HttpRequest onBuildRequest(CreateAccountingPurchaseorderRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, CreateAccountingPurchaseorderRequest.class, new TypeReference<CreateAccountingPurchaseorderRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

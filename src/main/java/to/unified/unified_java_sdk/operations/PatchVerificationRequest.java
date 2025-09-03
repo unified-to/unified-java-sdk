@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class PatchVerificationRequest {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class PatchVerificationRequest {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(PatchVerificationRequestRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    PatchVerificationRequestRequest.class,
+                    klass,
                     this.baseUrl,
                     "/verification/{connection_id}/request/{id}",
                     request, null);
@@ -86,8 +84,7 @@ public class PatchVerificationRequest {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<PatchVerificationRequestRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "verificationRequest",
@@ -101,7 +98,7 @@ public class PatchVerificationRequest {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    PatchVerificationRequestRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class PatchVerificationRequest {
         }
 
         private HttpRequest onBuildRequest(PatchVerificationRequestRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, PatchVerificationRequestRequest.class, new TypeReference<PatchVerificationRequestRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

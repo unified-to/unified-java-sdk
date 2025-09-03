@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class CreateUnifiedWebhook {
 
     static abstract class Base {
@@ -75,8 +74,7 @@ public class CreateUnifiedWebhook {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(CreateUnifiedWebhookRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
                     this.baseUrl,
                     "/unified/webhook");
@@ -84,8 +82,7 @@ public class CreateUnifiedWebhook {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<CreateUnifiedWebhookRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "webhook",
@@ -99,7 +96,7 @@ public class CreateUnifiedWebhook {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    CreateUnifiedWebhookRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -115,7 +112,7 @@ public class CreateUnifiedWebhook {
         }
 
         private HttpRequest onBuildRequest(CreateUnifiedWebhookRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, CreateUnifiedWebhookRequest.class, new TypeReference<CreateUnifiedWebhookRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

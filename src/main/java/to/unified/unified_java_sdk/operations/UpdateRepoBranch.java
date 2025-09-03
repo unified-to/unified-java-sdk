@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class UpdateRepoBranch {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class UpdateRepoBranch {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(UpdateRepoBranchRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    UpdateRepoBranchRequest.class,
+                    klass,
                     this.baseUrl,
                     "/repo/{connection_id}/branch/{id}",
                     request, null);
@@ -86,8 +84,7 @@ public class UpdateRepoBranch {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<UpdateRepoBranchRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "repoBranch",
@@ -101,7 +98,7 @@ public class UpdateRepoBranch {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    UpdateRepoBranchRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class UpdateRepoBranch {
         }
 
         private HttpRequest onBuildRequest(UpdateRepoBranchRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, UpdateRepoBranchRequest.class, new TypeReference<UpdateRepoBranchRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

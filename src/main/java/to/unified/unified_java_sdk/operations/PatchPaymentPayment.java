@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class PatchPaymentPayment {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class PatchPaymentPayment {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(PatchPaymentPaymentRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    PatchPaymentPaymentRequest.class,
+                    klass,
                     this.baseUrl,
                     "/payment/{connection_id}/payment/{id}",
                     request, null);
@@ -86,8 +84,7 @@ public class PatchPaymentPayment {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<PatchPaymentPaymentRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "paymentPayment",
@@ -101,7 +98,7 @@ public class PatchPaymentPayment {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    PatchPaymentPaymentRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class PatchPaymentPayment {
         }
 
         private HttpRequest onBuildRequest(PatchPaymentPaymentRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, PatchPaymentPaymentRequest.class, new TypeReference<PatchPaymentPaymentRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class PatchCalendarCalendar {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class PatchCalendarCalendar {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(PatchCalendarCalendarRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    PatchCalendarCalendarRequest.class,
+                    klass,
                     this.baseUrl,
                     "/calendar/{connection_id}/calendar/{id}",
                     request, null);
@@ -86,8 +84,7 @@ public class PatchCalendarCalendar {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<PatchCalendarCalendarRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "calendarCalendar",
@@ -101,7 +98,7 @@ public class PatchCalendarCalendar {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    PatchCalendarCalendarRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class PatchCalendarCalendar {
         }
 
         private HttpRequest onBuildRequest(PatchCalendarCalendarRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, PatchCalendarCalendarRequest.class, new TypeReference<PatchCalendarCalendarRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

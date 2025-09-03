@@ -26,7 +26,6 @@ import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class GetHrisPayslip {
 
     static abstract class Base {
@@ -72,10 +71,9 @@ public class GetHrisPayslip {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(GetHrisPayslipRequest request) throws Exception {
+        <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {
             String url = Utils.generateURL(
-                    GetHrisPayslipRequest.class,
+                    klass,
                     this.baseUrl,
                     "/hris/{connection_id}/payslip/{id}",
                     request, null);
@@ -84,7 +82,7 @@ public class GetHrisPayslip {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    GetHrisPayslipRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -100,7 +98,7 @@ public class GetHrisPayslip {
         }
 
         private HttpRequest onBuildRequest(GetHrisPayslipRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, GetHrisPayslipRequest.class);
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

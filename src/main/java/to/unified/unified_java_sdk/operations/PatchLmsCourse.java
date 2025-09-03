@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class PatchLmsCourse {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class PatchLmsCourse {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(PatchLmsCourseRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    PatchLmsCourseRequest.class,
+                    klass,
                     this.baseUrl,
                     "/lms/{connection_id}/course/{id}",
                     request, null);
@@ -86,8 +84,7 @@ public class PatchLmsCourse {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<PatchLmsCourseRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "lmsCourse",
@@ -101,7 +98,7 @@ public class PatchLmsCourse {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    PatchLmsCourseRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class PatchLmsCourse {
         }
 
         private HttpRequest onBuildRequest(PatchLmsCourseRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, PatchLmsCourseRequest.class, new TypeReference<PatchLmsCourseRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class CreateTicketingTicket {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class CreateTicketingTicket {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(CreateTicketingTicketRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    CreateTicketingTicketRequest.class,
+                    klass,
                     this.baseUrl,
                     "/ticketing/{connection_id}/ticket",
                     request, null);
@@ -86,8 +84,7 @@ public class CreateTicketingTicket {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<CreateTicketingTicketRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "ticketingTicket",
@@ -101,7 +98,7 @@ public class CreateTicketingTicket {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    CreateTicketingTicketRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class CreateTicketingTicket {
         }
 
         private HttpRequest onBuildRequest(CreateTicketingTicketRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, CreateTicketingTicketRequest.class, new TypeReference<CreateTicketingTicketRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

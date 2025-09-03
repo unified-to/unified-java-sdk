@@ -103,6 +103,7 @@ public class ObjectType {
     public static final ObjectType TICKETING_NOTE = new ObjectType("ticketing_note");
     public static final ObjectType TICKETING_TICKET = new ObjectType("ticketing_ticket");
     public static final ObjectType TICKETING_CUSTOMER = new ObjectType("ticketing_customer");
+    public static final ObjectType TICKETING_CATEGORY = new ObjectType("ticketing_category");
     public static final ObjectType UC_CONTACT = new ObjectType("uc_contact");
     public static final ObjectType UC_CALL = new ObjectType("uc_call");
     public static final ObjectType UC_COMMENT = new ObjectType("uc_comment");
@@ -112,6 +113,7 @@ public class ObjectType {
     public static final ObjectType STORAGE_FILE = new ObjectType("storage_file");
     public static final ObjectType GENAI_MODEL = new ObjectType("genai_model");
     public static final ObjectType GENAI_PROMPT = new ObjectType("genai_prompt");
+    public static final ObjectType GENAI_EMBEDDING = new ObjectType("genai_embedding");
     public static final ObjectType MESSAGING_MESSAGE = new ObjectType("messaging_message");
     public static final ObjectType MESSAGING_CHANNEL = new ObjectType("messaging_channel");
     public static final ObjectType KMS_SPACE = new ObjectType("kms_space");
@@ -267,6 +269,7 @@ public class ObjectType {
         map.put("ticketing_note", TICKETING_NOTE);
         map.put("ticketing_ticket", TICKETING_TICKET);
         map.put("ticketing_customer", TICKETING_CUSTOMER);
+        map.put("ticketing_category", TICKETING_CATEGORY);
         map.put("uc_contact", UC_CONTACT);
         map.put("uc_call", UC_CALL);
         map.put("uc_comment", UC_COMMENT);
@@ -276,6 +279,7 @@ public class ObjectType {
         map.put("storage_file", STORAGE_FILE);
         map.put("genai_model", GENAI_MODEL);
         map.put("genai_prompt", GENAI_PROMPT);
+        map.put("genai_embedding", GENAI_EMBEDDING);
         map.put("messaging_message", MESSAGING_MESSAGE);
         map.put("messaging_channel", MESSAGING_CHANNEL);
         map.put("kms_space", KMS_SPACE);
@@ -365,6 +369,7 @@ public class ObjectType {
         map.put("ticketing_note", ObjectTypeEnum.TICKETING_NOTE);
         map.put("ticketing_ticket", ObjectTypeEnum.TICKETING_TICKET);
         map.put("ticketing_customer", ObjectTypeEnum.TICKETING_CUSTOMER);
+        map.put("ticketing_category", ObjectTypeEnum.TICKETING_CATEGORY);
         map.put("uc_contact", ObjectTypeEnum.UC_CONTACT);
         map.put("uc_call", ObjectTypeEnum.UC_CALL);
         map.put("uc_comment", ObjectTypeEnum.UC_COMMENT);
@@ -374,6 +379,7 @@ public class ObjectType {
         map.put("storage_file", ObjectTypeEnum.STORAGE_FILE);
         map.put("genai_model", ObjectTypeEnum.GENAI_MODEL);
         map.put("genai_prompt", ObjectTypeEnum.GENAI_PROMPT);
+        map.put("genai_embedding", ObjectTypeEnum.GENAI_EMBEDDING);
         map.put("messaging_message", ObjectTypeEnum.MESSAGING_MESSAGE);
         map.put("messaging_channel", ObjectTypeEnum.MESSAGING_CHANNEL);
         map.put("kms_space", ObjectTypeEnum.KMS_SPACE);
@@ -493,6 +499,7 @@ public class ObjectType {
         TICKETING_NOTE("ticketing_note"),
         TICKETING_TICKET("ticketing_ticket"),
         TICKETING_CUSTOMER("ticketing_customer"),
+        TICKETING_CATEGORY("ticketing_category"),
         UC_CONTACT("uc_contact"),
         UC_CALL("uc_call"),
         UC_COMMENT("uc_comment"),
@@ -502,6 +509,7 @@ public class ObjectType {
         STORAGE_FILE("storage_file"),
         GENAI_MODEL("genai_model"),
         GENAI_PROMPT("genai_prompt"),
+        GENAI_EMBEDDING("genai_embedding"),
         MESSAGING_MESSAGE("messaging_message"),
         MESSAGING_CHANNEL("messaging_channel"),
         KMS_SPACE("kms_space"),

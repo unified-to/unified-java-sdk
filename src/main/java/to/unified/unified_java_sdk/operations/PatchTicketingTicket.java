@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class PatchTicketingTicket {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class PatchTicketingTicket {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(PatchTicketingTicketRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    PatchTicketingTicketRequest.class,
+                    klass,
                     this.baseUrl,
                     "/ticketing/{connection_id}/ticket/{id}",
                     request, null);
@@ -86,8 +84,7 @@ public class PatchTicketingTicket {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<PatchTicketingTicketRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "ticketingTicket",
@@ -101,7 +98,7 @@ public class PatchTicketingTicket {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    PatchTicketingTicketRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class PatchTicketingTicket {
         }
 
         private HttpRequest onBuildRequest(PatchTicketingTicketRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, PatchTicketingTicketRequest.class, new TypeReference<PatchTicketingTicketRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

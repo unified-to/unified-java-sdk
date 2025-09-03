@@ -26,7 +26,6 @@ import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class GetUnifiedWebhook {
 
     static abstract class Base {
@@ -72,10 +71,9 @@ public class GetUnifiedWebhook {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(GetUnifiedWebhookRequest request) throws Exception {
+        <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {
             String url = Utils.generateURL(
-                    GetUnifiedWebhookRequest.class,
+                    klass,
                     this.baseUrl,
                     "/unified/webhook/{id}",
                     request, null);
@@ -95,7 +93,7 @@ public class GetUnifiedWebhook {
         }
 
         private HttpRequest onBuildRequest(GetUnifiedWebhookRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, GetUnifiedWebhookRequest.class);
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

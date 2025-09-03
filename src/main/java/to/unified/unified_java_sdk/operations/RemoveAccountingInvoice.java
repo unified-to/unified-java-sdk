@@ -24,7 +24,6 @@ import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class RemoveAccountingInvoice {
 
     static abstract class Base {
@@ -70,10 +69,9 @@ public class RemoveAccountingInvoice {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(RemoveAccountingInvoiceRequest request) throws Exception {
+        <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {
             String url = Utils.generateURL(
-                    RemoveAccountingInvoiceRequest.class,
+                    klass,
                     this.baseUrl,
                     "/accounting/{connection_id}/invoice/{id}",
                     request, null);
@@ -93,7 +91,7 @@ public class RemoveAccountingInvoice {
         }
 
         private HttpRequest onBuildRequest(RemoveAccountingInvoiceRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, RemoveAccountingInvoiceRequest.class);
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

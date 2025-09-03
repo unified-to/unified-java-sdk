@@ -24,7 +24,6 @@ import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class RemoveKmsPage {
 
     static abstract class Base {
@@ -70,10 +69,9 @@ public class RemoveKmsPage {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(RemoveKmsPageRequest request) throws Exception {
+        <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {
             String url = Utils.generateURL(
-                    RemoveKmsPageRequest.class,
+                    klass,
                     this.baseUrl,
                     "/kms/{connection_id}/page/{id}",
                     request, null);
@@ -93,7 +91,7 @@ public class RemoveKmsPage {
         }
 
         private HttpRequest onBuildRequest(RemoveKmsPageRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, RemoveKmsPageRequest.class);
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

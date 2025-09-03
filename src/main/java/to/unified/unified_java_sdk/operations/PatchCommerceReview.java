@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class PatchCommerceReview {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class PatchCommerceReview {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(PatchCommerceReviewRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    PatchCommerceReviewRequest.class,
+                    klass,
                     this.baseUrl,
                     "/commerce/{connection_id}/review/{id}",
                     request, null);
@@ -86,8 +84,7 @@ public class PatchCommerceReview {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<PatchCommerceReviewRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "commerceReview",
@@ -101,7 +98,7 @@ public class PatchCommerceReview {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    PatchCommerceReviewRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class PatchCommerceReview {
         }
 
         private HttpRequest onBuildRequest(PatchCommerceReviewRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, PatchCommerceReviewRequest.class, new TypeReference<PatchCommerceReviewRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

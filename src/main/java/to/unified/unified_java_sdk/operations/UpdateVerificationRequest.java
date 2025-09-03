@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class UpdateVerificationRequest {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class UpdateVerificationRequest {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(UpdateVerificationRequestRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    UpdateVerificationRequestRequest.class,
+                    klass,
                     this.baseUrl,
                     "/verification/{connection_id}/request/{id}",
                     request, null);
@@ -86,8 +84,7 @@ public class UpdateVerificationRequest {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<UpdateVerificationRequestRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "verificationRequest",
@@ -101,7 +98,7 @@ public class UpdateVerificationRequest {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    UpdateVerificationRequestRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class UpdateVerificationRequest {
         }
 
         private HttpRequest onBuildRequest(UpdateVerificationRequestRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, UpdateVerificationRequestRequest.class, new TypeReference<UpdateVerificationRequestRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

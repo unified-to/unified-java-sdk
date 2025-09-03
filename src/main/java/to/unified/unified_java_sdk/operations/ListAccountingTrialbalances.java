@@ -27,7 +27,6 @@ import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class ListAccountingTrialbalances {
 
     static abstract class Base {
@@ -73,10 +72,9 @@ public class ListAccountingTrialbalances {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(ListAccountingTrialbalancesRequest request) throws Exception {
+        <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {
             String url = Utils.generateURL(
-                    ListAccountingTrialbalancesRequest.class,
+                    klass,
                     this.baseUrl,
                     "/accounting/{connection_id}/trialbalance",
                     request, null);
@@ -85,7 +83,7 @@ public class ListAccountingTrialbalances {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    ListAccountingTrialbalancesRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -101,7 +99,7 @@ public class ListAccountingTrialbalances {
         }
 
         private HttpRequest onBuildRequest(ListAccountingTrialbalancesRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, ListAccountingTrialbalancesRequest.class);
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

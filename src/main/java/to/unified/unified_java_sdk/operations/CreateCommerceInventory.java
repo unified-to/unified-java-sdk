@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class CreateCommerceInventory {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class CreateCommerceInventory {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(CreateCommerceInventoryRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    CreateCommerceInventoryRequest.class,
+                    klass,
                     this.baseUrl,
                     "/commerce/{connection_id}/inventory",
                     request, null);
@@ -86,8 +84,7 @@ public class CreateCommerceInventory {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<CreateCommerceInventoryRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "commerceInventory",
@@ -101,7 +98,7 @@ public class CreateCommerceInventory {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    CreateCommerceInventoryRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class CreateCommerceInventory {
         }
 
         private HttpRequest onBuildRequest(CreateCommerceInventoryRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, CreateCommerceInventoryRequest.class, new TypeReference<CreateCommerceInventoryRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

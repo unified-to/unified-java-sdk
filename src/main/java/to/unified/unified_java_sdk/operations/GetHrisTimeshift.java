@@ -26,7 +26,6 @@ import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class GetHrisTimeshift {
 
     static abstract class Base {
@@ -72,10 +71,9 @@ public class GetHrisTimeshift {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(GetHrisTimeshiftRequest request) throws Exception {
+        <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {
             String url = Utils.generateURL(
-                    GetHrisTimeshiftRequest.class,
+                    klass,
                     this.baseUrl,
                     "/hris/{connection_id}/timeshift/{id}",
                     request, null);
@@ -84,7 +82,7 @@ public class GetHrisTimeshift {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    GetHrisTimeshiftRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -100,7 +98,7 @@ public class GetHrisTimeshift {
         }
 
         private HttpRequest onBuildRequest(GetHrisTimeshiftRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, GetHrisTimeshiftRequest.class);
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

@@ -24,7 +24,6 @@ import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class RemoveCalendarLink {
 
     static abstract class Base {
@@ -70,10 +69,9 @@ public class RemoveCalendarLink {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(RemoveCalendarLinkRequest request) throws Exception {
+        <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {
             String url = Utils.generateURL(
-                    RemoveCalendarLinkRequest.class,
+                    klass,
                     this.baseUrl,
                     "/calendar/{connection_id}/link/{id}",
                     request, null);
@@ -93,7 +91,7 @@ public class RemoveCalendarLink {
         }
 
         private HttpRequest onBuildRequest(RemoveCalendarLinkRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, RemoveCalendarLinkRequest.class);
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

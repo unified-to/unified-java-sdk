@@ -27,6 +27,11 @@ public class TicketingTicket {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("category_id")
+    private Optional<String> categoryId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closed_at")
     private Optional<OffsetDateTime> closedAt;
 
@@ -103,6 +108,7 @@ public class TicketingTicket {
     @JsonCreator
     public TicketingTicket(
             @JsonProperty("category") Optional<String> category,
+            @JsonProperty("category_id") Optional<String> categoryId,
             @JsonProperty("closed_at") Optional<OffsetDateTime> closedAt,
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("customer_id") Optional<String> customerId,
@@ -119,6 +125,7 @@ public class TicketingTicket {
             @JsonProperty("url") Optional<String> url,
             @JsonProperty("user_id") Optional<String> userId) {
         Utils.checkNotNull(category, "category");
+        Utils.checkNotNull(categoryId, "categoryId");
         Utils.checkNotNull(closedAt, "closedAt");
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(customerId, "customerId");
@@ -135,6 +142,7 @@ public class TicketingTicket {
         Utils.checkNotNull(url, "url");
         Utils.checkNotNull(userId, "userId");
         this.category = category;
+        this.categoryId = categoryId;
         this.closedAt = closedAt;
         this.createdAt = createdAt;
         this.customerId = customerId;
@@ -158,12 +166,17 @@ public class TicketingTicket {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
     public Optional<String> category() {
         return category;
+    }
+
+    @JsonIgnore
+    public Optional<String> categoryId() {
+        return categoryId;
     }
 
     @JsonIgnore
@@ -259,6 +272,19 @@ public class TicketingTicket {
     public TicketingTicket withCategory(Optional<String> category) {
         Utils.checkNotNull(category, "category");
         this.category = category;
+        return this;
+    }
+
+    public TicketingTicket withCategoryId(String categoryId) {
+        Utils.checkNotNull(categoryId, "categoryId");
+        this.categoryId = Optional.ofNullable(categoryId);
+        return this;
+    }
+
+
+    public TicketingTicket withCategoryId(Optional<String> categoryId) {
+        Utils.checkNotNull(categoryId, "categoryId");
+        this.categoryId = categoryId;
         return this;
     }
 
@@ -468,6 +494,7 @@ public class TicketingTicket {
         TicketingTicket other = (TicketingTicket) o;
         return 
             Utils.enhancedDeepEquals(this.category, other.category) &&
+            Utils.enhancedDeepEquals(this.categoryId, other.categoryId) &&
             Utils.enhancedDeepEquals(this.closedAt, other.closedAt) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.customerId, other.customerId) &&
@@ -488,18 +515,19 @@ public class TicketingTicket {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            category, closedAt, createdAt,
-            customerId, description, id,
-            priority, raw, source,
-            sourceRef, status, subject,
-            tags, updatedAt, url,
-            userId);
+            category, categoryId, closedAt,
+            createdAt, customerId, description,
+            id, priority, raw,
+            source, sourceRef, status,
+            subject, tags, updatedAt,
+            url, userId);
     }
     
     @Override
     public String toString() {
         return Utils.toString(TicketingTicket.class,
                 "category", category,
+                "categoryId", categoryId,
                 "closedAt", closedAt,
                 "createdAt", createdAt,
                 "customerId", customerId,
@@ -521,6 +549,8 @@ public class TicketingTicket {
     public final static class Builder {
 
         private Optional<String> category = Optional.empty();
+
+        private Optional<String> categoryId = Optional.empty();
 
         private Optional<OffsetDateTime> closedAt = Optional.empty();
 
@@ -566,6 +596,19 @@ public class TicketingTicket {
         public Builder category(Optional<String> category) {
             Utils.checkNotNull(category, "category");
             this.category = category;
+            return this;
+        }
+
+
+        public Builder categoryId(String categoryId) {
+            Utils.checkNotNull(categoryId, "categoryId");
+            this.categoryId = Optional.ofNullable(categoryId);
+            return this;
+        }
+
+        public Builder categoryId(Optional<String> categoryId) {
+            Utils.checkNotNull(categoryId, "categoryId");
+            this.categoryId = categoryId;
             return this;
         }
 
@@ -767,12 +810,12 @@ public class TicketingTicket {
         public TicketingTicket build() {
 
             return new TicketingTicket(
-                category, closedAt, createdAt,
-                customerId, description, id,
-                priority, raw, source,
-                sourceRef, status, subject,
-                tags, updatedAt, url,
-                userId);
+                category, categoryId, closedAt,
+                createdAt, customerId, description,
+                id, priority, raw,
+                source, sourceRef, status,
+                subject, tags, updatedAt,
+                url, userId);
         }
 
     }

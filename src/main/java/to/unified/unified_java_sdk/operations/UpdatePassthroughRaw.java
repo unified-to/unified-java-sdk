@@ -28,7 +28,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class UpdatePassthroughRaw {
 
     static abstract class Base {
@@ -74,10 +73,9 @@ public class UpdatePassthroughRaw {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(UpdatePassthroughRawRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    UpdatePassthroughRawRequest.class,
+                    klass,
                     this.baseUrl,
                     "/passthrough/{connection_id}/{path}",
                     request, null);
@@ -85,8 +83,7 @@ public class UpdatePassthroughRaw {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<UpdatePassthroughRawRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "requestBody",
@@ -97,7 +94,7 @@ public class UpdatePassthroughRaw {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    UpdatePassthroughRawRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -113,7 +110,7 @@ public class UpdatePassthroughRaw {
         }
 
         private HttpRequest onBuildRequest(UpdatePassthroughRawRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, UpdatePassthroughRawRequest.class, new TypeReference<UpdatePassthroughRawRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

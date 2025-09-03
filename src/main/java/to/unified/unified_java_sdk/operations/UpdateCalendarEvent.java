@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class UpdateCalendarEvent {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class UpdateCalendarEvent {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(UpdateCalendarEventRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    UpdateCalendarEventRequest.class,
+                    klass,
                     this.baseUrl,
                     "/calendar/{connection_id}/event/{id}",
                     request, null);
@@ -86,8 +84,7 @@ public class UpdateCalendarEvent {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<UpdateCalendarEventRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "calendarEvent",
@@ -101,7 +98,7 @@ public class UpdateCalendarEvent {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    UpdateCalendarEventRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class UpdateCalendarEvent {
         }
 
         private HttpRequest onBuildRequest(UpdateCalendarEventRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, UpdateCalendarEventRequest.class, new TypeReference<UpdateCalendarEventRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

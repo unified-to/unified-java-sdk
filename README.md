@@ -34,7 +34,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.35.1'
+implementation 'to.unified:unified-java-sdk:0.36.0'
 ```
 
 Maven:
@@ -42,7 +42,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.35.1</version>
+    <version>0.36.0</version>
 </dependency>
 ```
 
@@ -355,11 +355,17 @@ public class Application {
 ### [category()](docs/sdks/category/README.md)
 
 * [createAccountingCategory](docs/sdks/category/README.md#createaccountingcategory) - Create a category
+* [createTicketingCategory](docs/sdks/category/README.md#createticketingcategory) - Create a category
 * [getAccountingCategory](docs/sdks/category/README.md#getaccountingcategory) - Retrieve a category
+* [getTicketingCategory](docs/sdks/category/README.md#getticketingcategory) - Retrieve a category
 * [listAccountingCategories](docs/sdks/category/README.md#listaccountingcategories) - List all categories
+* [listTicketingCategories](docs/sdks/category/README.md#listticketingcategories) - List all categories
 * [patchAccountingCategory](docs/sdks/category/README.md#patchaccountingcategory) - Update a category
+* [patchTicketingCategory](docs/sdks/category/README.md#patchticketingcategory) - Update a category
 * [removeAccountingCategory](docs/sdks/category/README.md#removeaccountingcategory) - Remove a category
+* [removeTicketingCategory](docs/sdks/category/README.md#removeticketingcategory) - Remove a category
 * [updateAccountingCategory](docs/sdks/category/README.md#updateaccountingcategory) - Update a category
+* [updateTicketingCategory](docs/sdks/category/README.md#updateticketingcategory) - Update a category
 
 ### [change()](docs/sdks/change/README.md)
 
@@ -597,6 +603,10 @@ public class Application {
 * [removeAtsDocument](docs/sdks/document/README.md#removeatsdocument) - Remove a document
 * [updateAtsDocument](docs/sdks/document/README.md#updateatsdocument) - Update a document
 
+### [embedding()](docs/sdks/embedding/README.md)
+
+* [createGenaiEmbedding](docs/sdks/embedding/README.md#creategenaiembedding) - Create an embedding
+
 ### [employee()](docs/sdks/employee/README.md)
 
 * [createHrisEmployee](docs/sdks/employee/README.md#createhrisemployee) - Create an employee
@@ -637,7 +647,9 @@ public class Application {
 
 ### [genai()](docs/sdks/genai/README.md)
 
+* [createGenaiEmbedding](docs/sdks/genai/README.md#creategenaiembedding) - Create an embedding
 * [createGenaiPrompt](docs/sdks/genai/README.md#creategenaiprompt) - Create a prompt
+* [getGenaiModel](docs/sdks/genai/README.md#getgenaimodel) - Retrieve a model
 * [listGenaiModels](docs/sdks/genai/README.md#listgenaimodels) - List all models
 
 ### [group()](docs/sdks/group/README.md)
@@ -926,6 +938,7 @@ public class Application {
 
 ### [model()](docs/sdks/model/README.md)
 
+* [getGenaiModel](docs/sdks/model/README.md#getgenaimodel) - Retrieve a model
 * [listGenaiModels](docs/sdks/model/README.md#listgenaimodels) - List all models
 
 ### [note()](docs/sdks/note/README.md)
@@ -1259,21 +1272,27 @@ public class Application {
 
 ### [ticketing()](docs/sdks/ticketing/README.md)
 
+* [createTicketingCategory](docs/sdks/ticketing/README.md#createticketingcategory) - Create a category
 * [createTicketingCustomer](docs/sdks/ticketing/README.md#createticketingcustomer) - Create a customer
 * [createTicketingNote](docs/sdks/ticketing/README.md#createticketingnote) - Create a note
 * [createTicketingTicket](docs/sdks/ticketing/README.md#createticketingticket) - Create a ticket
+* [getTicketingCategory](docs/sdks/ticketing/README.md#getticketingcategory) - Retrieve a category
 * [getTicketingCustomer](docs/sdks/ticketing/README.md#getticketingcustomer) - Retrieve a customer
 * [getTicketingNote](docs/sdks/ticketing/README.md#getticketingnote) - Retrieve a note
 * [getTicketingTicket](docs/sdks/ticketing/README.md#getticketingticket) - Retrieve a ticket
+* [listTicketingCategories](docs/sdks/ticketing/README.md#listticketingcategories) - List all categories
 * [listTicketingCustomers](docs/sdks/ticketing/README.md#listticketingcustomers) - List all customers
 * [listTicketingNotes](docs/sdks/ticketing/README.md#listticketingnotes) - List all notes
 * [listTicketingTickets](docs/sdks/ticketing/README.md#listticketingtickets) - List all tickets
+* [patchTicketingCategory](docs/sdks/ticketing/README.md#patchticketingcategory) - Update a category
 * [patchTicketingCustomer](docs/sdks/ticketing/README.md#patchticketingcustomer) - Update a customer
 * [patchTicketingNote](docs/sdks/ticketing/README.md#patchticketingnote) - Update a note
 * [patchTicketingTicket](docs/sdks/ticketing/README.md#patchticketingticket) - Update a ticket
+* [removeTicketingCategory](docs/sdks/ticketing/README.md#removeticketingcategory) - Remove a category
 * [removeTicketingCustomer](docs/sdks/ticketing/README.md#removeticketingcustomer) - Remove a customer
 * [removeTicketingNote](docs/sdks/ticketing/README.md#removeticketingnote) - Remove a note
 * [removeTicketingTicket](docs/sdks/ticketing/README.md#removeticketingticket) - Remove a ticket
+* [updateTicketingCategory](docs/sdks/ticketing/README.md#updateticketingcategory) - Update a category
 * [updateTicketingCustomer](docs/sdks/ticketing/README.md#updateticketingcustomer) - Update a customer
 * [updateTicketingNote](docs/sdks/ticketing/README.md#updateticketingnote) - Update a note
 * [updateTicketingTicket](docs/sdks/ticketing/README.md#updateticketingticket) - Update a ticket

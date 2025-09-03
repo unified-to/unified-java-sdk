@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class PatchUnifiedWebhook {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class PatchUnifiedWebhook {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(PatchUnifiedWebhookRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    PatchUnifiedWebhookRequest.class,
+                    klass,
                     this.baseUrl,
                     "/unified/webhook/{id}",
                     request, null);
@@ -86,8 +84,7 @@ public class PatchUnifiedWebhook {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<PatchUnifiedWebhookRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "webhook",
@@ -112,7 +109,7 @@ public class PatchUnifiedWebhook {
         }
 
         private HttpRequest onBuildRequest(PatchUnifiedWebhookRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, PatchUnifiedWebhookRequest.class, new TypeReference<PatchUnifiedWebhookRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

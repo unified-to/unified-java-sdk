@@ -24,7 +24,6 @@ import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class RemoveStorageFile {
 
     static abstract class Base {
@@ -70,10 +69,9 @@ public class RemoveStorageFile {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(RemoveStorageFileRequest request) throws Exception {
+        <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {
             String url = Utils.generateURL(
-                    RemoveStorageFileRequest.class,
+                    klass,
                     this.baseUrl,
                     "/storage/{connection_id}/file/{id}",
                     request, null);
@@ -93,7 +91,7 @@ public class RemoveStorageFile {
         }
 
         private HttpRequest onBuildRequest(RemoveStorageFileRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, RemoveStorageFileRequest.class);
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

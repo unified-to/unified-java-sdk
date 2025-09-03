@@ -24,7 +24,6 @@ import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class RemoveHrisDevice {
 
     static abstract class Base {
@@ -70,10 +69,9 @@ public class RemoveHrisDevice {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(RemoveHrisDeviceRequest request) throws Exception {
+        <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {
             String url = Utils.generateURL(
-                    RemoveHrisDeviceRequest.class,
+                    klass,
                     this.baseUrl,
                     "/hris/{connection_id}/device/{id}",
                     request, null);
@@ -93,7 +91,7 @@ public class RemoveHrisDevice {
         }
 
         private HttpRequest onBuildRequest(RemoveHrisDeviceRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, RemoveHrisDeviceRequest.class);
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

@@ -26,7 +26,6 @@ import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class GetUnifiedApicall {
 
     static abstract class Base {
@@ -72,10 +71,9 @@ public class GetUnifiedApicall {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(GetUnifiedApicallRequest request) throws Exception {
+        <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {
             String url = Utils.generateURL(
-                    GetUnifiedApicallRequest.class,
+                    klass,
                     this.baseUrl,
                     "/unified/apicall/{id}",
                     request, null);
@@ -95,7 +93,7 @@ public class GetUnifiedApicall {
         }
 
         private HttpRequest onBuildRequest(GetUnifiedApicallRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, GetUnifiedApicallRequest.class);
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

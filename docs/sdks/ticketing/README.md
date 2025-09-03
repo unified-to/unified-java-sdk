@@ -5,24 +5,90 @@
 
 ### Available Operations
 
+* [createTicketingCategory](#createticketingcategory) - Create a category
 * [createTicketingCustomer](#createticketingcustomer) - Create a customer
 * [createTicketingNote](#createticketingnote) - Create a note
 * [createTicketingTicket](#createticketingticket) - Create a ticket
+* [getTicketingCategory](#getticketingcategory) - Retrieve a category
 * [getTicketingCustomer](#getticketingcustomer) - Retrieve a customer
 * [getTicketingNote](#getticketingnote) - Retrieve a note
 * [getTicketingTicket](#getticketingticket) - Retrieve a ticket
+* [listTicketingCategories](#listticketingcategories) - List all categories
 * [listTicketingCustomers](#listticketingcustomers) - List all customers
 * [listTicketingNotes](#listticketingnotes) - List all notes
 * [listTicketingTickets](#listticketingtickets) - List all tickets
+* [patchTicketingCategory](#patchticketingcategory) - Update a category
 * [patchTicketingCustomer](#patchticketingcustomer) - Update a customer
 * [patchTicketingNote](#patchticketingnote) - Update a note
 * [patchTicketingTicket](#patchticketingticket) - Update a ticket
+* [removeTicketingCategory](#removeticketingcategory) - Remove a category
 * [removeTicketingCustomer](#removeticketingcustomer) - Remove a customer
 * [removeTicketingNote](#removeticketingnote) - Remove a note
 * [removeTicketingTicket](#removeticketingticket) - Remove a ticket
+* [updateTicketingCategory](#updateticketingcategory) - Update a category
 * [updateTicketingCustomer](#updateticketingcustomer) - Update a customer
 * [updateTicketingNote](#updateticketingnote) - Update a note
 * [updateTicketingTicket](#updateticketingticket) - Update a ticket
+
+## createTicketingCategory
+
+Create a category
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createTicketingCategory" method="post" path="/ticketing/{connection_id}/category" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingCategoryRequest;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingCategoryResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.TicketingCategory;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateTicketingCategoryRequest req = CreateTicketingCategoryRequest.builder()
+                .ticketingCategory(TicketingCategory.builder()
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateTicketingCategoryResponse res = sdk.ticketing().createTicketingCategory()
+                .request(req)
+                .call();
+
+        if (res.ticketingCategory().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [CreateTicketingCategoryRequest](../../models/operations/CreateTicketingCategoryRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+
+### Response
+
+**[CreateTicketingCategoryResponse](../../models/operations/CreateTicketingCategoryResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createTicketingCustomer
 
@@ -204,6 +270,64 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getTicketingCategory
+
+Retrieve a category
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getTicketingCategory" method="get" path="/ticketing/{connection_id}/category/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetTicketingCategoryRequest;
+import to.unified.unified_java_sdk.models.operations.GetTicketingCategoryResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetTicketingCategoryRequest req = GetTicketingCategoryRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetTicketingCategoryResponse res = sdk.ticketing().getTicketingCategory()
+                .request(req)
+                .call();
+
+        if (res.ticketingCategory().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [GetTicketingCategoryRequest](../../models/operations/GetTicketingCategoryRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[GetTicketingCategoryResponse](../../models/operations/GetTicketingCategoryResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## getTicketingCustomer
 
 Retrieve a customer
@@ -378,6 +502,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listTicketingCategories
+
+List all categories
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listTicketingCategories" method="get" path="/ticketing/{connection_id}/category" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListTicketingCategoriesRequest;
+import to.unified.unified_java_sdk.models.operations.ListTicketingCategoriesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListTicketingCategoriesRequest req = ListTicketingCategoriesRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListTicketingCategoriesResponse res = sdk.ticketing().listTicketingCategories()
+                .request(req)
+                .call();
+
+        if (res.ticketingCategories().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [ListTicketingCategoriesRequest](../../models/operations/ListTicketingCategoriesRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+
+### Response
+
+**[ListTicketingCategoriesResponse](../../models/operations/ListTicketingCategoriesResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listTicketingCustomers
 
 List all customers
@@ -542,6 +723,67 @@ public class Application {
 ### Response
 
 **[ListTicketingTicketsResponse](../../models/operations/ListTicketingTicketsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchTicketingCategory
+
+Update a category
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchTicketingCategory" method="patch" path="/ticketing/{connection_id}/category/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingCategoryRequest;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingCategoryResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.TicketingCategory;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchTicketingCategoryRequest req = PatchTicketingCategoryRequest.builder()
+                .ticketingCategory(TicketingCategory.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchTicketingCategoryResponse res = sdk.ticketing().patchTicketingCategory()
+                .request(req)
+                .call();
+
+        if (res.ticketingCategory().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [PatchTicketingCategoryRequest](../../models/operations/PatchTicketingCategoryRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+
+### Response
+
+**[PatchTicketingCategoryResponse](../../models/operations/PatchTicketingCategoryResponse.md)**
 
 ### Errors
 
@@ -732,6 +974,62 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removeTicketingCategory
+
+Remove a category
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeTicketingCategory" method="delete" path="/ticketing/{connection_id}/category/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingCategoryRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingCategoryResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveTicketingCategoryRequest req = RemoveTicketingCategoryRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveTicketingCategoryResponse res = sdk.ticketing().removeTicketingCategory()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [RemoveTicketingCategoryRequest](../../models/operations/RemoveTicketingCategoryRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+
+### Response
+
+**[RemoveTicketingCategoryResponse](../../models/operations/RemoveTicketingCategoryResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## removeTicketingCustomer
 
 Remove a customer
@@ -893,6 +1191,67 @@ public class Application {
 ### Response
 
 **[RemoveTicketingTicketResponse](../../models/operations/RemoveTicketingTicketResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateTicketingCategory
+
+Update a category
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateTicketingCategory" method="put" path="/ticketing/{connection_id}/category/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingCategoryRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingCategoryResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.TicketingCategory;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateTicketingCategoryRequest req = UpdateTicketingCategoryRequest.builder()
+                .ticketingCategory(TicketingCategory.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateTicketingCategoryResponse res = sdk.ticketing().updateTicketingCategory()
+                .request(req)
+                .call();
+
+        if (res.ticketingCategory().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [UpdateTicketingCategoryRequest](../../models/operations/UpdateTicketingCategoryRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+
+### Response
+
+**[UpdateTicketingCategoryResponse](../../models/operations/UpdateTicketingCategoryResponse.md)**
 
 ### Errors
 

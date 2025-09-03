@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class PatchAccountingCreditmemo {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class PatchAccountingCreditmemo {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(PatchAccountingCreditmemoRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    PatchAccountingCreditmemoRequest.class,
+                    klass,
                     this.baseUrl,
                     "/accounting/{connection_id}/creditmemo/{id}",
                     request, null);
@@ -86,8 +84,7 @@ public class PatchAccountingCreditmemo {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<PatchAccountingCreditmemoRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "accountingCreditmemo",
@@ -101,7 +98,7 @@ public class PatchAccountingCreditmemo {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    PatchAccountingCreditmemoRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class PatchAccountingCreditmemo {
         }
 
         private HttpRequest onBuildRequest(PatchAccountingCreditmemoRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, PatchAccountingCreditmemoRequest.class, new TypeReference<PatchAccountingCreditmemoRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

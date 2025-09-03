@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class UpdateRepoRepository {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class UpdateRepoRepository {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(UpdateRepoRepositoryRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    UpdateRepoRepositoryRequest.class,
+                    klass,
                     this.baseUrl,
                     "/repo/{connection_id}/repository/{id}",
                     request, null);
@@ -86,8 +84,7 @@ public class UpdateRepoRepository {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<UpdateRepoRepositoryRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "repoRepository",
@@ -101,7 +98,7 @@ public class UpdateRepoRepository {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    UpdateRepoRepositoryRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class UpdateRepoRepository {
         }
 
         private HttpRequest onBuildRequest(UpdateRepoRepositoryRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, UpdateRepoRepositoryRequest.class, new TypeReference<UpdateRepoRepositoryRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

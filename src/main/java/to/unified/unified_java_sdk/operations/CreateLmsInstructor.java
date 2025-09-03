@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class CreateLmsInstructor {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class CreateLmsInstructor {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(CreateLmsInstructorRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    CreateLmsInstructorRequest.class,
+                    klass,
                     this.baseUrl,
                     "/lms/{connection_id}/instructor",
                     request, null);
@@ -86,8 +84,7 @@ public class CreateLmsInstructor {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<CreateLmsInstructorRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "lmsInstructor",
@@ -101,7 +98,7 @@ public class CreateLmsInstructor {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    CreateLmsInstructorRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class CreateLmsInstructor {
         }
 
         private HttpRequest onBuildRequest(CreateLmsInstructorRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, CreateLmsInstructorRequest.class, new TypeReference<CreateLmsInstructorRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

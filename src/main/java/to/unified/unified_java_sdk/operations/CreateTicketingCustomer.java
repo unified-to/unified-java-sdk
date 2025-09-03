@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class CreateTicketingCustomer {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class CreateTicketingCustomer {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(CreateTicketingCustomerRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    CreateTicketingCustomerRequest.class,
+                    klass,
                     this.baseUrl,
                     "/ticketing/{connection_id}/customer",
                     request, null);
@@ -86,8 +84,7 @@ public class CreateTicketingCustomer {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<CreateTicketingCustomerRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "ticketingCustomer",
@@ -101,7 +98,7 @@ public class CreateTicketingCustomer {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    CreateTicketingCustomerRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class CreateTicketingCustomer {
         }
 
         private HttpRequest onBuildRequest(CreateTicketingCustomerRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, CreateTicketingCustomerRequest.class, new TypeReference<CreateTicketingCustomerRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

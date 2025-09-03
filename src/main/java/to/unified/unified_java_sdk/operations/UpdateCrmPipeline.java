@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class UpdateCrmPipeline {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class UpdateCrmPipeline {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(UpdateCrmPipelineRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    UpdateCrmPipelineRequest.class,
+                    klass,
                     this.baseUrl,
                     "/crm/{connection_id}/pipeline/{id}",
                     request, null);
@@ -86,8 +84,7 @@ public class UpdateCrmPipeline {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<UpdateCrmPipelineRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "crmPipeline",
@@ -101,7 +98,7 @@ public class UpdateCrmPipeline {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    UpdateCrmPipelineRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class UpdateCrmPipeline {
         }
 
         private HttpRequest onBuildRequest(UpdateCrmPipelineRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, UpdateCrmPipelineRequest.class, new TypeReference<UpdateCrmPipelineRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

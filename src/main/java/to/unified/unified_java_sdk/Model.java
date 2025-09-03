@@ -6,9 +6,13 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import java.lang.Exception;
+import to.unified.unified_java_sdk.models.operations.GetGenaiModelRequest;
+import to.unified.unified_java_sdk.models.operations.GetGenaiModelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetGenaiModelResponse;
 import to.unified.unified_java_sdk.models.operations.ListGenaiModelsRequest;
 import to.unified.unified_java_sdk.models.operations.ListGenaiModelsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListGenaiModelsResponse;
+import to.unified.unified_java_sdk.operations.GetGenaiModel;
 import to.unified.unified_java_sdk.operations.ListGenaiModels;
 
 
@@ -17,6 +21,28 @@ public class Model {
 
     Model(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+    }
+
+    /**
+     * Retrieve a model
+     * 
+     * @return The call builder
+     */
+    public GetGenaiModelRequestBuilder getGenaiModel() {
+        return new GetGenaiModelRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a model
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public GetGenaiModelResponse getGenaiModel(GetGenaiModelRequest request) throws Exception {
+        RequestOperation<GetGenaiModelRequest, GetGenaiModelResponse> operation
+              = new GetGenaiModel.Sync(sdkConfiguration);
+        return operation.handleResponse(operation.doRequest(request));
     }
 
     /**

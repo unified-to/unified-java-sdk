@@ -27,7 +27,6 @@ import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class ListUnifiedIntegrationWorkspaces {
 
     static abstract class Base {
@@ -73,10 +72,9 @@ public class ListUnifiedIntegrationWorkspaces {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(ListUnifiedIntegrationWorkspacesRequest request) throws Exception {
+        <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {
             String url = Utils.generateURL(
-                    ListUnifiedIntegrationWorkspacesRequest.class,
+                    klass,
                     this.baseUrl,
                     "/unified/integration/workspace/{workspace_id}",
                     request, null);
@@ -85,7 +83,7 @@ public class ListUnifiedIntegrationWorkspaces {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    ListUnifiedIntegrationWorkspacesRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -101,7 +99,7 @@ public class ListUnifiedIntegrationWorkspaces {
         }
 
         private HttpRequest onBuildRequest(ListUnifiedIntegrationWorkspacesRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, ListUnifiedIntegrationWorkspacesRequest.class);
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

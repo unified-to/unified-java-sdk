@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class CreateRepoPullrequest {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class CreateRepoPullrequest {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(CreateRepoPullrequestRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    CreateRepoPullrequestRequest.class,
+                    klass,
                     this.baseUrl,
                     "/repo/{connection_id}/pullrequest",
                     request, null);
@@ -86,8 +84,7 @@ public class CreateRepoPullrequest {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<CreateRepoPullrequestRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "repoPullrequest",
@@ -101,7 +98,7 @@ public class CreateRepoPullrequest {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    CreateRepoPullrequestRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class CreateRepoPullrequest {
         }
 
         private HttpRequest onBuildRequest(CreateRepoPullrequestRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, CreateRepoPullrequestRequest.class, new TypeReference<CreateRepoPullrequestRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

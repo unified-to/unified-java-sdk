@@ -24,7 +24,6 @@ import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class RemoveKmsSpace {
 
     static abstract class Base {
@@ -70,10 +69,9 @@ public class RemoveKmsSpace {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(RemoveKmsSpaceRequest request) throws Exception {
+        <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {
             String url = Utils.generateURL(
-                    RemoveKmsSpaceRequest.class,
+                    klass,
                     this.baseUrl,
                     "/kms/{connection_id}/space/{id}",
                     request, null);
@@ -93,7 +91,7 @@ public class RemoveKmsSpace {
         }
 
         private HttpRequest onBuildRequest(RemoveKmsSpaceRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, RemoveKmsSpaceRequest.class);
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

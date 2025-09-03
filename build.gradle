@@ -105,7 +105,7 @@ publishing {
             // https://github.com/gradle/gradle/issues/18619
             groupId = "to.unified"
             artifactId = "unified-java-sdk"
-            version = "0.35.1"
+            version = "0.36.0"
 
             from components.java
 

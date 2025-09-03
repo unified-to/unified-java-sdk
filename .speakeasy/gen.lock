@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 422074ec49c609508b54a0d217c0ad82
+  docChecksum: a9003bf9eba5cb988acee2ba39aeae6f
   docVersion: "1.0"
-  speakeasyVersion: 1.606.9
-  generationVersion: 2.687.13
-  releaseVersion: 0.35.1
-  configChecksum: 6c4da50ac30a97521bfed83890786b23
+  speakeasyVersion: 1.607.0
+  generationVersion: 2.690.1
+  releaseVersion: 0.36.0
+  configChecksum: dab0110c5a8d876ed187c73d2563036f
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -15,7 +15,7 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.1
-    core: 3.46.0
+    core: 3.46.1
     downloadStreams: 0.1.1
     globalSecurity: 2.83.0
     globalSecurityCallbacks: 0.1.0
@@ -23,6 +23,7 @@ features:
     openEnums: 0.2.0
     sdkHooks: 1.1.0
     unions: 0.0.6
+    uploadStreams: 0.1.0
 generatedFiles:
   - .gitattributes
   - USAGE.md
@@ -96,6 +97,8 @@ generatedFiles:
   - docs/models/operations/CreateCrmLeadResponse.md
   - docs/models/operations/CreateCrmPipelineRequest.md
   - docs/models/operations/CreateCrmPipelineResponse.md
+  - docs/models/operations/CreateGenaiEmbeddingRequest.md
+  - docs/models/operations/CreateGenaiEmbeddingResponse.md
   - docs/models/operations/CreateGenaiPromptRequest.md
   - docs/models/operations/CreateGenaiPromptResponse.md
   - docs/models/operations/CreateHrisCompanyRequest.md
@@ -164,6 +167,8 @@ generatedFiles:
   - docs/models/operations/CreateTaskProjectResponse.md
   - docs/models/operations/CreateTaskTaskRequest.md
   - docs/models/operations/CreateTaskTaskResponse.md
+  - docs/models/operations/CreateTicketingCategoryRequest.md
+  - docs/models/operations/CreateTicketingCategoryResponse.md
   - docs/models/operations/CreateTicketingCustomerRequest.md
   - docs/models/operations/CreateTicketingCustomerResponse.md
   - docs/models/operations/CreateTicketingNoteRequest.md
@@ -261,6 +266,8 @@ generatedFiles:
   - docs/models/operations/GetCrmLeadResponse.md
   - docs/models/operations/GetCrmPipelineRequest.md
   - docs/models/operations/GetCrmPipelineResponse.md
+  - docs/models/operations/GetGenaiModelRequest.md
+  - docs/models/operations/GetGenaiModelResponse.md
   - docs/models/operations/GetHrisCompanyRequest.md
   - docs/models/operations/GetHrisCompanyResponse.md
   - docs/models/operations/GetHrisDeviceRequest.md
@@ -335,6 +342,8 @@ generatedFiles:
   - docs/models/operations/GetTaskProjectResponse.md
   - docs/models/operations/GetTaskTaskRequest.md
   - docs/models/operations/GetTaskTaskResponse.md
+  - docs/models/operations/GetTicketingCategoryRequest.md
+  - docs/models/operations/GetTicketingCategoryResponse.md
   - docs/models/operations/GetTicketingCustomerRequest.md
   - docs/models/operations/GetTicketingCustomerResponse.md
   - docs/models/operations/GetTicketingNoteRequest.md
@@ -527,6 +536,8 @@ generatedFiles:
   - docs/models/operations/ListTaskProjectsResponse.md
   - docs/models/operations/ListTaskTasksRequest.md
   - docs/models/operations/ListTaskTasksResponse.md
+  - docs/models/operations/ListTicketingCategoriesRequest.md
+  - docs/models/operations/ListTicketingCategoriesResponse.md
   - docs/models/operations/ListTicketingCustomersRequest.md
   - docs/models/operations/ListTicketingCustomersResponse.md
   - docs/models/operations/ListTicketingNotesRequest.md
@@ -692,6 +703,8 @@ generatedFiles:
   - docs/models/operations/PatchTaskProjectResponse.md
   - docs/models/operations/PatchTaskTaskRequest.md
   - docs/models/operations/PatchTaskTaskResponse.md
+  - docs/models/operations/PatchTicketingCategoryRequest.md
+  - docs/models/operations/PatchTicketingCategoryResponse.md
   - docs/models/operations/PatchTicketingCustomerRequest.md
   - docs/models/operations/PatchTicketingCustomerResponse.md
   - docs/models/operations/PatchTicketingNoteRequest.md
@@ -845,6 +858,8 @@ generatedFiles:
   - docs/models/operations/RemoveTaskProjectResponse.md
   - docs/models/operations/RemoveTaskTaskRequest.md
   - docs/models/operations/RemoveTaskTaskResponse.md
+  - docs/models/operations/RemoveTicketingCategoryRequest.md
+  - docs/models/operations/RemoveTicketingCategoryResponse.md
   - docs/models/operations/RemoveTicketingCustomerRequest.md
   - docs/models/operations/RemoveTicketingCustomerResponse.md
   - docs/models/operations/RemoveTicketingNoteRequest.md
@@ -997,6 +1012,8 @@ generatedFiles:
   - docs/models/operations/UpdateTaskProjectResponse.md
   - docs/models/operations/UpdateTaskTaskRequest.md
   - docs/models/operations/UpdateTaskTaskResponse.md
+  - docs/models/operations/UpdateTicketingCategoryRequest.md
+  - docs/models/operations/UpdateTicketingCategoryResponse.md
   - docs/models/operations/UpdateTicketingCustomerRequest.md
   - docs/models/operations/UpdateTicketingCustomerResponse.md
   - docs/models/operations/UpdateTicketingNoteRequest.md
@@ -1167,6 +1184,7 @@ generatedFiles:
   - docs/models/shared/DbType.md
   - docs/models/shared/EmploymentStatus.md
   - docs/models/shared/EmploymentType.md
+  - docs/models/shared/EncondingFormat.md
   - docs/models/shared/EnrichCompany.md
   - docs/models/shared/EnrichEmail.md
   - docs/models/shared/EnrichEmailType.md
@@ -1181,6 +1199,8 @@ generatedFiles:
   - docs/models/shared/Format.md
   - docs/models/shared/Frequency.md
   - docs/models/shared/GenaiContent.md
+  - docs/models/shared/GenaiEmbedding.md
+  - docs/models/shared/GenaiEmbeddingContent.md
   - docs/models/shared/GenaiModel.md
   - docs/models/shared/GenaiPrompt.md
   - docs/models/shared/Gender.md
@@ -1395,6 +1415,7 @@ generatedFiles:
   - docs/models/shared/TaskTask.md
   - docs/models/shared/TaskTaskStatus.md
   - docs/models/shared/TaxExemption.md
+  - docs/models/shared/TicketingCategory.md
   - docs/models/shared/TicketingCustomer.md
   - docs/models/shared/TicketingEmail.md
   - docs/models/shared/TicketingEmailType.md
@@ -1461,6 +1482,7 @@ generatedFiles:
   - docs/sdks/deal/README.md
   - docs/sdks/device/README.md
   - docs/sdks/document/README.md
+  - docs/sdks/embedding/README.md
   - docs/sdks/employee/README.md
   - docs/sdks/enrich/README.md
   - docs/sdks/event/README.md
@@ -1573,6 +1595,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/Deal.java
   - src/main/java/to/unified/unified_java_sdk/Device.java
   - src/main/java/to/unified/unified_java_sdk/Document.java
+  - src/main/java/to/unified/unified_java_sdk/Embedding.java
   - src/main/java/to/unified/unified_java_sdk/Employee.java
   - src/main/java/to/unified/unified_java_sdk/Enrich.java
   - src/main/java/to/unified/unified_java_sdk/Event.java
@@ -1753,6 +1776,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateCrmPipelineRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateCrmPipelineRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateCrmPipelineResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/CreateGenaiEmbeddingRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/CreateGenaiEmbeddingRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/CreateGenaiEmbeddingResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateGenaiPromptRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateGenaiPromptRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateGenaiPromptResponse.java
@@ -1855,6 +1881,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateTaskTaskRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateTaskTaskRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateTaskTaskResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/CreateTicketingCategoryRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/CreateTicketingCategoryRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/CreateTicketingCategoryResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateTicketingCustomerRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateTicketingCustomerRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateTicketingCustomerResponse.java
@@ -2001,6 +2030,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetCrmPipelineRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetCrmPipelineRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetCrmPipelineResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetGenaiModelRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetGenaiModelRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetGenaiModelResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetHrisCompanyRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetHrisCompanyRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetHrisCompanyResponse.java
@@ -2112,6 +2144,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetTaskTaskRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetTaskTaskRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetTaskTaskResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetTicketingCategoryRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetTicketingCategoryRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetTicketingCategoryResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetTicketingCustomerRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetTicketingCustomerRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetTicketingCustomerResponse.java
@@ -2400,6 +2435,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListTaskTasksRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListTaskTasksRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListTaskTasksResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/ListTicketingCategoriesRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/ListTicketingCategoriesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/ListTicketingCategoriesResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListTicketingCustomersRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListTicketingCustomersRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListTicketingCustomersResponse.java
@@ -2647,6 +2685,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchTaskTaskRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchTaskTaskRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchTaskTaskResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/PatchTicketingCategoryRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/PatchTicketingCategoryRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/PatchTicketingCategoryResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchTicketingCustomerRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchTicketingCustomerRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchTicketingCustomerResponse.java
@@ -2876,6 +2917,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveTaskTaskRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveTaskTaskRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveTaskTaskResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveTicketingCategoryRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveTicketingCategoryRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveTicketingCategoryResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveTicketingCustomerRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveTicketingCustomerRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveTicketingCustomerResponse.java
@@ -3104,6 +3148,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateTaskTaskRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateTaskTaskRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateTaskTaskResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateTicketingCategoryRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateTicketingCategoryRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateTicketingCategoryResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateTicketingCustomerRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateTicketingCustomerRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateTicketingCustomerResponse.java
@@ -3284,6 +3331,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/DbType.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/EmploymentStatus.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/EmploymentType.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/EncondingFormat.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/EnrichCompany.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/EnrichEmail.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/EnrichEmailType.java
@@ -3298,6 +3346,8 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/Format.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/Frequency.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/GenaiContent.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/GenaiEmbedding.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/GenaiEmbeddingContent.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/GenaiModel.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/GenaiPrompt.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/Gender.java
@@ -3512,6 +3562,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/TaskTask.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/TaskTaskStatus.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/TaxExemption.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/TicketingCategory.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/TicketingCustomer.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/TicketingEmail.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/TicketingEmailType.java
@@ -3579,6 +3630,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/CreateCrmEvent.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateCrmLead.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateCrmPipeline.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateGenaiEmbedding.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateGenaiPrompt.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateHrisCompany.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateHrisDevice.java
@@ -3613,6 +3665,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/CreateTaskComment.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateTaskProject.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateTaskTask.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateTicketingCategory.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateTicketingCustomer.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateTicketingNote.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateTicketingTicket.java
@@ -3662,6 +3715,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/GetCrmEvent.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetCrmLead.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetCrmPipeline.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetGenaiModel.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetHrisCompany.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetHrisDevice.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetHrisEmployee.java
@@ -3699,6 +3753,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/GetTaskComment.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetTaskProject.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetTaskTask.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetTicketingCategory.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetTicketingCustomer.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetTicketingNote.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetTicketingTicket.java
@@ -3795,6 +3850,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/ListTaskComments.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListTaskProjects.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListTaskTasks.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListTicketingCategories.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListTicketingCustomers.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListTicketingNotes.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListTicketingTickets.java
@@ -3878,6 +3934,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/PatchTaskComment.java
   - src/main/java/to/unified/unified_java_sdk/operations/PatchTaskProject.java
   - src/main/java/to/unified/unified_java_sdk/operations/PatchTaskTask.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchTicketingCategory.java
   - src/main/java/to/unified/unified_java_sdk/operations/PatchTicketingCustomer.java
   - src/main/java/to/unified/unified_java_sdk/operations/PatchTicketingNote.java
   - src/main/java/to/unified/unified_java_sdk/operations/PatchTicketingTicket.java
@@ -3954,6 +4011,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveTaskComment.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveTaskProject.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveTaskTask.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveTicketingCategory.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveTicketingCustomer.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveTicketingNote.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveTicketingTicket.java
@@ -4030,6 +4088,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateTaskComment.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateTaskProject.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateTaskTask.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateTicketingCategory.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateTicketingCustomer.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateTicketingNote.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateTicketingTicket.java
@@ -4043,6 +4102,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/utils/BackoffStrategy.java
   - src/main/java/to/unified/unified_java_sdk/utils/BigDecimalString.java
   - src/main/java/to/unified/unified_java_sdk/utils/BigIntegerString.java
+  - src/main/java/to/unified/unified_java_sdk/utils/Blob.java
   - src/main/java/to/unified/unified_java_sdk/utils/BlockingParser.java
   - src/main/java/to/unified/unified_java_sdk/utils/Constants.java
   - src/main/java/to/unified/unified_java_sdk/utils/CopiableInputStream.java
@@ -4091,6 +4151,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/utils/Types.java
   - src/main/java/to/unified/unified_java_sdk/utils/Utf8UrlEncoder.java
   - src/main/java/to/unified/unified_java_sdk/utils/Utils.java
+  - src/main/java/to/unified/unified_java_sdk/utils/reactive/ReactiveUtils.java
 examples:
   createAccountingAccount:
     speakeasy-default-create-accounting-account:
@@ -8581,6 +8642,80 @@ examples:
       responses:
         "200":
           application/json: {}
+  createTicketingCategory:
+    speakeasy-default-create-ticketing-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getTicketingCategory:
+    speakeasy-default-get-ticketing-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listTicketingCategories:
+    speakeasy-default-list-ticketing-categories:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchTicketingCategory:
+    speakeasy-default-patch-ticketing-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeTicketingCategory:
+    speakeasy-default-remove-ticketing-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateTicketingCategory:
+    speakeasy-default-update-ticketing-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createGenaiEmbedding:
+    speakeasy-default-create-genai-embedding:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getGenaiModel:
+    speakeasy-default-get-genai-model:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## SDK Changes Detected:\n* `unified-to.genai.createGenaiPrompt()`: \n  *  `request.genaiPrompt.mcpUrl` **Added**\n  *  `response.mcp_url` **Added**\n* `unified-to.prompt.createGenaiPrompt()`: \n  *  `request.genaiPrompt.mcpUrl` **Added**\n  *  `response.mcp_url` **Added**\n"
+releaseNotes: "## Java SDK Changes Detected:\n* `unified-to.category.createTicketingCategory()`: **Added**\n* `unified-to.category.getTicketingCategory()`: **Added**\n* `unified-to.category.listTicketingCategories()`: **Added**\n* `unified-to.category.patchTicketingCategory()`: **Added**\n* `unified-to.category.removeTicketingCategory()`: **Added**\n* `unified-to.category.updateTicketingCategory()`: **Added**\n* `unified-to.genai.createGenaiEmbedding()`: **Added**\n* `unified-to.genai.getGenaiModel()`: **Added**\n* `unified-to.embedding.createGenaiEmbedding()`: **Added**\n* `unified-to.model.getGenaiModel()`: **Added**\n* `unified-to.ticketing.createTicketingCategory()`: **Added**\n* `unified-to.ticketing.getTicketingCategory()`: **Added**\n* `unified-to.ticketing.listTicketingCategories()`: **Added**\n* `unified-to.ticketing.patchTicketingCategory()`: **Added**\n* `unified-to.ticketing.removeTicketingCategory()`: **Added**\n* `unified-to.ticketing.updateTicketingCategory()`: **Added**\n* `unified-to.ticketing.createTicketingTicket()`: \n  *  `request.ticketingTicket.categoryId` **Added**\n  *  `response.category_id` **Added**\n* `unified-to.ticketing.getTicketingTicket()`:  `response.category_id` **Added**\n* `unified-to.ticketing.listTicketingTickets()`:  `response.[].categoryId` **Added**\n* `unified-to.ticketing.patchTicketingTicket()`: \n  *  `request.ticketingTicket.categoryId` **Added**\n  *  `response.category_id` **Added**\n* `unified-to.ticketing.updateTicketingTicket()`: \n  *  `request.ticketingTicket.categoryId` **Added**\n  *  `response.category_id` **Added**\n* `unified-to.ticket.createTicketingTicket()`: \n  *  `request.ticketingTicket.categoryId` **Added**\n  *  `response.category_id` **Added**\n* `unified-to.ticket.getTicketingTicket()`:  `response.category_id` **Added**\n* `unified-to.ticket.listTicketingTickets()`:  `response.[].categoryId` **Added**\n* `unified-to.ticket.patchTicketingTicket()`: \n  *  `request.ticketingTicket.categoryId` **Added**\n  *  `response.category_id` **Added**\n* `unified-to.ticket.updateTicketingTicket()`: \n  *  `request.ticketingTicket.categoryId` **Added**\n  *  `response.category_id` **Added**\n"

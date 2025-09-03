@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class CreateHrisEmployee {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class CreateHrisEmployee {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(CreateHrisEmployeeRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    CreateHrisEmployeeRequest.class,
+                    klass,
                     this.baseUrl,
                     "/hris/{connection_id}/employee",
                     request, null);
@@ -86,8 +84,7 @@ public class CreateHrisEmployee {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<CreateHrisEmployeeRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "hrisEmployee",
@@ -101,7 +98,7 @@ public class CreateHrisEmployee {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    CreateHrisEmployeeRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class CreateHrisEmployee {
         }
 
         private HttpRequest onBuildRequest(CreateHrisEmployeeRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, CreateHrisEmployeeRequest.class, new TypeReference<CreateHrisEmployeeRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class PatchTicketingNote {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class PatchTicketingNote {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(PatchTicketingNoteRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    PatchTicketingNoteRequest.class,
+                    klass,
                     this.baseUrl,
                     "/ticketing/{connection_id}/note/{id}",
                     request, null);
@@ -86,8 +84,7 @@ public class PatchTicketingNote {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<PatchTicketingNoteRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "ticketingNote",
@@ -101,7 +98,7 @@ public class PatchTicketingNote {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    PatchTicketingNoteRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class PatchTicketingNote {
         }
 
         private HttpRequest onBuildRequest(PatchTicketingNoteRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, PatchTicketingNoteRequest.class, new TypeReference<PatchTicketingNoteRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

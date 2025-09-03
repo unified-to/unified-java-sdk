@@ -26,7 +26,6 @@ import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class GetMessagingChannel {
 
     static abstract class Base {
@@ -72,10 +71,9 @@ public class GetMessagingChannel {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(GetMessagingChannelRequest request) throws Exception {
+        <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {
             String url = Utils.generateURL(
-                    GetMessagingChannelRequest.class,
+                    klass,
                     this.baseUrl,
                     "/messaging/{connection_id}/channel/{id}",
                     request, null);
@@ -84,7 +82,7 @@ public class GetMessagingChannel {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    GetMessagingChannelRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -100,7 +98,7 @@ public class GetMessagingChannel {
         }
 
         private HttpRequest onBuildRequest(GetMessagingChannelRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, GetMessagingChannelRequest.class);
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

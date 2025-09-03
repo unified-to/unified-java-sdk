@@ -137,6 +137,8 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions TICKETING_TICKET_WRITE = new PropertyConnectionPermissions("ticketing_ticket_write");
     public static final PropertyConnectionPermissions TICKETING_NOTE_READ = new PropertyConnectionPermissions("ticketing_note_read");
     public static final PropertyConnectionPermissions TICKETING_NOTE_WRITE = new PropertyConnectionPermissions("ticketing_note_write");
+    public static final PropertyConnectionPermissions TICKETING_CATEGORY_READ = new PropertyConnectionPermissions("ticketing_category_read");
+    public static final PropertyConnectionPermissions TICKETING_CATEGORY_WRITE = new PropertyConnectionPermissions("ticketing_category_write");
     public static final PropertyConnectionPermissions HRIS_EMPLOYEE_READ = new PropertyConnectionPermissions("hris_employee_read");
     public static final PropertyConnectionPermissions HRIS_EMPLOYEE_WRITE = new PropertyConnectionPermissions("hris_employee_write");
     public static final PropertyConnectionPermissions HRIS_GROUP_READ = new PropertyConnectionPermissions("hris_group_read");
@@ -165,6 +167,8 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions GENAI_MODEL_READ = new PropertyConnectionPermissions("genai_model_read");
     public static final PropertyConnectionPermissions GENAI_PROMPT_READ = new PropertyConnectionPermissions("genai_prompt_read");
     public static final PropertyConnectionPermissions GENAI_PROMPT_WRITE = new PropertyConnectionPermissions("genai_prompt_write");
+    public static final PropertyConnectionPermissions GENAI_EMBEDDING_READ = new PropertyConnectionPermissions("genai_embedding_read");
+    public static final PropertyConnectionPermissions GENAI_EMBEDDING_WRITE = new PropertyConnectionPermissions("genai_embedding_write");
     public static final PropertyConnectionPermissions MESSAGING_MESSAGE_READ = new PropertyConnectionPermissions("messaging_message_read");
     public static final PropertyConnectionPermissions MESSAGING_MESSAGE_WRITE = new PropertyConnectionPermissions("messaging_message_write");
     public static final PropertyConnectionPermissions MESSAGING_CHANNEL_READ = new PropertyConnectionPermissions("messaging_channel_read");
@@ -379,6 +383,8 @@ public class PropertyConnectionPermissions {
         map.put("ticketing_ticket_write", TICKETING_TICKET_WRITE);
         map.put("ticketing_note_read", TICKETING_NOTE_READ);
         map.put("ticketing_note_write", TICKETING_NOTE_WRITE);
+        map.put("ticketing_category_read", TICKETING_CATEGORY_READ);
+        map.put("ticketing_category_write", TICKETING_CATEGORY_WRITE);
         map.put("hris_employee_read", HRIS_EMPLOYEE_READ);
         map.put("hris_employee_write", HRIS_EMPLOYEE_WRITE);
         map.put("hris_group_read", HRIS_GROUP_READ);
@@ -407,6 +413,8 @@ public class PropertyConnectionPermissions {
         map.put("genai_model_read", GENAI_MODEL_READ);
         map.put("genai_prompt_read", GENAI_PROMPT_READ);
         map.put("genai_prompt_write", GENAI_PROMPT_WRITE);
+        map.put("genai_embedding_read", GENAI_EMBEDDING_READ);
+        map.put("genai_embedding_write", GENAI_EMBEDDING_WRITE);
         map.put("messaging_message_read", MESSAGING_MESSAGE_READ);
         map.put("messaging_message_write", MESSAGING_MESSAGE_WRITE);
         map.put("messaging_channel_read", MESSAGING_CHANNEL_READ);
@@ -555,6 +563,8 @@ public class PropertyConnectionPermissions {
         map.put("ticketing_ticket_write", PropertyConnectionPermissionsEnum.TICKETING_TICKET_WRITE);
         map.put("ticketing_note_read", PropertyConnectionPermissionsEnum.TICKETING_NOTE_READ);
         map.put("ticketing_note_write", PropertyConnectionPermissionsEnum.TICKETING_NOTE_WRITE);
+        map.put("ticketing_category_read", PropertyConnectionPermissionsEnum.TICKETING_CATEGORY_READ);
+        map.put("ticketing_category_write", PropertyConnectionPermissionsEnum.TICKETING_CATEGORY_WRITE);
         map.put("hris_employee_read", PropertyConnectionPermissionsEnum.HRIS_EMPLOYEE_READ);
         map.put("hris_employee_write", PropertyConnectionPermissionsEnum.HRIS_EMPLOYEE_WRITE);
         map.put("hris_group_read", PropertyConnectionPermissionsEnum.HRIS_GROUP_READ);
@@ -583,6 +593,8 @@ public class PropertyConnectionPermissions {
         map.put("genai_model_read", PropertyConnectionPermissionsEnum.GENAI_MODEL_READ);
         map.put("genai_prompt_read", PropertyConnectionPermissionsEnum.GENAI_PROMPT_READ);
         map.put("genai_prompt_write", PropertyConnectionPermissionsEnum.GENAI_PROMPT_WRITE);
+        map.put("genai_embedding_read", PropertyConnectionPermissionsEnum.GENAI_EMBEDDING_READ);
+        map.put("genai_embedding_write", PropertyConnectionPermissionsEnum.GENAI_EMBEDDING_WRITE);
         map.put("messaging_message_read", PropertyConnectionPermissionsEnum.MESSAGING_MESSAGE_READ);
         map.put("messaging_message_write", PropertyConnectionPermissionsEnum.MESSAGING_MESSAGE_WRITE);
         map.put("messaging_channel_read", PropertyConnectionPermissionsEnum.MESSAGING_CHANNEL_READ);
@@ -761,6 +773,8 @@ public class PropertyConnectionPermissions {
         TICKETING_TICKET_WRITE("ticketing_ticket_write"),
         TICKETING_NOTE_READ("ticketing_note_read"),
         TICKETING_NOTE_WRITE("ticketing_note_write"),
+        TICKETING_CATEGORY_READ("ticketing_category_read"),
+        TICKETING_CATEGORY_WRITE("ticketing_category_write"),
         HRIS_EMPLOYEE_READ("hris_employee_read"),
         HRIS_EMPLOYEE_WRITE("hris_employee_write"),
         HRIS_GROUP_READ("hris_group_read"),
@@ -789,6 +803,8 @@ public class PropertyConnectionPermissions {
         GENAI_MODEL_READ("genai_model_read"),
         GENAI_PROMPT_READ("genai_prompt_read"),
         GENAI_PROMPT_WRITE("genai_prompt_write"),
+        GENAI_EMBEDDING_READ("genai_embedding_read"),
+        GENAI_EMBEDDING_WRITE("genai_embedding_write"),
         MESSAGING_MESSAGE_READ("messaging_message_read"),
         MESSAGING_MESSAGE_WRITE("messaging_message_write"),
         MESSAGING_CHANNEL_READ("messaging_channel_read"),

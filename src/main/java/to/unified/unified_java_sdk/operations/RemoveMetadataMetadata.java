@@ -24,7 +24,6 @@ import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class RemoveMetadataMetadata {
 
     static abstract class Base {
@@ -70,10 +69,9 @@ public class RemoveMetadataMetadata {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(RemoveMetadataMetadataRequest request) throws Exception {
+        <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {
             String url = Utils.generateURL(
-                    RemoveMetadataMetadataRequest.class,
+                    klass,
                     this.baseUrl,
                     "/metadata/{connection_id}/metadata/{id}",
                     request, null);
@@ -93,7 +91,7 @@ public class RemoveMetadataMetadata {
         }
 
         private HttpRequest onBuildRequest(RemoveMetadataMetadataRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, RemoveMetadataMetadataRequest.class);
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

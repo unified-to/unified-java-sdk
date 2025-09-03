@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class UpdateUnifiedConnection {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class UpdateUnifiedConnection {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(UpdateUnifiedConnectionRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    UpdateUnifiedConnectionRequest.class,
+                    klass,
                     this.baseUrl,
                     "/unified/connection/{id}",
                     request, null);
@@ -86,8 +84,7 @@ public class UpdateUnifiedConnection {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<UpdateUnifiedConnectionRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "connection",
@@ -112,7 +109,7 @@ public class UpdateUnifiedConnection {
         }
 
         private HttpRequest onBuildRequest(UpdateUnifiedConnectionRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, UpdateUnifiedConnectionRequest.class, new TypeReference<UpdateUnifiedConnectionRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

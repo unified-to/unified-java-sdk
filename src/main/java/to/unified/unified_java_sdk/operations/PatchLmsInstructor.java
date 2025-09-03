@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class PatchLmsInstructor {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class PatchLmsInstructor {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(PatchLmsInstructorRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    PatchLmsInstructorRequest.class,
+                    klass,
                     this.baseUrl,
                     "/lms/{connection_id}/instructor/{id}",
                     request, null);
@@ -86,8 +84,7 @@ public class PatchLmsInstructor {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<PatchLmsInstructorRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "lmsInstructor",
@@ -101,7 +98,7 @@ public class PatchLmsInstructor {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    PatchLmsInstructorRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class PatchLmsInstructor {
         }
 
         private HttpRequest onBuildRequest(PatchLmsInstructorRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, PatchLmsInstructorRequest.class, new TypeReference<PatchLmsInstructorRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 

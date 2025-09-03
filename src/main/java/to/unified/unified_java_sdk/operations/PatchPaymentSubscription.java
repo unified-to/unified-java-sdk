@@ -29,7 +29,6 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-
 public class PatchPaymentSubscription {
 
     static abstract class Base {
@@ -75,10 +74,9 @@ public class PatchPaymentSubscription {
                     java.util.Optional.of(java.util.List.of()),
                     securitySource());
         }
-
-        HttpRequest buildRequest(PatchPaymentSubscriptionRequest request) throws Exception {
+        <T, U>HttpRequest buildRequest(T request, Class<T> klass, TypeReference<U> typeReference) throws Exception {
             String url = Utils.generateURL(
-                    PatchPaymentSubscriptionRequest.class,
+                    klass,
                     this.baseUrl,
                     "/payment/{connection_id}/subscription/{id}",
                     request, null);
@@ -86,8 +84,7 @@ public class PatchPaymentSubscription {
             Object convertedRequest = Utils.convertToShape(
                     request,
                     JsonShape.DEFAULT,
-                    new TypeReference<PatchPaymentSubscriptionRequest>() {
-                    });
+                    typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
                     "paymentSubscription",
@@ -101,7 +98,7 @@ public class PatchPaymentSubscription {
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
 
             req.addQueryParams(Utils.getQueryParams(
-                    PatchPaymentSubscriptionRequest.class,
+                    klass,
                     request,
                     null));
             Utils.configureSecurity(req, this.sdkConfiguration.securitySource().getSecurity());
@@ -117,7 +114,7 @@ public class PatchPaymentSubscription {
         }
 
         private HttpRequest onBuildRequest(PatchPaymentSubscriptionRequest request) throws Exception {
-            HttpRequest req = buildRequest(request);
+            HttpRequest req = buildRequest(request, PatchPaymentSubscriptionRequest.class, new TypeReference<PatchPaymentSubscriptionRequest>() {});
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 
