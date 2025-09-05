@@ -18,9 +18,20 @@ import to.unified.unified_java_sdk.operations.ListAccountingTrialbalances;
 
 public class Trialbalance {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncTrialbalance asyncSDK;
 
     Trialbalance(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncTrialbalance(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncTrialbalance async() {
+        return asyncSDK;
     }
 
     /**

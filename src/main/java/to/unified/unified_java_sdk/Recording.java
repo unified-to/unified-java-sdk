@@ -42,9 +42,20 @@ import to.unified.unified_java_sdk.operations.UpdateUcRecording;
 
 public class Recording {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncRecording asyncSDK;
 
     Recording(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncRecording(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncRecording async() {
+        return asyncSDK;
     }
 
     /**

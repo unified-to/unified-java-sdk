@@ -14,9 +14,20 @@ import to.unified.unified_java_sdk.operations.CreateGenaiEmbedding;
 
 public class Embedding {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncEmbedding asyncSDK;
 
     Embedding(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncEmbedding(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncEmbedding async() {
+        return asyncSDK;
     }
 
     /**

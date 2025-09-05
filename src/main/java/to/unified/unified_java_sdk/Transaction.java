@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateAccountingTransaction;
 
 public class Transaction {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncTransaction asyncSDK;
 
     Transaction(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncTransaction(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncTransaction async() {
+        return asyncSDK;
     }
 
     /**

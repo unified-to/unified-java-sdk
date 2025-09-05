@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateCommerceItem;
 
 public class Item {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncItem asyncSDK;
 
     Item(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncItem(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncItem async() {
+        return asyncSDK;
     }
 
     /**

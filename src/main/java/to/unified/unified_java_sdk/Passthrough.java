@@ -42,9 +42,20 @@ import to.unified.unified_java_sdk.operations.UpdatePassthroughRaw;
 
 public class Passthrough {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncPassthrough asyncSDK;
 
     Passthrough(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncPassthrough(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncPassthrough async() {
+        return asyncSDK;
     }
 
     /**

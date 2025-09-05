@@ -86,9 +86,20 @@ import to.unified.unified_java_sdk.operations.UpdateHrisCompany;
 
 public class Company {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncCompany asyncSDK;
 
     Company(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncCompany(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncCompany async() {
+        return asyncSDK;
     }
 
     /**

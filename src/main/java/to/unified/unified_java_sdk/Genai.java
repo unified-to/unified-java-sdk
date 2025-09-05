@@ -26,9 +26,20 @@ import to.unified.unified_java_sdk.operations.ListGenaiModels;
 
 public class Genai {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncGenai asyncSDK;
 
     Genai(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncGenai(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncGenai async() {
+        return asyncSDK;
     }
 
     /**

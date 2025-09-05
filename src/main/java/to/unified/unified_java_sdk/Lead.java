@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateCrmLead;
 
 public class Lead {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncLead asyncSDK;
 
     Lead(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncLead(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncLead async() {
+        return asyncSDK;
     }
 
     /**

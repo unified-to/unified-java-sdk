@@ -82,9 +82,20 @@ import to.unified.unified_java_sdk.operations.UpdateKmsSpace;
 
 public class Kms {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncKms asyncSDK;
 
     Kms(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncKms(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncKms async() {
+        return asyncSDK;
     }
 
     /**

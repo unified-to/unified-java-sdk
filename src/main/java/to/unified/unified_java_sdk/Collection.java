@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateCommerceCollection;
 
 public class Collection {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncCollection asyncSDK;
 
     Collection(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncCollection(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncCollection async() {
+        return asyncSDK;
     }
 
     /**

@@ -14,9 +14,20 @@ import to.unified.unified_java_sdk.operations.ListUcCalls;
 
 public class Call {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncCall asyncSDK;
 
     Call(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncCall(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncCall async() {
+        return asyncSDK;
     }
 
     /**

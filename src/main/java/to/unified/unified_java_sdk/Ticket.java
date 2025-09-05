@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateTicketingTicket;
 
 public class Ticket {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncTicket asyncSDK;
 
     Ticket(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncTicket(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncTicket async() {
+        return asyncSDK;
     }
 
     /**

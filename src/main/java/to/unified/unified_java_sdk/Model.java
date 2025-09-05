@@ -18,9 +18,20 @@ import to.unified.unified_java_sdk.operations.ListGenaiModels;
 
 public class Model {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncModel asyncSDK;
 
     Model(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncModel(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncModel async() {
+        return asyncSDK;
     }
 
     /**

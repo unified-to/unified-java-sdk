@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateAtsDocument;
 
 public class Document {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncDocument asyncSDK;
 
     Document(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncDocument(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncDocument async() {
+        return asyncSDK;
     }
 
     /**

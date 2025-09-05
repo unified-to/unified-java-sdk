@@ -130,9 +130,20 @@ import to.unified.unified_java_sdk.operations.UpdateCommerceReview;
 
 public class Commerce {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncCommerce asyncSDK;
 
     Commerce(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncCommerce(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncCommerce async() {
+        return asyncSDK;
     }
 
     /**

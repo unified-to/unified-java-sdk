@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateRepoCommit;
 
 public class Commit {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncCommit asyncSDK;
 
     Commit(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncCommit(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncCommit async() {
+        return asyncSDK;
     }
 
     /**

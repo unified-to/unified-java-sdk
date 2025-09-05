@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateMartechList;
 
 public class List {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncList asyncSDK;
 
     List(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncList(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncList async() {
+        return asyncSDK;
     }
 
     /**

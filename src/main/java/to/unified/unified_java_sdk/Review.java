@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateCommerceReview;
 
 public class Review {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncReview asyncSDK;
 
     Review(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncReview(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncReview async() {
+        return asyncSDK;
     }
 
     /**

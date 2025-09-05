@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateRepoBranch;
 
 public class Branch {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncBranch asyncSDK;
 
     Branch(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncBranch(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncBranch async() {
+        return asyncSDK;
     }
 
     /**

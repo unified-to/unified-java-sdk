@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateTicketingNote;
 
 public class Note {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncNote asyncSDK;
 
     Note(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncNote(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncNote async() {
+        return asyncSDK;
     }
 
     /**

@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateMetadataMetadata;
 
 public class Metadata {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncMetadata asyncSDK;
 
     Metadata(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncMetadata(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncMetadata async() {
+        return asyncSDK;
     }
 
     /**

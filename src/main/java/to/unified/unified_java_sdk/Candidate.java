@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateAtsCandidate;
 
 public class Candidate {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncCandidate asyncSDK;
 
     Candidate(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncCandidate(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncCandidate async() {
+        return asyncSDK;
     }
 
     /**

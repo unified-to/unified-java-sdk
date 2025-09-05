@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateAccountingSalesorder;
 
 public class Salesorder {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncSalesorder asyncSDK;
 
     Salesorder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncSalesorder(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncSalesorder async() {
+        return asyncSDK;
     }
 
     /**

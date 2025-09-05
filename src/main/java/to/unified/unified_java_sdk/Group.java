@@ -58,9 +58,20 @@ import to.unified.unified_java_sdk.operations.UpdateScimGroups;
 
 public class Group {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncGroup asyncSDK;
 
     Group(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncGroup(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncGroup async() {
+        return asyncSDK;
     }
 
     /**

@@ -86,9 +86,20 @@ import to.unified.unified_java_sdk.operations.UpdateUcRecording;
 
 public class Uc {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncUc asyncSDK;
 
     Uc(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncUc(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncUc async() {
+        return asyncSDK;
     }
 
     /**

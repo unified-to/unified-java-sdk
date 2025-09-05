@@ -82,9 +82,20 @@ import to.unified.unified_java_sdk.operations.UpdateUcComment;
 
 public class Comment {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncComment asyncSDK;
 
     Comment(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncComment(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncComment async() {
+        return asyncSDK;
     }
 
     /**

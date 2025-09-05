@@ -884,6 +884,7 @@ public class UnifiedTo {
     }
 
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncUnifiedTo asyncSDK;
 
     /**
      * The Builder class allows the configuration of a new instance of the SDK.
@@ -1127,5 +1128,16 @@ public class UnifiedTo {
         this.verification = new Verification(sdkConfiguration);
         this.package_ = new Package(sdkConfiguration);
         this.request = new Request(sdkConfiguration);
+        this.asyncSDK = new AsyncUnifiedTo(this, sdkConfiguration);
     }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncUnifiedTo async() {
+        return asyncSDK;
+    }
+
 }

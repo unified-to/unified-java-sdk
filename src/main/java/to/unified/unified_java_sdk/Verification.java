@@ -42,9 +42,20 @@ import to.unified.unified_java_sdk.operations.UpdateVerificationRequest;
 
 public class Verification {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncVerification asyncSDK;
 
     Verification(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncVerification(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncVerification async() {
+        return asyncSDK;
     }
 
     /**

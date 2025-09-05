@@ -22,9 +22,20 @@ import to.unified.unified_java_sdk.operations.ListUnifiedIntegrations;
 
 public class Integration {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncIntegration asyncSDK;
 
     Integration(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncIntegration(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncIntegration async() {
+        return asyncSDK;
     }
 
     /**

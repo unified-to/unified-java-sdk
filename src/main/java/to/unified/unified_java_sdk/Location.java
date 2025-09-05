@@ -58,9 +58,20 @@ import to.unified.unified_java_sdk.operations.UpdateHrisLocation;
 
 public class Location {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncLocation asyncSDK;
 
     Location(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncLocation(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncLocation async() {
+        return asyncSDK;
     }
 
     /**

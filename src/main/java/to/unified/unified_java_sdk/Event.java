@@ -58,9 +58,20 @@ import to.unified.unified_java_sdk.operations.UpdateCrmEvent;
 
 public class Event {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncEvent asyncSDK;
 
     Event(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncEvent(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncEvent async() {
+        return asyncSDK;
     }
 
     /**

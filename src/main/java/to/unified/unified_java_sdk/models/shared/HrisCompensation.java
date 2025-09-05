@@ -34,6 +34,11 @@ public class HrisCompensation {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("group_id")
+    private Optional<String> groupId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private Optional<? extends HrisCompensationType> type;
 
@@ -42,20 +47,23 @@ public class HrisCompensation {
             @JsonProperty("amount") Optional<Double> amount,
             @JsonProperty("currency") Optional<String> currency,
             @JsonProperty("frequency") Optional<? extends HrisCompensationFrequency> frequency,
+            @JsonProperty("group_id") Optional<String> groupId,
             @JsonProperty("type") Optional<? extends HrisCompensationType> type) {
         Utils.checkNotNull(amount, "amount");
         Utils.checkNotNull(currency, "currency");
         Utils.checkNotNull(frequency, "frequency");
+        Utils.checkNotNull(groupId, "groupId");
         Utils.checkNotNull(type, "type");
         this.amount = amount;
         this.currency = currency;
         this.frequency = frequency;
+        this.groupId = groupId;
         this.type = type;
     }
     
     public HrisCompensation() {
         this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -72,6 +80,11 @@ public class HrisCompensation {
     @JsonIgnore
     public Optional<HrisCompensationFrequency> frequency() {
         return (Optional<HrisCompensationFrequency>) frequency;
+    }
+
+    @JsonIgnore
+    public Optional<String> groupId() {
+        return groupId;
     }
 
     @SuppressWarnings("unchecked")
@@ -124,6 +137,19 @@ public class HrisCompensation {
         return this;
     }
 
+    public HrisCompensation withGroupId(String groupId) {
+        Utils.checkNotNull(groupId, "groupId");
+        this.groupId = Optional.ofNullable(groupId);
+        return this;
+    }
+
+
+    public HrisCompensation withGroupId(Optional<String> groupId) {
+        Utils.checkNotNull(groupId, "groupId");
+        this.groupId = groupId;
+        return this;
+    }
+
     public HrisCompensation withType(HrisCompensationType type) {
         Utils.checkNotNull(type, "type");
         this.type = Optional.ofNullable(type);
@@ -150,6 +176,7 @@ public class HrisCompensation {
             Utils.enhancedDeepEquals(this.amount, other.amount) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.frequency, other.frequency) &&
+            Utils.enhancedDeepEquals(this.groupId, other.groupId) &&
             Utils.enhancedDeepEquals(this.type, other.type);
     }
     
@@ -157,7 +184,7 @@ public class HrisCompensation {
     public int hashCode() {
         return Utils.enhancedHash(
             amount, currency, frequency,
-            type);
+            groupId, type);
     }
     
     @Override
@@ -166,6 +193,7 @@ public class HrisCompensation {
                 "amount", amount,
                 "currency", currency,
                 "frequency", frequency,
+                "groupId", groupId,
                 "type", type);
     }
 
@@ -177,6 +205,8 @@ public class HrisCompensation {
         private Optional<String> currency = Optional.empty();
 
         private Optional<? extends HrisCompensationFrequency> frequency = Optional.empty();
+
+        private Optional<String> groupId = Optional.empty();
 
         private Optional<? extends HrisCompensationType> type = Optional.empty();
 
@@ -224,6 +254,19 @@ public class HrisCompensation {
         }
 
 
+        public Builder groupId(String groupId) {
+            Utils.checkNotNull(groupId, "groupId");
+            this.groupId = Optional.ofNullable(groupId);
+            return this;
+        }
+
+        public Builder groupId(Optional<String> groupId) {
+            Utils.checkNotNull(groupId, "groupId");
+            this.groupId = groupId;
+            return this;
+        }
+
+
         public Builder type(HrisCompensationType type) {
             Utils.checkNotNull(type, "type");
             this.type = Optional.ofNullable(type);
@@ -240,7 +283,7 @@ public class HrisCompensation {
 
             return new HrisCompensation(
                 amount, currency, frequency,
-                type);
+                groupId, type);
         }
 
     }

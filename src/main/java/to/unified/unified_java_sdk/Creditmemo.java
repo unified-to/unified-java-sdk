@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateAccountingCreditmemo;
 
 public class Creditmemo {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncCreditmemo asyncSDK;
 
     Creditmemo(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncCreditmemo(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncCreditmemo async() {
+        return asyncSDK;
     }
 
     /**

@@ -14,9 +14,20 @@ import to.unified.unified_java_sdk.operations.ListAtsApplicationstatuses;
 
 public class Applicationstatus {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncApplicationstatus asyncSDK;
 
     Applicationstatus(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncApplicationstatus(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncApplicationstatus async() {
+        return asyncSDK;
     }
 
     /**

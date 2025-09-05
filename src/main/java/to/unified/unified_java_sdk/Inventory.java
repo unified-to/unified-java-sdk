@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateCommerceInventory;
 
 public class Inventory {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncInventory asyncSDK;
 
     Inventory(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncInventory(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncInventory async() {
+        return asyncSDK;
     }
 
     /**

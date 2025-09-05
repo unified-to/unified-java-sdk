@@ -42,9 +42,20 @@ import to.unified.unified_java_sdk.operations.UpdateRepoOrganization;
 
 public class Organization {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncOrganization asyncSDK;
 
     Organization(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncOrganization(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncOrganization async() {
+        return asyncSDK;
     }
 
     /**

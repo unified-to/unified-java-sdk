@@ -18,9 +18,20 @@ import to.unified.unified_java_sdk.operations.ListHrisPayslips;
 
 public class Payslip {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncPayslip asyncSDK;
 
     Payslip(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncPayslip(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncPayslip async() {
+        return asyncSDK;
     }
 
     /**

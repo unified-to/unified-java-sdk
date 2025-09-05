@@ -58,9 +58,20 @@ import to.unified.unified_java_sdk.operations.UpdateTicketingCategory;
 
 public class Category {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncCategory asyncSDK;
 
     Category(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncCategory(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncCategory async() {
+        return asyncSDK;
     }
 
     /**

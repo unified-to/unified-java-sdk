@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateKmsPage;
 
 public class Page {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncPage asyncSDK;
 
     Page(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncPage(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncPage async() {
+        return asyncSDK;
     }
 
     /**

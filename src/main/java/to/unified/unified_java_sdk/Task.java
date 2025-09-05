@@ -90,9 +90,20 @@ import to.unified.unified_java_sdk.operations.UpdateTaskTask;
 
 public class Task {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncTask asyncSDK;
 
     Task(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncTask(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncTask async() {
+        return asyncSDK;
     }
 
     /**

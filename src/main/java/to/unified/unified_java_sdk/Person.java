@@ -14,9 +14,20 @@ import to.unified.unified_java_sdk.operations.ListEnrichPeople;
 
 public class Person {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncPerson asyncSDK;
 
     Person(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncPerson(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncPerson async() {
+        return asyncSDK;
     }
 
     /**

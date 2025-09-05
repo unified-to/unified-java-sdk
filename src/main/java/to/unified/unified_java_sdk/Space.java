@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateKmsSpace;
 
 public class Space {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncSpace asyncSDK;
 
     Space(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncSpace(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncSpace async() {
+        return asyncSDK;
     }
 
     /**

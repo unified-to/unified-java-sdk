@@ -98,9 +98,20 @@ import to.unified.unified_java_sdk.operations.UpdatePaymentSubscription;
 
 public class Payment {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncPayment asyncSDK;
 
     Payment(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncPayment(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncPayment async() {
+        return asyncSDK;
     }
 
     /**

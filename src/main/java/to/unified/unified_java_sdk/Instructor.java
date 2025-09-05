@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateLmsInstructor;
 
 public class Instructor {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncInstructor asyncSDK;
 
     Instructor(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncInstructor(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncInstructor async() {
+        return asyncSDK;
     }
 
     /**

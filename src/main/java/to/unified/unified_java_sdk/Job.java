@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateAtsJob;
 
 public class Job {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncJob asyncSDK;
 
     Job(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncJob(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncJob async() {
+        return asyncSDK;
     }
 
     /**

@@ -94,9 +94,20 @@ import to.unified.unified_java_sdk.operations.UpdateCalendarLink;
 
 public class Calendar {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncCalendar asyncSDK;
 
     Calendar(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncCalendar(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncCalendar async() {
+        return asyncSDK;
     }
 
     /**

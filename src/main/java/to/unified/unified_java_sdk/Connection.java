@@ -33,9 +33,20 @@ import to.unified.unified_java_sdk.operations.UpdateUnifiedConnection;
 
 public class Connection {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncConnection asyncSDK;
 
     Connection(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncConnection(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncConnection async() {
+        return asyncSDK;
     }
 
     /**

@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateRepoPullrequest;
 
 public class Pullrequest {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncPullrequest asyncSDK;
 
     Pullrequest(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncPullrequest(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncPullrequest async() {
+        return asyncSDK;
     }
 
     /**

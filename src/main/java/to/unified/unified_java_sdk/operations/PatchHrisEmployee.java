@@ -4,21 +4,28 @@
 package to.unified.unified_java_sdk.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import java.io.InputStream;
 import java.lang.Exception;
 import java.lang.Object;
+import java.lang.RuntimeException;
 import java.lang.String;
+import java.lang.Throwable;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.Optional;
+import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.SecuritySource;
 import to.unified.unified_java_sdk.models.errors.SDKError;
 import to.unified.unified_java_sdk.models.operations.PatchHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisEmployeeResponse;
 import to.unified.unified_java_sdk.models.shared.HrisEmployee;
+import to.unified.unified_java_sdk.utils.Blob;
+import to.unified.unified_java_sdk.utils.Exceptions;
 import to.unified.unified_java_sdk.utils.HTTPClient;
 import to.unified.unified_java_sdk.utils.HTTPRequest;
 import to.unified.unified_java_sdk.utils.Hook.AfterErrorContextImpl;
@@ -203,6 +210,90 @@ public class PatchHrisEmployee {
                     response.statusCode(),
                     "Unexpected status code received: " + response.statusCode(),
                     Utils.extractByteArrayFromBody(response));
+        }
+    }
+    public static class Async extends Base
+            implements AsyncRequestOperation<PatchHrisEmployeeRequest, to.unified.unified_java_sdk.models.operations.async.PatchHrisEmployeeResponse> {
+
+        public Async(SDKConfiguration sdkConfiguration) {
+            super(sdkConfiguration);
+        }
+
+        private CompletableFuture<HttpRequest> onBuildRequest(PatchHrisEmployeeRequest request) throws Exception {
+            HttpRequest req = buildRequest(request, PatchHrisEmployeeRequest.class, new TypeReference<PatchHrisEmployeeRequest>() {});
+            return this.sdkConfiguration.asyncHooks().beforeRequest(createBeforeRequestContext(), req);
+        }
+
+        private CompletableFuture<HttpResponse<Blob>> onError(HttpResponse<Blob> response, Throwable error) {
+            return this.sdkConfiguration.asyncHooks().afterError(createAfterErrorContext(), response, error);
+        }
+
+        private CompletableFuture<HttpResponse<Blob>> onSuccess(HttpResponse<Blob> response) {
+            return this.sdkConfiguration.asyncHooks().afterSuccess(createAfterSuccessContext(), response);
+        }
+
+        @Override
+        public CompletableFuture<HttpResponse<Blob>> doRequest(PatchHrisEmployeeRequest request) {
+            return Exceptions.unchecked(() -> onBuildRequest(request)).get().thenCompose(client::sendAsync)
+                    .handle((resp, err) -> {
+                        if (err != null) {
+                            return onError(null, err);
+                        }
+                        if (Utils.statusCodeMatches(resp.statusCode(), "4XX", "5XX")) {
+                            return onError(resp, null);
+                        }
+                        return CompletableFuture.completedFuture(resp);
+                    })
+                    .thenCompose(Function.identity())
+                    .thenCompose(this::onSuccess);
+        }
+
+        @Override
+        public CompletableFuture<to.unified.unified_java_sdk.models.operations.async.PatchHrisEmployeeResponse> handleResponse(
+                HttpResponse<Blob> response) {
+            String contentType = response
+                    .headers()
+                    .firstValue("Content-Type")
+                    .orElse("application/octet-stream");
+            to.unified.unified_java_sdk.models.operations.async.PatchHrisEmployeeResponse.Builder resBuilder =
+                    to.unified.unified_java_sdk.models.operations.async.PatchHrisEmployeeResponse
+                            .builder()
+                            .contentType(contentType)
+                            .statusCode(response.statusCode())
+                            .rawResponse(response);
+
+            to.unified.unified_java_sdk.models.operations.async.PatchHrisEmployeeResponse res = resBuilder.build();
+            
+            if (Utils.statusCodeMatches(response.statusCode(), "200")) {
+                if (Utils.contentTypeMatches(contentType, "application/json")) {
+                    return response.body().toByteArray().thenApply(bodyBytes -> {
+                        try {
+                            HrisEmployee out = Utils.mapper().readValue(
+                                    bodyBytes,
+                                    new TypeReference<>() {
+                                    });
+                            res.withHrisEmployee(out);
+                            return res;
+                        } catch (Exception e) {
+                            throw new RuntimeException(e);
+                        }
+                    });
+                } else {
+                    return Utils.createAsyncApiError(response, "Unexpected content-type received: " + contentType);
+                }
+            }
+            
+            if (Utils.statusCodeMatches(response.statusCode(), "4XX")) {
+                // no content
+                return Utils.createAsyncApiError(response, "API error occurred");
+            }
+            
+            if (Utils.statusCodeMatches(response.statusCode(), "5XX")) {
+                // no content
+                return Utils.createAsyncApiError(response, "API error occurred");
+            }
+            
+            return Utils.createAsyncApiError(response, "Unexpected status code received: " + response.statusCode());
         }
     }
 }

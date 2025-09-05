@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateStorageFile;
 
 public class Storage {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncStorage asyncSDK;
 
     Storage(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncStorage(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncStorage async() {
+        return asyncSDK;
     }
 
     /**

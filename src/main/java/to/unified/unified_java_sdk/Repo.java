@@ -130,9 +130,20 @@ import to.unified.unified_java_sdk.operations.UpdateRepoRepository;
 
 public class Repo {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncRepo asyncSDK;
 
     Repo(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncRepo(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncRepo async() {
+        return asyncSDK;
     }
 
     /**

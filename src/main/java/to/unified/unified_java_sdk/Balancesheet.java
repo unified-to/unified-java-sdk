@@ -18,9 +18,20 @@ import to.unified.unified_java_sdk.operations.ListAccountingBalancesheets;
 
 public class Balancesheet {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncBalancesheet asyncSDK;
 
     Balancesheet(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncBalancesheet(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncBalancesheet async() {
+        return asyncSDK;
     }
 
     /**

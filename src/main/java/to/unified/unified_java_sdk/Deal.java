@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateCrmDeal;
 
 public class Deal {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncDeal asyncSDK;
 
     Deal(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncDeal(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncDeal async() {
+        return asyncSDK;
     }
 
     /**

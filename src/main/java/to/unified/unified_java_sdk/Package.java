@@ -18,9 +18,20 @@ import to.unified.unified_java_sdk.operations.ListVerificationPackages;
 
 public class Package {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncPackage asyncSDK;
 
     Package(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncPackage(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncPackage async() {
+        return asyncSDK;
     }
 
     /**

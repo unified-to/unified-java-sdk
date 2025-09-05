@@ -18,9 +18,20 @@ import to.unified.unified_java_sdk.operations.ListMessagingChannels;
 
 public class Channel {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncChannel asyncSDK;
 
     Channel(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncChannel(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncChannel async() {
+        return asyncSDK;
     }
 
     /**

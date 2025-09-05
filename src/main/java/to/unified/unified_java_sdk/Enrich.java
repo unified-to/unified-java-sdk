@@ -18,9 +18,20 @@ import to.unified.unified_java_sdk.operations.ListEnrichPeople;
 
 public class Enrich {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncEnrich asyncSDK;
 
     Enrich(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncEnrich(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncEnrich async() {
+        return asyncSDK;
     }
 
     /**

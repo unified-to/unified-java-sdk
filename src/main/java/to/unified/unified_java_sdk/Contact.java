@@ -82,9 +82,20 @@ import to.unified.unified_java_sdk.operations.UpdateUcContact;
 
 public class Contact {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncContact asyncSDK;
 
     Contact(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncContact(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncContact async() {
+        return asyncSDK;
     }
 
     /**

@@ -90,9 +90,20 @@ import to.unified.unified_java_sdk.operations.UpdateUnifiedWebhookTrigger;
 
 public class Unified {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncUnified asyncSDK;
 
     Unified(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncUnified(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncUnified async() {
+        return asyncSDK;
     }
 
     /**

@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateVerificationRequest;
 
 public class Request {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncRequest asyncSDK;
 
     Request(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncRequest(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncRequest async() {
+        return asyncSDK;
     }
 
     /**

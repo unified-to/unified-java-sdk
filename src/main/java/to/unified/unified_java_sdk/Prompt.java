@@ -14,9 +14,20 @@ import to.unified.unified_java_sdk.operations.CreateGenaiPrompt;
 
 public class Prompt {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncPrompt asyncSDK;
 
     Prompt(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncPrompt(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncPrompt async() {
+        return asyncSDK;
     }
 
     /**

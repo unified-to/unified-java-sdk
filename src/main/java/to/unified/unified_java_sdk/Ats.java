@@ -206,9 +206,20 @@ import to.unified.unified_java_sdk.operations.UpdateAtsScorecard;
 
 public class Ats {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncAts asyncSDK;
 
     Ats(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncAts(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncAts async() {
+        return asyncSDK;
     }
 
     /**

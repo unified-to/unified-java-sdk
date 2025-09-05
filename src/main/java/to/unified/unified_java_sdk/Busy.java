@@ -14,9 +14,20 @@ import to.unified.unified_java_sdk.operations.ListCalendarBusies;
 
 public class Busy {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncBusy asyncSDK;
 
     Busy(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncBusy(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncBusy async() {
+        return asyncSDK;
     }
 
     /**

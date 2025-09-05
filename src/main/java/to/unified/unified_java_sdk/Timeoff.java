@@ -18,9 +18,20 @@ import to.unified.unified_java_sdk.operations.ListHrisTimeoffs;
 
 public class Timeoff {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncTimeoff asyncSDK;
 
     Timeoff(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncTimeoff(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncTimeoff async() {
+        return asyncSDK;
     }
 
     /**

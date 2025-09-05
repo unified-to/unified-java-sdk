@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateCrmPipeline;
 
 public class Pipeline {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncPipeline asyncSDK;
 
     Pipeline(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncPipeline(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncPipeline async() {
+        return asyncSDK;
     }
 
     /**

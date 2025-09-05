@@ -18,9 +18,20 @@ import to.unified.unified_java_sdk.operations.ListUnifiedApicalls;
 
 public class Apicall {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncApicall asyncSDK;
 
     Apicall(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncApicall(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncApicall async() {
+        return asyncSDK;
     }
 
     /**

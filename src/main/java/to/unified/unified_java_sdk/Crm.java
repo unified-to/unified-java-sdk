@@ -154,9 +154,20 @@ import to.unified.unified_java_sdk.operations.UpdateCrmPipeline;
 
 public class Crm {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncCrm asyncSDK;
 
     Crm(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncCrm(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncCrm async() {
+        return asyncSDK;
     }
 
     /**

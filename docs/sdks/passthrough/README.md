@@ -105,7 +105,6 @@ public class Application {
                 .request(req)
                 .call();
 
-        // handle response
     }
 }
 ```
@@ -273,7 +272,6 @@ public class Application {
                 .request(req)
                 .call();
 
-        // handle response
     }
 }
 ```
@@ -441,7 +439,6 @@ public class Application {
                 .request(req)
                 .call();
 
-        // handle response
     }
 }
 ```

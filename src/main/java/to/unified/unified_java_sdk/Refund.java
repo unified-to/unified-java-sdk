@@ -18,9 +18,20 @@ import to.unified.unified_java_sdk.operations.ListPaymentRefunds;
 
 public class Refund {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncRefund asyncSDK;
 
     Refund(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncRefund(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncRefund async() {
+        return asyncSDK;
     }
 
     /**

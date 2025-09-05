@@ -170,9 +170,20 @@ import to.unified.unified_java_sdk.operations.UpdateHrisTimeshift;
 
 public class Hris {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncHris asyncSDK;
 
     Hris(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncHris(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncHris async() {
+        return asyncSDK;
     }
 
     /**

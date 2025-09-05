@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateHrisTimeshift;
 
 public class Timeshift {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncTimeshift asyncSDK;
 
     Timeshift(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncTimeshift(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncTimeshift async() {
+        return asyncSDK;
     }
 
     /**

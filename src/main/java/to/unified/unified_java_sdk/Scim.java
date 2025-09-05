@@ -58,9 +58,20 @@ import to.unified.unified_java_sdk.operations.UpdateScimUsers;
 
 public class Scim {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncScim asyncSDK;
 
     Scim(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncScim(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncScim async() {
+        return asyncSDK;
     }
 
     /**

@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateAccountingPurchaseorder;
 
 public class Purchaseorder {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncPurchaseorder asyncSDK;
 
     Purchaseorder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncPurchaseorder(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncPurchaseorder async() {
+        return asyncSDK;
     }
 
     /**

@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateAccountingInvoice;
 
 public class Invoice {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncInvoice asyncSDK;
 
     Invoice(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncInvoice(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncInvoice async() {
+        return asyncSDK;
     }
 
     /**

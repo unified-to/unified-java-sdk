@@ -18,9 +18,20 @@ import to.unified.unified_java_sdk.operations.ListAccountingProfitlosses;
 
 public class Profitloss {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncProfitloss asyncSDK;
 
     Profitloss(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncProfitloss(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncProfitloss async() {
+        return asyncSDK;
     }
 
     /**

@@ -18,9 +18,20 @@ import to.unified.unified_java_sdk.operations.ListTaskChanges;
 
 public class Change {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncChange asyncSDK;
 
     Change(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncChange(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncChange async() {
+        return asyncSDK;
     }
 
     /**

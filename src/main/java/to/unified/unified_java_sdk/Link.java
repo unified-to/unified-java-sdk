@@ -58,9 +58,20 @@ import to.unified.unified_java_sdk.operations.UpdatePaymentLink;
 
 public class Link {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncLink asyncSDK;
 
     Link(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncLink(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncLink async() {
+        return asyncSDK;
     }
 
     /**

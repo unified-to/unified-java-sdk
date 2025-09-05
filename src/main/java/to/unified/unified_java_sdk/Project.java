@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateTaskProject;
 
 public class Project {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncProject asyncSDK;
 
     Project(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncProject(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncProject async() {
+        return asyncSDK;
     }
 
     /**

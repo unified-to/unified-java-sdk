@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateAccountingBill;
 
 public class Bill {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncBill asyncSDK;
 
     Bill(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncBill(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncBill async() {
+        return asyncSDK;
     }
 
     /**

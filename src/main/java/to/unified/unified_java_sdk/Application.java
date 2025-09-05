@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateAtsApplication;
 
 public class Application {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncApplication asyncSDK;
 
     Application(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncApplication(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncApplication async() {
+        return asyncSDK;
     }
 
     /**

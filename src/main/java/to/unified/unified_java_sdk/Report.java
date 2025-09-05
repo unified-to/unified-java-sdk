@@ -18,9 +18,20 @@ import to.unified.unified_java_sdk.operations.ListAccountingReports;
 
 public class Report {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncReport asyncSDK;
 
     Report(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncReport(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncReport async() {
+        return asyncSDK;
     }
 
     /**

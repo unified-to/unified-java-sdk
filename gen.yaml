@@ -21,17 +21,17 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 java:
-  version: 0.36.0
+  version: 0.37.0
   additionalDependencies: []
   additionalPlugins: []
   artifactID: unified-java-sdk
+  asyncMode: enabled
   baseErrorName: UnifiedToError
   clientServerStatusCodesAsErrors: true
   companyEmail: hello@unified.to
   companyName: Unified API Inc.
   companyURL: www.unified.to
   defaultErrorName: SDKError
-  enableAsync: false
   enableCustomCodeRegions: false
   enableStreamingUploads: false
   flattenGlobalSecurity: false

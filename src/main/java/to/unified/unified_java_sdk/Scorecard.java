@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateAtsScorecard;
 
 public class Scorecard {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncScorecard asyncSDK;
 
     Scorecard(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncScorecard(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncScorecard async() {
+        return asyncSDK;
     }
 
     /**

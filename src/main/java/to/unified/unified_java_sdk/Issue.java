@@ -14,9 +14,20 @@ import to.unified.unified_java_sdk.operations.ListUnifiedIssues;
 
 public class Issue {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncIssue asyncSDK;
 
     Issue(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncIssue(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncIssue async() {
+        return asyncSDK;
     }
 
     /**

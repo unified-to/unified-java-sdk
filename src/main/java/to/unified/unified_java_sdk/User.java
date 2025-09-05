@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateScimUsers;
 
 public class User {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncUser asyncSDK;
 
     User(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncUser(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncUser async() {
+        return asyncSDK;
     }
 
     /**

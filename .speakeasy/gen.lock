@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: a9003bf9eba5cb988acee2ba39aeae6f
+  docChecksum: 815d3eb3e63fd66f5050d707713e3c46
   docVersion: "1.0"
-  speakeasyVersion: 1.607.0
-  generationVersion: 2.690.1
-  releaseVersion: 0.36.0
-  configChecksum: dab0110c5a8d876ed187c73d2563036f
+  speakeasyVersion: 1.609.0
+  generationVersion: 2.692.0
+  releaseVersion: 0.37.0
+  configChecksum: fde068dcab08409efe36632e419cf404
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -15,7 +15,7 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.1
-    core: 3.46.1
+    core: 3.47.0
     downloadStreams: 0.1.1
     globalSecurity: 2.83.0
     globalSecurityCallbacks: 0.1.0
@@ -1556,6 +1556,7 @@ generatedFiles:
   - docs/sdks/user/README.md
   - docs/sdks/verification/README.md
   - docs/sdks/webhook/README.md
+  - docs/utils/Blob.md
   - gradle.properties
   - gradle/wrapper/gradle-wrapper.jar
   - gradle/wrapper/gradle-wrapper.properties
@@ -1568,6 +1569,113 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/Apicall.java
   - src/main/java/to/unified/unified_java_sdk/Application.java
   - src/main/java/to/unified/unified_java_sdk/Applicationstatus.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncAccount.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncAccounting.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncActivity.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncApicall.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncApplication.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncApplicationstatus.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncAts.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncAuth.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncBalancesheet.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncBill.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncBranch.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncBusy.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncCalendar.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncCall.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncCandidate.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncCategory.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncChange.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncChannel.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncClass.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncCollection.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncComment.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncCommerce.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncCommit.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncCompany.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncConnection.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncContact.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncCourse.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncCreditmemo.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncCrm.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncCustomer.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncDeal.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncDevice.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncDocument.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncEmbedding.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncEmployee.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncEnrich.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncEvent.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncFile.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncGenai.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncGroup.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncHris.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncInstructor.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncIntegration.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncInterview.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncInventory.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncInvoice.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncIssue.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncItem.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncJob.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncJournal.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncKms.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncLead.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncLink.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncList.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncLms.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncLocation.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncLogin.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncMartech.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncMember.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncMessage.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncMessaging.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncMetadata.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncModel.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncNote.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncOrder.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncOrganization.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncPackage.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncPage.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncPassthrough.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncPayment.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncPayout.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncPayslip.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncPerson.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncPipeline.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncProfitloss.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncProject.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncPrompt.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncPullrequest.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncPurchaseorder.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncRecording.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncRefund.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncRepo.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncReport.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncRepository.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncRequest.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncReview.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncSalesorder.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncScim.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncScorecard.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncSpace.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncStorage.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncStudent.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncSubscription.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncTask.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncTaxrate.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncTicket.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncTicketing.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncTimeoff.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncTimeshift.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncTransaction.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncTrialbalance.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncUc.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncUnified.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncUnifiedTo.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncUser.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncVerification.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncWebhook.java
   - src/main/java/to/unified/unified_java_sdk/Ats.java
   - src/main/java/to/unified/unified_java_sdk/Auth.java
   - src/main/java/to/unified/unified_java_sdk/Balancesheet.java
@@ -1673,6 +1781,509 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/Webhook.java
   - src/main/java/to/unified/unified_java_sdk/models/errors/AuthException.java
   - src/main/java/to/unified/unified_java_sdk/models/errors/SDKError.java
+  - src/main/java/to/unified/unified_java_sdk/models/errors/UncheckedSDKError.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAccountingAccountRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAccountingBillRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAccountingCategoryRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAccountingContactRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAccountingCreditmemoRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAccountingInvoiceRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAccountingJournalRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAccountingOrderRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAccountingPurchaseorderRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAccountingSalesorderRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAccountingTaxrateRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAccountingTransactionRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAtsActivityRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAtsApplicationRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAtsCandidateRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAtsCompanyRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAtsDocumentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAtsInterviewRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAtsJobRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAtsScorecardRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCalendarCalendarRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCalendarEventRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCalendarLinkRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCommerceCollectionRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCommerceInventoryRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCommerceItemRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCommerceLocationRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCommerceReviewRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCrmCompanyRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCrmContactRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCrmDealRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCrmEventRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCrmLeadRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCrmPipelineRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateGenaiEmbeddingRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateGenaiPromptRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateHrisCompanyRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateHrisDeviceRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateHrisEmployeeRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateHrisGroupRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateHrisLocationRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateHrisTimeshiftRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateKmsCommentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateKmsPageRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateKmsSpaceRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateLmsClassRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateLmsCourseRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateLmsInstructorRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateLmsStudentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateMartechListRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateMartechMemberRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateMessagingMessageRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateMetadataMetadataRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreatePassthroughJsonRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreatePassthroughRawRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreatePaymentLinkRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreatePaymentPaymentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreatePaymentSubscriptionRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateRepoBranchRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateRepoCommitRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateRepoOrganizationRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateRepoPullrequestRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateRepoRepositoryRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateScimGroupsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateScimUsersRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateStorageFileRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateTaskCommentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateTaskProjectRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateTaskTaskRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateTicketingCategoryRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateTicketingCustomerRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateTicketingNoteRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateTicketingTicketRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateUcCommentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateUcContactRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateUcRecordingRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateUnifiedConnectionRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateUnifiedWebhookRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateVerificationRequestRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingAccountRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingBalancesheetRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingBillRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingCategoryRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingContactRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingCreditmemoRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingInvoiceRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingJournalRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingOrderRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingOrganizationRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingProfitlossRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingPurchaseorderRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingReportRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingSalesorderRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingTaxrateRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingTransactionRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingTrialbalanceRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAtsActivityRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAtsApplicationRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAtsCandidateRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAtsCompanyRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAtsDocumentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAtsInterviewRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAtsJobRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAtsScorecardRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCalendarCalendarRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCalendarEventRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCalendarLinkRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCalendarRecordingRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCommerceCollectionRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCommerceInventoryRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCommerceItemRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCommerceLocationRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCommerceReviewRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCrmCompanyRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCrmContactRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCrmDealRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCrmEventRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCrmLeadRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCrmPipelineRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetGenaiModelRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetHrisCompanyRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetHrisDeviceRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetHrisEmployeeRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetHrisGroupRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetHrisLocationRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetHrisPayslipRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetHrisTimeoffRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetHrisTimeshiftRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetKmsCommentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetKmsPageRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetKmsSpaceRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetLmsClassRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetLmsCourseRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetLmsInstructorRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetLmsStudentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetMartechListRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetMartechMemberRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetMessagingChannelRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetMessagingMessageRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetMetadataMetadataRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetPaymentLinkRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetPaymentPaymentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetPaymentPayoutRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetPaymentRefundRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetPaymentSubscriptionRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetRepoBranchRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetRepoCommitRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetRepoOrganizationRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetRepoPullrequestRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetRepoRepositoryRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetScimGroupsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetScimUsersRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetStorageFileRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetTaskChangeRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetTaskCommentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetTaskProjectRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetTaskTaskRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetTicketingCategoryRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetTicketingCustomerRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetTicketingNoteRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetTicketingTicketRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetUcCommentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetUcContactRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetUcRecordingRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetUnifiedApicallRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetUnifiedConnectionRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetUnifiedIntegrationAuthRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetUnifiedIntegrationLoginRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetUnifiedWebhookRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetVerificationPackageRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetVerificationRequestRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingAccountsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingBalancesheetsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingBillsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingCategoriesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingContactsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingCreditmemoesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingInvoicesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingJournalsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingOrdersRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingOrganizationsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingProfitlossesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingPurchaseordersRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingReportsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingSalesordersRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingTaxratesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingTransactionsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingTrialbalancesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAtsActivitiesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAtsApplicationsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAtsApplicationstatusesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAtsCandidatesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAtsCompaniesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAtsDocumentsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAtsInterviewsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAtsJobsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAtsScorecardsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCalendarBusiesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCalendarCalendarsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCalendarEventsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCalendarLinksRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCalendarRecordingsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCommerceCollectionsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCommerceInventoriesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCommerceItemsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCommerceLocationsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCommerceReviewsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCrmCompaniesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCrmContactsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCrmDealsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCrmEventsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCrmLeadsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCrmPipelinesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListEnrichCompaniesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListEnrichPeopleRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListGenaiModelsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListHrisCompaniesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListHrisDevicesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListHrisEmployeesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListHrisGroupsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListHrisLocationsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListHrisPayslipsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListHrisTimeoffsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListHrisTimeshiftsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListKmsCommentsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListKmsPagesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListKmsSpacesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListLmsClassesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListLmsCoursesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListLmsInstructorsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListLmsStudentsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListMartechListsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListMartechMembersRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListMessagingChannelsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListMessagingMessagesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListMetadataMetadatasRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListPassthroughsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListPaymentLinksRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListPaymentPaymentsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListPaymentPayoutsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListPaymentRefundsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListPaymentSubscriptionsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListRepoBranchesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListRepoCommitsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListRepoOrganizationsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListRepoPullrequestsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListRepoRepositoriesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListScimGroupsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListScimUsersRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListStorageFilesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListTaskChangesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListTaskCommentsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListTaskProjectsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListTaskTasksRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListTicketingCategoriesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListTicketingCustomersRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListTicketingNotesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListTicketingTicketsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListUcCallsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListUcCommentsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListUcContactsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListUcRecordingsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListUnifiedApicallsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListUnifiedConnectionsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListUnifiedIntegrationWorkspacesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListUnifiedIntegrationsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListUnifiedIssuesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListUnifiedWebhooksRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListVerificationPackagesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListVerificationRequestsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchAccountingAccountRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchAccountingBillRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchAccountingCategoryRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchAccountingContactRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchAccountingCreditmemoRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchAccountingInvoiceRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchAccountingJournalRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchAccountingOrderRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchAccountingPurchaseorderRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchAccountingSalesorderRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchAccountingTaxrateRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchAccountingTransactionRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchAtsActivityRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchAtsApplicationRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchAtsCandidateRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchAtsCompanyRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchAtsDocumentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchAtsInterviewRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchAtsJobRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchAtsScorecardRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCalendarCalendarRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCalendarEventRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCalendarLinkRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCommerceCollectionRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCommerceInventoryRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCommerceItemRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCommerceLocationRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCommerceReviewRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCrmCompanyRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCrmContactRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCrmDealRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCrmEventRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCrmLeadRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCrmPipelineRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchHrisCompanyRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchHrisDeviceRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchHrisEmployeeRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchHrisGroupRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchHrisLocationRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchHrisTimeshiftRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchKmsCommentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchKmsPageRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchKmsSpaceRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchLmsClassRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchLmsCourseRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchLmsInstructorRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchLmsStudentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchMartechListRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchMartechMemberRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchMessagingMessageRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchMetadataMetadataRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchPassthroughJsonRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchPassthroughRawRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchPaymentLinkRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchPaymentPaymentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchPaymentSubscriptionRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchRepoBranchRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchRepoCommitRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchRepoOrganizationRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchRepoPullrequestRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchRepoRepositoryRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchScimGroupsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchScimUsersRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchStorageFileRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchTaskCommentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchTaskProjectRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchTaskTaskRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchTicketingCategoryRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchTicketingCustomerRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchTicketingNoteRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchTicketingTicketRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchUcCommentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchUcContactRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchUcRecordingRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchUnifiedConnectionRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchUnifiedWebhookRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchUnifiedWebhookTriggerRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchVerificationRequestRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveAccountingAccountRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveAccountingBillRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveAccountingCategoryRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveAccountingContactRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveAccountingCreditmemoRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveAccountingInvoiceRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveAccountingJournalRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveAccountingOrderRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveAccountingPurchaseorderRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveAccountingSalesorderRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveAccountingTaxrateRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveAccountingTransactionRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveAtsActivityRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveAtsApplicationRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveAtsCandidateRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveAtsCompanyRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveAtsDocumentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveAtsInterviewRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveAtsJobRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveAtsScorecardRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCalendarCalendarRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCalendarEventRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCalendarLinkRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCommerceCollectionRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCommerceInventoryRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCommerceItemRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCommerceLocationRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCommerceReviewRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCrmCompanyRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCrmContactRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCrmDealRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCrmEventRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCrmLeadRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCrmPipelineRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveHrisCompanyRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveHrisDeviceRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveHrisEmployeeRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveHrisGroupRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveHrisLocationRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveHrisTimeshiftRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveKmsCommentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveKmsPageRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveKmsSpaceRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveLmsClassRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveLmsCourseRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveLmsInstructorRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveLmsStudentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveMartechListRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveMartechMemberRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveMessagingMessageRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveMetadataMetadataRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemovePassthroughRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemovePaymentLinkRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemovePaymentPaymentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemovePaymentSubscriptionRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveRepoBranchRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveRepoCommitRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveRepoOrganizationRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveRepoPullrequestRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveRepoRepositoryRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveScimGroupsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveScimUsersRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveStorageFileRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveTaskCommentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveTaskProjectRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveTaskTaskRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveTicketingCategoryRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveTicketingCustomerRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveTicketingNoteRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveTicketingTicketRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveUcCommentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveUcContactRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveUcRecordingRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveUnifiedConnectionRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveUnifiedWebhookRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveVerificationRequestRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateAccountingAccountRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateAccountingBillRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateAccountingCategoryRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateAccountingContactRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateAccountingCreditmemoRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateAccountingInvoiceRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateAccountingJournalRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateAccountingOrderRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateAccountingPurchaseorderRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateAccountingSalesorderRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateAccountingTaxrateRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateAccountingTransactionRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateAtsActivityRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateAtsApplicationRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateAtsCandidateRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateAtsCompanyRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateAtsDocumentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateAtsInterviewRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateAtsJobRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateAtsScorecardRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCalendarCalendarRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCalendarEventRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCalendarLinkRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCommerceCollectionRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCommerceInventoryRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCommerceItemRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCommerceLocationRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCommerceReviewRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCrmCompanyRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCrmContactRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCrmDealRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCrmEventRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCrmLeadRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCrmPipelineRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateHrisCompanyRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateHrisDeviceRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateHrisEmployeeRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateHrisGroupRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateHrisLocationRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateHrisTimeshiftRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateKmsCommentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateKmsPageRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateKmsSpaceRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateLmsClassRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateLmsCourseRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateLmsInstructorRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateLmsStudentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateMartechListRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateMartechMemberRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateMessagingMessageRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateMetadataMetadataRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdatePassthroughJsonRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdatePassthroughRawRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdatePaymentLinkRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdatePaymentPaymentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdatePaymentSubscriptionRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateRepoBranchRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateRepoCommitRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateRepoOrganizationRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateRepoPullrequestRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateRepoRepositoryRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateScimGroupsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateScimUsersRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateStorageFileRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateTaskCommentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateTaskProjectRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateTaskTaskRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateTicketingCategoryRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateTicketingCustomerRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateTicketingNoteRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateTicketingTicketRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateUcCommentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateUcContactRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateUcRecordingRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateUnifiedConnectionRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateUnifiedWebhookRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateUnifiedWebhookTriggerRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateVerificationRequestRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/Categories.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateAccountingAccountRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateAccountingAccountRequestBuilder.java
@@ -3181,6 +3792,508 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateVerificationRequestRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateVerificationRequestRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateVerificationRequestResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAccountingAccountResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAccountingBillResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAccountingCategoryResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAccountingContactResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAccountingCreditmemoResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAccountingInvoiceResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAccountingJournalResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAccountingOrderResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAccountingPurchaseorderResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAccountingSalesorderResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAccountingTaxrateResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAccountingTransactionResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAtsActivityResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAtsApplicationResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAtsCandidateResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAtsCompanyResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAtsDocumentResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAtsInterviewResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAtsJobResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAtsScorecardResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCalendarCalendarResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCalendarEventResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCalendarLinkResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCommerceCollectionResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCommerceInventoryResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCommerceItemResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCommerceLocationResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCommerceReviewResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCrmCompanyResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCrmContactResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCrmDealResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCrmEventResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCrmLeadResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCrmPipelineResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateGenaiEmbeddingResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateGenaiPromptResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateHrisCompanyResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateHrisDeviceResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateHrisEmployeeResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateHrisGroupResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateHrisLocationResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateHrisTimeshiftResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateKmsCommentResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateKmsPageResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateKmsSpaceResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateLmsClassResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateLmsCourseResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateLmsInstructorResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateLmsStudentResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateMartechListResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateMartechMemberResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateMessagingMessageResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateMetadataMetadataResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreatePassthroughJsonResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreatePassthroughRawResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreatePaymentLinkResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreatePaymentPaymentResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreatePaymentSubscriptionResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateRepoBranchResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateRepoCommitResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateRepoOrganizationResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateRepoPullrequestResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateRepoRepositoryResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateScimGroupsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateScimUsersResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateStorageFileResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateTaskCommentResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateTaskProjectResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateTaskTaskResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateTicketingCategoryResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateTicketingCustomerResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateTicketingNoteResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateTicketingTicketResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateUcCommentResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateUcContactResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateUcRecordingResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateUnifiedConnectionResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateUnifiedWebhookResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateVerificationRequestResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingAccountResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingBalancesheetResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingBillResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingCategoryResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingContactResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingCreditmemoResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingInvoiceResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingJournalResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingOrderResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingOrganizationResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingProfitlossResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingPurchaseorderResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingReportResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingSalesorderResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingTaxrateResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingTransactionResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingTrialbalanceResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAtsActivityResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAtsApplicationResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAtsCandidateResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAtsCompanyResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAtsDocumentResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAtsInterviewResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAtsJobResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAtsScorecardResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCalendarCalendarResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCalendarEventResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCalendarLinkResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCalendarRecordingResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCommerceCollectionResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCommerceInventoryResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCommerceItemResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCommerceLocationResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCommerceReviewResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCrmCompanyResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCrmContactResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCrmDealResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCrmEventResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCrmLeadResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCrmPipelineResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetGenaiModelResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetHrisCompanyResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetHrisDeviceResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetHrisEmployeeResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetHrisGroupResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetHrisLocationResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetHrisPayslipResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetHrisTimeoffResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetHrisTimeshiftResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetKmsCommentResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetKmsPageResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetKmsSpaceResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetLmsClassResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetLmsCourseResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetLmsInstructorResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetLmsStudentResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetMartechListResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetMartechMemberResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetMessagingChannelResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetMessagingMessageResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetMetadataMetadataResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetPaymentLinkResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetPaymentPaymentResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetPaymentPayoutResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetPaymentRefundResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetPaymentSubscriptionResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetRepoBranchResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetRepoCommitResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetRepoOrganizationResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetRepoPullrequestResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetRepoRepositoryResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetScimGroupsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetScimUsersResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetStorageFileResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetTaskChangeResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetTaskCommentResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetTaskProjectResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetTaskTaskResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetTicketingCategoryResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetTicketingCustomerResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetTicketingNoteResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetTicketingTicketResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetUcCommentResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetUcContactResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetUcRecordingResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetUnifiedApicallResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetUnifiedConnectionResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetUnifiedIntegrationAuthResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetUnifiedIntegrationLoginResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetUnifiedWebhookResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetVerificationPackageResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetVerificationRequestResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingAccountsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingBalancesheetsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingBillsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingCategoriesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingContactsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingCreditmemoesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingInvoicesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingJournalsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingOrdersResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingOrganizationsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingProfitlossesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingPurchaseordersResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingReportsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingSalesordersResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingTaxratesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingTransactionsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingTrialbalancesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAtsActivitiesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAtsApplicationsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAtsApplicationstatusesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAtsCandidatesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAtsCompaniesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAtsDocumentsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAtsInterviewsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAtsJobsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAtsScorecardsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCalendarBusiesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCalendarCalendarsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCalendarEventsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCalendarLinksResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCalendarRecordingsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCommerceCollectionsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCommerceInventoriesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCommerceItemsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCommerceLocationsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCommerceReviewsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCrmCompaniesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCrmContactsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCrmDealsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCrmEventsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCrmLeadsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCrmPipelinesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListEnrichCompaniesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListEnrichPeopleResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListGenaiModelsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListHrisCompaniesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListHrisDevicesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListHrisEmployeesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListHrisGroupsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListHrisLocationsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListHrisPayslipsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListHrisTimeoffsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListHrisTimeshiftsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListKmsCommentsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListKmsPagesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListKmsSpacesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListLmsClassesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListLmsCoursesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListLmsInstructorsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListLmsStudentsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListMartechListsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListMartechMembersResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListMessagingChannelsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListMessagingMessagesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListMetadataMetadatasResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListPassthroughsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListPaymentLinksResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListPaymentPaymentsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListPaymentPayoutsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListPaymentRefundsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListPaymentSubscriptionsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListRepoBranchesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListRepoCommitsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListRepoOrganizationsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListRepoPullrequestsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListRepoRepositoriesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListScimGroupsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListScimUsersResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListStorageFilesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListTaskChangesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListTaskCommentsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListTaskProjectsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListTaskTasksResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListTicketingCategoriesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListTicketingCustomersResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListTicketingNotesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListTicketingTicketsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListUcCallsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListUcCommentsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListUcContactsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListUcRecordingsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListUnifiedApicallsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListUnifiedConnectionsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListUnifiedIntegrationWorkspacesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListUnifiedIntegrationsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListUnifiedIssuesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListUnifiedWebhooksResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListVerificationPackagesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListVerificationRequestsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchAccountingAccountResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchAccountingBillResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchAccountingCategoryResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchAccountingContactResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchAccountingCreditmemoResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchAccountingInvoiceResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchAccountingJournalResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchAccountingOrderResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchAccountingPurchaseorderResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchAccountingSalesorderResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchAccountingTaxrateResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchAccountingTransactionResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchAtsActivityResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchAtsApplicationResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchAtsCandidateResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchAtsCompanyResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchAtsDocumentResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchAtsInterviewResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchAtsJobResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchAtsScorecardResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCalendarCalendarResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCalendarEventResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCalendarLinkResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCommerceCollectionResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCommerceInventoryResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCommerceItemResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCommerceLocationResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCommerceReviewResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCrmCompanyResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCrmContactResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCrmDealResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCrmEventResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCrmLeadResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCrmPipelineResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchHrisCompanyResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchHrisDeviceResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchHrisEmployeeResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchHrisGroupResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchHrisLocationResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchHrisTimeshiftResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchKmsCommentResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchKmsPageResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchKmsSpaceResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchLmsClassResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchLmsCourseResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchLmsInstructorResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchLmsStudentResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchMartechListResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchMartechMemberResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchMessagingMessageResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchMetadataMetadataResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchPassthroughJsonResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchPassthroughRawResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchPaymentLinkResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchPaymentPaymentResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchPaymentSubscriptionResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchRepoBranchResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchRepoCommitResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchRepoOrganizationResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchRepoPullrequestResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchRepoRepositoryResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchScimGroupsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchScimUsersResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchStorageFileResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchTaskCommentResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchTaskProjectResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchTaskTaskResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchTicketingCategoryResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchTicketingCustomerResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchTicketingNoteResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchTicketingTicketResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchUcCommentResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchUcContactResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchUcRecordingResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchUnifiedConnectionResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchUnifiedWebhookResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchUnifiedWebhookTriggerResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchVerificationRequestResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveAccountingAccountResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveAccountingBillResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveAccountingCategoryResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveAccountingContactResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveAccountingCreditmemoResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveAccountingInvoiceResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveAccountingJournalResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveAccountingOrderResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveAccountingPurchaseorderResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveAccountingSalesorderResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveAccountingTaxrateResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveAccountingTransactionResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveAtsActivityResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveAtsApplicationResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveAtsCandidateResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveAtsCompanyResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveAtsDocumentResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveAtsInterviewResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveAtsJobResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveAtsScorecardResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCalendarCalendarResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCalendarEventResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCalendarLinkResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCommerceCollectionResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCommerceInventoryResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCommerceItemResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCommerceLocationResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCommerceReviewResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCrmCompanyResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCrmContactResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCrmDealResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCrmEventResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCrmLeadResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCrmPipelineResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveHrisCompanyResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveHrisDeviceResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveHrisEmployeeResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveHrisGroupResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveHrisLocationResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveHrisTimeshiftResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveKmsCommentResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveKmsPageResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveKmsSpaceResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveLmsClassResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveLmsCourseResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveLmsInstructorResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveLmsStudentResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveMartechListResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveMartechMemberResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveMessagingMessageResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveMetadataMetadataResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemovePassthroughResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemovePaymentLinkResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemovePaymentPaymentResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemovePaymentSubscriptionResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveRepoBranchResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveRepoCommitResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveRepoOrganizationResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveRepoPullrequestResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveRepoRepositoryResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveScimGroupsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveScimUsersResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveStorageFileResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveTaskCommentResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveTaskProjectResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveTaskTaskResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveTicketingCategoryResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveTicketingCustomerResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveTicketingNoteResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveTicketingTicketResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveUcCommentResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveUcContactResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveUcRecordingResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveUnifiedConnectionResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveUnifiedWebhookResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveVerificationRequestResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateAccountingAccountResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateAccountingBillResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateAccountingCategoryResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateAccountingContactResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateAccountingCreditmemoResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateAccountingInvoiceResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateAccountingJournalResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateAccountingOrderResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateAccountingPurchaseorderResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateAccountingSalesorderResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateAccountingTaxrateResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateAccountingTransactionResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateAtsActivityResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateAtsApplicationResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateAtsCandidateResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateAtsCompanyResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateAtsDocumentResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateAtsInterviewResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateAtsJobResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateAtsScorecardResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCalendarCalendarResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCalendarEventResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCalendarLinkResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCommerceCollectionResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCommerceInventoryResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCommerceItemResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCommerceLocationResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCommerceReviewResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCrmCompanyResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCrmContactResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCrmDealResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCrmEventResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCrmLeadResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCrmPipelineResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateHrisCompanyResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateHrisDeviceResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateHrisEmployeeResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateHrisGroupResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateHrisLocationResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateHrisTimeshiftResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateKmsCommentResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateKmsPageResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateKmsSpaceResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateLmsClassResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateLmsCourseResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateLmsInstructorResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateLmsStudentResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateMartechListResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateMartechMemberResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateMessagingMessageResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateMetadataMetadataResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdatePassthroughJsonResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdatePassthroughRawResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdatePaymentLinkResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdatePaymentPaymentResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdatePaymentSubscriptionResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateRepoBranchResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateRepoCommitResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateRepoOrganizationResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateRepoPullrequestResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateRepoRepositoryResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateScimGroupsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateScimUsersResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateStorageFileResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateTaskCommentResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateTaskProjectResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateTaskTaskResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateTicketingCategoryResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateTicketingCustomerResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateTicketingNoteResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateTicketingTicketResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateUcCommentResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateUcContactResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateUcRecordingResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateUnifiedConnectionResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateUnifiedWebhookResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateUnifiedWebhookTriggerResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateVerificationRequestResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingAccount.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingAssociatedContact.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingAttachment.java
@@ -4099,6 +5212,11 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateUnifiedWebhook.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateUnifiedWebhookTrigger.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateVerificationRequest.java
+  - src/main/java/to/unified/unified_java_sdk/utils/AsyncHook.java
+  - src/main/java/to/unified/unified_java_sdk/utils/AsyncHooks.java
+  - src/main/java/to/unified/unified_java_sdk/utils/AsyncResponse.java
+  - src/main/java/to/unified/unified_java_sdk/utils/AsyncRetries.java
+  - src/main/java/to/unified/unified_java_sdk/utils/AsyncRetryableException.java
   - src/main/java/to/unified/unified_java_sdk/utils/BackoffStrategy.java
   - src/main/java/to/unified/unified_java_sdk/utils/BigDecimalString.java
   - src/main/java/to/unified/unified_java_sdk/utils/BigIntegerString.java
@@ -4118,6 +5236,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/utils/HeaderMetadata.java
   - src/main/java/to/unified/unified_java_sdk/utils/Helpers.java
   - src/main/java/to/unified/unified_java_sdk/utils/Hook.java
+  - src/main/java/to/unified/unified_java_sdk/utils/HookAdapters.java
   - src/main/java/to/unified/unified_java_sdk/utils/Hooks.java
   - src/main/java/to/unified/unified_java_sdk/utils/JSON.java
   - src/main/java/to/unified/unified_java_sdk/utils/LazySingletonValue.java
@@ -4125,6 +5244,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/utils/Multipart.java
   - src/main/java/to/unified/unified_java_sdk/utils/MultipartFormMetadata.java
   - src/main/java/to/unified/unified_java_sdk/utils/NameValue.java
+  - src/main/java/to/unified/unified_java_sdk/utils/NonRetryableException.java
   - src/main/java/to/unified/unified_java_sdk/utils/OneOfDeserializer.java
   - src/main/java/to/unified/unified_java_sdk/utils/Options.java
   - src/main/java/to/unified/unified_java_sdk/utils/PathParamsMetadata.java
@@ -4140,6 +5260,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/utils/ResponseWithBody.java
   - src/main/java/to/unified/unified_java_sdk/utils/Retries.java
   - src/main/java/to/unified/unified_java_sdk/utils/RetryConfig.java
+  - src/main/java/to/unified/unified_java_sdk/utils/RetryableException.java
   - src/main/java/to/unified/unified_java_sdk/utils/Security.java
   - src/main/java/to/unified/unified_java_sdk/utils/SecurityMetadata.java
   - src/main/java/to/unified/unified_java_sdk/utils/SerializedBody.java
@@ -4151,6 +5272,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/utils/Types.java
   - src/main/java/to/unified/unified_java_sdk/utils/Utf8UrlEncoder.java
   - src/main/java/to/unified/unified_java_sdk/utils/Utils.java
+  - src/main/java/to/unified/unified_java_sdk/utils/reactive/EventStream.java
   - src/main/java/to/unified/unified_java_sdk/utils/reactive/ReactiveUtils.java
 examples:
   createAccountingAccount:
@@ -6177,10 +7299,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {}
+        application/json: {"employee_user_id": "<id>", "end_at": "2025-10-18T00:03:45.822Z", "start_at": "2024-06-03T05:33:48.715Z"}
       responses:
         "200":
-          application/json: {}
+          application/json: {"employee_user_id": "<id>", "end_at": "2025-04-02T06:29:45.209Z", "start_at": "2025-05-03T19:13:33.398Z"}
   getHrisDevice:
     speakeasy-default-get-hris-device:
       parameters:
@@ -6234,7 +7356,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {}
+          application/json: {"employee_user_id": "<id>", "end_at": "2025-02-02T20:47:43.029Z", "start_at": "2023-11-12T09:20:44.392Z"}
   listHrisDevices:
     speakeasy-default-list-hris-devices:
       parameters:
@@ -6282,7 +7404,7 @@ examples:
           connection_id: "<id>"
       responses:
         "200":
-          application/json: [{}]
+          application/json: [{"employee_user_id": "<id>", "end_at": "2025-03-16T00:40:56.364Z", "start_at": "2024-03-12T18:17:36.342Z"}]
   patchHrisDevice:
     speakeasy-default-patch-hris-device:
       parameters:
@@ -6323,10 +7445,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {}
+        application/json: {"employee_user_id": "<id>", "end_at": "2023-11-17T18:53:02.172Z", "start_at": "2023-01-19T02:48:41.002Z"}
       responses:
         "200":
-          application/json: {}
+          application/json: {"employee_user_id": "<id>", "end_at": "2023-05-16T07:27:26.608Z", "start_at": "2024-07-25T03:16:34.281Z"}
   removeHrisDevice:
     speakeasy-default-remove-hris-device:
       parameters:
@@ -6391,10 +7513,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {}
+        application/json: {"employee_user_id": "<id>", "end_at": "2025-03-03T22:04:09.340Z", "start_at": "2024-05-30T21:19:58.772Z"}
       responses:
         "200":
-          application/json: {}
+          application/json: {"employee_user_id": "<id>", "end_at": "2024-05-09T22:44:06.400Z", "start_at": "2023-11-14T18:28:16.870Z"}
   createScimGroups:
     speakeasy-default-create-scim-groups:
       parameters:
@@ -8718,4 +9840,4 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Java SDK Changes Detected:\n* `unified-to.category.createTicketingCategory()`: **Added**\n* `unified-to.category.getTicketingCategory()`: **Added**\n* `unified-to.category.listTicketingCategories()`: **Added**\n* `unified-to.category.patchTicketingCategory()`: **Added**\n* `unified-to.category.removeTicketingCategory()`: **Added**\n* `unified-to.category.updateTicketingCategory()`: **Added**\n* `unified-to.genai.createGenaiEmbedding()`: **Added**\n* `unified-to.genai.getGenaiModel()`: **Added**\n* `unified-to.embedding.createGenaiEmbedding()`: **Added**\n* `unified-to.model.getGenaiModel()`: **Added**\n* `unified-to.ticketing.createTicketingCategory()`: **Added**\n* `unified-to.ticketing.getTicketingCategory()`: **Added**\n* `unified-to.ticketing.listTicketingCategories()`: **Added**\n* `unified-to.ticketing.patchTicketingCategory()`: **Added**\n* `unified-to.ticketing.removeTicketingCategory()`: **Added**\n* `unified-to.ticketing.updateTicketingCategory()`: **Added**\n* `unified-to.ticketing.createTicketingTicket()`: \n  *  `request.ticketingTicket.categoryId` **Added**\n  *  `response.category_id` **Added**\n* `unified-to.ticketing.getTicketingTicket()`:  `response.category_id` **Added**\n* `unified-to.ticketing.listTicketingTickets()`:  `response.[].categoryId` **Added**\n* `unified-to.ticketing.patchTicketingTicket()`: \n  *  `request.ticketingTicket.categoryId` **Added**\n  *  `response.category_id` **Added**\n* `unified-to.ticketing.updateTicketingTicket()`: \n  *  `request.ticketingTicket.categoryId` **Added**\n  *  `response.category_id` **Added**\n* `unified-to.ticket.createTicketingTicket()`: \n  *  `request.ticketingTicket.categoryId` **Added**\n  *  `response.category_id` **Added**\n* `unified-to.ticket.getTicketingTicket()`:  `response.category_id` **Added**\n* `unified-to.ticket.listTicketingTickets()`:  `response.[].categoryId` **Added**\n* `unified-to.ticket.patchTicketingTicket()`: \n  *  `request.ticketingTicket.categoryId` **Added**\n  *  `response.category_id` **Added**\n* `unified-to.ticket.updateTicketingTicket()`: \n  *  `request.ticketingTicket.categoryId` **Added**\n  *  `response.category_id` **Added**\n"
+releaseNotes: "## Java SDK Changes Detected:\n* `unified-to.hris.patchHrisTimeshift()`: \n  *  `request.hrisTimeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `unified-to.hris.createHrisTimeshift()`: \n  *  `request.hrisTimeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `unified-to.timeshift.updateHrisTimeshift()`: \n  *  `request.hrisTimeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `unified-to.timeshift.patchHrisTimeshift()`: \n  *  `request.hrisTimeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `unified-to.timeshift.createHrisTimeshift()`: \n  *  `request.hrisTimeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `unified-to.hris.updateHrisTimeshift()`: \n  *  `request.hrisTimeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `unified-to.hris.listHrisTimeshifts()`:  `response.[]` **Changed**\n* `unified-to.employee.patchHrisEmployee()`: \n  *  `request.hrisEmployee.compensation.[].groupId` **Added**\n  *  `response.compensation.[].groupId` **Added**\n* `unified-to.hris.updateHrisEmployee()`: \n  *  `request.hrisEmployee.compensation.[].groupId` **Added**\n  *  `response.compensation.[].groupId` **Added**\n* `unified-to.hris.createHrisEmployee()`: \n  *  `request.hrisEmployee.compensation.[].groupId` **Added**\n  *  `response.compensation.[].groupId` **Added**\n* `unified-to.employee.createHrisEmployee()`: \n  *  `request.hrisEmployee.compensation.[].groupId` **Added**\n  *  `response.compensation.[].groupId` **Added**\n* `unified-to.employee.getHrisEmployee()`:  `response.compensation.[].groupId` **Added**\n* `unified-to.employee.listHrisEmployees()`:  `response.[].compensation.[].groupId` **Added**\n* `unified-to.hris.patchHrisEmployee()`: \n  *  `request.hrisEmployee.compensation.[].groupId` **Added**\n  *  `response.compensation.[].groupId` **Added**\n* `unified-to.employee.updateHrisEmployee()`: \n  *  `request.hrisEmployee.compensation.[].groupId` **Added**\n  *  `response.compensation.[].groupId` **Added**\n* `unified-to.hris.listHrisEmployees()`:  `response.[].compensation.[].groupId` **Added**\n* `unified-to.timeshift.getHrisTimeshift()`:  `response` **Changed**\n* `unified-to.timeshift.listHrisTimeshifts()`:  `response.[]` **Changed**\n* `unified-to.hris.getHrisTimeshift()`:  `response` **Changed**\n* `unified-to.hris.getHrisEmployee()`:  `response.compensation.[].groupId` **Added**\n"

@@ -58,9 +58,20 @@ import to.unified.unified_java_sdk.operations.UpdateMartechMember;
 
 public class Martech {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncMartech asyncSDK;
 
     Martech(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncMartech(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncMartech async() {
+        return asyncSDK;
     }
 
     /**

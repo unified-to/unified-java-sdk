@@ -18,9 +18,20 @@ import to.unified.unified_java_sdk.operations.ListPaymentPayouts;
 
 public class Payout {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncPayout asyncSDK;
 
     Payout(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncPayout(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncPayout async() {
+        return asyncSDK;
     }
 
     /**

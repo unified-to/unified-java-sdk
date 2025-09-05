@@ -18,9 +18,20 @@ import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationLogin;
 
 public class Auth {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncAuth asyncSDK;
 
     Auth(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncAuth(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncAuth async() {
+        return asyncSDK;
     }
 
     /**

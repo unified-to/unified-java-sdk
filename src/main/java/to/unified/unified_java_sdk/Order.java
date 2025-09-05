@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateAccountingOrder;
 
 public class Order {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncOrder asyncSDK;
 
     Order(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncOrder(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncOrder async() {
+        return asyncSDK;
     }
 
     /**

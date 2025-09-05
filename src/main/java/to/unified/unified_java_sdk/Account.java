@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateAccountingAccount;
 
 public class Account {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncAccount asyncSDK;
 
     Account(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncAccount(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncAccount async() {
+        return asyncSDK;
     }
 
     /**

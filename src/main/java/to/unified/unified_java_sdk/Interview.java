@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateAtsInterview;
 
 public class Interview {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncInterview asyncSDK;
 
     Interview(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncInterview(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncInterview async() {
+        return asyncSDK;
     }
 
     /**

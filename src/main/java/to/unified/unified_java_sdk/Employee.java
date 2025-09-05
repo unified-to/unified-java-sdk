@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateHrisEmployee;
 
 public class Employee {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncEmployee asyncSDK;
 
     Employee(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncEmployee(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncEmployee async() {
+        return asyncSDK;
     }
 
     /**

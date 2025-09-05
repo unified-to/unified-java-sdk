@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateMartechMember;
 
 public class Member {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncMember asyncSDK;
 
     Member(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncMember(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncMember async() {
+        return asyncSDK;
     }
 
     /**

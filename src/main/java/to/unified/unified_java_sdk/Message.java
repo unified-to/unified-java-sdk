@@ -34,9 +34,20 @@ import to.unified.unified_java_sdk.operations.UpdateMessagingMessage;
 
 public class Message {
     private final SDKConfiguration sdkConfiguration;
+    private final AsyncMessage asyncSDK;
 
     Message(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.asyncSDK = new AsyncMessage(this, sdkConfiguration);
+    }
+
+    /**
+     * Switches to the async SDK.
+     * 
+     * @return The async SDK
+     */
+    public AsyncMessage async() {
+        return asyncSDK;
     }
 
     /**
