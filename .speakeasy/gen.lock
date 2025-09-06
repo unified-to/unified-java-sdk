@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 815d3eb3e63fd66f5050d707713e3c46
+  docChecksum: 8ed442c273cdb35b6056af069e0583c0
   docVersion: "1.0"
-  speakeasyVersion: 1.609.0
-  generationVersion: 2.692.0
-  releaseVersion: 0.37.0
-  configChecksum: fde068dcab08409efe36632e419cf404
+  speakeasyVersion: 1.611.0
+  generationVersion: 2.694.1
+  releaseVersion: 0.37.1
+  configChecksum: 426aadb1ae8f6f7fd137e68a85532105
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -15,7 +15,7 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.1
-    core: 3.47.0
+    core: 3.47.1
     downloadStreams: 0.1.1
     globalSecurity: 2.83.0
     globalSecurityCallbacks: 0.1.0
@@ -1232,7 +1232,6 @@ generatedFiles:
   - docs/models/shared/HrisTelephoneType.md
   - docs/models/shared/HrisTimeoff.md
   - docs/models/shared/HrisTimeoffStatus.md
-  - docs/models/shared/HrisTimeoffType.md
   - docs/models/shared/HrisTimeshift.md
   - docs/models/shared/Integration.md
   - docs/models/shared/Integration1.md
@@ -4492,7 +4491,6 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/HrisTelephoneType.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/HrisTimeoff.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/HrisTimeoffStatus.java
-  - src/main/java/to/unified/unified_java_sdk/models/shared/HrisTimeoffType.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/HrisTimeshift.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/Integration.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/Integration1.java
@@ -9840,4 +9838,9 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Java SDK Changes Detected:\n* `unified-to.hris.patchHrisTimeshift()`: \n  *  `request.hrisTimeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `unified-to.hris.createHrisTimeshift()`: \n  *  `request.hrisTimeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `unified-to.timeshift.updateHrisTimeshift()`: \n  *  `request.hrisTimeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `unified-to.timeshift.patchHrisTimeshift()`: \n  *  `request.hrisTimeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `unified-to.timeshift.createHrisTimeshift()`: \n  *  `request.hrisTimeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `unified-to.hris.updateHrisTimeshift()`: \n  *  `request.hrisTimeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `unified-to.hris.listHrisTimeshifts()`:  `response.[]` **Changed**\n* `unified-to.employee.patchHrisEmployee()`: \n  *  `request.hrisEmployee.compensation.[].groupId` **Added**\n  *  `response.compensation.[].groupId` **Added**\n* `unified-to.hris.updateHrisEmployee()`: \n  *  `request.hrisEmployee.compensation.[].groupId` **Added**\n  *  `response.compensation.[].groupId` **Added**\n* `unified-to.hris.createHrisEmployee()`: \n  *  `request.hrisEmployee.compensation.[].groupId` **Added**\n  *  `response.compensation.[].groupId` **Added**\n* `unified-to.employee.createHrisEmployee()`: \n  *  `request.hrisEmployee.compensation.[].groupId` **Added**\n  *  `response.compensation.[].groupId` **Added**\n* `unified-to.employee.getHrisEmployee()`:  `response.compensation.[].groupId` **Added**\n* `unified-to.employee.listHrisEmployees()`:  `response.[].compensation.[].groupId` **Added**\n* `unified-to.hris.patchHrisEmployee()`: \n  *  `request.hrisEmployee.compensation.[].groupId` **Added**\n  *  `response.compensation.[].groupId` **Added**\n* `unified-to.employee.updateHrisEmployee()`: \n  *  `request.hrisEmployee.compensation.[].groupId` **Added**\n  *  `response.compensation.[].groupId` **Added**\n* `unified-to.hris.listHrisEmployees()`:  `response.[].compensation.[].groupId` **Added**\n* `unified-to.timeshift.getHrisTimeshift()`:  `response` **Changed**\n* `unified-to.timeshift.listHrisTimeshifts()`:  `response.[]` **Changed**\n* `unified-to.hris.getHrisTimeshift()`:  `response` **Changed**\n* `unified-to.hris.getHrisEmployee()`:  `response.compensation.[].groupId` **Added**\n"
+releaseNotes: |
+  ## Java SDK Changes Detected:
+  * `unified-to.hris.getHrisTimeoff()`:  `response` **Changed** **Breaking** :warning:
+  * `unified-to.hris.listHrisTimeoffs()`:  `response.[]` **Changed** **Breaking** :warning:
+  * `unified-to.timeoff.getHrisTimeoff()`:  `response` **Changed** **Breaking** :warning:
+  * `unified-to.timeoff.listHrisTimeoffs()`:  `response.[]` **Changed** **Breaking** :warning:

@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
@@ -56,8 +57,18 @@ public class HrisTimeoff {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_paid")
+    private Optional<Boolean> isPaid;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reason")
+    private Optional<String> reason;
 
 
     @JsonProperty("start_at")
@@ -67,11 +78,6 @@ public class HrisTimeoff {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private Optional<? extends HrisTimeoffStatus> status;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("type")
-    private Optional<? extends HrisTimeoffType> type;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -92,10 +98,11 @@ public class HrisTimeoff {
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("end_at") Optional<OffsetDateTime> endAt,
             @JsonProperty("id") Optional<String> id,
+            @JsonProperty("is_paid") Optional<Boolean> isPaid,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("reason") Optional<String> reason,
             @JsonProperty("start_at") OffsetDateTime startAt,
             @JsonProperty("status") Optional<? extends HrisTimeoffStatus> status,
-            @JsonProperty("type") Optional<? extends HrisTimeoffType> type,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
             @JsonProperty("user_id") Optional<String> userId) {
         Utils.checkNotNull(approvedAt, "approvedAt");
@@ -105,10 +112,11 @@ public class HrisTimeoff {
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(endAt, "endAt");
         Utils.checkNotNull(id, "id");
+        Utils.checkNotNull(isPaid, "isPaid");
         Utils.checkNotNull(raw, "raw");
+        Utils.checkNotNull(reason, "reason");
         Utils.checkNotNull(startAt, "startAt");
         Utils.checkNotNull(status, "status");
-        Utils.checkNotNull(type, "type");
         Utils.checkNotNull(updatedAt, "updatedAt");
         Utils.checkNotNull(userId, "userId");
         this.approvedAt = approvedAt;
@@ -118,10 +126,11 @@ public class HrisTimeoff {
         this.createdAt = createdAt;
         this.endAt = endAt;
         this.id = id;
+        this.isPaid = isPaid;
         this.raw = raw;
+        this.reason = reason;
         this.startAt = startAt;
         this.status = status;
-        this.type = type;
         this.updatedAt = updatedAt;
         this.userId = userId;
     }
@@ -130,9 +139,9 @@ public class HrisTimeoff {
             OffsetDateTime startAt) {
         this(Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), startAt,
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            Optional.empty(), startAt, Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -170,10 +179,20 @@ public class HrisTimeoff {
         return id;
     }
 
+    @JsonIgnore
+    public Optional<Boolean> isPaid() {
+        return isPaid;
+    }
+
     @SuppressWarnings("unchecked")
     @JsonIgnore
     public Optional<Map<String, Object>> raw() {
         return (Optional<Map<String, Object>>) raw;
+    }
+
+    @JsonIgnore
+    public Optional<String> reason() {
+        return reason;
     }
 
     @JsonIgnore
@@ -185,12 +204,6 @@ public class HrisTimeoff {
     @JsonIgnore
     public Optional<HrisTimeoffStatus> status() {
         return (Optional<HrisTimeoffStatus>) status;
-    }
-
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
-    public Optional<HrisTimeoffType> type() {
-        return (Optional<HrisTimeoffType>) type;
     }
 
     @JsonIgnore
@@ -299,6 +312,19 @@ public class HrisTimeoff {
         return this;
     }
 
+    public HrisTimeoff withIsPaid(boolean isPaid) {
+        Utils.checkNotNull(isPaid, "isPaid");
+        this.isPaid = Optional.ofNullable(isPaid);
+        return this;
+    }
+
+
+    public HrisTimeoff withIsPaid(Optional<Boolean> isPaid) {
+        Utils.checkNotNull(isPaid, "isPaid");
+        this.isPaid = isPaid;
+        return this;
+    }
+
     public HrisTimeoff withRaw(Map<String, Object> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
@@ -309,6 +335,19 @@ public class HrisTimeoff {
     public HrisTimeoff withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
+        return this;
+    }
+
+    public HrisTimeoff withReason(String reason) {
+        Utils.checkNotNull(reason, "reason");
+        this.reason = Optional.ofNullable(reason);
+        return this;
+    }
+
+
+    public HrisTimeoff withReason(Optional<String> reason) {
+        Utils.checkNotNull(reason, "reason");
+        this.reason = reason;
         return this;
     }
 
@@ -328,19 +367,6 @@ public class HrisTimeoff {
     public HrisTimeoff withStatus(Optional<? extends HrisTimeoffStatus> status) {
         Utils.checkNotNull(status, "status");
         this.status = status;
-        return this;
-    }
-
-    public HrisTimeoff withType(HrisTimeoffType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
-        return this;
-    }
-
-
-    public HrisTimeoff withType(Optional<? extends HrisTimeoffType> type) {
-        Utils.checkNotNull(type, "type");
-        this.type = type;
         return this;
     }
 
@@ -387,10 +413,11 @@ public class HrisTimeoff {
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.isPaid, other.isPaid) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.reason, other.reason) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
-            Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
             Utils.enhancedDeepEquals(this.userId, other.userId);
     }
@@ -400,9 +427,9 @@ public class HrisTimeoff {
         return Utils.enhancedHash(
             approvedAt, approverUserId, comments,
             companyId, createdAt, endAt,
-            id, raw, startAt,
-            status, type, updatedAt,
-            userId);
+            id, isPaid, raw,
+            reason, startAt, status,
+            updatedAt, userId);
     }
     
     @Override
@@ -415,10 +442,11 @@ public class HrisTimeoff {
                 "createdAt", createdAt,
                 "endAt", endAt,
                 "id", id,
+                "isPaid", isPaid,
                 "raw", raw,
+                "reason", reason,
                 "startAt", startAt,
                 "status", status,
-                "type", type,
                 "updatedAt", updatedAt,
                 "userId", userId);
     }
@@ -440,13 +468,15 @@ public class HrisTimeoff {
 
         private Optional<String> id = Optional.empty();
 
+        private Optional<Boolean> isPaid = Optional.empty();
+
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
+
+        private Optional<String> reason = Optional.empty();
 
         private OffsetDateTime startAt;
 
         private Optional<? extends HrisTimeoffStatus> status = Optional.empty();
-
-        private Optional<? extends HrisTimeoffType> type = Optional.empty();
 
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
 
@@ -548,6 +578,19 @@ public class HrisTimeoff {
         }
 
 
+        public Builder isPaid(boolean isPaid) {
+            Utils.checkNotNull(isPaid, "isPaid");
+            this.isPaid = Optional.ofNullable(isPaid);
+            return this;
+        }
+
+        public Builder isPaid(Optional<Boolean> isPaid) {
+            Utils.checkNotNull(isPaid, "isPaid");
+            this.isPaid = isPaid;
+            return this;
+        }
+
+
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
@@ -557,6 +600,19 @@ public class HrisTimeoff {
         public Builder raw(Optional<? extends Map<String, Object>> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
+            return this;
+        }
+
+
+        public Builder reason(String reason) {
+            Utils.checkNotNull(reason, "reason");
+            this.reason = Optional.ofNullable(reason);
+            return this;
+        }
+
+        public Builder reason(Optional<String> reason) {
+            Utils.checkNotNull(reason, "reason");
+            this.reason = reason;
             return this;
         }
 
@@ -577,19 +633,6 @@ public class HrisTimeoff {
         public Builder status(Optional<? extends HrisTimeoffStatus> status) {
             Utils.checkNotNull(status, "status");
             this.status = status;
-            return this;
-        }
-
-
-        public Builder type(HrisTimeoffType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<? extends HrisTimeoffType> type) {
-            Utils.checkNotNull(type, "type");
-            this.type = type;
             return this;
         }
 
@@ -624,9 +667,9 @@ public class HrisTimeoff {
             return new HrisTimeoff(
                 approvedAt, approverUserId, comments,
                 companyId, createdAt, endAt,
-                id, raw, startAt,
-                status, type, updatedAt,
-                userId);
+                id, isPaid, raw,
+                reason, startAt, status,
+                updatedAt, userId);
         }
 
     }
