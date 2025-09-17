@@ -19,6 +19,11 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class UcComment {
 
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("call_id")
+    private Optional<String> callId;
+
+
     @JsonProperty("content")
     private String content;
 
@@ -49,18 +54,21 @@ public class UcComment {
 
     @JsonCreator
     public UcComment(
+            @JsonProperty("call_id") Optional<String> callId,
             @JsonProperty("content") String content,
             @JsonProperty("created_at") Optional<String> createdAt,
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
             @JsonProperty("updated_at") Optional<String> updatedAt,
             @JsonProperty("user_id") Optional<String> userId) {
+        Utils.checkNotNull(callId, "callId");
         Utils.checkNotNull(content, "content");
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(id, "id");
         Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(updatedAt, "updatedAt");
         Utils.checkNotNull(userId, "userId");
+        this.callId = callId;
         this.content = content;
         this.createdAt = createdAt;
         this.id = id;
@@ -71,8 +79,14 @@ public class UcComment {
     
     public UcComment(
             String content) {
-        this(content, Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), content, Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
+    }
+
+    @JsonIgnore
+    public Optional<String> callId() {
+        return callId;
     }
 
     @JsonIgnore
@@ -110,6 +124,19 @@ public class UcComment {
         return new Builder();
     }
 
+
+    public UcComment withCallId(String callId) {
+        Utils.checkNotNull(callId, "callId");
+        this.callId = Optional.ofNullable(callId);
+        return this;
+    }
+
+
+    public UcComment withCallId(Optional<String> callId) {
+        Utils.checkNotNull(callId, "callId");
+        this.callId = callId;
+        return this;
+    }
 
     public UcComment withContent(String content) {
         Utils.checkNotNull(content, "content");
@@ -192,6 +219,7 @@ public class UcComment {
         }
         UcComment other = (UcComment) o;
         return 
+            Utils.enhancedDeepEquals(this.callId, other.callId) &&
             Utils.enhancedDeepEquals(this.content, other.content) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
@@ -203,13 +231,15 @@ public class UcComment {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            content, createdAt, id,
-            raw, updatedAt, userId);
+            callId, content, createdAt,
+            id, raw, updatedAt,
+            userId);
     }
     
     @Override
     public String toString() {
         return Utils.toString(UcComment.class,
+                "callId", callId,
                 "content", content,
                 "createdAt", createdAt,
                 "id", id,
@@ -220,6 +250,8 @@ public class UcComment {
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
+
+        private Optional<String> callId = Optional.empty();
 
         private String content;
 
@@ -235,6 +267,19 @@ public class UcComment {
 
         private Builder() {
           // force use of static builder() method
+        }
+
+
+        public Builder callId(String callId) {
+            Utils.checkNotNull(callId, "callId");
+            this.callId = Optional.ofNullable(callId);
+            return this;
+        }
+
+        public Builder callId(Optional<String> callId) {
+            Utils.checkNotNull(callId, "callId");
+            this.callId = callId;
+            return this;
         }
 
 
@@ -312,8 +357,9 @@ public class UcComment {
         public UcComment build() {
 
             return new UcComment(
-                content, createdAt, id,
-                raw, updatedAt, userId);
+                callId, content, createdAt,
+                id, raw, updatedAt,
+                userId);
         }
 
     }

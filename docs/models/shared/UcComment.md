@@ -5,6 +5,7 @@
 
 | Field                  | Type                   | Required               | Description            |
 | ---------------------- | ---------------------- | ---------------------- | ---------------------- |
+| `callId`               | *Optional\<String>*    | :heavy_minus_sign:     | N/A                    |
 | `content`              | *String*               | :heavy_check_mark:     | N/A                    |
 | `createdAt`            | *Optional\<String>*    | :heavy_minus_sign:     | N/A                    |
 | `id`                   | *Optional\<String>*    | :heavy_minus_sign:     | N/A                    |

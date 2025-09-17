@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 8ed442c273cdb35b6056af069e0583c0
+  docChecksum: ff3e18b39b0a3be1adfdaeecd26778b0
   docVersion: "1.0"
-  speakeasyVersion: 1.611.0
-  generationVersion: 2.694.1
-  releaseVersion: 0.37.1
-  configChecksum: 426aadb1ae8f6f7fd137e68a85532105
+  speakeasyVersion: 1.617.1
+  generationVersion: 2.701.8
+  releaseVersion: 0.37.2
+  configChecksum: b6c32b2fdef6ee3380a85edb25adf3bc
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -15,9 +15,9 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.1
-    core: 3.47.1
+    core: 3.47.2
     downloadStreams: 0.1.1
-    globalSecurity: 2.83.0
+    globalSecurity: 2.83.1
     globalSecurityCallbacks: 0.1.0
     globalServerURLs: 2.82.2
     openEnums: 0.2.0
@@ -9838,9 +9838,4 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: |
-  ## Java SDK Changes Detected:
-  * `unified-to.hris.getHrisTimeoff()`:  `response` **Changed** **Breaking** :warning:
-  * `unified-to.hris.listHrisTimeoffs()`:  `response.[]` **Changed** **Breaking** :warning:
-  * `unified-to.timeoff.getHrisTimeoff()`:  `response` **Changed** **Breaking** :warning:
-  * `unified-to.timeoff.listHrisTimeoffs()`:  `response.[]` **Changed** **Breaking** :warning:
+releaseNotes: "## Java SDK Changes Detected:\n* `unified-to.kms.createKmsSpace()`: \n  *  `request.kmsSpace.parentId` **Added**\n  *  `response.parent_id` **Added**\n* `unified-to.kms.getKmsSpace()`:  `response.parent_id` **Added**\n* `unified-to.kms.listKmsSpaces()`:  `response.[].parentId` **Added**\n* `unified-to.kms.patchKmsSpace()`: \n  *  `request.kmsSpace.parentId` **Added**\n  *  `response.parent_id` **Added**\n* `unified-to.kms.updateKmsSpace()`: \n  *  `request.kmsSpace.parentId` **Added**\n  *  `response.parent_id` **Added**\n* `unified-to.comment.createUcComment()`: \n  *  `request.ucComment.callId` **Added**\n  *  `response.call_id` **Added**\n* `unified-to.comment.getUcComment()`:  `response.call_id` **Added**\n* `unified-to.comment.listUcComments()`:  `response.[].callId` **Added**\n* `unified-to.comment.patchUcComment()`: \n  *  `request.ucComment.callId` **Added**\n  *  `response.call_id` **Added**\n* `unified-to.comment.updateUcComment()`: \n  *  `request.ucComment.callId` **Added**\n  *  `response.call_id` **Added**\n* `unified-to.space.createKmsSpace()`: \n  *  `request.kmsSpace.parentId` **Added**\n  *  `response.parent_id` **Added**\n* `unified-to.space.getKmsSpace()`:  `response.parent_id` **Added**\n* `unified-to.space.listKmsSpaces()`:  `response.[].parentId` **Added**\n* `unified-to.space.patchKmsSpace()`: \n  *  `request.kmsSpace.parentId` **Added**\n  *  `response.parent_id` **Added**\n* `unified-to.space.updateKmsSpace()`: \n  *  `request.kmsSpace.parentId` **Added**\n  *  `response.parent_id` **Added**\n* `unified-to.uc.createUcComment()`: \n  *  `request.ucComment.callId` **Added**\n  *  `response.call_id` **Added**\n* `unified-to.uc.getUcComment()`:  `response.call_id` **Added**\n* `unified-to.uc.listUcComments()`:  `response.[].callId` **Added**\n* `unified-to.uc.patchUcComment()`: \n  *  `request.ucComment.callId` **Added**\n  *  `response.call_id` **Added**\n* `unified-to.uc.updateUcComment()`: \n  *  `request.ucComment.callId` **Added**\n  *  `response.call_id` **Added**\n"
