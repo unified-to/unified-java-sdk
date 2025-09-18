@@ -21,6 +21,11 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AccountingProfitloss {
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("category_ids")
+    private Optional<? extends List<String>> categoryIds;
+
     /**
      * &#64;deprecated – use cost_of_goods_sold_sections instead
      */
@@ -129,6 +134,7 @@ public class AccountingProfitloss {
 
     @JsonCreator
     public AccountingProfitloss(
+            @JsonProperty("category_ids") Optional<? extends List<String>> categoryIds,
             @JsonProperty("cost_of_goods_sold") Optional<? extends List<AccountingProfitlossCategory>> costOfGoodsSold,
             @JsonProperty("cost_of_goods_sold_sections") Optional<? extends List<AccountingProfitlossSection>> costOfGoodsSoldSections,
             @JsonProperty("cost_of_goods_sold_total_amount") Optional<Double> costOfGoodsSoldTotalAmount,
@@ -149,6 +155,7 @@ public class AccountingProfitloss {
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
             @JsonProperty("start_at") Optional<OffsetDateTime> startAt,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
+        Utils.checkNotNull(categoryIds, "categoryIds");
         Utils.checkNotNull(costOfGoodsSold, "costOfGoodsSold");
         Utils.checkNotNull(costOfGoodsSoldSections, "costOfGoodsSoldSections");
         Utils.checkNotNull(costOfGoodsSoldTotalAmount, "costOfGoodsSoldTotalAmount");
@@ -169,6 +176,7 @@ public class AccountingProfitloss {
         Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(startAt, "startAt");
         Utils.checkNotNull(updatedAt, "updatedAt");
+        this.categoryIds = categoryIds;
         this.costOfGoodsSold = costOfGoodsSold;
         this.costOfGoodsSoldSections = costOfGoodsSoldSections;
         this.costOfGoodsSoldTotalAmount = costOfGoodsSoldTotalAmount;
@@ -198,7 +206,13 @@ public class AccountingProfitloss {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty());
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<String>> categoryIds() {
+        return (Optional<List<String>>) categoryIds;
     }
 
     /**
@@ -321,6 +335,19 @@ public class AccountingProfitloss {
         return new Builder();
     }
 
+
+    public AccountingProfitloss withCategoryIds(List<String> categoryIds) {
+        Utils.checkNotNull(categoryIds, "categoryIds");
+        this.categoryIds = Optional.ofNullable(categoryIds);
+        return this;
+    }
+
+
+    public AccountingProfitloss withCategoryIds(Optional<? extends List<String>> categoryIds) {
+        Utils.checkNotNull(categoryIds, "categoryIds");
+        this.categoryIds = categoryIds;
+        return this;
+    }
 
     /**
      * &#64;deprecated – use cost_of_goods_sold_sections instead
@@ -610,6 +637,7 @@ public class AccountingProfitloss {
         }
         AccountingProfitloss other = (AccountingProfitloss) o;
         return 
+            Utils.enhancedDeepEquals(this.categoryIds, other.categoryIds) &&
             Utils.enhancedDeepEquals(this.costOfGoodsSold, other.costOfGoodsSold) &&
             Utils.enhancedDeepEquals(this.costOfGoodsSoldSections, other.costOfGoodsSoldSections) &&
             Utils.enhancedDeepEquals(this.costOfGoodsSoldTotalAmount, other.costOfGoodsSoldTotalAmount) &&
@@ -635,18 +663,19 @@ public class AccountingProfitloss {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            costOfGoodsSold, costOfGoodsSoldSections, costOfGoodsSoldTotalAmount,
-            createdAt, currency, endAt,
-            expenses, expensesSections, expensesTotalAmount,
-            grossProfitAmount, id, income,
-            incomeSections, incomeTotalAmount, name,
-            netIncomeAmount, netProfitAmount, raw,
-            startAt, updatedAt);
+            categoryIds, costOfGoodsSold, costOfGoodsSoldSections,
+            costOfGoodsSoldTotalAmount, createdAt, currency,
+            endAt, expenses, expensesSections,
+            expensesTotalAmount, grossProfitAmount, id,
+            income, incomeSections, incomeTotalAmount,
+            name, netIncomeAmount, netProfitAmount,
+            raw, startAt, updatedAt);
     }
     
     @Override
     public String toString() {
         return Utils.toString(AccountingProfitloss.class,
+                "categoryIds", categoryIds,
                 "costOfGoodsSold", costOfGoodsSold,
                 "costOfGoodsSoldSections", costOfGoodsSoldSections,
                 "costOfGoodsSoldTotalAmount", costOfGoodsSoldTotalAmount,
@@ -671,6 +700,8 @@ public class AccountingProfitloss {
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
+
+        private Optional<? extends List<String>> categoryIds = Optional.empty();
 
         private Optional<? extends List<AccountingProfitlossCategory>> costOfGoodsSold = Optional.empty();
 
@@ -714,6 +745,19 @@ public class AccountingProfitloss {
 
         private Builder() {
           // force use of static builder() method
+        }
+
+
+        public Builder categoryIds(List<String> categoryIds) {
+            Utils.checkNotNull(categoryIds, "categoryIds");
+            this.categoryIds = Optional.ofNullable(categoryIds);
+            return this;
+        }
+
+        public Builder categoryIds(Optional<? extends List<String>> categoryIds) {
+            Utils.checkNotNull(categoryIds, "categoryIds");
+            this.categoryIds = categoryIds;
+            return this;
         }
 
 
@@ -997,13 +1041,13 @@ public class AccountingProfitloss {
         public AccountingProfitloss build() {
 
             return new AccountingProfitloss(
-                costOfGoodsSold, costOfGoodsSoldSections, costOfGoodsSoldTotalAmount,
-                createdAt, currency, endAt,
-                expenses, expensesSections, expensesTotalAmount,
-                grossProfitAmount, id, income,
-                incomeSections, incomeTotalAmount, name,
-                netIncomeAmount, netProfitAmount, raw,
-                startAt, updatedAt);
+                categoryIds, costOfGoodsSold, costOfGoodsSoldSections,
+                costOfGoodsSoldTotalAmount, createdAt, currency,
+                endAt, expenses, expensesSections,
+                expensesTotalAmount, grossProfitAmount, id,
+                income, incomeSections, incomeTotalAmount,
+                name, netIncomeAmount, netProfitAmount,
+                raw, startAt, updatedAt);
         }
 
     }
