@@ -10,12 +10,14 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListScimUsersRequest;
 import to.unified.unified_java_sdk.operations.ListScimUsers;
+import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListScimUsersRequestBuilder {
 
     private ListScimUsersRequest request;
     private final SDKConfiguration sdkConfiguration;
+    private final Headers _headers = new Headers(); 
 
     public ListScimUsersRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
@@ -30,7 +32,7 @@ public class ListScimUsersRequestBuilder {
     public CompletableFuture<ListScimUsersResponse> call() throws Exception {
         
         AsyncRequestOperation<ListScimUsersRequest, ListScimUsersResponse> operation
-              = new ListScimUsers.Async(sdkConfiguration);
+              = new ListScimUsers.Async(sdkConfiguration, _headers);
 
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);

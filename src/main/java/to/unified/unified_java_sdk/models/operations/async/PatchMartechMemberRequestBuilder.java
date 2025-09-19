@@ -10,12 +10,14 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchMartechMemberRequest;
 import to.unified.unified_java_sdk.operations.PatchMartechMember;
+import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchMartechMemberRequestBuilder {
 
     private PatchMartechMemberRequest request;
     private final SDKConfiguration sdkConfiguration;
+    private final Headers _headers = new Headers(); 
 
     public PatchMartechMemberRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
@@ -30,7 +32,7 @@ public class PatchMartechMemberRequestBuilder {
     public CompletableFuture<PatchMartechMemberResponse> call() throws Exception {
         
         AsyncRequestOperation<PatchMartechMemberRequest, PatchMartechMemberResponse> operation
-              = new PatchMartechMember.Async(sdkConfiguration);
+              = new PatchMartechMember.Async(sdkConfiguration, _headers);
 
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);

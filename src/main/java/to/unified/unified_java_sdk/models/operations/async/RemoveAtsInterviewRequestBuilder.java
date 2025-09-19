@@ -10,12 +10,14 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemoveAtsInterviewRequest;
 import to.unified.unified_java_sdk.operations.RemoveAtsInterview;
+import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveAtsInterviewRequestBuilder {
 
     private RemoveAtsInterviewRequest request;
     private final SDKConfiguration sdkConfiguration;
+    private final Headers _headers = new Headers(); 
 
     public RemoveAtsInterviewRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
@@ -30,7 +32,7 @@ public class RemoveAtsInterviewRequestBuilder {
     public CompletableFuture<RemoveAtsInterviewResponse> call() throws Exception {
         
         AsyncRequestOperation<RemoveAtsInterviewRequest, RemoveAtsInterviewResponse> operation
-              = new RemoveAtsInterview.Async(sdkConfiguration);
+              = new RemoveAtsInterview.Async(sdkConfiguration, _headers);
 
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);

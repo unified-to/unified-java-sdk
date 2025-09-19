@@ -8,12 +8,14 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemoveMartechMember;
+import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveMartechMemberRequestBuilder {
 
     private RemoveMartechMemberRequest request;
     private final SDKConfiguration sdkConfiguration;
+    private final Headers _headers = new Headers(); 
 
     public RemoveMartechMemberRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
@@ -28,7 +30,7 @@ public class RemoveMartechMemberRequestBuilder {
     public RemoveMartechMemberResponse call() throws Exception {
         
         RequestOperation<RemoveMartechMemberRequest, RemoveMartechMemberResponse> operation
-              = new RemoveMartechMember.Sync(sdkConfiguration);
+              = new RemoveMartechMember.Sync(sdkConfiguration, _headers);
 
         return operation.handleResponse(operation.doRequest(request));
     }

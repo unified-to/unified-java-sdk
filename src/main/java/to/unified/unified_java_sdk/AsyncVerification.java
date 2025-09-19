@@ -38,9 +38,11 @@ import to.unified.unified_java_sdk.operations.ListVerificationRequests;
 import to.unified.unified_java_sdk.operations.PatchVerificationRequest;
 import to.unified.unified_java_sdk.operations.RemoveVerificationRequest;
 import to.unified.unified_java_sdk.operations.UpdateVerificationRequest;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncVerification {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Verification syncSDK;
 
@@ -76,7 +78,7 @@ public class AsyncVerification {
      */
     public CompletableFuture<CreateVerificationRequestResponse> createVerificationRequest(CreateVerificationRequestRequest request) {
         AsyncRequestOperation<CreateVerificationRequestRequest, CreateVerificationRequestResponse> operation
-              = new CreateVerificationRequest.Async(sdkConfiguration);
+              = new CreateVerificationRequest.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -99,7 +101,7 @@ public class AsyncVerification {
      */
     public CompletableFuture<GetVerificationPackageResponse> getVerificationPackage(GetVerificationPackageRequest request) {
         AsyncRequestOperation<GetVerificationPackageRequest, GetVerificationPackageResponse> operation
-              = new GetVerificationPackage.Async(sdkConfiguration);
+              = new GetVerificationPackage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -122,7 +124,7 @@ public class AsyncVerification {
      */
     public CompletableFuture<GetVerificationRequestResponse> getVerificationRequest(GetVerificationRequestRequest request) {
         AsyncRequestOperation<GetVerificationRequestRequest, GetVerificationRequestResponse> operation
-              = new GetVerificationRequest.Async(sdkConfiguration);
+              = new GetVerificationRequest.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -145,7 +147,7 @@ public class AsyncVerification {
      */
     public CompletableFuture<ListVerificationPackagesResponse> listVerificationPackages(ListVerificationPackagesRequest request) {
         AsyncRequestOperation<ListVerificationPackagesRequest, ListVerificationPackagesResponse> operation
-              = new ListVerificationPackages.Async(sdkConfiguration);
+              = new ListVerificationPackages.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -168,7 +170,7 @@ public class AsyncVerification {
      */
     public CompletableFuture<ListVerificationRequestsResponse> listVerificationRequests(ListVerificationRequestsRequest request) {
         AsyncRequestOperation<ListVerificationRequestsRequest, ListVerificationRequestsResponse> operation
-              = new ListVerificationRequests.Async(sdkConfiguration);
+              = new ListVerificationRequests.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -191,7 +193,7 @@ public class AsyncVerification {
      */
     public CompletableFuture<PatchVerificationRequestResponse> patchVerificationRequest(PatchVerificationRequestRequest request) {
         AsyncRequestOperation<PatchVerificationRequestRequest, PatchVerificationRequestResponse> operation
-              = new PatchVerificationRequest.Async(sdkConfiguration);
+              = new PatchVerificationRequest.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -214,7 +216,7 @@ public class AsyncVerification {
      */
     public CompletableFuture<RemoveVerificationRequestResponse> removeVerificationRequest(RemoveVerificationRequestRequest request) {
         AsyncRequestOperation<RemoveVerificationRequestRequest, RemoveVerificationRequestResponse> operation
-              = new RemoveVerificationRequest.Async(sdkConfiguration);
+              = new RemoveVerificationRequest.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -237,7 +239,7 @@ public class AsyncVerification {
      */
     public CompletableFuture<UpdateVerificationRequestResponse> updateVerificationRequest(UpdateVerificationRequestRequest request) {
         AsyncRequestOperation<UpdateVerificationRequestRequest, UpdateVerificationRequestResponse> operation
-              = new UpdateVerificationRequest.Async(sdkConfiguration);
+              = new UpdateVerificationRequest.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

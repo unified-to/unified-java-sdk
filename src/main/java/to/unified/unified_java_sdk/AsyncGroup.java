@@ -54,9 +54,11 @@ import to.unified.unified_java_sdk.operations.RemoveHrisGroup;
 import to.unified.unified_java_sdk.operations.RemoveScimGroups;
 import to.unified.unified_java_sdk.operations.UpdateHrisGroup;
 import to.unified.unified_java_sdk.operations.UpdateScimGroups;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncGroup {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Group syncSDK;
 
@@ -92,7 +94,7 @@ public class AsyncGroup {
      */
     public CompletableFuture<CreateHrisGroupResponse> createHrisGroup(CreateHrisGroupRequest request) {
         AsyncRequestOperation<CreateHrisGroupRequest, CreateHrisGroupResponse> operation
-              = new CreateHrisGroup.Async(sdkConfiguration);
+              = new CreateHrisGroup.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -115,7 +117,7 @@ public class AsyncGroup {
      */
     public CompletableFuture<CreateScimGroupsResponse> createScimGroups(CreateScimGroupsRequest request) {
         AsyncRequestOperation<CreateScimGroupsRequest, CreateScimGroupsResponse> operation
-              = new CreateScimGroups.Async(sdkConfiguration);
+              = new CreateScimGroups.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -138,7 +140,7 @@ public class AsyncGroup {
      */
     public CompletableFuture<GetHrisGroupResponse> getHrisGroup(GetHrisGroupRequest request) {
         AsyncRequestOperation<GetHrisGroupRequest, GetHrisGroupResponse> operation
-              = new GetHrisGroup.Async(sdkConfiguration);
+              = new GetHrisGroup.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -161,7 +163,7 @@ public class AsyncGroup {
      */
     public CompletableFuture<GetScimGroupsResponse> getScimGroups(GetScimGroupsRequest request) {
         AsyncRequestOperation<GetScimGroupsRequest, GetScimGroupsResponse> operation
-              = new GetScimGroups.Async(sdkConfiguration);
+              = new GetScimGroups.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -184,7 +186,7 @@ public class AsyncGroup {
      */
     public CompletableFuture<ListHrisGroupsResponse> listHrisGroups(ListHrisGroupsRequest request) {
         AsyncRequestOperation<ListHrisGroupsRequest, ListHrisGroupsResponse> operation
-              = new ListHrisGroups.Async(sdkConfiguration);
+              = new ListHrisGroups.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -207,7 +209,7 @@ public class AsyncGroup {
      */
     public CompletableFuture<ListScimGroupsResponse> listScimGroups(ListScimGroupsRequest request) {
         AsyncRequestOperation<ListScimGroupsRequest, ListScimGroupsResponse> operation
-              = new ListScimGroups.Async(sdkConfiguration);
+              = new ListScimGroups.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -230,7 +232,7 @@ public class AsyncGroup {
      */
     public CompletableFuture<PatchHrisGroupResponse> patchHrisGroup(PatchHrisGroupRequest request) {
         AsyncRequestOperation<PatchHrisGroupRequest, PatchHrisGroupResponse> operation
-              = new PatchHrisGroup.Async(sdkConfiguration);
+              = new PatchHrisGroup.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -253,7 +255,7 @@ public class AsyncGroup {
      */
     public CompletableFuture<PatchScimGroupsResponse> patchScimGroups(PatchScimGroupsRequest request) {
         AsyncRequestOperation<PatchScimGroupsRequest, PatchScimGroupsResponse> operation
-              = new PatchScimGroups.Async(sdkConfiguration);
+              = new PatchScimGroups.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -276,7 +278,7 @@ public class AsyncGroup {
      */
     public CompletableFuture<RemoveHrisGroupResponse> removeHrisGroup(RemoveHrisGroupRequest request) {
         AsyncRequestOperation<RemoveHrisGroupRequest, RemoveHrisGroupResponse> operation
-              = new RemoveHrisGroup.Async(sdkConfiguration);
+              = new RemoveHrisGroup.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -299,7 +301,7 @@ public class AsyncGroup {
      */
     public CompletableFuture<RemoveScimGroupsResponse> removeScimGroups(RemoveScimGroupsRequest request) {
         AsyncRequestOperation<RemoveScimGroupsRequest, RemoveScimGroupsResponse> operation
-              = new RemoveScimGroups.Async(sdkConfiguration);
+              = new RemoveScimGroups.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -322,7 +324,7 @@ public class AsyncGroup {
      */
     public CompletableFuture<UpdateHrisGroupResponse> updateHrisGroup(UpdateHrisGroupRequest request) {
         AsyncRequestOperation<UpdateHrisGroupRequest, UpdateHrisGroupResponse> operation
-              = new UpdateHrisGroup.Async(sdkConfiguration);
+              = new UpdateHrisGroup.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -345,7 +347,7 @@ public class AsyncGroup {
      */
     public CompletableFuture<UpdateScimGroupsResponse> updateScimGroups(UpdateScimGroupsRequest request) {
         AsyncRequestOperation<UpdateScimGroupsRequest, UpdateScimGroupsResponse> operation
-              = new UpdateScimGroups.Async(sdkConfiguration);
+              = new UpdateScimGroups.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

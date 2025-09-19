@@ -10,12 +10,14 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingContactRequest;
 import to.unified.unified_java_sdk.operations.RemoveAccountingContact;
+import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveAccountingContactRequestBuilder {
 
     private RemoveAccountingContactRequest request;
     private final SDKConfiguration sdkConfiguration;
+    private final Headers _headers = new Headers(); 
 
     public RemoveAccountingContactRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
@@ -30,7 +32,7 @@ public class RemoveAccountingContactRequestBuilder {
     public CompletableFuture<RemoveAccountingContactResponse> call() throws Exception {
         
         AsyncRequestOperation<RemoveAccountingContactRequest, RemoveAccountingContactResponse> operation
-              = new RemoveAccountingContact.Async(sdkConfiguration);
+              = new RemoveAccountingContact.Async(sdkConfiguration, _headers);
 
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);

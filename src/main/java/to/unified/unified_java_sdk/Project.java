@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListTaskProjects;
 import to.unified.unified_java_sdk.operations.PatchTaskProject;
 import to.unified.unified_java_sdk.operations.RemoveTaskProject;
 import to.unified.unified_java_sdk.operations.UpdateTaskProject;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Project {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncProject asyncSDK;
 
@@ -68,7 +70,7 @@ public class Project {
      */
     public CreateTaskProjectResponse createTaskProject(CreateTaskProjectRequest request) throws Exception {
         RequestOperation<CreateTaskProjectRequest, CreateTaskProjectResponse> operation
-              = new CreateTaskProject.Sync(sdkConfiguration);
+              = new CreateTaskProject.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -90,7 +92,7 @@ public class Project {
      */
     public GetTaskProjectResponse getTaskProject(GetTaskProjectRequest request) throws Exception {
         RequestOperation<GetTaskProjectRequest, GetTaskProjectResponse> operation
-              = new GetTaskProject.Sync(sdkConfiguration);
+              = new GetTaskProject.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -112,7 +114,7 @@ public class Project {
      */
     public ListTaskProjectsResponse listTaskProjects(ListTaskProjectsRequest request) throws Exception {
         RequestOperation<ListTaskProjectsRequest, ListTaskProjectsResponse> operation
-              = new ListTaskProjects.Sync(sdkConfiguration);
+              = new ListTaskProjects.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -134,7 +136,7 @@ public class Project {
      */
     public PatchTaskProjectResponse patchTaskProject(PatchTaskProjectRequest request) throws Exception {
         RequestOperation<PatchTaskProjectRequest, PatchTaskProjectResponse> operation
-              = new PatchTaskProject.Sync(sdkConfiguration);
+              = new PatchTaskProject.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -156,7 +158,7 @@ public class Project {
      */
     public RemoveTaskProjectResponse removeTaskProject(RemoveTaskProjectRequest request) throws Exception {
         RequestOperation<RemoveTaskProjectRequest, RemoveTaskProjectResponse> operation
-              = new RemoveTaskProject.Sync(sdkConfiguration);
+              = new RemoveTaskProject.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -178,7 +180,7 @@ public class Project {
      */
     public UpdateTaskProjectResponse updateTaskProject(UpdateTaskProjectRequest request) throws Exception {
         RequestOperation<UpdateTaskProjectRequest, UpdateTaskProjectResponse> operation
-              = new UpdateTaskProject.Sync(sdkConfiguration);
+              = new UpdateTaskProject.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

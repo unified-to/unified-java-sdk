@@ -14,9 +14,11 @@ import to.unified.unified_java_sdk.models.operations.ListVerificationPackagesReq
 import to.unified.unified_java_sdk.models.operations.ListVerificationPackagesResponse;
 import to.unified.unified_java_sdk.operations.GetVerificationPackage;
 import to.unified.unified_java_sdk.operations.ListVerificationPackages;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Package {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncPackage asyncSDK;
 
@@ -52,7 +54,7 @@ public class Package {
      */
     public GetVerificationPackageResponse getVerificationPackage(GetVerificationPackageRequest request) throws Exception {
         RequestOperation<GetVerificationPackageRequest, GetVerificationPackageResponse> operation
-              = new GetVerificationPackage.Sync(sdkConfiguration);
+              = new GetVerificationPackage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -74,7 +76,7 @@ public class Package {
      */
     public ListVerificationPackagesResponse listVerificationPackages(ListVerificationPackagesRequest request) throws Exception {
         RequestOperation<ListVerificationPackagesRequest, ListVerificationPackagesResponse> operation
-              = new ListVerificationPackages.Sync(sdkConfiguration);
+              = new ListVerificationPackages.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

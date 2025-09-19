@@ -78,9 +78,11 @@ import to.unified.unified_java_sdk.operations.RemoveUcComment;
 import to.unified.unified_java_sdk.operations.UpdateKmsComment;
 import to.unified.unified_java_sdk.operations.UpdateTaskComment;
 import to.unified.unified_java_sdk.operations.UpdateUcComment;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncComment {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Comment syncSDK;
 
@@ -116,7 +118,7 @@ public class AsyncComment {
      */
     public CompletableFuture<CreateKmsCommentResponse> createKmsComment(CreateKmsCommentRequest request) {
         AsyncRequestOperation<CreateKmsCommentRequest, CreateKmsCommentResponse> operation
-              = new CreateKmsComment.Async(sdkConfiguration);
+              = new CreateKmsComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -139,7 +141,7 @@ public class AsyncComment {
      */
     public CompletableFuture<CreateTaskCommentResponse> createTaskComment(CreateTaskCommentRequest request) {
         AsyncRequestOperation<CreateTaskCommentRequest, CreateTaskCommentResponse> operation
-              = new CreateTaskComment.Async(sdkConfiguration);
+              = new CreateTaskComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -162,7 +164,7 @@ public class AsyncComment {
      */
     public CompletableFuture<CreateUcCommentResponse> createUcComment(CreateUcCommentRequest request) {
         AsyncRequestOperation<CreateUcCommentRequest, CreateUcCommentResponse> operation
-              = new CreateUcComment.Async(sdkConfiguration);
+              = new CreateUcComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -185,7 +187,7 @@ public class AsyncComment {
      */
     public CompletableFuture<GetKmsCommentResponse> getKmsComment(GetKmsCommentRequest request) {
         AsyncRequestOperation<GetKmsCommentRequest, GetKmsCommentResponse> operation
-              = new GetKmsComment.Async(sdkConfiguration);
+              = new GetKmsComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -208,7 +210,7 @@ public class AsyncComment {
      */
     public CompletableFuture<GetTaskCommentResponse> getTaskComment(GetTaskCommentRequest request) {
         AsyncRequestOperation<GetTaskCommentRequest, GetTaskCommentResponse> operation
-              = new GetTaskComment.Async(sdkConfiguration);
+              = new GetTaskComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -231,7 +233,7 @@ public class AsyncComment {
      */
     public CompletableFuture<GetUcCommentResponse> getUcComment(GetUcCommentRequest request) {
         AsyncRequestOperation<GetUcCommentRequest, GetUcCommentResponse> operation
-              = new GetUcComment.Async(sdkConfiguration);
+              = new GetUcComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -254,7 +256,7 @@ public class AsyncComment {
      */
     public CompletableFuture<ListKmsCommentsResponse> listKmsComments(ListKmsCommentsRequest request) {
         AsyncRequestOperation<ListKmsCommentsRequest, ListKmsCommentsResponse> operation
-              = new ListKmsComments.Async(sdkConfiguration);
+              = new ListKmsComments.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -277,7 +279,7 @@ public class AsyncComment {
      */
     public CompletableFuture<ListTaskCommentsResponse> listTaskComments(ListTaskCommentsRequest request) {
         AsyncRequestOperation<ListTaskCommentsRequest, ListTaskCommentsResponse> operation
-              = new ListTaskComments.Async(sdkConfiguration);
+              = new ListTaskComments.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -300,7 +302,7 @@ public class AsyncComment {
      */
     public CompletableFuture<ListUcCommentsResponse> listUcComments(ListUcCommentsRequest request) {
         AsyncRequestOperation<ListUcCommentsRequest, ListUcCommentsResponse> operation
-              = new ListUcComments.Async(sdkConfiguration);
+              = new ListUcComments.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -323,7 +325,7 @@ public class AsyncComment {
      */
     public CompletableFuture<PatchKmsCommentResponse> patchKmsComment(PatchKmsCommentRequest request) {
         AsyncRequestOperation<PatchKmsCommentRequest, PatchKmsCommentResponse> operation
-              = new PatchKmsComment.Async(sdkConfiguration);
+              = new PatchKmsComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -346,7 +348,7 @@ public class AsyncComment {
      */
     public CompletableFuture<PatchTaskCommentResponse> patchTaskComment(PatchTaskCommentRequest request) {
         AsyncRequestOperation<PatchTaskCommentRequest, PatchTaskCommentResponse> operation
-              = new PatchTaskComment.Async(sdkConfiguration);
+              = new PatchTaskComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -369,7 +371,7 @@ public class AsyncComment {
      */
     public CompletableFuture<PatchUcCommentResponse> patchUcComment(PatchUcCommentRequest request) {
         AsyncRequestOperation<PatchUcCommentRequest, PatchUcCommentResponse> operation
-              = new PatchUcComment.Async(sdkConfiguration);
+              = new PatchUcComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -392,7 +394,7 @@ public class AsyncComment {
      */
     public CompletableFuture<RemoveKmsCommentResponse> removeKmsComment(RemoveKmsCommentRequest request) {
         AsyncRequestOperation<RemoveKmsCommentRequest, RemoveKmsCommentResponse> operation
-              = new RemoveKmsComment.Async(sdkConfiguration);
+              = new RemoveKmsComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -415,7 +417,7 @@ public class AsyncComment {
      */
     public CompletableFuture<RemoveTaskCommentResponse> removeTaskComment(RemoveTaskCommentRequest request) {
         AsyncRequestOperation<RemoveTaskCommentRequest, RemoveTaskCommentResponse> operation
-              = new RemoveTaskComment.Async(sdkConfiguration);
+              = new RemoveTaskComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -438,7 +440,7 @@ public class AsyncComment {
      */
     public CompletableFuture<RemoveUcCommentResponse> removeUcComment(RemoveUcCommentRequest request) {
         AsyncRequestOperation<RemoveUcCommentRequest, RemoveUcCommentResponse> operation
-              = new RemoveUcComment.Async(sdkConfiguration);
+              = new RemoveUcComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -461,7 +463,7 @@ public class AsyncComment {
      */
     public CompletableFuture<UpdateKmsCommentResponse> updateKmsComment(UpdateKmsCommentRequest request) {
         AsyncRequestOperation<UpdateKmsCommentRequest, UpdateKmsCommentResponse> operation
-              = new UpdateKmsComment.Async(sdkConfiguration);
+              = new UpdateKmsComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -484,7 +486,7 @@ public class AsyncComment {
      */
     public CompletableFuture<UpdateTaskCommentResponse> updateTaskComment(UpdateTaskCommentRequest request) {
         AsyncRequestOperation<UpdateTaskCommentRequest, UpdateTaskCommentResponse> operation
-              = new UpdateTaskComment.Async(sdkConfiguration);
+              = new UpdateTaskComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -507,7 +509,7 @@ public class AsyncComment {
      */
     public CompletableFuture<UpdateUcCommentResponse> updateUcComment(UpdateUcCommentRequest request) {
         AsyncRequestOperation<UpdateUcCommentRequest, UpdateUcCommentResponse> operation
-              = new UpdateUcComment.Async(sdkConfiguration);
+              = new UpdateUcComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

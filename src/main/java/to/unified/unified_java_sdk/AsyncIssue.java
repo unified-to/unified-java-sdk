@@ -10,9 +10,11 @@ import to.unified.unified_java_sdk.models.operations.ListUnifiedIssuesRequest;
 import to.unified.unified_java_sdk.models.operations.async.ListUnifiedIssuesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListUnifiedIssuesResponse;
 import to.unified.unified_java_sdk.operations.ListUnifiedIssues;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncIssue {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Issue syncSDK;
 
@@ -48,7 +50,7 @@ public class AsyncIssue {
      */
     public CompletableFuture<ListUnifiedIssuesResponse> listUnifiedIssues(ListUnifiedIssuesRequest request) {
         AsyncRequestOperation<ListUnifiedIssuesRequest, ListUnifiedIssuesResponse> operation
-              = new ListUnifiedIssues.Async(sdkConfiguration);
+              = new ListUnifiedIssues.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -8,12 +8,14 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.PatchKmsSpace;
+import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchKmsSpaceRequestBuilder {
 
     private PatchKmsSpaceRequest request;
     private final SDKConfiguration sdkConfiguration;
+    private final Headers _headers = new Headers(); 
 
     public PatchKmsSpaceRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
@@ -28,7 +30,7 @@ public class PatchKmsSpaceRequestBuilder {
     public PatchKmsSpaceResponse call() throws Exception {
         
         RequestOperation<PatchKmsSpaceRequest, PatchKmsSpaceResponse> operation
-              = new PatchKmsSpace.Sync(sdkConfiguration);
+              = new PatchKmsSpace.Sync(sdkConfiguration, _headers);
 
         return operation.handleResponse(operation.doRequest(request));
     }

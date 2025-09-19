@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListTicketingCustomers;
 import to.unified.unified_java_sdk.operations.PatchTicketingCustomer;
 import to.unified.unified_java_sdk.operations.RemoveTicketingCustomer;
 import to.unified.unified_java_sdk.operations.UpdateTicketingCustomer;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncCustomer {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Customer syncSDK;
 
@@ -68,7 +70,7 @@ public class AsyncCustomer {
      */
     public CompletableFuture<CreateTicketingCustomerResponse> createTicketingCustomer(CreateTicketingCustomerRequest request) {
         AsyncRequestOperation<CreateTicketingCustomerRequest, CreateTicketingCustomerResponse> operation
-              = new CreateTicketingCustomer.Async(sdkConfiguration);
+              = new CreateTicketingCustomer.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -91,7 +93,7 @@ public class AsyncCustomer {
      */
     public CompletableFuture<GetTicketingCustomerResponse> getTicketingCustomer(GetTicketingCustomerRequest request) {
         AsyncRequestOperation<GetTicketingCustomerRequest, GetTicketingCustomerResponse> operation
-              = new GetTicketingCustomer.Async(sdkConfiguration);
+              = new GetTicketingCustomer.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -114,7 +116,7 @@ public class AsyncCustomer {
      */
     public CompletableFuture<ListTicketingCustomersResponse> listTicketingCustomers(ListTicketingCustomersRequest request) {
         AsyncRequestOperation<ListTicketingCustomersRequest, ListTicketingCustomersResponse> operation
-              = new ListTicketingCustomers.Async(sdkConfiguration);
+              = new ListTicketingCustomers.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -137,7 +139,7 @@ public class AsyncCustomer {
      */
     public CompletableFuture<PatchTicketingCustomerResponse> patchTicketingCustomer(PatchTicketingCustomerRequest request) {
         AsyncRequestOperation<PatchTicketingCustomerRequest, PatchTicketingCustomerResponse> operation
-              = new PatchTicketingCustomer.Async(sdkConfiguration);
+              = new PatchTicketingCustomer.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -160,7 +162,7 @@ public class AsyncCustomer {
      */
     public CompletableFuture<RemoveTicketingCustomerResponse> removeTicketingCustomer(RemoveTicketingCustomerRequest request) {
         AsyncRequestOperation<RemoveTicketingCustomerRequest, RemoveTicketingCustomerResponse> operation
-              = new RemoveTicketingCustomer.Async(sdkConfiguration);
+              = new RemoveTicketingCustomer.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -183,7 +185,7 @@ public class AsyncCustomer {
      */
     public CompletableFuture<UpdateTicketingCustomerResponse> updateTicketingCustomer(UpdateTicketingCustomerRequest request) {
         AsyncRequestOperation<UpdateTicketingCustomerRequest, UpdateTicketingCustomerResponse> operation
-              = new UpdateTicketingCustomer.Async(sdkConfiguration);
+              = new UpdateTicketingCustomer.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

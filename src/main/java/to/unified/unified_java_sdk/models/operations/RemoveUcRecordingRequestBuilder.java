@@ -8,12 +8,14 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemoveUcRecording;
+import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveUcRecordingRequestBuilder {
 
     private RemoveUcRecordingRequest request;
     private final SDKConfiguration sdkConfiguration;
+    private final Headers _headers = new Headers(); 
 
     public RemoveUcRecordingRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
@@ -28,7 +30,7 @@ public class RemoveUcRecordingRequestBuilder {
     public RemoveUcRecordingResponse call() throws Exception {
         
         RequestOperation<RemoveUcRecordingRequest, RemoveUcRecordingResponse> operation
-              = new RemoveUcRecording.Sync(sdkConfiguration);
+              = new RemoveUcRecording.Sync(sdkConfiguration, _headers);
 
         return operation.handleResponse(operation.doRequest(request));
     }

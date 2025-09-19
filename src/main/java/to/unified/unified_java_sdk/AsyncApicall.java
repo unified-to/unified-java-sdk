@@ -14,9 +14,11 @@ import to.unified.unified_java_sdk.models.operations.async.ListUnifiedApicallsRe
 import to.unified.unified_java_sdk.models.operations.async.ListUnifiedApicallsResponse;
 import to.unified.unified_java_sdk.operations.GetUnifiedApicall;
 import to.unified.unified_java_sdk.operations.ListUnifiedApicalls;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncApicall {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Apicall syncSDK;
 
@@ -52,7 +54,7 @@ public class AsyncApicall {
      */
     public CompletableFuture<GetUnifiedApicallResponse> getUnifiedApicall(GetUnifiedApicallRequest request) {
         AsyncRequestOperation<GetUnifiedApicallRequest, GetUnifiedApicallResponse> operation
-              = new GetUnifiedApicall.Async(sdkConfiguration);
+              = new GetUnifiedApicall.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -75,7 +77,7 @@ public class AsyncApicall {
      */
     public CompletableFuture<ListUnifiedApicallsResponse> listUnifiedApicalls(ListUnifiedApicallsRequest request) {
         AsyncRequestOperation<ListUnifiedApicallsRequest, ListUnifiedApicallsResponse> operation
-              = new ListUnifiedApicalls.Async(sdkConfiguration);
+              = new ListUnifiedApicalls.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

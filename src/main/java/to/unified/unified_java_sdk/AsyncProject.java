@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListTaskProjects;
 import to.unified.unified_java_sdk.operations.PatchTaskProject;
 import to.unified.unified_java_sdk.operations.RemoveTaskProject;
 import to.unified.unified_java_sdk.operations.UpdateTaskProject;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncProject {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Project syncSDK;
 
@@ -68,7 +70,7 @@ public class AsyncProject {
      */
     public CompletableFuture<CreateTaskProjectResponse> createTaskProject(CreateTaskProjectRequest request) {
         AsyncRequestOperation<CreateTaskProjectRequest, CreateTaskProjectResponse> operation
-              = new CreateTaskProject.Async(sdkConfiguration);
+              = new CreateTaskProject.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -91,7 +93,7 @@ public class AsyncProject {
      */
     public CompletableFuture<GetTaskProjectResponse> getTaskProject(GetTaskProjectRequest request) {
         AsyncRequestOperation<GetTaskProjectRequest, GetTaskProjectResponse> operation
-              = new GetTaskProject.Async(sdkConfiguration);
+              = new GetTaskProject.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -114,7 +116,7 @@ public class AsyncProject {
      */
     public CompletableFuture<ListTaskProjectsResponse> listTaskProjects(ListTaskProjectsRequest request) {
         AsyncRequestOperation<ListTaskProjectsRequest, ListTaskProjectsResponse> operation
-              = new ListTaskProjects.Async(sdkConfiguration);
+              = new ListTaskProjects.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -137,7 +139,7 @@ public class AsyncProject {
      */
     public CompletableFuture<PatchTaskProjectResponse> patchTaskProject(PatchTaskProjectRequest request) {
         AsyncRequestOperation<PatchTaskProjectRequest, PatchTaskProjectResponse> operation
-              = new PatchTaskProject.Async(sdkConfiguration);
+              = new PatchTaskProject.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -160,7 +162,7 @@ public class AsyncProject {
      */
     public CompletableFuture<RemoveTaskProjectResponse> removeTaskProject(RemoveTaskProjectRequest request) {
         AsyncRequestOperation<RemoveTaskProjectRequest, RemoveTaskProjectResponse> operation
-              = new RemoveTaskProject.Async(sdkConfiguration);
+              = new RemoveTaskProject.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -183,7 +185,7 @@ public class AsyncProject {
      */
     public CompletableFuture<UpdateTaskProjectResponse> updateTaskProject(UpdateTaskProjectRequest request) {
         AsyncRequestOperation<UpdateTaskProjectRequest, UpdateTaskProjectResponse> operation
-              = new UpdateTaskProject.Async(sdkConfiguration);
+              = new UpdateTaskProject.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

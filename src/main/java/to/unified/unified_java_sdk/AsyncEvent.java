@@ -54,9 +54,11 @@ import to.unified.unified_java_sdk.operations.RemoveCalendarEvent;
 import to.unified.unified_java_sdk.operations.RemoveCrmEvent;
 import to.unified.unified_java_sdk.operations.UpdateCalendarEvent;
 import to.unified.unified_java_sdk.operations.UpdateCrmEvent;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncEvent {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Event syncSDK;
 
@@ -92,7 +94,7 @@ public class AsyncEvent {
      */
     public CompletableFuture<CreateCalendarEventResponse> createCalendarEvent(CreateCalendarEventRequest request) {
         AsyncRequestOperation<CreateCalendarEventRequest, CreateCalendarEventResponse> operation
-              = new CreateCalendarEvent.Async(sdkConfiguration);
+              = new CreateCalendarEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -115,7 +117,7 @@ public class AsyncEvent {
      */
     public CompletableFuture<CreateCrmEventResponse> createCrmEvent(CreateCrmEventRequest request) {
         AsyncRequestOperation<CreateCrmEventRequest, CreateCrmEventResponse> operation
-              = new CreateCrmEvent.Async(sdkConfiguration);
+              = new CreateCrmEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -138,7 +140,7 @@ public class AsyncEvent {
      */
     public CompletableFuture<GetCalendarEventResponse> getCalendarEvent(GetCalendarEventRequest request) {
         AsyncRequestOperation<GetCalendarEventRequest, GetCalendarEventResponse> operation
-              = new GetCalendarEvent.Async(sdkConfiguration);
+              = new GetCalendarEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -161,7 +163,7 @@ public class AsyncEvent {
      */
     public CompletableFuture<GetCrmEventResponse> getCrmEvent(GetCrmEventRequest request) {
         AsyncRequestOperation<GetCrmEventRequest, GetCrmEventResponse> operation
-              = new GetCrmEvent.Async(sdkConfiguration);
+              = new GetCrmEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -184,7 +186,7 @@ public class AsyncEvent {
      */
     public CompletableFuture<ListCalendarEventsResponse> listCalendarEvents(ListCalendarEventsRequest request) {
         AsyncRequestOperation<ListCalendarEventsRequest, ListCalendarEventsResponse> operation
-              = new ListCalendarEvents.Async(sdkConfiguration);
+              = new ListCalendarEvents.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -207,7 +209,7 @@ public class AsyncEvent {
      */
     public CompletableFuture<ListCrmEventsResponse> listCrmEvents(ListCrmEventsRequest request) {
         AsyncRequestOperation<ListCrmEventsRequest, ListCrmEventsResponse> operation
-              = new ListCrmEvents.Async(sdkConfiguration);
+              = new ListCrmEvents.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -230,7 +232,7 @@ public class AsyncEvent {
      */
     public CompletableFuture<PatchCalendarEventResponse> patchCalendarEvent(PatchCalendarEventRequest request) {
         AsyncRequestOperation<PatchCalendarEventRequest, PatchCalendarEventResponse> operation
-              = new PatchCalendarEvent.Async(sdkConfiguration);
+              = new PatchCalendarEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -253,7 +255,7 @@ public class AsyncEvent {
      */
     public CompletableFuture<PatchCrmEventResponse> patchCrmEvent(PatchCrmEventRequest request) {
         AsyncRequestOperation<PatchCrmEventRequest, PatchCrmEventResponse> operation
-              = new PatchCrmEvent.Async(sdkConfiguration);
+              = new PatchCrmEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -276,7 +278,7 @@ public class AsyncEvent {
      */
     public CompletableFuture<RemoveCalendarEventResponse> removeCalendarEvent(RemoveCalendarEventRequest request) {
         AsyncRequestOperation<RemoveCalendarEventRequest, RemoveCalendarEventResponse> operation
-              = new RemoveCalendarEvent.Async(sdkConfiguration);
+              = new RemoveCalendarEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -299,7 +301,7 @@ public class AsyncEvent {
      */
     public CompletableFuture<RemoveCrmEventResponse> removeCrmEvent(RemoveCrmEventRequest request) {
         AsyncRequestOperation<RemoveCrmEventRequest, RemoveCrmEventResponse> operation
-              = new RemoveCrmEvent.Async(sdkConfiguration);
+              = new RemoveCrmEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -322,7 +324,7 @@ public class AsyncEvent {
      */
     public CompletableFuture<UpdateCalendarEventResponse> updateCalendarEvent(UpdateCalendarEventRequest request) {
         AsyncRequestOperation<UpdateCalendarEventRequest, UpdateCalendarEventResponse> operation
-              = new UpdateCalendarEvent.Async(sdkConfiguration);
+              = new UpdateCalendarEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -345,7 +347,7 @@ public class AsyncEvent {
      */
     public CompletableFuture<UpdateCrmEventResponse> updateCrmEvent(UpdateCrmEventRequest request) {
         AsyncRequestOperation<UpdateCrmEventRequest, UpdateCrmEventResponse> operation
-              = new UpdateCrmEvent.Async(sdkConfiguration);
+              = new UpdateCrmEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

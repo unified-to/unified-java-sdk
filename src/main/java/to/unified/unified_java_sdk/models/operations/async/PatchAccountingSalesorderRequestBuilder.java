@@ -10,12 +10,14 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingSalesorderRequest;
 import to.unified.unified_java_sdk.operations.PatchAccountingSalesorder;
+import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchAccountingSalesorderRequestBuilder {
 
     private PatchAccountingSalesorderRequest request;
     private final SDKConfiguration sdkConfiguration;
+    private final Headers _headers = new Headers(); 
 
     public PatchAccountingSalesorderRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
@@ -30,7 +32,7 @@ public class PatchAccountingSalesorderRequestBuilder {
     public CompletableFuture<PatchAccountingSalesorderResponse> call() throws Exception {
         
         AsyncRequestOperation<PatchAccountingSalesorderRequest, PatchAccountingSalesorderResponse> operation
-              = new PatchAccountingSalesorder.Async(sdkConfiguration);
+              = new PatchAccountingSalesorder.Async(sdkConfiguration, _headers);
 
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);

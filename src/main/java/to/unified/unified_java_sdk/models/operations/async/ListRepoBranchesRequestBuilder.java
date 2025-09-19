@@ -10,12 +10,14 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListRepoBranchesRequest;
 import to.unified.unified_java_sdk.operations.ListRepoBranches;
+import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListRepoBranchesRequestBuilder {
 
     private ListRepoBranchesRequest request;
     private final SDKConfiguration sdkConfiguration;
+    private final Headers _headers = new Headers(); 
 
     public ListRepoBranchesRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
@@ -30,7 +32,7 @@ public class ListRepoBranchesRequestBuilder {
     public CompletableFuture<ListRepoBranchesResponse> call() throws Exception {
         
         AsyncRequestOperation<ListRepoBranchesRequest, ListRepoBranchesResponse> operation
-              = new ListRepoBranches.Async(sdkConfiguration);
+              = new ListRepoBranches.Async(sdkConfiguration, _headers);
 
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);

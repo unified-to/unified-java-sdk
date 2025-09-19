@@ -10,12 +10,14 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListAccountingJournalsRequest;
 import to.unified.unified_java_sdk.operations.ListAccountingJournals;
+import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListAccountingJournalsRequestBuilder {
 
     private ListAccountingJournalsRequest request;
     private final SDKConfiguration sdkConfiguration;
+    private final Headers _headers = new Headers(); 
 
     public ListAccountingJournalsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
@@ -30,7 +32,7 @@ public class ListAccountingJournalsRequestBuilder {
     public CompletableFuture<ListAccountingJournalsResponse> call() throws Exception {
         
         AsyncRequestOperation<ListAccountingJournalsRequest, ListAccountingJournalsResponse> operation
-              = new ListAccountingJournals.Async(sdkConfiguration);
+              = new ListAccountingJournals.Async(sdkConfiguration, _headers);
 
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);

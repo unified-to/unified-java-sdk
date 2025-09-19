@@ -10,12 +10,14 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListMessagingMessagesRequest;
 import to.unified.unified_java_sdk.operations.ListMessagingMessages;
+import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListMessagingMessagesRequestBuilder {
 
     private ListMessagingMessagesRequest request;
     private final SDKConfiguration sdkConfiguration;
+    private final Headers _headers = new Headers(); 
 
     public ListMessagingMessagesRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
@@ -30,7 +32,7 @@ public class ListMessagingMessagesRequestBuilder {
     public CompletableFuture<ListMessagingMessagesResponse> call() throws Exception {
         
         AsyncRequestOperation<ListMessagingMessagesRequest, ListMessagingMessagesResponse> operation
-              = new ListMessagingMessages.Async(sdkConfiguration);
+              = new ListMessagingMessages.Async(sdkConfiguration, _headers);
 
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);

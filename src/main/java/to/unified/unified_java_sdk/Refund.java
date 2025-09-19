@@ -14,9 +14,11 @@ import to.unified.unified_java_sdk.models.operations.ListPaymentRefundsRequestBu
 import to.unified.unified_java_sdk.models.operations.ListPaymentRefundsResponse;
 import to.unified.unified_java_sdk.operations.GetPaymentRefund;
 import to.unified.unified_java_sdk.operations.ListPaymentRefunds;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Refund {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncRefund asyncSDK;
 
@@ -52,7 +54,7 @@ public class Refund {
      */
     public GetPaymentRefundResponse getPaymentRefund(GetPaymentRefundRequest request) throws Exception {
         RequestOperation<GetPaymentRefundRequest, GetPaymentRefundResponse> operation
-              = new GetPaymentRefund.Sync(sdkConfiguration);
+              = new GetPaymentRefund.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -74,7 +76,7 @@ public class Refund {
      */
     public ListPaymentRefundsResponse listPaymentRefunds(ListPaymentRefundsRequest request) throws Exception {
         RequestOperation<ListPaymentRefundsRequest, ListPaymentRefundsResponse> operation
-              = new ListPaymentRefunds.Sync(sdkConfiguration);
+              = new ListPaymentRefunds.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

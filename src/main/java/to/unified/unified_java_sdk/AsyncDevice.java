@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListHrisDevices;
 import to.unified.unified_java_sdk.operations.PatchHrisDevice;
 import to.unified.unified_java_sdk.operations.RemoveHrisDevice;
 import to.unified.unified_java_sdk.operations.UpdateHrisDevice;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncDevice {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Device syncSDK;
 
@@ -68,7 +70,7 @@ public class AsyncDevice {
      */
     public CompletableFuture<CreateHrisDeviceResponse> createHrisDevice(CreateHrisDeviceRequest request) {
         AsyncRequestOperation<CreateHrisDeviceRequest, CreateHrisDeviceResponse> operation
-              = new CreateHrisDevice.Async(sdkConfiguration);
+              = new CreateHrisDevice.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -91,7 +93,7 @@ public class AsyncDevice {
      */
     public CompletableFuture<GetHrisDeviceResponse> getHrisDevice(GetHrisDeviceRequest request) {
         AsyncRequestOperation<GetHrisDeviceRequest, GetHrisDeviceResponse> operation
-              = new GetHrisDevice.Async(sdkConfiguration);
+              = new GetHrisDevice.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -114,7 +116,7 @@ public class AsyncDevice {
      */
     public CompletableFuture<ListHrisDevicesResponse> listHrisDevices(ListHrisDevicesRequest request) {
         AsyncRequestOperation<ListHrisDevicesRequest, ListHrisDevicesResponse> operation
-              = new ListHrisDevices.Async(sdkConfiguration);
+              = new ListHrisDevices.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -137,7 +139,7 @@ public class AsyncDevice {
      */
     public CompletableFuture<PatchHrisDeviceResponse> patchHrisDevice(PatchHrisDeviceRequest request) {
         AsyncRequestOperation<PatchHrisDeviceRequest, PatchHrisDeviceResponse> operation
-              = new PatchHrisDevice.Async(sdkConfiguration);
+              = new PatchHrisDevice.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -160,7 +162,7 @@ public class AsyncDevice {
      */
     public CompletableFuture<RemoveHrisDeviceResponse> removeHrisDevice(RemoveHrisDeviceRequest request) {
         AsyncRequestOperation<RemoveHrisDeviceRequest, RemoveHrisDeviceResponse> operation
-              = new RemoveHrisDevice.Async(sdkConfiguration);
+              = new RemoveHrisDevice.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -183,7 +185,7 @@ public class AsyncDevice {
      */
     public CompletableFuture<UpdateHrisDeviceResponse> updateHrisDevice(UpdateHrisDeviceRequest request) {
         AsyncRequestOperation<UpdateHrisDeviceRequest, UpdateHrisDeviceResponse> operation
-              = new UpdateHrisDevice.Async(sdkConfiguration);
+              = new UpdateHrisDevice.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

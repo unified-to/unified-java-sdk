@@ -18,9 +18,11 @@ import to.unified.unified_java_sdk.models.operations.async.ListUnifiedIntegratio
 import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationAuth;
 import to.unified.unified_java_sdk.operations.ListUnifiedIntegrationWorkspaces;
 import to.unified.unified_java_sdk.operations.ListUnifiedIntegrations;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncIntegration {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Integration syncSDK;
 
@@ -60,7 +62,7 @@ public class AsyncIntegration {
      */
     public CompletableFuture<GetUnifiedIntegrationAuthResponse> getUnifiedIntegrationAuth(GetUnifiedIntegrationAuthRequest request) {
         AsyncRequestOperation<GetUnifiedIntegrationAuthRequest, GetUnifiedIntegrationAuthResponse> operation
-              = new GetUnifiedIntegrationAuth.Async(sdkConfiguration);
+              = new GetUnifiedIntegrationAuth.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -87,7 +89,7 @@ public class AsyncIntegration {
      */
     public CompletableFuture<ListUnifiedIntegrationWorkspacesResponse> listUnifiedIntegrationWorkspaces(ListUnifiedIntegrationWorkspacesRequest request) {
         AsyncRequestOperation<ListUnifiedIntegrationWorkspacesRequest, ListUnifiedIntegrationWorkspacesResponse> operation
-              = new ListUnifiedIntegrationWorkspaces.Async(sdkConfiguration);
+              = new ListUnifiedIntegrationWorkspaces.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -110,7 +112,7 @@ public class AsyncIntegration {
      */
     public CompletableFuture<ListUnifiedIntegrationsResponse> listUnifiedIntegrations(ListUnifiedIntegrationsRequest request) {
         AsyncRequestOperation<ListUnifiedIntegrationsRequest, ListUnifiedIntegrationsResponse> operation
-              = new ListUnifiedIntegrations.Async(sdkConfiguration);
+              = new ListUnifiedIntegrations.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

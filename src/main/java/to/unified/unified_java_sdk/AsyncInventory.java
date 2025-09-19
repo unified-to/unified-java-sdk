@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListCommerceInventories;
 import to.unified.unified_java_sdk.operations.PatchCommerceInventory;
 import to.unified.unified_java_sdk.operations.RemoveCommerceInventory;
 import to.unified.unified_java_sdk.operations.UpdateCommerceInventory;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncInventory {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Inventory syncSDK;
 
@@ -68,7 +70,7 @@ public class AsyncInventory {
      */
     public CompletableFuture<CreateCommerceInventoryResponse> createCommerceInventory(CreateCommerceInventoryRequest request) {
         AsyncRequestOperation<CreateCommerceInventoryRequest, CreateCommerceInventoryResponse> operation
-              = new CreateCommerceInventory.Async(sdkConfiguration);
+              = new CreateCommerceInventory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -91,7 +93,7 @@ public class AsyncInventory {
      */
     public CompletableFuture<GetCommerceInventoryResponse> getCommerceInventory(GetCommerceInventoryRequest request) {
         AsyncRequestOperation<GetCommerceInventoryRequest, GetCommerceInventoryResponse> operation
-              = new GetCommerceInventory.Async(sdkConfiguration);
+              = new GetCommerceInventory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -114,7 +116,7 @@ public class AsyncInventory {
      */
     public CompletableFuture<ListCommerceInventoriesResponse> listCommerceInventories(ListCommerceInventoriesRequest request) {
         AsyncRequestOperation<ListCommerceInventoriesRequest, ListCommerceInventoriesResponse> operation
-              = new ListCommerceInventories.Async(sdkConfiguration);
+              = new ListCommerceInventories.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -137,7 +139,7 @@ public class AsyncInventory {
      */
     public CompletableFuture<PatchCommerceInventoryResponse> patchCommerceInventory(PatchCommerceInventoryRequest request) {
         AsyncRequestOperation<PatchCommerceInventoryRequest, PatchCommerceInventoryResponse> operation
-              = new PatchCommerceInventory.Async(sdkConfiguration);
+              = new PatchCommerceInventory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -160,7 +162,7 @@ public class AsyncInventory {
      */
     public CompletableFuture<RemoveCommerceInventoryResponse> removeCommerceInventory(RemoveCommerceInventoryRequest request) {
         AsyncRequestOperation<RemoveCommerceInventoryRequest, RemoveCommerceInventoryResponse> operation
-              = new RemoveCommerceInventory.Async(sdkConfiguration);
+              = new RemoveCommerceInventory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -183,7 +185,7 @@ public class AsyncInventory {
      */
     public CompletableFuture<UpdateCommerceInventoryResponse> updateCommerceInventory(UpdateCommerceInventoryRequest request) {
         AsyncRequestOperation<UpdateCommerceInventoryRequest, UpdateCommerceInventoryResponse> operation
-              = new UpdateCommerceInventory.Async(sdkConfiguration);
+              = new UpdateCommerceInventory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

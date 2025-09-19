@@ -78,9 +78,11 @@ import to.unified.unified_java_sdk.operations.RemoveKmsSpace;
 import to.unified.unified_java_sdk.operations.UpdateKmsComment;
 import to.unified.unified_java_sdk.operations.UpdateKmsPage;
 import to.unified.unified_java_sdk.operations.UpdateKmsSpace;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Kms {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncKms asyncSDK;
 
@@ -116,7 +118,7 @@ public class Kms {
      */
     public CreateKmsCommentResponse createKmsComment(CreateKmsCommentRequest request) throws Exception {
         RequestOperation<CreateKmsCommentRequest, CreateKmsCommentResponse> operation
-              = new CreateKmsComment.Sync(sdkConfiguration);
+              = new CreateKmsComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -138,7 +140,7 @@ public class Kms {
      */
     public CreateKmsPageResponse createKmsPage(CreateKmsPageRequest request) throws Exception {
         RequestOperation<CreateKmsPageRequest, CreateKmsPageResponse> operation
-              = new CreateKmsPage.Sync(sdkConfiguration);
+              = new CreateKmsPage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -160,7 +162,7 @@ public class Kms {
      */
     public CreateKmsSpaceResponse createKmsSpace(CreateKmsSpaceRequest request) throws Exception {
         RequestOperation<CreateKmsSpaceRequest, CreateKmsSpaceResponse> operation
-              = new CreateKmsSpace.Sync(sdkConfiguration);
+              = new CreateKmsSpace.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -182,7 +184,7 @@ public class Kms {
      */
     public GetKmsCommentResponse getKmsComment(GetKmsCommentRequest request) throws Exception {
         RequestOperation<GetKmsCommentRequest, GetKmsCommentResponse> operation
-              = new GetKmsComment.Sync(sdkConfiguration);
+              = new GetKmsComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -204,7 +206,7 @@ public class Kms {
      */
     public GetKmsPageResponse getKmsPage(GetKmsPageRequest request) throws Exception {
         RequestOperation<GetKmsPageRequest, GetKmsPageResponse> operation
-              = new GetKmsPage.Sync(sdkConfiguration);
+              = new GetKmsPage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -226,7 +228,7 @@ public class Kms {
      */
     public GetKmsSpaceResponse getKmsSpace(GetKmsSpaceRequest request) throws Exception {
         RequestOperation<GetKmsSpaceRequest, GetKmsSpaceResponse> operation
-              = new GetKmsSpace.Sync(sdkConfiguration);
+              = new GetKmsSpace.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -248,7 +250,7 @@ public class Kms {
      */
     public ListKmsCommentsResponse listKmsComments(ListKmsCommentsRequest request) throws Exception {
         RequestOperation<ListKmsCommentsRequest, ListKmsCommentsResponse> operation
-              = new ListKmsComments.Sync(sdkConfiguration);
+              = new ListKmsComments.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -270,7 +272,7 @@ public class Kms {
      */
     public ListKmsPagesResponse listKmsPages(ListKmsPagesRequest request) throws Exception {
         RequestOperation<ListKmsPagesRequest, ListKmsPagesResponse> operation
-              = new ListKmsPages.Sync(sdkConfiguration);
+              = new ListKmsPages.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -292,7 +294,7 @@ public class Kms {
      */
     public ListKmsSpacesResponse listKmsSpaces(ListKmsSpacesRequest request) throws Exception {
         RequestOperation<ListKmsSpacesRequest, ListKmsSpacesResponse> operation
-              = new ListKmsSpaces.Sync(sdkConfiguration);
+              = new ListKmsSpaces.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -314,7 +316,7 @@ public class Kms {
      */
     public PatchKmsCommentResponse patchKmsComment(PatchKmsCommentRequest request) throws Exception {
         RequestOperation<PatchKmsCommentRequest, PatchKmsCommentResponse> operation
-              = new PatchKmsComment.Sync(sdkConfiguration);
+              = new PatchKmsComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -336,7 +338,7 @@ public class Kms {
      */
     public PatchKmsPageResponse patchKmsPage(PatchKmsPageRequest request) throws Exception {
         RequestOperation<PatchKmsPageRequest, PatchKmsPageResponse> operation
-              = new PatchKmsPage.Sync(sdkConfiguration);
+              = new PatchKmsPage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -358,7 +360,7 @@ public class Kms {
      */
     public PatchKmsSpaceResponse patchKmsSpace(PatchKmsSpaceRequest request) throws Exception {
         RequestOperation<PatchKmsSpaceRequest, PatchKmsSpaceResponse> operation
-              = new PatchKmsSpace.Sync(sdkConfiguration);
+              = new PatchKmsSpace.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -380,7 +382,7 @@ public class Kms {
      */
     public RemoveKmsCommentResponse removeKmsComment(RemoveKmsCommentRequest request) throws Exception {
         RequestOperation<RemoveKmsCommentRequest, RemoveKmsCommentResponse> operation
-              = new RemoveKmsComment.Sync(sdkConfiguration);
+              = new RemoveKmsComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -402,7 +404,7 @@ public class Kms {
      */
     public RemoveKmsPageResponse removeKmsPage(RemoveKmsPageRequest request) throws Exception {
         RequestOperation<RemoveKmsPageRequest, RemoveKmsPageResponse> operation
-              = new RemoveKmsPage.Sync(sdkConfiguration);
+              = new RemoveKmsPage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -424,7 +426,7 @@ public class Kms {
      */
     public RemoveKmsSpaceResponse removeKmsSpace(RemoveKmsSpaceRequest request) throws Exception {
         RequestOperation<RemoveKmsSpaceRequest, RemoveKmsSpaceResponse> operation
-              = new RemoveKmsSpace.Sync(sdkConfiguration);
+              = new RemoveKmsSpace.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -446,7 +448,7 @@ public class Kms {
      */
     public UpdateKmsCommentResponse updateKmsComment(UpdateKmsCommentRequest request) throws Exception {
         RequestOperation<UpdateKmsCommentRequest, UpdateKmsCommentResponse> operation
-              = new UpdateKmsComment.Sync(sdkConfiguration);
+              = new UpdateKmsComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -468,7 +470,7 @@ public class Kms {
      */
     public UpdateKmsPageResponse updateKmsPage(UpdateKmsPageRequest request) throws Exception {
         RequestOperation<UpdateKmsPageRequest, UpdateKmsPageResponse> operation
-              = new UpdateKmsPage.Sync(sdkConfiguration);
+              = new UpdateKmsPage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -490,7 +492,7 @@ public class Kms {
      */
     public UpdateKmsSpaceResponse updateKmsSpace(UpdateKmsSpaceRequest request) throws Exception {
         RequestOperation<UpdateKmsSpaceRequest, UpdateKmsSpaceResponse> operation
-              = new UpdateKmsSpace.Sync(sdkConfiguration);
+              = new UpdateKmsSpace.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListRepoBranches;
 import to.unified.unified_java_sdk.operations.PatchRepoBranch;
 import to.unified.unified_java_sdk.operations.RemoveRepoBranch;
 import to.unified.unified_java_sdk.operations.UpdateRepoBranch;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncBranch {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Branch syncSDK;
 
@@ -68,7 +70,7 @@ public class AsyncBranch {
      */
     public CompletableFuture<CreateRepoBranchResponse> createRepoBranch(CreateRepoBranchRequest request) {
         AsyncRequestOperation<CreateRepoBranchRequest, CreateRepoBranchResponse> operation
-              = new CreateRepoBranch.Async(sdkConfiguration);
+              = new CreateRepoBranch.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -91,7 +93,7 @@ public class AsyncBranch {
      */
     public CompletableFuture<GetRepoBranchResponse> getRepoBranch(GetRepoBranchRequest request) {
         AsyncRequestOperation<GetRepoBranchRequest, GetRepoBranchResponse> operation
-              = new GetRepoBranch.Async(sdkConfiguration);
+              = new GetRepoBranch.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -114,7 +116,7 @@ public class AsyncBranch {
      */
     public CompletableFuture<ListRepoBranchesResponse> listRepoBranches(ListRepoBranchesRequest request) {
         AsyncRequestOperation<ListRepoBranchesRequest, ListRepoBranchesResponse> operation
-              = new ListRepoBranches.Async(sdkConfiguration);
+              = new ListRepoBranches.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -137,7 +139,7 @@ public class AsyncBranch {
      */
     public CompletableFuture<PatchRepoBranchResponse> patchRepoBranch(PatchRepoBranchRequest request) {
         AsyncRequestOperation<PatchRepoBranchRequest, PatchRepoBranchResponse> operation
-              = new PatchRepoBranch.Async(sdkConfiguration);
+              = new PatchRepoBranch.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -160,7 +162,7 @@ public class AsyncBranch {
      */
     public CompletableFuture<RemoveRepoBranchResponse> removeRepoBranch(RemoveRepoBranchRequest request) {
         AsyncRequestOperation<RemoveRepoBranchRequest, RemoveRepoBranchResponse> operation
-              = new RemoveRepoBranch.Async(sdkConfiguration);
+              = new RemoveRepoBranch.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -183,7 +185,7 @@ public class AsyncBranch {
      */
     public CompletableFuture<UpdateRepoBranchResponse> updateRepoBranch(UpdateRepoBranchRequest request) {
         AsyncRequestOperation<UpdateRepoBranchRequest, UpdateRepoBranchResponse> operation
-              = new UpdateRepoBranch.Async(sdkConfiguration);
+              = new UpdateRepoBranch.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

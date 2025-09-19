@@ -14,9 +14,11 @@ import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleRequestBuil
 import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleResponse;
 import to.unified.unified_java_sdk.operations.ListEnrichCompanies;
 import to.unified.unified_java_sdk.operations.ListEnrichPeople;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Enrich {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncEnrich asyncSDK;
 
@@ -52,7 +54,7 @@ public class Enrich {
      */
     public ListEnrichCompaniesResponse listEnrichCompanies(ListEnrichCompaniesRequest request) throws Exception {
         RequestOperation<ListEnrichCompaniesRequest, ListEnrichCompaniesResponse> operation
-              = new ListEnrichCompanies.Sync(sdkConfiguration);
+              = new ListEnrichCompanies.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -74,7 +76,7 @@ public class Enrich {
      */
     public ListEnrichPeopleResponse listEnrichPeople(ListEnrichPeopleRequest request) throws Exception {
         RequestOperation<ListEnrichPeopleRequest, ListEnrichPeopleResponse> operation
-              = new ListEnrichPeople.Sync(sdkConfiguration);
+              = new ListEnrichPeople.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

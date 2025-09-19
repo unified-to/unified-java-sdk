@@ -14,9 +14,11 @@ import to.unified.unified_java_sdk.models.operations.async.ListTaskChangesReques
 import to.unified.unified_java_sdk.models.operations.async.ListTaskChangesResponse;
 import to.unified.unified_java_sdk.operations.GetTaskChange;
 import to.unified.unified_java_sdk.operations.ListTaskChanges;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncChange {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Change syncSDK;
 
@@ -52,7 +54,7 @@ public class AsyncChange {
      */
     public CompletableFuture<GetTaskChangeResponse> getTaskChange(GetTaskChangeRequest request) {
         AsyncRequestOperation<GetTaskChangeRequest, GetTaskChangeResponse> operation
-              = new GetTaskChange.Async(sdkConfiguration);
+              = new GetTaskChange.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -75,7 +77,7 @@ public class AsyncChange {
      */
     public CompletableFuture<ListTaskChangesResponse> listTaskChanges(ListTaskChangesRequest request) {
         AsyncRequestOperation<ListTaskChangesRequest, ListTaskChangesResponse> operation
-              = new ListTaskChanges.Async(sdkConfiguration);
+              = new ListTaskChanges.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

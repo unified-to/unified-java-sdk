@@ -202,9 +202,11 @@ import to.unified.unified_java_sdk.operations.UpdateAtsDocument;
 import to.unified.unified_java_sdk.operations.UpdateAtsInterview;
 import to.unified.unified_java_sdk.operations.UpdateAtsJob;
 import to.unified.unified_java_sdk.operations.UpdateAtsScorecard;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Ats {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncAts asyncSDK;
 
@@ -240,7 +242,7 @@ public class Ats {
      */
     public CreateAtsActivityResponse createAtsActivity(CreateAtsActivityRequest request) throws Exception {
         RequestOperation<CreateAtsActivityRequest, CreateAtsActivityResponse> operation
-              = new CreateAtsActivity.Sync(sdkConfiguration);
+              = new CreateAtsActivity.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -262,7 +264,7 @@ public class Ats {
      */
     public CreateAtsApplicationResponse createAtsApplication(CreateAtsApplicationRequest request) throws Exception {
         RequestOperation<CreateAtsApplicationRequest, CreateAtsApplicationResponse> operation
-              = new CreateAtsApplication.Sync(sdkConfiguration);
+              = new CreateAtsApplication.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -284,7 +286,7 @@ public class Ats {
      */
     public CreateAtsCandidateResponse createAtsCandidate(CreateAtsCandidateRequest request) throws Exception {
         RequestOperation<CreateAtsCandidateRequest, CreateAtsCandidateResponse> operation
-              = new CreateAtsCandidate.Sync(sdkConfiguration);
+              = new CreateAtsCandidate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -306,7 +308,7 @@ public class Ats {
      */
     public CreateAtsCompanyResponse createAtsCompany(CreateAtsCompanyRequest request) throws Exception {
         RequestOperation<CreateAtsCompanyRequest, CreateAtsCompanyResponse> operation
-              = new CreateAtsCompany.Sync(sdkConfiguration);
+              = new CreateAtsCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -328,7 +330,7 @@ public class Ats {
      */
     public CreateAtsDocumentResponse createAtsDocument(CreateAtsDocumentRequest request) throws Exception {
         RequestOperation<CreateAtsDocumentRequest, CreateAtsDocumentResponse> operation
-              = new CreateAtsDocument.Sync(sdkConfiguration);
+              = new CreateAtsDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -350,7 +352,7 @@ public class Ats {
      */
     public CreateAtsInterviewResponse createAtsInterview(CreateAtsInterviewRequest request) throws Exception {
         RequestOperation<CreateAtsInterviewRequest, CreateAtsInterviewResponse> operation
-              = new CreateAtsInterview.Sync(sdkConfiguration);
+              = new CreateAtsInterview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -372,7 +374,7 @@ public class Ats {
      */
     public CreateAtsJobResponse createAtsJob(CreateAtsJobRequest request) throws Exception {
         RequestOperation<CreateAtsJobRequest, CreateAtsJobResponse> operation
-              = new CreateAtsJob.Sync(sdkConfiguration);
+              = new CreateAtsJob.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -394,7 +396,7 @@ public class Ats {
      */
     public CreateAtsScorecardResponse createAtsScorecard(CreateAtsScorecardRequest request) throws Exception {
         RequestOperation<CreateAtsScorecardRequest, CreateAtsScorecardResponse> operation
-              = new CreateAtsScorecard.Sync(sdkConfiguration);
+              = new CreateAtsScorecard.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -416,7 +418,7 @@ public class Ats {
      */
     public GetAtsActivityResponse getAtsActivity(GetAtsActivityRequest request) throws Exception {
         RequestOperation<GetAtsActivityRequest, GetAtsActivityResponse> operation
-              = new GetAtsActivity.Sync(sdkConfiguration);
+              = new GetAtsActivity.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -438,7 +440,7 @@ public class Ats {
      */
     public GetAtsApplicationResponse getAtsApplication(GetAtsApplicationRequest request) throws Exception {
         RequestOperation<GetAtsApplicationRequest, GetAtsApplicationResponse> operation
-              = new GetAtsApplication.Sync(sdkConfiguration);
+              = new GetAtsApplication.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -460,7 +462,7 @@ public class Ats {
      */
     public GetAtsCandidateResponse getAtsCandidate(GetAtsCandidateRequest request) throws Exception {
         RequestOperation<GetAtsCandidateRequest, GetAtsCandidateResponse> operation
-              = new GetAtsCandidate.Sync(sdkConfiguration);
+              = new GetAtsCandidate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -482,7 +484,7 @@ public class Ats {
      */
     public GetAtsCompanyResponse getAtsCompany(GetAtsCompanyRequest request) throws Exception {
         RequestOperation<GetAtsCompanyRequest, GetAtsCompanyResponse> operation
-              = new GetAtsCompany.Sync(sdkConfiguration);
+              = new GetAtsCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -504,7 +506,7 @@ public class Ats {
      */
     public GetAtsDocumentResponse getAtsDocument(GetAtsDocumentRequest request) throws Exception {
         RequestOperation<GetAtsDocumentRequest, GetAtsDocumentResponse> operation
-              = new GetAtsDocument.Sync(sdkConfiguration);
+              = new GetAtsDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -526,7 +528,7 @@ public class Ats {
      */
     public GetAtsInterviewResponse getAtsInterview(GetAtsInterviewRequest request) throws Exception {
         RequestOperation<GetAtsInterviewRequest, GetAtsInterviewResponse> operation
-              = new GetAtsInterview.Sync(sdkConfiguration);
+              = new GetAtsInterview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -548,7 +550,7 @@ public class Ats {
      */
     public GetAtsJobResponse getAtsJob(GetAtsJobRequest request) throws Exception {
         RequestOperation<GetAtsJobRequest, GetAtsJobResponse> operation
-              = new GetAtsJob.Sync(sdkConfiguration);
+              = new GetAtsJob.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -570,7 +572,7 @@ public class Ats {
      */
     public GetAtsScorecardResponse getAtsScorecard(GetAtsScorecardRequest request) throws Exception {
         RequestOperation<GetAtsScorecardRequest, GetAtsScorecardResponse> operation
-              = new GetAtsScorecard.Sync(sdkConfiguration);
+              = new GetAtsScorecard.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -592,7 +594,7 @@ public class Ats {
      */
     public ListAtsActivitiesResponse listAtsActivities(ListAtsActivitiesRequest request) throws Exception {
         RequestOperation<ListAtsActivitiesRequest, ListAtsActivitiesResponse> operation
-              = new ListAtsActivities.Sync(sdkConfiguration);
+              = new ListAtsActivities.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -614,7 +616,7 @@ public class Ats {
      */
     public ListAtsApplicationsResponse listAtsApplications(ListAtsApplicationsRequest request) throws Exception {
         RequestOperation<ListAtsApplicationsRequest, ListAtsApplicationsResponse> operation
-              = new ListAtsApplications.Sync(sdkConfiguration);
+              = new ListAtsApplications.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -636,7 +638,7 @@ public class Ats {
      */
     public ListAtsApplicationstatusesResponse listAtsApplicationstatuses(ListAtsApplicationstatusesRequest request) throws Exception {
         RequestOperation<ListAtsApplicationstatusesRequest, ListAtsApplicationstatusesResponse> operation
-              = new ListAtsApplicationstatuses.Sync(sdkConfiguration);
+              = new ListAtsApplicationstatuses.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -658,7 +660,7 @@ public class Ats {
      */
     public ListAtsCandidatesResponse listAtsCandidates(ListAtsCandidatesRequest request) throws Exception {
         RequestOperation<ListAtsCandidatesRequest, ListAtsCandidatesResponse> operation
-              = new ListAtsCandidates.Sync(sdkConfiguration);
+              = new ListAtsCandidates.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -680,7 +682,7 @@ public class Ats {
      */
     public ListAtsCompaniesResponse listAtsCompanies(ListAtsCompaniesRequest request) throws Exception {
         RequestOperation<ListAtsCompaniesRequest, ListAtsCompaniesResponse> operation
-              = new ListAtsCompanies.Sync(sdkConfiguration);
+              = new ListAtsCompanies.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -702,7 +704,7 @@ public class Ats {
      */
     public ListAtsDocumentsResponse listAtsDocuments(ListAtsDocumentsRequest request) throws Exception {
         RequestOperation<ListAtsDocumentsRequest, ListAtsDocumentsResponse> operation
-              = new ListAtsDocuments.Sync(sdkConfiguration);
+              = new ListAtsDocuments.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -724,7 +726,7 @@ public class Ats {
      */
     public ListAtsInterviewsResponse listAtsInterviews(ListAtsInterviewsRequest request) throws Exception {
         RequestOperation<ListAtsInterviewsRequest, ListAtsInterviewsResponse> operation
-              = new ListAtsInterviews.Sync(sdkConfiguration);
+              = new ListAtsInterviews.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -746,7 +748,7 @@ public class Ats {
      */
     public ListAtsJobsResponse listAtsJobs(ListAtsJobsRequest request) throws Exception {
         RequestOperation<ListAtsJobsRequest, ListAtsJobsResponse> operation
-              = new ListAtsJobs.Sync(sdkConfiguration);
+              = new ListAtsJobs.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -768,7 +770,7 @@ public class Ats {
      */
     public ListAtsScorecardsResponse listAtsScorecards(ListAtsScorecardsRequest request) throws Exception {
         RequestOperation<ListAtsScorecardsRequest, ListAtsScorecardsResponse> operation
-              = new ListAtsScorecards.Sync(sdkConfiguration);
+              = new ListAtsScorecards.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -790,7 +792,7 @@ public class Ats {
      */
     public PatchAtsActivityResponse patchAtsActivity(PatchAtsActivityRequest request) throws Exception {
         RequestOperation<PatchAtsActivityRequest, PatchAtsActivityResponse> operation
-              = new PatchAtsActivity.Sync(sdkConfiguration);
+              = new PatchAtsActivity.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -812,7 +814,7 @@ public class Ats {
      */
     public PatchAtsApplicationResponse patchAtsApplication(PatchAtsApplicationRequest request) throws Exception {
         RequestOperation<PatchAtsApplicationRequest, PatchAtsApplicationResponse> operation
-              = new PatchAtsApplication.Sync(sdkConfiguration);
+              = new PatchAtsApplication.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -834,7 +836,7 @@ public class Ats {
      */
     public PatchAtsCandidateResponse patchAtsCandidate(PatchAtsCandidateRequest request) throws Exception {
         RequestOperation<PatchAtsCandidateRequest, PatchAtsCandidateResponse> operation
-              = new PatchAtsCandidate.Sync(sdkConfiguration);
+              = new PatchAtsCandidate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -856,7 +858,7 @@ public class Ats {
      */
     public PatchAtsCompanyResponse patchAtsCompany(PatchAtsCompanyRequest request) throws Exception {
         RequestOperation<PatchAtsCompanyRequest, PatchAtsCompanyResponse> operation
-              = new PatchAtsCompany.Sync(sdkConfiguration);
+              = new PatchAtsCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -878,7 +880,7 @@ public class Ats {
      */
     public PatchAtsDocumentResponse patchAtsDocument(PatchAtsDocumentRequest request) throws Exception {
         RequestOperation<PatchAtsDocumentRequest, PatchAtsDocumentResponse> operation
-              = new PatchAtsDocument.Sync(sdkConfiguration);
+              = new PatchAtsDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -900,7 +902,7 @@ public class Ats {
      */
     public PatchAtsInterviewResponse patchAtsInterview(PatchAtsInterviewRequest request) throws Exception {
         RequestOperation<PatchAtsInterviewRequest, PatchAtsInterviewResponse> operation
-              = new PatchAtsInterview.Sync(sdkConfiguration);
+              = new PatchAtsInterview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -922,7 +924,7 @@ public class Ats {
      */
     public PatchAtsJobResponse patchAtsJob(PatchAtsJobRequest request) throws Exception {
         RequestOperation<PatchAtsJobRequest, PatchAtsJobResponse> operation
-              = new PatchAtsJob.Sync(sdkConfiguration);
+              = new PatchAtsJob.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -944,7 +946,7 @@ public class Ats {
      */
     public PatchAtsScorecardResponse patchAtsScorecard(PatchAtsScorecardRequest request) throws Exception {
         RequestOperation<PatchAtsScorecardRequest, PatchAtsScorecardResponse> operation
-              = new PatchAtsScorecard.Sync(sdkConfiguration);
+              = new PatchAtsScorecard.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -966,7 +968,7 @@ public class Ats {
      */
     public RemoveAtsActivityResponse removeAtsActivity(RemoveAtsActivityRequest request) throws Exception {
         RequestOperation<RemoveAtsActivityRequest, RemoveAtsActivityResponse> operation
-              = new RemoveAtsActivity.Sync(sdkConfiguration);
+              = new RemoveAtsActivity.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -988,7 +990,7 @@ public class Ats {
      */
     public RemoveAtsApplicationResponse removeAtsApplication(RemoveAtsApplicationRequest request) throws Exception {
         RequestOperation<RemoveAtsApplicationRequest, RemoveAtsApplicationResponse> operation
-              = new RemoveAtsApplication.Sync(sdkConfiguration);
+              = new RemoveAtsApplication.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1010,7 +1012,7 @@ public class Ats {
      */
     public RemoveAtsCandidateResponse removeAtsCandidate(RemoveAtsCandidateRequest request) throws Exception {
         RequestOperation<RemoveAtsCandidateRequest, RemoveAtsCandidateResponse> operation
-              = new RemoveAtsCandidate.Sync(sdkConfiguration);
+              = new RemoveAtsCandidate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1032,7 +1034,7 @@ public class Ats {
      */
     public RemoveAtsCompanyResponse removeAtsCompany(RemoveAtsCompanyRequest request) throws Exception {
         RequestOperation<RemoveAtsCompanyRequest, RemoveAtsCompanyResponse> operation
-              = new RemoveAtsCompany.Sync(sdkConfiguration);
+              = new RemoveAtsCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1054,7 +1056,7 @@ public class Ats {
      */
     public RemoveAtsDocumentResponse removeAtsDocument(RemoveAtsDocumentRequest request) throws Exception {
         RequestOperation<RemoveAtsDocumentRequest, RemoveAtsDocumentResponse> operation
-              = new RemoveAtsDocument.Sync(sdkConfiguration);
+              = new RemoveAtsDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1076,7 +1078,7 @@ public class Ats {
      */
     public RemoveAtsInterviewResponse removeAtsInterview(RemoveAtsInterviewRequest request) throws Exception {
         RequestOperation<RemoveAtsInterviewRequest, RemoveAtsInterviewResponse> operation
-              = new RemoveAtsInterview.Sync(sdkConfiguration);
+              = new RemoveAtsInterview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1098,7 +1100,7 @@ public class Ats {
      */
     public RemoveAtsJobResponse removeAtsJob(RemoveAtsJobRequest request) throws Exception {
         RequestOperation<RemoveAtsJobRequest, RemoveAtsJobResponse> operation
-              = new RemoveAtsJob.Sync(sdkConfiguration);
+              = new RemoveAtsJob.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1120,7 +1122,7 @@ public class Ats {
      */
     public RemoveAtsScorecardResponse removeAtsScorecard(RemoveAtsScorecardRequest request) throws Exception {
         RequestOperation<RemoveAtsScorecardRequest, RemoveAtsScorecardResponse> operation
-              = new RemoveAtsScorecard.Sync(sdkConfiguration);
+              = new RemoveAtsScorecard.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1142,7 +1144,7 @@ public class Ats {
      */
     public UpdateAtsActivityResponse updateAtsActivity(UpdateAtsActivityRequest request) throws Exception {
         RequestOperation<UpdateAtsActivityRequest, UpdateAtsActivityResponse> operation
-              = new UpdateAtsActivity.Sync(sdkConfiguration);
+              = new UpdateAtsActivity.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1164,7 +1166,7 @@ public class Ats {
      */
     public UpdateAtsApplicationResponse updateAtsApplication(UpdateAtsApplicationRequest request) throws Exception {
         RequestOperation<UpdateAtsApplicationRequest, UpdateAtsApplicationResponse> operation
-              = new UpdateAtsApplication.Sync(sdkConfiguration);
+              = new UpdateAtsApplication.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1186,7 +1188,7 @@ public class Ats {
      */
     public UpdateAtsCandidateResponse updateAtsCandidate(UpdateAtsCandidateRequest request) throws Exception {
         RequestOperation<UpdateAtsCandidateRequest, UpdateAtsCandidateResponse> operation
-              = new UpdateAtsCandidate.Sync(sdkConfiguration);
+              = new UpdateAtsCandidate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1208,7 +1210,7 @@ public class Ats {
      */
     public UpdateAtsCompanyResponse updateAtsCompany(UpdateAtsCompanyRequest request) throws Exception {
         RequestOperation<UpdateAtsCompanyRequest, UpdateAtsCompanyResponse> operation
-              = new UpdateAtsCompany.Sync(sdkConfiguration);
+              = new UpdateAtsCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1230,7 +1232,7 @@ public class Ats {
      */
     public UpdateAtsDocumentResponse updateAtsDocument(UpdateAtsDocumentRequest request) throws Exception {
         RequestOperation<UpdateAtsDocumentRequest, UpdateAtsDocumentResponse> operation
-              = new UpdateAtsDocument.Sync(sdkConfiguration);
+              = new UpdateAtsDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1252,7 +1254,7 @@ public class Ats {
      */
     public UpdateAtsInterviewResponse updateAtsInterview(UpdateAtsInterviewRequest request) throws Exception {
         RequestOperation<UpdateAtsInterviewRequest, UpdateAtsInterviewResponse> operation
-              = new UpdateAtsInterview.Sync(sdkConfiguration);
+              = new UpdateAtsInterview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1274,7 +1276,7 @@ public class Ats {
      */
     public UpdateAtsJobResponse updateAtsJob(UpdateAtsJobRequest request) throws Exception {
         RequestOperation<UpdateAtsJobRequest, UpdateAtsJobResponse> operation
-              = new UpdateAtsJob.Sync(sdkConfiguration);
+              = new UpdateAtsJob.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1296,7 +1298,7 @@ public class Ats {
      */
     public UpdateAtsScorecardResponse updateAtsScorecard(UpdateAtsScorecardRequest request) throws Exception {
         RequestOperation<UpdateAtsScorecardRequest, UpdateAtsScorecardResponse> operation
-              = new UpdateAtsScorecard.Sync(sdkConfiguration);
+              = new UpdateAtsScorecard.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

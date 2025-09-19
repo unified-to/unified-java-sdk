@@ -10,12 +10,14 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchMessagingMessageRequest;
 import to.unified.unified_java_sdk.operations.PatchMessagingMessage;
+import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchMessagingMessageRequestBuilder {
 
     private PatchMessagingMessageRequest request;
     private final SDKConfiguration sdkConfiguration;
+    private final Headers _headers = new Headers(); 
 
     public PatchMessagingMessageRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
@@ -30,7 +32,7 @@ public class PatchMessagingMessageRequestBuilder {
     public CompletableFuture<PatchMessagingMessageResponse> call() throws Exception {
         
         AsyncRequestOperation<PatchMessagingMessageRequest, PatchMessagingMessageResponse> operation
-              = new PatchMessagingMessage.Async(sdkConfiguration);
+              = new PatchMessagingMessage.Async(sdkConfiguration, _headers);
 
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);

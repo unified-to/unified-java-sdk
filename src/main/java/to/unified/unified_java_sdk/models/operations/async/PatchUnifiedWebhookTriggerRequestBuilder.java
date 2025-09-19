@@ -10,12 +10,14 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchUnifiedWebhookTriggerRequest;
 import to.unified.unified_java_sdk.operations.PatchUnifiedWebhookTrigger;
+import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchUnifiedWebhookTriggerRequestBuilder {
 
     private PatchUnifiedWebhookTriggerRequest request;
     private final SDKConfiguration sdkConfiguration;
+    private final Headers _headers = new Headers(); 
 
     public PatchUnifiedWebhookTriggerRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
@@ -30,7 +32,7 @@ public class PatchUnifiedWebhookTriggerRequestBuilder {
     public CompletableFuture<PatchUnifiedWebhookTriggerResponse> call() throws Exception {
         
         AsyncRequestOperation<PatchUnifiedWebhookTriggerRequest, PatchUnifiedWebhookTriggerResponse> operation
-              = new PatchUnifiedWebhookTrigger.Async(sdkConfiguration);
+              = new PatchUnifiedWebhookTrigger.Async(sdkConfiguration, _headers);
 
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);

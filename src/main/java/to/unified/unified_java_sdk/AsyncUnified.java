@@ -86,9 +86,11 @@ import to.unified.unified_java_sdk.operations.RemoveUnifiedWebhook;
 import to.unified.unified_java_sdk.operations.UpdateUnifiedConnection;
 import to.unified.unified_java_sdk.operations.UpdateUnifiedWebhook;
 import to.unified.unified_java_sdk.operations.UpdateUnifiedWebhookTrigger;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncUnified {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Unified syncSDK;
 
@@ -128,7 +130,7 @@ public class AsyncUnified {
      */
     public CompletableFuture<CreateUnifiedConnectionResponse> createUnifiedConnection(Connection request) {
         AsyncRequestOperation<Connection, CreateUnifiedConnectionResponse> operation
-              = new CreateUnifiedConnection.Async(sdkConfiguration);
+              = new CreateUnifiedConnection.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -155,7 +157,7 @@ public class AsyncUnified {
      */
     public CompletableFuture<CreateUnifiedWebhookResponse> createUnifiedWebhook(CreateUnifiedWebhookRequest request) {
         AsyncRequestOperation<CreateUnifiedWebhookRequest, CreateUnifiedWebhookResponse> operation
-              = new CreateUnifiedWebhook.Async(sdkConfiguration);
+              = new CreateUnifiedWebhook.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -178,7 +180,7 @@ public class AsyncUnified {
      */
     public CompletableFuture<GetUnifiedApicallResponse> getUnifiedApicall(GetUnifiedApicallRequest request) {
         AsyncRequestOperation<GetUnifiedApicallRequest, GetUnifiedApicallResponse> operation
-              = new GetUnifiedApicall.Async(sdkConfiguration);
+              = new GetUnifiedApicall.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -201,7 +203,7 @@ public class AsyncUnified {
      */
     public CompletableFuture<GetUnifiedConnectionResponse> getUnifiedConnection(GetUnifiedConnectionRequest request) {
         AsyncRequestOperation<GetUnifiedConnectionRequest, GetUnifiedConnectionResponse> operation
-              = new GetUnifiedConnection.Async(sdkConfiguration);
+              = new GetUnifiedConnection.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -228,7 +230,7 @@ public class AsyncUnified {
      */
     public CompletableFuture<GetUnifiedIntegrationAuthResponse> getUnifiedIntegrationAuth(GetUnifiedIntegrationAuthRequest request) {
         AsyncRequestOperation<GetUnifiedIntegrationAuthRequest, GetUnifiedIntegrationAuthResponse> operation
-              = new GetUnifiedIntegrationAuth.Async(sdkConfiguration);
+              = new GetUnifiedIntegrationAuth.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -251,7 +253,7 @@ public class AsyncUnified {
      */
     public CompletableFuture<GetUnifiedWebhookResponse> getUnifiedWebhook(GetUnifiedWebhookRequest request) {
         AsyncRequestOperation<GetUnifiedWebhookRequest, GetUnifiedWebhookResponse> operation
-              = new GetUnifiedWebhook.Async(sdkConfiguration);
+              = new GetUnifiedWebhook.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -274,7 +276,7 @@ public class AsyncUnified {
      */
     public CompletableFuture<ListUnifiedApicallsResponse> listUnifiedApicalls(ListUnifiedApicallsRequest request) {
         AsyncRequestOperation<ListUnifiedApicallsRequest, ListUnifiedApicallsResponse> operation
-              = new ListUnifiedApicalls.Async(sdkConfiguration);
+              = new ListUnifiedApicalls.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -297,7 +299,7 @@ public class AsyncUnified {
      */
     public CompletableFuture<ListUnifiedConnectionsResponse> listUnifiedConnections(ListUnifiedConnectionsRequest request) {
         AsyncRequestOperation<ListUnifiedConnectionsRequest, ListUnifiedConnectionsResponse> operation
-              = new ListUnifiedConnections.Async(sdkConfiguration);
+              = new ListUnifiedConnections.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -324,7 +326,7 @@ public class AsyncUnified {
      */
     public CompletableFuture<ListUnifiedIntegrationWorkspacesResponse> listUnifiedIntegrationWorkspaces(ListUnifiedIntegrationWorkspacesRequest request) {
         AsyncRequestOperation<ListUnifiedIntegrationWorkspacesRequest, ListUnifiedIntegrationWorkspacesResponse> operation
-              = new ListUnifiedIntegrationWorkspaces.Async(sdkConfiguration);
+              = new ListUnifiedIntegrationWorkspaces.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -347,7 +349,7 @@ public class AsyncUnified {
      */
     public CompletableFuture<ListUnifiedIntegrationsResponse> listUnifiedIntegrations(ListUnifiedIntegrationsRequest request) {
         AsyncRequestOperation<ListUnifiedIntegrationsRequest, ListUnifiedIntegrationsResponse> operation
-              = new ListUnifiedIntegrations.Async(sdkConfiguration);
+              = new ListUnifiedIntegrations.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -370,7 +372,7 @@ public class AsyncUnified {
      */
     public CompletableFuture<ListUnifiedIssuesResponse> listUnifiedIssues(ListUnifiedIssuesRequest request) {
         AsyncRequestOperation<ListUnifiedIssuesRequest, ListUnifiedIssuesResponse> operation
-              = new ListUnifiedIssues.Async(sdkConfiguration);
+              = new ListUnifiedIssues.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -393,7 +395,7 @@ public class AsyncUnified {
      */
     public CompletableFuture<ListUnifiedWebhooksResponse> listUnifiedWebhooks(ListUnifiedWebhooksRequest request) {
         AsyncRequestOperation<ListUnifiedWebhooksRequest, ListUnifiedWebhooksResponse> operation
-              = new ListUnifiedWebhooks.Async(sdkConfiguration);
+              = new ListUnifiedWebhooks.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -416,7 +418,7 @@ public class AsyncUnified {
      */
     public CompletableFuture<PatchUnifiedConnectionResponse> patchUnifiedConnection(PatchUnifiedConnectionRequest request) {
         AsyncRequestOperation<PatchUnifiedConnectionRequest, PatchUnifiedConnectionResponse> operation
-              = new PatchUnifiedConnection.Async(sdkConfiguration);
+              = new PatchUnifiedConnection.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -439,7 +441,7 @@ public class AsyncUnified {
      */
     public CompletableFuture<PatchUnifiedWebhookResponse> patchUnifiedWebhook(PatchUnifiedWebhookRequest request) {
         AsyncRequestOperation<PatchUnifiedWebhookRequest, PatchUnifiedWebhookResponse> operation
-              = new PatchUnifiedWebhook.Async(sdkConfiguration);
+              = new PatchUnifiedWebhook.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -462,7 +464,7 @@ public class AsyncUnified {
      */
     public CompletableFuture<PatchUnifiedWebhookTriggerResponse> patchUnifiedWebhookTrigger(PatchUnifiedWebhookTriggerRequest request) {
         AsyncRequestOperation<PatchUnifiedWebhookTriggerRequest, PatchUnifiedWebhookTriggerResponse> operation
-              = new PatchUnifiedWebhookTrigger.Async(sdkConfiguration);
+              = new PatchUnifiedWebhookTrigger.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -485,7 +487,7 @@ public class AsyncUnified {
      */
     public CompletableFuture<RemoveUnifiedConnectionResponse> removeUnifiedConnection(RemoveUnifiedConnectionRequest request) {
         AsyncRequestOperation<RemoveUnifiedConnectionRequest, RemoveUnifiedConnectionResponse> operation
-              = new RemoveUnifiedConnection.Async(sdkConfiguration);
+              = new RemoveUnifiedConnection.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -508,7 +510,7 @@ public class AsyncUnified {
      */
     public CompletableFuture<RemoveUnifiedWebhookResponse> removeUnifiedWebhook(RemoveUnifiedWebhookRequest request) {
         AsyncRequestOperation<RemoveUnifiedWebhookRequest, RemoveUnifiedWebhookResponse> operation
-              = new RemoveUnifiedWebhook.Async(sdkConfiguration);
+              = new RemoveUnifiedWebhook.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -531,7 +533,7 @@ public class AsyncUnified {
      */
     public CompletableFuture<UpdateUnifiedConnectionResponse> updateUnifiedConnection(UpdateUnifiedConnectionRequest request) {
         AsyncRequestOperation<UpdateUnifiedConnectionRequest, UpdateUnifiedConnectionResponse> operation
-              = new UpdateUnifiedConnection.Async(sdkConfiguration);
+              = new UpdateUnifiedConnection.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -554,7 +556,7 @@ public class AsyncUnified {
      */
     public CompletableFuture<UpdateUnifiedWebhookResponse> updateUnifiedWebhook(UpdateUnifiedWebhookRequest request) {
         AsyncRequestOperation<UpdateUnifiedWebhookRequest, UpdateUnifiedWebhookResponse> operation
-              = new UpdateUnifiedWebhook.Async(sdkConfiguration);
+              = new UpdateUnifiedWebhook.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -577,7 +579,7 @@ public class AsyncUnified {
      */
     public CompletableFuture<UpdateUnifiedWebhookTriggerResponse> updateUnifiedWebhookTrigger(UpdateUnifiedWebhookTriggerRequest request) {
         AsyncRequestOperation<UpdateUnifiedWebhookTriggerRequest, UpdateUnifiedWebhookTriggerResponse> operation
-              = new UpdateUnifiedWebhookTrigger.Async(sdkConfiguration);
+              = new UpdateUnifiedWebhookTrigger.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

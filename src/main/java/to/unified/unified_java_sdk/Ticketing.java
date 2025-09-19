@@ -102,9 +102,11 @@ import to.unified.unified_java_sdk.operations.UpdateTicketingCategory;
 import to.unified.unified_java_sdk.operations.UpdateTicketingCustomer;
 import to.unified.unified_java_sdk.operations.UpdateTicketingNote;
 import to.unified.unified_java_sdk.operations.UpdateTicketingTicket;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Ticketing {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncTicketing asyncSDK;
 
@@ -140,7 +142,7 @@ public class Ticketing {
      */
     public CreateTicketingCategoryResponse createTicketingCategory(CreateTicketingCategoryRequest request) throws Exception {
         RequestOperation<CreateTicketingCategoryRequest, CreateTicketingCategoryResponse> operation
-              = new CreateTicketingCategory.Sync(sdkConfiguration);
+              = new CreateTicketingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -162,7 +164,7 @@ public class Ticketing {
      */
     public CreateTicketingCustomerResponse createTicketingCustomer(CreateTicketingCustomerRequest request) throws Exception {
         RequestOperation<CreateTicketingCustomerRequest, CreateTicketingCustomerResponse> operation
-              = new CreateTicketingCustomer.Sync(sdkConfiguration);
+              = new CreateTicketingCustomer.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -184,7 +186,7 @@ public class Ticketing {
      */
     public CreateTicketingNoteResponse createTicketingNote(CreateTicketingNoteRequest request) throws Exception {
         RequestOperation<CreateTicketingNoteRequest, CreateTicketingNoteResponse> operation
-              = new CreateTicketingNote.Sync(sdkConfiguration);
+              = new CreateTicketingNote.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -206,7 +208,7 @@ public class Ticketing {
      */
     public CreateTicketingTicketResponse createTicketingTicket(CreateTicketingTicketRequest request) throws Exception {
         RequestOperation<CreateTicketingTicketRequest, CreateTicketingTicketResponse> operation
-              = new CreateTicketingTicket.Sync(sdkConfiguration);
+              = new CreateTicketingTicket.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -228,7 +230,7 @@ public class Ticketing {
      */
     public GetTicketingCategoryResponse getTicketingCategory(GetTicketingCategoryRequest request) throws Exception {
         RequestOperation<GetTicketingCategoryRequest, GetTicketingCategoryResponse> operation
-              = new GetTicketingCategory.Sync(sdkConfiguration);
+              = new GetTicketingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -250,7 +252,7 @@ public class Ticketing {
      */
     public GetTicketingCustomerResponse getTicketingCustomer(GetTicketingCustomerRequest request) throws Exception {
         RequestOperation<GetTicketingCustomerRequest, GetTicketingCustomerResponse> operation
-              = new GetTicketingCustomer.Sync(sdkConfiguration);
+              = new GetTicketingCustomer.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -272,7 +274,7 @@ public class Ticketing {
      */
     public GetTicketingNoteResponse getTicketingNote(GetTicketingNoteRequest request) throws Exception {
         RequestOperation<GetTicketingNoteRequest, GetTicketingNoteResponse> operation
-              = new GetTicketingNote.Sync(sdkConfiguration);
+              = new GetTicketingNote.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -294,7 +296,7 @@ public class Ticketing {
      */
     public GetTicketingTicketResponse getTicketingTicket(GetTicketingTicketRequest request) throws Exception {
         RequestOperation<GetTicketingTicketRequest, GetTicketingTicketResponse> operation
-              = new GetTicketingTicket.Sync(sdkConfiguration);
+              = new GetTicketingTicket.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -316,7 +318,7 @@ public class Ticketing {
      */
     public ListTicketingCategoriesResponse listTicketingCategories(ListTicketingCategoriesRequest request) throws Exception {
         RequestOperation<ListTicketingCategoriesRequest, ListTicketingCategoriesResponse> operation
-              = new ListTicketingCategories.Sync(sdkConfiguration);
+              = new ListTicketingCategories.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -338,7 +340,7 @@ public class Ticketing {
      */
     public ListTicketingCustomersResponse listTicketingCustomers(ListTicketingCustomersRequest request) throws Exception {
         RequestOperation<ListTicketingCustomersRequest, ListTicketingCustomersResponse> operation
-              = new ListTicketingCustomers.Sync(sdkConfiguration);
+              = new ListTicketingCustomers.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -360,7 +362,7 @@ public class Ticketing {
      */
     public ListTicketingNotesResponse listTicketingNotes(ListTicketingNotesRequest request) throws Exception {
         RequestOperation<ListTicketingNotesRequest, ListTicketingNotesResponse> operation
-              = new ListTicketingNotes.Sync(sdkConfiguration);
+              = new ListTicketingNotes.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -382,7 +384,7 @@ public class Ticketing {
      */
     public ListTicketingTicketsResponse listTicketingTickets(ListTicketingTicketsRequest request) throws Exception {
         RequestOperation<ListTicketingTicketsRequest, ListTicketingTicketsResponse> operation
-              = new ListTicketingTickets.Sync(sdkConfiguration);
+              = new ListTicketingTickets.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -404,7 +406,7 @@ public class Ticketing {
      */
     public PatchTicketingCategoryResponse patchTicketingCategory(PatchTicketingCategoryRequest request) throws Exception {
         RequestOperation<PatchTicketingCategoryRequest, PatchTicketingCategoryResponse> operation
-              = new PatchTicketingCategory.Sync(sdkConfiguration);
+              = new PatchTicketingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -426,7 +428,7 @@ public class Ticketing {
      */
     public PatchTicketingCustomerResponse patchTicketingCustomer(PatchTicketingCustomerRequest request) throws Exception {
         RequestOperation<PatchTicketingCustomerRequest, PatchTicketingCustomerResponse> operation
-              = new PatchTicketingCustomer.Sync(sdkConfiguration);
+              = new PatchTicketingCustomer.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -448,7 +450,7 @@ public class Ticketing {
      */
     public PatchTicketingNoteResponse patchTicketingNote(PatchTicketingNoteRequest request) throws Exception {
         RequestOperation<PatchTicketingNoteRequest, PatchTicketingNoteResponse> operation
-              = new PatchTicketingNote.Sync(sdkConfiguration);
+              = new PatchTicketingNote.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -470,7 +472,7 @@ public class Ticketing {
      */
     public PatchTicketingTicketResponse patchTicketingTicket(PatchTicketingTicketRequest request) throws Exception {
         RequestOperation<PatchTicketingTicketRequest, PatchTicketingTicketResponse> operation
-              = new PatchTicketingTicket.Sync(sdkConfiguration);
+              = new PatchTicketingTicket.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -492,7 +494,7 @@ public class Ticketing {
      */
     public RemoveTicketingCategoryResponse removeTicketingCategory(RemoveTicketingCategoryRequest request) throws Exception {
         RequestOperation<RemoveTicketingCategoryRequest, RemoveTicketingCategoryResponse> operation
-              = new RemoveTicketingCategory.Sync(sdkConfiguration);
+              = new RemoveTicketingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -514,7 +516,7 @@ public class Ticketing {
      */
     public RemoveTicketingCustomerResponse removeTicketingCustomer(RemoveTicketingCustomerRequest request) throws Exception {
         RequestOperation<RemoveTicketingCustomerRequest, RemoveTicketingCustomerResponse> operation
-              = new RemoveTicketingCustomer.Sync(sdkConfiguration);
+              = new RemoveTicketingCustomer.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -536,7 +538,7 @@ public class Ticketing {
      */
     public RemoveTicketingNoteResponse removeTicketingNote(RemoveTicketingNoteRequest request) throws Exception {
         RequestOperation<RemoveTicketingNoteRequest, RemoveTicketingNoteResponse> operation
-              = new RemoveTicketingNote.Sync(sdkConfiguration);
+              = new RemoveTicketingNote.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -558,7 +560,7 @@ public class Ticketing {
      */
     public RemoveTicketingTicketResponse removeTicketingTicket(RemoveTicketingTicketRequest request) throws Exception {
         RequestOperation<RemoveTicketingTicketRequest, RemoveTicketingTicketResponse> operation
-              = new RemoveTicketingTicket.Sync(sdkConfiguration);
+              = new RemoveTicketingTicket.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -580,7 +582,7 @@ public class Ticketing {
      */
     public UpdateTicketingCategoryResponse updateTicketingCategory(UpdateTicketingCategoryRequest request) throws Exception {
         RequestOperation<UpdateTicketingCategoryRequest, UpdateTicketingCategoryResponse> operation
-              = new UpdateTicketingCategory.Sync(sdkConfiguration);
+              = new UpdateTicketingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -602,7 +604,7 @@ public class Ticketing {
      */
     public UpdateTicketingCustomerResponse updateTicketingCustomer(UpdateTicketingCustomerRequest request) throws Exception {
         RequestOperation<UpdateTicketingCustomerRequest, UpdateTicketingCustomerResponse> operation
-              = new UpdateTicketingCustomer.Sync(sdkConfiguration);
+              = new UpdateTicketingCustomer.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -624,7 +626,7 @@ public class Ticketing {
      */
     public UpdateTicketingNoteResponse updateTicketingNote(UpdateTicketingNoteRequest request) throws Exception {
         RequestOperation<UpdateTicketingNoteRequest, UpdateTicketingNoteResponse> operation
-              = new UpdateTicketingNote.Sync(sdkConfiguration);
+              = new UpdateTicketingNote.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -646,7 +648,7 @@ public class Ticketing {
      */
     public UpdateTicketingTicketResponse updateTicketingTicket(UpdateTicketingTicketRequest request) throws Exception {
         RequestOperation<UpdateTicketingTicketRequest, UpdateTicketingTicketResponse> operation
-              = new UpdateTicketingTicket.Sync(sdkConfiguration);
+              = new UpdateTicketingTicket.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

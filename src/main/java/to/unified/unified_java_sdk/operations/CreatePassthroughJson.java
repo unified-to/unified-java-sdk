@@ -28,6 +28,7 @@ import to.unified.unified_java_sdk.utils.Blob;
 import to.unified.unified_java_sdk.utils.Exceptions;
 import to.unified.unified_java_sdk.utils.HTTPClient;
 import to.unified.unified_java_sdk.utils.HTTPRequest;
+import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Hook.AfterErrorContextImpl;
 import to.unified.unified_java_sdk.utils.Hook.AfterSuccessContextImpl;
 import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
@@ -43,9 +44,11 @@ public class CreatePassthroughJson {
         final String baseUrl;
         final SecuritySource securitySource;
         final HTTPClient client;
+        final Headers _headers;
 
-        public Base(SDKConfiguration sdkConfiguration) {
+        public Base(SDKConfiguration sdkConfiguration, Headers _headers) {
             this.sdkConfiguration = sdkConfiguration;
+            this._headers =_headers;
             this.baseUrl = this.sdkConfiguration.serverUrl();
             this.securitySource = this.sdkConfiguration.securitySource();
             this.client = this.sdkConfiguration.client();
@@ -100,6 +103,7 @@ public class CreatePassthroughJson {
             req.setBody(Optional.ofNullable(serializedRequestBody));
             req.addHeader("Accept", "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0")
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
+            _headers.forEach((k, list) -> list.forEach(v -> req.addHeader(k, v)));
 
             req.addQueryParams(Utils.getQueryParams(
                     klass,
@@ -113,8 +117,8 @@ public class CreatePassthroughJson {
 
     public static class Sync extends Base
             implements RequestOperation<CreatePassthroughJsonRequest, CreatePassthroughJsonResponse> {
-        public Sync(SDKConfiguration sdkConfiguration) {
-            super(sdkConfiguration);
+        public Sync(SDKConfiguration sdkConfiguration, Headers _headers) {
+            super(sdkConfiguration, _headers);
         }
 
         private HttpRequest onBuildRequest(CreatePassthroughJsonRequest request) throws Exception {
@@ -242,8 +246,8 @@ public class CreatePassthroughJson {
     public static class Async extends Base
             implements AsyncRequestOperation<CreatePassthroughJsonRequest, to.unified.unified_java_sdk.models.operations.async.CreatePassthroughJsonResponse> {
 
-        public Async(SDKConfiguration sdkConfiguration) {
-            super(sdkConfiguration);
+        public Async(SDKConfiguration sdkConfiguration, Headers _headers) {
+            super(sdkConfiguration, _headers);
         }
 
         private CompletableFuture<HttpRequest> onBuildRequest(CreatePassthroughJsonRequest request) throws Exception {

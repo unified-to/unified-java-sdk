@@ -28,6 +28,7 @@ import to.unified.unified_java_sdk.utils.Blob;
 import to.unified.unified_java_sdk.utils.Exceptions;
 import to.unified.unified_java_sdk.utils.HTTPClient;
 import to.unified.unified_java_sdk.utils.HTTPRequest;
+import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Hook.AfterErrorContextImpl;
 import to.unified.unified_java_sdk.utils.Hook.AfterSuccessContextImpl;
 import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
@@ -43,9 +44,11 @@ public class CreateUcComment {
         final String baseUrl;
         final SecuritySource securitySource;
         final HTTPClient client;
+        final Headers _headers;
 
-        public Base(SDKConfiguration sdkConfiguration) {
+        public Base(SDKConfiguration sdkConfiguration, Headers _headers) {
             this.sdkConfiguration = sdkConfiguration;
+            this._headers =_headers;
             this.baseUrl = this.sdkConfiguration.serverUrl();
             this.securitySource = this.sdkConfiguration.securitySource();
             this.client = this.sdkConfiguration.client();
@@ -103,6 +106,7 @@ public class CreateUcComment {
             req.setBody(Optional.ofNullable(serializedRequestBody));
             req.addHeader("Accept", "application/json")
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
+            _headers.forEach((k, list) -> list.forEach(v -> req.addHeader(k, v)));
 
             req.addQueryParams(Utils.getQueryParams(
                     klass,
@@ -116,8 +120,8 @@ public class CreateUcComment {
 
     public static class Sync extends Base
             implements RequestOperation<CreateUcCommentRequest, CreateUcCommentResponse> {
-        public Sync(SDKConfiguration sdkConfiguration) {
-            super(sdkConfiguration);
+        public Sync(SDKConfiguration sdkConfiguration, Headers _headers) {
+            super(sdkConfiguration, _headers);
         }
 
         private HttpRequest onBuildRequest(CreateUcCommentRequest request) throws Exception {
@@ -215,8 +219,8 @@ public class CreateUcComment {
     public static class Async extends Base
             implements AsyncRequestOperation<CreateUcCommentRequest, to.unified.unified_java_sdk.models.operations.async.CreateUcCommentResponse> {
 
-        public Async(SDKConfiguration sdkConfiguration) {
-            super(sdkConfiguration);
+        public Async(SDKConfiguration sdkConfiguration, Headers _headers) {
+            super(sdkConfiguration, _headers);
         }
 
         private CompletableFuture<HttpRequest> onBuildRequest(CreateUcCommentRequest request) throws Exception {

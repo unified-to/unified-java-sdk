@@ -78,9 +78,11 @@ import to.unified.unified_java_sdk.operations.RemoveUcContact;
 import to.unified.unified_java_sdk.operations.UpdateAccountingContact;
 import to.unified.unified_java_sdk.operations.UpdateCrmContact;
 import to.unified.unified_java_sdk.operations.UpdateUcContact;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncContact {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Contact syncSDK;
 
@@ -116,7 +118,7 @@ public class AsyncContact {
      */
     public CompletableFuture<CreateAccountingContactResponse> createAccountingContact(CreateAccountingContactRequest request) {
         AsyncRequestOperation<CreateAccountingContactRequest, CreateAccountingContactResponse> operation
-              = new CreateAccountingContact.Async(sdkConfiguration);
+              = new CreateAccountingContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -139,7 +141,7 @@ public class AsyncContact {
      */
     public CompletableFuture<CreateCrmContactResponse> createCrmContact(CreateCrmContactRequest request) {
         AsyncRequestOperation<CreateCrmContactRequest, CreateCrmContactResponse> operation
-              = new CreateCrmContact.Async(sdkConfiguration);
+              = new CreateCrmContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -162,7 +164,7 @@ public class AsyncContact {
      */
     public CompletableFuture<CreateUcContactResponse> createUcContact(CreateUcContactRequest request) {
         AsyncRequestOperation<CreateUcContactRequest, CreateUcContactResponse> operation
-              = new CreateUcContact.Async(sdkConfiguration);
+              = new CreateUcContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -185,7 +187,7 @@ public class AsyncContact {
      */
     public CompletableFuture<GetAccountingContactResponse> getAccountingContact(GetAccountingContactRequest request) {
         AsyncRequestOperation<GetAccountingContactRequest, GetAccountingContactResponse> operation
-              = new GetAccountingContact.Async(sdkConfiguration);
+              = new GetAccountingContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -208,7 +210,7 @@ public class AsyncContact {
      */
     public CompletableFuture<GetCrmContactResponse> getCrmContact(GetCrmContactRequest request) {
         AsyncRequestOperation<GetCrmContactRequest, GetCrmContactResponse> operation
-              = new GetCrmContact.Async(sdkConfiguration);
+              = new GetCrmContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -231,7 +233,7 @@ public class AsyncContact {
      */
     public CompletableFuture<GetUcContactResponse> getUcContact(GetUcContactRequest request) {
         AsyncRequestOperation<GetUcContactRequest, GetUcContactResponse> operation
-              = new GetUcContact.Async(sdkConfiguration);
+              = new GetUcContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -254,7 +256,7 @@ public class AsyncContact {
      */
     public CompletableFuture<ListAccountingContactsResponse> listAccountingContacts(ListAccountingContactsRequest request) {
         AsyncRequestOperation<ListAccountingContactsRequest, ListAccountingContactsResponse> operation
-              = new ListAccountingContacts.Async(sdkConfiguration);
+              = new ListAccountingContacts.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -277,7 +279,7 @@ public class AsyncContact {
      */
     public CompletableFuture<ListCrmContactsResponse> listCrmContacts(ListCrmContactsRequest request) {
         AsyncRequestOperation<ListCrmContactsRequest, ListCrmContactsResponse> operation
-              = new ListCrmContacts.Async(sdkConfiguration);
+              = new ListCrmContacts.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -300,7 +302,7 @@ public class AsyncContact {
      */
     public CompletableFuture<ListUcContactsResponse> listUcContacts(ListUcContactsRequest request) {
         AsyncRequestOperation<ListUcContactsRequest, ListUcContactsResponse> operation
-              = new ListUcContacts.Async(sdkConfiguration);
+              = new ListUcContacts.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -323,7 +325,7 @@ public class AsyncContact {
      */
     public CompletableFuture<PatchAccountingContactResponse> patchAccountingContact(PatchAccountingContactRequest request) {
         AsyncRequestOperation<PatchAccountingContactRequest, PatchAccountingContactResponse> operation
-              = new PatchAccountingContact.Async(sdkConfiguration);
+              = new PatchAccountingContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -346,7 +348,7 @@ public class AsyncContact {
      */
     public CompletableFuture<PatchCrmContactResponse> patchCrmContact(PatchCrmContactRequest request) {
         AsyncRequestOperation<PatchCrmContactRequest, PatchCrmContactResponse> operation
-              = new PatchCrmContact.Async(sdkConfiguration);
+              = new PatchCrmContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -369,7 +371,7 @@ public class AsyncContact {
      */
     public CompletableFuture<PatchUcContactResponse> patchUcContact(PatchUcContactRequest request) {
         AsyncRequestOperation<PatchUcContactRequest, PatchUcContactResponse> operation
-              = new PatchUcContact.Async(sdkConfiguration);
+              = new PatchUcContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -392,7 +394,7 @@ public class AsyncContact {
      */
     public CompletableFuture<RemoveAccountingContactResponse> removeAccountingContact(RemoveAccountingContactRequest request) {
         AsyncRequestOperation<RemoveAccountingContactRequest, RemoveAccountingContactResponse> operation
-              = new RemoveAccountingContact.Async(sdkConfiguration);
+              = new RemoveAccountingContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -415,7 +417,7 @@ public class AsyncContact {
      */
     public CompletableFuture<RemoveCrmContactResponse> removeCrmContact(RemoveCrmContactRequest request) {
         AsyncRequestOperation<RemoveCrmContactRequest, RemoveCrmContactResponse> operation
-              = new RemoveCrmContact.Async(sdkConfiguration);
+              = new RemoveCrmContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -438,7 +440,7 @@ public class AsyncContact {
      */
     public CompletableFuture<RemoveUcContactResponse> removeUcContact(RemoveUcContactRequest request) {
         AsyncRequestOperation<RemoveUcContactRequest, RemoveUcContactResponse> operation
-              = new RemoveUcContact.Async(sdkConfiguration);
+              = new RemoveUcContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -461,7 +463,7 @@ public class AsyncContact {
      */
     public CompletableFuture<UpdateAccountingContactResponse> updateAccountingContact(UpdateAccountingContactRequest request) {
         AsyncRequestOperation<UpdateAccountingContactRequest, UpdateAccountingContactResponse> operation
-              = new UpdateAccountingContact.Async(sdkConfiguration);
+              = new UpdateAccountingContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -484,7 +486,7 @@ public class AsyncContact {
      */
     public CompletableFuture<UpdateCrmContactResponse> updateCrmContact(UpdateCrmContactRequest request) {
         AsyncRequestOperation<UpdateCrmContactRequest, UpdateCrmContactResponse> operation
-              = new UpdateCrmContact.Async(sdkConfiguration);
+              = new UpdateCrmContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -507,7 +509,7 @@ public class AsyncContact {
      */
     public CompletableFuture<UpdateUcContactResponse> updateUcContact(UpdateUcContactRequest request) {
         AsyncRequestOperation<UpdateUcContactRequest, UpdateUcContactResponse> operation
-              = new UpdateUcContact.Async(sdkConfiguration);
+              = new UpdateUcContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

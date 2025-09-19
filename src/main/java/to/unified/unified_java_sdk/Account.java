@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListAccountingAccounts;
 import to.unified.unified_java_sdk.operations.PatchAccountingAccount;
 import to.unified.unified_java_sdk.operations.RemoveAccountingAccount;
 import to.unified.unified_java_sdk.operations.UpdateAccountingAccount;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Account {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncAccount asyncSDK;
 
@@ -68,7 +70,7 @@ public class Account {
      */
     public CreateAccountingAccountResponse createAccountingAccount(CreateAccountingAccountRequest request) throws Exception {
         RequestOperation<CreateAccountingAccountRequest, CreateAccountingAccountResponse> operation
-              = new CreateAccountingAccount.Sync(sdkConfiguration);
+              = new CreateAccountingAccount.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -90,7 +92,7 @@ public class Account {
      */
     public GetAccountingAccountResponse getAccountingAccount(GetAccountingAccountRequest request) throws Exception {
         RequestOperation<GetAccountingAccountRequest, GetAccountingAccountResponse> operation
-              = new GetAccountingAccount.Sync(sdkConfiguration);
+              = new GetAccountingAccount.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -112,7 +114,7 @@ public class Account {
      */
     public ListAccountingAccountsResponse listAccountingAccounts(ListAccountingAccountsRequest request) throws Exception {
         RequestOperation<ListAccountingAccountsRequest, ListAccountingAccountsResponse> operation
-              = new ListAccountingAccounts.Sync(sdkConfiguration);
+              = new ListAccountingAccounts.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -134,7 +136,7 @@ public class Account {
      */
     public PatchAccountingAccountResponse patchAccountingAccount(PatchAccountingAccountRequest request) throws Exception {
         RequestOperation<PatchAccountingAccountRequest, PatchAccountingAccountResponse> operation
-              = new PatchAccountingAccount.Sync(sdkConfiguration);
+              = new PatchAccountingAccount.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -156,7 +158,7 @@ public class Account {
      */
     public RemoveAccountingAccountResponse removeAccountingAccount(RemoveAccountingAccountRequest request) throws Exception {
         RequestOperation<RemoveAccountingAccountRequest, RemoveAccountingAccountResponse> operation
-              = new RemoveAccountingAccount.Sync(sdkConfiguration);
+              = new RemoveAccountingAccount.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -178,7 +180,7 @@ public class Account {
      */
     public UpdateAccountingAccountResponse updateAccountingAccount(UpdateAccountingAccountRequest request) throws Exception {
         RequestOperation<UpdateAccountingAccountRequest, UpdateAccountingAccountResponse> operation
-              = new UpdateAccountingAccount.Sync(sdkConfiguration);
+              = new UpdateAccountingAccount.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

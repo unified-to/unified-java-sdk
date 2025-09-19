@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListAtsApplications;
 import to.unified.unified_java_sdk.operations.PatchAtsApplication;
 import to.unified.unified_java_sdk.operations.RemoveAtsApplication;
 import to.unified.unified_java_sdk.operations.UpdateAtsApplication;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncApplication {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Application syncSDK;
 
@@ -68,7 +70,7 @@ public class AsyncApplication {
      */
     public CompletableFuture<CreateAtsApplicationResponse> createAtsApplication(CreateAtsApplicationRequest request) {
         AsyncRequestOperation<CreateAtsApplicationRequest, CreateAtsApplicationResponse> operation
-              = new CreateAtsApplication.Async(sdkConfiguration);
+              = new CreateAtsApplication.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -91,7 +93,7 @@ public class AsyncApplication {
      */
     public CompletableFuture<GetAtsApplicationResponse> getAtsApplication(GetAtsApplicationRequest request) {
         AsyncRequestOperation<GetAtsApplicationRequest, GetAtsApplicationResponse> operation
-              = new GetAtsApplication.Async(sdkConfiguration);
+              = new GetAtsApplication.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -114,7 +116,7 @@ public class AsyncApplication {
      */
     public CompletableFuture<ListAtsApplicationsResponse> listAtsApplications(ListAtsApplicationsRequest request) {
         AsyncRequestOperation<ListAtsApplicationsRequest, ListAtsApplicationsResponse> operation
-              = new ListAtsApplications.Async(sdkConfiguration);
+              = new ListAtsApplications.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -137,7 +139,7 @@ public class AsyncApplication {
      */
     public CompletableFuture<PatchAtsApplicationResponse> patchAtsApplication(PatchAtsApplicationRequest request) {
         AsyncRequestOperation<PatchAtsApplicationRequest, PatchAtsApplicationResponse> operation
-              = new PatchAtsApplication.Async(sdkConfiguration);
+              = new PatchAtsApplication.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -160,7 +162,7 @@ public class AsyncApplication {
      */
     public CompletableFuture<RemoveAtsApplicationResponse> removeAtsApplication(RemoveAtsApplicationRequest request) {
         AsyncRequestOperation<RemoveAtsApplicationRequest, RemoveAtsApplicationResponse> operation
-              = new RemoveAtsApplication.Async(sdkConfiguration);
+              = new RemoveAtsApplication.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -183,7 +185,7 @@ public class AsyncApplication {
      */
     public CompletableFuture<UpdateAtsApplicationResponse> updateAtsApplication(UpdateAtsApplicationRequest request) {
         AsyncRequestOperation<UpdateAtsApplicationRequest, UpdateAtsApplicationResponse> operation
-              = new UpdateAtsApplication.Async(sdkConfiguration);
+              = new UpdateAtsApplication.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

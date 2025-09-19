@@ -10,9 +10,11 @@ import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleRequest;
 import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleResponse;
 import to.unified.unified_java_sdk.operations.ListEnrichPeople;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Person {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncPerson asyncSDK;
 
@@ -48,7 +50,7 @@ public class Person {
      */
     public ListEnrichPeopleResponse listEnrichPeople(ListEnrichPeopleRequest request) throws Exception {
         RequestOperation<ListEnrichPeopleRequest, ListEnrichPeopleResponse> operation
-              = new ListEnrichPeople.Sync(sdkConfiguration);
+              = new ListEnrichPeople.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

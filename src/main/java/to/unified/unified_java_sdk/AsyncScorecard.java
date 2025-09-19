@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListAtsScorecards;
 import to.unified.unified_java_sdk.operations.PatchAtsScorecard;
 import to.unified.unified_java_sdk.operations.RemoveAtsScorecard;
 import to.unified.unified_java_sdk.operations.UpdateAtsScorecard;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncScorecard {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Scorecard syncSDK;
 
@@ -68,7 +70,7 @@ public class AsyncScorecard {
      */
     public CompletableFuture<CreateAtsScorecardResponse> createAtsScorecard(CreateAtsScorecardRequest request) {
         AsyncRequestOperation<CreateAtsScorecardRequest, CreateAtsScorecardResponse> operation
-              = new CreateAtsScorecard.Async(sdkConfiguration);
+              = new CreateAtsScorecard.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -91,7 +93,7 @@ public class AsyncScorecard {
      */
     public CompletableFuture<GetAtsScorecardResponse> getAtsScorecard(GetAtsScorecardRequest request) {
         AsyncRequestOperation<GetAtsScorecardRequest, GetAtsScorecardResponse> operation
-              = new GetAtsScorecard.Async(sdkConfiguration);
+              = new GetAtsScorecard.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -114,7 +116,7 @@ public class AsyncScorecard {
      */
     public CompletableFuture<ListAtsScorecardsResponse> listAtsScorecards(ListAtsScorecardsRequest request) {
         AsyncRequestOperation<ListAtsScorecardsRequest, ListAtsScorecardsResponse> operation
-              = new ListAtsScorecards.Async(sdkConfiguration);
+              = new ListAtsScorecards.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -137,7 +139,7 @@ public class AsyncScorecard {
      */
     public CompletableFuture<PatchAtsScorecardResponse> patchAtsScorecard(PatchAtsScorecardRequest request) {
         AsyncRequestOperation<PatchAtsScorecardRequest, PatchAtsScorecardResponse> operation
-              = new PatchAtsScorecard.Async(sdkConfiguration);
+              = new PatchAtsScorecard.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -160,7 +162,7 @@ public class AsyncScorecard {
      */
     public CompletableFuture<RemoveAtsScorecardResponse> removeAtsScorecard(RemoveAtsScorecardRequest request) {
         AsyncRequestOperation<RemoveAtsScorecardRequest, RemoveAtsScorecardResponse> operation
-              = new RemoveAtsScorecard.Async(sdkConfiguration);
+              = new RemoveAtsScorecard.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -183,7 +185,7 @@ public class AsyncScorecard {
      */
     public CompletableFuture<UpdateAtsScorecardResponse> updateAtsScorecard(UpdateAtsScorecardRequest request) {
         AsyncRequestOperation<UpdateAtsScorecardRequest, UpdateAtsScorecardResponse> operation
-              = new UpdateAtsScorecard.Async(sdkConfiguration);
+              = new UpdateAtsScorecard.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

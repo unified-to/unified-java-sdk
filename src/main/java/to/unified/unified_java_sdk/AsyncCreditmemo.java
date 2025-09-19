@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListAccountingCreditmemoes;
 import to.unified.unified_java_sdk.operations.PatchAccountingCreditmemo;
 import to.unified.unified_java_sdk.operations.RemoveAccountingCreditmemo;
 import to.unified.unified_java_sdk.operations.UpdateAccountingCreditmemo;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncCreditmemo {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Creditmemo syncSDK;
 
@@ -68,7 +70,7 @@ public class AsyncCreditmemo {
      */
     public CompletableFuture<CreateAccountingCreditmemoResponse> createAccountingCreditmemo(CreateAccountingCreditmemoRequest request) {
         AsyncRequestOperation<CreateAccountingCreditmemoRequest, CreateAccountingCreditmemoResponse> operation
-              = new CreateAccountingCreditmemo.Async(sdkConfiguration);
+              = new CreateAccountingCreditmemo.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -91,7 +93,7 @@ public class AsyncCreditmemo {
      */
     public CompletableFuture<GetAccountingCreditmemoResponse> getAccountingCreditmemo(GetAccountingCreditmemoRequest request) {
         AsyncRequestOperation<GetAccountingCreditmemoRequest, GetAccountingCreditmemoResponse> operation
-              = new GetAccountingCreditmemo.Async(sdkConfiguration);
+              = new GetAccountingCreditmemo.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -114,7 +116,7 @@ public class AsyncCreditmemo {
      */
     public CompletableFuture<ListAccountingCreditmemoesResponse> listAccountingCreditmemoes(ListAccountingCreditmemoesRequest request) {
         AsyncRequestOperation<ListAccountingCreditmemoesRequest, ListAccountingCreditmemoesResponse> operation
-              = new ListAccountingCreditmemoes.Async(sdkConfiguration);
+              = new ListAccountingCreditmemoes.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -137,7 +139,7 @@ public class AsyncCreditmemo {
      */
     public CompletableFuture<PatchAccountingCreditmemoResponse> patchAccountingCreditmemo(PatchAccountingCreditmemoRequest request) {
         AsyncRequestOperation<PatchAccountingCreditmemoRequest, PatchAccountingCreditmemoResponse> operation
-              = new PatchAccountingCreditmemo.Async(sdkConfiguration);
+              = new PatchAccountingCreditmemo.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -160,7 +162,7 @@ public class AsyncCreditmemo {
      */
     public CompletableFuture<RemoveAccountingCreditmemoResponse> removeAccountingCreditmemo(RemoveAccountingCreditmemoRequest request) {
         AsyncRequestOperation<RemoveAccountingCreditmemoRequest, RemoveAccountingCreditmemoResponse> operation
-              = new RemoveAccountingCreditmemo.Async(sdkConfiguration);
+              = new RemoveAccountingCreditmemo.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -183,7 +185,7 @@ public class AsyncCreditmemo {
      */
     public CompletableFuture<UpdateAccountingCreditmemoResponse> updateAccountingCreditmemo(UpdateAccountingCreditmemoRequest request) {
         AsyncRequestOperation<UpdateAccountingCreditmemoRequest, UpdateAccountingCreditmemoResponse> operation
-              = new UpdateAccountingCreditmemo.Async(sdkConfiguration);
+              = new UpdateAccountingCreditmemo.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

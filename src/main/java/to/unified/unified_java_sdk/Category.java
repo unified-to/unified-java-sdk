@@ -54,9 +54,11 @@ import to.unified.unified_java_sdk.operations.RemoveAccountingCategory;
 import to.unified.unified_java_sdk.operations.RemoveTicketingCategory;
 import to.unified.unified_java_sdk.operations.UpdateAccountingCategory;
 import to.unified.unified_java_sdk.operations.UpdateTicketingCategory;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Category {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncCategory asyncSDK;
 
@@ -92,7 +94,7 @@ public class Category {
      */
     public CreateAccountingCategoryResponse createAccountingCategory(CreateAccountingCategoryRequest request) throws Exception {
         RequestOperation<CreateAccountingCategoryRequest, CreateAccountingCategoryResponse> operation
-              = new CreateAccountingCategory.Sync(sdkConfiguration);
+              = new CreateAccountingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -114,7 +116,7 @@ public class Category {
      */
     public CreateTicketingCategoryResponse createTicketingCategory(CreateTicketingCategoryRequest request) throws Exception {
         RequestOperation<CreateTicketingCategoryRequest, CreateTicketingCategoryResponse> operation
-              = new CreateTicketingCategory.Sync(sdkConfiguration);
+              = new CreateTicketingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -136,7 +138,7 @@ public class Category {
      */
     public GetAccountingCategoryResponse getAccountingCategory(GetAccountingCategoryRequest request) throws Exception {
         RequestOperation<GetAccountingCategoryRequest, GetAccountingCategoryResponse> operation
-              = new GetAccountingCategory.Sync(sdkConfiguration);
+              = new GetAccountingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -158,7 +160,7 @@ public class Category {
      */
     public GetTicketingCategoryResponse getTicketingCategory(GetTicketingCategoryRequest request) throws Exception {
         RequestOperation<GetTicketingCategoryRequest, GetTicketingCategoryResponse> operation
-              = new GetTicketingCategory.Sync(sdkConfiguration);
+              = new GetTicketingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -180,7 +182,7 @@ public class Category {
      */
     public ListAccountingCategoriesResponse listAccountingCategories(ListAccountingCategoriesRequest request) throws Exception {
         RequestOperation<ListAccountingCategoriesRequest, ListAccountingCategoriesResponse> operation
-              = new ListAccountingCategories.Sync(sdkConfiguration);
+              = new ListAccountingCategories.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -202,7 +204,7 @@ public class Category {
      */
     public ListTicketingCategoriesResponse listTicketingCategories(ListTicketingCategoriesRequest request) throws Exception {
         RequestOperation<ListTicketingCategoriesRequest, ListTicketingCategoriesResponse> operation
-              = new ListTicketingCategories.Sync(sdkConfiguration);
+              = new ListTicketingCategories.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -224,7 +226,7 @@ public class Category {
      */
     public PatchAccountingCategoryResponse patchAccountingCategory(PatchAccountingCategoryRequest request) throws Exception {
         RequestOperation<PatchAccountingCategoryRequest, PatchAccountingCategoryResponse> operation
-              = new PatchAccountingCategory.Sync(sdkConfiguration);
+              = new PatchAccountingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -246,7 +248,7 @@ public class Category {
      */
     public PatchTicketingCategoryResponse patchTicketingCategory(PatchTicketingCategoryRequest request) throws Exception {
         RequestOperation<PatchTicketingCategoryRequest, PatchTicketingCategoryResponse> operation
-              = new PatchTicketingCategory.Sync(sdkConfiguration);
+              = new PatchTicketingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -268,7 +270,7 @@ public class Category {
      */
     public RemoveAccountingCategoryResponse removeAccountingCategory(RemoveAccountingCategoryRequest request) throws Exception {
         RequestOperation<RemoveAccountingCategoryRequest, RemoveAccountingCategoryResponse> operation
-              = new RemoveAccountingCategory.Sync(sdkConfiguration);
+              = new RemoveAccountingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -290,7 +292,7 @@ public class Category {
      */
     public RemoveTicketingCategoryResponse removeTicketingCategory(RemoveTicketingCategoryRequest request) throws Exception {
         RequestOperation<RemoveTicketingCategoryRequest, RemoveTicketingCategoryResponse> operation
-              = new RemoveTicketingCategory.Sync(sdkConfiguration);
+              = new RemoveTicketingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -312,7 +314,7 @@ public class Category {
      */
     public UpdateAccountingCategoryResponse updateAccountingCategory(UpdateAccountingCategoryRequest request) throws Exception {
         RequestOperation<UpdateAccountingCategoryRequest, UpdateAccountingCategoryResponse> operation
-              = new UpdateAccountingCategory.Sync(sdkConfiguration);
+              = new UpdateAccountingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -334,7 +336,7 @@ public class Category {
      */
     public UpdateTicketingCategoryResponse updateTicketingCategory(UpdateTicketingCategoryRequest request) throws Exception {
         RequestOperation<UpdateTicketingCategoryRequest, UpdateTicketingCategoryResponse> operation
-              = new UpdateTicketingCategory.Sync(sdkConfiguration);
+              = new UpdateTicketingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListScimUsers;
 import to.unified.unified_java_sdk.operations.PatchScimUsers;
 import to.unified.unified_java_sdk.operations.RemoveScimUsers;
 import to.unified.unified_java_sdk.operations.UpdateScimUsers;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncUser {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final User syncSDK;
 
@@ -68,7 +70,7 @@ public class AsyncUser {
      */
     public CompletableFuture<CreateScimUsersResponse> createScimUsers(CreateScimUsersRequest request) {
         AsyncRequestOperation<CreateScimUsersRequest, CreateScimUsersResponse> operation
-              = new CreateScimUsers.Async(sdkConfiguration);
+              = new CreateScimUsers.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -91,7 +93,7 @@ public class AsyncUser {
      */
     public CompletableFuture<GetScimUsersResponse> getScimUsers(GetScimUsersRequest request) {
         AsyncRequestOperation<GetScimUsersRequest, GetScimUsersResponse> operation
-              = new GetScimUsers.Async(sdkConfiguration);
+              = new GetScimUsers.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -114,7 +116,7 @@ public class AsyncUser {
      */
     public CompletableFuture<ListScimUsersResponse> listScimUsers(ListScimUsersRequest request) {
         AsyncRequestOperation<ListScimUsersRequest, ListScimUsersResponse> operation
-              = new ListScimUsers.Async(sdkConfiguration);
+              = new ListScimUsers.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -137,7 +139,7 @@ public class AsyncUser {
      */
     public CompletableFuture<PatchScimUsersResponse> patchScimUsers(PatchScimUsersRequest request) {
         AsyncRequestOperation<PatchScimUsersRequest, PatchScimUsersResponse> operation
-              = new PatchScimUsers.Async(sdkConfiguration);
+              = new PatchScimUsers.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -160,7 +162,7 @@ public class AsyncUser {
      */
     public CompletableFuture<RemoveScimUsersResponse> removeScimUsers(RemoveScimUsersRequest request) {
         AsyncRequestOperation<RemoveScimUsersRequest, RemoveScimUsersResponse> operation
-              = new RemoveScimUsers.Async(sdkConfiguration);
+              = new RemoveScimUsers.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -183,7 +185,7 @@ public class AsyncUser {
      */
     public CompletableFuture<UpdateScimUsersResponse> updateScimUsers(UpdateScimUsersRequest request) {
         AsyncRequestOperation<UpdateScimUsersRequest, UpdateScimUsersResponse> operation
-              = new UpdateScimUsers.Async(sdkConfiguration);
+              = new UpdateScimUsers.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

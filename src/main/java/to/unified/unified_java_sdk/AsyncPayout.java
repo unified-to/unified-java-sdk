@@ -14,9 +14,11 @@ import to.unified.unified_java_sdk.models.operations.async.ListPaymentPayoutsReq
 import to.unified.unified_java_sdk.models.operations.async.ListPaymentPayoutsResponse;
 import to.unified.unified_java_sdk.operations.GetPaymentPayout;
 import to.unified.unified_java_sdk.operations.ListPaymentPayouts;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncPayout {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Payout syncSDK;
 
@@ -52,7 +54,7 @@ public class AsyncPayout {
      */
     public CompletableFuture<GetPaymentPayoutResponse> getPaymentPayout(GetPaymentPayoutRequest request) {
         AsyncRequestOperation<GetPaymentPayoutRequest, GetPaymentPayoutResponse> operation
-              = new GetPaymentPayout.Async(sdkConfiguration);
+              = new GetPaymentPayout.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -75,7 +77,7 @@ public class AsyncPayout {
      */
     public CompletableFuture<ListPaymentPayoutsResponse> listPaymentPayouts(ListPaymentPayoutsRequest request) {
         AsyncRequestOperation<ListPaymentPayoutsRequest, ListPaymentPayoutsResponse> operation
-              = new ListPaymentPayouts.Async(sdkConfiguration);
+              = new ListPaymentPayouts.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

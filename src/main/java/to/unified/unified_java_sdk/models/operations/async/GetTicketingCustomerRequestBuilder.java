@@ -10,12 +10,14 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetTicketingCustomerRequest;
 import to.unified.unified_java_sdk.operations.GetTicketingCustomer;
+import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetTicketingCustomerRequestBuilder {
 
     private GetTicketingCustomerRequest request;
     private final SDKConfiguration sdkConfiguration;
+    private final Headers _headers = new Headers(); 
 
     public GetTicketingCustomerRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
@@ -30,7 +32,7 @@ public class GetTicketingCustomerRequestBuilder {
     public CompletableFuture<GetTicketingCustomerResponse> call() throws Exception {
         
         AsyncRequestOperation<GetTicketingCustomerRequest, GetTicketingCustomerResponse> operation
-              = new GetTicketingCustomer.Async(sdkConfiguration);
+              = new GetTicketingCustomer.Async(sdkConfiguration, _headers);
 
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);

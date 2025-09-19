@@ -150,9 +150,11 @@ import to.unified.unified_java_sdk.operations.UpdateCrmDeal;
 import to.unified.unified_java_sdk.operations.UpdateCrmEvent;
 import to.unified.unified_java_sdk.operations.UpdateCrmLead;
 import to.unified.unified_java_sdk.operations.UpdateCrmPipeline;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncCrm {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Crm syncSDK;
 
@@ -188,7 +190,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<CreateCrmCompanyResponse> createCrmCompany(CreateCrmCompanyRequest request) {
         AsyncRequestOperation<CreateCrmCompanyRequest, CreateCrmCompanyResponse> operation
-              = new CreateCrmCompany.Async(sdkConfiguration);
+              = new CreateCrmCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -211,7 +213,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<CreateCrmContactResponse> createCrmContact(CreateCrmContactRequest request) {
         AsyncRequestOperation<CreateCrmContactRequest, CreateCrmContactResponse> operation
-              = new CreateCrmContact.Async(sdkConfiguration);
+              = new CreateCrmContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -234,7 +236,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<CreateCrmDealResponse> createCrmDeal(CreateCrmDealRequest request) {
         AsyncRequestOperation<CreateCrmDealRequest, CreateCrmDealResponse> operation
-              = new CreateCrmDeal.Async(sdkConfiguration);
+              = new CreateCrmDeal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -257,7 +259,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<CreateCrmEventResponse> createCrmEvent(CreateCrmEventRequest request) {
         AsyncRequestOperation<CreateCrmEventRequest, CreateCrmEventResponse> operation
-              = new CreateCrmEvent.Async(sdkConfiguration);
+              = new CreateCrmEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -280,7 +282,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<CreateCrmLeadResponse> createCrmLead(CreateCrmLeadRequest request) {
         AsyncRequestOperation<CreateCrmLeadRequest, CreateCrmLeadResponse> operation
-              = new CreateCrmLead.Async(sdkConfiguration);
+              = new CreateCrmLead.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -303,7 +305,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<CreateCrmPipelineResponse> createCrmPipeline(CreateCrmPipelineRequest request) {
         AsyncRequestOperation<CreateCrmPipelineRequest, CreateCrmPipelineResponse> operation
-              = new CreateCrmPipeline.Async(sdkConfiguration);
+              = new CreateCrmPipeline.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -326,7 +328,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<GetCrmCompanyResponse> getCrmCompany(GetCrmCompanyRequest request) {
         AsyncRequestOperation<GetCrmCompanyRequest, GetCrmCompanyResponse> operation
-              = new GetCrmCompany.Async(sdkConfiguration);
+              = new GetCrmCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -349,7 +351,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<GetCrmContactResponse> getCrmContact(GetCrmContactRequest request) {
         AsyncRequestOperation<GetCrmContactRequest, GetCrmContactResponse> operation
-              = new GetCrmContact.Async(sdkConfiguration);
+              = new GetCrmContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -372,7 +374,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<GetCrmDealResponse> getCrmDeal(GetCrmDealRequest request) {
         AsyncRequestOperation<GetCrmDealRequest, GetCrmDealResponse> operation
-              = new GetCrmDeal.Async(sdkConfiguration);
+              = new GetCrmDeal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -395,7 +397,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<GetCrmEventResponse> getCrmEvent(GetCrmEventRequest request) {
         AsyncRequestOperation<GetCrmEventRequest, GetCrmEventResponse> operation
-              = new GetCrmEvent.Async(sdkConfiguration);
+              = new GetCrmEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -418,7 +420,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<GetCrmLeadResponse> getCrmLead(GetCrmLeadRequest request) {
         AsyncRequestOperation<GetCrmLeadRequest, GetCrmLeadResponse> operation
-              = new GetCrmLead.Async(sdkConfiguration);
+              = new GetCrmLead.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -441,7 +443,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<GetCrmPipelineResponse> getCrmPipeline(GetCrmPipelineRequest request) {
         AsyncRequestOperation<GetCrmPipelineRequest, GetCrmPipelineResponse> operation
-              = new GetCrmPipeline.Async(sdkConfiguration);
+              = new GetCrmPipeline.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -464,7 +466,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<ListCrmCompaniesResponse> listCrmCompanies(ListCrmCompaniesRequest request) {
         AsyncRequestOperation<ListCrmCompaniesRequest, ListCrmCompaniesResponse> operation
-              = new ListCrmCompanies.Async(sdkConfiguration);
+              = new ListCrmCompanies.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -487,7 +489,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<ListCrmContactsResponse> listCrmContacts(ListCrmContactsRequest request) {
         AsyncRequestOperation<ListCrmContactsRequest, ListCrmContactsResponse> operation
-              = new ListCrmContacts.Async(sdkConfiguration);
+              = new ListCrmContacts.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -510,7 +512,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<ListCrmDealsResponse> listCrmDeals(ListCrmDealsRequest request) {
         AsyncRequestOperation<ListCrmDealsRequest, ListCrmDealsResponse> operation
-              = new ListCrmDeals.Async(sdkConfiguration);
+              = new ListCrmDeals.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -533,7 +535,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<ListCrmEventsResponse> listCrmEvents(ListCrmEventsRequest request) {
         AsyncRequestOperation<ListCrmEventsRequest, ListCrmEventsResponse> operation
-              = new ListCrmEvents.Async(sdkConfiguration);
+              = new ListCrmEvents.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -556,7 +558,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<ListCrmLeadsResponse> listCrmLeads(ListCrmLeadsRequest request) {
         AsyncRequestOperation<ListCrmLeadsRequest, ListCrmLeadsResponse> operation
-              = new ListCrmLeads.Async(sdkConfiguration);
+              = new ListCrmLeads.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -579,7 +581,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<ListCrmPipelinesResponse> listCrmPipelines(ListCrmPipelinesRequest request) {
         AsyncRequestOperation<ListCrmPipelinesRequest, ListCrmPipelinesResponse> operation
-              = new ListCrmPipelines.Async(sdkConfiguration);
+              = new ListCrmPipelines.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -602,7 +604,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<PatchCrmCompanyResponse> patchCrmCompany(PatchCrmCompanyRequest request) {
         AsyncRequestOperation<PatchCrmCompanyRequest, PatchCrmCompanyResponse> operation
-              = new PatchCrmCompany.Async(sdkConfiguration);
+              = new PatchCrmCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -625,7 +627,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<PatchCrmContactResponse> patchCrmContact(PatchCrmContactRequest request) {
         AsyncRequestOperation<PatchCrmContactRequest, PatchCrmContactResponse> operation
-              = new PatchCrmContact.Async(sdkConfiguration);
+              = new PatchCrmContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -648,7 +650,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<PatchCrmDealResponse> patchCrmDeal(PatchCrmDealRequest request) {
         AsyncRequestOperation<PatchCrmDealRequest, PatchCrmDealResponse> operation
-              = new PatchCrmDeal.Async(sdkConfiguration);
+              = new PatchCrmDeal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -671,7 +673,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<PatchCrmEventResponse> patchCrmEvent(PatchCrmEventRequest request) {
         AsyncRequestOperation<PatchCrmEventRequest, PatchCrmEventResponse> operation
-              = new PatchCrmEvent.Async(sdkConfiguration);
+              = new PatchCrmEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -694,7 +696,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<PatchCrmLeadResponse> patchCrmLead(PatchCrmLeadRequest request) {
         AsyncRequestOperation<PatchCrmLeadRequest, PatchCrmLeadResponse> operation
-              = new PatchCrmLead.Async(sdkConfiguration);
+              = new PatchCrmLead.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -717,7 +719,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<PatchCrmPipelineResponse> patchCrmPipeline(PatchCrmPipelineRequest request) {
         AsyncRequestOperation<PatchCrmPipelineRequest, PatchCrmPipelineResponse> operation
-              = new PatchCrmPipeline.Async(sdkConfiguration);
+              = new PatchCrmPipeline.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -740,7 +742,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<RemoveCrmCompanyResponse> removeCrmCompany(RemoveCrmCompanyRequest request) {
         AsyncRequestOperation<RemoveCrmCompanyRequest, RemoveCrmCompanyResponse> operation
-              = new RemoveCrmCompany.Async(sdkConfiguration);
+              = new RemoveCrmCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -763,7 +765,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<RemoveCrmContactResponse> removeCrmContact(RemoveCrmContactRequest request) {
         AsyncRequestOperation<RemoveCrmContactRequest, RemoveCrmContactResponse> operation
-              = new RemoveCrmContact.Async(sdkConfiguration);
+              = new RemoveCrmContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -786,7 +788,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<RemoveCrmDealResponse> removeCrmDeal(RemoveCrmDealRequest request) {
         AsyncRequestOperation<RemoveCrmDealRequest, RemoveCrmDealResponse> operation
-              = new RemoveCrmDeal.Async(sdkConfiguration);
+              = new RemoveCrmDeal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -809,7 +811,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<RemoveCrmEventResponse> removeCrmEvent(RemoveCrmEventRequest request) {
         AsyncRequestOperation<RemoveCrmEventRequest, RemoveCrmEventResponse> operation
-              = new RemoveCrmEvent.Async(sdkConfiguration);
+              = new RemoveCrmEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -832,7 +834,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<RemoveCrmLeadResponse> removeCrmLead(RemoveCrmLeadRequest request) {
         AsyncRequestOperation<RemoveCrmLeadRequest, RemoveCrmLeadResponse> operation
-              = new RemoveCrmLead.Async(sdkConfiguration);
+              = new RemoveCrmLead.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -855,7 +857,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<RemoveCrmPipelineResponse> removeCrmPipeline(RemoveCrmPipelineRequest request) {
         AsyncRequestOperation<RemoveCrmPipelineRequest, RemoveCrmPipelineResponse> operation
-              = new RemoveCrmPipeline.Async(sdkConfiguration);
+              = new RemoveCrmPipeline.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -878,7 +880,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<UpdateCrmCompanyResponse> updateCrmCompany(UpdateCrmCompanyRequest request) {
         AsyncRequestOperation<UpdateCrmCompanyRequest, UpdateCrmCompanyResponse> operation
-              = new UpdateCrmCompany.Async(sdkConfiguration);
+              = new UpdateCrmCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -901,7 +903,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<UpdateCrmContactResponse> updateCrmContact(UpdateCrmContactRequest request) {
         AsyncRequestOperation<UpdateCrmContactRequest, UpdateCrmContactResponse> operation
-              = new UpdateCrmContact.Async(sdkConfiguration);
+              = new UpdateCrmContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -924,7 +926,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<UpdateCrmDealResponse> updateCrmDeal(UpdateCrmDealRequest request) {
         AsyncRequestOperation<UpdateCrmDealRequest, UpdateCrmDealResponse> operation
-              = new UpdateCrmDeal.Async(sdkConfiguration);
+              = new UpdateCrmDeal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -947,7 +949,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<UpdateCrmEventResponse> updateCrmEvent(UpdateCrmEventRequest request) {
         AsyncRequestOperation<UpdateCrmEventRequest, UpdateCrmEventResponse> operation
-              = new UpdateCrmEvent.Async(sdkConfiguration);
+              = new UpdateCrmEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -970,7 +972,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<UpdateCrmLeadResponse> updateCrmLead(UpdateCrmLeadRequest request) {
         AsyncRequestOperation<UpdateCrmLeadRequest, UpdateCrmLeadResponse> operation
-              = new UpdateCrmLead.Async(sdkConfiguration);
+              = new UpdateCrmLead.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -993,7 +995,7 @@ public class AsyncCrm {
      */
     public CompletableFuture<UpdateCrmPipelineResponse> updateCrmPipeline(UpdateCrmPipelineRequest request) {
         AsyncRequestOperation<UpdateCrmPipelineRequest, UpdateCrmPipelineResponse> operation
-              = new UpdateCrmPipeline.Async(sdkConfiguration);
+              = new UpdateCrmPipeline.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

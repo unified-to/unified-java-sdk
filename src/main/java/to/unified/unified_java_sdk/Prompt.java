@@ -10,9 +10,11 @@ import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptRequest;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptResponse;
 import to.unified.unified_java_sdk.operations.CreateGenaiPrompt;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Prompt {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncPrompt asyncSDK;
 
@@ -48,7 +50,7 @@ public class Prompt {
      */
     public CreateGenaiPromptResponse createGenaiPrompt(CreateGenaiPromptRequest request) throws Exception {
         RequestOperation<CreateGenaiPromptRequest, CreateGenaiPromptResponse> operation
-              = new CreateGenaiPrompt.Sync(sdkConfiguration);
+              = new CreateGenaiPrompt.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

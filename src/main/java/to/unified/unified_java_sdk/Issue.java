@@ -10,9 +10,11 @@ import to.unified.unified_java_sdk.models.operations.ListUnifiedIssuesRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedIssuesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedIssuesResponse;
 import to.unified.unified_java_sdk.operations.ListUnifiedIssues;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Issue {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncIssue asyncSDK;
 
@@ -48,7 +50,7 @@ public class Issue {
      */
     public ListUnifiedIssuesResponse listUnifiedIssues(ListUnifiedIssuesRequest request) throws Exception {
         RequestOperation<ListUnifiedIssuesRequest, ListUnifiedIssuesResponse> operation
-              = new ListUnifiedIssues.Sync(sdkConfiguration);
+              = new ListUnifiedIssues.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

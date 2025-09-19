@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListMessagingMessages;
 import to.unified.unified_java_sdk.operations.PatchMessagingMessage;
 import to.unified.unified_java_sdk.operations.RemoveMessagingMessage;
 import to.unified.unified_java_sdk.operations.UpdateMessagingMessage;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Message {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncMessage asyncSDK;
 
@@ -68,7 +70,7 @@ public class Message {
      */
     public CreateMessagingMessageResponse createMessagingMessage(CreateMessagingMessageRequest request) throws Exception {
         RequestOperation<CreateMessagingMessageRequest, CreateMessagingMessageResponse> operation
-              = new CreateMessagingMessage.Sync(sdkConfiguration);
+              = new CreateMessagingMessage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -90,7 +92,7 @@ public class Message {
      */
     public GetMessagingMessageResponse getMessagingMessage(GetMessagingMessageRequest request) throws Exception {
         RequestOperation<GetMessagingMessageRequest, GetMessagingMessageResponse> operation
-              = new GetMessagingMessage.Sync(sdkConfiguration);
+              = new GetMessagingMessage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -112,7 +114,7 @@ public class Message {
      */
     public ListMessagingMessagesResponse listMessagingMessages(ListMessagingMessagesRequest request) throws Exception {
         RequestOperation<ListMessagingMessagesRequest, ListMessagingMessagesResponse> operation
-              = new ListMessagingMessages.Sync(sdkConfiguration);
+              = new ListMessagingMessages.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -134,7 +136,7 @@ public class Message {
      */
     public PatchMessagingMessageResponse patchMessagingMessage(PatchMessagingMessageRequest request) throws Exception {
         RequestOperation<PatchMessagingMessageRequest, PatchMessagingMessageResponse> operation
-              = new PatchMessagingMessage.Sync(sdkConfiguration);
+              = new PatchMessagingMessage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -156,7 +158,7 @@ public class Message {
      */
     public RemoveMessagingMessageResponse removeMessagingMessage(RemoveMessagingMessageRequest request) throws Exception {
         RequestOperation<RemoveMessagingMessageRequest, RemoveMessagingMessageResponse> operation
-              = new RemoveMessagingMessage.Sync(sdkConfiguration);
+              = new RemoveMessagingMessage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -178,7 +180,7 @@ public class Message {
      */
     public UpdateMessagingMessageResponse updateMessagingMessage(UpdateMessagingMessageRequest request) throws Exception {
         RequestOperation<UpdateMessagingMessageRequest, UpdateMessagingMessageResponse> operation
-              = new UpdateMessagingMessage.Sync(sdkConfiguration);
+              = new UpdateMessagingMessage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

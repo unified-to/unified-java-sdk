@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListAccountingJournals;
 import to.unified.unified_java_sdk.operations.PatchAccountingJournal;
 import to.unified.unified_java_sdk.operations.RemoveAccountingJournal;
 import to.unified.unified_java_sdk.operations.UpdateAccountingJournal;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncJournal {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Journal syncSDK;
 
@@ -68,7 +70,7 @@ public class AsyncJournal {
      */
     public CompletableFuture<CreateAccountingJournalResponse> createAccountingJournal(CreateAccountingJournalRequest request) {
         AsyncRequestOperation<CreateAccountingJournalRequest, CreateAccountingJournalResponse> operation
-              = new CreateAccountingJournal.Async(sdkConfiguration);
+              = new CreateAccountingJournal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -91,7 +93,7 @@ public class AsyncJournal {
      */
     public CompletableFuture<GetAccountingJournalResponse> getAccountingJournal(GetAccountingJournalRequest request) {
         AsyncRequestOperation<GetAccountingJournalRequest, GetAccountingJournalResponse> operation
-              = new GetAccountingJournal.Async(sdkConfiguration);
+              = new GetAccountingJournal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -114,7 +116,7 @@ public class AsyncJournal {
      */
     public CompletableFuture<ListAccountingJournalsResponse> listAccountingJournals(ListAccountingJournalsRequest request) {
         AsyncRequestOperation<ListAccountingJournalsRequest, ListAccountingJournalsResponse> operation
-              = new ListAccountingJournals.Async(sdkConfiguration);
+              = new ListAccountingJournals.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -137,7 +139,7 @@ public class AsyncJournal {
      */
     public CompletableFuture<PatchAccountingJournalResponse> patchAccountingJournal(PatchAccountingJournalRequest request) {
         AsyncRequestOperation<PatchAccountingJournalRequest, PatchAccountingJournalResponse> operation
-              = new PatchAccountingJournal.Async(sdkConfiguration);
+              = new PatchAccountingJournal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -160,7 +162,7 @@ public class AsyncJournal {
      */
     public CompletableFuture<RemoveAccountingJournalResponse> removeAccountingJournal(RemoveAccountingJournalRequest request) {
         AsyncRequestOperation<RemoveAccountingJournalRequest, RemoveAccountingJournalResponse> operation
-              = new RemoveAccountingJournal.Async(sdkConfiguration);
+              = new RemoveAccountingJournal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -183,7 +185,7 @@ public class AsyncJournal {
      */
     public CompletableFuture<UpdateAccountingJournalResponse> updateAccountingJournal(UpdateAccountingJournalRequest request) {
         AsyncRequestOperation<UpdateAccountingJournalRequest, UpdateAccountingJournalResponse> operation
-              = new UpdateAccountingJournal.Async(sdkConfiguration);
+              = new UpdateAccountingJournal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

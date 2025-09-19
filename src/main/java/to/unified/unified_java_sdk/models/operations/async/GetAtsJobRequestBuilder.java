@@ -10,12 +10,14 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetAtsJobRequest;
 import to.unified.unified_java_sdk.operations.GetAtsJob;
+import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetAtsJobRequestBuilder {
 
     private GetAtsJobRequest request;
     private final SDKConfiguration sdkConfiguration;
+    private final Headers _headers = new Headers(); 
 
     public GetAtsJobRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
@@ -30,7 +32,7 @@ public class GetAtsJobRequestBuilder {
     public CompletableFuture<GetAtsJobResponse> call() throws Exception {
         
         AsyncRequestOperation<GetAtsJobRequest, GetAtsJobResponse> operation
-              = new GetAtsJob.Async(sdkConfiguration);
+              = new GetAtsJob.Async(sdkConfiguration, _headers);
 
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);

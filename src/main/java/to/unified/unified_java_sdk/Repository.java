@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListRepoRepositories;
 import to.unified.unified_java_sdk.operations.PatchRepoRepository;
 import to.unified.unified_java_sdk.operations.RemoveRepoRepository;
 import to.unified.unified_java_sdk.operations.UpdateRepoRepository;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Repository {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncRepository asyncSDK;
 
@@ -68,7 +70,7 @@ public class Repository {
      */
     public CreateRepoRepositoryResponse createRepoRepository(CreateRepoRepositoryRequest request) throws Exception {
         RequestOperation<CreateRepoRepositoryRequest, CreateRepoRepositoryResponse> operation
-              = new CreateRepoRepository.Sync(sdkConfiguration);
+              = new CreateRepoRepository.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -90,7 +92,7 @@ public class Repository {
      */
     public GetRepoRepositoryResponse getRepoRepository(GetRepoRepositoryRequest request) throws Exception {
         RequestOperation<GetRepoRepositoryRequest, GetRepoRepositoryResponse> operation
-              = new GetRepoRepository.Sync(sdkConfiguration);
+              = new GetRepoRepository.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -112,7 +114,7 @@ public class Repository {
      */
     public ListRepoRepositoriesResponse listRepoRepositories(ListRepoRepositoriesRequest request) throws Exception {
         RequestOperation<ListRepoRepositoriesRequest, ListRepoRepositoriesResponse> operation
-              = new ListRepoRepositories.Sync(sdkConfiguration);
+              = new ListRepoRepositories.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -134,7 +136,7 @@ public class Repository {
      */
     public PatchRepoRepositoryResponse patchRepoRepository(PatchRepoRepositoryRequest request) throws Exception {
         RequestOperation<PatchRepoRepositoryRequest, PatchRepoRepositoryResponse> operation
-              = new PatchRepoRepository.Sync(sdkConfiguration);
+              = new PatchRepoRepository.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -156,7 +158,7 @@ public class Repository {
      */
     public RemoveRepoRepositoryResponse removeRepoRepository(RemoveRepoRepositoryRequest request) throws Exception {
         RequestOperation<RemoveRepoRepositoryRequest, RemoveRepoRepositoryResponse> operation
-              = new RemoveRepoRepository.Sync(sdkConfiguration);
+              = new RemoveRepoRepository.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -178,7 +180,7 @@ public class Repository {
      */
     public UpdateRepoRepositoryResponse updateRepoRepository(UpdateRepoRepositoryRequest request) throws Exception {
         RequestOperation<UpdateRepoRepositoryRequest, UpdateRepoRepositoryResponse> operation
-              = new UpdateRepoRepository.Sync(sdkConfiguration);
+              = new UpdateRepoRepository.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

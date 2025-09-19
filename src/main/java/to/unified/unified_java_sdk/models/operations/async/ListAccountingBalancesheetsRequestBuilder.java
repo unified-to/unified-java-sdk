@@ -10,12 +10,14 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListAccountingBalancesheetsRequest;
 import to.unified.unified_java_sdk.operations.ListAccountingBalancesheets;
+import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListAccountingBalancesheetsRequestBuilder {
 
     private ListAccountingBalancesheetsRequest request;
     private final SDKConfiguration sdkConfiguration;
+    private final Headers _headers = new Headers(); 
 
     public ListAccountingBalancesheetsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
@@ -30,7 +32,7 @@ public class ListAccountingBalancesheetsRequestBuilder {
     public CompletableFuture<ListAccountingBalancesheetsResponse> call() throws Exception {
         
         AsyncRequestOperation<ListAccountingBalancesheetsRequest, ListAccountingBalancesheetsResponse> operation
-              = new ListAccountingBalancesheets.Async(sdkConfiguration);
+              = new ListAccountingBalancesheets.Async(sdkConfiguration, _headers);
 
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);

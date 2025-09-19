@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListMessagingMessages;
 import to.unified.unified_java_sdk.operations.PatchMessagingMessage;
 import to.unified.unified_java_sdk.operations.RemoveMessagingMessage;
 import to.unified.unified_java_sdk.operations.UpdateMessagingMessage;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncMessage {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Message syncSDK;
 
@@ -68,7 +70,7 @@ public class AsyncMessage {
      */
     public CompletableFuture<CreateMessagingMessageResponse> createMessagingMessage(CreateMessagingMessageRequest request) {
         AsyncRequestOperation<CreateMessagingMessageRequest, CreateMessagingMessageResponse> operation
-              = new CreateMessagingMessage.Async(sdkConfiguration);
+              = new CreateMessagingMessage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -91,7 +93,7 @@ public class AsyncMessage {
      */
     public CompletableFuture<GetMessagingMessageResponse> getMessagingMessage(GetMessagingMessageRequest request) {
         AsyncRequestOperation<GetMessagingMessageRequest, GetMessagingMessageResponse> operation
-              = new GetMessagingMessage.Async(sdkConfiguration);
+              = new GetMessagingMessage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -114,7 +116,7 @@ public class AsyncMessage {
      */
     public CompletableFuture<ListMessagingMessagesResponse> listMessagingMessages(ListMessagingMessagesRequest request) {
         AsyncRequestOperation<ListMessagingMessagesRequest, ListMessagingMessagesResponse> operation
-              = new ListMessagingMessages.Async(sdkConfiguration);
+              = new ListMessagingMessages.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -137,7 +139,7 @@ public class AsyncMessage {
      */
     public CompletableFuture<PatchMessagingMessageResponse> patchMessagingMessage(PatchMessagingMessageRequest request) {
         AsyncRequestOperation<PatchMessagingMessageRequest, PatchMessagingMessageResponse> operation
-              = new PatchMessagingMessage.Async(sdkConfiguration);
+              = new PatchMessagingMessage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -160,7 +162,7 @@ public class AsyncMessage {
      */
     public CompletableFuture<RemoveMessagingMessageResponse> removeMessagingMessage(RemoveMessagingMessageRequest request) {
         AsyncRequestOperation<RemoveMessagingMessageRequest, RemoveMessagingMessageResponse> operation
-              = new RemoveMessagingMessage.Async(sdkConfiguration);
+              = new RemoveMessagingMessage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -183,7 +185,7 @@ public class AsyncMessage {
      */
     public CompletableFuture<UpdateMessagingMessageResponse> updateMessagingMessage(UpdateMessagingMessageRequest request) {
         AsyncRequestOperation<UpdateMessagingMessageRequest, UpdateMessagingMessageResponse> operation
-              = new UpdateMessagingMessage.Async(sdkConfiguration);
+              = new UpdateMessagingMessage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

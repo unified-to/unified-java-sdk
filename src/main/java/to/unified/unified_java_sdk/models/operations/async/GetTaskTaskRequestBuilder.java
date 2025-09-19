@@ -10,12 +10,14 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetTaskTaskRequest;
 import to.unified.unified_java_sdk.operations.GetTaskTask;
+import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetTaskTaskRequestBuilder {
 
     private GetTaskTaskRequest request;
     private final SDKConfiguration sdkConfiguration;
+    private final Headers _headers = new Headers(); 
 
     public GetTaskTaskRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
@@ -30,7 +32,7 @@ public class GetTaskTaskRequestBuilder {
     public CompletableFuture<GetTaskTaskResponse> call() throws Exception {
         
         AsyncRequestOperation<GetTaskTaskRequest, GetTaskTaskResponse> operation
-              = new GetTaskTask.Async(sdkConfiguration);
+              = new GetTaskTask.Async(sdkConfiguration, _headers);
 
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);

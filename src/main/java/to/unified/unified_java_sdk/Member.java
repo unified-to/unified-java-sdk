@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListMartechMembers;
 import to.unified.unified_java_sdk.operations.PatchMartechMember;
 import to.unified.unified_java_sdk.operations.RemoveMartechMember;
 import to.unified.unified_java_sdk.operations.UpdateMartechMember;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Member {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncMember asyncSDK;
 
@@ -68,7 +70,7 @@ public class Member {
      */
     public CreateMartechMemberResponse createMartechMember(CreateMartechMemberRequest request) throws Exception {
         RequestOperation<CreateMartechMemberRequest, CreateMartechMemberResponse> operation
-              = new CreateMartechMember.Sync(sdkConfiguration);
+              = new CreateMartechMember.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -90,7 +92,7 @@ public class Member {
      */
     public GetMartechMemberResponse getMartechMember(GetMartechMemberRequest request) throws Exception {
         RequestOperation<GetMartechMemberRequest, GetMartechMemberResponse> operation
-              = new GetMartechMember.Sync(sdkConfiguration);
+              = new GetMartechMember.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -112,7 +114,7 @@ public class Member {
      */
     public ListMartechMembersResponse listMartechMembers(ListMartechMembersRequest request) throws Exception {
         RequestOperation<ListMartechMembersRequest, ListMartechMembersResponse> operation
-              = new ListMartechMembers.Sync(sdkConfiguration);
+              = new ListMartechMembers.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -134,7 +136,7 @@ public class Member {
      */
     public PatchMartechMemberResponse patchMartechMember(PatchMartechMemberRequest request) throws Exception {
         RequestOperation<PatchMartechMemberRequest, PatchMartechMemberResponse> operation
-              = new PatchMartechMember.Sync(sdkConfiguration);
+              = new PatchMartechMember.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -156,7 +158,7 @@ public class Member {
      */
     public RemoveMartechMemberResponse removeMartechMember(RemoveMartechMemberRequest request) throws Exception {
         RequestOperation<RemoveMartechMemberRequest, RemoveMartechMemberResponse> operation
-              = new RemoveMartechMember.Sync(sdkConfiguration);
+              = new RemoveMartechMember.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -178,7 +180,7 @@ public class Member {
      */
     public UpdateMartechMemberResponse updateMartechMember(UpdateMartechMemberRequest request) throws Exception {
         RequestOperation<UpdateMartechMemberRequest, UpdateMartechMemberResponse> operation
-              = new UpdateMartechMember.Sync(sdkConfiguration);
+              = new UpdateMartechMember.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

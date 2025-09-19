@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListLmsInstructors;
 import to.unified.unified_java_sdk.operations.PatchLmsInstructor;
 import to.unified.unified_java_sdk.operations.RemoveLmsInstructor;
 import to.unified.unified_java_sdk.operations.UpdateLmsInstructor;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Instructor {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncInstructor asyncSDK;
 
@@ -68,7 +70,7 @@ public class Instructor {
      */
     public CreateLmsInstructorResponse createLmsInstructor(CreateLmsInstructorRequest request) throws Exception {
         RequestOperation<CreateLmsInstructorRequest, CreateLmsInstructorResponse> operation
-              = new CreateLmsInstructor.Sync(sdkConfiguration);
+              = new CreateLmsInstructor.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -90,7 +92,7 @@ public class Instructor {
      */
     public GetLmsInstructorResponse getLmsInstructor(GetLmsInstructorRequest request) throws Exception {
         RequestOperation<GetLmsInstructorRequest, GetLmsInstructorResponse> operation
-              = new GetLmsInstructor.Sync(sdkConfiguration);
+              = new GetLmsInstructor.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -112,7 +114,7 @@ public class Instructor {
      */
     public ListLmsInstructorsResponse listLmsInstructors(ListLmsInstructorsRequest request) throws Exception {
         RequestOperation<ListLmsInstructorsRequest, ListLmsInstructorsResponse> operation
-              = new ListLmsInstructors.Sync(sdkConfiguration);
+              = new ListLmsInstructors.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -134,7 +136,7 @@ public class Instructor {
      */
     public PatchLmsInstructorResponse patchLmsInstructor(PatchLmsInstructorRequest request) throws Exception {
         RequestOperation<PatchLmsInstructorRequest, PatchLmsInstructorResponse> operation
-              = new PatchLmsInstructor.Sync(sdkConfiguration);
+              = new PatchLmsInstructor.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -156,7 +158,7 @@ public class Instructor {
      */
     public RemoveLmsInstructorResponse removeLmsInstructor(RemoveLmsInstructorRequest request) throws Exception {
         RequestOperation<RemoveLmsInstructorRequest, RemoveLmsInstructorResponse> operation
-              = new RemoveLmsInstructor.Sync(sdkConfiguration);
+              = new RemoveLmsInstructor.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -178,7 +180,7 @@ public class Instructor {
      */
     public UpdateLmsInstructorResponse updateLmsInstructor(UpdateLmsInstructorRequest request) throws Exception {
         RequestOperation<UpdateLmsInstructorRequest, UpdateLmsInstructorResponse> operation
-              = new UpdateLmsInstructor.Sync(sdkConfiguration);
+              = new UpdateLmsInstructor.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

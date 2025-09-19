@@ -38,9 +38,11 @@ import to.unified.unified_java_sdk.operations.PatchPassthroughRaw;
 import to.unified.unified_java_sdk.operations.RemovePassthrough;
 import to.unified.unified_java_sdk.operations.UpdatePassthroughJson;
 import to.unified.unified_java_sdk.operations.UpdatePassthroughRaw;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncPassthrough {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Passthrough syncSDK;
 
@@ -76,7 +78,7 @@ public class AsyncPassthrough {
      */
     public CompletableFuture<CreatePassthroughJsonResponse> createPassthroughJson(CreatePassthroughJsonRequest request) {
         AsyncRequestOperation<CreatePassthroughJsonRequest, CreatePassthroughJsonResponse> operation
-              = new CreatePassthroughJson.Async(sdkConfiguration);
+              = new CreatePassthroughJson.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -99,7 +101,7 @@ public class AsyncPassthrough {
      */
     public CompletableFuture<CreatePassthroughRawResponse> createPassthroughRaw(CreatePassthroughRawRequest request) {
         AsyncRequestOperation<CreatePassthroughRawRequest, CreatePassthroughRawResponse> operation
-              = new CreatePassthroughRaw.Async(sdkConfiguration);
+              = new CreatePassthroughRaw.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -122,7 +124,7 @@ public class AsyncPassthrough {
      */
     public CompletableFuture<ListPassthroughsResponse> listPassthroughs(ListPassthroughsRequest request) {
         AsyncRequestOperation<ListPassthroughsRequest, ListPassthroughsResponse> operation
-              = new ListPassthroughs.Async(sdkConfiguration);
+              = new ListPassthroughs.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -145,7 +147,7 @@ public class AsyncPassthrough {
      */
     public CompletableFuture<PatchPassthroughJsonResponse> patchPassthroughJson(PatchPassthroughJsonRequest request) {
         AsyncRequestOperation<PatchPassthroughJsonRequest, PatchPassthroughJsonResponse> operation
-              = new PatchPassthroughJson.Async(sdkConfiguration);
+              = new PatchPassthroughJson.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -168,7 +170,7 @@ public class AsyncPassthrough {
      */
     public CompletableFuture<PatchPassthroughRawResponse> patchPassthroughRaw(PatchPassthroughRawRequest request) {
         AsyncRequestOperation<PatchPassthroughRawRequest, PatchPassthroughRawResponse> operation
-              = new PatchPassthroughRaw.Async(sdkConfiguration);
+              = new PatchPassthroughRaw.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -191,7 +193,7 @@ public class AsyncPassthrough {
      */
     public CompletableFuture<RemovePassthroughResponse> removePassthrough(RemovePassthroughRequest request) {
         AsyncRequestOperation<RemovePassthroughRequest, RemovePassthroughResponse> operation
-              = new RemovePassthrough.Async(sdkConfiguration);
+              = new RemovePassthrough.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -214,7 +216,7 @@ public class AsyncPassthrough {
      */
     public CompletableFuture<UpdatePassthroughJsonResponse> updatePassthroughJson(UpdatePassthroughJsonRequest request) {
         AsyncRequestOperation<UpdatePassthroughJsonRequest, UpdatePassthroughJsonResponse> operation
-              = new UpdatePassthroughJson.Async(sdkConfiguration);
+              = new UpdatePassthroughJson.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -237,7 +239,7 @@ public class AsyncPassthrough {
      */
     public CompletableFuture<UpdatePassthroughRawResponse> updatePassthroughRaw(UpdatePassthroughRawRequest request) {
         AsyncRequestOperation<UpdatePassthroughRawRequest, UpdatePassthroughRawResponse> operation
-              = new UpdatePassthroughRaw.Async(sdkConfiguration);
+              = new UpdatePassthroughRaw.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

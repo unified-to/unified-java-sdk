@@ -10,9 +10,11 @@ import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleRequest;
 import to.unified.unified_java_sdk.models.operations.async.ListEnrichPeopleRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListEnrichPeopleResponse;
 import to.unified.unified_java_sdk.operations.ListEnrichPeople;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncPerson {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Person syncSDK;
 
@@ -48,7 +50,7 @@ public class AsyncPerson {
      */
     public CompletableFuture<ListEnrichPeopleResponse> listEnrichPeople(ListEnrichPeopleRequest request) {
         AsyncRequestOperation<ListEnrichPeopleRequest, ListEnrichPeopleResponse> operation
-              = new ListEnrichPeople.Async(sdkConfiguration);
+              = new ListEnrichPeople.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

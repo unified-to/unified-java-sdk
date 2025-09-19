@@ -54,9 +54,11 @@ import to.unified.unified_java_sdk.operations.RemoveScimGroups;
 import to.unified.unified_java_sdk.operations.RemoveScimUsers;
 import to.unified.unified_java_sdk.operations.UpdateScimGroups;
 import to.unified.unified_java_sdk.operations.UpdateScimUsers;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Scim {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncScim asyncSDK;
 
@@ -92,7 +94,7 @@ public class Scim {
      */
     public CreateScimGroupsResponse createScimGroups(CreateScimGroupsRequest request) throws Exception {
         RequestOperation<CreateScimGroupsRequest, CreateScimGroupsResponse> operation
-              = new CreateScimGroups.Sync(sdkConfiguration);
+              = new CreateScimGroups.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -114,7 +116,7 @@ public class Scim {
      */
     public CreateScimUsersResponse createScimUsers(CreateScimUsersRequest request) throws Exception {
         RequestOperation<CreateScimUsersRequest, CreateScimUsersResponse> operation
-              = new CreateScimUsers.Sync(sdkConfiguration);
+              = new CreateScimUsers.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -136,7 +138,7 @@ public class Scim {
      */
     public GetScimGroupsResponse getScimGroups(GetScimGroupsRequest request) throws Exception {
         RequestOperation<GetScimGroupsRequest, GetScimGroupsResponse> operation
-              = new GetScimGroups.Sync(sdkConfiguration);
+              = new GetScimGroups.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -158,7 +160,7 @@ public class Scim {
      */
     public GetScimUsersResponse getScimUsers(GetScimUsersRequest request) throws Exception {
         RequestOperation<GetScimUsersRequest, GetScimUsersResponse> operation
-              = new GetScimUsers.Sync(sdkConfiguration);
+              = new GetScimUsers.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -180,7 +182,7 @@ public class Scim {
      */
     public ListScimGroupsResponse listScimGroups(ListScimGroupsRequest request) throws Exception {
         RequestOperation<ListScimGroupsRequest, ListScimGroupsResponse> operation
-              = new ListScimGroups.Sync(sdkConfiguration);
+              = new ListScimGroups.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -202,7 +204,7 @@ public class Scim {
      */
     public ListScimUsersResponse listScimUsers(ListScimUsersRequest request) throws Exception {
         RequestOperation<ListScimUsersRequest, ListScimUsersResponse> operation
-              = new ListScimUsers.Sync(sdkConfiguration);
+              = new ListScimUsers.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -224,7 +226,7 @@ public class Scim {
      */
     public PatchScimGroupsResponse patchScimGroups(PatchScimGroupsRequest request) throws Exception {
         RequestOperation<PatchScimGroupsRequest, PatchScimGroupsResponse> operation
-              = new PatchScimGroups.Sync(sdkConfiguration);
+              = new PatchScimGroups.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -246,7 +248,7 @@ public class Scim {
      */
     public PatchScimUsersResponse patchScimUsers(PatchScimUsersRequest request) throws Exception {
         RequestOperation<PatchScimUsersRequest, PatchScimUsersResponse> operation
-              = new PatchScimUsers.Sync(sdkConfiguration);
+              = new PatchScimUsers.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -268,7 +270,7 @@ public class Scim {
      */
     public RemoveScimGroupsResponse removeScimGroups(RemoveScimGroupsRequest request) throws Exception {
         RequestOperation<RemoveScimGroupsRequest, RemoveScimGroupsResponse> operation
-              = new RemoveScimGroups.Sync(sdkConfiguration);
+              = new RemoveScimGroups.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -290,7 +292,7 @@ public class Scim {
      */
     public RemoveScimUsersResponse removeScimUsers(RemoveScimUsersRequest request) throws Exception {
         RequestOperation<RemoveScimUsersRequest, RemoveScimUsersResponse> operation
-              = new RemoveScimUsers.Sync(sdkConfiguration);
+              = new RemoveScimUsers.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -312,7 +314,7 @@ public class Scim {
      */
     public UpdateScimGroupsResponse updateScimGroups(UpdateScimGroupsRequest request) throws Exception {
         RequestOperation<UpdateScimGroupsRequest, UpdateScimGroupsResponse> operation
-              = new UpdateScimGroups.Sync(sdkConfiguration);
+              = new UpdateScimGroups.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -334,7 +336,7 @@ public class Scim {
      */
     public UpdateScimUsersResponse updateScimUsers(UpdateScimUsersRequest request) throws Exception {
         RequestOperation<UpdateScimUsersRequest, UpdateScimUsersResponse> operation
-              = new UpdateScimUsers.Sync(sdkConfiguration);
+              = new UpdateScimUsers.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

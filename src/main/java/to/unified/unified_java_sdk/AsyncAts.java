@@ -202,9 +202,11 @@ import to.unified.unified_java_sdk.operations.UpdateAtsDocument;
 import to.unified.unified_java_sdk.operations.UpdateAtsInterview;
 import to.unified.unified_java_sdk.operations.UpdateAtsJob;
 import to.unified.unified_java_sdk.operations.UpdateAtsScorecard;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncAts {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Ats syncSDK;
 
@@ -240,7 +242,7 @@ public class AsyncAts {
      */
     public CompletableFuture<CreateAtsActivityResponse> createAtsActivity(CreateAtsActivityRequest request) {
         AsyncRequestOperation<CreateAtsActivityRequest, CreateAtsActivityResponse> operation
-              = new CreateAtsActivity.Async(sdkConfiguration);
+              = new CreateAtsActivity.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -263,7 +265,7 @@ public class AsyncAts {
      */
     public CompletableFuture<CreateAtsApplicationResponse> createAtsApplication(CreateAtsApplicationRequest request) {
         AsyncRequestOperation<CreateAtsApplicationRequest, CreateAtsApplicationResponse> operation
-              = new CreateAtsApplication.Async(sdkConfiguration);
+              = new CreateAtsApplication.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -286,7 +288,7 @@ public class AsyncAts {
      */
     public CompletableFuture<CreateAtsCandidateResponse> createAtsCandidate(CreateAtsCandidateRequest request) {
         AsyncRequestOperation<CreateAtsCandidateRequest, CreateAtsCandidateResponse> operation
-              = new CreateAtsCandidate.Async(sdkConfiguration);
+              = new CreateAtsCandidate.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -309,7 +311,7 @@ public class AsyncAts {
      */
     public CompletableFuture<CreateAtsCompanyResponse> createAtsCompany(CreateAtsCompanyRequest request) {
         AsyncRequestOperation<CreateAtsCompanyRequest, CreateAtsCompanyResponse> operation
-              = new CreateAtsCompany.Async(sdkConfiguration);
+              = new CreateAtsCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -332,7 +334,7 @@ public class AsyncAts {
      */
     public CompletableFuture<CreateAtsDocumentResponse> createAtsDocument(CreateAtsDocumentRequest request) {
         AsyncRequestOperation<CreateAtsDocumentRequest, CreateAtsDocumentResponse> operation
-              = new CreateAtsDocument.Async(sdkConfiguration);
+              = new CreateAtsDocument.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -355,7 +357,7 @@ public class AsyncAts {
      */
     public CompletableFuture<CreateAtsInterviewResponse> createAtsInterview(CreateAtsInterviewRequest request) {
         AsyncRequestOperation<CreateAtsInterviewRequest, CreateAtsInterviewResponse> operation
-              = new CreateAtsInterview.Async(sdkConfiguration);
+              = new CreateAtsInterview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -378,7 +380,7 @@ public class AsyncAts {
      */
     public CompletableFuture<CreateAtsJobResponse> createAtsJob(CreateAtsJobRequest request) {
         AsyncRequestOperation<CreateAtsJobRequest, CreateAtsJobResponse> operation
-              = new CreateAtsJob.Async(sdkConfiguration);
+              = new CreateAtsJob.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -401,7 +403,7 @@ public class AsyncAts {
      */
     public CompletableFuture<CreateAtsScorecardResponse> createAtsScorecard(CreateAtsScorecardRequest request) {
         AsyncRequestOperation<CreateAtsScorecardRequest, CreateAtsScorecardResponse> operation
-              = new CreateAtsScorecard.Async(sdkConfiguration);
+              = new CreateAtsScorecard.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -424,7 +426,7 @@ public class AsyncAts {
      */
     public CompletableFuture<GetAtsActivityResponse> getAtsActivity(GetAtsActivityRequest request) {
         AsyncRequestOperation<GetAtsActivityRequest, GetAtsActivityResponse> operation
-              = new GetAtsActivity.Async(sdkConfiguration);
+              = new GetAtsActivity.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -447,7 +449,7 @@ public class AsyncAts {
      */
     public CompletableFuture<GetAtsApplicationResponse> getAtsApplication(GetAtsApplicationRequest request) {
         AsyncRequestOperation<GetAtsApplicationRequest, GetAtsApplicationResponse> operation
-              = new GetAtsApplication.Async(sdkConfiguration);
+              = new GetAtsApplication.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -470,7 +472,7 @@ public class AsyncAts {
      */
     public CompletableFuture<GetAtsCandidateResponse> getAtsCandidate(GetAtsCandidateRequest request) {
         AsyncRequestOperation<GetAtsCandidateRequest, GetAtsCandidateResponse> operation
-              = new GetAtsCandidate.Async(sdkConfiguration);
+              = new GetAtsCandidate.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -493,7 +495,7 @@ public class AsyncAts {
      */
     public CompletableFuture<GetAtsCompanyResponse> getAtsCompany(GetAtsCompanyRequest request) {
         AsyncRequestOperation<GetAtsCompanyRequest, GetAtsCompanyResponse> operation
-              = new GetAtsCompany.Async(sdkConfiguration);
+              = new GetAtsCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -516,7 +518,7 @@ public class AsyncAts {
      */
     public CompletableFuture<GetAtsDocumentResponse> getAtsDocument(GetAtsDocumentRequest request) {
         AsyncRequestOperation<GetAtsDocumentRequest, GetAtsDocumentResponse> operation
-              = new GetAtsDocument.Async(sdkConfiguration);
+              = new GetAtsDocument.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -539,7 +541,7 @@ public class AsyncAts {
      */
     public CompletableFuture<GetAtsInterviewResponse> getAtsInterview(GetAtsInterviewRequest request) {
         AsyncRequestOperation<GetAtsInterviewRequest, GetAtsInterviewResponse> operation
-              = new GetAtsInterview.Async(sdkConfiguration);
+              = new GetAtsInterview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -562,7 +564,7 @@ public class AsyncAts {
      */
     public CompletableFuture<GetAtsJobResponse> getAtsJob(GetAtsJobRequest request) {
         AsyncRequestOperation<GetAtsJobRequest, GetAtsJobResponse> operation
-              = new GetAtsJob.Async(sdkConfiguration);
+              = new GetAtsJob.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -585,7 +587,7 @@ public class AsyncAts {
      */
     public CompletableFuture<GetAtsScorecardResponse> getAtsScorecard(GetAtsScorecardRequest request) {
         AsyncRequestOperation<GetAtsScorecardRequest, GetAtsScorecardResponse> operation
-              = new GetAtsScorecard.Async(sdkConfiguration);
+              = new GetAtsScorecard.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -608,7 +610,7 @@ public class AsyncAts {
      */
     public CompletableFuture<ListAtsActivitiesResponse> listAtsActivities(ListAtsActivitiesRequest request) {
         AsyncRequestOperation<ListAtsActivitiesRequest, ListAtsActivitiesResponse> operation
-              = new ListAtsActivities.Async(sdkConfiguration);
+              = new ListAtsActivities.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -631,7 +633,7 @@ public class AsyncAts {
      */
     public CompletableFuture<ListAtsApplicationsResponse> listAtsApplications(ListAtsApplicationsRequest request) {
         AsyncRequestOperation<ListAtsApplicationsRequest, ListAtsApplicationsResponse> operation
-              = new ListAtsApplications.Async(sdkConfiguration);
+              = new ListAtsApplications.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -654,7 +656,7 @@ public class AsyncAts {
      */
     public CompletableFuture<ListAtsApplicationstatusesResponse> listAtsApplicationstatuses(ListAtsApplicationstatusesRequest request) {
         AsyncRequestOperation<ListAtsApplicationstatusesRequest, ListAtsApplicationstatusesResponse> operation
-              = new ListAtsApplicationstatuses.Async(sdkConfiguration);
+              = new ListAtsApplicationstatuses.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -677,7 +679,7 @@ public class AsyncAts {
      */
     public CompletableFuture<ListAtsCandidatesResponse> listAtsCandidates(ListAtsCandidatesRequest request) {
         AsyncRequestOperation<ListAtsCandidatesRequest, ListAtsCandidatesResponse> operation
-              = new ListAtsCandidates.Async(sdkConfiguration);
+              = new ListAtsCandidates.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -700,7 +702,7 @@ public class AsyncAts {
      */
     public CompletableFuture<ListAtsCompaniesResponse> listAtsCompanies(ListAtsCompaniesRequest request) {
         AsyncRequestOperation<ListAtsCompaniesRequest, ListAtsCompaniesResponse> operation
-              = new ListAtsCompanies.Async(sdkConfiguration);
+              = new ListAtsCompanies.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -723,7 +725,7 @@ public class AsyncAts {
      */
     public CompletableFuture<ListAtsDocumentsResponse> listAtsDocuments(ListAtsDocumentsRequest request) {
         AsyncRequestOperation<ListAtsDocumentsRequest, ListAtsDocumentsResponse> operation
-              = new ListAtsDocuments.Async(sdkConfiguration);
+              = new ListAtsDocuments.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -746,7 +748,7 @@ public class AsyncAts {
      */
     public CompletableFuture<ListAtsInterviewsResponse> listAtsInterviews(ListAtsInterviewsRequest request) {
         AsyncRequestOperation<ListAtsInterviewsRequest, ListAtsInterviewsResponse> operation
-              = new ListAtsInterviews.Async(sdkConfiguration);
+              = new ListAtsInterviews.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -769,7 +771,7 @@ public class AsyncAts {
      */
     public CompletableFuture<ListAtsJobsResponse> listAtsJobs(ListAtsJobsRequest request) {
         AsyncRequestOperation<ListAtsJobsRequest, ListAtsJobsResponse> operation
-              = new ListAtsJobs.Async(sdkConfiguration);
+              = new ListAtsJobs.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -792,7 +794,7 @@ public class AsyncAts {
      */
     public CompletableFuture<ListAtsScorecardsResponse> listAtsScorecards(ListAtsScorecardsRequest request) {
         AsyncRequestOperation<ListAtsScorecardsRequest, ListAtsScorecardsResponse> operation
-              = new ListAtsScorecards.Async(sdkConfiguration);
+              = new ListAtsScorecards.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -815,7 +817,7 @@ public class AsyncAts {
      */
     public CompletableFuture<PatchAtsActivityResponse> patchAtsActivity(PatchAtsActivityRequest request) {
         AsyncRequestOperation<PatchAtsActivityRequest, PatchAtsActivityResponse> operation
-              = new PatchAtsActivity.Async(sdkConfiguration);
+              = new PatchAtsActivity.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -838,7 +840,7 @@ public class AsyncAts {
      */
     public CompletableFuture<PatchAtsApplicationResponse> patchAtsApplication(PatchAtsApplicationRequest request) {
         AsyncRequestOperation<PatchAtsApplicationRequest, PatchAtsApplicationResponse> operation
-              = new PatchAtsApplication.Async(sdkConfiguration);
+              = new PatchAtsApplication.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -861,7 +863,7 @@ public class AsyncAts {
      */
     public CompletableFuture<PatchAtsCandidateResponse> patchAtsCandidate(PatchAtsCandidateRequest request) {
         AsyncRequestOperation<PatchAtsCandidateRequest, PatchAtsCandidateResponse> operation
-              = new PatchAtsCandidate.Async(sdkConfiguration);
+              = new PatchAtsCandidate.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -884,7 +886,7 @@ public class AsyncAts {
      */
     public CompletableFuture<PatchAtsCompanyResponse> patchAtsCompany(PatchAtsCompanyRequest request) {
         AsyncRequestOperation<PatchAtsCompanyRequest, PatchAtsCompanyResponse> operation
-              = new PatchAtsCompany.Async(sdkConfiguration);
+              = new PatchAtsCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -907,7 +909,7 @@ public class AsyncAts {
      */
     public CompletableFuture<PatchAtsDocumentResponse> patchAtsDocument(PatchAtsDocumentRequest request) {
         AsyncRequestOperation<PatchAtsDocumentRequest, PatchAtsDocumentResponse> operation
-              = new PatchAtsDocument.Async(sdkConfiguration);
+              = new PatchAtsDocument.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -930,7 +932,7 @@ public class AsyncAts {
      */
     public CompletableFuture<PatchAtsInterviewResponse> patchAtsInterview(PatchAtsInterviewRequest request) {
         AsyncRequestOperation<PatchAtsInterviewRequest, PatchAtsInterviewResponse> operation
-              = new PatchAtsInterview.Async(sdkConfiguration);
+              = new PatchAtsInterview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -953,7 +955,7 @@ public class AsyncAts {
      */
     public CompletableFuture<PatchAtsJobResponse> patchAtsJob(PatchAtsJobRequest request) {
         AsyncRequestOperation<PatchAtsJobRequest, PatchAtsJobResponse> operation
-              = new PatchAtsJob.Async(sdkConfiguration);
+              = new PatchAtsJob.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -976,7 +978,7 @@ public class AsyncAts {
      */
     public CompletableFuture<PatchAtsScorecardResponse> patchAtsScorecard(PatchAtsScorecardRequest request) {
         AsyncRequestOperation<PatchAtsScorecardRequest, PatchAtsScorecardResponse> operation
-              = new PatchAtsScorecard.Async(sdkConfiguration);
+              = new PatchAtsScorecard.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -999,7 +1001,7 @@ public class AsyncAts {
      */
     public CompletableFuture<RemoveAtsActivityResponse> removeAtsActivity(RemoveAtsActivityRequest request) {
         AsyncRequestOperation<RemoveAtsActivityRequest, RemoveAtsActivityResponse> operation
-              = new RemoveAtsActivity.Async(sdkConfiguration);
+              = new RemoveAtsActivity.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1022,7 +1024,7 @@ public class AsyncAts {
      */
     public CompletableFuture<RemoveAtsApplicationResponse> removeAtsApplication(RemoveAtsApplicationRequest request) {
         AsyncRequestOperation<RemoveAtsApplicationRequest, RemoveAtsApplicationResponse> operation
-              = new RemoveAtsApplication.Async(sdkConfiguration);
+              = new RemoveAtsApplication.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1045,7 +1047,7 @@ public class AsyncAts {
      */
     public CompletableFuture<RemoveAtsCandidateResponse> removeAtsCandidate(RemoveAtsCandidateRequest request) {
         AsyncRequestOperation<RemoveAtsCandidateRequest, RemoveAtsCandidateResponse> operation
-              = new RemoveAtsCandidate.Async(sdkConfiguration);
+              = new RemoveAtsCandidate.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1068,7 +1070,7 @@ public class AsyncAts {
      */
     public CompletableFuture<RemoveAtsCompanyResponse> removeAtsCompany(RemoveAtsCompanyRequest request) {
         AsyncRequestOperation<RemoveAtsCompanyRequest, RemoveAtsCompanyResponse> operation
-              = new RemoveAtsCompany.Async(sdkConfiguration);
+              = new RemoveAtsCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1091,7 +1093,7 @@ public class AsyncAts {
      */
     public CompletableFuture<RemoveAtsDocumentResponse> removeAtsDocument(RemoveAtsDocumentRequest request) {
         AsyncRequestOperation<RemoveAtsDocumentRequest, RemoveAtsDocumentResponse> operation
-              = new RemoveAtsDocument.Async(sdkConfiguration);
+              = new RemoveAtsDocument.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1114,7 +1116,7 @@ public class AsyncAts {
      */
     public CompletableFuture<RemoveAtsInterviewResponse> removeAtsInterview(RemoveAtsInterviewRequest request) {
         AsyncRequestOperation<RemoveAtsInterviewRequest, RemoveAtsInterviewResponse> operation
-              = new RemoveAtsInterview.Async(sdkConfiguration);
+              = new RemoveAtsInterview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1137,7 +1139,7 @@ public class AsyncAts {
      */
     public CompletableFuture<RemoveAtsJobResponse> removeAtsJob(RemoveAtsJobRequest request) {
         AsyncRequestOperation<RemoveAtsJobRequest, RemoveAtsJobResponse> operation
-              = new RemoveAtsJob.Async(sdkConfiguration);
+              = new RemoveAtsJob.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1160,7 +1162,7 @@ public class AsyncAts {
      */
     public CompletableFuture<RemoveAtsScorecardResponse> removeAtsScorecard(RemoveAtsScorecardRequest request) {
         AsyncRequestOperation<RemoveAtsScorecardRequest, RemoveAtsScorecardResponse> operation
-              = new RemoveAtsScorecard.Async(sdkConfiguration);
+              = new RemoveAtsScorecard.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1183,7 +1185,7 @@ public class AsyncAts {
      */
     public CompletableFuture<UpdateAtsActivityResponse> updateAtsActivity(UpdateAtsActivityRequest request) {
         AsyncRequestOperation<UpdateAtsActivityRequest, UpdateAtsActivityResponse> operation
-              = new UpdateAtsActivity.Async(sdkConfiguration);
+              = new UpdateAtsActivity.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1206,7 +1208,7 @@ public class AsyncAts {
      */
     public CompletableFuture<UpdateAtsApplicationResponse> updateAtsApplication(UpdateAtsApplicationRequest request) {
         AsyncRequestOperation<UpdateAtsApplicationRequest, UpdateAtsApplicationResponse> operation
-              = new UpdateAtsApplication.Async(sdkConfiguration);
+              = new UpdateAtsApplication.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1229,7 +1231,7 @@ public class AsyncAts {
      */
     public CompletableFuture<UpdateAtsCandidateResponse> updateAtsCandidate(UpdateAtsCandidateRequest request) {
         AsyncRequestOperation<UpdateAtsCandidateRequest, UpdateAtsCandidateResponse> operation
-              = new UpdateAtsCandidate.Async(sdkConfiguration);
+              = new UpdateAtsCandidate.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1252,7 +1254,7 @@ public class AsyncAts {
      */
     public CompletableFuture<UpdateAtsCompanyResponse> updateAtsCompany(UpdateAtsCompanyRequest request) {
         AsyncRequestOperation<UpdateAtsCompanyRequest, UpdateAtsCompanyResponse> operation
-              = new UpdateAtsCompany.Async(sdkConfiguration);
+              = new UpdateAtsCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1275,7 +1277,7 @@ public class AsyncAts {
      */
     public CompletableFuture<UpdateAtsDocumentResponse> updateAtsDocument(UpdateAtsDocumentRequest request) {
         AsyncRequestOperation<UpdateAtsDocumentRequest, UpdateAtsDocumentResponse> operation
-              = new UpdateAtsDocument.Async(sdkConfiguration);
+              = new UpdateAtsDocument.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1298,7 +1300,7 @@ public class AsyncAts {
      */
     public CompletableFuture<UpdateAtsInterviewResponse> updateAtsInterview(UpdateAtsInterviewRequest request) {
         AsyncRequestOperation<UpdateAtsInterviewRequest, UpdateAtsInterviewResponse> operation
-              = new UpdateAtsInterview.Async(sdkConfiguration);
+              = new UpdateAtsInterview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1321,7 +1323,7 @@ public class AsyncAts {
      */
     public CompletableFuture<UpdateAtsJobResponse> updateAtsJob(UpdateAtsJobRequest request) {
         AsyncRequestOperation<UpdateAtsJobRequest, UpdateAtsJobResponse> operation
-              = new UpdateAtsJob.Async(sdkConfiguration);
+              = new UpdateAtsJob.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1344,7 +1346,7 @@ public class AsyncAts {
      */
     public CompletableFuture<UpdateAtsScorecardResponse> updateAtsScorecard(UpdateAtsScorecardRequest request) {
         AsyncRequestOperation<UpdateAtsScorecardRequest, UpdateAtsScorecardResponse> operation
-              = new UpdateAtsScorecard.Async(sdkConfiguration);
+              = new UpdateAtsScorecard.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -54,9 +54,11 @@ import to.unified.unified_java_sdk.operations.RemoveCalendarLink;
 import to.unified.unified_java_sdk.operations.RemovePaymentLink;
 import to.unified.unified_java_sdk.operations.UpdateCalendarLink;
 import to.unified.unified_java_sdk.operations.UpdatePaymentLink;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncLink {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Link syncSDK;
 
@@ -92,7 +94,7 @@ public class AsyncLink {
      */
     public CompletableFuture<CreateCalendarLinkResponse> createCalendarLink(CreateCalendarLinkRequest request) {
         AsyncRequestOperation<CreateCalendarLinkRequest, CreateCalendarLinkResponse> operation
-              = new CreateCalendarLink.Async(sdkConfiguration);
+              = new CreateCalendarLink.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -115,7 +117,7 @@ public class AsyncLink {
      */
     public CompletableFuture<CreatePaymentLinkResponse> createPaymentLink(CreatePaymentLinkRequest request) {
         AsyncRequestOperation<CreatePaymentLinkRequest, CreatePaymentLinkResponse> operation
-              = new CreatePaymentLink.Async(sdkConfiguration);
+              = new CreatePaymentLink.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -138,7 +140,7 @@ public class AsyncLink {
      */
     public CompletableFuture<GetCalendarLinkResponse> getCalendarLink(GetCalendarLinkRequest request) {
         AsyncRequestOperation<GetCalendarLinkRequest, GetCalendarLinkResponse> operation
-              = new GetCalendarLink.Async(sdkConfiguration);
+              = new GetCalendarLink.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -161,7 +163,7 @@ public class AsyncLink {
      */
     public CompletableFuture<GetPaymentLinkResponse> getPaymentLink(GetPaymentLinkRequest request) {
         AsyncRequestOperation<GetPaymentLinkRequest, GetPaymentLinkResponse> operation
-              = new GetPaymentLink.Async(sdkConfiguration);
+              = new GetPaymentLink.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -184,7 +186,7 @@ public class AsyncLink {
      */
     public CompletableFuture<ListCalendarLinksResponse> listCalendarLinks(ListCalendarLinksRequest request) {
         AsyncRequestOperation<ListCalendarLinksRequest, ListCalendarLinksResponse> operation
-              = new ListCalendarLinks.Async(sdkConfiguration);
+              = new ListCalendarLinks.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -207,7 +209,7 @@ public class AsyncLink {
      */
     public CompletableFuture<ListPaymentLinksResponse> listPaymentLinks(ListPaymentLinksRequest request) {
         AsyncRequestOperation<ListPaymentLinksRequest, ListPaymentLinksResponse> operation
-              = new ListPaymentLinks.Async(sdkConfiguration);
+              = new ListPaymentLinks.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -230,7 +232,7 @@ public class AsyncLink {
      */
     public CompletableFuture<PatchCalendarLinkResponse> patchCalendarLink(PatchCalendarLinkRequest request) {
         AsyncRequestOperation<PatchCalendarLinkRequest, PatchCalendarLinkResponse> operation
-              = new PatchCalendarLink.Async(sdkConfiguration);
+              = new PatchCalendarLink.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -253,7 +255,7 @@ public class AsyncLink {
      */
     public CompletableFuture<PatchPaymentLinkResponse> patchPaymentLink(PatchPaymentLinkRequest request) {
         AsyncRequestOperation<PatchPaymentLinkRequest, PatchPaymentLinkResponse> operation
-              = new PatchPaymentLink.Async(sdkConfiguration);
+              = new PatchPaymentLink.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -276,7 +278,7 @@ public class AsyncLink {
      */
     public CompletableFuture<RemoveCalendarLinkResponse> removeCalendarLink(RemoveCalendarLinkRequest request) {
         AsyncRequestOperation<RemoveCalendarLinkRequest, RemoveCalendarLinkResponse> operation
-              = new RemoveCalendarLink.Async(sdkConfiguration);
+              = new RemoveCalendarLink.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -299,7 +301,7 @@ public class AsyncLink {
      */
     public CompletableFuture<RemovePaymentLinkResponse> removePaymentLink(RemovePaymentLinkRequest request) {
         AsyncRequestOperation<RemovePaymentLinkRequest, RemovePaymentLinkResponse> operation
-              = new RemovePaymentLink.Async(sdkConfiguration);
+              = new RemovePaymentLink.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -322,7 +324,7 @@ public class AsyncLink {
      */
     public CompletableFuture<UpdateCalendarLinkResponse> updateCalendarLink(UpdateCalendarLinkRequest request) {
         AsyncRequestOperation<UpdateCalendarLinkRequest, UpdateCalendarLinkResponse> operation
-              = new UpdateCalendarLink.Async(sdkConfiguration);
+              = new UpdateCalendarLink.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -345,7 +347,7 @@ public class AsyncLink {
      */
     public CompletableFuture<UpdatePaymentLinkResponse> updatePaymentLink(UpdatePaymentLinkRequest request) {
         AsyncRequestOperation<UpdatePaymentLinkRequest, UpdatePaymentLinkResponse> operation
-              = new UpdatePaymentLink.Async(sdkConfiguration);
+              = new UpdatePaymentLink.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

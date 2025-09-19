@@ -14,9 +14,11 @@ import to.unified.unified_java_sdk.models.operations.ListHrisPayslipsRequestBuil
 import to.unified.unified_java_sdk.models.operations.ListHrisPayslipsResponse;
 import to.unified.unified_java_sdk.operations.GetHrisPayslip;
 import to.unified.unified_java_sdk.operations.ListHrisPayslips;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Payslip {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncPayslip asyncSDK;
 
@@ -52,7 +54,7 @@ public class Payslip {
      */
     public GetHrisPayslipResponse getHrisPayslip(GetHrisPayslipRequest request) throws Exception {
         RequestOperation<GetHrisPayslipRequest, GetHrisPayslipResponse> operation
-              = new GetHrisPayslip.Sync(sdkConfiguration);
+              = new GetHrisPayslip.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -74,7 +76,7 @@ public class Payslip {
      */
     public ListHrisPayslipsResponse listHrisPayslips(ListHrisPayslipsRequest request) throws Exception {
         RequestOperation<ListHrisPayslipsRequest, ListHrisPayslipsResponse> operation
-              = new ListHrisPayslips.Sync(sdkConfiguration);
+              = new ListHrisPayslips.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

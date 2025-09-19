@@ -54,9 +54,11 @@ import to.unified.unified_java_sdk.operations.RemoveAccountingCategory;
 import to.unified.unified_java_sdk.operations.RemoveTicketingCategory;
 import to.unified.unified_java_sdk.operations.UpdateAccountingCategory;
 import to.unified.unified_java_sdk.operations.UpdateTicketingCategory;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncCategory {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Category syncSDK;
 
@@ -92,7 +94,7 @@ public class AsyncCategory {
      */
     public CompletableFuture<CreateAccountingCategoryResponse> createAccountingCategory(CreateAccountingCategoryRequest request) {
         AsyncRequestOperation<CreateAccountingCategoryRequest, CreateAccountingCategoryResponse> operation
-              = new CreateAccountingCategory.Async(sdkConfiguration);
+              = new CreateAccountingCategory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -115,7 +117,7 @@ public class AsyncCategory {
      */
     public CompletableFuture<CreateTicketingCategoryResponse> createTicketingCategory(CreateTicketingCategoryRequest request) {
         AsyncRequestOperation<CreateTicketingCategoryRequest, CreateTicketingCategoryResponse> operation
-              = new CreateTicketingCategory.Async(sdkConfiguration);
+              = new CreateTicketingCategory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -138,7 +140,7 @@ public class AsyncCategory {
      */
     public CompletableFuture<GetAccountingCategoryResponse> getAccountingCategory(GetAccountingCategoryRequest request) {
         AsyncRequestOperation<GetAccountingCategoryRequest, GetAccountingCategoryResponse> operation
-              = new GetAccountingCategory.Async(sdkConfiguration);
+              = new GetAccountingCategory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -161,7 +163,7 @@ public class AsyncCategory {
      */
     public CompletableFuture<GetTicketingCategoryResponse> getTicketingCategory(GetTicketingCategoryRequest request) {
         AsyncRequestOperation<GetTicketingCategoryRequest, GetTicketingCategoryResponse> operation
-              = new GetTicketingCategory.Async(sdkConfiguration);
+              = new GetTicketingCategory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -184,7 +186,7 @@ public class AsyncCategory {
      */
     public CompletableFuture<ListAccountingCategoriesResponse> listAccountingCategories(ListAccountingCategoriesRequest request) {
         AsyncRequestOperation<ListAccountingCategoriesRequest, ListAccountingCategoriesResponse> operation
-              = new ListAccountingCategories.Async(sdkConfiguration);
+              = new ListAccountingCategories.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -207,7 +209,7 @@ public class AsyncCategory {
      */
     public CompletableFuture<ListTicketingCategoriesResponse> listTicketingCategories(ListTicketingCategoriesRequest request) {
         AsyncRequestOperation<ListTicketingCategoriesRequest, ListTicketingCategoriesResponse> operation
-              = new ListTicketingCategories.Async(sdkConfiguration);
+              = new ListTicketingCategories.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -230,7 +232,7 @@ public class AsyncCategory {
      */
     public CompletableFuture<PatchAccountingCategoryResponse> patchAccountingCategory(PatchAccountingCategoryRequest request) {
         AsyncRequestOperation<PatchAccountingCategoryRequest, PatchAccountingCategoryResponse> operation
-              = new PatchAccountingCategory.Async(sdkConfiguration);
+              = new PatchAccountingCategory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -253,7 +255,7 @@ public class AsyncCategory {
      */
     public CompletableFuture<PatchTicketingCategoryResponse> patchTicketingCategory(PatchTicketingCategoryRequest request) {
         AsyncRequestOperation<PatchTicketingCategoryRequest, PatchTicketingCategoryResponse> operation
-              = new PatchTicketingCategory.Async(sdkConfiguration);
+              = new PatchTicketingCategory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -276,7 +278,7 @@ public class AsyncCategory {
      */
     public CompletableFuture<RemoveAccountingCategoryResponse> removeAccountingCategory(RemoveAccountingCategoryRequest request) {
         AsyncRequestOperation<RemoveAccountingCategoryRequest, RemoveAccountingCategoryResponse> operation
-              = new RemoveAccountingCategory.Async(sdkConfiguration);
+              = new RemoveAccountingCategory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -299,7 +301,7 @@ public class AsyncCategory {
      */
     public CompletableFuture<RemoveTicketingCategoryResponse> removeTicketingCategory(RemoveTicketingCategoryRequest request) {
         AsyncRequestOperation<RemoveTicketingCategoryRequest, RemoveTicketingCategoryResponse> operation
-              = new RemoveTicketingCategory.Async(sdkConfiguration);
+              = new RemoveTicketingCategory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -322,7 +324,7 @@ public class AsyncCategory {
      */
     public CompletableFuture<UpdateAccountingCategoryResponse> updateAccountingCategory(UpdateAccountingCategoryRequest request) {
         AsyncRequestOperation<UpdateAccountingCategoryRequest, UpdateAccountingCategoryResponse> operation
-              = new UpdateAccountingCategory.Async(sdkConfiguration);
+              = new UpdateAccountingCategory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -345,7 +347,7 @@ public class AsyncCategory {
      */
     public CompletableFuture<UpdateTicketingCategoryResponse> updateTicketingCategory(UpdateTicketingCategoryRequest request) {
         AsyncRequestOperation<UpdateTicketingCategoryRequest, UpdateTicketingCategoryResponse> operation
-              = new UpdateTicketingCategory.Async(sdkConfiguration);
+              = new UpdateTicketingCategory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListLmsClasses;
 import to.unified.unified_java_sdk.operations.PatchLmsClass;
 import to.unified.unified_java_sdk.operations.RemoveLmsClass;
 import to.unified.unified_java_sdk.operations.UpdateLmsClass;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncClass {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Class syncSDK;
 
@@ -68,7 +70,7 @@ public class AsyncClass {
      */
     public CompletableFuture<CreateLmsClassResponse> createLmsClass(CreateLmsClassRequest request) {
         AsyncRequestOperation<CreateLmsClassRequest, CreateLmsClassResponse> operation
-              = new CreateLmsClass.Async(sdkConfiguration);
+              = new CreateLmsClass.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -91,7 +93,7 @@ public class AsyncClass {
      */
     public CompletableFuture<GetLmsClassResponse> getLmsClass(GetLmsClassRequest request) {
         AsyncRequestOperation<GetLmsClassRequest, GetLmsClassResponse> operation
-              = new GetLmsClass.Async(sdkConfiguration);
+              = new GetLmsClass.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -114,7 +116,7 @@ public class AsyncClass {
      */
     public CompletableFuture<ListLmsClassesResponse> listLmsClasses(ListLmsClassesRequest request) {
         AsyncRequestOperation<ListLmsClassesRequest, ListLmsClassesResponse> operation
-              = new ListLmsClasses.Async(sdkConfiguration);
+              = new ListLmsClasses.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -137,7 +139,7 @@ public class AsyncClass {
      */
     public CompletableFuture<PatchLmsClassResponse> patchLmsClass(PatchLmsClassRequest request) {
         AsyncRequestOperation<PatchLmsClassRequest, PatchLmsClassResponse> operation
-              = new PatchLmsClass.Async(sdkConfiguration);
+              = new PatchLmsClass.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -160,7 +162,7 @@ public class AsyncClass {
      */
     public CompletableFuture<RemoveLmsClassResponse> removeLmsClass(RemoveLmsClassRequest request) {
         AsyncRequestOperation<RemoveLmsClassRequest, RemoveLmsClassResponse> operation
-              = new RemoveLmsClass.Async(sdkConfiguration);
+              = new RemoveLmsClass.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -183,7 +185,7 @@ public class AsyncClass {
      */
     public CompletableFuture<UpdateLmsClassResponse> updateLmsClass(UpdateLmsClassRequest request) {
         AsyncRequestOperation<UpdateLmsClassRequest, UpdateLmsClassResponse> operation
-              = new UpdateLmsClass.Async(sdkConfiguration);
+              = new UpdateLmsClass.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

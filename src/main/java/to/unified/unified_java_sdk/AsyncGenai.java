@@ -22,9 +22,11 @@ import to.unified.unified_java_sdk.operations.CreateGenaiEmbedding;
 import to.unified.unified_java_sdk.operations.CreateGenaiPrompt;
 import to.unified.unified_java_sdk.operations.GetGenaiModel;
 import to.unified.unified_java_sdk.operations.ListGenaiModels;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncGenai {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Genai syncSDK;
 
@@ -60,7 +62,7 @@ public class AsyncGenai {
      */
     public CompletableFuture<CreateGenaiEmbeddingResponse> createGenaiEmbedding(CreateGenaiEmbeddingRequest request) {
         AsyncRequestOperation<CreateGenaiEmbeddingRequest, CreateGenaiEmbeddingResponse> operation
-              = new CreateGenaiEmbedding.Async(sdkConfiguration);
+              = new CreateGenaiEmbedding.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -83,7 +85,7 @@ public class AsyncGenai {
      */
     public CompletableFuture<CreateGenaiPromptResponse> createGenaiPrompt(CreateGenaiPromptRequest request) {
         AsyncRequestOperation<CreateGenaiPromptRequest, CreateGenaiPromptResponse> operation
-              = new CreateGenaiPrompt.Async(sdkConfiguration);
+              = new CreateGenaiPrompt.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -106,7 +108,7 @@ public class AsyncGenai {
      */
     public CompletableFuture<GetGenaiModelResponse> getGenaiModel(GetGenaiModelRequest request) {
         AsyncRequestOperation<GetGenaiModelRequest, GetGenaiModelResponse> operation
-              = new GetGenaiModel.Async(sdkConfiguration);
+              = new GetGenaiModel.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -129,7 +131,7 @@ public class AsyncGenai {
      */
     public CompletableFuture<ListGenaiModelsResponse> listGenaiModels(ListGenaiModelsRequest request) {
         AsyncRequestOperation<ListGenaiModelsRequest, ListGenaiModelsResponse> operation
-              = new ListGenaiModels.Async(sdkConfiguration);
+              = new ListGenaiModels.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

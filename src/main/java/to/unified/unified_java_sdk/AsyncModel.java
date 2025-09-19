@@ -14,9 +14,11 @@ import to.unified.unified_java_sdk.models.operations.async.ListGenaiModelsReques
 import to.unified.unified_java_sdk.models.operations.async.ListGenaiModelsResponse;
 import to.unified.unified_java_sdk.operations.GetGenaiModel;
 import to.unified.unified_java_sdk.operations.ListGenaiModels;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncModel {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Model syncSDK;
 
@@ -52,7 +54,7 @@ public class AsyncModel {
      */
     public CompletableFuture<GetGenaiModelResponse> getGenaiModel(GetGenaiModelRequest request) {
         AsyncRequestOperation<GetGenaiModelRequest, GetGenaiModelResponse> operation
-              = new GetGenaiModel.Async(sdkConfiguration);
+              = new GetGenaiModel.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -75,7 +77,7 @@ public class AsyncModel {
      */
     public CompletableFuture<ListGenaiModelsResponse> listGenaiModels(ListGenaiModelsRequest request) {
         AsyncRequestOperation<ListGenaiModelsRequest, ListGenaiModelsResponse> operation
-              = new ListGenaiModels.Async(sdkConfiguration);
+              = new ListGenaiModels.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

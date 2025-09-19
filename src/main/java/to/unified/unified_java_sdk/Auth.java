@@ -14,9 +14,11 @@ import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationLoginR
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationLoginResponse;
 import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationAuth;
 import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationLogin;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Auth {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncAuth asyncSDK;
 
@@ -56,7 +58,7 @@ public class Auth {
      */
     public GetUnifiedIntegrationAuthResponse getUnifiedIntegrationAuth(GetUnifiedIntegrationAuthRequest request) throws Exception {
         RequestOperation<GetUnifiedIntegrationAuthRequest, GetUnifiedIntegrationAuthResponse> operation
-              = new GetUnifiedIntegrationAuth.Sync(sdkConfiguration);
+              = new GetUnifiedIntegrationAuth.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -82,7 +84,7 @@ public class Auth {
      */
     public GetUnifiedIntegrationLoginResponse getUnifiedIntegrationLogin(GetUnifiedIntegrationLoginRequest request) throws Exception {
         RequestOperation<GetUnifiedIntegrationLoginRequest, GetUnifiedIntegrationLoginResponse> operation
-              = new GetUnifiedIntegrationLogin.Sync(sdkConfiguration);
+              = new GetUnifiedIntegrationLogin.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListAccountingOrders;
 import to.unified.unified_java_sdk.operations.PatchAccountingOrder;
 import to.unified.unified_java_sdk.operations.RemoveAccountingOrder;
 import to.unified.unified_java_sdk.operations.UpdateAccountingOrder;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncOrder {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Order syncSDK;
 
@@ -68,7 +70,7 @@ public class AsyncOrder {
      */
     public CompletableFuture<CreateAccountingOrderResponse> createAccountingOrder(CreateAccountingOrderRequest request) {
         AsyncRequestOperation<CreateAccountingOrderRequest, CreateAccountingOrderResponse> operation
-              = new CreateAccountingOrder.Async(sdkConfiguration);
+              = new CreateAccountingOrder.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -91,7 +93,7 @@ public class AsyncOrder {
      */
     public CompletableFuture<GetAccountingOrderResponse> getAccountingOrder(GetAccountingOrderRequest request) {
         AsyncRequestOperation<GetAccountingOrderRequest, GetAccountingOrderResponse> operation
-              = new GetAccountingOrder.Async(sdkConfiguration);
+              = new GetAccountingOrder.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -114,7 +116,7 @@ public class AsyncOrder {
      */
     public CompletableFuture<ListAccountingOrdersResponse> listAccountingOrders(ListAccountingOrdersRequest request) {
         AsyncRequestOperation<ListAccountingOrdersRequest, ListAccountingOrdersResponse> operation
-              = new ListAccountingOrders.Async(sdkConfiguration);
+              = new ListAccountingOrders.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -137,7 +139,7 @@ public class AsyncOrder {
      */
     public CompletableFuture<PatchAccountingOrderResponse> patchAccountingOrder(PatchAccountingOrderRequest request) {
         AsyncRequestOperation<PatchAccountingOrderRequest, PatchAccountingOrderResponse> operation
-              = new PatchAccountingOrder.Async(sdkConfiguration);
+              = new PatchAccountingOrder.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -160,7 +162,7 @@ public class AsyncOrder {
      */
     public CompletableFuture<RemoveAccountingOrderResponse> removeAccountingOrder(RemoveAccountingOrderRequest request) {
         AsyncRequestOperation<RemoveAccountingOrderRequest, RemoveAccountingOrderResponse> operation
-              = new RemoveAccountingOrder.Async(sdkConfiguration);
+              = new RemoveAccountingOrder.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -183,7 +185,7 @@ public class AsyncOrder {
      */
     public CompletableFuture<UpdateAccountingOrderResponse> updateAccountingOrder(UpdateAccountingOrderRequest request) {
         AsyncRequestOperation<UpdateAccountingOrderRequest, UpdateAccountingOrderResponse> operation
-              = new UpdateAccountingOrder.Async(sdkConfiguration);
+              = new UpdateAccountingOrder.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

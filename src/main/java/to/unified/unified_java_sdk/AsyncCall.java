@@ -10,9 +10,11 @@ import to.unified.unified_java_sdk.models.operations.ListUcCallsRequest;
 import to.unified.unified_java_sdk.models.operations.async.ListUcCallsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListUcCallsResponse;
 import to.unified.unified_java_sdk.operations.ListUcCalls;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncCall {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Call syncSDK;
 
@@ -48,7 +50,7 @@ public class AsyncCall {
      */
     public CompletableFuture<ListUcCallsResponse> listUcCalls(ListUcCallsRequest request) {
         AsyncRequestOperation<ListUcCallsRequest, ListUcCallsResponse> operation
-              = new ListUcCalls.Async(sdkConfiguration);
+              = new ListUcCalls.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

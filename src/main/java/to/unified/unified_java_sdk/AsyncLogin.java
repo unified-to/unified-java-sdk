@@ -10,9 +10,11 @@ import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationLoginR
 import to.unified.unified_java_sdk.models.operations.async.GetUnifiedIntegrationLoginRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetUnifiedIntegrationLoginResponse;
 import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationLogin;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncLogin {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Login syncSDK;
 
@@ -52,7 +54,7 @@ public class AsyncLogin {
      */
     public CompletableFuture<GetUnifiedIntegrationLoginResponse> getUnifiedIntegrationLogin(GetUnifiedIntegrationLoginRequest request) {
         AsyncRequestOperation<GetUnifiedIntegrationLoginRequest, GetUnifiedIntegrationLoginResponse> operation
-              = new GetUnifiedIntegrationLogin.Async(sdkConfiguration);
+              = new GetUnifiedIntegrationLogin.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

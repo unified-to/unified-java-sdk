@@ -14,9 +14,11 @@ import to.unified.unified_java_sdk.models.operations.async.GetUnifiedIntegration
 import to.unified.unified_java_sdk.models.operations.async.GetUnifiedIntegrationLoginResponse;
 import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationAuth;
 import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationLogin;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncAuth {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Auth syncSDK;
 
@@ -56,7 +58,7 @@ public class AsyncAuth {
      */
     public CompletableFuture<GetUnifiedIntegrationAuthResponse> getUnifiedIntegrationAuth(GetUnifiedIntegrationAuthRequest request) {
         AsyncRequestOperation<GetUnifiedIntegrationAuthRequest, GetUnifiedIntegrationAuthResponse> operation
-              = new GetUnifiedIntegrationAuth.Async(sdkConfiguration);
+              = new GetUnifiedIntegrationAuth.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -83,7 +85,7 @@ public class AsyncAuth {
      */
     public CompletableFuture<GetUnifiedIntegrationLoginResponse> getUnifiedIntegrationLogin(GetUnifiedIntegrationLoginRequest request) {
         AsyncRequestOperation<GetUnifiedIntegrationLoginRequest, GetUnifiedIntegrationLoginResponse> operation
-              = new GetUnifiedIntegrationLogin.Async(sdkConfiguration);
+              = new GetUnifiedIntegrationLogin.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

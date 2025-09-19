@@ -38,9 +38,11 @@ import to.unified.unified_java_sdk.operations.PatchPassthroughRaw;
 import to.unified.unified_java_sdk.operations.RemovePassthrough;
 import to.unified.unified_java_sdk.operations.UpdatePassthroughJson;
 import to.unified.unified_java_sdk.operations.UpdatePassthroughRaw;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Passthrough {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncPassthrough asyncSDK;
 
@@ -76,7 +78,7 @@ public class Passthrough {
      */
     public CreatePassthroughJsonResponse createPassthroughJson(CreatePassthroughJsonRequest request) throws Exception {
         RequestOperation<CreatePassthroughJsonRequest, CreatePassthroughJsonResponse> operation
-              = new CreatePassthroughJson.Sync(sdkConfiguration);
+              = new CreatePassthroughJson.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -98,7 +100,7 @@ public class Passthrough {
      */
     public CreatePassthroughRawResponse createPassthroughRaw(CreatePassthroughRawRequest request) throws Exception {
         RequestOperation<CreatePassthroughRawRequest, CreatePassthroughRawResponse> operation
-              = new CreatePassthroughRaw.Sync(sdkConfiguration);
+              = new CreatePassthroughRaw.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -120,7 +122,7 @@ public class Passthrough {
      */
     public ListPassthroughsResponse listPassthroughs(ListPassthroughsRequest request) throws Exception {
         RequestOperation<ListPassthroughsRequest, ListPassthroughsResponse> operation
-              = new ListPassthroughs.Sync(sdkConfiguration);
+              = new ListPassthroughs.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -142,7 +144,7 @@ public class Passthrough {
      */
     public PatchPassthroughJsonResponse patchPassthroughJson(PatchPassthroughJsonRequest request) throws Exception {
         RequestOperation<PatchPassthroughJsonRequest, PatchPassthroughJsonResponse> operation
-              = new PatchPassthroughJson.Sync(sdkConfiguration);
+              = new PatchPassthroughJson.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -164,7 +166,7 @@ public class Passthrough {
      */
     public PatchPassthroughRawResponse patchPassthroughRaw(PatchPassthroughRawRequest request) throws Exception {
         RequestOperation<PatchPassthroughRawRequest, PatchPassthroughRawResponse> operation
-              = new PatchPassthroughRaw.Sync(sdkConfiguration);
+              = new PatchPassthroughRaw.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -186,7 +188,7 @@ public class Passthrough {
      */
     public RemovePassthroughResponse removePassthrough(RemovePassthroughRequest request) throws Exception {
         RequestOperation<RemovePassthroughRequest, RemovePassthroughResponse> operation
-              = new RemovePassthrough.Sync(sdkConfiguration);
+              = new RemovePassthrough.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -208,7 +210,7 @@ public class Passthrough {
      */
     public UpdatePassthroughJsonResponse updatePassthroughJson(UpdatePassthroughJsonRequest request) throws Exception {
         RequestOperation<UpdatePassthroughJsonRequest, UpdatePassthroughJsonResponse> operation
-              = new UpdatePassthroughJson.Sync(sdkConfiguration);
+              = new UpdatePassthroughJson.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -230,7 +232,7 @@ public class Passthrough {
      */
     public UpdatePassthroughRawResponse updatePassthroughRaw(UpdatePassthroughRawRequest request) throws Exception {
         RequestOperation<UpdatePassthroughRawRequest, UpdatePassthroughRawResponse> operation
-              = new UpdatePassthroughRaw.Sync(sdkConfiguration);
+              = new UpdatePassthroughRaw.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

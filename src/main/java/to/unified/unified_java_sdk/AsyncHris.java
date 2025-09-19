@@ -166,9 +166,11 @@ import to.unified.unified_java_sdk.operations.UpdateHrisEmployee;
 import to.unified.unified_java_sdk.operations.UpdateHrisGroup;
 import to.unified.unified_java_sdk.operations.UpdateHrisLocation;
 import to.unified.unified_java_sdk.operations.UpdateHrisTimeshift;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncHris {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Hris syncSDK;
 
@@ -204,7 +206,7 @@ public class AsyncHris {
      */
     public CompletableFuture<CreateHrisCompanyResponse> createHrisCompany(CreateHrisCompanyRequest request) {
         AsyncRequestOperation<CreateHrisCompanyRequest, CreateHrisCompanyResponse> operation
-              = new CreateHrisCompany.Async(sdkConfiguration);
+              = new CreateHrisCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,7 +229,7 @@ public class AsyncHris {
      */
     public CompletableFuture<CreateHrisDeviceResponse> createHrisDevice(CreateHrisDeviceRequest request) {
         AsyncRequestOperation<CreateHrisDeviceRequest, CreateHrisDeviceResponse> operation
-              = new CreateHrisDevice.Async(sdkConfiguration);
+              = new CreateHrisDevice.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -250,7 +252,7 @@ public class AsyncHris {
      */
     public CompletableFuture<CreateHrisEmployeeResponse> createHrisEmployee(CreateHrisEmployeeRequest request) {
         AsyncRequestOperation<CreateHrisEmployeeRequest, CreateHrisEmployeeResponse> operation
-              = new CreateHrisEmployee.Async(sdkConfiguration);
+              = new CreateHrisEmployee.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -273,7 +275,7 @@ public class AsyncHris {
      */
     public CompletableFuture<CreateHrisGroupResponse> createHrisGroup(CreateHrisGroupRequest request) {
         AsyncRequestOperation<CreateHrisGroupRequest, CreateHrisGroupResponse> operation
-              = new CreateHrisGroup.Async(sdkConfiguration);
+              = new CreateHrisGroup.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -296,7 +298,7 @@ public class AsyncHris {
      */
     public CompletableFuture<CreateHrisLocationResponse> createHrisLocation(CreateHrisLocationRequest request) {
         AsyncRequestOperation<CreateHrisLocationRequest, CreateHrisLocationResponse> operation
-              = new CreateHrisLocation.Async(sdkConfiguration);
+              = new CreateHrisLocation.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -319,7 +321,7 @@ public class AsyncHris {
      */
     public CompletableFuture<CreateHrisTimeshiftResponse> createHrisTimeshift(CreateHrisTimeshiftRequest request) {
         AsyncRequestOperation<CreateHrisTimeshiftRequest, CreateHrisTimeshiftResponse> operation
-              = new CreateHrisTimeshift.Async(sdkConfiguration);
+              = new CreateHrisTimeshift.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -342,7 +344,7 @@ public class AsyncHris {
      */
     public CompletableFuture<GetHrisCompanyResponse> getHrisCompany(GetHrisCompanyRequest request) {
         AsyncRequestOperation<GetHrisCompanyRequest, GetHrisCompanyResponse> operation
-              = new GetHrisCompany.Async(sdkConfiguration);
+              = new GetHrisCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -365,7 +367,7 @@ public class AsyncHris {
      */
     public CompletableFuture<GetHrisDeviceResponse> getHrisDevice(GetHrisDeviceRequest request) {
         AsyncRequestOperation<GetHrisDeviceRequest, GetHrisDeviceResponse> operation
-              = new GetHrisDevice.Async(sdkConfiguration);
+              = new GetHrisDevice.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -388,7 +390,7 @@ public class AsyncHris {
      */
     public CompletableFuture<GetHrisEmployeeResponse> getHrisEmployee(GetHrisEmployeeRequest request) {
         AsyncRequestOperation<GetHrisEmployeeRequest, GetHrisEmployeeResponse> operation
-              = new GetHrisEmployee.Async(sdkConfiguration);
+              = new GetHrisEmployee.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -411,7 +413,7 @@ public class AsyncHris {
      */
     public CompletableFuture<GetHrisGroupResponse> getHrisGroup(GetHrisGroupRequest request) {
         AsyncRequestOperation<GetHrisGroupRequest, GetHrisGroupResponse> operation
-              = new GetHrisGroup.Async(sdkConfiguration);
+              = new GetHrisGroup.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -434,7 +436,7 @@ public class AsyncHris {
      */
     public CompletableFuture<GetHrisLocationResponse> getHrisLocation(GetHrisLocationRequest request) {
         AsyncRequestOperation<GetHrisLocationRequest, GetHrisLocationResponse> operation
-              = new GetHrisLocation.Async(sdkConfiguration);
+              = new GetHrisLocation.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -457,7 +459,7 @@ public class AsyncHris {
      */
     public CompletableFuture<GetHrisPayslipResponse> getHrisPayslip(GetHrisPayslipRequest request) {
         AsyncRequestOperation<GetHrisPayslipRequest, GetHrisPayslipResponse> operation
-              = new GetHrisPayslip.Async(sdkConfiguration);
+              = new GetHrisPayslip.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -480,7 +482,7 @@ public class AsyncHris {
      */
     public CompletableFuture<GetHrisTimeoffResponse> getHrisTimeoff(GetHrisTimeoffRequest request) {
         AsyncRequestOperation<GetHrisTimeoffRequest, GetHrisTimeoffResponse> operation
-              = new GetHrisTimeoff.Async(sdkConfiguration);
+              = new GetHrisTimeoff.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -503,7 +505,7 @@ public class AsyncHris {
      */
     public CompletableFuture<GetHrisTimeshiftResponse> getHrisTimeshift(GetHrisTimeshiftRequest request) {
         AsyncRequestOperation<GetHrisTimeshiftRequest, GetHrisTimeshiftResponse> operation
-              = new GetHrisTimeshift.Async(sdkConfiguration);
+              = new GetHrisTimeshift.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -526,7 +528,7 @@ public class AsyncHris {
      */
     public CompletableFuture<ListHrisCompaniesResponse> listHrisCompanies(ListHrisCompaniesRequest request) {
         AsyncRequestOperation<ListHrisCompaniesRequest, ListHrisCompaniesResponse> operation
-              = new ListHrisCompanies.Async(sdkConfiguration);
+              = new ListHrisCompanies.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -549,7 +551,7 @@ public class AsyncHris {
      */
     public CompletableFuture<ListHrisDevicesResponse> listHrisDevices(ListHrisDevicesRequest request) {
         AsyncRequestOperation<ListHrisDevicesRequest, ListHrisDevicesResponse> operation
-              = new ListHrisDevices.Async(sdkConfiguration);
+              = new ListHrisDevices.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -572,7 +574,7 @@ public class AsyncHris {
      */
     public CompletableFuture<ListHrisEmployeesResponse> listHrisEmployees(ListHrisEmployeesRequest request) {
         AsyncRequestOperation<ListHrisEmployeesRequest, ListHrisEmployeesResponse> operation
-              = new ListHrisEmployees.Async(sdkConfiguration);
+              = new ListHrisEmployees.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -595,7 +597,7 @@ public class AsyncHris {
      */
     public CompletableFuture<ListHrisGroupsResponse> listHrisGroups(ListHrisGroupsRequest request) {
         AsyncRequestOperation<ListHrisGroupsRequest, ListHrisGroupsResponse> operation
-              = new ListHrisGroups.Async(sdkConfiguration);
+              = new ListHrisGroups.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -618,7 +620,7 @@ public class AsyncHris {
      */
     public CompletableFuture<ListHrisLocationsResponse> listHrisLocations(ListHrisLocationsRequest request) {
         AsyncRequestOperation<ListHrisLocationsRequest, ListHrisLocationsResponse> operation
-              = new ListHrisLocations.Async(sdkConfiguration);
+              = new ListHrisLocations.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -641,7 +643,7 @@ public class AsyncHris {
      */
     public CompletableFuture<ListHrisPayslipsResponse> listHrisPayslips(ListHrisPayslipsRequest request) {
         AsyncRequestOperation<ListHrisPayslipsRequest, ListHrisPayslipsResponse> operation
-              = new ListHrisPayslips.Async(sdkConfiguration);
+              = new ListHrisPayslips.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -664,7 +666,7 @@ public class AsyncHris {
      */
     public CompletableFuture<ListHrisTimeoffsResponse> listHrisTimeoffs(ListHrisTimeoffsRequest request) {
         AsyncRequestOperation<ListHrisTimeoffsRequest, ListHrisTimeoffsResponse> operation
-              = new ListHrisTimeoffs.Async(sdkConfiguration);
+              = new ListHrisTimeoffs.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -687,7 +689,7 @@ public class AsyncHris {
      */
     public CompletableFuture<ListHrisTimeshiftsResponse> listHrisTimeshifts(ListHrisTimeshiftsRequest request) {
         AsyncRequestOperation<ListHrisTimeshiftsRequest, ListHrisTimeshiftsResponse> operation
-              = new ListHrisTimeshifts.Async(sdkConfiguration);
+              = new ListHrisTimeshifts.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -710,7 +712,7 @@ public class AsyncHris {
      */
     public CompletableFuture<PatchHrisCompanyResponse> patchHrisCompany(PatchHrisCompanyRequest request) {
         AsyncRequestOperation<PatchHrisCompanyRequest, PatchHrisCompanyResponse> operation
-              = new PatchHrisCompany.Async(sdkConfiguration);
+              = new PatchHrisCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -733,7 +735,7 @@ public class AsyncHris {
      */
     public CompletableFuture<PatchHrisDeviceResponse> patchHrisDevice(PatchHrisDeviceRequest request) {
         AsyncRequestOperation<PatchHrisDeviceRequest, PatchHrisDeviceResponse> operation
-              = new PatchHrisDevice.Async(sdkConfiguration);
+              = new PatchHrisDevice.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -756,7 +758,7 @@ public class AsyncHris {
      */
     public CompletableFuture<PatchHrisEmployeeResponse> patchHrisEmployee(PatchHrisEmployeeRequest request) {
         AsyncRequestOperation<PatchHrisEmployeeRequest, PatchHrisEmployeeResponse> operation
-              = new PatchHrisEmployee.Async(sdkConfiguration);
+              = new PatchHrisEmployee.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -779,7 +781,7 @@ public class AsyncHris {
      */
     public CompletableFuture<PatchHrisGroupResponse> patchHrisGroup(PatchHrisGroupRequest request) {
         AsyncRequestOperation<PatchHrisGroupRequest, PatchHrisGroupResponse> operation
-              = new PatchHrisGroup.Async(sdkConfiguration);
+              = new PatchHrisGroup.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -802,7 +804,7 @@ public class AsyncHris {
      */
     public CompletableFuture<PatchHrisLocationResponse> patchHrisLocation(PatchHrisLocationRequest request) {
         AsyncRequestOperation<PatchHrisLocationRequest, PatchHrisLocationResponse> operation
-              = new PatchHrisLocation.Async(sdkConfiguration);
+              = new PatchHrisLocation.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -825,7 +827,7 @@ public class AsyncHris {
      */
     public CompletableFuture<PatchHrisTimeshiftResponse> patchHrisTimeshift(PatchHrisTimeshiftRequest request) {
         AsyncRequestOperation<PatchHrisTimeshiftRequest, PatchHrisTimeshiftResponse> operation
-              = new PatchHrisTimeshift.Async(sdkConfiguration);
+              = new PatchHrisTimeshift.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -848,7 +850,7 @@ public class AsyncHris {
      */
     public CompletableFuture<RemoveHrisCompanyResponse> removeHrisCompany(RemoveHrisCompanyRequest request) {
         AsyncRequestOperation<RemoveHrisCompanyRequest, RemoveHrisCompanyResponse> operation
-              = new RemoveHrisCompany.Async(sdkConfiguration);
+              = new RemoveHrisCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -871,7 +873,7 @@ public class AsyncHris {
      */
     public CompletableFuture<RemoveHrisDeviceResponse> removeHrisDevice(RemoveHrisDeviceRequest request) {
         AsyncRequestOperation<RemoveHrisDeviceRequest, RemoveHrisDeviceResponse> operation
-              = new RemoveHrisDevice.Async(sdkConfiguration);
+              = new RemoveHrisDevice.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -894,7 +896,7 @@ public class AsyncHris {
      */
     public CompletableFuture<RemoveHrisEmployeeResponse> removeHrisEmployee(RemoveHrisEmployeeRequest request) {
         AsyncRequestOperation<RemoveHrisEmployeeRequest, RemoveHrisEmployeeResponse> operation
-              = new RemoveHrisEmployee.Async(sdkConfiguration);
+              = new RemoveHrisEmployee.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -917,7 +919,7 @@ public class AsyncHris {
      */
     public CompletableFuture<RemoveHrisGroupResponse> removeHrisGroup(RemoveHrisGroupRequest request) {
         AsyncRequestOperation<RemoveHrisGroupRequest, RemoveHrisGroupResponse> operation
-              = new RemoveHrisGroup.Async(sdkConfiguration);
+              = new RemoveHrisGroup.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -940,7 +942,7 @@ public class AsyncHris {
      */
     public CompletableFuture<RemoveHrisLocationResponse> removeHrisLocation(RemoveHrisLocationRequest request) {
         AsyncRequestOperation<RemoveHrisLocationRequest, RemoveHrisLocationResponse> operation
-              = new RemoveHrisLocation.Async(sdkConfiguration);
+              = new RemoveHrisLocation.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -963,7 +965,7 @@ public class AsyncHris {
      */
     public CompletableFuture<RemoveHrisTimeshiftResponse> removeHrisTimeshift(RemoveHrisTimeshiftRequest request) {
         AsyncRequestOperation<RemoveHrisTimeshiftRequest, RemoveHrisTimeshiftResponse> operation
-              = new RemoveHrisTimeshift.Async(sdkConfiguration);
+              = new RemoveHrisTimeshift.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -986,7 +988,7 @@ public class AsyncHris {
      */
     public CompletableFuture<UpdateHrisCompanyResponse> updateHrisCompany(UpdateHrisCompanyRequest request) {
         AsyncRequestOperation<UpdateHrisCompanyRequest, UpdateHrisCompanyResponse> operation
-              = new UpdateHrisCompany.Async(sdkConfiguration);
+              = new UpdateHrisCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1009,7 +1011,7 @@ public class AsyncHris {
      */
     public CompletableFuture<UpdateHrisDeviceResponse> updateHrisDevice(UpdateHrisDeviceRequest request) {
         AsyncRequestOperation<UpdateHrisDeviceRequest, UpdateHrisDeviceResponse> operation
-              = new UpdateHrisDevice.Async(sdkConfiguration);
+              = new UpdateHrisDevice.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1032,7 +1034,7 @@ public class AsyncHris {
      */
     public CompletableFuture<UpdateHrisEmployeeResponse> updateHrisEmployee(UpdateHrisEmployeeRequest request) {
         AsyncRequestOperation<UpdateHrisEmployeeRequest, UpdateHrisEmployeeResponse> operation
-              = new UpdateHrisEmployee.Async(sdkConfiguration);
+              = new UpdateHrisEmployee.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1055,7 +1057,7 @@ public class AsyncHris {
      */
     public CompletableFuture<UpdateHrisGroupResponse> updateHrisGroup(UpdateHrisGroupRequest request) {
         AsyncRequestOperation<UpdateHrisGroupRequest, UpdateHrisGroupResponse> operation
-              = new UpdateHrisGroup.Async(sdkConfiguration);
+              = new UpdateHrisGroup.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1078,7 +1080,7 @@ public class AsyncHris {
      */
     public CompletableFuture<UpdateHrisLocationResponse> updateHrisLocation(UpdateHrisLocationRequest request) {
         AsyncRequestOperation<UpdateHrisLocationRequest, UpdateHrisLocationResponse> operation
-              = new UpdateHrisLocation.Async(sdkConfiguration);
+              = new UpdateHrisLocation.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1101,7 +1103,7 @@ public class AsyncHris {
      */
     public CompletableFuture<UpdateHrisTimeshiftResponse> updateHrisTimeshift(UpdateHrisTimeshiftRequest request) {
         AsyncRequestOperation<UpdateHrisTimeshiftRequest, UpdateHrisTimeshiftResponse> operation
-              = new UpdateHrisTimeshift.Async(sdkConfiguration);
+              = new UpdateHrisTimeshift.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

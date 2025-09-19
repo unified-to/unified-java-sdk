@@ -10,12 +10,14 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetStorageFileRequest;
 import to.unified.unified_java_sdk.operations.GetStorageFile;
+import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetStorageFileRequestBuilder {
 
     private GetStorageFileRequest request;
     private final SDKConfiguration sdkConfiguration;
+    private final Headers _headers = new Headers(); 
 
     public GetStorageFileRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
@@ -30,7 +32,7 @@ public class GetStorageFileRequestBuilder {
     public CompletableFuture<GetStorageFileResponse> call() throws Exception {
         
         AsyncRequestOperation<GetStorageFileRequest, GetStorageFileResponse> operation
-              = new GetStorageFile.Async(sdkConfiguration);
+              = new GetStorageFile.Async(sdkConfiguration, _headers);
 
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);

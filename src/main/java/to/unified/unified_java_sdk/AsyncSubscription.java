@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListPaymentSubscriptions;
 import to.unified.unified_java_sdk.operations.PatchPaymentSubscription;
 import to.unified.unified_java_sdk.operations.RemovePaymentSubscription;
 import to.unified.unified_java_sdk.operations.UpdatePaymentSubscription;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncSubscription {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Subscription syncSDK;
 
@@ -68,7 +70,7 @@ public class AsyncSubscription {
      */
     public CompletableFuture<CreatePaymentSubscriptionResponse> createPaymentSubscription(CreatePaymentSubscriptionRequest request) {
         AsyncRequestOperation<CreatePaymentSubscriptionRequest, CreatePaymentSubscriptionResponse> operation
-              = new CreatePaymentSubscription.Async(sdkConfiguration);
+              = new CreatePaymentSubscription.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -91,7 +93,7 @@ public class AsyncSubscription {
      */
     public CompletableFuture<GetPaymentSubscriptionResponse> getPaymentSubscription(GetPaymentSubscriptionRequest request) {
         AsyncRequestOperation<GetPaymentSubscriptionRequest, GetPaymentSubscriptionResponse> operation
-              = new GetPaymentSubscription.Async(sdkConfiguration);
+              = new GetPaymentSubscription.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -114,7 +116,7 @@ public class AsyncSubscription {
      */
     public CompletableFuture<ListPaymentSubscriptionsResponse> listPaymentSubscriptions(ListPaymentSubscriptionsRequest request) {
         AsyncRequestOperation<ListPaymentSubscriptionsRequest, ListPaymentSubscriptionsResponse> operation
-              = new ListPaymentSubscriptions.Async(sdkConfiguration);
+              = new ListPaymentSubscriptions.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -137,7 +139,7 @@ public class AsyncSubscription {
      */
     public CompletableFuture<PatchPaymentSubscriptionResponse> patchPaymentSubscription(PatchPaymentSubscriptionRequest request) {
         AsyncRequestOperation<PatchPaymentSubscriptionRequest, PatchPaymentSubscriptionResponse> operation
-              = new PatchPaymentSubscription.Async(sdkConfiguration);
+              = new PatchPaymentSubscription.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -160,7 +162,7 @@ public class AsyncSubscription {
      */
     public CompletableFuture<RemovePaymentSubscriptionResponse> removePaymentSubscription(RemovePaymentSubscriptionRequest request) {
         AsyncRequestOperation<RemovePaymentSubscriptionRequest, RemovePaymentSubscriptionResponse> operation
-              = new RemovePaymentSubscription.Async(sdkConfiguration);
+              = new RemovePaymentSubscription.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -183,7 +185,7 @@ public class AsyncSubscription {
      */
     public CompletableFuture<UpdatePaymentSubscriptionResponse> updatePaymentSubscription(UpdatePaymentSubscriptionRequest request) {
         AsyncRequestOperation<UpdatePaymentSubscriptionRequest, UpdatePaymentSubscriptionResponse> operation
-              = new UpdatePaymentSubscription.Async(sdkConfiguration);
+              = new UpdatePaymentSubscription.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

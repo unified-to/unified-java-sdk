@@ -10,9 +10,11 @@ import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatusesR
 import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatusesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatusesResponse;
 import to.unified.unified_java_sdk.operations.ListAtsApplicationstatuses;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Applicationstatus {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncApplicationstatus asyncSDK;
 
@@ -48,7 +50,7 @@ public class Applicationstatus {
      */
     public ListAtsApplicationstatusesResponse listAtsApplicationstatuses(ListAtsApplicationstatusesRequest request) throws Exception {
         RequestOperation<ListAtsApplicationstatusesRequest, ListAtsApplicationstatusesResponse> operation
-              = new ListAtsApplicationstatuses.Sync(sdkConfiguration);
+              = new ListAtsApplicationstatuses.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

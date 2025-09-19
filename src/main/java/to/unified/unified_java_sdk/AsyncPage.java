@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListKmsPages;
 import to.unified.unified_java_sdk.operations.PatchKmsPage;
 import to.unified.unified_java_sdk.operations.RemoveKmsPage;
 import to.unified.unified_java_sdk.operations.UpdateKmsPage;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncPage {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Page syncSDK;
 
@@ -68,7 +70,7 @@ public class AsyncPage {
      */
     public CompletableFuture<CreateKmsPageResponse> createKmsPage(CreateKmsPageRequest request) {
         AsyncRequestOperation<CreateKmsPageRequest, CreateKmsPageResponse> operation
-              = new CreateKmsPage.Async(sdkConfiguration);
+              = new CreateKmsPage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -91,7 +93,7 @@ public class AsyncPage {
      */
     public CompletableFuture<GetKmsPageResponse> getKmsPage(GetKmsPageRequest request) {
         AsyncRequestOperation<GetKmsPageRequest, GetKmsPageResponse> operation
-              = new GetKmsPage.Async(sdkConfiguration);
+              = new GetKmsPage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -114,7 +116,7 @@ public class AsyncPage {
      */
     public CompletableFuture<ListKmsPagesResponse> listKmsPages(ListKmsPagesRequest request) {
         AsyncRequestOperation<ListKmsPagesRequest, ListKmsPagesResponse> operation
-              = new ListKmsPages.Async(sdkConfiguration);
+              = new ListKmsPages.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -137,7 +139,7 @@ public class AsyncPage {
      */
     public CompletableFuture<PatchKmsPageResponse> patchKmsPage(PatchKmsPageRequest request) {
         AsyncRequestOperation<PatchKmsPageRequest, PatchKmsPageResponse> operation
-              = new PatchKmsPage.Async(sdkConfiguration);
+              = new PatchKmsPage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -160,7 +162,7 @@ public class AsyncPage {
      */
     public CompletableFuture<RemoveKmsPageResponse> removeKmsPage(RemoveKmsPageRequest request) {
         AsyncRequestOperation<RemoveKmsPageRequest, RemoveKmsPageResponse> operation
-              = new RemoveKmsPage.Async(sdkConfiguration);
+              = new RemoveKmsPage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -183,7 +185,7 @@ public class AsyncPage {
      */
     public CompletableFuture<UpdateKmsPageResponse> updateKmsPage(UpdateKmsPageRequest request) {
         AsyncRequestOperation<UpdateKmsPageRequest, UpdateKmsPageResponse> operation
-              = new UpdateKmsPage.Async(sdkConfiguration);
+              = new UpdateKmsPage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

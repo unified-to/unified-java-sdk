@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListVerificationRequests;
 import to.unified.unified_java_sdk.operations.PatchVerificationRequest;
 import to.unified.unified_java_sdk.operations.RemoveVerificationRequest;
 import to.unified.unified_java_sdk.operations.UpdateVerificationRequest;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Request {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncRequest asyncSDK;
 
@@ -68,7 +70,7 @@ public class Request {
      */
     public CreateVerificationRequestResponse createVerificationRequest(CreateVerificationRequestRequest request) throws Exception {
         RequestOperation<CreateVerificationRequestRequest, CreateVerificationRequestResponse> operation
-              = new CreateVerificationRequest.Sync(sdkConfiguration);
+              = new CreateVerificationRequest.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -90,7 +92,7 @@ public class Request {
      */
     public GetVerificationRequestResponse getVerificationRequest(GetVerificationRequestRequest request) throws Exception {
         RequestOperation<GetVerificationRequestRequest, GetVerificationRequestResponse> operation
-              = new GetVerificationRequest.Sync(sdkConfiguration);
+              = new GetVerificationRequest.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -112,7 +114,7 @@ public class Request {
      */
     public ListVerificationRequestsResponse listVerificationRequests(ListVerificationRequestsRequest request) throws Exception {
         RequestOperation<ListVerificationRequestsRequest, ListVerificationRequestsResponse> operation
-              = new ListVerificationRequests.Sync(sdkConfiguration);
+              = new ListVerificationRequests.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -134,7 +136,7 @@ public class Request {
      */
     public PatchVerificationRequestResponse patchVerificationRequest(PatchVerificationRequestRequest request) throws Exception {
         RequestOperation<PatchVerificationRequestRequest, PatchVerificationRequestResponse> operation
-              = new PatchVerificationRequest.Sync(sdkConfiguration);
+              = new PatchVerificationRequest.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -156,7 +158,7 @@ public class Request {
      */
     public RemoveVerificationRequestResponse removeVerificationRequest(RemoveVerificationRequestRequest request) throws Exception {
         RequestOperation<RemoveVerificationRequestRequest, RemoveVerificationRequestResponse> operation
-              = new RemoveVerificationRequest.Sync(sdkConfiguration);
+              = new RemoveVerificationRequest.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -178,7 +180,7 @@ public class Request {
      */
     public UpdateVerificationRequestResponse updateVerificationRequest(UpdateVerificationRequestRequest request) throws Exception {
         RequestOperation<UpdateVerificationRequestRequest, UpdateVerificationRequestResponse> operation
-              = new UpdateVerificationRequest.Sync(sdkConfiguration);
+              = new UpdateVerificationRequest.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

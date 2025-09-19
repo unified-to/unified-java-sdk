@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListStorageFiles;
 import to.unified.unified_java_sdk.operations.PatchStorageFile;
 import to.unified.unified_java_sdk.operations.RemoveStorageFile;
 import to.unified.unified_java_sdk.operations.UpdateStorageFile;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Storage {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncStorage asyncSDK;
 
@@ -68,7 +70,7 @@ public class Storage {
      */
     public CreateStorageFileResponse createStorageFile(CreateStorageFileRequest request) throws Exception {
         RequestOperation<CreateStorageFileRequest, CreateStorageFileResponse> operation
-              = new CreateStorageFile.Sync(sdkConfiguration);
+              = new CreateStorageFile.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -90,7 +92,7 @@ public class Storage {
      */
     public GetStorageFileResponse getStorageFile(GetStorageFileRequest request) throws Exception {
         RequestOperation<GetStorageFileRequest, GetStorageFileResponse> operation
-              = new GetStorageFile.Sync(sdkConfiguration);
+              = new GetStorageFile.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -112,7 +114,7 @@ public class Storage {
      */
     public ListStorageFilesResponse listStorageFiles(ListStorageFilesRequest request) throws Exception {
         RequestOperation<ListStorageFilesRequest, ListStorageFilesResponse> operation
-              = new ListStorageFiles.Sync(sdkConfiguration);
+              = new ListStorageFiles.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -134,7 +136,7 @@ public class Storage {
      */
     public PatchStorageFileResponse patchStorageFile(PatchStorageFileRequest request) throws Exception {
         RequestOperation<PatchStorageFileRequest, PatchStorageFileResponse> operation
-              = new PatchStorageFile.Sync(sdkConfiguration);
+              = new PatchStorageFile.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -156,7 +158,7 @@ public class Storage {
      */
     public RemoveStorageFileResponse removeStorageFile(RemoveStorageFileRequest request) throws Exception {
         RequestOperation<RemoveStorageFileRequest, RemoveStorageFileResponse> operation
-              = new RemoveStorageFile.Sync(sdkConfiguration);
+              = new RemoveStorageFile.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -178,7 +180,7 @@ public class Storage {
      */
     public UpdateStorageFileResponse updateStorageFile(UpdateStorageFileRequest request) throws Exception {
         RequestOperation<UpdateStorageFileRequest, UpdateStorageFileResponse> operation
-              = new UpdateStorageFile.Sync(sdkConfiguration);
+              = new UpdateStorageFile.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

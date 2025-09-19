@@ -82,9 +82,11 @@ import to.unified.unified_java_sdk.operations.RemoveUcRecording;
 import to.unified.unified_java_sdk.operations.UpdateUcComment;
 import to.unified.unified_java_sdk.operations.UpdateUcContact;
 import to.unified.unified_java_sdk.operations.UpdateUcRecording;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncUc {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Uc syncSDK;
 
@@ -120,7 +122,7 @@ public class AsyncUc {
      */
     public CompletableFuture<CreateUcCommentResponse> createUcComment(CreateUcCommentRequest request) {
         AsyncRequestOperation<CreateUcCommentRequest, CreateUcCommentResponse> operation
-              = new CreateUcComment.Async(sdkConfiguration);
+              = new CreateUcComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -143,7 +145,7 @@ public class AsyncUc {
      */
     public CompletableFuture<CreateUcContactResponse> createUcContact(CreateUcContactRequest request) {
         AsyncRequestOperation<CreateUcContactRequest, CreateUcContactResponse> operation
-              = new CreateUcContact.Async(sdkConfiguration);
+              = new CreateUcContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -166,7 +168,7 @@ public class AsyncUc {
      */
     public CompletableFuture<CreateUcRecordingResponse> createUcRecording(CreateUcRecordingRequest request) {
         AsyncRequestOperation<CreateUcRecordingRequest, CreateUcRecordingResponse> operation
-              = new CreateUcRecording.Async(sdkConfiguration);
+              = new CreateUcRecording.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -189,7 +191,7 @@ public class AsyncUc {
      */
     public CompletableFuture<GetUcCommentResponse> getUcComment(GetUcCommentRequest request) {
         AsyncRequestOperation<GetUcCommentRequest, GetUcCommentResponse> operation
-              = new GetUcComment.Async(sdkConfiguration);
+              = new GetUcComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -212,7 +214,7 @@ public class AsyncUc {
      */
     public CompletableFuture<GetUcContactResponse> getUcContact(GetUcContactRequest request) {
         AsyncRequestOperation<GetUcContactRequest, GetUcContactResponse> operation
-              = new GetUcContact.Async(sdkConfiguration);
+              = new GetUcContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -235,7 +237,7 @@ public class AsyncUc {
      */
     public CompletableFuture<GetUcRecordingResponse> getUcRecording(GetUcRecordingRequest request) {
         AsyncRequestOperation<GetUcRecordingRequest, GetUcRecordingResponse> operation
-              = new GetUcRecording.Async(sdkConfiguration);
+              = new GetUcRecording.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -258,7 +260,7 @@ public class AsyncUc {
      */
     public CompletableFuture<ListUcCallsResponse> listUcCalls(ListUcCallsRequest request) {
         AsyncRequestOperation<ListUcCallsRequest, ListUcCallsResponse> operation
-              = new ListUcCalls.Async(sdkConfiguration);
+              = new ListUcCalls.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -281,7 +283,7 @@ public class AsyncUc {
      */
     public CompletableFuture<ListUcCommentsResponse> listUcComments(ListUcCommentsRequest request) {
         AsyncRequestOperation<ListUcCommentsRequest, ListUcCommentsResponse> operation
-              = new ListUcComments.Async(sdkConfiguration);
+              = new ListUcComments.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -304,7 +306,7 @@ public class AsyncUc {
      */
     public CompletableFuture<ListUcContactsResponse> listUcContacts(ListUcContactsRequest request) {
         AsyncRequestOperation<ListUcContactsRequest, ListUcContactsResponse> operation
-              = new ListUcContacts.Async(sdkConfiguration);
+              = new ListUcContacts.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -327,7 +329,7 @@ public class AsyncUc {
      */
     public CompletableFuture<ListUcRecordingsResponse> listUcRecordings(ListUcRecordingsRequest request) {
         AsyncRequestOperation<ListUcRecordingsRequest, ListUcRecordingsResponse> operation
-              = new ListUcRecordings.Async(sdkConfiguration);
+              = new ListUcRecordings.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -350,7 +352,7 @@ public class AsyncUc {
      */
     public CompletableFuture<PatchUcCommentResponse> patchUcComment(PatchUcCommentRequest request) {
         AsyncRequestOperation<PatchUcCommentRequest, PatchUcCommentResponse> operation
-              = new PatchUcComment.Async(sdkConfiguration);
+              = new PatchUcComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -373,7 +375,7 @@ public class AsyncUc {
      */
     public CompletableFuture<PatchUcContactResponse> patchUcContact(PatchUcContactRequest request) {
         AsyncRequestOperation<PatchUcContactRequest, PatchUcContactResponse> operation
-              = new PatchUcContact.Async(sdkConfiguration);
+              = new PatchUcContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -396,7 +398,7 @@ public class AsyncUc {
      */
     public CompletableFuture<PatchUcRecordingResponse> patchUcRecording(PatchUcRecordingRequest request) {
         AsyncRequestOperation<PatchUcRecordingRequest, PatchUcRecordingResponse> operation
-              = new PatchUcRecording.Async(sdkConfiguration);
+              = new PatchUcRecording.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -419,7 +421,7 @@ public class AsyncUc {
      */
     public CompletableFuture<RemoveUcCommentResponse> removeUcComment(RemoveUcCommentRequest request) {
         AsyncRequestOperation<RemoveUcCommentRequest, RemoveUcCommentResponse> operation
-              = new RemoveUcComment.Async(sdkConfiguration);
+              = new RemoveUcComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -442,7 +444,7 @@ public class AsyncUc {
      */
     public CompletableFuture<RemoveUcContactResponse> removeUcContact(RemoveUcContactRequest request) {
         AsyncRequestOperation<RemoveUcContactRequest, RemoveUcContactResponse> operation
-              = new RemoveUcContact.Async(sdkConfiguration);
+              = new RemoveUcContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -465,7 +467,7 @@ public class AsyncUc {
      */
     public CompletableFuture<RemoveUcRecordingResponse> removeUcRecording(RemoveUcRecordingRequest request) {
         AsyncRequestOperation<RemoveUcRecordingRequest, RemoveUcRecordingResponse> operation
-              = new RemoveUcRecording.Async(sdkConfiguration);
+              = new RemoveUcRecording.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -488,7 +490,7 @@ public class AsyncUc {
      */
     public CompletableFuture<UpdateUcCommentResponse> updateUcComment(UpdateUcCommentRequest request) {
         AsyncRequestOperation<UpdateUcCommentRequest, UpdateUcCommentResponse> operation
-              = new UpdateUcComment.Async(sdkConfiguration);
+              = new UpdateUcComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -511,7 +513,7 @@ public class AsyncUc {
      */
     public CompletableFuture<UpdateUcContactResponse> updateUcContact(UpdateUcContactRequest request) {
         AsyncRequestOperation<UpdateUcContactRequest, UpdateUcContactResponse> operation
-              = new UpdateUcContact.Async(sdkConfiguration);
+              = new UpdateUcContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -534,7 +536,7 @@ public class AsyncUc {
      */
     public CompletableFuture<UpdateUcRecordingResponse> updateUcRecording(UpdateUcRecordingRequest request) {
         AsyncRequestOperation<UpdateUcRecordingRequest, UpdateUcRecordingResponse> operation
-              = new UpdateUcRecording.Async(sdkConfiguration);
+              = new UpdateUcRecording.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

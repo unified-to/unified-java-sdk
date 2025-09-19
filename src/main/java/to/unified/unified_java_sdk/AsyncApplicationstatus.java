@@ -10,9 +10,11 @@ import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatusesR
 import to.unified.unified_java_sdk.models.operations.async.ListAtsApplicationstatusesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAtsApplicationstatusesResponse;
 import to.unified.unified_java_sdk.operations.ListAtsApplicationstatuses;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncApplicationstatus {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Applicationstatus syncSDK;
 
@@ -48,7 +50,7 @@ public class AsyncApplicationstatus {
      */
     public CompletableFuture<ListAtsApplicationstatusesResponse> listAtsApplicationstatuses(ListAtsApplicationstatusesRequest request) {
         AsyncRequestOperation<ListAtsApplicationstatusesRequest, ListAtsApplicationstatusesResponse> operation
-              = new ListAtsApplicationstatuses.Async(sdkConfiguration);
+              = new ListAtsApplicationstatuses.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

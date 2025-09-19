@@ -22,9 +22,11 @@ import to.unified.unified_java_sdk.operations.CreateGenaiEmbedding;
 import to.unified.unified_java_sdk.operations.CreateGenaiPrompt;
 import to.unified.unified_java_sdk.operations.GetGenaiModel;
 import to.unified.unified_java_sdk.operations.ListGenaiModels;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Genai {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncGenai asyncSDK;
 
@@ -60,7 +62,7 @@ public class Genai {
      */
     public CreateGenaiEmbeddingResponse createGenaiEmbedding(CreateGenaiEmbeddingRequest request) throws Exception {
         RequestOperation<CreateGenaiEmbeddingRequest, CreateGenaiEmbeddingResponse> operation
-              = new CreateGenaiEmbedding.Sync(sdkConfiguration);
+              = new CreateGenaiEmbedding.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -82,7 +84,7 @@ public class Genai {
      */
     public CreateGenaiPromptResponse createGenaiPrompt(CreateGenaiPromptRequest request) throws Exception {
         RequestOperation<CreateGenaiPromptRequest, CreateGenaiPromptResponse> operation
-              = new CreateGenaiPrompt.Sync(sdkConfiguration);
+              = new CreateGenaiPrompt.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -104,7 +106,7 @@ public class Genai {
      */
     public GetGenaiModelResponse getGenaiModel(GetGenaiModelRequest request) throws Exception {
         RequestOperation<GetGenaiModelRequest, GetGenaiModelResponse> operation
-              = new GetGenaiModel.Sync(sdkConfiguration);
+              = new GetGenaiModel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -126,7 +128,7 @@ public class Genai {
      */
     public ListGenaiModelsResponse listGenaiModels(ListGenaiModelsRequest request) throws Exception {
         RequestOperation<ListGenaiModelsRequest, ListGenaiModelsResponse> operation
-              = new ListGenaiModels.Sync(sdkConfiguration);
+              = new ListGenaiModels.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

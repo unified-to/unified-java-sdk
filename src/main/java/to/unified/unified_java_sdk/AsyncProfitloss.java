@@ -14,9 +14,11 @@ import to.unified.unified_java_sdk.models.operations.async.ListAccountingProfitl
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingProfitlossesResponse;
 import to.unified.unified_java_sdk.operations.GetAccountingProfitloss;
 import to.unified.unified_java_sdk.operations.ListAccountingProfitlosses;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncProfitloss {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Profitloss syncSDK;
 
@@ -52,7 +54,7 @@ public class AsyncProfitloss {
      */
     public CompletableFuture<GetAccountingProfitlossResponse> getAccountingProfitloss(GetAccountingProfitlossRequest request) {
         AsyncRequestOperation<GetAccountingProfitlossRequest, GetAccountingProfitlossResponse> operation
-              = new GetAccountingProfitloss.Async(sdkConfiguration);
+              = new GetAccountingProfitloss.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -75,7 +77,7 @@ public class AsyncProfitloss {
      */
     public CompletableFuture<ListAccountingProfitlossesResponse> listAccountingProfitlosses(ListAccountingProfitlossesRequest request) {
         AsyncRequestOperation<ListAccountingProfitlossesRequest, ListAccountingProfitlossesResponse> operation
-              = new ListAccountingProfitlosses.Async(sdkConfiguration);
+              = new ListAccountingProfitlosses.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

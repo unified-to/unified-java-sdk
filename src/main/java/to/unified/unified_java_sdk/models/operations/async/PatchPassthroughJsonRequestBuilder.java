@@ -10,12 +10,14 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchPassthroughJsonRequest;
 import to.unified.unified_java_sdk.operations.PatchPassthroughJson;
+import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchPassthroughJsonRequestBuilder {
 
     private PatchPassthroughJsonRequest request;
     private final SDKConfiguration sdkConfiguration;
+    private final Headers _headers = new Headers(); 
 
     public PatchPassthroughJsonRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
@@ -30,7 +32,7 @@ public class PatchPassthroughJsonRequestBuilder {
     public CompletableFuture<PatchPassthroughJsonResponse> call() throws Exception {
         
         AsyncRequestOperation<PatchPassthroughJsonRequest, PatchPassthroughJsonResponse> operation
-              = new PatchPassthroughJson.Async(sdkConfiguration);
+              = new PatchPassthroughJson.Async(sdkConfiguration, _headers);
 
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);

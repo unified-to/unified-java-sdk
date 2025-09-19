@@ -10,12 +10,14 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchPassthroughRawRequest;
 import to.unified.unified_java_sdk.operations.PatchPassthroughRaw;
+import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchPassthroughRawRequestBuilder {
 
     private PatchPassthroughRawRequest request;
     private final SDKConfiguration sdkConfiguration;
+    private final Headers _headers = new Headers(); 
 
     public PatchPassthroughRawRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
@@ -30,7 +32,7 @@ public class PatchPassthroughRawRequestBuilder {
     public CompletableFuture<PatchPassthroughRawResponse> call() throws Exception {
         
         AsyncRequestOperation<PatchPassthroughRawRequest, PatchPassthroughRawResponse> operation
-              = new PatchPassthroughRaw.Async(sdkConfiguration);
+              = new PatchPassthroughRaw.Async(sdkConfiguration, _headers);
 
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);

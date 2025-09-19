@@ -10,12 +10,14 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingPurchaseorderRequest;
 import to.unified.unified_java_sdk.operations.RemoveAccountingPurchaseorder;
+import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveAccountingPurchaseorderRequestBuilder {
 
     private RemoveAccountingPurchaseorderRequest request;
     private final SDKConfiguration sdkConfiguration;
+    private final Headers _headers = new Headers(); 
 
     public RemoveAccountingPurchaseorderRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
@@ -30,7 +32,7 @@ public class RemoveAccountingPurchaseorderRequestBuilder {
     public CompletableFuture<RemoveAccountingPurchaseorderResponse> call() throws Exception {
         
         AsyncRequestOperation<RemoveAccountingPurchaseorderRequest, RemoveAccountingPurchaseorderResponse> operation
-              = new RemoveAccountingPurchaseorder.Async(sdkConfiguration);
+              = new RemoveAccountingPurchaseorder.Async(sdkConfiguration, _headers);
 
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);

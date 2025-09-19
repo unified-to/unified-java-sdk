@@ -10,9 +10,11 @@ import to.unified.unified_java_sdk.models.operations.ListUcCallsRequest;
 import to.unified.unified_java_sdk.models.operations.ListUcCallsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListUcCallsResponse;
 import to.unified.unified_java_sdk.operations.ListUcCalls;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Call {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncCall asyncSDK;
 
@@ -48,7 +50,7 @@ public class Call {
      */
     public ListUcCallsResponse listUcCalls(ListUcCallsRequest request) throws Exception {
         RequestOperation<ListUcCallsRequest, ListUcCallsResponse> operation
-              = new ListUcCalls.Sync(sdkConfiguration);
+              = new ListUcCalls.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListCrmDeals;
 import to.unified.unified_java_sdk.operations.PatchCrmDeal;
 import to.unified.unified_java_sdk.operations.RemoveCrmDeal;
 import to.unified.unified_java_sdk.operations.UpdateCrmDeal;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncDeal {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Deal syncSDK;
 
@@ -68,7 +70,7 @@ public class AsyncDeal {
      */
     public CompletableFuture<CreateCrmDealResponse> createCrmDeal(CreateCrmDealRequest request) {
         AsyncRequestOperation<CreateCrmDealRequest, CreateCrmDealResponse> operation
-              = new CreateCrmDeal.Async(sdkConfiguration);
+              = new CreateCrmDeal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -91,7 +93,7 @@ public class AsyncDeal {
      */
     public CompletableFuture<GetCrmDealResponse> getCrmDeal(GetCrmDealRequest request) {
         AsyncRequestOperation<GetCrmDealRequest, GetCrmDealResponse> operation
-              = new GetCrmDeal.Async(sdkConfiguration);
+              = new GetCrmDeal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -114,7 +116,7 @@ public class AsyncDeal {
      */
     public CompletableFuture<ListCrmDealsResponse> listCrmDeals(ListCrmDealsRequest request) {
         AsyncRequestOperation<ListCrmDealsRequest, ListCrmDealsResponse> operation
-              = new ListCrmDeals.Async(sdkConfiguration);
+              = new ListCrmDeals.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -137,7 +139,7 @@ public class AsyncDeal {
      */
     public CompletableFuture<PatchCrmDealResponse> patchCrmDeal(PatchCrmDealRequest request) {
         AsyncRequestOperation<PatchCrmDealRequest, PatchCrmDealResponse> operation
-              = new PatchCrmDeal.Async(sdkConfiguration);
+              = new PatchCrmDeal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -160,7 +162,7 @@ public class AsyncDeal {
      */
     public CompletableFuture<RemoveCrmDealResponse> removeCrmDeal(RemoveCrmDealRequest request) {
         AsyncRequestOperation<RemoveCrmDealRequest, RemoveCrmDealResponse> operation
-              = new RemoveCrmDeal.Async(sdkConfiguration);
+              = new RemoveCrmDeal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -183,7 +185,7 @@ public class AsyncDeal {
      */
     public CompletableFuture<UpdateCrmDealResponse> updateCrmDeal(UpdateCrmDealRequest request) {
         AsyncRequestOperation<UpdateCrmDealRequest, UpdateCrmDealResponse> operation
-              = new UpdateCrmDeal.Async(sdkConfiguration);
+              = new UpdateCrmDeal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

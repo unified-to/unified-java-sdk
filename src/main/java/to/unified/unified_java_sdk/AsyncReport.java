@@ -14,9 +14,11 @@ import to.unified.unified_java_sdk.models.operations.async.ListAccountingReports
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingReportsResponse;
 import to.unified.unified_java_sdk.operations.GetAccountingReport;
 import to.unified.unified_java_sdk.operations.ListAccountingReports;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncReport {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Report syncSDK;
 
@@ -52,7 +54,7 @@ public class AsyncReport {
      */
     public CompletableFuture<GetAccountingReportResponse> getAccountingReport(GetAccountingReportRequest request) {
         AsyncRequestOperation<GetAccountingReportRequest, GetAccountingReportResponse> operation
-              = new GetAccountingReport.Async(sdkConfiguration);
+              = new GetAccountingReport.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -75,7 +77,7 @@ public class AsyncReport {
      */
     public CompletableFuture<ListAccountingReportsResponse> listAccountingReports(ListAccountingReportsRequest request) {
         AsyncRequestOperation<ListAccountingReportsRequest, ListAccountingReportsResponse> operation
-              = new ListAccountingReports.Async(sdkConfiguration);
+              = new ListAccountingReports.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

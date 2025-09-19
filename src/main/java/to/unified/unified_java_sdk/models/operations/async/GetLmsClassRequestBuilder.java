@@ -10,12 +10,14 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetLmsClassRequest;
 import to.unified.unified_java_sdk.operations.GetLmsClass;
+import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetLmsClassRequestBuilder {
 
     private GetLmsClassRequest request;
     private final SDKConfiguration sdkConfiguration;
+    private final Headers _headers = new Headers(); 
 
     public GetLmsClassRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
@@ -30,7 +32,7 @@ public class GetLmsClassRequestBuilder {
     public CompletableFuture<GetLmsClassResponse> call() throws Exception {
         
         AsyncRequestOperation<GetLmsClassRequest, GetLmsClassResponse> operation
-              = new GetLmsClass.Async(sdkConfiguration);
+              = new GetLmsClass.Async(sdkConfiguration, _headers);
 
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);

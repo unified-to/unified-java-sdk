@@ -10,9 +10,11 @@ import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateGenaiPromptRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateGenaiPromptResponse;
 import to.unified.unified_java_sdk.operations.CreateGenaiPrompt;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncPrompt {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Prompt syncSDK;
 
@@ -48,7 +50,7 @@ public class AsyncPrompt {
      */
     public CompletableFuture<CreateGenaiPromptResponse> createGenaiPrompt(CreateGenaiPromptRequest request) {
         AsyncRequestOperation<CreateGenaiPromptRequest, CreateGenaiPromptResponse> operation
-              = new CreateGenaiPrompt.Async(sdkConfiguration);
+              = new CreateGenaiPrompt.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

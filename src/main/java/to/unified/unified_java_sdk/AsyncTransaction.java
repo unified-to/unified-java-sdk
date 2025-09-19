@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListAccountingTransactions;
 import to.unified.unified_java_sdk.operations.PatchAccountingTransaction;
 import to.unified.unified_java_sdk.operations.RemoveAccountingTransaction;
 import to.unified.unified_java_sdk.operations.UpdateAccountingTransaction;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncTransaction {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Transaction syncSDK;
 
@@ -68,7 +70,7 @@ public class AsyncTransaction {
      */
     public CompletableFuture<CreateAccountingTransactionResponse> createAccountingTransaction(CreateAccountingTransactionRequest request) {
         AsyncRequestOperation<CreateAccountingTransactionRequest, CreateAccountingTransactionResponse> operation
-              = new CreateAccountingTransaction.Async(sdkConfiguration);
+              = new CreateAccountingTransaction.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -91,7 +93,7 @@ public class AsyncTransaction {
      */
     public CompletableFuture<GetAccountingTransactionResponse> getAccountingTransaction(GetAccountingTransactionRequest request) {
         AsyncRequestOperation<GetAccountingTransactionRequest, GetAccountingTransactionResponse> operation
-              = new GetAccountingTransaction.Async(sdkConfiguration);
+              = new GetAccountingTransaction.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -114,7 +116,7 @@ public class AsyncTransaction {
      */
     public CompletableFuture<ListAccountingTransactionsResponse> listAccountingTransactions(ListAccountingTransactionsRequest request) {
         AsyncRequestOperation<ListAccountingTransactionsRequest, ListAccountingTransactionsResponse> operation
-              = new ListAccountingTransactions.Async(sdkConfiguration);
+              = new ListAccountingTransactions.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -137,7 +139,7 @@ public class AsyncTransaction {
      */
     public CompletableFuture<PatchAccountingTransactionResponse> patchAccountingTransaction(PatchAccountingTransactionRequest request) {
         AsyncRequestOperation<PatchAccountingTransactionRequest, PatchAccountingTransactionResponse> operation
-              = new PatchAccountingTransaction.Async(sdkConfiguration);
+              = new PatchAccountingTransaction.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -160,7 +162,7 @@ public class AsyncTransaction {
      */
     public CompletableFuture<RemoveAccountingTransactionResponse> removeAccountingTransaction(RemoveAccountingTransactionRequest request) {
         AsyncRequestOperation<RemoveAccountingTransactionRequest, RemoveAccountingTransactionResponse> operation
-              = new RemoveAccountingTransaction.Async(sdkConfiguration);
+              = new RemoveAccountingTransaction.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -183,7 +185,7 @@ public class AsyncTransaction {
      */
     public CompletableFuture<UpdateAccountingTransactionResponse> updateAccountingTransaction(UpdateAccountingTransactionRequest request) {
         AsyncRequestOperation<UpdateAccountingTransactionRequest, UpdateAccountingTransactionResponse> operation
-              = new UpdateAccountingTransaction.Async(sdkConfiguration);
+              = new UpdateAccountingTransaction.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

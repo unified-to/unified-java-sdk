@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListAccountingInvoices;
 import to.unified.unified_java_sdk.operations.PatchAccountingInvoice;
 import to.unified.unified_java_sdk.operations.RemoveAccountingInvoice;
 import to.unified.unified_java_sdk.operations.UpdateAccountingInvoice;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncInvoice {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Invoice syncSDK;
 
@@ -68,7 +70,7 @@ public class AsyncInvoice {
      */
     public CompletableFuture<CreateAccountingInvoiceResponse> createAccountingInvoice(CreateAccountingInvoiceRequest request) {
         AsyncRequestOperation<CreateAccountingInvoiceRequest, CreateAccountingInvoiceResponse> operation
-              = new CreateAccountingInvoice.Async(sdkConfiguration);
+              = new CreateAccountingInvoice.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -91,7 +93,7 @@ public class AsyncInvoice {
      */
     public CompletableFuture<GetAccountingInvoiceResponse> getAccountingInvoice(GetAccountingInvoiceRequest request) {
         AsyncRequestOperation<GetAccountingInvoiceRequest, GetAccountingInvoiceResponse> operation
-              = new GetAccountingInvoice.Async(sdkConfiguration);
+              = new GetAccountingInvoice.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -114,7 +116,7 @@ public class AsyncInvoice {
      */
     public CompletableFuture<ListAccountingInvoicesResponse> listAccountingInvoices(ListAccountingInvoicesRequest request) {
         AsyncRequestOperation<ListAccountingInvoicesRequest, ListAccountingInvoicesResponse> operation
-              = new ListAccountingInvoices.Async(sdkConfiguration);
+              = new ListAccountingInvoices.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -137,7 +139,7 @@ public class AsyncInvoice {
      */
     public CompletableFuture<PatchAccountingInvoiceResponse> patchAccountingInvoice(PatchAccountingInvoiceRequest request) {
         AsyncRequestOperation<PatchAccountingInvoiceRequest, PatchAccountingInvoiceResponse> operation
-              = new PatchAccountingInvoice.Async(sdkConfiguration);
+              = new PatchAccountingInvoice.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -160,7 +162,7 @@ public class AsyncInvoice {
      */
     public CompletableFuture<RemoveAccountingInvoiceResponse> removeAccountingInvoice(RemoveAccountingInvoiceRequest request) {
         AsyncRequestOperation<RemoveAccountingInvoiceRequest, RemoveAccountingInvoiceResponse> operation
-              = new RemoveAccountingInvoice.Async(sdkConfiguration);
+              = new RemoveAccountingInvoice.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -183,7 +185,7 @@ public class AsyncInvoice {
      */
     public CompletableFuture<UpdateAccountingInvoiceResponse> updateAccountingInvoice(UpdateAccountingInvoiceRequest request) {
         AsyncRequestOperation<UpdateAccountingInvoiceRequest, UpdateAccountingInvoiceResponse> operation
-              = new UpdateAccountingInvoice.Async(sdkConfiguration);
+              = new UpdateAccountingInvoice.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

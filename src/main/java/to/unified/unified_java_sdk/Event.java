@@ -54,9 +54,11 @@ import to.unified.unified_java_sdk.operations.RemoveCalendarEvent;
 import to.unified.unified_java_sdk.operations.RemoveCrmEvent;
 import to.unified.unified_java_sdk.operations.UpdateCalendarEvent;
 import to.unified.unified_java_sdk.operations.UpdateCrmEvent;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Event {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncEvent asyncSDK;
 
@@ -92,7 +94,7 @@ public class Event {
      */
     public CreateCalendarEventResponse createCalendarEvent(CreateCalendarEventRequest request) throws Exception {
         RequestOperation<CreateCalendarEventRequest, CreateCalendarEventResponse> operation
-              = new CreateCalendarEvent.Sync(sdkConfiguration);
+              = new CreateCalendarEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -114,7 +116,7 @@ public class Event {
      */
     public CreateCrmEventResponse createCrmEvent(CreateCrmEventRequest request) throws Exception {
         RequestOperation<CreateCrmEventRequest, CreateCrmEventResponse> operation
-              = new CreateCrmEvent.Sync(sdkConfiguration);
+              = new CreateCrmEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -136,7 +138,7 @@ public class Event {
      */
     public GetCalendarEventResponse getCalendarEvent(GetCalendarEventRequest request) throws Exception {
         RequestOperation<GetCalendarEventRequest, GetCalendarEventResponse> operation
-              = new GetCalendarEvent.Sync(sdkConfiguration);
+              = new GetCalendarEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -158,7 +160,7 @@ public class Event {
      */
     public GetCrmEventResponse getCrmEvent(GetCrmEventRequest request) throws Exception {
         RequestOperation<GetCrmEventRequest, GetCrmEventResponse> operation
-              = new GetCrmEvent.Sync(sdkConfiguration);
+              = new GetCrmEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -180,7 +182,7 @@ public class Event {
      */
     public ListCalendarEventsResponse listCalendarEvents(ListCalendarEventsRequest request) throws Exception {
         RequestOperation<ListCalendarEventsRequest, ListCalendarEventsResponse> operation
-              = new ListCalendarEvents.Sync(sdkConfiguration);
+              = new ListCalendarEvents.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -202,7 +204,7 @@ public class Event {
      */
     public ListCrmEventsResponse listCrmEvents(ListCrmEventsRequest request) throws Exception {
         RequestOperation<ListCrmEventsRequest, ListCrmEventsResponse> operation
-              = new ListCrmEvents.Sync(sdkConfiguration);
+              = new ListCrmEvents.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -224,7 +226,7 @@ public class Event {
      */
     public PatchCalendarEventResponse patchCalendarEvent(PatchCalendarEventRequest request) throws Exception {
         RequestOperation<PatchCalendarEventRequest, PatchCalendarEventResponse> operation
-              = new PatchCalendarEvent.Sync(sdkConfiguration);
+              = new PatchCalendarEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -246,7 +248,7 @@ public class Event {
      */
     public PatchCrmEventResponse patchCrmEvent(PatchCrmEventRequest request) throws Exception {
         RequestOperation<PatchCrmEventRequest, PatchCrmEventResponse> operation
-              = new PatchCrmEvent.Sync(sdkConfiguration);
+              = new PatchCrmEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -268,7 +270,7 @@ public class Event {
      */
     public RemoveCalendarEventResponse removeCalendarEvent(RemoveCalendarEventRequest request) throws Exception {
         RequestOperation<RemoveCalendarEventRequest, RemoveCalendarEventResponse> operation
-              = new RemoveCalendarEvent.Sync(sdkConfiguration);
+              = new RemoveCalendarEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -290,7 +292,7 @@ public class Event {
      */
     public RemoveCrmEventResponse removeCrmEvent(RemoveCrmEventRequest request) throws Exception {
         RequestOperation<RemoveCrmEventRequest, RemoveCrmEventResponse> operation
-              = new RemoveCrmEvent.Sync(sdkConfiguration);
+              = new RemoveCrmEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -312,7 +314,7 @@ public class Event {
      */
     public UpdateCalendarEventResponse updateCalendarEvent(UpdateCalendarEventRequest request) throws Exception {
         RequestOperation<UpdateCalendarEventRequest, UpdateCalendarEventResponse> operation
-              = new UpdateCalendarEvent.Sync(sdkConfiguration);
+              = new UpdateCalendarEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -334,7 +336,7 @@ public class Event {
      */
     public UpdateCrmEventResponse updateCrmEvent(UpdateCrmEventRequest request) throws Exception {
         RequestOperation<UpdateCrmEventRequest, UpdateCrmEventResponse> operation
-              = new UpdateCrmEvent.Sync(sdkConfiguration);
+              = new UpdateCrmEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

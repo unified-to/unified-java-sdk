@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListAccountingPurchaseorders;
 import to.unified.unified_java_sdk.operations.PatchAccountingPurchaseorder;
 import to.unified.unified_java_sdk.operations.RemoveAccountingPurchaseorder;
 import to.unified.unified_java_sdk.operations.UpdateAccountingPurchaseorder;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncPurchaseorder {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Purchaseorder syncSDK;
 
@@ -68,7 +70,7 @@ public class AsyncPurchaseorder {
      */
     public CompletableFuture<CreateAccountingPurchaseorderResponse> createAccountingPurchaseorder(CreateAccountingPurchaseorderRequest request) {
         AsyncRequestOperation<CreateAccountingPurchaseorderRequest, CreateAccountingPurchaseorderResponse> operation
-              = new CreateAccountingPurchaseorder.Async(sdkConfiguration);
+              = new CreateAccountingPurchaseorder.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -91,7 +93,7 @@ public class AsyncPurchaseorder {
      */
     public CompletableFuture<GetAccountingPurchaseorderResponse> getAccountingPurchaseorder(GetAccountingPurchaseorderRequest request) {
         AsyncRequestOperation<GetAccountingPurchaseorderRequest, GetAccountingPurchaseorderResponse> operation
-              = new GetAccountingPurchaseorder.Async(sdkConfiguration);
+              = new GetAccountingPurchaseorder.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -114,7 +116,7 @@ public class AsyncPurchaseorder {
      */
     public CompletableFuture<ListAccountingPurchaseordersResponse> listAccountingPurchaseorders(ListAccountingPurchaseordersRequest request) {
         AsyncRequestOperation<ListAccountingPurchaseordersRequest, ListAccountingPurchaseordersResponse> operation
-              = new ListAccountingPurchaseorders.Async(sdkConfiguration);
+              = new ListAccountingPurchaseorders.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -137,7 +139,7 @@ public class AsyncPurchaseorder {
      */
     public CompletableFuture<PatchAccountingPurchaseorderResponse> patchAccountingPurchaseorder(PatchAccountingPurchaseorderRequest request) {
         AsyncRequestOperation<PatchAccountingPurchaseorderRequest, PatchAccountingPurchaseorderResponse> operation
-              = new PatchAccountingPurchaseorder.Async(sdkConfiguration);
+              = new PatchAccountingPurchaseorder.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -160,7 +162,7 @@ public class AsyncPurchaseorder {
      */
     public CompletableFuture<RemoveAccountingPurchaseorderResponse> removeAccountingPurchaseorder(RemoveAccountingPurchaseorderRequest request) {
         AsyncRequestOperation<RemoveAccountingPurchaseorderRequest, RemoveAccountingPurchaseorderResponse> operation
-              = new RemoveAccountingPurchaseorder.Async(sdkConfiguration);
+              = new RemoveAccountingPurchaseorder.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -183,7 +185,7 @@ public class AsyncPurchaseorder {
      */
     public CompletableFuture<UpdateAccountingPurchaseorderResponse> updateAccountingPurchaseorder(UpdateAccountingPurchaseorderRequest request) {
         AsyncRequestOperation<UpdateAccountingPurchaseorderRequest, UpdateAccountingPurchaseorderResponse> operation
-              = new UpdateAccountingPurchaseorder.Async(sdkConfiguration);
+              = new UpdateAccountingPurchaseorder.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

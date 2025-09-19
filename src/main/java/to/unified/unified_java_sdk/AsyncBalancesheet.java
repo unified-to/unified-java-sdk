@@ -14,9 +14,11 @@ import to.unified.unified_java_sdk.models.operations.async.ListAccountingBalance
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingBalancesheetsResponse;
 import to.unified.unified_java_sdk.operations.GetAccountingBalancesheet;
 import to.unified.unified_java_sdk.operations.ListAccountingBalancesheets;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncBalancesheet {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Balancesheet syncSDK;
 
@@ -52,7 +54,7 @@ public class AsyncBalancesheet {
      */
     public CompletableFuture<GetAccountingBalancesheetResponse> getAccountingBalancesheet(GetAccountingBalancesheetRequest request) {
         AsyncRequestOperation<GetAccountingBalancesheetRequest, GetAccountingBalancesheetResponse> operation
-              = new GetAccountingBalancesheet.Async(sdkConfiguration);
+              = new GetAccountingBalancesheet.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -75,7 +77,7 @@ public class AsyncBalancesheet {
      */
     public CompletableFuture<ListAccountingBalancesheetsResponse> listAccountingBalancesheets(ListAccountingBalancesheetsRequest request) {
         AsyncRequestOperation<ListAccountingBalancesheetsRequest, ListAccountingBalancesheetsResponse> operation
-              = new ListAccountingBalancesheets.Async(sdkConfiguration);
+              = new ListAccountingBalancesheets.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

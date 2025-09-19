@@ -54,9 +54,11 @@ import to.unified.unified_java_sdk.operations.RemoveMartechList;
 import to.unified.unified_java_sdk.operations.RemoveMartechMember;
 import to.unified.unified_java_sdk.operations.UpdateMartechList;
 import to.unified.unified_java_sdk.operations.UpdateMartechMember;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncMartech {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Martech syncSDK;
 
@@ -92,7 +94,7 @@ public class AsyncMartech {
      */
     public CompletableFuture<CreateMartechListResponse> createMartechList(CreateMartechListRequest request) {
         AsyncRequestOperation<CreateMartechListRequest, CreateMartechListResponse> operation
-              = new CreateMartechList.Async(sdkConfiguration);
+              = new CreateMartechList.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -115,7 +117,7 @@ public class AsyncMartech {
      */
     public CompletableFuture<CreateMartechMemberResponse> createMartechMember(CreateMartechMemberRequest request) {
         AsyncRequestOperation<CreateMartechMemberRequest, CreateMartechMemberResponse> operation
-              = new CreateMartechMember.Async(sdkConfiguration);
+              = new CreateMartechMember.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -138,7 +140,7 @@ public class AsyncMartech {
      */
     public CompletableFuture<GetMartechListResponse> getMartechList(GetMartechListRequest request) {
         AsyncRequestOperation<GetMartechListRequest, GetMartechListResponse> operation
-              = new GetMartechList.Async(sdkConfiguration);
+              = new GetMartechList.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -161,7 +163,7 @@ public class AsyncMartech {
      */
     public CompletableFuture<GetMartechMemberResponse> getMartechMember(GetMartechMemberRequest request) {
         AsyncRequestOperation<GetMartechMemberRequest, GetMartechMemberResponse> operation
-              = new GetMartechMember.Async(sdkConfiguration);
+              = new GetMartechMember.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -184,7 +186,7 @@ public class AsyncMartech {
      */
     public CompletableFuture<ListMartechListsResponse> listMartechLists(ListMartechListsRequest request) {
         AsyncRequestOperation<ListMartechListsRequest, ListMartechListsResponse> operation
-              = new ListMartechLists.Async(sdkConfiguration);
+              = new ListMartechLists.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -207,7 +209,7 @@ public class AsyncMartech {
      */
     public CompletableFuture<ListMartechMembersResponse> listMartechMembers(ListMartechMembersRequest request) {
         AsyncRequestOperation<ListMartechMembersRequest, ListMartechMembersResponse> operation
-              = new ListMartechMembers.Async(sdkConfiguration);
+              = new ListMartechMembers.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -230,7 +232,7 @@ public class AsyncMartech {
      */
     public CompletableFuture<PatchMartechListResponse> patchMartechList(PatchMartechListRequest request) {
         AsyncRequestOperation<PatchMartechListRequest, PatchMartechListResponse> operation
-              = new PatchMartechList.Async(sdkConfiguration);
+              = new PatchMartechList.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -253,7 +255,7 @@ public class AsyncMartech {
      */
     public CompletableFuture<PatchMartechMemberResponse> patchMartechMember(PatchMartechMemberRequest request) {
         AsyncRequestOperation<PatchMartechMemberRequest, PatchMartechMemberResponse> operation
-              = new PatchMartechMember.Async(sdkConfiguration);
+              = new PatchMartechMember.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -276,7 +278,7 @@ public class AsyncMartech {
      */
     public CompletableFuture<RemoveMartechListResponse> removeMartechList(RemoveMartechListRequest request) {
         AsyncRequestOperation<RemoveMartechListRequest, RemoveMartechListResponse> operation
-              = new RemoveMartechList.Async(sdkConfiguration);
+              = new RemoveMartechList.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -299,7 +301,7 @@ public class AsyncMartech {
      */
     public CompletableFuture<RemoveMartechMemberResponse> removeMartechMember(RemoveMartechMemberRequest request) {
         AsyncRequestOperation<RemoveMartechMemberRequest, RemoveMartechMemberResponse> operation
-              = new RemoveMartechMember.Async(sdkConfiguration);
+              = new RemoveMartechMember.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -322,7 +324,7 @@ public class AsyncMartech {
      */
     public CompletableFuture<UpdateMartechListResponse> updateMartechList(UpdateMartechListRequest request) {
         AsyncRequestOperation<UpdateMartechListRequest, UpdateMartechListResponse> operation
-              = new UpdateMartechList.Async(sdkConfiguration);
+              = new UpdateMartechList.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -345,7 +347,7 @@ public class AsyncMartech {
      */
     public CompletableFuture<UpdateMartechMemberResponse> updateMartechMember(UpdateMartechMemberRequest request) {
         AsyncRequestOperation<UpdateMartechMemberRequest, UpdateMartechMemberResponse> operation
-              = new UpdateMartechMember.Async(sdkConfiguration);
+              = new UpdateMartechMember.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

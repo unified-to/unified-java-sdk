@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListMartechLists;
 import to.unified.unified_java_sdk.operations.PatchMartechList;
 import to.unified.unified_java_sdk.operations.RemoveMartechList;
 import to.unified.unified_java_sdk.operations.UpdateMartechList;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class List {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncList asyncSDK;
 
@@ -68,7 +70,7 @@ public class List {
      */
     public CreateMartechListResponse createMartechList(CreateMartechListRequest request) throws Exception {
         RequestOperation<CreateMartechListRequest, CreateMartechListResponse> operation
-              = new CreateMartechList.Sync(sdkConfiguration);
+              = new CreateMartechList.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -90,7 +92,7 @@ public class List {
      */
     public GetMartechListResponse getMartechList(GetMartechListRequest request) throws Exception {
         RequestOperation<GetMartechListRequest, GetMartechListResponse> operation
-              = new GetMartechList.Sync(sdkConfiguration);
+              = new GetMartechList.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -112,7 +114,7 @@ public class List {
      */
     public ListMartechListsResponse listMartechLists(ListMartechListsRequest request) throws Exception {
         RequestOperation<ListMartechListsRequest, ListMartechListsResponse> operation
-              = new ListMartechLists.Sync(sdkConfiguration);
+              = new ListMartechLists.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -134,7 +136,7 @@ public class List {
      */
     public PatchMartechListResponse patchMartechList(PatchMartechListRequest request) throws Exception {
         RequestOperation<PatchMartechListRequest, PatchMartechListResponse> operation
-              = new PatchMartechList.Sync(sdkConfiguration);
+              = new PatchMartechList.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -156,7 +158,7 @@ public class List {
      */
     public RemoveMartechListResponse removeMartechList(RemoveMartechListRequest request) throws Exception {
         RequestOperation<RemoveMartechListRequest, RemoveMartechListResponse> operation
-              = new RemoveMartechList.Sync(sdkConfiguration);
+              = new RemoveMartechList.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -178,7 +180,7 @@ public class List {
      */
     public UpdateMartechListResponse updateMartechList(UpdateMartechListRequest request) throws Exception {
         RequestOperation<UpdateMartechListRequest, UpdateMartechListResponse> operation
-              = new UpdateMartechList.Sync(sdkConfiguration);
+              = new UpdateMartechList.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

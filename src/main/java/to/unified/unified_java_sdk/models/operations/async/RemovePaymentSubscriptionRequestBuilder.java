@@ -10,12 +10,14 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemovePaymentSubscriptionRequest;
 import to.unified.unified_java_sdk.operations.RemovePaymentSubscription;
+import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemovePaymentSubscriptionRequestBuilder {
 
     private RemovePaymentSubscriptionRequest request;
     private final SDKConfiguration sdkConfiguration;
+    private final Headers _headers = new Headers(); 
 
     public RemovePaymentSubscriptionRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
@@ -30,7 +32,7 @@ public class RemovePaymentSubscriptionRequestBuilder {
     public CompletableFuture<RemovePaymentSubscriptionResponse> call() throws Exception {
         
         AsyncRequestOperation<RemovePaymentSubscriptionRequest, RemovePaymentSubscriptionResponse> operation
-              = new RemovePaymentSubscription.Async(sdkConfiguration);
+              = new RemovePaymentSubscription.Async(sdkConfiguration, _headers);
 
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);

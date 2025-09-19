@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListAccountingTaxrates;
 import to.unified.unified_java_sdk.operations.PatchAccountingTaxrate;
 import to.unified.unified_java_sdk.operations.RemoveAccountingTaxrate;
 import to.unified.unified_java_sdk.operations.UpdateAccountingTaxrate;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncTaxrate {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Taxrate syncSDK;
 
@@ -68,7 +70,7 @@ public class AsyncTaxrate {
      */
     public CompletableFuture<CreateAccountingTaxrateResponse> createAccountingTaxrate(CreateAccountingTaxrateRequest request) {
         AsyncRequestOperation<CreateAccountingTaxrateRequest, CreateAccountingTaxrateResponse> operation
-              = new CreateAccountingTaxrate.Async(sdkConfiguration);
+              = new CreateAccountingTaxrate.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -91,7 +93,7 @@ public class AsyncTaxrate {
      */
     public CompletableFuture<GetAccountingTaxrateResponse> getAccountingTaxrate(GetAccountingTaxrateRequest request) {
         AsyncRequestOperation<GetAccountingTaxrateRequest, GetAccountingTaxrateResponse> operation
-              = new GetAccountingTaxrate.Async(sdkConfiguration);
+              = new GetAccountingTaxrate.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -114,7 +116,7 @@ public class AsyncTaxrate {
      */
     public CompletableFuture<ListAccountingTaxratesResponse> listAccountingTaxrates(ListAccountingTaxratesRequest request) {
         AsyncRequestOperation<ListAccountingTaxratesRequest, ListAccountingTaxratesResponse> operation
-              = new ListAccountingTaxrates.Async(sdkConfiguration);
+              = new ListAccountingTaxrates.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -137,7 +139,7 @@ public class AsyncTaxrate {
      */
     public CompletableFuture<PatchAccountingTaxrateResponse> patchAccountingTaxrate(PatchAccountingTaxrateRequest request) {
         AsyncRequestOperation<PatchAccountingTaxrateRequest, PatchAccountingTaxrateResponse> operation
-              = new PatchAccountingTaxrate.Async(sdkConfiguration);
+              = new PatchAccountingTaxrate.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -160,7 +162,7 @@ public class AsyncTaxrate {
      */
     public CompletableFuture<RemoveAccountingTaxrateResponse> removeAccountingTaxrate(RemoveAccountingTaxrateRequest request) {
         AsyncRequestOperation<RemoveAccountingTaxrateRequest, RemoveAccountingTaxrateResponse> operation
-              = new RemoveAccountingTaxrate.Async(sdkConfiguration);
+              = new RemoveAccountingTaxrate.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -183,7 +185,7 @@ public class AsyncTaxrate {
      */
     public CompletableFuture<UpdateAccountingTaxrateResponse> updateAccountingTaxrate(UpdateAccountingTaxrateRequest request) {
         AsyncRequestOperation<UpdateAccountingTaxrateRequest, UpdateAccountingTaxrateResponse> operation
-              = new UpdateAccountingTaxrate.Async(sdkConfiguration);
+              = new UpdateAccountingTaxrate.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

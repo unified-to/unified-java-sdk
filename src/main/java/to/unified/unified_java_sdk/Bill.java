@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListAccountingBills;
 import to.unified.unified_java_sdk.operations.PatchAccountingBill;
 import to.unified.unified_java_sdk.operations.RemoveAccountingBill;
 import to.unified.unified_java_sdk.operations.UpdateAccountingBill;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Bill {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncBill asyncSDK;
 
@@ -68,7 +70,7 @@ public class Bill {
      */
     public CreateAccountingBillResponse createAccountingBill(CreateAccountingBillRequest request) throws Exception {
         RequestOperation<CreateAccountingBillRequest, CreateAccountingBillResponse> operation
-              = new CreateAccountingBill.Sync(sdkConfiguration);
+              = new CreateAccountingBill.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -90,7 +92,7 @@ public class Bill {
      */
     public GetAccountingBillResponse getAccountingBill(GetAccountingBillRequest request) throws Exception {
         RequestOperation<GetAccountingBillRequest, GetAccountingBillResponse> operation
-              = new GetAccountingBill.Sync(sdkConfiguration);
+              = new GetAccountingBill.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -112,7 +114,7 @@ public class Bill {
      */
     public ListAccountingBillsResponse listAccountingBills(ListAccountingBillsRequest request) throws Exception {
         RequestOperation<ListAccountingBillsRequest, ListAccountingBillsResponse> operation
-              = new ListAccountingBills.Sync(sdkConfiguration);
+              = new ListAccountingBills.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -134,7 +136,7 @@ public class Bill {
      */
     public PatchAccountingBillResponse patchAccountingBill(PatchAccountingBillRequest request) throws Exception {
         RequestOperation<PatchAccountingBillRequest, PatchAccountingBillResponse> operation
-              = new PatchAccountingBill.Sync(sdkConfiguration);
+              = new PatchAccountingBill.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -156,7 +158,7 @@ public class Bill {
      */
     public RemoveAccountingBillResponse removeAccountingBill(RemoveAccountingBillRequest request) throws Exception {
         RequestOperation<RemoveAccountingBillRequest, RemoveAccountingBillResponse> operation
-              = new RemoveAccountingBill.Sync(sdkConfiguration);
+              = new RemoveAccountingBill.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -178,7 +180,7 @@ public class Bill {
      */
     public UpdateAccountingBillResponse updateAccountingBill(UpdateAccountingBillRequest request) throws Exception {
         RequestOperation<UpdateAccountingBillRequest, UpdateAccountingBillResponse> operation
-              = new UpdateAccountingBill.Sync(sdkConfiguration);
+              = new UpdateAccountingBill.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

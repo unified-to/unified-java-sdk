@@ -14,9 +14,11 @@ import to.unified.unified_java_sdk.models.operations.async.ListAccountingTrialba
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingTrialbalancesResponse;
 import to.unified.unified_java_sdk.operations.GetAccountingTrialbalance;
 import to.unified.unified_java_sdk.operations.ListAccountingTrialbalances;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncTrialbalance {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Trialbalance syncSDK;
 
@@ -52,7 +54,7 @@ public class AsyncTrialbalance {
      */
     public CompletableFuture<GetAccountingTrialbalanceResponse> getAccountingTrialbalance(GetAccountingTrialbalanceRequest request) {
         AsyncRequestOperation<GetAccountingTrialbalanceRequest, GetAccountingTrialbalanceResponse> operation
-              = new GetAccountingTrialbalance.Async(sdkConfiguration);
+              = new GetAccountingTrialbalance.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -75,7 +77,7 @@ public class AsyncTrialbalance {
      */
     public CompletableFuture<ListAccountingTrialbalancesResponse> listAccountingTrialbalances(ListAccountingTrialbalancesRequest request) {
         AsyncRequestOperation<ListAccountingTrialbalancesRequest, ListAccountingTrialbalancesResponse> operation
-              = new ListAccountingTrialbalances.Async(sdkConfiguration);
+              = new ListAccountingTrialbalances.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

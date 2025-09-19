@@ -14,9 +14,11 @@ import to.unified.unified_java_sdk.models.operations.ListMessagingChannelsReques
 import to.unified.unified_java_sdk.models.operations.ListMessagingChannelsResponse;
 import to.unified.unified_java_sdk.operations.GetMessagingChannel;
 import to.unified.unified_java_sdk.operations.ListMessagingChannels;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Channel {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncChannel asyncSDK;
 
@@ -52,7 +54,7 @@ public class Channel {
      */
     public GetMessagingChannelResponse getMessagingChannel(GetMessagingChannelRequest request) throws Exception {
         RequestOperation<GetMessagingChannelRequest, GetMessagingChannelResponse> operation
-              = new GetMessagingChannel.Sync(sdkConfiguration);
+              = new GetMessagingChannel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -74,7 +76,7 @@ public class Channel {
      */
     public ListMessagingChannelsResponse listMessagingChannels(ListMessagingChannelsRequest request) throws Exception {
         RequestOperation<ListMessagingChannelsRequest, ListMessagingChannelsResponse> operation
-              = new ListMessagingChannels.Sync(sdkConfiguration);
+              = new ListMessagingChannels.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

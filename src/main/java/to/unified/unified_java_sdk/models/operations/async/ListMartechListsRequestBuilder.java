@@ -10,12 +10,14 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListMartechListsRequest;
 import to.unified.unified_java_sdk.operations.ListMartechLists;
+import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListMartechListsRequestBuilder {
 
     private ListMartechListsRequest request;
     private final SDKConfiguration sdkConfiguration;
+    private final Headers _headers = new Headers(); 
 
     public ListMartechListsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
@@ -30,7 +32,7 @@ public class ListMartechListsRequestBuilder {
     public CompletableFuture<ListMartechListsResponse> call() throws Exception {
         
         AsyncRequestOperation<ListMartechListsRequest, ListMartechListsResponse> operation
-              = new ListMartechLists.Async(sdkConfiguration);
+              = new ListMartechLists.Async(sdkConfiguration, _headers);
 
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);

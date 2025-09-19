@@ -14,9 +14,11 @@ import to.unified.unified_java_sdk.models.operations.async.ListHrisTimeoffsReque
 import to.unified.unified_java_sdk.models.operations.async.ListHrisTimeoffsResponse;
 import to.unified.unified_java_sdk.operations.GetHrisTimeoff;
 import to.unified.unified_java_sdk.operations.ListHrisTimeoffs;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncTimeoff {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Timeoff syncSDK;
 
@@ -52,7 +54,7 @@ public class AsyncTimeoff {
      */
     public CompletableFuture<GetHrisTimeoffResponse> getHrisTimeoff(GetHrisTimeoffRequest request) {
         AsyncRequestOperation<GetHrisTimeoffRequest, GetHrisTimeoffResponse> operation
-              = new GetHrisTimeoff.Async(sdkConfiguration);
+              = new GetHrisTimeoff.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -75,7 +77,7 @@ public class AsyncTimeoff {
      */
     public CompletableFuture<ListHrisTimeoffsResponse> listHrisTimeoffs(ListHrisTimeoffsRequest request) {
         AsyncRequestOperation<ListHrisTimeoffsRequest, ListHrisTimeoffsResponse> operation
-              = new ListHrisTimeoffs.Async(sdkConfiguration);
+              = new ListHrisTimeoffs.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

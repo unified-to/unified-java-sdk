@@ -10,12 +10,14 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetKmsPageRequest;
 import to.unified.unified_java_sdk.operations.GetKmsPage;
+import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetKmsPageRequestBuilder {
 
     private GetKmsPageRequest request;
     private final SDKConfiguration sdkConfiguration;
+    private final Headers _headers = new Headers(); 
 
     public GetKmsPageRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
@@ -30,7 +32,7 @@ public class GetKmsPageRequestBuilder {
     public CompletableFuture<GetKmsPageResponse> call() throws Exception {
         
         AsyncRequestOperation<GetKmsPageRequest, GetKmsPageResponse> operation
-              = new GetKmsPage.Async(sdkConfiguration);
+              = new GetKmsPage.Async(sdkConfiguration, _headers);
 
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);

@@ -38,9 +38,11 @@ import to.unified.unified_java_sdk.operations.ListRepoOrganizations;
 import to.unified.unified_java_sdk.operations.PatchRepoOrganization;
 import to.unified.unified_java_sdk.operations.RemoveRepoOrganization;
 import to.unified.unified_java_sdk.operations.UpdateRepoOrganization;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncOrganization {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Organization syncSDK;
 
@@ -76,7 +78,7 @@ public class AsyncOrganization {
      */
     public CompletableFuture<CreateRepoOrganizationResponse> createRepoOrganization(CreateRepoOrganizationRequest request) {
         AsyncRequestOperation<CreateRepoOrganizationRequest, CreateRepoOrganizationResponse> operation
-              = new CreateRepoOrganization.Async(sdkConfiguration);
+              = new CreateRepoOrganization.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -99,7 +101,7 @@ public class AsyncOrganization {
      */
     public CompletableFuture<GetAccountingOrganizationResponse> getAccountingOrganization(GetAccountingOrganizationRequest request) {
         AsyncRequestOperation<GetAccountingOrganizationRequest, GetAccountingOrganizationResponse> operation
-              = new GetAccountingOrganization.Async(sdkConfiguration);
+              = new GetAccountingOrganization.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -122,7 +124,7 @@ public class AsyncOrganization {
      */
     public CompletableFuture<GetRepoOrganizationResponse> getRepoOrganization(GetRepoOrganizationRequest request) {
         AsyncRequestOperation<GetRepoOrganizationRequest, GetRepoOrganizationResponse> operation
-              = new GetRepoOrganization.Async(sdkConfiguration);
+              = new GetRepoOrganization.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -145,7 +147,7 @@ public class AsyncOrganization {
      */
     public CompletableFuture<ListAccountingOrganizationsResponse> listAccountingOrganizations(ListAccountingOrganizationsRequest request) {
         AsyncRequestOperation<ListAccountingOrganizationsRequest, ListAccountingOrganizationsResponse> operation
-              = new ListAccountingOrganizations.Async(sdkConfiguration);
+              = new ListAccountingOrganizations.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -168,7 +170,7 @@ public class AsyncOrganization {
      */
     public CompletableFuture<ListRepoOrganizationsResponse> listRepoOrganizations(ListRepoOrganizationsRequest request) {
         AsyncRequestOperation<ListRepoOrganizationsRequest, ListRepoOrganizationsResponse> operation
-              = new ListRepoOrganizations.Async(sdkConfiguration);
+              = new ListRepoOrganizations.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -191,7 +193,7 @@ public class AsyncOrganization {
      */
     public CompletableFuture<PatchRepoOrganizationResponse> patchRepoOrganization(PatchRepoOrganizationRequest request) {
         AsyncRequestOperation<PatchRepoOrganizationRequest, PatchRepoOrganizationResponse> operation
-              = new PatchRepoOrganization.Async(sdkConfiguration);
+              = new PatchRepoOrganization.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -214,7 +216,7 @@ public class AsyncOrganization {
      */
     public CompletableFuture<RemoveRepoOrganizationResponse> removeRepoOrganization(RemoveRepoOrganizationRequest request) {
         AsyncRequestOperation<RemoveRepoOrganizationRequest, RemoveRepoOrganizationResponse> operation
-              = new RemoveRepoOrganization.Async(sdkConfiguration);
+              = new RemoveRepoOrganization.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -237,7 +239,7 @@ public class AsyncOrganization {
      */
     public CompletableFuture<UpdateRepoOrganizationResponse> updateRepoOrganization(UpdateRepoOrganizationRequest request) {
         AsyncRequestOperation<UpdateRepoOrganizationRequest, UpdateRepoOrganizationResponse> operation
-              = new UpdateRepoOrganization.Async(sdkConfiguration);
+              = new UpdateRepoOrganization.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

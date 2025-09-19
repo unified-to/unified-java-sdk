@@ -78,9 +78,11 @@ import to.unified.unified_java_sdk.operations.RemoveKmsSpace;
 import to.unified.unified_java_sdk.operations.UpdateKmsComment;
 import to.unified.unified_java_sdk.operations.UpdateKmsPage;
 import to.unified.unified_java_sdk.operations.UpdateKmsSpace;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncKms {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Kms syncSDK;
 
@@ -116,7 +118,7 @@ public class AsyncKms {
      */
     public CompletableFuture<CreateKmsCommentResponse> createKmsComment(CreateKmsCommentRequest request) {
         AsyncRequestOperation<CreateKmsCommentRequest, CreateKmsCommentResponse> operation
-              = new CreateKmsComment.Async(sdkConfiguration);
+              = new CreateKmsComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -139,7 +141,7 @@ public class AsyncKms {
      */
     public CompletableFuture<CreateKmsPageResponse> createKmsPage(CreateKmsPageRequest request) {
         AsyncRequestOperation<CreateKmsPageRequest, CreateKmsPageResponse> operation
-              = new CreateKmsPage.Async(sdkConfiguration);
+              = new CreateKmsPage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -162,7 +164,7 @@ public class AsyncKms {
      */
     public CompletableFuture<CreateKmsSpaceResponse> createKmsSpace(CreateKmsSpaceRequest request) {
         AsyncRequestOperation<CreateKmsSpaceRequest, CreateKmsSpaceResponse> operation
-              = new CreateKmsSpace.Async(sdkConfiguration);
+              = new CreateKmsSpace.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -185,7 +187,7 @@ public class AsyncKms {
      */
     public CompletableFuture<GetKmsCommentResponse> getKmsComment(GetKmsCommentRequest request) {
         AsyncRequestOperation<GetKmsCommentRequest, GetKmsCommentResponse> operation
-              = new GetKmsComment.Async(sdkConfiguration);
+              = new GetKmsComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -208,7 +210,7 @@ public class AsyncKms {
      */
     public CompletableFuture<GetKmsPageResponse> getKmsPage(GetKmsPageRequest request) {
         AsyncRequestOperation<GetKmsPageRequest, GetKmsPageResponse> operation
-              = new GetKmsPage.Async(sdkConfiguration);
+              = new GetKmsPage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -231,7 +233,7 @@ public class AsyncKms {
      */
     public CompletableFuture<GetKmsSpaceResponse> getKmsSpace(GetKmsSpaceRequest request) {
         AsyncRequestOperation<GetKmsSpaceRequest, GetKmsSpaceResponse> operation
-              = new GetKmsSpace.Async(sdkConfiguration);
+              = new GetKmsSpace.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -254,7 +256,7 @@ public class AsyncKms {
      */
     public CompletableFuture<ListKmsCommentsResponse> listKmsComments(ListKmsCommentsRequest request) {
         AsyncRequestOperation<ListKmsCommentsRequest, ListKmsCommentsResponse> operation
-              = new ListKmsComments.Async(sdkConfiguration);
+              = new ListKmsComments.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -277,7 +279,7 @@ public class AsyncKms {
      */
     public CompletableFuture<ListKmsPagesResponse> listKmsPages(ListKmsPagesRequest request) {
         AsyncRequestOperation<ListKmsPagesRequest, ListKmsPagesResponse> operation
-              = new ListKmsPages.Async(sdkConfiguration);
+              = new ListKmsPages.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -300,7 +302,7 @@ public class AsyncKms {
      */
     public CompletableFuture<ListKmsSpacesResponse> listKmsSpaces(ListKmsSpacesRequest request) {
         AsyncRequestOperation<ListKmsSpacesRequest, ListKmsSpacesResponse> operation
-              = new ListKmsSpaces.Async(sdkConfiguration);
+              = new ListKmsSpaces.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -323,7 +325,7 @@ public class AsyncKms {
      */
     public CompletableFuture<PatchKmsCommentResponse> patchKmsComment(PatchKmsCommentRequest request) {
         AsyncRequestOperation<PatchKmsCommentRequest, PatchKmsCommentResponse> operation
-              = new PatchKmsComment.Async(sdkConfiguration);
+              = new PatchKmsComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -346,7 +348,7 @@ public class AsyncKms {
      */
     public CompletableFuture<PatchKmsPageResponse> patchKmsPage(PatchKmsPageRequest request) {
         AsyncRequestOperation<PatchKmsPageRequest, PatchKmsPageResponse> operation
-              = new PatchKmsPage.Async(sdkConfiguration);
+              = new PatchKmsPage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -369,7 +371,7 @@ public class AsyncKms {
      */
     public CompletableFuture<PatchKmsSpaceResponse> patchKmsSpace(PatchKmsSpaceRequest request) {
         AsyncRequestOperation<PatchKmsSpaceRequest, PatchKmsSpaceResponse> operation
-              = new PatchKmsSpace.Async(sdkConfiguration);
+              = new PatchKmsSpace.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -392,7 +394,7 @@ public class AsyncKms {
      */
     public CompletableFuture<RemoveKmsCommentResponse> removeKmsComment(RemoveKmsCommentRequest request) {
         AsyncRequestOperation<RemoveKmsCommentRequest, RemoveKmsCommentResponse> operation
-              = new RemoveKmsComment.Async(sdkConfiguration);
+              = new RemoveKmsComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -415,7 +417,7 @@ public class AsyncKms {
      */
     public CompletableFuture<RemoveKmsPageResponse> removeKmsPage(RemoveKmsPageRequest request) {
         AsyncRequestOperation<RemoveKmsPageRequest, RemoveKmsPageResponse> operation
-              = new RemoveKmsPage.Async(sdkConfiguration);
+              = new RemoveKmsPage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -438,7 +440,7 @@ public class AsyncKms {
      */
     public CompletableFuture<RemoveKmsSpaceResponse> removeKmsSpace(RemoveKmsSpaceRequest request) {
         AsyncRequestOperation<RemoveKmsSpaceRequest, RemoveKmsSpaceResponse> operation
-              = new RemoveKmsSpace.Async(sdkConfiguration);
+              = new RemoveKmsSpace.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -461,7 +463,7 @@ public class AsyncKms {
      */
     public CompletableFuture<UpdateKmsCommentResponse> updateKmsComment(UpdateKmsCommentRequest request) {
         AsyncRequestOperation<UpdateKmsCommentRequest, UpdateKmsCommentResponse> operation
-              = new UpdateKmsComment.Async(sdkConfiguration);
+              = new UpdateKmsComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -484,7 +486,7 @@ public class AsyncKms {
      */
     public CompletableFuture<UpdateKmsPageResponse> updateKmsPage(UpdateKmsPageRequest request) {
         AsyncRequestOperation<UpdateKmsPageRequest, UpdateKmsPageResponse> operation
-              = new UpdateKmsPage.Async(sdkConfiguration);
+              = new UpdateKmsPage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -507,7 +509,7 @@ public class AsyncKms {
      */
     public CompletableFuture<UpdateKmsSpaceResponse> updateKmsSpace(UpdateKmsSpaceRequest request) {
         AsyncRequestOperation<UpdateKmsSpaceRequest, UpdateKmsSpaceResponse> operation
-              = new UpdateKmsSpace.Async(sdkConfiguration);
+              = new UpdateKmsSpace.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

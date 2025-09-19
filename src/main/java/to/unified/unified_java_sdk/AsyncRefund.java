@@ -14,9 +14,11 @@ import to.unified.unified_java_sdk.models.operations.async.ListPaymentRefundsReq
 import to.unified.unified_java_sdk.models.operations.async.ListPaymentRefundsResponse;
 import to.unified.unified_java_sdk.operations.GetPaymentRefund;
 import to.unified.unified_java_sdk.operations.ListPaymentRefunds;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncRefund {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Refund syncSDK;
 
@@ -52,7 +54,7 @@ public class AsyncRefund {
      */
     public CompletableFuture<GetPaymentRefundResponse> getPaymentRefund(GetPaymentRefundRequest request) {
         AsyncRequestOperation<GetPaymentRefundRequest, GetPaymentRefundResponse> operation
-              = new GetPaymentRefund.Async(sdkConfiguration);
+              = new GetPaymentRefund.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -75,7 +77,7 @@ public class AsyncRefund {
      */
     public CompletableFuture<ListPaymentRefundsResponse> listPaymentRefunds(ListPaymentRefundsRequest request) {
         AsyncRequestOperation<ListPaymentRefundsRequest, ListPaymentRefundsResponse> operation
-              = new ListPaymentRefunds.Async(sdkConfiguration);
+              = new ListPaymentRefunds.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -38,9 +38,11 @@ import to.unified.unified_java_sdk.operations.ListVerificationRequests;
 import to.unified.unified_java_sdk.operations.PatchVerificationRequest;
 import to.unified.unified_java_sdk.operations.RemoveVerificationRequest;
 import to.unified.unified_java_sdk.operations.UpdateVerificationRequest;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Verification {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncVerification asyncSDK;
 
@@ -76,7 +78,7 @@ public class Verification {
      */
     public CreateVerificationRequestResponse createVerificationRequest(CreateVerificationRequestRequest request) throws Exception {
         RequestOperation<CreateVerificationRequestRequest, CreateVerificationRequestResponse> operation
-              = new CreateVerificationRequest.Sync(sdkConfiguration);
+              = new CreateVerificationRequest.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -98,7 +100,7 @@ public class Verification {
      */
     public GetVerificationPackageResponse getVerificationPackage(GetVerificationPackageRequest request) throws Exception {
         RequestOperation<GetVerificationPackageRequest, GetVerificationPackageResponse> operation
-              = new GetVerificationPackage.Sync(sdkConfiguration);
+              = new GetVerificationPackage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -120,7 +122,7 @@ public class Verification {
      */
     public GetVerificationRequestResponse getVerificationRequest(GetVerificationRequestRequest request) throws Exception {
         RequestOperation<GetVerificationRequestRequest, GetVerificationRequestResponse> operation
-              = new GetVerificationRequest.Sync(sdkConfiguration);
+              = new GetVerificationRequest.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -142,7 +144,7 @@ public class Verification {
      */
     public ListVerificationPackagesResponse listVerificationPackages(ListVerificationPackagesRequest request) throws Exception {
         RequestOperation<ListVerificationPackagesRequest, ListVerificationPackagesResponse> operation
-              = new ListVerificationPackages.Sync(sdkConfiguration);
+              = new ListVerificationPackages.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -164,7 +166,7 @@ public class Verification {
      */
     public ListVerificationRequestsResponse listVerificationRequests(ListVerificationRequestsRequest request) throws Exception {
         RequestOperation<ListVerificationRequestsRequest, ListVerificationRequestsResponse> operation
-              = new ListVerificationRequests.Sync(sdkConfiguration);
+              = new ListVerificationRequests.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -186,7 +188,7 @@ public class Verification {
      */
     public PatchVerificationRequestResponse patchVerificationRequest(PatchVerificationRequestRequest request) throws Exception {
         RequestOperation<PatchVerificationRequestRequest, PatchVerificationRequestResponse> operation
-              = new PatchVerificationRequest.Sync(sdkConfiguration);
+              = new PatchVerificationRequest.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -208,7 +210,7 @@ public class Verification {
      */
     public RemoveVerificationRequestResponse removeVerificationRequest(RemoveVerificationRequestRequest request) throws Exception {
         RequestOperation<RemoveVerificationRequestRequest, RemoveVerificationRequestResponse> operation
-              = new RemoveVerificationRequest.Sync(sdkConfiguration);
+              = new RemoveVerificationRequest.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -230,7 +232,7 @@ public class Verification {
      */
     public UpdateVerificationRequestResponse updateVerificationRequest(UpdateVerificationRequestRequest request) throws Exception {
         RequestOperation<UpdateVerificationRequestRequest, UpdateVerificationRequestResponse> operation
-              = new UpdateVerificationRequest.Sync(sdkConfiguration);
+              = new UpdateVerificationRequest.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

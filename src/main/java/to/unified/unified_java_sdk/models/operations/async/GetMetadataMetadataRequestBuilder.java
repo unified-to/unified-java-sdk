@@ -10,12 +10,14 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetMetadataMetadataRequest;
 import to.unified.unified_java_sdk.operations.GetMetadataMetadata;
+import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetMetadataMetadataRequestBuilder {
 
     private GetMetadataMetadataRequest request;
     private final SDKConfiguration sdkConfiguration;
+    private final Headers _headers = new Headers(); 
 
     public GetMetadataMetadataRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
@@ -30,7 +32,7 @@ public class GetMetadataMetadataRequestBuilder {
     public CompletableFuture<GetMetadataMetadataResponse> call() throws Exception {
         
         AsyncRequestOperation<GetMetadataMetadataRequest, GetMetadataMetadataResponse> operation
-              = new GetMetadataMetadata.Async(sdkConfiguration);
+              = new GetMetadataMetadata.Async(sdkConfiguration, _headers);
 
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);

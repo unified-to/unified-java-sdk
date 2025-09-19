@@ -14,9 +14,11 @@ import to.unified.unified_java_sdk.models.operations.ListTaskChangesRequestBuild
 import to.unified.unified_java_sdk.models.operations.ListTaskChangesResponse;
 import to.unified.unified_java_sdk.operations.GetTaskChange;
 import to.unified.unified_java_sdk.operations.ListTaskChanges;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Change {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncChange asyncSDK;
 
@@ -52,7 +54,7 @@ public class Change {
      */
     public GetTaskChangeResponse getTaskChange(GetTaskChangeRequest request) throws Exception {
         RequestOperation<GetTaskChangeRequest, GetTaskChangeResponse> operation
-              = new GetTaskChange.Sync(sdkConfiguration);
+              = new GetTaskChange.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -74,7 +76,7 @@ public class Change {
      */
     public ListTaskChangesResponse listTaskChanges(ListTaskChangesRequest request) throws Exception {
         RequestOperation<ListTaskChangesRequest, ListTaskChangesResponse> operation
-              = new ListTaskChanges.Sync(sdkConfiguration);
+              = new ListTaskChanges.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

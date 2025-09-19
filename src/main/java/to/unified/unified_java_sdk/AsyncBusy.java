@@ -10,9 +10,11 @@ import to.unified.unified_java_sdk.models.operations.ListCalendarBusiesRequest;
 import to.unified.unified_java_sdk.models.operations.async.ListCalendarBusiesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListCalendarBusiesResponse;
 import to.unified.unified_java_sdk.operations.ListCalendarBusies;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncBusy {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Busy syncSDK;
 
@@ -48,7 +50,7 @@ public class AsyncBusy {
      */
     public CompletableFuture<ListCalendarBusiesResponse> listCalendarBusies(ListCalendarBusiesRequest request) {
         AsyncRequestOperation<ListCalendarBusiesRequest, ListCalendarBusiesResponse> operation
-              = new ListCalendarBusies.Async(sdkConfiguration);
+              = new ListCalendarBusies.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

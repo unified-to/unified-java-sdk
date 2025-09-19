@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListRepoPullrequests;
 import to.unified.unified_java_sdk.operations.PatchRepoPullrequest;
 import to.unified.unified_java_sdk.operations.RemoveRepoPullrequest;
 import to.unified.unified_java_sdk.operations.UpdateRepoPullrequest;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncPullrequest {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Pullrequest syncSDK;
 
@@ -68,7 +70,7 @@ public class AsyncPullrequest {
      */
     public CompletableFuture<CreateRepoPullrequestResponse> createRepoPullrequest(CreateRepoPullrequestRequest request) {
         AsyncRequestOperation<CreateRepoPullrequestRequest, CreateRepoPullrequestResponse> operation
-              = new CreateRepoPullrequest.Async(sdkConfiguration);
+              = new CreateRepoPullrequest.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -91,7 +93,7 @@ public class AsyncPullrequest {
      */
     public CompletableFuture<GetRepoPullrequestResponse> getRepoPullrequest(GetRepoPullrequestRequest request) {
         AsyncRequestOperation<GetRepoPullrequestRequest, GetRepoPullrequestResponse> operation
-              = new GetRepoPullrequest.Async(sdkConfiguration);
+              = new GetRepoPullrequest.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -114,7 +116,7 @@ public class AsyncPullrequest {
      */
     public CompletableFuture<ListRepoPullrequestsResponse> listRepoPullrequests(ListRepoPullrequestsRequest request) {
         AsyncRequestOperation<ListRepoPullrequestsRequest, ListRepoPullrequestsResponse> operation
-              = new ListRepoPullrequests.Async(sdkConfiguration);
+              = new ListRepoPullrequests.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -137,7 +139,7 @@ public class AsyncPullrequest {
      */
     public CompletableFuture<PatchRepoPullrequestResponse> patchRepoPullrequest(PatchRepoPullrequestRequest request) {
         AsyncRequestOperation<PatchRepoPullrequestRequest, PatchRepoPullrequestResponse> operation
-              = new PatchRepoPullrequest.Async(sdkConfiguration);
+              = new PatchRepoPullrequest.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -160,7 +162,7 @@ public class AsyncPullrequest {
      */
     public CompletableFuture<RemoveRepoPullrequestResponse> removeRepoPullrequest(RemoveRepoPullrequestRequest request) {
         AsyncRequestOperation<RemoveRepoPullrequestRequest, RemoveRepoPullrequestResponse> operation
-              = new RemoveRepoPullrequest.Async(sdkConfiguration);
+              = new RemoveRepoPullrequest.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -183,7 +185,7 @@ public class AsyncPullrequest {
      */
     public CompletableFuture<UpdateRepoPullrequestResponse> updateRepoPullrequest(UpdateRepoPullrequestRequest request) {
         AsyncRequestOperation<UpdateRepoPullrequestRequest, UpdateRepoPullrequestResponse> operation
-              = new UpdateRepoPullrequest.Async(sdkConfiguration);
+              = new UpdateRepoPullrequest.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

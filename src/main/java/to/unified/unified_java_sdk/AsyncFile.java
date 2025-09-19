@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListStorageFiles;
 import to.unified.unified_java_sdk.operations.PatchStorageFile;
 import to.unified.unified_java_sdk.operations.RemoveStorageFile;
 import to.unified.unified_java_sdk.operations.UpdateStorageFile;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncFile {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final File syncSDK;
 
@@ -68,7 +70,7 @@ public class AsyncFile {
      */
     public CompletableFuture<CreateStorageFileResponse> createStorageFile(CreateStorageFileRequest request) {
         AsyncRequestOperation<CreateStorageFileRequest, CreateStorageFileResponse> operation
-              = new CreateStorageFile.Async(sdkConfiguration);
+              = new CreateStorageFile.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -91,7 +93,7 @@ public class AsyncFile {
      */
     public CompletableFuture<GetStorageFileResponse> getStorageFile(GetStorageFileRequest request) {
         AsyncRequestOperation<GetStorageFileRequest, GetStorageFileResponse> operation
-              = new GetStorageFile.Async(sdkConfiguration);
+              = new GetStorageFile.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -114,7 +116,7 @@ public class AsyncFile {
      */
     public CompletableFuture<ListStorageFilesResponse> listStorageFiles(ListStorageFilesRequest request) {
         AsyncRequestOperation<ListStorageFilesRequest, ListStorageFilesResponse> operation
-              = new ListStorageFiles.Async(sdkConfiguration);
+              = new ListStorageFiles.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -137,7 +139,7 @@ public class AsyncFile {
      */
     public CompletableFuture<PatchStorageFileResponse> patchStorageFile(PatchStorageFileRequest request) {
         AsyncRequestOperation<PatchStorageFileRequest, PatchStorageFileResponse> operation
-              = new PatchStorageFile.Async(sdkConfiguration);
+              = new PatchStorageFile.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -160,7 +162,7 @@ public class AsyncFile {
      */
     public CompletableFuture<RemoveStorageFileResponse> removeStorageFile(RemoveStorageFileRequest request) {
         AsyncRequestOperation<RemoveStorageFileRequest, RemoveStorageFileResponse> operation
-              = new RemoveStorageFile.Async(sdkConfiguration);
+              = new RemoveStorageFile.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -183,7 +185,7 @@ public class AsyncFile {
      */
     public CompletableFuture<UpdateStorageFileResponse> updateStorageFile(UpdateStorageFileRequest request) {
         AsyncRequestOperation<UpdateStorageFileRequest, UpdateStorageFileResponse> operation
-              = new UpdateStorageFile.Async(sdkConfiguration);
+              = new UpdateStorageFile.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

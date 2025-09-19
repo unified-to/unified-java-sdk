@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListRepoCommits;
 import to.unified.unified_java_sdk.operations.PatchRepoCommit;
 import to.unified.unified_java_sdk.operations.RemoveRepoCommit;
 import to.unified.unified_java_sdk.operations.UpdateRepoCommit;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncCommit {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Commit syncSDK;
 
@@ -68,7 +70,7 @@ public class AsyncCommit {
      */
     public CompletableFuture<CreateRepoCommitResponse> createRepoCommit(CreateRepoCommitRequest request) {
         AsyncRequestOperation<CreateRepoCommitRequest, CreateRepoCommitResponse> operation
-              = new CreateRepoCommit.Async(sdkConfiguration);
+              = new CreateRepoCommit.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -91,7 +93,7 @@ public class AsyncCommit {
      */
     public CompletableFuture<GetRepoCommitResponse> getRepoCommit(GetRepoCommitRequest request) {
         AsyncRequestOperation<GetRepoCommitRequest, GetRepoCommitResponse> operation
-              = new GetRepoCommit.Async(sdkConfiguration);
+              = new GetRepoCommit.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -114,7 +116,7 @@ public class AsyncCommit {
      */
     public CompletableFuture<ListRepoCommitsResponse> listRepoCommits(ListRepoCommitsRequest request) {
         AsyncRequestOperation<ListRepoCommitsRequest, ListRepoCommitsResponse> operation
-              = new ListRepoCommits.Async(sdkConfiguration);
+              = new ListRepoCommits.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -137,7 +139,7 @@ public class AsyncCommit {
      */
     public CompletableFuture<PatchRepoCommitResponse> patchRepoCommit(PatchRepoCommitRequest request) {
         AsyncRequestOperation<PatchRepoCommitRequest, PatchRepoCommitResponse> operation
-              = new PatchRepoCommit.Async(sdkConfiguration);
+              = new PatchRepoCommit.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -160,7 +162,7 @@ public class AsyncCommit {
      */
     public CompletableFuture<RemoveRepoCommitResponse> removeRepoCommit(RemoveRepoCommitRequest request) {
         AsyncRequestOperation<RemoveRepoCommitRequest, RemoveRepoCommitResponse> operation
-              = new RemoveRepoCommit.Async(sdkConfiguration);
+              = new RemoveRepoCommit.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -183,7 +185,7 @@ public class AsyncCommit {
      */
     public CompletableFuture<UpdateRepoCommitResponse> updateRepoCommit(UpdateRepoCommitRequest request) {
         AsyncRequestOperation<UpdateRepoCommitRequest, UpdateRepoCommitResponse> operation
-              = new UpdateRepoCommit.Async(sdkConfiguration);
+              = new UpdateRepoCommit.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

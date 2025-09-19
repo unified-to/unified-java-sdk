@@ -10,9 +10,11 @@ import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbeddingRequest
 import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbeddingRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbeddingResponse;
 import to.unified.unified_java_sdk.operations.CreateGenaiEmbedding;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Embedding {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncEmbedding asyncSDK;
 
@@ -48,7 +50,7 @@ public class Embedding {
      */
     public CreateGenaiEmbeddingResponse createGenaiEmbedding(CreateGenaiEmbeddingRequest request) throws Exception {
         RequestOperation<CreateGenaiEmbeddingRequest, CreateGenaiEmbeddingResponse> operation
-              = new CreateGenaiEmbedding.Sync(sdkConfiguration);
+              = new CreateGenaiEmbedding.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

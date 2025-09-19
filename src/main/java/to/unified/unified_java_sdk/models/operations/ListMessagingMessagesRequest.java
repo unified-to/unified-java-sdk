@@ -34,6 +34,10 @@ public class ListMessagingMessagesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_le")
     private Optional<String> endLe;
 
+
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    private Optional<String> expand;
+
     /**
      * Comma-delimited fields to return
      */
@@ -91,6 +95,7 @@ public class ListMessagingMessagesRequest {
             Optional<String> channelId,
             String connectionId,
             Optional<String> endLe,
+            Optional<String> expand,
             Optional<? extends List<String>> fields,
             Optional<Double> limit,
             Optional<Double> offset,
@@ -104,6 +109,7 @@ public class ListMessagingMessagesRequest {
         Utils.checkNotNull(channelId, "channelId");
         Utils.checkNotNull(connectionId, "connectionId");
         Utils.checkNotNull(endLe, "endLe");
+        Utils.checkNotNull(expand, "expand");
         Utils.checkNotNull(fields, "fields");
         Utils.checkNotNull(limit, "limit");
         Utils.checkNotNull(offset, "offset");
@@ -117,6 +123,7 @@ public class ListMessagingMessagesRequest {
         this.channelId = channelId;
         this.connectionId = connectionId;
         this.endLe = endLe;
+        this.expand = expand;
         this.fields = fields;
         this.limit = limit;
         this.offset = offset;
@@ -135,7 +142,7 @@ public class ListMessagingMessagesRequest {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            Optional.empty(), Optional.empty());
     }
 
     /**
@@ -160,6 +167,11 @@ public class ListMessagingMessagesRequest {
     @JsonIgnore
     public Optional<String> endLe() {
         return endLe;
+    }
+
+    @JsonIgnore
+    public Optional<String> expand() {
+        return expand;
     }
 
     /**
@@ -280,6 +292,19 @@ public class ListMessagingMessagesRequest {
     public ListMessagingMessagesRequest withEndLe(Optional<String> endLe) {
         Utils.checkNotNull(endLe, "endLe");
         this.endLe = endLe;
+        return this;
+    }
+
+    public ListMessagingMessagesRequest withExpand(String expand) {
+        Utils.checkNotNull(expand, "expand");
+        this.expand = Optional.ofNullable(expand);
+        return this;
+    }
+
+
+    public ListMessagingMessagesRequest withExpand(Optional<String> expand) {
+        Utils.checkNotNull(expand, "expand");
+        this.expand = expand;
         return this;
     }
 
@@ -462,6 +487,7 @@ public class ListMessagingMessagesRequest {
             Utils.enhancedDeepEquals(this.channelId, other.channelId) &&
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
             Utils.enhancedDeepEquals(this.endLe, other.endLe) &&
+            Utils.enhancedDeepEquals(this.expand, other.expand) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
@@ -478,10 +504,10 @@ public class ListMessagingMessagesRequest {
     public int hashCode() {
         return Utils.enhancedHash(
             channelId, connectionId, endLe,
-            fields, limit, offset,
-            order, parentId, query,
-            raw, sort, startGte,
-            updatedGte);
+            expand, fields, limit,
+            offset, order, parentId,
+            query, raw, sort,
+            startGte, updatedGte);
     }
     
     @Override
@@ -490,6 +516,7 @@ public class ListMessagingMessagesRequest {
                 "channelId", channelId,
                 "connectionId", connectionId,
                 "endLe", endLe,
+                "expand", expand,
                 "fields", fields,
                 "limit", limit,
                 "offset", offset,
@@ -510,6 +537,8 @@ public class ListMessagingMessagesRequest {
         private String connectionId;
 
         private Optional<String> endLe = Optional.empty();
+
+        private Optional<String> expand = Optional.empty();
 
         private Optional<? extends List<String>> fields = Optional.empty();
 
@@ -580,6 +609,19 @@ public class ListMessagingMessagesRequest {
         public Builder endLe(Optional<String> endLe) {
             Utils.checkNotNull(endLe, "endLe");
             this.endLe = endLe;
+            return this;
+        }
+
+
+        public Builder expand(String expand) {
+            Utils.checkNotNull(expand, "expand");
+            this.expand = Optional.ofNullable(expand);
+            return this;
+        }
+
+        public Builder expand(Optional<String> expand) {
+            Utils.checkNotNull(expand, "expand");
+            this.expand = expand;
             return this;
         }
 
@@ -753,10 +795,10 @@ public class ListMessagingMessagesRequest {
 
             return new ListMessagingMessagesRequest(
                 channelId, connectionId, endLe,
-                fields, limit, offset,
-                order, parentId, query,
-                raw, sort, startGte,
-                updatedGte);
+                expand, fields, limit,
+                offset, order, parentId,
+                query, raw, sort,
+                startGte, updatedGte);
         }
 
     }

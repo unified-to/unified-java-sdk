@@ -14,9 +14,11 @@ import to.unified.unified_java_sdk.models.operations.async.ListVerificationPacka
 import to.unified.unified_java_sdk.models.operations.async.ListVerificationPackagesResponse;
 import to.unified.unified_java_sdk.operations.GetVerificationPackage;
 import to.unified.unified_java_sdk.operations.ListVerificationPackages;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncPackage {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Package syncSDK;
 
@@ -52,7 +54,7 @@ public class AsyncPackage {
      */
     public CompletableFuture<GetVerificationPackageResponse> getVerificationPackage(GetVerificationPackageRequest request) {
         AsyncRequestOperation<GetVerificationPackageRequest, GetVerificationPackageResponse> operation
-              = new GetVerificationPackage.Async(sdkConfiguration);
+              = new GetVerificationPackage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -75,7 +77,7 @@ public class AsyncPackage {
      */
     public CompletableFuture<ListVerificationPackagesResponse> listVerificationPackages(ListVerificationPackagesRequest request) {
         AsyncRequestOperation<ListVerificationPackagesRequest, ListVerificationPackagesResponse> operation
-              = new ListVerificationPackages.Async(sdkConfiguration);
+              = new ListVerificationPackages.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

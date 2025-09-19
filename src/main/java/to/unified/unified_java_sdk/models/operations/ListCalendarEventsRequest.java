@@ -34,6 +34,10 @@ public class ListCalendarEventsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_le")
     private Optional<String> endLe;
 
+
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    private Optional<String> expand;
+
     /**
      * Whether to expand recurring calendar events
      */
@@ -91,6 +95,7 @@ public class ListCalendarEventsRequest {
             Optional<String> calendarId,
             String connectionId,
             Optional<String> endLe,
+            Optional<String> expand,
             Optional<String> expandRecurringEvents,
             Optional<? extends List<String>> fields,
             Optional<Double> limit,
@@ -104,6 +109,7 @@ public class ListCalendarEventsRequest {
         Utils.checkNotNull(calendarId, "calendarId");
         Utils.checkNotNull(connectionId, "connectionId");
         Utils.checkNotNull(endLe, "endLe");
+        Utils.checkNotNull(expand, "expand");
         Utils.checkNotNull(expandRecurringEvents, "expandRecurringEvents");
         Utils.checkNotNull(fields, "fields");
         Utils.checkNotNull(limit, "limit");
@@ -117,6 +123,7 @@ public class ListCalendarEventsRequest {
         this.calendarId = calendarId;
         this.connectionId = connectionId;
         this.endLe = endLe;
+        this.expand = expand;
         this.expandRecurringEvents = expandRecurringEvents;
         this.fields = fields;
         this.limit = limit;
@@ -135,7 +142,7 @@ public class ListCalendarEventsRequest {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            Optional.empty(), Optional.empty());
     }
 
     /**
@@ -160,6 +167,11 @@ public class ListCalendarEventsRequest {
     @JsonIgnore
     public Optional<String> endLe() {
         return endLe;
+    }
+
+    @JsonIgnore
+    public Optional<String> expand() {
+        return expand;
     }
 
     /**
@@ -280,6 +292,19 @@ public class ListCalendarEventsRequest {
     public ListCalendarEventsRequest withEndLe(Optional<String> endLe) {
         Utils.checkNotNull(endLe, "endLe");
         this.endLe = endLe;
+        return this;
+    }
+
+    public ListCalendarEventsRequest withExpand(String expand) {
+        Utils.checkNotNull(expand, "expand");
+        this.expand = Optional.ofNullable(expand);
+        return this;
+    }
+
+
+    public ListCalendarEventsRequest withExpand(Optional<String> expand) {
+        Utils.checkNotNull(expand, "expand");
+        this.expand = expand;
         return this;
     }
 
@@ -462,6 +487,7 @@ public class ListCalendarEventsRequest {
             Utils.enhancedDeepEquals(this.calendarId, other.calendarId) &&
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
             Utils.enhancedDeepEquals(this.endLe, other.endLe) &&
+            Utils.enhancedDeepEquals(this.expand, other.expand) &&
             Utils.enhancedDeepEquals(this.expandRecurringEvents, other.expandRecurringEvents) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
@@ -478,10 +504,10 @@ public class ListCalendarEventsRequest {
     public int hashCode() {
         return Utils.enhancedHash(
             calendarId, connectionId, endLe,
-            expandRecurringEvents, fields, limit,
-            offset, order, query,
-            raw, sort, startGte,
-            updatedGte);
+            expand, expandRecurringEvents, fields,
+            limit, offset, order,
+            query, raw, sort,
+            startGte, updatedGte);
     }
     
     @Override
@@ -490,6 +516,7 @@ public class ListCalendarEventsRequest {
                 "calendarId", calendarId,
                 "connectionId", connectionId,
                 "endLe", endLe,
+                "expand", expand,
                 "expandRecurringEvents", expandRecurringEvents,
                 "fields", fields,
                 "limit", limit,
@@ -510,6 +537,8 @@ public class ListCalendarEventsRequest {
         private String connectionId;
 
         private Optional<String> endLe = Optional.empty();
+
+        private Optional<String> expand = Optional.empty();
 
         private Optional<String> expandRecurringEvents = Optional.empty();
 
@@ -580,6 +609,19 @@ public class ListCalendarEventsRequest {
         public Builder endLe(Optional<String> endLe) {
             Utils.checkNotNull(endLe, "endLe");
             this.endLe = endLe;
+            return this;
+        }
+
+
+        public Builder expand(String expand) {
+            Utils.checkNotNull(expand, "expand");
+            this.expand = Optional.ofNullable(expand);
+            return this;
+        }
+
+        public Builder expand(Optional<String> expand) {
+            Utils.checkNotNull(expand, "expand");
+            this.expand = expand;
             return this;
         }
 
@@ -753,10 +795,10 @@ public class ListCalendarEventsRequest {
 
             return new ListCalendarEventsRequest(
                 calendarId, connectionId, endLe,
-                expandRecurringEvents, fields, limit,
-                offset, order, query,
-                raw, sort, startGte,
-                updatedGte);
+                expand, expandRecurringEvents, fields,
+                limit, offset, order,
+                query, raw, sort,
+                startGte, updatedGte);
         }
 
     }

@@ -14,9 +14,11 @@ import to.unified.unified_java_sdk.models.operations.async.ListHrisPayslipsReque
 import to.unified.unified_java_sdk.models.operations.async.ListHrisPayslipsResponse;
 import to.unified.unified_java_sdk.operations.GetHrisPayslip;
 import to.unified.unified_java_sdk.operations.ListHrisPayslips;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncPayslip {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Payslip syncSDK;
 
@@ -52,7 +54,7 @@ public class AsyncPayslip {
      */
     public CompletableFuture<GetHrisPayslipResponse> getHrisPayslip(GetHrisPayslipRequest request) {
         AsyncRequestOperation<GetHrisPayslipRequest, GetHrisPayslipResponse> operation
-              = new GetHrisPayslip.Async(sdkConfiguration);
+              = new GetHrisPayslip.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -75,7 +77,7 @@ public class AsyncPayslip {
      */
     public CompletableFuture<ListHrisPayslipsResponse> listHrisPayslips(ListHrisPayslipsRequest request) {
         AsyncRequestOperation<ListHrisPayslipsRequest, ListHrisPayslipsResponse> operation
-              = new ListHrisPayslips.Async(sdkConfiguration);
+              = new ListHrisPayslips.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

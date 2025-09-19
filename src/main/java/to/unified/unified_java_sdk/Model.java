@@ -14,9 +14,11 @@ import to.unified.unified_java_sdk.models.operations.ListGenaiModelsRequestBuild
 import to.unified.unified_java_sdk.models.operations.ListGenaiModelsResponse;
 import to.unified.unified_java_sdk.operations.GetGenaiModel;
 import to.unified.unified_java_sdk.operations.ListGenaiModels;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class Model {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final AsyncModel asyncSDK;
 
@@ -52,7 +54,7 @@ public class Model {
      */
     public GetGenaiModelResponse getGenaiModel(GetGenaiModelRequest request) throws Exception {
         RequestOperation<GetGenaiModelRequest, GetGenaiModelResponse> operation
-              = new GetGenaiModel.Sync(sdkConfiguration);
+              = new GetGenaiModel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -74,7 +76,7 @@ public class Model {
      */
     public ListGenaiModelsResponse listGenaiModels(ListGenaiModelsRequest request) throws Exception {
         RequestOperation<ListGenaiModelsRequest, ListGenaiModelsResponse> operation
-              = new ListGenaiModels.Sync(sdkConfiguration);
+              = new ListGenaiModels.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

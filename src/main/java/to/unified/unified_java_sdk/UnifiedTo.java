@@ -7,6 +7,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.HTTPClient;
+import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.RetryConfig;
 import to.unified.unified_java_sdk.utils.SpeakeasyHTTPClient;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -15,21 +16,22 @@ import to.unified.unified_java_sdk.utils.Utils;
  * Unified.to API: One API to Rule Them All
  */
 public class UnifiedTo {
+    private static final Headers _headers = Headers.EMPTY;
 
 
     /**
      * SERVERS contains the list of server urls available to the SDK.
      */
     public static final String[] SERVERS = {
-        /**
+        /*
          * North American data region
          */
         "https://api.unified.to",
-        /**
+        /*
          * European data region
          */
         "https://api-eu.unified.to",
-        /**
+        /*
          * Australian data region
          */
         "https://api-au.unified.to",
@@ -995,6 +997,7 @@ public class UnifiedTo {
             return this;
         }
 
+
         /**
          * Builds a new instance of the SDK.
          *
@@ -1009,7 +1012,7 @@ public class UnifiedTo {
             return new UnifiedTo(sdkConfiguration);
         }
     }
-    
+
     /**
      * Get a new instance of the SDK builder to configure a new instance of the SDK.
      *
@@ -1019,7 +1022,7 @@ public class UnifiedTo {
         return new Builder();
     }
 
-    private UnifiedTo(SDKConfiguration sdkConfiguration) {
+    public UnifiedTo(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
         this.sdkConfiguration.initialize();
         this.accounting = new Accounting(sdkConfiguration);

@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListMetadataMetadatas;
 import to.unified.unified_java_sdk.operations.PatchMetadataMetadata;
 import to.unified.unified_java_sdk.operations.RemoveMetadataMetadata;
 import to.unified.unified_java_sdk.operations.UpdateMetadataMetadata;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncMetadata {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Metadata syncSDK;
 
@@ -68,7 +70,7 @@ public class AsyncMetadata {
      */
     public CompletableFuture<CreateMetadataMetadataResponse> createMetadataMetadata(CreateMetadataMetadataRequest request) {
         AsyncRequestOperation<CreateMetadataMetadataRequest, CreateMetadataMetadataResponse> operation
-              = new CreateMetadataMetadata.Async(sdkConfiguration);
+              = new CreateMetadataMetadata.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -91,7 +93,7 @@ public class AsyncMetadata {
      */
     public CompletableFuture<GetMetadataMetadataResponse> getMetadataMetadata(GetMetadataMetadataRequest request) {
         AsyncRequestOperation<GetMetadataMetadataRequest, GetMetadataMetadataResponse> operation
-              = new GetMetadataMetadata.Async(sdkConfiguration);
+              = new GetMetadataMetadata.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -114,7 +116,7 @@ public class AsyncMetadata {
      */
     public CompletableFuture<ListMetadataMetadatasResponse> listMetadataMetadatas(ListMetadataMetadatasRequest request) {
         AsyncRequestOperation<ListMetadataMetadatasRequest, ListMetadataMetadatasResponse> operation
-              = new ListMetadataMetadatas.Async(sdkConfiguration);
+              = new ListMetadataMetadatas.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -137,7 +139,7 @@ public class AsyncMetadata {
      */
     public CompletableFuture<PatchMetadataMetadataResponse> patchMetadataMetadata(PatchMetadataMetadataRequest request) {
         AsyncRequestOperation<PatchMetadataMetadataRequest, PatchMetadataMetadataResponse> operation
-              = new PatchMetadataMetadata.Async(sdkConfiguration);
+              = new PatchMetadataMetadata.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -160,7 +162,7 @@ public class AsyncMetadata {
      */
     public CompletableFuture<RemoveMetadataMetadataResponse> removeMetadataMetadata(RemoveMetadataMetadataRequest request) {
         AsyncRequestOperation<RemoveMetadataMetadataRequest, RemoveMetadataMetadataResponse> operation
-              = new RemoveMetadataMetadata.Async(sdkConfiguration);
+              = new RemoveMetadataMetadata.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -183,7 +185,7 @@ public class AsyncMetadata {
      */
     public CompletableFuture<UpdateMetadataMetadataResponse> updateMetadataMetadata(UpdateMetadataMetadataRequest request) {
         AsyncRequestOperation<UpdateMetadataMetadataRequest, UpdateMetadataMetadataResponse> operation
-              = new UpdateMetadataMetadata.Async(sdkConfiguration);
+              = new UpdateMetadataMetadata.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

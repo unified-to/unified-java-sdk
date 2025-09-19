@@ -30,9 +30,11 @@ import to.unified.unified_java_sdk.operations.ListRepoRepositories;
 import to.unified.unified_java_sdk.operations.PatchRepoRepository;
 import to.unified.unified_java_sdk.operations.RemoveRepoRepository;
 import to.unified.unified_java_sdk.operations.UpdateRepoRepository;
+import to.unified.unified_java_sdk.utils.Headers;
 
 
 public class AsyncRepository {
+    private static final Headers _headers = Headers.EMPTY;
     private final SDKConfiguration sdkConfiguration;
     private final Repository syncSDK;
 
@@ -68,7 +70,7 @@ public class AsyncRepository {
      */
     public CompletableFuture<CreateRepoRepositoryResponse> createRepoRepository(CreateRepoRepositoryRequest request) {
         AsyncRequestOperation<CreateRepoRepositoryRequest, CreateRepoRepositoryResponse> operation
-              = new CreateRepoRepository.Async(sdkConfiguration);
+              = new CreateRepoRepository.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -91,7 +93,7 @@ public class AsyncRepository {
      */
     public CompletableFuture<GetRepoRepositoryResponse> getRepoRepository(GetRepoRepositoryRequest request) {
         AsyncRequestOperation<GetRepoRepositoryRequest, GetRepoRepositoryResponse> operation
-              = new GetRepoRepository.Async(sdkConfiguration);
+              = new GetRepoRepository.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -114,7 +116,7 @@ public class AsyncRepository {
      */
     public CompletableFuture<ListRepoRepositoriesResponse> listRepoRepositories(ListRepoRepositoriesRequest request) {
         AsyncRequestOperation<ListRepoRepositoriesRequest, ListRepoRepositoriesResponse> operation
-              = new ListRepoRepositories.Async(sdkConfiguration);
+              = new ListRepoRepositories.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -137,7 +139,7 @@ public class AsyncRepository {
      */
     public CompletableFuture<PatchRepoRepositoryResponse> patchRepoRepository(PatchRepoRepositoryRequest request) {
         AsyncRequestOperation<PatchRepoRepositoryRequest, PatchRepoRepositoryResponse> operation
-              = new PatchRepoRepository.Async(sdkConfiguration);
+              = new PatchRepoRepository.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -160,7 +162,7 @@ public class AsyncRepository {
      */
     public CompletableFuture<RemoveRepoRepositoryResponse> removeRepoRepository(RemoveRepoRepositoryRequest request) {
         AsyncRequestOperation<RemoveRepoRepositoryRequest, RemoveRepoRepositoryResponse> operation
-              = new RemoveRepoRepository.Async(sdkConfiguration);
+              = new RemoveRepoRepository.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -183,7 +185,7 @@ public class AsyncRepository {
      */
     public CompletableFuture<UpdateRepoRepositoryResponse> updateRepoRepository(UpdateRepoRepositoryRequest request) {
         AsyncRequestOperation<UpdateRepoRepositoryRequest, UpdateRepoRepositoryResponse> operation
-              = new UpdateRepoRepository.Async(sdkConfiguration);
+              = new UpdateRepoRepository.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

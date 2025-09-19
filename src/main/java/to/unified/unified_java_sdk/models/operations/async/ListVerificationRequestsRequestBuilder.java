@@ -10,12 +10,14 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListVerificationRequestsRequest;
 import to.unified.unified_java_sdk.operations.ListVerificationRequests;
+import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListVerificationRequestsRequestBuilder {
 
     private ListVerificationRequestsRequest request;
     private final SDKConfiguration sdkConfiguration;
+    private final Headers _headers = new Headers(); 
 
     public ListVerificationRequestsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
@@ -30,7 +32,7 @@ public class ListVerificationRequestsRequestBuilder {
     public CompletableFuture<ListVerificationRequestsResponse> call() throws Exception {
         
         AsyncRequestOperation<ListVerificationRequestsRequest, ListVerificationRequestsResponse> operation
-              = new ListVerificationRequests.Async(sdkConfiguration);
+              = new ListVerificationRequests.Async(sdkConfiguration, _headers);
 
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
