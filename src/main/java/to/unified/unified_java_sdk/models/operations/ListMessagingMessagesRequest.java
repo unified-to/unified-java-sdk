@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
@@ -34,9 +35,11 @@ public class ListMessagingMessagesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_le")
     private Optional<String> endLe;
 
-
+    /**
+     * Whether to flatten grouped or recurring items into individual entries.
+     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
-    private Optional<String> expand;
+    private Optional<Boolean> expand;
 
     /**
      * Comma-delimited fields to return
@@ -95,7 +98,7 @@ public class ListMessagingMessagesRequest {
             Optional<String> channelId,
             String connectionId,
             Optional<String> endLe,
-            Optional<String> expand,
+            Optional<Boolean> expand,
             Optional<? extends List<String>> fields,
             Optional<Double> limit,
             Optional<Double> offset,
@@ -169,8 +172,11 @@ public class ListMessagingMessagesRequest {
         return endLe;
     }
 
+    /**
+     * Whether to flatten grouped or recurring items into individual entries.
+     */
     @JsonIgnore
-    public Optional<String> expand() {
+    public Optional<Boolean> expand() {
         return expand;
     }
 
@@ -295,14 +301,20 @@ public class ListMessagingMessagesRequest {
         return this;
     }
 
-    public ListMessagingMessagesRequest withExpand(String expand) {
+    /**
+     * Whether to flatten grouped or recurring items into individual entries.
+     */
+    public ListMessagingMessagesRequest withExpand(boolean expand) {
         Utils.checkNotNull(expand, "expand");
         this.expand = Optional.ofNullable(expand);
         return this;
     }
 
 
-    public ListMessagingMessagesRequest withExpand(Optional<String> expand) {
+    /**
+     * Whether to flatten grouped or recurring items into individual entries.
+     */
+    public ListMessagingMessagesRequest withExpand(Optional<Boolean> expand) {
         Utils.checkNotNull(expand, "expand");
         this.expand = expand;
         return this;
@@ -538,7 +550,7 @@ public class ListMessagingMessagesRequest {
 
         private Optional<String> endLe = Optional.empty();
 
-        private Optional<String> expand = Optional.empty();
+        private Optional<Boolean> expand = Optional.empty();
 
         private Optional<? extends List<String>> fields = Optional.empty();
 
@@ -613,13 +625,19 @@ public class ListMessagingMessagesRequest {
         }
 
 
-        public Builder expand(String expand) {
+        /**
+         * Whether to flatten grouped or recurring items into individual entries.
+         */
+        public Builder expand(boolean expand) {
             Utils.checkNotNull(expand, "expand");
             this.expand = Optional.ofNullable(expand);
             return this;
         }
 
-        public Builder expand(Optional<String> expand) {
+        /**
+         * Whether to flatten grouped or recurring items into individual entries.
+         */
+        public Builder expand(Optional<Boolean> expand) {
             Utils.checkNotNull(expand, "expand");
             this.expand = expand;
             return this;

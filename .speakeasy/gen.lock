@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 6ba38662f570a477a5eacdaf583b3b85
+  docChecksum: 3a2b9f42726c5dfd24761ce463b8da0d
   docVersion: "1.0"
-  speakeasyVersion: 1.621.0
-  generationVersion: 2.707.0
-  releaseVersion: 0.39.0
-  configChecksum: 6d201f4b91fbd15ed5d53386eef2d70e
+  speakeasyVersion: 1.622.1
+  generationVersion: 2.709.0
+  releaseVersion: 0.39.1
+  configChecksum: ac55d5e7d80367fa247775a6b12cf13a
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -9847,4 +9847,4 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Java SDK Changes Detected:\n* `unified-to.calendar.listCalendarEvents()`: \n  *  `request.expand` **Added**\n* `unified-to.event.listCalendarEvents()`: \n  *  `request.expand` **Added**\n* `unified-to.messaging.listMessagingMessages()`: \n  *  `request.expand` **Added**\n* `unified-to.message.listMessagingMessages()`: \n  *  `request.expand` **Added**\n"
+releaseNotes: "## Java SDK Changes Detected:\n* `unified-to.calendar.listCalendarEvents()`:  `request` **Changed** **Breaking** :warning:\n* `unified-to.event.listCalendarEvents()`:  `request` **Changed** **Breaking** :warning:\n* `unified-to.messaging.listMessagingMessages()`: \n  *  `request.expand` **Changed** **Breaking** :warning:\n* `unified-to.message.listMessagingMessages()`: \n  *  `request.expand` **Changed** **Breaking** :warning:\n"

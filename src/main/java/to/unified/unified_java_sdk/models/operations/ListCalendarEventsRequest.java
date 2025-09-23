@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
@@ -34,15 +35,17 @@ public class ListCalendarEventsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_le")
     private Optional<String> endLe;
 
-
+    /**
+     * Whether to flatten grouped or recurring items into individual entries.
+     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
-    private Optional<String> expand;
+    private Optional<Boolean> expand;
 
     /**
      * Whether to expand recurring calendar events
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand_recurring_events")
-    private Optional<String> expandRecurringEvents;
+    private Optional<Boolean> expandRecurringEvents;
 
     /**
      * Comma-delimited fields to return
@@ -95,8 +98,8 @@ public class ListCalendarEventsRequest {
             Optional<String> calendarId,
             String connectionId,
             Optional<String> endLe,
-            Optional<String> expand,
-            Optional<String> expandRecurringEvents,
+            Optional<Boolean> expand,
+            Optional<Boolean> expandRecurringEvents,
             Optional<? extends List<String>> fields,
             Optional<Double> limit,
             Optional<Double> offset,
@@ -169,8 +172,11 @@ public class ListCalendarEventsRequest {
         return endLe;
     }
 
+    /**
+     * Whether to flatten grouped or recurring items into individual entries.
+     */
     @JsonIgnore
-    public Optional<String> expand() {
+    public Optional<Boolean> expand() {
         return expand;
     }
 
@@ -178,7 +184,7 @@ public class ListCalendarEventsRequest {
      * Whether to expand recurring calendar events
      */
     @JsonIgnore
-    public Optional<String> expandRecurringEvents() {
+    public Optional<Boolean> expandRecurringEvents() {
         return expandRecurringEvents;
     }
 
@@ -295,14 +301,20 @@ public class ListCalendarEventsRequest {
         return this;
     }
 
-    public ListCalendarEventsRequest withExpand(String expand) {
+    /**
+     * Whether to flatten grouped or recurring items into individual entries.
+     */
+    public ListCalendarEventsRequest withExpand(boolean expand) {
         Utils.checkNotNull(expand, "expand");
         this.expand = Optional.ofNullable(expand);
         return this;
     }
 
 
-    public ListCalendarEventsRequest withExpand(Optional<String> expand) {
+    /**
+     * Whether to flatten grouped or recurring items into individual entries.
+     */
+    public ListCalendarEventsRequest withExpand(Optional<Boolean> expand) {
         Utils.checkNotNull(expand, "expand");
         this.expand = expand;
         return this;
@@ -311,7 +323,7 @@ public class ListCalendarEventsRequest {
     /**
      * Whether to expand recurring calendar events
      */
-    public ListCalendarEventsRequest withExpandRecurringEvents(String expandRecurringEvents) {
+    public ListCalendarEventsRequest withExpandRecurringEvents(boolean expandRecurringEvents) {
         Utils.checkNotNull(expandRecurringEvents, "expandRecurringEvents");
         this.expandRecurringEvents = Optional.ofNullable(expandRecurringEvents);
         return this;
@@ -321,7 +333,7 @@ public class ListCalendarEventsRequest {
     /**
      * Whether to expand recurring calendar events
      */
-    public ListCalendarEventsRequest withExpandRecurringEvents(Optional<String> expandRecurringEvents) {
+    public ListCalendarEventsRequest withExpandRecurringEvents(Optional<Boolean> expandRecurringEvents) {
         Utils.checkNotNull(expandRecurringEvents, "expandRecurringEvents");
         this.expandRecurringEvents = expandRecurringEvents;
         return this;
@@ -538,9 +550,9 @@ public class ListCalendarEventsRequest {
 
         private Optional<String> endLe = Optional.empty();
 
-        private Optional<String> expand = Optional.empty();
+        private Optional<Boolean> expand = Optional.empty();
 
-        private Optional<String> expandRecurringEvents = Optional.empty();
+        private Optional<Boolean> expandRecurringEvents = Optional.empty();
 
         private Optional<? extends List<String>> fields = Optional.empty();
 
@@ -613,13 +625,19 @@ public class ListCalendarEventsRequest {
         }
 
 
-        public Builder expand(String expand) {
+        /**
+         * Whether to flatten grouped or recurring items into individual entries.
+         */
+        public Builder expand(boolean expand) {
             Utils.checkNotNull(expand, "expand");
             this.expand = Optional.ofNullable(expand);
             return this;
         }
 
-        public Builder expand(Optional<String> expand) {
+        /**
+         * Whether to flatten grouped or recurring items into individual entries.
+         */
+        public Builder expand(Optional<Boolean> expand) {
             Utils.checkNotNull(expand, "expand");
             this.expand = expand;
             return this;
@@ -629,7 +647,7 @@ public class ListCalendarEventsRequest {
         /**
          * Whether to expand recurring calendar events
          */
-        public Builder expandRecurringEvents(String expandRecurringEvents) {
+        public Builder expandRecurringEvents(boolean expandRecurringEvents) {
             Utils.checkNotNull(expandRecurringEvents, "expandRecurringEvents");
             this.expandRecurringEvents = Optional.ofNullable(expandRecurringEvents);
             return this;
@@ -638,7 +656,7 @@ public class ListCalendarEventsRequest {
         /**
          * Whether to expand recurring calendar events
          */
-        public Builder expandRecurringEvents(Optional<String> expandRecurringEvents) {
+        public Builder expandRecurringEvents(Optional<Boolean> expandRecurringEvents) {
             Utils.checkNotNull(expandRecurringEvents, "expandRecurringEvents");
             this.expandRecurringEvents = expandRecurringEvents;
             return this;
