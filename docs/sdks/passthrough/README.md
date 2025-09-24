@@ -49,7 +49,9 @@ public class Application {
                 .request(req)
                 .call();
 
-        // handle response
+        if (res.defaultApplicationJsonAny().isPresent()) {
+            // handle response
+        }
     }
 }
 ```
@@ -160,7 +162,9 @@ public class Application {
                 .request(req)
                 .call();
 
-        // handle response
+        if (res.defaultApplicationJsonAny().isPresent()) {
+            // handle response
+        }
     }
 }
 ```
@@ -216,7 +220,9 @@ public class Application {
                 .request(req)
                 .call();
 
-        // handle response
+        if (res.defaultApplicationJsonAny().isPresent()) {
+            // handle response
+        }
     }
 }
 ```
@@ -327,7 +333,9 @@ public class Application {
                 .request(req)
                 .call();
 
-        // handle response
+        if (res.defaultApplicationJsonAny().isPresent()) {
+            // handle response
+        }
     }
 }
 ```
@@ -383,7 +391,9 @@ public class Application {
                 .request(req)
                 .call();
 
-        // handle response
+        if (res.defaultApplicationJsonAny().isPresent()) {
+            // handle response
+        }
     }
 }
 ```

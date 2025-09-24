@@ -22,7 +22,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 java:
-  version: 0.39.1
+  version: 0.39.2
   additionalDependencies: []
   additionalPlugins: []
   artifactID: unified-java-sdk

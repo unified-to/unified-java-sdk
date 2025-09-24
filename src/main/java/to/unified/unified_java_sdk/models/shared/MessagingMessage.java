@@ -90,6 +90,11 @@ public class MessagingMessage {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("parent_id")
+    private Optional<String> parentId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_message_id")
     private Optional<String> parentMessageId;
 
@@ -143,6 +148,7 @@ public class MessagingMessage {
             @JsonProperty("message") Optional<String> message,
             @JsonProperty("message_html") Optional<String> messageHtml,
             @JsonProperty("message_markdown") Optional<String> messageMarkdown,
+            @JsonProperty("parent_id") Optional<String> parentId,
             @JsonProperty("parent_message_id") Optional<String> parentMessageId,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
             @JsonProperty("reactions") Optional<? extends List<MessagingReaction>> reactions,
@@ -164,6 +170,7 @@ public class MessagingMessage {
         Utils.checkNotNull(message, "message");
         Utils.checkNotNull(messageHtml, "messageHtml");
         Utils.checkNotNull(messageMarkdown, "messageMarkdown");
+        Utils.checkNotNull(parentId, "parentId");
         Utils.checkNotNull(parentMessageId, "parentMessageId");
         Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(reactions, "reactions");
@@ -185,6 +192,7 @@ public class MessagingMessage {
         this.message = message;
         this.messageHtml = messageHtml;
         this.messageMarkdown = messageMarkdown;
+        this.parentId = parentId;
         this.parentMessageId = parentMessageId;
         this.raw = raw;
         this.reactions = reactions;
@@ -202,7 +210,8 @@ public class MessagingMessage {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -277,6 +286,11 @@ public class MessagingMessage {
     @JsonIgnore
     public Optional<String> messageMarkdown() {
         return messageMarkdown;
+    }
+
+    @JsonIgnore
+    public Optional<String> parentId() {
+        return parentId;
     }
 
     @JsonIgnore
@@ -501,6 +515,19 @@ public class MessagingMessage {
         return this;
     }
 
+    public MessagingMessage withParentId(String parentId) {
+        Utils.checkNotNull(parentId, "parentId");
+        this.parentId = Optional.ofNullable(parentId);
+        return this;
+    }
+
+
+    public MessagingMessage withParentId(Optional<String> parentId) {
+        Utils.checkNotNull(parentId, "parentId");
+        this.parentId = parentId;
+        return this;
+    }
+
     public MessagingMessage withParentMessageId(String parentMessageId) {
         Utils.checkNotNull(parentMessageId, "parentMessageId");
         this.parentMessageId = Optional.ofNullable(parentMessageId);
@@ -628,6 +655,7 @@ public class MessagingMessage {
             Utils.enhancedDeepEquals(this.message, other.message) &&
             Utils.enhancedDeepEquals(this.messageHtml, other.messageHtml) &&
             Utils.enhancedDeepEquals(this.messageMarkdown, other.messageMarkdown) &&
+            Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.parentMessageId, other.parentMessageId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.reactions, other.reactions) &&
@@ -645,9 +673,10 @@ public class MessagingMessage {
             channelIds, createdAt, destinationMembers,
             hasChildren, hiddenMembers, id,
             mentionedMembers, message, messageHtml,
-            messageMarkdown, parentMessageId, raw,
-            reactions, reference, rootMessageId,
-            subject, updatedAt, webUrl);
+            messageMarkdown, parentId, parentMessageId,
+            raw, reactions, reference,
+            rootMessageId, subject, updatedAt,
+            webUrl);
     }
     
     @Override
@@ -666,6 +695,7 @@ public class MessagingMessage {
                 "message", message,
                 "messageHtml", messageHtml,
                 "messageMarkdown", messageMarkdown,
+                "parentId", parentId,
                 "parentMessageId", parentMessageId,
                 "raw", raw,
                 "reactions", reactions,
@@ -704,6 +734,8 @@ public class MessagingMessage {
         private Optional<String> messageHtml = Optional.empty();
 
         private Optional<String> messageMarkdown = Optional.empty();
+
+        private Optional<String> parentId = Optional.empty();
 
         private Optional<String> parentMessageId = Optional.empty();
 
@@ -901,6 +933,19 @@ public class MessagingMessage {
         }
 
 
+        public Builder parentId(String parentId) {
+            Utils.checkNotNull(parentId, "parentId");
+            this.parentId = Optional.ofNullable(parentId);
+            return this;
+        }
+
+        public Builder parentId(Optional<String> parentId) {
+            Utils.checkNotNull(parentId, "parentId");
+            this.parentId = parentId;
+            return this;
+        }
+
+
         public Builder parentMessageId(String parentMessageId) {
             Utils.checkNotNull(parentMessageId, "parentMessageId");
             this.parentMessageId = Optional.ofNullable(parentMessageId);
@@ -1011,9 +1056,10 @@ public class MessagingMessage {
                 channelIds, createdAt, destinationMembers,
                 hasChildren, hiddenMembers, id,
                 mentionedMembers, message, messageHtml,
-                messageMarkdown, parentMessageId, raw,
-                reactions, reference, rootMessageId,
-                subject, updatedAt, webUrl);
+                messageMarkdown, parentId, parentMessageId,
+                raw, reactions, reference,
+                rootMessageId, subject, updatedAt,
+                webUrl);
         }
 
     }
