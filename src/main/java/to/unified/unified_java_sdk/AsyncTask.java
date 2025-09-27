@@ -122,7 +122,7 @@ public class AsyncTask {
      * Create a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateTaskCommentResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateTaskCommentResponse>} - The async response
      */
     public CompletableFuture<CreateTaskCommentResponse> createTaskComment(CreateTaskCommentRequest request) {
         AsyncRequestOperation<CreateTaskCommentRequest, CreateTaskCommentResponse> operation
@@ -145,7 +145,7 @@ public class AsyncTask {
      * Create a project
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateTaskProjectResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateTaskProjectResponse>} - The async response
      */
     public CompletableFuture<CreateTaskProjectResponse> createTaskProject(CreateTaskProjectRequest request) {
         AsyncRequestOperation<CreateTaskProjectRequest, CreateTaskProjectResponse> operation
@@ -168,7 +168,7 @@ public class AsyncTask {
      * Create a task
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateTaskTaskResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateTaskTaskResponse>} - The async response
      */
     public CompletableFuture<CreateTaskTaskResponse> createTaskTask(CreateTaskTaskRequest request) {
         AsyncRequestOperation<CreateTaskTaskRequest, CreateTaskTaskResponse> operation
@@ -191,7 +191,7 @@ public class AsyncTask {
      * Retrieve a change
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetTaskChangeResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetTaskChangeResponse>} - The async response
      */
     public CompletableFuture<GetTaskChangeResponse> getTaskChange(GetTaskChangeRequest request) {
         AsyncRequestOperation<GetTaskChangeRequest, GetTaskChangeResponse> operation
@@ -214,7 +214,7 @@ public class AsyncTask {
      * Retrieve a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetTaskCommentResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetTaskCommentResponse>} - The async response
      */
     public CompletableFuture<GetTaskCommentResponse> getTaskComment(GetTaskCommentRequest request) {
         AsyncRequestOperation<GetTaskCommentRequest, GetTaskCommentResponse> operation
@@ -237,7 +237,7 @@ public class AsyncTask {
      * Retrieve a project
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetTaskProjectResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetTaskProjectResponse>} - The async response
      */
     public CompletableFuture<GetTaskProjectResponse> getTaskProject(GetTaskProjectRequest request) {
         AsyncRequestOperation<GetTaskProjectRequest, GetTaskProjectResponse> operation
@@ -260,7 +260,7 @@ public class AsyncTask {
      * Retrieve a task
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetTaskTaskResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetTaskTaskResponse>} - The async response
      */
     public CompletableFuture<GetTaskTaskResponse> getTaskTask(GetTaskTaskRequest request) {
         AsyncRequestOperation<GetTaskTaskRequest, GetTaskTaskResponse> operation
@@ -283,7 +283,7 @@ public class AsyncTask {
      * List all changes
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListTaskChangesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListTaskChangesResponse>} - The async response
      */
     public CompletableFuture<ListTaskChangesResponse> listTaskChanges(ListTaskChangesRequest request) {
         AsyncRequestOperation<ListTaskChangesRequest, ListTaskChangesResponse> operation
@@ -306,7 +306,7 @@ public class AsyncTask {
      * List all comments
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListTaskCommentsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListTaskCommentsResponse>} - The async response
      */
     public CompletableFuture<ListTaskCommentsResponse> listTaskComments(ListTaskCommentsRequest request) {
         AsyncRequestOperation<ListTaskCommentsRequest, ListTaskCommentsResponse> operation
@@ -329,7 +329,7 @@ public class AsyncTask {
      * List all projects
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListTaskProjectsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListTaskProjectsResponse>} - The async response
      */
     public CompletableFuture<ListTaskProjectsResponse> listTaskProjects(ListTaskProjectsRequest request) {
         AsyncRequestOperation<ListTaskProjectsRequest, ListTaskProjectsResponse> operation
@@ -352,7 +352,7 @@ public class AsyncTask {
      * List all tasks
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListTaskTasksResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListTaskTasksResponse>} - The async response
      */
     public CompletableFuture<ListTaskTasksResponse> listTaskTasks(ListTaskTasksRequest request) {
         AsyncRequestOperation<ListTaskTasksRequest, ListTaskTasksResponse> operation
@@ -375,7 +375,7 @@ public class AsyncTask {
      * Update a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchTaskCommentResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchTaskCommentResponse>} - The async response
      */
     public CompletableFuture<PatchTaskCommentResponse> patchTaskComment(PatchTaskCommentRequest request) {
         AsyncRequestOperation<PatchTaskCommentRequest, PatchTaskCommentResponse> operation
@@ -398,7 +398,7 @@ public class AsyncTask {
      * Update a project
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchTaskProjectResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchTaskProjectResponse>} - The async response
      */
     public CompletableFuture<PatchTaskProjectResponse> patchTaskProject(PatchTaskProjectRequest request) {
         AsyncRequestOperation<PatchTaskProjectRequest, PatchTaskProjectResponse> operation
@@ -421,7 +421,7 @@ public class AsyncTask {
      * Update a task
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchTaskTaskResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchTaskTaskResponse>} - The async response
      */
     public CompletableFuture<PatchTaskTaskResponse> patchTaskTask(PatchTaskTaskRequest request) {
         AsyncRequestOperation<PatchTaskTaskRequest, PatchTaskTaskResponse> operation
@@ -444,7 +444,7 @@ public class AsyncTask {
      * Remove a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveTaskCommentResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveTaskCommentResponse>} - The async response
      */
     public CompletableFuture<RemoveTaskCommentResponse> removeTaskComment(RemoveTaskCommentRequest request) {
         AsyncRequestOperation<RemoveTaskCommentRequest, RemoveTaskCommentResponse> operation
@@ -467,7 +467,7 @@ public class AsyncTask {
      * Remove a project
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveTaskProjectResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveTaskProjectResponse>} - The async response
      */
     public CompletableFuture<RemoveTaskProjectResponse> removeTaskProject(RemoveTaskProjectRequest request) {
         AsyncRequestOperation<RemoveTaskProjectRequest, RemoveTaskProjectResponse> operation
@@ -490,7 +490,7 @@ public class AsyncTask {
      * Remove a task
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveTaskTaskResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveTaskTaskResponse>} - The async response
      */
     public CompletableFuture<RemoveTaskTaskResponse> removeTaskTask(RemoveTaskTaskRequest request) {
         AsyncRequestOperation<RemoveTaskTaskRequest, RemoveTaskTaskResponse> operation
@@ -513,7 +513,7 @@ public class AsyncTask {
      * Update a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateTaskCommentResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateTaskCommentResponse>} - The async response
      */
     public CompletableFuture<UpdateTaskCommentResponse> updateTaskComment(UpdateTaskCommentRequest request) {
         AsyncRequestOperation<UpdateTaskCommentRequest, UpdateTaskCommentResponse> operation
@@ -536,7 +536,7 @@ public class AsyncTask {
      * Update a project
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateTaskProjectResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateTaskProjectResponse>} - The async response
      */
     public CompletableFuture<UpdateTaskProjectResponse> updateTaskProject(UpdateTaskProjectRequest request) {
         AsyncRequestOperation<UpdateTaskProjectRequest, UpdateTaskProjectResponse> operation
@@ -559,7 +559,7 @@ public class AsyncTask {
      * Update a task
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateTaskTaskResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateTaskTaskResponse>} - The async response
      */
     public CompletableFuture<UpdateTaskTaskResponse> updateTaskTask(UpdateTaskTaskRequest request) {
         AsyncRequestOperation<UpdateTaskTaskRequest, UpdateTaskTaskResponse> operation

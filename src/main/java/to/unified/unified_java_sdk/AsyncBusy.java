@@ -46,7 +46,7 @@ public class AsyncBusy {
      * List all busies
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListCalendarBusiesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListCalendarBusiesResponse>} - The async response
      */
     public CompletableFuture<ListCalendarBusiesResponse> listCalendarBusies(ListCalendarBusiesRequest request) {
         AsyncRequestOperation<ListCalendarBusiesRequest, ListCalendarBusiesResponse> operation

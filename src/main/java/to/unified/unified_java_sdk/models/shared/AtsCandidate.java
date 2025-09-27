@@ -76,7 +76,8 @@ public class AtsCandidate {
     private Optional<String> imageUrl;
 
     /**
-     * URLs for web pages containing additional material about the candidate (LinkedIn, other social media, articles, etc.)
+     * URLs for web pages containing additional material about the candidate (LinkedIn, other social media,
+     * articles, etc.)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link_urls")
@@ -289,7 +290,8 @@ public class AtsCandidate {
     }
 
     /**
-     * URLs for web pages containing additional material about the candidate (LinkedIn, other social media, articles, etc.)
+     * URLs for web pages containing additional material about the candidate (LinkedIn, other social media,
+     * articles, etc.)
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
@@ -513,7 +515,8 @@ public class AtsCandidate {
     }
 
     /**
-     * URLs for web pages containing additional material about the candidate (LinkedIn, other social media, articles, etc.)
+     * URLs for web pages containing additional material about the candidate (LinkedIn, other social media,
+     * articles, etc.)
      */
     public AtsCandidate withLinkUrls(List<String> linkUrls) {
         Utils.checkNotNull(linkUrls, "linkUrls");
@@ -523,7 +526,8 @@ public class AtsCandidate {
 
 
     /**
-     * URLs for web pages containing additional material about the candidate (LinkedIn, other social media, articles, etc.)
+     * URLs for web pages containing additional material about the candidate (LinkedIn, other social media,
+     * articles, etc.)
      */
     public AtsCandidate withLinkUrls(Optional<? extends List<String>> linkUrls) {
         Utils.checkNotNull(linkUrls, "linkUrls");
@@ -965,7 +969,8 @@ public class AtsCandidate {
 
 
         /**
-         * URLs for web pages containing additional material about the candidate (LinkedIn, other social media, articles, etc.)
+         * URLs for web pages containing additional material about the candidate (LinkedIn, other social media,
+         * articles, etc.)
          */
         public Builder linkUrls(List<String> linkUrls) {
             Utils.checkNotNull(linkUrls, "linkUrls");
@@ -974,7 +979,8 @@ public class AtsCandidate {
         }
 
         /**
-         * URLs for web pages containing additional material about the candidate (LinkedIn, other social media, articles, etc.)
+         * URLs for web pages containing additional material about the candidate (LinkedIn, other social media,
+         * articles, etc.)
          */
         public Builder linkUrls(Optional<? extends List<String>> linkUrls) {
             Utils.checkNotNull(linkUrls, "linkUrls");

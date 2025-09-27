@@ -66,7 +66,7 @@ public class AsyncLead {
      * Create a lead
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateCrmLeadResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateCrmLeadResponse>} - The async response
      */
     public CompletableFuture<CreateCrmLeadResponse> createCrmLead(CreateCrmLeadRequest request) {
         AsyncRequestOperation<CreateCrmLeadRequest, CreateCrmLeadResponse> operation
@@ -89,7 +89,7 @@ public class AsyncLead {
      * Retrieve a lead
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetCrmLeadResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetCrmLeadResponse>} - The async response
      */
     public CompletableFuture<GetCrmLeadResponse> getCrmLead(GetCrmLeadRequest request) {
         AsyncRequestOperation<GetCrmLeadRequest, GetCrmLeadResponse> operation
@@ -112,7 +112,7 @@ public class AsyncLead {
      * List all leads
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListCrmLeadsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListCrmLeadsResponse>} - The async response
      */
     public CompletableFuture<ListCrmLeadsResponse> listCrmLeads(ListCrmLeadsRequest request) {
         AsyncRequestOperation<ListCrmLeadsRequest, ListCrmLeadsResponse> operation
@@ -135,7 +135,7 @@ public class AsyncLead {
      * Update a lead
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchCrmLeadResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchCrmLeadResponse>} - The async response
      */
     public CompletableFuture<PatchCrmLeadResponse> patchCrmLead(PatchCrmLeadRequest request) {
         AsyncRequestOperation<PatchCrmLeadRequest, PatchCrmLeadResponse> operation
@@ -158,7 +158,7 @@ public class AsyncLead {
      * Remove a lead
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveCrmLeadResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveCrmLeadResponse>} - The async response
      */
     public CompletableFuture<RemoveCrmLeadResponse> removeCrmLead(RemoveCrmLeadRequest request) {
         AsyncRequestOperation<RemoveCrmLeadRequest, RemoveCrmLeadResponse> operation
@@ -181,7 +181,7 @@ public class AsyncLead {
      * Update a lead
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateCrmLeadResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateCrmLeadResponse>} - The async response
      */
     public CompletableFuture<UpdateCrmLeadResponse> updateCrmLead(UpdateCrmLeadRequest request) {
         AsyncRequestOperation<UpdateCrmLeadRequest, UpdateCrmLeadResponse> operation

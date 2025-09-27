@@ -66,7 +66,7 @@ public class AsyncInterview {
      * Create an interview
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateAtsInterviewResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateAtsInterviewResponse>} - The async response
      */
     public CompletableFuture<CreateAtsInterviewResponse> createAtsInterview(CreateAtsInterviewRequest request) {
         AsyncRequestOperation<CreateAtsInterviewRequest, CreateAtsInterviewResponse> operation
@@ -89,7 +89,7 @@ public class AsyncInterview {
      * Retrieve an interview
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetAtsInterviewResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetAtsInterviewResponse>} - The async response
      */
     public CompletableFuture<GetAtsInterviewResponse> getAtsInterview(GetAtsInterviewRequest request) {
         AsyncRequestOperation<GetAtsInterviewRequest, GetAtsInterviewResponse> operation
@@ -112,7 +112,7 @@ public class AsyncInterview {
      * List all interviews
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListAtsInterviewsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListAtsInterviewsResponse>} - The async response
      */
     public CompletableFuture<ListAtsInterviewsResponse> listAtsInterviews(ListAtsInterviewsRequest request) {
         AsyncRequestOperation<ListAtsInterviewsRequest, ListAtsInterviewsResponse> operation
@@ -135,7 +135,7 @@ public class AsyncInterview {
      * Update an interview
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchAtsInterviewResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchAtsInterviewResponse>} - The async response
      */
     public CompletableFuture<PatchAtsInterviewResponse> patchAtsInterview(PatchAtsInterviewRequest request) {
         AsyncRequestOperation<PatchAtsInterviewRequest, PatchAtsInterviewResponse> operation
@@ -158,7 +158,7 @@ public class AsyncInterview {
      * Remove an interview
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveAtsInterviewResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveAtsInterviewResponse>} - The async response
      */
     public CompletableFuture<RemoveAtsInterviewResponse> removeAtsInterview(RemoveAtsInterviewRequest request) {
         AsyncRequestOperation<RemoveAtsInterviewRequest, RemoveAtsInterviewResponse> operation
@@ -181,7 +181,7 @@ public class AsyncInterview {
      * Update an interview
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateAtsInterviewResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateAtsInterviewResponse>} - The async response
      */
     public CompletableFuture<UpdateAtsInterviewResponse> updateAtsInterview(UpdateAtsInterviewRequest request) {
         AsyncRequestOperation<UpdateAtsInterviewRequest, UpdateAtsInterviewResponse> operation

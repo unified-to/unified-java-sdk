@@ -58,7 +58,7 @@ public class AsyncGenai {
      * Create an embedding
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateGenaiEmbeddingResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateGenaiEmbeddingResponse>} - The async response
      */
     public CompletableFuture<CreateGenaiEmbeddingResponse> createGenaiEmbedding(CreateGenaiEmbeddingRequest request) {
         AsyncRequestOperation<CreateGenaiEmbeddingRequest, CreateGenaiEmbeddingResponse> operation
@@ -81,7 +81,7 @@ public class AsyncGenai {
      * Create a prompt
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateGenaiPromptResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateGenaiPromptResponse>} - The async response
      */
     public CompletableFuture<CreateGenaiPromptResponse> createGenaiPrompt(CreateGenaiPromptRequest request) {
         AsyncRequestOperation<CreateGenaiPromptRequest, CreateGenaiPromptResponse> operation
@@ -104,7 +104,7 @@ public class AsyncGenai {
      * Retrieve a model
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetGenaiModelResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetGenaiModelResponse>} - The async response
      */
     public CompletableFuture<GetGenaiModelResponse> getGenaiModel(GetGenaiModelRequest request) {
         AsyncRequestOperation<GetGenaiModelRequest, GetGenaiModelResponse> operation
@@ -127,7 +127,7 @@ public class AsyncGenai {
      * List all models
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListGenaiModelsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListGenaiModelsResponse>} - The async response
      */
     public CompletableFuture<ListGenaiModelsResponse> listGenaiModels(ListGenaiModelsRequest request) {
         AsyncRequestOperation<ListGenaiModelsRequest, ListGenaiModelsResponse> operation

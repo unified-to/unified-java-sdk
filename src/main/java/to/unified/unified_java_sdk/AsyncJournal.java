@@ -66,7 +66,7 @@ public class AsyncJournal {
      * Create a journal
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateAccountingJournalResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateAccountingJournalResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingJournalResponse> createAccountingJournal(CreateAccountingJournalRequest request) {
         AsyncRequestOperation<CreateAccountingJournalRequest, CreateAccountingJournalResponse> operation
@@ -89,7 +89,7 @@ public class AsyncJournal {
      * Retrieve a journal
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetAccountingJournalResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetAccountingJournalResponse>} - The async response
      */
     public CompletableFuture<GetAccountingJournalResponse> getAccountingJournal(GetAccountingJournalRequest request) {
         AsyncRequestOperation<GetAccountingJournalRequest, GetAccountingJournalResponse> operation
@@ -112,7 +112,7 @@ public class AsyncJournal {
      * List all journals
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListAccountingJournalsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListAccountingJournalsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingJournalsResponse> listAccountingJournals(ListAccountingJournalsRequest request) {
         AsyncRequestOperation<ListAccountingJournalsRequest, ListAccountingJournalsResponse> operation
@@ -135,7 +135,7 @@ public class AsyncJournal {
      * Update a journal
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchAccountingJournalResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchAccountingJournalResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingJournalResponse> patchAccountingJournal(PatchAccountingJournalRequest request) {
         AsyncRequestOperation<PatchAccountingJournalRequest, PatchAccountingJournalResponse> operation
@@ -158,7 +158,7 @@ public class AsyncJournal {
      * Remove a journal
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveAccountingJournalResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveAccountingJournalResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingJournalResponse> removeAccountingJournal(RemoveAccountingJournalRequest request) {
         AsyncRequestOperation<RemoveAccountingJournalRequest, RemoveAccountingJournalResponse> operation
@@ -181,7 +181,7 @@ public class AsyncJournal {
      * Update a journal
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateAccountingJournalResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateAccountingJournalResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingJournalResponse> updateAccountingJournal(UpdateAccountingJournalRequest request) {
         AsyncRequestOperation<UpdateAccountingJournalRequest, UpdateAccountingJournalResponse> operation

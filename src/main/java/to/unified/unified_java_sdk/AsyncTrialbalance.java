@@ -50,7 +50,7 @@ public class AsyncTrialbalance {
      * Retrieve a trialbalance
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetAccountingTrialbalanceResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetAccountingTrialbalanceResponse>} - The async response
      */
     public CompletableFuture<GetAccountingTrialbalanceResponse> getAccountingTrialbalance(GetAccountingTrialbalanceRequest request) {
         AsyncRequestOperation<GetAccountingTrialbalanceRequest, GetAccountingTrialbalanceResponse> operation
@@ -73,7 +73,7 @@ public class AsyncTrialbalance {
      * List all trialbalances
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListAccountingTrialbalancesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListAccountingTrialbalancesResponse>} - The async response
      */
     public CompletableFuture<ListAccountingTrialbalancesResponse> listAccountingTrialbalances(ListAccountingTrialbalancesRequest request) {
         AsyncRequestOperation<ListAccountingTrialbalancesRequest, ListAccountingTrialbalancesResponse> operation

@@ -66,7 +66,7 @@ public class AsyncStudent {
      * Create a student
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateLmsStudentResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateLmsStudentResponse>} - The async response
      */
     public CompletableFuture<CreateLmsStudentResponse> createLmsStudent(CreateLmsStudentRequest request) {
         AsyncRequestOperation<CreateLmsStudentRequest, CreateLmsStudentResponse> operation
@@ -89,7 +89,7 @@ public class AsyncStudent {
      * Retrieve a student
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetLmsStudentResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetLmsStudentResponse>} - The async response
      */
     public CompletableFuture<GetLmsStudentResponse> getLmsStudent(GetLmsStudentRequest request) {
         AsyncRequestOperation<GetLmsStudentRequest, GetLmsStudentResponse> operation
@@ -112,7 +112,7 @@ public class AsyncStudent {
      * List all students
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListLmsStudentsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListLmsStudentsResponse>} - The async response
      */
     public CompletableFuture<ListLmsStudentsResponse> listLmsStudents(ListLmsStudentsRequest request) {
         AsyncRequestOperation<ListLmsStudentsRequest, ListLmsStudentsResponse> operation
@@ -135,7 +135,7 @@ public class AsyncStudent {
      * Update a student
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchLmsStudentResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchLmsStudentResponse>} - The async response
      */
     public CompletableFuture<PatchLmsStudentResponse> patchLmsStudent(PatchLmsStudentRequest request) {
         AsyncRequestOperation<PatchLmsStudentRequest, PatchLmsStudentResponse> operation
@@ -158,7 +158,7 @@ public class AsyncStudent {
      * Remove a student
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveLmsStudentResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveLmsStudentResponse>} - The async response
      */
     public CompletableFuture<RemoveLmsStudentResponse> removeLmsStudent(RemoveLmsStudentRequest request) {
         AsyncRequestOperation<RemoveLmsStudentRequest, RemoveLmsStudentResponse> operation
@@ -181,7 +181,7 @@ public class AsyncStudent {
      * Update a student
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateLmsStudentResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateLmsStudentResponse>} - The async response
      */
     public CompletableFuture<UpdateLmsStudentResponse> updateLmsStudent(UpdateLmsStudentRequest request) {
         AsyncRequestOperation<UpdateLmsStudentRequest, UpdateLmsStudentResponse> operation

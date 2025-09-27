@@ -66,7 +66,7 @@ public class AsyncInvoice {
      * Create an invoice
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateAccountingInvoiceResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateAccountingInvoiceResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingInvoiceResponse> createAccountingInvoice(CreateAccountingInvoiceRequest request) {
         AsyncRequestOperation<CreateAccountingInvoiceRequest, CreateAccountingInvoiceResponse> operation
@@ -89,7 +89,7 @@ public class AsyncInvoice {
      * Retrieve an invoice
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetAccountingInvoiceResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetAccountingInvoiceResponse>} - The async response
      */
     public CompletableFuture<GetAccountingInvoiceResponse> getAccountingInvoice(GetAccountingInvoiceRequest request) {
         AsyncRequestOperation<GetAccountingInvoiceRequest, GetAccountingInvoiceResponse> operation
@@ -112,7 +112,7 @@ public class AsyncInvoice {
      * List all invoices
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListAccountingInvoicesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListAccountingInvoicesResponse>} - The async response
      */
     public CompletableFuture<ListAccountingInvoicesResponse> listAccountingInvoices(ListAccountingInvoicesRequest request) {
         AsyncRequestOperation<ListAccountingInvoicesRequest, ListAccountingInvoicesResponse> operation
@@ -135,7 +135,7 @@ public class AsyncInvoice {
      * Update an invoice
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchAccountingInvoiceResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchAccountingInvoiceResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingInvoiceResponse> patchAccountingInvoice(PatchAccountingInvoiceRequest request) {
         AsyncRequestOperation<PatchAccountingInvoiceRequest, PatchAccountingInvoiceResponse> operation
@@ -158,7 +158,7 @@ public class AsyncInvoice {
      * Remove an invoice
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveAccountingInvoiceResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveAccountingInvoiceResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingInvoiceResponse> removeAccountingInvoice(RemoveAccountingInvoiceRequest request) {
         AsyncRequestOperation<RemoveAccountingInvoiceRequest, RemoveAccountingInvoiceResponse> operation
@@ -181,7 +181,7 @@ public class AsyncInvoice {
      * Update an invoice
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateAccountingInvoiceResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateAccountingInvoiceResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingInvoiceResponse> updateAccountingInvoice(UpdateAccountingInvoiceRequest request) {
         AsyncRequestOperation<UpdateAccountingInvoiceRequest, UpdateAccountingInvoiceResponse> operation

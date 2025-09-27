@@ -186,7 +186,7 @@ public class AsyncCrm {
      * Create a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateCrmCompanyResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateCrmCompanyResponse>} - The async response
      */
     public CompletableFuture<CreateCrmCompanyResponse> createCrmCompany(CreateCrmCompanyRequest request) {
         AsyncRequestOperation<CreateCrmCompanyRequest, CreateCrmCompanyResponse> operation
@@ -209,7 +209,7 @@ public class AsyncCrm {
      * Create a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateCrmContactResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateCrmContactResponse>} - The async response
      */
     public CompletableFuture<CreateCrmContactResponse> createCrmContact(CreateCrmContactRequest request) {
         AsyncRequestOperation<CreateCrmContactRequest, CreateCrmContactResponse> operation
@@ -232,7 +232,7 @@ public class AsyncCrm {
      * Create a deal
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateCrmDealResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateCrmDealResponse>} - The async response
      */
     public CompletableFuture<CreateCrmDealResponse> createCrmDeal(CreateCrmDealRequest request) {
         AsyncRequestOperation<CreateCrmDealRequest, CreateCrmDealResponse> operation
@@ -255,7 +255,7 @@ public class AsyncCrm {
      * Create an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateCrmEventResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateCrmEventResponse>} - The async response
      */
     public CompletableFuture<CreateCrmEventResponse> createCrmEvent(CreateCrmEventRequest request) {
         AsyncRequestOperation<CreateCrmEventRequest, CreateCrmEventResponse> operation
@@ -278,7 +278,7 @@ public class AsyncCrm {
      * Create a lead
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateCrmLeadResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateCrmLeadResponse>} - The async response
      */
     public CompletableFuture<CreateCrmLeadResponse> createCrmLead(CreateCrmLeadRequest request) {
         AsyncRequestOperation<CreateCrmLeadRequest, CreateCrmLeadResponse> operation
@@ -301,7 +301,7 @@ public class AsyncCrm {
      * Create a pipeline
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateCrmPipelineResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateCrmPipelineResponse>} - The async response
      */
     public CompletableFuture<CreateCrmPipelineResponse> createCrmPipeline(CreateCrmPipelineRequest request) {
         AsyncRequestOperation<CreateCrmPipelineRequest, CreateCrmPipelineResponse> operation
@@ -324,7 +324,7 @@ public class AsyncCrm {
      * Retrieve a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetCrmCompanyResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetCrmCompanyResponse>} - The async response
      */
     public CompletableFuture<GetCrmCompanyResponse> getCrmCompany(GetCrmCompanyRequest request) {
         AsyncRequestOperation<GetCrmCompanyRequest, GetCrmCompanyResponse> operation
@@ -347,7 +347,7 @@ public class AsyncCrm {
      * Retrieve a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetCrmContactResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetCrmContactResponse>} - The async response
      */
     public CompletableFuture<GetCrmContactResponse> getCrmContact(GetCrmContactRequest request) {
         AsyncRequestOperation<GetCrmContactRequest, GetCrmContactResponse> operation
@@ -370,7 +370,7 @@ public class AsyncCrm {
      * Retrieve a deal
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetCrmDealResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetCrmDealResponse>} - The async response
      */
     public CompletableFuture<GetCrmDealResponse> getCrmDeal(GetCrmDealRequest request) {
         AsyncRequestOperation<GetCrmDealRequest, GetCrmDealResponse> operation
@@ -393,7 +393,7 @@ public class AsyncCrm {
      * Retrieve an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetCrmEventResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetCrmEventResponse>} - The async response
      */
     public CompletableFuture<GetCrmEventResponse> getCrmEvent(GetCrmEventRequest request) {
         AsyncRequestOperation<GetCrmEventRequest, GetCrmEventResponse> operation
@@ -416,7 +416,7 @@ public class AsyncCrm {
      * Retrieve a lead
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetCrmLeadResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetCrmLeadResponse>} - The async response
      */
     public CompletableFuture<GetCrmLeadResponse> getCrmLead(GetCrmLeadRequest request) {
         AsyncRequestOperation<GetCrmLeadRequest, GetCrmLeadResponse> operation
@@ -439,7 +439,7 @@ public class AsyncCrm {
      * Retrieve a pipeline
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetCrmPipelineResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetCrmPipelineResponse>} - The async response
      */
     public CompletableFuture<GetCrmPipelineResponse> getCrmPipeline(GetCrmPipelineRequest request) {
         AsyncRequestOperation<GetCrmPipelineRequest, GetCrmPipelineResponse> operation
@@ -462,7 +462,7 @@ public class AsyncCrm {
      * List all companies
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListCrmCompaniesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListCrmCompaniesResponse>} - The async response
      */
     public CompletableFuture<ListCrmCompaniesResponse> listCrmCompanies(ListCrmCompaniesRequest request) {
         AsyncRequestOperation<ListCrmCompaniesRequest, ListCrmCompaniesResponse> operation
@@ -485,7 +485,7 @@ public class AsyncCrm {
      * List all contacts
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListCrmContactsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListCrmContactsResponse>} - The async response
      */
     public CompletableFuture<ListCrmContactsResponse> listCrmContacts(ListCrmContactsRequest request) {
         AsyncRequestOperation<ListCrmContactsRequest, ListCrmContactsResponse> operation
@@ -508,7 +508,7 @@ public class AsyncCrm {
      * List all deals
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListCrmDealsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListCrmDealsResponse>} - The async response
      */
     public CompletableFuture<ListCrmDealsResponse> listCrmDeals(ListCrmDealsRequest request) {
         AsyncRequestOperation<ListCrmDealsRequest, ListCrmDealsResponse> operation
@@ -531,7 +531,7 @@ public class AsyncCrm {
      * List all events
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListCrmEventsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListCrmEventsResponse>} - The async response
      */
     public CompletableFuture<ListCrmEventsResponse> listCrmEvents(ListCrmEventsRequest request) {
         AsyncRequestOperation<ListCrmEventsRequest, ListCrmEventsResponse> operation
@@ -554,7 +554,7 @@ public class AsyncCrm {
      * List all leads
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListCrmLeadsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListCrmLeadsResponse>} - The async response
      */
     public CompletableFuture<ListCrmLeadsResponse> listCrmLeads(ListCrmLeadsRequest request) {
         AsyncRequestOperation<ListCrmLeadsRequest, ListCrmLeadsResponse> operation
@@ -577,7 +577,7 @@ public class AsyncCrm {
      * List all pipelines
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListCrmPipelinesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListCrmPipelinesResponse>} - The async response
      */
     public CompletableFuture<ListCrmPipelinesResponse> listCrmPipelines(ListCrmPipelinesRequest request) {
         AsyncRequestOperation<ListCrmPipelinesRequest, ListCrmPipelinesResponse> operation
@@ -600,7 +600,7 @@ public class AsyncCrm {
      * Update a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchCrmCompanyResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchCrmCompanyResponse>} - The async response
      */
     public CompletableFuture<PatchCrmCompanyResponse> patchCrmCompany(PatchCrmCompanyRequest request) {
         AsyncRequestOperation<PatchCrmCompanyRequest, PatchCrmCompanyResponse> operation
@@ -623,7 +623,7 @@ public class AsyncCrm {
      * Update a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchCrmContactResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchCrmContactResponse>} - The async response
      */
     public CompletableFuture<PatchCrmContactResponse> patchCrmContact(PatchCrmContactRequest request) {
         AsyncRequestOperation<PatchCrmContactRequest, PatchCrmContactResponse> operation
@@ -646,7 +646,7 @@ public class AsyncCrm {
      * Update a deal
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchCrmDealResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchCrmDealResponse>} - The async response
      */
     public CompletableFuture<PatchCrmDealResponse> patchCrmDeal(PatchCrmDealRequest request) {
         AsyncRequestOperation<PatchCrmDealRequest, PatchCrmDealResponse> operation
@@ -669,7 +669,7 @@ public class AsyncCrm {
      * Update an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchCrmEventResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchCrmEventResponse>} - The async response
      */
     public CompletableFuture<PatchCrmEventResponse> patchCrmEvent(PatchCrmEventRequest request) {
         AsyncRequestOperation<PatchCrmEventRequest, PatchCrmEventResponse> operation
@@ -692,7 +692,7 @@ public class AsyncCrm {
      * Update a lead
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchCrmLeadResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchCrmLeadResponse>} - The async response
      */
     public CompletableFuture<PatchCrmLeadResponse> patchCrmLead(PatchCrmLeadRequest request) {
         AsyncRequestOperation<PatchCrmLeadRequest, PatchCrmLeadResponse> operation
@@ -715,7 +715,7 @@ public class AsyncCrm {
      * Update a pipeline
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchCrmPipelineResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchCrmPipelineResponse>} - The async response
      */
     public CompletableFuture<PatchCrmPipelineResponse> patchCrmPipeline(PatchCrmPipelineRequest request) {
         AsyncRequestOperation<PatchCrmPipelineRequest, PatchCrmPipelineResponse> operation
@@ -738,7 +738,7 @@ public class AsyncCrm {
      * Remove a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveCrmCompanyResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveCrmCompanyResponse>} - The async response
      */
     public CompletableFuture<RemoveCrmCompanyResponse> removeCrmCompany(RemoveCrmCompanyRequest request) {
         AsyncRequestOperation<RemoveCrmCompanyRequest, RemoveCrmCompanyResponse> operation
@@ -761,7 +761,7 @@ public class AsyncCrm {
      * Remove a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveCrmContactResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveCrmContactResponse>} - The async response
      */
     public CompletableFuture<RemoveCrmContactResponse> removeCrmContact(RemoveCrmContactRequest request) {
         AsyncRequestOperation<RemoveCrmContactRequest, RemoveCrmContactResponse> operation
@@ -784,7 +784,7 @@ public class AsyncCrm {
      * Remove a deal
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveCrmDealResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveCrmDealResponse>} - The async response
      */
     public CompletableFuture<RemoveCrmDealResponse> removeCrmDeal(RemoveCrmDealRequest request) {
         AsyncRequestOperation<RemoveCrmDealRequest, RemoveCrmDealResponse> operation
@@ -807,7 +807,7 @@ public class AsyncCrm {
      * Remove an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveCrmEventResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveCrmEventResponse>} - The async response
      */
     public CompletableFuture<RemoveCrmEventResponse> removeCrmEvent(RemoveCrmEventRequest request) {
         AsyncRequestOperation<RemoveCrmEventRequest, RemoveCrmEventResponse> operation
@@ -830,7 +830,7 @@ public class AsyncCrm {
      * Remove a lead
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveCrmLeadResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveCrmLeadResponse>} - The async response
      */
     public CompletableFuture<RemoveCrmLeadResponse> removeCrmLead(RemoveCrmLeadRequest request) {
         AsyncRequestOperation<RemoveCrmLeadRequest, RemoveCrmLeadResponse> operation
@@ -853,7 +853,7 @@ public class AsyncCrm {
      * Remove a pipeline
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveCrmPipelineResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveCrmPipelineResponse>} - The async response
      */
     public CompletableFuture<RemoveCrmPipelineResponse> removeCrmPipeline(RemoveCrmPipelineRequest request) {
         AsyncRequestOperation<RemoveCrmPipelineRequest, RemoveCrmPipelineResponse> operation
@@ -876,7 +876,7 @@ public class AsyncCrm {
      * Update a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateCrmCompanyResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateCrmCompanyResponse>} - The async response
      */
     public CompletableFuture<UpdateCrmCompanyResponse> updateCrmCompany(UpdateCrmCompanyRequest request) {
         AsyncRequestOperation<UpdateCrmCompanyRequest, UpdateCrmCompanyResponse> operation
@@ -899,7 +899,7 @@ public class AsyncCrm {
      * Update a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateCrmContactResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateCrmContactResponse>} - The async response
      */
     public CompletableFuture<UpdateCrmContactResponse> updateCrmContact(UpdateCrmContactRequest request) {
         AsyncRequestOperation<UpdateCrmContactRequest, UpdateCrmContactResponse> operation
@@ -922,7 +922,7 @@ public class AsyncCrm {
      * Update a deal
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateCrmDealResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateCrmDealResponse>} - The async response
      */
     public CompletableFuture<UpdateCrmDealResponse> updateCrmDeal(UpdateCrmDealRequest request) {
         AsyncRequestOperation<UpdateCrmDealRequest, UpdateCrmDealResponse> operation
@@ -945,7 +945,7 @@ public class AsyncCrm {
      * Update an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateCrmEventResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateCrmEventResponse>} - The async response
      */
     public CompletableFuture<UpdateCrmEventResponse> updateCrmEvent(UpdateCrmEventRequest request) {
         AsyncRequestOperation<UpdateCrmEventRequest, UpdateCrmEventResponse> operation
@@ -968,7 +968,7 @@ public class AsyncCrm {
      * Update a lead
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateCrmLeadResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateCrmLeadResponse>} - The async response
      */
     public CompletableFuture<UpdateCrmLeadResponse> updateCrmLead(UpdateCrmLeadRequest request) {
         AsyncRequestOperation<UpdateCrmLeadRequest, UpdateCrmLeadResponse> operation
@@ -991,7 +991,7 @@ public class AsyncCrm {
      * Update a pipeline
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateCrmPipelineResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateCrmPipelineResponse>} - The async response
      */
     public CompletableFuture<UpdateCrmPipelineResponse> updateCrmPipeline(UpdateCrmPipelineRequest request) {
         AsyncRequestOperation<UpdateCrmPipelineRequest, UpdateCrmPipelineResponse> operation

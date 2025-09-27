@@ -50,7 +50,7 @@ public class AsyncApicall {
      * Retrieve specific API Call by its ID
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetUnifiedApicallResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetUnifiedApicallResponse>} - The async response
      */
     public CompletableFuture<GetUnifiedApicallResponse> getUnifiedApicall(GetUnifiedApicallRequest request) {
         AsyncRequestOperation<GetUnifiedApicallRequest, GetUnifiedApicallResponse> operation
@@ -73,7 +73,7 @@ public class AsyncApicall {
      * Returns API Calls
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListUnifiedApicallsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListUnifiedApicallsResponse>} - The async response
      */
     public CompletableFuture<ListUnifiedApicallsResponse> listUnifiedApicalls(ListUnifiedApicallsRequest request) {
         AsyncRequestOperation<ListUnifiedApicallsRequest, ListUnifiedApicallsResponse> operation

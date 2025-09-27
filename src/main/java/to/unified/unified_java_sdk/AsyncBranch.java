@@ -66,7 +66,7 @@ public class AsyncBranch {
      * Create a branch
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateRepoBranchResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateRepoBranchResponse>} - The async response
      */
     public CompletableFuture<CreateRepoBranchResponse> createRepoBranch(CreateRepoBranchRequest request) {
         AsyncRequestOperation<CreateRepoBranchRequest, CreateRepoBranchResponse> operation
@@ -89,7 +89,7 @@ public class AsyncBranch {
      * Retrieve a branch
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetRepoBranchResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetRepoBranchResponse>} - The async response
      */
     public CompletableFuture<GetRepoBranchResponse> getRepoBranch(GetRepoBranchRequest request) {
         AsyncRequestOperation<GetRepoBranchRequest, GetRepoBranchResponse> operation
@@ -112,7 +112,7 @@ public class AsyncBranch {
      * List all branches
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListRepoBranchesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListRepoBranchesResponse>} - The async response
      */
     public CompletableFuture<ListRepoBranchesResponse> listRepoBranches(ListRepoBranchesRequest request) {
         AsyncRequestOperation<ListRepoBranchesRequest, ListRepoBranchesResponse> operation
@@ -135,7 +135,7 @@ public class AsyncBranch {
      * Update a branch
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchRepoBranchResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchRepoBranchResponse>} - The async response
      */
     public CompletableFuture<PatchRepoBranchResponse> patchRepoBranch(PatchRepoBranchRequest request) {
         AsyncRequestOperation<PatchRepoBranchRequest, PatchRepoBranchResponse> operation
@@ -158,7 +158,7 @@ public class AsyncBranch {
      * Remove a branch
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveRepoBranchResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveRepoBranchResponse>} - The async response
      */
     public CompletableFuture<RemoveRepoBranchResponse> removeRepoBranch(RemoveRepoBranchRequest request) {
         AsyncRequestOperation<RemoveRepoBranchRequest, RemoveRepoBranchResponse> operation
@@ -181,7 +181,7 @@ public class AsyncBranch {
      * Update a branch
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateRepoBranchResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateRepoBranchResponse>} - The async response
      */
     public CompletableFuture<UpdateRepoBranchResponse> updateRepoBranch(UpdateRepoBranchRequest request) {
         AsyncRequestOperation<UpdateRepoBranchRequest, UpdateRepoBranchResponse> operation

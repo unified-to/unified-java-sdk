@@ -66,7 +66,7 @@ public class AsyncNote {
      * Create a note
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateTicketingNoteResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateTicketingNoteResponse>} - The async response
      */
     public CompletableFuture<CreateTicketingNoteResponse> createTicketingNote(CreateTicketingNoteRequest request) {
         AsyncRequestOperation<CreateTicketingNoteRequest, CreateTicketingNoteResponse> operation
@@ -89,7 +89,7 @@ public class AsyncNote {
      * Retrieve a note
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetTicketingNoteResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetTicketingNoteResponse>} - The async response
      */
     public CompletableFuture<GetTicketingNoteResponse> getTicketingNote(GetTicketingNoteRequest request) {
         AsyncRequestOperation<GetTicketingNoteRequest, GetTicketingNoteResponse> operation
@@ -112,7 +112,7 @@ public class AsyncNote {
      * List all notes
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListTicketingNotesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListTicketingNotesResponse>} - The async response
      */
     public CompletableFuture<ListTicketingNotesResponse> listTicketingNotes(ListTicketingNotesRequest request) {
         AsyncRequestOperation<ListTicketingNotesRequest, ListTicketingNotesResponse> operation
@@ -135,7 +135,7 @@ public class AsyncNote {
      * Update a note
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchTicketingNoteResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchTicketingNoteResponse>} - The async response
      */
     public CompletableFuture<PatchTicketingNoteResponse> patchTicketingNote(PatchTicketingNoteRequest request) {
         AsyncRequestOperation<PatchTicketingNoteRequest, PatchTicketingNoteResponse> operation
@@ -158,7 +158,7 @@ public class AsyncNote {
      * Remove a note
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveTicketingNoteResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveTicketingNoteResponse>} - The async response
      */
     public CompletableFuture<RemoveTicketingNoteResponse> removeTicketingNote(RemoveTicketingNoteRequest request) {
         AsyncRequestOperation<RemoveTicketingNoteRequest, RemoveTicketingNoteResponse> operation
@@ -181,7 +181,7 @@ public class AsyncNote {
      * Update a note
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateTicketingNoteResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateTicketingNoteResponse>} - The async response
      */
     public CompletableFuture<UpdateTicketingNoteResponse> updateTicketingNote(UpdateTicketingNoteRequest request) {
         AsyncRequestOperation<UpdateTicketingNoteRequest, UpdateTicketingNoteResponse> operation

@@ -66,7 +66,7 @@ public class AsyncDeal {
      * Create a deal
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateCrmDealResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateCrmDealResponse>} - The async response
      */
     public CompletableFuture<CreateCrmDealResponse> createCrmDeal(CreateCrmDealRequest request) {
         AsyncRequestOperation<CreateCrmDealRequest, CreateCrmDealResponse> operation
@@ -89,7 +89,7 @@ public class AsyncDeal {
      * Retrieve a deal
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetCrmDealResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetCrmDealResponse>} - The async response
      */
     public CompletableFuture<GetCrmDealResponse> getCrmDeal(GetCrmDealRequest request) {
         AsyncRequestOperation<GetCrmDealRequest, GetCrmDealResponse> operation
@@ -112,7 +112,7 @@ public class AsyncDeal {
      * List all deals
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListCrmDealsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListCrmDealsResponse>} - The async response
      */
     public CompletableFuture<ListCrmDealsResponse> listCrmDeals(ListCrmDealsRequest request) {
         AsyncRequestOperation<ListCrmDealsRequest, ListCrmDealsResponse> operation
@@ -135,7 +135,7 @@ public class AsyncDeal {
      * Update a deal
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchCrmDealResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchCrmDealResponse>} - The async response
      */
     public CompletableFuture<PatchCrmDealResponse> patchCrmDeal(PatchCrmDealRequest request) {
         AsyncRequestOperation<PatchCrmDealRequest, PatchCrmDealResponse> operation
@@ -158,7 +158,7 @@ public class AsyncDeal {
      * Remove a deal
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveCrmDealResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveCrmDealResponse>} - The async response
      */
     public CompletableFuture<RemoveCrmDealResponse> removeCrmDeal(RemoveCrmDealRequest request) {
         AsyncRequestOperation<RemoveCrmDealRequest, RemoveCrmDealResponse> operation
@@ -181,7 +181,7 @@ public class AsyncDeal {
      * Update a deal
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateCrmDealResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateCrmDealResponse>} - The async response
      */
     public CompletableFuture<UpdateCrmDealResponse> updateCrmDeal(UpdateCrmDealRequest request) {
         AsyncRequestOperation<UpdateCrmDealRequest, UpdateCrmDealResponse> operation

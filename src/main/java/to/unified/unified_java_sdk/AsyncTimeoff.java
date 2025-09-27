@@ -50,7 +50,7 @@ public class AsyncTimeoff {
      * Retrieve a timeoff
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetHrisTimeoffResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetHrisTimeoffResponse>} - The async response
      */
     public CompletableFuture<GetHrisTimeoffResponse> getHrisTimeoff(GetHrisTimeoffRequest request) {
         AsyncRequestOperation<GetHrisTimeoffRequest, GetHrisTimeoffResponse> operation
@@ -73,7 +73,7 @@ public class AsyncTimeoff {
      * List all timeoffs
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListHrisTimeoffsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListHrisTimeoffsResponse>} - The async response
      */
     public CompletableFuture<ListHrisTimeoffsResponse> listHrisTimeoffs(ListHrisTimeoffsRequest request) {
         AsyncRequestOperation<ListHrisTimeoffsRequest, ListHrisTimeoffsResponse> operation

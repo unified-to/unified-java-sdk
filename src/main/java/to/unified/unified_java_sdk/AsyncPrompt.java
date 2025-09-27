@@ -46,7 +46,7 @@ public class AsyncPrompt {
      * Create a prompt
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateGenaiPromptResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateGenaiPromptResponse>} - The async response
      */
     public CompletableFuture<CreateGenaiPromptResponse> createGenaiPrompt(CreateGenaiPromptRequest request) {
         AsyncRequestOperation<CreateGenaiPromptRequest, CreateGenaiPromptResponse> operation

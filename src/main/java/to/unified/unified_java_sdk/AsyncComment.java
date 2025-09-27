@@ -114,7 +114,7 @@ public class AsyncComment {
      * Create a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateKmsCommentResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateKmsCommentResponse>} - The async response
      */
     public CompletableFuture<CreateKmsCommentResponse> createKmsComment(CreateKmsCommentRequest request) {
         AsyncRequestOperation<CreateKmsCommentRequest, CreateKmsCommentResponse> operation
@@ -137,7 +137,7 @@ public class AsyncComment {
      * Create a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateTaskCommentResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateTaskCommentResponse>} - The async response
      */
     public CompletableFuture<CreateTaskCommentResponse> createTaskComment(CreateTaskCommentRequest request) {
         AsyncRequestOperation<CreateTaskCommentRequest, CreateTaskCommentResponse> operation
@@ -160,7 +160,7 @@ public class AsyncComment {
      * Create a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateUcCommentResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateUcCommentResponse>} - The async response
      */
     public CompletableFuture<CreateUcCommentResponse> createUcComment(CreateUcCommentRequest request) {
         AsyncRequestOperation<CreateUcCommentRequest, CreateUcCommentResponse> operation
@@ -183,7 +183,7 @@ public class AsyncComment {
      * Retrieve a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetKmsCommentResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetKmsCommentResponse>} - The async response
      */
     public CompletableFuture<GetKmsCommentResponse> getKmsComment(GetKmsCommentRequest request) {
         AsyncRequestOperation<GetKmsCommentRequest, GetKmsCommentResponse> operation
@@ -206,7 +206,7 @@ public class AsyncComment {
      * Retrieve a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetTaskCommentResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetTaskCommentResponse>} - The async response
      */
     public CompletableFuture<GetTaskCommentResponse> getTaskComment(GetTaskCommentRequest request) {
         AsyncRequestOperation<GetTaskCommentRequest, GetTaskCommentResponse> operation
@@ -229,7 +229,7 @@ public class AsyncComment {
      * Retrieve a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetUcCommentResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetUcCommentResponse>} - The async response
      */
     public CompletableFuture<GetUcCommentResponse> getUcComment(GetUcCommentRequest request) {
         AsyncRequestOperation<GetUcCommentRequest, GetUcCommentResponse> operation
@@ -252,7 +252,7 @@ public class AsyncComment {
      * List all comments
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListKmsCommentsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListKmsCommentsResponse>} - The async response
      */
     public CompletableFuture<ListKmsCommentsResponse> listKmsComments(ListKmsCommentsRequest request) {
         AsyncRequestOperation<ListKmsCommentsRequest, ListKmsCommentsResponse> operation
@@ -275,7 +275,7 @@ public class AsyncComment {
      * List all comments
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListTaskCommentsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListTaskCommentsResponse>} - The async response
      */
     public CompletableFuture<ListTaskCommentsResponse> listTaskComments(ListTaskCommentsRequest request) {
         AsyncRequestOperation<ListTaskCommentsRequest, ListTaskCommentsResponse> operation
@@ -298,7 +298,7 @@ public class AsyncComment {
      * List all comments
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListUcCommentsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListUcCommentsResponse>} - The async response
      */
     public CompletableFuture<ListUcCommentsResponse> listUcComments(ListUcCommentsRequest request) {
         AsyncRequestOperation<ListUcCommentsRequest, ListUcCommentsResponse> operation
@@ -321,7 +321,7 @@ public class AsyncComment {
      * Update a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchKmsCommentResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchKmsCommentResponse>} - The async response
      */
     public CompletableFuture<PatchKmsCommentResponse> patchKmsComment(PatchKmsCommentRequest request) {
         AsyncRequestOperation<PatchKmsCommentRequest, PatchKmsCommentResponse> operation
@@ -344,7 +344,7 @@ public class AsyncComment {
      * Update a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchTaskCommentResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchTaskCommentResponse>} - The async response
      */
     public CompletableFuture<PatchTaskCommentResponse> patchTaskComment(PatchTaskCommentRequest request) {
         AsyncRequestOperation<PatchTaskCommentRequest, PatchTaskCommentResponse> operation
@@ -367,7 +367,7 @@ public class AsyncComment {
      * Update a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchUcCommentResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchUcCommentResponse>} - The async response
      */
     public CompletableFuture<PatchUcCommentResponse> patchUcComment(PatchUcCommentRequest request) {
         AsyncRequestOperation<PatchUcCommentRequest, PatchUcCommentResponse> operation
@@ -390,7 +390,7 @@ public class AsyncComment {
      * Remove a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveKmsCommentResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveKmsCommentResponse>} - The async response
      */
     public CompletableFuture<RemoveKmsCommentResponse> removeKmsComment(RemoveKmsCommentRequest request) {
         AsyncRequestOperation<RemoveKmsCommentRequest, RemoveKmsCommentResponse> operation
@@ -413,7 +413,7 @@ public class AsyncComment {
      * Remove a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveTaskCommentResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveTaskCommentResponse>} - The async response
      */
     public CompletableFuture<RemoveTaskCommentResponse> removeTaskComment(RemoveTaskCommentRequest request) {
         AsyncRequestOperation<RemoveTaskCommentRequest, RemoveTaskCommentResponse> operation
@@ -436,7 +436,7 @@ public class AsyncComment {
      * Remove a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveUcCommentResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveUcCommentResponse>} - The async response
      */
     public CompletableFuture<RemoveUcCommentResponse> removeUcComment(RemoveUcCommentRequest request) {
         AsyncRequestOperation<RemoveUcCommentRequest, RemoveUcCommentResponse> operation
@@ -459,7 +459,7 @@ public class AsyncComment {
      * Update a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateKmsCommentResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateKmsCommentResponse>} - The async response
      */
     public CompletableFuture<UpdateKmsCommentResponse> updateKmsComment(UpdateKmsCommentRequest request) {
         AsyncRequestOperation<UpdateKmsCommentRequest, UpdateKmsCommentResponse> operation
@@ -482,7 +482,7 @@ public class AsyncComment {
      * Update a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateTaskCommentResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateTaskCommentResponse>} - The async response
      */
     public CompletableFuture<UpdateTaskCommentResponse> updateTaskComment(UpdateTaskCommentRequest request) {
         AsyncRequestOperation<UpdateTaskCommentRequest, UpdateTaskCommentResponse> operation
@@ -505,7 +505,7 @@ public class AsyncComment {
      * Update a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateUcCommentResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateUcCommentResponse>} - The async response
      */
     public CompletableFuture<UpdateUcCommentResponse> updateUcComment(UpdateUcCommentRequest request) {
         AsyncRequestOperation<UpdateUcCommentRequest, UpdateUcCommentResponse> operation

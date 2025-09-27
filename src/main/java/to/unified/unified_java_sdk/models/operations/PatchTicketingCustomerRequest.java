@@ -39,7 +39,9 @@ public class PatchTicketingCustomerRequest {
     private String id;
 
     /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
+     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
+     * 
+     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
     private Optional<String> raw;
@@ -102,7 +104,9 @@ public class PatchTicketingCustomerRequest {
     }
 
     /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
+     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
+     * 
+     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @JsonIgnore
     public Optional<String> raw() {
@@ -158,7 +162,9 @@ public class PatchTicketingCustomerRequest {
     }
 
     /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
+     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
+     * 
+     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     public PatchTicketingCustomerRequest withRaw(String raw) {
         Utils.checkNotNull(raw, "raw");
@@ -168,7 +174,9 @@ public class PatchTicketingCustomerRequest {
 
 
     /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
+     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
+     * 
+     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     public PatchTicketingCustomerRequest withRaw(Optional<String> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -275,7 +283,9 @@ public class PatchTicketingCustomerRequest {
 
 
         /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
+         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
+         * 
+         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
         public Builder raw(String raw) {
             Utils.checkNotNull(raw, "raw");
@@ -284,7 +294,9 @@ public class PatchTicketingCustomerRequest {
         }
 
         /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
+         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
+         * 
+         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
         public Builder raw(Optional<String> raw) {
             Utils.checkNotNull(raw, "raw");

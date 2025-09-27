@@ -66,7 +66,7 @@ public class AsyncAccount {
      * Create an account
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateAccountingAccountResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateAccountingAccountResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingAccountResponse> createAccountingAccount(CreateAccountingAccountRequest request) {
         AsyncRequestOperation<CreateAccountingAccountRequest, CreateAccountingAccountResponse> operation
@@ -89,7 +89,7 @@ public class AsyncAccount {
      * Retrieve an account
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetAccountingAccountResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetAccountingAccountResponse>} - The async response
      */
     public CompletableFuture<GetAccountingAccountResponse> getAccountingAccount(GetAccountingAccountRequest request) {
         AsyncRequestOperation<GetAccountingAccountRequest, GetAccountingAccountResponse> operation
@@ -112,7 +112,7 @@ public class AsyncAccount {
      * List all accounts
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListAccountingAccountsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListAccountingAccountsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingAccountsResponse> listAccountingAccounts(ListAccountingAccountsRequest request) {
         AsyncRequestOperation<ListAccountingAccountsRequest, ListAccountingAccountsResponse> operation
@@ -135,7 +135,7 @@ public class AsyncAccount {
      * Update an account
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchAccountingAccountResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchAccountingAccountResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingAccountResponse> patchAccountingAccount(PatchAccountingAccountRequest request) {
         AsyncRequestOperation<PatchAccountingAccountRequest, PatchAccountingAccountResponse> operation
@@ -158,7 +158,7 @@ public class AsyncAccount {
      * Remove an account
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveAccountingAccountResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveAccountingAccountResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingAccountResponse> removeAccountingAccount(RemoveAccountingAccountRequest request) {
         AsyncRequestOperation<RemoveAccountingAccountRequest, RemoveAccountingAccountResponse> operation
@@ -181,7 +181,7 @@ public class AsyncAccount {
      * Update an account
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateAccountingAccountResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateAccountingAccountResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingAccountResponse> updateAccountingAccount(UpdateAccountingAccountRequest request) {
         AsyncRequestOperation<UpdateAccountingAccountRequest, UpdateAccountingAccountResponse> operation

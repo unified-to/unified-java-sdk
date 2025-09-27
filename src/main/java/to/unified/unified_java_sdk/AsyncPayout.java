@@ -50,7 +50,7 @@ public class AsyncPayout {
      * Retrieve a payout
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetPaymentPayoutResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetPaymentPayoutResponse>} - The async response
      */
     public CompletableFuture<GetPaymentPayoutResponse> getPaymentPayout(GetPaymentPayoutRequest request) {
         AsyncRequestOperation<GetPaymentPayoutRequest, GetPaymentPayoutResponse> operation
@@ -73,7 +73,7 @@ public class AsyncPayout {
      * List all payouts
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListPaymentPayoutsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListPaymentPayoutsResponse>} - The async response
      */
     public CompletableFuture<ListPaymentPayoutsResponse> listPaymentPayouts(ListPaymentPayoutsRequest request) {
         AsyncRequestOperation<ListPaymentPayoutsRequest, ListPaymentPayoutsResponse> operation

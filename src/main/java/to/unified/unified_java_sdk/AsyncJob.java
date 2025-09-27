@@ -66,7 +66,7 @@ public class AsyncJob {
      * Create a job
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateAtsJobResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateAtsJobResponse>} - The async response
      */
     public CompletableFuture<CreateAtsJobResponse> createAtsJob(CreateAtsJobRequest request) {
         AsyncRequestOperation<CreateAtsJobRequest, CreateAtsJobResponse> operation
@@ -89,7 +89,7 @@ public class AsyncJob {
      * Retrieve a job
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetAtsJobResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetAtsJobResponse>} - The async response
      */
     public CompletableFuture<GetAtsJobResponse> getAtsJob(GetAtsJobRequest request) {
         AsyncRequestOperation<GetAtsJobRequest, GetAtsJobResponse> operation
@@ -112,7 +112,7 @@ public class AsyncJob {
      * List all jobs
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListAtsJobsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListAtsJobsResponse>} - The async response
      */
     public CompletableFuture<ListAtsJobsResponse> listAtsJobs(ListAtsJobsRequest request) {
         AsyncRequestOperation<ListAtsJobsRequest, ListAtsJobsResponse> operation
@@ -135,7 +135,7 @@ public class AsyncJob {
      * Update a job
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchAtsJobResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchAtsJobResponse>} - The async response
      */
     public CompletableFuture<PatchAtsJobResponse> patchAtsJob(PatchAtsJobRequest request) {
         AsyncRequestOperation<PatchAtsJobRequest, PatchAtsJobResponse> operation
@@ -158,7 +158,7 @@ public class AsyncJob {
      * Remove a job
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveAtsJobResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveAtsJobResponse>} - The async response
      */
     public CompletableFuture<RemoveAtsJobResponse> removeAtsJob(RemoveAtsJobRequest request) {
         AsyncRequestOperation<RemoveAtsJobRequest, RemoveAtsJobResponse> operation
@@ -181,7 +181,7 @@ public class AsyncJob {
      * Update a job
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateAtsJobResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateAtsJobResponse>} - The async response
      */
     public CompletableFuture<UpdateAtsJobResponse> updateAtsJob(UpdateAtsJobRequest request) {
         AsyncRequestOperation<UpdateAtsJobRequest, UpdateAtsJobResponse> operation

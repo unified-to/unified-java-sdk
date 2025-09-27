@@ -40,7 +40,8 @@ public class AsyncAuth {
     /**
      * Authorize new connection
      * 
-     * <p>Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
+     * <p>Returns an authorization URL for the specified integration. Once a successful authorization occurs,
+     * a new connection is created.
      * 
      * @return The async call builder
      */
@@ -51,10 +52,11 @@ public class AsyncAuth {
     /**
      * Authorize new connection
      * 
-     * <p>Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
+     * <p>Returns an authorization URL for the specified integration. Once a successful authorization occurs,
+     * a new connection is created.
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetUnifiedIntegrationAuthResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetUnifiedIntegrationAuthResponse>} - The async response
      */
     public CompletableFuture<GetUnifiedIntegrationAuthResponse> getUnifiedIntegrationAuth(GetUnifiedIntegrationAuthRequest request) {
         AsyncRequestOperation<GetUnifiedIntegrationAuthRequest, GetUnifiedIntegrationAuthResponse> operation
@@ -67,7 +69,9 @@ public class AsyncAuth {
     /**
      * Sign in a user
      * 
-     * <p>Returns an authentication URL for the specified integration.  Once a successful authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is base-64 encoded.
+     * <p>Returns an authentication URL for the specified integration. Once a successful authentication
+     * occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is
+     * base-64 encoded.
      * 
      * @return The async call builder
      */
@@ -78,10 +82,12 @@ public class AsyncAuth {
     /**
      * Sign in a user
      * 
-     * <p>Returns an authentication URL for the specified integration.  Once a successful authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is base-64 encoded.
+     * <p>Returns an authentication URL for the specified integration. Once a successful authentication
+     * occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is
+     * base-64 encoded.
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetUnifiedIntegrationLoginResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetUnifiedIntegrationLoginResponse>} - The async response
      */
     public CompletableFuture<GetUnifiedIntegrationLoginResponse> getUnifiedIntegrationLogin(GetUnifiedIntegrationLoginRequest request) {
         AsyncRequestOperation<GetUnifiedIntegrationLoginRequest, GetUnifiedIntegrationLoginResponse> operation

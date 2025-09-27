@@ -66,7 +66,7 @@ public class AsyncInventory {
      * Create an inventory
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateCommerceInventoryResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateCommerceInventoryResponse>} - The async response
      */
     public CompletableFuture<CreateCommerceInventoryResponse> createCommerceInventory(CreateCommerceInventoryRequest request) {
         AsyncRequestOperation<CreateCommerceInventoryRequest, CreateCommerceInventoryResponse> operation
@@ -89,7 +89,7 @@ public class AsyncInventory {
      * Retrieve an inventory
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetCommerceInventoryResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetCommerceInventoryResponse>} - The async response
      */
     public CompletableFuture<GetCommerceInventoryResponse> getCommerceInventory(GetCommerceInventoryRequest request) {
         AsyncRequestOperation<GetCommerceInventoryRequest, GetCommerceInventoryResponse> operation
@@ -112,7 +112,7 @@ public class AsyncInventory {
      * List all inventories
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListCommerceInventoriesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListCommerceInventoriesResponse>} - The async response
      */
     public CompletableFuture<ListCommerceInventoriesResponse> listCommerceInventories(ListCommerceInventoriesRequest request) {
         AsyncRequestOperation<ListCommerceInventoriesRequest, ListCommerceInventoriesResponse> operation
@@ -135,7 +135,7 @@ public class AsyncInventory {
      * Update an inventory
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchCommerceInventoryResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchCommerceInventoryResponse>} - The async response
      */
     public CompletableFuture<PatchCommerceInventoryResponse> patchCommerceInventory(PatchCommerceInventoryRequest request) {
         AsyncRequestOperation<PatchCommerceInventoryRequest, PatchCommerceInventoryResponse> operation
@@ -158,7 +158,7 @@ public class AsyncInventory {
      * Remove an inventory
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveCommerceInventoryResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveCommerceInventoryResponse>} - The async response
      */
     public CompletableFuture<RemoveCommerceInventoryResponse> removeCommerceInventory(RemoveCommerceInventoryRequest request) {
         AsyncRequestOperation<RemoveCommerceInventoryRequest, RemoveCommerceInventoryResponse> operation
@@ -181,7 +181,7 @@ public class AsyncInventory {
      * Update an inventory
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateCommerceInventoryResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateCommerceInventoryResponse>} - The async response
      */
     public CompletableFuture<UpdateCommerceInventoryResponse> updateCommerceInventory(UpdateCommerceInventoryRequest request) {
         AsyncRequestOperation<UpdateCommerceInventoryRequest, UpdateCommerceInventoryResponse> operation

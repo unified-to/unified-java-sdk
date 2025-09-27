@@ -66,7 +66,7 @@ public class AsyncPipeline {
      * Create a pipeline
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateCrmPipelineResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateCrmPipelineResponse>} - The async response
      */
     public CompletableFuture<CreateCrmPipelineResponse> createCrmPipeline(CreateCrmPipelineRequest request) {
         AsyncRequestOperation<CreateCrmPipelineRequest, CreateCrmPipelineResponse> operation
@@ -89,7 +89,7 @@ public class AsyncPipeline {
      * Retrieve a pipeline
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetCrmPipelineResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetCrmPipelineResponse>} - The async response
      */
     public CompletableFuture<GetCrmPipelineResponse> getCrmPipeline(GetCrmPipelineRequest request) {
         AsyncRequestOperation<GetCrmPipelineRequest, GetCrmPipelineResponse> operation
@@ -112,7 +112,7 @@ public class AsyncPipeline {
      * List all pipelines
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListCrmPipelinesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListCrmPipelinesResponse>} - The async response
      */
     public CompletableFuture<ListCrmPipelinesResponse> listCrmPipelines(ListCrmPipelinesRequest request) {
         AsyncRequestOperation<ListCrmPipelinesRequest, ListCrmPipelinesResponse> operation
@@ -135,7 +135,7 @@ public class AsyncPipeline {
      * Update a pipeline
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchCrmPipelineResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchCrmPipelineResponse>} - The async response
      */
     public CompletableFuture<PatchCrmPipelineResponse> patchCrmPipeline(PatchCrmPipelineRequest request) {
         AsyncRequestOperation<PatchCrmPipelineRequest, PatchCrmPipelineResponse> operation
@@ -158,7 +158,7 @@ public class AsyncPipeline {
      * Remove a pipeline
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveCrmPipelineResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveCrmPipelineResponse>} - The async response
      */
     public CompletableFuture<RemoveCrmPipelineResponse> removeCrmPipeline(RemoveCrmPipelineRequest request) {
         AsyncRequestOperation<RemoveCrmPipelineRequest, RemoveCrmPipelineResponse> operation
@@ -181,7 +181,7 @@ public class AsyncPipeline {
      * Update a pipeline
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateCrmPipelineResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateCrmPipelineResponse>} - The async response
      */
     public CompletableFuture<UpdateCrmPipelineResponse> updateCrmPipeline(UpdateCrmPipelineRequest request) {
         AsyncRequestOperation<UpdateCrmPipelineRequest, UpdateCrmPipelineResponse> operation

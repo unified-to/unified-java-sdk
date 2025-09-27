@@ -126,7 +126,7 @@ public class AsyncCalendar {
      * Create a calendar
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateCalendarCalendarResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateCalendarCalendarResponse>} - The async response
      */
     public CompletableFuture<CreateCalendarCalendarResponse> createCalendarCalendar(CreateCalendarCalendarRequest request) {
         AsyncRequestOperation<CreateCalendarCalendarRequest, CreateCalendarCalendarResponse> operation
@@ -149,7 +149,7 @@ public class AsyncCalendar {
      * Create an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateCalendarEventResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateCalendarEventResponse>} - The async response
      */
     public CompletableFuture<CreateCalendarEventResponse> createCalendarEvent(CreateCalendarEventRequest request) {
         AsyncRequestOperation<CreateCalendarEventRequest, CreateCalendarEventResponse> operation
@@ -172,7 +172,7 @@ public class AsyncCalendar {
      * Create a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateCalendarLinkResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateCalendarLinkResponse>} - The async response
      */
     public CompletableFuture<CreateCalendarLinkResponse> createCalendarLink(CreateCalendarLinkRequest request) {
         AsyncRequestOperation<CreateCalendarLinkRequest, CreateCalendarLinkResponse> operation
@@ -195,7 +195,7 @@ public class AsyncCalendar {
      * Retrieve a calendar
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetCalendarCalendarResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetCalendarCalendarResponse>} - The async response
      */
     public CompletableFuture<GetCalendarCalendarResponse> getCalendarCalendar(GetCalendarCalendarRequest request) {
         AsyncRequestOperation<GetCalendarCalendarRequest, GetCalendarCalendarResponse> operation
@@ -218,7 +218,7 @@ public class AsyncCalendar {
      * Retrieve an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetCalendarEventResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetCalendarEventResponse>} - The async response
      */
     public CompletableFuture<GetCalendarEventResponse> getCalendarEvent(GetCalendarEventRequest request) {
         AsyncRequestOperation<GetCalendarEventRequest, GetCalendarEventResponse> operation
@@ -241,7 +241,7 @@ public class AsyncCalendar {
      * Retrieve a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetCalendarLinkResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetCalendarLinkResponse>} - The async response
      */
     public CompletableFuture<GetCalendarLinkResponse> getCalendarLink(GetCalendarLinkRequest request) {
         AsyncRequestOperation<GetCalendarLinkRequest, GetCalendarLinkResponse> operation
@@ -264,7 +264,7 @@ public class AsyncCalendar {
      * Retrieve a recording
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetCalendarRecordingResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetCalendarRecordingResponse>} - The async response
      */
     public CompletableFuture<GetCalendarRecordingResponse> getCalendarRecording(GetCalendarRecordingRequest request) {
         AsyncRequestOperation<GetCalendarRecordingRequest, GetCalendarRecordingResponse> operation
@@ -287,7 +287,7 @@ public class AsyncCalendar {
      * List all busies
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListCalendarBusiesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListCalendarBusiesResponse>} - The async response
      */
     public CompletableFuture<ListCalendarBusiesResponse> listCalendarBusies(ListCalendarBusiesRequest request) {
         AsyncRequestOperation<ListCalendarBusiesRequest, ListCalendarBusiesResponse> operation
@@ -310,7 +310,7 @@ public class AsyncCalendar {
      * List all calendars
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListCalendarCalendarsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListCalendarCalendarsResponse>} - The async response
      */
     public CompletableFuture<ListCalendarCalendarsResponse> listCalendarCalendars(ListCalendarCalendarsRequest request) {
         AsyncRequestOperation<ListCalendarCalendarsRequest, ListCalendarCalendarsResponse> operation
@@ -333,7 +333,7 @@ public class AsyncCalendar {
      * List all events
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListCalendarEventsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListCalendarEventsResponse>} - The async response
      */
     public CompletableFuture<ListCalendarEventsResponse> listCalendarEvents(ListCalendarEventsRequest request) {
         AsyncRequestOperation<ListCalendarEventsRequest, ListCalendarEventsResponse> operation
@@ -356,7 +356,7 @@ public class AsyncCalendar {
      * List all links
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListCalendarLinksResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListCalendarLinksResponse>} - The async response
      */
     public CompletableFuture<ListCalendarLinksResponse> listCalendarLinks(ListCalendarLinksRequest request) {
         AsyncRequestOperation<ListCalendarLinksRequest, ListCalendarLinksResponse> operation
@@ -379,7 +379,7 @@ public class AsyncCalendar {
      * List all recordings
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListCalendarRecordingsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListCalendarRecordingsResponse>} - The async response
      */
     public CompletableFuture<ListCalendarRecordingsResponse> listCalendarRecordings(ListCalendarRecordingsRequest request) {
         AsyncRequestOperation<ListCalendarRecordingsRequest, ListCalendarRecordingsResponse> operation
@@ -402,7 +402,7 @@ public class AsyncCalendar {
      * Update a calendar
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchCalendarCalendarResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchCalendarCalendarResponse>} - The async response
      */
     public CompletableFuture<PatchCalendarCalendarResponse> patchCalendarCalendar(PatchCalendarCalendarRequest request) {
         AsyncRequestOperation<PatchCalendarCalendarRequest, PatchCalendarCalendarResponse> operation
@@ -425,7 +425,7 @@ public class AsyncCalendar {
      * Update an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchCalendarEventResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchCalendarEventResponse>} - The async response
      */
     public CompletableFuture<PatchCalendarEventResponse> patchCalendarEvent(PatchCalendarEventRequest request) {
         AsyncRequestOperation<PatchCalendarEventRequest, PatchCalendarEventResponse> operation
@@ -448,7 +448,7 @@ public class AsyncCalendar {
      * Update a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchCalendarLinkResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchCalendarLinkResponse>} - The async response
      */
     public CompletableFuture<PatchCalendarLinkResponse> patchCalendarLink(PatchCalendarLinkRequest request) {
         AsyncRequestOperation<PatchCalendarLinkRequest, PatchCalendarLinkResponse> operation
@@ -471,7 +471,7 @@ public class AsyncCalendar {
      * Remove a calendar
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveCalendarCalendarResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveCalendarCalendarResponse>} - The async response
      */
     public CompletableFuture<RemoveCalendarCalendarResponse> removeCalendarCalendar(RemoveCalendarCalendarRequest request) {
         AsyncRequestOperation<RemoveCalendarCalendarRequest, RemoveCalendarCalendarResponse> operation
@@ -494,7 +494,7 @@ public class AsyncCalendar {
      * Remove an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveCalendarEventResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveCalendarEventResponse>} - The async response
      */
     public CompletableFuture<RemoveCalendarEventResponse> removeCalendarEvent(RemoveCalendarEventRequest request) {
         AsyncRequestOperation<RemoveCalendarEventRequest, RemoveCalendarEventResponse> operation
@@ -517,7 +517,7 @@ public class AsyncCalendar {
      * Remove a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveCalendarLinkResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveCalendarLinkResponse>} - The async response
      */
     public CompletableFuture<RemoveCalendarLinkResponse> removeCalendarLink(RemoveCalendarLinkRequest request) {
         AsyncRequestOperation<RemoveCalendarLinkRequest, RemoveCalendarLinkResponse> operation
@@ -540,7 +540,7 @@ public class AsyncCalendar {
      * Update a calendar
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateCalendarCalendarResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateCalendarCalendarResponse>} - The async response
      */
     public CompletableFuture<UpdateCalendarCalendarResponse> updateCalendarCalendar(UpdateCalendarCalendarRequest request) {
         AsyncRequestOperation<UpdateCalendarCalendarRequest, UpdateCalendarCalendarResponse> operation
@@ -563,7 +563,7 @@ public class AsyncCalendar {
      * Update an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateCalendarEventResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateCalendarEventResponse>} - The async response
      */
     public CompletableFuture<UpdateCalendarEventResponse> updateCalendarEvent(UpdateCalendarEventRequest request) {
         AsyncRequestOperation<UpdateCalendarEventRequest, UpdateCalendarEventResponse> operation
@@ -586,7 +586,7 @@ public class AsyncCalendar {
      * Update a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateCalendarLinkResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateCalendarLinkResponse>} - The async response
      */
     public CompletableFuture<UpdateCalendarLinkResponse> updateCalendarLink(UpdateCalendarLinkRequest request) {
         AsyncRequestOperation<UpdateCalendarLinkRequest, UpdateCalendarLinkResponse> operation

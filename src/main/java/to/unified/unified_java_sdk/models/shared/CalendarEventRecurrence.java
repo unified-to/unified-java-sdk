@@ -60,14 +60,16 @@ public class CalendarEventRecurrence {
     private Optional<? extends List<Double>> onMonthDays;
 
     /**
-     * months of the year to repeat on, defaults to undefined (every month), only used if frequency is YEARLY, January is 1
+     * months of the year to repeat on, defaults to undefined (every month), only used if frequency is
+     * YEARLY, January is 1
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("on_months")
     private Optional<? extends List<Double>> onMonths;
 
     /**
-     * week ordinals for BYDAY (e.g., -1 for last, -2 for second-to-last, 1 for first, 2 for second), only used with on_days. 0 is used for days without week ordinals.
+     * week ordinals for BYDAY (e.g., -1 for last, -2 for second-to-last, 1 for first, 2 for second), only
+     * used with on_days. 0 is used for days without week ordinals.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("on_weeks")
@@ -186,7 +188,8 @@ public class CalendarEventRecurrence {
     }
 
     /**
-     * months of the year to repeat on, defaults to undefined (every month), only used if frequency is YEARLY, January is 1
+     * months of the year to repeat on, defaults to undefined (every month), only used if frequency is
+     * YEARLY, January is 1
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
@@ -195,7 +198,8 @@ public class CalendarEventRecurrence {
     }
 
     /**
-     * week ordinals for BYDAY (e.g., -1 for last, -2 for second-to-last, 1 for first, 2 for second), only used with on_days. 0 is used for days without week ordinals.
+     * week ordinals for BYDAY (e.g., -1 for last, -2 for second-to-last, 1 for first, 2 for second), only
+     * used with on_days. 0 is used for days without week ordinals.
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
@@ -331,7 +335,8 @@ public class CalendarEventRecurrence {
     }
 
     /**
-     * months of the year to repeat on, defaults to undefined (every month), only used if frequency is YEARLY, January is 1
+     * months of the year to repeat on, defaults to undefined (every month), only used if frequency is
+     * YEARLY, January is 1
      */
     public CalendarEventRecurrence withOnMonths(List<Double> onMonths) {
         Utils.checkNotNull(onMonths, "onMonths");
@@ -341,7 +346,8 @@ public class CalendarEventRecurrence {
 
 
     /**
-     * months of the year to repeat on, defaults to undefined (every month), only used if frequency is YEARLY, January is 1
+     * months of the year to repeat on, defaults to undefined (every month), only used if frequency is
+     * YEARLY, January is 1
      */
     public CalendarEventRecurrence withOnMonths(Optional<? extends List<Double>> onMonths) {
         Utils.checkNotNull(onMonths, "onMonths");
@@ -350,7 +356,8 @@ public class CalendarEventRecurrence {
     }
 
     /**
-     * week ordinals for BYDAY (e.g., -1 for last, -2 for second-to-last, 1 for first, 2 for second), only used with on_days. 0 is used for days without week ordinals.
+     * week ordinals for BYDAY (e.g., -1 for last, -2 for second-to-last, 1 for first, 2 for second), only
+     * used with on_days. 0 is used for days without week ordinals.
      */
     public CalendarEventRecurrence withOnWeeks(List<Double> onWeeks) {
         Utils.checkNotNull(onWeeks, "onWeeks");
@@ -360,7 +367,8 @@ public class CalendarEventRecurrence {
 
 
     /**
-     * week ordinals for BYDAY (e.g., -1 for last, -2 for second-to-last, 1 for first, 2 for second), only used with on_days. 0 is used for days without week ordinals.
+     * week ordinals for BYDAY (e.g., -1 for last, -2 for second-to-last, 1 for first, 2 for second), only
+     * used with on_days. 0 is used for days without week ordinals.
      */
     public CalendarEventRecurrence withOnWeeks(Optional<? extends List<Double>> onWeeks) {
         Utils.checkNotNull(onWeeks, "onWeeks");
@@ -599,7 +607,8 @@ public class CalendarEventRecurrence {
 
 
         /**
-         * months of the year to repeat on, defaults to undefined (every month), only used if frequency is YEARLY, January is 1
+         * months of the year to repeat on, defaults to undefined (every month), only used if frequency is
+         * YEARLY, January is 1
          */
         public Builder onMonths(List<Double> onMonths) {
             Utils.checkNotNull(onMonths, "onMonths");
@@ -608,7 +617,8 @@ public class CalendarEventRecurrence {
         }
 
         /**
-         * months of the year to repeat on, defaults to undefined (every month), only used if frequency is YEARLY, January is 1
+         * months of the year to repeat on, defaults to undefined (every month), only used if frequency is
+         * YEARLY, January is 1
          */
         public Builder onMonths(Optional<? extends List<Double>> onMonths) {
             Utils.checkNotNull(onMonths, "onMonths");
@@ -618,7 +628,8 @@ public class CalendarEventRecurrence {
 
 
         /**
-         * week ordinals for BYDAY (e.g., -1 for last, -2 for second-to-last, 1 for first, 2 for second), only used with on_days. 0 is used for days without week ordinals.
+         * week ordinals for BYDAY (e.g., -1 for last, -2 for second-to-last, 1 for first, 2 for second), only
+         * used with on_days. 0 is used for days without week ordinals.
          */
         public Builder onWeeks(List<Double> onWeeks) {
             Utils.checkNotNull(onWeeks, "onWeeks");
@@ -627,7 +638,8 @@ public class CalendarEventRecurrence {
         }
 
         /**
-         * week ordinals for BYDAY (e.g., -1 for last, -2 for second-to-last, 1 for first, 2 for second), only used with on_days. 0 is used for days without week ordinals.
+         * week ordinals for BYDAY (e.g., -1 for last, -2 for second-to-last, 1 for first, 2 for second), only
+         * used with on_days. 0 is used for days without week ordinals.
          */
         public Builder onWeeks(Optional<? extends List<Double>> onWeeks) {
             Utils.checkNotNull(onWeeks, "onWeeks");

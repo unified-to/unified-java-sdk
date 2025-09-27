@@ -50,7 +50,7 @@ public class AsyncEnrich {
      * Retrieve enrichment information for a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListEnrichCompaniesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListEnrichCompaniesResponse>} - The async response
      */
     public CompletableFuture<ListEnrichCompaniesResponse> listEnrichCompanies(ListEnrichCompaniesRequest request) {
         AsyncRequestOperation<ListEnrichCompaniesRequest, ListEnrichCompaniesResponse> operation
@@ -73,7 +73,7 @@ public class AsyncEnrich {
      * Retrieve enrichment information for a person
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListEnrichPeopleResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListEnrichPeopleResponse>} - The async response
      */
     public CompletableFuture<ListEnrichPeopleResponse> listEnrichPeople(ListEnrichPeopleRequest request) {
         AsyncRequestOperation<ListEnrichPeopleRequest, ListEnrichPeopleResponse> operation

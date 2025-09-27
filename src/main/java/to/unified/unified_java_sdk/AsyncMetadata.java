@@ -66,7 +66,7 @@ public class AsyncMetadata {
      * Create a metadata
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateMetadataMetadataResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateMetadataMetadataResponse>} - The async response
      */
     public CompletableFuture<CreateMetadataMetadataResponse> createMetadataMetadata(CreateMetadataMetadataRequest request) {
         AsyncRequestOperation<CreateMetadataMetadataRequest, CreateMetadataMetadataResponse> operation
@@ -89,7 +89,7 @@ public class AsyncMetadata {
      * Retrieve a metadata
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetMetadataMetadataResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetMetadataMetadataResponse>} - The async response
      */
     public CompletableFuture<GetMetadataMetadataResponse> getMetadataMetadata(GetMetadataMetadataRequest request) {
         AsyncRequestOperation<GetMetadataMetadataRequest, GetMetadataMetadataResponse> operation
@@ -112,7 +112,7 @@ public class AsyncMetadata {
      * List all metadatas
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListMetadataMetadatasResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListMetadataMetadatasResponse>} - The async response
      */
     public CompletableFuture<ListMetadataMetadatasResponse> listMetadataMetadatas(ListMetadataMetadatasRequest request) {
         AsyncRequestOperation<ListMetadataMetadatasRequest, ListMetadataMetadatasResponse> operation
@@ -135,7 +135,7 @@ public class AsyncMetadata {
      * Update a metadata
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchMetadataMetadataResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchMetadataMetadataResponse>} - The async response
      */
     public CompletableFuture<PatchMetadataMetadataResponse> patchMetadataMetadata(PatchMetadataMetadataRequest request) {
         AsyncRequestOperation<PatchMetadataMetadataRequest, PatchMetadataMetadataResponse> operation
@@ -158,7 +158,7 @@ public class AsyncMetadata {
      * Remove a metadata
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveMetadataMetadataResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveMetadataMetadataResponse>} - The async response
      */
     public CompletableFuture<RemoveMetadataMetadataResponse> removeMetadataMetadata(RemoveMetadataMetadataRequest request) {
         AsyncRequestOperation<RemoveMetadataMetadataRequest, RemoveMetadataMetadataResponse> operation
@@ -181,7 +181,7 @@ public class AsyncMetadata {
      * Update a metadata
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateMetadataMetadataResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateMetadataMetadataResponse>} - The async response
      */
     public CompletableFuture<UpdateMetadataMetadataResponse> updateMetadataMetadata(UpdateMetadataMetadataRequest request) {
         AsyncRequestOperation<UpdateMetadataMetadataRequest, UpdateMetadataMetadataResponse> operation

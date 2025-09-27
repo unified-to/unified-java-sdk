@@ -74,7 +74,7 @@ public class AsyncMessaging {
      * Create a message
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateMessagingMessageResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateMessagingMessageResponse>} - The async response
      */
     public CompletableFuture<CreateMessagingMessageResponse> createMessagingMessage(CreateMessagingMessageRequest request) {
         AsyncRequestOperation<CreateMessagingMessageRequest, CreateMessagingMessageResponse> operation
@@ -97,7 +97,7 @@ public class AsyncMessaging {
      * Retrieve a channel
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetMessagingChannelResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetMessagingChannelResponse>} - The async response
      */
     public CompletableFuture<GetMessagingChannelResponse> getMessagingChannel(GetMessagingChannelRequest request) {
         AsyncRequestOperation<GetMessagingChannelRequest, GetMessagingChannelResponse> operation
@@ -120,7 +120,7 @@ public class AsyncMessaging {
      * Retrieve a message
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetMessagingMessageResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetMessagingMessageResponse>} - The async response
      */
     public CompletableFuture<GetMessagingMessageResponse> getMessagingMessage(GetMessagingMessageRequest request) {
         AsyncRequestOperation<GetMessagingMessageRequest, GetMessagingMessageResponse> operation
@@ -143,7 +143,7 @@ public class AsyncMessaging {
      * List all channels
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListMessagingChannelsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListMessagingChannelsResponse>} - The async response
      */
     public CompletableFuture<ListMessagingChannelsResponse> listMessagingChannels(ListMessagingChannelsRequest request) {
         AsyncRequestOperation<ListMessagingChannelsRequest, ListMessagingChannelsResponse> operation
@@ -166,7 +166,7 @@ public class AsyncMessaging {
      * List all messages
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListMessagingMessagesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListMessagingMessagesResponse>} - The async response
      */
     public CompletableFuture<ListMessagingMessagesResponse> listMessagingMessages(ListMessagingMessagesRequest request) {
         AsyncRequestOperation<ListMessagingMessagesRequest, ListMessagingMessagesResponse> operation
@@ -189,7 +189,7 @@ public class AsyncMessaging {
      * Update a message
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchMessagingMessageResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchMessagingMessageResponse>} - The async response
      */
     public CompletableFuture<PatchMessagingMessageResponse> patchMessagingMessage(PatchMessagingMessageRequest request) {
         AsyncRequestOperation<PatchMessagingMessageRequest, PatchMessagingMessageResponse> operation
@@ -212,7 +212,7 @@ public class AsyncMessaging {
      * Remove a message
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveMessagingMessageResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveMessagingMessageResponse>} - The async response
      */
     public CompletableFuture<RemoveMessagingMessageResponse> removeMessagingMessage(RemoveMessagingMessageRequest request) {
         AsyncRequestOperation<RemoveMessagingMessageRequest, RemoveMessagingMessageResponse> operation
@@ -235,7 +235,7 @@ public class AsyncMessaging {
      * Update a message
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateMessagingMessageResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateMessagingMessageResponse>} - The async response
      */
     public CompletableFuture<UpdateMessagingMessageResponse> updateMessagingMessage(UpdateMessagingMessageRequest request) {
         AsyncRequestOperation<UpdateMessagingMessageRequest, UpdateMessagingMessageResponse> operation

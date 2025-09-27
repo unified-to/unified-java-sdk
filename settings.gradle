@@ -14,3 +14,8 @@ include 'unified-java-sdk-spring-boot-starter'
 
 project(':unified-java-sdk-spring-boot-autoconfigure').projectDir = file('spring/unified-java-sdk-spring-boot-autoconfigure')
 project(':unified-java-sdk-spring-boot-starter').projectDir = file('spring/unified-java-sdk-spring-boot-starter')
+
+// Apply additional settings if the file exists
+if (file('settings-extra.gradle').exists()) {
+    apply from: 'settings-extra.gradle'
+}

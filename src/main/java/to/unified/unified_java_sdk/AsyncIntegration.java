@@ -44,7 +44,8 @@ public class AsyncIntegration {
     /**
      * Authorize new connection
      * 
-     * <p>Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
+     * <p>Returns an authorization URL for the specified integration. Once a successful authorization occurs,
+     * a new connection is created.
      * 
      * @return The async call builder
      */
@@ -55,10 +56,11 @@ public class AsyncIntegration {
     /**
      * Authorize new connection
      * 
-     * <p>Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
+     * <p>Returns an authorization URL for the specified integration. Once a successful authorization occurs,
+     * a new connection is created.
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetUnifiedIntegrationAuthResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetUnifiedIntegrationAuthResponse>} - The async response
      */
     public CompletableFuture<GetUnifiedIntegrationAuthResponse> getUnifiedIntegrationAuth(GetUnifiedIntegrationAuthRequest request) {
         AsyncRequestOperation<GetUnifiedIntegrationAuthRequest, GetUnifiedIntegrationAuthResponse> operation
@@ -85,7 +87,7 @@ public class AsyncIntegration {
      * <p>No authentication required as this is to be used by front-end interface
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListUnifiedIntegrationWorkspacesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListUnifiedIntegrationWorkspacesResponse>} - The async response
      */
     public CompletableFuture<ListUnifiedIntegrationWorkspacesResponse> listUnifiedIntegrationWorkspaces(ListUnifiedIntegrationWorkspacesRequest request) {
         AsyncRequestOperation<ListUnifiedIntegrationWorkspacesRequest, ListUnifiedIntegrationWorkspacesResponse> operation
@@ -108,7 +110,7 @@ public class AsyncIntegration {
      * Returns all integrations
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListUnifiedIntegrationsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListUnifiedIntegrationsResponse>} - The async response
      */
     public CompletableFuture<ListUnifiedIntegrationsResponse> listUnifiedIntegrations(ListUnifiedIntegrationsRequest request) {
         AsyncRequestOperation<ListUnifiedIntegrationsRequest, ListUnifiedIntegrationsResponse> operation

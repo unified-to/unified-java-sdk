@@ -66,7 +66,7 @@ public class AsyncCourse {
      * Create a course
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateLmsCourseResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateLmsCourseResponse>} - The async response
      */
     public CompletableFuture<CreateLmsCourseResponse> createLmsCourse(CreateLmsCourseRequest request) {
         AsyncRequestOperation<CreateLmsCourseRequest, CreateLmsCourseResponse> operation
@@ -89,7 +89,7 @@ public class AsyncCourse {
      * Retrieve a course
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetLmsCourseResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetLmsCourseResponse>} - The async response
      */
     public CompletableFuture<GetLmsCourseResponse> getLmsCourse(GetLmsCourseRequest request) {
         AsyncRequestOperation<GetLmsCourseRequest, GetLmsCourseResponse> operation
@@ -112,7 +112,7 @@ public class AsyncCourse {
      * List all courses
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListLmsCoursesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListLmsCoursesResponse>} - The async response
      */
     public CompletableFuture<ListLmsCoursesResponse> listLmsCourses(ListLmsCoursesRequest request) {
         AsyncRequestOperation<ListLmsCoursesRequest, ListLmsCoursesResponse> operation
@@ -135,7 +135,7 @@ public class AsyncCourse {
      * Update a course
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchLmsCourseResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchLmsCourseResponse>} - The async response
      */
     public CompletableFuture<PatchLmsCourseResponse> patchLmsCourse(PatchLmsCourseRequest request) {
         AsyncRequestOperation<PatchLmsCourseRequest, PatchLmsCourseResponse> operation
@@ -158,7 +158,7 @@ public class AsyncCourse {
      * Remove a course
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveLmsCourseResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveLmsCourseResponse>} - The async response
      */
     public CompletableFuture<RemoveLmsCourseResponse> removeLmsCourse(RemoveLmsCourseRequest request) {
         AsyncRequestOperation<RemoveLmsCourseRequest, RemoveLmsCourseResponse> operation
@@ -181,7 +181,7 @@ public class AsyncCourse {
      * Update a course
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateLmsCourseResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateLmsCourseResponse>} - The async response
      */
     public CompletableFuture<UpdateLmsCourseResponse> updateLmsCourse(UpdateLmsCourseRequest request) {
         AsyncRequestOperation<UpdateLmsCourseRequest, UpdateLmsCourseResponse> operation

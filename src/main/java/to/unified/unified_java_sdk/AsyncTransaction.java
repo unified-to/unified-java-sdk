@@ -66,7 +66,7 @@ public class AsyncTransaction {
      * Create a transaction
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateAccountingTransactionResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateAccountingTransactionResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingTransactionResponse> createAccountingTransaction(CreateAccountingTransactionRequest request) {
         AsyncRequestOperation<CreateAccountingTransactionRequest, CreateAccountingTransactionResponse> operation
@@ -89,7 +89,7 @@ public class AsyncTransaction {
      * Retrieve a transaction
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetAccountingTransactionResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetAccountingTransactionResponse>} - The async response
      */
     public CompletableFuture<GetAccountingTransactionResponse> getAccountingTransaction(GetAccountingTransactionRequest request) {
         AsyncRequestOperation<GetAccountingTransactionRequest, GetAccountingTransactionResponse> operation
@@ -112,7 +112,7 @@ public class AsyncTransaction {
      * List all transactions
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListAccountingTransactionsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListAccountingTransactionsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingTransactionsResponse> listAccountingTransactions(ListAccountingTransactionsRequest request) {
         AsyncRequestOperation<ListAccountingTransactionsRequest, ListAccountingTransactionsResponse> operation
@@ -135,7 +135,7 @@ public class AsyncTransaction {
      * Update a transaction
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchAccountingTransactionResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchAccountingTransactionResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingTransactionResponse> patchAccountingTransaction(PatchAccountingTransactionRequest request) {
         AsyncRequestOperation<PatchAccountingTransactionRequest, PatchAccountingTransactionResponse> operation
@@ -158,7 +158,7 @@ public class AsyncTransaction {
      * Remove a transaction
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveAccountingTransactionResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveAccountingTransactionResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingTransactionResponse> removeAccountingTransaction(RemoveAccountingTransactionRequest request) {
         AsyncRequestOperation<RemoveAccountingTransactionRequest, RemoveAccountingTransactionResponse> operation
@@ -181,7 +181,7 @@ public class AsyncTransaction {
      * Update a transaction
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateAccountingTransactionResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateAccountingTransactionResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingTransactionResponse> updateAccountingTransaction(UpdateAccountingTransactionRequest request) {
         AsyncRequestOperation<UpdateAccountingTransactionRequest, UpdateAccountingTransactionResponse> operation

@@ -37,7 +37,8 @@ public class MessagingMessage {
     private Optional<String> channelId;
 
     /**
-     * Represents the IDs of all channels to which the message is sent. Identifies the channels where the message is posted.
+     * Represents the IDs of all channels to which the message is sent. Identifies the channels where the
+     * message is posted.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel_ids")
@@ -67,6 +68,11 @@ public class MessagingMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_unread")
+    private Optional<Boolean> isUnread;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -144,6 +150,7 @@ public class MessagingMessage {
             @JsonProperty("has_children") Optional<Boolean> hasChildren,
             @JsonProperty("hidden_members") Optional<? extends List<MessagingMember>> hiddenMembers,
             @JsonProperty("id") Optional<String> id,
+            @JsonProperty("is_unread") Optional<Boolean> isUnread,
             @JsonProperty("mentioned_members") Optional<? extends List<MessagingMember>> mentionedMembers,
             @JsonProperty("message") Optional<String> message,
             @JsonProperty("message_html") Optional<String> messageHtml,
@@ -166,6 +173,7 @@ public class MessagingMessage {
         Utils.checkNotNull(hasChildren, "hasChildren");
         Utils.checkNotNull(hiddenMembers, "hiddenMembers");
         Utils.checkNotNull(id, "id");
+        Utils.checkNotNull(isUnread, "isUnread");
         Utils.checkNotNull(mentionedMembers, "mentionedMembers");
         Utils.checkNotNull(message, "message");
         Utils.checkNotNull(messageHtml, "messageHtml");
@@ -188,6 +196,7 @@ public class MessagingMessage {
         this.hasChildren = hasChildren;
         this.hiddenMembers = hiddenMembers;
         this.id = id;
+        this.isUnread = isUnread;
         this.mentionedMembers = mentionedMembers;
         this.message = message;
         this.messageHtml = messageHtml;
@@ -211,7 +220,7 @@ public class MessagingMessage {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -232,7 +241,8 @@ public class MessagingMessage {
     }
 
     /**
-     * Represents the IDs of all channels to which the message is sent. Identifies the channels where the message is posted.
+     * Represents the IDs of all channels to which the message is sent. Identifies the channels where the
+     * message is posted.
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
@@ -265,6 +275,11 @@ public class MessagingMessage {
     @JsonIgnore
     public Optional<String> id() {
         return id;
+    }
+
+    @JsonIgnore
+    public Optional<Boolean> isUnread() {
+        return isUnread;
     }
 
     @SuppressWarnings("unchecked")
@@ -380,7 +395,8 @@ public class MessagingMessage {
     }
 
     /**
-     * Represents the IDs of all channels to which the message is sent. Identifies the channels where the message is posted.
+     * Represents the IDs of all channels to which the message is sent. Identifies the channels where the
+     * message is posted.
      */
     public MessagingMessage withChannelIds(List<String> channelIds) {
         Utils.checkNotNull(channelIds, "channelIds");
@@ -390,7 +406,8 @@ public class MessagingMessage {
 
 
     /**
-     * Represents the IDs of all channels to which the message is sent. Identifies the channels where the message is posted.
+     * Represents the IDs of all channels to which the message is sent. Identifies the channels where the
+     * message is posted.
      */
     public MessagingMessage withChannelIds(Optional<? extends List<String>> channelIds) {
         Utils.checkNotNull(channelIds, "channelIds");
@@ -460,6 +477,19 @@ public class MessagingMessage {
     public MessagingMessage withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
+        return this;
+    }
+
+    public MessagingMessage withIsUnread(boolean isUnread) {
+        Utils.checkNotNull(isUnread, "isUnread");
+        this.isUnread = Optional.ofNullable(isUnread);
+        return this;
+    }
+
+
+    public MessagingMessage withIsUnread(Optional<Boolean> isUnread) {
+        Utils.checkNotNull(isUnread, "isUnread");
+        this.isUnread = isUnread;
         return this;
     }
 
@@ -651,6 +681,7 @@ public class MessagingMessage {
             Utils.enhancedDeepEquals(this.hasChildren, other.hasChildren) &&
             Utils.enhancedDeepEquals(this.hiddenMembers, other.hiddenMembers) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.isUnread, other.isUnread) &&
             Utils.enhancedDeepEquals(this.mentionedMembers, other.mentionedMembers) &&
             Utils.enhancedDeepEquals(this.message, other.message) &&
             Utils.enhancedDeepEquals(this.messageHtml, other.messageHtml) &&
@@ -672,11 +703,11 @@ public class MessagingMessage {
             attachments, authorMember, channelId,
             channelIds, createdAt, destinationMembers,
             hasChildren, hiddenMembers, id,
-            mentionedMembers, message, messageHtml,
-            messageMarkdown, parentId, parentMessageId,
-            raw, reactions, reference,
-            rootMessageId, subject, updatedAt,
-            webUrl);
+            isUnread, mentionedMembers, message,
+            messageHtml, messageMarkdown, parentId,
+            parentMessageId, raw, reactions,
+            reference, rootMessageId, subject,
+            updatedAt, webUrl);
     }
     
     @Override
@@ -691,6 +722,7 @@ public class MessagingMessage {
                 "hasChildren", hasChildren,
                 "hiddenMembers", hiddenMembers,
                 "id", id,
+                "isUnread", isUnread,
                 "mentionedMembers", mentionedMembers,
                 "message", message,
                 "messageHtml", messageHtml,
@@ -726,6 +758,8 @@ public class MessagingMessage {
         private Optional<? extends List<MessagingMember>> hiddenMembers = Optional.empty();
 
         private Optional<String> id = Optional.empty();
+
+        private Optional<Boolean> isUnread = Optional.empty();
 
         private Optional<? extends List<MessagingMember>> mentionedMembers = Optional.empty();
 
@@ -798,7 +832,8 @@ public class MessagingMessage {
 
 
         /**
-         * Represents the IDs of all channels to which the message is sent. Identifies the channels where the message is posted.
+         * Represents the IDs of all channels to which the message is sent. Identifies the channels where the
+         * message is posted.
          */
         public Builder channelIds(List<String> channelIds) {
             Utils.checkNotNull(channelIds, "channelIds");
@@ -807,7 +842,8 @@ public class MessagingMessage {
         }
 
         /**
-         * Represents the IDs of all channels to which the message is sent. Identifies the channels where the message is posted.
+         * Represents the IDs of all channels to which the message is sent. Identifies the channels where the
+         * message is posted.
          */
         public Builder channelIds(Optional<? extends List<String>> channelIds) {
             Utils.checkNotNull(channelIds, "channelIds");
@@ -877,6 +913,19 @@ public class MessagingMessage {
         public Builder id(Optional<String> id) {
             Utils.checkNotNull(id, "id");
             this.id = id;
+            return this;
+        }
+
+
+        public Builder isUnread(boolean isUnread) {
+            Utils.checkNotNull(isUnread, "isUnread");
+            this.isUnread = Optional.ofNullable(isUnread);
+            return this;
+        }
+
+        public Builder isUnread(Optional<Boolean> isUnread) {
+            Utils.checkNotNull(isUnread, "isUnread");
+            this.isUnread = isUnread;
             return this;
         }
 
@@ -1055,11 +1104,11 @@ public class MessagingMessage {
                 attachments, authorMember, channelId,
                 channelIds, createdAt, destinationMembers,
                 hasChildren, hiddenMembers, id,
-                mentionedMembers, message, messageHtml,
-                messageMarkdown, parentId, parentMessageId,
-                raw, reactions, reference,
-                rootMessageId, subject, updatedAt,
-                webUrl);
+                isUnread, mentionedMembers, message,
+                messageHtml, messageMarkdown, parentId,
+                parentMessageId, raw, reactions,
+                reference, rootMessageId, subject,
+                updatedAt, webUrl);
         }
 
     }

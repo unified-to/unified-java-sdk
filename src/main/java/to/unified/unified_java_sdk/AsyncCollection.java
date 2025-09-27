@@ -66,7 +66,7 @@ public class AsyncCollection {
      * Create a collection
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateCommerceCollectionResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateCommerceCollectionResponse>} - The async response
      */
     public CompletableFuture<CreateCommerceCollectionResponse> createCommerceCollection(CreateCommerceCollectionRequest request) {
         AsyncRequestOperation<CreateCommerceCollectionRequest, CreateCommerceCollectionResponse> operation
@@ -89,7 +89,7 @@ public class AsyncCollection {
      * Retrieve a collection
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetCommerceCollectionResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetCommerceCollectionResponse>} - The async response
      */
     public CompletableFuture<GetCommerceCollectionResponse> getCommerceCollection(GetCommerceCollectionRequest request) {
         AsyncRequestOperation<GetCommerceCollectionRequest, GetCommerceCollectionResponse> operation
@@ -112,7 +112,7 @@ public class AsyncCollection {
      * List all collections
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListCommerceCollectionsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListCommerceCollectionsResponse>} - The async response
      */
     public CompletableFuture<ListCommerceCollectionsResponse> listCommerceCollections(ListCommerceCollectionsRequest request) {
         AsyncRequestOperation<ListCommerceCollectionsRequest, ListCommerceCollectionsResponse> operation
@@ -135,7 +135,7 @@ public class AsyncCollection {
      * Update a collection
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchCommerceCollectionResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchCommerceCollectionResponse>} - The async response
      */
     public CompletableFuture<PatchCommerceCollectionResponse> patchCommerceCollection(PatchCommerceCollectionRequest request) {
         AsyncRequestOperation<PatchCommerceCollectionRequest, PatchCommerceCollectionResponse> operation
@@ -158,7 +158,7 @@ public class AsyncCollection {
      * Remove a collection
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveCommerceCollectionResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveCommerceCollectionResponse>} - The async response
      */
     public CompletableFuture<RemoveCommerceCollectionResponse> removeCommerceCollection(RemoveCommerceCollectionRequest request) {
         AsyncRequestOperation<RemoveCommerceCollectionRequest, RemoveCommerceCollectionResponse> operation
@@ -181,7 +181,7 @@ public class AsyncCollection {
      * Update a collection
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateCommerceCollectionResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateCommerceCollectionResponse>} - The async response
      */
     public CompletableFuture<UpdateCommerceCollectionResponse> updateCommerceCollection(UpdateCommerceCollectionRequest request) {
         AsyncRequestOperation<UpdateCommerceCollectionRequest, UpdateCommerceCollectionResponse> operation

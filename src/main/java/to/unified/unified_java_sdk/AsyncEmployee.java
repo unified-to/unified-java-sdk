@@ -66,7 +66,7 @@ public class AsyncEmployee {
      * Create an employee
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateHrisEmployeeResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateHrisEmployeeResponse>} - The async response
      */
     public CompletableFuture<CreateHrisEmployeeResponse> createHrisEmployee(CreateHrisEmployeeRequest request) {
         AsyncRequestOperation<CreateHrisEmployeeRequest, CreateHrisEmployeeResponse> operation
@@ -89,7 +89,7 @@ public class AsyncEmployee {
      * Retrieve an employee
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetHrisEmployeeResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetHrisEmployeeResponse>} - The async response
      */
     public CompletableFuture<GetHrisEmployeeResponse> getHrisEmployee(GetHrisEmployeeRequest request) {
         AsyncRequestOperation<GetHrisEmployeeRequest, GetHrisEmployeeResponse> operation
@@ -112,7 +112,7 @@ public class AsyncEmployee {
      * List all employees
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListHrisEmployeesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListHrisEmployeesResponse>} - The async response
      */
     public CompletableFuture<ListHrisEmployeesResponse> listHrisEmployees(ListHrisEmployeesRequest request) {
         AsyncRequestOperation<ListHrisEmployeesRequest, ListHrisEmployeesResponse> operation
@@ -135,7 +135,7 @@ public class AsyncEmployee {
      * Update an employee
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchHrisEmployeeResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchHrisEmployeeResponse>} - The async response
      */
     public CompletableFuture<PatchHrisEmployeeResponse> patchHrisEmployee(PatchHrisEmployeeRequest request) {
         AsyncRequestOperation<PatchHrisEmployeeRequest, PatchHrisEmployeeResponse> operation
@@ -158,7 +158,7 @@ public class AsyncEmployee {
      * Remove an employee
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveHrisEmployeeResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveHrisEmployeeResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisEmployeeResponse> removeHrisEmployee(RemoveHrisEmployeeRequest request) {
         AsyncRequestOperation<RemoveHrisEmployeeRequest, RemoveHrisEmployeeResponse> operation
@@ -181,7 +181,7 @@ public class AsyncEmployee {
      * Update an employee
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateHrisEmployeeResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateHrisEmployeeResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisEmployeeResponse> updateHrisEmployee(UpdateHrisEmployeeRequest request) {
         AsyncRequestOperation<UpdateHrisEmployeeRequest, UpdateHrisEmployeeResponse> operation

@@ -19,7 +19,8 @@ public class GetUnifiedIntegrationLoginRequest {
     private Optional<String> env;
 
     /**
-     * The URL where you want the user to be redirect to after an unsuccessful authentication. An "error" variable will be appended.
+     * The URL where you want the user to be redirect to after an unsuccessful authentication. An "error"
+     * variable will be appended.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=failure_redirect")
     private Optional<String> failureRedirect;
@@ -41,7 +42,9 @@ public class GetUnifiedIntegrationLoginRequest {
     private Optional<String> state;
 
     /**
-     * The URL where you want the user to be redirect to after a successful authentication/sign-in.  A "jwt" parameter will be appended to the URL which will contain a name and email of the user who just signed-in.
+     * The URL where you want the user to be redirect to after a successful authentication/sign-in. A "jwt"
+     * parameter will be appended to the URL which will contain a name and email of the user who just
+     * signed-in.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=success_redirect")
     private Optional<String> successRedirect;
@@ -91,7 +94,8 @@ public class GetUnifiedIntegrationLoginRequest {
     }
 
     /**
-     * The URL where you want the user to be redirect to after an unsuccessful authentication. An "error" variable will be appended.
+     * The URL where you want the user to be redirect to after an unsuccessful authentication. An "error"
+     * variable will be appended.
      */
     @JsonIgnore
     public Optional<String> failureRedirect() {
@@ -120,7 +124,9 @@ public class GetUnifiedIntegrationLoginRequest {
     }
 
     /**
-     * The URL where you want the user to be redirect to after a successful authentication/sign-in.  A "jwt" parameter will be appended to the URL which will contain a name and email of the user who just signed-in.
+     * The URL where you want the user to be redirect to after a successful authentication/sign-in. A "jwt"
+     * parameter will be appended to the URL which will contain a name and email of the user who just
+     * signed-in.
      */
     @JsonIgnore
     public Optional<String> successRedirect() {
@@ -154,7 +160,8 @@ public class GetUnifiedIntegrationLoginRequest {
     }
 
     /**
-     * The URL where you want the user to be redirect to after an unsuccessful authentication. An "error" variable will be appended.
+     * The URL where you want the user to be redirect to after an unsuccessful authentication. An "error"
+     * variable will be appended.
      */
     public GetUnifiedIntegrationLoginRequest withFailureRedirect(String failureRedirect) {
         Utils.checkNotNull(failureRedirect, "failureRedirect");
@@ -164,7 +171,8 @@ public class GetUnifiedIntegrationLoginRequest {
 
 
     /**
-     * The URL where you want the user to be redirect to after an unsuccessful authentication. An "error" variable will be appended.
+     * The URL where you want the user to be redirect to after an unsuccessful authentication. An "error"
+     * variable will be appended.
      */
     public GetUnifiedIntegrationLoginRequest withFailureRedirect(Optional<String> failureRedirect) {
         Utils.checkNotNull(failureRedirect, "failureRedirect");
@@ -214,7 +222,9 @@ public class GetUnifiedIntegrationLoginRequest {
     }
 
     /**
-     * The URL where you want the user to be redirect to after a successful authentication/sign-in.  A "jwt" parameter will be appended to the URL which will contain a name and email of the user who just signed-in.
+     * The URL where you want the user to be redirect to after a successful authentication/sign-in. A "jwt"
+     * parameter will be appended to the URL which will contain a name and email of the user who just
+     * signed-in.
      */
     public GetUnifiedIntegrationLoginRequest withSuccessRedirect(String successRedirect) {
         Utils.checkNotNull(successRedirect, "successRedirect");
@@ -224,7 +234,9 @@ public class GetUnifiedIntegrationLoginRequest {
 
 
     /**
-     * The URL where you want the user to be redirect to after a successful authentication/sign-in.  A "jwt" parameter will be appended to the URL which will contain a name and email of the user who just signed-in.
+     * The URL where you want the user to be redirect to after a successful authentication/sign-in. A "jwt"
+     * parameter will be appended to the URL which will contain a name and email of the user who just
+     * signed-in.
      */
     public GetUnifiedIntegrationLoginRequest withSuccessRedirect(Optional<String> successRedirect) {
         Utils.checkNotNull(successRedirect, "successRedirect");
@@ -316,7 +328,8 @@ public class GetUnifiedIntegrationLoginRequest {
 
 
         /**
-         * The URL where you want the user to be redirect to after an unsuccessful authentication. An "error" variable will be appended.
+         * The URL where you want the user to be redirect to after an unsuccessful authentication. An "error"
+         * variable will be appended.
          */
         public Builder failureRedirect(String failureRedirect) {
             Utils.checkNotNull(failureRedirect, "failureRedirect");
@@ -325,7 +338,8 @@ public class GetUnifiedIntegrationLoginRequest {
         }
 
         /**
-         * The URL where you want the user to be redirect to after an unsuccessful authentication. An "error" variable will be appended.
+         * The URL where you want the user to be redirect to after an unsuccessful authentication. An "error"
+         * variable will be appended.
          */
         public Builder failureRedirect(Optional<String> failureRedirect) {
             Utils.checkNotNull(failureRedirect, "failureRedirect");
@@ -377,7 +391,9 @@ public class GetUnifiedIntegrationLoginRequest {
 
 
         /**
-         * The URL where you want the user to be redirect to after a successful authentication/sign-in.  A "jwt" parameter will be appended to the URL which will contain a name and email of the user who just signed-in.
+         * The URL where you want the user to be redirect to after a successful authentication/sign-in. A "jwt"
+         * parameter will be appended to the URL which will contain a name and email of the user who just
+         * signed-in.
          */
         public Builder successRedirect(String successRedirect) {
             Utils.checkNotNull(successRedirect, "successRedirect");
@@ -386,7 +402,9 @@ public class GetUnifiedIntegrationLoginRequest {
         }
 
         /**
-         * The URL where you want the user to be redirect to after a successful authentication/sign-in.  A "jwt" parameter will be appended to the URL which will contain a name and email of the user who just signed-in.
+         * The URL where you want the user to be redirect to after a successful authentication/sign-in. A "jwt"
+         * parameter will be appended to the URL which will contain a name and email of the user who just
+         * signed-in.
          */
         public Builder successRedirect(Optional<String> successRedirect) {
             Utils.checkNotNull(successRedirect, "successRedirect");

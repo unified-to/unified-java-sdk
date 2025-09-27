@@ -50,7 +50,7 @@ public class AsyncChange {
      * Retrieve a change
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetTaskChangeResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetTaskChangeResponse>} - The async response
      */
     public CompletableFuture<GetTaskChangeResponse> getTaskChange(GetTaskChangeRequest request) {
         AsyncRequestOperation<GetTaskChangeRequest, GetTaskChangeResponse> operation
@@ -73,7 +73,7 @@ public class AsyncChange {
      * List all changes
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListTaskChangesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListTaskChangesResponse>} - The async response
      */
     public CompletableFuture<ListTaskChangesResponse> listTaskChanges(ListTaskChangesRequest request) {
         AsyncRequestOperation<ListTaskChangesRequest, ListTaskChangesResponse> operation

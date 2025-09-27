@@ -46,7 +46,7 @@ public class AsyncEmbedding {
      * Create an embedding
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateGenaiEmbeddingResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateGenaiEmbeddingResponse>} - The async response
      */
     public CompletableFuture<CreateGenaiEmbeddingResponse> createGenaiEmbedding(CreateGenaiEmbeddingRequest request) {
         AsyncRequestOperation<CreateGenaiEmbeddingRequest, CreateGenaiEmbeddingResponse> operation

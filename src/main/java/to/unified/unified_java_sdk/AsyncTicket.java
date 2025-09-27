@@ -66,7 +66,7 @@ public class AsyncTicket {
      * Create a ticket
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateTicketingTicketResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateTicketingTicketResponse>} - The async response
      */
     public CompletableFuture<CreateTicketingTicketResponse> createTicketingTicket(CreateTicketingTicketRequest request) {
         AsyncRequestOperation<CreateTicketingTicketRequest, CreateTicketingTicketResponse> operation
@@ -89,7 +89,7 @@ public class AsyncTicket {
      * Retrieve a ticket
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetTicketingTicketResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetTicketingTicketResponse>} - The async response
      */
     public CompletableFuture<GetTicketingTicketResponse> getTicketingTicket(GetTicketingTicketRequest request) {
         AsyncRequestOperation<GetTicketingTicketRequest, GetTicketingTicketResponse> operation
@@ -112,7 +112,7 @@ public class AsyncTicket {
      * List all tickets
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListTicketingTicketsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListTicketingTicketsResponse>} - The async response
      */
     public CompletableFuture<ListTicketingTicketsResponse> listTicketingTickets(ListTicketingTicketsRequest request) {
         AsyncRequestOperation<ListTicketingTicketsRequest, ListTicketingTicketsResponse> operation
@@ -135,7 +135,7 @@ public class AsyncTicket {
      * Update a ticket
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchTicketingTicketResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchTicketingTicketResponse>} - The async response
      */
     public CompletableFuture<PatchTicketingTicketResponse> patchTicketingTicket(PatchTicketingTicketRequest request) {
         AsyncRequestOperation<PatchTicketingTicketRequest, PatchTicketingTicketResponse> operation
@@ -158,7 +158,7 @@ public class AsyncTicket {
      * Remove a ticket
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveTicketingTicketResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveTicketingTicketResponse>} - The async response
      */
     public CompletableFuture<RemoveTicketingTicketResponse> removeTicketingTicket(RemoveTicketingTicketRequest request) {
         AsyncRequestOperation<RemoveTicketingTicketRequest, RemoveTicketingTicketResponse> operation
@@ -181,7 +181,7 @@ public class AsyncTicket {
      * Update a ticket
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateTicketingTicketResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateTicketingTicketResponse>} - The async response
      */
     public CompletableFuture<UpdateTicketingTicketResponse> updateTicketingTicket(UpdateTicketingTicketRequest request) {
         AsyncRequestOperation<UpdateTicketingTicketRequest, UpdateTicketingTicketResponse> operation

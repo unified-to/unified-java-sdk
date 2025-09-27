@@ -14,7 +14,7 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListEnrichPeopleRequest {
     /**
-     * The name of the company the person is associated with.  Not valid by itself.
+     * The name of the company the person is associated with. Not valid by itself.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=company_name")
     private Optional<String> companyName;
@@ -78,7 +78,7 @@ public class ListEnrichPeopleRequest {
     }
 
     /**
-     * The name of the company the person is associated with.  Not valid by itself.
+     * The name of the company the person is associated with. Not valid by itself.
      */
     @JsonIgnore
     public Optional<String> companyName() {
@@ -131,7 +131,7 @@ public class ListEnrichPeopleRequest {
 
 
     /**
-     * The name of the company the person is associated with.  Not valid by itself.
+     * The name of the company the person is associated with. Not valid by itself.
      */
     public ListEnrichPeopleRequest withCompanyName(String companyName) {
         Utils.checkNotNull(companyName, "companyName");
@@ -141,7 +141,7 @@ public class ListEnrichPeopleRequest {
 
 
     /**
-     * The name of the company the person is associated with.  Not valid by itself.
+     * The name of the company the person is associated with. Not valid by itself.
      */
     public ListEnrichPeopleRequest withCompanyName(Optional<String> companyName) {
         Utils.checkNotNull(companyName, "companyName");
@@ -291,7 +291,7 @@ public class ListEnrichPeopleRequest {
 
 
         /**
-         * The name of the company the person is associated with.  Not valid by itself.
+         * The name of the company the person is associated with. Not valid by itself.
          */
         public Builder companyName(String companyName) {
             Utils.checkNotNull(companyName, "companyName");
@@ -300,7 +300,7 @@ public class ListEnrichPeopleRequest {
         }
 
         /**
-         * The name of the company the person is associated with.  Not valid by itself.
+         * The name of the company the person is associated with. Not valid by itself.
          */
         public Builder companyName(Optional<String> companyName) {
             Utils.checkNotNull(companyName, "companyName");

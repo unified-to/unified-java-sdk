@@ -66,7 +66,7 @@ public class AsyncDocument {
      * Create a document
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateAtsDocumentResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateAtsDocumentResponse>} - The async response
      */
     public CompletableFuture<CreateAtsDocumentResponse> createAtsDocument(CreateAtsDocumentRequest request) {
         AsyncRequestOperation<CreateAtsDocumentRequest, CreateAtsDocumentResponse> operation
@@ -89,7 +89,7 @@ public class AsyncDocument {
      * Retrieve a document
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetAtsDocumentResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetAtsDocumentResponse>} - The async response
      */
     public CompletableFuture<GetAtsDocumentResponse> getAtsDocument(GetAtsDocumentRequest request) {
         AsyncRequestOperation<GetAtsDocumentRequest, GetAtsDocumentResponse> operation
@@ -112,7 +112,7 @@ public class AsyncDocument {
      * List all documents
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListAtsDocumentsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListAtsDocumentsResponse>} - The async response
      */
     public CompletableFuture<ListAtsDocumentsResponse> listAtsDocuments(ListAtsDocumentsRequest request) {
         AsyncRequestOperation<ListAtsDocumentsRequest, ListAtsDocumentsResponse> operation
@@ -135,7 +135,7 @@ public class AsyncDocument {
      * Update a document
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchAtsDocumentResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchAtsDocumentResponse>} - The async response
      */
     public CompletableFuture<PatchAtsDocumentResponse> patchAtsDocument(PatchAtsDocumentRequest request) {
         AsyncRequestOperation<PatchAtsDocumentRequest, PatchAtsDocumentResponse> operation
@@ -158,7 +158,7 @@ public class AsyncDocument {
      * Remove a document
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveAtsDocumentResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveAtsDocumentResponse>} - The async response
      */
     public CompletableFuture<RemoveAtsDocumentResponse> removeAtsDocument(RemoveAtsDocumentRequest request) {
         AsyncRequestOperation<RemoveAtsDocumentRequest, RemoveAtsDocumentResponse> operation
@@ -181,7 +181,7 @@ public class AsyncDocument {
      * Update a document
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateAtsDocumentResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateAtsDocumentResponse>} - The async response
      */
     public CompletableFuture<UpdateAtsDocumentResponse> updateAtsDocument(UpdateAtsDocumentRequest request) {
         AsyncRequestOperation<UpdateAtsDocumentRequest, UpdateAtsDocumentResponse> operation

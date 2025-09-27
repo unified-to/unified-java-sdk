@@ -64,7 +64,9 @@ public class AsyncWebhook {
     /**
      * Create webhook subscription
      * 
-     * <p>The data payload received by your server is described at https://docs.unified.to/unified/overview. The `interval` field can be set as low as 1 minute for paid accounts, and 60 minutes for free accounts.
+     * <p>The data payload received by your server is described at https://docs.unified.to/unified/overview.
+     * The `interval` field can be set as low as 1 minute for paid accounts, and 60 minutes for free
+     * accounts.
      * 
      * @return The async call builder
      */
@@ -75,10 +77,12 @@ public class AsyncWebhook {
     /**
      * Create webhook subscription
      * 
-     * <p>The data payload received by your server is described at https://docs.unified.to/unified/overview. The `interval` field can be set as low as 1 minute for paid accounts, and 60 minutes for free accounts.
+     * <p>The data payload received by your server is described at https://docs.unified.to/unified/overview.
+     * The `interval` field can be set as low as 1 minute for paid accounts, and 60 minutes for free
+     * accounts.
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateUnifiedWebhookResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateUnifiedWebhookResponse>} - The async response
      */
     public CompletableFuture<CreateUnifiedWebhookResponse> createUnifiedWebhook(CreateUnifiedWebhookRequest request) {
         AsyncRequestOperation<CreateUnifiedWebhookRequest, CreateUnifiedWebhookResponse> operation
@@ -101,7 +105,7 @@ public class AsyncWebhook {
      * Retrieve webhook by its ID
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetUnifiedWebhookResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetUnifiedWebhookResponse>} - The async response
      */
     public CompletableFuture<GetUnifiedWebhookResponse> getUnifiedWebhook(GetUnifiedWebhookRequest request) {
         AsyncRequestOperation<GetUnifiedWebhookRequest, GetUnifiedWebhookResponse> operation
@@ -124,7 +128,7 @@ public class AsyncWebhook {
      * Returns all registered webhooks
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListUnifiedWebhooksResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListUnifiedWebhooksResponse>} - The async response
      */
     public CompletableFuture<ListUnifiedWebhooksResponse> listUnifiedWebhooks(ListUnifiedWebhooksRequest request) {
         AsyncRequestOperation<ListUnifiedWebhooksRequest, ListUnifiedWebhooksResponse> operation
@@ -147,7 +151,7 @@ public class AsyncWebhook {
      * Update webhook subscription
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchUnifiedWebhookResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchUnifiedWebhookResponse>} - The async response
      */
     public CompletableFuture<PatchUnifiedWebhookResponse> patchUnifiedWebhook(PatchUnifiedWebhookRequest request) {
         AsyncRequestOperation<PatchUnifiedWebhookRequest, PatchUnifiedWebhookResponse> operation
@@ -170,7 +174,7 @@ public class AsyncWebhook {
      * Trigger webhook
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchUnifiedWebhookTriggerResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchUnifiedWebhookTriggerResponse>} - The async response
      */
     public CompletableFuture<PatchUnifiedWebhookTriggerResponse> patchUnifiedWebhookTrigger(PatchUnifiedWebhookTriggerRequest request) {
         AsyncRequestOperation<PatchUnifiedWebhookTriggerRequest, PatchUnifiedWebhookTriggerResponse> operation
@@ -193,7 +197,7 @@ public class AsyncWebhook {
      * Remove webhook subscription
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveUnifiedWebhookResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveUnifiedWebhookResponse>} - The async response
      */
     public CompletableFuture<RemoveUnifiedWebhookResponse> removeUnifiedWebhook(RemoveUnifiedWebhookRequest request) {
         AsyncRequestOperation<RemoveUnifiedWebhookRequest, RemoveUnifiedWebhookResponse> operation
@@ -216,7 +220,7 @@ public class AsyncWebhook {
      * Update webhook subscription
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateUnifiedWebhookResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateUnifiedWebhookResponse>} - The async response
      */
     public CompletableFuture<UpdateUnifiedWebhookResponse> updateUnifiedWebhook(UpdateUnifiedWebhookRequest request) {
         AsyncRequestOperation<UpdateUnifiedWebhookRequest, UpdateUnifiedWebhookResponse> operation
@@ -239,7 +243,7 @@ public class AsyncWebhook {
      * Trigger webhook
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateUnifiedWebhookTriggerResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateUnifiedWebhookTriggerResponse>} - The async response
      */
     public CompletableFuture<UpdateUnifiedWebhookTriggerResponse> updateUnifiedWebhookTrigger(UpdateUnifiedWebhookTriggerRequest request) {
         AsyncRequestOperation<UpdateUnifiedWebhookTriggerRequest, UpdateUnifiedWebhookTriggerResponse> operation

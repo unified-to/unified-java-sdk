@@ -74,7 +74,7 @@ public class AsyncVerification {
      * Create a request
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateVerificationRequestResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateVerificationRequestResponse>} - The async response
      */
     public CompletableFuture<CreateVerificationRequestResponse> createVerificationRequest(CreateVerificationRequestRequest request) {
         AsyncRequestOperation<CreateVerificationRequestRequest, CreateVerificationRequestResponse> operation
@@ -97,7 +97,7 @@ public class AsyncVerification {
      * Retrieve a package
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetVerificationPackageResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetVerificationPackageResponse>} - The async response
      */
     public CompletableFuture<GetVerificationPackageResponse> getVerificationPackage(GetVerificationPackageRequest request) {
         AsyncRequestOperation<GetVerificationPackageRequest, GetVerificationPackageResponse> operation
@@ -120,7 +120,7 @@ public class AsyncVerification {
      * Retrieve a request
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetVerificationRequestResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetVerificationRequestResponse>} - The async response
      */
     public CompletableFuture<GetVerificationRequestResponse> getVerificationRequest(GetVerificationRequestRequest request) {
         AsyncRequestOperation<GetVerificationRequestRequest, GetVerificationRequestResponse> operation
@@ -143,7 +143,7 @@ public class AsyncVerification {
      * List all packages
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListVerificationPackagesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListVerificationPackagesResponse>} - The async response
      */
     public CompletableFuture<ListVerificationPackagesResponse> listVerificationPackages(ListVerificationPackagesRequest request) {
         AsyncRequestOperation<ListVerificationPackagesRequest, ListVerificationPackagesResponse> operation
@@ -166,7 +166,7 @@ public class AsyncVerification {
      * List all requests
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListVerificationRequestsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListVerificationRequestsResponse>} - The async response
      */
     public CompletableFuture<ListVerificationRequestsResponse> listVerificationRequests(ListVerificationRequestsRequest request) {
         AsyncRequestOperation<ListVerificationRequestsRequest, ListVerificationRequestsResponse> operation
@@ -189,7 +189,7 @@ public class AsyncVerification {
      * Update a request
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchVerificationRequestResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchVerificationRequestResponse>} - The async response
      */
     public CompletableFuture<PatchVerificationRequestResponse> patchVerificationRequest(PatchVerificationRequestRequest request) {
         AsyncRequestOperation<PatchVerificationRequestRequest, PatchVerificationRequestResponse> operation
@@ -212,7 +212,7 @@ public class AsyncVerification {
      * Remove a request
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveVerificationRequestResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveVerificationRequestResponse>} - The async response
      */
     public CompletableFuture<RemoveVerificationRequestResponse> removeVerificationRequest(RemoveVerificationRequestRequest request) {
         AsyncRequestOperation<RemoveVerificationRequestRequest, RemoveVerificationRequestResponse> operation
@@ -235,7 +235,7 @@ public class AsyncVerification {
      * Update a request
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateVerificationRequestResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateVerificationRequestResponse>} - The async response
      */
     public CompletableFuture<UpdateVerificationRequestResponse> updateVerificationRequest(UpdateVerificationRequestRequest request) {
         AsyncRequestOperation<UpdateVerificationRequestRequest, UpdateVerificationRequestResponse> operation

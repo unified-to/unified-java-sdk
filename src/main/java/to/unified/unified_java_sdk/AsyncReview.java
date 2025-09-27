@@ -66,7 +66,7 @@ public class AsyncReview {
      * Create a review
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateCommerceReviewResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateCommerceReviewResponse>} - The async response
      */
     public CompletableFuture<CreateCommerceReviewResponse> createCommerceReview(CreateCommerceReviewRequest request) {
         AsyncRequestOperation<CreateCommerceReviewRequest, CreateCommerceReviewResponse> operation
@@ -89,7 +89,7 @@ public class AsyncReview {
      * Retrieve a review
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetCommerceReviewResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetCommerceReviewResponse>} - The async response
      */
     public CompletableFuture<GetCommerceReviewResponse> getCommerceReview(GetCommerceReviewRequest request) {
         AsyncRequestOperation<GetCommerceReviewRequest, GetCommerceReviewResponse> operation
@@ -112,7 +112,7 @@ public class AsyncReview {
      * List all reviews
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListCommerceReviewsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListCommerceReviewsResponse>} - The async response
      */
     public CompletableFuture<ListCommerceReviewsResponse> listCommerceReviews(ListCommerceReviewsRequest request) {
         AsyncRequestOperation<ListCommerceReviewsRequest, ListCommerceReviewsResponse> operation
@@ -135,7 +135,7 @@ public class AsyncReview {
      * Update a review
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchCommerceReviewResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchCommerceReviewResponse>} - The async response
      */
     public CompletableFuture<PatchCommerceReviewResponse> patchCommerceReview(PatchCommerceReviewRequest request) {
         AsyncRequestOperation<PatchCommerceReviewRequest, PatchCommerceReviewResponse> operation
@@ -158,7 +158,7 @@ public class AsyncReview {
      * Remove a review
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveCommerceReviewResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveCommerceReviewResponse>} - The async response
      */
     public CompletableFuture<RemoveCommerceReviewResponse> removeCommerceReview(RemoveCommerceReviewRequest request) {
         AsyncRequestOperation<RemoveCommerceReviewRequest, RemoveCommerceReviewResponse> operation
@@ -181,7 +181,7 @@ public class AsyncReview {
      * Update a review
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateCommerceReviewResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateCommerceReviewResponse>} - The async response
      */
     public CompletableFuture<UpdateCommerceReviewResponse> updateCommerceReview(UpdateCommerceReviewRequest request) {
         AsyncRequestOperation<UpdateCommerceReviewRequest, UpdateCommerceReviewResponse> operation

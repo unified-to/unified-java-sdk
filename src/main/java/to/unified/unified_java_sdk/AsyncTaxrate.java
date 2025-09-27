@@ -66,7 +66,7 @@ public class AsyncTaxrate {
      * Create a taxrate
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateAccountingTaxrateResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateAccountingTaxrateResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingTaxrateResponse> createAccountingTaxrate(CreateAccountingTaxrateRequest request) {
         AsyncRequestOperation<CreateAccountingTaxrateRequest, CreateAccountingTaxrateResponse> operation
@@ -89,7 +89,7 @@ public class AsyncTaxrate {
      * Retrieve a taxrate
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetAccountingTaxrateResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetAccountingTaxrateResponse>} - The async response
      */
     public CompletableFuture<GetAccountingTaxrateResponse> getAccountingTaxrate(GetAccountingTaxrateRequest request) {
         AsyncRequestOperation<GetAccountingTaxrateRequest, GetAccountingTaxrateResponse> operation
@@ -112,7 +112,7 @@ public class AsyncTaxrate {
      * List all taxrates
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListAccountingTaxratesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListAccountingTaxratesResponse>} - The async response
      */
     public CompletableFuture<ListAccountingTaxratesResponse> listAccountingTaxrates(ListAccountingTaxratesRequest request) {
         AsyncRequestOperation<ListAccountingTaxratesRequest, ListAccountingTaxratesResponse> operation
@@ -135,7 +135,7 @@ public class AsyncTaxrate {
      * Update a taxrate
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchAccountingTaxrateResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchAccountingTaxrateResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingTaxrateResponse> patchAccountingTaxrate(PatchAccountingTaxrateRequest request) {
         AsyncRequestOperation<PatchAccountingTaxrateRequest, PatchAccountingTaxrateResponse> operation
@@ -158,7 +158,7 @@ public class AsyncTaxrate {
      * Remove a taxrate
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveAccountingTaxrateResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveAccountingTaxrateResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingTaxrateResponse> removeAccountingTaxrate(RemoveAccountingTaxrateRequest request) {
         AsyncRequestOperation<RemoveAccountingTaxrateRequest, RemoveAccountingTaxrateResponse> operation
@@ -181,7 +181,7 @@ public class AsyncTaxrate {
      * Update a taxrate
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateAccountingTaxrateResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateAccountingTaxrateResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingTaxrateResponse> updateAccountingTaxrate(UpdateAccountingTaxrateRequest request) {
         AsyncRequestOperation<UpdateAccountingTaxrateRequest, UpdateAccountingTaxrateResponse> operation

@@ -109,7 +109,7 @@ public class ScimUser {
     private Optional<String> profileUrl;
 
     /**
-     * Student, Faculty, ...
+     * Student, Faculty,...
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roles")
@@ -363,7 +363,7 @@ public class ScimUser {
     }
 
     /**
-     * Student, Faculty, ...
+     * Student, Faculty,...
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
@@ -664,7 +664,7 @@ public class ScimUser {
     }
 
     /**
-     * Student, Faculty, ...
+     * Student, Faculty,...
      */
     public ScimUser withRoles(List<ScimRole> roles) {
         Utils.checkNotNull(roles, "roles");
@@ -674,7 +674,7 @@ public class ScimUser {
 
 
     /**
-     * Student, Faculty, ...
+     * Student, Faculty,...
      */
     public ScimUser withRoles(Optional<? extends List<ScimRole>> roles) {
         Utils.checkNotNull(roles, "roles");
@@ -1192,7 +1192,7 @@ public class ScimUser {
 
 
         /**
-         * Student, Faculty, ...
+         * Student, Faculty,...
          */
         public Builder roles(List<ScimRole> roles) {
             Utils.checkNotNull(roles, "roles");
@@ -1201,7 +1201,7 @@ public class ScimUser {
         }
 
         /**
-         * Student, Faculty, ...
+         * Student, Faculty,...
          */
         public Builder roles(Optional<? extends List<ScimRole>> roles) {
             Utils.checkNotNull(roles, "roles");

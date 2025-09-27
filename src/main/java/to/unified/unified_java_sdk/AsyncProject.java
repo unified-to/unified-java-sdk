@@ -66,7 +66,7 @@ public class AsyncProject {
      * Create a project
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateTaskProjectResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateTaskProjectResponse>} - The async response
      */
     public CompletableFuture<CreateTaskProjectResponse> createTaskProject(CreateTaskProjectRequest request) {
         AsyncRequestOperation<CreateTaskProjectRequest, CreateTaskProjectResponse> operation
@@ -89,7 +89,7 @@ public class AsyncProject {
      * Retrieve a project
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetTaskProjectResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetTaskProjectResponse>} - The async response
      */
     public CompletableFuture<GetTaskProjectResponse> getTaskProject(GetTaskProjectRequest request) {
         AsyncRequestOperation<GetTaskProjectRequest, GetTaskProjectResponse> operation
@@ -112,7 +112,7 @@ public class AsyncProject {
      * List all projects
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListTaskProjectsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListTaskProjectsResponse>} - The async response
      */
     public CompletableFuture<ListTaskProjectsResponse> listTaskProjects(ListTaskProjectsRequest request) {
         AsyncRequestOperation<ListTaskProjectsRequest, ListTaskProjectsResponse> operation
@@ -135,7 +135,7 @@ public class AsyncProject {
      * Update a project
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchTaskProjectResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchTaskProjectResponse>} - The async response
      */
     public CompletableFuture<PatchTaskProjectResponse> patchTaskProject(PatchTaskProjectRequest request) {
         AsyncRequestOperation<PatchTaskProjectRequest, PatchTaskProjectResponse> operation
@@ -158,7 +158,7 @@ public class AsyncProject {
      * Remove a project
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveTaskProjectResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveTaskProjectResponse>} - The async response
      */
     public CompletableFuture<RemoveTaskProjectResponse> removeTaskProject(RemoveTaskProjectRequest request) {
         AsyncRequestOperation<RemoveTaskProjectRequest, RemoveTaskProjectResponse> operation
@@ -181,7 +181,7 @@ public class AsyncProject {
      * Update a project
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateTaskProjectResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateTaskProjectResponse>} - The async response
      */
     public CompletableFuture<UpdateTaskProjectResponse> updateTaskProject(UpdateTaskProjectRequest request) {
         AsyncRequestOperation<UpdateTaskProjectRequest, UpdateTaskProjectResponse> operation

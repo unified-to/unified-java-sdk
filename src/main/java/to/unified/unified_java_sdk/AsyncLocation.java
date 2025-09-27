@@ -90,7 +90,7 @@ public class AsyncLocation {
      * Create a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateCommerceLocationResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateCommerceLocationResponse>} - The async response
      */
     public CompletableFuture<CreateCommerceLocationResponse> createCommerceLocation(CreateCommerceLocationRequest request) {
         AsyncRequestOperation<CreateCommerceLocationRequest, CreateCommerceLocationResponse> operation
@@ -113,7 +113,7 @@ public class AsyncLocation {
      * Create a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateHrisLocationResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateHrisLocationResponse>} - The async response
      */
     public CompletableFuture<CreateHrisLocationResponse> createHrisLocation(CreateHrisLocationRequest request) {
         AsyncRequestOperation<CreateHrisLocationRequest, CreateHrisLocationResponse> operation
@@ -136,7 +136,7 @@ public class AsyncLocation {
      * Retrieve a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetCommerceLocationResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetCommerceLocationResponse>} - The async response
      */
     public CompletableFuture<GetCommerceLocationResponse> getCommerceLocation(GetCommerceLocationRequest request) {
         AsyncRequestOperation<GetCommerceLocationRequest, GetCommerceLocationResponse> operation
@@ -159,7 +159,7 @@ public class AsyncLocation {
      * Retrieve a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetHrisLocationResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetHrisLocationResponse>} - The async response
      */
     public CompletableFuture<GetHrisLocationResponse> getHrisLocation(GetHrisLocationRequest request) {
         AsyncRequestOperation<GetHrisLocationRequest, GetHrisLocationResponse> operation
@@ -182,7 +182,7 @@ public class AsyncLocation {
      * List all locations
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListCommerceLocationsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListCommerceLocationsResponse>} - The async response
      */
     public CompletableFuture<ListCommerceLocationsResponse> listCommerceLocations(ListCommerceLocationsRequest request) {
         AsyncRequestOperation<ListCommerceLocationsRequest, ListCommerceLocationsResponse> operation
@@ -205,7 +205,7 @@ public class AsyncLocation {
      * List all locations
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListHrisLocationsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListHrisLocationsResponse>} - The async response
      */
     public CompletableFuture<ListHrisLocationsResponse> listHrisLocations(ListHrisLocationsRequest request) {
         AsyncRequestOperation<ListHrisLocationsRequest, ListHrisLocationsResponse> operation
@@ -228,7 +228,7 @@ public class AsyncLocation {
      * Update a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchCommerceLocationResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchCommerceLocationResponse>} - The async response
      */
     public CompletableFuture<PatchCommerceLocationResponse> patchCommerceLocation(PatchCommerceLocationRequest request) {
         AsyncRequestOperation<PatchCommerceLocationRequest, PatchCommerceLocationResponse> operation
@@ -251,7 +251,7 @@ public class AsyncLocation {
      * Update a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchHrisLocationResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchHrisLocationResponse>} - The async response
      */
     public CompletableFuture<PatchHrisLocationResponse> patchHrisLocation(PatchHrisLocationRequest request) {
         AsyncRequestOperation<PatchHrisLocationRequest, PatchHrisLocationResponse> operation
@@ -274,7 +274,7 @@ public class AsyncLocation {
      * Remove a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveCommerceLocationResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveCommerceLocationResponse>} - The async response
      */
     public CompletableFuture<RemoveCommerceLocationResponse> removeCommerceLocation(RemoveCommerceLocationRequest request) {
         AsyncRequestOperation<RemoveCommerceLocationRequest, RemoveCommerceLocationResponse> operation
@@ -297,7 +297,7 @@ public class AsyncLocation {
      * Remove a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveHrisLocationResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveHrisLocationResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisLocationResponse> removeHrisLocation(RemoveHrisLocationRequest request) {
         AsyncRequestOperation<RemoveHrisLocationRequest, RemoveHrisLocationResponse> operation
@@ -320,7 +320,7 @@ public class AsyncLocation {
      * Update a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateCommerceLocationResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateCommerceLocationResponse>} - The async response
      */
     public CompletableFuture<UpdateCommerceLocationResponse> updateCommerceLocation(UpdateCommerceLocationRequest request) {
         AsyncRequestOperation<UpdateCommerceLocationRequest, UpdateCommerceLocationResponse> operation
@@ -343,7 +343,7 @@ public class AsyncLocation {
      * Update a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateHrisLocationResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateHrisLocationResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisLocationResponse> updateHrisLocation(UpdateHrisLocationRequest request) {
         AsyncRequestOperation<UpdateHrisLocationRequest, UpdateHrisLocationResponse> operation

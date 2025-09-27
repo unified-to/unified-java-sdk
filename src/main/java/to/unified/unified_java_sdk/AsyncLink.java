@@ -90,7 +90,7 @@ public class AsyncLink {
      * Create a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateCalendarLinkResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateCalendarLinkResponse>} - The async response
      */
     public CompletableFuture<CreateCalendarLinkResponse> createCalendarLink(CreateCalendarLinkRequest request) {
         AsyncRequestOperation<CreateCalendarLinkRequest, CreateCalendarLinkResponse> operation
@@ -113,7 +113,7 @@ public class AsyncLink {
      * Create a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreatePaymentLinkResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreatePaymentLinkResponse>} - The async response
      */
     public CompletableFuture<CreatePaymentLinkResponse> createPaymentLink(CreatePaymentLinkRequest request) {
         AsyncRequestOperation<CreatePaymentLinkRequest, CreatePaymentLinkResponse> operation
@@ -136,7 +136,7 @@ public class AsyncLink {
      * Retrieve a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetCalendarLinkResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetCalendarLinkResponse>} - The async response
      */
     public CompletableFuture<GetCalendarLinkResponse> getCalendarLink(GetCalendarLinkRequest request) {
         AsyncRequestOperation<GetCalendarLinkRequest, GetCalendarLinkResponse> operation
@@ -159,7 +159,7 @@ public class AsyncLink {
      * Retrieve a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetPaymentLinkResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetPaymentLinkResponse>} - The async response
      */
     public CompletableFuture<GetPaymentLinkResponse> getPaymentLink(GetPaymentLinkRequest request) {
         AsyncRequestOperation<GetPaymentLinkRequest, GetPaymentLinkResponse> operation
@@ -182,7 +182,7 @@ public class AsyncLink {
      * List all links
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListCalendarLinksResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListCalendarLinksResponse>} - The async response
      */
     public CompletableFuture<ListCalendarLinksResponse> listCalendarLinks(ListCalendarLinksRequest request) {
         AsyncRequestOperation<ListCalendarLinksRequest, ListCalendarLinksResponse> operation
@@ -205,7 +205,7 @@ public class AsyncLink {
      * List all links
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListPaymentLinksResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListPaymentLinksResponse>} - The async response
      */
     public CompletableFuture<ListPaymentLinksResponse> listPaymentLinks(ListPaymentLinksRequest request) {
         AsyncRequestOperation<ListPaymentLinksRequest, ListPaymentLinksResponse> operation
@@ -228,7 +228,7 @@ public class AsyncLink {
      * Update a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchCalendarLinkResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchCalendarLinkResponse>} - The async response
      */
     public CompletableFuture<PatchCalendarLinkResponse> patchCalendarLink(PatchCalendarLinkRequest request) {
         AsyncRequestOperation<PatchCalendarLinkRequest, PatchCalendarLinkResponse> operation
@@ -251,7 +251,7 @@ public class AsyncLink {
      * Update a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchPaymentLinkResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchPaymentLinkResponse>} - The async response
      */
     public CompletableFuture<PatchPaymentLinkResponse> patchPaymentLink(PatchPaymentLinkRequest request) {
         AsyncRequestOperation<PatchPaymentLinkRequest, PatchPaymentLinkResponse> operation
@@ -274,7 +274,7 @@ public class AsyncLink {
      * Remove a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveCalendarLinkResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveCalendarLinkResponse>} - The async response
      */
     public CompletableFuture<RemoveCalendarLinkResponse> removeCalendarLink(RemoveCalendarLinkRequest request) {
         AsyncRequestOperation<RemoveCalendarLinkRequest, RemoveCalendarLinkResponse> operation
@@ -297,7 +297,7 @@ public class AsyncLink {
      * Remove a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemovePaymentLinkResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemovePaymentLinkResponse>} - The async response
      */
     public CompletableFuture<RemovePaymentLinkResponse> removePaymentLink(RemovePaymentLinkRequest request) {
         AsyncRequestOperation<RemovePaymentLinkRequest, RemovePaymentLinkResponse> operation
@@ -320,7 +320,7 @@ public class AsyncLink {
      * Update a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateCalendarLinkResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateCalendarLinkResponse>} - The async response
      */
     public CompletableFuture<UpdateCalendarLinkResponse> updateCalendarLink(UpdateCalendarLinkRequest request) {
         AsyncRequestOperation<UpdateCalendarLinkRequest, UpdateCalendarLinkResponse> operation
@@ -343,7 +343,7 @@ public class AsyncLink {
      * Update a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdatePaymentLinkResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdatePaymentLinkResponse>} - The async response
      */
     public CompletableFuture<UpdatePaymentLinkResponse> updatePaymentLink(UpdatePaymentLinkRequest request) {
         AsyncRequestOperation<UpdatePaymentLinkRequest, UpdatePaymentLinkResponse> operation

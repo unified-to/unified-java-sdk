@@ -63,7 +63,9 @@ public class Webhook {
     /**
      * Create webhook subscription
      * 
-     * <p>The data payload received by your server is described at https://docs.unified.to/unified/overview. The `interval` field can be set as low as 1 minute for paid accounts, and 60 minutes for free accounts.
+     * <p>The data payload received by your server is described at https://docs.unified.to/unified/overview.
+     * The `interval` field can be set as low as 1 minute for paid accounts, and 60 minutes for free
+     * accounts.
      * 
      * @return The call builder
      */
@@ -74,7 +76,9 @@ public class Webhook {
     /**
      * Create webhook subscription
      * 
-     * <p>The data payload received by your server is described at https://docs.unified.to/unified/overview. The `interval` field can be set as low as 1 minute for paid accounts, and 60 minutes for free accounts.
+     * <p>The data payload received by your server is described at https://docs.unified.to/unified/overview.
+     * The `interval` field can be set as low as 1 minute for paid accounts, and 60 minutes for free
+     * accounts.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

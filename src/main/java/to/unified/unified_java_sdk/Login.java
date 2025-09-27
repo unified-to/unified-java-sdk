@@ -35,7 +35,9 @@ public class Login {
     /**
      * Sign in a user
      * 
-     * <p>Returns an authentication URL for the specified integration.  Once a successful authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is base-64 encoded.
+     * <p>Returns an authentication URL for the specified integration. Once a successful authentication
+     * occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is
+     * base-64 encoded.
      * 
      * @return The call builder
      */
@@ -46,7 +48,9 @@ public class Login {
     /**
      * Sign in a user
      * 
-     * <p>Returns an authentication URL for the specified integration.  Once a successful authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is base-64 encoded.
+     * <p>Returns an authentication URL for the specified integration. Once a successful authentication
+     * occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is
+     * base-64 encoded.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

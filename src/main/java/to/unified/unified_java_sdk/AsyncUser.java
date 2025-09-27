@@ -66,7 +66,7 @@ public class AsyncUser {
      * Create user
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateScimUsersResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateScimUsersResponse>} - The async response
      */
     public CompletableFuture<CreateScimUsersResponse> createScimUsers(CreateScimUsersRequest request) {
         AsyncRequestOperation<CreateScimUsersRequest, CreateScimUsersResponse> operation
@@ -89,7 +89,7 @@ public class AsyncUser {
      * Get user
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetScimUsersResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetScimUsersResponse>} - The async response
      */
     public CompletableFuture<GetScimUsersResponse> getScimUsers(GetScimUsersRequest request) {
         AsyncRequestOperation<GetScimUsersRequest, GetScimUsersResponse> operation
@@ -112,7 +112,7 @@ public class AsyncUser {
      * List users
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListScimUsersResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListScimUsersResponse>} - The async response
      */
     public CompletableFuture<ListScimUsersResponse> listScimUsers(ListScimUsersRequest request) {
         AsyncRequestOperation<ListScimUsersRequest, ListScimUsersResponse> operation
@@ -135,7 +135,7 @@ public class AsyncUser {
      * Update user
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchScimUsersResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchScimUsersResponse>} - The async response
      */
     public CompletableFuture<PatchScimUsersResponse> patchScimUsers(PatchScimUsersRequest request) {
         AsyncRequestOperation<PatchScimUsersRequest, PatchScimUsersResponse> operation
@@ -158,7 +158,7 @@ public class AsyncUser {
      * Delete user
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveScimUsersResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveScimUsersResponse>} - The async response
      */
     public CompletableFuture<RemoveScimUsersResponse> removeScimUsers(RemoveScimUsersRequest request) {
         AsyncRequestOperation<RemoveScimUsersRequest, RemoveScimUsersResponse> operation
@@ -181,7 +181,7 @@ public class AsyncUser {
      * Update user
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateScimUsersResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateScimUsersResponse>} - The async response
      */
     public CompletableFuture<UpdateScimUsersResponse> updateScimUsers(UpdateScimUsersRequest request) {
         AsyncRequestOperation<UpdateScimUsersRequest, UpdateScimUsersResponse> operation

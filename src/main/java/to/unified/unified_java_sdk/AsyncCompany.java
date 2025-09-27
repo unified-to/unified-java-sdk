@@ -118,7 +118,7 @@ public class AsyncCompany {
      * Create a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateAtsCompanyResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateAtsCompanyResponse>} - The async response
      */
     public CompletableFuture<CreateAtsCompanyResponse> createAtsCompany(CreateAtsCompanyRequest request) {
         AsyncRequestOperation<CreateAtsCompanyRequest, CreateAtsCompanyResponse> operation
@@ -141,7 +141,7 @@ public class AsyncCompany {
      * Create a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateCrmCompanyResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateCrmCompanyResponse>} - The async response
      */
     public CompletableFuture<CreateCrmCompanyResponse> createCrmCompany(CreateCrmCompanyRequest request) {
         AsyncRequestOperation<CreateCrmCompanyRequest, CreateCrmCompanyResponse> operation
@@ -164,7 +164,7 @@ public class AsyncCompany {
      * Create a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateHrisCompanyResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateHrisCompanyResponse>} - The async response
      */
     public CompletableFuture<CreateHrisCompanyResponse> createHrisCompany(CreateHrisCompanyRequest request) {
         AsyncRequestOperation<CreateHrisCompanyRequest, CreateHrisCompanyResponse> operation
@@ -187,7 +187,7 @@ public class AsyncCompany {
      * Retrieve a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetAtsCompanyResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetAtsCompanyResponse>} - The async response
      */
     public CompletableFuture<GetAtsCompanyResponse> getAtsCompany(GetAtsCompanyRequest request) {
         AsyncRequestOperation<GetAtsCompanyRequest, GetAtsCompanyResponse> operation
@@ -210,7 +210,7 @@ public class AsyncCompany {
      * Retrieve a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetCrmCompanyResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetCrmCompanyResponse>} - The async response
      */
     public CompletableFuture<GetCrmCompanyResponse> getCrmCompany(GetCrmCompanyRequest request) {
         AsyncRequestOperation<GetCrmCompanyRequest, GetCrmCompanyResponse> operation
@@ -233,7 +233,7 @@ public class AsyncCompany {
      * Retrieve a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetHrisCompanyResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetHrisCompanyResponse>} - The async response
      */
     public CompletableFuture<GetHrisCompanyResponse> getHrisCompany(GetHrisCompanyRequest request) {
         AsyncRequestOperation<GetHrisCompanyRequest, GetHrisCompanyResponse> operation
@@ -256,7 +256,7 @@ public class AsyncCompany {
      * List all companies
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListAtsCompaniesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListAtsCompaniesResponse>} - The async response
      */
     public CompletableFuture<ListAtsCompaniesResponse> listAtsCompanies(ListAtsCompaniesRequest request) {
         AsyncRequestOperation<ListAtsCompaniesRequest, ListAtsCompaniesResponse> operation
@@ -279,7 +279,7 @@ public class AsyncCompany {
      * List all companies
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListCrmCompaniesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListCrmCompaniesResponse>} - The async response
      */
     public CompletableFuture<ListCrmCompaniesResponse> listCrmCompanies(ListCrmCompaniesRequest request) {
         AsyncRequestOperation<ListCrmCompaniesRequest, ListCrmCompaniesResponse> operation
@@ -302,7 +302,7 @@ public class AsyncCompany {
      * Retrieve enrichment information for a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListEnrichCompaniesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListEnrichCompaniesResponse>} - The async response
      */
     public CompletableFuture<ListEnrichCompaniesResponse> listEnrichCompanies(ListEnrichCompaniesRequest request) {
         AsyncRequestOperation<ListEnrichCompaniesRequest, ListEnrichCompaniesResponse> operation
@@ -325,7 +325,7 @@ public class AsyncCompany {
      * List all companies
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListHrisCompaniesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListHrisCompaniesResponse>} - The async response
      */
     public CompletableFuture<ListHrisCompaniesResponse> listHrisCompanies(ListHrisCompaniesRequest request) {
         AsyncRequestOperation<ListHrisCompaniesRequest, ListHrisCompaniesResponse> operation
@@ -348,7 +348,7 @@ public class AsyncCompany {
      * Update a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchAtsCompanyResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchAtsCompanyResponse>} - The async response
      */
     public CompletableFuture<PatchAtsCompanyResponse> patchAtsCompany(PatchAtsCompanyRequest request) {
         AsyncRequestOperation<PatchAtsCompanyRequest, PatchAtsCompanyResponse> operation
@@ -371,7 +371,7 @@ public class AsyncCompany {
      * Update a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchCrmCompanyResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchCrmCompanyResponse>} - The async response
      */
     public CompletableFuture<PatchCrmCompanyResponse> patchCrmCompany(PatchCrmCompanyRequest request) {
         AsyncRequestOperation<PatchCrmCompanyRequest, PatchCrmCompanyResponse> operation
@@ -394,7 +394,7 @@ public class AsyncCompany {
      * Update a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchHrisCompanyResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchHrisCompanyResponse>} - The async response
      */
     public CompletableFuture<PatchHrisCompanyResponse> patchHrisCompany(PatchHrisCompanyRequest request) {
         AsyncRequestOperation<PatchHrisCompanyRequest, PatchHrisCompanyResponse> operation
@@ -417,7 +417,7 @@ public class AsyncCompany {
      * Remove a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveAtsCompanyResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveAtsCompanyResponse>} - The async response
      */
     public CompletableFuture<RemoveAtsCompanyResponse> removeAtsCompany(RemoveAtsCompanyRequest request) {
         AsyncRequestOperation<RemoveAtsCompanyRequest, RemoveAtsCompanyResponse> operation
@@ -440,7 +440,7 @@ public class AsyncCompany {
      * Remove a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveCrmCompanyResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveCrmCompanyResponse>} - The async response
      */
     public CompletableFuture<RemoveCrmCompanyResponse> removeCrmCompany(RemoveCrmCompanyRequest request) {
         AsyncRequestOperation<RemoveCrmCompanyRequest, RemoveCrmCompanyResponse> operation
@@ -463,7 +463,7 @@ public class AsyncCompany {
      * Remove a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveHrisCompanyResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveHrisCompanyResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisCompanyResponse> removeHrisCompany(RemoveHrisCompanyRequest request) {
         AsyncRequestOperation<RemoveHrisCompanyRequest, RemoveHrisCompanyResponse> operation
@@ -486,7 +486,7 @@ public class AsyncCompany {
      * Update a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateAtsCompanyResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateAtsCompanyResponse>} - The async response
      */
     public CompletableFuture<UpdateAtsCompanyResponse> updateAtsCompany(UpdateAtsCompanyRequest request) {
         AsyncRequestOperation<UpdateAtsCompanyRequest, UpdateAtsCompanyResponse> operation
@@ -509,7 +509,7 @@ public class AsyncCompany {
      * Update a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateCrmCompanyResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateCrmCompanyResponse>} - The async response
      */
     public CompletableFuture<UpdateCrmCompanyResponse> updateCrmCompany(UpdateCrmCompanyRequest request) {
         AsyncRequestOperation<UpdateCrmCompanyRequest, UpdateCrmCompanyResponse> operation
@@ -532,7 +532,7 @@ public class AsyncCompany {
      * Update a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateHrisCompanyResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateHrisCompanyResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisCompanyResponse> updateHrisCompany(UpdateHrisCompanyRequest request) {
         AsyncRequestOperation<UpdateHrisCompanyRequest, UpdateHrisCompanyResponse> operation

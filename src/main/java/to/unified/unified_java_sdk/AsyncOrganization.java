@@ -74,7 +74,7 @@ public class AsyncOrganization {
      * Create an organization
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateRepoOrganizationResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateRepoOrganizationResponse>} - The async response
      */
     public CompletableFuture<CreateRepoOrganizationResponse> createRepoOrganization(CreateRepoOrganizationRequest request) {
         AsyncRequestOperation<CreateRepoOrganizationRequest, CreateRepoOrganizationResponse> operation
@@ -97,7 +97,7 @@ public class AsyncOrganization {
      * Retrieve an organization
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetAccountingOrganizationResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetAccountingOrganizationResponse>} - The async response
      */
     public CompletableFuture<GetAccountingOrganizationResponse> getAccountingOrganization(GetAccountingOrganizationRequest request) {
         AsyncRequestOperation<GetAccountingOrganizationRequest, GetAccountingOrganizationResponse> operation
@@ -120,7 +120,7 @@ public class AsyncOrganization {
      * Retrieve an organization
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetRepoOrganizationResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetRepoOrganizationResponse>} - The async response
      */
     public CompletableFuture<GetRepoOrganizationResponse> getRepoOrganization(GetRepoOrganizationRequest request) {
         AsyncRequestOperation<GetRepoOrganizationRequest, GetRepoOrganizationResponse> operation
@@ -143,7 +143,7 @@ public class AsyncOrganization {
      * List all organizations
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListAccountingOrganizationsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListAccountingOrganizationsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingOrganizationsResponse> listAccountingOrganizations(ListAccountingOrganizationsRequest request) {
         AsyncRequestOperation<ListAccountingOrganizationsRequest, ListAccountingOrganizationsResponse> operation
@@ -166,7 +166,7 @@ public class AsyncOrganization {
      * List all organizations
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListRepoOrganizationsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListRepoOrganizationsResponse>} - The async response
      */
     public CompletableFuture<ListRepoOrganizationsResponse> listRepoOrganizations(ListRepoOrganizationsRequest request) {
         AsyncRequestOperation<ListRepoOrganizationsRequest, ListRepoOrganizationsResponse> operation
@@ -189,7 +189,7 @@ public class AsyncOrganization {
      * Update an organization
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchRepoOrganizationResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchRepoOrganizationResponse>} - The async response
      */
     public CompletableFuture<PatchRepoOrganizationResponse> patchRepoOrganization(PatchRepoOrganizationRequest request) {
         AsyncRequestOperation<PatchRepoOrganizationRequest, PatchRepoOrganizationResponse> operation
@@ -212,7 +212,7 @@ public class AsyncOrganization {
      * Remove an organization
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveRepoOrganizationResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveRepoOrganizationResponse>} - The async response
      */
     public CompletableFuture<RemoveRepoOrganizationResponse> removeRepoOrganization(RemoveRepoOrganizationRequest request) {
         AsyncRequestOperation<RemoveRepoOrganizationRequest, RemoveRepoOrganizationResponse> operation
@@ -235,7 +235,7 @@ public class AsyncOrganization {
      * Update an organization
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateRepoOrganizationResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateRepoOrganizationResponse>} - The async response
      */
     public CompletableFuture<UpdateRepoOrganizationResponse> updateRepoOrganization(UpdateRepoOrganizationRequest request) {
         AsyncRequestOperation<UpdateRepoOrganizationRequest, UpdateRepoOrganizationResponse> operation

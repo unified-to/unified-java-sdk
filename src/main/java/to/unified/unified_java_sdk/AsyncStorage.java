@@ -66,7 +66,7 @@ public class AsyncStorage {
      * Create a file
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateStorageFileResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateStorageFileResponse>} - The async response
      */
     public CompletableFuture<CreateStorageFileResponse> createStorageFile(CreateStorageFileRequest request) {
         AsyncRequestOperation<CreateStorageFileRequest, CreateStorageFileResponse> operation
@@ -89,7 +89,7 @@ public class AsyncStorage {
      * Retrieve a file
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetStorageFileResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetStorageFileResponse>} - The async response
      */
     public CompletableFuture<GetStorageFileResponse> getStorageFile(GetStorageFileRequest request) {
         AsyncRequestOperation<GetStorageFileRequest, GetStorageFileResponse> operation
@@ -112,7 +112,7 @@ public class AsyncStorage {
      * List all files
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListStorageFilesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListStorageFilesResponse>} - The async response
      */
     public CompletableFuture<ListStorageFilesResponse> listStorageFiles(ListStorageFilesRequest request) {
         AsyncRequestOperation<ListStorageFilesRequest, ListStorageFilesResponse> operation
@@ -135,7 +135,7 @@ public class AsyncStorage {
      * Update a file
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchStorageFileResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchStorageFileResponse>} - The async response
      */
     public CompletableFuture<PatchStorageFileResponse> patchStorageFile(PatchStorageFileRequest request) {
         AsyncRequestOperation<PatchStorageFileRequest, PatchStorageFileResponse> operation
@@ -158,7 +158,7 @@ public class AsyncStorage {
      * Remove a file
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveStorageFileResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveStorageFileResponse>} - The async response
      */
     public CompletableFuture<RemoveStorageFileResponse> removeStorageFile(RemoveStorageFileRequest request) {
         AsyncRequestOperation<RemoveStorageFileRequest, RemoveStorageFileResponse> operation
@@ -181,7 +181,7 @@ public class AsyncStorage {
      * Update a file
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateStorageFileResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateStorageFileResponse>} - The async response
      */
     public CompletableFuture<UpdateStorageFileResponse> updateStorageFile(UpdateStorageFileRequest request) {
         AsyncRequestOperation<UpdateStorageFileRequest, UpdateStorageFileResponse> operation

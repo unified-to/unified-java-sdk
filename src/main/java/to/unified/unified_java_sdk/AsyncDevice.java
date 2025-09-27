@@ -66,7 +66,7 @@ public class AsyncDevice {
      * Create a device
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateHrisDeviceResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateHrisDeviceResponse>} - The async response
      */
     public CompletableFuture<CreateHrisDeviceResponse> createHrisDevice(CreateHrisDeviceRequest request) {
         AsyncRequestOperation<CreateHrisDeviceRequest, CreateHrisDeviceResponse> operation
@@ -89,7 +89,7 @@ public class AsyncDevice {
      * Retrieve a device
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetHrisDeviceResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetHrisDeviceResponse>} - The async response
      */
     public CompletableFuture<GetHrisDeviceResponse> getHrisDevice(GetHrisDeviceRequest request) {
         AsyncRequestOperation<GetHrisDeviceRequest, GetHrisDeviceResponse> operation
@@ -112,7 +112,7 @@ public class AsyncDevice {
      * List all devices
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListHrisDevicesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListHrisDevicesResponse>} - The async response
      */
     public CompletableFuture<ListHrisDevicesResponse> listHrisDevices(ListHrisDevicesRequest request) {
         AsyncRequestOperation<ListHrisDevicesRequest, ListHrisDevicesResponse> operation
@@ -135,7 +135,7 @@ public class AsyncDevice {
      * Update a device
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchHrisDeviceResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchHrisDeviceResponse>} - The async response
      */
     public CompletableFuture<PatchHrisDeviceResponse> patchHrisDevice(PatchHrisDeviceRequest request) {
         AsyncRequestOperation<PatchHrisDeviceRequest, PatchHrisDeviceResponse> operation
@@ -158,7 +158,7 @@ public class AsyncDevice {
      * Remove a device
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveHrisDeviceResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveHrisDeviceResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisDeviceResponse> removeHrisDevice(RemoveHrisDeviceRequest request) {
         AsyncRequestOperation<RemoveHrisDeviceRequest, RemoveHrisDeviceResponse> operation
@@ -181,7 +181,7 @@ public class AsyncDevice {
      * Update a device
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateHrisDeviceResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateHrisDeviceResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisDeviceResponse> updateHrisDevice(UpdateHrisDeviceRequest request) {
         AsyncRequestOperation<UpdateHrisDeviceRequest, UpdateHrisDeviceResponse> operation

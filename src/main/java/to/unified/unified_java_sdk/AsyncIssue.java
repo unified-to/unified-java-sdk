@@ -46,7 +46,7 @@ public class AsyncIssue {
      * List support issues
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListUnifiedIssuesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListUnifiedIssuesResponse>} - The async response
      */
     public CompletableFuture<ListUnifiedIssuesResponse> listUnifiedIssues(ListUnifiedIssuesRequest request) {
         AsyncRequestOperation<ListUnifiedIssuesRequest, ListUnifiedIssuesResponse> operation

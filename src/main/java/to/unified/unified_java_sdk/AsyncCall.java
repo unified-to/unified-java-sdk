@@ -46,7 +46,7 @@ public class AsyncCall {
      * List all calls
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListUcCallsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListUcCallsResponse>} - The async response
      */
     public CompletableFuture<ListUcCallsResponse> listUcCalls(ListUcCallsRequest request) {
         AsyncRequestOperation<ListUcCallsRequest, ListUcCallsResponse> operation

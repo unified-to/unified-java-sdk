@@ -118,7 +118,7 @@ public class AsyncUc {
      * Create a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateUcCommentResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateUcCommentResponse>} - The async response
      */
     public CompletableFuture<CreateUcCommentResponse> createUcComment(CreateUcCommentRequest request) {
         AsyncRequestOperation<CreateUcCommentRequest, CreateUcCommentResponse> operation
@@ -141,7 +141,7 @@ public class AsyncUc {
      * Create a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateUcContactResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateUcContactResponse>} - The async response
      */
     public CompletableFuture<CreateUcContactResponse> createUcContact(CreateUcContactRequest request) {
         AsyncRequestOperation<CreateUcContactRequest, CreateUcContactResponse> operation
@@ -164,7 +164,7 @@ public class AsyncUc {
      * Create a recording
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateUcRecordingResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateUcRecordingResponse>} - The async response
      */
     public CompletableFuture<CreateUcRecordingResponse> createUcRecording(CreateUcRecordingRequest request) {
         AsyncRequestOperation<CreateUcRecordingRequest, CreateUcRecordingResponse> operation
@@ -187,7 +187,7 @@ public class AsyncUc {
      * Retrieve a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetUcCommentResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetUcCommentResponse>} - The async response
      */
     public CompletableFuture<GetUcCommentResponse> getUcComment(GetUcCommentRequest request) {
         AsyncRequestOperation<GetUcCommentRequest, GetUcCommentResponse> operation
@@ -210,7 +210,7 @@ public class AsyncUc {
      * Retrieve a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetUcContactResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetUcContactResponse>} - The async response
      */
     public CompletableFuture<GetUcContactResponse> getUcContact(GetUcContactRequest request) {
         AsyncRequestOperation<GetUcContactRequest, GetUcContactResponse> operation
@@ -233,7 +233,7 @@ public class AsyncUc {
      * Retrieve a recording
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetUcRecordingResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetUcRecordingResponse>} - The async response
      */
     public CompletableFuture<GetUcRecordingResponse> getUcRecording(GetUcRecordingRequest request) {
         AsyncRequestOperation<GetUcRecordingRequest, GetUcRecordingResponse> operation
@@ -256,7 +256,7 @@ public class AsyncUc {
      * List all calls
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListUcCallsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListUcCallsResponse>} - The async response
      */
     public CompletableFuture<ListUcCallsResponse> listUcCalls(ListUcCallsRequest request) {
         AsyncRequestOperation<ListUcCallsRequest, ListUcCallsResponse> operation
@@ -279,7 +279,7 @@ public class AsyncUc {
      * List all comments
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListUcCommentsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListUcCommentsResponse>} - The async response
      */
     public CompletableFuture<ListUcCommentsResponse> listUcComments(ListUcCommentsRequest request) {
         AsyncRequestOperation<ListUcCommentsRequest, ListUcCommentsResponse> operation
@@ -302,7 +302,7 @@ public class AsyncUc {
      * List all contacts
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListUcContactsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListUcContactsResponse>} - The async response
      */
     public CompletableFuture<ListUcContactsResponse> listUcContacts(ListUcContactsRequest request) {
         AsyncRequestOperation<ListUcContactsRequest, ListUcContactsResponse> operation
@@ -325,7 +325,7 @@ public class AsyncUc {
      * List all recordings
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListUcRecordingsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListUcRecordingsResponse>} - The async response
      */
     public CompletableFuture<ListUcRecordingsResponse> listUcRecordings(ListUcRecordingsRequest request) {
         AsyncRequestOperation<ListUcRecordingsRequest, ListUcRecordingsResponse> operation
@@ -348,7 +348,7 @@ public class AsyncUc {
      * Update a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchUcCommentResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchUcCommentResponse>} - The async response
      */
     public CompletableFuture<PatchUcCommentResponse> patchUcComment(PatchUcCommentRequest request) {
         AsyncRequestOperation<PatchUcCommentRequest, PatchUcCommentResponse> operation
@@ -371,7 +371,7 @@ public class AsyncUc {
      * Update a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchUcContactResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchUcContactResponse>} - The async response
      */
     public CompletableFuture<PatchUcContactResponse> patchUcContact(PatchUcContactRequest request) {
         AsyncRequestOperation<PatchUcContactRequest, PatchUcContactResponse> operation
@@ -394,7 +394,7 @@ public class AsyncUc {
      * Update a recording
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchUcRecordingResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchUcRecordingResponse>} - The async response
      */
     public CompletableFuture<PatchUcRecordingResponse> patchUcRecording(PatchUcRecordingRequest request) {
         AsyncRequestOperation<PatchUcRecordingRequest, PatchUcRecordingResponse> operation
@@ -417,7 +417,7 @@ public class AsyncUc {
      * Remove a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveUcCommentResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveUcCommentResponse>} - The async response
      */
     public CompletableFuture<RemoveUcCommentResponse> removeUcComment(RemoveUcCommentRequest request) {
         AsyncRequestOperation<RemoveUcCommentRequest, RemoveUcCommentResponse> operation
@@ -440,7 +440,7 @@ public class AsyncUc {
      * Remove a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveUcContactResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveUcContactResponse>} - The async response
      */
     public CompletableFuture<RemoveUcContactResponse> removeUcContact(RemoveUcContactRequest request) {
         AsyncRequestOperation<RemoveUcContactRequest, RemoveUcContactResponse> operation
@@ -463,7 +463,7 @@ public class AsyncUc {
      * Remove a recording
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveUcRecordingResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveUcRecordingResponse>} - The async response
      */
     public CompletableFuture<RemoveUcRecordingResponse> removeUcRecording(RemoveUcRecordingRequest request) {
         AsyncRequestOperation<RemoveUcRecordingRequest, RemoveUcRecordingResponse> operation
@@ -486,7 +486,7 @@ public class AsyncUc {
      * Update a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateUcCommentResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateUcCommentResponse>} - The async response
      */
     public CompletableFuture<UpdateUcCommentResponse> updateUcComment(UpdateUcCommentRequest request) {
         AsyncRequestOperation<UpdateUcCommentRequest, UpdateUcCommentResponse> operation
@@ -509,7 +509,7 @@ public class AsyncUc {
      * Update a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateUcContactResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateUcContactResponse>} - The async response
      */
     public CompletableFuture<UpdateUcContactResponse> updateUcContact(UpdateUcContactRequest request) {
         AsyncRequestOperation<UpdateUcContactRequest, UpdateUcContactResponse> operation
@@ -532,7 +532,7 @@ public class AsyncUc {
      * Update a recording
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateUcRecordingResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateUcRecordingResponse>} - The async response
      */
     public CompletableFuture<UpdateUcRecordingResponse> updateUcRecording(UpdateUcRecordingRequest request) {
         AsyncRequestOperation<UpdateUcRecordingRequest, UpdateUcRecordingResponse> operation

@@ -66,7 +66,7 @@ public class AsyncTimeshift {
      * Create a timeshift
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateHrisTimeshiftResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateHrisTimeshiftResponse>} - The async response
      */
     public CompletableFuture<CreateHrisTimeshiftResponse> createHrisTimeshift(CreateHrisTimeshiftRequest request) {
         AsyncRequestOperation<CreateHrisTimeshiftRequest, CreateHrisTimeshiftResponse> operation
@@ -89,7 +89,7 @@ public class AsyncTimeshift {
      * Retrieve a timeshift
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetHrisTimeshiftResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetHrisTimeshiftResponse>} - The async response
      */
     public CompletableFuture<GetHrisTimeshiftResponse> getHrisTimeshift(GetHrisTimeshiftRequest request) {
         AsyncRequestOperation<GetHrisTimeshiftRequest, GetHrisTimeshiftResponse> operation
@@ -112,7 +112,7 @@ public class AsyncTimeshift {
      * List all timeshifts
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListHrisTimeshiftsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListHrisTimeshiftsResponse>} - The async response
      */
     public CompletableFuture<ListHrisTimeshiftsResponse> listHrisTimeshifts(ListHrisTimeshiftsRequest request) {
         AsyncRequestOperation<ListHrisTimeshiftsRequest, ListHrisTimeshiftsResponse> operation
@@ -135,7 +135,7 @@ public class AsyncTimeshift {
      * Update a timeshift
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchHrisTimeshiftResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchHrisTimeshiftResponse>} - The async response
      */
     public CompletableFuture<PatchHrisTimeshiftResponse> patchHrisTimeshift(PatchHrisTimeshiftRequest request) {
         AsyncRequestOperation<PatchHrisTimeshiftRequest, PatchHrisTimeshiftResponse> operation
@@ -158,7 +158,7 @@ public class AsyncTimeshift {
      * Remove a timeshift
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveHrisTimeshiftResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveHrisTimeshiftResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisTimeshiftResponse> removeHrisTimeshift(RemoveHrisTimeshiftRequest request) {
         AsyncRequestOperation<RemoveHrisTimeshiftRequest, RemoveHrisTimeshiftResponse> operation
@@ -181,7 +181,7 @@ public class AsyncTimeshift {
      * Update a timeshift
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateHrisTimeshiftResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateHrisTimeshiftResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisTimeshiftResponse> updateHrisTimeshift(UpdateHrisTimeshiftRequest request) {
         AsyncRequestOperation<UpdateHrisTimeshiftRequest, UpdateHrisTimeshiftResponse> operation

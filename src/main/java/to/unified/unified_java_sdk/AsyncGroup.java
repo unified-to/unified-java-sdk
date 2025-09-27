@@ -90,7 +90,7 @@ public class AsyncGroup {
      * Create a group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateHrisGroupResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateHrisGroupResponse>} - The async response
      */
     public CompletableFuture<CreateHrisGroupResponse> createHrisGroup(CreateHrisGroupRequest request) {
         AsyncRequestOperation<CreateHrisGroupRequest, CreateHrisGroupResponse> operation
@@ -113,7 +113,7 @@ public class AsyncGroup {
      * Create group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateScimGroupsResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateScimGroupsResponse>} - The async response
      */
     public CompletableFuture<CreateScimGroupsResponse> createScimGroups(CreateScimGroupsRequest request) {
         AsyncRequestOperation<CreateScimGroupsRequest, CreateScimGroupsResponse> operation
@@ -136,7 +136,7 @@ public class AsyncGroup {
      * Retrieve a group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetHrisGroupResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetHrisGroupResponse>} - The async response
      */
     public CompletableFuture<GetHrisGroupResponse> getHrisGroup(GetHrisGroupRequest request) {
         AsyncRequestOperation<GetHrisGroupRequest, GetHrisGroupResponse> operation
@@ -159,7 +159,7 @@ public class AsyncGroup {
      * Get group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetScimGroupsResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetScimGroupsResponse>} - The async response
      */
     public CompletableFuture<GetScimGroupsResponse> getScimGroups(GetScimGroupsRequest request) {
         AsyncRequestOperation<GetScimGroupsRequest, GetScimGroupsResponse> operation
@@ -182,7 +182,7 @@ public class AsyncGroup {
      * List all groups
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListHrisGroupsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListHrisGroupsResponse>} - The async response
      */
     public CompletableFuture<ListHrisGroupsResponse> listHrisGroups(ListHrisGroupsRequest request) {
         AsyncRequestOperation<ListHrisGroupsRequest, ListHrisGroupsResponse> operation
@@ -205,7 +205,7 @@ public class AsyncGroup {
      * List groups
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListScimGroupsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListScimGroupsResponse>} - The async response
      */
     public CompletableFuture<ListScimGroupsResponse> listScimGroups(ListScimGroupsRequest request) {
         AsyncRequestOperation<ListScimGroupsRequest, ListScimGroupsResponse> operation
@@ -228,7 +228,7 @@ public class AsyncGroup {
      * Update a group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchHrisGroupResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchHrisGroupResponse>} - The async response
      */
     public CompletableFuture<PatchHrisGroupResponse> patchHrisGroup(PatchHrisGroupRequest request) {
         AsyncRequestOperation<PatchHrisGroupRequest, PatchHrisGroupResponse> operation
@@ -251,7 +251,7 @@ public class AsyncGroup {
      * Update group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchScimGroupsResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchScimGroupsResponse>} - The async response
      */
     public CompletableFuture<PatchScimGroupsResponse> patchScimGroups(PatchScimGroupsRequest request) {
         AsyncRequestOperation<PatchScimGroupsRequest, PatchScimGroupsResponse> operation
@@ -274,7 +274,7 @@ public class AsyncGroup {
      * Remove a group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveHrisGroupResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveHrisGroupResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisGroupResponse> removeHrisGroup(RemoveHrisGroupRequest request) {
         AsyncRequestOperation<RemoveHrisGroupRequest, RemoveHrisGroupResponse> operation
@@ -297,7 +297,7 @@ public class AsyncGroup {
      * Delete group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveScimGroupsResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveScimGroupsResponse>} - The async response
      */
     public CompletableFuture<RemoveScimGroupsResponse> removeScimGroups(RemoveScimGroupsRequest request) {
         AsyncRequestOperation<RemoveScimGroupsRequest, RemoveScimGroupsResponse> operation
@@ -320,7 +320,7 @@ public class AsyncGroup {
      * Update a group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateHrisGroupResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateHrisGroupResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisGroupResponse> updateHrisGroup(UpdateHrisGroupRequest request) {
         AsyncRequestOperation<UpdateHrisGroupRequest, UpdateHrisGroupResponse> operation
@@ -343,7 +343,7 @@ public class AsyncGroup {
      * Update group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateScimGroupsResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateScimGroupsResponse>} - The async response
      */
     public CompletableFuture<UpdateScimGroupsResponse> updateScimGroups(UpdateScimGroupsRequest request) {
         AsyncRequestOperation<UpdateScimGroupsRequest, UpdateScimGroupsResponse> operation

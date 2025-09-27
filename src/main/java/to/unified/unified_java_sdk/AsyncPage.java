@@ -66,7 +66,7 @@ public class AsyncPage {
      * Create a page
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateKmsPageResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateKmsPageResponse>} - The async response
      */
     public CompletableFuture<CreateKmsPageResponse> createKmsPage(CreateKmsPageRequest request) {
         AsyncRequestOperation<CreateKmsPageRequest, CreateKmsPageResponse> operation
@@ -89,7 +89,7 @@ public class AsyncPage {
      * Retrieve a page
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetKmsPageResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetKmsPageResponse>} - The async response
      */
     public CompletableFuture<GetKmsPageResponse> getKmsPage(GetKmsPageRequest request) {
         AsyncRequestOperation<GetKmsPageRequest, GetKmsPageResponse> operation
@@ -112,7 +112,7 @@ public class AsyncPage {
      * List all pages
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListKmsPagesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListKmsPagesResponse>} - The async response
      */
     public CompletableFuture<ListKmsPagesResponse> listKmsPages(ListKmsPagesRequest request) {
         AsyncRequestOperation<ListKmsPagesRequest, ListKmsPagesResponse> operation
@@ -135,7 +135,7 @@ public class AsyncPage {
      * Update a page
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchKmsPageResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchKmsPageResponse>} - The async response
      */
     public CompletableFuture<PatchKmsPageResponse> patchKmsPage(PatchKmsPageRequest request) {
         AsyncRequestOperation<PatchKmsPageRequest, PatchKmsPageResponse> operation
@@ -158,7 +158,7 @@ public class AsyncPage {
      * Remove a page
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveKmsPageResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveKmsPageResponse>} - The async response
      */
     public CompletableFuture<RemoveKmsPageResponse> removeKmsPage(RemoveKmsPageRequest request) {
         AsyncRequestOperation<RemoveKmsPageRequest, RemoveKmsPageResponse> operation
@@ -181,7 +181,7 @@ public class AsyncPage {
      * Update a page
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateKmsPageResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateKmsPageResponse>} - The async response
      */
     public CompletableFuture<UpdateKmsPageResponse> updateKmsPage(UpdateKmsPageRequest request) {
         AsyncRequestOperation<UpdateKmsPageRequest, UpdateKmsPageResponse> operation

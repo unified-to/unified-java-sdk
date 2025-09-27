@@ -74,7 +74,7 @@ public class AsyncRecording {
      * Create a recording
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateUcRecordingResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateUcRecordingResponse>} - The async response
      */
     public CompletableFuture<CreateUcRecordingResponse> createUcRecording(CreateUcRecordingRequest request) {
         AsyncRequestOperation<CreateUcRecordingRequest, CreateUcRecordingResponse> operation
@@ -97,7 +97,7 @@ public class AsyncRecording {
      * Retrieve a recording
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetCalendarRecordingResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetCalendarRecordingResponse>} - The async response
      */
     public CompletableFuture<GetCalendarRecordingResponse> getCalendarRecording(GetCalendarRecordingRequest request) {
         AsyncRequestOperation<GetCalendarRecordingRequest, GetCalendarRecordingResponse> operation
@@ -120,7 +120,7 @@ public class AsyncRecording {
      * Retrieve a recording
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetUcRecordingResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetUcRecordingResponse>} - The async response
      */
     public CompletableFuture<GetUcRecordingResponse> getUcRecording(GetUcRecordingRequest request) {
         AsyncRequestOperation<GetUcRecordingRequest, GetUcRecordingResponse> operation
@@ -143,7 +143,7 @@ public class AsyncRecording {
      * List all recordings
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListCalendarRecordingsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListCalendarRecordingsResponse>} - The async response
      */
     public CompletableFuture<ListCalendarRecordingsResponse> listCalendarRecordings(ListCalendarRecordingsRequest request) {
         AsyncRequestOperation<ListCalendarRecordingsRequest, ListCalendarRecordingsResponse> operation
@@ -166,7 +166,7 @@ public class AsyncRecording {
      * List all recordings
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListUcRecordingsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListUcRecordingsResponse>} - The async response
      */
     public CompletableFuture<ListUcRecordingsResponse> listUcRecordings(ListUcRecordingsRequest request) {
         AsyncRequestOperation<ListUcRecordingsRequest, ListUcRecordingsResponse> operation
@@ -189,7 +189,7 @@ public class AsyncRecording {
      * Update a recording
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchUcRecordingResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchUcRecordingResponse>} - The async response
      */
     public CompletableFuture<PatchUcRecordingResponse> patchUcRecording(PatchUcRecordingRequest request) {
         AsyncRequestOperation<PatchUcRecordingRequest, PatchUcRecordingResponse> operation
@@ -212,7 +212,7 @@ public class AsyncRecording {
      * Remove a recording
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveUcRecordingResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveUcRecordingResponse>} - The async response
      */
     public CompletableFuture<RemoveUcRecordingResponse> removeUcRecording(RemoveUcRecordingRequest request) {
         AsyncRequestOperation<RemoveUcRecordingRequest, RemoveUcRecordingResponse> operation
@@ -235,7 +235,7 @@ public class AsyncRecording {
      * Update a recording
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateUcRecordingResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateUcRecordingResponse>} - The async response
      */
     public CompletableFuture<UpdateUcRecordingResponse> updateUcRecording(UpdateUcRecordingRequest request) {
         AsyncRequestOperation<UpdateUcRecordingRequest, UpdateUcRecordingResponse> operation

@@ -66,7 +66,7 @@ public class AsyncCommit {
      * Create a commit
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateRepoCommitResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateRepoCommitResponse>} - The async response
      */
     public CompletableFuture<CreateRepoCommitResponse> createRepoCommit(CreateRepoCommitRequest request) {
         AsyncRequestOperation<CreateRepoCommitRequest, CreateRepoCommitResponse> operation
@@ -89,7 +89,7 @@ public class AsyncCommit {
      * Retrieve a commit
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetRepoCommitResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetRepoCommitResponse>} - The async response
      */
     public CompletableFuture<GetRepoCommitResponse> getRepoCommit(GetRepoCommitRequest request) {
         AsyncRequestOperation<GetRepoCommitRequest, GetRepoCommitResponse> operation
@@ -112,7 +112,7 @@ public class AsyncCommit {
      * List all commits
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListRepoCommitsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListRepoCommitsResponse>} - The async response
      */
     public CompletableFuture<ListRepoCommitsResponse> listRepoCommits(ListRepoCommitsRequest request) {
         AsyncRequestOperation<ListRepoCommitsRequest, ListRepoCommitsResponse> operation
@@ -135,7 +135,7 @@ public class AsyncCommit {
      * Update a commit
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchRepoCommitResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchRepoCommitResponse>} - The async response
      */
     public CompletableFuture<PatchRepoCommitResponse> patchRepoCommit(PatchRepoCommitRequest request) {
         AsyncRequestOperation<PatchRepoCommitRequest, PatchRepoCommitResponse> operation
@@ -158,7 +158,7 @@ public class AsyncCommit {
      * Remove a commit
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveRepoCommitResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveRepoCommitResponse>} - The async response
      */
     public CompletableFuture<RemoveRepoCommitResponse> removeRepoCommit(RemoveRepoCommitRequest request) {
         AsyncRequestOperation<RemoveRepoCommitRequest, RemoveRepoCommitResponse> operation
@@ -181,7 +181,7 @@ public class AsyncCommit {
      * Update a commit
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateRepoCommitResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateRepoCommitResponse>} - The async response
      */
     public CompletableFuture<UpdateRepoCommitResponse> updateRepoCommit(UpdateRepoCommitRequest request) {
         AsyncRequestOperation<UpdateRepoCommitRequest, UpdateRepoCommitResponse> operation

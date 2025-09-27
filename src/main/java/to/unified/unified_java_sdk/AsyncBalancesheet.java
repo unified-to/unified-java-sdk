@@ -50,7 +50,7 @@ public class AsyncBalancesheet {
      * Retrieve a balancesheet
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetAccountingBalancesheetResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetAccountingBalancesheetResponse>} - The async response
      */
     public CompletableFuture<GetAccountingBalancesheetResponse> getAccountingBalancesheet(GetAccountingBalancesheetRequest request) {
         AsyncRequestOperation<GetAccountingBalancesheetRequest, GetAccountingBalancesheetResponse> operation
@@ -73,7 +73,7 @@ public class AsyncBalancesheet {
      * List all balancesheets
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListAccountingBalancesheetsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListAccountingBalancesheetsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingBalancesheetsResponse> listAccountingBalancesheets(ListAccountingBalancesheetsRequest request) {
         AsyncRequestOperation<ListAccountingBalancesheetsRequest, ListAccountingBalancesheetsResponse> operation

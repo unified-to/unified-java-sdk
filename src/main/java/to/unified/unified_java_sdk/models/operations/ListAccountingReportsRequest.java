@@ -53,7 +53,9 @@ public class ListAccountingReportsRequest {
     private Optional<String> query;
 
     /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
+     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
+     * 
+     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
     private Optional<String> raw;
@@ -175,7 +177,9 @@ public class ListAccountingReportsRequest {
     }
 
     /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
+     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
+     * 
+     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @JsonIgnore
     public Optional<String> raw() {
@@ -319,7 +323,9 @@ public class ListAccountingReportsRequest {
     }
 
     /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
+     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
+     * 
+     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     public ListAccountingReportsRequest withRaw(String raw) {
         Utils.checkNotNull(raw, "raw");
@@ -329,7 +335,9 @@ public class ListAccountingReportsRequest {
 
 
     /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
+     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
+     * 
+     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     public ListAccountingReportsRequest withRaw(Optional<String> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -590,7 +598,9 @@ public class ListAccountingReportsRequest {
 
 
         /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
+         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
+         * 
+         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
         public Builder raw(String raw) {
             Utils.checkNotNull(raw, "raw");
@@ -599,7 +609,9 @@ public class ListAccountingReportsRequest {
         }
 
         /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
+         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
+         * 
+         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
         public Builder raw(Optional<String> raw) {
             Utils.checkNotNull(raw, "raw");

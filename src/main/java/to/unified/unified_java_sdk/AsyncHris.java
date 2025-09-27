@@ -202,7 +202,7 @@ public class AsyncHris {
      * Create a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateHrisCompanyResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateHrisCompanyResponse>} - The async response
      */
     public CompletableFuture<CreateHrisCompanyResponse> createHrisCompany(CreateHrisCompanyRequest request) {
         AsyncRequestOperation<CreateHrisCompanyRequest, CreateHrisCompanyResponse> operation
@@ -225,7 +225,7 @@ public class AsyncHris {
      * Create a device
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateHrisDeviceResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateHrisDeviceResponse>} - The async response
      */
     public CompletableFuture<CreateHrisDeviceResponse> createHrisDevice(CreateHrisDeviceRequest request) {
         AsyncRequestOperation<CreateHrisDeviceRequest, CreateHrisDeviceResponse> operation
@@ -248,7 +248,7 @@ public class AsyncHris {
      * Create an employee
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateHrisEmployeeResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateHrisEmployeeResponse>} - The async response
      */
     public CompletableFuture<CreateHrisEmployeeResponse> createHrisEmployee(CreateHrisEmployeeRequest request) {
         AsyncRequestOperation<CreateHrisEmployeeRequest, CreateHrisEmployeeResponse> operation
@@ -271,7 +271,7 @@ public class AsyncHris {
      * Create a group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateHrisGroupResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateHrisGroupResponse>} - The async response
      */
     public CompletableFuture<CreateHrisGroupResponse> createHrisGroup(CreateHrisGroupRequest request) {
         AsyncRequestOperation<CreateHrisGroupRequest, CreateHrisGroupResponse> operation
@@ -294,7 +294,7 @@ public class AsyncHris {
      * Create a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateHrisLocationResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateHrisLocationResponse>} - The async response
      */
     public CompletableFuture<CreateHrisLocationResponse> createHrisLocation(CreateHrisLocationRequest request) {
         AsyncRequestOperation<CreateHrisLocationRequest, CreateHrisLocationResponse> operation
@@ -317,7 +317,7 @@ public class AsyncHris {
      * Create a timeshift
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateHrisTimeshiftResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateHrisTimeshiftResponse>} - The async response
      */
     public CompletableFuture<CreateHrisTimeshiftResponse> createHrisTimeshift(CreateHrisTimeshiftRequest request) {
         AsyncRequestOperation<CreateHrisTimeshiftRequest, CreateHrisTimeshiftResponse> operation
@@ -340,7 +340,7 @@ public class AsyncHris {
      * Retrieve a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetHrisCompanyResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetHrisCompanyResponse>} - The async response
      */
     public CompletableFuture<GetHrisCompanyResponse> getHrisCompany(GetHrisCompanyRequest request) {
         AsyncRequestOperation<GetHrisCompanyRequest, GetHrisCompanyResponse> operation
@@ -363,7 +363,7 @@ public class AsyncHris {
      * Retrieve a device
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetHrisDeviceResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetHrisDeviceResponse>} - The async response
      */
     public CompletableFuture<GetHrisDeviceResponse> getHrisDevice(GetHrisDeviceRequest request) {
         AsyncRequestOperation<GetHrisDeviceRequest, GetHrisDeviceResponse> operation
@@ -386,7 +386,7 @@ public class AsyncHris {
      * Retrieve an employee
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetHrisEmployeeResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetHrisEmployeeResponse>} - The async response
      */
     public CompletableFuture<GetHrisEmployeeResponse> getHrisEmployee(GetHrisEmployeeRequest request) {
         AsyncRequestOperation<GetHrisEmployeeRequest, GetHrisEmployeeResponse> operation
@@ -409,7 +409,7 @@ public class AsyncHris {
      * Retrieve a group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetHrisGroupResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetHrisGroupResponse>} - The async response
      */
     public CompletableFuture<GetHrisGroupResponse> getHrisGroup(GetHrisGroupRequest request) {
         AsyncRequestOperation<GetHrisGroupRequest, GetHrisGroupResponse> operation
@@ -432,7 +432,7 @@ public class AsyncHris {
      * Retrieve a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetHrisLocationResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetHrisLocationResponse>} - The async response
      */
     public CompletableFuture<GetHrisLocationResponse> getHrisLocation(GetHrisLocationRequest request) {
         AsyncRequestOperation<GetHrisLocationRequest, GetHrisLocationResponse> operation
@@ -455,7 +455,7 @@ public class AsyncHris {
      * Retrieve a payslip
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetHrisPayslipResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetHrisPayslipResponse>} - The async response
      */
     public CompletableFuture<GetHrisPayslipResponse> getHrisPayslip(GetHrisPayslipRequest request) {
         AsyncRequestOperation<GetHrisPayslipRequest, GetHrisPayslipResponse> operation
@@ -478,7 +478,7 @@ public class AsyncHris {
      * Retrieve a timeoff
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetHrisTimeoffResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetHrisTimeoffResponse>} - The async response
      */
     public CompletableFuture<GetHrisTimeoffResponse> getHrisTimeoff(GetHrisTimeoffRequest request) {
         AsyncRequestOperation<GetHrisTimeoffRequest, GetHrisTimeoffResponse> operation
@@ -501,7 +501,7 @@ public class AsyncHris {
      * Retrieve a timeshift
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetHrisTimeshiftResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetHrisTimeshiftResponse>} - The async response
      */
     public CompletableFuture<GetHrisTimeshiftResponse> getHrisTimeshift(GetHrisTimeshiftRequest request) {
         AsyncRequestOperation<GetHrisTimeshiftRequest, GetHrisTimeshiftResponse> operation
@@ -524,7 +524,7 @@ public class AsyncHris {
      * List all companies
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListHrisCompaniesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListHrisCompaniesResponse>} - The async response
      */
     public CompletableFuture<ListHrisCompaniesResponse> listHrisCompanies(ListHrisCompaniesRequest request) {
         AsyncRequestOperation<ListHrisCompaniesRequest, ListHrisCompaniesResponse> operation
@@ -547,7 +547,7 @@ public class AsyncHris {
      * List all devices
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListHrisDevicesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListHrisDevicesResponse>} - The async response
      */
     public CompletableFuture<ListHrisDevicesResponse> listHrisDevices(ListHrisDevicesRequest request) {
         AsyncRequestOperation<ListHrisDevicesRequest, ListHrisDevicesResponse> operation
@@ -570,7 +570,7 @@ public class AsyncHris {
      * List all employees
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListHrisEmployeesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListHrisEmployeesResponse>} - The async response
      */
     public CompletableFuture<ListHrisEmployeesResponse> listHrisEmployees(ListHrisEmployeesRequest request) {
         AsyncRequestOperation<ListHrisEmployeesRequest, ListHrisEmployeesResponse> operation
@@ -593,7 +593,7 @@ public class AsyncHris {
      * List all groups
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListHrisGroupsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListHrisGroupsResponse>} - The async response
      */
     public CompletableFuture<ListHrisGroupsResponse> listHrisGroups(ListHrisGroupsRequest request) {
         AsyncRequestOperation<ListHrisGroupsRequest, ListHrisGroupsResponse> operation
@@ -616,7 +616,7 @@ public class AsyncHris {
      * List all locations
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListHrisLocationsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListHrisLocationsResponse>} - The async response
      */
     public CompletableFuture<ListHrisLocationsResponse> listHrisLocations(ListHrisLocationsRequest request) {
         AsyncRequestOperation<ListHrisLocationsRequest, ListHrisLocationsResponse> operation
@@ -639,7 +639,7 @@ public class AsyncHris {
      * List all payslips
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListHrisPayslipsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListHrisPayslipsResponse>} - The async response
      */
     public CompletableFuture<ListHrisPayslipsResponse> listHrisPayslips(ListHrisPayslipsRequest request) {
         AsyncRequestOperation<ListHrisPayslipsRequest, ListHrisPayslipsResponse> operation
@@ -662,7 +662,7 @@ public class AsyncHris {
      * List all timeoffs
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListHrisTimeoffsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListHrisTimeoffsResponse>} - The async response
      */
     public CompletableFuture<ListHrisTimeoffsResponse> listHrisTimeoffs(ListHrisTimeoffsRequest request) {
         AsyncRequestOperation<ListHrisTimeoffsRequest, ListHrisTimeoffsResponse> operation
@@ -685,7 +685,7 @@ public class AsyncHris {
      * List all timeshifts
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListHrisTimeshiftsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListHrisTimeshiftsResponse>} - The async response
      */
     public CompletableFuture<ListHrisTimeshiftsResponse> listHrisTimeshifts(ListHrisTimeshiftsRequest request) {
         AsyncRequestOperation<ListHrisTimeshiftsRequest, ListHrisTimeshiftsResponse> operation
@@ -708,7 +708,7 @@ public class AsyncHris {
      * Update a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchHrisCompanyResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchHrisCompanyResponse>} - The async response
      */
     public CompletableFuture<PatchHrisCompanyResponse> patchHrisCompany(PatchHrisCompanyRequest request) {
         AsyncRequestOperation<PatchHrisCompanyRequest, PatchHrisCompanyResponse> operation
@@ -731,7 +731,7 @@ public class AsyncHris {
      * Update a device
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchHrisDeviceResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchHrisDeviceResponse>} - The async response
      */
     public CompletableFuture<PatchHrisDeviceResponse> patchHrisDevice(PatchHrisDeviceRequest request) {
         AsyncRequestOperation<PatchHrisDeviceRequest, PatchHrisDeviceResponse> operation
@@ -754,7 +754,7 @@ public class AsyncHris {
      * Update an employee
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchHrisEmployeeResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchHrisEmployeeResponse>} - The async response
      */
     public CompletableFuture<PatchHrisEmployeeResponse> patchHrisEmployee(PatchHrisEmployeeRequest request) {
         AsyncRequestOperation<PatchHrisEmployeeRequest, PatchHrisEmployeeResponse> operation
@@ -777,7 +777,7 @@ public class AsyncHris {
      * Update a group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchHrisGroupResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchHrisGroupResponse>} - The async response
      */
     public CompletableFuture<PatchHrisGroupResponse> patchHrisGroup(PatchHrisGroupRequest request) {
         AsyncRequestOperation<PatchHrisGroupRequest, PatchHrisGroupResponse> operation
@@ -800,7 +800,7 @@ public class AsyncHris {
      * Update a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchHrisLocationResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchHrisLocationResponse>} - The async response
      */
     public CompletableFuture<PatchHrisLocationResponse> patchHrisLocation(PatchHrisLocationRequest request) {
         AsyncRequestOperation<PatchHrisLocationRequest, PatchHrisLocationResponse> operation
@@ -823,7 +823,7 @@ public class AsyncHris {
      * Update a timeshift
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchHrisTimeshiftResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchHrisTimeshiftResponse>} - The async response
      */
     public CompletableFuture<PatchHrisTimeshiftResponse> patchHrisTimeshift(PatchHrisTimeshiftRequest request) {
         AsyncRequestOperation<PatchHrisTimeshiftRequest, PatchHrisTimeshiftResponse> operation
@@ -846,7 +846,7 @@ public class AsyncHris {
      * Remove a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveHrisCompanyResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveHrisCompanyResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisCompanyResponse> removeHrisCompany(RemoveHrisCompanyRequest request) {
         AsyncRequestOperation<RemoveHrisCompanyRequest, RemoveHrisCompanyResponse> operation
@@ -869,7 +869,7 @@ public class AsyncHris {
      * Remove a device
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveHrisDeviceResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveHrisDeviceResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisDeviceResponse> removeHrisDevice(RemoveHrisDeviceRequest request) {
         AsyncRequestOperation<RemoveHrisDeviceRequest, RemoveHrisDeviceResponse> operation
@@ -892,7 +892,7 @@ public class AsyncHris {
      * Remove an employee
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveHrisEmployeeResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveHrisEmployeeResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisEmployeeResponse> removeHrisEmployee(RemoveHrisEmployeeRequest request) {
         AsyncRequestOperation<RemoveHrisEmployeeRequest, RemoveHrisEmployeeResponse> operation
@@ -915,7 +915,7 @@ public class AsyncHris {
      * Remove a group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveHrisGroupResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveHrisGroupResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisGroupResponse> removeHrisGroup(RemoveHrisGroupRequest request) {
         AsyncRequestOperation<RemoveHrisGroupRequest, RemoveHrisGroupResponse> operation
@@ -938,7 +938,7 @@ public class AsyncHris {
      * Remove a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveHrisLocationResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveHrisLocationResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisLocationResponse> removeHrisLocation(RemoveHrisLocationRequest request) {
         AsyncRequestOperation<RemoveHrisLocationRequest, RemoveHrisLocationResponse> operation
@@ -961,7 +961,7 @@ public class AsyncHris {
      * Remove a timeshift
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveHrisTimeshiftResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveHrisTimeshiftResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisTimeshiftResponse> removeHrisTimeshift(RemoveHrisTimeshiftRequest request) {
         AsyncRequestOperation<RemoveHrisTimeshiftRequest, RemoveHrisTimeshiftResponse> operation
@@ -984,7 +984,7 @@ public class AsyncHris {
      * Update a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateHrisCompanyResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateHrisCompanyResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisCompanyResponse> updateHrisCompany(UpdateHrisCompanyRequest request) {
         AsyncRequestOperation<UpdateHrisCompanyRequest, UpdateHrisCompanyResponse> operation
@@ -1007,7 +1007,7 @@ public class AsyncHris {
      * Update a device
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateHrisDeviceResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateHrisDeviceResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisDeviceResponse> updateHrisDevice(UpdateHrisDeviceRequest request) {
         AsyncRequestOperation<UpdateHrisDeviceRequest, UpdateHrisDeviceResponse> operation
@@ -1030,7 +1030,7 @@ public class AsyncHris {
      * Update an employee
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateHrisEmployeeResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateHrisEmployeeResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisEmployeeResponse> updateHrisEmployee(UpdateHrisEmployeeRequest request) {
         AsyncRequestOperation<UpdateHrisEmployeeRequest, UpdateHrisEmployeeResponse> operation
@@ -1053,7 +1053,7 @@ public class AsyncHris {
      * Update a group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateHrisGroupResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateHrisGroupResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisGroupResponse> updateHrisGroup(UpdateHrisGroupRequest request) {
         AsyncRequestOperation<UpdateHrisGroupRequest, UpdateHrisGroupResponse> operation
@@ -1076,7 +1076,7 @@ public class AsyncHris {
      * Update a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateHrisLocationResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateHrisLocationResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisLocationResponse> updateHrisLocation(UpdateHrisLocationRequest request) {
         AsyncRequestOperation<UpdateHrisLocationRequest, UpdateHrisLocationResponse> operation
@@ -1099,7 +1099,7 @@ public class AsyncHris {
      * Update a timeshift
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateHrisTimeshiftResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateHrisTimeshiftResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisTimeshiftResponse> updateHrisTimeshift(UpdateHrisTimeshiftRequest request) {
         AsyncRequestOperation<UpdateHrisTimeshiftRequest, UpdateHrisTimeshiftResponse> operation

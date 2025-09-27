@@ -90,7 +90,7 @@ public class AsyncMartech {
      * Create a list
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateMartechListResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateMartechListResponse>} - The async response
      */
     public CompletableFuture<CreateMartechListResponse> createMartechList(CreateMartechListRequest request) {
         AsyncRequestOperation<CreateMartechListRequest, CreateMartechListResponse> operation
@@ -113,7 +113,7 @@ public class AsyncMartech {
      * Create a member
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateMartechMemberResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateMartechMemberResponse>} - The async response
      */
     public CompletableFuture<CreateMartechMemberResponse> createMartechMember(CreateMartechMemberRequest request) {
         AsyncRequestOperation<CreateMartechMemberRequest, CreateMartechMemberResponse> operation
@@ -136,7 +136,7 @@ public class AsyncMartech {
      * Retrieve a list
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetMartechListResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetMartechListResponse>} - The async response
      */
     public CompletableFuture<GetMartechListResponse> getMartechList(GetMartechListRequest request) {
         AsyncRequestOperation<GetMartechListRequest, GetMartechListResponse> operation
@@ -159,7 +159,7 @@ public class AsyncMartech {
      * Retrieve a member
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetMartechMemberResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetMartechMemberResponse>} - The async response
      */
     public CompletableFuture<GetMartechMemberResponse> getMartechMember(GetMartechMemberRequest request) {
         AsyncRequestOperation<GetMartechMemberRequest, GetMartechMemberResponse> operation
@@ -182,7 +182,7 @@ public class AsyncMartech {
      * List all lists
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListMartechListsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListMartechListsResponse>} - The async response
      */
     public CompletableFuture<ListMartechListsResponse> listMartechLists(ListMartechListsRequest request) {
         AsyncRequestOperation<ListMartechListsRequest, ListMartechListsResponse> operation
@@ -205,7 +205,7 @@ public class AsyncMartech {
      * List all members
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListMartechMembersResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListMartechMembersResponse>} - The async response
      */
     public CompletableFuture<ListMartechMembersResponse> listMartechMembers(ListMartechMembersRequest request) {
         AsyncRequestOperation<ListMartechMembersRequest, ListMartechMembersResponse> operation
@@ -228,7 +228,7 @@ public class AsyncMartech {
      * Update a list
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchMartechListResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchMartechListResponse>} - The async response
      */
     public CompletableFuture<PatchMartechListResponse> patchMartechList(PatchMartechListRequest request) {
         AsyncRequestOperation<PatchMartechListRequest, PatchMartechListResponse> operation
@@ -251,7 +251,7 @@ public class AsyncMartech {
      * Update a member
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchMartechMemberResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchMartechMemberResponse>} - The async response
      */
     public CompletableFuture<PatchMartechMemberResponse> patchMartechMember(PatchMartechMemberRequest request) {
         AsyncRequestOperation<PatchMartechMemberRequest, PatchMartechMemberResponse> operation
@@ -274,7 +274,7 @@ public class AsyncMartech {
      * Remove a list
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveMartechListResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveMartechListResponse>} - The async response
      */
     public CompletableFuture<RemoveMartechListResponse> removeMartechList(RemoveMartechListRequest request) {
         AsyncRequestOperation<RemoveMartechListRequest, RemoveMartechListResponse> operation
@@ -297,7 +297,7 @@ public class AsyncMartech {
      * Remove a member
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveMartechMemberResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveMartechMemberResponse>} - The async response
      */
     public CompletableFuture<RemoveMartechMemberResponse> removeMartechMember(RemoveMartechMemberRequest request) {
         AsyncRequestOperation<RemoveMartechMemberRequest, RemoveMartechMemberResponse> operation
@@ -320,7 +320,7 @@ public class AsyncMartech {
      * Update a list
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateMartechListResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateMartechListResponse>} - The async response
      */
     public CompletableFuture<UpdateMartechListResponse> updateMartechList(UpdateMartechListRequest request) {
         AsyncRequestOperation<UpdateMartechListRequest, UpdateMartechListResponse> operation
@@ -343,7 +343,7 @@ public class AsyncMartech {
      * Update a member
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateMartechMemberResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateMartechMemberResponse>} - The async response
      */
     public CompletableFuture<UpdateMartechMemberResponse> updateMartechMember(UpdateMartechMemberRequest request) {
         AsyncRequestOperation<UpdateMartechMemberRequest, UpdateMartechMemberResponse> operation

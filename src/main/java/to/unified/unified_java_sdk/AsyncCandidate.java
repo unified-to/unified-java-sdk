@@ -66,7 +66,7 @@ public class AsyncCandidate {
      * Create a candidate
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateAtsCandidateResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateAtsCandidateResponse>} - The async response
      */
     public CompletableFuture<CreateAtsCandidateResponse> createAtsCandidate(CreateAtsCandidateRequest request) {
         AsyncRequestOperation<CreateAtsCandidateRequest, CreateAtsCandidateResponse> operation
@@ -89,7 +89,7 @@ public class AsyncCandidate {
      * Retrieve a candidate
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetAtsCandidateResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetAtsCandidateResponse>} - The async response
      */
     public CompletableFuture<GetAtsCandidateResponse> getAtsCandidate(GetAtsCandidateRequest request) {
         AsyncRequestOperation<GetAtsCandidateRequest, GetAtsCandidateResponse> operation
@@ -112,7 +112,7 @@ public class AsyncCandidate {
      * List all candidates
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListAtsCandidatesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListAtsCandidatesResponse>} - The async response
      */
     public CompletableFuture<ListAtsCandidatesResponse> listAtsCandidates(ListAtsCandidatesRequest request) {
         AsyncRequestOperation<ListAtsCandidatesRequest, ListAtsCandidatesResponse> operation
@@ -135,7 +135,7 @@ public class AsyncCandidate {
      * Update a candidate
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchAtsCandidateResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchAtsCandidateResponse>} - The async response
      */
     public CompletableFuture<PatchAtsCandidateResponse> patchAtsCandidate(PatchAtsCandidateRequest request) {
         AsyncRequestOperation<PatchAtsCandidateRequest, PatchAtsCandidateResponse> operation
@@ -158,7 +158,7 @@ public class AsyncCandidate {
      * Remove a candidate
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveAtsCandidateResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveAtsCandidateResponse>} - The async response
      */
     public CompletableFuture<RemoveAtsCandidateResponse> removeAtsCandidate(RemoveAtsCandidateRequest request) {
         AsyncRequestOperation<RemoveAtsCandidateRequest, RemoveAtsCandidateResponse> operation
@@ -181,7 +181,7 @@ public class AsyncCandidate {
      * Update a candidate
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateAtsCandidateResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateAtsCandidateResponse>} - The async response
      */
     public CompletableFuture<UpdateAtsCandidateResponse> updateAtsCandidate(UpdateAtsCandidateRequest request) {
         AsyncRequestOperation<UpdateAtsCandidateRequest, UpdateAtsCandidateResponse> operation

@@ -50,7 +50,7 @@ public class AsyncReport {
      * Retrieve a report
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetAccountingReportResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetAccountingReportResponse>} - The async response
      */
     public CompletableFuture<GetAccountingReportResponse> getAccountingReport(GetAccountingReportRequest request) {
         AsyncRequestOperation<GetAccountingReportRequest, GetAccountingReportResponse> operation
@@ -73,7 +73,7 @@ public class AsyncReport {
      * List all reports
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListAccountingReportsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListAccountingReportsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingReportsResponse> listAccountingReports(ListAccountingReportsRequest request) {
         AsyncRequestOperation<ListAccountingReportsRequest, ListAccountingReportsResponse> operation

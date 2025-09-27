@@ -66,7 +66,7 @@ public class AsyncSpace {
      * Create a space
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateKmsSpaceResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateKmsSpaceResponse>} - The async response
      */
     public CompletableFuture<CreateKmsSpaceResponse> createKmsSpace(CreateKmsSpaceRequest request) {
         AsyncRequestOperation<CreateKmsSpaceRequest, CreateKmsSpaceResponse> operation
@@ -89,7 +89,7 @@ public class AsyncSpace {
      * Retrieve a space
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetKmsSpaceResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetKmsSpaceResponse>} - The async response
      */
     public CompletableFuture<GetKmsSpaceResponse> getKmsSpace(GetKmsSpaceRequest request) {
         AsyncRequestOperation<GetKmsSpaceRequest, GetKmsSpaceResponse> operation
@@ -112,7 +112,7 @@ public class AsyncSpace {
      * List all spaces
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListKmsSpacesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListKmsSpacesResponse>} - The async response
      */
     public CompletableFuture<ListKmsSpacesResponse> listKmsSpaces(ListKmsSpacesRequest request) {
         AsyncRequestOperation<ListKmsSpacesRequest, ListKmsSpacesResponse> operation
@@ -135,7 +135,7 @@ public class AsyncSpace {
      * Update a space
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchKmsSpaceResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchKmsSpaceResponse>} - The async response
      */
     public CompletableFuture<PatchKmsSpaceResponse> patchKmsSpace(PatchKmsSpaceRequest request) {
         AsyncRequestOperation<PatchKmsSpaceRequest, PatchKmsSpaceResponse> operation
@@ -158,7 +158,7 @@ public class AsyncSpace {
      * Remove a space
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveKmsSpaceResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveKmsSpaceResponse>} - The async response
      */
     public CompletableFuture<RemoveKmsSpaceResponse> removeKmsSpace(RemoveKmsSpaceRequest request) {
         AsyncRequestOperation<RemoveKmsSpaceRequest, RemoveKmsSpaceResponse> operation
@@ -181,7 +181,7 @@ public class AsyncSpace {
      * Update a space
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateKmsSpaceResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateKmsSpaceResponse>} - The async response
      */
     public CompletableFuture<UpdateKmsSpaceResponse> updateKmsSpace(UpdateKmsSpaceRequest request) {
         AsyncRequestOperation<UpdateKmsSpaceRequest, UpdateKmsSpaceResponse> operation

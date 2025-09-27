@@ -101,7 +101,8 @@ public class PropertyConnectionAuth {
     private Optional<String> name;
 
     /**
-     * When integration.auth_type = "other", this field contains the authentication credentials in the same order as token_names
+     * When integration.auth_type = "other", this field contains the authentication credentials in the same
+     * order as token_names
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("other_auth_info")
@@ -321,7 +322,8 @@ public class PropertyConnectionAuth {
     }
 
     /**
-     * When integration.auth_type = "other", this field contains the authentication credentials in the same order as token_names
+     * When integration.auth_type = "other", this field contains the authentication credentials in the same
+     * order as token_names
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
@@ -575,7 +577,8 @@ public class PropertyConnectionAuth {
     }
 
     /**
-     * When integration.auth_type = "other", this field contains the authentication credentials in the same order as token_names
+     * When integration.auth_type = "other", this field contains the authentication credentials in the same
+     * order as token_names
      */
     public PropertyConnectionAuth withOtherAuthInfo(List<String> otherAuthInfo) {
         Utils.checkNotNull(otherAuthInfo, "otherAuthInfo");
@@ -585,7 +588,8 @@ public class PropertyConnectionAuth {
 
 
     /**
-     * When integration.auth_type = "other", this field contains the authentication credentials in the same order as token_names
+     * When integration.auth_type = "other", this field contains the authentication credentials in the same
+     * order as token_names
      */
     public PropertyConnectionAuth withOtherAuthInfo(Optional<? extends List<String>> otherAuthInfo) {
         Utils.checkNotNull(otherAuthInfo, "otherAuthInfo");
@@ -1045,7 +1049,8 @@ public class PropertyConnectionAuth {
 
 
         /**
-         * When integration.auth_type = "other", this field contains the authentication credentials in the same order as token_names
+         * When integration.auth_type = "other", this field contains the authentication credentials in the same
+         * order as token_names
          */
         public Builder otherAuthInfo(List<String> otherAuthInfo) {
             Utils.checkNotNull(otherAuthInfo, "otherAuthInfo");
@@ -1054,7 +1059,8 @@ public class PropertyConnectionAuth {
         }
 
         /**
-         * When integration.auth_type = "other", this field contains the authentication credentials in the same order as token_names
+         * When integration.auth_type = "other", this field contains the authentication credentials in the same
+         * order as token_names
          */
         public Builder otherAuthInfo(Optional<? extends List<String>> otherAuthInfo) {
             Utils.checkNotNull(otherAuthInfo, "otherAuthInfo");

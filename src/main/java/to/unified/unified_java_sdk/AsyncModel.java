@@ -50,7 +50,7 @@ public class AsyncModel {
      * Retrieve a model
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetGenaiModelResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetGenaiModelResponse>} - The async response
      */
     public CompletableFuture<GetGenaiModelResponse> getGenaiModel(GetGenaiModelRequest request) {
         AsyncRequestOperation<GetGenaiModelRequest, GetGenaiModelResponse> operation
@@ -73,7 +73,7 @@ public class AsyncModel {
      * List all models
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListGenaiModelsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListGenaiModelsResponse>} - The async response
      */
     public CompletableFuture<ListGenaiModelsResponse> listGenaiModels(ListGenaiModelsRequest request) {
         AsyncRequestOperation<ListGenaiModelsRequest, ListGenaiModelsResponse> operation

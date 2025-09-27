@@ -17,7 +17,8 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateCrmEventRequest {
     /**
-     * An event represents an event, activity, or engagement and is always associated with a deal, contact, or company
+     * An event represents an event, activity, or engagement and is always associated with a deal, contact,
+     * or company
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     private CrmEvent crmEvent;
@@ -35,7 +36,9 @@ public class CreateCrmEventRequest {
     private Optional<? extends List<String>> fields;
 
     /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
+     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
+     * 
+     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
     private Optional<String> raw;
@@ -64,7 +67,8 @@ public class CreateCrmEventRequest {
     }
 
     /**
-     * An event represents an event, activity, or engagement and is always associated with a deal, contact, or company
+     * An event represents an event, activity, or engagement and is always associated with a deal, contact,
+     * or company
      */
     @JsonIgnore
     public CrmEvent crmEvent() {
@@ -89,7 +93,9 @@ public class CreateCrmEventRequest {
     }
 
     /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
+     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
+     * 
+     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @JsonIgnore
     public Optional<String> raw() {
@@ -102,7 +108,8 @@ public class CreateCrmEventRequest {
 
 
     /**
-     * An event represents an event, activity, or engagement and is always associated with a deal, contact, or company
+     * An event represents an event, activity, or engagement and is always associated with a deal, contact,
+     * or company
      */
     public CreateCrmEventRequest withCrmEvent(CrmEvent crmEvent) {
         Utils.checkNotNull(crmEvent, "crmEvent");
@@ -139,7 +146,9 @@ public class CreateCrmEventRequest {
     }
 
     /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
+     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
+     * 
+     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     public CreateCrmEventRequest withRaw(String raw) {
         Utils.checkNotNull(raw, "raw");
@@ -149,7 +158,9 @@ public class CreateCrmEventRequest {
 
 
     /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
+     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
+     * 
+     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     public CreateCrmEventRequest withRaw(Optional<String> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -206,7 +217,8 @@ public class CreateCrmEventRequest {
 
 
         /**
-         * An event represents an event, activity, or engagement and is always associated with a deal, contact, or company
+         * An event represents an event, activity, or engagement and is always associated with a deal, contact,
+         * or company
          */
         public Builder crmEvent(CrmEvent crmEvent) {
             Utils.checkNotNull(crmEvent, "crmEvent");
@@ -245,7 +257,9 @@ public class CreateCrmEventRequest {
 
 
         /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
+         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
+         * 
+         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
         public Builder raw(String raw) {
             Utils.checkNotNull(raw, "raw");
@@ -254,7 +268,9 @@ public class CreateCrmEventRequest {
         }
 
         /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
+         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
+         * 
+         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
         public Builder raw(Optional<String> raw) {
             Utils.checkNotNull(raw, "raw");

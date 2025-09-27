@@ -66,7 +66,7 @@ public class AsyncActivity {
      * Create an activity
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateAtsActivityResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateAtsActivityResponse>} - The async response
      */
     public CompletableFuture<CreateAtsActivityResponse> createAtsActivity(CreateAtsActivityRequest request) {
         AsyncRequestOperation<CreateAtsActivityRequest, CreateAtsActivityResponse> operation
@@ -89,7 +89,7 @@ public class AsyncActivity {
      * Retrieve an activity
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetAtsActivityResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetAtsActivityResponse>} - The async response
      */
     public CompletableFuture<GetAtsActivityResponse> getAtsActivity(GetAtsActivityRequest request) {
         AsyncRequestOperation<GetAtsActivityRequest, GetAtsActivityResponse> operation
@@ -112,7 +112,7 @@ public class AsyncActivity {
      * List all activities
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListAtsActivitiesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListAtsActivitiesResponse>} - The async response
      */
     public CompletableFuture<ListAtsActivitiesResponse> listAtsActivities(ListAtsActivitiesRequest request) {
         AsyncRequestOperation<ListAtsActivitiesRequest, ListAtsActivitiesResponse> operation
@@ -135,7 +135,7 @@ public class AsyncActivity {
      * Update an activity
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchAtsActivityResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchAtsActivityResponse>} - The async response
      */
     public CompletableFuture<PatchAtsActivityResponse> patchAtsActivity(PatchAtsActivityRequest request) {
         AsyncRequestOperation<PatchAtsActivityRequest, PatchAtsActivityResponse> operation
@@ -158,7 +158,7 @@ public class AsyncActivity {
      * Remove an activity
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveAtsActivityResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveAtsActivityResponse>} - The async response
      */
     public CompletableFuture<RemoveAtsActivityResponse> removeAtsActivity(RemoveAtsActivityRequest request) {
         AsyncRequestOperation<RemoveAtsActivityRequest, RemoveAtsActivityResponse> operation
@@ -181,7 +181,7 @@ public class AsyncActivity {
      * Update an activity
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateAtsActivityResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateAtsActivityResponse>} - The async response
      */
     public CompletableFuture<UpdateAtsActivityResponse> updateAtsActivity(UpdateAtsActivityRequest request) {
         AsyncRequestOperation<UpdateAtsActivityRequest, UpdateAtsActivityResponse> operation

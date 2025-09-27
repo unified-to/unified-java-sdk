@@ -50,7 +50,7 @@ public class AsyncProfitloss {
      * Retrieve a profitloss
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetAccountingProfitlossResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetAccountingProfitlossResponse>} - The async response
      */
     public CompletableFuture<GetAccountingProfitlossResponse> getAccountingProfitloss(GetAccountingProfitlossRequest request) {
         AsyncRequestOperation<GetAccountingProfitlossRequest, GetAccountingProfitlossResponse> operation
@@ -73,7 +73,7 @@ public class AsyncProfitloss {
      * List all profitlosses
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListAccountingProfitlossesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListAccountingProfitlossesResponse>} - The async response
      */
     public CompletableFuture<ListAccountingProfitlossesResponse> listAccountingProfitlosses(ListAccountingProfitlossesRequest request) {
         AsyncRequestOperation<ListAccountingProfitlossesRequest, ListAccountingProfitlossesResponse> operation

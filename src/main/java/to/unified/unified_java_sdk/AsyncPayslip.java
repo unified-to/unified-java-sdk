@@ -50,7 +50,7 @@ public class AsyncPayslip {
      * Retrieve a payslip
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetHrisPayslipResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetHrisPayslipResponse>} - The async response
      */
     public CompletableFuture<GetHrisPayslipResponse> getHrisPayslip(GetHrisPayslipRequest request) {
         AsyncRequestOperation<GetHrisPayslipRequest, GetHrisPayslipResponse> operation
@@ -73,7 +73,7 @@ public class AsyncPayslip {
      * List all payslips
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListHrisPayslipsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListHrisPayslipsResponse>} - The async response
      */
     public CompletableFuture<ListHrisPayslipsResponse> listHrisPayslips(ListHrisPayslipsRequest request) {
         AsyncRequestOperation<ListHrisPayslipsRequest, ListHrisPayslipsResponse> operation

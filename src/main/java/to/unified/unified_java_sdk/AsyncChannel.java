@@ -50,7 +50,7 @@ public class AsyncChannel {
      * Retrieve a channel
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetMessagingChannelResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetMessagingChannelResponse>} - The async response
      */
     public CompletableFuture<GetMessagingChannelResponse> getMessagingChannel(GetMessagingChannelRequest request) {
         AsyncRequestOperation<GetMessagingChannelRequest, GetMessagingChannelResponse> operation
@@ -73,7 +73,7 @@ public class AsyncChannel {
      * List all channels
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListMessagingChannelsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListMessagingChannelsResponse>} - The async response
      */
     public CompletableFuture<ListMessagingChannelsResponse> listMessagingChannels(ListMessagingChannelsRequest request) {
         AsyncRequestOperation<ListMessagingChannelsRequest, ListMessagingChannelsResponse> operation

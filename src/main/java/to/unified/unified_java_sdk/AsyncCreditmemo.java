@@ -66,7 +66,7 @@ public class AsyncCreditmemo {
      * Create a creditmemo
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateAccountingCreditmemoResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateAccountingCreditmemoResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingCreditmemoResponse> createAccountingCreditmemo(CreateAccountingCreditmemoRequest request) {
         AsyncRequestOperation<CreateAccountingCreditmemoRequest, CreateAccountingCreditmemoResponse> operation
@@ -89,7 +89,7 @@ public class AsyncCreditmemo {
      * Retrieve a creditmemo
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetAccountingCreditmemoResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetAccountingCreditmemoResponse>} - The async response
      */
     public CompletableFuture<GetAccountingCreditmemoResponse> getAccountingCreditmemo(GetAccountingCreditmemoRequest request) {
         AsyncRequestOperation<GetAccountingCreditmemoRequest, GetAccountingCreditmemoResponse> operation
@@ -112,7 +112,7 @@ public class AsyncCreditmemo {
      * List all creditmemoes
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListAccountingCreditmemoesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListAccountingCreditmemoesResponse>} - The async response
      */
     public CompletableFuture<ListAccountingCreditmemoesResponse> listAccountingCreditmemoes(ListAccountingCreditmemoesRequest request) {
         AsyncRequestOperation<ListAccountingCreditmemoesRequest, ListAccountingCreditmemoesResponse> operation
@@ -135,7 +135,7 @@ public class AsyncCreditmemo {
      * Update a creditmemo
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchAccountingCreditmemoResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchAccountingCreditmemoResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingCreditmemoResponse> patchAccountingCreditmemo(PatchAccountingCreditmemoRequest request) {
         AsyncRequestOperation<PatchAccountingCreditmemoRequest, PatchAccountingCreditmemoResponse> operation
@@ -158,7 +158,7 @@ public class AsyncCreditmemo {
      * Remove a creditmemo
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveAccountingCreditmemoResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveAccountingCreditmemoResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingCreditmemoResponse> removeAccountingCreditmemo(RemoveAccountingCreditmemoRequest request) {
         AsyncRequestOperation<RemoveAccountingCreditmemoRequest, RemoveAccountingCreditmemoResponse> operation
@@ -181,7 +181,7 @@ public class AsyncCreditmemo {
      * Update a creditmemo
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateAccountingCreditmemoResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateAccountingCreditmemoResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingCreditmemoResponse> updateAccountingCreditmemo(UpdateAccountingCreditmemoRequest request) {
         AsyncRequestOperation<UpdateAccountingCreditmemoRequest, UpdateAccountingCreditmemoResponse> operation

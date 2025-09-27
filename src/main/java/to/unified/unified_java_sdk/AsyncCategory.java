@@ -90,7 +90,7 @@ public class AsyncCategory {
      * Create a category
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateAccountingCategoryResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateAccountingCategoryResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingCategoryResponse> createAccountingCategory(CreateAccountingCategoryRequest request) {
         AsyncRequestOperation<CreateAccountingCategoryRequest, CreateAccountingCategoryResponse> operation
@@ -113,7 +113,7 @@ public class AsyncCategory {
      * Create a category
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateTicketingCategoryResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateTicketingCategoryResponse>} - The async response
      */
     public CompletableFuture<CreateTicketingCategoryResponse> createTicketingCategory(CreateTicketingCategoryRequest request) {
         AsyncRequestOperation<CreateTicketingCategoryRequest, CreateTicketingCategoryResponse> operation
@@ -136,7 +136,7 @@ public class AsyncCategory {
      * Retrieve a category
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetAccountingCategoryResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetAccountingCategoryResponse>} - The async response
      */
     public CompletableFuture<GetAccountingCategoryResponse> getAccountingCategory(GetAccountingCategoryRequest request) {
         AsyncRequestOperation<GetAccountingCategoryRequest, GetAccountingCategoryResponse> operation
@@ -159,7 +159,7 @@ public class AsyncCategory {
      * Retrieve a category
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetTicketingCategoryResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetTicketingCategoryResponse>} - The async response
      */
     public CompletableFuture<GetTicketingCategoryResponse> getTicketingCategory(GetTicketingCategoryRequest request) {
         AsyncRequestOperation<GetTicketingCategoryRequest, GetTicketingCategoryResponse> operation
@@ -182,7 +182,7 @@ public class AsyncCategory {
      * List all categories
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListAccountingCategoriesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListAccountingCategoriesResponse>} - The async response
      */
     public CompletableFuture<ListAccountingCategoriesResponse> listAccountingCategories(ListAccountingCategoriesRequest request) {
         AsyncRequestOperation<ListAccountingCategoriesRequest, ListAccountingCategoriesResponse> operation
@@ -205,7 +205,7 @@ public class AsyncCategory {
      * List all categories
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListTicketingCategoriesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListTicketingCategoriesResponse>} - The async response
      */
     public CompletableFuture<ListTicketingCategoriesResponse> listTicketingCategories(ListTicketingCategoriesRequest request) {
         AsyncRequestOperation<ListTicketingCategoriesRequest, ListTicketingCategoriesResponse> operation
@@ -228,7 +228,7 @@ public class AsyncCategory {
      * Update a category
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchAccountingCategoryResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchAccountingCategoryResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingCategoryResponse> patchAccountingCategory(PatchAccountingCategoryRequest request) {
         AsyncRequestOperation<PatchAccountingCategoryRequest, PatchAccountingCategoryResponse> operation
@@ -251,7 +251,7 @@ public class AsyncCategory {
      * Update a category
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchTicketingCategoryResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchTicketingCategoryResponse>} - The async response
      */
     public CompletableFuture<PatchTicketingCategoryResponse> patchTicketingCategory(PatchTicketingCategoryRequest request) {
         AsyncRequestOperation<PatchTicketingCategoryRequest, PatchTicketingCategoryResponse> operation
@@ -274,7 +274,7 @@ public class AsyncCategory {
      * Remove a category
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveAccountingCategoryResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveAccountingCategoryResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingCategoryResponse> removeAccountingCategory(RemoveAccountingCategoryRequest request) {
         AsyncRequestOperation<RemoveAccountingCategoryRequest, RemoveAccountingCategoryResponse> operation
@@ -297,7 +297,7 @@ public class AsyncCategory {
      * Remove a category
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveTicketingCategoryResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveTicketingCategoryResponse>} - The async response
      */
     public CompletableFuture<RemoveTicketingCategoryResponse> removeTicketingCategory(RemoveTicketingCategoryRequest request) {
         AsyncRequestOperation<RemoveTicketingCategoryRequest, RemoveTicketingCategoryResponse> operation
@@ -320,7 +320,7 @@ public class AsyncCategory {
      * Update a category
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateAccountingCategoryResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateAccountingCategoryResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingCategoryResponse> updateAccountingCategory(UpdateAccountingCategoryRequest request) {
         AsyncRequestOperation<UpdateAccountingCategoryRequest, UpdateAccountingCategoryResponse> operation
@@ -343,7 +343,7 @@ public class AsyncCategory {
      * Update a category
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateTicketingCategoryResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateTicketingCategoryResponse>} - The async response
      */
     public CompletableFuture<UpdateTicketingCategoryResponse> updateTicketingCategory(UpdateTicketingCategoryRequest request) {
         AsyncRequestOperation<UpdateTicketingCategoryRequest, UpdateTicketingCategoryResponse> operation

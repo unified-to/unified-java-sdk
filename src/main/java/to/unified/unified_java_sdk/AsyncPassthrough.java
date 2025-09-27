@@ -74,7 +74,7 @@ public class AsyncPassthrough {
      * Passthrough POST
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreatePassthroughJsonResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreatePassthroughJsonResponse>} - The async response
      */
     public CompletableFuture<CreatePassthroughJsonResponse> createPassthroughJson(CreatePassthroughJsonRequest request) {
         AsyncRequestOperation<CreatePassthroughJsonRequest, CreatePassthroughJsonResponse> operation
@@ -97,7 +97,7 @@ public class AsyncPassthrough {
      * Passthrough POST
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreatePassthroughRawResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreatePassthroughRawResponse>} - The async response
      */
     public CompletableFuture<CreatePassthroughRawResponse> createPassthroughRaw(CreatePassthroughRawRequest request) {
         AsyncRequestOperation<CreatePassthroughRawRequest, CreatePassthroughRawResponse> operation
@@ -120,7 +120,7 @@ public class AsyncPassthrough {
      * Passthrough GET
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListPassthroughsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListPassthroughsResponse>} - The async response
      */
     public CompletableFuture<ListPassthroughsResponse> listPassthroughs(ListPassthroughsRequest request) {
         AsyncRequestOperation<ListPassthroughsRequest, ListPassthroughsResponse> operation
@@ -143,7 +143,7 @@ public class AsyncPassthrough {
      * Passthrough PUT
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchPassthroughJsonResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchPassthroughJsonResponse>} - The async response
      */
     public CompletableFuture<PatchPassthroughJsonResponse> patchPassthroughJson(PatchPassthroughJsonRequest request) {
         AsyncRequestOperation<PatchPassthroughJsonRequest, PatchPassthroughJsonResponse> operation
@@ -166,7 +166,7 @@ public class AsyncPassthrough {
      * Passthrough PUT
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchPassthroughRawResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchPassthroughRawResponse>} - The async response
      */
     public CompletableFuture<PatchPassthroughRawResponse> patchPassthroughRaw(PatchPassthroughRawRequest request) {
         AsyncRequestOperation<PatchPassthroughRawRequest, PatchPassthroughRawResponse> operation
@@ -189,7 +189,7 @@ public class AsyncPassthrough {
      * Passthrough DELETE
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemovePassthroughResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemovePassthroughResponse>} - The async response
      */
     public CompletableFuture<RemovePassthroughResponse> removePassthrough(RemovePassthroughRequest request) {
         AsyncRequestOperation<RemovePassthroughRequest, RemovePassthroughResponse> operation
@@ -212,7 +212,7 @@ public class AsyncPassthrough {
      * Passthrough PUT
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdatePassthroughJsonResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdatePassthroughJsonResponse>} - The async response
      */
     public CompletableFuture<UpdatePassthroughJsonResponse> updatePassthroughJson(UpdatePassthroughJsonRequest request) {
         AsyncRequestOperation<UpdatePassthroughJsonRequest, UpdatePassthroughJsonResponse> operation
@@ -235,7 +235,7 @@ public class AsyncPassthrough {
      * Passthrough PUT
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdatePassthroughRawResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdatePassthroughRawResponse>} - The async response
      */
     public CompletableFuture<UpdatePassthroughRawResponse> updatePassthroughRaw(UpdatePassthroughRawRequest request) {
         AsyncRequestOperation<UpdatePassthroughRawRequest, UpdatePassthroughRawResponse> operation

@@ -66,7 +66,7 @@ public class AsyncScorecard {
      * Create a scorecard
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateAtsScorecardResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateAtsScorecardResponse>} - The async response
      */
     public CompletableFuture<CreateAtsScorecardResponse> createAtsScorecard(CreateAtsScorecardRequest request) {
         AsyncRequestOperation<CreateAtsScorecardRequest, CreateAtsScorecardResponse> operation
@@ -89,7 +89,7 @@ public class AsyncScorecard {
      * Retrieve a scorecard
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetAtsScorecardResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetAtsScorecardResponse>} - The async response
      */
     public CompletableFuture<GetAtsScorecardResponse> getAtsScorecard(GetAtsScorecardRequest request) {
         AsyncRequestOperation<GetAtsScorecardRequest, GetAtsScorecardResponse> operation
@@ -112,7 +112,7 @@ public class AsyncScorecard {
      * List all scorecards
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListAtsScorecardsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListAtsScorecardsResponse>} - The async response
      */
     public CompletableFuture<ListAtsScorecardsResponse> listAtsScorecards(ListAtsScorecardsRequest request) {
         AsyncRequestOperation<ListAtsScorecardsRequest, ListAtsScorecardsResponse> operation
@@ -135,7 +135,7 @@ public class AsyncScorecard {
      * Update a scorecard
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchAtsScorecardResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchAtsScorecardResponse>} - The async response
      */
     public CompletableFuture<PatchAtsScorecardResponse> patchAtsScorecard(PatchAtsScorecardRequest request) {
         AsyncRequestOperation<PatchAtsScorecardRequest, PatchAtsScorecardResponse> operation
@@ -158,7 +158,7 @@ public class AsyncScorecard {
      * Remove a scorecard
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveAtsScorecardResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveAtsScorecardResponse>} - The async response
      */
     public CompletableFuture<RemoveAtsScorecardResponse> removeAtsScorecard(RemoveAtsScorecardRequest request) {
         AsyncRequestOperation<RemoveAtsScorecardRequest, RemoveAtsScorecardResponse> operation
@@ -181,7 +181,7 @@ public class AsyncScorecard {
      * Update a scorecard
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateAtsScorecardResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateAtsScorecardResponse>} - The async response
      */
     public CompletableFuture<UpdateAtsScorecardResponse> updateAtsScorecard(UpdateAtsScorecardRequest request) {
         AsyncRequestOperation<UpdateAtsScorecardRequest, UpdateAtsScorecardResponse> operation

@@ -66,7 +66,7 @@ public class AsyncOrder {
      * Create an order
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateAccountingOrderResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateAccountingOrderResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingOrderResponse> createAccountingOrder(CreateAccountingOrderRequest request) {
         AsyncRequestOperation<CreateAccountingOrderRequest, CreateAccountingOrderResponse> operation
@@ -89,7 +89,7 @@ public class AsyncOrder {
      * Retrieve an order
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetAccountingOrderResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetAccountingOrderResponse>} - The async response
      */
     public CompletableFuture<GetAccountingOrderResponse> getAccountingOrder(GetAccountingOrderRequest request) {
         AsyncRequestOperation<GetAccountingOrderRequest, GetAccountingOrderResponse> operation
@@ -112,7 +112,7 @@ public class AsyncOrder {
      * List all orders
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListAccountingOrdersResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListAccountingOrdersResponse>} - The async response
      */
     public CompletableFuture<ListAccountingOrdersResponse> listAccountingOrders(ListAccountingOrdersRequest request) {
         AsyncRequestOperation<ListAccountingOrdersRequest, ListAccountingOrdersResponse> operation
@@ -135,7 +135,7 @@ public class AsyncOrder {
      * Update an order
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchAccountingOrderResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchAccountingOrderResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingOrderResponse> patchAccountingOrder(PatchAccountingOrderRequest request) {
         AsyncRequestOperation<PatchAccountingOrderRequest, PatchAccountingOrderResponse> operation
@@ -158,7 +158,7 @@ public class AsyncOrder {
      * Remove an order
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveAccountingOrderResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveAccountingOrderResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingOrderResponse> removeAccountingOrder(RemoveAccountingOrderRequest request) {
         AsyncRequestOperation<RemoveAccountingOrderRequest, RemoveAccountingOrderResponse> operation
@@ -181,7 +181,7 @@ public class AsyncOrder {
      * Update an order
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateAccountingOrderResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateAccountingOrderResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingOrderResponse> updateAccountingOrder(UpdateAccountingOrderRequest request) {
         AsyncRequestOperation<UpdateAccountingOrderRequest, UpdateAccountingOrderResponse> operation

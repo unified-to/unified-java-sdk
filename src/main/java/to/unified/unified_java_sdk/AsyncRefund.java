@@ -50,7 +50,7 @@ public class AsyncRefund {
      * Retrieve a refund
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetPaymentRefundResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetPaymentRefundResponse>} - The async response
      */
     public CompletableFuture<GetPaymentRefundResponse> getPaymentRefund(GetPaymentRefundRequest request) {
         AsyncRequestOperation<GetPaymentRefundRequest, GetPaymentRefundResponse> operation
@@ -73,7 +73,7 @@ public class AsyncRefund {
      * List all refunds
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListPaymentRefundsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListPaymentRefundsResponse>} - The async response
      */
     public CompletableFuture<ListPaymentRefundsResponse> listPaymentRefunds(ListPaymentRefundsRequest request) {
         AsyncRequestOperation<ListPaymentRefundsRequest, ListPaymentRefundsResponse> operation

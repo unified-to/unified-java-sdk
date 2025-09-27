@@ -35,7 +35,9 @@ public class CreateCommerceCollectionRequest {
     private Optional<? extends List<String>> fields;
 
     /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
+     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
+     * 
+     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
     private Optional<String> raw;
@@ -89,7 +91,9 @@ public class CreateCommerceCollectionRequest {
     }
 
     /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
+     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
+     * 
+     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @JsonIgnore
     public Optional<String> raw() {
@@ -139,7 +143,9 @@ public class CreateCommerceCollectionRequest {
     }
 
     /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
+     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
+     * 
+     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     public CreateCommerceCollectionRequest withRaw(String raw) {
         Utils.checkNotNull(raw, "raw");
@@ -149,7 +155,9 @@ public class CreateCommerceCollectionRequest {
 
 
     /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
+     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
+     * 
+     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     public CreateCommerceCollectionRequest withRaw(Optional<String> raw) {
         Utils.checkNotNull(raw, "raw");
@@ -245,7 +253,9 @@ public class CreateCommerceCollectionRequest {
 
 
         /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
+         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
+         * 
+         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
         public Builder raw(String raw) {
             Utils.checkNotNull(raw, "raw");
@@ -254,7 +264,9 @@ public class CreateCommerceCollectionRequest {
         }
 
         /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
+         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
+         * 
+         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
         public Builder raw(Optional<String> raw) {
             Utils.checkNotNull(raw, "raw");

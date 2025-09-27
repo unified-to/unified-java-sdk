@@ -27,7 +27,8 @@ public class GetUnifiedIntegrationAuthRequest {
     private Optional<String> externalXref;
 
     /**
-     * The URL where you want the user to be redirect to after an unsuccessful authentication. An "error" variable will be appended.
+     * The URL where you want the user to be redirect to after an unsuccessful authentication. An "error"
+     * variable will be appended.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=failure_redirect")
     private Optional<String> failureRedirect;
@@ -63,7 +64,8 @@ public class GetUnifiedIntegrationAuthRequest {
     private Optional<String> subdomain;
 
     /**
-     * The URL where you want the user to be redirect to after a successful authorization.  The connection ID will be appended with (id=&lt;connectionId&gt;) to this URL, as will the state that was provided.
+     * The URL where you want the user to be redirect to after a successful authorization. The connection
+     * ID will be appended with (id=&lt;connectionId&gt;) to this URL, as will the state that was provided.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=success_redirect")
     private Optional<String> successRedirect;
@@ -134,7 +136,8 @@ public class GetUnifiedIntegrationAuthRequest {
     }
 
     /**
-     * The URL where you want the user to be redirect to after an unsuccessful authentication. An "error" variable will be appended.
+     * The URL where you want the user to be redirect to after an unsuccessful authentication. An "error"
+     * variable will be appended.
      */
     @JsonIgnore
     public Optional<String> failureRedirect() {
@@ -182,7 +185,8 @@ public class GetUnifiedIntegrationAuthRequest {
     }
 
     /**
-     * The URL where you want the user to be redirect to after a successful authorization.  The connection ID will be appended with (id=&lt;connectionId&gt;) to this URL, as will the state that was provided.
+     * The URL where you want the user to be redirect to after a successful authorization. The connection
+     * ID will be appended with (id=&lt;connectionId&gt;) to this URL, as will the state that was provided.
      */
     @JsonIgnore
     public Optional<String> successRedirect() {
@@ -235,7 +239,8 @@ public class GetUnifiedIntegrationAuthRequest {
     }
 
     /**
-     * The URL where you want the user to be redirect to after an unsuccessful authentication. An "error" variable will be appended.
+     * The URL where you want the user to be redirect to after an unsuccessful authentication. An "error"
+     * variable will be appended.
      */
     public GetUnifiedIntegrationAuthRequest withFailureRedirect(String failureRedirect) {
         Utils.checkNotNull(failureRedirect, "failureRedirect");
@@ -245,7 +250,8 @@ public class GetUnifiedIntegrationAuthRequest {
 
 
     /**
-     * The URL where you want the user to be redirect to after an unsuccessful authentication. An "error" variable will be appended.
+     * The URL where you want the user to be redirect to after an unsuccessful authentication. An "error"
+     * variable will be appended.
      */
     public GetUnifiedIntegrationAuthRequest withFailureRedirect(Optional<String> failureRedirect) {
         Utils.checkNotNull(failureRedirect, "failureRedirect");
@@ -340,7 +346,8 @@ public class GetUnifiedIntegrationAuthRequest {
     }
 
     /**
-     * The URL where you want the user to be redirect to after a successful authorization.  The connection ID will be appended with (id=&lt;connectionId&gt;) to this URL, as will the state that was provided.
+     * The URL where you want the user to be redirect to after a successful authorization. The connection
+     * ID will be appended with (id=&lt;connectionId&gt;) to this URL, as will the state that was provided.
      */
     public GetUnifiedIntegrationAuthRequest withSuccessRedirect(String successRedirect) {
         Utils.checkNotNull(successRedirect, "successRedirect");
@@ -350,7 +357,8 @@ public class GetUnifiedIntegrationAuthRequest {
 
 
     /**
-     * The URL where you want the user to be redirect to after a successful authorization.  The connection ID will be appended with (id=&lt;connectionId&gt;) to this URL, as will the state that was provided.
+     * The URL where you want the user to be redirect to after a successful authorization. The connection
+     * ID will be appended with (id=&lt;connectionId&gt;) to this URL, as will the state that was provided.
      */
     public GetUnifiedIntegrationAuthRequest withSuccessRedirect(Optional<String> successRedirect) {
         Utils.checkNotNull(successRedirect, "successRedirect");
@@ -478,7 +486,8 @@ public class GetUnifiedIntegrationAuthRequest {
 
 
         /**
-         * The URL where you want the user to be redirect to after an unsuccessful authentication. An "error" variable will be appended.
+         * The URL where you want the user to be redirect to after an unsuccessful authentication. An "error"
+         * variable will be appended.
          */
         public Builder failureRedirect(String failureRedirect) {
             Utils.checkNotNull(failureRedirect, "failureRedirect");
@@ -487,7 +496,8 @@ public class GetUnifiedIntegrationAuthRequest {
         }
 
         /**
-         * The URL where you want the user to be redirect to after an unsuccessful authentication. An "error" variable will be appended.
+         * The URL where you want the user to be redirect to after an unsuccessful authentication. An "error"
+         * variable will be appended.
          */
         public Builder failureRedirect(Optional<String> failureRedirect) {
             Utils.checkNotNull(failureRedirect, "failureRedirect");
@@ -584,7 +594,8 @@ public class GetUnifiedIntegrationAuthRequest {
 
 
         /**
-         * The URL where you want the user to be redirect to after a successful authorization.  The connection ID will be appended with (id=&lt;connectionId&gt;) to this URL, as will the state that was provided.
+         * The URL where you want the user to be redirect to after a successful authorization. The connection
+         * ID will be appended with (id=&lt;connectionId&gt;) to this URL, as will the state that was provided.
          */
         public Builder successRedirect(String successRedirect) {
             Utils.checkNotNull(successRedirect, "successRedirect");
@@ -593,7 +604,8 @@ public class GetUnifiedIntegrationAuthRequest {
         }
 
         /**
-         * The URL where you want the user to be redirect to after a successful authorization.  The connection ID will be appended with (id=&lt;connectionId&gt;) to this URL, as will the state that was provided.
+         * The URL where you want the user to be redirect to after a successful authorization. The connection
+         * ID will be appended with (id=&lt;connectionId&gt;) to this URL, as will the state that was provided.
          */
         public Builder successRedirect(Optional<String> successRedirect) {
             Utils.checkNotNull(successRedirect, "successRedirect");

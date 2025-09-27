@@ -46,7 +46,7 @@ public class AsyncApplicationstatus {
      * List all applicationstatuses
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListAtsApplicationstatusesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListAtsApplicationstatusesResponse>} - The async response
      */
     public CompletableFuture<ListAtsApplicationstatusesResponse> listAtsApplicationstatuses(ListAtsApplicationstatusesRequest request) {
         AsyncRequestOperation<ListAtsApplicationstatusesRequest, ListAtsApplicationstatusesResponse> operation

@@ -66,7 +66,7 @@ public class AsyncRepository {
      * Create a repository
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateRepoRepositoryResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateRepoRepositoryResponse>} - The async response
      */
     public CompletableFuture<CreateRepoRepositoryResponse> createRepoRepository(CreateRepoRepositoryRequest request) {
         AsyncRequestOperation<CreateRepoRepositoryRequest, CreateRepoRepositoryResponse> operation
@@ -89,7 +89,7 @@ public class AsyncRepository {
      * Retrieve a repository
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetRepoRepositoryResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetRepoRepositoryResponse>} - The async response
      */
     public CompletableFuture<GetRepoRepositoryResponse> getRepoRepository(GetRepoRepositoryRequest request) {
         AsyncRequestOperation<GetRepoRepositoryRequest, GetRepoRepositoryResponse> operation
@@ -112,7 +112,7 @@ public class AsyncRepository {
      * List all repositories
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListRepoRepositoriesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListRepoRepositoriesResponse>} - The async response
      */
     public CompletableFuture<ListRepoRepositoriesResponse> listRepoRepositories(ListRepoRepositoriesRequest request) {
         AsyncRequestOperation<ListRepoRepositoriesRequest, ListRepoRepositoriesResponse> operation
@@ -135,7 +135,7 @@ public class AsyncRepository {
      * Update a repository
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchRepoRepositoryResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchRepoRepositoryResponse>} - The async response
      */
     public CompletableFuture<PatchRepoRepositoryResponse> patchRepoRepository(PatchRepoRepositoryRequest request) {
         AsyncRequestOperation<PatchRepoRepositoryRequest, PatchRepoRepositoryResponse> operation
@@ -158,7 +158,7 @@ public class AsyncRepository {
      * Remove a repository
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveRepoRepositoryResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveRepoRepositoryResponse>} - The async response
      */
     public CompletableFuture<RemoveRepoRepositoryResponse> removeRepoRepository(RemoveRepoRepositoryRequest request) {
         AsyncRequestOperation<RemoveRepoRepositoryRequest, RemoveRepoRepositoryResponse> operation
@@ -181,7 +181,7 @@ public class AsyncRepository {
      * Update a repository
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateRepoRepositoryResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateRepoRepositoryResponse>} - The async response
      */
     public CompletableFuture<UpdateRepoRepositoryResponse> updateRepoRepository(UpdateRepoRepositoryRequest request) {
         AsyncRequestOperation<UpdateRepoRepositoryRequest, UpdateRepoRepositoryResponse> operation

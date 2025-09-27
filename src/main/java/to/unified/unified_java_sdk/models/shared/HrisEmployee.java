@@ -97,7 +97,8 @@ public class HrisEmployee {
     private Optional<? extends HrisEmployeeGender> gender;
 
     /**
-     * Which groups/teams/units that this employee/user belongs to.  May not have all of the Group fields present, but should have id, name, or email.
+     * Which groups/teams/units that this employee/user belongs to. May not have all of the Group fields
+     * present, but should have id, name, or email.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groups")
@@ -430,7 +431,8 @@ public class HrisEmployee {
     }
 
     /**
-     * Which groups/teams/units that this employee/user belongs to.  May not have all of the Group fields present, but should have id, name, or email.
+     * Which groups/teams/units that this employee/user belongs to. May not have all of the Group fields
+     * present, but should have id, name, or email.
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
@@ -754,7 +756,8 @@ public class HrisEmployee {
     }
 
     /**
-     * Which groups/teams/units that this employee/user belongs to.  May not have all of the Group fields present, but should have id, name, or email.
+     * Which groups/teams/units that this employee/user belongs to. May not have all of the Group fields
+     * present, but should have id, name, or email.
      */
     public HrisEmployee withGroups(List<HrisGroup> groups) {
         Utils.checkNotNull(groups, "groups");
@@ -764,7 +767,8 @@ public class HrisEmployee {
 
 
     /**
-     * Which groups/teams/units that this employee/user belongs to.  May not have all of the Group fields present, but should have id, name, or email.
+     * Which groups/teams/units that this employee/user belongs to. May not have all of the Group fields
+     * present, but should have id, name, or email.
      */
     public HrisEmployee withGroups(Optional<? extends List<HrisGroup>> groups) {
         Utils.checkNotNull(groups, "groups");
@@ -1449,7 +1453,8 @@ public class HrisEmployee {
 
 
         /**
-         * Which groups/teams/units that this employee/user belongs to.  May not have all of the Group fields present, but should have id, name, or email.
+         * Which groups/teams/units that this employee/user belongs to. May not have all of the Group fields
+         * present, but should have id, name, or email.
          */
         public Builder groups(List<HrisGroup> groups) {
             Utils.checkNotNull(groups, "groups");
@@ -1458,7 +1463,8 @@ public class HrisEmployee {
         }
 
         /**
-         * Which groups/teams/units that this employee/user belongs to.  May not have all of the Group fields present, but should have id, name, or email.
+         * Which groups/teams/units that this employee/user belongs to. May not have all of the Group fields
+         * present, but should have id, name, or email.
          */
         public Builder groups(Optional<? extends List<HrisGroup>> groups) {
             Utils.checkNotNull(groups, "groups");

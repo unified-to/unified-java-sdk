@@ -43,7 +43,8 @@ public class Integration {
     /**
      * Authorize new connection
      * 
-     * <p>Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
+     * <p>Returns an authorization URL for the specified integration. Once a successful authorization occurs,
+     * a new connection is created.
      * 
      * @return The call builder
      */
@@ -54,7 +55,8 @@ public class Integration {
     /**
      * Authorize new connection
      * 
-     * <p>Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
+     * <p>Returns an authorization URL for the specified integration. Once a successful authorization occurs,
+     * a new connection is created.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

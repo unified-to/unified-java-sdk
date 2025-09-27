@@ -114,7 +114,7 @@ public class AsyncContact {
      * Create a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateAccountingContactResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateAccountingContactResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingContactResponse> createAccountingContact(CreateAccountingContactRequest request) {
         AsyncRequestOperation<CreateAccountingContactRequest, CreateAccountingContactResponse> operation
@@ -137,7 +137,7 @@ public class AsyncContact {
      * Create a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateCrmContactResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateCrmContactResponse>} - The async response
      */
     public CompletableFuture<CreateCrmContactResponse> createCrmContact(CreateCrmContactRequest request) {
         AsyncRequestOperation<CreateCrmContactRequest, CreateCrmContactResponse> operation
@@ -160,7 +160,7 @@ public class AsyncContact {
      * Create a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateUcContactResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateUcContactResponse>} - The async response
      */
     public CompletableFuture<CreateUcContactResponse> createUcContact(CreateUcContactRequest request) {
         AsyncRequestOperation<CreateUcContactRequest, CreateUcContactResponse> operation
@@ -183,7 +183,7 @@ public class AsyncContact {
      * Retrieve a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetAccountingContactResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetAccountingContactResponse>} - The async response
      */
     public CompletableFuture<GetAccountingContactResponse> getAccountingContact(GetAccountingContactRequest request) {
         AsyncRequestOperation<GetAccountingContactRequest, GetAccountingContactResponse> operation
@@ -206,7 +206,7 @@ public class AsyncContact {
      * Retrieve a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetCrmContactResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetCrmContactResponse>} - The async response
      */
     public CompletableFuture<GetCrmContactResponse> getCrmContact(GetCrmContactRequest request) {
         AsyncRequestOperation<GetCrmContactRequest, GetCrmContactResponse> operation
@@ -229,7 +229,7 @@ public class AsyncContact {
      * Retrieve a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetUcContactResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetUcContactResponse>} - The async response
      */
     public CompletableFuture<GetUcContactResponse> getUcContact(GetUcContactRequest request) {
         AsyncRequestOperation<GetUcContactRequest, GetUcContactResponse> operation
@@ -252,7 +252,7 @@ public class AsyncContact {
      * List all contacts
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListAccountingContactsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListAccountingContactsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingContactsResponse> listAccountingContacts(ListAccountingContactsRequest request) {
         AsyncRequestOperation<ListAccountingContactsRequest, ListAccountingContactsResponse> operation
@@ -275,7 +275,7 @@ public class AsyncContact {
      * List all contacts
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListCrmContactsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListCrmContactsResponse>} - The async response
      */
     public CompletableFuture<ListCrmContactsResponse> listCrmContacts(ListCrmContactsRequest request) {
         AsyncRequestOperation<ListCrmContactsRequest, ListCrmContactsResponse> operation
@@ -298,7 +298,7 @@ public class AsyncContact {
      * List all contacts
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListUcContactsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListUcContactsResponse>} - The async response
      */
     public CompletableFuture<ListUcContactsResponse> listUcContacts(ListUcContactsRequest request) {
         AsyncRequestOperation<ListUcContactsRequest, ListUcContactsResponse> operation
@@ -321,7 +321,7 @@ public class AsyncContact {
      * Update a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchAccountingContactResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchAccountingContactResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingContactResponse> patchAccountingContact(PatchAccountingContactRequest request) {
         AsyncRequestOperation<PatchAccountingContactRequest, PatchAccountingContactResponse> operation
@@ -344,7 +344,7 @@ public class AsyncContact {
      * Update a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchCrmContactResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchCrmContactResponse>} - The async response
      */
     public CompletableFuture<PatchCrmContactResponse> patchCrmContact(PatchCrmContactRequest request) {
         AsyncRequestOperation<PatchCrmContactRequest, PatchCrmContactResponse> operation
@@ -367,7 +367,7 @@ public class AsyncContact {
      * Update a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchUcContactResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchUcContactResponse>} - The async response
      */
     public CompletableFuture<PatchUcContactResponse> patchUcContact(PatchUcContactRequest request) {
         AsyncRequestOperation<PatchUcContactRequest, PatchUcContactResponse> operation
@@ -390,7 +390,7 @@ public class AsyncContact {
      * Remove a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveAccountingContactResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveAccountingContactResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingContactResponse> removeAccountingContact(RemoveAccountingContactRequest request) {
         AsyncRequestOperation<RemoveAccountingContactRequest, RemoveAccountingContactResponse> operation
@@ -413,7 +413,7 @@ public class AsyncContact {
      * Remove a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveCrmContactResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveCrmContactResponse>} - The async response
      */
     public CompletableFuture<RemoveCrmContactResponse> removeCrmContact(RemoveCrmContactRequest request) {
         AsyncRequestOperation<RemoveCrmContactRequest, RemoveCrmContactResponse> operation
@@ -436,7 +436,7 @@ public class AsyncContact {
      * Remove a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveUcContactResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveUcContactResponse>} - The async response
      */
     public CompletableFuture<RemoveUcContactResponse> removeUcContact(RemoveUcContactRequest request) {
         AsyncRequestOperation<RemoveUcContactRequest, RemoveUcContactResponse> operation
@@ -459,7 +459,7 @@ public class AsyncContact {
      * Update a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateAccountingContactResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateAccountingContactResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingContactResponse> updateAccountingContact(UpdateAccountingContactRequest request) {
         AsyncRequestOperation<UpdateAccountingContactRequest, UpdateAccountingContactResponse> operation
@@ -482,7 +482,7 @@ public class AsyncContact {
      * Update a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateCrmContactResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateCrmContactResponse>} - The async response
      */
     public CompletableFuture<UpdateCrmContactResponse> updateCrmContact(UpdateCrmContactRequest request) {
         AsyncRequestOperation<UpdateCrmContactRequest, UpdateCrmContactResponse> operation
@@ -505,7 +505,7 @@ public class AsyncContact {
      * Update a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateUcContactResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateUcContactResponse>} - The async response
      */
     public CompletableFuture<UpdateUcContactResponse> updateUcContact(UpdateUcContactRequest request) {
         AsyncRequestOperation<UpdateUcContactRequest, UpdateUcContactResponse> operation

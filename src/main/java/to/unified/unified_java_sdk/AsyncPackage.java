@@ -50,7 +50,7 @@ public class AsyncPackage {
      * Retrieve a package
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetVerificationPackageResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetVerificationPackageResponse>} - The async response
      */
     public CompletableFuture<GetVerificationPackageResponse> getVerificationPackage(GetVerificationPackageRequest request) {
         AsyncRequestOperation<GetVerificationPackageRequest, GetVerificationPackageResponse> operation
@@ -73,7 +73,7 @@ public class AsyncPackage {
      * List all packages
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListVerificationPackagesResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListVerificationPackagesResponse>} - The async response
      */
     public CompletableFuture<ListVerificationPackagesResponse> listVerificationPackages(ListVerificationPackagesRequest request) {
         AsyncRequestOperation<ListVerificationPackagesRequest, ListVerificationPackagesResponse> operation

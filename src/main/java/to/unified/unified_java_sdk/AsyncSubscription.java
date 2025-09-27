@@ -66,7 +66,7 @@ public class AsyncSubscription {
      * Create a subscription
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreatePaymentSubscriptionResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreatePaymentSubscriptionResponse>} - The async response
      */
     public CompletableFuture<CreatePaymentSubscriptionResponse> createPaymentSubscription(CreatePaymentSubscriptionRequest request) {
         AsyncRequestOperation<CreatePaymentSubscriptionRequest, CreatePaymentSubscriptionResponse> operation
@@ -89,7 +89,7 @@ public class AsyncSubscription {
      * Retrieve a subscription
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetPaymentSubscriptionResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetPaymentSubscriptionResponse>} - The async response
      */
     public CompletableFuture<GetPaymentSubscriptionResponse> getPaymentSubscription(GetPaymentSubscriptionRequest request) {
         AsyncRequestOperation<GetPaymentSubscriptionRequest, GetPaymentSubscriptionResponse> operation
@@ -112,7 +112,7 @@ public class AsyncSubscription {
      * List all subscriptions
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListPaymentSubscriptionsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListPaymentSubscriptionsResponse>} - The async response
      */
     public CompletableFuture<ListPaymentSubscriptionsResponse> listPaymentSubscriptions(ListPaymentSubscriptionsRequest request) {
         AsyncRequestOperation<ListPaymentSubscriptionsRequest, ListPaymentSubscriptionsResponse> operation
@@ -135,7 +135,7 @@ public class AsyncSubscription {
      * Update a subscription
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchPaymentSubscriptionResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchPaymentSubscriptionResponse>} - The async response
      */
     public CompletableFuture<PatchPaymentSubscriptionResponse> patchPaymentSubscription(PatchPaymentSubscriptionRequest request) {
         AsyncRequestOperation<PatchPaymentSubscriptionRequest, PatchPaymentSubscriptionResponse> operation
@@ -158,7 +158,7 @@ public class AsyncSubscription {
      * Remove a subscription
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemovePaymentSubscriptionResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemovePaymentSubscriptionResponse>} - The async response
      */
     public CompletableFuture<RemovePaymentSubscriptionResponse> removePaymentSubscription(RemovePaymentSubscriptionRequest request) {
         AsyncRequestOperation<RemovePaymentSubscriptionRequest, RemovePaymentSubscriptionResponse> operation
@@ -181,7 +181,7 @@ public class AsyncSubscription {
      * Update a subscription
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdatePaymentSubscriptionResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdatePaymentSubscriptionResponse>} - The async response
      */
     public CompletableFuture<UpdatePaymentSubscriptionResponse> updatePaymentSubscription(UpdatePaymentSubscriptionRequest request) {
         AsyncRequestOperation<UpdatePaymentSubscriptionRequest, UpdatePaymentSubscriptionResponse> operation

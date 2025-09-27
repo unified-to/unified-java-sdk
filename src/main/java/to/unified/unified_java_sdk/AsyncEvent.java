@@ -90,7 +90,7 @@ public class AsyncEvent {
      * Create an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateCalendarEventResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateCalendarEventResponse>} - The async response
      */
     public CompletableFuture<CreateCalendarEventResponse> createCalendarEvent(CreateCalendarEventRequest request) {
         AsyncRequestOperation<CreateCalendarEventRequest, CreateCalendarEventResponse> operation
@@ -113,7 +113,7 @@ public class AsyncEvent {
      * Create an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;CreateCrmEventResponse&gt; - The async response
+     * @return {@code CompletableFuture<CreateCrmEventResponse>} - The async response
      */
     public CompletableFuture<CreateCrmEventResponse> createCrmEvent(CreateCrmEventRequest request) {
         AsyncRequestOperation<CreateCrmEventRequest, CreateCrmEventResponse> operation
@@ -136,7 +136,7 @@ public class AsyncEvent {
      * Retrieve an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetCalendarEventResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetCalendarEventResponse>} - The async response
      */
     public CompletableFuture<GetCalendarEventResponse> getCalendarEvent(GetCalendarEventRequest request) {
         AsyncRequestOperation<GetCalendarEventRequest, GetCalendarEventResponse> operation
@@ -159,7 +159,7 @@ public class AsyncEvent {
      * Retrieve an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;GetCrmEventResponse&gt; - The async response
+     * @return {@code CompletableFuture<GetCrmEventResponse>} - The async response
      */
     public CompletableFuture<GetCrmEventResponse> getCrmEvent(GetCrmEventRequest request) {
         AsyncRequestOperation<GetCrmEventRequest, GetCrmEventResponse> operation
@@ -182,7 +182,7 @@ public class AsyncEvent {
      * List all events
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListCalendarEventsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListCalendarEventsResponse>} - The async response
      */
     public CompletableFuture<ListCalendarEventsResponse> listCalendarEvents(ListCalendarEventsRequest request) {
         AsyncRequestOperation<ListCalendarEventsRequest, ListCalendarEventsResponse> operation
@@ -205,7 +205,7 @@ public class AsyncEvent {
      * List all events
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;ListCrmEventsResponse&gt; - The async response
+     * @return {@code CompletableFuture<ListCrmEventsResponse>} - The async response
      */
     public CompletableFuture<ListCrmEventsResponse> listCrmEvents(ListCrmEventsRequest request) {
         AsyncRequestOperation<ListCrmEventsRequest, ListCrmEventsResponse> operation
@@ -228,7 +228,7 @@ public class AsyncEvent {
      * Update an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchCalendarEventResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchCalendarEventResponse>} - The async response
      */
     public CompletableFuture<PatchCalendarEventResponse> patchCalendarEvent(PatchCalendarEventRequest request) {
         AsyncRequestOperation<PatchCalendarEventRequest, PatchCalendarEventResponse> operation
@@ -251,7 +251,7 @@ public class AsyncEvent {
      * Update an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;PatchCrmEventResponse&gt; - The async response
+     * @return {@code CompletableFuture<PatchCrmEventResponse>} - The async response
      */
     public CompletableFuture<PatchCrmEventResponse> patchCrmEvent(PatchCrmEventRequest request) {
         AsyncRequestOperation<PatchCrmEventRequest, PatchCrmEventResponse> operation
@@ -274,7 +274,7 @@ public class AsyncEvent {
      * Remove an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveCalendarEventResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveCalendarEventResponse>} - The async response
      */
     public CompletableFuture<RemoveCalendarEventResponse> removeCalendarEvent(RemoveCalendarEventRequest request) {
         AsyncRequestOperation<RemoveCalendarEventRequest, RemoveCalendarEventResponse> operation
@@ -297,7 +297,7 @@ public class AsyncEvent {
      * Remove an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;RemoveCrmEventResponse&gt; - The async response
+     * @return {@code CompletableFuture<RemoveCrmEventResponse>} - The async response
      */
     public CompletableFuture<RemoveCrmEventResponse> removeCrmEvent(RemoveCrmEventRequest request) {
         AsyncRequestOperation<RemoveCrmEventRequest, RemoveCrmEventResponse> operation
@@ -320,7 +320,7 @@ public class AsyncEvent {
      * Update an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateCalendarEventResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateCalendarEventResponse>} - The async response
      */
     public CompletableFuture<UpdateCalendarEventResponse> updateCalendarEvent(UpdateCalendarEventRequest request) {
         AsyncRequestOperation<UpdateCalendarEventRequest, UpdateCalendarEventResponse> operation
@@ -343,7 +343,7 @@ public class AsyncEvent {
      * Update an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return CompletableFuture&lt;UpdateCrmEventResponse&gt; - The async response
+     * @return {@code CompletableFuture<UpdateCrmEventResponse>} - The async response
      */
     public CompletableFuture<UpdateCrmEventResponse> updateCrmEvent(UpdateCrmEventRequest request) {
         AsyncRequestOperation<UpdateCrmEventRequest, UpdateCrmEventResponse> operation
