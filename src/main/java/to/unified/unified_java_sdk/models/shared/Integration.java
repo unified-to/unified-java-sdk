@@ -113,6 +113,11 @@ public class Integration {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("saml")
+    private Optional<? extends Saml> saml;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sandbox")
     private Optional<? extends Sandbox> sandbox;
 
@@ -178,6 +183,7 @@ public class Integration {
             @JsonProperty("partnership") Optional<? extends Partnership> partnership,
             @JsonProperty("popularity") Optional<Double> popularity,
             @JsonProperty("rate_limit_description") Optional<String> rateLimitDescription,
+            @JsonProperty("saml") Optional<? extends Saml> saml,
             @JsonProperty("sandbox") Optional<? extends Sandbox> sandbox,
             @JsonProperty("support") Optional<? extends Map<String, Object>> support,
             @JsonProperty("tested_at") Optional<OffsetDateTime> testedAt,
@@ -204,6 +210,7 @@ public class Integration {
         Utils.checkNotNull(partnership, "partnership");
         Utils.checkNotNull(popularity, "popularity");
         Utils.checkNotNull(rateLimitDescription, "rateLimitDescription");
+        Utils.checkNotNull(saml, "saml");
         Utils.checkNotNull(sandbox, "sandbox");
         Utils.checkNotNull(support, "support");
         Utils.checkNotNull(testedAt, "testedAt");
@@ -230,6 +237,7 @@ public class Integration {
         this.partnership = partnership;
         this.popularity = popularity;
         this.rateLimitDescription = rateLimitDescription;
+        this.saml = saml;
         this.sandbox = sandbox;
         this.support = support;
         this.testedAt = testedAt;
@@ -252,8 +260,8 @@ public class Integration {
             Optional.empty(), name, Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), type,
-            Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            type, Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -344,6 +352,12 @@ public class Integration {
     @JsonIgnore
     public Optional<String> rateLimitDescription() {
         return rateLimitDescription;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<Saml> saml() {
+        return (Optional<Saml>) saml;
     }
 
     @SuppressWarnings("unchecked")
@@ -616,6 +630,19 @@ public class Integration {
         return this;
     }
 
+    public Integration withSaml(Saml saml) {
+        Utils.checkNotNull(saml, "saml");
+        this.saml = Optional.ofNullable(saml);
+        return this;
+    }
+
+
+    public Integration withSaml(Optional<? extends Saml> saml) {
+        Utils.checkNotNull(saml, "saml");
+        this.saml = saml;
+        return this;
+    }
+
     public Integration withSandbox(Sandbox sandbox) {
         Utils.checkNotNull(sandbox, "sandbox");
         this.sandbox = Optional.ofNullable(sandbox);
@@ -765,6 +792,7 @@ public class Integration {
             Utils.enhancedDeepEquals(this.partnership, other.partnership) &&
             Utils.enhancedDeepEquals(this.popularity, other.popularity) &&
             Utils.enhancedDeepEquals(this.rateLimitDescription, other.rateLimitDescription) &&
+            Utils.enhancedDeepEquals(this.saml, other.saml) &&
             Utils.enhancedDeepEquals(this.sandbox, other.sandbox) &&
             Utils.enhancedDeepEquals(this.support, other.support) &&
             Utils.enhancedDeepEquals(this.testedAt, other.testedAt) &&
@@ -784,10 +812,10 @@ public class Integration {
             createdAt, description, faIcon,
             featured, inProgress, isActive,
             logoUrl, name, partnership,
-            popularity, rateLimitDescription, sandbox,
-            support, testedAt, textColor,
-            tokenInstructions, tokenNames, type,
-            updatedAt, webUrl);
+            popularity, rateLimitDescription, saml,
+            sandbox, support, testedAt,
+            textColor, tokenInstructions, tokenNames,
+            type, updatedAt, webUrl);
     }
     
     @Override
@@ -810,6 +838,7 @@ public class Integration {
                 "partnership", partnership,
                 "popularity", popularity,
                 "rateLimitDescription", rateLimitDescription,
+                "saml", saml,
                 "sandbox", sandbox,
                 "support", support,
                 "testedAt", testedAt,
@@ -857,6 +886,8 @@ public class Integration {
         private Optional<Double> popularity = Optional.empty();
 
         private Optional<String> rateLimitDescription = Optional.empty();
+
+        private Optional<? extends Saml> saml = Optional.empty();
 
         private Optional<? extends Sandbox> sandbox = Optional.empty();
 
@@ -1093,6 +1124,19 @@ public class Integration {
         }
 
 
+        public Builder saml(Saml saml) {
+            Utils.checkNotNull(saml, "saml");
+            this.saml = Optional.ofNullable(saml);
+            return this;
+        }
+
+        public Builder saml(Optional<? extends Saml> saml) {
+            Utils.checkNotNull(saml, "saml");
+            this.saml = saml;
+            return this;
+        }
+
+
         public Builder sandbox(Sandbox sandbox) {
             Utils.checkNotNull(sandbox, "sandbox");
             this.sandbox = Optional.ofNullable(sandbox);
@@ -1223,10 +1267,10 @@ public class Integration {
                 createdAt, description, faIcon,
                 featured, inProgress, isActive,
                 logoUrl, name, partnership,
-                popularity, rateLimitDescription, sandbox,
-                support, testedAt, textColor,
-                tokenInstructions, tokenNames, type,
-                updatedAt, webUrl);
+                popularity, rateLimitDescription, saml,
+                sandbox, support, testedAt,
+                textColor, tokenInstructions, tokenNames,
+                type, updatedAt, webUrl);
         }
 
     }
