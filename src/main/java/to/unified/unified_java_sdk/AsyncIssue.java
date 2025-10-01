@@ -6,9 +6,13 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import java.util.concurrent.CompletableFuture;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedIssueRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedIssuesRequest;
+import to.unified.unified_java_sdk.models.operations.async.GetUnifiedIssueRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetUnifiedIssueResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListUnifiedIssuesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListUnifiedIssuesResponse;
+import to.unified.unified_java_sdk.operations.GetUnifiedIssue;
 import to.unified.unified_java_sdk.operations.ListUnifiedIssues;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -30,6 +34,29 @@ public class AsyncIssue {
      */
     public Issue sync() {
         return syncSDK;
+    }
+
+
+    /**
+     * Retrieve support issue
+     * 
+     * @return The async call builder
+     */
+    public GetUnifiedIssueRequestBuilder getUnifiedIssue() {
+        return new GetUnifiedIssueRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve support issue
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetUnifiedIssueResponse>} - The async response
+     */
+    public CompletableFuture<GetUnifiedIssueResponse> getUnifiedIssue(GetUnifiedIssueRequest request) {
+        AsyncRequestOperation<GetUnifiedIssueRequest, GetUnifiedIssueResponse> operation
+              = new GetUnifiedIssue.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
     }
 
 

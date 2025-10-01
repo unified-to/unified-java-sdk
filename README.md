@@ -35,7 +35,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.40.1'
+implementation 'to.unified:unified-java-sdk:0.40.2'
 ```
 
 Maven:
@@ -43,7 +43,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.40.1</version>
+    <version>0.40.2</version>
 </dependency>
 ```
 
@@ -799,6 +799,7 @@ public class Application {
 
 ### [issue()](docs/sdks/issue/README.md)
 
+* [getUnifiedIssue](docs/sdks/issue/README.md#getunifiedissue) - Retrieve support issue
 * [listUnifiedIssues](docs/sdks/issue/README.md#listunifiedissues) - List support issues
 
 ### [item()](docs/sdks/item/README.md)
@@ -1399,6 +1400,7 @@ public class Application {
 * [getUnifiedApicall](docs/sdks/unified/README.md#getunifiedapicall) - Retrieve specific API Call by its ID
 * [getUnifiedConnection](docs/sdks/unified/README.md#getunifiedconnection) - Retrieve connection
 * [getUnifiedIntegrationAuth](docs/sdks/unified/README.md#getunifiedintegrationauth) - Authorize new connection
+* [getUnifiedIssue](docs/sdks/unified/README.md#getunifiedissue) - Retrieve support issue
 * [getUnifiedWebhook](docs/sdks/unified/README.md#getunifiedwebhook) - Retrieve webhook by its ID
 * [listUnifiedApicalls](docs/sdks/unified/README.md#listunifiedapicalls) - Returns API Calls
 * [listUnifiedConnections](docs/sdks/unified/README.md#listunifiedconnections) - List all connections

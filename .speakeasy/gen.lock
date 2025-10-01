@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 877b52162b06392093c3efbd89172e36
+  docChecksum: 93627d104d7b0fff5c900b54ba7421e8
   docVersion: "1.0"
   speakeasyVersion: 1.631.5
   generationVersion: 2.716.16
-  releaseVersion: 0.40.1
-  configChecksum: 0bd92a12661de816d9ff0491781531be
+  releaseVersion: 0.40.2
+  configChecksum: ad7e681831c078f7118d280251513c48
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -364,6 +364,8 @@ generatedFiles:
   - docs/models/operations/GetUnifiedIntegrationAuthResponse.md
   - docs/models/operations/GetUnifiedIntegrationLoginRequest.md
   - docs/models/operations/GetUnifiedIntegrationLoginResponse.md
+  - docs/models/operations/GetUnifiedIssueRequest.md
+  - docs/models/operations/GetUnifiedIssueResponse.md
   - docs/models/operations/GetUnifiedWebhookRequest.md
   - docs/models/operations/GetUnifiedWebhookResponse.md
   - docs/models/operations/GetVerificationPackageRequest.md
@@ -1960,6 +1962,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetUnifiedConnectionRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetUnifiedIntegrationAuthRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetUnifiedIntegrationLoginRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetUnifiedIssueRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetUnifiedWebhookRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetVerificationPackageRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetVerificationRequestRequestBuilder.java
@@ -2798,6 +2801,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetUnifiedIntegrationLoginRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetUnifiedIntegrationLoginRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetUnifiedIntegrationLoginResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetUnifiedIssueRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetUnifiedIssueRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetUnifiedIssueResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetUnifiedWebhookRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetUnifiedWebhookRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetUnifiedWebhookResponse.java
@@ -3970,6 +3976,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetUnifiedConnectionResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetUnifiedIntegrationAuthResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetUnifiedIntegrationLoginResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetUnifiedIssueResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetUnifiedWebhookResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetVerificationPackageResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetVerificationRequestResponse.java
@@ -4889,6 +4896,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/GetUnifiedConnection.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetUnifiedIntegrationAuth.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetUnifiedIntegrationLogin.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetUnifiedIssue.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetUnifiedWebhook.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetVerificationPackage.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetVerificationRequest.java
@@ -9851,11 +9859,17 @@ examples:
       responses:
         "200":
           application/json: {}
+  getUnifiedIssue:
+    speakeasy-default-get-unified-issue:
+      parameters:
+        path:
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {"status": "ON_HOLD", "ticket_ref": "<value>", "title": "<value>", "workspace_id": "<id>"}
 examplesVersion: 1.0.2
 generatedTests: {}
 releaseNotes: |
   ## Java SDK Changes Detected:
-  * `unified-to.unified.listUnifiedIntegrationWorkspaces()`:  `response.[].saml` **Added**
-  * `unified-to.unified.listUnifiedIntegrations()`:  `response.[].saml` **Added**
-  * `unified-to.integration.listUnifiedIntegrationWorkspaces()`:  `response.[].saml` **Added**
-  * `unified-to.integration.listUnifiedIntegrations()`:  `response.[].saml` **Added**
+  * `unified-to.unified.getUnifiedIssue()`: **Added**
+  * `unified-to.issue.getUnifiedIssue()`: **Added**

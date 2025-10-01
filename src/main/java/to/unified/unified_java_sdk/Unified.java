@@ -20,6 +20,9 @@ import to.unified.unified_java_sdk.models.operations.GetUnifiedConnectionRespons
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationAuthRequest;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationAuthRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationAuthResponse;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedIssueRequest;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedIssueRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedIssueResponse;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedWebhookRequest;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedWebhookRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedWebhookResponse;
@@ -71,6 +74,7 @@ import to.unified.unified_java_sdk.operations.CreateUnifiedWebhook;
 import to.unified.unified_java_sdk.operations.GetUnifiedApicall;
 import to.unified.unified_java_sdk.operations.GetUnifiedConnection;
 import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationAuth;
+import to.unified.unified_java_sdk.operations.GetUnifiedIssue;
 import to.unified.unified_java_sdk.operations.GetUnifiedWebhook;
 import to.unified.unified_java_sdk.operations.ListUnifiedApicalls;
 import to.unified.unified_java_sdk.operations.ListUnifiedConnections;
@@ -233,6 +237,28 @@ public class Unified {
     public GetUnifiedIntegrationAuthResponse getUnifiedIntegrationAuth(GetUnifiedIntegrationAuthRequest request) throws Exception {
         RequestOperation<GetUnifiedIntegrationAuthRequest, GetUnifiedIntegrationAuthResponse> operation
               = new GetUnifiedIntegrationAuth.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve support issue
+     * 
+     * @return The call builder
+     */
+    public GetUnifiedIssueRequestBuilder getUnifiedIssue() {
+        return new GetUnifiedIssueRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve support issue
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public GetUnifiedIssueResponse getUnifiedIssue(GetUnifiedIssueRequest request) throws Exception {
+        RequestOperation<GetUnifiedIssueRequest, GetUnifiedIssueResponse> operation
+              = new GetUnifiedIssue.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -10,6 +10,7 @@
 * [getUnifiedApicall](#getunifiedapicall) - Retrieve specific API Call by its ID
 * [getUnifiedConnection](#getunifiedconnection) - Retrieve connection
 * [getUnifiedIntegrationAuth](#getunifiedintegrationauth) - Authorize new connection
+* [getUnifiedIssue](#getunifiedissue) - Retrieve support issue
 * [getUnifiedWebhook](#getunifiedwebhook) - Retrieve webhook by its ID
 * [listUnifiedApicalls](#listunifiedapicalls) - Returns API Calls
 * [listUnifiedConnections](#listunifiedconnections) - List all connections
@@ -312,6 +313,63 @@ public class Application {
 ### Response
 
 **[GetUnifiedIntegrationAuthResponse](../../models/operations/GetUnifiedIntegrationAuthResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getUnifiedIssue
+
+Retrieve support issue
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getUnifiedIssue" method="get" path="/unified/issue/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedIssueRequest;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedIssueResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetUnifiedIssueRequest req = GetUnifiedIssueRequest.builder()
+                .id("<id>")
+                .build();
+
+        GetUnifiedIssueResponse res = sdk.unified().getUnifiedIssue()
+                .request(req)
+                .call();
+
+        if (res.issue().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [GetUnifiedIssueRequest](../../models/operations/GetUnifiedIssueRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+
+### Response
+
+**[GetUnifiedIssueResponse](../../models/operations/GetUnifiedIssueResponse.md)**
 
 ### Errors
 

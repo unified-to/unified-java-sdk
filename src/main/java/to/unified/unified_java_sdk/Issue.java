@@ -6,9 +6,13 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import java.lang.Exception;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedIssueRequest;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedIssueRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedIssueResponse;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedIssuesRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedIssuesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedIssuesResponse;
+import to.unified.unified_java_sdk.operations.GetUnifiedIssue;
 import to.unified.unified_java_sdk.operations.ListUnifiedIssues;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -30,6 +34,28 @@ public class Issue {
      */
     public AsyncIssue async() {
         return asyncSDK;
+    }
+
+    /**
+     * Retrieve support issue
+     * 
+     * @return The call builder
+     */
+    public GetUnifiedIssueRequestBuilder getUnifiedIssue() {
+        return new GetUnifiedIssueRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve support issue
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public GetUnifiedIssueResponse getUnifiedIssue(GetUnifiedIssueRequest request) throws Exception {
+        RequestOperation<GetUnifiedIssueRequest, GetUnifiedIssueResponse> operation
+              = new GetUnifiedIssue.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
     }
 
     /**
