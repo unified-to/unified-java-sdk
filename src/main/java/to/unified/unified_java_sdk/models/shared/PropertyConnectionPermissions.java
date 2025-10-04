@@ -111,6 +111,7 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions ATS_JOB_READ = new PropertyConnectionPermissions("ats_job_read");
     public static final PropertyConnectionPermissions ATS_JOB_WRITE = new PropertyConnectionPermissions("ats_job_write");
     public static final PropertyConnectionPermissions ATS_COMPANY_READ = new PropertyConnectionPermissions("ats_company_read");
+    public static final PropertyConnectionPermissions ATS_COMPANY_WRITE = new PropertyConnectionPermissions("ats_company_write");
     public static final PropertyConnectionPermissions ATS_DOCUMENT_READ = new PropertyConnectionPermissions("ats_document_read");
     public static final PropertyConnectionPermissions ATS_DOCUMENT_WRITE = new PropertyConnectionPermissions("ats_document_write");
     public static final PropertyConnectionPermissions ATS_SCORECARD_READ = new PropertyConnectionPermissions("ats_scorecard_read");
@@ -357,6 +358,7 @@ public class PropertyConnectionPermissions {
         map.put("ats_job_read", ATS_JOB_READ);
         map.put("ats_job_write", ATS_JOB_WRITE);
         map.put("ats_company_read", ATS_COMPANY_READ);
+        map.put("ats_company_write", ATS_COMPANY_WRITE);
         map.put("ats_document_read", ATS_DOCUMENT_READ);
         map.put("ats_document_write", ATS_DOCUMENT_WRITE);
         map.put("ats_scorecard_read", ATS_SCORECARD_READ);
@@ -537,6 +539,7 @@ public class PropertyConnectionPermissions {
         map.put("ats_job_read", PropertyConnectionPermissionsEnum.ATS_JOB_READ);
         map.put("ats_job_write", PropertyConnectionPermissionsEnum.ATS_JOB_WRITE);
         map.put("ats_company_read", PropertyConnectionPermissionsEnum.ATS_COMPANY_READ);
+        map.put("ats_company_write", PropertyConnectionPermissionsEnum.ATS_COMPANY_WRITE);
         map.put("ats_document_read", PropertyConnectionPermissionsEnum.ATS_DOCUMENT_READ);
         map.put("ats_document_write", PropertyConnectionPermissionsEnum.ATS_DOCUMENT_WRITE);
         map.put("ats_scorecard_read", PropertyConnectionPermissionsEnum.ATS_SCORECARD_READ);
@@ -747,6 +750,7 @@ public class PropertyConnectionPermissions {
         ATS_JOB_READ("ats_job_read"),
         ATS_JOB_WRITE("ats_job_write"),
         ATS_COMPANY_READ("ats_company_read"),
+        ATS_COMPANY_WRITE("ats_company_write"),
         ATS_DOCUMENT_READ("ats_document_read"),
         ATS_DOCUMENT_WRITE("ats_document_write"),
         ATS_SCORECARD_READ("ats_scorecard_read"),
