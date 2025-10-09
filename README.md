@@ -35,7 +35,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.40.3'
+implementation 'to.unified:unified-java-sdk:0.40.4'
 ```
 
 Maven:
@@ -43,7 +43,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.40.3</version>
+    <version>0.40.4</version>
 </dependency>
 ```
 
@@ -1416,7 +1416,6 @@ public class Application {
 * [updateUnifiedConnection](docs/sdks/unified/README.md#updateunifiedconnection) - Update connection
 * [updateUnifiedWebhook](docs/sdks/unified/README.md#updateunifiedwebhook) - Update webhook subscription
 * [updateUnifiedWebhookTrigger](docs/sdks/unified/README.md#updateunifiedwebhooktrigger) - Trigger webhook
-
 
 ### [user()](docs/sdks/user/README.md)
 

@@ -22,6 +22,11 @@ public class PropertyMessagingMessageAuthorMember {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("image_url")
+    private Optional<String> imageUrl;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
 
@@ -33,23 +38,32 @@ public class PropertyMessagingMessageAuthorMember {
     @JsonCreator
     public PropertyMessagingMessageAuthorMember(
             @JsonProperty("email") Optional<String> email,
+            @JsonProperty("image_url") Optional<String> imageUrl,
             @JsonProperty("name") Optional<String> name,
             @JsonProperty("user_id") Optional<String> userId) {
         Utils.checkNotNull(email, "email");
+        Utils.checkNotNull(imageUrl, "imageUrl");
         Utils.checkNotNull(name, "name");
         Utils.checkNotNull(userId, "userId");
         this.email = email;
+        this.imageUrl = imageUrl;
         this.name = name;
         this.userId = userId;
     }
     
     public PropertyMessagingMessageAuthorMember() {
-        this(Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
     public Optional<String> email() {
         return email;
+    }
+
+    @JsonIgnore
+    public Optional<String> imageUrl() {
+        return imageUrl;
     }
 
     @JsonIgnore
@@ -77,6 +91,19 @@ public class PropertyMessagingMessageAuthorMember {
     public PropertyMessagingMessageAuthorMember withEmail(Optional<String> email) {
         Utils.checkNotNull(email, "email");
         this.email = email;
+        return this;
+    }
+
+    public PropertyMessagingMessageAuthorMember withImageUrl(String imageUrl) {
+        Utils.checkNotNull(imageUrl, "imageUrl");
+        this.imageUrl = Optional.ofNullable(imageUrl);
+        return this;
+    }
+
+
+    public PropertyMessagingMessageAuthorMember withImageUrl(Optional<String> imageUrl) {
+        Utils.checkNotNull(imageUrl, "imageUrl");
+        this.imageUrl = imageUrl;
         return this;
     }
 
@@ -117,6 +144,7 @@ public class PropertyMessagingMessageAuthorMember {
         PropertyMessagingMessageAuthorMember other = (PropertyMessagingMessageAuthorMember) o;
         return 
             Utils.enhancedDeepEquals(this.email, other.email) &&
+            Utils.enhancedDeepEquals(this.imageUrl, other.imageUrl) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.userId, other.userId);
     }
@@ -124,13 +152,15 @@ public class PropertyMessagingMessageAuthorMember {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            email, name, userId);
+            email, imageUrl, name,
+            userId);
     }
     
     @Override
     public String toString() {
         return Utils.toString(PropertyMessagingMessageAuthorMember.class,
                 "email", email,
+                "imageUrl", imageUrl,
                 "name", name,
                 "userId", userId);
     }
@@ -139,6 +169,8 @@ public class PropertyMessagingMessageAuthorMember {
     public final static class Builder {
 
         private Optional<String> email = Optional.empty();
+
+        private Optional<String> imageUrl = Optional.empty();
 
         private Optional<String> name = Optional.empty();
 
@@ -158,6 +190,19 @@ public class PropertyMessagingMessageAuthorMember {
         public Builder email(Optional<String> email) {
             Utils.checkNotNull(email, "email");
             this.email = email;
+            return this;
+        }
+
+
+        public Builder imageUrl(String imageUrl) {
+            Utils.checkNotNull(imageUrl, "imageUrl");
+            this.imageUrl = Optional.ofNullable(imageUrl);
+            return this;
+        }
+
+        public Builder imageUrl(Optional<String> imageUrl) {
+            Utils.checkNotNull(imageUrl, "imageUrl");
+            this.imageUrl = imageUrl;
             return this;
         }
 
@@ -190,7 +235,8 @@ public class PropertyMessagingMessageAuthorMember {
         public PropertyMessagingMessageAuthorMember build() {
 
             return new PropertyMessagingMessageAuthorMember(
-                email, name, userId);
+                email, imageUrl, name,
+                userId);
         }
 
     }

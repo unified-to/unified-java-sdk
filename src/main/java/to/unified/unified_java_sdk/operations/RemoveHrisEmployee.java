@@ -57,7 +57,7 @@ public class RemoveHrisEmployee {
                     this.sdkConfiguration,
                     this.baseUrl,
                     "removeHrisEmployee",
-                    java.util.Optional.of(java.util.List.of()),
+                    java.util.Optional.empty(),
                     securitySource());
         }
 
@@ -66,7 +66,7 @@ public class RemoveHrisEmployee {
                     this.sdkConfiguration,
                     this.baseUrl,
                     "removeHrisEmployee",
-                    java.util.Optional.of(java.util.List.of()),
+                    java.util.Optional.empty(),
                     securitySource());
         }
 
@@ -75,7 +75,7 @@ public class RemoveHrisEmployee {
                     this.sdkConfiguration,
                     this.baseUrl,
                     "removeHrisEmployee",
-                    java.util.Optional.of(java.util.List.of()),
+                    java.util.Optional.empty(),
                     securitySource());
         }
         <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {

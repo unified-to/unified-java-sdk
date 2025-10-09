@@ -68,6 +68,11 @@ public class AccountingSalesorder {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sales_channel")
+    private Optional<String> salesChannel;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_address")
     private Optional<? extends PropertyAccountingSalesorderShippingAddress> shippingAddress;
 
@@ -97,6 +102,7 @@ public class AccountingSalesorder {
             @JsonProperty("lineitems") Optional<? extends List<AccountingLineitem>> lineitems,
             @JsonProperty("posted_at") Optional<OffsetDateTime> postedAt,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("sales_channel") Optional<String> salesChannel,
             @JsonProperty("shipping_address") Optional<? extends PropertyAccountingSalesorderShippingAddress> shippingAddress,
             @JsonProperty("status") Optional<? extends AccountingSalesorderStatus> status,
             @JsonProperty("total_amount") Optional<Double> totalAmount,
@@ -110,6 +116,7 @@ public class AccountingSalesorder {
         Utils.checkNotNull(lineitems, "lineitems");
         Utils.checkNotNull(postedAt, "postedAt");
         Utils.checkNotNull(raw, "raw");
+        Utils.checkNotNull(salesChannel, "salesChannel");
         Utils.checkNotNull(shippingAddress, "shippingAddress");
         Utils.checkNotNull(status, "status");
         Utils.checkNotNull(totalAmount, "totalAmount");
@@ -123,6 +130,7 @@ public class AccountingSalesorder {
         this.lineitems = lineitems;
         this.postedAt = postedAt;
         this.raw = raw;
+        this.salesChannel = salesChannel;
         this.shippingAddress = shippingAddress;
         this.status = status;
         this.totalAmount = totalAmount;
@@ -134,7 +142,7 @@ public class AccountingSalesorder {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -183,6 +191,11 @@ public class AccountingSalesorder {
     @JsonIgnore
     public Optional<Map<String, Object>> raw() {
         return (Optional<Map<String, Object>>) raw;
+    }
+
+    @JsonIgnore
+    public Optional<String> salesChannel() {
+        return salesChannel;
     }
 
     @SuppressWarnings("unchecked")
@@ -329,6 +342,19 @@ public class AccountingSalesorder {
         return this;
     }
 
+    public AccountingSalesorder withSalesChannel(String salesChannel) {
+        Utils.checkNotNull(salesChannel, "salesChannel");
+        this.salesChannel = Optional.ofNullable(salesChannel);
+        return this;
+    }
+
+
+    public AccountingSalesorder withSalesChannel(Optional<String> salesChannel) {
+        Utils.checkNotNull(salesChannel, "salesChannel");
+        this.salesChannel = salesChannel;
+        return this;
+    }
+
     public AccountingSalesorder withShippingAddress(PropertyAccountingSalesorderShippingAddress shippingAddress) {
         Utils.checkNotNull(shippingAddress, "shippingAddress");
         this.shippingAddress = Optional.ofNullable(shippingAddress);
@@ -400,6 +426,7 @@ public class AccountingSalesorder {
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
             Utils.enhancedDeepEquals(this.postedAt, other.postedAt) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.salesChannel, other.salesChannel) &&
             Utils.enhancedDeepEquals(this.shippingAddress, other.shippingAddress) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
             Utils.enhancedDeepEquals(this.totalAmount, other.totalAmount) &&
@@ -412,8 +439,8 @@ public class AccountingSalesorder {
             accountId, billingAddress, contactId,
             createdAt, currency, id,
             lineitems, postedAt, raw,
-            shippingAddress, status, totalAmount,
-            updatedAt);
+            salesChannel, shippingAddress, status,
+            totalAmount, updatedAt);
     }
     
     @Override
@@ -428,6 +455,7 @@ public class AccountingSalesorder {
                 "lineitems", lineitems,
                 "postedAt", postedAt,
                 "raw", raw,
+                "salesChannel", salesChannel,
                 "shippingAddress", shippingAddress,
                 "status", status,
                 "totalAmount", totalAmount,
@@ -454,6 +482,8 @@ public class AccountingSalesorder {
         private Optional<OffsetDateTime> postedAt = Optional.empty();
 
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
+
+        private Optional<String> salesChannel = Optional.empty();
 
         private Optional<? extends PropertyAccountingSalesorderShippingAddress> shippingAddress = Optional.empty();
 
@@ -585,6 +615,19 @@ public class AccountingSalesorder {
         }
 
 
+        public Builder salesChannel(String salesChannel) {
+            Utils.checkNotNull(salesChannel, "salesChannel");
+            this.salesChannel = Optional.ofNullable(salesChannel);
+            return this;
+        }
+
+        public Builder salesChannel(Optional<String> salesChannel) {
+            Utils.checkNotNull(salesChannel, "salesChannel");
+            this.salesChannel = salesChannel;
+            return this;
+        }
+
+
         public Builder shippingAddress(PropertyAccountingSalesorderShippingAddress shippingAddress) {
             Utils.checkNotNull(shippingAddress, "shippingAddress");
             this.shippingAddress = Optional.ofNullable(shippingAddress);
@@ -642,8 +685,8 @@ public class AccountingSalesorder {
                 accountId, billingAddress, contactId,
                 createdAt, currency, id,
                 lineitems, postedAt, raw,
-                shippingAddress, status, totalAmount,
-                updatedAt);
+                salesChannel, shippingAddress, status,
+                totalAmount, updatedAt);
         }
 
     }

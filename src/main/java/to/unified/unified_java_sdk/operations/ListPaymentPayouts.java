@@ -61,7 +61,7 @@ public class ListPaymentPayouts {
                     this.sdkConfiguration,
                     this.baseUrl,
                     "listPaymentPayouts",
-                    java.util.Optional.of(java.util.List.of()),
+                    java.util.Optional.empty(),
                     securitySource());
         }
 
@@ -70,7 +70,7 @@ public class ListPaymentPayouts {
                     this.sdkConfiguration,
                     this.baseUrl,
                     "listPaymentPayouts",
-                    java.util.Optional.of(java.util.List.of()),
+                    java.util.Optional.empty(),
                     securitySource());
         }
 
@@ -79,7 +79,7 @@ public class ListPaymentPayouts {
                     this.sdkConfiguration,
                     this.baseUrl,
                     "listPaymentPayouts",
-                    java.util.Optional.of(java.util.List.of()),
+                    java.util.Optional.empty(),
                     securitySource());
         }
         <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {

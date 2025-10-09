@@ -59,7 +59,7 @@ public class GetUnifiedIntegrationAuth {
                     this.sdkConfiguration,
                     this.baseUrl,
                     "getUnifiedIntegrationAuth",
-                    java.util.Optional.of(java.util.List.of()),
+                    java.util.Optional.empty(),
                     securitySource());
         }
 
@@ -68,7 +68,7 @@ public class GetUnifiedIntegrationAuth {
                     this.sdkConfiguration,
                     this.baseUrl,
                     "getUnifiedIntegrationAuth",
-                    java.util.Optional.of(java.util.List.of()),
+                    java.util.Optional.empty(),
                     securitySource());
         }
 
@@ -77,7 +77,7 @@ public class GetUnifiedIntegrationAuth {
                     this.sdkConfiguration,
                     this.baseUrl,
                     "getUnifiedIntegrationAuth",
-                    java.util.Optional.of(java.util.List.of()),
+                    java.util.Optional.empty(),
                     securitySource());
         }
         <T>HttpRequest buildRequest(T request, Class<T> klass) throws Exception {

@@ -37,12 +37,19 @@ public class MessagingMessage {
     private Optional<String> channelId;
 
     /**
-     * Represents the IDs of all channels to which the message is sent. Identifies the channels where the
-     * message is posted.
+     * &#64;deprecated; use channels instead
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel_ids")
     private Optional<? extends List<String>> channelIds;
+
+    /**
+     * Represents the names of all channels to which the message is sent. Identifies the channels where the
+     * message is posted.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("channels")
+    private Optional<? extends List<MessagingChannelMessage>> channels;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -145,6 +152,7 @@ public class MessagingMessage {
             @JsonProperty("author_member") Optional<? extends PropertyMessagingMessageAuthorMember> authorMember,
             @JsonProperty("channel_id") Optional<String> channelId,
             @JsonProperty("channel_ids") Optional<? extends List<String>> channelIds,
+            @JsonProperty("channels") Optional<? extends List<MessagingChannelMessage>> channels,
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("destination_members") Optional<? extends List<MessagingMember>> destinationMembers,
             @JsonProperty("has_children") Optional<Boolean> hasChildren,
@@ -168,6 +176,7 @@ public class MessagingMessage {
         Utils.checkNotNull(authorMember, "authorMember");
         Utils.checkNotNull(channelId, "channelId");
         Utils.checkNotNull(channelIds, "channelIds");
+        Utils.checkNotNull(channels, "channels");
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(destinationMembers, "destinationMembers");
         Utils.checkNotNull(hasChildren, "hasChildren");
@@ -191,6 +200,7 @@ public class MessagingMessage {
         this.authorMember = authorMember;
         this.channelId = channelId;
         this.channelIds = channelIds;
+        this.channels = channels;
         this.createdAt = createdAt;
         this.destinationMembers = destinationMembers;
         this.hasChildren = hasChildren;
@@ -220,7 +230,7 @@ public class MessagingMessage {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -241,13 +251,22 @@ public class MessagingMessage {
     }
 
     /**
-     * Represents the IDs of all channels to which the message is sent. Identifies the channels where the
-     * message is posted.
+     * &#64;deprecated; use channels instead
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
     public Optional<List<String>> channelIds() {
         return (Optional<List<String>>) channelIds;
+    }
+
+    /**
+     * Represents the names of all channels to which the message is sent. Identifies the channels where the
+     * message is posted.
+     */
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<MessagingChannelMessage>> channels() {
+        return (Optional<List<MessagingChannelMessage>>) channels;
     }
 
     @JsonIgnore
@@ -395,8 +414,7 @@ public class MessagingMessage {
     }
 
     /**
-     * Represents the IDs of all channels to which the message is sent. Identifies the channels where the
-     * message is posted.
+     * &#64;deprecated; use channels instead
      */
     public MessagingMessage withChannelIds(List<String> channelIds) {
         Utils.checkNotNull(channelIds, "channelIds");
@@ -406,12 +424,32 @@ public class MessagingMessage {
 
 
     /**
-     * Represents the IDs of all channels to which the message is sent. Identifies the channels where the
-     * message is posted.
+     * &#64;deprecated; use channels instead
      */
     public MessagingMessage withChannelIds(Optional<? extends List<String>> channelIds) {
         Utils.checkNotNull(channelIds, "channelIds");
         this.channelIds = channelIds;
+        return this;
+    }
+
+    /**
+     * Represents the names of all channels to which the message is sent. Identifies the channels where the
+     * message is posted.
+     */
+    public MessagingMessage withChannels(List<MessagingChannelMessage> channels) {
+        Utils.checkNotNull(channels, "channels");
+        this.channels = Optional.ofNullable(channels);
+        return this;
+    }
+
+
+    /**
+     * Represents the names of all channels to which the message is sent. Identifies the channels where the
+     * message is posted.
+     */
+    public MessagingMessage withChannels(Optional<? extends List<MessagingChannelMessage>> channels) {
+        Utils.checkNotNull(channels, "channels");
+        this.channels = channels;
         return this;
     }
 
@@ -676,6 +714,7 @@ public class MessagingMessage {
             Utils.enhancedDeepEquals(this.authorMember, other.authorMember) &&
             Utils.enhancedDeepEquals(this.channelId, other.channelId) &&
             Utils.enhancedDeepEquals(this.channelIds, other.channelIds) &&
+            Utils.enhancedDeepEquals(this.channels, other.channels) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.destinationMembers, other.destinationMembers) &&
             Utils.enhancedDeepEquals(this.hasChildren, other.hasChildren) &&
@@ -701,13 +740,13 @@ public class MessagingMessage {
     public int hashCode() {
         return Utils.enhancedHash(
             attachments, authorMember, channelId,
-            channelIds, createdAt, destinationMembers,
-            hasChildren, hiddenMembers, id,
-            isUnread, mentionedMembers, message,
-            messageHtml, messageMarkdown, parentId,
-            parentMessageId, raw, reactions,
-            reference, rootMessageId, subject,
-            updatedAt, webUrl);
+            channelIds, channels, createdAt,
+            destinationMembers, hasChildren, hiddenMembers,
+            id, isUnread, mentionedMembers,
+            message, messageHtml, messageMarkdown,
+            parentId, parentMessageId, raw,
+            reactions, reference, rootMessageId,
+            subject, updatedAt, webUrl);
     }
     
     @Override
@@ -717,6 +756,7 @@ public class MessagingMessage {
                 "authorMember", authorMember,
                 "channelId", channelId,
                 "channelIds", channelIds,
+                "channels", channels,
                 "createdAt", createdAt,
                 "destinationMembers", destinationMembers,
                 "hasChildren", hasChildren,
@@ -748,6 +788,8 @@ public class MessagingMessage {
         private Optional<String> channelId = Optional.empty();
 
         private Optional<? extends List<String>> channelIds = Optional.empty();
+
+        private Optional<? extends List<MessagingChannelMessage>> channels = Optional.empty();
 
         private Optional<OffsetDateTime> createdAt = Optional.empty();
 
@@ -832,8 +874,7 @@ public class MessagingMessage {
 
 
         /**
-         * Represents the IDs of all channels to which the message is sent. Identifies the channels where the
-         * message is posted.
+         * &#64;deprecated; use channels instead
          */
         public Builder channelIds(List<String> channelIds) {
             Utils.checkNotNull(channelIds, "channelIds");
@@ -842,12 +883,32 @@ public class MessagingMessage {
         }
 
         /**
-         * Represents the IDs of all channels to which the message is sent. Identifies the channels where the
-         * message is posted.
+         * &#64;deprecated; use channels instead
          */
         public Builder channelIds(Optional<? extends List<String>> channelIds) {
             Utils.checkNotNull(channelIds, "channelIds");
             this.channelIds = channelIds;
+            return this;
+        }
+
+
+        /**
+         * Represents the names of all channels to which the message is sent. Identifies the channels where the
+         * message is posted.
+         */
+        public Builder channels(List<MessagingChannelMessage> channels) {
+            Utils.checkNotNull(channels, "channels");
+            this.channels = Optional.ofNullable(channels);
+            return this;
+        }
+
+        /**
+         * Represents the names of all channels to which the message is sent. Identifies the channels where the
+         * message is posted.
+         */
+        public Builder channels(Optional<? extends List<MessagingChannelMessage>> channels) {
+            Utils.checkNotNull(channels, "channels");
+            this.channels = channels;
             return this;
         }
 
@@ -1102,13 +1163,13 @@ public class MessagingMessage {
 
             return new MessagingMessage(
                 attachments, authorMember, channelId,
-                channelIds, createdAt, destinationMembers,
-                hasChildren, hiddenMembers, id,
-                isUnread, mentionedMembers, message,
-                messageHtml, messageMarkdown, parentId,
-                parentMessageId, raw, reactions,
-                reference, rootMessageId, subject,
-                updatedAt, webUrl);
+                channelIds, channels, createdAt,
+                destinationMembers, hasChildren, hiddenMembers,
+                id, isUnread, mentionedMembers,
+                message, messageHtml, messageMarkdown,
+                parentId, parentMessageId, raw,
+                reactions, reference, rootMessageId,
+                subject, updatedAt, webUrl);
         }
 
     }

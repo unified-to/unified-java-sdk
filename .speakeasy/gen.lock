@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 0b33a55547cf2ac860e6a35542823995
+  docChecksum: dc91eeac96415353b77e357c69ab74d6
   docVersion: "1.0"
-  speakeasyVersion: 1.634.2
-  generationVersion: 2.721.3
-  releaseVersion: 0.40.3
-  configChecksum: 6288dec843f6fe08f03ae08d9c519200
+  speakeasyVersion: 1.636.2
+  generationVersion: 2.723.8
+  releaseVersion: 0.40.4
+  configChecksum: 3e852c48ad6c2b28b2c8e4ec81892419
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -1276,6 +1276,7 @@ generatedFiles:
   - docs/models/shared/MarketingMember.md
   - docs/models/shared/MessagingAttachment.md
   - docs/models/shared/MessagingChannel.md
+  - docs/models/shared/MessagingChannelMessage.md
   - docs/models/shared/MessagingMember.md
   - docs/models/shared/MessagingMessage.md
   - docs/models/shared/MessagingReaction.md
@@ -1556,7 +1557,6 @@ generatedFiles:
   - docs/sdks/trialbalance/README.md
   - docs/sdks/uc/README.md
   - docs/sdks/unified/README.md
-  - docs/sdks/unifiedto/README.md
   - docs/sdks/user/README.md
   - docs/sdks/verification/README.md
   - docs/sdks/webhook/README.md
@@ -4551,6 +4551,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/MarketingMember.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/MessagingAttachment.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/MessagingChannel.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/MessagingChannelMessage.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/MessagingMember.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/MessagingMessage.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/MessagingReaction.java
@@ -9869,3 +9870,4 @@ examples:
           application/json: {"status": "ON_HOLD", "ticket_ref": "<value>", "title": "<value>", "workspace_id": "<id>"}
 examplesVersion: 1.0.2
 generatedTests: {}
+releaseNotes: "## Java SDK Changes Detected:\n* `unified-to.accounting.createAccountingSalesorder()`: \n  *  `request.accountingSalesorder.salesChannel` **Added**\n  *  `response.sales_channel` **Added**\n* `unified-to.accounting.getAccountingSalesorder()`:  `response.sales_channel` **Added**\n* `unified-to.accounting.listAccountingSalesorders()`:  `response.[].salesChannel` **Added**\n* `unified-to.accounting.patchAccountingSalesorder()`: \n  *  `request.accountingSalesorder.salesChannel` **Added**\n  *  `response.sales_channel` **Added**\n* `unified-to.accounting.updateAccountingSalesorder()`: \n  *  `request.accountingSalesorder.salesChannel` **Added**\n  *  `response.sales_channel` **Added**\n* `unified-to.salesorder.createAccountingSalesorder()`: \n  *  `request.accountingSalesorder.salesChannel` **Added**\n  *  `response.sales_channel` **Added**\n* `unified-to.salesorder.getAccountingSalesorder()`:  `response.sales_channel` **Added**\n* `unified-to.salesorder.listAccountingSalesorders()`:  `response.[].salesChannel` **Added**\n* `unified-to.salesorder.patchAccountingSalesorder()`: \n  *  `request.accountingSalesorder.salesChannel` **Added**\n  *  `response.sales_channel` **Added**\n* `unified-to.salesorder.updateAccountingSalesorder()`: \n  *  `request.accountingSalesorder.salesChannel` **Added**\n  *  `response.sales_channel` **Added**\n* `unified-to.messaging.createMessagingMessage()`: \n  *  `request.messagingMessage` **Changed**\n  *  `response` **Changed**\n* `unified-to.messaging.getMessagingChannel()`:  `response.members.[].imageUrl` **Added**\n* `unified-to.messaging.getMessagingMessage()`:  `response` **Changed**\n* `unified-to.messaging.listMessagingChannels()`:  `response.[].members.[].imageUrl` **Added**\n* `unified-to.messaging.listMessagingMessages()`:  `response.[]` **Changed**\n* `unified-to.messaging.patchMessagingMessage()`: \n  *  `request.messagingMessage` **Changed**\n  *  `response` **Changed**\n* `unified-to.messaging.updateMessagingMessage()`: \n  *  `request.messagingMessage` **Changed**\n  *  `response` **Changed**\n* `unified-to.channel.getMessagingChannel()`:  `response.members.[].imageUrl` **Added**\n* `unified-to.channel.listMessagingChannels()`:  `response.[].members.[].imageUrl` **Added**\n* `unified-to.message.createMessagingMessage()`: \n  *  `request.messagingMessage` **Changed**\n  *  `response` **Changed**\n* `unified-to.message.getMessagingMessage()`:  `response` **Changed**\n* `unified-to.message.listMessagingMessages()`:  `response.[]` **Changed**\n* `unified-to.message.patchMessagingMessage()`: \n  *  `request.messagingMessage` **Changed**\n  *  `response` **Changed**\n* `unified-to.message.updateMessagingMessage()`: \n  *  `request.messagingMessage` **Changed**\n  *  `response` **Changed**\n"
