@@ -23,6 +23,11 @@ public class CrmMetadata {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("format")
+    private Optional<? extends CrmMetadataFormat> format;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
@@ -54,6 +59,7 @@ public class CrmMetadata {
     @JsonCreator
     public CrmMetadata(
             @JsonProperty("extra_data") Optional<? extends CrmMetadataExtraData> extraData,
+            @JsonProperty("format") Optional<? extends CrmMetadataFormat> format,
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("key") Optional<String> key,
             @JsonProperty("namespace") Optional<String> namespace,
@@ -61,6 +67,7 @@ public class CrmMetadata {
             @JsonProperty("type") Optional<String> type,
             @JsonProperty("value") Optional<? extends CrmMetadataValue> value) {
         Utils.checkNotNull(extraData, "extraData");
+        Utils.checkNotNull(format, "format");
         Utils.checkNotNull(id, "id");
         Utils.checkNotNull(key, "key");
         Utils.checkNotNull(namespace, "namespace");
@@ -68,6 +75,7 @@ public class CrmMetadata {
         Utils.checkNotNull(type, "type");
         Utils.checkNotNull(value, "value");
         this.extraData = extraData;
+        this.format = format;
         this.id = id;
         this.key = key;
         this.namespace = namespace;
@@ -79,13 +87,19 @@ public class CrmMetadata {
     public CrmMetadata() {
         this(Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
     public Optional<CrmMetadataExtraData> extraData() {
         return (Optional<CrmMetadataExtraData>) extraData;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<CrmMetadataFormat> format() {
+        return (Optional<CrmMetadataFormat>) format;
     }
 
     @JsonIgnore
@@ -134,6 +148,19 @@ public class CrmMetadata {
     public CrmMetadata withExtraData(Optional<? extends CrmMetadataExtraData> extraData) {
         Utils.checkNotNull(extraData, "extraData");
         this.extraData = extraData;
+        return this;
+    }
+
+    public CrmMetadata withFormat(CrmMetadataFormat format) {
+        Utils.checkNotNull(format, "format");
+        this.format = Optional.ofNullable(format);
+        return this;
+    }
+
+
+    public CrmMetadata withFormat(Optional<? extends CrmMetadataFormat> format) {
+        Utils.checkNotNull(format, "format");
+        this.format = format;
         return this;
     }
 
@@ -226,6 +253,7 @@ public class CrmMetadata {
         CrmMetadata other = (CrmMetadata) o;
         return 
             Utils.enhancedDeepEquals(this.extraData, other.extraData) &&
+            Utils.enhancedDeepEquals(this.format, other.format) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.key, other.key) &&
             Utils.enhancedDeepEquals(this.namespace, other.namespace) &&
@@ -237,15 +265,16 @@ public class CrmMetadata {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            extraData, id, key,
-            namespace, slug, type,
-            value);
+            extraData, format, id,
+            key, namespace, slug,
+            type, value);
     }
     
     @Override
     public String toString() {
         return Utils.toString(CrmMetadata.class,
                 "extraData", extraData,
+                "format", format,
                 "id", id,
                 "key", key,
                 "namespace", namespace,
@@ -258,6 +287,8 @@ public class CrmMetadata {
     public final static class Builder {
 
         private Optional<? extends CrmMetadataExtraData> extraData = Optional.empty();
+
+        private Optional<? extends CrmMetadataFormat> format = Optional.empty();
 
         private Optional<String> id = Optional.empty();
 
@@ -285,6 +316,19 @@ public class CrmMetadata {
         public Builder extraData(Optional<? extends CrmMetadataExtraData> extraData) {
             Utils.checkNotNull(extraData, "extraData");
             this.extraData = extraData;
+            return this;
+        }
+
+
+        public Builder format(CrmMetadataFormat format) {
+            Utils.checkNotNull(format, "format");
+            this.format = Optional.ofNullable(format);
+            return this;
+        }
+
+        public Builder format(Optional<? extends CrmMetadataFormat> format) {
+            Utils.checkNotNull(format, "format");
+            this.format = format;
             return this;
         }
 
@@ -369,9 +413,9 @@ public class CrmMetadata {
         public CrmMetadata build() {
 
             return new CrmMetadata(
-                extraData, id, key,
-                namespace, slug, type,
-                value);
+                extraData, format, id,
+                key, namespace, slug,
+                type, value);
         }
 
     }
