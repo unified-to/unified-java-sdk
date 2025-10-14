@@ -93,6 +93,16 @@ public class AtsJob {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("minimum_degree")
+    private Optional<String> minimumDegree;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("minimum_experience_years")
+    private Optional<Double> minimumExperienceYears;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
 
@@ -165,6 +175,8 @@ public class AtsJob {
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("language_locale") Optional<String> languageLocale,
             @JsonProperty("metadata") Optional<? extends List<AtsMetadata>> metadata,
+            @JsonProperty("minimum_degree") Optional<String> minimumDegree,
+            @JsonProperty("minimum_experience_years") Optional<Double> minimumExperienceYears,
             @JsonProperty("name") Optional<String> name,
             @JsonProperty("number_of_openings") Optional<Double> numberOfOpenings,
             @JsonProperty("openings") Optional<? extends List<AtsJobOpening>> openings,
@@ -189,6 +201,8 @@ public class AtsJob {
         Utils.checkNotNull(id, "id");
         Utils.checkNotNull(languageLocale, "languageLocale");
         Utils.checkNotNull(metadata, "metadata");
+        Utils.checkNotNull(minimumDegree, "minimumDegree");
+        Utils.checkNotNull(minimumExperienceYears, "minimumExperienceYears");
         Utils.checkNotNull(name, "name");
         Utils.checkNotNull(numberOfOpenings, "numberOfOpenings");
         Utils.checkNotNull(openings, "openings");
@@ -213,6 +227,8 @@ public class AtsJob {
         this.id = id;
         this.languageLocale = languageLocale;
         this.metadata = metadata;
+        this.minimumDegree = minimumDegree;
+        this.minimumExperienceYears = minimumExperienceYears;
         this.name = name;
         this.numberOfOpenings = numberOfOpenings;
         this.openings = openings;
@@ -234,7 +250,8 @@ public class AtsJob {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -313,6 +330,16 @@ public class AtsJob {
     @JsonIgnore
     public Optional<List<AtsMetadata>> metadata() {
         return (Optional<List<AtsMetadata>>) metadata;
+    }
+
+    @JsonIgnore
+    public Optional<String> minimumDegree() {
+        return minimumDegree;
+    }
+
+    @JsonIgnore
+    public Optional<Double> minimumExperienceYears() {
+        return minimumExperienceYears;
     }
 
     @JsonIgnore
@@ -569,6 +596,32 @@ public class AtsJob {
         return this;
     }
 
+    public AtsJob withMinimumDegree(String minimumDegree) {
+        Utils.checkNotNull(minimumDegree, "minimumDegree");
+        this.minimumDegree = Optional.ofNullable(minimumDegree);
+        return this;
+    }
+
+
+    public AtsJob withMinimumDegree(Optional<String> minimumDegree) {
+        Utils.checkNotNull(minimumDegree, "minimumDegree");
+        this.minimumDegree = minimumDegree;
+        return this;
+    }
+
+    public AtsJob withMinimumExperienceYears(double minimumExperienceYears) {
+        Utils.checkNotNull(minimumExperienceYears, "minimumExperienceYears");
+        this.minimumExperienceYears = Optional.ofNullable(minimumExperienceYears);
+        return this;
+    }
+
+
+    public AtsJob withMinimumExperienceYears(Optional<Double> minimumExperienceYears) {
+        Utils.checkNotNull(minimumExperienceYears, "minimumExperienceYears");
+        this.minimumExperienceYears = minimumExperienceYears;
+        return this;
+    }
+
     public AtsJob withName(String name) {
         Utils.checkNotNull(name, "name");
         this.name = Optional.ofNullable(name);
@@ -747,6 +800,8 @@ public class AtsJob {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.languageLocale, other.languageLocale) &&
             Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
+            Utils.enhancedDeepEquals(this.minimumDegree, other.minimumDegree) &&
+            Utils.enhancedDeepEquals(this.minimumExperienceYears, other.minimumExperienceYears) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.numberOfOpenings, other.numberOfOpenings) &&
             Utils.enhancedDeepEquals(this.openings, other.openings) &&
@@ -767,10 +822,11 @@ public class AtsJob {
             compensation, createdAt, departments,
             description, employmentType, groups,
             hiringManagerIds, id, languageLocale,
-            metadata, name, numberOfOpenings,
-            openings, postings, publicJobUrls,
-            questions, raw, recruiterIds,
-            remote, status, updatedAt);
+            metadata, minimumDegree, minimumExperienceYears,
+            name, numberOfOpenings, openings,
+            postings, publicJobUrls, questions,
+            raw, recruiterIds, remote,
+            status, updatedAt);
     }
     
     @Override
@@ -789,6 +845,8 @@ public class AtsJob {
                 "id", id,
                 "languageLocale", languageLocale,
                 "metadata", metadata,
+                "minimumDegree", minimumDegree,
+                "minimumExperienceYears", minimumExperienceYears,
                 "name", name,
                 "numberOfOpenings", numberOfOpenings,
                 "openings", openings,
@@ -830,6 +888,10 @@ public class AtsJob {
         private Optional<String> languageLocale = Optional.empty();
 
         private Optional<? extends List<AtsMetadata>> metadata = Optional.empty();
+
+        private Optional<String> minimumDegree = Optional.empty();
+
+        private Optional<Double> minimumExperienceYears = Optional.empty();
 
         private Optional<String> name = Optional.empty();
 
@@ -1039,6 +1101,32 @@ public class AtsJob {
         }
 
 
+        public Builder minimumDegree(String minimumDegree) {
+            Utils.checkNotNull(minimumDegree, "minimumDegree");
+            this.minimumDegree = Optional.ofNullable(minimumDegree);
+            return this;
+        }
+
+        public Builder minimumDegree(Optional<String> minimumDegree) {
+            Utils.checkNotNull(minimumDegree, "minimumDegree");
+            this.minimumDegree = minimumDegree;
+            return this;
+        }
+
+
+        public Builder minimumExperienceYears(double minimumExperienceYears) {
+            Utils.checkNotNull(minimumExperienceYears, "minimumExperienceYears");
+            this.minimumExperienceYears = Optional.ofNullable(minimumExperienceYears);
+            return this;
+        }
+
+        public Builder minimumExperienceYears(Optional<Double> minimumExperienceYears) {
+            Utils.checkNotNull(minimumExperienceYears, "minimumExperienceYears");
+            this.minimumExperienceYears = minimumExperienceYears;
+            return this;
+        }
+
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = Optional.ofNullable(name);
@@ -1200,10 +1288,11 @@ public class AtsJob {
                 compensation, createdAt, departments,
                 description, employmentType, groups,
                 hiringManagerIds, id, languageLocale,
-                metadata, name, numberOfOpenings,
-                openings, postings, publicJobUrls,
-                questions, raw, recruiterIds,
-                remote, status, updatedAt);
+                metadata, minimumDegree, minimumExperienceYears,
+                name, numberOfOpenings, openings,
+                postings, publicJobUrls, questions,
+                raw, recruiterIds, remote,
+                status, updatedAt);
         }
 
     }
