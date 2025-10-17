@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchUcContactRequest;
@@ -29,7 +28,7 @@ public class PatchUcContactRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<PatchUcContactResponse> call() throws Exception {
+    public CompletableFuture<PatchUcContactResponse> call() {
         
         AsyncRequestOperation<PatchUcContactRequest, PatchUcContactResponse> operation
               = new PatchUcContact.Async(sdkConfiguration, _headers);

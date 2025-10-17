@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.GetAccountingReportRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingReportRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAccountingReportResponse;
@@ -50,9 +49,9 @@ public class Report {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingReportResponse getAccountingReport(GetAccountingReportRequest request) throws Exception {
+    public GetAccountingReportResponse getAccountingReport(GetAccountingReportRequest request) {
         RequestOperation<GetAccountingReportRequest, GetAccountingReportResponse> operation
               = new GetAccountingReport.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -72,9 +71,9 @@ public class Report {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingReportsResponse listAccountingReports(ListAccountingReportsRequest request) throws Exception {
+    public ListAccountingReportsResponse listAccountingReports(ListAccountingReportsRequest request) {
         RequestOperation<ListAccountingReportsRequest, ListAccountingReportsResponse> operation
               = new ListAccountingReports.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingOrderRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingOrderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingOrderResponse;
@@ -66,9 +65,9 @@ public class Order {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingOrderResponse createAccountingOrder(CreateAccountingOrderRequest request) throws Exception {
+    public CreateAccountingOrderResponse createAccountingOrder(CreateAccountingOrderRequest request) {
         RequestOperation<CreateAccountingOrderRequest, CreateAccountingOrderResponse> operation
               = new CreateAccountingOrder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -88,9 +87,9 @@ public class Order {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingOrderResponse getAccountingOrder(GetAccountingOrderRequest request) throws Exception {
+    public GetAccountingOrderResponse getAccountingOrder(GetAccountingOrderRequest request) {
         RequestOperation<GetAccountingOrderRequest, GetAccountingOrderResponse> operation
               = new GetAccountingOrder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -110,9 +109,9 @@ public class Order {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingOrdersResponse listAccountingOrders(ListAccountingOrdersRequest request) throws Exception {
+    public ListAccountingOrdersResponse listAccountingOrders(ListAccountingOrdersRequest request) {
         RequestOperation<ListAccountingOrdersRequest, ListAccountingOrdersResponse> operation
               = new ListAccountingOrders.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -132,9 +131,9 @@ public class Order {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingOrderResponse patchAccountingOrder(PatchAccountingOrderRequest request) throws Exception {
+    public PatchAccountingOrderResponse patchAccountingOrder(PatchAccountingOrderRequest request) {
         RequestOperation<PatchAccountingOrderRequest, PatchAccountingOrderResponse> operation
               = new PatchAccountingOrder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -154,9 +153,9 @@ public class Order {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingOrderResponse removeAccountingOrder(RemoveAccountingOrderRequest request) throws Exception {
+    public RemoveAccountingOrderResponse removeAccountingOrder(RemoveAccountingOrderRequest request) {
         RequestOperation<RemoveAccountingOrderRequest, RemoveAccountingOrderResponse> operation
               = new RemoveAccountingOrder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -176,9 +175,9 @@ public class Order {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingOrderResponse updateAccountingOrder(UpdateAccountingOrderRequest request) throws Exception {
+    public UpdateAccountingOrderResponse updateAccountingOrder(UpdateAccountingOrderRequest request) {
         RequestOperation<UpdateAccountingOrderRequest, UpdateAccountingOrderResponse> operation
               = new UpdateAccountingOrder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

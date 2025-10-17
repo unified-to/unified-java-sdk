@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.UpdateAtsJob;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class UpdateAtsJobRequestBuilder {
         return this;
     }
 
-    public UpdateAtsJobResponse call() throws Exception {
+    public UpdateAtsJobResponse call() {
         
         RequestOperation<UpdateAtsJobRequest, UpdateAtsJobResponse> operation
               = new UpdateAtsJob.Sync(sdkConfiguration, _headers);

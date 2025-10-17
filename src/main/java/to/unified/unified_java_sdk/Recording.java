@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateUcRecordingRequest;
 import to.unified.unified_java_sdk.models.operations.CreateUcRecordingRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateUcRecordingResponse;
@@ -74,9 +73,9 @@ public class Recording {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateUcRecordingResponse createUcRecording(CreateUcRecordingRequest request) throws Exception {
+    public CreateUcRecordingResponse createUcRecording(CreateUcRecordingRequest request) {
         RequestOperation<CreateUcRecordingRequest, CreateUcRecordingResponse> operation
               = new CreateUcRecording.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -96,9 +95,9 @@ public class Recording {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetCalendarRecordingResponse getCalendarRecording(GetCalendarRecordingRequest request) throws Exception {
+    public GetCalendarRecordingResponse getCalendarRecording(GetCalendarRecordingRequest request) {
         RequestOperation<GetCalendarRecordingRequest, GetCalendarRecordingResponse> operation
               = new GetCalendarRecording.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -118,9 +117,9 @@ public class Recording {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetUcRecordingResponse getUcRecording(GetUcRecordingRequest request) throws Exception {
+    public GetUcRecordingResponse getUcRecording(GetUcRecordingRequest request) {
         RequestOperation<GetUcRecordingRequest, GetUcRecordingResponse> operation
               = new GetUcRecording.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -140,9 +139,9 @@ public class Recording {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListCalendarRecordingsResponse listCalendarRecordings(ListCalendarRecordingsRequest request) throws Exception {
+    public ListCalendarRecordingsResponse listCalendarRecordings(ListCalendarRecordingsRequest request) {
         RequestOperation<ListCalendarRecordingsRequest, ListCalendarRecordingsResponse> operation
               = new ListCalendarRecordings.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -162,9 +161,9 @@ public class Recording {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListUcRecordingsResponse listUcRecordings(ListUcRecordingsRequest request) throws Exception {
+    public ListUcRecordingsResponse listUcRecordings(ListUcRecordingsRequest request) {
         RequestOperation<ListUcRecordingsRequest, ListUcRecordingsResponse> operation
               = new ListUcRecordings.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -184,9 +183,9 @@ public class Recording {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchUcRecordingResponse patchUcRecording(PatchUcRecordingRequest request) throws Exception {
+    public PatchUcRecordingResponse patchUcRecording(PatchUcRecordingRequest request) {
         RequestOperation<PatchUcRecordingRequest, PatchUcRecordingResponse> operation
               = new PatchUcRecording.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -206,9 +205,9 @@ public class Recording {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveUcRecordingResponse removeUcRecording(RemoveUcRecordingRequest request) throws Exception {
+    public RemoveUcRecordingResponse removeUcRecording(RemoveUcRecordingRequest request) {
         RequestOperation<RemoveUcRecordingRequest, RemoveUcRecordingResponse> operation
               = new RemoveUcRecording.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -228,9 +227,9 @@ public class Recording {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateUcRecordingResponse updateUcRecording(UpdateUcRecordingRequest request) throws Exception {
+    public UpdateUcRecordingResponse updateUcRecording(UpdateUcRecordingRequest request) {
         RequestOperation<UpdateUcRecordingRequest, UpdateUcRecordingResponse> operation
               = new UpdateUcRecording.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

@@ -300,6 +300,17 @@ public class UnifiedJavaSDKAutoConfig {
         return unifiedTo.creditmemo();
     }
     /**
+     * Creates a Expense sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Expense instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Expense expense(UnifiedTo unifiedTo) {
+        return unifiedTo.expense();
+    }
+    /**
      * Creates a Invoice sub-SDK bean if none exists.
      *
      * @param unifiedTo the main SDK instance
@@ -1477,6 +1488,17 @@ public class UnifiedJavaSDKAutoConfig {
     @ConditionalOnMissingBean
     public AsyncCreditmemo asyncCreditmemo(AsyncUnifiedTo asyncUnifiedTo) {
         return asyncUnifiedTo.creditmemo();
+    }
+    /**
+     * Creates an AsyncExpense sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncExpense instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncExpense asyncExpense(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.expense();
     }
     /**
      * Creates an AsyncInvoice sub-SDK bean if none exists.

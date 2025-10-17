@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.ListPassthroughs;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class ListPassthroughsRequestBuilder {
         return this;
     }
 
-    public ListPassthroughsResponse call() throws Exception {
+    public ListPassthroughsResponse call() {
         
         RequestOperation<ListPassthroughsRequest, ListPassthroughsResponse> operation
               = new ListPassthroughs.Sync(sdkConfiguration, _headers);

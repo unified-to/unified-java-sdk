@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.UpdateUcRecording;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class UpdateUcRecordingRequestBuilder {
         return this;
     }
 
-    public UpdateUcRecordingResponse call() throws Exception {
+    public UpdateUcRecordingResponse call() {
         
         RequestOperation<UpdateUcRecordingRequest, UpdateUcRecordingResponse> operation
               = new UpdateUcRecording.Sync(sdkConfiguration, _headers);

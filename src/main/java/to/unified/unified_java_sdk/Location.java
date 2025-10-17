@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceLocationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceLocationResponse;
@@ -90,9 +89,9 @@ public class Location {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCommerceLocationResponse createCommerceLocation(CreateCommerceLocationRequest request) throws Exception {
+    public CreateCommerceLocationResponse createCommerceLocation(CreateCommerceLocationRequest request) {
         RequestOperation<CreateCommerceLocationRequest, CreateCommerceLocationResponse> operation
               = new CreateCommerceLocation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -112,9 +111,9 @@ public class Location {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateHrisLocationResponse createHrisLocation(CreateHrisLocationRequest request) throws Exception {
+    public CreateHrisLocationResponse createHrisLocation(CreateHrisLocationRequest request) {
         RequestOperation<CreateHrisLocationRequest, CreateHrisLocationResponse> operation
               = new CreateHrisLocation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -134,9 +133,9 @@ public class Location {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetCommerceLocationResponse getCommerceLocation(GetCommerceLocationRequest request) throws Exception {
+    public GetCommerceLocationResponse getCommerceLocation(GetCommerceLocationRequest request) {
         RequestOperation<GetCommerceLocationRequest, GetCommerceLocationResponse> operation
               = new GetCommerceLocation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -156,9 +155,9 @@ public class Location {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisLocationResponse getHrisLocation(GetHrisLocationRequest request) throws Exception {
+    public GetHrisLocationResponse getHrisLocation(GetHrisLocationRequest request) {
         RequestOperation<GetHrisLocationRequest, GetHrisLocationResponse> operation
               = new GetHrisLocation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -178,9 +177,9 @@ public class Location {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListCommerceLocationsResponse listCommerceLocations(ListCommerceLocationsRequest request) throws Exception {
+    public ListCommerceLocationsResponse listCommerceLocations(ListCommerceLocationsRequest request) {
         RequestOperation<ListCommerceLocationsRequest, ListCommerceLocationsResponse> operation
               = new ListCommerceLocations.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -200,9 +199,9 @@ public class Location {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisLocationsResponse listHrisLocations(ListHrisLocationsRequest request) throws Exception {
+    public ListHrisLocationsResponse listHrisLocations(ListHrisLocationsRequest request) {
         RequestOperation<ListHrisLocationsRequest, ListHrisLocationsResponse> operation
               = new ListHrisLocations.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -222,9 +221,9 @@ public class Location {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCommerceLocationResponse patchCommerceLocation(PatchCommerceLocationRequest request) throws Exception {
+    public PatchCommerceLocationResponse patchCommerceLocation(PatchCommerceLocationRequest request) {
         RequestOperation<PatchCommerceLocationRequest, PatchCommerceLocationResponse> operation
               = new PatchCommerceLocation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -244,9 +243,9 @@ public class Location {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchHrisLocationResponse patchHrisLocation(PatchHrisLocationRequest request) throws Exception {
+    public PatchHrisLocationResponse patchHrisLocation(PatchHrisLocationRequest request) {
         RequestOperation<PatchHrisLocationRequest, PatchHrisLocationResponse> operation
               = new PatchHrisLocation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -266,9 +265,9 @@ public class Location {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCommerceLocationResponse removeCommerceLocation(RemoveCommerceLocationRequest request) throws Exception {
+    public RemoveCommerceLocationResponse removeCommerceLocation(RemoveCommerceLocationRequest request) {
         RequestOperation<RemoveCommerceLocationRequest, RemoveCommerceLocationResponse> operation
               = new RemoveCommerceLocation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -288,9 +287,9 @@ public class Location {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveHrisLocationResponse removeHrisLocation(RemoveHrisLocationRequest request) throws Exception {
+    public RemoveHrisLocationResponse removeHrisLocation(RemoveHrisLocationRequest request) {
         RequestOperation<RemoveHrisLocationRequest, RemoveHrisLocationResponse> operation
               = new RemoveHrisLocation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -310,9 +309,9 @@ public class Location {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCommerceLocationResponse updateCommerceLocation(UpdateCommerceLocationRequest request) throws Exception {
+    public UpdateCommerceLocationResponse updateCommerceLocation(UpdateCommerceLocationRequest request) {
         RequestOperation<UpdateCommerceLocationRequest, UpdateCommerceLocationResponse> operation
               = new UpdateCommerceLocation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -332,9 +331,9 @@ public class Location {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateHrisLocationResponse updateHrisLocation(UpdateHrisLocationRequest request) throws Exception {
+    public UpdateHrisLocationResponse updateHrisLocation(UpdateHrisLocationRequest request) {
         RequestOperation<UpdateHrisLocationRequest, UpdateHrisLocationResponse> operation
               = new UpdateHrisLocation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

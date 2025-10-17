@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemoveScimUsersRequest;
@@ -29,7 +28,7 @@ public class RemoveScimUsersRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<RemoveScimUsersResponse> call() throws Exception {
+    public CompletableFuture<RemoveScimUsersResponse> call() {
         
         AsyncRequestOperation<RemoveScimUsersRequest, RemoveScimUsersResponse> operation
               = new RemoveScimUsers.Async(sdkConfiguration, _headers);

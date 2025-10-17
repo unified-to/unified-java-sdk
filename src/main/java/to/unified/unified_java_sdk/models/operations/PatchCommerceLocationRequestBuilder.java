@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.PatchCommerceLocation;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class PatchCommerceLocationRequestBuilder {
         return this;
     }
 
-    public PatchCommerceLocationResponse call() throws Exception {
+    public PatchCommerceLocationResponse call() {
         
         RequestOperation<PatchCommerceLocationRequest, PatchCommerceLocationResponse> operation
               = new PatchCommerceLocation.Sync(sdkConfiguration, _headers);

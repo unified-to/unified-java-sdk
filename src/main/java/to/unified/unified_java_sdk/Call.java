@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.ListUcCallsRequest;
 import to.unified.unified_java_sdk.models.operations.ListUcCallsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListUcCallsResponse;
@@ -46,9 +45,9 @@ public class Call {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListUcCallsResponse listUcCalls(ListUcCallsRequest request) throws Exception {
+    public ListUcCallsResponse listUcCalls(ListUcCallsRequest request) {
         RequestOperation<ListUcCallsRequest, ListUcCallsResponse> operation
               = new ListUcCalls.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

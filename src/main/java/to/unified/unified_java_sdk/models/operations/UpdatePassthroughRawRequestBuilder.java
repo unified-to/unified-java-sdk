@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.UpdatePassthroughRaw;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class UpdatePassthroughRawRequestBuilder {
         return this;
     }
 
-    public UpdatePassthroughRawResponse call() throws Exception {
+    public UpdatePassthroughRawResponse call() {
         
         RequestOperation<UpdatePassthroughRawRequest, UpdatePassthroughRawResponse> operation
               = new UpdatePassthroughRaw.Sync(sdkConfiguration, _headers);

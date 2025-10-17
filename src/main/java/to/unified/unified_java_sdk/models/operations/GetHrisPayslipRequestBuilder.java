@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetHrisPayslip;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class GetHrisPayslipRequestBuilder {
         return this;
     }
 
-    public GetHrisPayslipResponse call() throws Exception {
+    public GetHrisPayslipResponse call() {
         
         RequestOperation<GetHrisPayslipRequest, GetHrisPayslipResponse> operation
               = new GetHrisPayslip.Sync(sdkConfiguration, _headers);

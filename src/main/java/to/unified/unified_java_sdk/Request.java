@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateVerificationRequestRequest;
 import to.unified.unified_java_sdk.models.operations.CreateVerificationRequestRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateVerificationRequestResponse;
@@ -66,9 +65,9 @@ public class Request {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateVerificationRequestResponse createVerificationRequest(CreateVerificationRequestRequest request) throws Exception {
+    public CreateVerificationRequestResponse createVerificationRequest(CreateVerificationRequestRequest request) {
         RequestOperation<CreateVerificationRequestRequest, CreateVerificationRequestResponse> operation
               = new CreateVerificationRequest.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -88,9 +87,9 @@ public class Request {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetVerificationRequestResponse getVerificationRequest(GetVerificationRequestRequest request) throws Exception {
+    public GetVerificationRequestResponse getVerificationRequest(GetVerificationRequestRequest request) {
         RequestOperation<GetVerificationRequestRequest, GetVerificationRequestResponse> operation
               = new GetVerificationRequest.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -110,9 +109,9 @@ public class Request {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListVerificationRequestsResponse listVerificationRequests(ListVerificationRequestsRequest request) throws Exception {
+    public ListVerificationRequestsResponse listVerificationRequests(ListVerificationRequestsRequest request) {
         RequestOperation<ListVerificationRequestsRequest, ListVerificationRequestsResponse> operation
               = new ListVerificationRequests.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -132,9 +131,9 @@ public class Request {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchVerificationRequestResponse patchVerificationRequest(PatchVerificationRequestRequest request) throws Exception {
+    public PatchVerificationRequestResponse patchVerificationRequest(PatchVerificationRequestRequest request) {
         RequestOperation<PatchVerificationRequestRequest, PatchVerificationRequestResponse> operation
               = new PatchVerificationRequest.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -154,9 +153,9 @@ public class Request {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveVerificationRequestResponse removeVerificationRequest(RemoveVerificationRequestRequest request) throws Exception {
+    public RemoveVerificationRequestResponse removeVerificationRequest(RemoveVerificationRequestRequest request) {
         RequestOperation<RemoveVerificationRequestRequest, RemoveVerificationRequestResponse> operation
               = new RemoveVerificationRequest.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -176,9 +175,9 @@ public class Request {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateVerificationRequestResponse updateVerificationRequest(UpdateVerificationRequestRequest request) throws Exception {
+    public UpdateVerificationRequestResponse updateVerificationRequest(UpdateVerificationRequestRequest request) {
         RequestOperation<UpdateVerificationRequestRequest, UpdateVerificationRequestResponse> operation
               = new UpdateVerificationRequest.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

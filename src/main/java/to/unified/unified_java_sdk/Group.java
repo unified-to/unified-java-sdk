@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisGroupRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisGroupResponse;
@@ -90,9 +89,9 @@ public class Group {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateHrisGroupResponse createHrisGroup(CreateHrisGroupRequest request) throws Exception {
+    public CreateHrisGroupResponse createHrisGroup(CreateHrisGroupRequest request) {
         RequestOperation<CreateHrisGroupRequest, CreateHrisGroupResponse> operation
               = new CreateHrisGroup.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -112,9 +111,9 @@ public class Group {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateScimGroupsResponse createScimGroups(CreateScimGroupsRequest request) throws Exception {
+    public CreateScimGroupsResponse createScimGroups(CreateScimGroupsRequest request) {
         RequestOperation<CreateScimGroupsRequest, CreateScimGroupsResponse> operation
               = new CreateScimGroups.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -134,9 +133,9 @@ public class Group {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisGroupResponse getHrisGroup(GetHrisGroupRequest request) throws Exception {
+    public GetHrisGroupResponse getHrisGroup(GetHrisGroupRequest request) {
         RequestOperation<GetHrisGroupRequest, GetHrisGroupResponse> operation
               = new GetHrisGroup.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -156,9 +155,9 @@ public class Group {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetScimGroupsResponse getScimGroups(GetScimGroupsRequest request) throws Exception {
+    public GetScimGroupsResponse getScimGroups(GetScimGroupsRequest request) {
         RequestOperation<GetScimGroupsRequest, GetScimGroupsResponse> operation
               = new GetScimGroups.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -178,9 +177,9 @@ public class Group {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisGroupsResponse listHrisGroups(ListHrisGroupsRequest request) throws Exception {
+    public ListHrisGroupsResponse listHrisGroups(ListHrisGroupsRequest request) {
         RequestOperation<ListHrisGroupsRequest, ListHrisGroupsResponse> operation
               = new ListHrisGroups.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -200,9 +199,9 @@ public class Group {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListScimGroupsResponse listScimGroups(ListScimGroupsRequest request) throws Exception {
+    public ListScimGroupsResponse listScimGroups(ListScimGroupsRequest request) {
         RequestOperation<ListScimGroupsRequest, ListScimGroupsResponse> operation
               = new ListScimGroups.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -222,9 +221,9 @@ public class Group {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchHrisGroupResponse patchHrisGroup(PatchHrisGroupRequest request) throws Exception {
+    public PatchHrisGroupResponse patchHrisGroup(PatchHrisGroupRequest request) {
         RequestOperation<PatchHrisGroupRequest, PatchHrisGroupResponse> operation
               = new PatchHrisGroup.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -244,9 +243,9 @@ public class Group {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchScimGroupsResponse patchScimGroups(PatchScimGroupsRequest request) throws Exception {
+    public PatchScimGroupsResponse patchScimGroups(PatchScimGroupsRequest request) {
         RequestOperation<PatchScimGroupsRequest, PatchScimGroupsResponse> operation
               = new PatchScimGroups.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -266,9 +265,9 @@ public class Group {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveHrisGroupResponse removeHrisGroup(RemoveHrisGroupRequest request) throws Exception {
+    public RemoveHrisGroupResponse removeHrisGroup(RemoveHrisGroupRequest request) {
         RequestOperation<RemoveHrisGroupRequest, RemoveHrisGroupResponse> operation
               = new RemoveHrisGroup.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -288,9 +287,9 @@ public class Group {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveScimGroupsResponse removeScimGroups(RemoveScimGroupsRequest request) throws Exception {
+    public RemoveScimGroupsResponse removeScimGroups(RemoveScimGroupsRequest request) {
         RequestOperation<RemoveScimGroupsRequest, RemoveScimGroupsResponse> operation
               = new RemoveScimGroups.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -310,9 +309,9 @@ public class Group {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateHrisGroupResponse updateHrisGroup(UpdateHrisGroupRequest request) throws Exception {
+    public UpdateHrisGroupResponse updateHrisGroup(UpdateHrisGroupRequest request) {
         RequestOperation<UpdateHrisGroupRequest, UpdateHrisGroupResponse> operation
               = new UpdateHrisGroup.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -332,9 +331,9 @@ public class Group {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateScimGroupsResponse updateScimGroups(UpdateScimGroupsRequest request) throws Exception {
+    public UpdateScimGroupsResponse updateScimGroups(UpdateScimGroupsRequest request) {
         RequestOperation<UpdateScimGroupsRequest, UpdateScimGroupsResponse> operation
               = new UpdateScimGroups.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

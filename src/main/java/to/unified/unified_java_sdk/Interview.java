@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateAtsInterviewRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsInterviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAtsInterviewResponse;
@@ -66,9 +65,9 @@ public class Interview {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAtsInterviewResponse createAtsInterview(CreateAtsInterviewRequest request) throws Exception {
+    public CreateAtsInterviewResponse createAtsInterview(CreateAtsInterviewRequest request) {
         RequestOperation<CreateAtsInterviewRequest, CreateAtsInterviewResponse> operation
               = new CreateAtsInterview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -88,9 +87,9 @@ public class Interview {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetAtsInterviewResponse getAtsInterview(GetAtsInterviewRequest request) throws Exception {
+    public GetAtsInterviewResponse getAtsInterview(GetAtsInterviewRequest request) {
         RequestOperation<GetAtsInterviewRequest, GetAtsInterviewResponse> operation
               = new GetAtsInterview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -110,9 +109,9 @@ public class Interview {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListAtsInterviewsResponse listAtsInterviews(ListAtsInterviewsRequest request) throws Exception {
+    public ListAtsInterviewsResponse listAtsInterviews(ListAtsInterviewsRequest request) {
         RequestOperation<ListAtsInterviewsRequest, ListAtsInterviewsResponse> operation
               = new ListAtsInterviews.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -132,9 +131,9 @@ public class Interview {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAtsInterviewResponse patchAtsInterview(PatchAtsInterviewRequest request) throws Exception {
+    public PatchAtsInterviewResponse patchAtsInterview(PatchAtsInterviewRequest request) {
         RequestOperation<PatchAtsInterviewRequest, PatchAtsInterviewResponse> operation
               = new PatchAtsInterview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -154,9 +153,9 @@ public class Interview {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAtsInterviewResponse removeAtsInterview(RemoveAtsInterviewRequest request) throws Exception {
+    public RemoveAtsInterviewResponse removeAtsInterview(RemoveAtsInterviewRequest request) {
         RequestOperation<RemoveAtsInterviewRequest, RemoveAtsInterviewResponse> operation
               = new RemoveAtsInterview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -176,9 +175,9 @@ public class Interview {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAtsInterviewResponse updateAtsInterview(UpdateAtsInterviewRequest request) throws Exception {
+    public UpdateAtsInterviewResponse updateAtsInterview(UpdateAtsInterviewRequest request) {
         RequestOperation<UpdateAtsInterviewRequest, UpdateAtsInterviewResponse> operation
               = new UpdateAtsInterview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

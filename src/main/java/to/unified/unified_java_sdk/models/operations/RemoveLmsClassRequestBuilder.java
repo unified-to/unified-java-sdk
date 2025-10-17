@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemoveLmsClass;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class RemoveLmsClassRequestBuilder {
         return this;
     }
 
-    public RemoveLmsClassResponse call() throws Exception {
+    public RemoveLmsClassResponse call() {
         
         RequestOperation<RemoveLmsClassRequest, RemoveLmsClassResponse> operation
               = new RemoveLmsClass.Sync(sdkConfiguration, _headers);

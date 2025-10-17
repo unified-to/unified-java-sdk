@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetPaymentLinkRequest;
@@ -29,7 +28,7 @@ public class GetPaymentLinkRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<GetPaymentLinkResponse> call() throws Exception {
+    public CompletableFuture<GetPaymentLinkResponse> call() {
         
         AsyncRequestOperation<GetPaymentLinkRequest, GetPaymentLinkResponse> operation
               = new GetPaymentLink.Async(sdkConfiguration, _headers);

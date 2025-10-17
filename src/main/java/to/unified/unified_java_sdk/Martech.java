@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateMartechListRequest;
 import to.unified.unified_java_sdk.models.operations.CreateMartechListRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateMartechListResponse;
@@ -90,9 +89,9 @@ public class Martech {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateMartechListResponse createMartechList(CreateMartechListRequest request) throws Exception {
+    public CreateMartechListResponse createMartechList(CreateMartechListRequest request) {
         RequestOperation<CreateMartechListRequest, CreateMartechListResponse> operation
               = new CreateMartechList.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -112,9 +111,9 @@ public class Martech {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateMartechMemberResponse createMartechMember(CreateMartechMemberRequest request) throws Exception {
+    public CreateMartechMemberResponse createMartechMember(CreateMartechMemberRequest request) {
         RequestOperation<CreateMartechMemberRequest, CreateMartechMemberResponse> operation
               = new CreateMartechMember.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -134,9 +133,9 @@ public class Martech {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetMartechListResponse getMartechList(GetMartechListRequest request) throws Exception {
+    public GetMartechListResponse getMartechList(GetMartechListRequest request) {
         RequestOperation<GetMartechListRequest, GetMartechListResponse> operation
               = new GetMartechList.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -156,9 +155,9 @@ public class Martech {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetMartechMemberResponse getMartechMember(GetMartechMemberRequest request) throws Exception {
+    public GetMartechMemberResponse getMartechMember(GetMartechMemberRequest request) {
         RequestOperation<GetMartechMemberRequest, GetMartechMemberResponse> operation
               = new GetMartechMember.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -178,9 +177,9 @@ public class Martech {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListMartechListsResponse listMartechLists(ListMartechListsRequest request) throws Exception {
+    public ListMartechListsResponse listMartechLists(ListMartechListsRequest request) {
         RequestOperation<ListMartechListsRequest, ListMartechListsResponse> operation
               = new ListMartechLists.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -200,9 +199,9 @@ public class Martech {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListMartechMembersResponse listMartechMembers(ListMartechMembersRequest request) throws Exception {
+    public ListMartechMembersResponse listMartechMembers(ListMartechMembersRequest request) {
         RequestOperation<ListMartechMembersRequest, ListMartechMembersResponse> operation
               = new ListMartechMembers.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -222,9 +221,9 @@ public class Martech {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchMartechListResponse patchMartechList(PatchMartechListRequest request) throws Exception {
+    public PatchMartechListResponse patchMartechList(PatchMartechListRequest request) {
         RequestOperation<PatchMartechListRequest, PatchMartechListResponse> operation
               = new PatchMartechList.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -244,9 +243,9 @@ public class Martech {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchMartechMemberResponse patchMartechMember(PatchMartechMemberRequest request) throws Exception {
+    public PatchMartechMemberResponse patchMartechMember(PatchMartechMemberRequest request) {
         RequestOperation<PatchMartechMemberRequest, PatchMartechMemberResponse> operation
               = new PatchMartechMember.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -266,9 +265,9 @@ public class Martech {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveMartechListResponse removeMartechList(RemoveMartechListRequest request) throws Exception {
+    public RemoveMartechListResponse removeMartechList(RemoveMartechListRequest request) {
         RequestOperation<RemoveMartechListRequest, RemoveMartechListResponse> operation
               = new RemoveMartechList.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -288,9 +287,9 @@ public class Martech {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveMartechMemberResponse removeMartechMember(RemoveMartechMemberRequest request) throws Exception {
+    public RemoveMartechMemberResponse removeMartechMember(RemoveMartechMemberRequest request) {
         RequestOperation<RemoveMartechMemberRequest, RemoveMartechMemberResponse> operation
               = new RemoveMartechMember.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -310,9 +309,9 @@ public class Martech {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateMartechListResponse updateMartechList(UpdateMartechListRequest request) throws Exception {
+    public UpdateMartechListResponse updateMartechList(UpdateMartechListRequest request) {
         RequestOperation<UpdateMartechListRequest, UpdateMartechListResponse> operation
               = new UpdateMartechList.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -332,9 +331,9 @@ public class Martech {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateMartechMemberResponse updateMartechMember(UpdateMartechMemberRequest request) throws Exception {
+    public UpdateMartechMemberResponse updateMartechMember(UpdateMartechMemberRequest request) {
         RequestOperation<UpdateMartechMemberRequest, UpdateMartechMemberResponse> operation
               = new UpdateMartechMember.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

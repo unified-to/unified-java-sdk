@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListAtsApplicationsRequest;
@@ -29,7 +28,7 @@ public class ListAtsApplicationsRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<ListAtsApplicationsResponse> call() throws Exception {
+    public CompletableFuture<ListAtsApplicationsResponse> call() {
         
         AsyncRequestOperation<ListAtsApplicationsRequest, ListAtsApplicationsResponse> operation
               = new ListAtsApplications.Async(sdkConfiguration, _headers);

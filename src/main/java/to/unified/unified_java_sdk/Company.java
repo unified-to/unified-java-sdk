@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyResponse;
@@ -118,9 +117,9 @@ public class Company {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAtsCompanyResponse createAtsCompany(CreateAtsCompanyRequest request) throws Exception {
+    public CreateAtsCompanyResponse createAtsCompany(CreateAtsCompanyRequest request) {
         RequestOperation<CreateAtsCompanyRequest, CreateAtsCompanyResponse> operation
               = new CreateAtsCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -140,9 +139,9 @@ public class Company {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCrmCompanyResponse createCrmCompany(CreateCrmCompanyRequest request) throws Exception {
+    public CreateCrmCompanyResponse createCrmCompany(CreateCrmCompanyRequest request) {
         RequestOperation<CreateCrmCompanyRequest, CreateCrmCompanyResponse> operation
               = new CreateCrmCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -162,9 +161,9 @@ public class Company {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateHrisCompanyResponse createHrisCompany(CreateHrisCompanyRequest request) throws Exception {
+    public CreateHrisCompanyResponse createHrisCompany(CreateHrisCompanyRequest request) {
         RequestOperation<CreateHrisCompanyRequest, CreateHrisCompanyResponse> operation
               = new CreateHrisCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -184,9 +183,9 @@ public class Company {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetAtsCompanyResponse getAtsCompany(GetAtsCompanyRequest request) throws Exception {
+    public GetAtsCompanyResponse getAtsCompany(GetAtsCompanyRequest request) {
         RequestOperation<GetAtsCompanyRequest, GetAtsCompanyResponse> operation
               = new GetAtsCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -206,9 +205,9 @@ public class Company {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetCrmCompanyResponse getCrmCompany(GetCrmCompanyRequest request) throws Exception {
+    public GetCrmCompanyResponse getCrmCompany(GetCrmCompanyRequest request) {
         RequestOperation<GetCrmCompanyRequest, GetCrmCompanyResponse> operation
               = new GetCrmCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -228,9 +227,9 @@ public class Company {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisCompanyResponse getHrisCompany(GetHrisCompanyRequest request) throws Exception {
+    public GetHrisCompanyResponse getHrisCompany(GetHrisCompanyRequest request) {
         RequestOperation<GetHrisCompanyRequest, GetHrisCompanyResponse> operation
               = new GetHrisCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -250,9 +249,9 @@ public class Company {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListAtsCompaniesResponse listAtsCompanies(ListAtsCompaniesRequest request) throws Exception {
+    public ListAtsCompaniesResponse listAtsCompanies(ListAtsCompaniesRequest request) {
         RequestOperation<ListAtsCompaniesRequest, ListAtsCompaniesResponse> operation
               = new ListAtsCompanies.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -272,9 +271,9 @@ public class Company {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmCompaniesResponse listCrmCompanies(ListCrmCompaniesRequest request) throws Exception {
+    public ListCrmCompaniesResponse listCrmCompanies(ListCrmCompaniesRequest request) {
         RequestOperation<ListCrmCompaniesRequest, ListCrmCompaniesResponse> operation
               = new ListCrmCompanies.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -294,9 +293,9 @@ public class Company {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListEnrichCompaniesResponse listEnrichCompanies(ListEnrichCompaniesRequest request) throws Exception {
+    public ListEnrichCompaniesResponse listEnrichCompanies(ListEnrichCompaniesRequest request) {
         RequestOperation<ListEnrichCompaniesRequest, ListEnrichCompaniesResponse> operation
               = new ListEnrichCompanies.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -316,9 +315,9 @@ public class Company {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisCompaniesResponse listHrisCompanies(ListHrisCompaniesRequest request) throws Exception {
+    public ListHrisCompaniesResponse listHrisCompanies(ListHrisCompaniesRequest request) {
         RequestOperation<ListHrisCompaniesRequest, ListHrisCompaniesResponse> operation
               = new ListHrisCompanies.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -338,9 +337,9 @@ public class Company {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAtsCompanyResponse patchAtsCompany(PatchAtsCompanyRequest request) throws Exception {
+    public PatchAtsCompanyResponse patchAtsCompany(PatchAtsCompanyRequest request) {
         RequestOperation<PatchAtsCompanyRequest, PatchAtsCompanyResponse> operation
               = new PatchAtsCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -360,9 +359,9 @@ public class Company {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCrmCompanyResponse patchCrmCompany(PatchCrmCompanyRequest request) throws Exception {
+    public PatchCrmCompanyResponse patchCrmCompany(PatchCrmCompanyRequest request) {
         RequestOperation<PatchCrmCompanyRequest, PatchCrmCompanyResponse> operation
               = new PatchCrmCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -382,9 +381,9 @@ public class Company {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchHrisCompanyResponse patchHrisCompany(PatchHrisCompanyRequest request) throws Exception {
+    public PatchHrisCompanyResponse patchHrisCompany(PatchHrisCompanyRequest request) {
         RequestOperation<PatchHrisCompanyRequest, PatchHrisCompanyResponse> operation
               = new PatchHrisCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -404,9 +403,9 @@ public class Company {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAtsCompanyResponse removeAtsCompany(RemoveAtsCompanyRequest request) throws Exception {
+    public RemoveAtsCompanyResponse removeAtsCompany(RemoveAtsCompanyRequest request) {
         RequestOperation<RemoveAtsCompanyRequest, RemoveAtsCompanyResponse> operation
               = new RemoveAtsCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -426,9 +425,9 @@ public class Company {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCrmCompanyResponse removeCrmCompany(RemoveCrmCompanyRequest request) throws Exception {
+    public RemoveCrmCompanyResponse removeCrmCompany(RemoveCrmCompanyRequest request) {
         RequestOperation<RemoveCrmCompanyRequest, RemoveCrmCompanyResponse> operation
               = new RemoveCrmCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -448,9 +447,9 @@ public class Company {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveHrisCompanyResponse removeHrisCompany(RemoveHrisCompanyRequest request) throws Exception {
+    public RemoveHrisCompanyResponse removeHrisCompany(RemoveHrisCompanyRequest request) {
         RequestOperation<RemoveHrisCompanyRequest, RemoveHrisCompanyResponse> operation
               = new RemoveHrisCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -470,9 +469,9 @@ public class Company {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAtsCompanyResponse updateAtsCompany(UpdateAtsCompanyRequest request) throws Exception {
+    public UpdateAtsCompanyResponse updateAtsCompany(UpdateAtsCompanyRequest request) {
         RequestOperation<UpdateAtsCompanyRequest, UpdateAtsCompanyResponse> operation
               = new UpdateAtsCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -492,9 +491,9 @@ public class Company {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmCompanyResponse updateCrmCompany(UpdateCrmCompanyRequest request) throws Exception {
+    public UpdateCrmCompanyResponse updateCrmCompany(UpdateCrmCompanyRequest request) {
         RequestOperation<UpdateCrmCompanyRequest, UpdateCrmCompanyResponse> operation
               = new UpdateCrmCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -514,9 +513,9 @@ public class Company {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateHrisCompanyResponse updateHrisCompany(UpdateHrisCompanyRequest request) throws Exception {
+    public UpdateHrisCompanyResponse updateHrisCompany(UpdateHrisCompanyRequest request) {
         RequestOperation<UpdateHrisCompanyRequest, UpdateHrisCompanyResponse> operation
               = new UpdateHrisCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

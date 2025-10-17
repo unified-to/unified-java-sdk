@@ -4,13 +4,14 @@
 package to.unified.unified_java_sdk.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+import static to.unified.unified_java_sdk.utils.Exceptions.unchecked;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import java.io.InputStream;
 import java.lang.Exception;
+import java.lang.IllegalArgumentException;
 import java.lang.Object;
-import java.lang.RuntimeException;
 import java.lang.String;
 import java.lang.Throwable;
 import java.net.http.HttpRequest;
@@ -25,7 +26,6 @@ import to.unified.unified_java_sdk.models.operations.CreateUnifiedWebhookRequest
 import to.unified.unified_java_sdk.models.operations.CreateUnifiedWebhookResponse;
 import to.unified.unified_java_sdk.models.shared.Webhook;
 import to.unified.unified_java_sdk.utils.Blob;
-import to.unified.unified_java_sdk.utils.Exceptions;
 import to.unified.unified_java_sdk.utils.HTTPClient;
 import to.unified.unified_java_sdk.utils.HTTPRequest;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -99,7 +99,7 @@ public class CreateUnifiedWebhook {
                     "json",
                     false);
             if (serializedRequestBody == null) {
-                throw new Exception("Request body is required");
+                throw new IllegalArgumentException("Request body is required");
             }
             req.setBody(Optional.ofNullable(serializedRequestBody));
             req.addHeader("Accept", "application/json")
@@ -139,8 +139,8 @@ public class CreateUnifiedWebhook {
         }
 
         @Override
-        public HttpResponse<InputStream> doRequest(CreateUnifiedWebhookRequest request) throws Exception {
-            HttpRequest r = onBuildRequest(request);
+        public HttpResponse<InputStream> doRequest(CreateUnifiedWebhookRequest request) {
+            HttpRequest r = unchecked(() -> onBuildRequest(request)).get();
             HttpResponse<InputStream> httpRes;
             try {
                 httpRes = client.send(r);
@@ -150,7 +150,7 @@ public class CreateUnifiedWebhook {
                     httpRes = onSuccess(httpRes);
                 }
             } catch (Exception e) {
-                httpRes = onError(null, e);
+                httpRes = unchecked(() -> onError(null, e)).get();
             }
 
             return httpRes;
@@ -158,7 +158,7 @@ public class CreateUnifiedWebhook {
 
 
         @Override
-        public CreateUnifiedWebhookResponse handleResponse(HttpResponse<InputStream> response) throws Exception {
+        public CreateUnifiedWebhookResponse handleResponse(HttpResponse<InputStream> response) {
             String contentType = response
                     .headers()
                     .firstValue("Content-Type")
@@ -174,44 +174,20 @@ public class CreateUnifiedWebhook {
             
             if (Utils.statusCodeMatches(response.statusCode(), "200")) {
                 if (Utils.contentTypeMatches(contentType, "application/json")) {
-                    Webhook out = Utils.mapper().readValue(
-                            response.body(),
-                            new TypeReference<>() {
-                            });
-                    res.withWebhook(out);
-                    return res;
+                    return res.withWebhook(Utils.unmarshal(response, new TypeReference<Webhook>() {}));
                 } else {
-                    throw new SDKError(
-                            response,
-                            response.statusCode(),
-                            "Unexpected content-type received: " + contentType,
-                            Utils.extractByteArrayFromBody(response));
+                    throw SDKError.from("Unexpected content-type received: " + contentType, response);
                 }
             }
-            
             if (Utils.statusCodeMatches(response.statusCode(), "4XX")) {
                 // no content
-                throw new SDKError(
-                        response,
-                        response.statusCode(),
-                        "API error occurred",
-                        Utils.extractByteArrayFromBody(response));
+                throw SDKError.from("API error occurred", response);
             }
-            
             if (Utils.statusCodeMatches(response.statusCode(), "5XX")) {
                 // no content
-                throw new SDKError(
-                        response,
-                        response.statusCode(),
-                        "API error occurred",
-                        Utils.extractByteArrayFromBody(response));
+                throw SDKError.from("API error occurred", response);
             }
-            
-            throw new SDKError(
-                    response,
-                    response.statusCode(),
-                    "Unexpected status code received: " + response.statusCode(),
-                    Utils.extractByteArrayFromBody(response));
+            throw SDKError.from("Unexpected status code received: " + response.statusCode(), response);
         }
     }
     public static class Async extends Base
@@ -236,7 +212,7 @@ public class CreateUnifiedWebhook {
 
         @Override
         public CompletableFuture<HttpResponse<Blob>> doRequest(CreateUnifiedWebhookRequest request) {
-            return Exceptions.unchecked(() -> onBuildRequest(request)).get().thenCompose(client::sendAsync)
+            return unchecked(() -> onBuildRequest(request)).get().thenCompose(client::sendAsync)
                     .handle((resp, err) -> {
                         if (err != null) {
                             return onError(null, err);
@@ -268,33 +244,20 @@ public class CreateUnifiedWebhook {
             
             if (Utils.statusCodeMatches(response.statusCode(), "200")) {
                 if (Utils.contentTypeMatches(contentType, "application/json")) {
-                    return response.body().toByteArray().thenApply(bodyBytes -> {
-                        try {
-                            Webhook out = Utils.mapper().readValue(
-                                    bodyBytes,
-                                    new TypeReference<>() {
-                                    });
-                            res.withWebhook(out);
-                            return res;
-                        } catch (Exception e) {
-                            throw new RuntimeException(e);
-                        }
-                    });
+                    return Utils.unmarshalAsync(response, new TypeReference<Webhook>() {})
+                            .thenApply(res::withWebhook);
                 } else {
                     return Utils.createAsyncApiError(response, "Unexpected content-type received: " + contentType);
                 }
             }
-            
             if (Utils.statusCodeMatches(response.statusCode(), "4XX")) {
                 // no content
                 return Utils.createAsyncApiError(response, "API error occurred");
             }
-            
             if (Utils.statusCodeMatches(response.statusCode(), "5XX")) {
                 // no content
                 return Utils.createAsyncApiError(response, "API error occurred");
             }
-            
             return Utils.createAsyncApiError(response, "Unexpected status code received: " + response.statusCode());
         }
     }

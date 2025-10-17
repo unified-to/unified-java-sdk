@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchScimGroupsRequest;
@@ -29,7 +28,7 @@ public class PatchScimGroupsRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<PatchScimGroupsResponse> call() throws Exception {
+    public CompletableFuture<PatchScimGroupsResponse> call() {
         
         AsyncRequestOperation<PatchScimGroupsRequest, PatchScimGroupsResponse> operation
               = new PatchScimGroups.Async(sdkConfiguration, _headers);

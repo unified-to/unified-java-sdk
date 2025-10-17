@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchVerificationRequestRequest;
@@ -29,7 +28,7 @@ public class PatchVerificationRequestRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<PatchVerificationRequestResponse> call() throws Exception {
+    public CompletableFuture<PatchVerificationRequestResponse> call() {
         
         AsyncRequestOperation<PatchVerificationRequestRequest, PatchVerificationRequestResponse> operation
               = new PatchVerificationRequest.Async(sdkConfiguration, _headers);

@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingCreditmemoRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingCreditmemoRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingCreditmemoResponse;
@@ -66,9 +65,9 @@ public class Creditmemo {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingCreditmemoResponse createAccountingCreditmemo(CreateAccountingCreditmemoRequest request) throws Exception {
+    public CreateAccountingCreditmemoResponse createAccountingCreditmemo(CreateAccountingCreditmemoRequest request) {
         RequestOperation<CreateAccountingCreditmemoRequest, CreateAccountingCreditmemoResponse> operation
               = new CreateAccountingCreditmemo.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -88,9 +87,9 @@ public class Creditmemo {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingCreditmemoResponse getAccountingCreditmemo(GetAccountingCreditmemoRequest request) throws Exception {
+    public GetAccountingCreditmemoResponse getAccountingCreditmemo(GetAccountingCreditmemoRequest request) {
         RequestOperation<GetAccountingCreditmemoRequest, GetAccountingCreditmemoResponse> operation
               = new GetAccountingCreditmemo.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -110,9 +109,9 @@ public class Creditmemo {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingCreditmemoesResponse listAccountingCreditmemoes(ListAccountingCreditmemoesRequest request) throws Exception {
+    public ListAccountingCreditmemoesResponse listAccountingCreditmemoes(ListAccountingCreditmemoesRequest request) {
         RequestOperation<ListAccountingCreditmemoesRequest, ListAccountingCreditmemoesResponse> operation
               = new ListAccountingCreditmemoes.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -132,9 +131,9 @@ public class Creditmemo {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingCreditmemoResponse patchAccountingCreditmemo(PatchAccountingCreditmemoRequest request) throws Exception {
+    public PatchAccountingCreditmemoResponse patchAccountingCreditmemo(PatchAccountingCreditmemoRequest request) {
         RequestOperation<PatchAccountingCreditmemoRequest, PatchAccountingCreditmemoResponse> operation
               = new PatchAccountingCreditmemo.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -154,9 +153,9 @@ public class Creditmemo {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingCreditmemoResponse removeAccountingCreditmemo(RemoveAccountingCreditmemoRequest request) throws Exception {
+    public RemoveAccountingCreditmemoResponse removeAccountingCreditmemo(RemoveAccountingCreditmemoRequest request) {
         RequestOperation<RemoveAccountingCreditmemoRequest, RemoveAccountingCreditmemoResponse> operation
               = new RemoveAccountingCreditmemo.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -176,9 +175,9 @@ public class Creditmemo {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingCreditmemoResponse updateAccountingCreditmemo(UpdateAccountingCreditmemoRequest request) throws Exception {
+    public UpdateAccountingCreditmemoResponse updateAccountingCreditmemo(UpdateAccountingCreditmemoRequest request) {
         RequestOperation<UpdateAccountingCreditmemoRequest, UpdateAccountingCreditmemoResponse> operation
               = new UpdateAccountingCreditmemo.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

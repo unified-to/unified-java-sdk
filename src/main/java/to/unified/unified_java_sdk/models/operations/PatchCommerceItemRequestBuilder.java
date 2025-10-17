@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.PatchCommerceItem;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class PatchCommerceItemRequestBuilder {
         return this;
     }
 
-    public PatchCommerceItemResponse call() throws Exception {
+    public PatchCommerceItemResponse call() {
         
         RequestOperation<PatchCommerceItemRequest, PatchCommerceItemResponse> operation
               = new PatchCommerceItem.Sync(sdkConfiguration, _headers);

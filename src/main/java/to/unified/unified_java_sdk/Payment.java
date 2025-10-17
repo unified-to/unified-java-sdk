@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreatePaymentLinkRequest;
 import to.unified.unified_java_sdk.models.operations.CreatePaymentLinkRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreatePaymentLinkResponse;
@@ -130,9 +129,9 @@ public class Payment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreatePaymentLinkResponse createPaymentLink(CreatePaymentLinkRequest request) throws Exception {
+    public CreatePaymentLinkResponse createPaymentLink(CreatePaymentLinkRequest request) {
         RequestOperation<CreatePaymentLinkRequest, CreatePaymentLinkResponse> operation
               = new CreatePaymentLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -152,9 +151,9 @@ public class Payment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreatePaymentPaymentResponse createPaymentPayment(CreatePaymentPaymentRequest request) throws Exception {
+    public CreatePaymentPaymentResponse createPaymentPayment(CreatePaymentPaymentRequest request) {
         RequestOperation<CreatePaymentPaymentRequest, CreatePaymentPaymentResponse> operation
               = new CreatePaymentPayment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -174,9 +173,9 @@ public class Payment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreatePaymentSubscriptionResponse createPaymentSubscription(CreatePaymentSubscriptionRequest request) throws Exception {
+    public CreatePaymentSubscriptionResponse createPaymentSubscription(CreatePaymentSubscriptionRequest request) {
         RequestOperation<CreatePaymentSubscriptionRequest, CreatePaymentSubscriptionResponse> operation
               = new CreatePaymentSubscription.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -196,9 +195,9 @@ public class Payment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetPaymentLinkResponse getPaymentLink(GetPaymentLinkRequest request) throws Exception {
+    public GetPaymentLinkResponse getPaymentLink(GetPaymentLinkRequest request) {
         RequestOperation<GetPaymentLinkRequest, GetPaymentLinkResponse> operation
               = new GetPaymentLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -218,9 +217,9 @@ public class Payment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetPaymentPaymentResponse getPaymentPayment(GetPaymentPaymentRequest request) throws Exception {
+    public GetPaymentPaymentResponse getPaymentPayment(GetPaymentPaymentRequest request) {
         RequestOperation<GetPaymentPaymentRequest, GetPaymentPaymentResponse> operation
               = new GetPaymentPayment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -240,9 +239,9 @@ public class Payment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetPaymentPayoutResponse getPaymentPayout(GetPaymentPayoutRequest request) throws Exception {
+    public GetPaymentPayoutResponse getPaymentPayout(GetPaymentPayoutRequest request) {
         RequestOperation<GetPaymentPayoutRequest, GetPaymentPayoutResponse> operation
               = new GetPaymentPayout.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -262,9 +261,9 @@ public class Payment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetPaymentRefundResponse getPaymentRefund(GetPaymentRefundRequest request) throws Exception {
+    public GetPaymentRefundResponse getPaymentRefund(GetPaymentRefundRequest request) {
         RequestOperation<GetPaymentRefundRequest, GetPaymentRefundResponse> operation
               = new GetPaymentRefund.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -284,9 +283,9 @@ public class Payment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetPaymentSubscriptionResponse getPaymentSubscription(GetPaymentSubscriptionRequest request) throws Exception {
+    public GetPaymentSubscriptionResponse getPaymentSubscription(GetPaymentSubscriptionRequest request) {
         RequestOperation<GetPaymentSubscriptionRequest, GetPaymentSubscriptionResponse> operation
               = new GetPaymentSubscription.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -306,9 +305,9 @@ public class Payment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListPaymentLinksResponse listPaymentLinks(ListPaymentLinksRequest request) throws Exception {
+    public ListPaymentLinksResponse listPaymentLinks(ListPaymentLinksRequest request) {
         RequestOperation<ListPaymentLinksRequest, ListPaymentLinksResponse> operation
               = new ListPaymentLinks.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -328,9 +327,9 @@ public class Payment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListPaymentPaymentsResponse listPaymentPayments(ListPaymentPaymentsRequest request) throws Exception {
+    public ListPaymentPaymentsResponse listPaymentPayments(ListPaymentPaymentsRequest request) {
         RequestOperation<ListPaymentPaymentsRequest, ListPaymentPaymentsResponse> operation
               = new ListPaymentPayments.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -350,9 +349,9 @@ public class Payment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListPaymentPayoutsResponse listPaymentPayouts(ListPaymentPayoutsRequest request) throws Exception {
+    public ListPaymentPayoutsResponse listPaymentPayouts(ListPaymentPayoutsRequest request) {
         RequestOperation<ListPaymentPayoutsRequest, ListPaymentPayoutsResponse> operation
               = new ListPaymentPayouts.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -372,9 +371,9 @@ public class Payment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListPaymentRefundsResponse listPaymentRefunds(ListPaymentRefundsRequest request) throws Exception {
+    public ListPaymentRefundsResponse listPaymentRefunds(ListPaymentRefundsRequest request) {
         RequestOperation<ListPaymentRefundsRequest, ListPaymentRefundsResponse> operation
               = new ListPaymentRefunds.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -394,9 +393,9 @@ public class Payment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListPaymentSubscriptionsResponse listPaymentSubscriptions(ListPaymentSubscriptionsRequest request) throws Exception {
+    public ListPaymentSubscriptionsResponse listPaymentSubscriptions(ListPaymentSubscriptionsRequest request) {
         RequestOperation<ListPaymentSubscriptionsRequest, ListPaymentSubscriptionsResponse> operation
               = new ListPaymentSubscriptions.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -416,9 +415,9 @@ public class Payment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchPaymentLinkResponse patchPaymentLink(PatchPaymentLinkRequest request) throws Exception {
+    public PatchPaymentLinkResponse patchPaymentLink(PatchPaymentLinkRequest request) {
         RequestOperation<PatchPaymentLinkRequest, PatchPaymentLinkResponse> operation
               = new PatchPaymentLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -438,9 +437,9 @@ public class Payment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchPaymentPaymentResponse patchPaymentPayment(PatchPaymentPaymentRequest request) throws Exception {
+    public PatchPaymentPaymentResponse patchPaymentPayment(PatchPaymentPaymentRequest request) {
         RequestOperation<PatchPaymentPaymentRequest, PatchPaymentPaymentResponse> operation
               = new PatchPaymentPayment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -460,9 +459,9 @@ public class Payment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchPaymentSubscriptionResponse patchPaymentSubscription(PatchPaymentSubscriptionRequest request) throws Exception {
+    public PatchPaymentSubscriptionResponse patchPaymentSubscription(PatchPaymentSubscriptionRequest request) {
         RequestOperation<PatchPaymentSubscriptionRequest, PatchPaymentSubscriptionResponse> operation
               = new PatchPaymentSubscription.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -482,9 +481,9 @@ public class Payment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemovePaymentLinkResponse removePaymentLink(RemovePaymentLinkRequest request) throws Exception {
+    public RemovePaymentLinkResponse removePaymentLink(RemovePaymentLinkRequest request) {
         RequestOperation<RemovePaymentLinkRequest, RemovePaymentLinkResponse> operation
               = new RemovePaymentLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -504,9 +503,9 @@ public class Payment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemovePaymentPaymentResponse removePaymentPayment(RemovePaymentPaymentRequest request) throws Exception {
+    public RemovePaymentPaymentResponse removePaymentPayment(RemovePaymentPaymentRequest request) {
         RequestOperation<RemovePaymentPaymentRequest, RemovePaymentPaymentResponse> operation
               = new RemovePaymentPayment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -526,9 +525,9 @@ public class Payment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemovePaymentSubscriptionResponse removePaymentSubscription(RemovePaymentSubscriptionRequest request) throws Exception {
+    public RemovePaymentSubscriptionResponse removePaymentSubscription(RemovePaymentSubscriptionRequest request) {
         RequestOperation<RemovePaymentSubscriptionRequest, RemovePaymentSubscriptionResponse> operation
               = new RemovePaymentSubscription.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -548,9 +547,9 @@ public class Payment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdatePaymentLinkResponse updatePaymentLink(UpdatePaymentLinkRequest request) throws Exception {
+    public UpdatePaymentLinkResponse updatePaymentLink(UpdatePaymentLinkRequest request) {
         RequestOperation<UpdatePaymentLinkRequest, UpdatePaymentLinkResponse> operation
               = new UpdatePaymentLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -570,9 +569,9 @@ public class Payment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdatePaymentPaymentResponse updatePaymentPayment(UpdatePaymentPaymentRequest request) throws Exception {
+    public UpdatePaymentPaymentResponse updatePaymentPayment(UpdatePaymentPaymentRequest request) {
         RequestOperation<UpdatePaymentPaymentRequest, UpdatePaymentPaymentResponse> operation
               = new UpdatePaymentPayment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -592,9 +591,9 @@ public class Payment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdatePaymentSubscriptionResponse updatePaymentSubscription(UpdatePaymentSubscriptionRequest request) throws Exception {
+    public UpdatePaymentSubscriptionResponse updatePaymentSubscription(UpdatePaymentSubscriptionRequest request) {
         RequestOperation<UpdatePaymentSubscriptionRequest, UpdatePaymentSubscriptionResponse> operation
               = new UpdatePaymentSubscription.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

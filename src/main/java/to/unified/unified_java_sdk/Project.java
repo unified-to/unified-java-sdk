@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateTaskProjectRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTaskProjectRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateTaskProjectResponse;
@@ -66,9 +65,9 @@ public class Project {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateTaskProjectResponse createTaskProject(CreateTaskProjectRequest request) throws Exception {
+    public CreateTaskProjectResponse createTaskProject(CreateTaskProjectRequest request) {
         RequestOperation<CreateTaskProjectRequest, CreateTaskProjectResponse> operation
               = new CreateTaskProject.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -88,9 +87,9 @@ public class Project {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetTaskProjectResponse getTaskProject(GetTaskProjectRequest request) throws Exception {
+    public GetTaskProjectResponse getTaskProject(GetTaskProjectRequest request) {
         RequestOperation<GetTaskProjectRequest, GetTaskProjectResponse> operation
               = new GetTaskProject.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -110,9 +109,9 @@ public class Project {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListTaskProjectsResponse listTaskProjects(ListTaskProjectsRequest request) throws Exception {
+    public ListTaskProjectsResponse listTaskProjects(ListTaskProjectsRequest request) {
         RequestOperation<ListTaskProjectsRequest, ListTaskProjectsResponse> operation
               = new ListTaskProjects.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -132,9 +131,9 @@ public class Project {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchTaskProjectResponse patchTaskProject(PatchTaskProjectRequest request) throws Exception {
+    public PatchTaskProjectResponse patchTaskProject(PatchTaskProjectRequest request) {
         RequestOperation<PatchTaskProjectRequest, PatchTaskProjectResponse> operation
               = new PatchTaskProject.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -154,9 +153,9 @@ public class Project {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveTaskProjectResponse removeTaskProject(RemoveTaskProjectRequest request) throws Exception {
+    public RemoveTaskProjectResponse removeTaskProject(RemoveTaskProjectRequest request) {
         RequestOperation<RemoveTaskProjectRequest, RemoveTaskProjectResponse> operation
               = new RemoveTaskProject.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -176,9 +175,9 @@ public class Project {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateTaskProjectResponse updateTaskProject(UpdateTaskProjectRequest request) throws Exception {
+    public UpdateTaskProjectResponse updateTaskProject(UpdateTaskProjectRequest request) {
         RequestOperation<UpdateTaskProjectRequest, UpdateTaskProjectResponse> operation
               = new UpdateTaskProject.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

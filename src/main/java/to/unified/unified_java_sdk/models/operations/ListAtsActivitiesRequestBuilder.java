@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.ListAtsActivities;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class ListAtsActivitiesRequestBuilder {
         return this;
     }
 
-    public ListAtsActivitiesResponse call() throws Exception {
+    public ListAtsActivitiesResponse call() {
         
         RequestOperation<ListAtsActivitiesRequest, ListAtsActivitiesResponse> operation
               = new ListAtsActivities.Sync(sdkConfiguration, _headers);

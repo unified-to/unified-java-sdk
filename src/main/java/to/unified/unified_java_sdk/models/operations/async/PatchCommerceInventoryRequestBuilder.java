@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceInventoryRequest;
@@ -29,7 +28,7 @@ public class PatchCommerceInventoryRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<PatchCommerceInventoryResponse> call() throws Exception {
+    public CompletableFuture<PatchCommerceInventoryResponse> call() {
         
         AsyncRequestOperation<PatchCommerceInventoryRequest, PatchCommerceInventoryResponse> operation
               = new PatchCommerceInventory.Async(sdkConfiguration, _headers);

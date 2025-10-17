@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingNoteRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingNoteRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingNoteResponse;
@@ -66,9 +65,9 @@ public class Note {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateTicketingNoteResponse createTicketingNote(CreateTicketingNoteRequest request) throws Exception {
+    public CreateTicketingNoteResponse createTicketingNote(CreateTicketingNoteRequest request) {
         RequestOperation<CreateTicketingNoteRequest, CreateTicketingNoteResponse> operation
               = new CreateTicketingNote.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -88,9 +87,9 @@ public class Note {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetTicketingNoteResponse getTicketingNote(GetTicketingNoteRequest request) throws Exception {
+    public GetTicketingNoteResponse getTicketingNote(GetTicketingNoteRequest request) {
         RequestOperation<GetTicketingNoteRequest, GetTicketingNoteResponse> operation
               = new GetTicketingNote.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -110,9 +109,9 @@ public class Note {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListTicketingNotesResponse listTicketingNotes(ListTicketingNotesRequest request) throws Exception {
+    public ListTicketingNotesResponse listTicketingNotes(ListTicketingNotesRequest request) {
         RequestOperation<ListTicketingNotesRequest, ListTicketingNotesResponse> operation
               = new ListTicketingNotes.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -132,9 +131,9 @@ public class Note {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchTicketingNoteResponse patchTicketingNote(PatchTicketingNoteRequest request) throws Exception {
+    public PatchTicketingNoteResponse patchTicketingNote(PatchTicketingNoteRequest request) {
         RequestOperation<PatchTicketingNoteRequest, PatchTicketingNoteResponse> operation
               = new PatchTicketingNote.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -154,9 +153,9 @@ public class Note {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveTicketingNoteResponse removeTicketingNote(RemoveTicketingNoteRequest request) throws Exception {
+    public RemoveTicketingNoteResponse removeTicketingNote(RemoveTicketingNoteRequest request) {
         RequestOperation<RemoveTicketingNoteRequest, RemoveTicketingNoteResponse> operation
               = new RemoveTicketingNote.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -176,9 +175,9 @@ public class Note {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateTicketingNoteResponse updateTicketingNote(UpdateTicketingNoteRequest request) throws Exception {
+    public UpdateTicketingNoteResponse updateTicketingNote(UpdateTicketingNoteRequest request) {
         RequestOperation<UpdateTicketingNoteRequest, UpdateTicketingNoteResponse> operation
               = new UpdateTicketingNote.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

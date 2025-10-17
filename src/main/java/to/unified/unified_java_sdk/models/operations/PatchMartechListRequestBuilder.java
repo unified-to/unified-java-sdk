@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.PatchMartechList;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class PatchMartechListRequestBuilder {
         return this;
     }
 
-    public PatchMartechListResponse call() throws Exception {
+    public PatchMartechListResponse call() {
         
         RequestOperation<PatchMartechListRequest, PatchMartechListResponse> operation
               = new PatchMartechList.Sync(sdkConfiguration, _headers);

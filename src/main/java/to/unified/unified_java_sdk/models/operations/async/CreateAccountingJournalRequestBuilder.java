@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingJournalRequest;
@@ -29,7 +28,7 @@ public class CreateAccountingJournalRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<CreateAccountingJournalResponse> call() throws Exception {
+    public CompletableFuture<CreateAccountingJournalResponse> call() {
         
         AsyncRequestOperation<CreateAccountingJournalRequest, CreateAccountingJournalResponse> operation
               = new CreateAccountingJournal.Async(sdkConfiguration, _headers);

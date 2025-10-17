@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.GetGenaiModelRequest;
 import to.unified.unified_java_sdk.models.operations.GetGenaiModelRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetGenaiModelResponse;
@@ -50,9 +49,9 @@ public class Model {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetGenaiModelResponse getGenaiModel(GetGenaiModelRequest request) throws Exception {
+    public GetGenaiModelResponse getGenaiModel(GetGenaiModelRequest request) {
         RequestOperation<GetGenaiModelRequest, GetGenaiModelResponse> operation
               = new GetGenaiModel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -72,9 +71,9 @@ public class Model {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListGenaiModelsResponse listGenaiModels(ListGenaiModelsRequest request) throws Exception {
+    public ListGenaiModelsResponse listGenaiModels(ListGenaiModelsRequest request) {
         RequestOperation<ListGenaiModelsRequest, ListGenaiModelsResponse> operation
               = new ListGenaiModels.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetPaymentRefund;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class GetPaymentRefundRequestBuilder {
         return this;
     }
 
-    public GetPaymentRefundResponse call() throws Exception {
+    public GetPaymentRefundResponse call() {
         
         RequestOperation<GetPaymentRefundRequest, GetPaymentRefundResponse> operation
               = new GetPaymentRefund.Sync(sdkConfiguration, _headers);

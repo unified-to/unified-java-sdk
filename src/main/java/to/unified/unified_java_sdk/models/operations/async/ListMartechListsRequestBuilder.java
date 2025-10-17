@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListMartechListsRequest;
@@ -29,7 +28,7 @@ public class ListMartechListsRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<ListMartechListsResponse> call() throws Exception {
+    public CompletableFuture<ListMartechListsResponse> call() {
         
         AsyncRequestOperation<ListMartechListsRequest, ListMartechListsResponse> operation
               = new ListMartechLists.Async(sdkConfiguration, _headers);

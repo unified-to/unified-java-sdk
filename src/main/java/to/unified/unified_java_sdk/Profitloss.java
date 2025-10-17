@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.GetAccountingProfitlossRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingProfitlossRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAccountingProfitlossResponse;
@@ -50,9 +49,9 @@ public class Profitloss {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingProfitlossResponse getAccountingProfitloss(GetAccountingProfitlossRequest request) throws Exception {
+    public GetAccountingProfitlossResponse getAccountingProfitloss(GetAccountingProfitlossRequest request) {
         RequestOperation<GetAccountingProfitlossRequest, GetAccountingProfitlossResponse> operation
               = new GetAccountingProfitloss.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -72,9 +71,9 @@ public class Profitloss {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingProfitlossesResponse listAccountingProfitlosses(ListAccountingProfitlossesRequest request) throws Exception {
+    public ListAccountingProfitlossesResponse listAccountingProfitlosses(ListAccountingProfitlossesRequest request) {
         RequestOperation<ListAccountingProfitlossesRequest, ListAccountingProfitlossesResponse> operation
               = new ListAccountingProfitlosses.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

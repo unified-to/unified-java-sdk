@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateRepoOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateRepoOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateRepoOrganizationResponse;
@@ -74,9 +73,9 @@ public class Organization {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateRepoOrganizationResponse createRepoOrganization(CreateRepoOrganizationRequest request) throws Exception {
+    public CreateRepoOrganizationResponse createRepoOrganization(CreateRepoOrganizationRequest request) {
         RequestOperation<CreateRepoOrganizationRequest, CreateRepoOrganizationResponse> operation
               = new CreateRepoOrganization.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -96,9 +95,9 @@ public class Organization {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingOrganizationResponse getAccountingOrganization(GetAccountingOrganizationRequest request) throws Exception {
+    public GetAccountingOrganizationResponse getAccountingOrganization(GetAccountingOrganizationRequest request) {
         RequestOperation<GetAccountingOrganizationRequest, GetAccountingOrganizationResponse> operation
               = new GetAccountingOrganization.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -118,9 +117,9 @@ public class Organization {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetRepoOrganizationResponse getRepoOrganization(GetRepoOrganizationRequest request) throws Exception {
+    public GetRepoOrganizationResponse getRepoOrganization(GetRepoOrganizationRequest request) {
         RequestOperation<GetRepoOrganizationRequest, GetRepoOrganizationResponse> operation
               = new GetRepoOrganization.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -140,9 +139,9 @@ public class Organization {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingOrganizationsResponse listAccountingOrganizations(ListAccountingOrganizationsRequest request) throws Exception {
+    public ListAccountingOrganizationsResponse listAccountingOrganizations(ListAccountingOrganizationsRequest request) {
         RequestOperation<ListAccountingOrganizationsRequest, ListAccountingOrganizationsResponse> operation
               = new ListAccountingOrganizations.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -162,9 +161,9 @@ public class Organization {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListRepoOrganizationsResponse listRepoOrganizations(ListRepoOrganizationsRequest request) throws Exception {
+    public ListRepoOrganizationsResponse listRepoOrganizations(ListRepoOrganizationsRequest request) {
         RequestOperation<ListRepoOrganizationsRequest, ListRepoOrganizationsResponse> operation
               = new ListRepoOrganizations.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -184,9 +183,9 @@ public class Organization {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchRepoOrganizationResponse patchRepoOrganization(PatchRepoOrganizationRequest request) throws Exception {
+    public PatchRepoOrganizationResponse patchRepoOrganization(PatchRepoOrganizationRequest request) {
         RequestOperation<PatchRepoOrganizationRequest, PatchRepoOrganizationResponse> operation
               = new PatchRepoOrganization.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -206,9 +205,9 @@ public class Organization {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveRepoOrganizationResponse removeRepoOrganization(RemoveRepoOrganizationRequest request) throws Exception {
+    public RemoveRepoOrganizationResponse removeRepoOrganization(RemoveRepoOrganizationRequest request) {
         RequestOperation<RemoveRepoOrganizationRequest, RemoveRepoOrganizationResponse> operation
               = new RemoveRepoOrganization.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -228,9 +227,9 @@ public class Organization {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateRepoOrganizationResponse updateRepoOrganization(UpdateRepoOrganizationRequest request) throws Exception {
+    public UpdateRepoOrganizationResponse updateRepoOrganization(UpdateRepoOrganizationRequest request) {
         RequestOperation<UpdateRepoOrganizationRequest, UpdateRepoOrganizationResponse> operation
               = new UpdateRepoOrganization.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

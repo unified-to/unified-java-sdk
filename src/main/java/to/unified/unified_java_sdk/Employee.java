@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeResponse;
@@ -66,9 +65,9 @@ public class Employee {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateHrisEmployeeResponse createHrisEmployee(CreateHrisEmployeeRequest request) throws Exception {
+    public CreateHrisEmployeeResponse createHrisEmployee(CreateHrisEmployeeRequest request) {
         RequestOperation<CreateHrisEmployeeRequest, CreateHrisEmployeeResponse> operation
               = new CreateHrisEmployee.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -88,9 +87,9 @@ public class Employee {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisEmployeeResponse getHrisEmployee(GetHrisEmployeeRequest request) throws Exception {
+    public GetHrisEmployeeResponse getHrisEmployee(GetHrisEmployeeRequest request) {
         RequestOperation<GetHrisEmployeeRequest, GetHrisEmployeeResponse> operation
               = new GetHrisEmployee.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -110,9 +109,9 @@ public class Employee {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisEmployeesResponse listHrisEmployees(ListHrisEmployeesRequest request) throws Exception {
+    public ListHrisEmployeesResponse listHrisEmployees(ListHrisEmployeesRequest request) {
         RequestOperation<ListHrisEmployeesRequest, ListHrisEmployeesResponse> operation
               = new ListHrisEmployees.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -132,9 +131,9 @@ public class Employee {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchHrisEmployeeResponse patchHrisEmployee(PatchHrisEmployeeRequest request) throws Exception {
+    public PatchHrisEmployeeResponse patchHrisEmployee(PatchHrisEmployeeRequest request) {
         RequestOperation<PatchHrisEmployeeRequest, PatchHrisEmployeeResponse> operation
               = new PatchHrisEmployee.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -154,9 +153,9 @@ public class Employee {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveHrisEmployeeResponse removeHrisEmployee(RemoveHrisEmployeeRequest request) throws Exception {
+    public RemoveHrisEmployeeResponse removeHrisEmployee(RemoveHrisEmployeeRequest request) {
         RequestOperation<RemoveHrisEmployeeRequest, RemoveHrisEmployeeResponse> operation
               = new RemoveHrisEmployee.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -176,9 +175,9 @@ public class Employee {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateHrisEmployeeResponse updateHrisEmployee(UpdateHrisEmployeeRequest request) throws Exception {
+    public UpdateHrisEmployeeResponse updateHrisEmployee(UpdateHrisEmployeeRequest request) {
         RequestOperation<UpdateHrisEmployeeRequest, UpdateHrisEmployeeResponse> operation
               = new UpdateHrisEmployee.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

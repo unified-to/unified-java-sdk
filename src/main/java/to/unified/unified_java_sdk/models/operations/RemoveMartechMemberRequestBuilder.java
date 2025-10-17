@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemoveMartechMember;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class RemoveMartechMemberRequestBuilder {
         return this;
     }
 
-    public RemoveMartechMemberResponse call() throws Exception {
+    public RemoveMartechMemberResponse call() {
         
         RequestOperation<RemoveMartechMemberRequest, RemoveMartechMemberResponse> operation
               = new RemoveMartechMember.Sync(sdkConfiguration, _headers);

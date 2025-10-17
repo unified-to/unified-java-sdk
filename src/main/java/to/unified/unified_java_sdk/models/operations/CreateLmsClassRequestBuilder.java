@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.CreateLmsClass;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class CreateLmsClassRequestBuilder {
         return this;
     }
 
-    public CreateLmsClassResponse call() throws Exception {
+    public CreateLmsClassResponse call() {
         
         RequestOperation<CreateLmsClassRequest, CreateLmsClassResponse> operation
               = new CreateLmsClass.Sync(sdkConfiguration, _headers);

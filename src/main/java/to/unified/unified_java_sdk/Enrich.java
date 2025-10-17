@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.ListEnrichCompaniesRequest;
 import to.unified.unified_java_sdk.models.operations.ListEnrichCompaniesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListEnrichCompaniesResponse;
@@ -50,9 +49,9 @@ public class Enrich {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListEnrichCompaniesResponse listEnrichCompanies(ListEnrichCompaniesRequest request) throws Exception {
+    public ListEnrichCompaniesResponse listEnrichCompanies(ListEnrichCompaniesRequest request) {
         RequestOperation<ListEnrichCompaniesRequest, ListEnrichCompaniesResponse> operation
               = new ListEnrichCompanies.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -72,9 +71,9 @@ public class Enrich {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListEnrichPeopleResponse listEnrichPeople(ListEnrichPeopleRequest request) throws Exception {
+    public ListEnrichPeopleResponse listEnrichPeople(ListEnrichPeopleRequest request) {
         RequestOperation<ListEnrichPeopleRequest, ListEnrichPeopleResponse> operation
               = new ListEnrichPeople.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetUnifiedIssue;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class GetUnifiedIssueRequestBuilder {
         return this;
     }
 
-    public GetUnifiedIssueResponse call() throws Exception {
+    public GetUnifiedIssueResponse call() {
         
         RequestOperation<GetUnifiedIssueRequest, GetUnifiedIssueResponse> operation
               = new GetUnifiedIssue.Sync(sdkConfiguration, _headers);

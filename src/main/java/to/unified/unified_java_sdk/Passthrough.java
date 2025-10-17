@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreatePassthroughJsonRequest;
 import to.unified.unified_java_sdk.models.operations.CreatePassthroughJsonRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreatePassthroughJsonResponse;
@@ -74,9 +73,9 @@ public class Passthrough {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreatePassthroughJsonResponse createPassthroughJson(CreatePassthroughJsonRequest request) throws Exception {
+    public CreatePassthroughJsonResponse createPassthroughJson(CreatePassthroughJsonRequest request) {
         RequestOperation<CreatePassthroughJsonRequest, CreatePassthroughJsonResponse> operation
               = new CreatePassthroughJson.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -96,9 +95,9 @@ public class Passthrough {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreatePassthroughRawResponse createPassthroughRaw(CreatePassthroughRawRequest request) throws Exception {
+    public CreatePassthroughRawResponse createPassthroughRaw(CreatePassthroughRawRequest request) {
         RequestOperation<CreatePassthroughRawRequest, CreatePassthroughRawResponse> operation
               = new CreatePassthroughRaw.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -118,9 +117,9 @@ public class Passthrough {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListPassthroughsResponse listPassthroughs(ListPassthroughsRequest request) throws Exception {
+    public ListPassthroughsResponse listPassthroughs(ListPassthroughsRequest request) {
         RequestOperation<ListPassthroughsRequest, ListPassthroughsResponse> operation
               = new ListPassthroughs.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -140,9 +139,9 @@ public class Passthrough {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchPassthroughJsonResponse patchPassthroughJson(PatchPassthroughJsonRequest request) throws Exception {
+    public PatchPassthroughJsonResponse patchPassthroughJson(PatchPassthroughJsonRequest request) {
         RequestOperation<PatchPassthroughJsonRequest, PatchPassthroughJsonResponse> operation
               = new PatchPassthroughJson.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -162,9 +161,9 @@ public class Passthrough {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchPassthroughRawResponse patchPassthroughRaw(PatchPassthroughRawRequest request) throws Exception {
+    public PatchPassthroughRawResponse patchPassthroughRaw(PatchPassthroughRawRequest request) {
         RequestOperation<PatchPassthroughRawRequest, PatchPassthroughRawResponse> operation
               = new PatchPassthroughRaw.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -184,9 +183,9 @@ public class Passthrough {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemovePassthroughResponse removePassthrough(RemovePassthroughRequest request) throws Exception {
+    public RemovePassthroughResponse removePassthrough(RemovePassthroughRequest request) {
         RequestOperation<RemovePassthroughRequest, RemovePassthroughResponse> operation
               = new RemovePassthrough.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -206,9 +205,9 @@ public class Passthrough {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdatePassthroughJsonResponse updatePassthroughJson(UpdatePassthroughJsonRequest request) throws Exception {
+    public UpdatePassthroughJsonResponse updatePassthroughJson(UpdatePassthroughJsonRequest request) {
         RequestOperation<UpdatePassthroughJsonRequest, UpdatePassthroughJsonResponse> operation
               = new UpdatePassthroughJson.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -228,9 +227,9 @@ public class Passthrough {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdatePassthroughRawResponse updatePassthroughRaw(UpdatePassthroughRawRequest request) throws Exception {
+    public UpdatePassthroughRawResponse updatePassthroughRaw(UpdatePassthroughRawRequest request) {
         RequestOperation<UpdatePassthroughRawRequest, UpdatePassthroughRawResponse> operation
               = new UpdatePassthroughRaw.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

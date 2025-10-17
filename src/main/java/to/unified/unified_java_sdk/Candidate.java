@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateAtsCandidateRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsCandidateRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAtsCandidateResponse;
@@ -66,9 +65,9 @@ public class Candidate {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAtsCandidateResponse createAtsCandidate(CreateAtsCandidateRequest request) throws Exception {
+    public CreateAtsCandidateResponse createAtsCandidate(CreateAtsCandidateRequest request) {
         RequestOperation<CreateAtsCandidateRequest, CreateAtsCandidateResponse> operation
               = new CreateAtsCandidate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -88,9 +87,9 @@ public class Candidate {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetAtsCandidateResponse getAtsCandidate(GetAtsCandidateRequest request) throws Exception {
+    public GetAtsCandidateResponse getAtsCandidate(GetAtsCandidateRequest request) {
         RequestOperation<GetAtsCandidateRequest, GetAtsCandidateResponse> operation
               = new GetAtsCandidate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -110,9 +109,9 @@ public class Candidate {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListAtsCandidatesResponse listAtsCandidates(ListAtsCandidatesRequest request) throws Exception {
+    public ListAtsCandidatesResponse listAtsCandidates(ListAtsCandidatesRequest request) {
         RequestOperation<ListAtsCandidatesRequest, ListAtsCandidatesResponse> operation
               = new ListAtsCandidates.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -132,9 +131,9 @@ public class Candidate {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAtsCandidateResponse patchAtsCandidate(PatchAtsCandidateRequest request) throws Exception {
+    public PatchAtsCandidateResponse patchAtsCandidate(PatchAtsCandidateRequest request) {
         RequestOperation<PatchAtsCandidateRequest, PatchAtsCandidateResponse> operation
               = new PatchAtsCandidate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -154,9 +153,9 @@ public class Candidate {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAtsCandidateResponse removeAtsCandidate(RemoveAtsCandidateRequest request) throws Exception {
+    public RemoveAtsCandidateResponse removeAtsCandidate(RemoveAtsCandidateRequest request) {
         RequestOperation<RemoveAtsCandidateRequest, RemoveAtsCandidateResponse> operation
               = new RemoveAtsCandidate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -176,9 +175,9 @@ public class Candidate {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAtsCandidateResponse updateAtsCandidate(UpdateAtsCandidateRequest request) throws Exception {
+    public UpdateAtsCandidateResponse updateAtsCandidate(UpdateAtsCandidateRequest request) {
         RequestOperation<UpdateAtsCandidateRequest, UpdateAtsCandidateResponse> operation
               = new UpdateAtsCandidate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

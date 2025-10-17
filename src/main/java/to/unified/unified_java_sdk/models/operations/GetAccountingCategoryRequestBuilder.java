@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetAccountingCategory;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class GetAccountingCategoryRequestBuilder {
         return this;
     }
 
-    public GetAccountingCategoryResponse call() throws Exception {
+    public GetAccountingCategoryResponse call() {
         
         RequestOperation<GetAccountingCategoryRequest, GetAccountingCategoryResponse> operation
               = new GetAccountingCategory.Sync(sdkConfiguration, _headers);

@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemoveAccountingTaxrate;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class RemoveAccountingTaxrateRequestBuilder {
         return this;
     }
 
-    public RemoveAccountingTaxrateResponse call() throws Exception {
+    public RemoveAccountingTaxrateResponse call() {
         
         RequestOperation<RemoveAccountingTaxrateRequest, RemoveAccountingTaxrateResponse> operation
               = new RemoveAccountingTaxrate.Sync(sdkConfiguration, _headers);

@@ -11,6 +11,7 @@ import to.unified.unified_java_sdk.models.operations.CreateAccountingBillRequest
 import to.unified.unified_java_sdk.models.operations.CreateAccountingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingContactRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingCreditmemoRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingExpenseRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingInvoiceRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingJournalRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingOrderRequest;
@@ -24,6 +25,7 @@ import to.unified.unified_java_sdk.models.operations.GetAccountingBillRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingContactRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingCreditmemoRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingExpenseRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingInvoiceRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingJournalRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingOrderRequest;
@@ -41,6 +43,7 @@ import to.unified.unified_java_sdk.models.operations.ListAccountingBillsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingCategoriesRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingContactsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingCreditmemoesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingExpensesRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingInvoicesRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingJournalsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingOrdersRequest;
@@ -57,6 +60,7 @@ import to.unified.unified_java_sdk.models.operations.PatchAccountingBillRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingContactRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingCreditmemoRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingExpenseRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingInvoiceRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingJournalRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingOrderRequest;
@@ -69,6 +73,7 @@ import to.unified.unified_java_sdk.models.operations.RemoveAccountingBillRequest
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingContactRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingCreditmemoRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingExpenseRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingInvoiceRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingJournalRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingOrderRequest;
@@ -81,6 +86,7 @@ import to.unified.unified_java_sdk.models.operations.UpdateAccountingBillRequest
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingContactRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingCreditmemoRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingExpenseRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingInvoiceRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingJournalRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingOrderRequest;
@@ -98,6 +104,8 @@ import to.unified.unified_java_sdk.models.operations.async.CreateAccountingConta
 import to.unified.unified_java_sdk.models.operations.async.CreateAccountingContactResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateAccountingCreditmemoRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateAccountingCreditmemoResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateAccountingExpenseRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAccountingExpenseResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateAccountingInvoiceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateAccountingInvoiceResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateAccountingJournalRequestBuilder;
@@ -124,6 +132,8 @@ import to.unified.unified_java_sdk.models.operations.async.GetAccountingContactR
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingContactResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingCreditmemoRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingCreditmemoResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingExpenseRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingExpenseResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingInvoiceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingInvoiceResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingJournalRequestBuilder;
@@ -158,6 +168,8 @@ import to.unified.unified_java_sdk.models.operations.async.ListAccountingContact
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingContactsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingCreditmemoesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingCreditmemoesResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingExpensesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingExpensesResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingInvoicesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingInvoicesResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingJournalsRequestBuilder;
@@ -190,6 +202,8 @@ import to.unified.unified_java_sdk.models.operations.async.PatchAccountingContac
 import to.unified.unified_java_sdk.models.operations.async.PatchAccountingContactResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchAccountingCreditmemoRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchAccountingCreditmemoResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchAccountingExpenseRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAccountingExpenseResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchAccountingInvoiceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchAccountingInvoiceResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchAccountingJournalRequestBuilder;
@@ -214,6 +228,8 @@ import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingConta
 import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingContactResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingCreditmemoRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingCreditmemoResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingExpenseRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingExpenseResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingInvoiceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingInvoiceResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingJournalRequestBuilder;
@@ -238,6 +254,8 @@ import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingConta
 import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingContactResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingCreditmemoRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingCreditmemoResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingExpenseRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingExpenseResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingInvoiceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingInvoiceResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingJournalRequestBuilder;
@@ -257,6 +275,7 @@ import to.unified.unified_java_sdk.operations.CreateAccountingBill;
 import to.unified.unified_java_sdk.operations.CreateAccountingCategory;
 import to.unified.unified_java_sdk.operations.CreateAccountingContact;
 import to.unified.unified_java_sdk.operations.CreateAccountingCreditmemo;
+import to.unified.unified_java_sdk.operations.CreateAccountingExpense;
 import to.unified.unified_java_sdk.operations.CreateAccountingInvoice;
 import to.unified.unified_java_sdk.operations.CreateAccountingJournal;
 import to.unified.unified_java_sdk.operations.CreateAccountingOrder;
@@ -270,6 +289,7 @@ import to.unified.unified_java_sdk.operations.GetAccountingBill;
 import to.unified.unified_java_sdk.operations.GetAccountingCategory;
 import to.unified.unified_java_sdk.operations.GetAccountingContact;
 import to.unified.unified_java_sdk.operations.GetAccountingCreditmemo;
+import to.unified.unified_java_sdk.operations.GetAccountingExpense;
 import to.unified.unified_java_sdk.operations.GetAccountingInvoice;
 import to.unified.unified_java_sdk.operations.GetAccountingJournal;
 import to.unified.unified_java_sdk.operations.GetAccountingOrder;
@@ -287,6 +307,7 @@ import to.unified.unified_java_sdk.operations.ListAccountingBills;
 import to.unified.unified_java_sdk.operations.ListAccountingCategories;
 import to.unified.unified_java_sdk.operations.ListAccountingContacts;
 import to.unified.unified_java_sdk.operations.ListAccountingCreditmemoes;
+import to.unified.unified_java_sdk.operations.ListAccountingExpenses;
 import to.unified.unified_java_sdk.operations.ListAccountingInvoices;
 import to.unified.unified_java_sdk.operations.ListAccountingJournals;
 import to.unified.unified_java_sdk.operations.ListAccountingOrders;
@@ -303,6 +324,7 @@ import to.unified.unified_java_sdk.operations.PatchAccountingBill;
 import to.unified.unified_java_sdk.operations.PatchAccountingCategory;
 import to.unified.unified_java_sdk.operations.PatchAccountingContact;
 import to.unified.unified_java_sdk.operations.PatchAccountingCreditmemo;
+import to.unified.unified_java_sdk.operations.PatchAccountingExpense;
 import to.unified.unified_java_sdk.operations.PatchAccountingInvoice;
 import to.unified.unified_java_sdk.operations.PatchAccountingJournal;
 import to.unified.unified_java_sdk.operations.PatchAccountingOrder;
@@ -315,6 +337,7 @@ import to.unified.unified_java_sdk.operations.RemoveAccountingBill;
 import to.unified.unified_java_sdk.operations.RemoveAccountingCategory;
 import to.unified.unified_java_sdk.operations.RemoveAccountingContact;
 import to.unified.unified_java_sdk.operations.RemoveAccountingCreditmemo;
+import to.unified.unified_java_sdk.operations.RemoveAccountingExpense;
 import to.unified.unified_java_sdk.operations.RemoveAccountingInvoice;
 import to.unified.unified_java_sdk.operations.RemoveAccountingJournal;
 import to.unified.unified_java_sdk.operations.RemoveAccountingOrder;
@@ -327,6 +350,7 @@ import to.unified.unified_java_sdk.operations.UpdateAccountingBill;
 import to.unified.unified_java_sdk.operations.UpdateAccountingCategory;
 import to.unified.unified_java_sdk.operations.UpdateAccountingContact;
 import to.unified.unified_java_sdk.operations.UpdateAccountingCreditmemo;
+import to.unified.unified_java_sdk.operations.UpdateAccountingExpense;
 import to.unified.unified_java_sdk.operations.UpdateAccountingInvoice;
 import to.unified.unified_java_sdk.operations.UpdateAccountingJournal;
 import to.unified.unified_java_sdk.operations.UpdateAccountingOrder;
@@ -467,6 +491,29 @@ public class AsyncAccounting {
     public CompletableFuture<CreateAccountingCreditmemoResponse> createAccountingCreditmemo(CreateAccountingCreditmemoRequest request) {
         AsyncRequestOperation<CreateAccountingCreditmemoRequest, CreateAccountingCreditmemoResponse> operation
               = new CreateAccountingCreditmemo.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Create an expense
+     * 
+     * @return The async call builder
+     */
+    public CreateAccountingExpenseRequestBuilder createAccountingExpense() {
+        return new CreateAccountingExpenseRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create an expense
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateAccountingExpenseResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingExpenseResponse> createAccountingExpense(CreateAccountingExpenseRequest request) {
+        AsyncRequestOperation<CreateAccountingExpenseRequest, CreateAccountingExpenseResponse> operation
+              = new CreateAccountingExpense.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -766,6 +813,29 @@ public class AsyncAccounting {
     public CompletableFuture<GetAccountingCreditmemoResponse> getAccountingCreditmemo(GetAccountingCreditmemoRequest request) {
         AsyncRequestOperation<GetAccountingCreditmemoRequest, GetAccountingCreditmemoResponse> operation
               = new GetAccountingCreditmemo.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve an expense
+     * 
+     * @return The async call builder
+     */
+    public GetAccountingExpenseRequestBuilder getAccountingExpense() {
+        return new GetAccountingExpenseRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an expense
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetAccountingExpenseResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingExpenseResponse> getAccountingExpense(GetAccountingExpenseRequest request) {
+        AsyncRequestOperation<GetAccountingExpenseRequest, GetAccountingExpenseResponse> operation
+              = new GetAccountingExpense.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1163,6 +1233,29 @@ public class AsyncAccounting {
 
 
     /**
+     * List all expenses
+     * 
+     * @return The async call builder
+     */
+    public ListAccountingExpensesRequestBuilder listAccountingExpenses() {
+        return new ListAccountingExpensesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all expenses
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListAccountingExpensesResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingExpensesResponse> listAccountingExpenses(ListAccountingExpensesRequest request) {
+        AsyncRequestOperation<ListAccountingExpensesRequest, ListAccountingExpensesResponse> operation
+              = new ListAccountingExpenses.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * List all invoices
      * 
      * @return The async call builder
@@ -1531,6 +1624,29 @@ public class AsyncAccounting {
 
 
     /**
+     * Update an expense
+     * 
+     * @return The async call builder
+     */
+    public PatchAccountingExpenseRequestBuilder patchAccountingExpense() {
+        return new PatchAccountingExpenseRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an expense
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchAccountingExpenseResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingExpenseResponse> patchAccountingExpense(PatchAccountingExpenseRequest request) {
+        AsyncRequestOperation<PatchAccountingExpenseRequest, PatchAccountingExpenseResponse> operation
+              = new PatchAccountingExpense.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Update an invoice
      * 
      * @return The async call builder
@@ -1807,6 +1923,29 @@ public class AsyncAccounting {
 
 
     /**
+     * Remove an expense
+     * 
+     * @return The async call builder
+     */
+    public RemoveAccountingExpenseRequestBuilder removeAccountingExpense() {
+        return new RemoveAccountingExpenseRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove an expense
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveAccountingExpenseResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingExpenseResponse> removeAccountingExpense(RemoveAccountingExpenseRequest request) {
+        AsyncRequestOperation<RemoveAccountingExpenseRequest, RemoveAccountingExpenseResponse> operation
+              = new RemoveAccountingExpense.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Remove an invoice
      * 
      * @return The async call builder
@@ -2077,6 +2216,29 @@ public class AsyncAccounting {
     public CompletableFuture<UpdateAccountingCreditmemoResponse> updateAccountingCreditmemo(UpdateAccountingCreditmemoRequest request) {
         AsyncRequestOperation<UpdateAccountingCreditmemoRequest, UpdateAccountingCreditmemoResponse> operation
               = new UpdateAccountingCreditmemo.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update an expense
+     * 
+     * @return The async call builder
+     */
+    public UpdateAccountingExpenseRequestBuilder updateAccountingExpense() {
+        return new UpdateAccountingExpenseRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an expense
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdateAccountingExpenseResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingExpenseResponse> updateAccountingExpense(UpdateAccountingExpenseRequest request) {
+        AsyncRequestOperation<UpdateAccountingExpenseRequest, UpdateAccountingExpenseResponse> operation
+              = new UpdateAccountingExpense.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

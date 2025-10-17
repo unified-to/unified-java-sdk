@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchTaskTaskRequest;
@@ -29,7 +28,7 @@ public class PatchTaskTaskRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<PatchTaskTaskResponse> call() throws Exception {
+    public CompletableFuture<PatchTaskTaskResponse> call() {
         
         AsyncRequestOperation<PatchTaskTaskRequest, PatchTaskTaskResponse> operation
               = new PatchTaskTask.Async(sdkConfiguration, _headers);

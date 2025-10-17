@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemoveAtsScorecardRequest;
@@ -29,7 +28,7 @@ public class RemoveAtsScorecardRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<RemoveAtsScorecardResponse> call() throws Exception {
+    public CompletableFuture<RemoveAtsScorecardResponse> call() {
         
         AsyncRequestOperation<RemoveAtsScorecardRequest, RemoveAtsScorecardResponse> operation
               = new RemoveAtsScorecard.Async(sdkConfiguration, _headers);

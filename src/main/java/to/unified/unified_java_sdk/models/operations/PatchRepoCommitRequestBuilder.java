@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.PatchRepoCommit;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class PatchRepoCommitRequestBuilder {
         return this;
     }
 
-    public PatchRepoCommitResponse call() throws Exception {
+    public PatchRepoCommitResponse call() {
         
         RequestOperation<PatchRepoCommitRequest, PatchRepoCommitResponse> operation
               = new PatchRepoCommit.Sync(sdkConfiguration, _headers);

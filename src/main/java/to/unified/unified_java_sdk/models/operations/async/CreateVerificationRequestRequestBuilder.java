@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.CreateVerificationRequestRequest;
@@ -29,7 +28,7 @@ public class CreateVerificationRequestRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<CreateVerificationRequestResponse> call() throws Exception {
+    public CompletableFuture<CreateVerificationRequestResponse> call() {
         
         AsyncRequestOperation<CreateVerificationRequestRequest, CreateVerificationRequestResponse> operation
               = new CreateVerificationRequest.Async(sdkConfiguration, _headers);

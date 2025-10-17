@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.GetHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisTimeoffRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHrisTimeoffResponse;
@@ -50,9 +49,9 @@ public class Timeoff {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisTimeoffResponse getHrisTimeoff(GetHrisTimeoffRequest request) throws Exception {
+    public GetHrisTimeoffResponse getHrisTimeoff(GetHrisTimeoffRequest request) {
         RequestOperation<GetHrisTimeoffRequest, GetHrisTimeoffResponse> operation
               = new GetHrisTimeoff.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -72,9 +71,9 @@ public class Timeoff {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisTimeoffsResponse listHrisTimeoffs(ListHrisTimeoffsRequest request) throws Exception {
+    public ListHrisTimeoffsResponse listHrisTimeoffs(ListHrisTimeoffsRequest request) {
         RequestOperation<ListHrisTimeoffsRequest, ListHrisTimeoffsResponse> operation
               = new ListHrisTimeoffs.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListHrisLocationsRequest;
@@ -29,7 +28,7 @@ public class ListHrisLocationsRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<ListHrisLocationsResponse> call() throws Exception {
+    public CompletableFuture<ListHrisLocationsResponse> call() {
         
         AsyncRequestOperation<ListHrisLocationsRequest, ListHrisLocationsResponse> operation
               = new ListHrisLocations.Async(sdkConfiguration, _headers);

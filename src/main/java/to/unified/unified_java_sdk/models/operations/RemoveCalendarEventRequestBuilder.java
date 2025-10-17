@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemoveCalendarEvent;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class RemoveCalendarEventRequestBuilder {
         return this;
     }
 
-    public RemoveCalendarEventResponse call() throws Exception {
+    public RemoveCalendarEventResponse call() {
         
         RequestOperation<RemoveCalendarEventRequest, RemoveCalendarEventResponse> operation
               = new RemoveCalendarEvent.Sync(sdkConfiguration, _headers);

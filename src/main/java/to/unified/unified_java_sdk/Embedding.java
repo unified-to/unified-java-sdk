@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbeddingRequest;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbeddingRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbeddingResponse;
@@ -46,9 +45,9 @@ public class Embedding {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateGenaiEmbeddingResponse createGenaiEmbedding(CreateGenaiEmbeddingRequest request) throws Exception {
+    public CreateGenaiEmbeddingResponse createGenaiEmbedding(CreateGenaiEmbeddingRequest request) {
         RequestOperation<CreateGenaiEmbeddingRequest, CreateGenaiEmbeddingResponse> operation
               = new CreateGenaiEmbedding.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

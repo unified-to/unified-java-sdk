@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.PatchTicketingCategory;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class PatchTicketingCategoryRequestBuilder {
         return this;
     }
 
-    public PatchTicketingCategoryResponse call() throws Exception {
+    public PatchTicketingCategoryResponse call() {
         
         RequestOperation<PatchTicketingCategoryRequest, PatchTicketingCategoryResponse> operation
               = new PatchTicketingCategory.Sync(sdkConfiguration, _headers);

@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.ListCalendarCalendars;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class ListCalendarCalendarsRequestBuilder {
         return this;
     }
 
-    public ListCalendarCalendarsResponse call() throws Exception {
+    public ListCalendarCalendarsResponse call() {
         
         RequestOperation<ListCalendarCalendarsRequest, ListCalendarCalendarsResponse> operation
               = new ListCalendarCalendars.Sync(sdkConfiguration, _headers);

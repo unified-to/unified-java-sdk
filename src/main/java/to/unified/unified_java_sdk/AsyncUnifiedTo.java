@@ -25,6 +25,8 @@ public class AsyncUnifiedTo {
 
     private final AsyncCreditmemo creditmemo;
 
+    private final AsyncExpense expense;
+
     private final AsyncInvoice invoice;
 
     private final AsyncJournal journal;
@@ -249,6 +251,10 @@ public class AsyncUnifiedTo {
 
     public AsyncCreditmemo creditmemo() {
         return creditmemo;
+    }
+
+    public AsyncExpense expense() {
+        return expense;
     }
 
     public AsyncInvoice invoice() {
@@ -660,6 +666,7 @@ public class AsyncUnifiedTo {
         this.category = new AsyncCategory(syncSDK.category(), sdkConfiguration);
         this.contact = new AsyncContact(syncSDK.contact(), sdkConfiguration);
         this.creditmemo = new AsyncCreditmemo(syncSDK.creditmemo(), sdkConfiguration);
+        this.expense = new AsyncExpense(syncSDK.expense(), sdkConfiguration);
         this.invoice = new AsyncInvoice(syncSDK.invoice(), sdkConfiguration);
         this.journal = new AsyncJournal(syncSDK.journal(), sdkConfiguration);
         this.order = new AsyncOrder(syncSDK.order(), sdkConfiguration);

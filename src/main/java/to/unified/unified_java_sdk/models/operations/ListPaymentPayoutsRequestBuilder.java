@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.ListPaymentPayouts;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class ListPaymentPayoutsRequestBuilder {
         return this;
     }
 
-    public ListPaymentPayoutsResponse call() throws Exception {
+    public ListPaymentPayoutsResponse call() {
         
         RequestOperation<ListPaymentPayoutsRequest, ListPaymentPayoutsResponse> operation
               = new ListPaymentPayouts.Sync(sdkConfiguration, _headers);

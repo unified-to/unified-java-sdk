@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisGroupRequest;
@@ -29,7 +28,7 @@ public class RemoveHrisGroupRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<RemoveHrisGroupResponse> call() throws Exception {
+    public CompletableFuture<RemoveHrisGroupResponse> call() {
         
         AsyncRequestOperation<RemoveHrisGroupRequest, RemoveHrisGroupResponse> operation
               = new RemoveHrisGroup.Async(sdkConfiguration, _headers);

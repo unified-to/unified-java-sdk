@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyRequest;
@@ -29,7 +28,7 @@ public class CreateAtsCompanyRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<CreateAtsCompanyResponse> call() throws Exception {
+    public CompletableFuture<CreateAtsCompanyResponse> call() {
         
         AsyncRequestOperation<CreateAtsCompanyRequest, CreateAtsCompanyResponse> operation
               = new CreateAtsCompany.Async(sdkConfiguration, _headers);

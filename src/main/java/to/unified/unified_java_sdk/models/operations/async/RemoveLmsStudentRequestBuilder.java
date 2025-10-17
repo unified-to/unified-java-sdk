@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemoveLmsStudentRequest;
@@ -29,7 +28,7 @@ public class RemoveLmsStudentRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<RemoveLmsStudentResponse> call() throws Exception {
+    public CompletableFuture<RemoveLmsStudentResponse> call() {
         
         AsyncRequestOperation<RemoveLmsStudentRequest, RemoveLmsStudentResponse> operation
               = new RemoveLmsStudent.Async(sdkConfiguration, _headers);

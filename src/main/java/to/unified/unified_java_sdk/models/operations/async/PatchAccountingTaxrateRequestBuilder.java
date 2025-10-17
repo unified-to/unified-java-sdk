@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingTaxrateRequest;
@@ -29,7 +28,7 @@ public class PatchAccountingTaxrateRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<PatchAccountingTaxrateResponse> call() throws Exception {
+    public CompletableFuture<PatchAccountingTaxrateResponse> call() {
         
         AsyncRequestOperation<PatchAccountingTaxrateRequest, PatchAccountingTaxrateResponse> operation
               = new PatchAccountingTaxrate.Async(sdkConfiguration, _headers);

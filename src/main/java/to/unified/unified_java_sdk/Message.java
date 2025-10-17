@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateMessagingMessageRequest;
 import to.unified.unified_java_sdk.models.operations.CreateMessagingMessageRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateMessagingMessageResponse;
@@ -66,9 +65,9 @@ public class Message {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateMessagingMessageResponse createMessagingMessage(CreateMessagingMessageRequest request) throws Exception {
+    public CreateMessagingMessageResponse createMessagingMessage(CreateMessagingMessageRequest request) {
         RequestOperation<CreateMessagingMessageRequest, CreateMessagingMessageResponse> operation
               = new CreateMessagingMessage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -88,9 +87,9 @@ public class Message {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetMessagingMessageResponse getMessagingMessage(GetMessagingMessageRequest request) throws Exception {
+    public GetMessagingMessageResponse getMessagingMessage(GetMessagingMessageRequest request) {
         RequestOperation<GetMessagingMessageRequest, GetMessagingMessageResponse> operation
               = new GetMessagingMessage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -110,9 +109,9 @@ public class Message {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListMessagingMessagesResponse listMessagingMessages(ListMessagingMessagesRequest request) throws Exception {
+    public ListMessagingMessagesResponse listMessagingMessages(ListMessagingMessagesRequest request) {
         RequestOperation<ListMessagingMessagesRequest, ListMessagingMessagesResponse> operation
               = new ListMessagingMessages.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -132,9 +131,9 @@ public class Message {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchMessagingMessageResponse patchMessagingMessage(PatchMessagingMessageRequest request) throws Exception {
+    public PatchMessagingMessageResponse patchMessagingMessage(PatchMessagingMessageRequest request) {
         RequestOperation<PatchMessagingMessageRequest, PatchMessagingMessageResponse> operation
               = new PatchMessagingMessage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -154,9 +153,9 @@ public class Message {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveMessagingMessageResponse removeMessagingMessage(RemoveMessagingMessageRequest request) throws Exception {
+    public RemoveMessagingMessageResponse removeMessagingMessage(RemoveMessagingMessageRequest request) {
         RequestOperation<RemoveMessagingMessageRequest, RemoveMessagingMessageResponse> operation
               = new RemoveMessagingMessage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -176,9 +175,9 @@ public class Message {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateMessagingMessageResponse updateMessagingMessage(UpdateMessagingMessageRequest request) throws Exception {
+    public UpdateMessagingMessageResponse updateMessagingMessage(UpdateMessagingMessageRequest request) {
         RequestOperation<UpdateMessagingMessageRequest, UpdateMessagingMessageResponse> operation
               = new UpdateMessagingMessage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

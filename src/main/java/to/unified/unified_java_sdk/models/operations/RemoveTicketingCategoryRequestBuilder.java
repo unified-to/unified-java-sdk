@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemoveTicketingCategory;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class RemoveTicketingCategoryRequestBuilder {
         return this;
     }
 
-    public RemoveTicketingCategoryResponse call() throws Exception {
+    public RemoveTicketingCategoryResponse call() {
         
         RequestOperation<RemoveTicketingCategoryRequest, RemoveTicketingCategoryResponse> operation
               = new RemoveTicketingCategory.Sync(sdkConfiguration, _headers);

@@ -4,6 +4,7 @@
 package to.unified.unified_java_sdk.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+import static to.unified.unified_java_sdk.utils.Exceptions.unchecked;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import java.io.InputStream;
@@ -21,7 +22,6 @@ import to.unified.unified_java_sdk.models.errors.SDKError;
 import to.unified.unified_java_sdk.models.operations.RemoveCalendarCalendarRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveCalendarCalendarResponse;
 import to.unified.unified_java_sdk.utils.Blob;
-import to.unified.unified_java_sdk.utils.Exceptions;
 import to.unified.unified_java_sdk.utils.HTTPClient;
 import to.unified.unified_java_sdk.utils.HTTPRequest;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -117,8 +117,8 @@ public class RemoveCalendarCalendar {
         }
 
         @Override
-        public HttpResponse<InputStream> doRequest(RemoveCalendarCalendarRequest request) throws Exception {
-            HttpRequest r = onBuildRequest(request);
+        public HttpResponse<InputStream> doRequest(RemoveCalendarCalendarRequest request) {
+            HttpRequest r = unchecked(() -> onBuildRequest(request)).get();
             HttpResponse<InputStream> httpRes;
             try {
                 httpRes = client.send(r);
@@ -128,7 +128,7 @@ public class RemoveCalendarCalendar {
                     httpRes = onSuccess(httpRes);
                 }
             } catch (Exception e) {
-                httpRes = onError(null, e);
+                httpRes = unchecked(() -> onError(null, e)).get();
             }
 
             return httpRes;
@@ -136,7 +136,7 @@ public class RemoveCalendarCalendar {
 
 
         @Override
-        public RemoveCalendarCalendarResponse handleResponse(HttpResponse<InputStream> response) throws Exception {
+        public RemoveCalendarCalendarResponse handleResponse(HttpResponse<InputStream> response) {
             String contentType = response
                     .headers()
                     .firstValue("Content-Type")
@@ -154,36 +154,20 @@ public class RemoveCalendarCalendar {
                 // no content
                 return res;
             }
-            
             if (Utils.statusCodeMatches(response.statusCode(), "4XX")) {
                 // no content
-                throw new SDKError(
-                        response,
-                        response.statusCode(),
-                        "API error occurred",
-                        Utils.extractByteArrayFromBody(response));
+                throw SDKError.from("API error occurred", response);
             }
-            
             if (Utils.statusCodeMatches(response.statusCode(), "5XX")) {
                 // no content
-                throw new SDKError(
-                        response,
-                        response.statusCode(),
-                        "API error occurred",
-                        Utils.extractByteArrayFromBody(response));
+                throw SDKError.from("API error occurred", response);
             }
-            
             if (Utils.statusCodeMatches(response.statusCode(), "default")) {
                 res.withHeaders(response.headers().map());
                 // no content
                 return res;
             }
-            
-            throw new SDKError(
-                    response,
-                    response.statusCode(),
-                    "Unexpected status code received: " + response.statusCode(),
-                    Utils.extractByteArrayFromBody(response));
+            throw SDKError.from("Unexpected status code received: " + response.statusCode(), response);
         }
     }
     public static class Async extends Base
@@ -208,7 +192,7 @@ public class RemoveCalendarCalendar {
 
         @Override
         public CompletableFuture<HttpResponse<Blob>> doRequest(RemoveCalendarCalendarRequest request) {
-            return Exceptions.unchecked(() -> onBuildRequest(request)).get().thenCompose(client::sendAsync)
+            return unchecked(() -> onBuildRequest(request)).get().thenCompose(client::sendAsync)
                     .handle((resp, err) -> {
                         if (err != null) {
                             return onError(null, err);
@@ -242,23 +226,19 @@ public class RemoveCalendarCalendar {
                 // no content
                 return CompletableFuture.completedFuture(res);
             }
-            
             if (Utils.statusCodeMatches(response.statusCode(), "4XX")) {
                 // no content
                 return Utils.createAsyncApiError(response, "API error occurred");
             }
-            
             if (Utils.statusCodeMatches(response.statusCode(), "5XX")) {
                 // no content
                 return Utils.createAsyncApiError(response, "API error occurred");
             }
-            
             if (Utils.statusCodeMatches(response.statusCode(), "default")) {
                 res.withHeaders(response.headers().map());
                 // no content
                 return CompletableFuture.completedFuture(res);
             }
-            
             return Utils.createAsyncApiError(response, "Unexpected status code received: " + response.statusCode());
         }
     }

@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoBranchRequest;
@@ -29,7 +28,7 @@ public class UpdateRepoBranchRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<UpdateRepoBranchResponse> call() throws Exception {
+    public CompletableFuture<UpdateRepoBranchResponse> call() {
         
         AsyncRequestOperation<UpdateRepoBranchRequest, UpdateRepoBranchResponse> operation
               = new UpdateRepoBranch.Async(sdkConfiguration, _headers);

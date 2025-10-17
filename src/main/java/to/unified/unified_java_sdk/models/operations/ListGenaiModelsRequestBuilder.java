@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.ListGenaiModels;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class ListGenaiModelsRequestBuilder {
         return this;
     }
 
-    public ListGenaiModelsResponse call() throws Exception {
+    public ListGenaiModelsResponse call() {
         
         RequestOperation<ListGenaiModelsRequest, ListGenaiModelsResponse> operation
               = new ListGenaiModels.Sync(sdkConfiguration, _headers);

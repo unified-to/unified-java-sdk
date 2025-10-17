@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateRepoPullrequestRequest;
 import to.unified.unified_java_sdk.models.operations.CreateRepoPullrequestRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateRepoPullrequestResponse;
@@ -66,9 +65,9 @@ public class Pullrequest {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateRepoPullrequestResponse createRepoPullrequest(CreateRepoPullrequestRequest request) throws Exception {
+    public CreateRepoPullrequestResponse createRepoPullrequest(CreateRepoPullrequestRequest request) {
         RequestOperation<CreateRepoPullrequestRequest, CreateRepoPullrequestResponse> operation
               = new CreateRepoPullrequest.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -88,9 +87,9 @@ public class Pullrequest {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetRepoPullrequestResponse getRepoPullrequest(GetRepoPullrequestRequest request) throws Exception {
+    public GetRepoPullrequestResponse getRepoPullrequest(GetRepoPullrequestRequest request) {
         RequestOperation<GetRepoPullrequestRequest, GetRepoPullrequestResponse> operation
               = new GetRepoPullrequest.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -110,9 +109,9 @@ public class Pullrequest {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListRepoPullrequestsResponse listRepoPullrequests(ListRepoPullrequestsRequest request) throws Exception {
+    public ListRepoPullrequestsResponse listRepoPullrequests(ListRepoPullrequestsRequest request) {
         RequestOperation<ListRepoPullrequestsRequest, ListRepoPullrequestsResponse> operation
               = new ListRepoPullrequests.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -132,9 +131,9 @@ public class Pullrequest {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchRepoPullrequestResponse patchRepoPullrequest(PatchRepoPullrequestRequest request) throws Exception {
+    public PatchRepoPullrequestResponse patchRepoPullrequest(PatchRepoPullrequestRequest request) {
         RequestOperation<PatchRepoPullrequestRequest, PatchRepoPullrequestResponse> operation
               = new PatchRepoPullrequest.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -154,9 +153,9 @@ public class Pullrequest {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveRepoPullrequestResponse removeRepoPullrequest(RemoveRepoPullrequestRequest request) throws Exception {
+    public RemoveRepoPullrequestResponse removeRepoPullrequest(RemoveRepoPullrequestRequest request) {
         RequestOperation<RemoveRepoPullrequestRequest, RemoveRepoPullrequestResponse> operation
               = new RemoveRepoPullrequest.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -176,9 +175,9 @@ public class Pullrequest {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateRepoPullrequestResponse updateRepoPullrequest(UpdateRepoPullrequestRequest request) throws Exception {
+    public UpdateRepoPullrequestResponse updateRepoPullrequest(UpdateRepoPullrequestRequest request) {
         RequestOperation<UpdateRepoPullrequestRequest, UpdateRepoPullrequestResponse> operation
               = new UpdateRepoPullrequest.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

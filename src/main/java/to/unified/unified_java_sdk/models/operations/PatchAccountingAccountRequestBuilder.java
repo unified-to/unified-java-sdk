@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.PatchAccountingAccount;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class PatchAccountingAccountRequestBuilder {
         return this;
     }
 
-    public PatchAccountingAccountResponse call() throws Exception {
+    public PatchAccountingAccountResponse call() {
         
         RequestOperation<PatchAccountingAccountRequest, PatchAccountingAccountResponse> operation
               = new PatchAccountingAccount.Sync(sdkConfiguration, _headers);

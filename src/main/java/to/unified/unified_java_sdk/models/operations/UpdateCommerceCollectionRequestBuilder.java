@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.UpdateCommerceCollection;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class UpdateCommerceCollectionRequestBuilder {
         return this;
     }
 
-    public UpdateCommerceCollectionResponse call() throws Exception {
+    public UpdateCommerceCollectionResponse call() {
         
         RequestOperation<UpdateCommerceCollectionRequest, UpdateCommerceCollectionResponse> operation
               = new UpdateCommerceCollection.Sync(sdkConfiguration, _headers);

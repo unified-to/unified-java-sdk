@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetAtsScorecard;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class GetAtsScorecardRequestBuilder {
         return this;
     }
 
-    public GetAtsScorecardResponse call() throws Exception {
+    public GetAtsScorecardResponse call() {
         
         RequestOperation<GetAtsScorecardRequest, GetAtsScorecardResponse> operation
               = new GetAtsScorecard.Sync(sdkConfiguration, _headers);

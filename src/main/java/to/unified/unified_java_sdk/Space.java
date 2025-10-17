@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceRequest;
 import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceResponse;
@@ -66,9 +65,9 @@ public class Space {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateKmsSpaceResponse createKmsSpace(CreateKmsSpaceRequest request) throws Exception {
+    public CreateKmsSpaceResponse createKmsSpace(CreateKmsSpaceRequest request) {
         RequestOperation<CreateKmsSpaceRequest, CreateKmsSpaceResponse> operation
               = new CreateKmsSpace.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -88,9 +87,9 @@ public class Space {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetKmsSpaceResponse getKmsSpace(GetKmsSpaceRequest request) throws Exception {
+    public GetKmsSpaceResponse getKmsSpace(GetKmsSpaceRequest request) {
         RequestOperation<GetKmsSpaceRequest, GetKmsSpaceResponse> operation
               = new GetKmsSpace.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -110,9 +109,9 @@ public class Space {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListKmsSpacesResponse listKmsSpaces(ListKmsSpacesRequest request) throws Exception {
+    public ListKmsSpacesResponse listKmsSpaces(ListKmsSpacesRequest request) {
         RequestOperation<ListKmsSpacesRequest, ListKmsSpacesResponse> operation
               = new ListKmsSpaces.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -132,9 +131,9 @@ public class Space {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchKmsSpaceResponse patchKmsSpace(PatchKmsSpaceRequest request) throws Exception {
+    public PatchKmsSpaceResponse patchKmsSpace(PatchKmsSpaceRequest request) {
         RequestOperation<PatchKmsSpaceRequest, PatchKmsSpaceResponse> operation
               = new PatchKmsSpace.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -154,9 +153,9 @@ public class Space {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveKmsSpaceResponse removeKmsSpace(RemoveKmsSpaceRequest request) throws Exception {
+    public RemoveKmsSpaceResponse removeKmsSpace(RemoveKmsSpaceRequest request) {
         RequestOperation<RemoveKmsSpaceRequest, RemoveKmsSpaceResponse> operation
               = new RemoveKmsSpace.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -176,9 +175,9 @@ public class Space {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateKmsSpaceResponse updateKmsSpace(UpdateKmsSpaceRequest request) throws Exception {
+    public UpdateKmsSpaceResponse updateKmsSpace(UpdateKmsSpaceRequest request) {
         RequestOperation<UpdateKmsSpaceRequest, UpdateKmsSpaceResponse> operation
               = new UpdateKmsSpace.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

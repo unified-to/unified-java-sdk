@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.UpdateUnifiedWebhookTrigger;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class UpdateUnifiedWebhookTriggerRequestBuilder {
         return this;
     }
 
-    public UpdateUnifiedWebhookTriggerResponse call() throws Exception {
+    public UpdateUnifiedWebhookTriggerResponse call() {
         
         RequestOperation<UpdateUnifiedWebhookTriggerRequest, UpdateUnifiedWebhookTriggerResponse> operation
               = new UpdateUnifiedWebhookTrigger.Sync(sdkConfiguration, _headers);

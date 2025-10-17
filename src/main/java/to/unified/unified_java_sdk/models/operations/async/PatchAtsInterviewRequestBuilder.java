@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchAtsInterviewRequest;
@@ -29,7 +28,7 @@ public class PatchAtsInterviewRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<PatchAtsInterviewResponse> call() throws Exception {
+    public CompletableFuture<PatchAtsInterviewResponse> call() {
         
         AsyncRequestOperation<PatchAtsInterviewRequest, PatchAtsInterviewResponse> operation
               = new PatchAtsInterview.Async(sdkConfiguration, _headers);

@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftResponse;
@@ -66,9 +65,9 @@ public class Timeshift {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateHrisTimeshiftResponse createHrisTimeshift(CreateHrisTimeshiftRequest request) throws Exception {
+    public CreateHrisTimeshiftResponse createHrisTimeshift(CreateHrisTimeshiftRequest request) {
         RequestOperation<CreateHrisTimeshiftRequest, CreateHrisTimeshiftResponse> operation
               = new CreateHrisTimeshift.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -88,9 +87,9 @@ public class Timeshift {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisTimeshiftResponse getHrisTimeshift(GetHrisTimeshiftRequest request) throws Exception {
+    public GetHrisTimeshiftResponse getHrisTimeshift(GetHrisTimeshiftRequest request) {
         RequestOperation<GetHrisTimeshiftRequest, GetHrisTimeshiftResponse> operation
               = new GetHrisTimeshift.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -110,9 +109,9 @@ public class Timeshift {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisTimeshiftsResponse listHrisTimeshifts(ListHrisTimeshiftsRequest request) throws Exception {
+    public ListHrisTimeshiftsResponse listHrisTimeshifts(ListHrisTimeshiftsRequest request) {
         RequestOperation<ListHrisTimeshiftsRequest, ListHrisTimeshiftsResponse> operation
               = new ListHrisTimeshifts.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -132,9 +131,9 @@ public class Timeshift {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchHrisTimeshiftResponse patchHrisTimeshift(PatchHrisTimeshiftRequest request) throws Exception {
+    public PatchHrisTimeshiftResponse patchHrisTimeshift(PatchHrisTimeshiftRequest request) {
         RequestOperation<PatchHrisTimeshiftRequest, PatchHrisTimeshiftResponse> operation
               = new PatchHrisTimeshift.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -154,9 +153,9 @@ public class Timeshift {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveHrisTimeshiftResponse removeHrisTimeshift(RemoveHrisTimeshiftRequest request) throws Exception {
+    public RemoveHrisTimeshiftResponse removeHrisTimeshift(RemoveHrisTimeshiftRequest request) {
         RequestOperation<RemoveHrisTimeshiftRequest, RemoveHrisTimeshiftResponse> operation
               = new RemoveHrisTimeshift.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -176,9 +175,9 @@ public class Timeshift {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateHrisTimeshiftResponse updateHrisTimeshift(UpdateHrisTimeshiftRequest request) throws Exception {
+    public UpdateHrisTimeshiftResponse updateHrisTimeshift(UpdateHrisTimeshiftRequest request) {
         RequestOperation<UpdateHrisTimeshiftRequest, UpdateHrisTimeshiftResponse> operation
               = new UpdateHrisTimeshift.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

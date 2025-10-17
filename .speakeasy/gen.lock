@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: a340dff9ff9a611e83b0ac8c9df95754
+  docChecksum: 5e991f57774a394989eb351c469cc219
   docVersion: "1.0"
-  speakeasyVersion: 1.636.3
-  generationVersion: 2.723.11
-  releaseVersion: 0.40.6
-  configChecksum: e8b76648afaa54ba49b05ec0efa54af4
+  speakeasyVersion: 1.637.0
+  generationVersion: 2.727.4
+  releaseVersion: 0.41.0
+  configChecksum: 7d5293b8284a8d4129565e761416d532
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -15,7 +15,7 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.1
-    core: 3.52.3
+    core: 3.53.0
     downloadStreams: 0.1.1
     globalSecurity: 2.83.1
     globalSecurityCallbacks: 0.1.0
@@ -39,6 +39,8 @@ generatedFiles:
   - docs/models/operations/CreateAccountingContactResponse.md
   - docs/models/operations/CreateAccountingCreditmemoRequest.md
   - docs/models/operations/CreateAccountingCreditmemoResponse.md
+  - docs/models/operations/CreateAccountingExpenseRequest.md
+  - docs/models/operations/CreateAccountingExpenseResponse.md
   - docs/models/operations/CreateAccountingInvoiceRequest.md
   - docs/models/operations/CreateAccountingInvoiceResponse.md
   - docs/models/operations/CreateAccountingJournalRequest.md
@@ -198,6 +200,8 @@ generatedFiles:
   - docs/models/operations/GetAccountingContactResponse.md
   - docs/models/operations/GetAccountingCreditmemoRequest.md
   - docs/models/operations/GetAccountingCreditmemoResponse.md
+  - docs/models/operations/GetAccountingExpenseRequest.md
+  - docs/models/operations/GetAccountingExpenseResponse.md
   - docs/models/operations/GetAccountingInvoiceRequest.md
   - docs/models/operations/GetAccountingInvoiceResponse.md
   - docs/models/operations/GetAccountingJournalRequest.md
@@ -384,6 +388,8 @@ generatedFiles:
   - docs/models/operations/ListAccountingContactsResponse.md
   - docs/models/operations/ListAccountingCreditmemoesRequest.md
   - docs/models/operations/ListAccountingCreditmemoesResponse.md
+  - docs/models/operations/ListAccountingExpensesRequest.md
+  - docs/models/operations/ListAccountingExpensesResponse.md
   - docs/models/operations/ListAccountingInvoicesRequest.md
   - docs/models/operations/ListAccountingInvoicesResponse.md
   - docs/models/operations/ListAccountingJournalsRequest.md
@@ -581,6 +587,8 @@ generatedFiles:
   - docs/models/operations/PatchAccountingContactResponse.md
   - docs/models/operations/PatchAccountingCreditmemoRequest.md
   - docs/models/operations/PatchAccountingCreditmemoResponse.md
+  - docs/models/operations/PatchAccountingExpenseRequest.md
+  - docs/models/operations/PatchAccountingExpenseResponse.md
   - docs/models/operations/PatchAccountingInvoiceRequest.md
   - docs/models/operations/PatchAccountingInvoiceResponse.md
   - docs/models/operations/PatchAccountingJournalRequest.md
@@ -738,6 +746,8 @@ generatedFiles:
   - docs/models/operations/RemoveAccountingContactResponse.md
   - docs/models/operations/RemoveAccountingCreditmemoRequest.md
   - docs/models/operations/RemoveAccountingCreditmemoResponse.md
+  - docs/models/operations/RemoveAccountingExpenseRequest.md
+  - docs/models/operations/RemoveAccountingExpenseResponse.md
   - docs/models/operations/RemoveAccountingInvoiceRequest.md
   - docs/models/operations/RemoveAccountingInvoiceResponse.md
   - docs/models/operations/RemoveAccountingJournalRequest.md
@@ -890,6 +900,8 @@ generatedFiles:
   - docs/models/operations/UpdateAccountingContactResponse.md
   - docs/models/operations/UpdateAccountingCreditmemoRequest.md
   - docs/models/operations/UpdateAccountingCreditmemoResponse.md
+  - docs/models/operations/UpdateAccountingExpenseRequest.md
+  - docs/models/operations/UpdateAccountingExpenseResponse.md
   - docs/models/operations/UpdateAccountingInvoiceRequest.md
   - docs/models/operations/UpdateAccountingInvoiceResponse.md
   - docs/models/operations/UpdateAccountingJournalRequest.md
@@ -1052,6 +1064,7 @@ generatedFiles:
   - docs/models/shared/AccountingCreditmemoStatus.md
   - docs/models/shared/AccountingEmail.md
   - docs/models/shared/AccountingEmailType.md
+  - docs/models/shared/AccountingExpense.md
   - docs/models/shared/AccountingInvoice.md
   - docs/models/shared/AccountingInvoicePaymentCollectionMethod.md
   - docs/models/shared/AccountingInvoiceStatus.md
@@ -1492,6 +1505,7 @@ generatedFiles:
   - docs/sdks/employee/README.md
   - docs/sdks/enrich/README.md
   - docs/sdks/event/README.md
+  - docs/sdks/expense/README.md
   - docs/sdks/file/README.md
   - docs/sdks/genai/README.md
   - docs/sdks/group/README.md
@@ -1619,6 +1633,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/AsyncEmployee.java
   - src/main/java/to/unified/unified_java_sdk/AsyncEnrich.java
   - src/main/java/to/unified/unified_java_sdk/AsyncEvent.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncExpense.java
   - src/main/java/to/unified/unified_java_sdk/AsyncFile.java
   - src/main/java/to/unified/unified_java_sdk/AsyncGenai.java
   - src/main/java/to/unified/unified_java_sdk/AsyncGroup.java
@@ -1720,6 +1735,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/Employee.java
   - src/main/java/to/unified/unified_java_sdk/Enrich.java
   - src/main/java/to/unified/unified_java_sdk/Event.java
+  - src/main/java/to/unified/unified_java_sdk/Expense.java
   - src/main/java/to/unified/unified_java_sdk/File.java
   - src/main/java/to/unified/unified_java_sdk/Genai.java
   - src/main/java/to/unified/unified_java_sdk/Group.java
@@ -1792,14 +1808,16 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/User.java
   - src/main/java/to/unified/unified_java_sdk/Verification.java
   - src/main/java/to/unified/unified_java_sdk/Webhook.java
+  - src/main/java/to/unified/unified_java_sdk/models/errors/AsyncSDKError.java
   - src/main/java/to/unified/unified_java_sdk/models/errors/AuthException.java
   - src/main/java/to/unified/unified_java_sdk/models/errors/SDKError.java
-  - src/main/java/to/unified/unified_java_sdk/models/errors/UncheckedSDKError.java
+  - src/main/java/to/unified/unified_java_sdk/models/errors/UnifiedToError.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAccountingAccountRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAccountingBillRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAccountingCategoryRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAccountingContactRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAccountingCreditmemoRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAccountingExpenseRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAccountingInvoiceRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAccountingJournalRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAccountingOrderRequestBuilder.java
@@ -1880,6 +1898,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingCategoryRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingContactRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingCreditmemoRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingExpenseRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingInvoiceRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingJournalRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingOrderRequestBuilder.java
@@ -1973,6 +1992,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingCategoriesRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingContactsRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingCreditmemoesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingExpensesRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingInvoicesRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingJournalsRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingOrdersRequestBuilder.java
@@ -2071,6 +2091,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchAccountingCategoryRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchAccountingContactRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchAccountingCreditmemoRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchAccountingExpenseRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchAccountingInvoiceRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchAccountingJournalRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchAccountingOrderRequestBuilder.java
@@ -2149,6 +2170,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveAccountingCategoryRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveAccountingContactRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveAccountingCreditmemoRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveAccountingExpenseRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveAccountingInvoiceRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveAccountingJournalRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveAccountingOrderRequestBuilder.java
@@ -2225,6 +2247,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateAccountingCategoryRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateAccountingContactRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateAccountingCreditmemoRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateAccountingExpenseRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateAccountingInvoiceRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateAccountingJournalRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateAccountingOrderRequestBuilder.java
@@ -2314,6 +2337,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateAccountingCreditmemoRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateAccountingCreditmemoRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateAccountingCreditmemoResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/CreateAccountingExpenseRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/CreateAccountingExpenseRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/CreateAccountingExpenseResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateAccountingInvoiceRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateAccountingInvoiceRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateAccountingInvoiceResponse.java
@@ -2553,6 +2579,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingCreditmemoRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingCreditmemoRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingCreditmemoResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingExpenseRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingExpenseRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingExpenseResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingInvoiceRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingInvoiceRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingInvoiceResponse.java
@@ -2832,6 +2861,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingCreditmemoesRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingCreditmemoesRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingCreditmemoesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingExpensesRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingExpensesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingExpensesResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingInvoicesRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingInvoicesRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingInvoicesResponse.java
@@ -3127,6 +3159,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchAccountingCreditmemoRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchAccountingCreditmemoRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchAccountingCreditmemoResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/PatchAccountingExpenseRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/PatchAccountingExpenseRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/PatchAccountingExpenseResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchAccountingInvoiceRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchAccountingInvoiceRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchAccountingInvoiceResponse.java
@@ -3362,6 +3397,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveAccountingCreditmemoRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveAccountingCreditmemoRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveAccountingCreditmemoResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveAccountingExpenseRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveAccountingExpenseRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveAccountingExpenseResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveAccountingInvoiceRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveAccountingInvoiceRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveAccountingInvoiceResponse.java
@@ -3590,6 +3628,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateAccountingCreditmemoRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateAccountingCreditmemoRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateAccountingCreditmemoResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateAccountingExpenseRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateAccountingExpenseRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateAccountingExpenseResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateAccountingInvoiceRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateAccountingInvoiceRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateAccountingInvoiceResponse.java
@@ -3814,6 +3855,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAccountingCategoryResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAccountingContactResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAccountingCreditmemoResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAccountingExpenseResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAccountingInvoiceResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAccountingJournalResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAccountingOrderResponse.java
@@ -3894,6 +3936,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingCategoryResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingContactResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingCreditmemoResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingExpenseResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingInvoiceResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingJournalResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingOrderResponse.java
@@ -3987,6 +4030,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingCategoriesResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingContactsResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingCreditmemoesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingExpensesResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingInvoicesResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingJournalsResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingOrdersResponse.java
@@ -4085,6 +4129,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchAccountingCategoryResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchAccountingContactResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchAccountingCreditmemoResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchAccountingExpenseResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchAccountingInvoiceResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchAccountingJournalResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchAccountingOrderResponse.java
@@ -4163,6 +4208,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveAccountingCategoryResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveAccountingContactResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveAccountingCreditmemoResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveAccountingExpenseResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveAccountingInvoiceResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveAccountingJournalResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveAccountingOrderResponse.java
@@ -4239,6 +4285,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateAccountingCategoryResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateAccountingContactResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateAccountingCreditmemoResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateAccountingExpenseResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateAccountingInvoiceResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateAccountingJournalResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateAccountingOrderResponse.java
@@ -4328,6 +4375,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingCreditmemoStatus.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingEmail.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingEmailType.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingExpense.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingInvoice.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingInvoicePaymentCollectionMethod.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingInvoiceStatus.java
@@ -4736,6 +4784,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingCategory.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingContact.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingCreditmemo.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingExpense.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingInvoice.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingJournal.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingOrder.java
@@ -4816,6 +4865,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingCategory.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingContact.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingCreditmemo.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingExpense.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingInvoice.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingJournal.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingOrder.java
@@ -4909,6 +4959,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingCategories.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingContacts.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingCreditmemoes.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingExpenses.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingInvoices.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingJournals.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingOrders.java
@@ -5008,6 +5059,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingCategory.java
   - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingContact.java
   - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingCreditmemo.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingExpense.java
   - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingInvoice.java
   - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingJournal.java
   - src/main/java/to/unified/unified_java_sdk/operations/PatchAccountingOrder.java
@@ -5086,6 +5138,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingCategory.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingContact.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingCreditmemo.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingExpense.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingInvoice.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingJournal.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveAccountingOrder.java
@@ -5162,6 +5215,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingCategory.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingContact.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingCreditmemo.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingExpense.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingInvoice.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingJournal.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingOrder.java
@@ -9870,6 +9924,61 @@ examples:
       responses:
         "200":
           application/json: {"status": "ON_HOLD", "ticket_ref": "<value>", "title": "<value>", "workspace_id": "<id>"}
+  createAccountingExpense:
+    speakeasy-default-create-accounting-expense:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getAccountingExpense:
+    speakeasy-default-get-accounting-expense:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listAccountingExpenses:
+    speakeasy-default-list-accounting-expenses:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchAccountingExpense:
+    speakeasy-default-patch-accounting-expense:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeAccountingExpense:
+    speakeasy-default-remove-accounting-expense:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateAccountingExpense:
+    speakeasy-default-update-accounting-expense:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Java SDK Changes Detected:\n* `unified-to.ats.createAtsJob()`: \n  *  `request.atsJob` **Changed**\n  *  `response` **Changed**\n* `unified-to.ats.getAtsJob()`:  `response` **Changed**\n* `unified-to.ats.listAtsJobs()`:  `response.[]` **Changed**\n* `unified-to.ats.patchAtsJob()`: \n  *  `request.atsJob` **Changed**\n  *  `response` **Changed**\n* `unified-to.ats.updateAtsJob()`: \n  *  `request.atsJob` **Changed**\n  *  `response` **Changed**\n* `unified-to.job.createAtsJob()`: \n  *  `request.atsJob` **Changed**\n  *  `response` **Changed**\n* `unified-to.job.getAtsJob()`:  `response` **Changed**\n* `unified-to.job.listAtsJobs()`:  `response.[]` **Changed**\n* `unified-to.job.patchAtsJob()`: \n  *  `request.atsJob` **Changed**\n  *  `response` **Changed**\n* `unified-to.job.updateAtsJob()`: \n  *  `request.atsJob` **Changed**\n  *  `response` **Changed**\n"
+releaseNotes: "## Java SDK Changes Detected:\n* `unified-to.accounting.createAccountingExpense()`: **Added**\n* `unified-to.accounting.getAccountingExpense()`: **Added**\n* `unified-to.accounting.listAccountingExpenses()`: **Added**\n* `unified-to.accounting.patchAccountingExpense()`: **Added**\n* `unified-to.accounting.removeAccountingExpense()`: **Added**\n* `unified-to.accounting.updateAccountingExpense()`: **Added**\n* `unified-to.expense.createAccountingExpense()`: **Added**\n* `unified-to.expense.getAccountingExpense()`: **Added**\n* `unified-to.expense.listAccountingExpenses()`: **Added**\n* `unified-to.expense.patchAccountingExpense()`: **Added**\n* `unified-to.expense.removeAccountingExpense()`: **Added**\n* `unified-to.expense.updateAccountingExpense()`: **Added**\n* `unified-to.messaging.listMessagingMessages()`: \n  *  `request.userId` **Added**\n* `unified-to.message.listMessagingMessages()`: \n  *  `request.userId` **Added**\n"

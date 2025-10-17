@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingTicketRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingTicketRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingTicketResponse;
@@ -66,9 +65,9 @@ public class Ticket {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateTicketingTicketResponse createTicketingTicket(CreateTicketingTicketRequest request) throws Exception {
+    public CreateTicketingTicketResponse createTicketingTicket(CreateTicketingTicketRequest request) {
         RequestOperation<CreateTicketingTicketRequest, CreateTicketingTicketResponse> operation
               = new CreateTicketingTicket.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -88,9 +87,9 @@ public class Ticket {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetTicketingTicketResponse getTicketingTicket(GetTicketingTicketRequest request) throws Exception {
+    public GetTicketingTicketResponse getTicketingTicket(GetTicketingTicketRequest request) {
         RequestOperation<GetTicketingTicketRequest, GetTicketingTicketResponse> operation
               = new GetTicketingTicket.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -110,9 +109,9 @@ public class Ticket {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListTicketingTicketsResponse listTicketingTickets(ListTicketingTicketsRequest request) throws Exception {
+    public ListTicketingTicketsResponse listTicketingTickets(ListTicketingTicketsRequest request) {
         RequestOperation<ListTicketingTicketsRequest, ListTicketingTicketsResponse> operation
               = new ListTicketingTickets.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -132,9 +131,9 @@ public class Ticket {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchTicketingTicketResponse patchTicketingTicket(PatchTicketingTicketRequest request) throws Exception {
+    public PatchTicketingTicketResponse patchTicketingTicket(PatchTicketingTicketRequest request) {
         RequestOperation<PatchTicketingTicketRequest, PatchTicketingTicketResponse> operation
               = new PatchTicketingTicket.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -154,9 +153,9 @@ public class Ticket {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveTicketingTicketResponse removeTicketingTicket(RemoveTicketingTicketRequest request) throws Exception {
+    public RemoveTicketingTicketResponse removeTicketingTicket(RemoveTicketingTicketRequest request) {
         RequestOperation<RemoveTicketingTicketRequest, RemoveTicketingTicketResponse> operation
               = new RemoveTicketingTicket.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -176,9 +175,9 @@ public class Ticket {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateTicketingTicketResponse updateTicketingTicket(UpdateTicketingTicketRequest request) throws Exception {
+    public UpdateTicketingTicketResponse updateTicketingTicket(UpdateTicketingTicketRequest request) {
         RequestOperation<UpdateTicketingTicketRequest, UpdateTicketingTicketResponse> operation
               = new UpdateTicketingTicket.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListCalendarLinksRequest;
@@ -29,7 +28,7 @@ public class ListCalendarLinksRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<ListCalendarLinksResponse> call() throws Exception {
+    public CompletableFuture<ListCalendarLinksResponse> call() {
         
         AsyncRequestOperation<ListCalendarLinksRequest, ListCalendarLinksResponse> operation
               = new ListCalendarLinks.Async(sdkConfiguration, _headers);

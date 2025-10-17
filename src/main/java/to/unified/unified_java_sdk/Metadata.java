@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateMetadataMetadataRequest;
 import to.unified.unified_java_sdk.models.operations.CreateMetadataMetadataRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateMetadataMetadataResponse;
@@ -66,9 +65,9 @@ public class Metadata {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateMetadataMetadataResponse createMetadataMetadata(CreateMetadataMetadataRequest request) throws Exception {
+    public CreateMetadataMetadataResponse createMetadataMetadata(CreateMetadataMetadataRequest request) {
         RequestOperation<CreateMetadataMetadataRequest, CreateMetadataMetadataResponse> operation
               = new CreateMetadataMetadata.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -88,9 +87,9 @@ public class Metadata {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetMetadataMetadataResponse getMetadataMetadata(GetMetadataMetadataRequest request) throws Exception {
+    public GetMetadataMetadataResponse getMetadataMetadata(GetMetadataMetadataRequest request) {
         RequestOperation<GetMetadataMetadataRequest, GetMetadataMetadataResponse> operation
               = new GetMetadataMetadata.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -110,9 +109,9 @@ public class Metadata {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListMetadataMetadatasResponse listMetadataMetadatas(ListMetadataMetadatasRequest request) throws Exception {
+    public ListMetadataMetadatasResponse listMetadataMetadatas(ListMetadataMetadatasRequest request) {
         RequestOperation<ListMetadataMetadatasRequest, ListMetadataMetadatasResponse> operation
               = new ListMetadataMetadatas.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -132,9 +131,9 @@ public class Metadata {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchMetadataMetadataResponse patchMetadataMetadata(PatchMetadataMetadataRequest request) throws Exception {
+    public PatchMetadataMetadataResponse patchMetadataMetadata(PatchMetadataMetadataRequest request) {
         RequestOperation<PatchMetadataMetadataRequest, PatchMetadataMetadataResponse> operation
               = new PatchMetadataMetadata.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -154,9 +153,9 @@ public class Metadata {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveMetadataMetadataResponse removeMetadataMetadata(RemoveMetadataMetadataRequest request) throws Exception {
+    public RemoveMetadataMetadataResponse removeMetadataMetadata(RemoveMetadataMetadataRequest request) {
         RequestOperation<RemoveMetadataMetadataRequest, RemoveMetadataMetadataResponse> operation
               = new RemoveMetadataMetadata.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -176,9 +175,9 @@ public class Metadata {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateMetadataMetadataResponse updateMetadataMetadata(UpdateMetadataMetadataRequest request) throws Exception {
+    public UpdateMetadataMetadataResponse updateMetadataMetadata(UpdateMetadataMetadataRequest request) {
         RequestOperation<UpdateMetadataMetadataRequest, UpdateMetadataMetadataResponse> operation
               = new UpdateMetadataMetadata.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

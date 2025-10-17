@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateMartechMemberRequest;
 import to.unified.unified_java_sdk.models.operations.CreateMartechMemberRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateMartechMemberResponse;
@@ -66,9 +65,9 @@ public class Member {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateMartechMemberResponse createMartechMember(CreateMartechMemberRequest request) throws Exception {
+    public CreateMartechMemberResponse createMartechMember(CreateMartechMemberRequest request) {
         RequestOperation<CreateMartechMemberRequest, CreateMartechMemberResponse> operation
               = new CreateMartechMember.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -88,9 +87,9 @@ public class Member {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetMartechMemberResponse getMartechMember(GetMartechMemberRequest request) throws Exception {
+    public GetMartechMemberResponse getMartechMember(GetMartechMemberRequest request) {
         RequestOperation<GetMartechMemberRequest, GetMartechMemberResponse> operation
               = new GetMartechMember.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -110,9 +109,9 @@ public class Member {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListMartechMembersResponse listMartechMembers(ListMartechMembersRequest request) throws Exception {
+    public ListMartechMembersResponse listMartechMembers(ListMartechMembersRequest request) {
         RequestOperation<ListMartechMembersRequest, ListMartechMembersResponse> operation
               = new ListMartechMembers.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -132,9 +131,9 @@ public class Member {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchMartechMemberResponse patchMartechMember(PatchMartechMemberRequest request) throws Exception {
+    public PatchMartechMemberResponse patchMartechMember(PatchMartechMemberRequest request) {
         RequestOperation<PatchMartechMemberRequest, PatchMartechMemberResponse> operation
               = new PatchMartechMember.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -154,9 +153,9 @@ public class Member {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveMartechMemberResponse removeMartechMember(RemoveMartechMemberRequest request) throws Exception {
+    public RemoveMartechMemberResponse removeMartechMember(RemoveMartechMemberRequest request) {
         RequestOperation<RemoveMartechMemberRequest, RemoveMartechMemberResponse> operation
               = new RemoveMartechMember.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -176,9 +175,9 @@ public class Member {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateMartechMemberResponse updateMartechMember(UpdateMartechMemberRequest request) throws Exception {
+    public UpdateMartechMemberResponse updateMartechMember(UpdateMartechMemberRequest request) {
         RequestOperation<UpdateMartechMemberRequest, UpdateMartechMemberResponse> operation
               = new UpdateMartechMember.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

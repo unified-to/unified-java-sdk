@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateTaskCommentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTaskCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateTaskCommentResponse;
@@ -122,9 +121,9 @@ public class Task {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateTaskCommentResponse createTaskComment(CreateTaskCommentRequest request) throws Exception {
+    public CreateTaskCommentResponse createTaskComment(CreateTaskCommentRequest request) {
         RequestOperation<CreateTaskCommentRequest, CreateTaskCommentResponse> operation
               = new CreateTaskComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -144,9 +143,9 @@ public class Task {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateTaskProjectResponse createTaskProject(CreateTaskProjectRequest request) throws Exception {
+    public CreateTaskProjectResponse createTaskProject(CreateTaskProjectRequest request) {
         RequestOperation<CreateTaskProjectRequest, CreateTaskProjectResponse> operation
               = new CreateTaskProject.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -166,9 +165,9 @@ public class Task {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateTaskTaskResponse createTaskTask(CreateTaskTaskRequest request) throws Exception {
+    public CreateTaskTaskResponse createTaskTask(CreateTaskTaskRequest request) {
         RequestOperation<CreateTaskTaskRequest, CreateTaskTaskResponse> operation
               = new CreateTaskTask.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -188,9 +187,9 @@ public class Task {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetTaskChangeResponse getTaskChange(GetTaskChangeRequest request) throws Exception {
+    public GetTaskChangeResponse getTaskChange(GetTaskChangeRequest request) {
         RequestOperation<GetTaskChangeRequest, GetTaskChangeResponse> operation
               = new GetTaskChange.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -210,9 +209,9 @@ public class Task {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetTaskCommentResponse getTaskComment(GetTaskCommentRequest request) throws Exception {
+    public GetTaskCommentResponse getTaskComment(GetTaskCommentRequest request) {
         RequestOperation<GetTaskCommentRequest, GetTaskCommentResponse> operation
               = new GetTaskComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -232,9 +231,9 @@ public class Task {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetTaskProjectResponse getTaskProject(GetTaskProjectRequest request) throws Exception {
+    public GetTaskProjectResponse getTaskProject(GetTaskProjectRequest request) {
         RequestOperation<GetTaskProjectRequest, GetTaskProjectResponse> operation
               = new GetTaskProject.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -254,9 +253,9 @@ public class Task {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetTaskTaskResponse getTaskTask(GetTaskTaskRequest request) throws Exception {
+    public GetTaskTaskResponse getTaskTask(GetTaskTaskRequest request) {
         RequestOperation<GetTaskTaskRequest, GetTaskTaskResponse> operation
               = new GetTaskTask.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -276,9 +275,9 @@ public class Task {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListTaskChangesResponse listTaskChanges(ListTaskChangesRequest request) throws Exception {
+    public ListTaskChangesResponse listTaskChanges(ListTaskChangesRequest request) {
         RequestOperation<ListTaskChangesRequest, ListTaskChangesResponse> operation
               = new ListTaskChanges.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -298,9 +297,9 @@ public class Task {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListTaskCommentsResponse listTaskComments(ListTaskCommentsRequest request) throws Exception {
+    public ListTaskCommentsResponse listTaskComments(ListTaskCommentsRequest request) {
         RequestOperation<ListTaskCommentsRequest, ListTaskCommentsResponse> operation
               = new ListTaskComments.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -320,9 +319,9 @@ public class Task {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListTaskProjectsResponse listTaskProjects(ListTaskProjectsRequest request) throws Exception {
+    public ListTaskProjectsResponse listTaskProjects(ListTaskProjectsRequest request) {
         RequestOperation<ListTaskProjectsRequest, ListTaskProjectsResponse> operation
               = new ListTaskProjects.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -342,9 +341,9 @@ public class Task {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListTaskTasksResponse listTaskTasks(ListTaskTasksRequest request) throws Exception {
+    public ListTaskTasksResponse listTaskTasks(ListTaskTasksRequest request) {
         RequestOperation<ListTaskTasksRequest, ListTaskTasksResponse> operation
               = new ListTaskTasks.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -364,9 +363,9 @@ public class Task {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchTaskCommentResponse patchTaskComment(PatchTaskCommentRequest request) throws Exception {
+    public PatchTaskCommentResponse patchTaskComment(PatchTaskCommentRequest request) {
         RequestOperation<PatchTaskCommentRequest, PatchTaskCommentResponse> operation
               = new PatchTaskComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -386,9 +385,9 @@ public class Task {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchTaskProjectResponse patchTaskProject(PatchTaskProjectRequest request) throws Exception {
+    public PatchTaskProjectResponse patchTaskProject(PatchTaskProjectRequest request) {
         RequestOperation<PatchTaskProjectRequest, PatchTaskProjectResponse> operation
               = new PatchTaskProject.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -408,9 +407,9 @@ public class Task {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchTaskTaskResponse patchTaskTask(PatchTaskTaskRequest request) throws Exception {
+    public PatchTaskTaskResponse patchTaskTask(PatchTaskTaskRequest request) {
         RequestOperation<PatchTaskTaskRequest, PatchTaskTaskResponse> operation
               = new PatchTaskTask.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -430,9 +429,9 @@ public class Task {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveTaskCommentResponse removeTaskComment(RemoveTaskCommentRequest request) throws Exception {
+    public RemoveTaskCommentResponse removeTaskComment(RemoveTaskCommentRequest request) {
         RequestOperation<RemoveTaskCommentRequest, RemoveTaskCommentResponse> operation
               = new RemoveTaskComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -452,9 +451,9 @@ public class Task {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveTaskProjectResponse removeTaskProject(RemoveTaskProjectRequest request) throws Exception {
+    public RemoveTaskProjectResponse removeTaskProject(RemoveTaskProjectRequest request) {
         RequestOperation<RemoveTaskProjectRequest, RemoveTaskProjectResponse> operation
               = new RemoveTaskProject.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -474,9 +473,9 @@ public class Task {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveTaskTaskResponse removeTaskTask(RemoveTaskTaskRequest request) throws Exception {
+    public RemoveTaskTaskResponse removeTaskTask(RemoveTaskTaskRequest request) {
         RequestOperation<RemoveTaskTaskRequest, RemoveTaskTaskResponse> operation
               = new RemoveTaskTask.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -496,9 +495,9 @@ public class Task {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateTaskCommentResponse updateTaskComment(UpdateTaskCommentRequest request) throws Exception {
+    public UpdateTaskCommentResponse updateTaskComment(UpdateTaskCommentRequest request) {
         RequestOperation<UpdateTaskCommentRequest, UpdateTaskCommentResponse> operation
               = new UpdateTaskComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -518,9 +517,9 @@ public class Task {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateTaskProjectResponse updateTaskProject(UpdateTaskProjectRequest request) throws Exception {
+    public UpdateTaskProjectResponse updateTaskProject(UpdateTaskProjectRequest request) {
         RequestOperation<UpdateTaskProjectRequest, UpdateTaskProjectResponse> operation
               = new UpdateTaskProject.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -540,9 +539,9 @@ public class Task {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateTaskTaskResponse updateTaskTask(UpdateTaskTaskRequest request) throws Exception {
+    public UpdateTaskTaskResponse updateTaskTask(UpdateTaskTaskRequest request) {
         RequestOperation<UpdateTaskTaskRequest, UpdateTaskTaskResponse> operation
               = new UpdateTaskTask.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

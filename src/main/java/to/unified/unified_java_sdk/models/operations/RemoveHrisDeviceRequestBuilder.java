@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemoveHrisDevice;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class RemoveHrisDeviceRequestBuilder {
         return this;
     }
 
-    public RemoveHrisDeviceResponse call() throws Exception {
+    public RemoveHrisDeviceResponse call() {
         
         RequestOperation<RemoveHrisDeviceRequest, RemoveHrisDeviceResponse> operation
               = new RemoveHrisDevice.Sync(sdkConfiguration, _headers);

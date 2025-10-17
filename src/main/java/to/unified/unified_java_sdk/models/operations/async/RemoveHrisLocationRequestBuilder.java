@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisLocationRequest;
@@ -29,7 +28,7 @@ public class RemoveHrisLocationRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<RemoveHrisLocationResponse> call() throws Exception {
+    public CompletableFuture<RemoveHrisLocationResponse> call() {
         
         AsyncRequestOperation<RemoveHrisLocationRequest, RemoveHrisLocationResponse> operation
               = new RemoveHrisLocation.Async(sdkConfiguration, _headers);

@@ -62,6 +62,7 @@ public class ObjectType {
     public static final ObjectType ACCOUNTING_PROFITLOSS = new ObjectType("accounting_profitloss");
     public static final ObjectType ACCOUNTING_TRIALBALANCE = new ObjectType("accounting_trialbalance");
     public static final ObjectType ACCOUNTING_CATEGORY = new ObjectType("accounting_category");
+    public static final ObjectType ACCOUNTING_EXPENSE = new ObjectType("accounting_expense");
     public static final ObjectType PAYMENT_PAYMENT = new ObjectType("payment_payment");
     public static final ObjectType PAYMENT_LINK = new ObjectType("payment_link");
     public static final ObjectType PAYMENT_PAYOUT = new ObjectType("payment_payout");
@@ -228,6 +229,7 @@ public class ObjectType {
         map.put("accounting_profitloss", ACCOUNTING_PROFITLOSS);
         map.put("accounting_trialbalance", ACCOUNTING_TRIALBALANCE);
         map.put("accounting_category", ACCOUNTING_CATEGORY);
+        map.put("accounting_expense", ACCOUNTING_EXPENSE);
         map.put("payment_payment", PAYMENT_PAYMENT);
         map.put("payment_link", PAYMENT_LINK);
         map.put("payment_payout", PAYMENT_PAYOUT);
@@ -328,6 +330,7 @@ public class ObjectType {
         map.put("accounting_profitloss", ObjectTypeEnum.ACCOUNTING_PROFITLOSS);
         map.put("accounting_trialbalance", ObjectTypeEnum.ACCOUNTING_TRIALBALANCE);
         map.put("accounting_category", ObjectTypeEnum.ACCOUNTING_CATEGORY);
+        map.put("accounting_expense", ObjectTypeEnum.ACCOUNTING_EXPENSE);
         map.put("payment_payment", ObjectTypeEnum.PAYMENT_PAYMENT);
         map.put("payment_link", ObjectTypeEnum.PAYMENT_LINK);
         map.put("payment_payout", ObjectTypeEnum.PAYMENT_PAYOUT);
@@ -458,6 +461,7 @@ public class ObjectType {
         ACCOUNTING_PROFITLOSS("accounting_profitloss"),
         ACCOUNTING_TRIALBALANCE("accounting_trialbalance"),
         ACCOUNTING_CATEGORY("accounting_category"),
+        ACCOUNTING_EXPENSE("accounting_expense"),
         PAYMENT_PAYMENT("payment_payment"),
         PAYMENT_LINK("payment_link"),
         PAYMENT_PAYOUT("payment_payout"),

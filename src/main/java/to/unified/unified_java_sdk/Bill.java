@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBillRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBillRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBillResponse;
@@ -66,9 +65,9 @@ public class Bill {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingBillResponse createAccountingBill(CreateAccountingBillRequest request) throws Exception {
+    public CreateAccountingBillResponse createAccountingBill(CreateAccountingBillRequest request) {
         RequestOperation<CreateAccountingBillRequest, CreateAccountingBillResponse> operation
               = new CreateAccountingBill.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -88,9 +87,9 @@ public class Bill {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingBillResponse getAccountingBill(GetAccountingBillRequest request) throws Exception {
+    public GetAccountingBillResponse getAccountingBill(GetAccountingBillRequest request) {
         RequestOperation<GetAccountingBillRequest, GetAccountingBillResponse> operation
               = new GetAccountingBill.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -110,9 +109,9 @@ public class Bill {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingBillsResponse listAccountingBills(ListAccountingBillsRequest request) throws Exception {
+    public ListAccountingBillsResponse listAccountingBills(ListAccountingBillsRequest request) {
         RequestOperation<ListAccountingBillsRequest, ListAccountingBillsResponse> operation
               = new ListAccountingBills.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -132,9 +131,9 @@ public class Bill {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingBillResponse patchAccountingBill(PatchAccountingBillRequest request) throws Exception {
+    public PatchAccountingBillResponse patchAccountingBill(PatchAccountingBillRequest request) {
         RequestOperation<PatchAccountingBillRequest, PatchAccountingBillResponse> operation
               = new PatchAccountingBill.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -154,9 +153,9 @@ public class Bill {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingBillResponse removeAccountingBill(RemoveAccountingBillRequest request) throws Exception {
+    public RemoveAccountingBillResponse removeAccountingBill(RemoveAccountingBillRequest request) {
         RequestOperation<RemoveAccountingBillRequest, RemoveAccountingBillResponse> operation
               = new RemoveAccountingBill.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -176,9 +175,9 @@ public class Bill {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingBillResponse updateAccountingBill(UpdateAccountingBillRequest request) throws Exception {
+    public UpdateAccountingBillResponse updateAccountingBill(UpdateAccountingBillRequest request) {
         RequestOperation<UpdateAccountingBillRequest, UpdateAccountingBillResponse> operation
               = new UpdateAccountingBill.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

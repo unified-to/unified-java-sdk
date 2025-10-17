@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetAtsJobRequest;
@@ -29,7 +28,7 @@ public class GetAtsJobRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<GetAtsJobResponse> call() throws Exception {
+    public CompletableFuture<GetAtsJobResponse> call() {
         
         AsyncRequestOperation<GetAtsJobRequest, GetAtsJobResponse> operation
               = new GetAtsJob.Async(sdkConfiguration, _headers);

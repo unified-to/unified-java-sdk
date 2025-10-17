@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetAccountingContactRequest;
@@ -29,7 +28,7 @@ public class GetAccountingContactRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<GetAccountingContactResponse> call() throws Exception {
+    public CompletableFuture<GetAccountingContactResponse> call() {
         
         AsyncRequestOperation<GetAccountingContactRequest, GetAccountingContactResponse> operation
               = new GetAccountingContact.Async(sdkConfiguration, _headers);

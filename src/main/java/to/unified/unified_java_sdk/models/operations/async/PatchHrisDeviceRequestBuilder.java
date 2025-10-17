@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDeviceRequest;
@@ -29,7 +28,7 @@ public class PatchHrisDeviceRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<PatchHrisDeviceResponse> call() throws Exception {
+    public CompletableFuture<PatchHrisDeviceResponse> call() {
         
         AsyncRequestOperation<PatchHrisDeviceRequest, PatchHrisDeviceResponse> operation
               = new PatchHrisDevice.Async(sdkConfiguration, _headers);

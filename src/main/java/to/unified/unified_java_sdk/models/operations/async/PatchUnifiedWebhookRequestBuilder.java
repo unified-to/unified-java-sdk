@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchUnifiedWebhookRequest;
@@ -29,7 +28,7 @@ public class PatchUnifiedWebhookRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<PatchUnifiedWebhookResponse> call() throws Exception {
+    public CompletableFuture<PatchUnifiedWebhookResponse> call() {
         
         AsyncRequestOperation<PatchUnifiedWebhookRequest, PatchUnifiedWebhookResponse> operation
               = new PatchUnifiedWebhook.Async(sdkConfiguration, _headers);

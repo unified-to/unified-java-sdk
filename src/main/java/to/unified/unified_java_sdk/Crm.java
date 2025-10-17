@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateCrmCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCrmCompanyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCrmCompanyResponse;
@@ -186,9 +185,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCrmCompanyResponse createCrmCompany(CreateCrmCompanyRequest request) throws Exception {
+    public CreateCrmCompanyResponse createCrmCompany(CreateCrmCompanyRequest request) {
         RequestOperation<CreateCrmCompanyRequest, CreateCrmCompanyResponse> operation
               = new CreateCrmCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -208,9 +207,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCrmContactResponse createCrmContact(CreateCrmContactRequest request) throws Exception {
+    public CreateCrmContactResponse createCrmContact(CreateCrmContactRequest request) {
         RequestOperation<CreateCrmContactRequest, CreateCrmContactResponse> operation
               = new CreateCrmContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -230,9 +229,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCrmDealResponse createCrmDeal(CreateCrmDealRequest request) throws Exception {
+    public CreateCrmDealResponse createCrmDeal(CreateCrmDealRequest request) {
         RequestOperation<CreateCrmDealRequest, CreateCrmDealResponse> operation
               = new CreateCrmDeal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -252,9 +251,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCrmEventResponse createCrmEvent(CreateCrmEventRequest request) throws Exception {
+    public CreateCrmEventResponse createCrmEvent(CreateCrmEventRequest request) {
         RequestOperation<CreateCrmEventRequest, CreateCrmEventResponse> operation
               = new CreateCrmEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -274,9 +273,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCrmLeadResponse createCrmLead(CreateCrmLeadRequest request) throws Exception {
+    public CreateCrmLeadResponse createCrmLead(CreateCrmLeadRequest request) {
         RequestOperation<CreateCrmLeadRequest, CreateCrmLeadResponse> operation
               = new CreateCrmLead.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -296,9 +295,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCrmPipelineResponse createCrmPipeline(CreateCrmPipelineRequest request) throws Exception {
+    public CreateCrmPipelineResponse createCrmPipeline(CreateCrmPipelineRequest request) {
         RequestOperation<CreateCrmPipelineRequest, CreateCrmPipelineResponse> operation
               = new CreateCrmPipeline.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -318,9 +317,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetCrmCompanyResponse getCrmCompany(GetCrmCompanyRequest request) throws Exception {
+    public GetCrmCompanyResponse getCrmCompany(GetCrmCompanyRequest request) {
         RequestOperation<GetCrmCompanyRequest, GetCrmCompanyResponse> operation
               = new GetCrmCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -340,9 +339,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetCrmContactResponse getCrmContact(GetCrmContactRequest request) throws Exception {
+    public GetCrmContactResponse getCrmContact(GetCrmContactRequest request) {
         RequestOperation<GetCrmContactRequest, GetCrmContactResponse> operation
               = new GetCrmContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -362,9 +361,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetCrmDealResponse getCrmDeal(GetCrmDealRequest request) throws Exception {
+    public GetCrmDealResponse getCrmDeal(GetCrmDealRequest request) {
         RequestOperation<GetCrmDealRequest, GetCrmDealResponse> operation
               = new GetCrmDeal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -384,9 +383,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetCrmEventResponse getCrmEvent(GetCrmEventRequest request) throws Exception {
+    public GetCrmEventResponse getCrmEvent(GetCrmEventRequest request) {
         RequestOperation<GetCrmEventRequest, GetCrmEventResponse> operation
               = new GetCrmEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -406,9 +405,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetCrmLeadResponse getCrmLead(GetCrmLeadRequest request) throws Exception {
+    public GetCrmLeadResponse getCrmLead(GetCrmLeadRequest request) {
         RequestOperation<GetCrmLeadRequest, GetCrmLeadResponse> operation
               = new GetCrmLead.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -428,9 +427,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetCrmPipelineResponse getCrmPipeline(GetCrmPipelineRequest request) throws Exception {
+    public GetCrmPipelineResponse getCrmPipeline(GetCrmPipelineRequest request) {
         RequestOperation<GetCrmPipelineRequest, GetCrmPipelineResponse> operation
               = new GetCrmPipeline.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -450,9 +449,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmCompaniesResponse listCrmCompanies(ListCrmCompaniesRequest request) throws Exception {
+    public ListCrmCompaniesResponse listCrmCompanies(ListCrmCompaniesRequest request) {
         RequestOperation<ListCrmCompaniesRequest, ListCrmCompaniesResponse> operation
               = new ListCrmCompanies.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -472,9 +471,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmContactsResponse listCrmContacts(ListCrmContactsRequest request) throws Exception {
+    public ListCrmContactsResponse listCrmContacts(ListCrmContactsRequest request) {
         RequestOperation<ListCrmContactsRequest, ListCrmContactsResponse> operation
               = new ListCrmContacts.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -494,9 +493,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmDealsResponse listCrmDeals(ListCrmDealsRequest request) throws Exception {
+    public ListCrmDealsResponse listCrmDeals(ListCrmDealsRequest request) {
         RequestOperation<ListCrmDealsRequest, ListCrmDealsResponse> operation
               = new ListCrmDeals.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -516,9 +515,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmEventsResponse listCrmEvents(ListCrmEventsRequest request) throws Exception {
+    public ListCrmEventsResponse listCrmEvents(ListCrmEventsRequest request) {
         RequestOperation<ListCrmEventsRequest, ListCrmEventsResponse> operation
               = new ListCrmEvents.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -538,9 +537,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmLeadsResponse listCrmLeads(ListCrmLeadsRequest request) throws Exception {
+    public ListCrmLeadsResponse listCrmLeads(ListCrmLeadsRequest request) {
         RequestOperation<ListCrmLeadsRequest, ListCrmLeadsResponse> operation
               = new ListCrmLeads.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -560,9 +559,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmPipelinesResponse listCrmPipelines(ListCrmPipelinesRequest request) throws Exception {
+    public ListCrmPipelinesResponse listCrmPipelines(ListCrmPipelinesRequest request) {
         RequestOperation<ListCrmPipelinesRequest, ListCrmPipelinesResponse> operation
               = new ListCrmPipelines.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -582,9 +581,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCrmCompanyResponse patchCrmCompany(PatchCrmCompanyRequest request) throws Exception {
+    public PatchCrmCompanyResponse patchCrmCompany(PatchCrmCompanyRequest request) {
         RequestOperation<PatchCrmCompanyRequest, PatchCrmCompanyResponse> operation
               = new PatchCrmCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -604,9 +603,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCrmContactResponse patchCrmContact(PatchCrmContactRequest request) throws Exception {
+    public PatchCrmContactResponse patchCrmContact(PatchCrmContactRequest request) {
         RequestOperation<PatchCrmContactRequest, PatchCrmContactResponse> operation
               = new PatchCrmContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -626,9 +625,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCrmDealResponse patchCrmDeal(PatchCrmDealRequest request) throws Exception {
+    public PatchCrmDealResponse patchCrmDeal(PatchCrmDealRequest request) {
         RequestOperation<PatchCrmDealRequest, PatchCrmDealResponse> operation
               = new PatchCrmDeal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -648,9 +647,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCrmEventResponse patchCrmEvent(PatchCrmEventRequest request) throws Exception {
+    public PatchCrmEventResponse patchCrmEvent(PatchCrmEventRequest request) {
         RequestOperation<PatchCrmEventRequest, PatchCrmEventResponse> operation
               = new PatchCrmEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -670,9 +669,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCrmLeadResponse patchCrmLead(PatchCrmLeadRequest request) throws Exception {
+    public PatchCrmLeadResponse patchCrmLead(PatchCrmLeadRequest request) {
         RequestOperation<PatchCrmLeadRequest, PatchCrmLeadResponse> operation
               = new PatchCrmLead.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -692,9 +691,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCrmPipelineResponse patchCrmPipeline(PatchCrmPipelineRequest request) throws Exception {
+    public PatchCrmPipelineResponse patchCrmPipeline(PatchCrmPipelineRequest request) {
         RequestOperation<PatchCrmPipelineRequest, PatchCrmPipelineResponse> operation
               = new PatchCrmPipeline.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -714,9 +713,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCrmCompanyResponse removeCrmCompany(RemoveCrmCompanyRequest request) throws Exception {
+    public RemoveCrmCompanyResponse removeCrmCompany(RemoveCrmCompanyRequest request) {
         RequestOperation<RemoveCrmCompanyRequest, RemoveCrmCompanyResponse> operation
               = new RemoveCrmCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -736,9 +735,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCrmContactResponse removeCrmContact(RemoveCrmContactRequest request) throws Exception {
+    public RemoveCrmContactResponse removeCrmContact(RemoveCrmContactRequest request) {
         RequestOperation<RemoveCrmContactRequest, RemoveCrmContactResponse> operation
               = new RemoveCrmContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -758,9 +757,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCrmDealResponse removeCrmDeal(RemoveCrmDealRequest request) throws Exception {
+    public RemoveCrmDealResponse removeCrmDeal(RemoveCrmDealRequest request) {
         RequestOperation<RemoveCrmDealRequest, RemoveCrmDealResponse> operation
               = new RemoveCrmDeal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -780,9 +779,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCrmEventResponse removeCrmEvent(RemoveCrmEventRequest request) throws Exception {
+    public RemoveCrmEventResponse removeCrmEvent(RemoveCrmEventRequest request) {
         RequestOperation<RemoveCrmEventRequest, RemoveCrmEventResponse> operation
               = new RemoveCrmEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -802,9 +801,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCrmLeadResponse removeCrmLead(RemoveCrmLeadRequest request) throws Exception {
+    public RemoveCrmLeadResponse removeCrmLead(RemoveCrmLeadRequest request) {
         RequestOperation<RemoveCrmLeadRequest, RemoveCrmLeadResponse> operation
               = new RemoveCrmLead.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -824,9 +823,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCrmPipelineResponse removeCrmPipeline(RemoveCrmPipelineRequest request) throws Exception {
+    public RemoveCrmPipelineResponse removeCrmPipeline(RemoveCrmPipelineRequest request) {
         RequestOperation<RemoveCrmPipelineRequest, RemoveCrmPipelineResponse> operation
               = new RemoveCrmPipeline.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -846,9 +845,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmCompanyResponse updateCrmCompany(UpdateCrmCompanyRequest request) throws Exception {
+    public UpdateCrmCompanyResponse updateCrmCompany(UpdateCrmCompanyRequest request) {
         RequestOperation<UpdateCrmCompanyRequest, UpdateCrmCompanyResponse> operation
               = new UpdateCrmCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -868,9 +867,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmContactResponse updateCrmContact(UpdateCrmContactRequest request) throws Exception {
+    public UpdateCrmContactResponse updateCrmContact(UpdateCrmContactRequest request) {
         RequestOperation<UpdateCrmContactRequest, UpdateCrmContactResponse> operation
               = new UpdateCrmContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -890,9 +889,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmDealResponse updateCrmDeal(UpdateCrmDealRequest request) throws Exception {
+    public UpdateCrmDealResponse updateCrmDeal(UpdateCrmDealRequest request) {
         RequestOperation<UpdateCrmDealRequest, UpdateCrmDealResponse> operation
               = new UpdateCrmDeal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -912,9 +911,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmEventResponse updateCrmEvent(UpdateCrmEventRequest request) throws Exception {
+    public UpdateCrmEventResponse updateCrmEvent(UpdateCrmEventRequest request) {
         RequestOperation<UpdateCrmEventRequest, UpdateCrmEventResponse> operation
               = new UpdateCrmEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -934,9 +933,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmLeadResponse updateCrmLead(UpdateCrmLeadRequest request) throws Exception {
+    public UpdateCrmLeadResponse updateCrmLead(UpdateCrmLeadRequest request) {
         RequestOperation<UpdateCrmLeadRequest, UpdateCrmLeadResponse> operation
               = new UpdateCrmLead.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -956,9 +955,9 @@ public class Crm {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmPipelineResponse updateCrmPipeline(UpdateCrmPipelineRequest request) throws Exception {
+    public UpdateCrmPipelineResponse updateCrmPipeline(UpdateCrmPipelineRequest request) {
         RequestOperation<UpdateCrmPipelineRequest, UpdateCrmPipelineResponse> operation
               = new UpdateCrmPipeline.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchAtsDocumentRequest;
@@ -29,7 +28,7 @@ public class PatchAtsDocumentRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<PatchAtsDocumentResponse> call() throws Exception {
+    public CompletableFuture<PatchAtsDocumentResponse> call() {
         
         AsyncRequestOperation<PatchAtsDocumentRequest, PatchAtsDocumentResponse> operation
               = new PatchAtsDocument.Async(sdkConfiguration, _headers);

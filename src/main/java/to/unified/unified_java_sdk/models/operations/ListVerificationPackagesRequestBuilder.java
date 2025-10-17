@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.ListVerificationPackages;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class ListVerificationPackagesRequestBuilder {
         return this;
     }
 
-    public ListVerificationPackagesResponse call() throws Exception {
+    public ListVerificationPackagesResponse call() {
         
         RequestOperation<ListVerificationPackagesRequest, ListVerificationPackagesResponse> operation
               = new ListVerificationPackages.Sync(sdkConfiguration, _headers);

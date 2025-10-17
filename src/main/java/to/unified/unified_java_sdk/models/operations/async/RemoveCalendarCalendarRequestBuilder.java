@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemoveCalendarCalendarRequest;
@@ -29,7 +28,7 @@ public class RemoveCalendarCalendarRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<RemoveCalendarCalendarResponse> call() throws Exception {
+    public CompletableFuture<RemoveCalendarCalendarResponse> call() {
         
         AsyncRequestOperation<RemoveCalendarCalendarRequest, RemoveCalendarCalendarResponse> operation
               = new RemoveCalendarCalendar.Async(sdkConfiguration, _headers);

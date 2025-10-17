@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemoveStorageFileRequest;
@@ -29,7 +28,7 @@ public class RemoveStorageFileRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<RemoveStorageFileResponse> call() throws Exception {
+    public CompletableFuture<RemoveStorageFileResponse> call() {
         
         AsyncRequestOperation<RemoveStorageFileRequest, RemoveStorageFileResponse> operation
               = new RemoveStorageFile.Async(sdkConfiguration, _headers);

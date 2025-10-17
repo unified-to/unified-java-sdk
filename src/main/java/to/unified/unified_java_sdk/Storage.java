@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateStorageFileRequest;
 import to.unified.unified_java_sdk.models.operations.CreateStorageFileRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateStorageFileResponse;
@@ -66,9 +65,9 @@ public class Storage {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateStorageFileResponse createStorageFile(CreateStorageFileRequest request) throws Exception {
+    public CreateStorageFileResponse createStorageFile(CreateStorageFileRequest request) {
         RequestOperation<CreateStorageFileRequest, CreateStorageFileResponse> operation
               = new CreateStorageFile.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -88,9 +87,9 @@ public class Storage {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetStorageFileResponse getStorageFile(GetStorageFileRequest request) throws Exception {
+    public GetStorageFileResponse getStorageFile(GetStorageFileRequest request) {
         RequestOperation<GetStorageFileRequest, GetStorageFileResponse> operation
               = new GetStorageFile.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -110,9 +109,9 @@ public class Storage {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListStorageFilesResponse listStorageFiles(ListStorageFilesRequest request) throws Exception {
+    public ListStorageFilesResponse listStorageFiles(ListStorageFilesRequest request) {
         RequestOperation<ListStorageFilesRequest, ListStorageFilesResponse> operation
               = new ListStorageFiles.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -132,9 +131,9 @@ public class Storage {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchStorageFileResponse patchStorageFile(PatchStorageFileRequest request) throws Exception {
+    public PatchStorageFileResponse patchStorageFile(PatchStorageFileRequest request) {
         RequestOperation<PatchStorageFileRequest, PatchStorageFileResponse> operation
               = new PatchStorageFile.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -154,9 +153,9 @@ public class Storage {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveStorageFileResponse removeStorageFile(RemoveStorageFileRequest request) throws Exception {
+    public RemoveStorageFileResponse removeStorageFile(RemoveStorageFileRequest request) {
         RequestOperation<RemoveStorageFileRequest, RemoveStorageFileResponse> operation
               = new RemoveStorageFile.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -176,9 +175,9 @@ public class Storage {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateStorageFileResponse updateStorageFile(UpdateStorageFileRequest request) throws Exception {
+    public UpdateStorageFileResponse updateStorageFile(UpdateStorageFileRequest request) {
         RequestOperation<UpdateStorageFileRequest, UpdateStorageFileResponse> operation
               = new UpdateStorageFile.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

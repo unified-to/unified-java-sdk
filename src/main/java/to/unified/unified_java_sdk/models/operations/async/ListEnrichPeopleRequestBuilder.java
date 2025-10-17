@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleRequest;
@@ -29,7 +28,7 @@ public class ListEnrichPeopleRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<ListEnrichPeopleResponse> call() throws Exception {
+    public CompletableFuture<ListEnrichPeopleResponse> call() {
         
         AsyncRequestOperation<ListEnrichPeopleRequest, ListEnrichPeopleResponse> operation
               = new ListEnrichPeople.Async(sdkConfiguration, _headers);

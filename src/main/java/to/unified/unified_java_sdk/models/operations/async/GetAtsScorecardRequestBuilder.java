@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetAtsScorecardRequest;
@@ -29,7 +28,7 @@ public class GetAtsScorecardRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<GetAtsScorecardResponse> call() throws Exception {
+    public CompletableFuture<GetAtsScorecardResponse> call() {
         
         AsyncRequestOperation<GetAtsScorecardRequest, GetAtsScorecardResponse> operation
               = new GetAtsScorecard.Async(sdkConfiguration, _headers);

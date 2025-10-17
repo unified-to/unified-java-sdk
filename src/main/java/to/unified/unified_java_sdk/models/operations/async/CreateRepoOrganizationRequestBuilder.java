@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.CreateRepoOrganizationRequest;
@@ -29,7 +28,7 @@ public class CreateRepoOrganizationRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<CreateRepoOrganizationResponse> call() throws Exception {
+    public CompletableFuture<CreateRepoOrganizationResponse> call() {
         
         AsyncRequestOperation<CreateRepoOrganizationRequest, CreateRepoOrganizationResponse> operation
               = new CreateRepoOrganization.Async(sdkConfiguration, _headers);

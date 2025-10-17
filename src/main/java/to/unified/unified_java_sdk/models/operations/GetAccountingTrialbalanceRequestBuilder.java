@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetAccountingTrialbalance;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class GetAccountingTrialbalanceRequestBuilder {
         return this;
     }
 
-    public GetAccountingTrialbalanceResponse call() throws Exception {
+    public GetAccountingTrialbalanceResponse call() {
         
         RequestOperation<GetAccountingTrialbalanceRequest, GetAccountingTrialbalanceResponse> operation
               = new GetAccountingTrialbalance.Sync(sdkConfiguration, _headers);

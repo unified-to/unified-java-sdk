@@ -4,13 +4,13 @@
 package to.unified.unified_java_sdk.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+import static to.unified.unified_java_sdk.utils.Exceptions.unchecked;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import java.io.InputStream;
 import java.lang.Exception;
 import java.lang.Object;
-import java.lang.RuntimeException;
 import java.lang.String;
 import java.lang.Throwable;
 import java.net.http.HttpRequest;
@@ -138,8 +138,8 @@ public class UpdatePassthroughJson {
         }
 
         @Override
-        public HttpResponse<InputStream> doRequest(UpdatePassthroughJsonRequest request) throws Exception {
-            HttpRequest r = onBuildRequest(request);
+        public HttpResponse<InputStream> doRequest(UpdatePassthroughJsonRequest request) {
+            HttpRequest r = unchecked(() -> onBuildRequest(request)).get();
             HttpResponse<InputStream> httpRes;
             try {
                 httpRes = client.send(r);
@@ -149,7 +149,7 @@ public class UpdatePassthroughJson {
                     httpRes = onSuccess(httpRes);
                 }
             } catch (Exception e) {
-                httpRes = onError(null, e);
+                httpRes = unchecked(() -> onError(null, e)).get();
             }
 
             return httpRes;
@@ -157,7 +157,7 @@ public class UpdatePassthroughJson {
 
 
         @Override
-        public UpdatePassthroughJsonResponse handleResponse(HttpResponse<InputStream> response) throws Exception {
+        public UpdatePassthroughJsonResponse handleResponse(HttpResponse<InputStream> response) {
             String contentType = response
                     .headers()
                     .firstValue("Content-Type")
@@ -179,68 +179,42 @@ public class UpdatePassthroughJson {
                 // no content
                 return res;
             }
-            
             if (Utils.statusCodeMatches(response.statusCode(), "304")) {
                 res.withHeaders(response.headers().map());
                 // no content
                 return res;
             }
-            
             if (Utils.statusCodeMatches(response.statusCode(), "4XX")) {
                 // no content
-                throw new SDKError(
-                        response,
-                        response.statusCode(),
-                        "API error occurred",
-                        Utils.extractByteArrayFromBody(response));
+                throw SDKError.from("API error occurred", response);
             }
-            
             if (Utils.statusCodeMatches(response.statusCode(), "5XX")) {
                 // no content
-                throw new SDKError(
-                        response,
-                        response.statusCode(),
-                        "API error occurred",
-                        Utils.extractByteArrayFromBody(response));
+                throw SDKError.from("API error occurred", response);
             }
-            
             if (Utils.statusCodeMatches(response.statusCode(), "default")) {
                 res.withHeaders(response.headers().map());
                 if (Utils.contentTypeMatches(contentType, "application/json")) {
-                    Object out = Utils.mapper().readValue(
-                            response.body(),
-                            new TypeReference<>() {
-                            });
-                    res.withDefaultApplicationJsonAny(out);
-                    return res;
+                    return res.withDefaultApplicationJsonAny(Utils.unmarshal(response, new TypeReference<Object>() {}));
                 } else if (Utils.contentTypeMatches(contentType, "application/xml")) {
-                    String out = Utils.toUtf8AndClose(response.body());
+                    String out = unchecked(() -> Utils.toUtf8AndClose(response.body())).get();
                     res.withDefaultApplicationXmlRes(out);
                     return res;
                 } else if (Utils.contentTypeMatches(contentType, "text/csv")) {
-                    String out = Utils.toUtf8AndClose(response.body());
+                    String out = unchecked(() -> Utils.toUtf8AndClose(response.body())).get();
                     res.withDefaultTextCsvRes(out);
                     return res;
                 } else if (Utils.contentTypeMatches(contentType, "text/plain")) {
-                    String out = Utils.toUtf8AndClose(response.body());
+                    String out = unchecked(() -> Utils.toUtf8AndClose(response.body())).get();
                     res.withDefaultTextPlainRes(out);
                     return res;
                 } else if (Utils.contentTypeMatches(contentType, "*/*")) {
                     return res;
                 } else {
-                    throw new SDKError(
-                            response,
-                            response.statusCode(),
-                            "Unexpected content-type received: " + contentType,
-                            Utils.extractByteArrayFromBody(response));
+                    throw SDKError.from("Unexpected content-type received: " + contentType, response);
                 }
             }
-            
-            throw new SDKError(
-                    response,
-                    response.statusCode(),
-                    "Unexpected status code received: " + response.statusCode(),
-                    Utils.extractByteArrayFromBody(response));
+            throw SDKError.from("Unexpected status code received: " + response.statusCode(), response);
         }
     }
     public static class Async extends Base
@@ -265,7 +239,7 @@ public class UpdatePassthroughJson {
 
         @Override
         public CompletableFuture<HttpResponse<Blob>> doRequest(UpdatePassthroughJsonRequest request) {
-            return Exceptions.unchecked(() -> onBuildRequest(request)).get().thenCompose(client::sendAsync)
+            return unchecked(() -> onBuildRequest(request)).get().thenCompose(client::sendAsync)
                     .handle((resp, err) -> {
                         if (err != null) {
                             return onError(null, err);
@@ -303,38 +277,24 @@ public class UpdatePassthroughJson {
                 // no content
                 return CompletableFuture.completedFuture(res);
             }
-            
             if (Utils.statusCodeMatches(response.statusCode(), "304")) {
                 res.withHeaders(response.headers().map());
                 // no content
                 return CompletableFuture.completedFuture(res);
             }
-            
             if (Utils.statusCodeMatches(response.statusCode(), "4XX")) {
                 // no content
                 return Utils.createAsyncApiError(response, "API error occurred");
             }
-            
             if (Utils.statusCodeMatches(response.statusCode(), "5XX")) {
                 // no content
                 return Utils.createAsyncApiError(response, "API error occurred");
             }
-            
             if (Utils.statusCodeMatches(response.statusCode(), "default")) {
                 res.withHeaders(response.headers().map());
                 if (Utils.contentTypeMatches(contentType, "application/json")) {
-                    return response.body().toByteArray().thenApply(bodyBytes -> {
-                        try {
-                            Object out = Utils.mapper().readValue(
-                                    bodyBytes,
-                                    new TypeReference<>() {
-                                    });
-                            res.withDefaultApplicationJsonAny(out);
-                            return res;
-                        } catch (Exception e) {
-                            throw new RuntimeException(e);
-                        }
-                    });
+                    return Utils.unmarshalAsync(response, new TypeReference<Object>() {})
+                            .thenApply(res::withDefaultApplicationJsonAny);
                 } else if (Utils.contentTypeMatches(contentType, "application/xml")) {
                     return response.body().toByteArray().thenApply(bodyBytes -> {
                         try {
@@ -342,7 +302,7 @@ public class UpdatePassthroughJson {
                             res.withDefaultApplicationXmlRes(out);
                             return res;
                         } catch (Exception e) {
-                            throw new RuntimeException(e);
+                            return Exceptions.rethrow(e);
                         }
                     });
                 } else if (Utils.contentTypeMatches(contentType, "text/csv")) {
@@ -352,7 +312,7 @@ public class UpdatePassthroughJson {
                             res.withDefaultTextCsvRes(out);
                             return res;
                         } catch (Exception e) {
-                            throw new RuntimeException(e);
+                            return Exceptions.rethrow(e);
                         }
                     });
                 } else if (Utils.contentTypeMatches(contentType, "text/plain")) {
@@ -362,7 +322,7 @@ public class UpdatePassthroughJson {
                             res.withDefaultTextPlainRes(out);
                             return res;
                         } catch (Exception e) {
-                            throw new RuntimeException(e);
+                            return Exceptions.rethrow(e);
                         }
                     });
                 } else if (Utils.contentTypeMatches(contentType, "*/*")) {
@@ -371,7 +331,6 @@ public class UpdatePassthroughJson {
                     return Utils.createAsyncApiError(response, "Unexpected content-type received: " + contentType);
                 }
             }
-            
             return Utils.createAsyncApiError(response, "Unexpected status code received: " + response.statusCode());
         }
     }

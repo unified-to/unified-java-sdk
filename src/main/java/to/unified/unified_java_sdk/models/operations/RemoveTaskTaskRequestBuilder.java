@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemoveTaskTask;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class RemoveTaskTaskRequestBuilder {
         return this;
     }
 
-    public RemoveTaskTaskResponse call() throws Exception {
+    public RemoveTaskTaskResponse call() {
         
         RequestOperation<RemoveTaskTaskRequest, RemoveTaskTaskResponse> operation
               = new RemoveTaskTask.Sync(sdkConfiguration, _headers);

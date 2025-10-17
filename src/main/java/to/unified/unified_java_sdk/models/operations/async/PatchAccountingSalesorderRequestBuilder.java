@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingSalesorderRequest;
@@ -29,7 +28,7 @@ public class PatchAccountingSalesorderRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<PatchAccountingSalesorderResponse> call() throws Exception {
+    public CompletableFuture<PatchAccountingSalesorderResponse> call() {
         
         AsyncRequestOperation<PatchAccountingSalesorderRequest, PatchAccountingSalesorderResponse> operation
               = new PatchAccountingSalesorder.Async(sdkConfiguration, _headers);

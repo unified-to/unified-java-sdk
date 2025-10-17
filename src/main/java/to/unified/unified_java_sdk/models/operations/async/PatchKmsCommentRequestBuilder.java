@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchKmsCommentRequest;
@@ -29,7 +28,7 @@ public class PatchKmsCommentRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<PatchKmsCommentResponse> call() throws Exception {
+    public CompletableFuture<PatchKmsCommentResponse> call() {
         
         AsyncRequestOperation<PatchKmsCommentRequest, PatchKmsCommentResponse> operation
               = new PatchKmsComment.Async(sdkConfiguration, _headers);

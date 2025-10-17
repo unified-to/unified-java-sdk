@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateAtsJobRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsJobRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAtsJobResponse;
@@ -66,9 +65,9 @@ public class Job {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAtsJobResponse createAtsJob(CreateAtsJobRequest request) throws Exception {
+    public CreateAtsJobResponse createAtsJob(CreateAtsJobRequest request) {
         RequestOperation<CreateAtsJobRequest, CreateAtsJobResponse> operation
               = new CreateAtsJob.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -88,9 +87,9 @@ public class Job {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetAtsJobResponse getAtsJob(GetAtsJobRequest request) throws Exception {
+    public GetAtsJobResponse getAtsJob(GetAtsJobRequest request) {
         RequestOperation<GetAtsJobRequest, GetAtsJobResponse> operation
               = new GetAtsJob.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -110,9 +109,9 @@ public class Job {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListAtsJobsResponse listAtsJobs(ListAtsJobsRequest request) throws Exception {
+    public ListAtsJobsResponse listAtsJobs(ListAtsJobsRequest request) {
         RequestOperation<ListAtsJobsRequest, ListAtsJobsResponse> operation
               = new ListAtsJobs.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -132,9 +131,9 @@ public class Job {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAtsJobResponse patchAtsJob(PatchAtsJobRequest request) throws Exception {
+    public PatchAtsJobResponse patchAtsJob(PatchAtsJobRequest request) {
         RequestOperation<PatchAtsJobRequest, PatchAtsJobResponse> operation
               = new PatchAtsJob.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -154,9 +153,9 @@ public class Job {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAtsJobResponse removeAtsJob(RemoveAtsJobRequest request) throws Exception {
+    public RemoveAtsJobResponse removeAtsJob(RemoveAtsJobRequest request) {
         RequestOperation<RemoveAtsJobRequest, RemoveAtsJobResponse> operation
               = new RemoveAtsJob.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -176,9 +175,9 @@ public class Job {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAtsJobResponse updateAtsJob(UpdateAtsJobRequest request) throws Exception {
+    public UpdateAtsJobResponse updateAtsJob(UpdateAtsJobRequest request) {
         RequestOperation<UpdateAtsJobRequest, UpdateAtsJobResponse> operation
               = new UpdateAtsJob.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

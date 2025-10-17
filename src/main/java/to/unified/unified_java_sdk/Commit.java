@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateRepoCommitRequest;
 import to.unified.unified_java_sdk.models.operations.CreateRepoCommitRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateRepoCommitResponse;
@@ -66,9 +65,9 @@ public class Commit {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateRepoCommitResponse createRepoCommit(CreateRepoCommitRequest request) throws Exception {
+    public CreateRepoCommitResponse createRepoCommit(CreateRepoCommitRequest request) {
         RequestOperation<CreateRepoCommitRequest, CreateRepoCommitResponse> operation
               = new CreateRepoCommit.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -88,9 +87,9 @@ public class Commit {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetRepoCommitResponse getRepoCommit(GetRepoCommitRequest request) throws Exception {
+    public GetRepoCommitResponse getRepoCommit(GetRepoCommitRequest request) {
         RequestOperation<GetRepoCommitRequest, GetRepoCommitResponse> operation
               = new GetRepoCommit.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -110,9 +109,9 @@ public class Commit {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListRepoCommitsResponse listRepoCommits(ListRepoCommitsRequest request) throws Exception {
+    public ListRepoCommitsResponse listRepoCommits(ListRepoCommitsRequest request) {
         RequestOperation<ListRepoCommitsRequest, ListRepoCommitsResponse> operation
               = new ListRepoCommits.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -132,9 +131,9 @@ public class Commit {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchRepoCommitResponse patchRepoCommit(PatchRepoCommitRequest request) throws Exception {
+    public PatchRepoCommitResponse patchRepoCommit(PatchRepoCommitRequest request) {
         RequestOperation<PatchRepoCommitRequest, PatchRepoCommitResponse> operation
               = new PatchRepoCommit.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -154,9 +153,9 @@ public class Commit {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveRepoCommitResponse removeRepoCommit(RemoveRepoCommitRequest request) throws Exception {
+    public RemoveRepoCommitResponse removeRepoCommit(RemoveRepoCommitRequest request) {
         RequestOperation<RemoveRepoCommitRequest, RemoveRepoCommitResponse> operation
               = new RemoveRepoCommit.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -176,9 +175,9 @@ public class Commit {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateRepoCommitResponse updateRepoCommit(UpdateRepoCommitRequest request) throws Exception {
+    public UpdateRepoCommitResponse updateRepoCommit(UpdateRepoCommitRequest request) {
         RequestOperation<UpdateRepoCommitRequest, UpdateRepoCommitResponse> operation
               = new UpdateRepoCommit.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

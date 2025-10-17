@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemoveAccountingCreditmemo;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class RemoveAccountingCreditmemoRequestBuilder {
         return this;
     }
 
-    public RemoveAccountingCreditmemoResponse call() throws Exception {
+    public RemoveAccountingCreditmemoResponse call() {
         
         RequestOperation<RemoveAccountingCreditmemoRequest, RemoveAccountingCreditmemoResponse> operation
               = new RemoveAccountingCreditmemo.Sync(sdkConfiguration, _headers);

@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.CreateCrmLeadRequest;
@@ -29,7 +28,7 @@ public class CreateCrmLeadRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<CreateCrmLeadResponse> call() throws Exception {
+    public CompletableFuture<CreateCrmLeadResponse> call() {
         
         AsyncRequestOperation<CreateCrmLeadRequest, CreateCrmLeadResponse> operation
               = new CreateCrmLead.Async(sdkConfiguration, _headers);

@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetAccountingReportRequest;
@@ -29,7 +28,7 @@ public class GetAccountingReportRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<GetAccountingReportResponse> call() throws Exception {
+    public CompletableFuture<GetAccountingReportResponse> call() {
         
         AsyncRequestOperation<GetAccountingReportRequest, GetAccountingReportResponse> operation
               = new GetAccountingReport.Async(sdkConfiguration, _headers);

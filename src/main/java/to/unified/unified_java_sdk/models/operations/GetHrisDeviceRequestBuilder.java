@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetHrisDevice;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class GetHrisDeviceRequestBuilder {
         return this;
     }
 
-    public GetHrisDeviceResponse call() throws Exception {
+    public GetHrisDeviceResponse call() {
         
         RequestOperation<GetHrisDeviceRequest, GetHrisDeviceResponse> operation
               = new GetHrisDevice.Sync(sdkConfiguration, _headers);

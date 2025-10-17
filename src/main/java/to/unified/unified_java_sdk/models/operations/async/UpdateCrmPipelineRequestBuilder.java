@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmPipelineRequest;
@@ -29,7 +28,7 @@ public class UpdateCrmPipelineRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<UpdateCrmPipelineResponse> call() throws Exception {
+    public CompletableFuture<UpdateCrmPipelineResponse> call() {
         
         AsyncRequestOperation<UpdateCrmPipelineRequest, UpdateCrmPipelineResponse> operation
               = new UpdateCrmPipeline.Async(sdkConfiguration, _headers);

@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchHrisGroupRequest;
@@ -29,7 +28,7 @@ public class PatchHrisGroupRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<PatchHrisGroupResponse> call() throws Exception {
+    public CompletableFuture<PatchHrisGroupResponse> call() {
         
         AsyncRequestOperation<PatchHrisGroupRequest, PatchHrisGroupResponse> operation
               = new PatchHrisGroup.Async(sdkConfiguration, _headers);

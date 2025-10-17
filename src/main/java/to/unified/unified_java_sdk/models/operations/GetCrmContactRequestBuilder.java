@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetCrmContact;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class GetCrmContactRequestBuilder {
         return this;
     }
 
-    public GetCrmContactResponse call() throws Exception {
+    public GetCrmContactResponse call() {
         
         RequestOperation<GetCrmContactRequest, GetCrmContactResponse> operation
               = new GetCrmContact.Sync(sdkConfiguration, _headers);

@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceCollectionRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceCollectionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceCollectionResponse;
@@ -66,9 +65,9 @@ public class Collection {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCommerceCollectionResponse createCommerceCollection(CreateCommerceCollectionRequest request) throws Exception {
+    public CreateCommerceCollectionResponse createCommerceCollection(CreateCommerceCollectionRequest request) {
         RequestOperation<CreateCommerceCollectionRequest, CreateCommerceCollectionResponse> operation
               = new CreateCommerceCollection.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -88,9 +87,9 @@ public class Collection {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetCommerceCollectionResponse getCommerceCollection(GetCommerceCollectionRequest request) throws Exception {
+    public GetCommerceCollectionResponse getCommerceCollection(GetCommerceCollectionRequest request) {
         RequestOperation<GetCommerceCollectionRequest, GetCommerceCollectionResponse> operation
               = new GetCommerceCollection.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -110,9 +109,9 @@ public class Collection {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListCommerceCollectionsResponse listCommerceCollections(ListCommerceCollectionsRequest request) throws Exception {
+    public ListCommerceCollectionsResponse listCommerceCollections(ListCommerceCollectionsRequest request) {
         RequestOperation<ListCommerceCollectionsRequest, ListCommerceCollectionsResponse> operation
               = new ListCommerceCollections.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -132,9 +131,9 @@ public class Collection {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCommerceCollectionResponse patchCommerceCollection(PatchCommerceCollectionRequest request) throws Exception {
+    public PatchCommerceCollectionResponse patchCommerceCollection(PatchCommerceCollectionRequest request) {
         RequestOperation<PatchCommerceCollectionRequest, PatchCommerceCollectionResponse> operation
               = new PatchCommerceCollection.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -154,9 +153,9 @@ public class Collection {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCommerceCollectionResponse removeCommerceCollection(RemoveCommerceCollectionRequest request) throws Exception {
+    public RemoveCommerceCollectionResponse removeCommerceCollection(RemoveCommerceCollectionRequest request) {
         RequestOperation<RemoveCommerceCollectionRequest, RemoveCommerceCollectionResponse> operation
               = new RemoveCommerceCollection.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -176,9 +175,9 @@ public class Collection {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCommerceCollectionResponse updateCommerceCollection(UpdateCommerceCollectionRequest request) throws Exception {
+    public UpdateCommerceCollectionResponse updateCommerceCollection(UpdateCommerceCollectionRequest request) {
         RequestOperation<UpdateCommerceCollectionRequest, UpdateCommerceCollectionResponse> operation
               = new UpdateCommerceCollection.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

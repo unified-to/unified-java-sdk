@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoCommitRequest;
@@ -29,7 +28,7 @@ public class UpdateRepoCommitRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<UpdateRepoCommitResponse> call() throws Exception {
+    public CompletableFuture<UpdateRepoCommitResponse> call() {
         
         AsyncRequestOperation<UpdateRepoCommitRequest, UpdateRepoCommitResponse> operation
               = new UpdateRepoCommit.Async(sdkConfiguration, _headers);

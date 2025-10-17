@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.ListEnrichCompanies;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class ListEnrichCompaniesRequestBuilder {
         return this;
     }
 
-    public ListEnrichCompaniesResponse call() throws Exception {
+    public ListEnrichCompaniesResponse call() {
         
         RequestOperation<ListEnrichCompaniesRequest, ListEnrichCompaniesResponse> operation
               = new ListEnrichCompanies.Sync(sdkConfiguration, _headers);

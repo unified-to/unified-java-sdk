@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetTaskTask;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class GetTaskTaskRequestBuilder {
         return this;
     }
 
-    public GetTaskTaskResponse call() throws Exception {
+    public GetTaskTaskResponse call() {
         
         RequestOperation<GetTaskTaskRequest, GetTaskTaskResponse> operation
               = new GetTaskTask.Sync(sdkConfiguration, _headers);

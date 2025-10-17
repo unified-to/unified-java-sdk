@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateHrisCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisCompanyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisCompanyResponse;
@@ -202,9 +201,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateHrisCompanyResponse createHrisCompany(CreateHrisCompanyRequest request) throws Exception {
+    public CreateHrisCompanyResponse createHrisCompany(CreateHrisCompanyRequest request) {
         RequestOperation<CreateHrisCompanyRequest, CreateHrisCompanyResponse> operation
               = new CreateHrisCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -224,9 +223,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateHrisDeviceResponse createHrisDevice(CreateHrisDeviceRequest request) throws Exception {
+    public CreateHrisDeviceResponse createHrisDevice(CreateHrisDeviceRequest request) {
         RequestOperation<CreateHrisDeviceRequest, CreateHrisDeviceResponse> operation
               = new CreateHrisDevice.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -246,9 +245,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateHrisEmployeeResponse createHrisEmployee(CreateHrisEmployeeRequest request) throws Exception {
+    public CreateHrisEmployeeResponse createHrisEmployee(CreateHrisEmployeeRequest request) {
         RequestOperation<CreateHrisEmployeeRequest, CreateHrisEmployeeResponse> operation
               = new CreateHrisEmployee.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -268,9 +267,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateHrisGroupResponse createHrisGroup(CreateHrisGroupRequest request) throws Exception {
+    public CreateHrisGroupResponse createHrisGroup(CreateHrisGroupRequest request) {
         RequestOperation<CreateHrisGroupRequest, CreateHrisGroupResponse> operation
               = new CreateHrisGroup.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -290,9 +289,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateHrisLocationResponse createHrisLocation(CreateHrisLocationRequest request) throws Exception {
+    public CreateHrisLocationResponse createHrisLocation(CreateHrisLocationRequest request) {
         RequestOperation<CreateHrisLocationRequest, CreateHrisLocationResponse> operation
               = new CreateHrisLocation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -312,9 +311,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateHrisTimeshiftResponse createHrisTimeshift(CreateHrisTimeshiftRequest request) throws Exception {
+    public CreateHrisTimeshiftResponse createHrisTimeshift(CreateHrisTimeshiftRequest request) {
         RequestOperation<CreateHrisTimeshiftRequest, CreateHrisTimeshiftResponse> operation
               = new CreateHrisTimeshift.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -334,9 +333,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisCompanyResponse getHrisCompany(GetHrisCompanyRequest request) throws Exception {
+    public GetHrisCompanyResponse getHrisCompany(GetHrisCompanyRequest request) {
         RequestOperation<GetHrisCompanyRequest, GetHrisCompanyResponse> operation
               = new GetHrisCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -356,9 +355,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisDeviceResponse getHrisDevice(GetHrisDeviceRequest request) throws Exception {
+    public GetHrisDeviceResponse getHrisDevice(GetHrisDeviceRequest request) {
         RequestOperation<GetHrisDeviceRequest, GetHrisDeviceResponse> operation
               = new GetHrisDevice.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -378,9 +377,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisEmployeeResponse getHrisEmployee(GetHrisEmployeeRequest request) throws Exception {
+    public GetHrisEmployeeResponse getHrisEmployee(GetHrisEmployeeRequest request) {
         RequestOperation<GetHrisEmployeeRequest, GetHrisEmployeeResponse> operation
               = new GetHrisEmployee.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -400,9 +399,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisGroupResponse getHrisGroup(GetHrisGroupRequest request) throws Exception {
+    public GetHrisGroupResponse getHrisGroup(GetHrisGroupRequest request) {
         RequestOperation<GetHrisGroupRequest, GetHrisGroupResponse> operation
               = new GetHrisGroup.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -422,9 +421,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisLocationResponse getHrisLocation(GetHrisLocationRequest request) throws Exception {
+    public GetHrisLocationResponse getHrisLocation(GetHrisLocationRequest request) {
         RequestOperation<GetHrisLocationRequest, GetHrisLocationResponse> operation
               = new GetHrisLocation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -444,9 +443,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisPayslipResponse getHrisPayslip(GetHrisPayslipRequest request) throws Exception {
+    public GetHrisPayslipResponse getHrisPayslip(GetHrisPayslipRequest request) {
         RequestOperation<GetHrisPayslipRequest, GetHrisPayslipResponse> operation
               = new GetHrisPayslip.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -466,9 +465,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisTimeoffResponse getHrisTimeoff(GetHrisTimeoffRequest request) throws Exception {
+    public GetHrisTimeoffResponse getHrisTimeoff(GetHrisTimeoffRequest request) {
         RequestOperation<GetHrisTimeoffRequest, GetHrisTimeoffResponse> operation
               = new GetHrisTimeoff.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -488,9 +487,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisTimeshiftResponse getHrisTimeshift(GetHrisTimeshiftRequest request) throws Exception {
+    public GetHrisTimeshiftResponse getHrisTimeshift(GetHrisTimeshiftRequest request) {
         RequestOperation<GetHrisTimeshiftRequest, GetHrisTimeshiftResponse> operation
               = new GetHrisTimeshift.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -510,9 +509,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisCompaniesResponse listHrisCompanies(ListHrisCompaniesRequest request) throws Exception {
+    public ListHrisCompaniesResponse listHrisCompanies(ListHrisCompaniesRequest request) {
         RequestOperation<ListHrisCompaniesRequest, ListHrisCompaniesResponse> operation
               = new ListHrisCompanies.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -532,9 +531,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisDevicesResponse listHrisDevices(ListHrisDevicesRequest request) throws Exception {
+    public ListHrisDevicesResponse listHrisDevices(ListHrisDevicesRequest request) {
         RequestOperation<ListHrisDevicesRequest, ListHrisDevicesResponse> operation
               = new ListHrisDevices.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -554,9 +553,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisEmployeesResponse listHrisEmployees(ListHrisEmployeesRequest request) throws Exception {
+    public ListHrisEmployeesResponse listHrisEmployees(ListHrisEmployeesRequest request) {
         RequestOperation<ListHrisEmployeesRequest, ListHrisEmployeesResponse> operation
               = new ListHrisEmployees.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -576,9 +575,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisGroupsResponse listHrisGroups(ListHrisGroupsRequest request) throws Exception {
+    public ListHrisGroupsResponse listHrisGroups(ListHrisGroupsRequest request) {
         RequestOperation<ListHrisGroupsRequest, ListHrisGroupsResponse> operation
               = new ListHrisGroups.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -598,9 +597,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisLocationsResponse listHrisLocations(ListHrisLocationsRequest request) throws Exception {
+    public ListHrisLocationsResponse listHrisLocations(ListHrisLocationsRequest request) {
         RequestOperation<ListHrisLocationsRequest, ListHrisLocationsResponse> operation
               = new ListHrisLocations.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -620,9 +619,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisPayslipsResponse listHrisPayslips(ListHrisPayslipsRequest request) throws Exception {
+    public ListHrisPayslipsResponse listHrisPayslips(ListHrisPayslipsRequest request) {
         RequestOperation<ListHrisPayslipsRequest, ListHrisPayslipsResponse> operation
               = new ListHrisPayslips.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -642,9 +641,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisTimeoffsResponse listHrisTimeoffs(ListHrisTimeoffsRequest request) throws Exception {
+    public ListHrisTimeoffsResponse listHrisTimeoffs(ListHrisTimeoffsRequest request) {
         RequestOperation<ListHrisTimeoffsRequest, ListHrisTimeoffsResponse> operation
               = new ListHrisTimeoffs.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -664,9 +663,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisTimeshiftsResponse listHrisTimeshifts(ListHrisTimeshiftsRequest request) throws Exception {
+    public ListHrisTimeshiftsResponse listHrisTimeshifts(ListHrisTimeshiftsRequest request) {
         RequestOperation<ListHrisTimeshiftsRequest, ListHrisTimeshiftsResponse> operation
               = new ListHrisTimeshifts.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -686,9 +685,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchHrisCompanyResponse patchHrisCompany(PatchHrisCompanyRequest request) throws Exception {
+    public PatchHrisCompanyResponse patchHrisCompany(PatchHrisCompanyRequest request) {
         RequestOperation<PatchHrisCompanyRequest, PatchHrisCompanyResponse> operation
               = new PatchHrisCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -708,9 +707,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchHrisDeviceResponse patchHrisDevice(PatchHrisDeviceRequest request) throws Exception {
+    public PatchHrisDeviceResponse patchHrisDevice(PatchHrisDeviceRequest request) {
         RequestOperation<PatchHrisDeviceRequest, PatchHrisDeviceResponse> operation
               = new PatchHrisDevice.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -730,9 +729,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchHrisEmployeeResponse patchHrisEmployee(PatchHrisEmployeeRequest request) throws Exception {
+    public PatchHrisEmployeeResponse patchHrisEmployee(PatchHrisEmployeeRequest request) {
         RequestOperation<PatchHrisEmployeeRequest, PatchHrisEmployeeResponse> operation
               = new PatchHrisEmployee.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -752,9 +751,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchHrisGroupResponse patchHrisGroup(PatchHrisGroupRequest request) throws Exception {
+    public PatchHrisGroupResponse patchHrisGroup(PatchHrisGroupRequest request) {
         RequestOperation<PatchHrisGroupRequest, PatchHrisGroupResponse> operation
               = new PatchHrisGroup.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -774,9 +773,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchHrisLocationResponse patchHrisLocation(PatchHrisLocationRequest request) throws Exception {
+    public PatchHrisLocationResponse patchHrisLocation(PatchHrisLocationRequest request) {
         RequestOperation<PatchHrisLocationRequest, PatchHrisLocationResponse> operation
               = new PatchHrisLocation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -796,9 +795,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchHrisTimeshiftResponse patchHrisTimeshift(PatchHrisTimeshiftRequest request) throws Exception {
+    public PatchHrisTimeshiftResponse patchHrisTimeshift(PatchHrisTimeshiftRequest request) {
         RequestOperation<PatchHrisTimeshiftRequest, PatchHrisTimeshiftResponse> operation
               = new PatchHrisTimeshift.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -818,9 +817,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveHrisCompanyResponse removeHrisCompany(RemoveHrisCompanyRequest request) throws Exception {
+    public RemoveHrisCompanyResponse removeHrisCompany(RemoveHrisCompanyRequest request) {
         RequestOperation<RemoveHrisCompanyRequest, RemoveHrisCompanyResponse> operation
               = new RemoveHrisCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -840,9 +839,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveHrisDeviceResponse removeHrisDevice(RemoveHrisDeviceRequest request) throws Exception {
+    public RemoveHrisDeviceResponse removeHrisDevice(RemoveHrisDeviceRequest request) {
         RequestOperation<RemoveHrisDeviceRequest, RemoveHrisDeviceResponse> operation
               = new RemoveHrisDevice.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -862,9 +861,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveHrisEmployeeResponse removeHrisEmployee(RemoveHrisEmployeeRequest request) throws Exception {
+    public RemoveHrisEmployeeResponse removeHrisEmployee(RemoveHrisEmployeeRequest request) {
         RequestOperation<RemoveHrisEmployeeRequest, RemoveHrisEmployeeResponse> operation
               = new RemoveHrisEmployee.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -884,9 +883,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveHrisGroupResponse removeHrisGroup(RemoveHrisGroupRequest request) throws Exception {
+    public RemoveHrisGroupResponse removeHrisGroup(RemoveHrisGroupRequest request) {
         RequestOperation<RemoveHrisGroupRequest, RemoveHrisGroupResponse> operation
               = new RemoveHrisGroup.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -906,9 +905,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveHrisLocationResponse removeHrisLocation(RemoveHrisLocationRequest request) throws Exception {
+    public RemoveHrisLocationResponse removeHrisLocation(RemoveHrisLocationRequest request) {
         RequestOperation<RemoveHrisLocationRequest, RemoveHrisLocationResponse> operation
               = new RemoveHrisLocation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -928,9 +927,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveHrisTimeshiftResponse removeHrisTimeshift(RemoveHrisTimeshiftRequest request) throws Exception {
+    public RemoveHrisTimeshiftResponse removeHrisTimeshift(RemoveHrisTimeshiftRequest request) {
         RequestOperation<RemoveHrisTimeshiftRequest, RemoveHrisTimeshiftResponse> operation
               = new RemoveHrisTimeshift.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -950,9 +949,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateHrisCompanyResponse updateHrisCompany(UpdateHrisCompanyRequest request) throws Exception {
+    public UpdateHrisCompanyResponse updateHrisCompany(UpdateHrisCompanyRequest request) {
         RequestOperation<UpdateHrisCompanyRequest, UpdateHrisCompanyResponse> operation
               = new UpdateHrisCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -972,9 +971,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateHrisDeviceResponse updateHrisDevice(UpdateHrisDeviceRequest request) throws Exception {
+    public UpdateHrisDeviceResponse updateHrisDevice(UpdateHrisDeviceRequest request) {
         RequestOperation<UpdateHrisDeviceRequest, UpdateHrisDeviceResponse> operation
               = new UpdateHrisDevice.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -994,9 +993,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateHrisEmployeeResponse updateHrisEmployee(UpdateHrisEmployeeRequest request) throws Exception {
+    public UpdateHrisEmployeeResponse updateHrisEmployee(UpdateHrisEmployeeRequest request) {
         RequestOperation<UpdateHrisEmployeeRequest, UpdateHrisEmployeeResponse> operation
               = new UpdateHrisEmployee.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1016,9 +1015,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateHrisGroupResponse updateHrisGroup(UpdateHrisGroupRequest request) throws Exception {
+    public UpdateHrisGroupResponse updateHrisGroup(UpdateHrisGroupRequest request) {
         RequestOperation<UpdateHrisGroupRequest, UpdateHrisGroupResponse> operation
               = new UpdateHrisGroup.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1038,9 +1037,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateHrisLocationResponse updateHrisLocation(UpdateHrisLocationRequest request) throws Exception {
+    public UpdateHrisLocationResponse updateHrisLocation(UpdateHrisLocationRequest request) {
         RequestOperation<UpdateHrisLocationRequest, UpdateHrisLocationResponse> operation
               = new UpdateHrisLocation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1060,9 +1059,9 @@ public class Hris {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateHrisTimeshiftResponse updateHrisTimeshift(UpdateHrisTimeshiftRequest request) throws Exception {
+    public UpdateHrisTimeshiftResponse updateHrisTimeshift(UpdateHrisTimeshiftRequest request) {
         RequestOperation<UpdateHrisTimeshiftRequest, UpdateHrisTimeshiftResponse> operation
               = new UpdateHrisTimeshift.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

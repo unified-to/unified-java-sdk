@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingPurchaseorderRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingPurchaseorderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingPurchaseorderResponse;
@@ -66,9 +65,9 @@ public class Purchaseorder {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingPurchaseorderResponse createAccountingPurchaseorder(CreateAccountingPurchaseorderRequest request) throws Exception {
+    public CreateAccountingPurchaseorderResponse createAccountingPurchaseorder(CreateAccountingPurchaseorderRequest request) {
         RequestOperation<CreateAccountingPurchaseorderRequest, CreateAccountingPurchaseorderResponse> operation
               = new CreateAccountingPurchaseorder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -88,9 +87,9 @@ public class Purchaseorder {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingPurchaseorderResponse getAccountingPurchaseorder(GetAccountingPurchaseorderRequest request) throws Exception {
+    public GetAccountingPurchaseorderResponse getAccountingPurchaseorder(GetAccountingPurchaseorderRequest request) {
         RequestOperation<GetAccountingPurchaseorderRequest, GetAccountingPurchaseorderResponse> operation
               = new GetAccountingPurchaseorder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -110,9 +109,9 @@ public class Purchaseorder {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingPurchaseordersResponse listAccountingPurchaseorders(ListAccountingPurchaseordersRequest request) throws Exception {
+    public ListAccountingPurchaseordersResponse listAccountingPurchaseorders(ListAccountingPurchaseordersRequest request) {
         RequestOperation<ListAccountingPurchaseordersRequest, ListAccountingPurchaseordersResponse> operation
               = new ListAccountingPurchaseorders.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -132,9 +131,9 @@ public class Purchaseorder {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingPurchaseorderResponse patchAccountingPurchaseorder(PatchAccountingPurchaseorderRequest request) throws Exception {
+    public PatchAccountingPurchaseorderResponse patchAccountingPurchaseorder(PatchAccountingPurchaseorderRequest request) {
         RequestOperation<PatchAccountingPurchaseorderRequest, PatchAccountingPurchaseorderResponse> operation
               = new PatchAccountingPurchaseorder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -154,9 +153,9 @@ public class Purchaseorder {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingPurchaseorderResponse removeAccountingPurchaseorder(RemoveAccountingPurchaseorderRequest request) throws Exception {
+    public RemoveAccountingPurchaseorderResponse removeAccountingPurchaseorder(RemoveAccountingPurchaseorderRequest request) {
         RequestOperation<RemoveAccountingPurchaseorderRequest, RemoveAccountingPurchaseorderResponse> operation
               = new RemoveAccountingPurchaseorder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -176,9 +175,9 @@ public class Purchaseorder {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingPurchaseorderResponse updateAccountingPurchaseorder(UpdateAccountingPurchaseorderRequest request) throws Exception {
+    public UpdateAccountingPurchaseorderResponse updateAccountingPurchaseorder(UpdateAccountingPurchaseorderRequest request) {
         RequestOperation<UpdateAccountingPurchaseorderRequest, UpdateAccountingPurchaseorderResponse> operation
               = new UpdateAccountingPurchaseorder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

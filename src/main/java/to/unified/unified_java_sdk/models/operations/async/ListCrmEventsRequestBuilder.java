@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListCrmEventsRequest;
@@ -29,7 +28,7 @@ public class ListCrmEventsRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<ListCrmEventsResponse> call() throws Exception {
+    public CompletableFuture<ListCrmEventsResponse> call() {
         
         AsyncRequestOperation<ListCrmEventsRequest, ListCrmEventsResponse> operation
               = new ListCrmEvents.Async(sdkConfiguration, _headers);

@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemoveRepoBranch;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class RemoveRepoBranchRequestBuilder {
         return this;
     }
 
-    public RemoveRepoBranchResponse call() throws Exception {
+    public RemoveRepoBranchResponse call() {
         
         RequestOperation<RemoveRepoBranchRequest, RemoveRepoBranchResponse> operation
               = new RemoveRepoBranch.Sync(sdkConfiguration, _headers);

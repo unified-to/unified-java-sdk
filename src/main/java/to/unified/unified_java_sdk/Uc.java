@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateUcCommentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateUcCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateUcCommentResponse;
@@ -118,9 +117,9 @@ public class Uc {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateUcCommentResponse createUcComment(CreateUcCommentRequest request) throws Exception {
+    public CreateUcCommentResponse createUcComment(CreateUcCommentRequest request) {
         RequestOperation<CreateUcCommentRequest, CreateUcCommentResponse> operation
               = new CreateUcComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -140,9 +139,9 @@ public class Uc {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateUcContactResponse createUcContact(CreateUcContactRequest request) throws Exception {
+    public CreateUcContactResponse createUcContact(CreateUcContactRequest request) {
         RequestOperation<CreateUcContactRequest, CreateUcContactResponse> operation
               = new CreateUcContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -162,9 +161,9 @@ public class Uc {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateUcRecordingResponse createUcRecording(CreateUcRecordingRequest request) throws Exception {
+    public CreateUcRecordingResponse createUcRecording(CreateUcRecordingRequest request) {
         RequestOperation<CreateUcRecordingRequest, CreateUcRecordingResponse> operation
               = new CreateUcRecording.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -184,9 +183,9 @@ public class Uc {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetUcCommentResponse getUcComment(GetUcCommentRequest request) throws Exception {
+    public GetUcCommentResponse getUcComment(GetUcCommentRequest request) {
         RequestOperation<GetUcCommentRequest, GetUcCommentResponse> operation
               = new GetUcComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -206,9 +205,9 @@ public class Uc {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetUcContactResponse getUcContact(GetUcContactRequest request) throws Exception {
+    public GetUcContactResponse getUcContact(GetUcContactRequest request) {
         RequestOperation<GetUcContactRequest, GetUcContactResponse> operation
               = new GetUcContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -228,9 +227,9 @@ public class Uc {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetUcRecordingResponse getUcRecording(GetUcRecordingRequest request) throws Exception {
+    public GetUcRecordingResponse getUcRecording(GetUcRecordingRequest request) {
         RequestOperation<GetUcRecordingRequest, GetUcRecordingResponse> operation
               = new GetUcRecording.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -250,9 +249,9 @@ public class Uc {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListUcCallsResponse listUcCalls(ListUcCallsRequest request) throws Exception {
+    public ListUcCallsResponse listUcCalls(ListUcCallsRequest request) {
         RequestOperation<ListUcCallsRequest, ListUcCallsResponse> operation
               = new ListUcCalls.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -272,9 +271,9 @@ public class Uc {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListUcCommentsResponse listUcComments(ListUcCommentsRequest request) throws Exception {
+    public ListUcCommentsResponse listUcComments(ListUcCommentsRequest request) {
         RequestOperation<ListUcCommentsRequest, ListUcCommentsResponse> operation
               = new ListUcComments.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -294,9 +293,9 @@ public class Uc {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListUcContactsResponse listUcContacts(ListUcContactsRequest request) throws Exception {
+    public ListUcContactsResponse listUcContacts(ListUcContactsRequest request) {
         RequestOperation<ListUcContactsRequest, ListUcContactsResponse> operation
               = new ListUcContacts.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -316,9 +315,9 @@ public class Uc {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListUcRecordingsResponse listUcRecordings(ListUcRecordingsRequest request) throws Exception {
+    public ListUcRecordingsResponse listUcRecordings(ListUcRecordingsRequest request) {
         RequestOperation<ListUcRecordingsRequest, ListUcRecordingsResponse> operation
               = new ListUcRecordings.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -338,9 +337,9 @@ public class Uc {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchUcCommentResponse patchUcComment(PatchUcCommentRequest request) throws Exception {
+    public PatchUcCommentResponse patchUcComment(PatchUcCommentRequest request) {
         RequestOperation<PatchUcCommentRequest, PatchUcCommentResponse> operation
               = new PatchUcComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -360,9 +359,9 @@ public class Uc {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchUcContactResponse patchUcContact(PatchUcContactRequest request) throws Exception {
+    public PatchUcContactResponse patchUcContact(PatchUcContactRequest request) {
         RequestOperation<PatchUcContactRequest, PatchUcContactResponse> operation
               = new PatchUcContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -382,9 +381,9 @@ public class Uc {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchUcRecordingResponse patchUcRecording(PatchUcRecordingRequest request) throws Exception {
+    public PatchUcRecordingResponse patchUcRecording(PatchUcRecordingRequest request) {
         RequestOperation<PatchUcRecordingRequest, PatchUcRecordingResponse> operation
               = new PatchUcRecording.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -404,9 +403,9 @@ public class Uc {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveUcCommentResponse removeUcComment(RemoveUcCommentRequest request) throws Exception {
+    public RemoveUcCommentResponse removeUcComment(RemoveUcCommentRequest request) {
         RequestOperation<RemoveUcCommentRequest, RemoveUcCommentResponse> operation
               = new RemoveUcComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -426,9 +425,9 @@ public class Uc {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveUcContactResponse removeUcContact(RemoveUcContactRequest request) throws Exception {
+    public RemoveUcContactResponse removeUcContact(RemoveUcContactRequest request) {
         RequestOperation<RemoveUcContactRequest, RemoveUcContactResponse> operation
               = new RemoveUcContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -448,9 +447,9 @@ public class Uc {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveUcRecordingResponse removeUcRecording(RemoveUcRecordingRequest request) throws Exception {
+    public RemoveUcRecordingResponse removeUcRecording(RemoveUcRecordingRequest request) {
         RequestOperation<RemoveUcRecordingRequest, RemoveUcRecordingResponse> operation
               = new RemoveUcRecording.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -470,9 +469,9 @@ public class Uc {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateUcCommentResponse updateUcComment(UpdateUcCommentRequest request) throws Exception {
+    public UpdateUcCommentResponse updateUcComment(UpdateUcCommentRequest request) {
         RequestOperation<UpdateUcCommentRequest, UpdateUcCommentResponse> operation
               = new UpdateUcComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -492,9 +491,9 @@ public class Uc {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateUcContactResponse updateUcContact(UpdateUcContactRequest request) throws Exception {
+    public UpdateUcContactResponse updateUcContact(UpdateUcContactRequest request) {
         RequestOperation<UpdateUcContactRequest, UpdateUcContactResponse> operation
               = new UpdateUcContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -514,9 +513,9 @@ public class Uc {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateUcRecordingResponse updateUcRecording(UpdateUcRecordingRequest request) throws Exception {
+    public UpdateUcRecordingResponse updateUcRecording(UpdateUcRecordingRequest request) {
         RequestOperation<UpdateUcRecordingRequest, UpdateUcRecordingResponse> operation
               = new UpdateUcRecording.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

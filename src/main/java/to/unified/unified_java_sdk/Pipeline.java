@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateCrmPipelineRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCrmPipelineRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCrmPipelineResponse;
@@ -66,9 +65,9 @@ public class Pipeline {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCrmPipelineResponse createCrmPipeline(CreateCrmPipelineRequest request) throws Exception {
+    public CreateCrmPipelineResponse createCrmPipeline(CreateCrmPipelineRequest request) {
         RequestOperation<CreateCrmPipelineRequest, CreateCrmPipelineResponse> operation
               = new CreateCrmPipeline.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -88,9 +87,9 @@ public class Pipeline {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetCrmPipelineResponse getCrmPipeline(GetCrmPipelineRequest request) throws Exception {
+    public GetCrmPipelineResponse getCrmPipeline(GetCrmPipelineRequest request) {
         RequestOperation<GetCrmPipelineRequest, GetCrmPipelineResponse> operation
               = new GetCrmPipeline.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -110,9 +109,9 @@ public class Pipeline {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmPipelinesResponse listCrmPipelines(ListCrmPipelinesRequest request) throws Exception {
+    public ListCrmPipelinesResponse listCrmPipelines(ListCrmPipelinesRequest request) {
         RequestOperation<ListCrmPipelinesRequest, ListCrmPipelinesResponse> operation
               = new ListCrmPipelines.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -132,9 +131,9 @@ public class Pipeline {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCrmPipelineResponse patchCrmPipeline(PatchCrmPipelineRequest request) throws Exception {
+    public PatchCrmPipelineResponse patchCrmPipeline(PatchCrmPipelineRequest request) {
         RequestOperation<PatchCrmPipelineRequest, PatchCrmPipelineResponse> operation
               = new PatchCrmPipeline.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -154,9 +153,9 @@ public class Pipeline {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCrmPipelineResponse removeCrmPipeline(RemoveCrmPipelineRequest request) throws Exception {
+    public RemoveCrmPipelineResponse removeCrmPipeline(RemoveCrmPipelineRequest request) {
         RequestOperation<RemoveCrmPipelineRequest, RemoveCrmPipelineResponse> operation
               = new RemoveCrmPipeline.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -176,9 +175,9 @@ public class Pipeline {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmPipelineResponse updateCrmPipeline(UpdateCrmPipelineRequest request) throws Exception {
+    public UpdateCrmPipelineResponse updateCrmPipeline(UpdateCrmPipelineRequest request) {
         RequestOperation<UpdateCrmPipelineRequest, UpdateCrmPipelineResponse> operation
               = new UpdateCrmPipeline.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

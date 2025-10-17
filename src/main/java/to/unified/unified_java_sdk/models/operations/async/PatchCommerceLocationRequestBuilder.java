@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceLocationRequest;
@@ -29,7 +28,7 @@ public class PatchCommerceLocationRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<PatchCommerceLocationResponse> call() throws Exception {
+    public CompletableFuture<PatchCommerceLocationResponse> call() {
         
         AsyncRequestOperation<PatchCommerceLocationRequest, PatchCommerceLocationResponse> operation
               = new PatchCommerceLocation.Async(sdkConfiguration, _headers);

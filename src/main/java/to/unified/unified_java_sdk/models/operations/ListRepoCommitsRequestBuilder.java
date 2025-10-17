@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.ListRepoCommits;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class ListRepoCommitsRequestBuilder {
         return this;
     }
 
-    public ListRepoCommitsResponse call() throws Exception {
+    public ListRepoCommitsResponse call() {
         
         RequestOperation<ListRepoCommitsRequest, ListRepoCommitsResponse> operation
               = new ListRepoCommits.Sync(sdkConfiguration, _headers);

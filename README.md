@@ -35,7 +35,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.40.6'
+implementation 'to.unified:unified-java-sdk:0.41.0'
 ```
 
 Maven:
@@ -43,7 +43,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.40.6</version>
+    <version>0.41.0</version>
 </dependency>
 ```
 
@@ -171,6 +171,7 @@ public class Application {
 * [createAccountingCategory](docs/sdks/accounting/README.md#createaccountingcategory) - Create a category
 * [createAccountingContact](docs/sdks/accounting/README.md#createaccountingcontact) - Create a contact
 * [createAccountingCreditmemo](docs/sdks/accounting/README.md#createaccountingcreditmemo) - Create a creditmemo
+* [createAccountingExpense](docs/sdks/accounting/README.md#createaccountingexpense) - Create an expense
 * [createAccountingInvoice](docs/sdks/accounting/README.md#createaccountinginvoice) - Create an invoice
 * [createAccountingJournal](docs/sdks/accounting/README.md#createaccountingjournal) - Create a journal
 * [createAccountingOrder](docs/sdks/accounting/README.md#createaccountingorder) - Create an order
@@ -184,6 +185,7 @@ public class Application {
 * [getAccountingCategory](docs/sdks/accounting/README.md#getaccountingcategory) - Retrieve a category
 * [getAccountingContact](docs/sdks/accounting/README.md#getaccountingcontact) - Retrieve a contact
 * [getAccountingCreditmemo](docs/sdks/accounting/README.md#getaccountingcreditmemo) - Retrieve a creditmemo
+* [getAccountingExpense](docs/sdks/accounting/README.md#getaccountingexpense) - Retrieve an expense
 * [getAccountingInvoice](docs/sdks/accounting/README.md#getaccountinginvoice) - Retrieve an invoice
 * [getAccountingJournal](docs/sdks/accounting/README.md#getaccountingjournal) - Retrieve a journal
 * [getAccountingOrder](docs/sdks/accounting/README.md#getaccountingorder) - Retrieve an order
@@ -201,6 +203,7 @@ public class Application {
 * [listAccountingCategories](docs/sdks/accounting/README.md#listaccountingcategories) - List all categories
 * [listAccountingContacts](docs/sdks/accounting/README.md#listaccountingcontacts) - List all contacts
 * [listAccountingCreditmemoes](docs/sdks/accounting/README.md#listaccountingcreditmemoes) - List all creditmemoes
+* [listAccountingExpenses](docs/sdks/accounting/README.md#listaccountingexpenses) - List all expenses
 * [listAccountingInvoices](docs/sdks/accounting/README.md#listaccountinginvoices) - List all invoices
 * [listAccountingJournals](docs/sdks/accounting/README.md#listaccountingjournals) - List all journals
 * [listAccountingOrders](docs/sdks/accounting/README.md#listaccountingorders) - List all orders
@@ -217,6 +220,7 @@ public class Application {
 * [patchAccountingCategory](docs/sdks/accounting/README.md#patchaccountingcategory) - Update a category
 * [patchAccountingContact](docs/sdks/accounting/README.md#patchaccountingcontact) - Update a contact
 * [patchAccountingCreditmemo](docs/sdks/accounting/README.md#patchaccountingcreditmemo) - Update a creditmemo
+* [patchAccountingExpense](docs/sdks/accounting/README.md#patchaccountingexpense) - Update an expense
 * [patchAccountingInvoice](docs/sdks/accounting/README.md#patchaccountinginvoice) - Update an invoice
 * [patchAccountingJournal](docs/sdks/accounting/README.md#patchaccountingjournal) - Update a journal
 * [patchAccountingOrder](docs/sdks/accounting/README.md#patchaccountingorder) - Update an order
@@ -229,6 +233,7 @@ public class Application {
 * [removeAccountingCategory](docs/sdks/accounting/README.md#removeaccountingcategory) - Remove a category
 * [removeAccountingContact](docs/sdks/accounting/README.md#removeaccountingcontact) - Remove a contact
 * [removeAccountingCreditmemo](docs/sdks/accounting/README.md#removeaccountingcreditmemo) - Remove a creditmemo
+* [removeAccountingExpense](docs/sdks/accounting/README.md#removeaccountingexpense) - Remove an expense
 * [removeAccountingInvoice](docs/sdks/accounting/README.md#removeaccountinginvoice) - Remove an invoice
 * [removeAccountingJournal](docs/sdks/accounting/README.md#removeaccountingjournal) - Remove a journal
 * [removeAccountingOrder](docs/sdks/accounting/README.md#removeaccountingorder) - Remove an order
@@ -241,6 +246,7 @@ public class Application {
 * [updateAccountingCategory](docs/sdks/accounting/README.md#updateaccountingcategory) - Update a category
 * [updateAccountingContact](docs/sdks/accounting/README.md#updateaccountingcontact) - Update a contact
 * [updateAccountingCreditmemo](docs/sdks/accounting/README.md#updateaccountingcreditmemo) - Update a creditmemo
+* [updateAccountingExpense](docs/sdks/accounting/README.md#updateaccountingexpense) - Update an expense
 * [updateAccountingInvoice](docs/sdks/accounting/README.md#updateaccountinginvoice) - Update an invoice
 * [updateAccountingJournal](docs/sdks/accounting/README.md#updateaccountingjournal) - Update a journal
 * [updateAccountingOrder](docs/sdks/accounting/README.md#updateaccountingorder) - Update an order
@@ -680,6 +686,15 @@ public class Application {
 * [removeCrmEvent](docs/sdks/event/README.md#removecrmevent) - Remove an event
 * [updateCalendarEvent](docs/sdks/event/README.md#updatecalendarevent) - Update an event
 * [updateCrmEvent](docs/sdks/event/README.md#updatecrmevent) - Update an event
+
+### [expense()](docs/sdks/expense/README.md)
+
+* [createAccountingExpense](docs/sdks/expense/README.md#createaccountingexpense) - Create an expense
+* [getAccountingExpense](docs/sdks/expense/README.md#getaccountingexpense) - Retrieve an expense
+* [listAccountingExpenses](docs/sdks/expense/README.md#listaccountingexpenses) - List all expenses
+* [patchAccountingExpense](docs/sdks/expense/README.md#patchaccountingexpense) - Update an expense
+* [removeAccountingExpense](docs/sdks/expense/README.md#removeaccountingexpense) - Remove an expense
+* [updateAccountingExpense](docs/sdks/expense/README.md#updateaccountingexpense) - Update an expense
 
 ### [file()](docs/sdks/file/README.md)
 
@@ -1553,14 +1568,19 @@ public class Application {
 
 Handling errors in this SDK should largely match your expectations. All operations return a response object or raise an exception.
 
-By default, an API error will throw a `models/errors/SDKError` exception. When custom error responses are specified for an operation, the SDK may also throw their associated exception. You can refer to respective *Errors* tables in SDK docs for more details on possible exception types for each operation. For example, the `createAccountingAccount` method throws the following exceptions:
 
-| Error Type             | Status Code | Content Type |
-| ---------------------- | ----------- | ------------ |
-| models/errors/SDKError | 4XX, 5XX    | \*/\*        |
+[`UnifiedToError`](./src/main/java/models/errors/UnifiedToError.java) is the base class for all HTTP error responses. It has the following properties:
+
+| Method           | Type                        | Description                                                              |
+| ---------------- | --------------------------- | ------------------------------------------------------------------------ |
+| `message()`      | `String`                    | Error message                                                            |
+| `code()`         | `int`                       | HTTP response status code eg `404`                                       |
+| `headers`        | `Map<String, List<String>>` | HTTP response headers                                                    |
+| `body()`         | `byte[]`                    | HTTP body as a byte array. Can be empty array if no body is returned.    |
+| `bodyAsString()` | `String`                    | HTTP body as a UTF-8 string. Can be empty string if no body is returned. |
+| `rawResponse()`  | `HttpResponse<?>`           | Raw HTTP response (body already read and not available for re-read)      |
 
 ### Example
-
 ```java
 package hello.world;
 
@@ -1597,6 +1617,24 @@ public class Application {
     }
 }
 ```
+
+### Error Classes
+**Primary error:**
+* [`UnifiedToError`](./src/main/java/models/errors/UnifiedToError.java): The base class for HTTP error responses.
+
+<details><summary>Less common errors (6)</summary>
+
+<br />
+
+**Network errors:**
+* `java.io.IOException` (always wrapped by `java.io.UncheckedIOException`). Commonly encountered subclasses of
+`IOException` include `java.net.ConnectException`, `java.net.SocketTimeoutException`, `EOFException` (there are
+many more subclasses in the JDK platform).
+
+**Inherit from [`UnifiedToError`](./src/main/java/models/errors/UnifiedToError.java)**:
+
+
+</details>
 <!-- End Error Handling [errors] -->
 
 <!-- Start Asynchronous Support [async-support] -->

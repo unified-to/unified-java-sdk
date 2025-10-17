@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetTicketingCategory;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class GetTicketingCategoryRequestBuilder {
         return this;
     }
 
-    public GetTicketingCategoryResponse call() throws Exception {
+    public GetTicketingCategoryResponse call() {
         
         RequestOperation<GetTicketingCategoryRequest, GetTicketingCategoryResponse> operation
               = new GetTicketingCategory.Sync(sdkConfiguration, _headers);

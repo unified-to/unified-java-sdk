@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentResponse;
@@ -66,9 +65,9 @@ public class Document {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAtsDocumentResponse createAtsDocument(CreateAtsDocumentRequest request) throws Exception {
+    public CreateAtsDocumentResponse createAtsDocument(CreateAtsDocumentRequest request) {
         RequestOperation<CreateAtsDocumentRequest, CreateAtsDocumentResponse> operation
               = new CreateAtsDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -88,9 +87,9 @@ public class Document {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetAtsDocumentResponse getAtsDocument(GetAtsDocumentRequest request) throws Exception {
+    public GetAtsDocumentResponse getAtsDocument(GetAtsDocumentRequest request) {
         RequestOperation<GetAtsDocumentRequest, GetAtsDocumentResponse> operation
               = new GetAtsDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -110,9 +109,9 @@ public class Document {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListAtsDocumentsResponse listAtsDocuments(ListAtsDocumentsRequest request) throws Exception {
+    public ListAtsDocumentsResponse listAtsDocuments(ListAtsDocumentsRequest request) {
         RequestOperation<ListAtsDocumentsRequest, ListAtsDocumentsResponse> operation
               = new ListAtsDocuments.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -132,9 +131,9 @@ public class Document {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAtsDocumentResponse patchAtsDocument(PatchAtsDocumentRequest request) throws Exception {
+    public PatchAtsDocumentResponse patchAtsDocument(PatchAtsDocumentRequest request) {
         RequestOperation<PatchAtsDocumentRequest, PatchAtsDocumentResponse> operation
               = new PatchAtsDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -154,9 +153,9 @@ public class Document {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAtsDocumentResponse removeAtsDocument(RemoveAtsDocumentRequest request) throws Exception {
+    public RemoveAtsDocumentResponse removeAtsDocument(RemoveAtsDocumentRequest request) {
         RequestOperation<RemoveAtsDocumentRequest, RemoveAtsDocumentResponse> operation
               = new RemoveAtsDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -176,9 +175,9 @@ public class Document {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAtsDocumentResponse updateAtsDocument(UpdateAtsDocumentRequest request) throws Exception {
+    public UpdateAtsDocumentResponse updateAtsDocument(UpdateAtsDocumentRequest request) {
         RequestOperation<UpdateAtsDocumentRequest, UpdateAtsDocumentResponse> operation
               = new UpdateAtsDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.PatchLmsInstructor;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class PatchLmsInstructorRequestBuilder {
         return this;
     }
 
-    public PatchLmsInstructorResponse call() throws Exception {
+    public PatchLmsInstructorResponse call() {
         
         RequestOperation<PatchLmsInstructorRequest, PatchLmsInstructorResponse> operation
               = new PatchLmsInstructor.Sync(sdkConfiguration, _headers);

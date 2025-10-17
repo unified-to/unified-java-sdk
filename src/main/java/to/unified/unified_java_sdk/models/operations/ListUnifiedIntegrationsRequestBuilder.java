@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.ListUnifiedIntegrations;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class ListUnifiedIntegrationsRequestBuilder {
         return this;
     }
 
-    public ListUnifiedIntegrationsResponse call() throws Exception {
+    public ListUnifiedIntegrationsResponse call() {
         
         RequestOperation<ListUnifiedIntegrationsRequest, ListUnifiedIntegrationsResponse> operation
               = new ListUnifiedIntegrations.Sync(sdkConfiguration, _headers);

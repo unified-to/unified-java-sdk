@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.GetAccountingBalancesheetRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingBalancesheetRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAccountingBalancesheetResponse;
@@ -50,9 +49,9 @@ public class Balancesheet {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingBalancesheetResponse getAccountingBalancesheet(GetAccountingBalancesheetRequest request) throws Exception {
+    public GetAccountingBalancesheetResponse getAccountingBalancesheet(GetAccountingBalancesheetRequest request) {
         RequestOperation<GetAccountingBalancesheetRequest, GetAccountingBalancesheetResponse> operation
               = new GetAccountingBalancesheet.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -72,9 +71,9 @@ public class Balancesheet {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingBalancesheetsResponse listAccountingBalancesheets(ListAccountingBalancesheetsRequest request) throws Exception {
+    public ListAccountingBalancesheetsResponse listAccountingBalancesheets(ListAccountingBalancesheetsRequest request) {
         RequestOperation<ListAccountingBalancesheetsRequest, ListAccountingBalancesheetsResponse> operation
               = new ListAccountingBalancesheets.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.UpdateKmsPageRequest;
@@ -29,7 +28,7 @@ public class UpdateKmsPageRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<UpdateKmsPageResponse> call() throws Exception {
+    public CompletableFuture<UpdateKmsPageResponse> call() {
         
         AsyncRequestOperation<UpdateKmsPageRequest, UpdateKmsPageResponse> operation
               = new UpdateKmsPage.Async(sdkConfiguration, _headers);

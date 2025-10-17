@@ -95,6 +95,12 @@ public class ListMessagingMessagesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private Optional<String> updatedGte;
 
+    /**
+     * The user/employee ID to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
+    private Optional<String> userId;
+
     @JsonCreator
     public ListMessagingMessagesRequest(
             Optional<String> channelId,
@@ -110,7 +116,8 @@ public class ListMessagingMessagesRequest {
             Optional<String> raw,
             Optional<String> sort,
             Optional<String> startGte,
-            Optional<String> updatedGte) {
+            Optional<String> updatedGte,
+            Optional<String> userId) {
         Utils.checkNotNull(channelId, "channelId");
         Utils.checkNotNull(connectionId, "connectionId");
         Utils.checkNotNull(endLe, "endLe");
@@ -125,6 +132,7 @@ public class ListMessagingMessagesRequest {
         Utils.checkNotNull(sort, "sort");
         Utils.checkNotNull(startGte, "startGte");
         Utils.checkNotNull(updatedGte, "updatedGte");
+        Utils.checkNotNull(userId, "userId");
         this.channelId = channelId;
         this.connectionId = connectionId;
         this.endLe = endLe;
@@ -139,6 +147,7 @@ public class ListMessagingMessagesRequest {
         this.sort = sort;
         this.startGte = startGte;
         this.updatedGte = updatedGte;
+        this.userId = userId;
     }
     
     public ListMessagingMessagesRequest(
@@ -147,7 +156,7 @@ public class ListMessagingMessagesRequest {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     /**
@@ -251,6 +260,14 @@ public class ListMessagingMessagesRequest {
     @JsonIgnore
     public Optional<String> updatedGte() {
         return updatedGte;
+    }
+
+    /**
+     * The user/employee ID to filter by
+     */
+    @JsonIgnore
+    public Optional<String> userId() {
+        return userId;
     }
 
     public static Builder builder() {
@@ -494,6 +511,25 @@ public class ListMessagingMessagesRequest {
         return this;
     }
 
+    /**
+     * The user/employee ID to filter by
+     */
+    public ListMessagingMessagesRequest withUserId(String userId) {
+        Utils.checkNotNull(userId, "userId");
+        this.userId = Optional.ofNullable(userId);
+        return this;
+    }
+
+
+    /**
+     * The user/employee ID to filter by
+     */
+    public ListMessagingMessagesRequest withUserId(Optional<String> userId) {
+        Utils.checkNotNull(userId, "userId");
+        this.userId = userId;
+        return this;
+    }
+
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -517,7 +553,8 @@ public class ListMessagingMessagesRequest {
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
             Utils.enhancedDeepEquals(this.startGte, other.startGte) &&
-            Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte);
+            Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte) &&
+            Utils.enhancedDeepEquals(this.userId, other.userId);
     }
     
     @Override
@@ -527,7 +564,7 @@ public class ListMessagingMessagesRequest {
             expand, fields, limit,
             offset, order, parentId,
             query, raw, sort,
-            startGte, updatedGte);
+            startGte, updatedGte, userId);
     }
     
     @Override
@@ -546,7 +583,8 @@ public class ListMessagingMessagesRequest {
                 "raw", raw,
                 "sort", sort,
                 "startGte", startGte,
-                "updatedGte", updatedGte);
+                "updatedGte", updatedGte,
+                "userId", userId);
     }
 
     @SuppressWarnings("UnusedReturnValue")
@@ -579,6 +617,8 @@ public class ListMessagingMessagesRequest {
         private Optional<String> startGte = Optional.empty();
 
         private Optional<String> updatedGte = Optional.empty();
+
+        private Optional<String> userId = Optional.empty();
 
         private Builder() {
           // force use of static builder() method
@@ -821,6 +861,25 @@ public class ListMessagingMessagesRequest {
             return this;
         }
 
+
+        /**
+         * The user/employee ID to filter by
+         */
+        public Builder userId(String userId) {
+            Utils.checkNotNull(userId, "userId");
+            this.userId = Optional.ofNullable(userId);
+            return this;
+        }
+
+        /**
+         * The user/employee ID to filter by
+         */
+        public Builder userId(Optional<String> userId) {
+            Utils.checkNotNull(userId, "userId");
+            this.userId = userId;
+            return this;
+        }
+
         public ListMessagingMessagesRequest build() {
 
             return new ListMessagingMessagesRequest(
@@ -828,7 +887,7 @@ public class ListMessagingMessagesRequest {
                 expand, fields, limit,
                 offset, order, parentId,
                 query, raw, sort,
-                startGte, updatedGte);
+                startGte, updatedGte, userId);
         }
 
     }

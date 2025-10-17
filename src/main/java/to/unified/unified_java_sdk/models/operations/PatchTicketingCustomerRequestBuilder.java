@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.PatchTicketingCustomer;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class PatchTicketingCustomerRequestBuilder {
         return this;
     }
 
-    public PatchTicketingCustomerResponse call() throws Exception {
+    public PatchTicketingCustomerResponse call() {
         
         RequestOperation<PatchTicketingCustomerRequest, PatchTicketingCustomerResponse> operation
               = new PatchTicketingCustomer.Sync(sdkConfiguration, _headers);

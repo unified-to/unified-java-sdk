@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftRequest;
@@ -29,7 +28,7 @@ public class CreateHrisTimeshiftRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<CreateHrisTimeshiftResponse> call() throws Exception {
+    public CompletableFuture<CreateHrisTimeshiftResponse> call() {
         
         AsyncRequestOperation<CreateHrisTimeshiftRequest, CreateHrisTimeshiftResponse> operation
               = new CreateHrisTimeshift.Async(sdkConfiguration, _headers);

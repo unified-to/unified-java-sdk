@@ -60,6 +60,9 @@ public class UnifiedTo {
     private final Creditmemo creditmemo;
 
 
+    private final Expense expense;
+
+
     private final Invoice invoice;
 
 
@@ -389,6 +392,11 @@ public class UnifiedTo {
 
     public Creditmemo creditmemo() {
         return creditmemo;
+    }
+
+
+    public Expense expense() {
+        return expense;
     }
 
 
@@ -1030,6 +1038,7 @@ public class UnifiedTo {
         this.category = new Category(sdkConfiguration);
         this.contact = new Contact(sdkConfiguration);
         this.creditmemo = new Creditmemo(sdkConfiguration);
+        this.expense = new Expense(sdkConfiguration);
         this.invoice = new Invoice(sdkConfiguration);
         this.journal = new Journal(sdkConfiguration);
         this.order = new Order(sdkConfiguration);

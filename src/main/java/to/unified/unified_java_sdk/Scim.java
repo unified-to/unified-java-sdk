@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateScimGroupsRequest;
 import to.unified.unified_java_sdk.models.operations.CreateScimGroupsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateScimGroupsResponse;
@@ -90,9 +89,9 @@ public class Scim {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateScimGroupsResponse createScimGroups(CreateScimGroupsRequest request) throws Exception {
+    public CreateScimGroupsResponse createScimGroups(CreateScimGroupsRequest request) {
         RequestOperation<CreateScimGroupsRequest, CreateScimGroupsResponse> operation
               = new CreateScimGroups.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -112,9 +111,9 @@ public class Scim {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateScimUsersResponse createScimUsers(CreateScimUsersRequest request) throws Exception {
+    public CreateScimUsersResponse createScimUsers(CreateScimUsersRequest request) {
         RequestOperation<CreateScimUsersRequest, CreateScimUsersResponse> operation
               = new CreateScimUsers.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -134,9 +133,9 @@ public class Scim {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetScimGroupsResponse getScimGroups(GetScimGroupsRequest request) throws Exception {
+    public GetScimGroupsResponse getScimGroups(GetScimGroupsRequest request) {
         RequestOperation<GetScimGroupsRequest, GetScimGroupsResponse> operation
               = new GetScimGroups.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -156,9 +155,9 @@ public class Scim {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetScimUsersResponse getScimUsers(GetScimUsersRequest request) throws Exception {
+    public GetScimUsersResponse getScimUsers(GetScimUsersRequest request) {
         RequestOperation<GetScimUsersRequest, GetScimUsersResponse> operation
               = new GetScimUsers.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -178,9 +177,9 @@ public class Scim {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListScimGroupsResponse listScimGroups(ListScimGroupsRequest request) throws Exception {
+    public ListScimGroupsResponse listScimGroups(ListScimGroupsRequest request) {
         RequestOperation<ListScimGroupsRequest, ListScimGroupsResponse> operation
               = new ListScimGroups.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -200,9 +199,9 @@ public class Scim {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListScimUsersResponse listScimUsers(ListScimUsersRequest request) throws Exception {
+    public ListScimUsersResponse listScimUsers(ListScimUsersRequest request) {
         RequestOperation<ListScimUsersRequest, ListScimUsersResponse> operation
               = new ListScimUsers.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -222,9 +221,9 @@ public class Scim {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchScimGroupsResponse patchScimGroups(PatchScimGroupsRequest request) throws Exception {
+    public PatchScimGroupsResponse patchScimGroups(PatchScimGroupsRequest request) {
         RequestOperation<PatchScimGroupsRequest, PatchScimGroupsResponse> operation
               = new PatchScimGroups.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -244,9 +243,9 @@ public class Scim {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchScimUsersResponse patchScimUsers(PatchScimUsersRequest request) throws Exception {
+    public PatchScimUsersResponse patchScimUsers(PatchScimUsersRequest request) {
         RequestOperation<PatchScimUsersRequest, PatchScimUsersResponse> operation
               = new PatchScimUsers.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -266,9 +265,9 @@ public class Scim {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveScimGroupsResponse removeScimGroups(RemoveScimGroupsRequest request) throws Exception {
+    public RemoveScimGroupsResponse removeScimGroups(RemoveScimGroupsRequest request) {
         RequestOperation<RemoveScimGroupsRequest, RemoveScimGroupsResponse> operation
               = new RemoveScimGroups.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -288,9 +287,9 @@ public class Scim {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveScimUsersResponse removeScimUsers(RemoveScimUsersRequest request) throws Exception {
+    public RemoveScimUsersResponse removeScimUsers(RemoveScimUsersRequest request) {
         RequestOperation<RemoveScimUsersRequest, RemoveScimUsersResponse> operation
               = new RemoveScimUsers.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -310,9 +309,9 @@ public class Scim {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateScimGroupsResponse updateScimGroups(UpdateScimGroupsRequest request) throws Exception {
+    public UpdateScimGroupsResponse updateScimGroups(UpdateScimGroupsRequest request) {
         RequestOperation<UpdateScimGroupsRequest, UpdateScimGroupsResponse> operation
               = new UpdateScimGroups.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -332,9 +331,9 @@ public class Scim {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateScimUsersResponse updateScimUsers(UpdateScimUsersRequest request) throws Exception {
+    public UpdateScimUsersResponse updateScimUsers(UpdateScimUsersRequest request) {
         RequestOperation<UpdateScimUsersRequest, UpdateScimUsersResponse> operation
               = new UpdateScimUsers.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

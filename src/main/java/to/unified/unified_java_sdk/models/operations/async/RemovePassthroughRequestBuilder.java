@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemovePassthroughRequest;
@@ -29,7 +28,7 @@ public class RemovePassthroughRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<RemovePassthroughResponse> call() throws Exception {
+    public CompletableFuture<RemovePassthroughResponse> call() {
         
         AsyncRequestOperation<RemovePassthroughRequest, RemovePassthroughResponse> operation
               = new RemovePassthrough.Async(sdkConfiguration, _headers);

@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationAuthRequest;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationAuthRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationAuthResponse;
@@ -60,9 +59,9 @@ public class Integration {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetUnifiedIntegrationAuthResponse getUnifiedIntegrationAuth(GetUnifiedIntegrationAuthRequest request) throws Exception {
+    public GetUnifiedIntegrationAuthResponse getUnifiedIntegrationAuth(GetUnifiedIntegrationAuthRequest request) {
         RequestOperation<GetUnifiedIntegrationAuthRequest, GetUnifiedIntegrationAuthResponse> operation
               = new GetUnifiedIntegrationAuth.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -86,9 +85,9 @@ public class Integration {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListUnifiedIntegrationWorkspacesResponse listUnifiedIntegrationWorkspaces(ListUnifiedIntegrationWorkspacesRequest request) throws Exception {
+    public ListUnifiedIntegrationWorkspacesResponse listUnifiedIntegrationWorkspaces(ListUnifiedIntegrationWorkspacesRequest request) {
         RequestOperation<ListUnifiedIntegrationWorkspacesRequest, ListUnifiedIntegrationWorkspacesResponse> operation
               = new ListUnifiedIntegrationWorkspaces.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -108,9 +107,9 @@ public class Integration {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListUnifiedIntegrationsResponse listUnifiedIntegrations(ListUnifiedIntegrationsRequest request) throws Exception {
+    public ListUnifiedIntegrationsResponse listUnifiedIntegrations(ListUnifiedIntegrationsRequest request) {
         RequestOperation<ListUnifiedIntegrationsRequest, ListUnifiedIntegrationsResponse> operation
               = new ListUnifiedIntegrations.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

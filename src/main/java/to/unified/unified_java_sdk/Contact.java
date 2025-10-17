@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingContactRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingContactRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingContactResponse;
@@ -114,9 +113,9 @@ public class Contact {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingContactResponse createAccountingContact(CreateAccountingContactRequest request) throws Exception {
+    public CreateAccountingContactResponse createAccountingContact(CreateAccountingContactRequest request) {
         RequestOperation<CreateAccountingContactRequest, CreateAccountingContactResponse> operation
               = new CreateAccountingContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -136,9 +135,9 @@ public class Contact {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCrmContactResponse createCrmContact(CreateCrmContactRequest request) throws Exception {
+    public CreateCrmContactResponse createCrmContact(CreateCrmContactRequest request) {
         RequestOperation<CreateCrmContactRequest, CreateCrmContactResponse> operation
               = new CreateCrmContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -158,9 +157,9 @@ public class Contact {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateUcContactResponse createUcContact(CreateUcContactRequest request) throws Exception {
+    public CreateUcContactResponse createUcContact(CreateUcContactRequest request) {
         RequestOperation<CreateUcContactRequest, CreateUcContactResponse> operation
               = new CreateUcContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -180,9 +179,9 @@ public class Contact {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingContactResponse getAccountingContact(GetAccountingContactRequest request) throws Exception {
+    public GetAccountingContactResponse getAccountingContact(GetAccountingContactRequest request) {
         RequestOperation<GetAccountingContactRequest, GetAccountingContactResponse> operation
               = new GetAccountingContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -202,9 +201,9 @@ public class Contact {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetCrmContactResponse getCrmContact(GetCrmContactRequest request) throws Exception {
+    public GetCrmContactResponse getCrmContact(GetCrmContactRequest request) {
         RequestOperation<GetCrmContactRequest, GetCrmContactResponse> operation
               = new GetCrmContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -224,9 +223,9 @@ public class Contact {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetUcContactResponse getUcContact(GetUcContactRequest request) throws Exception {
+    public GetUcContactResponse getUcContact(GetUcContactRequest request) {
         RequestOperation<GetUcContactRequest, GetUcContactResponse> operation
               = new GetUcContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -246,9 +245,9 @@ public class Contact {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingContactsResponse listAccountingContacts(ListAccountingContactsRequest request) throws Exception {
+    public ListAccountingContactsResponse listAccountingContacts(ListAccountingContactsRequest request) {
         RequestOperation<ListAccountingContactsRequest, ListAccountingContactsResponse> operation
               = new ListAccountingContacts.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -268,9 +267,9 @@ public class Contact {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmContactsResponse listCrmContacts(ListCrmContactsRequest request) throws Exception {
+    public ListCrmContactsResponse listCrmContacts(ListCrmContactsRequest request) {
         RequestOperation<ListCrmContactsRequest, ListCrmContactsResponse> operation
               = new ListCrmContacts.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -290,9 +289,9 @@ public class Contact {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListUcContactsResponse listUcContacts(ListUcContactsRequest request) throws Exception {
+    public ListUcContactsResponse listUcContacts(ListUcContactsRequest request) {
         RequestOperation<ListUcContactsRequest, ListUcContactsResponse> operation
               = new ListUcContacts.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -312,9 +311,9 @@ public class Contact {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingContactResponse patchAccountingContact(PatchAccountingContactRequest request) throws Exception {
+    public PatchAccountingContactResponse patchAccountingContact(PatchAccountingContactRequest request) {
         RequestOperation<PatchAccountingContactRequest, PatchAccountingContactResponse> operation
               = new PatchAccountingContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -334,9 +333,9 @@ public class Contact {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCrmContactResponse patchCrmContact(PatchCrmContactRequest request) throws Exception {
+    public PatchCrmContactResponse patchCrmContact(PatchCrmContactRequest request) {
         RequestOperation<PatchCrmContactRequest, PatchCrmContactResponse> operation
               = new PatchCrmContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -356,9 +355,9 @@ public class Contact {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchUcContactResponse patchUcContact(PatchUcContactRequest request) throws Exception {
+    public PatchUcContactResponse patchUcContact(PatchUcContactRequest request) {
         RequestOperation<PatchUcContactRequest, PatchUcContactResponse> operation
               = new PatchUcContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -378,9 +377,9 @@ public class Contact {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingContactResponse removeAccountingContact(RemoveAccountingContactRequest request) throws Exception {
+    public RemoveAccountingContactResponse removeAccountingContact(RemoveAccountingContactRequest request) {
         RequestOperation<RemoveAccountingContactRequest, RemoveAccountingContactResponse> operation
               = new RemoveAccountingContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -400,9 +399,9 @@ public class Contact {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCrmContactResponse removeCrmContact(RemoveCrmContactRequest request) throws Exception {
+    public RemoveCrmContactResponse removeCrmContact(RemoveCrmContactRequest request) {
         RequestOperation<RemoveCrmContactRequest, RemoveCrmContactResponse> operation
               = new RemoveCrmContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -422,9 +421,9 @@ public class Contact {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveUcContactResponse removeUcContact(RemoveUcContactRequest request) throws Exception {
+    public RemoveUcContactResponse removeUcContact(RemoveUcContactRequest request) {
         RequestOperation<RemoveUcContactRequest, RemoveUcContactResponse> operation
               = new RemoveUcContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -444,9 +443,9 @@ public class Contact {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingContactResponse updateAccountingContact(UpdateAccountingContactRequest request) throws Exception {
+    public UpdateAccountingContactResponse updateAccountingContact(UpdateAccountingContactRequest request) {
         RequestOperation<UpdateAccountingContactRequest, UpdateAccountingContactResponse> operation
               = new UpdateAccountingContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -466,9 +465,9 @@ public class Contact {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmContactResponse updateCrmContact(UpdateCrmContactRequest request) throws Exception {
+    public UpdateCrmContactResponse updateCrmContact(UpdateCrmContactRequest request) {
         RequestOperation<UpdateCrmContactRequest, UpdateCrmContactResponse> operation
               = new UpdateCrmContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -488,9 +487,9 @@ public class Contact {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateUcContactResponse updateUcContact(UpdateUcContactRequest request) throws Exception {
+    public UpdateUcContactResponse updateUcContact(UpdateUcContactRequest request) {
         RequestOperation<UpdateUcContactRequest, UpdateUcContactResponse> operation
               = new UpdateUcContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

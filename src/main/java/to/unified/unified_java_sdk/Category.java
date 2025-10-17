@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingCategoryRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingCategoryResponse;
@@ -90,9 +89,9 @@ public class Category {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingCategoryResponse createAccountingCategory(CreateAccountingCategoryRequest request) throws Exception {
+    public CreateAccountingCategoryResponse createAccountingCategory(CreateAccountingCategoryRequest request) {
         RequestOperation<CreateAccountingCategoryRequest, CreateAccountingCategoryResponse> operation
               = new CreateAccountingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -112,9 +111,9 @@ public class Category {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateTicketingCategoryResponse createTicketingCategory(CreateTicketingCategoryRequest request) throws Exception {
+    public CreateTicketingCategoryResponse createTicketingCategory(CreateTicketingCategoryRequest request) {
         RequestOperation<CreateTicketingCategoryRequest, CreateTicketingCategoryResponse> operation
               = new CreateTicketingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -134,9 +133,9 @@ public class Category {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingCategoryResponse getAccountingCategory(GetAccountingCategoryRequest request) throws Exception {
+    public GetAccountingCategoryResponse getAccountingCategory(GetAccountingCategoryRequest request) {
         RequestOperation<GetAccountingCategoryRequest, GetAccountingCategoryResponse> operation
               = new GetAccountingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -156,9 +155,9 @@ public class Category {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetTicketingCategoryResponse getTicketingCategory(GetTicketingCategoryRequest request) throws Exception {
+    public GetTicketingCategoryResponse getTicketingCategory(GetTicketingCategoryRequest request) {
         RequestOperation<GetTicketingCategoryRequest, GetTicketingCategoryResponse> operation
               = new GetTicketingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -178,9 +177,9 @@ public class Category {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingCategoriesResponse listAccountingCategories(ListAccountingCategoriesRequest request) throws Exception {
+    public ListAccountingCategoriesResponse listAccountingCategories(ListAccountingCategoriesRequest request) {
         RequestOperation<ListAccountingCategoriesRequest, ListAccountingCategoriesResponse> operation
               = new ListAccountingCategories.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -200,9 +199,9 @@ public class Category {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListTicketingCategoriesResponse listTicketingCategories(ListTicketingCategoriesRequest request) throws Exception {
+    public ListTicketingCategoriesResponse listTicketingCategories(ListTicketingCategoriesRequest request) {
         RequestOperation<ListTicketingCategoriesRequest, ListTicketingCategoriesResponse> operation
               = new ListTicketingCategories.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -222,9 +221,9 @@ public class Category {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingCategoryResponse patchAccountingCategory(PatchAccountingCategoryRequest request) throws Exception {
+    public PatchAccountingCategoryResponse patchAccountingCategory(PatchAccountingCategoryRequest request) {
         RequestOperation<PatchAccountingCategoryRequest, PatchAccountingCategoryResponse> operation
               = new PatchAccountingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -244,9 +243,9 @@ public class Category {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchTicketingCategoryResponse patchTicketingCategory(PatchTicketingCategoryRequest request) throws Exception {
+    public PatchTicketingCategoryResponse patchTicketingCategory(PatchTicketingCategoryRequest request) {
         RequestOperation<PatchTicketingCategoryRequest, PatchTicketingCategoryResponse> operation
               = new PatchTicketingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -266,9 +265,9 @@ public class Category {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingCategoryResponse removeAccountingCategory(RemoveAccountingCategoryRequest request) throws Exception {
+    public RemoveAccountingCategoryResponse removeAccountingCategory(RemoveAccountingCategoryRequest request) {
         RequestOperation<RemoveAccountingCategoryRequest, RemoveAccountingCategoryResponse> operation
               = new RemoveAccountingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -288,9 +287,9 @@ public class Category {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveTicketingCategoryResponse removeTicketingCategory(RemoveTicketingCategoryRequest request) throws Exception {
+    public RemoveTicketingCategoryResponse removeTicketingCategory(RemoveTicketingCategoryRequest request) {
         RequestOperation<RemoveTicketingCategoryRequest, RemoveTicketingCategoryResponse> operation
               = new RemoveTicketingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -310,9 +309,9 @@ public class Category {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingCategoryResponse updateAccountingCategory(UpdateAccountingCategoryRequest request) throws Exception {
+    public UpdateAccountingCategoryResponse updateAccountingCategory(UpdateAccountingCategoryRequest request) {
         RequestOperation<UpdateAccountingCategoryRequest, UpdateAccountingCategoryResponse> operation
               = new UpdateAccountingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -332,9 +331,9 @@ public class Category {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateTicketingCategoryResponse updateTicketingCategory(UpdateTicketingCategoryRequest request) throws Exception {
+    public UpdateTicketingCategoryResponse updateTicketingCategory(UpdateTicketingCategoryRequest request) {
         RequestOperation<UpdateTicketingCategoryRequest, UpdateTicketingCategoryResponse> operation
               = new UpdateTicketingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

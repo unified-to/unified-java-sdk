@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListCommerceInventoriesRequest;
@@ -29,7 +28,7 @@ public class ListCommerceInventoriesRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<ListCommerceInventoriesResponse> call() throws Exception {
+    public CompletableFuture<ListCommerceInventoriesResponse> call() {
         
         AsyncRequestOperation<ListCommerceInventoriesRequest, ListCommerceInventoriesResponse> operation
               = new ListCommerceInventories.Async(sdkConfiguration, _headers);

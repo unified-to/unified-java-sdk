@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateUnifiedConnectionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateUnifiedConnectionResponse;
 import to.unified.unified_java_sdk.models.operations.CreateUnifiedWebhookRequest;
@@ -130,9 +129,9 @@ public class Unified {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateUnifiedConnectionResponse createUnifiedConnection(Connection request) throws Exception {
+    public CreateUnifiedConnectionResponse createUnifiedConnection(Connection request) {
         RequestOperation<Connection, CreateUnifiedConnectionResponse> operation
               = new CreateUnifiedConnection.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -160,9 +159,9 @@ public class Unified {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateUnifiedWebhookResponse createUnifiedWebhook(CreateUnifiedWebhookRequest request) throws Exception {
+    public CreateUnifiedWebhookResponse createUnifiedWebhook(CreateUnifiedWebhookRequest request) {
         RequestOperation<CreateUnifiedWebhookRequest, CreateUnifiedWebhookResponse> operation
               = new CreateUnifiedWebhook.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -182,9 +181,9 @@ public class Unified {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetUnifiedApicallResponse getUnifiedApicall(GetUnifiedApicallRequest request) throws Exception {
+    public GetUnifiedApicallResponse getUnifiedApicall(GetUnifiedApicallRequest request) {
         RequestOperation<GetUnifiedApicallRequest, GetUnifiedApicallResponse> operation
               = new GetUnifiedApicall.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -204,9 +203,9 @@ public class Unified {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetUnifiedConnectionResponse getUnifiedConnection(GetUnifiedConnectionRequest request) throws Exception {
+    public GetUnifiedConnectionResponse getUnifiedConnection(GetUnifiedConnectionRequest request) {
         RequestOperation<GetUnifiedConnectionRequest, GetUnifiedConnectionResponse> operation
               = new GetUnifiedConnection.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -232,9 +231,9 @@ public class Unified {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetUnifiedIntegrationAuthResponse getUnifiedIntegrationAuth(GetUnifiedIntegrationAuthRequest request) throws Exception {
+    public GetUnifiedIntegrationAuthResponse getUnifiedIntegrationAuth(GetUnifiedIntegrationAuthRequest request) {
         RequestOperation<GetUnifiedIntegrationAuthRequest, GetUnifiedIntegrationAuthResponse> operation
               = new GetUnifiedIntegrationAuth.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -254,9 +253,9 @@ public class Unified {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetUnifiedIssueResponse getUnifiedIssue(GetUnifiedIssueRequest request) throws Exception {
+    public GetUnifiedIssueResponse getUnifiedIssue(GetUnifiedIssueRequest request) {
         RequestOperation<GetUnifiedIssueRequest, GetUnifiedIssueResponse> operation
               = new GetUnifiedIssue.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -276,9 +275,9 @@ public class Unified {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetUnifiedWebhookResponse getUnifiedWebhook(GetUnifiedWebhookRequest request) throws Exception {
+    public GetUnifiedWebhookResponse getUnifiedWebhook(GetUnifiedWebhookRequest request) {
         RequestOperation<GetUnifiedWebhookRequest, GetUnifiedWebhookResponse> operation
               = new GetUnifiedWebhook.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -298,9 +297,9 @@ public class Unified {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListUnifiedApicallsResponse listUnifiedApicalls(ListUnifiedApicallsRequest request) throws Exception {
+    public ListUnifiedApicallsResponse listUnifiedApicalls(ListUnifiedApicallsRequest request) {
         RequestOperation<ListUnifiedApicallsRequest, ListUnifiedApicallsResponse> operation
               = new ListUnifiedApicalls.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -320,9 +319,9 @@ public class Unified {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListUnifiedConnectionsResponse listUnifiedConnections(ListUnifiedConnectionsRequest request) throws Exception {
+    public ListUnifiedConnectionsResponse listUnifiedConnections(ListUnifiedConnectionsRequest request) {
         RequestOperation<ListUnifiedConnectionsRequest, ListUnifiedConnectionsResponse> operation
               = new ListUnifiedConnections.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -346,9 +345,9 @@ public class Unified {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListUnifiedIntegrationWorkspacesResponse listUnifiedIntegrationWorkspaces(ListUnifiedIntegrationWorkspacesRequest request) throws Exception {
+    public ListUnifiedIntegrationWorkspacesResponse listUnifiedIntegrationWorkspaces(ListUnifiedIntegrationWorkspacesRequest request) {
         RequestOperation<ListUnifiedIntegrationWorkspacesRequest, ListUnifiedIntegrationWorkspacesResponse> operation
               = new ListUnifiedIntegrationWorkspaces.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -368,9 +367,9 @@ public class Unified {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListUnifiedIntegrationsResponse listUnifiedIntegrations(ListUnifiedIntegrationsRequest request) throws Exception {
+    public ListUnifiedIntegrationsResponse listUnifiedIntegrations(ListUnifiedIntegrationsRequest request) {
         RequestOperation<ListUnifiedIntegrationsRequest, ListUnifiedIntegrationsResponse> operation
               = new ListUnifiedIntegrations.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -390,9 +389,9 @@ public class Unified {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListUnifiedIssuesResponse listUnifiedIssues(ListUnifiedIssuesRequest request) throws Exception {
+    public ListUnifiedIssuesResponse listUnifiedIssues(ListUnifiedIssuesRequest request) {
         RequestOperation<ListUnifiedIssuesRequest, ListUnifiedIssuesResponse> operation
               = new ListUnifiedIssues.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -412,9 +411,9 @@ public class Unified {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListUnifiedWebhooksResponse listUnifiedWebhooks(ListUnifiedWebhooksRequest request) throws Exception {
+    public ListUnifiedWebhooksResponse listUnifiedWebhooks(ListUnifiedWebhooksRequest request) {
         RequestOperation<ListUnifiedWebhooksRequest, ListUnifiedWebhooksResponse> operation
               = new ListUnifiedWebhooks.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -434,9 +433,9 @@ public class Unified {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchUnifiedConnectionResponse patchUnifiedConnection(PatchUnifiedConnectionRequest request) throws Exception {
+    public PatchUnifiedConnectionResponse patchUnifiedConnection(PatchUnifiedConnectionRequest request) {
         RequestOperation<PatchUnifiedConnectionRequest, PatchUnifiedConnectionResponse> operation
               = new PatchUnifiedConnection.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -456,9 +455,9 @@ public class Unified {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchUnifiedWebhookResponse patchUnifiedWebhook(PatchUnifiedWebhookRequest request) throws Exception {
+    public PatchUnifiedWebhookResponse patchUnifiedWebhook(PatchUnifiedWebhookRequest request) {
         RequestOperation<PatchUnifiedWebhookRequest, PatchUnifiedWebhookResponse> operation
               = new PatchUnifiedWebhook.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -478,9 +477,9 @@ public class Unified {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchUnifiedWebhookTriggerResponse patchUnifiedWebhookTrigger(PatchUnifiedWebhookTriggerRequest request) throws Exception {
+    public PatchUnifiedWebhookTriggerResponse patchUnifiedWebhookTrigger(PatchUnifiedWebhookTriggerRequest request) {
         RequestOperation<PatchUnifiedWebhookTriggerRequest, PatchUnifiedWebhookTriggerResponse> operation
               = new PatchUnifiedWebhookTrigger.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -500,9 +499,9 @@ public class Unified {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveUnifiedConnectionResponse removeUnifiedConnection(RemoveUnifiedConnectionRequest request) throws Exception {
+    public RemoveUnifiedConnectionResponse removeUnifiedConnection(RemoveUnifiedConnectionRequest request) {
         RequestOperation<RemoveUnifiedConnectionRequest, RemoveUnifiedConnectionResponse> operation
               = new RemoveUnifiedConnection.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -522,9 +521,9 @@ public class Unified {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveUnifiedWebhookResponse removeUnifiedWebhook(RemoveUnifiedWebhookRequest request) throws Exception {
+    public RemoveUnifiedWebhookResponse removeUnifiedWebhook(RemoveUnifiedWebhookRequest request) {
         RequestOperation<RemoveUnifiedWebhookRequest, RemoveUnifiedWebhookResponse> operation
               = new RemoveUnifiedWebhook.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -544,9 +543,9 @@ public class Unified {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateUnifiedConnectionResponse updateUnifiedConnection(UpdateUnifiedConnectionRequest request) throws Exception {
+    public UpdateUnifiedConnectionResponse updateUnifiedConnection(UpdateUnifiedConnectionRequest request) {
         RequestOperation<UpdateUnifiedConnectionRequest, UpdateUnifiedConnectionResponse> operation
               = new UpdateUnifiedConnection.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -566,9 +565,9 @@ public class Unified {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateUnifiedWebhookResponse updateUnifiedWebhook(UpdateUnifiedWebhookRequest request) throws Exception {
+    public UpdateUnifiedWebhookResponse updateUnifiedWebhook(UpdateUnifiedWebhookRequest request) {
         RequestOperation<UpdateUnifiedWebhookRequest, UpdateUnifiedWebhookResponse> operation
               = new UpdateUnifiedWebhook.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -588,9 +587,9 @@ public class Unified {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateUnifiedWebhookTriggerResponse updateUnifiedWebhookTrigger(UpdateUnifiedWebhookTriggerRequest request) throws Exception {
+    public UpdateUnifiedWebhookTriggerResponse updateUnifiedWebhookTrigger(UpdateUnifiedWebhookTriggerRequest request) {
         RequestOperation<UpdateUnifiedWebhookTriggerRequest, UpdateUnifiedWebhookTriggerResponse> operation
               = new UpdateUnifiedWebhookTrigger.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

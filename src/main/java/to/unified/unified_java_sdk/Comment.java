@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateKmsCommentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateKmsCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateKmsCommentResponse;
@@ -114,9 +113,9 @@ public class Comment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateKmsCommentResponse createKmsComment(CreateKmsCommentRequest request) throws Exception {
+    public CreateKmsCommentResponse createKmsComment(CreateKmsCommentRequest request) {
         RequestOperation<CreateKmsCommentRequest, CreateKmsCommentResponse> operation
               = new CreateKmsComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -136,9 +135,9 @@ public class Comment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateTaskCommentResponse createTaskComment(CreateTaskCommentRequest request) throws Exception {
+    public CreateTaskCommentResponse createTaskComment(CreateTaskCommentRequest request) {
         RequestOperation<CreateTaskCommentRequest, CreateTaskCommentResponse> operation
               = new CreateTaskComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -158,9 +157,9 @@ public class Comment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateUcCommentResponse createUcComment(CreateUcCommentRequest request) throws Exception {
+    public CreateUcCommentResponse createUcComment(CreateUcCommentRequest request) {
         RequestOperation<CreateUcCommentRequest, CreateUcCommentResponse> operation
               = new CreateUcComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -180,9 +179,9 @@ public class Comment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetKmsCommentResponse getKmsComment(GetKmsCommentRequest request) throws Exception {
+    public GetKmsCommentResponse getKmsComment(GetKmsCommentRequest request) {
         RequestOperation<GetKmsCommentRequest, GetKmsCommentResponse> operation
               = new GetKmsComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -202,9 +201,9 @@ public class Comment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetTaskCommentResponse getTaskComment(GetTaskCommentRequest request) throws Exception {
+    public GetTaskCommentResponse getTaskComment(GetTaskCommentRequest request) {
         RequestOperation<GetTaskCommentRequest, GetTaskCommentResponse> operation
               = new GetTaskComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -224,9 +223,9 @@ public class Comment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetUcCommentResponse getUcComment(GetUcCommentRequest request) throws Exception {
+    public GetUcCommentResponse getUcComment(GetUcCommentRequest request) {
         RequestOperation<GetUcCommentRequest, GetUcCommentResponse> operation
               = new GetUcComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -246,9 +245,9 @@ public class Comment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListKmsCommentsResponse listKmsComments(ListKmsCommentsRequest request) throws Exception {
+    public ListKmsCommentsResponse listKmsComments(ListKmsCommentsRequest request) {
         RequestOperation<ListKmsCommentsRequest, ListKmsCommentsResponse> operation
               = new ListKmsComments.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -268,9 +267,9 @@ public class Comment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListTaskCommentsResponse listTaskComments(ListTaskCommentsRequest request) throws Exception {
+    public ListTaskCommentsResponse listTaskComments(ListTaskCommentsRequest request) {
         RequestOperation<ListTaskCommentsRequest, ListTaskCommentsResponse> operation
               = new ListTaskComments.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -290,9 +289,9 @@ public class Comment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListUcCommentsResponse listUcComments(ListUcCommentsRequest request) throws Exception {
+    public ListUcCommentsResponse listUcComments(ListUcCommentsRequest request) {
         RequestOperation<ListUcCommentsRequest, ListUcCommentsResponse> operation
               = new ListUcComments.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -312,9 +311,9 @@ public class Comment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchKmsCommentResponse patchKmsComment(PatchKmsCommentRequest request) throws Exception {
+    public PatchKmsCommentResponse patchKmsComment(PatchKmsCommentRequest request) {
         RequestOperation<PatchKmsCommentRequest, PatchKmsCommentResponse> operation
               = new PatchKmsComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -334,9 +333,9 @@ public class Comment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchTaskCommentResponse patchTaskComment(PatchTaskCommentRequest request) throws Exception {
+    public PatchTaskCommentResponse patchTaskComment(PatchTaskCommentRequest request) {
         RequestOperation<PatchTaskCommentRequest, PatchTaskCommentResponse> operation
               = new PatchTaskComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -356,9 +355,9 @@ public class Comment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchUcCommentResponse patchUcComment(PatchUcCommentRequest request) throws Exception {
+    public PatchUcCommentResponse patchUcComment(PatchUcCommentRequest request) {
         RequestOperation<PatchUcCommentRequest, PatchUcCommentResponse> operation
               = new PatchUcComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -378,9 +377,9 @@ public class Comment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveKmsCommentResponse removeKmsComment(RemoveKmsCommentRequest request) throws Exception {
+    public RemoveKmsCommentResponse removeKmsComment(RemoveKmsCommentRequest request) {
         RequestOperation<RemoveKmsCommentRequest, RemoveKmsCommentResponse> operation
               = new RemoveKmsComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -400,9 +399,9 @@ public class Comment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveTaskCommentResponse removeTaskComment(RemoveTaskCommentRequest request) throws Exception {
+    public RemoveTaskCommentResponse removeTaskComment(RemoveTaskCommentRequest request) {
         RequestOperation<RemoveTaskCommentRequest, RemoveTaskCommentResponse> operation
               = new RemoveTaskComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -422,9 +421,9 @@ public class Comment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveUcCommentResponse removeUcComment(RemoveUcCommentRequest request) throws Exception {
+    public RemoveUcCommentResponse removeUcComment(RemoveUcCommentRequest request) {
         RequestOperation<RemoveUcCommentRequest, RemoveUcCommentResponse> operation
               = new RemoveUcComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -444,9 +443,9 @@ public class Comment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateKmsCommentResponse updateKmsComment(UpdateKmsCommentRequest request) throws Exception {
+    public UpdateKmsCommentResponse updateKmsComment(UpdateKmsCommentRequest request) {
         RequestOperation<UpdateKmsCommentRequest, UpdateKmsCommentResponse> operation
               = new UpdateKmsComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -466,9 +465,9 @@ public class Comment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateTaskCommentResponse updateTaskComment(UpdateTaskCommentRequest request) throws Exception {
+    public UpdateTaskCommentResponse updateTaskComment(UpdateTaskCommentRequest request) {
         RequestOperation<UpdateTaskCommentRequest, UpdateTaskCommentResponse> operation
               = new UpdateTaskComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -488,9 +487,9 @@ public class Comment {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateUcCommentResponse updateUcComment(UpdateUcCommentRequest request) throws Exception {
+    public UpdateUcCommentResponse updateUcComment(UpdateUcCommentRequest request) {
         RequestOperation<UpdateUcCommentRequest, UpdateUcCommentResponse> operation
               = new UpdateUcComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

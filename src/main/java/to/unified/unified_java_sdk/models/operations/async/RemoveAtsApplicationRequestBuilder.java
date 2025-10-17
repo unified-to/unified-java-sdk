@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemoveAtsApplicationRequest;
@@ -29,7 +28,7 @@ public class RemoveAtsApplicationRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<RemoveAtsApplicationResponse> call() throws Exception {
+    public CompletableFuture<RemoveAtsApplicationResponse> call() {
         
         AsyncRequestOperation<RemoveAtsApplicationRequest, RemoveAtsApplicationResponse> operation
               = new RemoveAtsApplication.Async(sdkConfiguration, _headers);

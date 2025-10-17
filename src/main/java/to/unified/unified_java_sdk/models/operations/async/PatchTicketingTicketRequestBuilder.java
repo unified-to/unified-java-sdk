@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchTicketingTicketRequest;
@@ -29,7 +28,7 @@ public class PatchTicketingTicketRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<PatchTicketingTicketResponse> call() throws Exception {
+    public CompletableFuture<PatchTicketingTicketResponse> call() {
         
         AsyncRequestOperation<PatchTicketingTicketRequest, PatchTicketingTicketResponse> operation
               = new PatchTicketingTicket.Async(sdkConfiguration, _headers);

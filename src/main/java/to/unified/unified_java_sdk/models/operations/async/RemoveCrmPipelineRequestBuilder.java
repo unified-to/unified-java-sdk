@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemoveCrmPipelineRequest;
@@ -29,7 +28,7 @@ public class RemoveCrmPipelineRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<RemoveCrmPipelineResponse> call() throws Exception {
+    public CompletableFuture<RemoveCrmPipelineResponse> call() {
         
         AsyncRequestOperation<RemoveCrmPipelineRequest, RemoveCrmPipelineResponse> operation
               = new RemoveCrmPipeline.Async(sdkConfiguration, _headers);

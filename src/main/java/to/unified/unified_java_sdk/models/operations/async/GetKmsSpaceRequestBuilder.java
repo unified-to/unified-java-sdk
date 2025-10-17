@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetKmsSpaceRequest;
@@ -29,7 +28,7 @@ public class GetKmsSpaceRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<GetKmsSpaceResponse> call() throws Exception {
+    public CompletableFuture<GetKmsSpaceResponse> call() {
         
         AsyncRequestOperation<GetKmsSpaceRequest, GetKmsSpaceResponse> operation
               = new GetKmsSpace.Async(sdkConfiguration, _headers);

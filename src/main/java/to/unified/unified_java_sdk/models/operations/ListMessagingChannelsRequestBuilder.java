@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.ListMessagingChannels;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class ListMessagingChannelsRequestBuilder {
         return this;
     }
 
-    public ListMessagingChannelsResponse call() throws Exception {
+    public ListMessagingChannelsResponse call() {
         
         RequestOperation<ListMessagingChannelsRequest, ListMessagingChannelsResponse> operation
               = new ListMessagingChannels.Sync(sdkConfiguration, _headers);

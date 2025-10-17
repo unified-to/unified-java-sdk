@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetCrmDeal;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class GetCrmDealRequestBuilder {
         return this;
     }
 
-    public GetCrmDealResponse call() throws Exception {
+    public GetCrmDealResponse call() {
         
         RequestOperation<GetCrmDealRequest, GetCrmDealResponse> operation
               = new GetCrmDeal.Sync(sdkConfiguration, _headers);

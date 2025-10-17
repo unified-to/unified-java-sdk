@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceItemRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceItemRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceItemResponse;
@@ -66,9 +65,9 @@ public class Item {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCommerceItemResponse createCommerceItem(CreateCommerceItemRequest request) throws Exception {
+    public CreateCommerceItemResponse createCommerceItem(CreateCommerceItemRequest request) {
         RequestOperation<CreateCommerceItemRequest, CreateCommerceItemResponse> operation
               = new CreateCommerceItem.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -88,9 +87,9 @@ public class Item {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetCommerceItemResponse getCommerceItem(GetCommerceItemRequest request) throws Exception {
+    public GetCommerceItemResponse getCommerceItem(GetCommerceItemRequest request) {
         RequestOperation<GetCommerceItemRequest, GetCommerceItemResponse> operation
               = new GetCommerceItem.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -110,9 +109,9 @@ public class Item {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListCommerceItemsResponse listCommerceItems(ListCommerceItemsRequest request) throws Exception {
+    public ListCommerceItemsResponse listCommerceItems(ListCommerceItemsRequest request) {
         RequestOperation<ListCommerceItemsRequest, ListCommerceItemsResponse> operation
               = new ListCommerceItems.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -132,9 +131,9 @@ public class Item {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCommerceItemResponse patchCommerceItem(PatchCommerceItemRequest request) throws Exception {
+    public PatchCommerceItemResponse patchCommerceItem(PatchCommerceItemRequest request) {
         RequestOperation<PatchCommerceItemRequest, PatchCommerceItemResponse> operation
               = new PatchCommerceItem.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -154,9 +153,9 @@ public class Item {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCommerceItemResponse removeCommerceItem(RemoveCommerceItemRequest request) throws Exception {
+    public RemoveCommerceItemResponse removeCommerceItem(RemoveCommerceItemRequest request) {
         RequestOperation<RemoveCommerceItemRequest, RemoveCommerceItemResponse> operation
               = new RemoveCommerceItem.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -176,9 +175,9 @@ public class Item {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCommerceItemResponse updateCommerceItem(UpdateCommerceItemRequest request) throws Exception {
+    public UpdateCommerceItemResponse updateCommerceItem(UpdateCommerceItemRequest request) {
         RequestOperation<UpdateCommerceItemRequest, UpdateCommerceItemResponse> operation
               = new UpdateCommerceItem.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

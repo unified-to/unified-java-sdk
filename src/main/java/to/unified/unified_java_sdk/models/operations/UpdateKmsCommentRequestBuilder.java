@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.UpdateKmsComment;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class UpdateKmsCommentRequestBuilder {
         return this;
     }
 
-    public UpdateKmsCommentResponse call() throws Exception {
+    public UpdateKmsCommentResponse call() {
         
         RequestOperation<UpdateKmsCommentRequest, UpdateKmsCommentResponse> operation
               = new UpdateKmsComment.Sync(sdkConfiguration, _headers);

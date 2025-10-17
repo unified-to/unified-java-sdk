@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.CreateMessagingMessageRequest;
@@ -29,7 +28,7 @@ public class CreateMessagingMessageRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<CreateMessagingMessageResponse> call() throws Exception {
+    public CompletableFuture<CreateMessagingMessageResponse> call() {
         
         AsyncRequestOperation<CreateMessagingMessageRequest, CreateMessagingMessageResponse> operation
               = new CreateMessagingMessage.Async(sdkConfiguration, _headers);

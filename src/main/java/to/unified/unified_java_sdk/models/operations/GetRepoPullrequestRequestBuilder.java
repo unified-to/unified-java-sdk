@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetRepoPullrequest;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class GetRepoPullrequestRequestBuilder {
         return this;
     }
 
-    public GetRepoPullrequestResponse call() throws Exception {
+    public GetRepoPullrequestResponse call() {
         
         RequestOperation<GetRepoPullrequestRequest, GetRepoPullrequestResponse> operation
               = new GetRepoPullrequest.Sync(sdkConfiguration, _headers);

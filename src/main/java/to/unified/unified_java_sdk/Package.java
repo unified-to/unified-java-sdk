@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.GetVerificationPackageRequest;
 import to.unified.unified_java_sdk.models.operations.GetVerificationPackageRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetVerificationPackageResponse;
@@ -50,9 +49,9 @@ public class Package {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetVerificationPackageResponse getVerificationPackage(GetVerificationPackageRequest request) throws Exception {
+    public GetVerificationPackageResponse getVerificationPackage(GetVerificationPackageRequest request) {
         RequestOperation<GetVerificationPackageRequest, GetVerificationPackageResponse> operation
               = new GetVerificationPackage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -72,9 +71,9 @@ public class Package {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListVerificationPackagesResponse listVerificationPackages(ListVerificationPackagesRequest request) throws Exception {
+    public ListVerificationPackagesResponse listVerificationPackages(ListVerificationPackagesRequest request) {
         RequestOperation<ListVerificationPackagesRequest, ListVerificationPackagesResponse> operation
               = new ListVerificationPackages.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

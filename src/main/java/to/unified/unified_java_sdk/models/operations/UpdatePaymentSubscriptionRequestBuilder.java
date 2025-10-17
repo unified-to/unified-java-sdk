@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.UpdatePaymentSubscription;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class UpdatePaymentSubscriptionRequestBuilder {
         return this;
     }
 
-    public UpdatePaymentSubscriptionResponse call() throws Exception {
+    public UpdatePaymentSubscriptionResponse call() {
         
         RequestOperation<UpdatePaymentSubscriptionRequest, UpdatePaymentSubscriptionResponse> operation
               = new UpdatePaymentSubscription.Sync(sdkConfiguration, _headers);

@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceInventoryRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceInventoryRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceInventoryResponse;
@@ -66,9 +65,9 @@ public class Inventory {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCommerceInventoryResponse createCommerceInventory(CreateCommerceInventoryRequest request) throws Exception {
+    public CreateCommerceInventoryResponse createCommerceInventory(CreateCommerceInventoryRequest request) {
         RequestOperation<CreateCommerceInventoryRequest, CreateCommerceInventoryResponse> operation
               = new CreateCommerceInventory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -88,9 +87,9 @@ public class Inventory {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetCommerceInventoryResponse getCommerceInventory(GetCommerceInventoryRequest request) throws Exception {
+    public GetCommerceInventoryResponse getCommerceInventory(GetCommerceInventoryRequest request) {
         RequestOperation<GetCommerceInventoryRequest, GetCommerceInventoryResponse> operation
               = new GetCommerceInventory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -110,9 +109,9 @@ public class Inventory {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListCommerceInventoriesResponse listCommerceInventories(ListCommerceInventoriesRequest request) throws Exception {
+    public ListCommerceInventoriesResponse listCommerceInventories(ListCommerceInventoriesRequest request) {
         RequestOperation<ListCommerceInventoriesRequest, ListCommerceInventoriesResponse> operation
               = new ListCommerceInventories.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -132,9 +131,9 @@ public class Inventory {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCommerceInventoryResponse patchCommerceInventory(PatchCommerceInventoryRequest request) throws Exception {
+    public PatchCommerceInventoryResponse patchCommerceInventory(PatchCommerceInventoryRequest request) {
         RequestOperation<PatchCommerceInventoryRequest, PatchCommerceInventoryResponse> operation
               = new PatchCommerceInventory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -154,9 +153,9 @@ public class Inventory {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCommerceInventoryResponse removeCommerceInventory(RemoveCommerceInventoryRequest request) throws Exception {
+    public RemoveCommerceInventoryResponse removeCommerceInventory(RemoveCommerceInventoryRequest request) {
         RequestOperation<RemoveCommerceInventoryRequest, RemoveCommerceInventoryResponse> operation
               = new RemoveCommerceInventory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -176,9 +175,9 @@ public class Inventory {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCommerceInventoryResponse updateCommerceInventory(UpdateCommerceInventoryRequest request) throws Exception {
+    public UpdateCommerceInventoryResponse updateCommerceInventory(UpdateCommerceInventoryRequest request) {
         RequestOperation<UpdateCommerceInventoryRequest, UpdateCommerceInventoryResponse> operation
               = new UpdateCommerceInventory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

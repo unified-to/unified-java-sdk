@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.GetHrisPayslipRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisPayslipRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHrisPayslipResponse;
@@ -50,9 +49,9 @@ public class Payslip {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisPayslipResponse getHrisPayslip(GetHrisPayslipRequest request) throws Exception {
+    public GetHrisPayslipResponse getHrisPayslip(GetHrisPayslipRequest request) {
         RequestOperation<GetHrisPayslipRequest, GetHrisPayslipResponse> operation
               = new GetHrisPayslip.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -72,9 +71,9 @@ public class Payslip {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisPayslipsResponse listHrisPayslips(ListHrisPayslipsRequest request) throws Exception {
+    public ListHrisPayslipsResponse listHrisPayslips(ListHrisPayslipsRequest request) {
         RequestOperation<ListHrisPayslipsRequest, ListHrisPayslipsResponse> operation
               = new ListHrisPayslips.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatusesRequest;
 import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatusesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatusesResponse;
@@ -46,9 +45,9 @@ public class Applicationstatus {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListAtsApplicationstatusesResponse listAtsApplicationstatuses(ListAtsApplicationstatusesRequest request) throws Exception {
+    public ListAtsApplicationstatusesResponse listAtsApplicationstatuses(ListAtsApplicationstatusesRequest request) {
         RequestOperation<ListAtsApplicationstatusesRequest, ListAtsApplicationstatusesResponse> operation
               = new ListAtsApplicationstatuses.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

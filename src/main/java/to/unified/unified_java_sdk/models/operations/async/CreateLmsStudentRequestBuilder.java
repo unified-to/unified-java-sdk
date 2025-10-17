@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.CreateLmsStudentRequest;
@@ -29,7 +28,7 @@ public class CreateLmsStudentRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<CreateLmsStudentResponse> call() throws Exception {
+    public CompletableFuture<CreateLmsStudentResponse> call() {
         
         AsyncRequestOperation<CreateLmsStudentRequest, CreateLmsStudentResponse> operation
               = new CreateLmsStudent.Async(sdkConfiguration, _headers);

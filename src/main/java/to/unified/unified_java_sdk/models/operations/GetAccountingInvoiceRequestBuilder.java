@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetAccountingInvoice;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class GetAccountingInvoiceRequestBuilder {
         return this;
     }
 
-    public GetAccountingInvoiceResponse call() throws Exception {
+    public GetAccountingInvoiceResponse call() {
         
         RequestOperation<GetAccountingInvoiceRequest, GetAccountingInvoiceResponse> operation
               = new GetAccountingInvoice.Sync(sdkConfiguration, _headers);

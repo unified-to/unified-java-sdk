@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemoveKmsComment;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class RemoveKmsCommentRequestBuilder {
         return this;
     }
 
-    public RemoveKmsCommentResponse call() throws Exception {
+    public RemoveKmsCommentResponse call() {
         
         RequestOperation<RemoveKmsCommentRequest, RemoveKmsCommentResponse> operation
               = new RemoveKmsComment.Sync(sdkConfiguration, _headers);

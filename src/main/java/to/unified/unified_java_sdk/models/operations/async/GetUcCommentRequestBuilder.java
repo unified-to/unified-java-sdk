@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetUcCommentRequest;
@@ -29,7 +28,7 @@ public class GetUcCommentRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<GetUcCommentResponse> call() throws Exception {
+    public CompletableFuture<GetUcCommentResponse> call() {
         
         AsyncRequestOperation<GetUcCommentRequest, GetUcCommentResponse> operation
               = new GetUcComment.Async(sdkConfiguration, _headers);

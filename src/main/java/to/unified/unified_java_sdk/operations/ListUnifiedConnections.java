@@ -4,12 +4,12 @@
 package to.unified.unified_java_sdk.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+import static to.unified.unified_java_sdk.utils.Exceptions.unchecked;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import java.io.InputStream;
 import java.lang.Exception;
-import java.lang.RuntimeException;
 import java.lang.String;
 import java.lang.Throwable;
 import java.net.http.HttpRequest;
@@ -25,7 +25,6 @@ import to.unified.unified_java_sdk.models.operations.ListUnifiedConnectionsReque
 import to.unified.unified_java_sdk.models.operations.ListUnifiedConnectionsResponse;
 import to.unified.unified_java_sdk.models.shared.Connection;
 import to.unified.unified_java_sdk.utils.Blob;
-import to.unified.unified_java_sdk.utils.Exceptions;
 import to.unified.unified_java_sdk.utils.HTTPClient;
 import to.unified.unified_java_sdk.utils.HTTPRequest;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -124,8 +123,8 @@ public class ListUnifiedConnections {
         }
 
         @Override
-        public HttpResponse<InputStream> doRequest(ListUnifiedConnectionsRequest request) throws Exception {
-            HttpRequest r = onBuildRequest(request);
+        public HttpResponse<InputStream> doRequest(ListUnifiedConnectionsRequest request) {
+            HttpRequest r = unchecked(() -> onBuildRequest(request)).get();
             HttpResponse<InputStream> httpRes;
             try {
                 httpRes = client.send(r);
@@ -135,7 +134,7 @@ public class ListUnifiedConnections {
                     httpRes = onSuccess(httpRes);
                 }
             } catch (Exception e) {
-                httpRes = onError(null, e);
+                httpRes = unchecked(() -> onError(null, e)).get();
             }
 
             return httpRes;
@@ -143,7 +142,7 @@ public class ListUnifiedConnections {
 
 
         @Override
-        public ListUnifiedConnectionsResponse handleResponse(HttpResponse<InputStream> response) throws Exception {
+        public ListUnifiedConnectionsResponse handleResponse(HttpResponse<InputStream> response) {
             String contentType = response
                     .headers()
                     .firstValue("Content-Type")
@@ -159,44 +158,20 @@ public class ListUnifiedConnections {
             
             if (Utils.statusCodeMatches(response.statusCode(), "200")) {
                 if (Utils.contentTypeMatches(contentType, "application/json")) {
-                    List<Connection> out = Utils.mapper().readValue(
-                            response.body(),
-                            new TypeReference<>() {
-                            });
-                    res.withConnections(out);
-                    return res;
+                    return res.withConnections(Utils.unmarshal(response, new TypeReference<List<Connection>>() {}));
                 } else {
-                    throw new SDKError(
-                            response,
-                            response.statusCode(),
-                            "Unexpected content-type received: " + contentType,
-                            Utils.extractByteArrayFromBody(response));
+                    throw SDKError.from("Unexpected content-type received: " + contentType, response);
                 }
             }
-            
             if (Utils.statusCodeMatches(response.statusCode(), "4XX")) {
                 // no content
-                throw new SDKError(
-                        response,
-                        response.statusCode(),
-                        "API error occurred",
-                        Utils.extractByteArrayFromBody(response));
+                throw SDKError.from("API error occurred", response);
             }
-            
             if (Utils.statusCodeMatches(response.statusCode(), "5XX")) {
                 // no content
-                throw new SDKError(
-                        response,
-                        response.statusCode(),
-                        "API error occurred",
-                        Utils.extractByteArrayFromBody(response));
+                throw SDKError.from("API error occurred", response);
             }
-            
-            throw new SDKError(
-                    response,
-                    response.statusCode(),
-                    "Unexpected status code received: " + response.statusCode(),
-                    Utils.extractByteArrayFromBody(response));
+            throw SDKError.from("Unexpected status code received: " + response.statusCode(), response);
         }
     }
     public static class Async extends Base
@@ -221,7 +196,7 @@ public class ListUnifiedConnections {
 
         @Override
         public CompletableFuture<HttpResponse<Blob>> doRequest(ListUnifiedConnectionsRequest request) {
-            return Exceptions.unchecked(() -> onBuildRequest(request)).get().thenCompose(client::sendAsync)
+            return unchecked(() -> onBuildRequest(request)).get().thenCompose(client::sendAsync)
                     .handle((resp, err) -> {
                         if (err != null) {
                             return onError(null, err);
@@ -253,33 +228,20 @@ public class ListUnifiedConnections {
             
             if (Utils.statusCodeMatches(response.statusCode(), "200")) {
                 if (Utils.contentTypeMatches(contentType, "application/json")) {
-                    return response.body().toByteArray().thenApply(bodyBytes -> {
-                        try {
-                            List<Connection> out = Utils.mapper().readValue(
-                                    bodyBytes,
-                                    new TypeReference<>() {
-                                    });
-                            res.withConnections(out);
-                            return res;
-                        } catch (Exception e) {
-                            throw new RuntimeException(e);
-                        }
-                    });
+                    return Utils.unmarshalAsync(response, new TypeReference<List<Connection>>() {})
+                            .thenApply(res::withConnections);
                 } else {
                     return Utils.createAsyncApiError(response, "Unexpected content-type received: " + contentType);
                 }
             }
-            
             if (Utils.statusCodeMatches(response.statusCode(), "4XX")) {
                 // no content
                 return Utils.createAsyncApiError(response, "API error occurred");
             }
-            
             if (Utils.statusCodeMatches(response.statusCode(), "5XX")) {
                 // no content
                 return Utils.createAsyncApiError(response, "API error occurred");
             }
-            
             return Utils.createAsyncApiError(response, "Unexpected status code received: " + response.statusCode());
         }
     }

@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchCalendarEventRequest;
@@ -29,7 +28,7 @@ public class PatchCalendarEventRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<PatchCalendarEventResponse> call() throws Exception {
+    public CompletableFuture<PatchCalendarEventResponse> call() {
         
         AsyncRequestOperation<PatchCalendarEventRequest, PatchCalendarEventResponse> operation
               = new PatchCalendarEvent.Async(sdkConfiguration, _headers);

@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetRepoBranch;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class GetRepoBranchRequestBuilder {
         return this;
     }
 
-    public GetRepoBranchResponse call() throws Exception {
+    public GetRepoBranchResponse call() {
         
         RequestOperation<GetRepoBranchRequest, GetRepoBranchResponse> operation
               = new GetRepoBranch.Sync(sdkConfiguration, _headers);

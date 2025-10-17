@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateCrmDealRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCrmDealRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCrmDealResponse;
@@ -66,9 +65,9 @@ public class Deal {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCrmDealResponse createCrmDeal(CreateCrmDealRequest request) throws Exception {
+    public CreateCrmDealResponse createCrmDeal(CreateCrmDealRequest request) {
         RequestOperation<CreateCrmDealRequest, CreateCrmDealResponse> operation
               = new CreateCrmDeal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -88,9 +87,9 @@ public class Deal {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetCrmDealResponse getCrmDeal(GetCrmDealRequest request) throws Exception {
+    public GetCrmDealResponse getCrmDeal(GetCrmDealRequest request) {
         RequestOperation<GetCrmDealRequest, GetCrmDealResponse> operation
               = new GetCrmDeal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -110,9 +109,9 @@ public class Deal {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmDealsResponse listCrmDeals(ListCrmDealsRequest request) throws Exception {
+    public ListCrmDealsResponse listCrmDeals(ListCrmDealsRequest request) {
         RequestOperation<ListCrmDealsRequest, ListCrmDealsResponse> operation
               = new ListCrmDeals.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -132,9 +131,9 @@ public class Deal {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCrmDealResponse patchCrmDeal(PatchCrmDealRequest request) throws Exception {
+    public PatchCrmDealResponse patchCrmDeal(PatchCrmDealRequest request) {
         RequestOperation<PatchCrmDealRequest, PatchCrmDealResponse> operation
               = new PatchCrmDeal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -154,9 +153,9 @@ public class Deal {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCrmDealResponse removeCrmDeal(RemoveCrmDealRequest request) throws Exception {
+    public RemoveCrmDealResponse removeCrmDeal(RemoveCrmDealRequest request) {
         RequestOperation<RemoveCrmDealRequest, RemoveCrmDealResponse> operation
               = new RemoveCrmDeal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -176,9 +175,9 @@ public class Deal {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmDealResponse updateCrmDeal(UpdateCrmDealRequest request) throws Exception {
+    public UpdateCrmDealResponse updateCrmDeal(UpdateCrmDealRequest request) {
         RequestOperation<UpdateCrmDealRequest, UpdateCrmDealResponse> operation
               = new UpdateCrmDeal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

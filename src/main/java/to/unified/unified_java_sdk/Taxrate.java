@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingTaxrateRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingTaxrateRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingTaxrateResponse;
@@ -66,9 +65,9 @@ public class Taxrate {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingTaxrateResponse createAccountingTaxrate(CreateAccountingTaxrateRequest request) throws Exception {
+    public CreateAccountingTaxrateResponse createAccountingTaxrate(CreateAccountingTaxrateRequest request) {
         RequestOperation<CreateAccountingTaxrateRequest, CreateAccountingTaxrateResponse> operation
               = new CreateAccountingTaxrate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -88,9 +87,9 @@ public class Taxrate {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingTaxrateResponse getAccountingTaxrate(GetAccountingTaxrateRequest request) throws Exception {
+    public GetAccountingTaxrateResponse getAccountingTaxrate(GetAccountingTaxrateRequest request) {
         RequestOperation<GetAccountingTaxrateRequest, GetAccountingTaxrateResponse> operation
               = new GetAccountingTaxrate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -110,9 +109,9 @@ public class Taxrate {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingTaxratesResponse listAccountingTaxrates(ListAccountingTaxratesRequest request) throws Exception {
+    public ListAccountingTaxratesResponse listAccountingTaxrates(ListAccountingTaxratesRequest request) {
         RequestOperation<ListAccountingTaxratesRequest, ListAccountingTaxratesResponse> operation
               = new ListAccountingTaxrates.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -132,9 +131,9 @@ public class Taxrate {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingTaxrateResponse patchAccountingTaxrate(PatchAccountingTaxrateRequest request) throws Exception {
+    public PatchAccountingTaxrateResponse patchAccountingTaxrate(PatchAccountingTaxrateRequest request) {
         RequestOperation<PatchAccountingTaxrateRequest, PatchAccountingTaxrateResponse> operation
               = new PatchAccountingTaxrate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -154,9 +153,9 @@ public class Taxrate {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingTaxrateResponse removeAccountingTaxrate(RemoveAccountingTaxrateRequest request) throws Exception {
+    public RemoveAccountingTaxrateResponse removeAccountingTaxrate(RemoveAccountingTaxrateRequest request) {
         RequestOperation<RemoveAccountingTaxrateRequest, RemoveAccountingTaxrateResponse> operation
               = new RemoveAccountingTaxrate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -176,9 +175,9 @@ public class Taxrate {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingTaxrateResponse updateAccountingTaxrate(UpdateAccountingTaxrateRequest request) throws Exception {
+    public UpdateAccountingTaxrateResponse updateAccountingTaxrate(UpdateAccountingTaxrateRequest request) {
         RequestOperation<UpdateAccountingTaxrateRequest, UpdateAccountingTaxrateResponse> operation
               = new UpdateAccountingTaxrate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

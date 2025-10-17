@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingBillRequest;
@@ -29,7 +28,7 @@ public class RemoveAccountingBillRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<RemoveAccountingBillResponse> call() throws Exception {
+    public CompletableFuture<RemoveAccountingBillResponse> call() {
         
         AsyncRequestOperation<RemoveAccountingBillRequest, RemoveAccountingBillResponse> operation
               = new RemoveAccountingBill.Async(sdkConfiguration, _headers);

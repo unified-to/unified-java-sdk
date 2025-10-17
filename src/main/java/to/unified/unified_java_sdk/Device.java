@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeviceRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeviceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeviceResponse;
@@ -66,9 +65,9 @@ public class Device {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateHrisDeviceResponse createHrisDevice(CreateHrisDeviceRequest request) throws Exception {
+    public CreateHrisDeviceResponse createHrisDevice(CreateHrisDeviceRequest request) {
         RequestOperation<CreateHrisDeviceRequest, CreateHrisDeviceResponse> operation
               = new CreateHrisDevice.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -88,9 +87,9 @@ public class Device {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisDeviceResponse getHrisDevice(GetHrisDeviceRequest request) throws Exception {
+    public GetHrisDeviceResponse getHrisDevice(GetHrisDeviceRequest request) {
         RequestOperation<GetHrisDeviceRequest, GetHrisDeviceResponse> operation
               = new GetHrisDevice.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -110,9 +109,9 @@ public class Device {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisDevicesResponse listHrisDevices(ListHrisDevicesRequest request) throws Exception {
+    public ListHrisDevicesResponse listHrisDevices(ListHrisDevicesRequest request) {
         RequestOperation<ListHrisDevicesRequest, ListHrisDevicesResponse> operation
               = new ListHrisDevices.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -132,9 +131,9 @@ public class Device {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchHrisDeviceResponse patchHrisDevice(PatchHrisDeviceRequest request) throws Exception {
+    public PatchHrisDeviceResponse patchHrisDevice(PatchHrisDeviceRequest request) {
         RequestOperation<PatchHrisDeviceRequest, PatchHrisDeviceResponse> operation
               = new PatchHrisDevice.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -154,9 +153,9 @@ public class Device {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveHrisDeviceResponse removeHrisDevice(RemoveHrisDeviceRequest request) throws Exception {
+    public RemoveHrisDeviceResponse removeHrisDevice(RemoveHrisDeviceRequest request) {
         RequestOperation<RemoveHrisDeviceRequest, RemoveHrisDeviceResponse> operation
               = new RemoveHrisDevice.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -176,9 +175,9 @@ public class Device {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateHrisDeviceResponse updateHrisDevice(UpdateHrisDeviceRequest request) throws Exception {
+    public UpdateHrisDeviceResponse updateHrisDevice(UpdateHrisDeviceRequest request) {
         RequestOperation<UpdateHrisDeviceRequest, UpdateHrisDeviceResponse> operation
               = new UpdateHrisDevice.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

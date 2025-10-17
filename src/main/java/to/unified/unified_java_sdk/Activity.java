@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateAtsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsActivityRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAtsActivityResponse;
@@ -66,9 +65,9 @@ public class Activity {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAtsActivityResponse createAtsActivity(CreateAtsActivityRequest request) throws Exception {
+    public CreateAtsActivityResponse createAtsActivity(CreateAtsActivityRequest request) {
         RequestOperation<CreateAtsActivityRequest, CreateAtsActivityResponse> operation
               = new CreateAtsActivity.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -88,9 +87,9 @@ public class Activity {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetAtsActivityResponse getAtsActivity(GetAtsActivityRequest request) throws Exception {
+    public GetAtsActivityResponse getAtsActivity(GetAtsActivityRequest request) {
         RequestOperation<GetAtsActivityRequest, GetAtsActivityResponse> operation
               = new GetAtsActivity.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -110,9 +109,9 @@ public class Activity {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListAtsActivitiesResponse listAtsActivities(ListAtsActivitiesRequest request) throws Exception {
+    public ListAtsActivitiesResponse listAtsActivities(ListAtsActivitiesRequest request) {
         RequestOperation<ListAtsActivitiesRequest, ListAtsActivitiesResponse> operation
               = new ListAtsActivities.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -132,9 +131,9 @@ public class Activity {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAtsActivityResponse patchAtsActivity(PatchAtsActivityRequest request) throws Exception {
+    public PatchAtsActivityResponse patchAtsActivity(PatchAtsActivityRequest request) {
         RequestOperation<PatchAtsActivityRequest, PatchAtsActivityResponse> operation
               = new PatchAtsActivity.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -154,9 +153,9 @@ public class Activity {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAtsActivityResponse removeAtsActivity(RemoveAtsActivityRequest request) throws Exception {
+    public RemoveAtsActivityResponse removeAtsActivity(RemoveAtsActivityRequest request) {
         RequestOperation<RemoveAtsActivityRequest, RemoveAtsActivityResponse> operation
               = new RemoveAtsActivity.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -176,9 +175,9 @@ public class Activity {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAtsActivityResponse updateAtsActivity(UpdateAtsActivityRequest request) throws Exception {
+    public UpdateAtsActivityResponse updateAtsActivity(UpdateAtsActivityRequest request) {
         RequestOperation<UpdateAtsActivityRequest, UpdateAtsActivityResponse> operation
               = new UpdateAtsActivity.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

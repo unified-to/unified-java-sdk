@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemoveAccountingAccount;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class RemoveAccountingAccountRequestBuilder {
         return this;
     }
 
-    public RemoveAccountingAccountResponse call() throws Exception {
+    public RemoveAccountingAccountResponse call() {
         
         RequestOperation<RemoveAccountingAccountRequest, RemoveAccountingAccountResponse> operation
               = new RemoveAccountingAccount.Sync(sdkConfiguration, _headers);

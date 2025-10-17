@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemoveRepoPullrequestRequest;
@@ -29,7 +28,7 @@ public class RemoveRepoPullrequestRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<RemoveRepoPullrequestResponse> call() throws Exception {
+    public CompletableFuture<RemoveRepoPullrequestResponse> call() {
         
         AsyncRequestOperation<RemoveRepoPullrequestRequest, RemoveRepoPullrequestResponse> operation
               = new RemoveRepoPullrequest.Async(sdkConfiguration, _headers);

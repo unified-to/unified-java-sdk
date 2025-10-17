@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateAtsScorecardRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsScorecardRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAtsScorecardResponse;
@@ -66,9 +65,9 @@ public class Scorecard {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAtsScorecardResponse createAtsScorecard(CreateAtsScorecardRequest request) throws Exception {
+    public CreateAtsScorecardResponse createAtsScorecard(CreateAtsScorecardRequest request) {
         RequestOperation<CreateAtsScorecardRequest, CreateAtsScorecardResponse> operation
               = new CreateAtsScorecard.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -88,9 +87,9 @@ public class Scorecard {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetAtsScorecardResponse getAtsScorecard(GetAtsScorecardRequest request) throws Exception {
+    public GetAtsScorecardResponse getAtsScorecard(GetAtsScorecardRequest request) {
         RequestOperation<GetAtsScorecardRequest, GetAtsScorecardResponse> operation
               = new GetAtsScorecard.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -110,9 +109,9 @@ public class Scorecard {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListAtsScorecardsResponse listAtsScorecards(ListAtsScorecardsRequest request) throws Exception {
+    public ListAtsScorecardsResponse listAtsScorecards(ListAtsScorecardsRequest request) {
         RequestOperation<ListAtsScorecardsRequest, ListAtsScorecardsResponse> operation
               = new ListAtsScorecards.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -132,9 +131,9 @@ public class Scorecard {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAtsScorecardResponse patchAtsScorecard(PatchAtsScorecardRequest request) throws Exception {
+    public PatchAtsScorecardResponse patchAtsScorecard(PatchAtsScorecardRequest request) {
         RequestOperation<PatchAtsScorecardRequest, PatchAtsScorecardResponse> operation
               = new PatchAtsScorecard.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -154,9 +153,9 @@ public class Scorecard {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAtsScorecardResponse removeAtsScorecard(RemoveAtsScorecardRequest request) throws Exception {
+    public RemoveAtsScorecardResponse removeAtsScorecard(RemoveAtsScorecardRequest request) {
         RequestOperation<RemoveAtsScorecardRequest, RemoveAtsScorecardResponse> operation
               = new RemoveAtsScorecard.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -176,9 +175,9 @@ public class Scorecard {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAtsScorecardResponse updateAtsScorecard(UpdateAtsScorecardRequest request) throws Exception {
+    public UpdateAtsScorecardResponse updateAtsScorecard(UpdateAtsScorecardRequest request) {
         RequestOperation<UpdateAtsScorecardRequest, UpdateAtsScorecardResponse> operation
               = new UpdateAtsScorecard.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

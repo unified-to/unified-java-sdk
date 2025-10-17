@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.UpdateMetadataMetadataRequest;
@@ -29,7 +28,7 @@ public class UpdateMetadataMetadataRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<UpdateMetadataMetadataResponse> call() throws Exception {
+    public CompletableFuture<UpdateMetadataMetadataResponse> call() {
         
         AsyncRequestOperation<UpdateMetadataMetadataRequest, UpdateMetadataMetadataResponse> operation
               = new UpdateMetadataMetadata.Async(sdkConfiguration, _headers);

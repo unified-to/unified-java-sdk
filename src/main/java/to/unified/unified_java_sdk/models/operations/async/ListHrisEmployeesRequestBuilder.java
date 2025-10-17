@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListHrisEmployeesRequest;
@@ -29,7 +28,7 @@ public class ListHrisEmployeesRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<ListHrisEmployeesResponse> call() throws Exception {
+    public CompletableFuture<ListHrisEmployeesResponse> call() {
         
         AsyncRequestOperation<ListHrisEmployeesRequest, ListHrisEmployeesResponse> operation
               = new ListHrisEmployees.Async(sdkConfiguration, _headers);

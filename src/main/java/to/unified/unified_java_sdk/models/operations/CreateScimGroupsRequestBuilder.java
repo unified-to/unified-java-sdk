@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.CreateScimGroups;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class CreateScimGroupsRequestBuilder {
         return this;
     }
 
-    public CreateScimGroupsResponse call() throws Exception {
+    public CreateScimGroupsResponse call() {
         
         RequestOperation<CreateScimGroupsRequest, CreateScimGroupsResponse> operation
               = new CreateScimGroups.Sync(sdkConfiguration, _headers);

@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.GetAccountingTrialbalanceRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingTrialbalanceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAccountingTrialbalanceResponse;
@@ -50,9 +49,9 @@ public class Trialbalance {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingTrialbalanceResponse getAccountingTrialbalance(GetAccountingTrialbalanceRequest request) throws Exception {
+    public GetAccountingTrialbalanceResponse getAccountingTrialbalance(GetAccountingTrialbalanceRequest request) {
         RequestOperation<GetAccountingTrialbalanceRequest, GetAccountingTrialbalanceResponse> operation
               = new GetAccountingTrialbalance.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -72,9 +71,9 @@ public class Trialbalance {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingTrialbalancesResponse listAccountingTrialbalances(ListAccountingTrialbalancesRequest request) throws Exception {
+    public ListAccountingTrialbalancesResponse listAccountingTrialbalances(ListAccountingTrialbalancesRequest request) {
         RequestOperation<ListAccountingTrialbalancesRequest, ListAccountingTrialbalancesResponse> operation
               = new ListAccountingTrialbalances.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

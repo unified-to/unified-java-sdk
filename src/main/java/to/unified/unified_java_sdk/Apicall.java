@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedApicallRequest;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedApicallRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedApicallResponse;
@@ -50,9 +49,9 @@ public class Apicall {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetUnifiedApicallResponse getUnifiedApicall(GetUnifiedApicallRequest request) throws Exception {
+    public GetUnifiedApicallResponse getUnifiedApicall(GetUnifiedApicallRequest request) {
         RequestOperation<GetUnifiedApicallRequest, GetUnifiedApicallResponse> operation
               = new GetUnifiedApicall.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -72,9 +71,9 @@ public class Apicall {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListUnifiedApicallsResponse listUnifiedApicalls(ListUnifiedApicallsRequest request) throws Exception {
+    public ListUnifiedApicallsResponse listUnifiedApicalls(ListUnifiedApicallsRequest request) {
         RequestOperation<ListUnifiedApicallsRequest, ListUnifiedApicallsResponse> operation
               = new ListUnifiedApicalls.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

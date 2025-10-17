@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetStorageFile;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class GetStorageFileRequestBuilder {
         return this;
     }
 
-    public GetStorageFileResponse call() throws Exception {
+    public GetStorageFileResponse call() {
         
         RequestOperation<GetStorageFileRequest, GetStorageFileResponse> operation
               = new GetStorageFile.Sync(sdkConfiguration, _headers);

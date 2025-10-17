@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptRequest;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptResponse;
@@ -46,9 +45,9 @@ public class Prompt {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateGenaiPromptResponse createGenaiPrompt(CreateGenaiPromptRequest request) throws Exception {
+    public CreateGenaiPromptResponse createGenaiPrompt(CreateGenaiPromptRequest request) {
         RequestOperation<CreateGenaiPromptRequest, CreateGenaiPromptResponse> operation
               = new CreateGenaiPrompt.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

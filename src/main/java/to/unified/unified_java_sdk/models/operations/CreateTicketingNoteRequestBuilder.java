@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.CreateTicketingNote;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class CreateTicketingNoteRequestBuilder {
         return this;
     }
 
-    public CreateTicketingNoteResponse call() throws Exception {
+    public CreateTicketingNoteResponse call() {
         
         RequestOperation<CreateTicketingNoteRequest, CreateTicketingNoteResponse> operation
               = new CreateTicketingNote.Sync(sdkConfiguration, _headers);

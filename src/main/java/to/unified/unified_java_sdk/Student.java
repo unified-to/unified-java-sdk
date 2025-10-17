@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.CreateLmsStudentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateLmsStudentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateLmsStudentResponse;
@@ -66,9 +65,9 @@ public class Student {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public CreateLmsStudentResponse createLmsStudent(CreateLmsStudentRequest request) throws Exception {
+    public CreateLmsStudentResponse createLmsStudent(CreateLmsStudentRequest request) {
         RequestOperation<CreateLmsStudentRequest, CreateLmsStudentResponse> operation
               = new CreateLmsStudent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -88,9 +87,9 @@ public class Student {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public GetLmsStudentResponse getLmsStudent(GetLmsStudentRequest request) throws Exception {
+    public GetLmsStudentResponse getLmsStudent(GetLmsStudentRequest request) {
         RequestOperation<GetLmsStudentRequest, GetLmsStudentResponse> operation
               = new GetLmsStudent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -110,9 +109,9 @@ public class Student {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListLmsStudentsResponse listLmsStudents(ListLmsStudentsRequest request) throws Exception {
+    public ListLmsStudentsResponse listLmsStudents(ListLmsStudentsRequest request) {
         RequestOperation<ListLmsStudentsRequest, ListLmsStudentsResponse> operation
               = new ListLmsStudents.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -132,9 +131,9 @@ public class Student {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public PatchLmsStudentResponse patchLmsStudent(PatchLmsStudentRequest request) throws Exception {
+    public PatchLmsStudentResponse patchLmsStudent(PatchLmsStudentRequest request) {
         RequestOperation<PatchLmsStudentRequest, PatchLmsStudentResponse> operation
               = new PatchLmsStudent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -154,9 +153,9 @@ public class Student {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveLmsStudentResponse removeLmsStudent(RemoveLmsStudentRequest request) throws Exception {
+    public RemoveLmsStudentResponse removeLmsStudent(RemoveLmsStudentRequest request) {
         RequestOperation<RemoveLmsStudentRequest, RemoveLmsStudentResponse> operation
               = new RemoveLmsStudent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -176,9 +175,9 @@ public class Student {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateLmsStudentResponse updateLmsStudent(UpdateLmsStudentRequest request) throws Exception {
+    public UpdateLmsStudentResponse updateLmsStudent(UpdateLmsStudentRequest request) {
         RequestOperation<UpdateLmsStudentRequest, UpdateLmsStudentResponse> operation
               = new UpdateLmsStudent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
-import java.lang.Exception;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffsRequest;
@@ -29,7 +28,7 @@ public class ListHrisTimeoffsRequestBuilder {
         return this;
     }
 
-    public CompletableFuture<ListHrisTimeoffsResponse> call() throws Exception {
+    public CompletableFuture<ListHrisTimeoffsResponse> call() {
         
         AsyncRequestOperation<ListHrisTimeoffsRequest, ListHrisTimeoffsResponse> operation
               = new ListHrisTimeoffs.Async(sdkConfiguration, _headers);

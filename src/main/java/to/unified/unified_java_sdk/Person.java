@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleRequest;
 import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleResponse;
@@ -46,9 +45,9 @@ public class Person {
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
-     * @throws Exception if the API call fails
+     * @throws RuntimeException subclass if the API call fails
      */
-    public ListEnrichPeopleResponse listEnrichPeople(ListEnrichPeopleRequest request) throws Exception {
+    public ListEnrichPeopleResponse listEnrichPeople(ListEnrichPeopleRequest request) {
         RequestOperation<ListEnrichPeopleRequest, ListEnrichPeopleResponse> operation
               = new ListEnrichPeople.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

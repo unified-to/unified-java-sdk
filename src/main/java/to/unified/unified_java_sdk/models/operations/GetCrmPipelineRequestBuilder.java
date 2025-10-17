@@ -5,7 +5,6 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
-import java.lang.Exception;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetCrmPipeline;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -27,7 +26,7 @@ public class GetCrmPipelineRequestBuilder {
         return this;
     }
 
-    public GetCrmPipelineResponse call() throws Exception {
+    public GetCrmPipelineResponse call() {
         
         RequestOperation<GetCrmPipelineRequest, GetCrmPipelineResponse> operation
               = new GetCrmPipeline.Sync(sdkConfiguration, _headers);
