@@ -38,8 +38,18 @@ public class MarketingMember {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("first_name")
+    private Optional<String> firstName;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("last_name")
+    private Optional<String> lastName;
 
     /**
      * An array of list IDs associated with this member
@@ -53,9 +63,7 @@ public class MarketingMember {
     @JsonProperty("name")
     private Optional<String> name;
 
-    /**
-     * The raw data returned by the integration for this member
-     */
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
@@ -76,7 +84,9 @@ public class MarketingMember {
     public MarketingMember(
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("emails") Optional<? extends List<MarketingEmail>> emails,
+            @JsonProperty("first_name") Optional<String> firstName,
             @JsonProperty("id") Optional<String> id,
+            @JsonProperty("last_name") Optional<String> lastName,
             @JsonProperty("list_ids") Optional<? extends List<String>> listIds,
             @JsonProperty("name") Optional<String> name,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
@@ -84,7 +94,9 @@ public class MarketingMember {
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(emails, "emails");
+        Utils.checkNotNull(firstName, "firstName");
         Utils.checkNotNull(id, "id");
+        Utils.checkNotNull(lastName, "lastName");
         Utils.checkNotNull(listIds, "listIds");
         Utils.checkNotNull(name, "name");
         Utils.checkNotNull(raw, "raw");
@@ -92,7 +104,9 @@ public class MarketingMember {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.createdAt = createdAt;
         this.emails = emails;
+        this.firstName = firstName;
         this.id = id;
+        this.lastName = lastName;
         this.listIds = listIds;
         this.name = name;
         this.raw = raw;
@@ -103,7 +117,8 @@ public class MarketingMember {
     public MarketingMember() {
         this(Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -121,8 +136,18 @@ public class MarketingMember {
     }
 
     @JsonIgnore
+    public Optional<String> firstName() {
+        return firstName;
+    }
+
+    @JsonIgnore
     public Optional<String> id() {
         return id;
+    }
+
+    @JsonIgnore
+    public Optional<String> lastName() {
+        return lastName;
     }
 
     /**
@@ -139,9 +164,6 @@ public class MarketingMember {
         return name;
     }
 
-    /**
-     * The raw data returned by the integration for this member
-     */
     @SuppressWarnings("unchecked")
     @JsonIgnore
     public Optional<Map<String, Object>> raw() {
@@ -199,6 +221,19 @@ public class MarketingMember {
         return this;
     }
 
+    public MarketingMember withFirstName(String firstName) {
+        Utils.checkNotNull(firstName, "firstName");
+        this.firstName = Optional.ofNullable(firstName);
+        return this;
+    }
+
+
+    public MarketingMember withFirstName(Optional<String> firstName) {
+        Utils.checkNotNull(firstName, "firstName");
+        this.firstName = firstName;
+        return this;
+    }
+
     public MarketingMember withId(String id) {
         Utils.checkNotNull(id, "id");
         this.id = Optional.ofNullable(id);
@@ -209,6 +244,19 @@ public class MarketingMember {
     public MarketingMember withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
+        return this;
+    }
+
+    public MarketingMember withLastName(String lastName) {
+        Utils.checkNotNull(lastName, "lastName");
+        this.lastName = Optional.ofNullable(lastName);
+        return this;
+    }
+
+
+    public MarketingMember withLastName(Optional<String> lastName) {
+        Utils.checkNotNull(lastName, "lastName");
+        this.lastName = lastName;
         return this;
     }
 
@@ -244,9 +292,6 @@ public class MarketingMember {
         return this;
     }
 
-    /**
-     * The raw data returned by the integration for this member
-     */
     public MarketingMember withRaw(Map<String, Object> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
@@ -254,9 +299,6 @@ public class MarketingMember {
     }
 
 
-    /**
-     * The raw data returned by the integration for this member
-     */
     public MarketingMember withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
@@ -307,7 +349,9 @@ public class MarketingMember {
         return 
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.emails, other.emails) &&
+            Utils.enhancedDeepEquals(this.firstName, other.firstName) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.lastName, other.lastName) &&
             Utils.enhancedDeepEquals(this.listIds, other.listIds) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -318,9 +362,10 @@ public class MarketingMember {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt, emails, id,
-            listIds, name, raw,
-            tags, updatedAt);
+            createdAt, emails, firstName,
+            id, lastName, listIds,
+            name, raw, tags,
+            updatedAt);
     }
     
     @Override
@@ -328,7 +373,9 @@ public class MarketingMember {
         return Utils.toString(MarketingMember.class,
                 "createdAt", createdAt,
                 "emails", emails,
+                "firstName", firstName,
                 "id", id,
+                "lastName", lastName,
                 "listIds", listIds,
                 "name", name,
                 "raw", raw,
@@ -343,7 +390,11 @@ public class MarketingMember {
 
         private Optional<? extends List<MarketingEmail>> emails = Optional.empty();
 
+        private Optional<String> firstName = Optional.empty();
+
         private Optional<String> id = Optional.empty();
+
+        private Optional<String> lastName = Optional.empty();
 
         private Optional<? extends List<String>> listIds = Optional.empty();
 
@@ -392,6 +443,19 @@ public class MarketingMember {
         }
 
 
+        public Builder firstName(String firstName) {
+            Utils.checkNotNull(firstName, "firstName");
+            this.firstName = Optional.ofNullable(firstName);
+            return this;
+        }
+
+        public Builder firstName(Optional<String> firstName) {
+            Utils.checkNotNull(firstName, "firstName");
+            this.firstName = firstName;
+            return this;
+        }
+
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -401,6 +465,19 @@ public class MarketingMember {
         public Builder id(Optional<String> id) {
             Utils.checkNotNull(id, "id");
             this.id = id;
+            return this;
+        }
+
+
+        public Builder lastName(String lastName) {
+            Utils.checkNotNull(lastName, "lastName");
+            this.lastName = Optional.ofNullable(lastName);
+            return this;
+        }
+
+        public Builder lastName(Optional<String> lastName) {
+            Utils.checkNotNull(lastName, "lastName");
+            this.lastName = lastName;
             return this;
         }
 
@@ -437,18 +514,12 @@ public class MarketingMember {
         }
 
 
-        /**
-         * The raw data returned by the integration for this member
-         */
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        /**
-         * The raw data returned by the integration for this member
-         */
         public Builder raw(Optional<? extends Map<String, Object>> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
@@ -490,9 +561,10 @@ public class MarketingMember {
         public MarketingMember build() {
 
             return new MarketingMember(
-                createdAt, emails, id,
-                listIds, name, raw,
-                tags, updatedAt);
+                createdAt, emails, firstName,
+                id, lastName, listIds,
+                name, raw, tags,
+                updatedAt);
         }
 
     }

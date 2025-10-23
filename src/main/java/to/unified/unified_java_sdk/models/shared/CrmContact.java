@@ -67,6 +67,11 @@ public class CrmContact {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("first_name")
+    private Optional<String> firstName;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
@@ -74,6 +79,11 @@ public class CrmContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_url")
     private Optional<String> imageUrl;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("last_name")
+    private Optional<String> lastName;
 
     /**
      * Additional URLs associated with the contact e.g., LinkedIn, website, etc
@@ -128,8 +138,10 @@ public class CrmContact {
             @JsonProperty("deal_ids") Optional<? extends List<String>> dealIds,
             @JsonProperty("department") Optional<String> department,
             @JsonProperty("emails") Optional<? extends List<CrmEmail>> emails,
+            @JsonProperty("first_name") Optional<String> firstName,
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("image_url") Optional<String> imageUrl,
+            @JsonProperty("last_name") Optional<String> lastName,
             @JsonProperty("link_urls") Optional<? extends List<String>> linkUrls,
             @JsonProperty("metadata") Optional<? extends List<CrmMetadata>> metadata,
             @JsonProperty("name") Optional<String> name,
@@ -145,8 +157,10 @@ public class CrmContact {
         Utils.checkNotNull(dealIds, "dealIds");
         Utils.checkNotNull(department, "department");
         Utils.checkNotNull(emails, "emails");
+        Utils.checkNotNull(firstName, "firstName");
         Utils.checkNotNull(id, "id");
         Utils.checkNotNull(imageUrl, "imageUrl");
+        Utils.checkNotNull(lastName, "lastName");
         Utils.checkNotNull(linkUrls, "linkUrls");
         Utils.checkNotNull(metadata, "metadata");
         Utils.checkNotNull(name, "name");
@@ -162,8 +176,10 @@ public class CrmContact {
         this.dealIds = dealIds;
         this.department = department;
         this.emails = emails;
+        this.firstName = firstName;
         this.id = id;
         this.imageUrl = imageUrl;
+        this.lastName = lastName;
         this.linkUrls = linkUrls;
         this.metadata = metadata;
         this.name = name;
@@ -180,7 +196,8 @@ public class CrmContact {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -232,6 +249,11 @@ public class CrmContact {
     }
 
     @JsonIgnore
+    public Optional<String> firstName() {
+        return firstName;
+    }
+
+    @JsonIgnore
     public Optional<String> id() {
         return id;
     }
@@ -239,6 +261,11 @@ public class CrmContact {
     @JsonIgnore
     public Optional<String> imageUrl() {
         return imageUrl;
+    }
+
+    @JsonIgnore
+    public Optional<String> lastName() {
+        return lastName;
     }
 
     /**
@@ -405,6 +432,19 @@ public class CrmContact {
         return this;
     }
 
+    public CrmContact withFirstName(String firstName) {
+        Utils.checkNotNull(firstName, "firstName");
+        this.firstName = Optional.ofNullable(firstName);
+        return this;
+    }
+
+
+    public CrmContact withFirstName(Optional<String> firstName) {
+        Utils.checkNotNull(firstName, "firstName");
+        this.firstName = firstName;
+        return this;
+    }
+
     public CrmContact withId(String id) {
         Utils.checkNotNull(id, "id");
         this.id = Optional.ofNullable(id);
@@ -428,6 +468,19 @@ public class CrmContact {
     public CrmContact withImageUrl(Optional<String> imageUrl) {
         Utils.checkNotNull(imageUrl, "imageUrl");
         this.imageUrl = imageUrl;
+        return this;
+    }
+
+    public CrmContact withLastName(String lastName) {
+        Utils.checkNotNull(lastName, "lastName");
+        this.lastName = Optional.ofNullable(lastName);
+        return this;
+    }
+
+
+    public CrmContact withLastName(Optional<String> lastName) {
+        Utils.checkNotNull(lastName, "lastName");
+        this.lastName = lastName;
         return this;
     }
 
@@ -564,8 +617,10 @@ public class CrmContact {
             Utils.enhancedDeepEquals(this.dealIds, other.dealIds) &&
             Utils.enhancedDeepEquals(this.department, other.department) &&
             Utils.enhancedDeepEquals(this.emails, other.emails) &&
+            Utils.enhancedDeepEquals(this.firstName, other.firstName) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.imageUrl, other.imageUrl) &&
+            Utils.enhancedDeepEquals(this.lastName, other.lastName) &&
             Utils.enhancedDeepEquals(this.linkUrls, other.linkUrls) &&
             Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
@@ -581,10 +636,11 @@ public class CrmContact {
         return Utils.enhancedHash(
             address, company, companyIds,
             createdAt, dealIds, department,
-            emails, id, imageUrl,
-            linkUrls, metadata, name,
-            raw, telephones, title,
-            updatedAt, userId);
+            emails, firstName, id,
+            imageUrl, lastName, linkUrls,
+            metadata, name, raw,
+            telephones, title, updatedAt,
+            userId);
     }
     
     @Override
@@ -597,8 +653,10 @@ public class CrmContact {
                 "dealIds", dealIds,
                 "department", department,
                 "emails", emails,
+                "firstName", firstName,
                 "id", id,
                 "imageUrl", imageUrl,
+                "lastName", lastName,
                 "linkUrls", linkUrls,
                 "metadata", metadata,
                 "name", name,
@@ -626,9 +684,13 @@ public class CrmContact {
 
         private Optional<? extends List<CrmEmail>> emails = Optional.empty();
 
+        private Optional<String> firstName = Optional.empty();
+
         private Optional<String> id = Optional.empty();
 
         private Optional<String> imageUrl = Optional.empty();
+
+        private Optional<String> lastName = Optional.empty();
 
         private Optional<? extends List<String>> linkUrls = Optional.empty();
 
@@ -760,6 +822,19 @@ public class CrmContact {
         }
 
 
+        public Builder firstName(String firstName) {
+            Utils.checkNotNull(firstName, "firstName");
+            this.firstName = Optional.ofNullable(firstName);
+            return this;
+        }
+
+        public Builder firstName(Optional<String> firstName) {
+            Utils.checkNotNull(firstName, "firstName");
+            this.firstName = firstName;
+            return this;
+        }
+
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -782,6 +857,19 @@ public class CrmContact {
         public Builder imageUrl(Optional<String> imageUrl) {
             Utils.checkNotNull(imageUrl, "imageUrl");
             this.imageUrl = imageUrl;
+            return this;
+        }
+
+
+        public Builder lastName(String lastName) {
+            Utils.checkNotNull(lastName, "lastName");
+            this.lastName = Optional.ofNullable(lastName);
+            return this;
+        }
+
+        public Builder lastName(Optional<String> lastName) {
+            Utils.checkNotNull(lastName, "lastName");
+            this.lastName = lastName;
             return this;
         }
 
@@ -906,10 +994,11 @@ public class CrmContact {
             return new CrmContact(
                 address, company, companyIds,
                 createdAt, dealIds, department,
-                emails, id, imageUrl,
-                linkUrls, metadata, name,
-                raw, telephones, title,
-                updatedAt, userId);
+                emails, firstName, id,
+                imageUrl, lastName, linkUrls,
+                metadata, name, raw,
+                telephones, title, updatedAt,
+                userId);
         }
 
     }

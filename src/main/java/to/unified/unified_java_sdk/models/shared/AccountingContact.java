@@ -55,6 +55,11 @@ public class AccountingContact {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("first_name")
+    private Optional<String> firstName;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
@@ -77,6 +82,11 @@ public class AccountingContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_supplier")
     private Optional<Boolean> isSupplier;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("last_name")
+    private Optional<String> lastName;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -131,11 +141,13 @@ public class AccountingContact {
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("currency") Optional<String> currency,
             @JsonProperty("emails") Optional<? extends List<AccountingEmail>> emails,
+            @JsonProperty("first_name") Optional<String> firstName,
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("identification") Optional<String> identification,
             @JsonProperty("is_active") Optional<Boolean> isActive,
             @JsonProperty("is_customer") Optional<Boolean> isCustomer,
             @JsonProperty("is_supplier") Optional<Boolean> isSupplier,
+            @JsonProperty("last_name") Optional<String> lastName,
             @JsonProperty("name") Optional<String> name,
             @JsonProperty("payment_methods") Optional<? extends List<AccountingContactPaymentMethod>> paymentMethods,
             @JsonProperty("portal_url") Optional<String> portalUrl,
@@ -151,11 +163,13 @@ public class AccountingContact {
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(currency, "currency");
         Utils.checkNotNull(emails, "emails");
+        Utils.checkNotNull(firstName, "firstName");
         Utils.checkNotNull(id, "id");
         Utils.checkNotNull(identification, "identification");
         Utils.checkNotNull(isActive, "isActive");
         Utils.checkNotNull(isCustomer, "isCustomer");
         Utils.checkNotNull(isSupplier, "isSupplier");
+        Utils.checkNotNull(lastName, "lastName");
         Utils.checkNotNull(name, "name");
         Utils.checkNotNull(paymentMethods, "paymentMethods");
         Utils.checkNotNull(portalUrl, "portalUrl");
@@ -171,11 +185,13 @@ public class AccountingContact {
         this.createdAt = createdAt;
         this.currency = currency;
         this.emails = emails;
+        this.firstName = firstName;
         this.id = id;
         this.identification = identification;
         this.isActive = isActive;
         this.isCustomer = isCustomer;
         this.isSupplier = isSupplier;
+        this.lastName = lastName;
         this.name = name;
         this.paymentMethods = paymentMethods;
         this.portalUrl = portalUrl;
@@ -194,7 +210,8 @@ public class AccountingContact {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -231,6 +248,11 @@ public class AccountingContact {
     }
 
     @JsonIgnore
+    public Optional<String> firstName() {
+        return firstName;
+    }
+
+    @JsonIgnore
     public Optional<String> id() {
         return id;
     }
@@ -253,6 +275,11 @@ public class AccountingContact {
     @JsonIgnore
     public Optional<Boolean> isSupplier() {
         return isSupplier;
+    }
+
+    @JsonIgnore
+    public Optional<String> lastName() {
+        return lastName;
     }
 
     @JsonIgnore
@@ -388,6 +415,19 @@ public class AccountingContact {
         return this;
     }
 
+    public AccountingContact withFirstName(String firstName) {
+        Utils.checkNotNull(firstName, "firstName");
+        this.firstName = Optional.ofNullable(firstName);
+        return this;
+    }
+
+
+    public AccountingContact withFirstName(Optional<String> firstName) {
+        Utils.checkNotNull(firstName, "firstName");
+        this.firstName = firstName;
+        return this;
+    }
+
     public AccountingContact withId(String id) {
         Utils.checkNotNull(id, "id");
         this.id = Optional.ofNullable(id);
@@ -450,6 +490,19 @@ public class AccountingContact {
     public AccountingContact withIsSupplier(Optional<Boolean> isSupplier) {
         Utils.checkNotNull(isSupplier, "isSupplier");
         this.isSupplier = isSupplier;
+        return this;
+    }
+
+    public AccountingContact withLastName(String lastName) {
+        Utils.checkNotNull(lastName, "lastName");
+        this.lastName = Optional.ofNullable(lastName);
+        return this;
+    }
+
+
+    public AccountingContact withLastName(Optional<String> lastName) {
+        Utils.checkNotNull(lastName, "lastName");
+        this.lastName = lastName;
         return this;
     }
 
@@ -586,11 +639,13 @@ public class AccountingContact {
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.emails, other.emails) &&
+            Utils.enhancedDeepEquals(this.firstName, other.firstName) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.identification, other.identification) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
             Utils.enhancedDeepEquals(this.isCustomer, other.isCustomer) &&
             Utils.enhancedDeepEquals(this.isSupplier, other.isSupplier) &&
+            Utils.enhancedDeepEquals(this.lastName, other.lastName) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.paymentMethods, other.paymentMethods) &&
             Utils.enhancedDeepEquals(this.portalUrl, other.portalUrl) &&
@@ -607,11 +662,12 @@ public class AccountingContact {
         return Utils.enhancedHash(
             associatedContacts, billingAddress, companyName,
             createdAt, currency, emails,
-            id, identification, isActive,
-            isCustomer, isSupplier, name,
-            paymentMethods, portalUrl, raw,
-            shippingAddress, taxExemption, taxNumber,
-            telephones, updatedAt);
+            firstName, id, identification,
+            isActive, isCustomer, isSupplier,
+            lastName, name, paymentMethods,
+            portalUrl, raw, shippingAddress,
+            taxExemption, taxNumber, telephones,
+            updatedAt);
     }
     
     @Override
@@ -623,11 +679,13 @@ public class AccountingContact {
                 "createdAt", createdAt,
                 "currency", currency,
                 "emails", emails,
+                "firstName", firstName,
                 "id", id,
                 "identification", identification,
                 "isActive", isActive,
                 "isCustomer", isCustomer,
                 "isSupplier", isSupplier,
+                "lastName", lastName,
                 "name", name,
                 "paymentMethods", paymentMethods,
                 "portalUrl", portalUrl,
@@ -654,6 +712,8 @@ public class AccountingContact {
 
         private Optional<? extends List<AccountingEmail>> emails = Optional.empty();
 
+        private Optional<String> firstName = Optional.empty();
+
         private Optional<String> id = Optional.empty();
 
         private Optional<String> identification = Optional.empty();
@@ -663,6 +723,8 @@ public class AccountingContact {
         private Optional<Boolean> isCustomer = Optional.empty();
 
         private Optional<Boolean> isSupplier = Optional.empty();
+
+        private Optional<String> lastName = Optional.empty();
 
         private Optional<String> name = Optional.empty();
 
@@ -765,6 +827,19 @@ public class AccountingContact {
         }
 
 
+        public Builder firstName(String firstName) {
+            Utils.checkNotNull(firstName, "firstName");
+            this.firstName = Optional.ofNullable(firstName);
+            return this;
+        }
+
+        public Builder firstName(Optional<String> firstName) {
+            Utils.checkNotNull(firstName, "firstName");
+            this.firstName = firstName;
+            return this;
+        }
+
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -826,6 +901,19 @@ public class AccountingContact {
         public Builder isSupplier(Optional<Boolean> isSupplier) {
             Utils.checkNotNull(isSupplier, "isSupplier");
             this.isSupplier = isSupplier;
+            return this;
+        }
+
+
+        public Builder lastName(String lastName) {
+            Utils.checkNotNull(lastName, "lastName");
+            this.lastName = Optional.ofNullable(lastName);
+            return this;
+        }
+
+        public Builder lastName(Optional<String> lastName) {
+            Utils.checkNotNull(lastName, "lastName");
+            this.lastName = lastName;
             return this;
         }
 
@@ -954,11 +1042,12 @@ public class AccountingContact {
             return new AccountingContact(
                 associatedContacts, billingAddress, companyName,
                 createdAt, currency, emails,
-                id, identification, isActive,
-                isCustomer, isSupplier, name,
-                paymentMethods, portalUrl, raw,
-                shippingAddress, taxExemption, taxNumber,
-                telephones, updatedAt);
+                firstName, id, identification,
+                isActive, isCustomer, isSupplier,
+                lastName, name, paymentMethods,
+                portalUrl, raw, shippingAddress,
+                taxExemption, taxNumber, telephones,
+                updatedAt);
         }
 
 

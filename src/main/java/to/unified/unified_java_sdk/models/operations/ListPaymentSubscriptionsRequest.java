@@ -29,6 +29,18 @@ public class ListPaymentSubscriptionsRequest {
     private Optional<String> contactId;
 
     /**
+     * The end date to filter by (deprecated)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_le")
+    private Optional<String> endLe;
+
+    /**
+     * The end date to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_lt")
+    private Optional<String> endLt;
+
+    /**
      * Comma-delimited fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
@@ -65,6 +77,12 @@ public class ListPaymentSubscriptionsRequest {
     private Optional<String> sort;
 
     /**
+     * The start date to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_gte")
+    private Optional<String> startGte;
+
+    /**
      * Return only results whose updated date is equal or greater to this value
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
@@ -74,6 +92,8 @@ public class ListPaymentSubscriptionsRequest {
     public ListPaymentSubscriptionsRequest(
             String connectionId,
             Optional<String> contactId,
+            Optional<String> endLe,
+            Optional<String> endLt,
             Optional<? extends List<String>> fields,
             Optional<Double> limit,
             Optional<Double> offset,
@@ -81,9 +101,12 @@ public class ListPaymentSubscriptionsRequest {
             Optional<String> query,
             Optional<String> raw,
             Optional<String> sort,
+            Optional<String> startGte,
             Optional<String> updatedGte) {
         Utils.checkNotNull(connectionId, "connectionId");
         Utils.checkNotNull(contactId, "contactId");
+        Utils.checkNotNull(endLe, "endLe");
+        Utils.checkNotNull(endLt, "endLt");
         Utils.checkNotNull(fields, "fields");
         Utils.checkNotNull(limit, "limit");
         Utils.checkNotNull(offset, "offset");
@@ -91,9 +114,12 @@ public class ListPaymentSubscriptionsRequest {
         Utils.checkNotNull(query, "query");
         Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(sort, "sort");
+        Utils.checkNotNull(startGte, "startGte");
         Utils.checkNotNull(updatedGte, "updatedGte");
         this.connectionId = connectionId;
         this.contactId = contactId;
+        this.endLe = endLe;
+        this.endLt = endLt;
         this.fields = fields;
         this.limit = limit;
         this.offset = offset;
@@ -101,12 +127,14 @@ public class ListPaymentSubscriptionsRequest {
         this.query = query;
         this.raw = raw;
         this.sort = sort;
+        this.startGte = startGte;
         this.updatedGte = updatedGte;
     }
     
     public ListPaymentSubscriptionsRequest(
             String connectionId) {
         this(connectionId, Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty());
@@ -126,6 +154,22 @@ public class ListPaymentSubscriptionsRequest {
     @JsonIgnore
     public Optional<String> contactId() {
         return contactId;
+    }
+
+    /**
+     * The end date to filter by (deprecated)
+     */
+    @JsonIgnore
+    public Optional<String> endLe() {
+        return endLe;
+    }
+
+    /**
+     * The end date to filter by
+     */
+    @JsonIgnore
+    public Optional<String> endLt() {
+        return endLt;
     }
 
     /**
@@ -176,6 +220,14 @@ public class ListPaymentSubscriptionsRequest {
     }
 
     /**
+     * The start date to filter by
+     */
+    @JsonIgnore
+    public Optional<String> startGte() {
+        return startGte;
+    }
+
+    /**
      * Return only results whose updated date is equal or greater to this value
      */
     @JsonIgnore
@@ -213,6 +265,44 @@ public class ListPaymentSubscriptionsRequest {
     public ListPaymentSubscriptionsRequest withContactId(Optional<String> contactId) {
         Utils.checkNotNull(contactId, "contactId");
         this.contactId = contactId;
+        return this;
+    }
+
+    /**
+     * The end date to filter by (deprecated)
+     */
+    public ListPaymentSubscriptionsRequest withEndLe(String endLe) {
+        Utils.checkNotNull(endLe, "endLe");
+        this.endLe = Optional.ofNullable(endLe);
+        return this;
+    }
+
+
+    /**
+     * The end date to filter by (deprecated)
+     */
+    public ListPaymentSubscriptionsRequest withEndLe(Optional<String> endLe) {
+        Utils.checkNotNull(endLe, "endLe");
+        this.endLe = endLe;
+        return this;
+    }
+
+    /**
+     * The end date to filter by
+     */
+    public ListPaymentSubscriptionsRequest withEndLt(String endLt) {
+        Utils.checkNotNull(endLt, "endLt");
+        this.endLt = Optional.ofNullable(endLt);
+        return this;
+    }
+
+
+    /**
+     * The end date to filter by
+     */
+    public ListPaymentSubscriptionsRequest withEndLt(Optional<String> endLt) {
+        Utils.checkNotNull(endLt, "endLt");
+        this.endLt = endLt;
         return this;
     }
 
@@ -330,6 +420,25 @@ public class ListPaymentSubscriptionsRequest {
     }
 
     /**
+     * The start date to filter by
+     */
+    public ListPaymentSubscriptionsRequest withStartGte(String startGte) {
+        Utils.checkNotNull(startGte, "startGte");
+        this.startGte = Optional.ofNullable(startGte);
+        return this;
+    }
+
+
+    /**
+     * The start date to filter by
+     */
+    public ListPaymentSubscriptionsRequest withStartGte(Optional<String> startGte) {
+        Utils.checkNotNull(startGte, "startGte");
+        this.startGte = startGte;
+        return this;
+    }
+
+    /**
      * Return only results whose updated date is equal or greater to this value
      */
     public ListPaymentSubscriptionsRequest withUpdatedGte(String updatedGte) {
@@ -360,6 +469,8 @@ public class ListPaymentSubscriptionsRequest {
         return 
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
+            Utils.enhancedDeepEquals(this.endLe, other.endLe) &&
+            Utils.enhancedDeepEquals(this.endLt, other.endLt) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
@@ -367,15 +478,17 @@ public class ListPaymentSubscriptionsRequest {
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
+            Utils.enhancedDeepEquals(this.startGte, other.startGte) &&
             Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte);
     }
     
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId, contactId, fields,
-            limit, offset, order,
-            query, raw, sort,
+            connectionId, contactId, endLe,
+            endLt, fields, limit,
+            offset, order, query,
+            raw, sort, startGte,
             updatedGte);
     }
     
@@ -384,6 +497,8 @@ public class ListPaymentSubscriptionsRequest {
         return Utils.toString(ListPaymentSubscriptionsRequest.class,
                 "connectionId", connectionId,
                 "contactId", contactId,
+                "endLe", endLe,
+                "endLt", endLt,
                 "fields", fields,
                 "limit", limit,
                 "offset", offset,
@@ -391,6 +506,7 @@ public class ListPaymentSubscriptionsRequest {
                 "query", query,
                 "raw", raw,
                 "sort", sort,
+                "startGte", startGte,
                 "updatedGte", updatedGte);
     }
 
@@ -400,6 +516,10 @@ public class ListPaymentSubscriptionsRequest {
         private String connectionId;
 
         private Optional<String> contactId = Optional.empty();
+
+        private Optional<String> endLe = Optional.empty();
+
+        private Optional<String> endLt = Optional.empty();
 
         private Optional<? extends List<String>> fields = Optional.empty();
 
@@ -414,6 +534,8 @@ public class ListPaymentSubscriptionsRequest {
         private Optional<String> raw = Optional.empty();
 
         private Optional<String> sort = Optional.empty();
+
+        private Optional<String> startGte = Optional.empty();
 
         private Optional<String> updatedGte = Optional.empty();
 
@@ -447,6 +569,44 @@ public class ListPaymentSubscriptionsRequest {
         public Builder contactId(Optional<String> contactId) {
             Utils.checkNotNull(contactId, "contactId");
             this.contactId = contactId;
+            return this;
+        }
+
+
+        /**
+         * The end date to filter by (deprecated)
+         */
+        public Builder endLe(String endLe) {
+            Utils.checkNotNull(endLe, "endLe");
+            this.endLe = Optional.ofNullable(endLe);
+            return this;
+        }
+
+        /**
+         * The end date to filter by (deprecated)
+         */
+        public Builder endLe(Optional<String> endLe) {
+            Utils.checkNotNull(endLe, "endLe");
+            this.endLe = endLe;
+            return this;
+        }
+
+
+        /**
+         * The end date to filter by
+         */
+        public Builder endLt(String endLt) {
+            Utils.checkNotNull(endLt, "endLt");
+            this.endLt = Optional.ofNullable(endLt);
+            return this;
+        }
+
+        /**
+         * The end date to filter by
+         */
+        public Builder endLt(Optional<String> endLt) {
+            Utils.checkNotNull(endLt, "endLt");
+            this.endLt = endLt;
             return this;
         }
 
@@ -565,6 +725,25 @@ public class ListPaymentSubscriptionsRequest {
 
 
         /**
+         * The start date to filter by
+         */
+        public Builder startGte(String startGte) {
+            Utils.checkNotNull(startGte, "startGte");
+            this.startGte = Optional.ofNullable(startGte);
+            return this;
+        }
+
+        /**
+         * The start date to filter by
+         */
+        public Builder startGte(Optional<String> startGte) {
+            Utils.checkNotNull(startGte, "startGte");
+            this.startGte = startGte;
+            return this;
+        }
+
+
+        /**
          * Return only results whose updated date is equal or greater to this value
          */
         public Builder updatedGte(String updatedGte) {
@@ -585,9 +764,10 @@ public class ListPaymentSubscriptionsRequest {
         public ListPaymentSubscriptionsRequest build() {
 
             return new ListPaymentSubscriptionsRequest(
-                connectionId, contactId, fields,
-                limit, offset, order,
-                query, raw, sort,
+                connectionId, contactId, endLe,
+                endLt, fields, limit,
+                offset, order, query,
+                raw, sort, startGte,
                 updatedGte);
         }
 

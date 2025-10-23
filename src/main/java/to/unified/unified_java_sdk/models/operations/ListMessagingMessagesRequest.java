@@ -30,10 +30,16 @@ public class ListMessagingMessagesRequest {
     private String connectionId;
 
     /**
-     * The end date to filter by
+     * The end date to filter by (deprecated)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_le")
     private Optional<String> endLe;
+
+    /**
+     * The end date to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_lt")
+    private Optional<String> endLt;
 
     /**
      * Whether to flatten grouped or recurring items into individual entries.
@@ -106,6 +112,7 @@ public class ListMessagingMessagesRequest {
             Optional<String> channelId,
             String connectionId,
             Optional<String> endLe,
+            Optional<String> endLt,
             Optional<Boolean> expand,
             Optional<? extends List<String>> fields,
             Optional<Double> limit,
@@ -121,6 +128,7 @@ public class ListMessagingMessagesRequest {
         Utils.checkNotNull(channelId, "channelId");
         Utils.checkNotNull(connectionId, "connectionId");
         Utils.checkNotNull(endLe, "endLe");
+        Utils.checkNotNull(endLt, "endLt");
         Utils.checkNotNull(expand, "expand");
         Utils.checkNotNull(fields, "fields");
         Utils.checkNotNull(limit, "limit");
@@ -136,6 +144,7 @@ public class ListMessagingMessagesRequest {
         this.channelId = channelId;
         this.connectionId = connectionId;
         this.endLe = endLe;
+        this.endLt = endLt;
         this.expand = expand;
         this.fields = fields;
         this.limit = limit;
@@ -156,7 +165,8 @@ public class ListMessagingMessagesRequest {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     /**
@@ -176,11 +186,19 @@ public class ListMessagingMessagesRequest {
     }
 
     /**
-     * The end date to filter by
+     * The end date to filter by (deprecated)
      */
     @JsonIgnore
     public Optional<String> endLe() {
         return endLe;
+    }
+
+    /**
+     * The end date to filter by
+     */
+    @JsonIgnore
+    public Optional<String> endLt() {
+        return endLt;
     }
 
     /**
@@ -304,7 +322,7 @@ public class ListMessagingMessagesRequest {
     }
 
     /**
-     * The end date to filter by
+     * The end date to filter by (deprecated)
      */
     public ListMessagingMessagesRequest withEndLe(String endLe) {
         Utils.checkNotNull(endLe, "endLe");
@@ -314,11 +332,30 @@ public class ListMessagingMessagesRequest {
 
 
     /**
-     * The end date to filter by
+     * The end date to filter by (deprecated)
      */
     public ListMessagingMessagesRequest withEndLe(Optional<String> endLe) {
         Utils.checkNotNull(endLe, "endLe");
         this.endLe = endLe;
+        return this;
+    }
+
+    /**
+     * The end date to filter by
+     */
+    public ListMessagingMessagesRequest withEndLt(String endLt) {
+        Utils.checkNotNull(endLt, "endLt");
+        this.endLt = Optional.ofNullable(endLt);
+        return this;
+    }
+
+
+    /**
+     * The end date to filter by
+     */
+    public ListMessagingMessagesRequest withEndLt(Optional<String> endLt) {
+        Utils.checkNotNull(endLt, "endLt");
+        this.endLt = endLt;
         return this;
     }
 
@@ -543,6 +580,7 @@ public class ListMessagingMessagesRequest {
             Utils.enhancedDeepEquals(this.channelId, other.channelId) &&
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
             Utils.enhancedDeepEquals(this.endLe, other.endLe) &&
+            Utils.enhancedDeepEquals(this.endLt, other.endLt) &&
             Utils.enhancedDeepEquals(this.expand, other.expand) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
@@ -561,10 +599,11 @@ public class ListMessagingMessagesRequest {
     public int hashCode() {
         return Utils.enhancedHash(
             channelId, connectionId, endLe,
-            expand, fields, limit,
-            offset, order, parentId,
-            query, raw, sort,
-            startGte, updatedGte, userId);
+            endLt, expand, fields,
+            limit, offset, order,
+            parentId, query, raw,
+            sort, startGte, updatedGte,
+            userId);
     }
     
     @Override
@@ -573,6 +612,7 @@ public class ListMessagingMessagesRequest {
                 "channelId", channelId,
                 "connectionId", connectionId,
                 "endLe", endLe,
+                "endLt", endLt,
                 "expand", expand,
                 "fields", fields,
                 "limit", limit,
@@ -595,6 +635,8 @@ public class ListMessagingMessagesRequest {
         private String connectionId;
 
         private Optional<String> endLe = Optional.empty();
+
+        private Optional<String> endLt = Optional.empty();
 
         private Optional<Boolean> expand = Optional.empty();
 
@@ -655,7 +697,7 @@ public class ListMessagingMessagesRequest {
 
 
         /**
-         * The end date to filter by
+         * The end date to filter by (deprecated)
          */
         public Builder endLe(String endLe) {
             Utils.checkNotNull(endLe, "endLe");
@@ -664,11 +706,30 @@ public class ListMessagingMessagesRequest {
         }
 
         /**
-         * The end date to filter by
+         * The end date to filter by (deprecated)
          */
         public Builder endLe(Optional<String> endLe) {
             Utils.checkNotNull(endLe, "endLe");
             this.endLe = endLe;
+            return this;
+        }
+
+
+        /**
+         * The end date to filter by
+         */
+        public Builder endLt(String endLt) {
+            Utils.checkNotNull(endLt, "endLt");
+            this.endLt = Optional.ofNullable(endLt);
+            return this;
+        }
+
+        /**
+         * The end date to filter by
+         */
+        public Builder endLt(Optional<String> endLt) {
+            Utils.checkNotNull(endLt, "endLt");
+            this.endLt = endLt;
             return this;
         }
 
@@ -884,10 +945,11 @@ public class ListMessagingMessagesRequest {
 
             return new ListMessagingMessagesRequest(
                 channelId, connectionId, endLe,
-                expand, fields, limit,
-                offset, order, parentId,
-                query, raw, sort,
-                startGte, updatedGte, userId);
+                endLt, expand, fields,
+                limit, offset, order,
+                parentId, query, raw,
+                sort, startGte, updatedGte,
+                userId);
         }
 
     }

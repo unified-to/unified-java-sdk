@@ -43,8 +43,18 @@ public class UcContact {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("first_name")
+    private Optional<String> firstName;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("last_name")
+    private Optional<String> lastName;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -78,7 +88,9 @@ public class UcContact {
             @JsonProperty("company") Optional<String> company,
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("emails") Optional<? extends List<UcEmail>> emails,
+            @JsonProperty("first_name") Optional<String> firstName,
             @JsonProperty("id") Optional<String> id,
+            @JsonProperty("last_name") Optional<String> lastName,
             @JsonProperty("name") Optional<String> name,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
             @JsonProperty("telephones") Optional<? extends List<UcTelephone>> telephones,
@@ -87,7 +99,9 @@ public class UcContact {
         Utils.checkNotNull(company, "company");
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(emails, "emails");
+        Utils.checkNotNull(firstName, "firstName");
         Utils.checkNotNull(id, "id");
+        Utils.checkNotNull(lastName, "lastName");
         Utils.checkNotNull(name, "name");
         Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(telephones, "telephones");
@@ -96,7 +110,9 @@ public class UcContact {
         this.company = company;
         this.createdAt = createdAt;
         this.emails = emails;
+        this.firstName = firstName;
         this.id = id;
+        this.lastName = lastName;
         this.name = name;
         this.raw = raw;
         this.telephones = telephones;
@@ -107,7 +123,8 @@ public class UcContact {
     public UcContact() {
         this(Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -130,8 +147,18 @@ public class UcContact {
     }
 
     @JsonIgnore
+    public Optional<String> firstName() {
+        return firstName;
+    }
+
+    @JsonIgnore
     public Optional<String> id() {
         return id;
+    }
+
+    @JsonIgnore
+    public Optional<String> lastName() {
+        return lastName;
     }
 
     @JsonIgnore
@@ -214,6 +241,19 @@ public class UcContact {
         return this;
     }
 
+    public UcContact withFirstName(String firstName) {
+        Utils.checkNotNull(firstName, "firstName");
+        this.firstName = Optional.ofNullable(firstName);
+        return this;
+    }
+
+
+    public UcContact withFirstName(Optional<String> firstName) {
+        Utils.checkNotNull(firstName, "firstName");
+        this.firstName = firstName;
+        return this;
+    }
+
     public UcContact withId(String id) {
         Utils.checkNotNull(id, "id");
         this.id = Optional.ofNullable(id);
@@ -224,6 +264,19 @@ public class UcContact {
     public UcContact withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
+        return this;
+    }
+
+    public UcContact withLastName(String lastName) {
+        Utils.checkNotNull(lastName, "lastName");
+        this.lastName = Optional.ofNullable(lastName);
+        return this;
+    }
+
+
+    public UcContact withLastName(Optional<String> lastName) {
+        Utils.checkNotNull(lastName, "lastName");
+        this.lastName = lastName;
         return this;
     }
 
@@ -311,7 +364,9 @@ public class UcContact {
             Utils.enhancedDeepEquals(this.company, other.company) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.emails, other.emails) &&
+            Utils.enhancedDeepEquals(this.firstName, other.firstName) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.lastName, other.lastName) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.telephones, other.telephones) &&
@@ -323,8 +378,9 @@ public class UcContact {
     public int hashCode() {
         return Utils.enhancedHash(
             company, createdAt, emails,
-            id, name, raw,
-            telephones, title, updatedAt);
+            firstName, id, lastName,
+            name, raw, telephones,
+            title, updatedAt);
     }
     
     @Override
@@ -333,7 +389,9 @@ public class UcContact {
                 "company", company,
                 "createdAt", createdAt,
                 "emails", emails,
+                "firstName", firstName,
                 "id", id,
+                "lastName", lastName,
                 "name", name,
                 "raw", raw,
                 "telephones", telephones,
@@ -350,7 +408,11 @@ public class UcContact {
 
         private Optional<? extends List<UcEmail>> emails = Optional.empty();
 
+        private Optional<String> firstName = Optional.empty();
+
         private Optional<String> id = Optional.empty();
+
+        private Optional<String> lastName = Optional.empty();
 
         private Optional<String> name = Optional.empty();
 
@@ -412,6 +474,19 @@ public class UcContact {
         }
 
 
+        public Builder firstName(String firstName) {
+            Utils.checkNotNull(firstName, "firstName");
+            this.firstName = Optional.ofNullable(firstName);
+            return this;
+        }
+
+        public Builder firstName(Optional<String> firstName) {
+            Utils.checkNotNull(firstName, "firstName");
+            this.firstName = firstName;
+            return this;
+        }
+
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -421,6 +496,19 @@ public class UcContact {
         public Builder id(Optional<String> id) {
             Utils.checkNotNull(id, "id");
             this.id = id;
+            return this;
+        }
+
+
+        public Builder lastName(String lastName) {
+            Utils.checkNotNull(lastName, "lastName");
+            this.lastName = Optional.ofNullable(lastName);
+            return this;
+        }
+
+        public Builder lastName(Optional<String> lastName) {
+            Utils.checkNotNull(lastName, "lastName");
+            this.lastName = lastName;
             return this;
         }
 
@@ -499,8 +587,9 @@ public class UcContact {
 
             return new UcContact(
                 company, createdAt, emails,
-                id, name, raw,
-                telephones, title, updatedAt);
+                firstName, id, lastName,
+                name, raw, telephones,
+                title, updatedAt);
         }
 
     }

@@ -93,6 +93,11 @@ public class HrisEmployee {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("first_name")
+    private Optional<String> firstName;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     private Optional<? extends HrisEmployeeGender> gender;
 
@@ -123,6 +128,11 @@ public class HrisEmployee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language_locale")
     private Optional<String> languageLocale;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("last_name")
+    private Optional<String> lastName;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -230,12 +240,14 @@ public class HrisEmployee {
             @JsonProperty("employee_roles") Optional<? extends List<PropertyHrisEmployeeEmployeeRoles>> employeeRoles,
             @JsonProperty("employment_status") Optional<? extends EmploymentStatus> employmentStatus,
             @JsonProperty("employment_type") Optional<? extends HrisEmployeeEmploymentType> employmentType,
+            @JsonProperty("first_name") Optional<String> firstName,
             @JsonProperty("gender") Optional<? extends HrisEmployeeGender> gender,
             @JsonProperty("groups") Optional<? extends List<HrisGroup>> groups,
             @JsonProperty("hired_at") Optional<OffsetDateTime> hiredAt,
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("image_url") Optional<String> imageUrl,
             @JsonProperty("language_locale") Optional<String> languageLocale,
+            @JsonProperty("last_name") Optional<String> lastName,
             @JsonProperty("location") Optional<String> location,
             @JsonProperty("locations") Optional<? extends List<HrisLocation>> locations,
             @JsonProperty("manager_id") Optional<String> managerId,
@@ -268,12 +280,14 @@ public class HrisEmployee {
         Utils.checkNotNull(employeeRoles, "employeeRoles");
         Utils.checkNotNull(employmentStatus, "employmentStatus");
         Utils.checkNotNull(employmentType, "employmentType");
+        Utils.checkNotNull(firstName, "firstName");
         Utils.checkNotNull(gender, "gender");
         Utils.checkNotNull(groups, "groups");
         Utils.checkNotNull(hiredAt, "hiredAt");
         Utils.checkNotNull(id, "id");
         Utils.checkNotNull(imageUrl, "imageUrl");
         Utils.checkNotNull(languageLocale, "languageLocale");
+        Utils.checkNotNull(lastName, "lastName");
         Utils.checkNotNull(location, "location");
         Utils.checkNotNull(locations, "locations");
         Utils.checkNotNull(managerId, "managerId");
@@ -306,12 +320,14 @@ public class HrisEmployee {
         this.employeeRoles = employeeRoles;
         this.employmentStatus = employmentStatus;
         this.employmentType = employmentType;
+        this.firstName = firstName;
         this.gender = gender;
         this.groups = groups;
         this.hiredAt = hiredAt;
         this.id = id;
         this.imageUrl = imageUrl;
         this.languageLocale = languageLocale;
+        this.lastName = lastName;
         this.location = location;
         this.locations = locations;
         this.managerId = managerId;
@@ -345,7 +361,8 @@ public class HrisEmployee {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -424,6 +441,11 @@ public class HrisEmployee {
         return (Optional<HrisEmployeeEmploymentType>) employmentType;
     }
 
+    @JsonIgnore
+    public Optional<String> firstName() {
+        return firstName;
+    }
+
     @SuppressWarnings("unchecked")
     @JsonIgnore
     public Optional<HrisEmployeeGender> gender() {
@@ -458,6 +480,11 @@ public class HrisEmployee {
     @JsonIgnore
     public Optional<String> languageLocale() {
         return languageLocale;
+    }
+
+    @JsonIgnore
+    public Optional<String> lastName() {
+        return lastName;
     }
 
     @JsonIgnore
@@ -742,6 +769,19 @@ public class HrisEmployee {
         return this;
     }
 
+    public HrisEmployee withFirstName(String firstName) {
+        Utils.checkNotNull(firstName, "firstName");
+        this.firstName = Optional.ofNullable(firstName);
+        return this;
+    }
+
+
+    public HrisEmployee withFirstName(Optional<String> firstName) {
+        Utils.checkNotNull(firstName, "firstName");
+        this.firstName = firstName;
+        return this;
+    }
+
     public HrisEmployee withGender(HrisEmployeeGender gender) {
         Utils.checkNotNull(gender, "gender");
         this.gender = Optional.ofNullable(gender);
@@ -825,6 +865,19 @@ public class HrisEmployee {
     public HrisEmployee withLanguageLocale(Optional<String> languageLocale) {
         Utils.checkNotNull(languageLocale, "languageLocale");
         this.languageLocale = languageLocale;
+        return this;
+    }
+
+    public HrisEmployee withLastName(String lastName) {
+        Utils.checkNotNull(lastName, "lastName");
+        this.lastName = Optional.ofNullable(lastName);
+        return this;
+    }
+
+
+    public HrisEmployee withLastName(Optional<String> lastName) {
+        Utils.checkNotNull(lastName, "lastName");
+        this.lastName = lastName;
         return this;
     }
 
@@ -1086,12 +1139,14 @@ public class HrisEmployee {
             Utils.enhancedDeepEquals(this.employeeRoles, other.employeeRoles) &&
             Utils.enhancedDeepEquals(this.employmentStatus, other.employmentStatus) &&
             Utils.enhancedDeepEquals(this.employmentType, other.employmentType) &&
+            Utils.enhancedDeepEquals(this.firstName, other.firstName) &&
             Utils.enhancedDeepEquals(this.gender, other.gender) &&
             Utils.enhancedDeepEquals(this.groups, other.groups) &&
             Utils.enhancedDeepEquals(this.hiredAt, other.hiredAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.imageUrl, other.imageUrl) &&
             Utils.enhancedDeepEquals(this.languageLocale, other.languageLocale) &&
+            Utils.enhancedDeepEquals(this.lastName, other.lastName) &&
             Utils.enhancedDeepEquals(this.location, other.location) &&
             Utils.enhancedDeepEquals(this.locations, other.locations) &&
             Utils.enhancedDeepEquals(this.managerId, other.managerId) &&
@@ -1119,15 +1174,16 @@ public class HrisEmployee {
             compensation, createdAt, currency,
             dateOfBirth, department, division,
             emails, employeeNumber, employeeRoles,
-            employmentStatus, employmentType, gender,
-            groups, hiredAt, id,
-            imageUrl, languageLocale, location,
-            locations, managerId, maritalStatus,
-            metadata, name, pronouns,
-            raw, salutation, ssnSin,
-            storageQuotaAllocated, storageQuotaAvailable, storageQuotaUsed,
-            telephones, terminatedAt, timezone,
-            title, updatedAt);
+            employmentStatus, employmentType, firstName,
+            gender, groups, hiredAt,
+            id, imageUrl, languageLocale,
+            lastName, location, locations,
+            managerId, maritalStatus, metadata,
+            name, pronouns, raw,
+            salutation, ssnSin, storageQuotaAllocated,
+            storageQuotaAvailable, storageQuotaUsed, telephones,
+            terminatedAt, timezone, title,
+            updatedAt);
     }
     
     @Override
@@ -1147,12 +1203,14 @@ public class HrisEmployee {
                 "employeeRoles", employeeRoles,
                 "employmentStatus", employmentStatus,
                 "employmentType", employmentType,
+                "firstName", firstName,
                 "gender", gender,
                 "groups", groups,
                 "hiredAt", hiredAt,
                 "id", id,
                 "imageUrl", imageUrl,
                 "languageLocale", languageLocale,
+                "lastName", lastName,
                 "location", location,
                 "locations", locations,
                 "managerId", managerId,
@@ -1204,6 +1262,8 @@ public class HrisEmployee {
 
         private Optional<? extends HrisEmployeeEmploymentType> employmentType = Optional.empty();
 
+        private Optional<String> firstName = Optional.empty();
+
         private Optional<? extends HrisEmployeeGender> gender = Optional.empty();
 
         private Optional<? extends List<HrisGroup>> groups = Optional.empty();
@@ -1215,6 +1275,8 @@ public class HrisEmployee {
         private Optional<String> imageUrl = Optional.empty();
 
         private Optional<String> languageLocale = Optional.empty();
+
+        private Optional<String> lastName = Optional.empty();
 
         private Optional<String> location = Optional.empty();
 
@@ -1439,6 +1501,19 @@ public class HrisEmployee {
         }
 
 
+        public Builder firstName(String firstName) {
+            Utils.checkNotNull(firstName, "firstName");
+            this.firstName = Optional.ofNullable(firstName);
+            return this;
+        }
+
+        public Builder firstName(Optional<String> firstName) {
+            Utils.checkNotNull(firstName, "firstName");
+            this.firstName = firstName;
+            return this;
+        }
+
+
         public Builder gender(HrisEmployeeGender gender) {
             Utils.checkNotNull(gender, "gender");
             this.gender = Optional.ofNullable(gender);
@@ -1521,6 +1596,19 @@ public class HrisEmployee {
         public Builder languageLocale(Optional<String> languageLocale) {
             Utils.checkNotNull(languageLocale, "languageLocale");
             this.languageLocale = languageLocale;
+            return this;
+        }
+
+
+        public Builder lastName(String lastName) {
+            Utils.checkNotNull(lastName, "lastName");
+            this.lastName = Optional.ofNullable(lastName);
+            return this;
+        }
+
+        public Builder lastName(Optional<String> lastName) {
+            Utils.checkNotNull(lastName, "lastName");
+            this.lastName = lastName;
             return this;
         }
 
@@ -1765,15 +1853,16 @@ public class HrisEmployee {
                 compensation, createdAt, currency,
                 dateOfBirth, department, division,
                 emails, employeeNumber, employeeRoles,
-                employmentStatus, employmentType, gender,
-                groups, hiredAt, id,
-                imageUrl, languageLocale, location,
-                locations, managerId, maritalStatus,
-                metadata, name, pronouns,
-                raw, salutation, ssnSin,
-                storageQuotaAllocated, storageQuotaAvailable, storageQuotaUsed,
-                telephones, terminatedAt, timezone,
-                title, updatedAt);
+                employmentStatus, employmentType, firstName,
+                gender, groups, hiredAt,
+                id, imageUrl, languageLocale,
+                lastName, location, locations,
+                managerId, maritalStatus, metadata,
+                name, pronouns, raw,
+                salutation, ssnSin, storageQuotaAllocated,
+                storageQuotaAvailable, storageQuotaUsed, telephones,
+                terminatedAt, timezone, title,
+                updatedAt);
         }
 
     }

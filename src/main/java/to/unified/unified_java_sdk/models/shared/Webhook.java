@@ -112,11 +112,6 @@ public class Webhook {
     private Optional<Boolean> isPaused;
 
 
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("meta")
-    private Optional<? extends Map<String, Object>> meta;
-
-
     @JsonProperty("object_type")
     private ObjectType objectType;
 
@@ -166,7 +161,6 @@ public class Webhook {
             @JsonProperty("interval") Optional<Double> interval,
             @JsonProperty("is_healthy") Optional<Boolean> isHealthy,
             @JsonProperty("is_paused") Optional<Boolean> isPaused,
-            @JsonProperty("meta") Optional<? extends Map<String, Object>> meta,
             @JsonProperty("object_type") ObjectType objectType,
             @JsonProperty("page_max_limit") Optional<Double> pageMaxLimit,
             @JsonProperty("runs") Optional<? extends List<String>> runs,
@@ -190,7 +184,6 @@ public class Webhook {
         Utils.checkNotNull(interval, "interval");
         Utils.checkNotNull(isHealthy, "isHealthy");
         Utils.checkNotNull(isPaused, "isPaused");
-        Utils.checkNotNull(meta, "meta");
         Utils.checkNotNull(objectType, "objectType");
         Utils.checkNotNull(pageMaxLimit, "pageMaxLimit");
         Utils.checkNotNull(runs, "runs");
@@ -214,7 +207,6 @@ public class Webhook {
         this.interval = interval;
         this.isHealthy = isHealthy;
         this.isPaused = isPaused;
-        this.meta = meta;
         this.objectType = objectType;
         this.pageMaxLimit = pageMaxLimit;
         this.runs = runs;
@@ -232,9 +224,9 @@ public class Webhook {
             Optional.empty(), Optional.empty(), event,
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), objectType,
             Optional.empty(), Optional.empty(), Optional.empty(),
-            objectType, Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -322,12 +314,6 @@ public class Webhook {
     @JsonIgnore
     public Optional<Boolean> isPaused() {
         return isPaused;
-    }
-
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
-    public Optional<Map<String, Object>> meta() {
-        return (Optional<Map<String, Object>>) meta;
     }
 
     @JsonIgnore
@@ -577,19 +563,6 @@ public class Webhook {
         return this;
     }
 
-    public Webhook withMeta(Map<String, Object> meta) {
-        Utils.checkNotNull(meta, "meta");
-        this.meta = Optional.ofNullable(meta);
-        return this;
-    }
-
-
-    public Webhook withMeta(Optional<? extends Map<String, Object>> meta) {
-        Utils.checkNotNull(meta, "meta");
-        this.meta = meta;
-        return this;
-    }
-
     public Webhook withObjectType(ObjectType objectType) {
         Utils.checkNotNull(objectType, "objectType");
         this.objectType = objectType;
@@ -694,7 +667,6 @@ public class Webhook {
             Utils.enhancedDeepEquals(this.interval, other.interval) &&
             Utils.enhancedDeepEquals(this.isHealthy, other.isHealthy) &&
             Utils.enhancedDeepEquals(this.isPaused, other.isPaused) &&
-            Utils.enhancedDeepEquals(this.meta, other.meta) &&
             Utils.enhancedDeepEquals(this.objectType, other.objectType) &&
             Utils.enhancedDeepEquals(this.pageMaxLimit, other.pageMaxLimit) &&
             Utils.enhancedDeepEquals(this.runs, other.runs) &&
@@ -711,9 +683,9 @@ public class Webhook {
             dbUrl, environment, event,
             fields, filters, hookUrl,
             id, integrationType, interval,
-            isHealthy, isPaused, meta,
-            objectType, pageMaxLimit, runs,
-            updatedAt, webhookType, workspaceId);
+            isHealthy, isPaused, objectType,
+            pageMaxLimit, runs, updatedAt,
+            webhookType, workspaceId);
     }
     
     @Override
@@ -736,7 +708,6 @@ public class Webhook {
                 "interval", interval,
                 "isHealthy", isHealthy,
                 "isPaused", isPaused,
-                "meta", meta,
                 "objectType", objectType,
                 "pageMaxLimit", pageMaxLimit,
                 "runs", runs,
@@ -781,8 +752,6 @@ public class Webhook {
         private Optional<Boolean> isHealthy = Optional.empty();
 
         private Optional<Boolean> isPaused = Optional.empty();
-
-        private Optional<? extends Map<String, Object>> meta = Optional.empty();
 
         private ObjectType objectType;
 
@@ -1010,19 +979,6 @@ public class Webhook {
         }
 
 
-        public Builder meta(Map<String, Object> meta) {
-            Utils.checkNotNull(meta, "meta");
-            this.meta = Optional.ofNullable(meta);
-            return this;
-        }
-
-        public Builder meta(Optional<? extends Map<String, Object>> meta) {
-            Utils.checkNotNull(meta, "meta");
-            this.meta = meta;
-            return this;
-        }
-
-
         public Builder objectType(ObjectType objectType) {
             Utils.checkNotNull(objectType, "objectType");
             this.objectType = objectType;
@@ -1111,9 +1067,9 @@ public class Webhook {
                 dbUrl, environment, event,
                 fields, filters, hookUrl,
                 id, integrationType, interval,
-                isHealthy, isPaused, meta,
-                objectType, pageMaxLimit, runs,
-                updatedAt, webhookType, workspaceId);
+                isHealthy, isPaused, objectType,
+                pageMaxLimit, runs, updatedAt,
+                webhookType, workspaceId);
         }
 
 

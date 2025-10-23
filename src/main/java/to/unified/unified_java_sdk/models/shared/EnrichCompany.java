@@ -107,9 +107,7 @@ public class EnrichCompany {
     @JsonProperty("name")
     private Optional<String> name;
 
-    /**
-     * The raw data returned by the integration for this company
-     */
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
@@ -347,9 +345,6 @@ public class EnrichCompany {
         return name;
     }
 
-    /**
-     * The raw data returned by the integration for this company
-     */
     @SuppressWarnings("unchecked")
     @JsonIgnore
     public Optional<Map<String, Object>> raw() {
@@ -629,9 +624,6 @@ public class EnrichCompany {
         return this;
     }
 
-    /**
-     * The raw data returned by the integration for this company
-     */
     public EnrichCompany withRaw(Map<String, Object> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
@@ -639,9 +631,6 @@ public class EnrichCompany {
     }
 
 
-    /**
-     * The raw data returned by the integration for this company
-     */
     public EnrichCompany withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
@@ -1145,18 +1134,12 @@ public class EnrichCompany {
         }
 
 
-        /**
-         * The raw data returned by the integration for this company
-         */
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        /**
-         * The raw data returned by the integration for this company
-         */
         public Builder raw(Optional<? extends Map<String, Object>> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;

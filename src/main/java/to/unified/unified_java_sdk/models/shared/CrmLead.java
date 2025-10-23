@@ -58,6 +58,11 @@ public class CrmLead {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("first_name")
+    private Optional<String> firstName;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
@@ -65,6 +70,11 @@ public class CrmLead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     private Optional<Boolean> isActive;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("last_name")
+    private Optional<String> lastName;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -120,8 +130,10 @@ public class CrmLead {
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("creator_user_id") Optional<String> creatorUserId,
             @JsonProperty("emails") Optional<? extends List<CrmEmail>> emails,
+            @JsonProperty("first_name") Optional<String> firstName,
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("is_active") Optional<Boolean> isActive,
+            @JsonProperty("last_name") Optional<String> lastName,
             @JsonProperty("link_urls") Optional<? extends List<String>> linkUrls,
             @JsonProperty("metadata") Optional<? extends List<CrmMetadata>> metadata,
             @JsonProperty("name") Optional<String> name,
@@ -138,8 +150,10 @@ public class CrmLead {
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(creatorUserId, "creatorUserId");
         Utils.checkNotNull(emails, "emails");
+        Utils.checkNotNull(firstName, "firstName");
         Utils.checkNotNull(id, "id");
         Utils.checkNotNull(isActive, "isActive");
+        Utils.checkNotNull(lastName, "lastName");
         Utils.checkNotNull(linkUrls, "linkUrls");
         Utils.checkNotNull(metadata, "metadata");
         Utils.checkNotNull(name, "name");
@@ -156,8 +170,10 @@ public class CrmLead {
         this.createdAt = createdAt;
         this.creatorUserId = creatorUserId;
         this.emails = emails;
+        this.firstName = firstName;
         this.id = id;
         this.isActive = isActive;
+        this.lastName = lastName;
         this.linkUrls = linkUrls;
         this.metadata = metadata;
         this.name = name;
@@ -175,7 +191,8 @@ public class CrmLead {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -216,6 +233,11 @@ public class CrmLead {
     }
 
     @JsonIgnore
+    public Optional<String> firstName() {
+        return firstName;
+    }
+
+    @JsonIgnore
     public Optional<String> id() {
         return id;
     }
@@ -223,6 +245,11 @@ public class CrmLead {
     @JsonIgnore
     public Optional<Boolean> isActive() {
         return isActive;
+    }
+
+    @JsonIgnore
+    public Optional<String> lastName() {
+        return lastName;
     }
 
     @SuppressWarnings("unchecked")
@@ -370,6 +397,19 @@ public class CrmLead {
         return this;
     }
 
+    public CrmLead withFirstName(String firstName) {
+        Utils.checkNotNull(firstName, "firstName");
+        this.firstName = Optional.ofNullable(firstName);
+        return this;
+    }
+
+
+    public CrmLead withFirstName(Optional<String> firstName) {
+        Utils.checkNotNull(firstName, "firstName");
+        this.firstName = firstName;
+        return this;
+    }
+
     public CrmLead withId(String id) {
         Utils.checkNotNull(id, "id");
         this.id = Optional.ofNullable(id);
@@ -393,6 +433,19 @@ public class CrmLead {
     public CrmLead withIsActive(Optional<Boolean> isActive) {
         Utils.checkNotNull(isActive, "isActive");
         this.isActive = isActive;
+        return this;
+    }
+
+    public CrmLead withLastName(String lastName) {
+        Utils.checkNotNull(lastName, "lastName");
+        this.lastName = Optional.ofNullable(lastName);
+        return this;
+    }
+
+
+    public CrmLead withLastName(Optional<String> lastName) {
+        Utils.checkNotNull(lastName, "lastName");
+        this.lastName = lastName;
         return this;
     }
 
@@ -530,8 +583,10 @@ public class CrmLead {
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.creatorUserId, other.creatorUserId) &&
             Utils.enhancedDeepEquals(this.emails, other.emails) &&
+            Utils.enhancedDeepEquals(this.firstName, other.firstName) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
+            Utils.enhancedDeepEquals(this.lastName, other.lastName) &&
             Utils.enhancedDeepEquals(this.linkUrls, other.linkUrls) &&
             Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
@@ -548,10 +603,11 @@ public class CrmLead {
         return Utils.enhancedHash(
             address, companyId, companyName,
             contactId, createdAt, creatorUserId,
-            emails, id, isActive,
-            linkUrls, metadata, name,
-            raw, source, status,
-            telephones, updatedAt, userId);
+            emails, firstName, id,
+            isActive, lastName, linkUrls,
+            metadata, name, raw,
+            source, status, telephones,
+            updatedAt, userId);
     }
     
     @Override
@@ -564,8 +620,10 @@ public class CrmLead {
                 "createdAt", createdAt,
                 "creatorUserId", creatorUserId,
                 "emails", emails,
+                "firstName", firstName,
                 "id", id,
                 "isActive", isActive,
+                "lastName", lastName,
                 "linkUrls", linkUrls,
                 "metadata", metadata,
                 "name", name,
@@ -594,9 +652,13 @@ public class CrmLead {
 
         private Optional<? extends List<CrmEmail>> emails = Optional.empty();
 
+        private Optional<String> firstName = Optional.empty();
+
         private Optional<String> id = Optional.empty();
 
         private Optional<Boolean> isActive = Optional.empty();
+
+        private Optional<String> lastName = Optional.empty();
 
         private Optional<? extends List<String>> linkUrls = Optional.empty();
 
@@ -712,6 +774,19 @@ public class CrmLead {
         }
 
 
+        public Builder firstName(String firstName) {
+            Utils.checkNotNull(firstName, "firstName");
+            this.firstName = Optional.ofNullable(firstName);
+            return this;
+        }
+
+        public Builder firstName(Optional<String> firstName) {
+            Utils.checkNotNull(firstName, "firstName");
+            this.firstName = firstName;
+            return this;
+        }
+
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -734,6 +809,19 @@ public class CrmLead {
         public Builder isActive(Optional<Boolean> isActive) {
             Utils.checkNotNull(isActive, "isActive");
             this.isActive = isActive;
+            return this;
+        }
+
+
+        public Builder lastName(String lastName) {
+            Utils.checkNotNull(lastName, "lastName");
+            this.lastName = Optional.ofNullable(lastName);
+            return this;
+        }
+
+        public Builder lastName(Optional<String> lastName) {
+            Utils.checkNotNull(lastName, "lastName");
+            this.lastName = lastName;
             return this;
         }
 
@@ -859,10 +947,11 @@ public class CrmLead {
             return new CrmLead(
                 address, companyId, companyName,
                 contactId, createdAt, creatorUserId,
-                emails, id, isActive,
-                linkUrls, metadata, name,
-                raw, source, status,
-                telephones, updatedAt, userId);
+                emails, firstName, id,
+                isActive, lastName, linkUrls,
+                metadata, name, raw,
+                source, status, telephones,
+                updatedAt, userId);
         }
 
     }

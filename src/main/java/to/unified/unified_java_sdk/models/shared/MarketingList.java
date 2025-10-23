@@ -54,9 +54,7 @@ public class MarketingList {
     @JsonProperty("name")
     private Optional<String> name;
 
-    /**
-     * The raw data returned by the integration for this list
-     */
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
@@ -147,9 +145,6 @@ public class MarketingList {
         return name;
     }
 
-    /**
-     * The raw data returned by the integration for this list
-     */
     @SuppressWarnings("unchecked")
     @JsonIgnore
     public Optional<Map<String, Object>> raw() {
@@ -254,9 +249,6 @@ public class MarketingList {
         return this;
     }
 
-    /**
-     * The raw data returned by the integration for this list
-     */
     public MarketingList withRaw(Map<String, Object> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
@@ -264,9 +256,6 @@ public class MarketingList {
     }
 
 
-    /**
-     * The raw data returned by the integration for this list
-     */
     public MarketingList withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
@@ -464,18 +453,12 @@ public class MarketingList {
         }
 
 
-        /**
-         * The raw data returned by the integration for this list
-         */
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        /**
-         * The raw data returned by the integration for this list
-         */
         public Builder raw(Optional<? extends Map<String, Object>> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;

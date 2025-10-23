@@ -67,6 +67,11 @@ public class AtsCandidate {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("first_name")
+    private Optional<String> firstName;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
@@ -74,6 +79,11 @@ public class AtsCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_url")
     private Optional<String> imageUrl;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("last_name")
+    private Optional<String> lastName;
 
     /**
      * URLs for web pages containing additional material about the candidate (LinkedIn, other social media,
@@ -154,8 +164,10 @@ public class AtsCandidate {
             @JsonProperty("emails") Optional<? extends List<AtsEmail>> emails,
             @JsonProperty("experiences") Optional<? extends List<AtsCandidateExperience>> experiences,
             @JsonProperty("external_identifier") Optional<String> externalIdentifier,
+            @JsonProperty("first_name") Optional<String> firstName,
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("image_url") Optional<String> imageUrl,
+            @JsonProperty("last_name") Optional<String> lastName,
             @JsonProperty("link_urls") Optional<? extends List<String>> linkUrls,
             @JsonProperty("metadata") Optional<? extends List<AtsMetadata>> metadata,
             @JsonProperty("name") Optional<String> name,
@@ -178,8 +190,10 @@ public class AtsCandidate {
         Utils.checkNotNull(emails, "emails");
         Utils.checkNotNull(experiences, "experiences");
         Utils.checkNotNull(externalIdentifier, "externalIdentifier");
+        Utils.checkNotNull(firstName, "firstName");
         Utils.checkNotNull(id, "id");
         Utils.checkNotNull(imageUrl, "imageUrl");
+        Utils.checkNotNull(lastName, "lastName");
         Utils.checkNotNull(linkUrls, "linkUrls");
         Utils.checkNotNull(metadata, "metadata");
         Utils.checkNotNull(name, "name");
@@ -202,8 +216,10 @@ public class AtsCandidate {
         this.emails = emails;
         this.experiences = experiences;
         this.externalIdentifier = externalIdentifier;
+        this.firstName = firstName;
         this.id = id;
         this.imageUrl = imageUrl;
+        this.lastName = lastName;
         this.linkUrls = linkUrls;
         this.metadata = metadata;
         this.name = name;
@@ -227,7 +243,8 @@ public class AtsCandidate {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -280,6 +297,11 @@ public class AtsCandidate {
     }
 
     @JsonIgnore
+    public Optional<String> firstName() {
+        return firstName;
+    }
+
+    @JsonIgnore
     public Optional<String> id() {
         return id;
     }
@@ -287,6 +309,11 @@ public class AtsCandidate {
     @JsonIgnore
     public Optional<String> imageUrl() {
         return imageUrl;
+    }
+
+    @JsonIgnore
+    public Optional<String> lastName() {
+        return lastName;
     }
 
     /**
@@ -488,6 +515,19 @@ public class AtsCandidate {
         return this;
     }
 
+    public AtsCandidate withFirstName(String firstName) {
+        Utils.checkNotNull(firstName, "firstName");
+        this.firstName = Optional.ofNullable(firstName);
+        return this;
+    }
+
+
+    public AtsCandidate withFirstName(Optional<String> firstName) {
+        Utils.checkNotNull(firstName, "firstName");
+        this.firstName = firstName;
+        return this;
+    }
+
     public AtsCandidate withId(String id) {
         Utils.checkNotNull(id, "id");
         this.id = Optional.ofNullable(id);
@@ -511,6 +551,19 @@ public class AtsCandidate {
     public AtsCandidate withImageUrl(Optional<String> imageUrl) {
         Utils.checkNotNull(imageUrl, "imageUrl");
         this.imageUrl = imageUrl;
+        return this;
+    }
+
+    public AtsCandidate withLastName(String lastName) {
+        Utils.checkNotNull(lastName, "lastName");
+        this.lastName = Optional.ofNullable(lastName);
+        return this;
+    }
+
+
+    public AtsCandidate withLastName(Optional<String> lastName) {
+        Utils.checkNotNull(lastName, "lastName");
+        this.lastName = lastName;
         return this;
     }
 
@@ -710,8 +763,10 @@ public class AtsCandidate {
             Utils.enhancedDeepEquals(this.emails, other.emails) &&
             Utils.enhancedDeepEquals(this.experiences, other.experiences) &&
             Utils.enhancedDeepEquals(this.externalIdentifier, other.externalIdentifier) &&
+            Utils.enhancedDeepEquals(this.firstName, other.firstName) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.imageUrl, other.imageUrl) &&
+            Utils.enhancedDeepEquals(this.lastName, other.lastName) &&
             Utils.enhancedDeepEquals(this.linkUrls, other.linkUrls) &&
             Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
@@ -733,11 +788,12 @@ public class AtsCandidate {
             address, companyId, companyName,
             createdAt, dateOfBirth, education,
             emails, experiences, externalIdentifier,
-            id, imageUrl, linkUrls,
-            metadata, name, origin,
-            raw, skills, sources,
-            tags, telephones, title,
-            updatedAt, userId, webUrl);
+            firstName, id, imageUrl,
+            lastName, linkUrls, metadata,
+            name, origin, raw,
+            skills, sources, tags,
+            telephones, title, updatedAt,
+            userId, webUrl);
     }
     
     @Override
@@ -752,8 +808,10 @@ public class AtsCandidate {
                 "emails", emails,
                 "experiences", experiences,
                 "externalIdentifier", externalIdentifier,
+                "firstName", firstName,
                 "id", id,
                 "imageUrl", imageUrl,
+                "lastName", lastName,
                 "linkUrls", linkUrls,
                 "metadata", metadata,
                 "name", name,
@@ -790,9 +848,13 @@ public class AtsCandidate {
 
         private Optional<String> externalIdentifier = Optional.empty();
 
+        private Optional<String> firstName = Optional.empty();
+
         private Optional<String> id = Optional.empty();
 
         private Optional<String> imageUrl = Optional.empty();
+
+        private Optional<String> lastName = Optional.empty();
 
         private Optional<? extends List<String>> linkUrls = Optional.empty();
 
@@ -942,6 +1004,19 @@ public class AtsCandidate {
         }
 
 
+        public Builder firstName(String firstName) {
+            Utils.checkNotNull(firstName, "firstName");
+            this.firstName = Optional.ofNullable(firstName);
+            return this;
+        }
+
+        public Builder firstName(Optional<String> firstName) {
+            Utils.checkNotNull(firstName, "firstName");
+            this.firstName = firstName;
+            return this;
+        }
+
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -964,6 +1039,19 @@ public class AtsCandidate {
         public Builder imageUrl(Optional<String> imageUrl) {
             Utils.checkNotNull(imageUrl, "imageUrl");
             this.imageUrl = imageUrl;
+            return this;
+        }
+
+
+        public Builder lastName(String lastName) {
+            Utils.checkNotNull(lastName, "lastName");
+            this.lastName = Optional.ofNullable(lastName);
+            return this;
+        }
+
+        public Builder lastName(Optional<String> lastName) {
+            Utils.checkNotNull(lastName, "lastName");
+            this.lastName = lastName;
             return this;
         }
 
@@ -1150,11 +1238,12 @@ public class AtsCandidate {
                 address, companyId, companyName,
                 createdAt, dateOfBirth, education,
                 emails, experiences, externalIdentifier,
-                id, imageUrl, linkUrls,
-                metadata, name, origin,
-                raw, skills, sources,
-                tags, telephones, title,
-                updatedAt, userId, webUrl);
+                firstName, id, imageUrl,
+                lastName, linkUrls, metadata,
+                name, origin, raw,
+                skills, sources, tags,
+                telephones, title, updatedAt,
+                userId, webUrl);
         }
 
     }

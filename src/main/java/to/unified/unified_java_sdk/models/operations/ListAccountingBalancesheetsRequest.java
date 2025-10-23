@@ -35,10 +35,16 @@ public class ListAccountingBalancesheetsRequest {
     private Optional<String> contactId;
 
     /**
-     * The end date to filter by
+     * The end date to filter by (deprecated)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_le")
     private Optional<String> endLe;
+
+    /**
+     * The end date to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_lt")
+    private Optional<String> endLt;
 
     /**
      * Comma-delimited fields to return
@@ -94,6 +100,7 @@ public class ListAccountingBalancesheetsRequest {
             String connectionId,
             Optional<String> contactId,
             Optional<String> endLe,
+            Optional<String> endLt,
             Optional<? extends List<String>> fields,
             Optional<Double> limit,
             Optional<Double> offset,
@@ -107,6 +114,7 @@ public class ListAccountingBalancesheetsRequest {
         Utils.checkNotNull(connectionId, "connectionId");
         Utils.checkNotNull(contactId, "contactId");
         Utils.checkNotNull(endLe, "endLe");
+        Utils.checkNotNull(endLt, "endLt");
         Utils.checkNotNull(fields, "fields");
         Utils.checkNotNull(limit, "limit");
         Utils.checkNotNull(offset, "offset");
@@ -120,6 +128,7 @@ public class ListAccountingBalancesheetsRequest {
         this.connectionId = connectionId;
         this.contactId = contactId;
         this.endLe = endLe;
+        this.endLt = endLt;
         this.fields = fields;
         this.limit = limit;
         this.offset = offset;
@@ -137,7 +146,7 @@ public class ListAccountingBalancesheetsRequest {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            Optional.empty(), Optional.empty());
     }
 
     /**
@@ -165,11 +174,19 @@ public class ListAccountingBalancesheetsRequest {
     }
 
     /**
-     * The end date to filter by
+     * The end date to filter by (deprecated)
      */
     @JsonIgnore
     public Optional<String> endLe() {
         return endLe;
+    }
+
+    /**
+     * The end date to filter by
+     */
+    @JsonIgnore
+    public Optional<String> endLt() {
+        return endLt;
     }
 
     /**
@@ -288,7 +305,7 @@ public class ListAccountingBalancesheetsRequest {
     }
 
     /**
-     * The end date to filter by
+     * The end date to filter by (deprecated)
      */
     public ListAccountingBalancesheetsRequest withEndLe(String endLe) {
         Utils.checkNotNull(endLe, "endLe");
@@ -298,11 +315,30 @@ public class ListAccountingBalancesheetsRequest {
 
 
     /**
-     * The end date to filter by
+     * The end date to filter by (deprecated)
      */
     public ListAccountingBalancesheetsRequest withEndLe(Optional<String> endLe) {
         Utils.checkNotNull(endLe, "endLe");
         this.endLe = endLe;
+        return this;
+    }
+
+    /**
+     * The end date to filter by
+     */
+    public ListAccountingBalancesheetsRequest withEndLt(String endLt) {
+        Utils.checkNotNull(endLt, "endLt");
+        this.endLt = Optional.ofNullable(endLt);
+        return this;
+    }
+
+
+    /**
+     * The end date to filter by
+     */
+    public ListAccountingBalancesheetsRequest withEndLt(Optional<String> endLt) {
+        Utils.checkNotNull(endLt, "endLt");
+        this.endLt = endLt;
         return this;
     }
 
@@ -471,6 +507,7 @@ public class ListAccountingBalancesheetsRequest {
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
             Utils.enhancedDeepEquals(this.endLe, other.endLe) &&
+            Utils.enhancedDeepEquals(this.endLt, other.endLt) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
@@ -486,10 +523,10 @@ public class ListAccountingBalancesheetsRequest {
     public int hashCode() {
         return Utils.enhancedHash(
             categoryId, connectionId, contactId,
-            endLe, fields, limit,
-            offset, order, query,
-            raw, sort, startGte,
-            updatedGte);
+            endLe, endLt, fields,
+            limit, offset, order,
+            query, raw, sort,
+            startGte, updatedGte);
     }
     
     @Override
@@ -499,6 +536,7 @@ public class ListAccountingBalancesheetsRequest {
                 "connectionId", connectionId,
                 "contactId", contactId,
                 "endLe", endLe,
+                "endLt", endLt,
                 "fields", fields,
                 "limit", limit,
                 "offset", offset,
@@ -520,6 +558,8 @@ public class ListAccountingBalancesheetsRequest {
         private Optional<String> contactId = Optional.empty();
 
         private Optional<String> endLe = Optional.empty();
+
+        private Optional<String> endLt = Optional.empty();
 
         private Optional<? extends List<String>> fields = Optional.empty();
 
@@ -593,7 +633,7 @@ public class ListAccountingBalancesheetsRequest {
 
 
         /**
-         * The end date to filter by
+         * The end date to filter by (deprecated)
          */
         public Builder endLe(String endLe) {
             Utils.checkNotNull(endLe, "endLe");
@@ -602,11 +642,30 @@ public class ListAccountingBalancesheetsRequest {
         }
 
         /**
-         * The end date to filter by
+         * The end date to filter by (deprecated)
          */
         public Builder endLe(Optional<String> endLe) {
             Utils.checkNotNull(endLe, "endLe");
             this.endLe = endLe;
+            return this;
+        }
+
+
+        /**
+         * The end date to filter by
+         */
+        public Builder endLt(String endLt) {
+            Utils.checkNotNull(endLt, "endLt");
+            this.endLt = Optional.ofNullable(endLt);
+            return this;
+        }
+
+        /**
+         * The end date to filter by
+         */
+        public Builder endLt(Optional<String> endLt) {
+            Utils.checkNotNull(endLt, "endLt");
+            this.endLt = endLt;
             return this;
         }
 
@@ -765,10 +824,10 @@ public class ListAccountingBalancesheetsRequest {
 
             return new ListAccountingBalancesheetsRequest(
                 categoryId, connectionId, contactId,
-                endLe, fields, limit,
-                offset, order, query,
-                raw, sort, startGte,
-                updatedGte);
+                endLe, endLt, fields,
+                limit, offset, order,
+                query, raw, sort,
+                startGte, updatedGte);
         }
 
     }

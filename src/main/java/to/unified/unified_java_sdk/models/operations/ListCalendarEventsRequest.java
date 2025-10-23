@@ -30,10 +30,16 @@ public class ListCalendarEventsRequest {
     private String connectionId;
 
     /**
-     * The end date to filter by
+     * The end date to filter by (deprecated)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_le")
     private Optional<String> endLe;
+
+    /**
+     * The end date to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_lt")
+    private Optional<String> endLt;
 
     /**
      * Whether to flatten grouped or recurring items into individual entries.
@@ -100,6 +106,7 @@ public class ListCalendarEventsRequest {
             Optional<String> calendarId,
             String connectionId,
             Optional<String> endLe,
+            Optional<String> endLt,
             Optional<Boolean> expand,
             Optional<Boolean> expandRecurringEvents,
             Optional<? extends List<String>> fields,
@@ -114,6 +121,7 @@ public class ListCalendarEventsRequest {
         Utils.checkNotNull(calendarId, "calendarId");
         Utils.checkNotNull(connectionId, "connectionId");
         Utils.checkNotNull(endLe, "endLe");
+        Utils.checkNotNull(endLt, "endLt");
         Utils.checkNotNull(expand, "expand");
         Utils.checkNotNull(expandRecurringEvents, "expandRecurringEvents");
         Utils.checkNotNull(fields, "fields");
@@ -128,6 +136,7 @@ public class ListCalendarEventsRequest {
         this.calendarId = calendarId;
         this.connectionId = connectionId;
         this.endLe = endLe;
+        this.endLt = endLt;
         this.expand = expand;
         this.expandRecurringEvents = expandRecurringEvents;
         this.fields = fields;
@@ -147,7 +156,7 @@ public class ListCalendarEventsRequest {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     /**
@@ -167,11 +176,19 @@ public class ListCalendarEventsRequest {
     }
 
     /**
-     * The end date to filter by
+     * The end date to filter by (deprecated)
      */
     @JsonIgnore
     public Optional<String> endLe() {
         return endLe;
+    }
+
+    /**
+     * The end date to filter by
+     */
+    @JsonIgnore
+    public Optional<String> endLt() {
+        return endLt;
     }
 
     /**
@@ -287,7 +304,7 @@ public class ListCalendarEventsRequest {
     }
 
     /**
-     * The end date to filter by
+     * The end date to filter by (deprecated)
      */
     public ListCalendarEventsRequest withEndLe(String endLe) {
         Utils.checkNotNull(endLe, "endLe");
@@ -297,11 +314,30 @@ public class ListCalendarEventsRequest {
 
 
     /**
-     * The end date to filter by
+     * The end date to filter by (deprecated)
      */
     public ListCalendarEventsRequest withEndLe(Optional<String> endLe) {
         Utils.checkNotNull(endLe, "endLe");
         this.endLe = endLe;
+        return this;
+    }
+
+    /**
+     * The end date to filter by
+     */
+    public ListCalendarEventsRequest withEndLt(String endLt) {
+        Utils.checkNotNull(endLt, "endLt");
+        this.endLt = Optional.ofNullable(endLt);
+        return this;
+    }
+
+
+    /**
+     * The end date to filter by
+     */
+    public ListCalendarEventsRequest withEndLt(Optional<String> endLt) {
+        Utils.checkNotNull(endLt, "endLt");
+        this.endLt = endLt;
         return this;
     }
 
@@ -507,6 +543,7 @@ public class ListCalendarEventsRequest {
             Utils.enhancedDeepEquals(this.calendarId, other.calendarId) &&
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
             Utils.enhancedDeepEquals(this.endLe, other.endLe) &&
+            Utils.enhancedDeepEquals(this.endLt, other.endLt) &&
             Utils.enhancedDeepEquals(this.expand, other.expand) &&
             Utils.enhancedDeepEquals(this.expandRecurringEvents, other.expandRecurringEvents) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
@@ -524,10 +561,10 @@ public class ListCalendarEventsRequest {
     public int hashCode() {
         return Utils.enhancedHash(
             calendarId, connectionId, endLe,
-            expand, expandRecurringEvents, fields,
-            limit, offset, order,
-            query, raw, sort,
-            startGte, updatedGte);
+            endLt, expand, expandRecurringEvents,
+            fields, limit, offset,
+            order, query, raw,
+            sort, startGte, updatedGte);
     }
     
     @Override
@@ -536,6 +573,7 @@ public class ListCalendarEventsRequest {
                 "calendarId", calendarId,
                 "connectionId", connectionId,
                 "endLe", endLe,
+                "endLt", endLt,
                 "expand", expand,
                 "expandRecurringEvents", expandRecurringEvents,
                 "fields", fields,
@@ -557,6 +595,8 @@ public class ListCalendarEventsRequest {
         private String connectionId;
 
         private Optional<String> endLe = Optional.empty();
+
+        private Optional<String> endLt = Optional.empty();
 
         private Optional<Boolean> expand = Optional.empty();
 
@@ -615,7 +655,7 @@ public class ListCalendarEventsRequest {
 
 
         /**
-         * The end date to filter by
+         * The end date to filter by (deprecated)
          */
         public Builder endLe(String endLe) {
             Utils.checkNotNull(endLe, "endLe");
@@ -624,11 +664,30 @@ public class ListCalendarEventsRequest {
         }
 
         /**
-         * The end date to filter by
+         * The end date to filter by (deprecated)
          */
         public Builder endLe(Optional<String> endLe) {
             Utils.checkNotNull(endLe, "endLe");
             this.endLe = endLe;
+            return this;
+        }
+
+
+        /**
+         * The end date to filter by
+         */
+        public Builder endLt(String endLt) {
+            Utils.checkNotNull(endLt, "endLt");
+            this.endLt = Optional.ofNullable(endLt);
+            return this;
+        }
+
+        /**
+         * The end date to filter by
+         */
+        public Builder endLt(Optional<String> endLt) {
+            Utils.checkNotNull(endLt, "endLt");
+            this.endLt = endLt;
             return this;
         }
 
@@ -825,10 +884,10 @@ public class ListCalendarEventsRequest {
 
             return new ListCalendarEventsRequest(
                 calendarId, connectionId, endLe,
-                expand, expandRecurringEvents, fields,
-                limit, offset, order,
-                query, raw, sort,
-                startGte, updatedGte);
+                endLt, expand, expandRecurringEvents,
+                fields, limit, offset,
+                order, query, raw,
+                sort, startGte, updatedGte);
         }
 
     }

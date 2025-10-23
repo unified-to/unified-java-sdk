@@ -23,10 +23,16 @@ public class ListAccountingReportsRequest {
     private String connectionId;
 
     /**
-     * The end date to filter by
+     * The end date to filter by (deprecated)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_le")
     private Optional<String> endLe;
+
+    /**
+     * The end date to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_lt")
+    private Optional<String> endLt;
 
     /**
      * Comma-delimited fields to return
@@ -84,6 +90,7 @@ public class ListAccountingReportsRequest {
     public ListAccountingReportsRequest(
             String connectionId,
             Optional<String> endLe,
+            Optional<String> endLt,
             Optional<? extends List<String>> fields,
             Optional<Double> limit,
             Optional<Double> offset,
@@ -96,6 +103,7 @@ public class ListAccountingReportsRequest {
             Optional<String> updatedGte) {
         Utils.checkNotNull(connectionId, "connectionId");
         Utils.checkNotNull(endLe, "endLe");
+        Utils.checkNotNull(endLt, "endLt");
         Utils.checkNotNull(fields, "fields");
         Utils.checkNotNull(limit, "limit");
         Utils.checkNotNull(offset, "offset");
@@ -108,6 +116,7 @@ public class ListAccountingReportsRequest {
         Utils.checkNotNull(updatedGte, "updatedGte");
         this.connectionId = connectionId;
         this.endLe = endLe;
+        this.endLt = endLt;
         this.fields = fields;
         this.limit = limit;
         this.offset = offset;
@@ -125,7 +134,8 @@ public class ListAccountingReportsRequest {
         this(connectionId, Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     /**
@@ -137,11 +147,19 @@ public class ListAccountingReportsRequest {
     }
 
     /**
-     * The end date to filter by
+     * The end date to filter by (deprecated)
      */
     @JsonIgnore
     public Optional<String> endLe() {
         return endLe;
+    }
+
+    /**
+     * The end date to filter by
+     */
+    @JsonIgnore
+    public Optional<String> endLt() {
+        return endLt;
     }
 
     /**
@@ -227,7 +245,7 @@ public class ListAccountingReportsRequest {
     }
 
     /**
-     * The end date to filter by
+     * The end date to filter by (deprecated)
      */
     public ListAccountingReportsRequest withEndLe(String endLe) {
         Utils.checkNotNull(endLe, "endLe");
@@ -237,11 +255,30 @@ public class ListAccountingReportsRequest {
 
 
     /**
-     * The end date to filter by
+     * The end date to filter by (deprecated)
      */
     public ListAccountingReportsRequest withEndLe(Optional<String> endLe) {
         Utils.checkNotNull(endLe, "endLe");
         this.endLe = endLe;
+        return this;
+    }
+
+    /**
+     * The end date to filter by
+     */
+    public ListAccountingReportsRequest withEndLt(String endLt) {
+        Utils.checkNotNull(endLt, "endLt");
+        this.endLt = Optional.ofNullable(endLt);
+        return this;
+    }
+
+
+    /**
+     * The end date to filter by
+     */
+    public ListAccountingReportsRequest withEndLt(Optional<String> endLt) {
+        Utils.checkNotNull(endLt, "endLt");
+        this.endLt = endLt;
         return this;
     }
 
@@ -421,6 +458,7 @@ public class ListAccountingReportsRequest {
         return 
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
             Utils.enhancedDeepEquals(this.endLe, other.endLe) &&
+            Utils.enhancedDeepEquals(this.endLt, other.endLt) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
@@ -436,10 +474,11 @@ public class ListAccountingReportsRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId, endLe, fields,
-            limit, offset, order,
-            query, raw, sort,
-            startGte, type, updatedGte);
+            connectionId, endLe, endLt,
+            fields, limit, offset,
+            order, query, raw,
+            sort, startGte, type,
+            updatedGte);
     }
     
     @Override
@@ -447,6 +486,7 @@ public class ListAccountingReportsRequest {
         return Utils.toString(ListAccountingReportsRequest.class,
                 "connectionId", connectionId,
                 "endLe", endLe,
+                "endLt", endLt,
                 "fields", fields,
                 "limit", limit,
                 "offset", offset,
@@ -465,6 +505,8 @@ public class ListAccountingReportsRequest {
         private String connectionId;
 
         private Optional<String> endLe = Optional.empty();
+
+        private Optional<String> endLt = Optional.empty();
 
         private Optional<? extends List<String>> fields = Optional.empty();
 
@@ -502,7 +544,7 @@ public class ListAccountingReportsRequest {
 
 
         /**
-         * The end date to filter by
+         * The end date to filter by (deprecated)
          */
         public Builder endLe(String endLe) {
             Utils.checkNotNull(endLe, "endLe");
@@ -511,11 +553,30 @@ public class ListAccountingReportsRequest {
         }
 
         /**
-         * The end date to filter by
+         * The end date to filter by (deprecated)
          */
         public Builder endLe(Optional<String> endLe) {
             Utils.checkNotNull(endLe, "endLe");
             this.endLe = endLe;
+            return this;
+        }
+
+
+        /**
+         * The end date to filter by
+         */
+        public Builder endLt(String endLt) {
+            Utils.checkNotNull(endLt, "endLt");
+            this.endLt = Optional.ofNullable(endLt);
+            return this;
+        }
+
+        /**
+         * The end date to filter by
+         */
+        public Builder endLt(Optional<String> endLt) {
+            Utils.checkNotNull(endLt, "endLt");
+            this.endLt = endLt;
             return this;
         }
 
@@ -686,10 +747,11 @@ public class ListAccountingReportsRequest {
         public ListAccountingReportsRequest build() {
 
             return new ListAccountingReportsRequest(
-                connectionId, endLe, fields,
-                limit, offset, order,
-                query, raw, sort,
-                startGte, type, updatedGte);
+                connectionId, endLe, endLt,
+                fields, limit, offset,
+                order, query, raw,
+                sort, startGte, type,
+                updatedGte);
         }
 
     }
