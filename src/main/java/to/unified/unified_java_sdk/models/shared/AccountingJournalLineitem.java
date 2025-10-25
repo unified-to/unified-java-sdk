@@ -11,6 +11,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
+import java.lang.SuppressWarnings;
+import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -23,6 +25,11 @@ public class AccountingJournalLineitem {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("category_ids")
+    private Optional<? extends List<String>> categoryIds;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private Optional<String> contactId;
 
@@ -30,6 +37,11 @@ public class AccountingJournalLineitem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private Optional<String> description;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("group_id")
+    private Optional<String> groupId;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -48,6 +60,11 @@ public class AccountingJournalLineitem {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("project_id")
+    private Optional<String> projectId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_amount")
     private Optional<Double> taxAmount;
 
@@ -59,27 +76,36 @@ public class AccountingJournalLineitem {
     @JsonCreator
     public AccountingJournalLineitem(
             @JsonProperty("account_id") Optional<String> accountId,
+            @JsonProperty("category_ids") Optional<? extends List<String>> categoryIds,
             @JsonProperty("contact_id") Optional<String> contactId,
             @JsonProperty("description") Optional<String> description,
+            @JsonProperty("group_id") Optional<String> groupId,
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("invoice_id") Optional<String> invoiceId,
             @JsonProperty("payment_id") Optional<String> paymentId,
+            @JsonProperty("project_id") Optional<String> projectId,
             @JsonProperty("tax_amount") Optional<Double> taxAmount,
             @JsonProperty("total_amount") Optional<Double> totalAmount) {
         Utils.checkNotNull(accountId, "accountId");
+        Utils.checkNotNull(categoryIds, "categoryIds");
         Utils.checkNotNull(contactId, "contactId");
         Utils.checkNotNull(description, "description");
+        Utils.checkNotNull(groupId, "groupId");
         Utils.checkNotNull(id, "id");
         Utils.checkNotNull(invoiceId, "invoiceId");
         Utils.checkNotNull(paymentId, "paymentId");
+        Utils.checkNotNull(projectId, "projectId");
         Utils.checkNotNull(taxAmount, "taxAmount");
         Utils.checkNotNull(totalAmount, "totalAmount");
         this.accountId = accountId;
+        this.categoryIds = categoryIds;
         this.contactId = contactId;
         this.description = description;
+        this.groupId = groupId;
         this.id = id;
         this.invoiceId = invoiceId;
         this.paymentId = paymentId;
+        this.projectId = projectId;
         this.taxAmount = taxAmount;
         this.totalAmount = totalAmount;
     }
@@ -87,12 +113,19 @@ public class AccountingJournalLineitem {
     public AccountingJournalLineitem() {
         this(Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
     public Optional<String> accountId() {
         return accountId;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<String>> categoryIds() {
+        return (Optional<List<String>>) categoryIds;
     }
 
     @JsonIgnore
@@ -103,6 +136,11 @@ public class AccountingJournalLineitem {
     @JsonIgnore
     public Optional<String> description() {
         return description;
+    }
+
+    @JsonIgnore
+    public Optional<String> groupId() {
+        return groupId;
     }
 
     @JsonIgnore
@@ -118,6 +156,11 @@ public class AccountingJournalLineitem {
     @JsonIgnore
     public Optional<String> paymentId() {
         return paymentId;
+    }
+
+    @JsonIgnore
+    public Optional<String> projectId() {
+        return projectId;
     }
 
     @JsonIgnore
@@ -148,6 +191,19 @@ public class AccountingJournalLineitem {
         return this;
     }
 
+    public AccountingJournalLineitem withCategoryIds(List<String> categoryIds) {
+        Utils.checkNotNull(categoryIds, "categoryIds");
+        this.categoryIds = Optional.ofNullable(categoryIds);
+        return this;
+    }
+
+
+    public AccountingJournalLineitem withCategoryIds(Optional<? extends List<String>> categoryIds) {
+        Utils.checkNotNull(categoryIds, "categoryIds");
+        this.categoryIds = categoryIds;
+        return this;
+    }
+
     public AccountingJournalLineitem withContactId(String contactId) {
         Utils.checkNotNull(contactId, "contactId");
         this.contactId = Optional.ofNullable(contactId);
@@ -171,6 +227,19 @@ public class AccountingJournalLineitem {
     public AccountingJournalLineitem withDescription(Optional<String> description) {
         Utils.checkNotNull(description, "description");
         this.description = description;
+        return this;
+    }
+
+    public AccountingJournalLineitem withGroupId(String groupId) {
+        Utils.checkNotNull(groupId, "groupId");
+        this.groupId = Optional.ofNullable(groupId);
+        return this;
+    }
+
+
+    public AccountingJournalLineitem withGroupId(Optional<String> groupId) {
+        Utils.checkNotNull(groupId, "groupId");
+        this.groupId = groupId;
         return this;
     }
 
@@ -213,6 +282,19 @@ public class AccountingJournalLineitem {
         return this;
     }
 
+    public AccountingJournalLineitem withProjectId(String projectId) {
+        Utils.checkNotNull(projectId, "projectId");
+        this.projectId = Optional.ofNullable(projectId);
+        return this;
+    }
+
+
+    public AccountingJournalLineitem withProjectId(Optional<String> projectId) {
+        Utils.checkNotNull(projectId, "projectId");
+        this.projectId = projectId;
+        return this;
+    }
+
     public AccountingJournalLineitem withTaxAmount(double taxAmount) {
         Utils.checkNotNull(taxAmount, "taxAmount");
         this.taxAmount = Optional.ofNullable(taxAmount);
@@ -250,11 +332,14 @@ public class AccountingJournalLineitem {
         AccountingJournalLineitem other = (AccountingJournalLineitem) o;
         return 
             Utils.enhancedDeepEquals(this.accountId, other.accountId) &&
+            Utils.enhancedDeepEquals(this.categoryIds, other.categoryIds) &&
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
+            Utils.enhancedDeepEquals(this.groupId, other.groupId) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.invoiceId, other.invoiceId) &&
             Utils.enhancedDeepEquals(this.paymentId, other.paymentId) &&
+            Utils.enhancedDeepEquals(this.projectId, other.projectId) &&
             Utils.enhancedDeepEquals(this.taxAmount, other.taxAmount) &&
             Utils.enhancedDeepEquals(this.totalAmount, other.totalAmount);
     }
@@ -262,8 +347,9 @@ public class AccountingJournalLineitem {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            accountId, contactId, description,
-            id, invoiceId, paymentId,
+            accountId, categoryIds, contactId,
+            description, groupId, id,
+            invoiceId, paymentId, projectId,
             taxAmount, totalAmount);
     }
     
@@ -271,11 +357,14 @@ public class AccountingJournalLineitem {
     public String toString() {
         return Utils.toString(AccountingJournalLineitem.class,
                 "accountId", accountId,
+                "categoryIds", categoryIds,
                 "contactId", contactId,
                 "description", description,
+                "groupId", groupId,
                 "id", id,
                 "invoiceId", invoiceId,
                 "paymentId", paymentId,
+                "projectId", projectId,
                 "taxAmount", taxAmount,
                 "totalAmount", totalAmount);
     }
@@ -285,15 +374,21 @@ public class AccountingJournalLineitem {
 
         private Optional<String> accountId = Optional.empty();
 
+        private Optional<? extends List<String>> categoryIds = Optional.empty();
+
         private Optional<String> contactId = Optional.empty();
 
         private Optional<String> description = Optional.empty();
+
+        private Optional<String> groupId = Optional.empty();
 
         private Optional<String> id = Optional.empty();
 
         private Optional<String> invoiceId = Optional.empty();
 
         private Optional<String> paymentId = Optional.empty();
+
+        private Optional<String> projectId = Optional.empty();
 
         private Optional<Double> taxAmount = Optional.empty();
 
@@ -313,6 +408,19 @@ public class AccountingJournalLineitem {
         public Builder accountId(Optional<String> accountId) {
             Utils.checkNotNull(accountId, "accountId");
             this.accountId = accountId;
+            return this;
+        }
+
+
+        public Builder categoryIds(List<String> categoryIds) {
+            Utils.checkNotNull(categoryIds, "categoryIds");
+            this.categoryIds = Optional.ofNullable(categoryIds);
+            return this;
+        }
+
+        public Builder categoryIds(Optional<? extends List<String>> categoryIds) {
+            Utils.checkNotNull(categoryIds, "categoryIds");
+            this.categoryIds = categoryIds;
             return this;
         }
 
@@ -339,6 +447,19 @@ public class AccountingJournalLineitem {
         public Builder description(Optional<String> description) {
             Utils.checkNotNull(description, "description");
             this.description = description;
+            return this;
+        }
+
+
+        public Builder groupId(String groupId) {
+            Utils.checkNotNull(groupId, "groupId");
+            this.groupId = Optional.ofNullable(groupId);
+            return this;
+        }
+
+        public Builder groupId(Optional<String> groupId) {
+            Utils.checkNotNull(groupId, "groupId");
+            this.groupId = groupId;
             return this;
         }
 
@@ -382,6 +503,19 @@ public class AccountingJournalLineitem {
         }
 
 
+        public Builder projectId(String projectId) {
+            Utils.checkNotNull(projectId, "projectId");
+            this.projectId = Optional.ofNullable(projectId);
+            return this;
+        }
+
+        public Builder projectId(Optional<String> projectId) {
+            Utils.checkNotNull(projectId, "projectId");
+            this.projectId = projectId;
+            return this;
+        }
+
+
         public Builder taxAmount(double taxAmount) {
             Utils.checkNotNull(taxAmount, "taxAmount");
             this.taxAmount = Optional.ofNullable(taxAmount);
@@ -410,8 +544,9 @@ public class AccountingJournalLineitem {
         public AccountingJournalLineitem build() {
 
             return new AccountingJournalLineitem(
-                accountId, contactId, description,
-                id, invoiceId, paymentId,
+                accountId, categoryIds, contactId,
+                description, groupId, id,
+                invoiceId, paymentId, projectId,
                 taxAmount, totalAmount);
         }
 

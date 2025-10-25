@@ -54,8 +54,9 @@ public class RepoCommit {
     private Optional<OffsetDateTime> updatedAt;
 
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
-    private String userId;
+    private Optional<String> userId;
 
     @JsonCreator
     public RepoCommit(
@@ -66,7 +67,7 @@ public class RepoCommit {
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
             @JsonProperty("repo_id") String repoId,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("user_id") String userId) {
+            @JsonProperty("user_id") Optional<String> userId) {
         Utils.checkNotNull(branchId, "branchId");
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(id, "id");
@@ -86,11 +87,10 @@ public class RepoCommit {
     }
     
     public RepoCommit(
-            String repoId,
-            String userId) {
+            String repoId) {
         this(Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), repoId,
-            Optional.empty(), userId);
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -130,7 +130,7 @@ public class RepoCommit {
     }
 
     @JsonIgnore
-    public String userId() {
+    public Optional<String> userId() {
         return userId;
     }
 
@@ -225,6 +225,13 @@ public class RepoCommit {
 
     public RepoCommit withUserId(String userId) {
         Utils.checkNotNull(userId, "userId");
+        this.userId = Optional.ofNullable(userId);
+        return this;
+    }
+
+
+    public RepoCommit withUserId(Optional<String> userId) {
+        Utils.checkNotNull(userId, "userId");
         this.userId = userId;
         return this;
     }
@@ -287,7 +294,7 @@ public class RepoCommit {
 
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
 
-        private String userId;
+        private Optional<String> userId = Optional.empty();
 
         private Builder() {
           // force use of static builder() method
@@ -380,6 +387,12 @@ public class RepoCommit {
 
 
         public Builder userId(String userId) {
+            Utils.checkNotNull(userId, "userId");
+            this.userId = Optional.ofNullable(userId);
+            return this;
+        }
+
+        public Builder userId(Optional<String> userId) {
             Utils.checkNotNull(userId, "userId");
             this.userId = userId;
             return this;

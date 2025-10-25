@@ -128,7 +128,6 @@ public class Application {
         CreateRepoCommitRequest req = CreateRepoCommitRequest.builder()
                 .repoCommit(RepoCommit.builder()
                     .repoId("<id>")
-                    .userId("<id>")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1009,7 +1008,6 @@ public class Application {
         PatchRepoCommitRequest req = PatchRepoCommitRequest.builder()
                 .repoCommit(RepoCommit.builder()
                     .repoId("<id>")
-                    .userId("<id>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1599,7 +1597,6 @@ public class Application {
         UpdateRepoCommitRequest req = UpdateRepoCommitRequest.builder()
                 .repoCommit(RepoCommit.builder()
                     .repoId("<id>")
-                    .userId("<id>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
