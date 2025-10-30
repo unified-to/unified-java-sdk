@@ -53,6 +53,9 @@ import to.unified.unified_java_sdk.models.operations.GetAccountingBalancesheetRe
 import to.unified.unified_java_sdk.models.operations.GetAccountingBillRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingBillRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAccountingBillResponse;
+import to.unified.unified_java_sdk.models.operations.GetAccountingCashflowRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingCashflowRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAccountingCashflowResponse;
 import to.unified.unified_java_sdk.models.operations.GetAccountingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingCategoryRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAccountingCategoryResponse;
@@ -107,6 +110,9 @@ import to.unified.unified_java_sdk.models.operations.ListAccountingBalancesheets
 import to.unified.unified_java_sdk.models.operations.ListAccountingBillsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingBillsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAccountingBillsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAccountingCashflowsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingCashflowsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAccountingCashflowsResponse;
 import to.unified.unified_java_sdk.models.operations.ListAccountingCategoriesRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingCategoriesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAccountingCategoriesResponse;
@@ -285,6 +291,7 @@ import to.unified.unified_java_sdk.operations.CreateAccountingTransaction;
 import to.unified.unified_java_sdk.operations.GetAccountingAccount;
 import to.unified.unified_java_sdk.operations.GetAccountingBalancesheet;
 import to.unified.unified_java_sdk.operations.GetAccountingBill;
+import to.unified.unified_java_sdk.operations.GetAccountingCashflow;
 import to.unified.unified_java_sdk.operations.GetAccountingCategory;
 import to.unified.unified_java_sdk.operations.GetAccountingContact;
 import to.unified.unified_java_sdk.operations.GetAccountingCreditmemo;
@@ -303,6 +310,7 @@ import to.unified.unified_java_sdk.operations.GetAccountingTrialbalance;
 import to.unified.unified_java_sdk.operations.ListAccountingAccounts;
 import to.unified.unified_java_sdk.operations.ListAccountingBalancesheets;
 import to.unified.unified_java_sdk.operations.ListAccountingBills;
+import to.unified.unified_java_sdk.operations.ListAccountingCashflows;
 import to.unified.unified_java_sdk.operations.ListAccountingCategories;
 import to.unified.unified_java_sdk.operations.ListAccountingContacts;
 import to.unified.unified_java_sdk.operations.ListAccountingCreditmemoes;
@@ -732,6 +740,28 @@ public class Accounting {
     }
 
     /**
+     * Retrieve a cashflow
+     * 
+     * @return The call builder
+     */
+    public GetAccountingCashflowRequestBuilder getAccountingCashflow() {
+        return new GetAccountingCashflowRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a cashflow
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingCashflowResponse getAccountingCashflow(GetAccountingCashflowRequest request) {
+        RequestOperation<GetAccountingCashflowRequest, GetAccountingCashflowResponse> operation
+              = new GetAccountingCashflow.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Retrieve a category
      * 
      * @return The call builder
@@ -1124,6 +1154,28 @@ public class Accounting {
     public ListAccountingBillsResponse listAccountingBills(ListAccountingBillsRequest request) {
         RequestOperation<ListAccountingBillsRequest, ListAccountingBillsResponse> operation
               = new ListAccountingBills.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all cashflows
+     * 
+     * @return The call builder
+     */
+    public ListAccountingCashflowsRequestBuilder listAccountingCashflows() {
+        return new ListAccountingCashflowsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all cashflows
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingCashflowsResponse listAccountingCashflows(ListAccountingCashflowsRequest request) {
+        RequestOperation<ListAccountingCashflowsRequest, ListAccountingCashflowsResponse> operation
+              = new ListAccountingCashflows.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

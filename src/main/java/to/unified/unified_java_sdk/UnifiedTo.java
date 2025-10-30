@@ -51,6 +51,9 @@ public class UnifiedTo {
     private final Bill bill;
 
 
+    private final Cashflow cashflow;
+
+
     private final Category category;
 
 
@@ -377,6 +380,11 @@ public class UnifiedTo {
 
     public Bill bill() {
         return bill;
+    }
+
+
+    public Cashflow cashflow() {
+        return cashflow;
     }
 
 
@@ -1035,6 +1043,7 @@ public class UnifiedTo {
         this.account = new Account(sdkConfiguration);
         this.balancesheet = new Balancesheet(sdkConfiguration);
         this.bill = new Bill(sdkConfiguration);
+        this.cashflow = new Cashflow(sdkConfiguration);
         this.category = new Category(sdkConfiguration);
         this.contact = new Contact(sdkConfiguration);
         this.creditmemo = new Creditmemo(sdkConfiguration);

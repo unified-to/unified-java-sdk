@@ -82,6 +82,8 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions ACCOUNTING_CATEGORY_WRITE = new PropertyConnectionPermissions("accounting_category_write");
     public static final PropertyConnectionPermissions PAYMENT_PAYMENT_READ = new PropertyConnectionPermissions("payment_payment_read");
     public static final PropertyConnectionPermissions PAYMENT_PAYMENT_WRITE = new PropertyConnectionPermissions("payment_payment_write");
+    public static final PropertyConnectionPermissions ACCOUNTING_CASHFLOW_READ = new PropertyConnectionPermissions("accounting_cashflow_read");
+    public static final PropertyConnectionPermissions ACCOUNTING_CASHFLOW_WRITE = new PropertyConnectionPermissions("accounting_cashflow_write");
     public static final PropertyConnectionPermissions PAYMENT_PAYOUT_READ = new PropertyConnectionPermissions("payment_payout_read");
     public static final PropertyConnectionPermissions PAYMENT_REFUND_READ = new PropertyConnectionPermissions("payment_refund_read");
     public static final PropertyConnectionPermissions PAYMENT_LINK_READ = new PropertyConnectionPermissions("payment_link_read");
@@ -331,6 +333,8 @@ public class PropertyConnectionPermissions {
         map.put("accounting_category_write", ACCOUNTING_CATEGORY_WRITE);
         map.put("payment_payment_read", PAYMENT_PAYMENT_READ);
         map.put("payment_payment_write", PAYMENT_PAYMENT_WRITE);
+        map.put("accounting_cashflow_read", ACCOUNTING_CASHFLOW_READ);
+        map.put("accounting_cashflow_write", ACCOUNTING_CASHFLOW_WRITE);
         map.put("payment_payout_read", PAYMENT_PAYOUT_READ);
         map.put("payment_refund_read", PAYMENT_REFUND_READ);
         map.put("payment_link_read", PAYMENT_LINK_READ);
@@ -514,6 +518,8 @@ public class PropertyConnectionPermissions {
         map.put("accounting_category_write", PropertyConnectionPermissionsEnum.ACCOUNTING_CATEGORY_WRITE);
         map.put("payment_payment_read", PropertyConnectionPermissionsEnum.PAYMENT_PAYMENT_READ);
         map.put("payment_payment_write", PropertyConnectionPermissionsEnum.PAYMENT_PAYMENT_WRITE);
+        map.put("accounting_cashflow_read", PropertyConnectionPermissionsEnum.ACCOUNTING_CASHFLOW_READ);
+        map.put("accounting_cashflow_write", PropertyConnectionPermissionsEnum.ACCOUNTING_CASHFLOW_WRITE);
         map.put("payment_payout_read", PropertyConnectionPermissionsEnum.PAYMENT_PAYOUT_READ);
         map.put("payment_refund_read", PropertyConnectionPermissionsEnum.PAYMENT_REFUND_READ);
         map.put("payment_link_read", PropertyConnectionPermissionsEnum.PAYMENT_LINK_READ);
@@ -727,6 +733,8 @@ public class PropertyConnectionPermissions {
         ACCOUNTING_CATEGORY_WRITE("accounting_category_write"),
         PAYMENT_PAYMENT_READ("payment_payment_read"),
         PAYMENT_PAYMENT_WRITE("payment_payment_write"),
+        ACCOUNTING_CASHFLOW_READ("accounting_cashflow_read"),
+        ACCOUNTING_CASHFLOW_WRITE("accounting_cashflow_write"),
         PAYMENT_PAYOUT_READ("payment_payout_read"),
         PAYMENT_REFUND_READ("payment_refund_read"),
         PAYMENT_LINK_READ("payment_link_read"),

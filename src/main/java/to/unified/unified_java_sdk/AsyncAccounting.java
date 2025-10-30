@@ -22,6 +22,7 @@ import to.unified.unified_java_sdk.models.operations.CreateAccountingTransaction
 import to.unified.unified_java_sdk.models.operations.GetAccountingAccountRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingBalancesheetRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingBillRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingCashflowRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingContactRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingCreditmemoRequest;
@@ -40,6 +41,7 @@ import to.unified.unified_java_sdk.models.operations.GetAccountingTrialbalanceRe
 import to.unified.unified_java_sdk.models.operations.ListAccountingAccountsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingBalancesheetsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingBillsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingCashflowsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingCategoriesRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingContactsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingCreditmemoesRequest;
@@ -126,6 +128,8 @@ import to.unified.unified_java_sdk.models.operations.async.GetAccountingBalances
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingBalancesheetResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingBillRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingBillResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingCashflowRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingCashflowResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingCategoryRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingCategoryResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingContactRequestBuilder;
@@ -162,6 +166,8 @@ import to.unified.unified_java_sdk.models.operations.async.ListAccountingBalance
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingBalancesheetsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingBillsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingBillsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingCashflowsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingCashflowsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingCategoriesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingCategoriesResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingContactsRequestBuilder;
@@ -286,6 +292,7 @@ import to.unified.unified_java_sdk.operations.CreateAccountingTransaction;
 import to.unified.unified_java_sdk.operations.GetAccountingAccount;
 import to.unified.unified_java_sdk.operations.GetAccountingBalancesheet;
 import to.unified.unified_java_sdk.operations.GetAccountingBill;
+import to.unified.unified_java_sdk.operations.GetAccountingCashflow;
 import to.unified.unified_java_sdk.operations.GetAccountingCategory;
 import to.unified.unified_java_sdk.operations.GetAccountingContact;
 import to.unified.unified_java_sdk.operations.GetAccountingCreditmemo;
@@ -304,6 +311,7 @@ import to.unified.unified_java_sdk.operations.GetAccountingTrialbalance;
 import to.unified.unified_java_sdk.operations.ListAccountingAccounts;
 import to.unified.unified_java_sdk.operations.ListAccountingBalancesheets;
 import to.unified.unified_java_sdk.operations.ListAccountingBills;
+import to.unified.unified_java_sdk.operations.ListAccountingCashflows;
 import to.unified.unified_java_sdk.operations.ListAccountingCategories;
 import to.unified.unified_java_sdk.operations.ListAccountingContacts;
 import to.unified.unified_java_sdk.operations.ListAccountingCreditmemoes;
@@ -750,6 +758,29 @@ public class AsyncAccounting {
 
 
     /**
+     * Retrieve a cashflow
+     * 
+     * @return The async call builder
+     */
+    public GetAccountingCashflowRequestBuilder getAccountingCashflow() {
+        return new GetAccountingCashflowRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a cashflow
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetAccountingCashflowResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingCashflowResponse> getAccountingCashflow(GetAccountingCashflowRequest request) {
+        AsyncRequestOperation<GetAccountingCashflowRequest, GetAccountingCashflowResponse> operation
+              = new GetAccountingCashflow.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Retrieve a category
      * 
      * @return The async call builder
@@ -1158,6 +1189,29 @@ public class AsyncAccounting {
     public CompletableFuture<ListAccountingBillsResponse> listAccountingBills(ListAccountingBillsRequest request) {
         AsyncRequestOperation<ListAccountingBillsRequest, ListAccountingBillsResponse> operation
               = new ListAccountingBills.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all cashflows
+     * 
+     * @return The async call builder
+     */
+    public ListAccountingCashflowsRequestBuilder listAccountingCashflows() {
+        return new ListAccountingCashflowsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all cashflows
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListAccountingCashflowsResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingCashflowsResponse> listAccountingCashflows(ListAccountingCashflowsRequest request) {
+        AsyncRequestOperation<ListAccountingCashflowsRequest, ListAccountingCashflowsResponse> operation
+              = new ListAccountingCashflows.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

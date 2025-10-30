@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 018de8bfc3ab59a73a1c069f241e60a4
+  docChecksum: 488263b38991bc1af62a3a84968ffb52
   docVersion: "1.0"
-  speakeasyVersion: 1.639.3
-  generationVersion: 2.730.5
-  releaseVersion: 0.41.2
-  configChecksum: 03fba6c828bdef19e19ab9407d7a5647
+  speakeasyVersion: 1.642.2
+  generationVersion: 2.731.6
+  releaseVersion: 0.41.3
+  configChecksum: 8bd495a97277e339dfcedd45001f65dc
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -194,6 +194,8 @@ generatedFiles:
   - docs/models/operations/GetAccountingBalancesheetResponse.md
   - docs/models/operations/GetAccountingBillRequest.md
   - docs/models/operations/GetAccountingBillResponse.md
+  - docs/models/operations/GetAccountingCashflowRequest.md
+  - docs/models/operations/GetAccountingCashflowResponse.md
   - docs/models/operations/GetAccountingCategoryRequest.md
   - docs/models/operations/GetAccountingCategoryResponse.md
   - docs/models/operations/GetAccountingContactRequest.md
@@ -382,6 +384,8 @@ generatedFiles:
   - docs/models/operations/ListAccountingBalancesheetsResponse.md
   - docs/models/operations/ListAccountingBillsRequest.md
   - docs/models/operations/ListAccountingBillsResponse.md
+  - docs/models/operations/ListAccountingCashflowsRequest.md
+  - docs/models/operations/ListAccountingCashflowsResponse.md
   - docs/models/operations/ListAccountingCategoriesRequest.md
   - docs/models/operations/ListAccountingCategoriesResponse.md
   - docs/models/operations/ListAccountingContactsRequest.md
@@ -1055,6 +1059,9 @@ generatedFiles:
   - docs/models/shared/AccountingBalancesheetItem.md
   - docs/models/shared/AccountingBill.md
   - docs/models/shared/AccountingBillStatus.md
+  - docs/models/shared/AccountingCashflow.md
+  - docs/models/shared/AccountingCashflowItem.md
+  - docs/models/shared/AccountingCashflowSection.md
   - docs/models/shared/AccountingCategory.md
   - docs/models/shared/AccountingContact.md
   - docs/models/shared/AccountingContactPaymentMethod.md
@@ -1315,6 +1322,7 @@ generatedFiles:
   - docs/models/shared/Priority.md
   - docs/models/shared/ProfileGender.md
   - docs/models/shared/PropertyAccountingBalancesheetItemSubItems.md
+  - docs/models/shared/PropertyAccountingCashflowItemSubItems.md
   - docs/models/shared/PropertyAccountingContactBillingAddress.md
   - docs/models/shared/PropertyAccountingContactShippingAddress.md
   - docs/models/shared/PropertyAccountingOrderBillingAddress.md
@@ -1483,6 +1491,7 @@ generatedFiles:
   - docs/sdks/calendar/README.md
   - docs/sdks/call/README.md
   - docs/sdks/candidate/README.md
+  - docs/sdks/cashflow/README.md
   - docs/sdks/category/README.md
   - docs/sdks/change/README.md
   - docs/sdks/channel/README.md
@@ -1611,6 +1620,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/AsyncCalendar.java
   - src/main/java/to/unified/unified_java_sdk/AsyncCall.java
   - src/main/java/to/unified/unified_java_sdk/AsyncCandidate.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncCashflow.java
   - src/main/java/to/unified/unified_java_sdk/AsyncCategory.java
   - src/main/java/to/unified/unified_java_sdk/AsyncChange.java
   - src/main/java/to/unified/unified_java_sdk/AsyncChannel.java
@@ -1713,6 +1723,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/Calendar.java
   - src/main/java/to/unified/unified_java_sdk/Call.java
   - src/main/java/to/unified/unified_java_sdk/Candidate.java
+  - src/main/java/to/unified/unified_java_sdk/Cashflow.java
   - src/main/java/to/unified/unified_java_sdk/Category.java
   - src/main/java/to/unified/unified_java_sdk/Change.java
   - src/main/java/to/unified/unified_java_sdk/Channel.java
@@ -1895,6 +1906,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingAccountRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingBalancesheetRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingBillRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingCashflowRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingCategoryRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingContactRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingCreditmemoRequestBuilder.java
@@ -1989,6 +2001,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingAccountsRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingBalancesheetsRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingBillsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingCashflowsRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingCategoriesRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingContactsRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingCreditmemoesRequestBuilder.java
@@ -2570,6 +2583,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingBillRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingBillRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingBillResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingCashflowRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingCashflowRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingCashflowResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingCategoryRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingCategoryRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingCategoryResponse.java
@@ -2852,6 +2868,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingBillsRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingBillsRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingBillsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingCashflowsRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingCashflowsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingCashflowsResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingCategoriesRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingCategoriesRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingCategoriesResponse.java
@@ -3933,6 +3952,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingAccountResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingBalancesheetResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingBillResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingCashflowResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingCategoryResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingContactResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingCreditmemoResponse.java
@@ -4027,6 +4047,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingAccountsResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingBalancesheetsResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingBillsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingCashflowsResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingCategoriesResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingContactsResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingCreditmemoesResponse.java
@@ -4366,6 +4387,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingBalancesheetItem.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingBill.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingBillStatus.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingCashflow.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingCashflowItem.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingCashflowSection.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingCategory.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingContact.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingContactPaymentMethod.java
@@ -4626,6 +4650,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/Priority.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/ProfileGender.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAccountingBalancesheetItemSubItems.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAccountingCashflowItemSubItems.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAccountingContactBillingAddress.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAccountingContactShippingAddress.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAccountingOrderBillingAddress.java
@@ -4862,6 +4887,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingAccount.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingBalancesheet.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingBill.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingCashflow.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingCategory.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingContact.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingCreditmemo.java
@@ -4956,6 +4982,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingAccounts.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingBalancesheets.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingBills.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingCashflows.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingCategories.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingContacts.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListAccountingCreditmemoes.java
@@ -9979,6 +10006,28 @@ examples:
       responses:
         "200":
           application/json: {}
+  getAccountingCashflow:
+    speakeasy-default-get-accounting-cashflow:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listAccountingCashflows:
+    speakeasy-default-list-accounting-cashflows:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Java SDK Changes Detected:\n* `unified-to.accounting.createAccountingJournal()`: \n  *  `request.accountingJournal.lineitems.[]` **Changed**\n  *  `response.lineitems.[]` **Changed**\n* `unified-to.accounting.getAccountingJournal()`:  `response.lineitems.[]` **Changed**\n* `unified-to.accounting.listAccountingJournals()`:  `response.[].lineitems.[]` **Changed**\n* `unified-to.accounting.patchAccountingJournal()`: \n  *  `request.accountingJournal.lineitems.[]` **Changed**\n  *  `response.lineitems.[]` **Changed**\n* `unified-to.accounting.updateAccountingJournal()`: \n  *  `request.accountingJournal.lineitems.[]` **Changed**\n  *  `response.lineitems.[]` **Changed**\n* `unified-to.journal.createAccountingJournal()`: \n  *  `request.accountingJournal.lineitems.[]` **Changed**\n  *  `response.lineitems.[]` **Changed**\n* `unified-to.journal.getAccountingJournal()`:  `response.lineitems.[]` **Changed**\n* `unified-to.journal.listAccountingJournals()`:  `response.[].lineitems.[]` **Changed**\n* `unified-to.journal.patchAccountingJournal()`: \n  *  `request.accountingJournal.lineitems.[]` **Changed**\n  *  `response.lineitems.[]` **Changed**\n* `unified-to.journal.updateAccountingJournal()`: \n  *  `request.accountingJournal.lineitems.[]` **Changed**\n  *  `response.lineitems.[]` **Changed**\n* `unified-to.repo.createRepoCommit()`: \n  *  `request.repoCommit.userId` **Changed**\n  *  `response.user_id` **Changed**\n* `unified-to.repo.getRepoCommit()`:  `response.user_id` **Changed**\n* `unified-to.repo.listRepoCommits()`:  `response.[].userId` **Changed**\n* `unified-to.repo.patchRepoCommit()`: \n  *  `request.repoCommit.userId` **Changed**\n  *  `response.user_id` **Changed**\n* `unified-to.repo.updateRepoCommit()`: \n  *  `request.repoCommit.userId` **Changed**\n  *  `response.user_id` **Changed**\n* `unified-to.commit.createRepoCommit()`: \n  *  `request.repoCommit.userId` **Changed**\n  *  `response.user_id` **Changed**\n* `unified-to.commit.getRepoCommit()`:  `response.user_id` **Changed**\n* `unified-to.commit.listRepoCommits()`:  `response.[].userId` **Changed**\n* `unified-to.commit.patchRepoCommit()`: \n  *  `request.repoCommit.userId` **Changed**\n  *  `response.user_id` **Changed**\n* `unified-to.commit.updateRepoCommit()`: \n  *  `request.repoCommit.userId` **Changed**\n  *  `response.user_id` **Changed**\n"
+releaseNotes: |
+  ## Java SDK Changes Detected:
+  * `unified-to.accounting.getAccountingCashflow()`: **Added**
+  * `unified-to.accounting.listAccountingCashflows()`: **Added**
+  * `unified-to.cashflow.getAccountingCashflow()`: **Added**
+  * `unified-to.cashflow.listAccountingCashflows()`: **Added**

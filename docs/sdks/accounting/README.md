@@ -21,6 +21,7 @@
 * [getAccountingAccount](#getaccountingaccount) - Retrieve an account
 * [getAccountingBalancesheet](#getaccountingbalancesheet) - Retrieve a balancesheet
 * [getAccountingBill](#getaccountingbill) - Retrieve a bill
+* [getAccountingCashflow](#getaccountingcashflow) - Retrieve a cashflow
 * [getAccountingCategory](#getaccountingcategory) - Retrieve a category
 * [getAccountingContact](#getaccountingcontact) - Retrieve a contact
 * [getAccountingCreditmemo](#getaccountingcreditmemo) - Retrieve a creditmemo
@@ -39,6 +40,7 @@
 * [listAccountingAccounts](#listaccountingaccounts) - List all accounts
 * [listAccountingBalancesheets](#listaccountingbalancesheets) - List all balancesheets
 * [listAccountingBills](#listaccountingbills) - List all bills
+* [listAccountingCashflows](#listaccountingcashflows) - List all cashflows
 * [listAccountingCategories](#listaccountingcategories) - List all categories
 * [listAccountingContacts](#listaccountingcontacts) - List all contacts
 * [listAccountingCreditmemoes](#listaccountingcreditmemoes) - List all creditmemoes
@@ -1041,6 +1043,64 @@ public class Application {
 ### Response
 
 **[GetAccountingBillResponse](../../models/operations/GetAccountingBillResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getAccountingCashflow
+
+Retrieve a cashflow
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getAccountingCashflow" method="get" path="/accounting/{connection_id}/cashflow/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAccountingCashflowRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingCashflowResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetAccountingCashflowRequest req = GetAccountingCashflowRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetAccountingCashflowResponse res = sdk.accounting().getAccountingCashflow()
+                .request(req)
+                .call();
+
+        if (res.accountingCashflow().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [GetAccountingCashflowRequest](../../models/operations/GetAccountingCashflowRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[GetAccountingCashflowResponse](../../models/operations/GetAccountingCashflowResponse.md)**
 
 ### Errors
 
@@ -2082,6 +2142,63 @@ public class Application {
 ### Response
 
 **[ListAccountingBillsResponse](../../models/operations/ListAccountingBillsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listAccountingCashflows
+
+List all cashflows
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listAccountingCashflows" method="get" path="/accounting/{connection_id}/cashflow" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAccountingCashflowsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingCashflowsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListAccountingCashflowsRequest req = ListAccountingCashflowsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListAccountingCashflowsResponse res = sdk.accounting().listAccountingCashflows()
+                .request(req)
+                .call();
+
+        if (res.accountingCashflows().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [ListAccountingCashflowsRequest](../../models/operations/ListAccountingCashflowsRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+
+### Response
+
+**[ListAccountingCashflowsResponse](../../models/operations/ListAccountingCashflowsResponse.md)**
 
 ### Errors
 

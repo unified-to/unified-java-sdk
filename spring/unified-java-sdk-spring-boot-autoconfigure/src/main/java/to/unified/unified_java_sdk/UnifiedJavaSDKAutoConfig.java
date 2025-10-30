@@ -267,6 +267,17 @@ public class UnifiedJavaSDKAutoConfig {
         return unifiedTo.bill();
     }
     /**
+     * Creates a Cashflow sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Cashflow instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Cashflow cashflow(UnifiedTo unifiedTo) {
+        return unifiedTo.cashflow();
+    }
+    /**
      * Creates a Category sub-SDK bean if none exists.
      *
      * @param unifiedTo the main SDK instance
@@ -1455,6 +1466,17 @@ public class UnifiedJavaSDKAutoConfig {
     @ConditionalOnMissingBean
     public AsyncBill asyncBill(AsyncUnifiedTo asyncUnifiedTo) {
         return asyncUnifiedTo.bill();
+    }
+    /**
+     * Creates an AsyncCashflow sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncCashflow instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncCashflow asyncCashflow(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.cashflow();
     }
     /**
      * Creates an AsyncCategory sub-SDK bean if none exists.

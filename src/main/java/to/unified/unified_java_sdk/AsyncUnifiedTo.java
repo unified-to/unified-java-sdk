@@ -19,6 +19,8 @@ public class AsyncUnifiedTo {
 
     private final AsyncBill bill;
 
+    private final AsyncCashflow cashflow;
+
     private final AsyncCategory category;
 
     private final AsyncContact contact;
@@ -239,6 +241,10 @@ public class AsyncUnifiedTo {
 
     public AsyncBill bill() {
         return bill;
+    }
+
+    public AsyncCashflow cashflow() {
+        return cashflow;
     }
 
     public AsyncCategory category() {
@@ -663,6 +669,7 @@ public class AsyncUnifiedTo {
         this.account = new AsyncAccount(syncSDK.account(), sdkConfiguration);
         this.balancesheet = new AsyncBalancesheet(syncSDK.balancesheet(), sdkConfiguration);
         this.bill = new AsyncBill(syncSDK.bill(), sdkConfiguration);
+        this.cashflow = new AsyncCashflow(syncSDK.cashflow(), sdkConfiguration);
         this.category = new AsyncCategory(syncSDK.category(), sdkConfiguration);
         this.contact = new AsyncContact(syncSDK.contact(), sdkConfiguration);
         this.creditmemo = new AsyncCreditmemo(syncSDK.creditmemo(), sdkConfiguration);
