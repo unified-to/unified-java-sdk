@@ -58,6 +58,11 @@ public class KmsPageMetadataFormat {
     public static final KmsPageMetadataFormat YES_NO = new KmsPageMetadataFormat("YES_NO");
     public static final KmsPageMetadataFormat CURRENCY = new KmsPageMetadataFormat("CURRENCY");
     public static final KmsPageMetadataFormat URL = new KmsPageMetadataFormat("URL");
+    public static final KmsPageMetadataFormat PERCENT = new KmsPageMetadataFormat("PERCENT");
+    public static final KmsPageMetadataFormat EMAIL = new KmsPageMetadataFormat("EMAIL");
+    public static final KmsPageMetadataFormat PHONE = new KmsPageMetadataFormat("PHONE");
+    public static final KmsPageMetadataFormat REFERENCE = new KmsPageMetadataFormat("REFERENCE");
+    public static final KmsPageMetadataFormat TIME = new KmsPageMetadataFormat("TIME");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -142,6 +147,11 @@ public class KmsPageMetadataFormat {
         map.put("YES_NO", YES_NO);
         map.put("CURRENCY", CURRENCY);
         map.put("URL", URL);
+        map.put("PERCENT", PERCENT);
+        map.put("EMAIL", EMAIL);
+        map.put("PHONE", PHONE);
+        map.put("REFERENCE", REFERENCE);
+        map.put("TIME", TIME);
         return map;
     }
 
@@ -160,6 +170,11 @@ public class KmsPageMetadataFormat {
         map.put("YES_NO", KmsPageMetadataFormatEnum.YES_NO);
         map.put("CURRENCY", KmsPageMetadataFormatEnum.CURRENCY);
         map.put("URL", KmsPageMetadataFormatEnum.URL);
+        map.put("PERCENT", KmsPageMetadataFormatEnum.PERCENT);
+        map.put("EMAIL", KmsPageMetadataFormatEnum.EMAIL);
+        map.put("PHONE", KmsPageMetadataFormatEnum.PHONE);
+        map.put("REFERENCE", KmsPageMetadataFormatEnum.REFERENCE);
+        map.put("TIME", KmsPageMetadataFormatEnum.TIME);
         return map;
     }
     
@@ -207,7 +222,12 @@ public class KmsPageMetadataFormat {
         PRICE("PRICE"),
         YES_NO("YES_NO"),
         CURRENCY("CURRENCY"),
-        URL("URL"),;
+        URL("URL"),
+        PERCENT("PERCENT"),
+        EMAIL("EMAIL"),
+        PHONE("PHONE"),
+        REFERENCE("REFERENCE"),
+        TIME("TIME"),;
 
         private final String value;
 
