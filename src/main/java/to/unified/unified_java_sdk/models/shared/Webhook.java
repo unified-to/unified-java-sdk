@@ -11,7 +11,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.type.TypeReference;
 import java.lang.Boolean;
 import java.lang.Double;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
@@ -79,7 +78,7 @@ public class Webhook {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
-    private Optional<? extends Map<String, Object>> filters;
+    private Optional<? extends Map<String, String>> filters;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -154,7 +153,7 @@ public class Webhook {
             @JsonProperty("environment") Optional<String> environment,
             @JsonProperty("event") Event event,
             @JsonProperty("fields") Optional<String> fields,
-            @JsonProperty("filters") Optional<? extends Map<String, Object>> filters,
+            @JsonProperty("filters") Optional<? extends Map<String, String>> filters,
             @JsonProperty("hook_url") Optional<String> hookUrl,
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("integration_type") Optional<String> integrationType,
@@ -282,8 +281,8 @@ public class Webhook {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> filters() {
-        return (Optional<Map<String, Object>>) filters;
+    public Optional<Map<String, String>> filters() {
+        return (Optional<Map<String, String>>) filters;
     }
 
     @JsonIgnore
@@ -472,14 +471,14 @@ public class Webhook {
         return this;
     }
 
-    public Webhook withFilters(Map<String, Object> filters) {
+    public Webhook withFilters(Map<String, String> filters) {
         Utils.checkNotNull(filters, "filters");
         this.filters = Optional.ofNullable(filters);
         return this;
     }
 
 
-    public Webhook withFilters(Optional<? extends Map<String, Object>> filters) {
+    public Webhook withFilters(Optional<? extends Map<String, String>> filters) {
         Utils.checkNotNull(filters, "filters");
         this.filters = filters;
         return this;
@@ -739,7 +738,7 @@ public class Webhook {
 
         private Optional<String> fields = Optional.empty();
 
-        private Optional<? extends Map<String, Object>> filters = Optional.empty();
+        private Optional<? extends Map<String, String>> filters = Optional.empty();
 
         private Optional<String> hookUrl = Optional.empty();
 
@@ -888,13 +887,13 @@ public class Webhook {
         }
 
 
-        public Builder filters(Map<String, Object> filters) {
+        public Builder filters(Map<String, String> filters) {
             Utils.checkNotNull(filters, "filters");
             this.filters = Optional.ofNullable(filters);
             return this;
         }
 
-        public Builder filters(Optional<? extends Map<String, Object>> filters) {
+        public Builder filters(Optional<? extends Map<String, String>> filters) {
             Utils.checkNotNull(filters, "filters");
             this.filters = filters;
             return this;

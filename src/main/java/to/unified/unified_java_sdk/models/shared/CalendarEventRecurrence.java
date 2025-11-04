@@ -90,12 +90,10 @@ public class CalendarEventRecurrence {
     @JsonProperty("on_year_days")
     private Optional<? extends List<Double>> onYearDays;
 
-    /**
-     * timezone, defaults to undefined (no timezone)
-     */
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
-    private Optional<? extends List<String>> timezone;
+    private Optional<String> timezone;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -115,7 +113,7 @@ public class CalendarEventRecurrence {
             @JsonProperty("on_months") Optional<? extends List<Double>> onMonths,
             @JsonProperty("on_weeks") Optional<? extends List<Double>> onWeeks,
             @JsonProperty("on_year_days") Optional<? extends List<Double>> onYearDays,
-            @JsonProperty("timezone") Optional<? extends List<String>> timezone,
+            @JsonProperty("timezone") Optional<String> timezone,
             @JsonProperty("week_start") Optional<? extends WeekStart> weekStart) {
         Utils.checkNotNull(count, "count");
         Utils.checkNotNull(endAt, "endAt");
@@ -239,13 +237,9 @@ public class CalendarEventRecurrence {
         return (Optional<List<Double>>) onYearDays;
     }
 
-    /**
-     * timezone, defaults to undefined (no timezone)
-     */
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> timezone() {
-        return (Optional<List<String>>) timezone;
+    public Optional<String> timezone() {
+        return timezone;
     }
 
     @SuppressWarnings("unchecked")
@@ -448,20 +442,14 @@ public class CalendarEventRecurrence {
         return this;
     }
 
-    /**
-     * timezone, defaults to undefined (no timezone)
-     */
-    public CalendarEventRecurrence withTimezone(List<String> timezone) {
+    public CalendarEventRecurrence withTimezone(String timezone) {
         Utils.checkNotNull(timezone, "timezone");
         this.timezone = Optional.ofNullable(timezone);
         return this;
     }
 
 
-    /**
-     * timezone, defaults to undefined (no timezone)
-     */
-    public CalendarEventRecurrence withTimezone(Optional<? extends List<String>> timezone) {
+    public CalendarEventRecurrence withTimezone(Optional<String> timezone) {
         Utils.checkNotNull(timezone, "timezone");
         this.timezone = timezone;
         return this;
@@ -558,7 +546,7 @@ public class CalendarEventRecurrence {
 
         private Optional<? extends List<Double>> onYearDays = Optional.empty();
 
-        private Optional<? extends List<String>> timezone = Optional.empty();
+        private Optional<String> timezone = Optional.empty();
 
         private Optional<? extends WeekStart> weekStart = Optional.empty();
 
@@ -756,19 +744,13 @@ public class CalendarEventRecurrence {
         }
 
 
-        /**
-         * timezone, defaults to undefined (no timezone)
-         */
-        public Builder timezone(List<String> timezone) {
+        public Builder timezone(String timezone) {
             Utils.checkNotNull(timezone, "timezone");
             this.timezone = Optional.ofNullable(timezone);
             return this;
         }
 
-        /**
-         * timezone, defaults to undefined (no timezone)
-         */
-        public Builder timezone(Optional<? extends List<String>> timezone) {
+        public Builder timezone(Optional<String> timezone) {
             Utils.checkNotNull(timezone, "timezone");
             this.timezone = timezone;
             return this;

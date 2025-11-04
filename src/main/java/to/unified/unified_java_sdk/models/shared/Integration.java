@@ -10,7 +10,6 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.lang.Boolean;
 import java.lang.Double;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
@@ -124,7 +123,7 @@ public class Integration {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("support")
-    private Optional<? extends Map<String, Object>> support;
+    private Optional<? extends Map<String, IntegrationSupport>> support;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -185,7 +184,7 @@ public class Integration {
             @JsonProperty("rate_limit_description") Optional<String> rateLimitDescription,
             @JsonProperty("saml") Optional<? extends Saml> saml,
             @JsonProperty("sandbox") Optional<? extends Sandbox> sandbox,
-            @JsonProperty("support") Optional<? extends Map<String, Object>> support,
+            @JsonProperty("support") Optional<? extends Map<String, IntegrationSupport>> support,
             @JsonProperty("tested_at") Optional<OffsetDateTime> testedAt,
             @JsonProperty("text_color") Optional<String> textColor,
             @JsonProperty("token_instructions") Optional<? extends List<String>> tokenInstructions,
@@ -368,8 +367,8 @@ public class Integration {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> support() {
-        return (Optional<Map<String, Object>>) support;
+    public Optional<Map<String, IntegrationSupport>> support() {
+        return (Optional<Map<String, IntegrationSupport>>) support;
     }
 
     @JsonIgnore
@@ -656,14 +655,14 @@ public class Integration {
         return this;
     }
 
-    public Integration withSupport(Map<String, Object> support) {
+    public Integration withSupport(Map<String, IntegrationSupport> support) {
         Utils.checkNotNull(support, "support");
         this.support = Optional.ofNullable(support);
         return this;
     }
 
 
-    public Integration withSupport(Optional<? extends Map<String, Object>> support) {
+    public Integration withSupport(Optional<? extends Map<String, IntegrationSupport>> support) {
         Utils.checkNotNull(support, "support");
         this.support = support;
         return this;
@@ -891,7 +890,7 @@ public class Integration {
 
         private Optional<? extends Sandbox> sandbox = Optional.empty();
 
-        private Optional<? extends Map<String, Object>> support = Optional.empty();
+        private Optional<? extends Map<String, IntegrationSupport>> support = Optional.empty();
 
         private Optional<OffsetDateTime> testedAt = Optional.empty();
 
@@ -1150,13 +1149,13 @@ public class Integration {
         }
 
 
-        public Builder support(Map<String, Object> support) {
+        public Builder support(Map<String, IntegrationSupport> support) {
             Utils.checkNotNull(support, "support");
             this.support = Optional.ofNullable(support);
             return this;
         }
 
-        public Builder support(Optional<? extends Map<String, Object>> support) {
+        public Builder support(Optional<? extends Map<String, IntegrationSupport>> support) {
             Utils.checkNotNull(support, "support");
             this.support = support;
             return this;
