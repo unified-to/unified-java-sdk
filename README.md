@@ -36,7 +36,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.42.1'
+implementation 'to.unified:unified-java-sdk:0.43.0'
 ```
 
 Maven:
@@ -44,7 +44,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.42.1</version>
+    <version>0.43.0</version>
 </dependency>
 ```
 
@@ -1592,8 +1592,11 @@ Handling errors in this SDK should largely match your expectations. All operatio
 ```java
 package hello.world;
 
+import java.io.UncheckedIOException;
 import java.lang.Exception;
+import java.util.Optional;
 import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.errors.UnifiedToError;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountResponse;
 import to.unified.unified_java_sdk.models.shared.AccountingAccount;
@@ -1608,21 +1611,36 @@ public class Application {
                     .jwt(System.getenv().getOrDefault("JWT", ""))
                     .build())
             .build();
+        try {
 
-        CreateAccountingAccountRequest req = CreateAccountingAccountRequest.builder()
-                .accountingAccount(AccountingAccount.builder()
-                    .build())
-                .connectionId("<id>")
-                .build();
+            CreateAccountingAccountRequest req = CreateAccountingAccountRequest.builder()
+                    .accountingAccount(AccountingAccount.builder()
+                        .build())
+                    .connectionId("<id>")
+                    .build();
 
-        CreateAccountingAccountResponse res = sdk.accounting().createAccountingAccount()
-                .request(req)
-                .call();
+            CreateAccountingAccountResponse res = sdk.accounting().createAccountingAccount()
+                    .request(req)
+                    .call();
 
-        if (res.accountingAccount().isPresent()) {
-            // handle response
-        }
-    }
+            if (res.accountingAccount().isPresent()) {
+                // handle response
+            }
+        } catch (UnifiedToError ex) { // all SDK exceptions inherit from UnifiedToError
+
+            // ex.ToString() provides a detailed error message including
+            // HTTP status code, headers, and error payload (if any)
+            System.out.println(ex);
+
+            // Base exception fields
+            var rawResponse = ex.rawResponse();
+            var headers = ex.headers();
+            var contentType = headers.first("Content-Type");
+            int statusCode = ex.code();
+            Optional<byte[]> responseBody = ex.body();
+        } catch (UncheckedIOException ex) {
+            // handle IO error (connection, timeout, etc)
+        }    }
 }
 ```
 
