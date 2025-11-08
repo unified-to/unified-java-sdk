@@ -24,7 +24,7 @@ import to.unified.unified_java_sdk.utils.Utils;
 public class ExtraData {
 
     @JsonValue
-    private TypedObject value;
+    private final TypedObject value;
     
     private ExtraData(TypedObject value) {
         this.value = value;
@@ -32,27 +32,25 @@ public class ExtraData {
 
     public static ExtraData of(Map<String, Object> value) {
         Utils.checkNotNull(value, "value");
-        return new ExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<Map<String, Object>>(){}));
+        return new ExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static ExtraData of(String value) {
         Utils.checkNotNull(value, "value");
-        return new ExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<String>(){}));
+        return new ExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static ExtraData of(double value) {
-        Utils.checkNotNull(value, "value");
-        return new ExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Double>(){}));
+        return new ExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static ExtraData of(boolean value) {
-        Utils.checkNotNull(value, "value");
-        return new ExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Boolean>(){}));
+        return new ExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static ExtraData of(List<Five> value) {
         Utils.checkNotNull(value, "value");
-        return new ExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<List<Five>>(){}));
+        return new ExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
     
     /**
@@ -78,7 +76,7 @@ public class ExtraData {
      **/ 
     public java.lang.Object value() {
         return value.value();
-    }    
+    }
     
     @Override
     public boolean equals(java.lang.Object o) {

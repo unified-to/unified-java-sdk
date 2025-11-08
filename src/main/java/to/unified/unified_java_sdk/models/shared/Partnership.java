@@ -24,7 +24,7 @@ import to.unified.unified_java_sdk.utils.Utils;
 public class Partnership {
 
     @JsonValue
-    private TypedObject value;
+    private final TypedObject value;
     
     private Partnership(TypedObject value) {
         this.value = value;
@@ -32,27 +32,25 @@ public class Partnership {
 
     public static Partnership of(Map<String, Object> value) {
         Utils.checkNotNull(value, "value");
-        return new Partnership(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<Map<String, Object>>(){}));
+        return new Partnership(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static Partnership of(String value) {
         Utils.checkNotNull(value, "value");
-        return new Partnership(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<String>(){}));
+        return new Partnership(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static Partnership of(double value) {
-        Utils.checkNotNull(value, "value");
-        return new Partnership(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Double>(){}));
+        return new Partnership(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static Partnership of(boolean value) {
-        Utils.checkNotNull(value, "value");
-        return new Partnership(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Boolean>(){}));
+        return new Partnership(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static Partnership of(List<IntegrationSchemas5> value) {
         Utils.checkNotNull(value, "value");
-        return new Partnership(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<List<IntegrationSchemas5>>(){}));
+        return new Partnership(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
     
     /**
@@ -78,7 +76,7 @@ public class Partnership {
      **/ 
     public java.lang.Object value() {
         return value.value();
-    }    
+    }
     
     @Override
     public boolean equals(java.lang.Object o) {

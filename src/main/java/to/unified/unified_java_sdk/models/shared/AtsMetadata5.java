@@ -21,7 +21,7 @@ import to.unified.unified_java_sdk.utils.Utils;
 public class AtsMetadata5 {
 
     @JsonValue
-    private TypedObject value;
+    private final TypedObject value;
     
     private AtsMetadata5(TypedObject value) {
         this.value = value;
@@ -29,22 +29,20 @@ public class AtsMetadata5 {
 
     public static AtsMetadata5 of(AtsMetadata1 value) {
         Utils.checkNotNull(value, "value");
-        return new AtsMetadata5(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<AtsMetadata1>(){}));
+        return new AtsMetadata5(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static AtsMetadata5 of(String value) {
         Utils.checkNotNull(value, "value");
-        return new AtsMetadata5(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<String>(){}));
+        return new AtsMetadata5(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static AtsMetadata5 of(double value) {
-        Utils.checkNotNull(value, "value");
-        return new AtsMetadata5(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Double>(){}));
+        return new AtsMetadata5(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static AtsMetadata5 of(boolean value) {
-        Utils.checkNotNull(value, "value");
-        return new AtsMetadata5(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Boolean>(){}));
+        return new AtsMetadata5(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
     
     /**
@@ -69,7 +67,7 @@ public class AtsMetadata5 {
      **/ 
     public java.lang.Object value() {
         return value.value();
-    }    
+    }
     
     @Override
     public boolean equals(java.lang.Object o) {

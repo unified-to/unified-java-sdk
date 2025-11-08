@@ -24,7 +24,7 @@ import to.unified.unified_java_sdk.utils.Utils;
 public class KmsPageMetadataExtraData {
 
     @JsonValue
-    private TypedObject value;
+    private final TypedObject value;
     
     private KmsPageMetadataExtraData(TypedObject value) {
         this.value = value;
@@ -32,27 +32,25 @@ public class KmsPageMetadataExtraData {
 
     public static KmsPageMetadataExtraData of(Map<String, Object> value) {
         Utils.checkNotNull(value, "value");
-        return new KmsPageMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<Map<String, Object>>(){}));
+        return new KmsPageMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static KmsPageMetadataExtraData of(String value) {
         Utils.checkNotNull(value, "value");
-        return new KmsPageMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<String>(){}));
+        return new KmsPageMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static KmsPageMetadataExtraData of(double value) {
-        Utils.checkNotNull(value, "value");
-        return new KmsPageMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Double>(){}));
+        return new KmsPageMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static KmsPageMetadataExtraData of(boolean value) {
-        Utils.checkNotNull(value, "value");
-        return new KmsPageMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Boolean>(){}));
+        return new KmsPageMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static KmsPageMetadataExtraData of(List<KmsPageMetadata5> value) {
         Utils.checkNotNull(value, "value");
-        return new KmsPageMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<List<KmsPageMetadata5>>(){}));
+        return new KmsPageMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
     
     /**
@@ -78,7 +76,7 @@ public class KmsPageMetadataExtraData {
      **/ 
     public java.lang.Object value() {
         return value.value();
-    }    
+    }
     
     @Override
     public boolean equals(java.lang.Object o) {

@@ -24,7 +24,7 @@ import to.unified.unified_java_sdk.utils.Utils;
 public class Sandbox {
 
     @JsonValue
-    private TypedObject value;
+    private final TypedObject value;
     
     private Sandbox(TypedObject value) {
         this.value = value;
@@ -32,27 +32,25 @@ public class Sandbox {
 
     public static Sandbox of(Map<String, Object> value) {
         Utils.checkNotNull(value, "value");
-        return new Sandbox(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<Map<String, Object>>(){}));
+        return new Sandbox(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static Sandbox of(String value) {
         Utils.checkNotNull(value, "value");
-        return new Sandbox(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<String>(){}));
+        return new Sandbox(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static Sandbox of(double value) {
-        Utils.checkNotNull(value, "value");
-        return new Sandbox(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Double>(){}));
+        return new Sandbox(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static Sandbox of(boolean value) {
-        Utils.checkNotNull(value, "value");
-        return new Sandbox(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Boolean>(){}));
+        return new Sandbox(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static Sandbox of(List<IntegrationSchemasSandbox5> value) {
         Utils.checkNotNull(value, "value");
-        return new Sandbox(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<List<IntegrationSchemasSandbox5>>(){}));
+        return new Sandbox(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
     
     /**
@@ -78,7 +76,7 @@ public class Sandbox {
      **/ 
     public java.lang.Object value() {
         return value.value();
-    }    
+    }
     
     @Override
     public boolean equals(java.lang.Object o) {

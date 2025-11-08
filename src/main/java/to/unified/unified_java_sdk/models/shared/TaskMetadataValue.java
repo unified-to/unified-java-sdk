@@ -24,7 +24,7 @@ import to.unified.unified_java_sdk.utils.Utils;
 public class TaskMetadataValue {
 
     @JsonValue
-    private TypedObject value;
+    private final TypedObject value;
     
     private TaskMetadataValue(TypedObject value) {
         this.value = value;
@@ -32,27 +32,25 @@ public class TaskMetadataValue {
 
     public static TaskMetadataValue of(Map<String, Object> value) {
         Utils.checkNotNull(value, "value");
-        return new TaskMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<Map<String, Object>>(){}));
+        return new TaskMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static TaskMetadataValue of(String value) {
         Utils.checkNotNull(value, "value");
-        return new TaskMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<String>(){}));
+        return new TaskMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static TaskMetadataValue of(double value) {
-        Utils.checkNotNull(value, "value");
-        return new TaskMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Double>(){}));
+        return new TaskMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static TaskMetadataValue of(boolean value) {
-        Utils.checkNotNull(value, "value");
-        return new TaskMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Boolean>(){}));
+        return new TaskMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static TaskMetadataValue of(List<TaskMetadataSchemas5> value) {
         Utils.checkNotNull(value, "value");
-        return new TaskMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<List<TaskMetadataSchemas5>>(){}));
+        return new TaskMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
     
     /**
@@ -78,7 +76,7 @@ public class TaskMetadataValue {
      **/ 
     public java.lang.Object value() {
         return value.value();
-    }    
+    }
     
     @Override
     public boolean equals(java.lang.Object o) {

@@ -24,7 +24,7 @@ import to.unified.unified_java_sdk.utils.Utils;
 public class CommerceMetadataExtraData {
 
     @JsonValue
-    private TypedObject value;
+    private final TypedObject value;
     
     private CommerceMetadataExtraData(TypedObject value) {
         this.value = value;
@@ -32,27 +32,25 @@ public class CommerceMetadataExtraData {
 
     public static CommerceMetadataExtraData of(Map<String, Object> value) {
         Utils.checkNotNull(value, "value");
-        return new CommerceMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<Map<String, Object>>(){}));
+        return new CommerceMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static CommerceMetadataExtraData of(String value) {
         Utils.checkNotNull(value, "value");
-        return new CommerceMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<String>(){}));
+        return new CommerceMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static CommerceMetadataExtraData of(double value) {
-        Utils.checkNotNull(value, "value");
-        return new CommerceMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Double>(){}));
+        return new CommerceMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static CommerceMetadataExtraData of(boolean value) {
-        Utils.checkNotNull(value, "value");
-        return new CommerceMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Boolean>(){}));
+        return new CommerceMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static CommerceMetadataExtraData of(List<CommerceMetadata5> value) {
         Utils.checkNotNull(value, "value");
-        return new CommerceMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<List<CommerceMetadata5>>(){}));
+        return new CommerceMetadataExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
     
     /**
@@ -78,7 +76,7 @@ public class CommerceMetadataExtraData {
      **/ 
     public java.lang.Object value() {
         return value.value();
-    }    
+    }
     
     @Override
     public boolean equals(java.lang.Object o) {

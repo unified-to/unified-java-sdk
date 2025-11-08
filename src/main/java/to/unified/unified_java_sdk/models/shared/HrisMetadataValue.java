@@ -24,7 +24,7 @@ import to.unified.unified_java_sdk.utils.Utils;
 public class HrisMetadataValue {
 
     @JsonValue
-    private TypedObject value;
+    private final TypedObject value;
     
     private HrisMetadataValue(TypedObject value) {
         this.value = value;
@@ -32,27 +32,25 @@ public class HrisMetadataValue {
 
     public static HrisMetadataValue of(Map<String, Object> value) {
         Utils.checkNotNull(value, "value");
-        return new HrisMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<Map<String, Object>>(){}));
+        return new HrisMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static HrisMetadataValue of(String value) {
         Utils.checkNotNull(value, "value");
-        return new HrisMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<String>(){}));
+        return new HrisMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static HrisMetadataValue of(double value) {
-        Utils.checkNotNull(value, "value");
-        return new HrisMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Double>(){}));
+        return new HrisMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static HrisMetadataValue of(boolean value) {
-        Utils.checkNotNull(value, "value");
-        return new HrisMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Boolean>(){}));
+        return new HrisMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static HrisMetadataValue of(List<HrisMetadataSchemas5> value) {
         Utils.checkNotNull(value, "value");
-        return new HrisMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<List<HrisMetadataSchemas5>>(){}));
+        return new HrisMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
     
     /**
@@ -78,7 +76,7 @@ public class HrisMetadataValue {
      **/ 
     public java.lang.Object value() {
         return value.value();
-    }    
+    }
     
     @Override
     public boolean equals(java.lang.Object o) {

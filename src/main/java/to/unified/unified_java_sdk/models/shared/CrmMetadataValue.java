@@ -24,7 +24,7 @@ import to.unified.unified_java_sdk.utils.Utils;
 public class CrmMetadataValue {
 
     @JsonValue
-    private TypedObject value;
+    private final TypedObject value;
     
     private CrmMetadataValue(TypedObject value) {
         this.value = value;
@@ -32,27 +32,25 @@ public class CrmMetadataValue {
 
     public static CrmMetadataValue of(Map<String, Object> value) {
         Utils.checkNotNull(value, "value");
-        return new CrmMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<Map<String, Object>>(){}));
+        return new CrmMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static CrmMetadataValue of(String value) {
         Utils.checkNotNull(value, "value");
-        return new CrmMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<String>(){}));
+        return new CrmMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static CrmMetadataValue of(double value) {
-        Utils.checkNotNull(value, "value");
-        return new CrmMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Double>(){}));
+        return new CrmMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static CrmMetadataValue of(boolean value) {
-        Utils.checkNotNull(value, "value");
-        return new CrmMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Boolean>(){}));
+        return new CrmMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static CrmMetadataValue of(List<CrmMetadataSchemas5> value) {
         Utils.checkNotNull(value, "value");
-        return new CrmMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<List<CrmMetadataSchemas5>>(){}));
+        return new CrmMetadataValue(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
     
     /**
@@ -78,7 +76,7 @@ public class CrmMetadataValue {
      **/ 
     public java.lang.Object value() {
         return value.value();
-    }    
+    }
     
     @Override
     public boolean equals(java.lang.Object o) {

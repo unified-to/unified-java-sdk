@@ -55,6 +55,14 @@ public class CommerceCollection {
     @JsonProperty("is_visible")
     private Optional<Boolean> isVisible;
 
+    /**
+     * includes the list of metadata_metadata required to create a commerce_item under the respective
+     * commerce_collection
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("item_metadata")
+    private Optional<? extends List<CommerceMetadata>> itemMetadata;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("media")
@@ -112,6 +120,7 @@ public class CommerceCollection {
             @JsonProperty("is_active") Optional<Boolean> isActive,
             @JsonProperty("is_featured") Optional<Boolean> isFeatured,
             @JsonProperty("is_visible") Optional<Boolean> isVisible,
+            @JsonProperty("item_metadata") Optional<? extends List<CommerceMetadata>> itemMetadata,
             @JsonProperty("media") Optional<? extends List<CommerceItemMedia>> media,
             @JsonProperty("metadata") Optional<? extends List<CommerceMetadata>> metadata,
             @JsonProperty("name") String name,
@@ -128,6 +137,7 @@ public class CommerceCollection {
         Utils.checkNotNull(isActive, "isActive");
         Utils.checkNotNull(isFeatured, "isFeatured");
         Utils.checkNotNull(isVisible, "isVisible");
+        Utils.checkNotNull(itemMetadata, "itemMetadata");
         Utils.checkNotNull(media, "media");
         Utils.checkNotNull(metadata, "metadata");
         Utils.checkNotNull(name, "name");
@@ -144,6 +154,7 @@ public class CommerceCollection {
         this.isActive = isActive;
         this.isFeatured = isFeatured;
         this.isVisible = isVisible;
+        this.itemMetadata = itemMetadata;
         this.media = media;
         this.metadata = metadata;
         this.name = name;
@@ -160,10 +171,10 @@ public class CommerceCollection {
             String name) {
         this(Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), name,
             Optional.empty(), Optional.empty(), Optional.empty(),
+            name, Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -194,6 +205,16 @@ public class CommerceCollection {
     @JsonIgnore
     public Optional<Boolean> isVisible() {
         return isVisible;
+    }
+
+    /**
+     * includes the list of metadata_metadata required to create a commerce_item under the respective
+     * commerce_collection
+     */
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<CommerceMetadata>> itemMetadata() {
+        return (Optional<List<CommerceMetadata>>) itemMetadata;
     }
 
     @SuppressWarnings("unchecked")
@@ -331,6 +352,27 @@ public class CommerceCollection {
     public CommerceCollection withIsVisible(Optional<Boolean> isVisible) {
         Utils.checkNotNull(isVisible, "isVisible");
         this.isVisible = isVisible;
+        return this;
+    }
+
+    /**
+     * includes the list of metadata_metadata required to create a commerce_item under the respective
+     * commerce_collection
+     */
+    public CommerceCollection withItemMetadata(List<CommerceMetadata> itemMetadata) {
+        Utils.checkNotNull(itemMetadata, "itemMetadata");
+        this.itemMetadata = Optional.ofNullable(itemMetadata);
+        return this;
+    }
+
+
+    /**
+     * includes the list of metadata_metadata required to create a commerce_item under the respective
+     * commerce_collection
+     */
+    public CommerceCollection withItemMetadata(Optional<? extends List<CommerceMetadata>> itemMetadata) {
+        Utils.checkNotNull(itemMetadata, "itemMetadata");
+        this.itemMetadata = itemMetadata;
         return this;
     }
 
@@ -473,6 +515,7 @@ public class CommerceCollection {
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
             Utils.enhancedDeepEquals(this.isFeatured, other.isFeatured) &&
             Utils.enhancedDeepEquals(this.isVisible, other.isVisible) &&
+            Utils.enhancedDeepEquals(this.itemMetadata, other.itemMetadata) &&
             Utils.enhancedDeepEquals(this.media, other.media) &&
             Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
@@ -490,10 +533,10 @@ public class CommerceCollection {
         return Utils.enhancedHash(
             createdAt, description, id,
             isActive, isFeatured, isVisible,
-            media, metadata, name,
-            parentId, publicDescription, publicName,
-            raw, tags, type,
-            updatedAt);
+            itemMetadata, media, metadata,
+            name, parentId, publicDescription,
+            publicName, raw, tags,
+            type, updatedAt);
     }
     
     @Override
@@ -505,6 +548,7 @@ public class CommerceCollection {
                 "isActive", isActive,
                 "isFeatured", isFeatured,
                 "isVisible", isVisible,
+                "itemMetadata", itemMetadata,
                 "media", media,
                 "metadata", metadata,
                 "name", name,
@@ -531,6 +575,8 @@ public class CommerceCollection {
         private Optional<Boolean> isFeatured = Optional.empty();
 
         private Optional<Boolean> isVisible = Optional.empty();
+
+        private Optional<? extends List<CommerceMetadata>> itemMetadata = Optional.empty();
 
         private Optional<? extends List<CommerceItemMedia>> media = Optional.empty();
 
@@ -631,6 +677,27 @@ public class CommerceCollection {
         public Builder isVisible(Optional<Boolean> isVisible) {
             Utils.checkNotNull(isVisible, "isVisible");
             this.isVisible = isVisible;
+            return this;
+        }
+
+
+        /**
+         * includes the list of metadata_metadata required to create a commerce_item under the respective
+         * commerce_collection
+         */
+        public Builder itemMetadata(List<CommerceMetadata> itemMetadata) {
+            Utils.checkNotNull(itemMetadata, "itemMetadata");
+            this.itemMetadata = Optional.ofNullable(itemMetadata);
+            return this;
+        }
+
+        /**
+         * includes the list of metadata_metadata required to create a commerce_item under the respective
+         * commerce_collection
+         */
+        public Builder itemMetadata(Optional<? extends List<CommerceMetadata>> itemMetadata) {
+            Utils.checkNotNull(itemMetadata, "itemMetadata");
+            this.itemMetadata = itemMetadata;
             return this;
         }
 
@@ -763,10 +830,10 @@ public class CommerceCollection {
             return new CommerceCollection(
                 createdAt, description, id,
                 isActive, isFeatured, isVisible,
-                media, metadata, name,
-                parentId, publicDescription, publicName,
-                raw, tags, type,
-                updatedAt);
+                itemMetadata, media, metadata,
+                name, parentId, publicDescription,
+                publicName, raw, tags,
+                type, updatedAt);
         }
 
     }

@@ -21,7 +21,7 @@ import to.unified.unified_java_sdk.utils.Utils;
 public class Integration5 {
 
     @JsonValue
-    private TypedObject value;
+    private final TypedObject value;
     
     private Integration5(TypedObject value) {
         this.value = value;
@@ -29,22 +29,20 @@ public class Integration5 {
 
     public static Integration5 of(Integration1 value) {
         Utils.checkNotNull(value, "value");
-        return new Integration5(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<Integration1>(){}));
+        return new Integration5(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static Integration5 of(String value) {
         Utils.checkNotNull(value, "value");
-        return new Integration5(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<String>(){}));
+        return new Integration5(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static Integration5 of(double value) {
-        Utils.checkNotNull(value, "value");
-        return new Integration5(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Double>(){}));
+        return new Integration5(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static Integration5 of(boolean value) {
-        Utils.checkNotNull(value, "value");
-        return new Integration5(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Boolean>(){}));
+        return new Integration5(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
     
     /**
@@ -69,7 +67,7 @@ public class Integration5 {
      **/ 
     public java.lang.Object value() {
         return value.value();
-    }    
+    }
     
     @Override
     public boolean equals(java.lang.Object o) {

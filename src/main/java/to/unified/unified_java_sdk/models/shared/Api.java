@@ -24,7 +24,7 @@ import to.unified.unified_java_sdk.utils.Utils;
 public class Api {
 
     @JsonValue
-    private TypedObject value;
+    private final TypedObject value;
     
     private Api(TypedObject value) {
         this.value = value;
@@ -32,27 +32,25 @@ public class Api {
 
     public static Api of(Map<String, Object> value) {
         Utils.checkNotNull(value, "value");
-        return new Api(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<Map<String, Object>>(){}));
+        return new Api(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static Api of(String value) {
         Utils.checkNotNull(value, "value");
-        return new Api(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<String>(){}));
+        return new Api(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static Api of(double value) {
-        Utils.checkNotNull(value, "value");
-        return new Api(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Double>(){}));
+        return new Api(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static Api of(boolean value) {
-        Utils.checkNotNull(value, "value");
-        return new Api(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<java.lang.Boolean>(){}));
+        return new Api(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
     public static Api of(List<Integration5> value) {
         Utils.checkNotNull(value, "value");
-        return new Api(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<List<Integration5>>(){}));
+        return new Api(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
     
     /**
@@ -78,7 +76,7 @@ public class Api {
      **/ 
     public java.lang.Object value() {
         return value.value();
-    }    
+    }
     
     @Override
     public boolean equals(java.lang.Object o) {
