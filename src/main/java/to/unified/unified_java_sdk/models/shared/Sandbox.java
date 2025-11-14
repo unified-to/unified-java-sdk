@@ -87,7 +87,7 @@ public class Sandbox {
             return false;
         }
         Sandbox other = (Sandbox) o;
-        return Utils.enhancedDeepEquals(this.value.value(), other.value.value()); 
+        return Utils.enhancedDeepEquals(this.value.value(), other.value.value());
     }
     
     @Override
@@ -113,6 +113,6 @@ public class Sandbox {
         return Utils.toString(Sandbox.class,
                 "value", value);
     }
- 
+
 }
 

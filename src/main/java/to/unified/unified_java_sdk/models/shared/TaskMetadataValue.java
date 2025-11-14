@@ -87,7 +87,7 @@ public class TaskMetadataValue {
             return false;
         }
         TaskMetadataValue other = (TaskMetadataValue) o;
-        return Utils.enhancedDeepEquals(this.value.value(), other.value.value()); 
+        return Utils.enhancedDeepEquals(this.value.value(), other.value.value());
     }
     
     @Override
@@ -113,6 +113,6 @@ public class TaskMetadataValue {
         return Utils.toString(TaskMetadataValue.class,
                 "value", value);
     }
- 
+
 }
 

@@ -87,7 +87,7 @@ public class HrisMetadataExtraData {
             return false;
         }
         HrisMetadataExtraData other = (HrisMetadataExtraData) o;
-        return Utils.enhancedDeepEquals(this.value.value(), other.value.value()); 
+        return Utils.enhancedDeepEquals(this.value.value(), other.value.value());
     }
     
     @Override
@@ -113,6 +113,6 @@ public class HrisMetadataExtraData {
         return Utils.toString(HrisMetadataExtraData.class,
                 "value", value);
     }
- 
+
 }
 

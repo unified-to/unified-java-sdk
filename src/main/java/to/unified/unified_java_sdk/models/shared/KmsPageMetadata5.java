@@ -78,7 +78,7 @@ public class KmsPageMetadata5 {
             return false;
         }
         KmsPageMetadata5 other = (KmsPageMetadata5) o;
-        return Utils.enhancedDeepEquals(this.value.value(), other.value.value()); 
+        return Utils.enhancedDeepEquals(this.value.value(), other.value.value());
     }
     
     @Override
@@ -103,6 +103,6 @@ public class KmsPageMetadata5 {
         return Utils.toString(KmsPageMetadata5.class,
                 "value", value);
     }
- 
+
 }
 

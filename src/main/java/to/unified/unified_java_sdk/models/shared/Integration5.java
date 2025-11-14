@@ -78,7 +78,7 @@ public class Integration5 {
             return false;
         }
         Integration5 other = (Integration5) o;
-        return Utils.enhancedDeepEquals(this.value.value(), other.value.value()); 
+        return Utils.enhancedDeepEquals(this.value.value(), other.value.value());
     }
     
     @Override
@@ -103,6 +103,6 @@ public class Integration5 {
         return Utils.toString(Integration5.class,
                 "value", value);
     }
- 
+
 }
 

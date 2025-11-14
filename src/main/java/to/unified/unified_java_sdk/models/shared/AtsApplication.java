@@ -100,6 +100,11 @@ public class AtsApplication {
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("user_id")
+    private Optional<String> userId;
+
     @JsonCreator
     public AtsApplication(
             @JsonProperty("answers") Optional<? extends List<AtsApplicationAnswer>> answers,
@@ -117,7 +122,8 @@ public class AtsApplication {
             @JsonProperty("rejected_reason") Optional<String> rejectedReason,
             @JsonProperty("source") Optional<String> source,
             @JsonProperty("status") Optional<? extends AtsApplicationStatus> status,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
+            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
+            @JsonProperty("user_id") Optional<String> userId) {
         Utils.checkNotNull(answers, "answers");
         Utils.checkNotNull(appliedAt, "appliedAt");
         Utils.checkNotNull(candidateId, "candidateId");
@@ -134,6 +140,7 @@ public class AtsApplication {
         Utils.checkNotNull(source, "source");
         Utils.checkNotNull(status, "status");
         Utils.checkNotNull(updatedAt, "updatedAt");
+        Utils.checkNotNull(userId, "userId");
         this.answers = answers;
         this.appliedAt = appliedAt;
         this.candidateId = candidateId;
@@ -150,6 +157,7 @@ public class AtsApplication {
         this.source = source;
         this.status = status;
         this.updatedAt = updatedAt;
+        this.userId = userId;
     }
     
     public AtsApplication() {
@@ -158,7 +166,7 @@ public class AtsApplication {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -244,6 +252,11 @@ public class AtsApplication {
     @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
         return updatedAt;
+    }
+
+    @JsonIgnore
+    public Optional<String> userId() {
+        return userId;
     }
 
     public static Builder builder() {
@@ -459,6 +472,19 @@ public class AtsApplication {
         return this;
     }
 
+    public AtsApplication withUserId(String userId) {
+        Utils.checkNotNull(userId, "userId");
+        this.userId = Optional.ofNullable(userId);
+        return this;
+    }
+
+
+    public AtsApplication withUserId(Optional<String> userId) {
+        Utils.checkNotNull(userId, "userId");
+        this.userId = userId;
+        return this;
+    }
+
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -484,7 +510,8 @@ public class AtsApplication {
             Utils.enhancedDeepEquals(this.rejectedReason, other.rejectedReason) &&
             Utils.enhancedDeepEquals(this.source, other.source) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
-            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
+            Utils.enhancedDeepEquals(this.userId, other.userId);
     }
     
     @Override
@@ -495,7 +522,7 @@ public class AtsApplication {
             jobId, metadata, offers,
             originalStatus, raw, rejectedAt,
             rejectedReason, source, status,
-            updatedAt);
+            updatedAt, userId);
     }
     
     @Override
@@ -516,7 +543,8 @@ public class AtsApplication {
                 "rejectedReason", rejectedReason,
                 "source", source,
                 "status", status,
-                "updatedAt", updatedAt);
+                "updatedAt", updatedAt,
+                "userId", userId);
     }
 
     @SuppressWarnings("UnusedReturnValue")
@@ -553,6 +581,8 @@ public class AtsApplication {
         private Optional<? extends AtsApplicationStatus> status = Optional.empty();
 
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
+
+        private Optional<String> userId = Optional.empty();
 
         private Builder() {
           // force use of static builder() method
@@ -766,6 +796,19 @@ public class AtsApplication {
             return this;
         }
 
+
+        public Builder userId(String userId) {
+            Utils.checkNotNull(userId, "userId");
+            this.userId = Optional.ofNullable(userId);
+            return this;
+        }
+
+        public Builder userId(Optional<String> userId) {
+            Utils.checkNotNull(userId, "userId");
+            this.userId = userId;
+            return this;
+        }
+
         public AtsApplication build() {
 
             return new AtsApplication(
@@ -774,7 +817,7 @@ public class AtsApplication {
                 jobId, metadata, offers,
                 originalStatus, raw, rejectedAt,
                 rejectedReason, source, status,
-                updatedAt);
+                updatedAt, userId);
         }
 
     }

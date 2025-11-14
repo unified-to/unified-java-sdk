@@ -78,7 +78,7 @@ public class IntegrationSchemasSandbox5 {
             return false;
         }
         IntegrationSchemasSandbox5 other = (IntegrationSchemasSandbox5) o;
-        return Utils.enhancedDeepEquals(this.value.value(), other.value.value()); 
+        return Utils.enhancedDeepEquals(this.value.value(), other.value.value());
     }
     
     @Override
@@ -103,6 +103,6 @@ public class IntegrationSchemasSandbox5 {
         return Utils.toString(IntegrationSchemasSandbox5.class,
                 "value", value);
     }
- 
+
 }
 

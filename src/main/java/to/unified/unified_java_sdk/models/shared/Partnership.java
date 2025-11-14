@@ -87,7 +87,7 @@ public class Partnership {
             return false;
         }
         Partnership other = (Partnership) o;
-        return Utils.enhancedDeepEquals(this.value.value(), other.value.value()); 
+        return Utils.enhancedDeepEquals(this.value.value(), other.value.value());
     }
     
     @Override
@@ -113,6 +113,6 @@ public class Partnership {
         return Utils.toString(Partnership.class,
                 "value", value);
     }
- 
+
 }
 

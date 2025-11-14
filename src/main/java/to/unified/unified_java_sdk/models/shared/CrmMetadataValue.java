@@ -87,7 +87,7 @@ public class CrmMetadataValue {
             return false;
         }
         CrmMetadataValue other = (CrmMetadataValue) o;
-        return Utils.enhancedDeepEquals(this.value.value(), other.value.value()); 
+        return Utils.enhancedDeepEquals(this.value.value(), other.value.value());
     }
     
     @Override
@@ -113,6 +113,6 @@ public class CrmMetadataValue {
         return Utils.toString(CrmMetadataValue.class,
                 "value", value);
     }
- 
+
 }
 

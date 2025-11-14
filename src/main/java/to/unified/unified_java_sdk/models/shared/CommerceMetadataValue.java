@@ -87,7 +87,7 @@ public class CommerceMetadataValue {
             return false;
         }
         CommerceMetadataValue other = (CommerceMetadataValue) o;
-        return Utils.enhancedDeepEquals(this.value.value(), other.value.value()); 
+        return Utils.enhancedDeepEquals(this.value.value(), other.value.value());
     }
     
     @Override
@@ -113,6 +113,6 @@ public class CommerceMetadataValue {
         return Utils.toString(CommerceMetadataValue.class,
                 "value", value);
     }
- 
+
 }
 

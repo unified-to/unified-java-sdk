@@ -78,7 +78,7 @@ public class CommerceMetadataSchemas5 {
             return false;
         }
         CommerceMetadataSchemas5 other = (CommerceMetadataSchemas5) o;
-        return Utils.enhancedDeepEquals(this.value.value(), other.value.value()); 
+        return Utils.enhancedDeepEquals(this.value.value(), other.value.value());
     }
     
     @Override
@@ -103,6 +103,6 @@ public class CommerceMetadataSchemas5 {
         return Utils.toString(CommerceMetadataSchemas5.class,
                 "value", value);
     }
- 
+
 }
 

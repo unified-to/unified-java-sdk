@@ -78,7 +78,7 @@ public class CrmMetadataSchemas5 {
             return false;
         }
         CrmMetadataSchemas5 other = (CrmMetadataSchemas5) o;
-        return Utils.enhancedDeepEquals(this.value.value(), other.value.value()); 
+        return Utils.enhancedDeepEquals(this.value.value(), other.value.value());
     }
     
     @Override
@@ -103,6 +103,6 @@ public class CrmMetadataSchemas5 {
         return Utils.toString(CrmMetadataSchemas5.class,
                 "value", value);
     }
- 
+
 }
 

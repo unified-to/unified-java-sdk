@@ -78,7 +78,7 @@ public class HrisMetadataSchemas5 {
             return false;
         }
         HrisMetadataSchemas5 other = (HrisMetadataSchemas5) o;
-        return Utils.enhancedDeepEquals(this.value.value(), other.value.value()); 
+        return Utils.enhancedDeepEquals(this.value.value(), other.value.value());
     }
     
     @Override
@@ -103,6 +103,6 @@ public class HrisMetadataSchemas5 {
         return Utils.toString(HrisMetadataSchemas5.class,
                 "value", value);
     }
- 
+
 }
 

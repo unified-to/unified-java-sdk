@@ -25,7 +25,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 java:
-  version: 0.44.0
+  version: 0.45.0
   additionalDependencies: []
   additionalPlugins: []
   artifactID: unified-java-sdk
@@ -38,6 +38,7 @@ java:
   defaultErrorName: SDKError
   enableCustomCodeRegions: false
   enableStreamingUploads: false
+  enhancedUnionMemberResolution: true
   flattenGlobalSecurity: false
   generateOptionalUnionAccessors: false
   generateSpringBootStarter: true
@@ -59,6 +60,7 @@ java:
     url: https://mit-license.org/
   maxMethodParams: 0
   nullFriendlyParameters: false
+  openUnions: true
   outputModelSuffix: output
   projectName: Unified-java-sdk
   templateVersion: v2

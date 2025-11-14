@@ -78,7 +78,7 @@ public class AtsMetadata5 {
             return false;
         }
         AtsMetadata5 other = (AtsMetadata5) o;
-        return Utils.enhancedDeepEquals(this.value.value(), other.value.value()); 
+        return Utils.enhancedDeepEquals(this.value.value(), other.value.value());
     }
     
     @Override
@@ -103,6 +103,6 @@ public class AtsMetadata5 {
         return Utils.toString(AtsMetadata5.class,
                 "value", value);
     }
- 
+
 }
 

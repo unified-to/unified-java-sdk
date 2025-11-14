@@ -78,7 +78,7 @@ public class TaskMetadataSchemas5 {
             return false;
         }
         TaskMetadataSchemas5 other = (TaskMetadataSchemas5) o;
-        return Utils.enhancedDeepEquals(this.value.value(), other.value.value()); 
+        return Utils.enhancedDeepEquals(this.value.value(), other.value.value());
     }
     
     @Override
@@ -103,6 +103,6 @@ public class TaskMetadataSchemas5 {
         return Utils.toString(TaskMetadataSchemas5.class,
                 "value", value);
     }
- 
+
 }
 

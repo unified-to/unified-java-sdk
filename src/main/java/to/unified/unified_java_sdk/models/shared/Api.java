@@ -87,7 +87,7 @@ public class Api {
             return false;
         }
         Api other = (Api) o;
-        return Utils.enhancedDeepEquals(this.value.value(), other.value.value()); 
+        return Utils.enhancedDeepEquals(this.value.value(), other.value.value());
     }
     
     @Override
@@ -113,6 +113,6 @@ public class Api {
         return Utils.toString(Api.class,
                 "value", value);
     }
- 
+
 }
 

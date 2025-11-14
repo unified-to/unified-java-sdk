@@ -87,7 +87,7 @@ public class ExtraData {
             return false;
         }
         ExtraData other = (ExtraData) o;
-        return Utils.enhancedDeepEquals(this.value.value(), other.value.value()); 
+        return Utils.enhancedDeepEquals(this.value.value(), other.value.value());
     }
     
     @Override
@@ -113,6 +113,6 @@ public class ExtraData {
         return Utils.toString(ExtraData.class,
                 "value", value);
     }
- 
+
 }
 

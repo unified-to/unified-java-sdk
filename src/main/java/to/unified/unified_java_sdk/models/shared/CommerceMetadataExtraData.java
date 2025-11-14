@@ -87,7 +87,7 @@ public class CommerceMetadataExtraData {
             return false;
         }
         CommerceMetadataExtraData other = (CommerceMetadataExtraData) o;
-        return Utils.enhancedDeepEquals(this.value.value(), other.value.value()); 
+        return Utils.enhancedDeepEquals(this.value.value(), other.value.value());
     }
     
     @Override
@@ -113,6 +113,6 @@ public class CommerceMetadataExtraData {
         return Utils.toString(CommerceMetadataExtraData.class,
                 "value", value);
     }
- 
+
 }
 

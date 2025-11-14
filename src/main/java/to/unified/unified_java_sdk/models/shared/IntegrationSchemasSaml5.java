@@ -78,7 +78,7 @@ public class IntegrationSchemasSaml5 {
             return false;
         }
         IntegrationSchemasSaml5 other = (IntegrationSchemasSaml5) o;
-        return Utils.enhancedDeepEquals(this.value.value(), other.value.value()); 
+        return Utils.enhancedDeepEquals(this.value.value(), other.value.value());
     }
     
     @Override
@@ -103,6 +103,6 @@ public class IntegrationSchemasSaml5 {
         return Utils.toString(IntegrationSchemasSaml5.class,
                 "value", value);
     }
- 
+
 }
 
