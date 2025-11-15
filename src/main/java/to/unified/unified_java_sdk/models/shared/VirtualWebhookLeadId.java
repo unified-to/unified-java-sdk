@@ -41,39 +41,38 @@ import java.util.Optional;
  * use the {@code asEnum()} method (after dealing with the `Optional` appropriately).
  *
  */
-@JsonDeserialize(using = ApiCallType._Deserializer.class)
-@JsonSerialize(using = ApiCallType._Serializer.class)
-public class ApiCallType {
+@JsonDeserialize(using = VirtualWebhookLeadId._Deserializer.class)
+@JsonSerialize(using = VirtualWebhookLeadId._Serializer.class)
+public class VirtualWebhookLeadId {
 
-    public static final ApiCallType LOGIN = new ApiCallType("login");
-    public static final ApiCallType WEBHOOK = new ApiCallType("webhook");
-    public static final ApiCallType INBOUND = new ApiCallType("inbound");
-    public static final ApiCallType MCP = new ApiCallType("mcp");
+    public static final VirtualWebhookLeadId SUPPORTED_REQUIRED = new VirtualWebhookLeadId("supported-required");
+    public static final VirtualWebhookLeadId SUPPORTED = new VirtualWebhookLeadId("supported");
+    public static final VirtualWebhookLeadId NOT_SUPPORTED = new VirtualWebhookLeadId("not-supported");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
     // careful). Keep this field lower case to avoid clashing with
     // generated member names which will always be upper cased (Java
     // convention)
-    private static final Map<String, ApiCallType> values = createValuesMap();
-    private static final Map<String, ApiCallTypeEnum> enums = createEnumsMap();
+    private static final Map<String, VirtualWebhookLeadId> values = createValuesMap();
+    private static final Map<String, VirtualWebhookLeadIdEnum> enums = createEnumsMap();
 
     private final String value;
 
-    private ApiCallType(String value) {
+    private VirtualWebhookLeadId(String value) {
         this.value = value;
     }
 
     /**
-     * Returns a ApiCallType with the given value. For a specific value the 
+     * Returns a VirtualWebhookLeadId with the given value. For a specific value the 
      * returned object will always be a singleton so reference equality 
      * is satisfied when the values are the same.
      * 
-     * @param value value to be wrapped as ApiCallType
+     * @param value value to be wrapped as VirtualWebhookLeadId
      */ 
-    public static ApiCallType of(String value) {
-        synchronized (ApiCallType.class) {
-            return values.computeIfAbsent(value, v -> new ApiCallType(v));
+    public static VirtualWebhookLeadId of(String value) {
+        synchronized (VirtualWebhookLeadId.class) {
+            return values.computeIfAbsent(value, v -> new VirtualWebhookLeadId(v));
         }
     }
 
@@ -81,7 +80,7 @@ public class ApiCallType {
         return value;
     }
 
-    public Optional<ApiCallTypeEnum> asEnum() {
+    public Optional<VirtualWebhookLeadIdEnum> asEnum() {
         return Optional.ofNullable(enums.getOrDefault(value, null));
     }
 
@@ -102,80 +101,77 @@ public class ApiCallType {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        ApiCallType other = (ApiCallType) obj;
+        VirtualWebhookLeadId other = (VirtualWebhookLeadId) obj;
         return Objects.equals(value, other.value);
     }
 
     @Override
     public String toString() {
-        return "ApiCallType [value=" + value + "]";
+        return "VirtualWebhookLeadId [value=" + value + "]";
     }
 
     // return an array just like an enum
-    public static ApiCallType[] values() {
-        synchronized (ApiCallType.class) {
-            return values.values().toArray(new ApiCallType[] {});
+    public static VirtualWebhookLeadId[] values() {
+        synchronized (VirtualWebhookLeadId.class) {
+            return values.values().toArray(new VirtualWebhookLeadId[] {});
         }
     }
 
-    private static final Map<String, ApiCallType> createValuesMap() {
-        Map<String, ApiCallType> map = new LinkedHashMap<>();
-        map.put("login", LOGIN);
-        map.put("webhook", WEBHOOK);
-        map.put("inbound", INBOUND);
-        map.put("mcp", MCP);
+    private static final Map<String, VirtualWebhookLeadId> createValuesMap() {
+        Map<String, VirtualWebhookLeadId> map = new LinkedHashMap<>();
+        map.put("supported-required", SUPPORTED_REQUIRED);
+        map.put("supported", SUPPORTED);
+        map.put("not-supported", NOT_SUPPORTED);
         return map;
     }
 
-    private static final Map<String, ApiCallTypeEnum> createEnumsMap() {
-        Map<String, ApiCallTypeEnum> map = new HashMap<>();
-        map.put("login", ApiCallTypeEnum.LOGIN);
-        map.put("webhook", ApiCallTypeEnum.WEBHOOK);
-        map.put("inbound", ApiCallTypeEnum.INBOUND);
-        map.put("mcp", ApiCallTypeEnum.MCP);
+    private static final Map<String, VirtualWebhookLeadIdEnum> createEnumsMap() {
+        Map<String, VirtualWebhookLeadIdEnum> map = new HashMap<>();
+        map.put("supported-required", VirtualWebhookLeadIdEnum.SUPPORTED_REQUIRED);
+        map.put("supported", VirtualWebhookLeadIdEnum.SUPPORTED);
+        map.put("not-supported", VirtualWebhookLeadIdEnum.NOT_SUPPORTED);
         return map;
     }
     
     @SuppressWarnings("serial")
-    public static final class _Serializer extends StdSerializer<ApiCallType> {
+    public static final class _Serializer extends StdSerializer<VirtualWebhookLeadId> {
 
         protected _Serializer() {
-            super(ApiCallType.class);
+            super(VirtualWebhookLeadId.class);
         }
 
         @Override
-        public void serialize(ApiCallType value, JsonGenerator g, SerializerProvider provider)
+        public void serialize(VirtualWebhookLeadId value, JsonGenerator g, SerializerProvider provider)
                 throws IOException, JsonProcessingException {
             g.writeObject(value.value);
         }
     }
 
     @SuppressWarnings("serial")
-    public static final class _Deserializer extends StdDeserializer<ApiCallType> {
+    public static final class _Deserializer extends StdDeserializer<VirtualWebhookLeadId> {
 
         protected _Deserializer() {
-            super(ApiCallType.class);
+            super(VirtualWebhookLeadId.class);
         }
 
         @Override
-        public ApiCallType deserialize(JsonParser p, DeserializationContext ctxt)
+        public VirtualWebhookLeadId deserialize(JsonParser p, DeserializationContext ctxt)
                 throws IOException, JacksonException {
             String v = p.readValueAs(new TypeReference<String>() {});
             // use the factory method to ensure we get singletons
-            return ApiCallType.of(v);
+            return VirtualWebhookLeadId.of(v);
         }
     }
     
-    public enum ApiCallTypeEnum {
+    public enum VirtualWebhookLeadIdEnum {
 
-        LOGIN("login"),
-        WEBHOOK("webhook"),
-        INBOUND("inbound"),
-        MCP("mcp"),;
+        SUPPORTED_REQUIRED("supported-required"),
+        SUPPORTED("supported"),
+        NOT_SUPPORTED("not-supported"),;
 
         private final String value;
 
-        private ApiCallTypeEnum(String value) {
+        private VirtualWebhookLeadIdEnum(String value) {
             this.value = value;
         }
 

@@ -36,6 +36,11 @@ public class CalendarCalendar {
     private Optional<String> id;
 
 
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_primary")
+    private Optional<Boolean> isPrimary;
+
+
     @JsonProperty("name")
     private String name;
 
@@ -64,6 +69,7 @@ public class CalendarCalendar {
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("description") Optional<String> description,
             @JsonProperty("id") Optional<String> id,
+            @JsonProperty("is_primary") Optional<Boolean> isPrimary,
             @JsonProperty("name") String name,
             @JsonProperty("primary") Optional<Boolean> primary,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
@@ -72,6 +78,7 @@ public class CalendarCalendar {
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(description, "description");
         Utils.checkNotNull(id, "id");
+        Utils.checkNotNull(isPrimary, "isPrimary");
         Utils.checkNotNull(name, "name");
         Utils.checkNotNull(primary, "primary");
         Utils.checkNotNull(raw, "raw");
@@ -80,6 +87,7 @@ public class CalendarCalendar {
         this.createdAt = createdAt;
         this.description = description;
         this.id = id;
+        this.isPrimary = isPrimary;
         this.name = name;
         this.primary = primary;
         this.raw = raw;
@@ -90,8 +98,8 @@ public class CalendarCalendar {
     public CalendarCalendar(
             String name) {
         this(Optional.empty(), Optional.empty(), Optional.empty(),
-            name, Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            Optional.empty(), name, Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -107,6 +115,11 @@ public class CalendarCalendar {
     @JsonIgnore
     public Optional<String> id() {
         return id;
+    }
+
+    @JsonIgnore
+    public Optional<Boolean> isPrimary() {
+        return isPrimary;
     }
 
     @JsonIgnore
@@ -176,6 +189,19 @@ public class CalendarCalendar {
     public CalendarCalendar withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
+        return this;
+    }
+
+    public CalendarCalendar withIsPrimary(boolean isPrimary) {
+        Utils.checkNotNull(isPrimary, "isPrimary");
+        this.isPrimary = Optional.ofNullable(isPrimary);
+        return this;
+    }
+
+
+    public CalendarCalendar withIsPrimary(Optional<Boolean> isPrimary) {
+        Utils.checkNotNull(isPrimary, "isPrimary");
+        this.isPrimary = isPrimary;
         return this;
     }
 
@@ -250,6 +276,7 @@ public class CalendarCalendar {
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.isPrimary, other.isPrimary) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.primary, other.primary) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -261,8 +288,8 @@ public class CalendarCalendar {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, description, id,
-            name, primary, raw,
-            timezone, updatedAt);
+            isPrimary, name, primary,
+            raw, timezone, updatedAt);
     }
     
     @Override
@@ -271,6 +298,7 @@ public class CalendarCalendar {
                 "createdAt", createdAt,
                 "description", description,
                 "id", id,
+                "isPrimary", isPrimary,
                 "name", name,
                 "primary", primary,
                 "raw", raw,
@@ -286,6 +314,8 @@ public class CalendarCalendar {
         private Optional<String> description = Optional.empty();
 
         private Optional<String> id = Optional.empty();
+
+        private Optional<Boolean> isPrimary = Optional.empty();
 
         private String name;
 
@@ -337,6 +367,19 @@ public class CalendarCalendar {
         public Builder id(Optional<String> id) {
             Utils.checkNotNull(id, "id");
             this.id = id;
+            return this;
+        }
+
+
+        public Builder isPrimary(boolean isPrimary) {
+            Utils.checkNotNull(isPrimary, "isPrimary");
+            this.isPrimary = Optional.ofNullable(isPrimary);
+            return this;
+        }
+
+        public Builder isPrimary(Optional<Boolean> isPrimary) {
+            Utils.checkNotNull(isPrimary, "isPrimary");
+            this.isPrimary = isPrimary;
             return this;
         }
 
@@ -403,8 +446,8 @@ public class CalendarCalendar {
 
             return new CalendarCalendar(
                 createdAt, description, id,
-                name, primary, raw,
-                timezone, updatedAt);
+                isPrimary, name, primary,
+                raw, timezone, updatedAt);
         }
 
     }

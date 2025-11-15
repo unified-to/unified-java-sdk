@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 5c2a3f40eea3f879043c36a4d45e9686
+  docChecksum: 8e0da3e048dab0529dab732bc1eb6105
   docVersion: "1.0"
-  speakeasyVersion: 1.656.2
-  generationVersion: 2.753.6
-  releaseVersion: 0.45.0
-  configChecksum: cca3194d62ed57a5c828ecfa3c65ecdc
+  speakeasyVersion: 1.657.0
+  generationVersion: 2.755.0
+  releaseVersion: 0.45.1
+  configChecksum: 1a0a0f968ec36235d4bf5066c196b6db
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -1567,6 +1567,7 @@ generatedFiles:
   - docs/models/shared/VirtualWebhookItemId.md
   - docs/models/shared/VirtualWebhookItemVariantId.md
   - docs/models/shared/VirtualWebhookJobId.md
+  - docs/models/shared/VirtualWebhookLeadId.md
   - docs/models/shared/VirtualWebhookLimit.md
   - docs/models/shared/VirtualWebhookListId.md
   - docs/models/shared/VirtualWebhookLocationId.md
@@ -5007,6 +5008,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/VirtualWebhookItemId.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/VirtualWebhookItemVariantId.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/VirtualWebhookJobId.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/VirtualWebhookLeadId.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/VirtualWebhookLimit.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/VirtualWebhookListId.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/VirtualWebhookLocationId.java
@@ -10251,4 +10253,4 @@ examples:
           application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Java SDK Changes Detected:\n* `unified-to.ats.createAtsApplication()`: \n  *  `request.atsApplication.userId` **Added**\n  *  `response.user_id` **Added**\n* `unified-to.ats.getAtsApplication()`:  `response.user_id` **Added**\n* `unified-to.ats.listAtsApplications()`:  `response.[].userId` **Added**\n* `unified-to.ats.patchAtsApplication()`: \n  *  `request.atsApplication.userId` **Added**\n  *  `response.user_id` **Added**\n* `unified-to.ats.updateAtsApplication()`: \n  *  `request.atsApplication.userId` **Added**\n  *  `response.user_id` **Added**\n* `unified-to.application.createAtsApplication()`: \n  *  `request.atsApplication.userId` **Added**\n  *  `response.user_id` **Added**\n* `unified-to.application.getAtsApplication()`:  `response.user_id` **Added**\n* `unified-to.application.listAtsApplications()`:  `response.[].userId` **Added**\n* `unified-to.application.patchAtsApplication()`: \n  *  `request.atsApplication.userId` **Added**\n  *  `response.user_id` **Added**\n* `unified-to.application.updateAtsApplication()`: \n  *  `request.atsApplication.userId` **Added**\n  *  `response.user_id` **Added**\n"
+releaseNotes: "## Java SDK Changes Detected:\n* `unified-to.ats.createAtsJob()`: \n  *  `request.atsJob.skills` **Added**\n  *  `response.skills` **Added**\n* `unified-to.ats.getAtsJob()`:  `response.skills` **Added**\n* `unified-to.ats.listAtsJobs()`:  `response.[].skills` **Added**\n* `unified-to.ats.patchAtsJob()`: \n  *  `request.atsJob.skills` **Added**\n  *  `response.skills` **Added**\n* `unified-to.ats.updateAtsJob()`: \n  *  `request.atsJob.skills` **Added**\n  *  `response.skills` **Added**\n* `unified-to.job.createAtsJob()`: \n  *  `request.atsJob.skills` **Added**\n  *  `response.skills` **Added**\n* `unified-to.job.getAtsJob()`:  `response.skills` **Added**\n* `unified-to.job.listAtsJobs()`:  `response.[].skills` **Added**\n* `unified-to.job.patchAtsJob()`: \n  *  `request.atsJob.skills` **Added**\n  *  `response.skills` **Added**\n* `unified-to.job.updateAtsJob()`: \n  *  `request.atsJob.skills` **Added**\n  *  `response.skills` **Added**\n* `unified-to.calendar.createCalendarCalendar()`: \n  *  `request.calendarCalendar.isPrimary` **Added**\n  *  `response.is_primary` **Added**\n* `unified-to.calendar.getCalendarCalendar()`:  `response.is_primary` **Added**\n* `unified-to.calendar.listCalendarCalendars()`:  `response.[].isPrimary` **Added**\n* `unified-to.calendar.patchCalendarCalendar()`: \n  *  `request.calendarCalendar.isPrimary` **Added**\n  *  `response.is_primary` **Added**\n* `unified-to.calendar.updateCalendarCalendar()`: \n  *  `request.calendarCalendar.isPrimary` **Added**\n  *  `response.is_primary` **Added**\n* `unified-to.unified.listUnifiedIntegrationWorkspaces()`:  `response.[].support.{}.virtualWebhookLeadId` **Added**\n* `unified-to.unified.listUnifiedIntegrations()`:  `response.[].support.{}.virtualWebhookLeadId` **Added**\n* `unified-to.integration.listUnifiedIntegrationWorkspaces()`:  `response.[].support.{}.virtualWebhookLeadId` **Added**\n* `unified-to.integration.listUnifiedIntegrations()`:  `response.[].support.{}.virtualWebhookLeadId` **Added**\n"

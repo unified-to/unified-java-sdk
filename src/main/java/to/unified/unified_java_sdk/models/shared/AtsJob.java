@@ -152,6 +152,11 @@ public class AtsJob {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("skills")
+    private Optional<? extends List<String>> skills;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private Optional<? extends AtsJobStatus> status;
 
@@ -186,6 +191,7 @@ public class AtsJob {
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
             @JsonProperty("recruiter_ids") Optional<? extends List<String>> recruiterIds,
             @JsonProperty("remote") Optional<Boolean> remote,
+            @JsonProperty("skills") Optional<? extends List<String>> skills,
             @JsonProperty("status") Optional<? extends AtsJobStatus> status,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(addresses, "addresses");
@@ -212,6 +218,7 @@ public class AtsJob {
         Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(recruiterIds, "recruiterIds");
         Utils.checkNotNull(remote, "remote");
+        Utils.checkNotNull(skills, "skills");
         Utils.checkNotNull(status, "status");
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.addresses = addresses;
@@ -238,6 +245,7 @@ public class AtsJob {
         this.raw = raw;
         this.recruiterIds = recruiterIds;
         this.remote = remote;
+        this.skills = skills;
         this.status = status;
         this.updatedAt = updatedAt;
     }
@@ -251,7 +259,7 @@ public class AtsJob {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -397,6 +405,12 @@ public class AtsJob {
     @JsonIgnore
     public Optional<Boolean> remote() {
         return remote;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<String>> skills() {
+        return (Optional<List<String>>) skills;
     }
 
     @SuppressWarnings("unchecked")
@@ -751,6 +765,19 @@ public class AtsJob {
         return this;
     }
 
+    public AtsJob withSkills(List<String> skills) {
+        Utils.checkNotNull(skills, "skills");
+        this.skills = Optional.ofNullable(skills);
+        return this;
+    }
+
+
+    public AtsJob withSkills(Optional<? extends List<String>> skills) {
+        Utils.checkNotNull(skills, "skills");
+        this.skills = skills;
+        return this;
+    }
+
     public AtsJob withStatus(AtsJobStatus status) {
         Utils.checkNotNull(status, "status");
         this.status = Optional.ofNullable(status);
@@ -811,6 +838,7 @@ public class AtsJob {
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.recruiterIds, other.recruiterIds) &&
             Utils.enhancedDeepEquals(this.remote, other.remote) &&
+            Utils.enhancedDeepEquals(this.skills, other.skills) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
@@ -826,7 +854,7 @@ public class AtsJob {
             name, numberOfOpenings, openings,
             postings, publicJobUrls, questions,
             raw, recruiterIds, remote,
-            status, updatedAt);
+            skills, status, updatedAt);
     }
     
     @Override
@@ -856,6 +884,7 @@ public class AtsJob {
                 "raw", raw,
                 "recruiterIds", recruiterIds,
                 "remote", remote,
+                "skills", skills,
                 "status", status,
                 "updatedAt", updatedAt);
     }
@@ -910,6 +939,8 @@ public class AtsJob {
         private Optional<? extends List<String>> recruiterIds = Optional.empty();
 
         private Optional<Boolean> remote = Optional.empty();
+
+        private Optional<? extends List<String>> skills = Optional.empty();
 
         private Optional<? extends AtsJobStatus> status = Optional.empty();
 
@@ -1256,6 +1287,19 @@ public class AtsJob {
         }
 
 
+        public Builder skills(List<String> skills) {
+            Utils.checkNotNull(skills, "skills");
+            this.skills = Optional.ofNullable(skills);
+            return this;
+        }
+
+        public Builder skills(Optional<? extends List<String>> skills) {
+            Utils.checkNotNull(skills, "skills");
+            this.skills = skills;
+            return this;
+        }
+
+
         public Builder status(AtsJobStatus status) {
             Utils.checkNotNull(status, "status");
             this.status = Optional.ofNullable(status);
@@ -1292,7 +1336,7 @@ public class AtsJob {
                 name, numberOfOpenings, openings,
                 postings, publicJobUrls, questions,
                 raw, recruiterIds, remote,
-                status, updatedAt);
+                skills, status, updatedAt);
         }
 
     }

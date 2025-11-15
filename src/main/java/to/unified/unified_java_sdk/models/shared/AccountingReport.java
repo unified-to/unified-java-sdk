@@ -17,7 +17,12 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
-
+/**
+ * AccountingReport
+ * 
+ * <p>&#64;deprecated; use either AccountingProfitandloss, AccountingTrialbalance, AccountingBalancesheet,
+ * or AccountingCashflow instead
+ */
 public class AccountingReport {
 
     @JsonInclude(Include.NON_ABSENT)

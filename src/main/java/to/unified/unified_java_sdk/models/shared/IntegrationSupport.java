@@ -498,6 +498,11 @@ public class IntegrationSupport {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("virtual_webhook_lead_id")
+    private Optional<? extends VirtualWebhookLeadId> virtualWebhookLeadId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_limit")
     private Optional<? extends VirtualWebhookLimit> virtualWebhookLimit;
 
@@ -683,6 +688,7 @@ public class IntegrationSupport {
             @JsonProperty("virtual_webhook_item_id") Optional<? extends VirtualWebhookItemId> virtualWebhookItemId,
             @JsonProperty("virtual_webhook_item_variant_id") Optional<? extends VirtualWebhookItemVariantId> virtualWebhookItemVariantId,
             @JsonProperty("virtual_webhook_job_id") Optional<? extends VirtualWebhookJobId> virtualWebhookJobId,
+            @JsonProperty("virtual_webhook_lead_id") Optional<? extends VirtualWebhookLeadId> virtualWebhookLeadId,
             @JsonProperty("virtual_webhook_limit") Optional<? extends VirtualWebhookLimit> virtualWebhookLimit,
             @JsonProperty("virtual_webhook_list_id") Optional<? extends VirtualWebhookListId> virtualWebhookListId,
             @JsonProperty("virtual_webhook_location_id") Optional<? extends VirtualWebhookLocationId> virtualWebhookLocationId,
@@ -796,6 +802,7 @@ public class IntegrationSupport {
         Utils.checkNotNull(virtualWebhookItemId, "virtualWebhookItemId");
         Utils.checkNotNull(virtualWebhookItemVariantId, "virtualWebhookItemVariantId");
         Utils.checkNotNull(virtualWebhookJobId, "virtualWebhookJobId");
+        Utils.checkNotNull(virtualWebhookLeadId, "virtualWebhookLeadId");
         Utils.checkNotNull(virtualWebhookLimit, "virtualWebhookLimit");
         Utils.checkNotNull(virtualWebhookListId, "virtualWebhookListId");
         Utils.checkNotNull(virtualWebhookLocationId, "virtualWebhookLocationId");
@@ -909,6 +916,7 @@ public class IntegrationSupport {
         this.virtualWebhookItemId = virtualWebhookItemId;
         this.virtualWebhookItemVariantId = virtualWebhookItemVariantId;
         this.virtualWebhookJobId = virtualWebhookJobId;
+        this.virtualWebhookLeadId = virtualWebhookLeadId;
         this.virtualWebhookLimit = virtualWebhookLimit;
         this.virtualWebhookListId = virtualWebhookListId;
         this.virtualWebhookLocationId = virtualWebhookLocationId;
@@ -967,7 +975,7 @@ public class IntegrationSupport {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -1541,6 +1549,12 @@ public class IntegrationSupport {
     @JsonIgnore
     public Optional<VirtualWebhookJobId> virtualWebhookJobId() {
         return (Optional<VirtualWebhookJobId>) virtualWebhookJobId;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<VirtualWebhookLeadId> virtualWebhookLeadId() {
+        return (Optional<VirtualWebhookLeadId>) virtualWebhookLeadId;
     }
 
     @SuppressWarnings("unchecked")
@@ -2897,6 +2911,19 @@ public class IntegrationSupport {
         return this;
     }
 
+    public IntegrationSupport withVirtualWebhookLeadId(VirtualWebhookLeadId virtualWebhookLeadId) {
+        Utils.checkNotNull(virtualWebhookLeadId, "virtualWebhookLeadId");
+        this.virtualWebhookLeadId = Optional.ofNullable(virtualWebhookLeadId);
+        return this;
+    }
+
+
+    public IntegrationSupport withVirtualWebhookLeadId(Optional<? extends VirtualWebhookLeadId> virtualWebhookLeadId) {
+        Utils.checkNotNull(virtualWebhookLeadId, "virtualWebhookLeadId");
+        this.virtualWebhookLeadId = virtualWebhookLeadId;
+        return this;
+    }
+
     public IntegrationSupport withVirtualWebhookLimit(VirtualWebhookLimit virtualWebhookLimit) {
         Utils.checkNotNull(virtualWebhookLimit, "virtualWebhookLimit");
         this.virtualWebhookLimit = Optional.ofNullable(virtualWebhookLimit);
@@ -3236,6 +3263,7 @@ public class IntegrationSupport {
             Utils.enhancedDeepEquals(this.virtualWebhookItemId, other.virtualWebhookItemId) &&
             Utils.enhancedDeepEquals(this.virtualWebhookItemVariantId, other.virtualWebhookItemVariantId) &&
             Utils.enhancedDeepEquals(this.virtualWebhookJobId, other.virtualWebhookJobId) &&
+            Utils.enhancedDeepEquals(this.virtualWebhookLeadId, other.virtualWebhookLeadId) &&
             Utils.enhancedDeepEquals(this.virtualWebhookLimit, other.virtualWebhookLimit) &&
             Utils.enhancedDeepEquals(this.virtualWebhookListId, other.virtualWebhookListId) &&
             Utils.enhancedDeepEquals(this.virtualWebhookLocationId, other.virtualWebhookLocationId) &&
@@ -3290,13 +3318,13 @@ public class IntegrationSupport {
             virtualWebhookContactId, virtualWebhookCustomerId, virtualWebhookDealId,
             virtualWebhookEndLe, virtualWebhookEndLt, virtualWebhookEventId,
             virtualWebhookExpand, virtualWebhookFields, virtualWebhookItemId,
-            virtualWebhookItemVariantId, virtualWebhookJobId, virtualWebhookLimit,
-            virtualWebhookListId, virtualWebhookLocationId, virtualWebhookOrgId,
-            virtualWebhookPageId, virtualWebhookParentId, virtualWebhookPipelineId,
-            virtualWebhookProjectId, virtualWebhookRepoId, virtualWebhookSpaceId,
-            virtualWebhookStartGte, virtualWebhookStatus, virtualWebhookTaskId,
-            virtualWebhookTicketId, virtualWebhookType, virtualWebhookUpdatedGte,
-            virtualWebhookUserId, webhookEvents);
+            virtualWebhookItemVariantId, virtualWebhookJobId, virtualWebhookLeadId,
+            virtualWebhookLimit, virtualWebhookListId, virtualWebhookLocationId,
+            virtualWebhookOrgId, virtualWebhookPageId, virtualWebhookParentId,
+            virtualWebhookPipelineId, virtualWebhookProjectId, virtualWebhookRepoId,
+            virtualWebhookSpaceId, virtualWebhookStartGte, virtualWebhookStatus,
+            virtualWebhookTaskId, virtualWebhookTicketId, virtualWebhookType,
+            virtualWebhookUpdatedGte, virtualWebhookUserId, webhookEvents);
     }
     
     @Override
@@ -3397,6 +3425,7 @@ public class IntegrationSupport {
                 "virtualWebhookItemId", virtualWebhookItemId,
                 "virtualWebhookItemVariantId", virtualWebhookItemVariantId,
                 "virtualWebhookJobId", virtualWebhookJobId,
+                "virtualWebhookLeadId", virtualWebhookLeadId,
                 "virtualWebhookLimit", virtualWebhookLimit,
                 "virtualWebhookListId", virtualWebhookListId,
                 "virtualWebhookLocationId", virtualWebhookLocationId,
@@ -3609,6 +3638,8 @@ public class IntegrationSupport {
         private Optional<? extends VirtualWebhookItemVariantId> virtualWebhookItemVariantId = Optional.empty();
 
         private Optional<? extends VirtualWebhookJobId> virtualWebhookJobId = Optional.empty();
+
+        private Optional<? extends VirtualWebhookLeadId> virtualWebhookLeadId = Optional.empty();
 
         private Optional<? extends VirtualWebhookLimit> virtualWebhookLimit = Optional.empty();
 
@@ -4892,6 +4923,19 @@ public class IntegrationSupport {
         }
 
 
+        public Builder virtualWebhookLeadId(VirtualWebhookLeadId virtualWebhookLeadId) {
+            Utils.checkNotNull(virtualWebhookLeadId, "virtualWebhookLeadId");
+            this.virtualWebhookLeadId = Optional.ofNullable(virtualWebhookLeadId);
+            return this;
+        }
+
+        public Builder virtualWebhookLeadId(Optional<? extends VirtualWebhookLeadId> virtualWebhookLeadId) {
+            Utils.checkNotNull(virtualWebhookLeadId, "virtualWebhookLeadId");
+            this.virtualWebhookLeadId = virtualWebhookLeadId;
+            return this;
+        }
+
+
         public Builder virtualWebhookLimit(VirtualWebhookLimit virtualWebhookLimit) {
             Utils.checkNotNull(virtualWebhookLimit, "virtualWebhookLimit");
             this.virtualWebhookLimit = Optional.ofNullable(virtualWebhookLimit);
@@ -5159,13 +5203,13 @@ public class IntegrationSupport {
                 virtualWebhookContactId, virtualWebhookCustomerId, virtualWebhookDealId,
                 virtualWebhookEndLe, virtualWebhookEndLt, virtualWebhookEventId,
                 virtualWebhookExpand, virtualWebhookFields, virtualWebhookItemId,
-                virtualWebhookItemVariantId, virtualWebhookJobId, virtualWebhookLimit,
-                virtualWebhookListId, virtualWebhookLocationId, virtualWebhookOrgId,
-                virtualWebhookPageId, virtualWebhookParentId, virtualWebhookPipelineId,
-                virtualWebhookProjectId, virtualWebhookRepoId, virtualWebhookSpaceId,
-                virtualWebhookStartGte, virtualWebhookStatus, virtualWebhookTaskId,
-                virtualWebhookTicketId, virtualWebhookType, virtualWebhookUpdatedGte,
-                virtualWebhookUserId, webhookEvents);
+                virtualWebhookItemVariantId, virtualWebhookJobId, virtualWebhookLeadId,
+                virtualWebhookLimit, virtualWebhookListId, virtualWebhookLocationId,
+                virtualWebhookOrgId, virtualWebhookPageId, virtualWebhookParentId,
+                virtualWebhookPipelineId, virtualWebhookProjectId, virtualWebhookRepoId,
+                virtualWebhookSpaceId, virtualWebhookStartGte, virtualWebhookStatus,
+                virtualWebhookTaskId, virtualWebhookTicketId, virtualWebhookType,
+                virtualWebhookUpdatedGte, virtualWebhookUserId, webhookEvents);
         }
 
     }
