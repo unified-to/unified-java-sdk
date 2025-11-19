@@ -57,6 +57,11 @@ public class CrmCompany {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("domains")
+    private Optional<? extends List<String>> domains;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
     private Optional<? extends List<CrmEmail>> emails;
 
@@ -139,6 +144,7 @@ public class CrmCompany {
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("deal_ids") Optional<? extends List<String>> dealIds,
             @JsonProperty("description") Optional<String> description,
+            @JsonProperty("domains") Optional<? extends List<String>> domains,
             @JsonProperty("emails") Optional<? extends List<CrmEmail>> emails,
             @JsonProperty("employees") Optional<Double> employees,
             @JsonProperty("id") Optional<String> id,
@@ -159,6 +165,7 @@ public class CrmCompany {
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(dealIds, "dealIds");
         Utils.checkNotNull(description, "description");
+        Utils.checkNotNull(domains, "domains");
         Utils.checkNotNull(emails, "emails");
         Utils.checkNotNull(employees, "employees");
         Utils.checkNotNull(id, "id");
@@ -179,6 +186,7 @@ public class CrmCompany {
         this.createdAt = createdAt;
         this.dealIds = dealIds;
         this.description = description;
+        this.domains = domains;
         this.emails = emails;
         this.employees = employees;
         this.id = id;
@@ -203,7 +211,7 @@ public class CrmCompany {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -238,6 +246,12 @@ public class CrmCompany {
     @JsonIgnore
     public Optional<String> description() {
         return description;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<String>> domains() {
+        return (Optional<List<String>>) domains;
     }
 
     @SuppressWarnings("unchecked")
@@ -404,6 +418,19 @@ public class CrmCompany {
     public CrmCompany withDescription(Optional<String> description) {
         Utils.checkNotNull(description, "description");
         this.description = description;
+        return this;
+    }
+
+    public CrmCompany withDomains(List<String> domains) {
+        Utils.checkNotNull(domains, "domains");
+        this.domains = Optional.ofNullable(domains);
+        return this;
+    }
+
+
+    public CrmCompany withDomains(Optional<? extends List<String>> domains) {
+        Utils.checkNotNull(domains, "domains");
+        this.domains = domains;
         return this;
     }
 
@@ -623,6 +650,7 @@ public class CrmCompany {
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.dealIds, other.dealIds) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
+            Utils.enhancedDeepEquals(this.domains, other.domains) &&
             Utils.enhancedDeepEquals(this.emails, other.emails) &&
             Utils.enhancedDeepEquals(this.employees, other.employees) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
@@ -644,12 +672,12 @@ public class CrmCompany {
     public int hashCode() {
         return Utils.enhancedHash(
             address, contactIds, createdAt,
-            dealIds, description, emails,
-            employees, id, industry,
-            isActive, linkUrls, metadata,
-            name, raw, tags,
-            telephones, timezone, updatedAt,
-            userId, websites);
+            dealIds, description, domains,
+            emails, employees, id,
+            industry, isActive, linkUrls,
+            metadata, name, raw,
+            tags, telephones, timezone,
+            updatedAt, userId, websites);
     }
     
     @Override
@@ -660,6 +688,7 @@ public class CrmCompany {
                 "createdAt", createdAt,
                 "dealIds", dealIds,
                 "description", description,
+                "domains", domains,
                 "emails", emails,
                 "employees", employees,
                 "id", id,
@@ -689,6 +718,8 @@ public class CrmCompany {
         private Optional<? extends List<String>> dealIds = Optional.empty();
 
         private Optional<String> description = Optional.empty();
+
+        private Optional<? extends List<String>> domains = Optional.empty();
 
         private Optional<? extends List<CrmEmail>> emails = Optional.empty();
 
@@ -798,6 +829,19 @@ public class CrmCompany {
         public Builder description(Optional<String> description) {
             Utils.checkNotNull(description, "description");
             this.description = description;
+            return this;
+        }
+
+
+        public Builder domains(List<String> domains) {
+            Utils.checkNotNull(domains, "domains");
+            this.domains = Optional.ofNullable(domains);
+            return this;
+        }
+
+        public Builder domains(Optional<? extends List<String>> domains) {
+            Utils.checkNotNull(domains, "domains");
+            this.domains = domains;
             return this;
         }
 
@@ -1006,12 +1050,12 @@ public class CrmCompany {
 
             return new CrmCompany(
                 address, contactIds, createdAt,
-                dealIds, description, emails,
-                employees, id, industry,
-                isActive, linkUrls, metadata,
-                name, raw, tags,
-                telephones, timezone, updatedAt,
-                userId, websites);
+                dealIds, description, domains,
+                emails, employees, id,
+                industry, isActive, linkUrls,
+                metadata, name, raw,
+                tags, telephones, timezone,
+                updatedAt, userId, websites);
         }
 
     }
