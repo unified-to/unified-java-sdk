@@ -5,9 +5,13 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import to.unified.unified_java_sdk.models.operations.GetUcCallRequest;
+import to.unified.unified_java_sdk.models.operations.GetUcCallRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetUcCallResponse;
 import to.unified.unified_java_sdk.models.operations.ListUcCallsRequest;
 import to.unified.unified_java_sdk.models.operations.ListUcCallsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListUcCallsResponse;
+import to.unified.unified_java_sdk.operations.GetUcCall;
 import to.unified.unified_java_sdk.operations.ListUcCalls;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -29,6 +33,28 @@ public class Call {
      */
     public AsyncCall async() {
         return asyncSDK;
+    }
+
+    /**
+     * Retrieve a call
+     * 
+     * @return The call builder
+     */
+    public GetUcCallRequestBuilder getUcCall() {
+        return new GetUcCallRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a call
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUcCallResponse getUcCall(GetUcCallRequest request) {
+        RequestOperation<GetUcCallRequest, GetUcCallResponse> operation
+              = new GetUcCall.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
     }
 
     /**

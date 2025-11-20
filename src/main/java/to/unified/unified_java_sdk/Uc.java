@@ -14,6 +14,9 @@ import to.unified.unified_java_sdk.models.operations.CreateUcContactResponse;
 import to.unified.unified_java_sdk.models.operations.CreateUcRecordingRequest;
 import to.unified.unified_java_sdk.models.operations.CreateUcRecordingRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateUcRecordingResponse;
+import to.unified.unified_java_sdk.models.operations.GetUcCallRequest;
+import to.unified.unified_java_sdk.models.operations.GetUcCallRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetUcCallResponse;
 import to.unified.unified_java_sdk.models.operations.GetUcCommentRequest;
 import to.unified.unified_java_sdk.models.operations.GetUcCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetUcCommentResponse;
@@ -65,6 +68,7 @@ import to.unified.unified_java_sdk.models.operations.UpdateUcRecordingResponse;
 import to.unified.unified_java_sdk.operations.CreateUcComment;
 import to.unified.unified_java_sdk.operations.CreateUcContact;
 import to.unified.unified_java_sdk.operations.CreateUcRecording;
+import to.unified.unified_java_sdk.operations.GetUcCall;
 import to.unified.unified_java_sdk.operations.GetUcComment;
 import to.unified.unified_java_sdk.operations.GetUcContact;
 import to.unified.unified_java_sdk.operations.GetUcRecording;
@@ -166,6 +170,28 @@ public class Uc {
     public CreateUcRecordingResponse createUcRecording(CreateUcRecordingRequest request) {
         RequestOperation<CreateUcRecordingRequest, CreateUcRecordingResponse> operation
               = new CreateUcRecording.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a call
+     * 
+     * @return The call builder
+     */
+    public GetUcCallRequestBuilder getUcCall() {
+        return new GetUcCallRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a call
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUcCallResponse getUcCall(GetUcCallRequest request) {
+        RequestOperation<GetUcCallRequest, GetUcCallResponse> operation
+              = new GetUcCall.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

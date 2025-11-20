@@ -6,9 +6,13 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import java.util.concurrent.CompletableFuture;
+import to.unified.unified_java_sdk.models.operations.GetUcCallRequest;
 import to.unified.unified_java_sdk.models.operations.ListUcCallsRequest;
+import to.unified.unified_java_sdk.models.operations.async.GetUcCallRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetUcCallResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListUcCallsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListUcCallsResponse;
+import to.unified.unified_java_sdk.operations.GetUcCall;
 import to.unified.unified_java_sdk.operations.ListUcCalls;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -30,6 +34,29 @@ public class AsyncCall {
      */
     public Call sync() {
         return syncSDK;
+    }
+
+
+    /**
+     * Retrieve a call
+     * 
+     * @return The async call builder
+     */
+    public GetUcCallRequestBuilder getUcCall() {
+        return new GetUcCallRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a call
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetUcCallResponse>} - The async response
+     */
+    public CompletableFuture<GetUcCallResponse> getUcCall(GetUcCallRequest request) {
+        AsyncRequestOperation<GetUcCallRequest, GetUcCallResponse> operation
+              = new GetUcCall.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
     }
 
 

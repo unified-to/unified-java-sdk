@@ -9,6 +9,7 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateUcCommentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateUcContactRequest;
 import to.unified.unified_java_sdk.models.operations.CreateUcRecordingRequest;
+import to.unified.unified_java_sdk.models.operations.GetUcCallRequest;
 import to.unified.unified_java_sdk.models.operations.GetUcCommentRequest;
 import to.unified.unified_java_sdk.models.operations.GetUcContactRequest;
 import to.unified.unified_java_sdk.models.operations.GetUcRecordingRequest;
@@ -31,6 +32,8 @@ import to.unified.unified_java_sdk.models.operations.async.CreateUcContactReques
 import to.unified.unified_java_sdk.models.operations.async.CreateUcContactResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateUcRecordingRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateUcRecordingResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetUcCallRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetUcCallResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetUcCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetUcCommentResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetUcContactRequestBuilder;
@@ -66,6 +69,7 @@ import to.unified.unified_java_sdk.models.operations.async.UpdateUcRecordingResp
 import to.unified.unified_java_sdk.operations.CreateUcComment;
 import to.unified.unified_java_sdk.operations.CreateUcContact;
 import to.unified.unified_java_sdk.operations.CreateUcRecording;
+import to.unified.unified_java_sdk.operations.GetUcCall;
 import to.unified.unified_java_sdk.operations.GetUcComment;
 import to.unified.unified_java_sdk.operations.GetUcContact;
 import to.unified.unified_java_sdk.operations.GetUcRecording;
@@ -169,6 +173,29 @@ public class AsyncUc {
     public CompletableFuture<CreateUcRecordingResponse> createUcRecording(CreateUcRecordingRequest request) {
         AsyncRequestOperation<CreateUcRecordingRequest, CreateUcRecordingResponse> operation
               = new CreateUcRecording.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a call
+     * 
+     * @return The async call builder
+     */
+    public GetUcCallRequestBuilder getUcCall() {
+        return new GetUcCallRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a call
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetUcCallResponse>} - The async response
+     */
+    public CompletableFuture<GetUcCallResponse> getUcCall(GetUcCallRequest request) {
+        AsyncRequestOperation<GetUcCallRequest, GetUcCallResponse> operation
+              = new GetUcCall.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
