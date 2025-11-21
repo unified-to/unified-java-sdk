@@ -5,9 +5,15 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import to.unified.unified_java_sdk.models.operations.CreateHrisBenefitRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisBenefitRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateHrisBenefitResponse;
 import to.unified.unified_java_sdk.models.operations.CreateHrisCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisCompanyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.CreateHrisDeductionRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisDeductionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateHrisDeductionResponse;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeviceRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeviceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeviceResponse;
@@ -23,9 +29,15 @@ import to.unified.unified_java_sdk.models.operations.CreateHrisLocationResponse;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftResponse;
+import to.unified.unified_java_sdk.models.operations.GetHrisBenefitRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisBenefitRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHrisBenefitResponse;
 import to.unified.unified_java_sdk.models.operations.GetHrisCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisCompanyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHrisCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.GetHrisDeductionRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisDeductionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHrisDeductionResponse;
 import to.unified.unified_java_sdk.models.operations.GetHrisDeviceRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisDeviceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHrisDeviceResponse;
@@ -47,9 +59,15 @@ import to.unified.unified_java_sdk.models.operations.GetHrisTimeoffResponse;
 import to.unified.unified_java_sdk.models.operations.GetHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisTimeshiftRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHrisTimeshiftResponse;
+import to.unified.unified_java_sdk.models.operations.ListHrisBenefitsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisBenefitsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHrisBenefitsResponse;
 import to.unified.unified_java_sdk.models.operations.ListHrisCompaniesRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisCompaniesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHrisCompaniesResponse;
+import to.unified.unified_java_sdk.models.operations.ListHrisDeductionsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisDeductionsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHrisDeductionsResponse;
 import to.unified.unified_java_sdk.models.operations.ListHrisDevicesRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisDevicesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHrisDevicesResponse;
@@ -71,9 +89,15 @@ import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffsResponse;
 import to.unified.unified_java_sdk.models.operations.ListHrisTimeshiftsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisTimeshiftsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHrisTimeshiftsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchHrisBenefitRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisBenefitRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchHrisBenefitResponse;
 import to.unified.unified_java_sdk.models.operations.PatchHrisCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisCompanyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchHrisCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.PatchHrisDeductionRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisDeductionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchHrisDeductionResponse;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDeviceRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDeviceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDeviceResponse;
@@ -89,9 +113,15 @@ import to.unified.unified_java_sdk.models.operations.PatchHrisLocationResponse;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshiftRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshiftResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisBenefitRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisBenefitRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisBenefitResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisCompanyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisDeductionRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisDeductionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisDeductionResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisDeviceRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisDeviceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisDeviceResponse;
@@ -107,9 +137,15 @@ import to.unified.unified_java_sdk.models.operations.RemoveHrisLocationResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeshiftRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeshiftResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisBenefitRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisBenefitRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisBenefitResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisCompanyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisDeductionRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisDeductionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisDeductionResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDeviceRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDeviceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDeviceResponse;
@@ -125,13 +161,17 @@ import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftResponse;
+import to.unified.unified_java_sdk.operations.CreateHrisBenefit;
 import to.unified.unified_java_sdk.operations.CreateHrisCompany;
+import to.unified.unified_java_sdk.operations.CreateHrisDeduction;
 import to.unified.unified_java_sdk.operations.CreateHrisDevice;
 import to.unified.unified_java_sdk.operations.CreateHrisEmployee;
 import to.unified.unified_java_sdk.operations.CreateHrisGroup;
 import to.unified.unified_java_sdk.operations.CreateHrisLocation;
 import to.unified.unified_java_sdk.operations.CreateHrisTimeshift;
+import to.unified.unified_java_sdk.operations.GetHrisBenefit;
 import to.unified.unified_java_sdk.operations.GetHrisCompany;
+import to.unified.unified_java_sdk.operations.GetHrisDeduction;
 import to.unified.unified_java_sdk.operations.GetHrisDevice;
 import to.unified.unified_java_sdk.operations.GetHrisEmployee;
 import to.unified.unified_java_sdk.operations.GetHrisGroup;
@@ -139,7 +179,9 @@ import to.unified.unified_java_sdk.operations.GetHrisLocation;
 import to.unified.unified_java_sdk.operations.GetHrisPayslip;
 import to.unified.unified_java_sdk.operations.GetHrisTimeoff;
 import to.unified.unified_java_sdk.operations.GetHrisTimeshift;
+import to.unified.unified_java_sdk.operations.ListHrisBenefits;
 import to.unified.unified_java_sdk.operations.ListHrisCompanies;
+import to.unified.unified_java_sdk.operations.ListHrisDeductions;
 import to.unified.unified_java_sdk.operations.ListHrisDevices;
 import to.unified.unified_java_sdk.operations.ListHrisEmployees;
 import to.unified.unified_java_sdk.operations.ListHrisGroups;
@@ -147,19 +189,25 @@ import to.unified.unified_java_sdk.operations.ListHrisLocations;
 import to.unified.unified_java_sdk.operations.ListHrisPayslips;
 import to.unified.unified_java_sdk.operations.ListHrisTimeoffs;
 import to.unified.unified_java_sdk.operations.ListHrisTimeshifts;
+import to.unified.unified_java_sdk.operations.PatchHrisBenefit;
 import to.unified.unified_java_sdk.operations.PatchHrisCompany;
+import to.unified.unified_java_sdk.operations.PatchHrisDeduction;
 import to.unified.unified_java_sdk.operations.PatchHrisDevice;
 import to.unified.unified_java_sdk.operations.PatchHrisEmployee;
 import to.unified.unified_java_sdk.operations.PatchHrisGroup;
 import to.unified.unified_java_sdk.operations.PatchHrisLocation;
 import to.unified.unified_java_sdk.operations.PatchHrisTimeshift;
+import to.unified.unified_java_sdk.operations.RemoveHrisBenefit;
 import to.unified.unified_java_sdk.operations.RemoveHrisCompany;
+import to.unified.unified_java_sdk.operations.RemoveHrisDeduction;
 import to.unified.unified_java_sdk.operations.RemoveHrisDevice;
 import to.unified.unified_java_sdk.operations.RemoveHrisEmployee;
 import to.unified.unified_java_sdk.operations.RemoveHrisGroup;
 import to.unified.unified_java_sdk.operations.RemoveHrisLocation;
 import to.unified.unified_java_sdk.operations.RemoveHrisTimeshift;
+import to.unified.unified_java_sdk.operations.UpdateHrisBenefit;
 import to.unified.unified_java_sdk.operations.UpdateHrisCompany;
+import to.unified.unified_java_sdk.operations.UpdateHrisDeduction;
 import to.unified.unified_java_sdk.operations.UpdateHrisDevice;
 import to.unified.unified_java_sdk.operations.UpdateHrisEmployee;
 import to.unified.unified_java_sdk.operations.UpdateHrisGroup;
@@ -188,6 +236,28 @@ public class Hris {
     }
 
     /**
+     * Create a benefit
+     * 
+     * @return The call builder
+     */
+    public CreateHrisBenefitRequestBuilder createHrisBenefit() {
+        return new CreateHrisBenefitRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a benefit
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisBenefitResponse createHrisBenefit(CreateHrisBenefitRequest request) {
+        RequestOperation<CreateHrisBenefitRequest, CreateHrisBenefitResponse> operation
+              = new CreateHrisBenefit.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Create a company
      * 
      * @return The call builder
@@ -206,6 +276,28 @@ public class Hris {
     public CreateHrisCompanyResponse createHrisCompany(CreateHrisCompanyRequest request) {
         RequestOperation<CreateHrisCompanyRequest, CreateHrisCompanyResponse> operation
               = new CreateHrisCompany.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Create a deduction
+     * 
+     * @return The call builder
+     */
+    public CreateHrisDeductionRequestBuilder createHrisDeduction() {
+        return new CreateHrisDeductionRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a deduction
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisDeductionResponse createHrisDeduction(CreateHrisDeductionRequest request) {
+        RequestOperation<CreateHrisDeductionRequest, CreateHrisDeductionResponse> operation
+              = new CreateHrisDeduction.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -320,6 +412,28 @@ public class Hris {
     }
 
     /**
+     * Retrieve a benefit
+     * 
+     * @return The call builder
+     */
+    public GetHrisBenefitRequestBuilder getHrisBenefit() {
+        return new GetHrisBenefitRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a benefit
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisBenefitResponse getHrisBenefit(GetHrisBenefitRequest request) {
+        RequestOperation<GetHrisBenefitRequest, GetHrisBenefitResponse> operation
+              = new GetHrisBenefit.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Retrieve a company
      * 
      * @return The call builder
@@ -338,6 +452,28 @@ public class Hris {
     public GetHrisCompanyResponse getHrisCompany(GetHrisCompanyRequest request) {
         RequestOperation<GetHrisCompanyRequest, GetHrisCompanyResponse> operation
               = new GetHrisCompany.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a deduction
+     * 
+     * @return The call builder
+     */
+    public GetHrisDeductionRequestBuilder getHrisDeduction() {
+        return new GetHrisDeductionRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a deduction
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisDeductionResponse getHrisDeduction(GetHrisDeductionRequest request) {
+        RequestOperation<GetHrisDeductionRequest, GetHrisDeductionResponse> operation
+              = new GetHrisDeduction.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -496,6 +632,28 @@ public class Hris {
     }
 
     /**
+     * List all benefits
+     * 
+     * @return The call builder
+     */
+    public ListHrisBenefitsRequestBuilder listHrisBenefits() {
+        return new ListHrisBenefitsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all benefits
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisBenefitsResponse listHrisBenefits(ListHrisBenefitsRequest request) {
+        RequestOperation<ListHrisBenefitsRequest, ListHrisBenefitsResponse> operation
+              = new ListHrisBenefits.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * List all companies
      * 
      * @return The call builder
@@ -514,6 +672,28 @@ public class Hris {
     public ListHrisCompaniesResponse listHrisCompanies(ListHrisCompaniesRequest request) {
         RequestOperation<ListHrisCompaniesRequest, ListHrisCompaniesResponse> operation
               = new ListHrisCompanies.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all deductions
+     * 
+     * @return The call builder
+     */
+    public ListHrisDeductionsRequestBuilder listHrisDeductions() {
+        return new ListHrisDeductionsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all deductions
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisDeductionsResponse listHrisDeductions(ListHrisDeductionsRequest request) {
+        RequestOperation<ListHrisDeductionsRequest, ListHrisDeductionsResponse> operation
+              = new ListHrisDeductions.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -672,6 +852,28 @@ public class Hris {
     }
 
     /**
+     * Update a benefit
+     * 
+     * @return The call builder
+     */
+    public PatchHrisBenefitRequestBuilder patchHrisBenefit() {
+        return new PatchHrisBenefitRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a benefit
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisBenefitResponse patchHrisBenefit(PatchHrisBenefitRequest request) {
+        RequestOperation<PatchHrisBenefitRequest, PatchHrisBenefitResponse> operation
+              = new PatchHrisBenefit.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Update a company
      * 
      * @return The call builder
@@ -690,6 +892,28 @@ public class Hris {
     public PatchHrisCompanyResponse patchHrisCompany(PatchHrisCompanyRequest request) {
         RequestOperation<PatchHrisCompanyRequest, PatchHrisCompanyResponse> operation
               = new PatchHrisCompany.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a deduction
+     * 
+     * @return The call builder
+     */
+    public PatchHrisDeductionRequestBuilder patchHrisDeduction() {
+        return new PatchHrisDeductionRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a deduction
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisDeductionResponse patchHrisDeduction(PatchHrisDeductionRequest request) {
+        RequestOperation<PatchHrisDeductionRequest, PatchHrisDeductionResponse> operation
+              = new PatchHrisDeduction.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -804,6 +1028,28 @@ public class Hris {
     }
 
     /**
+     * Remove a benefit
+     * 
+     * @return The call builder
+     */
+    public RemoveHrisBenefitRequestBuilder removeHrisBenefit() {
+        return new RemoveHrisBenefitRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a benefit
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisBenefitResponse removeHrisBenefit(RemoveHrisBenefitRequest request) {
+        RequestOperation<RemoveHrisBenefitRequest, RemoveHrisBenefitResponse> operation
+              = new RemoveHrisBenefit.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Remove a company
      * 
      * @return The call builder
@@ -822,6 +1068,28 @@ public class Hris {
     public RemoveHrisCompanyResponse removeHrisCompany(RemoveHrisCompanyRequest request) {
         RequestOperation<RemoveHrisCompanyRequest, RemoveHrisCompanyResponse> operation
               = new RemoveHrisCompany.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove a deduction
+     * 
+     * @return The call builder
+     */
+    public RemoveHrisDeductionRequestBuilder removeHrisDeduction() {
+        return new RemoveHrisDeductionRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a deduction
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisDeductionResponse removeHrisDeduction(RemoveHrisDeductionRequest request) {
+        RequestOperation<RemoveHrisDeductionRequest, RemoveHrisDeductionResponse> operation
+              = new RemoveHrisDeduction.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -936,6 +1204,28 @@ public class Hris {
     }
 
     /**
+     * Update a benefit
+     * 
+     * @return The call builder
+     */
+    public UpdateHrisBenefitRequestBuilder updateHrisBenefit() {
+        return new UpdateHrisBenefitRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a benefit
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisBenefitResponse updateHrisBenefit(UpdateHrisBenefitRequest request) {
+        RequestOperation<UpdateHrisBenefitRequest, UpdateHrisBenefitResponse> operation
+              = new UpdateHrisBenefit.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Update a company
      * 
      * @return The call builder
@@ -954,6 +1244,28 @@ public class Hris {
     public UpdateHrisCompanyResponse updateHrisCompany(UpdateHrisCompanyRequest request) {
         RequestOperation<UpdateHrisCompanyRequest, UpdateHrisCompanyResponse> operation
               = new UpdateHrisCompany.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a deduction
+     * 
+     * @return The call builder
+     */
+    public UpdateHrisDeductionRequestBuilder updateHrisDeduction() {
+        return new UpdateHrisDeductionRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a deduction
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisDeductionResponse updateHrisDeduction(UpdateHrisDeductionRequest request) {
+        RequestOperation<UpdateHrisDeductionRequest, UpdateHrisDeductionResponse> operation
+              = new UpdateHrisDeduction.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

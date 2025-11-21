@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: d3236800ede7509df7bab0e934cc59f0
+  docChecksum: 67f7d6d0c66da74ba7cdc2b88db1c97d
   docVersion: "1.0"
-  speakeasyVersion: 1.658.2
+  speakeasyVersion: 1.659.0
   generationVersion: 2.755.9
-  releaseVersion: 0.45.3
-  configChecksum: b95b96e0ca22d9faa108a4b78a03d835
+  releaseVersion: 0.45.4
+  configChecksum: 52b86816b845ab2aaab570272b530e29
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -103,8 +103,12 @@ generatedFiles:
   - docs/models/operations/CreateGenaiEmbeddingResponse.md
   - docs/models/operations/CreateGenaiPromptRequest.md
   - docs/models/operations/CreateGenaiPromptResponse.md
+  - docs/models/operations/CreateHrisBenefitRequest.md
+  - docs/models/operations/CreateHrisBenefitResponse.md
   - docs/models/operations/CreateHrisCompanyRequest.md
   - docs/models/operations/CreateHrisCompanyResponse.md
+  - docs/models/operations/CreateHrisDeductionRequest.md
+  - docs/models/operations/CreateHrisDeductionResponse.md
   - docs/models/operations/CreateHrisDeviceRequest.md
   - docs/models/operations/CreateHrisDeviceResponse.md
   - docs/models/operations/CreateHrisEmployeeRequest.md
@@ -274,8 +278,12 @@ generatedFiles:
   - docs/models/operations/GetCrmPipelineResponse.md
   - docs/models/operations/GetGenaiModelRequest.md
   - docs/models/operations/GetGenaiModelResponse.md
+  - docs/models/operations/GetHrisBenefitRequest.md
+  - docs/models/operations/GetHrisBenefitResponse.md
   - docs/models/operations/GetHrisCompanyRequest.md
   - docs/models/operations/GetHrisCompanyResponse.md
+  - docs/models/operations/GetHrisDeductionRequest.md
+  - docs/models/operations/GetHrisDeductionResponse.md
   - docs/models/operations/GetHrisDeviceRequest.md
   - docs/models/operations/GetHrisDeviceResponse.md
   - docs/models/operations/GetHrisEmployeeRequest.md
@@ -474,8 +482,12 @@ generatedFiles:
   - docs/models/operations/ListEnrichPeopleResponse.md
   - docs/models/operations/ListGenaiModelsRequest.md
   - docs/models/operations/ListGenaiModelsResponse.md
+  - docs/models/operations/ListHrisBenefitsRequest.md
+  - docs/models/operations/ListHrisBenefitsResponse.md
   - docs/models/operations/ListHrisCompaniesRequest.md
   - docs/models/operations/ListHrisCompaniesResponse.md
+  - docs/models/operations/ListHrisDeductionsRequest.md
+  - docs/models/operations/ListHrisDeductionsResponse.md
   - docs/models/operations/ListHrisDevicesRequest.md
   - docs/models/operations/ListHrisDevicesResponse.md
   - docs/models/operations/ListHrisEmployeesRequest.md
@@ -653,8 +665,12 @@ generatedFiles:
   - docs/models/operations/PatchCrmLeadResponse.md
   - docs/models/operations/PatchCrmPipelineRequest.md
   - docs/models/operations/PatchCrmPipelineResponse.md
+  - docs/models/operations/PatchHrisBenefitRequest.md
+  - docs/models/operations/PatchHrisBenefitResponse.md
   - docs/models/operations/PatchHrisCompanyRequest.md
   - docs/models/operations/PatchHrisCompanyResponse.md
+  - docs/models/operations/PatchHrisDeductionRequest.md
+  - docs/models/operations/PatchHrisDeductionResponse.md
   - docs/models/operations/PatchHrisDeviceRequest.md
   - docs/models/operations/PatchHrisDeviceResponse.md
   - docs/models/operations/PatchHrisEmployeeRequest.md
@@ -812,8 +828,12 @@ generatedFiles:
   - docs/models/operations/RemoveCrmLeadResponse.md
   - docs/models/operations/RemoveCrmPipelineRequest.md
   - docs/models/operations/RemoveCrmPipelineResponse.md
+  - docs/models/operations/RemoveHrisBenefitRequest.md
+  - docs/models/operations/RemoveHrisBenefitResponse.md
   - docs/models/operations/RemoveHrisCompanyRequest.md
   - docs/models/operations/RemoveHrisCompanyResponse.md
+  - docs/models/operations/RemoveHrisDeductionRequest.md
+  - docs/models/operations/RemoveHrisDeductionResponse.md
   - docs/models/operations/RemoveHrisDeviceRequest.md
   - docs/models/operations/RemoveHrisDeviceResponse.md
   - docs/models/operations/RemoveHrisEmployeeRequest.md
@@ -966,8 +986,12 @@ generatedFiles:
   - docs/models/operations/UpdateCrmLeadResponse.md
   - docs/models/operations/UpdateCrmPipelineRequest.md
   - docs/models/operations/UpdateCrmPipelineResponse.md
+  - docs/models/operations/UpdateHrisBenefitRequest.md
+  - docs/models/operations/UpdateHrisBenefitResponse.md
   - docs/models/operations/UpdateHrisCompanyRequest.md
   - docs/models/operations/UpdateHrisCompanyResponse.md
+  - docs/models/operations/UpdateHrisDeductionRequest.md
+  - docs/models/operations/UpdateHrisDeductionResponse.md
   - docs/models/operations/UpdateHrisDeviceRequest.md
   - docs/models/operations/UpdateHrisDeviceResponse.md
   - docs/models/operations/UpdateHrisEmployeeRequest.md
@@ -1092,6 +1116,7 @@ generatedFiles:
   - docs/models/shared/AccountingProfitlossSubcategory.md
   - docs/models/shared/AccountingPurchaseorder.md
   - docs/models/shared/AccountingPurchaseorderStatus.md
+  - docs/models/shared/AccountingReference.md
   - docs/models/shared/AccountingReport.md
   - docs/models/shared/AccountingReportType.md
   - docs/models/shared/AccountingSalesorder.md
@@ -1183,6 +1208,7 @@ generatedFiles:
   - docs/models/shared/CommerceReviewStatus.md
   - docs/models/shared/Connection.md
   - docs/models/shared/ContentType.md
+  - docs/models/shared/CoverageLevel.md
   - docs/models/shared/CrmCompany.md
   - docs/models/shared/CrmContact.md
   - docs/models/shared/CrmDeal.md
@@ -1207,6 +1233,7 @@ generatedFiles:
   - docs/models/shared/CrmTelephone.md
   - docs/models/shared/CrmTelephoneType.md
   - docs/models/shared/DbType.md
+  - docs/models/shared/EmployerContributionType.md
   - docs/models/shared/EmploymentStatus.md
   - docs/models/shared/EmploymentType.md
   - docs/models/shared/EncondingFormat.md
@@ -1230,10 +1257,17 @@ generatedFiles:
   - docs/models/shared/GenaiModel.md
   - docs/models/shared/GenaiPrompt.md
   - docs/models/shared/Gender.md
+  - docs/models/shared/HrisBenefit.md
+  - docs/models/shared/HrisBenefitFrequency.md
+  - docs/models/shared/HrisBenefitType.md
   - docs/models/shared/HrisCompany.md
   - docs/models/shared/HrisCompensation.md
   - docs/models/shared/HrisCompensationFrequency.md
   - docs/models/shared/HrisCompensationType.md
+  - docs/models/shared/HrisDeduction.md
+  - docs/models/shared/HrisDeductionCoverageLevel.md
+  - docs/models/shared/HrisDeductionFrequency.md
+  - docs/models/shared/HrisDeductionType.md
   - docs/models/shared/HrisDevice.md
   - docs/models/shared/HrisEmail.md
   - docs/models/shared/HrisEmailType.md
@@ -1324,6 +1358,7 @@ generatedFiles:
   - docs/models/shared/ListPageId.md
   - docs/models/shared/ListParentId.md
   - docs/models/shared/ListPaymentId.md
+  - docs/models/shared/ListPayslipId.md
   - docs/models/shared/ListPipelineId.md
   - docs/models/shared/ListProjectId.md
   - docs/models/shared/ListQuery.md
@@ -1343,6 +1378,7 @@ generatedFiles:
   - docs/models/shared/ListType.md
   - docs/models/shared/ListUpdatedGte.md
   - docs/models/shared/ListUserId.md
+  - docs/models/shared/ListUserMentionedId.md
   - docs/models/shared/LmsClass.md
   - docs/models/shared/LmsCourse.md
   - docs/models/shared/LmsEmail.md
@@ -1436,6 +1472,10 @@ generatedFiles:
   - docs/models/shared/PropertyHrisEmployeeAddress.md
   - docs/models/shared/PropertyHrisEmployeeEmployeeRoles.md
   - docs/models/shared/PropertyHrisLocationAddress.md
+  - docs/models/shared/PropertyHrisPayslipDeduction.md
+  - docs/models/shared/PropertyHrisPayslipDeductionCoverageLevel.md
+  - docs/models/shared/PropertyHrisPayslipDeductionFrequency.md
+  - docs/models/shared/PropertyHrisPayslipDeductionType.md
   - docs/models/shared/PropertyIntegrationCategories.md
   - docs/models/shared/PropertyIntegrationSupportWebhookEvents.md
   - docs/models/shared/PropertyIntegrationSupportWebhookEventsCreated.md
@@ -1519,6 +1559,7 @@ generatedFiles:
   - docs/models/shared/TaskProject.md
   - docs/models/shared/TaskTask.md
   - docs/models/shared/TaskTaskStatus.md
+  - docs/models/shared/Tax.md
   - docs/models/shared/TaxExemption.md
   - docs/models/shared/TicketingCategory.md
   - docs/models/shared/TicketingCustomer.md
@@ -1587,6 +1628,7 @@ generatedFiles:
   - docs/models/shared/VirtualWebhookType.md
   - docs/models/shared/VirtualWebhookUpdatedGte.md
   - docs/models/shared/VirtualWebhookUserId.md
+  - docs/models/shared/VirtualWebhookUserMentionedId.md
   - docs/models/shared/Webhook.md
   - docs/models/shared/WebhookType.md
   - docs/models/shared/WeekStart.md
@@ -1600,6 +1642,7 @@ generatedFiles:
   - docs/sdks/ats/README.md
   - docs/sdks/auth/README.md
   - docs/sdks/balancesheet/README.md
+  - docs/sdks/benefit/README.md
   - docs/sdks/bill/README.md
   - docs/sdks/branch/README.md
   - docs/sdks/busy/README.md
@@ -1623,6 +1666,7 @@ generatedFiles:
   - docs/sdks/crm/README.md
   - docs/sdks/customer/README.md
   - docs/sdks/deal/README.md
+  - docs/sdks/deduction/README.md
   - docs/sdks/device/README.md
   - docs/sdks/document/README.md
   - docs/sdks/embedding/README.md
@@ -1729,6 +1773,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/AsyncAts.java
   - src/main/java/to/unified/unified_java_sdk/AsyncAuth.java
   - src/main/java/to/unified/unified_java_sdk/AsyncBalancesheet.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncBenefit.java
   - src/main/java/to/unified/unified_java_sdk/AsyncBill.java
   - src/main/java/to/unified/unified_java_sdk/AsyncBranch.java
   - src/main/java/to/unified/unified_java_sdk/AsyncBusy.java
@@ -1752,6 +1797,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/AsyncCrm.java
   - src/main/java/to/unified/unified_java_sdk/AsyncCustomer.java
   - src/main/java/to/unified/unified_java_sdk/AsyncDeal.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncDeduction.java
   - src/main/java/to/unified/unified_java_sdk/AsyncDevice.java
   - src/main/java/to/unified/unified_java_sdk/AsyncDocument.java
   - src/main/java/to/unified/unified_java_sdk/AsyncEmbedding.java
@@ -1832,6 +1878,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/Ats.java
   - src/main/java/to/unified/unified_java_sdk/Auth.java
   - src/main/java/to/unified/unified_java_sdk/Balancesheet.java
+  - src/main/java/to/unified/unified_java_sdk/Benefit.java
   - src/main/java/to/unified/unified_java_sdk/Bill.java
   - src/main/java/to/unified/unified_java_sdk/Branch.java
   - src/main/java/to/unified/unified_java_sdk/Busy.java
@@ -1855,6 +1902,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/Crm.java
   - src/main/java/to/unified/unified_java_sdk/Customer.java
   - src/main/java/to/unified/unified_java_sdk/Deal.java
+  - src/main/java/to/unified/unified_java_sdk/Deduction.java
   - src/main/java/to/unified/unified_java_sdk/Device.java
   - src/main/java/to/unified/unified_java_sdk/Document.java
   - src/main/java/to/unified/unified_java_sdk/Embedding.java
@@ -1975,7 +2023,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCrmPipelineRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateGenaiEmbeddingRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateGenaiPromptRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateHrisBenefitRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateHrisCompanyRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateHrisDeductionRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateHrisDeviceRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateHrisEmployeeRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateHrisGroupRequestBuilder.java
@@ -2061,7 +2111,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCrmLeadRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCrmPipelineRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetGenaiModelRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetHrisBenefitRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetHrisCompanyRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetHrisDeductionRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetHrisDeviceRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetHrisEmployeeRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetHrisGroupRequestBuilder.java
@@ -2161,7 +2213,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListEnrichCompaniesRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListEnrichPeopleRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListGenaiModelsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListHrisBenefitsRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListHrisCompaniesRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListHrisDeductionsRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListHrisDevicesRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListHrisEmployeesRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListHrisGroupsRequestBuilder.java
@@ -2250,7 +2304,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCrmEventRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCrmLeadRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCrmPipelineRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchHrisBenefitRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchHrisCompanyRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchHrisDeductionRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchHrisDeviceRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchHrisEmployeeRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchHrisGroupRequestBuilder.java
@@ -2329,7 +2385,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCrmEventRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCrmLeadRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCrmPipelineRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveHrisBenefitRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveHrisCompanyRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveHrisDeductionRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveHrisDeviceRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveHrisEmployeeRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveHrisGroupRequestBuilder.java
@@ -2406,7 +2464,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCrmEventRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCrmLeadRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCrmPipelineRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateHrisBenefitRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateHrisCompanyRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateHrisDeductionRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateHrisDeviceRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateHrisEmployeeRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateHrisGroupRequestBuilder.java
@@ -2562,9 +2622,15 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateGenaiPromptRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateGenaiPromptRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateGenaiPromptResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/CreateHrisBenefitRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/CreateHrisBenefitRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/CreateHrisBenefitResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateHrisCompanyRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateHrisCompanyRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateHrisCompanyResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/CreateHrisDeductionRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/CreateHrisDeductionRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/CreateHrisDeductionResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateHrisDeviceRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateHrisDeviceRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateHrisDeviceResponse.java
@@ -2819,9 +2885,15 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetGenaiModelRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetGenaiModelRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetGenaiModelResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetHrisBenefitRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetHrisBenefitRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetHrisBenefitResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetHrisCompanyRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetHrisCompanyRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetHrisCompanyResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetHrisDeductionRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetHrisDeductionRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetHrisDeductionResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetHrisDeviceRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetHrisDeviceRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetHrisDeviceResponse.java
@@ -3119,9 +3191,15 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListGenaiModelsRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListGenaiModelsRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListGenaiModelsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/ListHrisBenefitsRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/ListHrisBenefitsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/ListHrisBenefitsResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListHrisCompaniesRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListHrisCompaniesRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListHrisCompaniesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/ListHrisDeductionsRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/ListHrisDeductionsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/ListHrisDeductionsResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListHrisDevicesRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListHrisDevicesRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListHrisDevicesResponse.java
@@ -3387,9 +3465,15 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchCrmPipelineRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchCrmPipelineRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchCrmPipelineResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/PatchHrisBenefitRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/PatchHrisBenefitRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/PatchHrisBenefitResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchHrisCompanyRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchHrisCompanyRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchHrisCompanyResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/PatchHrisDeductionRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/PatchHrisDeductionRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/PatchHrisDeductionResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchHrisDeviceRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchHrisDeviceRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchHrisDeviceResponse.java
@@ -3625,9 +3709,15 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCrmPipelineRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCrmPipelineRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCrmPipelineResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveHrisBenefitRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveHrisBenefitRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveHrisBenefitResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveHrisCompanyRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveHrisCompanyRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveHrisCompanyResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveHrisDeductionRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveHrisDeductionRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveHrisDeductionResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveHrisDeviceRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveHrisDeviceRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveHrisDeviceResponse.java
@@ -3856,9 +3946,15 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCrmPipelineRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCrmPipelineRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCrmPipelineResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateHrisBenefitRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateHrisBenefitRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateHrisBenefitResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateHrisCompanyRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateHrisCompanyRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateHrisCompanyResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateHrisDeductionRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateHrisDeductionRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateHrisDeductionResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateHrisDeviceRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateHrisDeviceRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateHrisDeviceResponse.java
@@ -4025,7 +4121,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCrmPipelineResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateGenaiEmbeddingResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateGenaiPromptResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateHrisBenefitResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateHrisCompanyResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateHrisDeductionResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateHrisDeviceResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateHrisEmployeeResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateHrisGroupResponse.java
@@ -4111,7 +4209,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCrmLeadResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCrmPipelineResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetGenaiModelResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetHrisBenefitResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetHrisCompanyResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetHrisDeductionResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetHrisDeviceResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetHrisEmployeeResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetHrisGroupResponse.java
@@ -4211,7 +4311,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListEnrichCompaniesResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListEnrichPeopleResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListGenaiModelsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListHrisBenefitsResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListHrisCompaniesResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListHrisDeductionsResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListHrisDevicesResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListHrisEmployeesResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListHrisGroupsResponse.java
@@ -4300,7 +4402,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCrmEventResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCrmLeadResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCrmPipelineResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchHrisBenefitResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchHrisCompanyResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchHrisDeductionResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchHrisDeviceResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchHrisEmployeeResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchHrisGroupResponse.java
@@ -4379,7 +4483,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCrmEventResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCrmLeadResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCrmPipelineResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveHrisBenefitResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveHrisCompanyResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveHrisDeductionResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveHrisDeviceResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveHrisEmployeeResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveHrisGroupResponse.java
@@ -4456,7 +4562,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCrmEventResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCrmLeadResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCrmPipelineResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateHrisBenefitResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateHrisCompanyResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateHrisDeductionResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateHrisDeviceResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateHrisEmployeeResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateHrisGroupResponse.java
@@ -4538,6 +4646,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingProfitlossSubcategory.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingPurchaseorder.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingPurchaseorderStatus.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingReference.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingReport.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingReportType.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/AccountingSalesorder.java
@@ -4629,6 +4738,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceReviewStatus.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/Connection.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/ContentType.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/CoverageLevel.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/CrmCompany.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/CrmContact.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/CrmDeal.java
@@ -4653,6 +4763,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/CrmTelephone.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/CrmTelephoneType.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/DbType.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/EmployerContributionType.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/EmploymentStatus.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/EmploymentType.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/EncondingFormat.java
@@ -4676,10 +4787,17 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/GenaiModel.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/GenaiPrompt.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/Gender.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/HrisBenefit.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/HrisBenefitFrequency.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/HrisBenefitType.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/HrisCompany.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/HrisCompensation.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/HrisCompensationFrequency.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/HrisCompensationType.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/HrisDeduction.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/HrisDeductionCoverageLevel.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/HrisDeductionFrequency.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/HrisDeductionType.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/HrisDevice.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/HrisEmail.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/HrisEmailType.java
@@ -4770,6 +4888,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/ListPageId.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/ListParentId.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/ListPaymentId.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/ListPayslipId.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/ListPipelineId.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/ListProjectId.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/ListQuery.java
@@ -4789,6 +4908,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/ListType.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/ListUpdatedGte.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/ListUserId.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/ListUserMentionedId.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/LmsClass.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/LmsCourse.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/LmsEmail.java
@@ -4882,6 +5002,10 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/PropertyHrisEmployeeAddress.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/PropertyHrisEmployeeEmployeeRoles.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/PropertyHrisLocationAddress.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/PropertyHrisPayslipDeduction.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/PropertyHrisPayslipDeductionCoverageLevel.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/PropertyHrisPayslipDeductionFrequency.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/PropertyHrisPayslipDeductionType.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/PropertyIntegrationCategories.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/PropertyIntegrationSupportWebhookEvents.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/PropertyIntegrationSupportWebhookEventsCreated.java
@@ -4965,6 +5089,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/TaskProject.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/TaskTask.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/TaskTaskStatus.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/Tax.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/TaxExemption.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/TicketingCategory.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/TicketingCustomer.java
@@ -5033,6 +5158,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/VirtualWebhookType.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/VirtualWebhookUpdatedGte.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/VirtualWebhookUserId.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/VirtualWebhookUserMentionedId.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/Webhook.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/WebhookType.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/WeekStart.java
@@ -5074,7 +5200,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/CreateCrmPipeline.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateGenaiEmbedding.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateGenaiPrompt.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateHrisBenefit.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateHrisCompany.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateHrisDeduction.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateHrisDevice.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateHrisEmployee.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateHrisGroup.java
@@ -5160,7 +5288,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/GetCrmLead.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetCrmPipeline.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetGenaiModel.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetHrisBenefit.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetHrisCompany.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetHrisDeduction.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetHrisDevice.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetHrisEmployee.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetHrisGroup.java
@@ -5260,7 +5390,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/ListEnrichCompanies.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListEnrichPeople.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListGenaiModels.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListHrisBenefits.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListHrisCompanies.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListHrisDeductions.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListHrisDevices.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListHrisEmployees.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListHrisGroups.java
@@ -5350,7 +5482,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/PatchCrmEvent.java
   - src/main/java/to/unified/unified_java_sdk/operations/PatchCrmLead.java
   - src/main/java/to/unified/unified_java_sdk/operations/PatchCrmPipeline.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchHrisBenefit.java
   - src/main/java/to/unified/unified_java_sdk/operations/PatchHrisCompany.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchHrisDeduction.java
   - src/main/java/to/unified/unified_java_sdk/operations/PatchHrisDevice.java
   - src/main/java/to/unified/unified_java_sdk/operations/PatchHrisEmployee.java
   - src/main/java/to/unified/unified_java_sdk/operations/PatchHrisGroup.java
@@ -5429,7 +5563,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveCrmEvent.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveCrmLead.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveCrmPipeline.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveHrisBenefit.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveHrisCompany.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveHrisDeduction.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveHrisDevice.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveHrisEmployee.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveHrisGroup.java
@@ -5506,7 +5642,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateCrmEvent.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateCrmLead.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateCrmPipeline.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateHrisBenefit.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateHrisCompany.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateHrisDeduction.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateHrisDevice.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateHrisEmployee.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateHrisGroup.java
@@ -10268,9 +10406,116 @@ examples:
       responses:
         "200":
           application/json: {}
+  createHrisBenefit:
+    speakeasy-default-create-hris-benefit:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createHrisDeduction:
+    speakeasy-default-create-hris-deduction:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getHrisBenefit:
+    speakeasy-default-get-hris-benefit:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getHrisDeduction:
+    speakeasy-default-get-hris-deduction:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listHrisBenefits:
+    speakeasy-default-list-hris-benefits:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listHrisDeductions:
+    speakeasy-default-list-hris-deductions:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchHrisBenefit:
+    speakeasy-default-patch-hris-benefit:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  patchHrisDeduction:
+    speakeasy-default-patch-hris-deduction:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeHrisBenefit:
+    speakeasy-default-remove-hris-benefit:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeHrisDeduction:
+    speakeasy-default-remove-hris-deduction:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateHrisBenefit:
+    speakeasy-default-update-hris-benefit:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  updateHrisDeduction:
+    speakeasy-default-update-hris-deduction:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: |
-  ## Java SDK Changes Detected:
-  * `unified-to.uc.getUcCall()`: **Added**
-  * `unified-to.call.getUcCall()`: **Added**
+releaseNotes: "## Java SDK Changes Detected:\n* `unified-to.hris.createHrisBenefit()`: **Added**\n* `unified-to.hris.createHrisDeduction()`: **Added**\n* `unified-to.hris.getHrisBenefit()`: **Added**\n* `unified-to.hris.getHrisDeduction()`: **Added**\n* `unified-to.hris.listHrisBenefits()`: **Added**\n* `unified-to.hris.listHrisDeductions()`: **Added**\n* `unified-to.hris.patchHrisBenefit()`: **Added**\n* `unified-to.hris.patchHrisDeduction()`: **Added**\n* `unified-to.hris.removeHrisBenefit()`: **Added**\n* `unified-to.hris.removeHrisDeduction()`: **Added**\n* `unified-to.hris.updateHrisBenefit()`: **Added**\n* `unified-to.hris.updateHrisDeduction()`: **Added**\n* `unified-to.benefit.createHrisBenefit()`: **Added**\n* `unified-to.benefit.getHrisBenefit()`: **Added**\n* `unified-to.benefit.listHrisBenefits()`: **Added**\n* `unified-to.benefit.patchHrisBenefit()`: **Added**\n* `unified-to.benefit.removeHrisBenefit()`: **Added**\n* `unified-to.benefit.updateHrisBenefit()`: **Added**\n* `unified-to.deduction.createHrisDeduction()`: **Added**\n* `unified-to.deduction.getHrisDeduction()`: **Added**\n* `unified-to.deduction.listHrisDeductions()`: **Added**\n* `unified-to.deduction.patchHrisDeduction()`: **Added**\n* `unified-to.deduction.removeHrisDeduction()`: **Added**\n* `unified-to.deduction.updateHrisDeduction()`: **Added**\n* `unified-to.accounting.createAccountingBill()`: \n  *  `request.accountingBill.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.accounting.createAccountingCreditmemo()`: \n  *  `request.accountingCreditmemo.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.accounting.createAccountingExpense()`: \n  *  `request.accountingExpense.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.accounting.createAccountingInvoice()`: \n  *  `request.accountingInvoice.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.accounting.createAccountingOrder()`: \n  *  `request.accountingOrder.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.accounting.createAccountingPurchaseorder()`: \n  *  `request.accountingPurchaseorder.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.accounting.createAccountingSalesorder()`: \n  *  `request.accountingSalesorder.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.accounting.getAccountingBill()`:  `response.lineitems.[].locations` **Added**\n* `unified-to.accounting.getAccountingCreditmemo()`:  `response.lineitems.[].locations` **Added**\n* `unified-to.accounting.getAccountingExpense()`:  `response.lineitems.[].locations` **Added**\n* `unified-to.accounting.getAccountingInvoice()`:  `response.lineitems.[].locations` **Added**\n* `unified-to.accounting.getAccountingOrder()`:  `response.lineitems.[].locations` **Added**\n* `unified-to.accounting.getAccountingPurchaseorder()`:  `response.lineitems.[].locations` **Added**\n* `unified-to.accounting.getAccountingSalesorder()`:  `response.lineitems.[].locations` **Added**\n* `unified-to.accounting.listAccountingBills()`:  `response.[].lineitems.[].locations` **Added**\n* `unified-to.accounting.listAccountingCreditmemoes()`:  `response.[].lineitems.[].locations` **Added**\n* `unified-to.accounting.listAccountingExpenses()`:  `response.[].lineitems.[].locations` **Added**\n* `unified-to.accounting.listAccountingInvoices()`:  `response.[].lineitems.[].locations` **Added**\n* `unified-to.accounting.listAccountingOrders()`:  `response.[].lineitems.[].locations` **Added**\n* `unified-to.accounting.listAccountingPurchaseorders()`:  `response.[].lineitems.[].locations` **Added**\n* `unified-to.accounting.listAccountingSalesorders()`:  `response.[].lineitems.[].locations` **Added**\n* `unified-to.accounting.patchAccountingBill()`: \n  *  `request.accountingBill.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.accounting.patchAccountingCreditmemo()`: \n  *  `request.accountingCreditmemo.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.accounting.patchAccountingExpense()`: \n  *  `request.accountingExpense.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.accounting.patchAccountingInvoice()`: \n  *  `request.accountingInvoice.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.accounting.patchAccountingOrder()`: \n  *  `request.accountingOrder.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.accounting.patchAccountingPurchaseorder()`: \n  *  `request.accountingPurchaseorder.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.accounting.patchAccountingSalesorder()`: \n  *  `request.accountingSalesorder.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.accounting.updateAccountingBill()`: \n  *  `request.accountingBill.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.accounting.updateAccountingCreditmemo()`: \n  *  `request.accountingCreditmemo.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.accounting.updateAccountingExpense()`: \n  *  `request.accountingExpense.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.accounting.updateAccountingInvoice()`: \n  *  `request.accountingInvoice.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.accounting.updateAccountingOrder()`: \n  *  `request.accountingOrder.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.accounting.updateAccountingPurchaseorder()`: \n  *  `request.accountingPurchaseorder.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.accounting.updateAccountingSalesorder()`: \n  *  `request.accountingSalesorder.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.bill.createAccountingBill()`: \n  *  `request.accountingBill.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.bill.getAccountingBill()`:  `response.lineitems.[].locations` **Added**\n* `unified-to.bill.listAccountingBills()`:  `response.[].lineitems.[].locations` **Added**\n* `unified-to.bill.patchAccountingBill()`: \n  *  `request.accountingBill.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.bill.updateAccountingBill()`: \n  *  `request.accountingBill.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.creditmemo.createAccountingCreditmemo()`: \n  *  `request.accountingCreditmemo.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.creditmemo.getAccountingCreditmemo()`:  `response.lineitems.[].locations` **Added**\n* `unified-to.creditmemo.listAccountingCreditmemoes()`:  `response.[].lineitems.[].locations` **Added**\n* `unified-to.creditmemo.patchAccountingCreditmemo()`: \n  *  `request.accountingCreditmemo.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.creditmemo.updateAccountingCreditmemo()`: \n  *  `request.accountingCreditmemo.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.expense.createAccountingExpense()`: \n  *  `request.accountingExpense.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.expense.getAccountingExpense()`:  `response.lineitems.[].locations` **Added**\n* `unified-to.expense.listAccountingExpenses()`:  `response.[].lineitems.[].locations` **Added**\n* `unified-to.expense.patchAccountingExpense()`: \n  *  `request.accountingExpense.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.expense.updateAccountingExpense()`: \n  *  `request.accountingExpense.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.invoice.createAccountingInvoice()`: \n  *  `request.accountingInvoice.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.invoice.getAccountingInvoice()`:  `response.lineitems.[].locations` **Added**\n* `unified-to.invoice.listAccountingInvoices()`:  `response.[].lineitems.[].locations` **Added**\n* `unified-to.invoice.patchAccountingInvoice()`: \n  *  `request.accountingInvoice.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.invoice.updateAccountingInvoice()`: \n  *  `request.accountingInvoice.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.order.createAccountingOrder()`: \n  *  `request.accountingOrder.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.order.getAccountingOrder()`:  `response.lineitems.[].locations` **Added**\n* `unified-to.order.listAccountingOrders()`:  `response.[].lineitems.[].locations` **Added**\n* `unified-to.order.patchAccountingOrder()`: \n  *  `request.accountingOrder.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.order.updateAccountingOrder()`: \n  *  `request.accountingOrder.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.purchaseorder.createAccountingPurchaseorder()`: \n  *  `request.accountingPurchaseorder.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.purchaseorder.getAccountingPurchaseorder()`:  `response.lineitems.[].locations` **Added**\n* `unified-to.purchaseorder.listAccountingPurchaseorders()`:  `response.[].lineitems.[].locations` **Added**\n* `unified-to.purchaseorder.patchAccountingPurchaseorder()`: \n  *  `request.accountingPurchaseorder.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.purchaseorder.updateAccountingPurchaseorder()`: \n  *  `request.accountingPurchaseorder.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.salesorder.createAccountingSalesorder()`: \n  *  `request.accountingSalesorder.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.salesorder.getAccountingSalesorder()`:  `response.lineitems.[].locations` **Added**\n* `unified-to.salesorder.listAccountingSalesorders()`:  `response.[].lineitems.[].locations` **Added**\n* `unified-to.salesorder.patchAccountingSalesorder()`: \n  *  `request.accountingSalesorder.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.salesorder.updateAccountingSalesorder()`: \n  *  `request.accountingSalesorder.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified-to.hris.getHrisPayslip()`:  `response.deduction` **Added**\n* `unified-to.hris.listHrisPayslips()`:  `response.[].deduction` **Added**\n* `unified-to.payslip.getHrisPayslip()`:  `response.deduction` **Added**\n* `unified-to.payslip.listHrisPayslips()`:  `response.[].deduction` **Added**\n* `unified-to.messaging.createMessagingMessage()`: \n  *  `request.messagingMessage.messageThreadIdentifier` **Added**\n  *  `response.message_thread_identifier` **Added**\n* `unified-to.messaging.getMessagingMessage()`:  `response.message_thread_identifier` **Added**\n* `unified-to.messaging.listMessagingMessages()`: \n  *  `request.userMentionedId` **Added**\n  *  `response.[].messageThreadIdentifier` **Added**\n* `unified-to.messaging.patchMessagingMessage()`: \n  *  `request.messagingMessage.messageThreadIdentifier` **Added**\n  *  `response.message_thread_identifier` **Added**\n* `unified-to.messaging.updateMessagingMessage()`: \n  *  `request.messagingMessage.messageThreadIdentifier` **Added**\n  *  `response.message_thread_identifier` **Added**\n* `unified-to.message.createMessagingMessage()`: \n  *  `request.messagingMessage.messageThreadIdentifier` **Added**\n  *  `response.message_thread_identifier` **Added**\n* `unified-to.message.getMessagingMessage()`:  `response.message_thread_identifier` **Added**\n* `unified-to.message.listMessagingMessages()`: \n  *  `request.userMentionedId` **Added**\n  *  `response.[].messageThreadIdentifier` **Added**\n* `unified-to.message.patchMessagingMessage()`: \n  *  `request.messagingMessage.messageThreadIdentifier` **Added**\n  *  `response.message_thread_identifier` **Added**\n* `unified-to.message.updateMessagingMessage()`: \n  *  `request.messagingMessage.messageThreadIdentifier` **Added**\n  *  `response.message_thread_identifier` **Added**\n* `unified-to.uc.getUcCall()`:  `response` **Changed**\n* `unified-to.uc.listUcCalls()`:  `response.[]` **Changed**\n* `unified-to.call.getUcCall()`:  `response` **Changed**\n* `unified-to.call.listUcCalls()`:  `response.[]` **Changed**\n* `unified-to.unified.listUnifiedIntegrationWorkspaces()`:  `response.[].support.{}` **Changed**\n* `unified-to.unified.listUnifiedIntegrations()`:  `response.[].support.{}` **Changed**\n* `unified-to.integration.listUnifiedIntegrationWorkspaces()`:  `response.[].support.{}` **Changed**\n* `unified-to.integration.listUnifiedIntegrations()`:  `response.[].support.{}` **Changed**\n"

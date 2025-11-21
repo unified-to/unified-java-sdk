@@ -36,6 +36,13 @@ public class HrisPayslip {
     @JsonProperty("currency")
     private Optional<String> currency;
 
+    /**
+     * // The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("deduction")
+    private Optional<? extends PropertyHrisPayslipDeduction> deduction;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
@@ -95,6 +102,7 @@ public class HrisPayslip {
             @JsonProperty("company_id") Optional<String> companyId,
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("currency") Optional<String> currency,
+            @JsonProperty("deduction") Optional<? extends PropertyHrisPayslipDeduction> deduction,
             @JsonProperty("details") Optional<? extends List<HrisPayslipDetail>> details,
             @JsonProperty("end_at") Optional<OffsetDateTime> endAt,
             @JsonProperty("gross_amount") Optional<Double> grossAmount,
@@ -109,6 +117,7 @@ public class HrisPayslip {
         Utils.checkNotNull(companyId, "companyId");
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(currency, "currency");
+        Utils.checkNotNull(deduction, "deduction");
         Utils.checkNotNull(details, "details");
         Utils.checkNotNull(endAt, "endAt");
         Utils.checkNotNull(grossAmount, "grossAmount");
@@ -124,6 +133,7 @@ public class HrisPayslip {
         this.companyId = companyId;
         this.createdAt = createdAt;
         this.currency = currency;
+        this.deduction = deduction;
         this.details = details;
         this.endAt = endAt;
         this.grossAmount = grossAmount;
@@ -142,8 +152,8 @@ public class HrisPayslip {
         this(Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), raw, Optional.empty(),
-            Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), raw,
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -159,6 +169,15 @@ public class HrisPayslip {
     @JsonIgnore
     public Optional<String> currency() {
         return currency;
+    }
+
+    /**
+     * // The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
+     */
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<PropertyHrisPayslipDeduction> deduction() {
+        return (Optional<PropertyHrisPayslipDeduction>) deduction;
     }
 
     @SuppressWarnings("unchecked")
@@ -259,6 +278,25 @@ public class HrisPayslip {
     public HrisPayslip withCurrency(Optional<String> currency) {
         Utils.checkNotNull(currency, "currency");
         this.currency = currency;
+        return this;
+    }
+
+    /**
+     * // The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
+     */
+    public HrisPayslip withDeduction(PropertyHrisPayslipDeduction deduction) {
+        Utils.checkNotNull(deduction, "deduction");
+        this.deduction = Optional.ofNullable(deduction);
+        return this;
+    }
+
+
+    /**
+     * // The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
+     */
+    public HrisPayslip withDeduction(Optional<? extends PropertyHrisPayslipDeduction> deduction) {
+        Utils.checkNotNull(deduction, "deduction");
+        this.deduction = deduction;
         return this;
     }
 
@@ -411,6 +449,7 @@ public class HrisPayslip {
             Utils.enhancedDeepEquals(this.companyId, other.companyId) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
+            Utils.enhancedDeepEquals(this.deduction, other.deduction) &&
             Utils.enhancedDeepEquals(this.details, other.details) &&
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.grossAmount, other.grossAmount) &&
@@ -428,10 +467,10 @@ public class HrisPayslip {
     public int hashCode() {
         return Utils.enhancedHash(
             companyId, createdAt, currency,
-            details, endAt, grossAmount,
-            id, netAmount, paidAt,
-            paymentType, raw, startAt,
-            updatedAt, userId);
+            deduction, details, endAt,
+            grossAmount, id, netAmount,
+            paidAt, paymentType, raw,
+            startAt, updatedAt, userId);
     }
     
     @Override
@@ -440,6 +479,7 @@ public class HrisPayslip {
                 "companyId", companyId,
                 "createdAt", createdAt,
                 "currency", currency,
+                "deduction", deduction,
                 "details", details,
                 "endAt", endAt,
                 "grossAmount", grossAmount,
@@ -461,6 +501,8 @@ public class HrisPayslip {
         private Optional<OffsetDateTime> createdAt = Optional.empty();
 
         private Optional<String> currency = Optional.empty();
+
+        private Optional<? extends PropertyHrisPayslipDeduction> deduction = Optional.empty();
 
         private Optional<? extends List<HrisPayslipDetail>> details = Optional.empty();
 
@@ -524,6 +566,25 @@ public class HrisPayslip {
         public Builder currency(Optional<String> currency) {
             Utils.checkNotNull(currency, "currency");
             this.currency = currency;
+            return this;
+        }
+
+
+        /**
+         * // The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
+         */
+        public Builder deduction(PropertyHrisPayslipDeduction deduction) {
+            Utils.checkNotNull(deduction, "deduction");
+            this.deduction = Optional.ofNullable(deduction);
+            return this;
+        }
+
+        /**
+         * // The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
+         */
+        public Builder deduction(Optional<? extends PropertyHrisPayslipDeduction> deduction) {
+            Utils.checkNotNull(deduction, "deduction");
+            this.deduction = deduction;
             return this;
         }
 
@@ -668,10 +729,10 @@ public class HrisPayslip {
 
             return new HrisPayslip(
                 companyId, createdAt, currency,
-                details, endAt, grossAmount,
-                id, netAmount, paidAt,
-                paymentType, raw, startAt,
-                updatedAt, userId);
+                deduction, details, endAt,
+                grossAmount, id, netAmount,
+                paidAt, paymentType, raw,
+                startAt, updatedAt, userId);
         }
 
     }

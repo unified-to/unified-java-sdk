@@ -115,6 +115,10 @@ public class AsyncUnifiedTo {
 
     private final AsyncHris hris;
 
+    private final AsyncBenefit benefit;
+
+    private final AsyncDeduction deduction;
+
     private final AsyncDevice device;
 
     private final AsyncEmployee employee;
@@ -435,6 +439,14 @@ public class AsyncUnifiedTo {
         return hris;
     }
 
+    public AsyncBenefit benefit() {
+        return benefit;
+    }
+
+    public AsyncDeduction deduction() {
+        return deduction;
+    }
+
     public AsyncDevice device() {
         return device;
     }
@@ -717,6 +729,8 @@ public class AsyncUnifiedTo {
         this.model = new AsyncModel(syncSDK.model(), sdkConfiguration);
         this.prompt = new AsyncPrompt(syncSDK.prompt(), sdkConfiguration);
         this.hris = new AsyncHris(syncSDK.hris(), sdkConfiguration);
+        this.benefit = new AsyncBenefit(syncSDK.benefit(), sdkConfiguration);
+        this.deduction = new AsyncDeduction(syncSDK.deduction(), sdkConfiguration);
         this.device = new AsyncDevice(syncSDK.device(), sdkConfiguration);
         this.employee = new AsyncEmployee(syncSDK.employee(), sdkConfiguration);
         this.group = new AsyncGroup(syncSDK.group(), sdkConfiguration);

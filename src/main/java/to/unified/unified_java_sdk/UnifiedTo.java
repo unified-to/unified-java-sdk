@@ -195,6 +195,12 @@ public class UnifiedTo {
     private final Hris hris;
 
 
+    private final Benefit benefit;
+
+
+    private final Deduction deduction;
+
+
     private final Device device;
 
 
@@ -620,6 +626,16 @@ public class UnifiedTo {
 
     public Hris hris() {
         return hris;
+    }
+
+
+    public Benefit benefit() {
+        return benefit;
+    }
+
+
+    public Deduction deduction() {
+        return deduction;
     }
 
 
@@ -1091,6 +1107,8 @@ public class UnifiedTo {
         this.model = new Model(sdkConfiguration);
         this.prompt = new Prompt(sdkConfiguration);
         this.hris = new Hris(sdkConfiguration);
+        this.benefit = new Benefit(sdkConfiguration);
+        this.deduction = new Deduction(sdkConfiguration);
         this.device = new Device(sdkConfiguration);
         this.employee = new Employee(sdkConfiguration);
         this.group = new Group(sdkConfiguration);

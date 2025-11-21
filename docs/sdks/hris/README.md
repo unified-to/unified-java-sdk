@@ -5,13 +5,17 @@
 
 ### Available Operations
 
+* [createHrisBenefit](#createhrisbenefit) - Create a benefit
 * [createHrisCompany](#createhriscompany) - Create a company
+* [createHrisDeduction](#createhrisdeduction) - Create a deduction
 * [createHrisDevice](#createhrisdevice) - Create a device
 * [createHrisEmployee](#createhrisemployee) - Create an employee
 * [createHrisGroup](#createhrisgroup) - Create a group
 * [createHrisLocation](#createhrislocation) - Create a location
 * [createHrisTimeshift](#createhristimeshift) - Create a timeshift
+* [getHrisBenefit](#gethrisbenefit) - Retrieve a benefit
 * [getHrisCompany](#gethriscompany) - Retrieve a company
+* [getHrisDeduction](#gethrisdeduction) - Retrieve a deduction
 * [getHrisDevice](#gethrisdevice) - Retrieve a device
 * [getHrisEmployee](#gethrisemployee) - Retrieve an employee
 * [getHrisGroup](#gethrisgroup) - Retrieve a group
@@ -19,7 +23,9 @@
 * [getHrisPayslip](#gethrispayslip) - Retrieve a payslip
 * [getHrisTimeoff](#gethristimeoff) - Retrieve a timeoff
 * [getHrisTimeshift](#gethristimeshift) - Retrieve a timeshift
+* [listHrisBenefits](#listhrisbenefits) - List all benefits
 * [listHrisCompanies](#listhriscompanies) - List all companies
+* [listHrisDeductions](#listhrisdeductions) - List all deductions
 * [listHrisDevices](#listhrisdevices) - List all devices
 * [listHrisEmployees](#listhrisemployees) - List all employees
 * [listHrisGroups](#listhrisgroups) - List all groups
@@ -27,24 +33,90 @@
 * [listHrisPayslips](#listhrispayslips) - List all payslips
 * [listHrisTimeoffs](#listhristimeoffs) - List all timeoffs
 * [listHrisTimeshifts](#listhristimeshifts) - List all timeshifts
+* [patchHrisBenefit](#patchhrisbenefit) - Update a benefit
 * [patchHrisCompany](#patchhriscompany) - Update a company
+* [patchHrisDeduction](#patchhrisdeduction) - Update a deduction
 * [patchHrisDevice](#patchhrisdevice) - Update a device
 * [patchHrisEmployee](#patchhrisemployee) - Update an employee
 * [patchHrisGroup](#patchhrisgroup) - Update a group
 * [patchHrisLocation](#patchhrislocation) - Update a location
 * [patchHrisTimeshift](#patchhristimeshift) - Update a timeshift
+* [removeHrisBenefit](#removehrisbenefit) - Remove a benefit
 * [removeHrisCompany](#removehriscompany) - Remove a company
+* [removeHrisDeduction](#removehrisdeduction) - Remove a deduction
 * [removeHrisDevice](#removehrisdevice) - Remove a device
 * [removeHrisEmployee](#removehrisemployee) - Remove an employee
 * [removeHrisGroup](#removehrisgroup) - Remove a group
 * [removeHrisLocation](#removehrislocation) - Remove a location
 * [removeHrisTimeshift](#removehristimeshift) - Remove a timeshift
+* [updateHrisBenefit](#updatehrisbenefit) - Update a benefit
 * [updateHrisCompany](#updatehriscompany) - Update a company
+* [updateHrisDeduction](#updatehrisdeduction) - Update a deduction
 * [updateHrisDevice](#updatehrisdevice) - Update a device
 * [updateHrisEmployee](#updatehrisemployee) - Update an employee
 * [updateHrisGroup](#updatehrisgroup) - Update a group
 * [updateHrisLocation](#updatehrislocation) - Update a location
 * [updateHrisTimeshift](#updatehristimeshift) - Update a timeshift
+
+## createHrisBenefit
+
+Create a benefit
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createHrisBenefit" method="post" path="/hris/{connection_id}/benefit" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateHrisBenefitRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisBenefitResponse;
+import to.unified.unified_java_sdk.models.shared.HrisBenefit;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateHrisBenefitRequest req = CreateHrisBenefitRequest.builder()
+                .hrisBenefit(HrisBenefit.builder()
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateHrisBenefitResponse res = sdk.hris().createHrisBenefit()
+                .request(req)
+                .call();
+
+        if (res.hrisBenefit().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [CreateHrisBenefitRequest](../../models/operations/CreateHrisBenefitRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[CreateHrisBenefitResponse](../../models/operations/CreateHrisBenefitResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createHrisCompany
 
@@ -99,6 +171,66 @@ public class Application {
 ### Response
 
 **[CreateHrisCompanyResponse](../../models/operations/CreateHrisCompanyResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## createHrisDeduction
+
+Create a deduction
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createHrisDeduction" method="post" path="/hris/{connection_id}/deduction" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateHrisDeductionRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisDeductionResponse;
+import to.unified.unified_java_sdk.models.shared.HrisDeduction;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateHrisDeductionRequest req = CreateHrisDeductionRequest.builder()
+                .hrisDeduction(HrisDeduction.builder()
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateHrisDeductionResponse res = sdk.hris().createHrisDeduction()
+                .request(req)
+                .call();
+
+        if (res.hrisDeduction().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [CreateHrisDeductionRequest](../../models/operations/CreateHrisDeductionRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[CreateHrisDeductionResponse](../../models/operations/CreateHrisDeductionResponse.md)**
 
 ### Errors
 
@@ -411,6 +543,64 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getHrisBenefit
+
+Retrieve a benefit
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getHrisBenefit" method="get" path="/hris/{connection_id}/benefit/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHrisBenefitRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisBenefitResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetHrisBenefitRequest req = GetHrisBenefitRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetHrisBenefitResponse res = sdk.hris().getHrisBenefit()
+                .request(req)
+                .call();
+
+        if (res.hrisBenefit().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetHrisBenefitRequest](../../models/operations/GetHrisBenefitRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+
+### Response
+
+**[GetHrisBenefitResponse](../../models/operations/GetHrisBenefitResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## getHrisCompany
 
 Retrieve a company
@@ -462,6 +652,64 @@ public class Application {
 ### Response
 
 **[GetHrisCompanyResponse](../../models/operations/GetHrisCompanyResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getHrisDeduction
+
+Retrieve a deduction
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getHrisDeduction" method="get" path="/hris/{connection_id}/deduction/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHrisDeductionRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisDeductionResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetHrisDeductionRequest req = GetHrisDeductionRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetHrisDeductionResponse res = sdk.hris().getHrisDeduction()
+                .request(req)
+                .call();
+
+        if (res.hrisDeduction().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [GetHrisDeductionRequest](../../models/operations/GetHrisDeductionRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[GetHrisDeductionResponse](../../models/operations/GetHrisDeductionResponse.md)**
 
 ### Errors
 
@@ -875,6 +1123,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listHrisBenefits
+
+List all benefits
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listHrisBenefits" method="get" path="/hris/{connection_id}/benefit" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHrisBenefitsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisBenefitsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListHrisBenefitsRequest req = ListHrisBenefitsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListHrisBenefitsResponse res = sdk.hris().listHrisBenefits()
+                .request(req)
+                .call();
+
+        if (res.hrisBenefits().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListHrisBenefitsRequest](../../models/operations/ListHrisBenefitsRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[ListHrisBenefitsResponse](../../models/operations/ListHrisBenefitsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listHrisCompanies
 
 List all companies
@@ -925,6 +1230,63 @@ public class Application {
 ### Response
 
 **[ListHrisCompaniesResponse](../../models/operations/ListHrisCompaniesResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listHrisDeductions
+
+List all deductions
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listHrisDeductions" method="get" path="/hris/{connection_id}/deduction" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHrisDeductionsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisDeductionsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListHrisDeductionsRequest req = ListHrisDeductionsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListHrisDeductionsResponse res = sdk.hris().listHrisDeductions()
+                .request(req)
+                .call();
+
+        if (res.hrisDeductions().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [ListHrisDeductionsRequest](../../models/operations/ListHrisDeductionsRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[ListHrisDeductionsResponse](../../models/operations/ListHrisDeductionsResponse.md)**
 
 ### Errors
 
@@ -1331,6 +1693,67 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## patchHrisBenefit
+
+Update a benefit
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchHrisBenefit" method="patch" path="/hris/{connection_id}/benefit/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchHrisBenefitRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisBenefitResponse;
+import to.unified.unified_java_sdk.models.shared.HrisBenefit;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchHrisBenefitRequest req = PatchHrisBenefitRequest.builder()
+                .hrisBenefit(HrisBenefit.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchHrisBenefitResponse res = sdk.hris().patchHrisBenefit()
+                .request(req)
+                .call();
+
+        if (res.hrisBenefit().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [PatchHrisBenefitRequest](../../models/operations/PatchHrisBenefitRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[PatchHrisBenefitResponse](../../models/operations/PatchHrisBenefitResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## patchHrisCompany
 
 Update a company
@@ -1385,6 +1808,67 @@ public class Application {
 ### Response
 
 **[PatchHrisCompanyResponse](../../models/operations/PatchHrisCompanyResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchHrisDeduction
+
+Update a deduction
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchHrisDeduction" method="patch" path="/hris/{connection_id}/deduction/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchHrisDeductionRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisDeductionResponse;
+import to.unified.unified_java_sdk.models.shared.HrisDeduction;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchHrisDeductionRequest req = PatchHrisDeductionRequest.builder()
+                .hrisDeduction(HrisDeduction.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchHrisDeductionResponse res = sdk.hris().patchHrisDeduction()
+                .request(req)
+                .call();
+
+        if (res.hrisDeduction().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [PatchHrisDeductionRequest](../../models/operations/PatchHrisDeductionRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[PatchHrisDeductionResponse](../../models/operations/PatchHrisDeductionResponse.md)**
 
 ### Errors
 
@@ -1702,6 +2186,62 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removeHrisBenefit
+
+Remove a benefit
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeHrisBenefit" method="delete" path="/hris/{connection_id}/benefit/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisBenefitRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisBenefitResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveHrisBenefitRequest req = RemoveHrisBenefitRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveHrisBenefitResponse res = sdk.hris().removeHrisBenefit()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [RemoveHrisBenefitRequest](../../models/operations/RemoveHrisBenefitRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[RemoveHrisBenefitResponse](../../models/operations/RemoveHrisBenefitResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## removeHrisCompany
 
 Remove a company
@@ -1751,6 +2291,62 @@ public class Application {
 ### Response
 
 **[RemoveHrisCompanyResponse](../../models/operations/RemoveHrisCompanyResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeHrisDeduction
+
+Remove a deduction
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeHrisDeduction" method="delete" path="/hris/{connection_id}/deduction/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisDeductionRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisDeductionResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveHrisDeductionRequest req = RemoveHrisDeductionRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveHrisDeductionResponse res = sdk.hris().removeHrisDeduction()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [RemoveHrisDeductionRequest](../../models/operations/RemoveHrisDeductionRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[RemoveHrisDeductionResponse](../../models/operations/RemoveHrisDeductionResponse.md)**
 
 ### Errors
 
@@ -2038,6 +2634,67 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## updateHrisBenefit
+
+Update a benefit
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateHrisBenefit" method="put" path="/hris/{connection_id}/benefit/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisBenefitRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisBenefitResponse;
+import to.unified.unified_java_sdk.models.shared.HrisBenefit;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateHrisBenefitRequest req = UpdateHrisBenefitRequest.builder()
+                .hrisBenefit(HrisBenefit.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateHrisBenefitResponse res = sdk.hris().updateHrisBenefit()
+                .request(req)
+                .call();
+
+        if (res.hrisBenefit().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [UpdateHrisBenefitRequest](../../models/operations/UpdateHrisBenefitRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[UpdateHrisBenefitResponse](../../models/operations/UpdateHrisBenefitResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## updateHrisCompany
 
 Update a company
@@ -2092,6 +2749,67 @@ public class Application {
 ### Response
 
 **[UpdateHrisCompanyResponse](../../models/operations/UpdateHrisCompanyResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateHrisDeduction
+
+Update a deduction
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateHrisDeduction" method="put" path="/hris/{connection_id}/deduction/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisDeductionRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisDeductionResponse;
+import to.unified.unified_java_sdk.models.shared.HrisDeduction;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateHrisDeductionRequest req = UpdateHrisDeductionRequest.builder()
+                .hrisDeduction(HrisDeduction.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateHrisDeductionResponse res = sdk.hris().updateHrisDeduction()
+                .request(req)
+                .call();
+
+        if (res.hrisDeduction().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [UpdateHrisDeductionRequest](../../models/operations/UpdateHrisDeductionRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[UpdateHrisDeductionResponse](../../models/operations/UpdateHrisDeductionResponse.md)**
 
 ### Errors
 

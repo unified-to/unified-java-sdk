@@ -8,11 +8,13 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -23,6 +25,11 @@ public class UcCall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private Optional<String> contactId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("contacts")
+    private Optional<? extends List<UcContact>> contacts;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -38,6 +45,11 @@ public class UcCall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_private")
+    private Optional<Boolean> isPrivate;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -69,27 +81,33 @@ public class UcCall {
     @JsonCreator
     public UcCall(
             @JsonProperty("contact_id") Optional<String> contactId,
+            @JsonProperty("contacts") Optional<? extends List<UcContact>> contacts,
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("end_at") Optional<OffsetDateTime> endAt,
             @JsonProperty("id") Optional<String> id,
+            @JsonProperty("is_private") Optional<Boolean> isPrivate,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
             @JsonProperty("start_at") Optional<OffsetDateTime> startAt,
             @JsonProperty("telephone") Optional<? extends PropertyUcCallTelephone> telephone,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
             @JsonProperty("user_id") Optional<String> userId) {
         Utils.checkNotNull(contactId, "contactId");
+        Utils.checkNotNull(contacts, "contacts");
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(endAt, "endAt");
         Utils.checkNotNull(id, "id");
+        Utils.checkNotNull(isPrivate, "isPrivate");
         Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(startAt, "startAt");
         Utils.checkNotNull(telephone, "telephone");
         Utils.checkNotNull(updatedAt, "updatedAt");
         Utils.checkNotNull(userId, "userId");
         this.contactId = contactId;
+        this.contacts = contacts;
         this.createdAt = createdAt;
         this.endAt = endAt;
         this.id = id;
+        this.isPrivate = isPrivate;
         this.raw = raw;
         this.startAt = startAt;
         this.telephone = telephone;
@@ -100,12 +118,19 @@ public class UcCall {
     public UcCall() {
         this(Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
     public Optional<String> contactId() {
         return contactId;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<UcContact>> contacts() {
+        return (Optional<List<UcContact>>) contacts;
     }
 
     @JsonIgnore
@@ -121,6 +146,11 @@ public class UcCall {
     @JsonIgnore
     public Optional<String> id() {
         return id;
+    }
+
+    @JsonIgnore
+    public Optional<Boolean> isPrivate() {
+        return isPrivate;
     }
 
     @SuppressWarnings("unchecked")
@@ -171,6 +201,19 @@ public class UcCall {
         return this;
     }
 
+    public UcCall withContacts(List<UcContact> contacts) {
+        Utils.checkNotNull(contacts, "contacts");
+        this.contacts = Optional.ofNullable(contacts);
+        return this;
+    }
+
+
+    public UcCall withContacts(Optional<? extends List<UcContact>> contacts) {
+        Utils.checkNotNull(contacts, "contacts");
+        this.contacts = contacts;
+        return this;
+    }
+
     public UcCall withCreatedAt(OffsetDateTime createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = Optional.ofNullable(createdAt);
@@ -207,6 +250,19 @@ public class UcCall {
     public UcCall withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
+        return this;
+    }
+
+    public UcCall withIsPrivate(boolean isPrivate) {
+        Utils.checkNotNull(isPrivate, "isPrivate");
+        this.isPrivate = Optional.ofNullable(isPrivate);
+        return this;
+    }
+
+
+    public UcCall withIsPrivate(Optional<Boolean> isPrivate) {
+        Utils.checkNotNull(isPrivate, "isPrivate");
+        this.isPrivate = isPrivate;
         return this;
     }
 
@@ -292,9 +348,11 @@ public class UcCall {
         UcCall other = (UcCall) o;
         return 
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
+            Utils.enhancedDeepEquals(this.contacts, other.contacts) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.isPrivate, other.isPrivate) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
             Utils.enhancedDeepEquals(this.telephone, other.telephone) &&
@@ -305,18 +363,21 @@ public class UcCall {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            contactId, createdAt, endAt,
-            id, raw, startAt,
-            telephone, updatedAt, userId);
+            contactId, contacts, createdAt,
+            endAt, id, isPrivate,
+            raw, startAt, telephone,
+            updatedAt, userId);
     }
     
     @Override
     public String toString() {
         return Utils.toString(UcCall.class,
                 "contactId", contactId,
+                "contacts", contacts,
                 "createdAt", createdAt,
                 "endAt", endAt,
                 "id", id,
+                "isPrivate", isPrivate,
                 "raw", raw,
                 "startAt", startAt,
                 "telephone", telephone,
@@ -329,11 +390,15 @@ public class UcCall {
 
         private Optional<String> contactId = Optional.empty();
 
+        private Optional<? extends List<UcContact>> contacts = Optional.empty();
+
         private Optional<OffsetDateTime> createdAt = Optional.empty();
 
         private Optional<OffsetDateTime> endAt = Optional.empty();
 
         private Optional<String> id = Optional.empty();
+
+        private Optional<Boolean> isPrivate = Optional.empty();
 
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
 
@@ -359,6 +424,19 @@ public class UcCall {
         public Builder contactId(Optional<String> contactId) {
             Utils.checkNotNull(contactId, "contactId");
             this.contactId = contactId;
+            return this;
+        }
+
+
+        public Builder contacts(List<UcContact> contacts) {
+            Utils.checkNotNull(contacts, "contacts");
+            this.contacts = Optional.ofNullable(contacts);
+            return this;
+        }
+
+        public Builder contacts(Optional<? extends List<UcContact>> contacts) {
+            Utils.checkNotNull(contacts, "contacts");
+            this.contacts = contacts;
             return this;
         }
 
@@ -398,6 +476,19 @@ public class UcCall {
         public Builder id(Optional<String> id) {
             Utils.checkNotNull(id, "id");
             this.id = id;
+            return this;
+        }
+
+
+        public Builder isPrivate(boolean isPrivate) {
+            Utils.checkNotNull(isPrivate, "isPrivate");
+            this.isPrivate = Optional.ofNullable(isPrivate);
+            return this;
+        }
+
+        public Builder isPrivate(Optional<Boolean> isPrivate) {
+            Utils.checkNotNull(isPrivate, "isPrivate");
+            this.isPrivate = isPrivate;
             return this;
         }
 
@@ -475,9 +566,10 @@ public class UcCall {
         public UcCall build() {
 
             return new UcCall(
-                contactId, createdAt, endAt,
-                id, raw, startAt,
-                telephone, updatedAt, userId);
+                contactId, contacts, createdAt,
+                endAt, id, isPrivate,
+                raw, startAt, telephone,
+                updatedAt, userId);
         }
 
     }

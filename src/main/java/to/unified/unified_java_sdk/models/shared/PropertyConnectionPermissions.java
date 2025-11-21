@@ -160,6 +160,10 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions HRIS_LOCATION_WRITE = new PropertyConnectionPermissions("hris_location_write");
     public static final PropertyConnectionPermissions HRIS_DEVICE_READ = new PropertyConnectionPermissions("hris_device_read");
     public static final PropertyConnectionPermissions HRIS_DEVICE_WRITE = new PropertyConnectionPermissions("hris_device_write");
+    public static final PropertyConnectionPermissions HRIS_DEDUCTION_READ = new PropertyConnectionPermissions("hris_deduction_read");
+    public static final PropertyConnectionPermissions HRIS_DEDUCTION_WRITE = new PropertyConnectionPermissions("hris_deduction_write");
+    public static final PropertyConnectionPermissions HRIS_BENEFIT_READ = new PropertyConnectionPermissions("hris_benefit_read");
+    public static final PropertyConnectionPermissions HRIS_BENEFIT_WRITE = new PropertyConnectionPermissions("hris_benefit_write");
     public static final PropertyConnectionPermissions UC_CALL_READ = new PropertyConnectionPermissions("uc_call_read");
     public static final PropertyConnectionPermissions UC_CONTACT_READ = new PropertyConnectionPermissions("uc_contact_read");
     public static final PropertyConnectionPermissions UC_CONTACT_WRITE = new PropertyConnectionPermissions("uc_contact_write");
@@ -411,6 +415,10 @@ public class PropertyConnectionPermissions {
         map.put("hris_location_write", HRIS_LOCATION_WRITE);
         map.put("hris_device_read", HRIS_DEVICE_READ);
         map.put("hris_device_write", HRIS_DEVICE_WRITE);
+        map.put("hris_deduction_read", HRIS_DEDUCTION_READ);
+        map.put("hris_deduction_write", HRIS_DEDUCTION_WRITE);
+        map.put("hris_benefit_read", HRIS_BENEFIT_READ);
+        map.put("hris_benefit_write", HRIS_BENEFIT_WRITE);
         map.put("uc_call_read", UC_CALL_READ);
         map.put("uc_contact_read", UC_CONTACT_READ);
         map.put("uc_contact_write", UC_CONTACT_WRITE);
@@ -596,6 +604,10 @@ public class PropertyConnectionPermissions {
         map.put("hris_location_write", PropertyConnectionPermissionsEnum.HRIS_LOCATION_WRITE);
         map.put("hris_device_read", PropertyConnectionPermissionsEnum.HRIS_DEVICE_READ);
         map.put("hris_device_write", PropertyConnectionPermissionsEnum.HRIS_DEVICE_WRITE);
+        map.put("hris_deduction_read", PropertyConnectionPermissionsEnum.HRIS_DEDUCTION_READ);
+        map.put("hris_deduction_write", PropertyConnectionPermissionsEnum.HRIS_DEDUCTION_WRITE);
+        map.put("hris_benefit_read", PropertyConnectionPermissionsEnum.HRIS_BENEFIT_READ);
+        map.put("hris_benefit_write", PropertyConnectionPermissionsEnum.HRIS_BENEFIT_WRITE);
         map.put("uc_call_read", PropertyConnectionPermissionsEnum.UC_CALL_READ);
         map.put("uc_contact_read", PropertyConnectionPermissionsEnum.UC_CONTACT_READ);
         map.put("uc_contact_write", PropertyConnectionPermissionsEnum.UC_CONTACT_WRITE);
@@ -811,6 +823,10 @@ public class PropertyConnectionPermissions {
         HRIS_LOCATION_WRITE("hris_location_write"),
         HRIS_DEVICE_READ("hris_device_read"),
         HRIS_DEVICE_WRITE("hris_device_write"),
+        HRIS_DEDUCTION_READ("hris_deduction_read"),
+        HRIS_DEDUCTION_WRITE("hris_deduction_write"),
+        HRIS_BENEFIT_READ("hris_benefit_read"),
+        HRIS_BENEFIT_WRITE("hris_benefit_write"),
         UC_CALL_READ("uc_call_read"),
         UC_CONTACT_READ("uc_contact_read"),
         UC_CONTACT_WRITE("uc_contact_write"),

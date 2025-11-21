@@ -103,6 +103,11 @@ public class MessagingMessage {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("message_thread_identifier")
+    private Optional<String> messageThreadIdentifier;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     private Optional<String> parentId;
 
@@ -163,6 +168,7 @@ public class MessagingMessage {
             @JsonProperty("message") Optional<String> message,
             @JsonProperty("message_html") Optional<String> messageHtml,
             @JsonProperty("message_markdown") Optional<String> messageMarkdown,
+            @JsonProperty("message_thread_identifier") Optional<String> messageThreadIdentifier,
             @JsonProperty("parent_id") Optional<String> parentId,
             @JsonProperty("parent_message_id") Optional<String> parentMessageId,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
@@ -187,6 +193,7 @@ public class MessagingMessage {
         Utils.checkNotNull(message, "message");
         Utils.checkNotNull(messageHtml, "messageHtml");
         Utils.checkNotNull(messageMarkdown, "messageMarkdown");
+        Utils.checkNotNull(messageThreadIdentifier, "messageThreadIdentifier");
         Utils.checkNotNull(parentId, "parentId");
         Utils.checkNotNull(parentMessageId, "parentMessageId");
         Utils.checkNotNull(raw, "raw");
@@ -211,6 +218,7 @@ public class MessagingMessage {
         this.message = message;
         this.messageHtml = messageHtml;
         this.messageMarkdown = messageMarkdown;
+        this.messageThreadIdentifier = messageThreadIdentifier;
         this.parentId = parentId;
         this.parentMessageId = parentMessageId;
         this.raw = raw;
@@ -230,7 +238,8 @@ public class MessagingMessage {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -320,6 +329,11 @@ public class MessagingMessage {
     @JsonIgnore
     public Optional<String> messageMarkdown() {
         return messageMarkdown;
+    }
+
+    @JsonIgnore
+    public Optional<String> messageThreadIdentifier() {
+        return messageThreadIdentifier;
     }
 
     @JsonIgnore
@@ -583,6 +597,19 @@ public class MessagingMessage {
         return this;
     }
 
+    public MessagingMessage withMessageThreadIdentifier(String messageThreadIdentifier) {
+        Utils.checkNotNull(messageThreadIdentifier, "messageThreadIdentifier");
+        this.messageThreadIdentifier = Optional.ofNullable(messageThreadIdentifier);
+        return this;
+    }
+
+
+    public MessagingMessage withMessageThreadIdentifier(Optional<String> messageThreadIdentifier) {
+        Utils.checkNotNull(messageThreadIdentifier, "messageThreadIdentifier");
+        this.messageThreadIdentifier = messageThreadIdentifier;
+        return this;
+    }
+
     public MessagingMessage withParentId(String parentId) {
         Utils.checkNotNull(parentId, "parentId");
         this.parentId = Optional.ofNullable(parentId);
@@ -725,6 +752,7 @@ public class MessagingMessage {
             Utils.enhancedDeepEquals(this.message, other.message) &&
             Utils.enhancedDeepEquals(this.messageHtml, other.messageHtml) &&
             Utils.enhancedDeepEquals(this.messageMarkdown, other.messageMarkdown) &&
+            Utils.enhancedDeepEquals(this.messageThreadIdentifier, other.messageThreadIdentifier) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.parentMessageId, other.parentMessageId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -744,9 +772,10 @@ public class MessagingMessage {
             destinationMembers, hasChildren, hiddenMembers,
             id, isUnread, mentionedMembers,
             message, messageHtml, messageMarkdown,
-            parentId, parentMessageId, raw,
-            reactions, reference, rootMessageId,
-            subject, updatedAt, webUrl);
+            messageThreadIdentifier, parentId, parentMessageId,
+            raw, reactions, reference,
+            rootMessageId, subject, updatedAt,
+            webUrl);
     }
     
     @Override
@@ -767,6 +796,7 @@ public class MessagingMessage {
                 "message", message,
                 "messageHtml", messageHtml,
                 "messageMarkdown", messageMarkdown,
+                "messageThreadIdentifier", messageThreadIdentifier,
                 "parentId", parentId,
                 "parentMessageId", parentMessageId,
                 "raw", raw,
@@ -810,6 +840,8 @@ public class MessagingMessage {
         private Optional<String> messageHtml = Optional.empty();
 
         private Optional<String> messageMarkdown = Optional.empty();
+
+        private Optional<String> messageThreadIdentifier = Optional.empty();
 
         private Optional<String> parentId = Optional.empty();
 
@@ -1043,6 +1075,19 @@ public class MessagingMessage {
         }
 
 
+        public Builder messageThreadIdentifier(String messageThreadIdentifier) {
+            Utils.checkNotNull(messageThreadIdentifier, "messageThreadIdentifier");
+            this.messageThreadIdentifier = Optional.ofNullable(messageThreadIdentifier);
+            return this;
+        }
+
+        public Builder messageThreadIdentifier(Optional<String> messageThreadIdentifier) {
+            Utils.checkNotNull(messageThreadIdentifier, "messageThreadIdentifier");
+            this.messageThreadIdentifier = messageThreadIdentifier;
+            return this;
+        }
+
+
         public Builder parentId(String parentId) {
             Utils.checkNotNull(parentId, "parentId");
             this.parentId = Optional.ofNullable(parentId);
@@ -1167,9 +1212,10 @@ public class MessagingMessage {
                 destinationMembers, hasChildren, hiddenMembers,
                 id, isUnread, mentionedMembers,
                 message, messageHtml, messageMarkdown,
-                parentId, parentMessageId, raw,
-                reactions, reference, rootMessageId,
-                subject, updatedAt, webUrl);
+                messageThreadIdentifier, parentId, parentMessageId,
+                raw, reactions, reference,
+                rootMessageId, subject, updatedAt,
+                webUrl);
         }
 
     }

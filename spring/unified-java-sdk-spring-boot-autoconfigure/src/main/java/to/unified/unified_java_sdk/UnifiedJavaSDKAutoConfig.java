@@ -795,6 +795,28 @@ public class UnifiedJavaSDKAutoConfig {
         return unifiedTo.hris();
     }
     /**
+     * Creates a Benefit sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Benefit instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Benefit benefit(UnifiedTo unifiedTo) {
+        return unifiedTo.benefit();
+    }
+    /**
+     * Creates a Deduction sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Deduction instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Deduction deduction(UnifiedTo unifiedTo) {
+        return unifiedTo.deduction();
+    }
+    /**
      * Creates a Device sub-SDK bean if none exists.
      *
      * @param unifiedTo the main SDK instance
@@ -1994,6 +2016,28 @@ public class UnifiedJavaSDKAutoConfig {
     @ConditionalOnMissingBean
     public AsyncHris asyncHris(AsyncUnifiedTo asyncUnifiedTo) {
         return asyncUnifiedTo.hris();
+    }
+    /**
+     * Creates an AsyncBenefit sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncBenefit instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncBenefit asyncBenefit(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.benefit();
+    }
+    /**
+     * Creates an AsyncDeduction sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncDeduction instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncDeduction asyncDeduction(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.deduction();
     }
     /**
      * Creates an AsyncDevice sub-SDK bean if none exists.

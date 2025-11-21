@@ -99,6 +99,8 @@ public class ObjectType {
     public static final ObjectType HRIS_LOCATION = new ObjectType("hris_location");
     public static final ObjectType HRIS_DEVICE = new ObjectType("hris_device");
     public static final ObjectType HRIS_TIMESHIFT = new ObjectType("hris_timeshift");
+    public static final ObjectType HRIS_DEDUCTION = new ObjectType("hris_deduction");
+    public static final ObjectType HRIS_BENEFIT = new ObjectType("hris_benefit");
     public static final ObjectType MARTECH_LIST = new ObjectType("martech_list");
     public static final ObjectType MARTECH_MEMBER = new ObjectType("martech_member");
     public static final ObjectType PASSTHROUGH = new ObjectType("passthrough");
@@ -267,6 +269,8 @@ public class ObjectType {
         map.put("hris_location", HRIS_LOCATION);
         map.put("hris_device", HRIS_DEVICE);
         map.put("hris_timeshift", HRIS_TIMESHIFT);
+        map.put("hris_deduction", HRIS_DEDUCTION);
+        map.put("hris_benefit", HRIS_BENEFIT);
         map.put("martech_list", MARTECH_LIST);
         map.put("martech_member", MARTECH_MEMBER);
         map.put("passthrough", PASSTHROUGH);
@@ -369,6 +373,8 @@ public class ObjectType {
         map.put("hris_location", ObjectTypeEnum.HRIS_LOCATION);
         map.put("hris_device", ObjectTypeEnum.HRIS_DEVICE);
         map.put("hris_timeshift", ObjectTypeEnum.HRIS_TIMESHIFT);
+        map.put("hris_deduction", ObjectTypeEnum.HRIS_DEDUCTION);
+        map.put("hris_benefit", ObjectTypeEnum.HRIS_BENEFIT);
         map.put("martech_list", ObjectTypeEnum.MARTECH_LIST);
         map.put("martech_member", ObjectTypeEnum.MARTECH_MEMBER);
         map.put("passthrough", ObjectTypeEnum.PASSTHROUGH);
@@ -501,6 +507,8 @@ public class ObjectType {
         HRIS_LOCATION("hris_location"),
         HRIS_DEVICE("hris_device"),
         HRIS_TIMESHIFT("hris_timeshift"),
+        HRIS_DEDUCTION("hris_deduction"),
+        HRIS_BENEFIT("hris_benefit"),
         MARTECH_LIST("martech_list"),
         MARTECH_MEMBER("martech_member"),
         PASSTHROUGH("passthrough"),

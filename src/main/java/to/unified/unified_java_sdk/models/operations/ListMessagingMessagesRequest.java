@@ -18,7 +18,7 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListMessagingMessagesRequest {
     /**
-     * The channel ID to filter by
+     * The channel ID to filter by. You can also use these aliases; INBOX, SENT or DRAFT
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=channel_id")
     private Optional<String> channelId;
@@ -107,6 +107,12 @@ public class ListMessagingMessagesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
     private Optional<String> userId;
 
+    /**
+     * The user/employee ID to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_mentioned_id")
+    private Optional<String> userMentionedId;
+
     @JsonCreator
     public ListMessagingMessagesRequest(
             Optional<String> channelId,
@@ -124,7 +130,8 @@ public class ListMessagingMessagesRequest {
             Optional<String> sort,
             Optional<String> startGte,
             Optional<String> updatedGte,
-            Optional<String> userId) {
+            Optional<String> userId,
+            Optional<String> userMentionedId) {
         Utils.checkNotNull(channelId, "channelId");
         Utils.checkNotNull(connectionId, "connectionId");
         Utils.checkNotNull(endLe, "endLe");
@@ -141,6 +148,7 @@ public class ListMessagingMessagesRequest {
         Utils.checkNotNull(startGte, "startGte");
         Utils.checkNotNull(updatedGte, "updatedGte");
         Utils.checkNotNull(userId, "userId");
+        Utils.checkNotNull(userMentionedId, "userMentionedId");
         this.channelId = channelId;
         this.connectionId = connectionId;
         this.endLe = endLe;
@@ -157,6 +165,7 @@ public class ListMessagingMessagesRequest {
         this.startGte = startGte;
         this.updatedGte = updatedGte;
         this.userId = userId;
+        this.userMentionedId = userMentionedId;
     }
     
     public ListMessagingMessagesRequest(
@@ -166,11 +175,11 @@ public class ListMessagingMessagesRequest {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            Optional.empty(), Optional.empty());
     }
 
     /**
-     * The channel ID to filter by
+     * The channel ID to filter by. You can also use these aliases; INBOX, SENT or DRAFT
      */
     @JsonIgnore
     public Optional<String> channelId() {
@@ -288,13 +297,21 @@ public class ListMessagingMessagesRequest {
         return userId;
     }
 
+    /**
+     * The user/employee ID to filter by
+     */
+    @JsonIgnore
+    public Optional<String> userMentionedId() {
+        return userMentionedId;
+    }
+
     public static Builder builder() {
         return new Builder();
     }
 
 
     /**
-     * The channel ID to filter by
+     * The channel ID to filter by. You can also use these aliases; INBOX, SENT or DRAFT
      */
     public ListMessagingMessagesRequest withChannelId(String channelId) {
         Utils.checkNotNull(channelId, "channelId");
@@ -304,7 +321,7 @@ public class ListMessagingMessagesRequest {
 
 
     /**
-     * The channel ID to filter by
+     * The channel ID to filter by. You can also use these aliases; INBOX, SENT or DRAFT
      */
     public ListMessagingMessagesRequest withChannelId(Optional<String> channelId) {
         Utils.checkNotNull(channelId, "channelId");
@@ -567,6 +584,25 @@ public class ListMessagingMessagesRequest {
         return this;
     }
 
+    /**
+     * The user/employee ID to filter by
+     */
+    public ListMessagingMessagesRequest withUserMentionedId(String userMentionedId) {
+        Utils.checkNotNull(userMentionedId, "userMentionedId");
+        this.userMentionedId = Optional.ofNullable(userMentionedId);
+        return this;
+    }
+
+
+    /**
+     * The user/employee ID to filter by
+     */
+    public ListMessagingMessagesRequest withUserMentionedId(Optional<String> userMentionedId) {
+        Utils.checkNotNull(userMentionedId, "userMentionedId");
+        this.userMentionedId = userMentionedId;
+        return this;
+    }
+
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -592,7 +628,8 @@ public class ListMessagingMessagesRequest {
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
             Utils.enhancedDeepEquals(this.startGte, other.startGte) &&
             Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte) &&
-            Utils.enhancedDeepEquals(this.userId, other.userId);
+            Utils.enhancedDeepEquals(this.userId, other.userId) &&
+            Utils.enhancedDeepEquals(this.userMentionedId, other.userMentionedId);
     }
     
     @Override
@@ -603,7 +640,7 @@ public class ListMessagingMessagesRequest {
             limit, offset, order,
             parentId, query, raw,
             sort, startGte, updatedGte,
-            userId);
+            userId, userMentionedId);
     }
     
     @Override
@@ -624,7 +661,8 @@ public class ListMessagingMessagesRequest {
                 "sort", sort,
                 "startGte", startGte,
                 "updatedGte", updatedGte,
-                "userId", userId);
+                "userId", userId,
+                "userMentionedId", userMentionedId);
     }
 
     @SuppressWarnings("UnusedReturnValue")
@@ -662,13 +700,15 @@ public class ListMessagingMessagesRequest {
 
         private Optional<String> userId = Optional.empty();
 
+        private Optional<String> userMentionedId = Optional.empty();
+
         private Builder() {
           // force use of static builder() method
         }
 
 
         /**
-         * The channel ID to filter by
+         * The channel ID to filter by. You can also use these aliases; INBOX, SENT or DRAFT
          */
         public Builder channelId(String channelId) {
             Utils.checkNotNull(channelId, "channelId");
@@ -677,7 +717,7 @@ public class ListMessagingMessagesRequest {
         }
 
         /**
-         * The channel ID to filter by
+         * The channel ID to filter by. You can also use these aliases; INBOX, SENT or DRAFT
          */
         public Builder channelId(Optional<String> channelId) {
             Utils.checkNotNull(channelId, "channelId");
@@ -941,6 +981,25 @@ public class ListMessagingMessagesRequest {
             return this;
         }
 
+
+        /**
+         * The user/employee ID to filter by
+         */
+        public Builder userMentionedId(String userMentionedId) {
+            Utils.checkNotNull(userMentionedId, "userMentionedId");
+            this.userMentionedId = Optional.ofNullable(userMentionedId);
+            return this;
+        }
+
+        /**
+         * The user/employee ID to filter by
+         */
+        public Builder userMentionedId(Optional<String> userMentionedId) {
+            Utils.checkNotNull(userMentionedId, "userMentionedId");
+            this.userMentionedId = userMentionedId;
+            return this;
+        }
+
         public ListMessagingMessagesRequest build() {
 
             return new ListMessagingMessagesRequest(
@@ -949,7 +1008,7 @@ public class ListMessagingMessagesRequest {
                 limit, offset, order,
                 parentId, query, raw,
                 sort, startGte, updatedGte,
-                userId);
+                userId, userMentionedId);
         }
 
     }

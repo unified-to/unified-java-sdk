@@ -36,7 +36,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.45.3'
+implementation 'to.unified:unified-java-sdk:0.45.4'
 ```
 
 Maven:
@@ -44,7 +44,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.45.3</version>
+    <version>0.45.4</version>
 </dependency>
 ```
 
@@ -347,6 +347,15 @@ public class Application {
 * [getAccountingBalancesheet](docs/sdks/balancesheet/README.md#getaccountingbalancesheet) - Retrieve a balancesheet
 * [listAccountingBalancesheets](docs/sdks/balancesheet/README.md#listaccountingbalancesheets) - List all balancesheets
 
+### [benefit()](docs/sdks/benefit/README.md)
+
+* [createHrisBenefit](docs/sdks/benefit/README.md#createhrisbenefit) - Create a benefit
+* [getHrisBenefit](docs/sdks/benefit/README.md#gethrisbenefit) - Retrieve a benefit
+* [listHrisBenefits](docs/sdks/benefit/README.md#listhrisbenefits) - List all benefits
+* [patchHrisBenefit](docs/sdks/benefit/README.md#patchhrisbenefit) - Update a benefit
+* [removeHrisBenefit](docs/sdks/benefit/README.md#removehrisbenefit) - Remove a benefit
+* [updateHrisBenefit](docs/sdks/benefit/README.md#updatehrisbenefit) - Update a benefit
+
 ### [bill()](docs/sdks/bill/README.md)
 
 * [createAccountingBill](docs/sdks/bill/README.md#createaccountingbill) - Create a bill
@@ -645,6 +654,15 @@ public class Application {
 * [removeCrmDeal](docs/sdks/deal/README.md#removecrmdeal) - Remove a deal
 * [updateCrmDeal](docs/sdks/deal/README.md#updatecrmdeal) - Update a deal
 
+### [deduction()](docs/sdks/deduction/README.md)
+
+* [createHrisDeduction](docs/sdks/deduction/README.md#createhrisdeduction) - Create a deduction
+* [getHrisDeduction](docs/sdks/deduction/README.md#gethrisdeduction) - Retrieve a deduction
+* [listHrisDeductions](docs/sdks/deduction/README.md#listhrisdeductions) - List all deductions
+* [patchHrisDeduction](docs/sdks/deduction/README.md#patchhrisdeduction) - Update a deduction
+* [removeHrisDeduction](docs/sdks/deduction/README.md#removehrisdeduction) - Remove a deduction
+* [updateHrisDeduction](docs/sdks/deduction/README.md#updatehrisdeduction) - Update a deduction
+
 ### [device()](docs/sdks/device/README.md)
 
 * [createHrisDevice](docs/sdks/device/README.md#createhrisdevice) - Create a device
@@ -738,13 +756,17 @@ public class Application {
 
 ### [hris()](docs/sdks/hris/README.md)
 
+* [createHrisBenefit](docs/sdks/hris/README.md#createhrisbenefit) - Create a benefit
 * [createHrisCompany](docs/sdks/hris/README.md#createhriscompany) - Create a company
+* [createHrisDeduction](docs/sdks/hris/README.md#createhrisdeduction) - Create a deduction
 * [createHrisDevice](docs/sdks/hris/README.md#createhrisdevice) - Create a device
 * [createHrisEmployee](docs/sdks/hris/README.md#createhrisemployee) - Create an employee
 * [createHrisGroup](docs/sdks/hris/README.md#createhrisgroup) - Create a group
 * [createHrisLocation](docs/sdks/hris/README.md#createhrislocation) - Create a location
 * [createHrisTimeshift](docs/sdks/hris/README.md#createhristimeshift) - Create a timeshift
+* [getHrisBenefit](docs/sdks/hris/README.md#gethrisbenefit) - Retrieve a benefit
 * [getHrisCompany](docs/sdks/hris/README.md#gethriscompany) - Retrieve a company
+* [getHrisDeduction](docs/sdks/hris/README.md#gethrisdeduction) - Retrieve a deduction
 * [getHrisDevice](docs/sdks/hris/README.md#gethrisdevice) - Retrieve a device
 * [getHrisEmployee](docs/sdks/hris/README.md#gethrisemployee) - Retrieve an employee
 * [getHrisGroup](docs/sdks/hris/README.md#gethrisgroup) - Retrieve a group
@@ -752,7 +774,9 @@ public class Application {
 * [getHrisPayslip](docs/sdks/hris/README.md#gethrispayslip) - Retrieve a payslip
 * [getHrisTimeoff](docs/sdks/hris/README.md#gethristimeoff) - Retrieve a timeoff
 * [getHrisTimeshift](docs/sdks/hris/README.md#gethristimeshift) - Retrieve a timeshift
+* [listHrisBenefits](docs/sdks/hris/README.md#listhrisbenefits) - List all benefits
 * [listHrisCompanies](docs/sdks/hris/README.md#listhriscompanies) - List all companies
+* [listHrisDeductions](docs/sdks/hris/README.md#listhrisdeductions) - List all deductions
 * [listHrisDevices](docs/sdks/hris/README.md#listhrisdevices) - List all devices
 * [listHrisEmployees](docs/sdks/hris/README.md#listhrisemployees) - List all employees
 * [listHrisGroups](docs/sdks/hris/README.md#listhrisgroups) - List all groups
@@ -760,19 +784,25 @@ public class Application {
 * [listHrisPayslips](docs/sdks/hris/README.md#listhrispayslips) - List all payslips
 * [listHrisTimeoffs](docs/sdks/hris/README.md#listhristimeoffs) - List all timeoffs
 * [listHrisTimeshifts](docs/sdks/hris/README.md#listhristimeshifts) - List all timeshifts
+* [patchHrisBenefit](docs/sdks/hris/README.md#patchhrisbenefit) - Update a benefit
 * [patchHrisCompany](docs/sdks/hris/README.md#patchhriscompany) - Update a company
+* [patchHrisDeduction](docs/sdks/hris/README.md#patchhrisdeduction) - Update a deduction
 * [patchHrisDevice](docs/sdks/hris/README.md#patchhrisdevice) - Update a device
 * [patchHrisEmployee](docs/sdks/hris/README.md#patchhrisemployee) - Update an employee
 * [patchHrisGroup](docs/sdks/hris/README.md#patchhrisgroup) - Update a group
 * [patchHrisLocation](docs/sdks/hris/README.md#patchhrislocation) - Update a location
 * [patchHrisTimeshift](docs/sdks/hris/README.md#patchhristimeshift) - Update a timeshift
+* [removeHrisBenefit](docs/sdks/hris/README.md#removehrisbenefit) - Remove a benefit
 * [removeHrisCompany](docs/sdks/hris/README.md#removehriscompany) - Remove a company
+* [removeHrisDeduction](docs/sdks/hris/README.md#removehrisdeduction) - Remove a deduction
 * [removeHrisDevice](docs/sdks/hris/README.md#removehrisdevice) - Remove a device
 * [removeHrisEmployee](docs/sdks/hris/README.md#removehrisemployee) - Remove an employee
 * [removeHrisGroup](docs/sdks/hris/README.md#removehrisgroup) - Remove a group
 * [removeHrisLocation](docs/sdks/hris/README.md#removehrislocation) - Remove a location
 * [removeHrisTimeshift](docs/sdks/hris/README.md#removehristimeshift) - Remove a timeshift
+* [updateHrisBenefit](docs/sdks/hris/README.md#updatehrisbenefit) - Update a benefit
 * [updateHrisCompany](docs/sdks/hris/README.md#updatehriscompany) - Update a company
+* [updateHrisDeduction](docs/sdks/hris/README.md#updatehrisdeduction) - Update a deduction
 * [updateHrisDevice](docs/sdks/hris/README.md#updatehrisdevice) - Update a device
 * [updateHrisEmployee](docs/sdks/hris/README.md#updatehrisemployee) - Update an employee
 * [updateHrisGroup](docs/sdks/hris/README.md#updatehrisgroup) - Update a group
