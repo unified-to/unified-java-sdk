@@ -66,6 +66,11 @@ public class AccountingLineitem {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("item_variants")
+    private Optional<? extends List<AccountingReference>> itemVariants;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations")
     private Optional<? extends List<AccountingReference>> locations;
 
@@ -125,6 +130,7 @@ public class AccountingLineitem {
             @JsonProperty("item_id") Optional<String> itemId,
             @JsonProperty("item_name") Optional<String> itemName,
             @JsonProperty("item_sku") Optional<String> itemSku,
+            @JsonProperty("item_variants") Optional<? extends List<AccountingReference>> itemVariants,
             @JsonProperty("locations") Optional<? extends List<AccountingReference>> locations,
             @JsonProperty("notes") Optional<String> notes,
             @JsonProperty("refund_amount") Optional<Double> refundAmount,
@@ -144,6 +150,7 @@ public class AccountingLineitem {
         Utils.checkNotNull(itemId, "itemId");
         Utils.checkNotNull(itemName, "itemName");
         Utils.checkNotNull(itemSku, "itemSku");
+        Utils.checkNotNull(itemVariants, "itemVariants");
         Utils.checkNotNull(locations, "locations");
         Utils.checkNotNull(notes, "notes");
         Utils.checkNotNull(refundAmount, "refundAmount");
@@ -163,6 +170,7 @@ public class AccountingLineitem {
         this.itemId = itemId;
         this.itemName = itemName;
         this.itemSku = itemSku;
+        this.itemVariants = itemVariants;
         this.locations = locations;
         this.notes = notes;
         this.refundAmount = refundAmount;
@@ -182,7 +190,7 @@ public class AccountingLineitem {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -229,6 +237,12 @@ public class AccountingLineitem {
     @JsonIgnore
     public Optional<String> itemSku() {
         return itemSku;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<AccountingReference>> itemVariants() {
+        return (Optional<List<AccountingReference>>) itemVariants;
     }
 
     @SuppressWarnings("unchecked")
@@ -404,6 +418,19 @@ public class AccountingLineitem {
         return this;
     }
 
+    public AccountingLineitem withItemVariants(List<AccountingReference> itemVariants) {
+        Utils.checkNotNull(itemVariants, "itemVariants");
+        this.itemVariants = Optional.ofNullable(itemVariants);
+        return this;
+    }
+
+
+    public AccountingLineitem withItemVariants(Optional<? extends List<AccountingReference>> itemVariants) {
+        Utils.checkNotNull(itemVariants, "itemVariants");
+        this.itemVariants = itemVariants;
+        return this;
+    }
+
     public AccountingLineitem withLocations(List<AccountingReference> locations) {
         Utils.checkNotNull(locations, "locations");
         this.locations = Optional.ofNullable(locations);
@@ -553,6 +580,7 @@ public class AccountingLineitem {
             Utils.enhancedDeepEquals(this.itemId, other.itemId) &&
             Utils.enhancedDeepEquals(this.itemName, other.itemName) &&
             Utils.enhancedDeepEquals(this.itemSku, other.itemSku) &&
+            Utils.enhancedDeepEquals(this.itemVariants, other.itemVariants) &&
             Utils.enhancedDeepEquals(this.locations, other.locations) &&
             Utils.enhancedDeepEquals(this.notes, other.notes) &&
             Utils.enhancedDeepEquals(this.refundAmount, other.refundAmount) &&
@@ -571,10 +599,10 @@ public class AccountingLineitem {
             accountId, categoryIds, createdAt,
             discountAmount, id, itemDescription,
             itemId, itemName, itemSku,
-            locations, notes, refundAmount,
-            refundedAt, taxAmount, taxrateId,
-            totalAmount, unitAmount, unitQuantity,
-            updatedAt);
+            itemVariants, locations, notes,
+            refundAmount, refundedAt, taxAmount,
+            taxrateId, totalAmount, unitAmount,
+            unitQuantity, updatedAt);
     }
     
     @Override
@@ -589,6 +617,7 @@ public class AccountingLineitem {
                 "itemId", itemId,
                 "itemName", itemName,
                 "itemSku", itemSku,
+                "itemVariants", itemVariants,
                 "locations", locations,
                 "notes", notes,
                 "refundAmount", refundAmount,
@@ -621,6 +650,8 @@ public class AccountingLineitem {
         private Optional<String> itemName = Optional.empty();
 
         private Optional<String> itemSku = Optional.empty();
+
+        private Optional<? extends List<AccountingReference>> itemVariants = Optional.empty();
 
         private Optional<? extends List<AccountingReference>> locations = Optional.empty();
 
@@ -764,6 +795,19 @@ public class AccountingLineitem {
         }
 
 
+        public Builder itemVariants(List<AccountingReference> itemVariants) {
+            Utils.checkNotNull(itemVariants, "itemVariants");
+            this.itemVariants = Optional.ofNullable(itemVariants);
+            return this;
+        }
+
+        public Builder itemVariants(Optional<? extends List<AccountingReference>> itemVariants) {
+            Utils.checkNotNull(itemVariants, "itemVariants");
+            this.itemVariants = itemVariants;
+            return this;
+        }
+
+
         public Builder locations(List<AccountingReference> locations) {
             Utils.checkNotNull(locations, "locations");
             this.locations = Optional.ofNullable(locations);
@@ -899,10 +943,10 @@ public class AccountingLineitem {
                 accountId, categoryIds, createdAt,
                 discountAmount, id, itemDescription,
                 itemId, itemName, itemSku,
-                locations, notes, refundAmount,
-                refundedAt, taxAmount, taxrateId,
-                totalAmount, unitAmount, unitQuantity,
-                updatedAt);
+                itemVariants, locations, notes,
+                refundAmount, refundedAt, taxAmount,
+                taxrateId, totalAmount, unitAmount,
+                unitQuantity, updatedAt);
         }
 
     }

@@ -25,7 +25,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 java:
-  version: 0.45.4
+  version: 0.45.5
   additionalDependencies: []
   additionalPlugins: []
   artifactID: unified-java-sdk
@@ -37,8 +37,8 @@ java:
   companyURL: www.unified.to
   defaultErrorName: SDKError
   enableCustomCodeRegions: false
+  enableSlf4jLogging: false
   enableStreamingUploads: false
-  enhancedUnionMemberResolution: true
   flattenGlobalSecurity: false
   generateOptionalUnionAccessors: false
   generateSpringBootStarter: true
@@ -61,6 +61,8 @@ java:
   maxMethodParams: 0
   nullFriendlyParameters: false
   openUnions: true
+  operationScopedParams: true
   outputModelSuffix: output
   projectName: Unified-java-sdk
   templateVersion: v2
+  unionStrategy: populated-fields
