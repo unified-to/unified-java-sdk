@@ -162,6 +162,9 @@ public class UnifiedTo {
     private final Review review;
 
 
+    private final Saleschannel saleschannel;
+
+
     private final Crm crm;
 
 
@@ -571,6 +574,11 @@ public class UnifiedTo {
 
     public Review review() {
         return review;
+    }
+
+
+    public Saleschannel saleschannel() {
+        return saleschannel;
     }
 
 
@@ -1096,6 +1104,7 @@ public class UnifiedTo {
         this.item = new Item(sdkConfiguration);
         this.location = new Location(sdkConfiguration);
         this.review = new Review(sdkConfiguration);
+        this.saleschannel = new Saleschannel(sdkConfiguration);
         this.crm = new Crm(sdkConfiguration);
         this.deal = new Deal(sdkConfiguration);
         this.lead = new Lead(sdkConfiguration);

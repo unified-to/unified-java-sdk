@@ -20,6 +20,9 @@ import to.unified.unified_java_sdk.models.operations.CreateCommerceLocationRespo
 import to.unified.unified_java_sdk.models.operations.CreateCommerceReviewRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceSaleschannelRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceSaleschannelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceSaleschannelResponse;
 import to.unified.unified_java_sdk.models.operations.GetCommerceCollectionRequest;
 import to.unified.unified_java_sdk.models.operations.GetCommerceCollectionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetCommerceCollectionResponse;
@@ -35,6 +38,9 @@ import to.unified.unified_java_sdk.models.operations.GetCommerceLocationResponse
 import to.unified.unified_java_sdk.models.operations.GetCommerceReviewRequest;
 import to.unified.unified_java_sdk.models.operations.GetCommerceReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.operations.GetCommerceSaleschannelRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceSaleschannelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCommerceSaleschannelResponse;
 import to.unified.unified_java_sdk.models.operations.ListCommerceCollectionsRequest;
 import to.unified.unified_java_sdk.models.operations.ListCommerceCollectionsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListCommerceCollectionsResponse;
@@ -50,6 +56,9 @@ import to.unified.unified_java_sdk.models.operations.ListCommerceLocationsRespon
 import to.unified.unified_java_sdk.models.operations.ListCommerceReviewsRequest;
 import to.unified.unified_java_sdk.models.operations.ListCommerceReviewsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListCommerceReviewsResponse;
+import to.unified.unified_java_sdk.models.operations.ListCommerceSaleschannelsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceSaleschannelsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCommerceSaleschannelsResponse;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceCollectionRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceCollectionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceCollectionResponse;
@@ -65,6 +74,9 @@ import to.unified.unified_java_sdk.models.operations.PatchCommerceLocationRespon
 import to.unified.unified_java_sdk.models.operations.PatchCommerceReviewRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceSaleschannelRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceSaleschannelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceSaleschannelResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveCommerceCollectionRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveCommerceCollectionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveCommerceCollectionResponse;
@@ -80,6 +92,9 @@ import to.unified.unified_java_sdk.models.operations.RemoveCommerceLocationRespo
 import to.unified.unified_java_sdk.models.operations.RemoveCommerceReviewRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveCommerceReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceSaleschannelRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceSaleschannelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceSaleschannelResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceCollectionRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceCollectionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceCollectionResponse;
@@ -95,36 +110,45 @@ import to.unified.unified_java_sdk.models.operations.UpdateCommerceLocationRespo
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceReviewRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceSaleschannelRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceSaleschannelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceSaleschannelResponse;
 import to.unified.unified_java_sdk.operations.CreateCommerceCollection;
 import to.unified.unified_java_sdk.operations.CreateCommerceInventory;
 import to.unified.unified_java_sdk.operations.CreateCommerceItem;
 import to.unified.unified_java_sdk.operations.CreateCommerceLocation;
 import to.unified.unified_java_sdk.operations.CreateCommerceReview;
+import to.unified.unified_java_sdk.operations.CreateCommerceSaleschannel;
 import to.unified.unified_java_sdk.operations.GetCommerceCollection;
 import to.unified.unified_java_sdk.operations.GetCommerceInventory;
 import to.unified.unified_java_sdk.operations.GetCommerceItem;
 import to.unified.unified_java_sdk.operations.GetCommerceLocation;
 import to.unified.unified_java_sdk.operations.GetCommerceReview;
+import to.unified.unified_java_sdk.operations.GetCommerceSaleschannel;
 import to.unified.unified_java_sdk.operations.ListCommerceCollections;
 import to.unified.unified_java_sdk.operations.ListCommerceInventories;
 import to.unified.unified_java_sdk.operations.ListCommerceItems;
 import to.unified.unified_java_sdk.operations.ListCommerceLocations;
 import to.unified.unified_java_sdk.operations.ListCommerceReviews;
+import to.unified.unified_java_sdk.operations.ListCommerceSaleschannels;
 import to.unified.unified_java_sdk.operations.PatchCommerceCollection;
 import to.unified.unified_java_sdk.operations.PatchCommerceInventory;
 import to.unified.unified_java_sdk.operations.PatchCommerceItem;
 import to.unified.unified_java_sdk.operations.PatchCommerceLocation;
 import to.unified.unified_java_sdk.operations.PatchCommerceReview;
+import to.unified.unified_java_sdk.operations.PatchCommerceSaleschannel;
 import to.unified.unified_java_sdk.operations.RemoveCommerceCollection;
 import to.unified.unified_java_sdk.operations.RemoveCommerceInventory;
 import to.unified.unified_java_sdk.operations.RemoveCommerceItem;
 import to.unified.unified_java_sdk.operations.RemoveCommerceLocation;
 import to.unified.unified_java_sdk.operations.RemoveCommerceReview;
+import to.unified.unified_java_sdk.operations.RemoveCommerceSaleschannel;
 import to.unified.unified_java_sdk.operations.UpdateCommerceCollection;
 import to.unified.unified_java_sdk.operations.UpdateCommerceInventory;
 import to.unified.unified_java_sdk.operations.UpdateCommerceItem;
 import to.unified.unified_java_sdk.operations.UpdateCommerceLocation;
 import to.unified.unified_java_sdk.operations.UpdateCommerceReview;
+import to.unified.unified_java_sdk.operations.UpdateCommerceSaleschannel;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -258,6 +282,28 @@ public class Commerce {
     }
 
     /**
+     * Create a saleschannel
+     * 
+     * @return The call builder
+     */
+    public CreateCommerceSaleschannelRequestBuilder createCommerceSaleschannel() {
+        return new CreateCommerceSaleschannelRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a saleschannel
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCommerceSaleschannelResponse createCommerceSaleschannel(CreateCommerceSaleschannelRequest request) {
+        RequestOperation<CreateCommerceSaleschannelRequest, CreateCommerceSaleschannelResponse> operation
+              = new CreateCommerceSaleschannel.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Retrieve a collection
      * 
      * @return The call builder
@@ -364,6 +410,28 @@ public class Commerce {
     public GetCommerceReviewResponse getCommerceReview(GetCommerceReviewRequest request) {
         RequestOperation<GetCommerceReviewRequest, GetCommerceReviewResponse> operation
               = new GetCommerceReview.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a saleschannel
+     * 
+     * @return The call builder
+     */
+    public GetCommerceSaleschannelRequestBuilder getCommerceSaleschannel() {
+        return new GetCommerceSaleschannelRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a saleschannel
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCommerceSaleschannelResponse getCommerceSaleschannel(GetCommerceSaleschannelRequest request) {
+        RequestOperation<GetCommerceSaleschannelRequest, GetCommerceSaleschannelResponse> operation
+              = new GetCommerceSaleschannel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -478,6 +546,28 @@ public class Commerce {
     }
 
     /**
+     * List all saleschannels
+     * 
+     * @return The call builder
+     */
+    public ListCommerceSaleschannelsRequestBuilder listCommerceSaleschannels() {
+        return new ListCommerceSaleschannelsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all saleschannels
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCommerceSaleschannelsResponse listCommerceSaleschannels(ListCommerceSaleschannelsRequest request) {
+        RequestOperation<ListCommerceSaleschannelsRequest, ListCommerceSaleschannelsResponse> operation
+              = new ListCommerceSaleschannels.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Update a collection
      * 
      * @return The call builder
@@ -584,6 +674,28 @@ public class Commerce {
     public PatchCommerceReviewResponse patchCommerceReview(PatchCommerceReviewRequest request) {
         RequestOperation<PatchCommerceReviewRequest, PatchCommerceReviewResponse> operation
               = new PatchCommerceReview.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a saleschannel
+     * 
+     * @return The call builder
+     */
+    public PatchCommerceSaleschannelRequestBuilder patchCommerceSaleschannel() {
+        return new PatchCommerceSaleschannelRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a saleschannel
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCommerceSaleschannelResponse patchCommerceSaleschannel(PatchCommerceSaleschannelRequest request) {
+        RequestOperation<PatchCommerceSaleschannelRequest, PatchCommerceSaleschannelResponse> operation
+              = new PatchCommerceSaleschannel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -698,6 +810,28 @@ public class Commerce {
     }
 
     /**
+     * Remove a saleschannel
+     * 
+     * @return The call builder
+     */
+    public RemoveCommerceSaleschannelRequestBuilder removeCommerceSaleschannel() {
+        return new RemoveCommerceSaleschannelRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a saleschannel
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCommerceSaleschannelResponse removeCommerceSaleschannel(RemoveCommerceSaleschannelRequest request) {
+        RequestOperation<RemoveCommerceSaleschannelRequest, RemoveCommerceSaleschannelResponse> operation
+              = new RemoveCommerceSaleschannel.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Update a collection
      * 
      * @return The call builder
@@ -804,6 +938,28 @@ public class Commerce {
     public UpdateCommerceReviewResponse updateCommerceReview(UpdateCommerceReviewRequest request) {
         RequestOperation<UpdateCommerceReviewRequest, UpdateCommerceReviewResponse> operation
               = new UpdateCommerceReview.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a saleschannel
+     * 
+     * @return The call builder
+     */
+    public UpdateCommerceSaleschannelRequestBuilder updateCommerceSaleschannel() {
+        return new UpdateCommerceSaleschannelRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a saleschannel
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCommerceSaleschannelResponse updateCommerceSaleschannel(UpdateCommerceSaleschannelRequest request) {
+        RequestOperation<UpdateCommerceSaleschannelRequest, UpdateCommerceSaleschannelResponse> operation
+              = new UpdateCommerceSaleschannel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -60,6 +60,12 @@ public class ListCommerceCollectionsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
     private Optional<String> raw;
 
+    /**
+     * The saleschannel ID to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=saleschannel_id")
+    private Optional<String> saleschannelId;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     private Optional<String> sort;
@@ -84,6 +90,7 @@ public class ListCommerceCollectionsRequest {
             Optional<String> parentId,
             Optional<String> query,
             Optional<String> raw,
+            Optional<String> saleschannelId,
             Optional<String> sort,
             Optional<String> type,
             Optional<String> updatedGte) {
@@ -95,6 +102,7 @@ public class ListCommerceCollectionsRequest {
         Utils.checkNotNull(parentId, "parentId");
         Utils.checkNotNull(query, "query");
         Utils.checkNotNull(raw, "raw");
+        Utils.checkNotNull(saleschannelId, "saleschannelId");
         Utils.checkNotNull(sort, "sort");
         Utils.checkNotNull(type, "type");
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -106,6 +114,7 @@ public class ListCommerceCollectionsRequest {
         this.parentId = parentId;
         this.query = query;
         this.raw = raw;
+        this.saleschannelId = saleschannelId;
         this.sort = sort;
         this.type = type;
         this.updatedGte = updatedGte;
@@ -116,7 +125,7 @@ public class ListCommerceCollectionsRequest {
         this(connectionId, Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     /**
@@ -175,6 +184,14 @@ public class ListCommerceCollectionsRequest {
     @JsonIgnore
     public Optional<String> raw() {
         return raw;
+    }
+
+    /**
+     * The saleschannel ID to filter by
+     */
+    @JsonIgnore
+    public Optional<String> saleschannelId() {
+        return saleschannelId;
     }
 
     @JsonIgnore
@@ -328,6 +345,25 @@ public class ListCommerceCollectionsRequest {
         return this;
     }
 
+    /**
+     * The saleschannel ID to filter by
+     */
+    public ListCommerceCollectionsRequest withSaleschannelId(String saleschannelId) {
+        Utils.checkNotNull(saleschannelId, "saleschannelId");
+        this.saleschannelId = Optional.ofNullable(saleschannelId);
+        return this;
+    }
+
+
+    /**
+     * The saleschannel ID to filter by
+     */
+    public ListCommerceCollectionsRequest withSaleschannelId(Optional<String> saleschannelId) {
+        Utils.checkNotNull(saleschannelId, "saleschannelId");
+        this.saleschannelId = saleschannelId;
+        return this;
+    }
+
     public ListCommerceCollectionsRequest withSort(String sort) {
         Utils.checkNotNull(sort, "sort");
         this.sort = Optional.ofNullable(sort);
@@ -391,6 +427,7 @@ public class ListCommerceCollectionsRequest {
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.saleschannelId, other.saleschannelId) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte);
@@ -401,8 +438,8 @@ public class ListCommerceCollectionsRequest {
         return Utils.enhancedHash(
             connectionId, fields, limit,
             offset, order, parentId,
-            query, raw, sort,
-            type, updatedGte);
+            query, raw, saleschannelId,
+            sort, type, updatedGte);
     }
     
     @Override
@@ -416,6 +453,7 @@ public class ListCommerceCollectionsRequest {
                 "parentId", parentId,
                 "query", query,
                 "raw", raw,
+                "saleschannelId", saleschannelId,
                 "sort", sort,
                 "type", type,
                 "updatedGte", updatedGte);
@@ -439,6 +477,8 @@ public class ListCommerceCollectionsRequest {
         private Optional<String> query = Optional.empty();
 
         private Optional<String> raw = Optional.empty();
+
+        private Optional<String> saleschannelId = Optional.empty();
 
         private Optional<String> sort = Optional.empty();
 
@@ -580,6 +620,25 @@ public class ListCommerceCollectionsRequest {
         }
 
 
+        /**
+         * The saleschannel ID to filter by
+         */
+        public Builder saleschannelId(String saleschannelId) {
+            Utils.checkNotNull(saleschannelId, "saleschannelId");
+            this.saleschannelId = Optional.ofNullable(saleschannelId);
+            return this;
+        }
+
+        /**
+         * The saleschannel ID to filter by
+         */
+        public Builder saleschannelId(Optional<String> saleschannelId) {
+            Utils.checkNotNull(saleschannelId, "saleschannelId");
+            this.saleschannelId = saleschannelId;
+            return this;
+        }
+
+
         public Builder sort(String sort) {
             Utils.checkNotNull(sort, "sort");
             this.sort = Optional.ofNullable(sort);
@@ -629,8 +688,8 @@ public class ListCommerceCollectionsRequest {
             return new ListCommerceCollectionsRequest(
                 connectionId, fields, limit,
                 offset, order, parentId,
-                query, raw, sort,
-                type, updatedGte);
+                query, raw, saleschannelId,
+                sort, type, updatedGte);
         }
 
     }

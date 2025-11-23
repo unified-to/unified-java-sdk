@@ -672,6 +672,17 @@ public class UnifiedJavaSDKAutoConfig {
         return unifiedTo.review();
     }
     /**
+     * Creates a Saleschannel sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Saleschannel instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Saleschannel saleschannel(UnifiedTo unifiedTo) {
+        return unifiedTo.saleschannel();
+    }
+    /**
      * Creates a Crm sub-SDK bean if none exists.
      *
      * @param unifiedTo the main SDK instance
@@ -1893,6 +1904,17 @@ public class UnifiedJavaSDKAutoConfig {
     @ConditionalOnMissingBean
     public AsyncReview asyncReview(AsyncUnifiedTo asyncUnifiedTo) {
         return asyncUnifiedTo.review();
+    }
+    /**
+     * Creates an AsyncSaleschannel sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncSaleschannel instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncSaleschannel asyncSaleschannel(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.saleschannel();
     }
     /**
      * Creates an AsyncCrm sub-SDK bean if none exists.

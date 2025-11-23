@@ -11,31 +11,37 @@ import to.unified.unified_java_sdk.models.operations.CreateCommerceInventoryRequ
 import to.unified.unified_java_sdk.models.operations.CreateCommerceItemRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceLocationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceReviewRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceSaleschannelRequest;
 import to.unified.unified_java_sdk.models.operations.GetCommerceCollectionRequest;
 import to.unified.unified_java_sdk.models.operations.GetCommerceInventoryRequest;
 import to.unified.unified_java_sdk.models.operations.GetCommerceItemRequest;
 import to.unified.unified_java_sdk.models.operations.GetCommerceLocationRequest;
 import to.unified.unified_java_sdk.models.operations.GetCommerceReviewRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceSaleschannelRequest;
 import to.unified.unified_java_sdk.models.operations.ListCommerceCollectionsRequest;
 import to.unified.unified_java_sdk.models.operations.ListCommerceInventoriesRequest;
 import to.unified.unified_java_sdk.models.operations.ListCommerceItemsRequest;
 import to.unified.unified_java_sdk.models.operations.ListCommerceLocationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListCommerceReviewsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceSaleschannelsRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceCollectionRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceInventoryRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceItemRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceLocationRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceReviewRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceSaleschannelRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveCommerceCollectionRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveCommerceInventoryRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveCommerceItemRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveCommerceLocationRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveCommerceReviewRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceSaleschannelRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceCollectionRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceInventoryRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceLocationRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceReviewRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceSaleschannelRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateCommerceCollectionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateCommerceCollectionResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateCommerceInventoryRequestBuilder;
@@ -46,6 +52,8 @@ import to.unified.unified_java_sdk.models.operations.async.CreateCommerceLocatio
 import to.unified.unified_java_sdk.models.operations.async.CreateCommerceLocationResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateCommerceReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateCommerceSaleschannelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateCommerceSaleschannelResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetCommerceCollectionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetCommerceCollectionResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetCommerceInventoryRequestBuilder;
@@ -56,6 +64,8 @@ import to.unified.unified_java_sdk.models.operations.async.GetCommerceLocationRe
 import to.unified.unified_java_sdk.models.operations.async.GetCommerceLocationResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetCommerceReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetCommerceSaleschannelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetCommerceSaleschannelResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListCommerceCollectionsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListCommerceCollectionsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListCommerceInventoriesRequestBuilder;
@@ -66,6 +76,8 @@ import to.unified.unified_java_sdk.models.operations.async.ListCommerceLocations
 import to.unified.unified_java_sdk.models.operations.async.ListCommerceLocationsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListCommerceReviewsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListCommerceReviewsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListCommerceSaleschannelsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCommerceSaleschannelsResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchCommerceCollectionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchCommerceCollectionResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchCommerceInventoryRequestBuilder;
@@ -76,6 +88,8 @@ import to.unified.unified_java_sdk.models.operations.async.PatchCommerceLocation
 import to.unified.unified_java_sdk.models.operations.async.PatchCommerceLocationResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchCommerceReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchCommerceSaleschannelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchCommerceSaleschannelResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceCollectionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceCollectionResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceInventoryRequestBuilder;
@@ -86,6 +100,8 @@ import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceLocatio
 import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceLocationResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceSaleschannelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceSaleschannelResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceCollectionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceCollectionResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceInventoryRequestBuilder;
@@ -96,36 +112,44 @@ import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceLocatio
 import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceLocationResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceSaleschannelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceSaleschannelResponse;
 import to.unified.unified_java_sdk.operations.CreateCommerceCollection;
 import to.unified.unified_java_sdk.operations.CreateCommerceInventory;
 import to.unified.unified_java_sdk.operations.CreateCommerceItem;
 import to.unified.unified_java_sdk.operations.CreateCommerceLocation;
 import to.unified.unified_java_sdk.operations.CreateCommerceReview;
+import to.unified.unified_java_sdk.operations.CreateCommerceSaleschannel;
 import to.unified.unified_java_sdk.operations.GetCommerceCollection;
 import to.unified.unified_java_sdk.operations.GetCommerceInventory;
 import to.unified.unified_java_sdk.operations.GetCommerceItem;
 import to.unified.unified_java_sdk.operations.GetCommerceLocation;
 import to.unified.unified_java_sdk.operations.GetCommerceReview;
+import to.unified.unified_java_sdk.operations.GetCommerceSaleschannel;
 import to.unified.unified_java_sdk.operations.ListCommerceCollections;
 import to.unified.unified_java_sdk.operations.ListCommerceInventories;
 import to.unified.unified_java_sdk.operations.ListCommerceItems;
 import to.unified.unified_java_sdk.operations.ListCommerceLocations;
 import to.unified.unified_java_sdk.operations.ListCommerceReviews;
+import to.unified.unified_java_sdk.operations.ListCommerceSaleschannels;
 import to.unified.unified_java_sdk.operations.PatchCommerceCollection;
 import to.unified.unified_java_sdk.operations.PatchCommerceInventory;
 import to.unified.unified_java_sdk.operations.PatchCommerceItem;
 import to.unified.unified_java_sdk.operations.PatchCommerceLocation;
 import to.unified.unified_java_sdk.operations.PatchCommerceReview;
+import to.unified.unified_java_sdk.operations.PatchCommerceSaleschannel;
 import to.unified.unified_java_sdk.operations.RemoveCommerceCollection;
 import to.unified.unified_java_sdk.operations.RemoveCommerceInventory;
 import to.unified.unified_java_sdk.operations.RemoveCommerceItem;
 import to.unified.unified_java_sdk.operations.RemoveCommerceLocation;
 import to.unified.unified_java_sdk.operations.RemoveCommerceReview;
+import to.unified.unified_java_sdk.operations.RemoveCommerceSaleschannel;
 import to.unified.unified_java_sdk.operations.UpdateCommerceCollection;
 import to.unified.unified_java_sdk.operations.UpdateCommerceInventory;
 import to.unified.unified_java_sdk.operations.UpdateCommerceItem;
 import to.unified.unified_java_sdk.operations.UpdateCommerceLocation;
 import to.unified.unified_java_sdk.operations.UpdateCommerceReview;
+import to.unified.unified_java_sdk.operations.UpdateCommerceSaleschannel;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -265,6 +289,29 @@ public class AsyncCommerce {
 
 
     /**
+     * Create a saleschannel
+     * 
+     * @return The async call builder
+     */
+    public CreateCommerceSaleschannelRequestBuilder createCommerceSaleschannel() {
+        return new CreateCommerceSaleschannelRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a saleschannel
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateCommerceSaleschannelResponse>} - The async response
+     */
+    public CompletableFuture<CreateCommerceSaleschannelResponse> createCommerceSaleschannel(CreateCommerceSaleschannelRequest request) {
+        AsyncRequestOperation<CreateCommerceSaleschannelRequest, CreateCommerceSaleschannelResponse> operation
+              = new CreateCommerceSaleschannel.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Retrieve a collection
      * 
      * @return The async call builder
@@ -374,6 +421,29 @@ public class AsyncCommerce {
     public CompletableFuture<GetCommerceReviewResponse> getCommerceReview(GetCommerceReviewRequest request) {
         AsyncRequestOperation<GetCommerceReviewRequest, GetCommerceReviewResponse> operation
               = new GetCommerceReview.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a saleschannel
+     * 
+     * @return The async call builder
+     */
+    public GetCommerceSaleschannelRequestBuilder getCommerceSaleschannel() {
+        return new GetCommerceSaleschannelRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a saleschannel
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetCommerceSaleschannelResponse>} - The async response
+     */
+    public CompletableFuture<GetCommerceSaleschannelResponse> getCommerceSaleschannel(GetCommerceSaleschannelRequest request) {
+        AsyncRequestOperation<GetCommerceSaleschannelRequest, GetCommerceSaleschannelResponse> operation
+              = new GetCommerceSaleschannel.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -495,6 +565,29 @@ public class AsyncCommerce {
 
 
     /**
+     * List all saleschannels
+     * 
+     * @return The async call builder
+     */
+    public ListCommerceSaleschannelsRequestBuilder listCommerceSaleschannels() {
+        return new ListCommerceSaleschannelsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all saleschannels
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListCommerceSaleschannelsResponse>} - The async response
+     */
+    public CompletableFuture<ListCommerceSaleschannelsResponse> listCommerceSaleschannels(ListCommerceSaleschannelsRequest request) {
+        AsyncRequestOperation<ListCommerceSaleschannelsRequest, ListCommerceSaleschannelsResponse> operation
+              = new ListCommerceSaleschannels.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Update a collection
      * 
      * @return The async call builder
@@ -604,6 +697,29 @@ public class AsyncCommerce {
     public CompletableFuture<PatchCommerceReviewResponse> patchCommerceReview(PatchCommerceReviewRequest request) {
         AsyncRequestOperation<PatchCommerceReviewRequest, PatchCommerceReviewResponse> operation
               = new PatchCommerceReview.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a saleschannel
+     * 
+     * @return The async call builder
+     */
+    public PatchCommerceSaleschannelRequestBuilder patchCommerceSaleschannel() {
+        return new PatchCommerceSaleschannelRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a saleschannel
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchCommerceSaleschannelResponse>} - The async response
+     */
+    public CompletableFuture<PatchCommerceSaleschannelResponse> patchCommerceSaleschannel(PatchCommerceSaleschannelRequest request) {
+        AsyncRequestOperation<PatchCommerceSaleschannelRequest, PatchCommerceSaleschannelResponse> operation
+              = new PatchCommerceSaleschannel.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -725,6 +841,29 @@ public class AsyncCommerce {
 
 
     /**
+     * Remove a saleschannel
+     * 
+     * @return The async call builder
+     */
+    public RemoveCommerceSaleschannelRequestBuilder removeCommerceSaleschannel() {
+        return new RemoveCommerceSaleschannelRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a saleschannel
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveCommerceSaleschannelResponse>} - The async response
+     */
+    public CompletableFuture<RemoveCommerceSaleschannelResponse> removeCommerceSaleschannel(RemoveCommerceSaleschannelRequest request) {
+        AsyncRequestOperation<RemoveCommerceSaleschannelRequest, RemoveCommerceSaleschannelResponse> operation
+              = new RemoveCommerceSaleschannel.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Update a collection
      * 
      * @return The async call builder
@@ -834,6 +973,29 @@ public class AsyncCommerce {
     public CompletableFuture<UpdateCommerceReviewResponse> updateCommerceReview(UpdateCommerceReviewRequest request) {
         AsyncRequestOperation<UpdateCommerceReviewRequest, UpdateCommerceReviewResponse> operation
               = new UpdateCommerceReview.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a saleschannel
+     * 
+     * @return The async call builder
+     */
+    public UpdateCommerceSaleschannelRequestBuilder updateCommerceSaleschannel() {
+        return new UpdateCommerceSaleschannelRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a saleschannel
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdateCommerceSaleschannelResponse>} - The async response
+     */
+    public CompletableFuture<UpdateCommerceSaleschannelResponse> updateCommerceSaleschannel(UpdateCommerceSaleschannelRequest request) {
+        AsyncRequestOperation<UpdateCommerceSaleschannelRequest, UpdateCommerceSaleschannelResponse> operation
+              = new UpdateCommerceSaleschannel.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

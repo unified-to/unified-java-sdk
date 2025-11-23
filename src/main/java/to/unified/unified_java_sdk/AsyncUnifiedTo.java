@@ -93,6 +93,8 @@ public class AsyncUnifiedTo {
 
     private final AsyncReview review;
 
+    private final AsyncSaleschannel saleschannel;
+
     private final AsyncCrm crm;
 
     private final AsyncDeal deal;
@@ -393,6 +395,10 @@ public class AsyncUnifiedTo {
 
     public AsyncReview review() {
         return review;
+    }
+
+    public AsyncSaleschannel saleschannel() {
+        return saleschannel;
     }
 
     public AsyncCrm crm() {
@@ -718,6 +724,7 @@ public class AsyncUnifiedTo {
         this.item = new AsyncItem(syncSDK.item(), sdkConfiguration);
         this.location = new AsyncLocation(syncSDK.location(), sdkConfiguration);
         this.review = new AsyncReview(syncSDK.review(), sdkConfiguration);
+        this.saleschannel = new AsyncSaleschannel(syncSDK.saleschannel(), sdkConfiguration);
         this.crm = new AsyncCrm(syncSDK.crm(), sdkConfiguration);
         this.deal = new AsyncDeal(syncSDK.deal(), sdkConfiguration);
         this.lead = new AsyncLead(syncSDK.lead(), sdkConfiguration);

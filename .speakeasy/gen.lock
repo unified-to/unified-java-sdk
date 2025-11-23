@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: c6058565310b31d840e18ece25ff2318
+  docChecksum: 0cbfedd6f5ab2e89dc21eefa192c619d
   docVersion: "1.0"
   speakeasyVersion: 1.660.0
   generationVersion: 2.760.2
-  releaseVersion: 0.45.5
-  configChecksum: fe14778bc2a1b45345e4768362b3fa23
+  releaseVersion: 0.45.6
+  configChecksum: 719af1e18ec44991169dee85fb162479
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -87,6 +87,8 @@ generatedFiles:
   - docs/models/operations/CreateCommerceLocationResponse.md
   - docs/models/operations/CreateCommerceReviewRequest.md
   - docs/models/operations/CreateCommerceReviewResponse.md
+  - docs/models/operations/CreateCommerceSaleschannelRequest.md
+  - docs/models/operations/CreateCommerceSaleschannelResponse.md
   - docs/models/operations/CreateCrmCompanyRequest.md
   - docs/models/operations/CreateCrmCompanyResponse.md
   - docs/models/operations/CreateCrmContactRequest.md
@@ -264,6 +266,8 @@ generatedFiles:
   - docs/models/operations/GetCommerceLocationResponse.md
   - docs/models/operations/GetCommerceReviewRequest.md
   - docs/models/operations/GetCommerceReviewResponse.md
+  - docs/models/operations/GetCommerceSaleschannelRequest.md
+  - docs/models/operations/GetCommerceSaleschannelResponse.md
   - docs/models/operations/GetCrmCompanyRequest.md
   - docs/models/operations/GetCrmCompanyResponse.md
   - docs/models/operations/GetCrmContactRequest.md
@@ -464,6 +468,8 @@ generatedFiles:
   - docs/models/operations/ListCommerceLocationsResponse.md
   - docs/models/operations/ListCommerceReviewsRequest.md
   - docs/models/operations/ListCommerceReviewsResponse.md
+  - docs/models/operations/ListCommerceSaleschannelsRequest.md
+  - docs/models/operations/ListCommerceSaleschannelsResponse.md
   - docs/models/operations/ListCrmCompaniesRequest.md
   - docs/models/operations/ListCrmCompaniesResponse.md
   - docs/models/operations/ListCrmContactsRequest.md
@@ -653,6 +659,8 @@ generatedFiles:
   - docs/models/operations/PatchCommerceLocationResponse.md
   - docs/models/operations/PatchCommerceReviewRequest.md
   - docs/models/operations/PatchCommerceReviewResponse.md
+  - docs/models/operations/PatchCommerceSaleschannelRequest.md
+  - docs/models/operations/PatchCommerceSaleschannelResponse.md
   - docs/models/operations/PatchCrmCompanyRequest.md
   - docs/models/operations/PatchCrmCompanyResponse.md
   - docs/models/operations/PatchCrmContactRequest.md
@@ -816,6 +824,8 @@ generatedFiles:
   - docs/models/operations/RemoveCommerceLocationResponse.md
   - docs/models/operations/RemoveCommerceReviewRequest.md
   - docs/models/operations/RemoveCommerceReviewResponse.md
+  - docs/models/operations/RemoveCommerceSaleschannelRequest.md
+  - docs/models/operations/RemoveCommerceSaleschannelResponse.md
   - docs/models/operations/RemoveCrmCompanyRequest.md
   - docs/models/operations/RemoveCrmCompanyResponse.md
   - docs/models/operations/RemoveCrmContactRequest.md
@@ -974,6 +984,8 @@ generatedFiles:
   - docs/models/operations/UpdateCommerceLocationResponse.md
   - docs/models/operations/UpdateCommerceReviewRequest.md
   - docs/models/operations/UpdateCommerceReviewResponse.md
+  - docs/models/operations/UpdateCommerceSaleschannelRequest.md
+  - docs/models/operations/UpdateCommerceSaleschannelResponse.md
   - docs/models/operations/UpdateCrmCompanyRequest.md
   - docs/models/operations/UpdateCrmCompanyResponse.md
   - docs/models/operations/UpdateCrmContactRequest.md
@@ -1202,10 +1214,12 @@ generatedFiles:
   - docs/models/shared/CommerceMetadataSchemas1.md
   - docs/models/shared/CommerceMetadataSchemas5.md
   - docs/models/shared/CommerceMetadataValue.md
+  - docs/models/shared/CommerceReference.md
   - docs/models/shared/CommerceReview.md
   - docs/models/shared/CommerceReviewComment.md
   - docs/models/shared/CommerceReviewCommentStatus.md
   - docs/models/shared/CommerceReviewStatus.md
+  - docs/models/shared/CommerceSaleschannel.md
   - docs/models/shared/Connection.md
   - docs/models/shared/ContentType.md
   - docs/models/shared/CoverageLevel.md
@@ -1321,6 +1335,7 @@ generatedFiles:
   - docs/models/shared/KmsSpace.md
   - docs/models/shared/ListAccountId.md
   - docs/models/shared/ListApplicationId.md
+  - docs/models/shared/ListBenefitId.md
   - docs/models/shared/ListBranchId.md
   - docs/models/shared/ListCalendarId.md
   - docs/models/shared/ListCallId.md
@@ -1365,6 +1380,7 @@ generatedFiles:
   - docs/models/shared/ListRawFields.md
   - docs/models/shared/ListRepoId.md
   - docs/models/shared/ListRootId.md
+  - docs/models/shared/ListSaleschannelId.md
   - docs/models/shared/ListSortByCreatedAt.md
   - docs/models/shared/ListSortByName.md
   - docs/models/shared/ListSortByUpdatedAt.md
@@ -1620,6 +1636,7 @@ generatedFiles:
   - docs/models/shared/VirtualWebhookPipelineId.md
   - docs/models/shared/VirtualWebhookProjectId.md
   - docs/models/shared/VirtualWebhookRepoId.md
+  - docs/models/shared/VirtualWebhookSaleschannelId.md
   - docs/models/shared/VirtualWebhookSpaceId.md
   - docs/models/shared/VirtualWebhookStartGte.md
   - docs/models/shared/VirtualWebhookStatus.md
@@ -1723,6 +1740,7 @@ generatedFiles:
   - docs/sdks/repository/README.md
   - docs/sdks/request/README.md
   - docs/sdks/review/README.md
+  - docs/sdks/saleschannel/README.md
   - docs/sdks/salesorder/README.md
   - docs/sdks/scim/README.md
   - docs/sdks/scorecard/README.md
@@ -1854,6 +1872,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/AsyncRepository.java
   - src/main/java/to/unified/unified_java_sdk/AsyncRequest.java
   - src/main/java/to/unified/unified_java_sdk/AsyncReview.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncSaleschannel.java
   - src/main/java/to/unified/unified_java_sdk/AsyncSalesorder.java
   - src/main/java/to/unified/unified_java_sdk/AsyncScim.java
   - src/main/java/to/unified/unified_java_sdk/AsyncScorecard.java
@@ -1960,6 +1979,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/Request.java
   - src/main/java/to/unified/unified_java_sdk/Review.java
   - src/main/java/to/unified/unified_java_sdk/SDKConfiguration.java
+  - src/main/java/to/unified/unified_java_sdk/Saleschannel.java
   - src/main/java/to/unified/unified_java_sdk/Salesorder.java
   - src/main/java/to/unified/unified_java_sdk/Scim.java
   - src/main/java/to/unified/unified_java_sdk/Scorecard.java
@@ -2015,6 +2035,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCommerceItemRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCommerceLocationRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCommerceReviewRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCommerceSaleschannelRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCrmCompanyRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCrmContactRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCrmDealRequestBuilder.java
@@ -2104,6 +2125,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCommerceItemRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCommerceLocationRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCommerceReviewRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCommerceSaleschannelRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCrmCompanyRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCrmContactRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCrmDealRequestBuilder.java
@@ -2204,6 +2226,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCommerceItemsRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCommerceLocationsRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCommerceReviewsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCommerceSaleschannelsRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCrmCompaniesRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCrmContactsRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCrmDealsRequestBuilder.java
@@ -2298,6 +2321,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCommerceItemRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCommerceLocationRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCommerceReviewRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCommerceSaleschannelRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCrmCompanyRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCrmContactRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCrmDealRequestBuilder.java
@@ -2379,6 +2403,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCommerceItemRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCommerceLocationRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCommerceReviewRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCommerceSaleschannelRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCrmCompanyRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCrmContactRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCrmDealRequestBuilder.java
@@ -2458,6 +2483,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCommerceItemRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCommerceLocationRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCommerceReviewRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCommerceSaleschannelRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCrmCompanyRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCrmContactRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCrmDealRequestBuilder.java
@@ -2598,6 +2624,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateCommerceReviewRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateCommerceReviewRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateCommerceReviewResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/CreateCommerceSaleschannelRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/CreateCommerceSaleschannelRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/CreateCommerceSaleschannelResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateCrmCompanyRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateCrmCompanyRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateCrmCompanyResponse.java
@@ -2864,6 +2893,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetCommerceReviewRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetCommerceReviewRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetCommerceReviewResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetCommerceSaleschannelRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetCommerceSaleschannelRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/GetCommerceSaleschannelResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetCrmCompanyRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetCrmCompanyRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/GetCrmCompanyResponse.java
@@ -3164,6 +3196,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListCommerceReviewsRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListCommerceReviewsRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListCommerceReviewsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/ListCommerceSaleschannelsRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/ListCommerceSaleschannelsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/ListCommerceSaleschannelsResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListCrmCompaniesRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListCrmCompaniesRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListCrmCompaniesResponse.java
@@ -3447,6 +3482,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchCommerceReviewRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchCommerceReviewRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchCommerceReviewResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/PatchCommerceSaleschannelRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/PatchCommerceSaleschannelRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/PatchCommerceSaleschannelResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchCrmCompanyRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchCrmCompanyRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/PatchCrmCompanyResponse.java
@@ -3691,6 +3729,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCommerceReviewRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCommerceReviewRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCommerceReviewResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCommerceSaleschannelRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCommerceSaleschannelRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCommerceSaleschannelResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCrmCompanyRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCrmCompanyRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCrmCompanyResponse.java
@@ -3928,6 +3969,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCommerceReviewRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCommerceReviewRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCommerceReviewResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCommerceSaleschannelRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCommerceSaleschannelRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCommerceSaleschannelResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCrmCompanyRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCrmCompanyRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCrmCompanyResponse.java
@@ -4113,6 +4157,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCommerceItemResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCommerceLocationResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCommerceReviewResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCommerceSaleschannelResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCrmCompanyResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCrmContactResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCrmDealResponse.java
@@ -4202,6 +4247,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCommerceItemResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCommerceLocationResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCommerceReviewResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCommerceSaleschannelResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCrmCompanyResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCrmContactResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCrmDealResponse.java
@@ -4302,6 +4348,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCommerceItemsResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCommerceLocationsResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCommerceReviewsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCommerceSaleschannelsResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCrmCompaniesResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCrmContactsResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCrmDealsResponse.java
@@ -4396,6 +4443,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCommerceItemResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCommerceLocationResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCommerceReviewResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCommerceSaleschannelResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCrmCompanyResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCrmContactResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCrmDealResponse.java
@@ -4477,6 +4525,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCommerceItemResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCommerceLocationResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCommerceReviewResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCommerceSaleschannelResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCrmCompanyResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCrmContactResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCrmDealResponse.java
@@ -4556,6 +4605,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCommerceItemResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCommerceLocationResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCommerceReviewResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCommerceSaleschannelResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCrmCompanyResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCrmContactResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCrmDealResponse.java
@@ -4732,10 +4782,12 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceMetadataSchemas1.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceMetadataSchemas5.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceMetadataValue.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceReference.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceReview.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceReviewComment.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceReviewCommentStatus.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceReviewStatus.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/CommerceSaleschannel.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/Connection.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/ContentType.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/CoverageLevel.java
@@ -4851,6 +4903,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/KmsSpace.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/ListAccountId.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/ListApplicationId.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/ListBenefitId.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/ListBranchId.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/ListCalendarId.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/ListCallId.java
@@ -4895,6 +4948,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/ListRawFields.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/ListRepoId.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/ListRootId.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/ListSaleschannelId.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/ListSortByCreatedAt.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/ListSortByName.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/ListSortByUpdatedAt.java
@@ -5150,6 +5204,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/shared/VirtualWebhookPipelineId.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/VirtualWebhookProjectId.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/VirtualWebhookRepoId.java
+  - src/main/java/to/unified/unified_java_sdk/models/shared/VirtualWebhookSaleschannelId.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/VirtualWebhookSpaceId.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/VirtualWebhookStartGte.java
   - src/main/java/to/unified/unified_java_sdk/models/shared/VirtualWebhookStatus.java
@@ -5192,6 +5247,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/CreateCommerceItem.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateCommerceLocation.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateCommerceReview.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateCommerceSaleschannel.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateCrmCompany.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateCrmContact.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateCrmDeal.java
@@ -5281,6 +5337,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/GetCommerceItem.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetCommerceLocation.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetCommerceReview.java
+  - src/main/java/to/unified/unified_java_sdk/operations/GetCommerceSaleschannel.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetCrmCompany.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetCrmContact.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetCrmDeal.java
@@ -5381,6 +5438,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/ListCommerceItems.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListCommerceLocations.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListCommerceReviews.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListCommerceSaleschannels.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListCrmCompanies.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListCrmContacts.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListCrmDeals.java
@@ -5476,6 +5534,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/PatchCommerceItem.java
   - src/main/java/to/unified/unified_java_sdk/operations/PatchCommerceLocation.java
   - src/main/java/to/unified/unified_java_sdk/operations/PatchCommerceReview.java
+  - src/main/java/to/unified/unified_java_sdk/operations/PatchCommerceSaleschannel.java
   - src/main/java/to/unified/unified_java_sdk/operations/PatchCrmCompany.java
   - src/main/java/to/unified/unified_java_sdk/operations/PatchCrmContact.java
   - src/main/java/to/unified/unified_java_sdk/operations/PatchCrmDeal.java
@@ -5557,6 +5616,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveCommerceItem.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveCommerceLocation.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveCommerceReview.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveCommerceSaleschannel.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveCrmCompany.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveCrmContact.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveCrmDeal.java
@@ -5636,6 +5696,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateCommerceItem.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateCommerceLocation.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateCommerceReview.java
+  - src/main/java/to/unified/unified_java_sdk/operations/UpdateCommerceSaleschannel.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateCrmCompany.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateCrmContact.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateCrmDeal.java
@@ -10517,6 +10578,61 @@ examples:
       responses:
         "200":
           application/json: {}
+  createCommerceSaleschannel:
+    speakeasy-default-create-commerce-saleschannel:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getCommerceSaleschannel:
+    speakeasy-default-get-commerce-saleschannel:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listCommerceSaleschannels:
+    speakeasy-default-list-commerce-saleschannels:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchCommerceSaleschannel:
+    speakeasy-default-patch-commerce-saleschannel:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeCommerceSaleschannel:
+    speakeasy-default-remove-commerce-saleschannel:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateCommerceSaleschannel:
+    speakeasy-default-update-commerce-saleschannel:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Java SDK Changes Detected:\n* `unified-to.accounting.createAccountingBill()`: \n  *  `request.accountingBill.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.createAccountingCreditmemo()`: \n  *  `request.accountingCreditmemo.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.createAccountingExpense()`: \n  *  `request.accountingExpense.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.createAccountingInvoice()`: \n  *  `request.accountingInvoice.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.createAccountingOrder()`: \n  *  `request.accountingOrder.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.createAccountingPurchaseorder()`: \n  *  `request.accountingPurchaseorder.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.createAccountingSalesorder()`: \n  *  `request.accountingSalesorder.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.getAccountingBill()`:  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.getAccountingCreditmemo()`:  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.getAccountingExpense()`:  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.getAccountingInvoice()`:  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.getAccountingOrder()`:  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.getAccountingPurchaseorder()`:  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.getAccountingSalesorder()`:  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.listAccountingBills()`:  `response.[].lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.listAccountingCreditmemoes()`:  `response.[].lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.listAccountingExpenses()`:  `response.[].lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.listAccountingInvoices()`:  `response.[].lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.listAccountingOrders()`:  `response.[].lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.listAccountingPurchaseorders()`:  `response.[].lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.listAccountingSalesorders()`:  `response.[].lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.patchAccountingBill()`: \n  *  `request.accountingBill.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.patchAccountingCreditmemo()`: \n  *  `request.accountingCreditmemo.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.patchAccountingExpense()`: \n  *  `request.accountingExpense.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.patchAccountingInvoice()`: \n  *  `request.accountingInvoice.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.patchAccountingOrder()`: \n  *  `request.accountingOrder.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.patchAccountingPurchaseorder()`: \n  *  `request.accountingPurchaseorder.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.patchAccountingSalesorder()`: \n  *  `request.accountingSalesorder.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.updateAccountingBill()`: \n  *  `request.accountingBill.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.updateAccountingCreditmemo()`: \n  *  `request.accountingCreditmemo.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.updateAccountingExpense()`: \n  *  `request.accountingExpense.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.updateAccountingInvoice()`: \n  *  `request.accountingInvoice.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.updateAccountingOrder()`: \n  *  `request.accountingOrder.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.updateAccountingPurchaseorder()`: \n  *  `request.accountingPurchaseorder.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.accounting.updateAccountingSalesorder()`: \n  *  `request.accountingSalesorder.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.bill.createAccountingBill()`: \n  *  `request.accountingBill.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.bill.getAccountingBill()`:  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.bill.listAccountingBills()`:  `response.[].lineitems.[].itemVariants` **Added**\n* `unified-to.bill.patchAccountingBill()`: \n  *  `request.accountingBill.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.bill.updateAccountingBill()`: \n  *  `request.accountingBill.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.creditmemo.createAccountingCreditmemo()`: \n  *  `request.accountingCreditmemo.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.creditmemo.getAccountingCreditmemo()`:  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.creditmemo.listAccountingCreditmemoes()`:  `response.[].lineitems.[].itemVariants` **Added**\n* `unified-to.creditmemo.patchAccountingCreditmemo()`: \n  *  `request.accountingCreditmemo.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.creditmemo.updateAccountingCreditmemo()`: \n  *  `request.accountingCreditmemo.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.expense.createAccountingExpense()`: \n  *  `request.accountingExpense.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.expense.getAccountingExpense()`:  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.expense.listAccountingExpenses()`:  `response.[].lineitems.[].itemVariants` **Added**\n* `unified-to.expense.patchAccountingExpense()`: \n  *  `request.accountingExpense.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.expense.updateAccountingExpense()`: \n  *  `request.accountingExpense.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.invoice.createAccountingInvoice()`: \n  *  `request.accountingInvoice.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.invoice.getAccountingInvoice()`:  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.invoice.listAccountingInvoices()`:  `response.[].lineitems.[].itemVariants` **Added**\n* `unified-to.invoice.patchAccountingInvoice()`: \n  *  `request.accountingInvoice.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.invoice.updateAccountingInvoice()`: \n  *  `request.accountingInvoice.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.order.createAccountingOrder()`: \n  *  `request.accountingOrder.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.order.getAccountingOrder()`:  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.order.listAccountingOrders()`:  `response.[].lineitems.[].itemVariants` **Added**\n* `unified-to.order.patchAccountingOrder()`: \n  *  `request.accountingOrder.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.order.updateAccountingOrder()`: \n  *  `request.accountingOrder.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.purchaseorder.createAccountingPurchaseorder()`: \n  *  `request.accountingPurchaseorder.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.purchaseorder.getAccountingPurchaseorder()`:  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.purchaseorder.listAccountingPurchaseorders()`:  `response.[].lineitems.[].itemVariants` **Added**\n* `unified-to.purchaseorder.patchAccountingPurchaseorder()`: \n  *  `request.accountingPurchaseorder.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.purchaseorder.updateAccountingPurchaseorder()`: \n  *  `request.accountingPurchaseorder.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.salesorder.createAccountingSalesorder()`: \n  *  `request.accountingSalesorder.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.salesorder.getAccountingSalesorder()`:  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.salesorder.listAccountingSalesorders()`:  `response.[].lineitems.[].itemVariants` **Added**\n* `unified-to.salesorder.patchAccountingSalesorder()`: \n  *  `request.accountingSalesorder.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n* `unified-to.salesorder.updateAccountingSalesorder()`: \n  *  `request.accountingSalesorder.lineitems.[].itemVariants` **Added**\n  *  `response.lineitems.[].itemVariants` **Added**\n"
+releaseNotes: "## Java SDK Changes Detected:\n* `unified-to.item.getCommerceItem()`:  `response.media.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified-to.commerce.getCommerceCollection()`:  `response` **Changed** **Breaking** :warning:\n* `unified-to.review.updateCommerceReview()`: \n  *  `request.commerceReview.comments.[].metadata.[]` **Changed** **Breaking** :warning:\n  *  `response.comments.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified-to.review.patchCommerceReview()`: \n  *  `request.commerceReview.comments.[].metadata.[]` **Changed** **Breaking** :warning:\n  *  `response.comments.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified-to.review.listCommerceReviews()`:  `response.[].comments.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified-to.commerce.updateCommerceCollection()`: \n  *  `request.commerceCollection` **Changed** **Breaking** :warning:\n  *  `response` **Changed** **Breaking** :warning:\n* `unified-to.review.createCommerceReview()`: \n  *  `request.commerceReview.comments.[].metadata.[]` **Changed** **Breaking** :warning:\n  *  `response.comments.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified-to.item.updateCommerceItem()`: \n  *  `request.commerceItem.media.[].metadata.[]` **Changed** **Breaking** :warning:\n  *  `response.media.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified-to.item.patchCommerceItem()`: \n  *  `request.commerceItem.media.[].metadata.[]` **Changed** **Breaking** :warning:\n  *  `response.media.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified-to.item.listCommerceItems()`:  `response.[].media.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified-to.item.createCommerceItem()`: \n  *  `request.commerceItem.media.[].metadata.[]` **Changed** **Breaking** :warning:\n  *  `response.media.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified-to.collection.updateCommerceCollection()`: \n  *  `request.commerceCollection` **Changed** **Breaking** :warning:\n  *  `response` **Changed** **Breaking** :warning:\n* `unified-to.commerce.createCommerceCollection()`: \n  *  `request.commerceCollection` **Changed** **Breaking** :warning:\n  *  `response` **Changed** **Breaking** :warning:\n* `unified-to.commerce.createCommerceItem()`: \n  *  `request.commerceItem.media.[].metadata.[]` **Changed** **Breaking** :warning:\n  *  `response.media.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified-to.commerce.createCommerceReview()`: \n  *  `request.commerceReview.comments.[].metadata.[]` **Changed** **Breaking** :warning:\n  *  `response.comments.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified-to.commerce.patchCommerceReview()`: \n  *  `request.commerceReview.comments.[].metadata.[]` **Changed** **Breaking** :warning:\n  *  `response.comments.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified-to.commerce.getCommerceItem()`:  `response.media.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified-to.commerce.getCommerceReview()`:  `response.comments.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified-to.commerce.listCommerceCollections()`: \n  *  `request.saleschannelId` **Added**\n  *  `response.[]` **Changed** **Breaking** :warning:\n* `unified-to.commerce.listCommerceItems()`:  `response.[].media.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified-to.commerce.listCommerceReviews()`:  `response.[].comments.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified-to.commerce.patchCommerceCollection()`: \n  *  `request.commerceCollection` **Changed** **Breaking** :warning:\n  *  `response` **Changed** **Breaking** :warning:\n* `unified-to.collection.patchCommerceCollection()`: \n  *  `request.commerceCollection` **Changed** **Breaking** :warning:\n  *  `response` **Changed** **Breaking** :warning:\n* `unified-to.commerce.patchCommerceItem()`: \n  *  `request.commerceItem.media.[].metadata.[]` **Changed** **Breaking** :warning:\n  *  `response.media.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified-to.review.getCommerceReview()`:  `response.comments.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified-to.commerce.updateCommerceItem()`: \n  *  `request.commerceItem.media.[].metadata.[]` **Changed** **Breaking** :warning:\n  *  `response.media.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified-to.commerce.updateCommerceReview()`: \n  *  `request.commerceReview.comments.[].metadata.[]` **Changed** **Breaking** :warning:\n  *  `response.comments.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified-to.collection.createCommerceCollection()`: \n  *  `request.commerceCollection` **Changed** **Breaking** :warning:\n  *  `response` **Changed** **Breaking** :warning:\n* `unified-to.collection.getCommerceCollection()`:  `response` **Changed** **Breaking** :warning:\n* `unified-to.collection.listCommerceCollections()`: \n  *  `request.saleschannelId` **Added**\n  *  `response.[]` **Changed** **Breaking** :warning:\n* `unified-to.commerce.updateCommerceSaleschannel()`: **Added**\n* `unified-to.saleschannel.createCommerceSaleschannel()`: **Added**\n* `unified-to.saleschannel.removeCommerceSaleschannel()`: **Added**\n* `unified-to.commerce.createCommerceSaleschannel()`: **Added**\n* `unified-to.saleschannel.patchCommerceSaleschannel()`: **Added**\n* `unified-to.saleschannel.listCommerceSaleschannels()`: **Added**\n* `unified-to.saleschannel.updateCommerceSaleschannel()`: **Added**\n* `unified-to.saleschannel.getCommerceSaleschannel()`: **Added**\n* `unified-to.commerce.removeCommerceSaleschannel()`: **Added**\n* `unified-to.commerce.getCommerceSaleschannel()`: **Added**\n* `unified-to.commerce.patchCommerceSaleschannel()`: **Added**\n* `unified-to.commerce.listCommerceSaleschannels()`: **Added**\n* `unified-to.unified.listUnifiedIntegrationWorkspaces()`:  `response.[].support.{}` **Changed**\n* `unified-to.unified.listUnifiedIntegrations()`:  `response.[].support.{}` **Changed**\n* `unified-to.integration.listUnifiedIntegrationWorkspaces()`:  `response.[].support.{}` **Changed**\n* `unified-to.integration.listUnifiedIntegrations()`:  `response.[].support.{}` **Changed**\n"
