@@ -64,6 +64,10 @@ public class ListMessagingChannelsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     private Optional<String> sort;
 
+
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    private Optional<String> type;
+
     /**
      * Return only results whose updated date is equal or greater to this value
      */
@@ -81,6 +85,7 @@ public class ListMessagingChannelsRequest {
             Optional<String> query,
             Optional<String> raw,
             Optional<String> sort,
+            Optional<String> type,
             Optional<String> updatedGte) {
         Utils.checkNotNull(connectionId, "connectionId");
         Utils.checkNotNull(fields, "fields");
@@ -91,6 +96,7 @@ public class ListMessagingChannelsRequest {
         Utils.checkNotNull(query, "query");
         Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(sort, "sort");
+        Utils.checkNotNull(type, "type");
         Utils.checkNotNull(updatedGte, "updatedGte");
         this.connectionId = connectionId;
         this.fields = fields;
@@ -101,6 +107,7 @@ public class ListMessagingChannelsRequest {
         this.query = query;
         this.raw = raw;
         this.sort = sort;
+        this.type = type;
         this.updatedGte = updatedGte;
     }
     
@@ -109,7 +116,7 @@ public class ListMessagingChannelsRequest {
         this(connectionId, Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            Optional.empty(), Optional.empty());
     }
 
     /**
@@ -173,6 +180,11 @@ public class ListMessagingChannelsRequest {
     @JsonIgnore
     public Optional<String> sort() {
         return sort;
+    }
+
+    @JsonIgnore
+    public Optional<String> type() {
+        return type;
     }
 
     /**
@@ -329,6 +341,19 @@ public class ListMessagingChannelsRequest {
         return this;
     }
 
+    public ListMessagingChannelsRequest withType(String type) {
+        Utils.checkNotNull(type, "type");
+        this.type = Optional.ofNullable(type);
+        return this;
+    }
+
+
+    public ListMessagingChannelsRequest withType(Optional<String> type) {
+        Utils.checkNotNull(type, "type");
+        this.type = type;
+        return this;
+    }
+
     /**
      * Return only results whose updated date is equal or greater to this value
      */
@@ -367,6 +392,7 @@ public class ListMessagingChannelsRequest {
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
+            Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte);
     }
     
@@ -376,7 +402,7 @@ public class ListMessagingChannelsRequest {
             connectionId, fields, limit,
             offset, order, parentId,
             query, raw, sort,
-            updatedGte);
+            type, updatedGte);
     }
     
     @Override
@@ -391,6 +417,7 @@ public class ListMessagingChannelsRequest {
                 "query", query,
                 "raw", raw,
                 "sort", sort,
+                "type", type,
                 "updatedGte", updatedGte);
     }
 
@@ -414,6 +441,8 @@ public class ListMessagingChannelsRequest {
         private Optional<String> raw = Optional.empty();
 
         private Optional<String> sort = Optional.empty();
+
+        private Optional<String> type = Optional.empty();
 
         private Optional<String> updatedGte = Optional.empty();
 
@@ -564,6 +593,19 @@ public class ListMessagingChannelsRequest {
         }
 
 
+        public Builder type(String type) {
+            Utils.checkNotNull(type, "type");
+            this.type = Optional.ofNullable(type);
+            return this;
+        }
+
+        public Builder type(Optional<String> type) {
+            Utils.checkNotNull(type, "type");
+            this.type = type;
+            return this;
+        }
+
+
         /**
          * Return only results whose updated date is equal or greater to this value
          */
@@ -588,7 +630,7 @@ public class ListMessagingChannelsRequest {
                 connectionId, fields, limit,
                 offset, order, parentId,
                 query, raw, sort,
-                updatedGte);
+                type, updatedGte);
         }
 
     }

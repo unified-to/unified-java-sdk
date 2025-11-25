@@ -95,6 +95,10 @@ public class ListMessagingMessagesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_gte")
     private Optional<String> startGte;
 
+
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    private Optional<String> type;
+
     /**
      * Return only results whose updated date is equal or greater to this value
      */
@@ -129,6 +133,7 @@ public class ListMessagingMessagesRequest {
             Optional<String> raw,
             Optional<String> sort,
             Optional<String> startGte,
+            Optional<String> type,
             Optional<String> updatedGte,
             Optional<String> userId,
             Optional<String> userMentionedId) {
@@ -146,6 +151,7 @@ public class ListMessagingMessagesRequest {
         Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(sort, "sort");
         Utils.checkNotNull(startGte, "startGte");
+        Utils.checkNotNull(type, "type");
         Utils.checkNotNull(updatedGte, "updatedGte");
         Utils.checkNotNull(userId, "userId");
         Utils.checkNotNull(userMentionedId, "userMentionedId");
@@ -163,6 +169,7 @@ public class ListMessagingMessagesRequest {
         this.raw = raw;
         this.sort = sort;
         this.startGte = startGte;
+        this.type = type;
         this.updatedGte = updatedGte;
         this.userId = userId;
         this.userMentionedId = userMentionedId;
@@ -175,7 +182,7 @@ public class ListMessagingMessagesRequest {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     /**
@@ -279,6 +286,11 @@ public class ListMessagingMessagesRequest {
     @JsonIgnore
     public Optional<String> startGte() {
         return startGte;
+    }
+
+    @JsonIgnore
+    public Optional<String> type() {
+        return type;
     }
 
     /**
@@ -546,6 +558,19 @@ public class ListMessagingMessagesRequest {
         return this;
     }
 
+    public ListMessagingMessagesRequest withType(String type) {
+        Utils.checkNotNull(type, "type");
+        this.type = Optional.ofNullable(type);
+        return this;
+    }
+
+
+    public ListMessagingMessagesRequest withType(Optional<String> type) {
+        Utils.checkNotNull(type, "type");
+        this.type = type;
+        return this;
+    }
+
     /**
      * Return only results whose updated date is equal or greater to this value
      */
@@ -627,6 +652,7 @@ public class ListMessagingMessagesRequest {
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
             Utils.enhancedDeepEquals(this.startGte, other.startGte) &&
+            Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte) &&
             Utils.enhancedDeepEquals(this.userId, other.userId) &&
             Utils.enhancedDeepEquals(this.userMentionedId, other.userMentionedId);
@@ -639,8 +665,8 @@ public class ListMessagingMessagesRequest {
             endLt, expand, fields,
             limit, offset, order,
             parentId, query, raw,
-            sort, startGte, updatedGte,
-            userId, userMentionedId);
+            sort, startGte, type,
+            updatedGte, userId, userMentionedId);
     }
     
     @Override
@@ -660,6 +686,7 @@ public class ListMessagingMessagesRequest {
                 "raw", raw,
                 "sort", sort,
                 "startGte", startGte,
+                "type", type,
                 "updatedGte", updatedGte,
                 "userId", userId,
                 "userMentionedId", userMentionedId);
@@ -695,6 +722,8 @@ public class ListMessagingMessagesRequest {
         private Optional<String> sort = Optional.empty();
 
         private Optional<String> startGte = Optional.empty();
+
+        private Optional<String> type = Optional.empty();
 
         private Optional<String> updatedGte = Optional.empty();
 
@@ -944,6 +973,19 @@ public class ListMessagingMessagesRequest {
         }
 
 
+        public Builder type(String type) {
+            Utils.checkNotNull(type, "type");
+            this.type = Optional.ofNullable(type);
+            return this;
+        }
+
+        public Builder type(Optional<String> type) {
+            Utils.checkNotNull(type, "type");
+            this.type = type;
+            return this;
+        }
+
+
         /**
          * Return only results whose updated date is equal or greater to this value
          */
@@ -1007,8 +1049,8 @@ public class ListMessagingMessagesRequest {
                 endLt, expand, fields,
                 limit, offset, order,
                 parentId, query, raw,
-                sort, startGte, updatedGte,
-                userId, userMentionedId);
+                sort, startGte, type,
+                updatedGte, userId, userMentionedId);
         }
 
     }

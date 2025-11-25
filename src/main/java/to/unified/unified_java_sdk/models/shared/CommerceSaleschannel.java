@@ -50,11 +50,6 @@ public class CommerceSaleschannel {
 
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("item_metadata")
-    private Optional<? extends List<CommerceMetadata>> itemMetadata;
-
-
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
@@ -75,7 +70,6 @@ public class CommerceSaleschannel {
             @JsonProperty("description") Optional<String> description,
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("is_active") Optional<Boolean> isActive,
-            @JsonProperty("item_metadata") Optional<? extends List<CommerceMetadata>> itemMetadata,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
             @JsonProperty("slug") Optional<String> slug,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
@@ -84,7 +78,6 @@ public class CommerceSaleschannel {
         Utils.checkNotNull(description, "description");
         Utils.checkNotNull(id, "id");
         Utils.checkNotNull(isActive, "isActive");
-        Utils.checkNotNull(itemMetadata, "itemMetadata");
         Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(slug, "slug");
         Utils.checkNotNull(updatedAt, "updatedAt");
@@ -93,7 +86,6 @@ public class CommerceSaleschannel {
         this.description = description;
         this.id = id;
         this.isActive = isActive;
-        this.itemMetadata = itemMetadata;
         this.raw = raw;
         this.slug = slug;
         this.updatedAt = updatedAt;
@@ -102,7 +94,7 @@ public class CommerceSaleschannel {
     public CommerceSaleschannel() {
         this(Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty());
     }
 
     /**
@@ -132,12 +124,6 @@ public class CommerceSaleschannel {
     @JsonIgnore
     public Optional<Boolean> isActive() {
         return isActive;
-    }
-
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
-    public Optional<List<CommerceMetadata>> itemMetadata() {
-        return (Optional<List<CommerceMetadata>>) itemMetadata;
     }
 
     @SuppressWarnings("unchecked")
@@ -232,19 +218,6 @@ public class CommerceSaleschannel {
         return this;
     }
 
-    public CommerceSaleschannel withItemMetadata(List<CommerceMetadata> itemMetadata) {
-        Utils.checkNotNull(itemMetadata, "itemMetadata");
-        this.itemMetadata = Optional.ofNullable(itemMetadata);
-        return this;
-    }
-
-
-    public CommerceSaleschannel withItemMetadata(Optional<? extends List<CommerceMetadata>> itemMetadata) {
-        Utils.checkNotNull(itemMetadata, "itemMetadata");
-        this.itemMetadata = itemMetadata;
-        return this;
-    }
-
     public CommerceSaleschannel withRaw(Map<String, Object> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
@@ -299,7 +272,6 @@ public class CommerceSaleschannel {
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
-            Utils.enhancedDeepEquals(this.itemMetadata, other.itemMetadata) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.slug, other.slug) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
@@ -309,8 +281,8 @@ public class CommerceSaleschannel {
     public int hashCode() {
         return Utils.enhancedHash(
             collections, createdAt, description,
-            id, isActive, itemMetadata,
-            raw, slug, updatedAt);
+            id, isActive, raw,
+            slug, updatedAt);
     }
     
     @Override
@@ -321,7 +293,6 @@ public class CommerceSaleschannel {
                 "description", description,
                 "id", id,
                 "isActive", isActive,
-                "itemMetadata", itemMetadata,
                 "raw", raw,
                 "slug", slug,
                 "updatedAt", updatedAt);
@@ -339,8 +310,6 @@ public class CommerceSaleschannel {
         private Optional<String> id = Optional.empty();
 
         private Optional<Boolean> isActive = Optional.empty();
-
-        private Optional<? extends List<CommerceMetadata>> itemMetadata = Optional.empty();
 
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
 
@@ -424,19 +393,6 @@ public class CommerceSaleschannel {
         }
 
 
-        public Builder itemMetadata(List<CommerceMetadata> itemMetadata) {
-            Utils.checkNotNull(itemMetadata, "itemMetadata");
-            this.itemMetadata = Optional.ofNullable(itemMetadata);
-            return this;
-        }
-
-        public Builder itemMetadata(Optional<? extends List<CommerceMetadata>> itemMetadata) {
-            Utils.checkNotNull(itemMetadata, "itemMetadata");
-            this.itemMetadata = itemMetadata;
-            return this;
-        }
-
-
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
@@ -479,8 +435,8 @@ public class CommerceSaleschannel {
 
             return new CommerceSaleschannel(
                 collections, createdAt, description,
-                id, isActive, itemMetadata,
-                raw, slug, updatedAt);
+                id, isActive, raw,
+                slug, updatedAt);
         }
 
     }
