@@ -348,6 +348,9 @@ public class UnifiedTo {
     private final Connection connection;
 
 
+    private final Environment environment;
+
+
     private final Integration integration;
 
 
@@ -887,6 +890,11 @@ public class UnifiedTo {
     }
 
 
+    public Environment environment() {
+        return environment;
+    }
+
+
     public Integration integration() {
         return integration;
     }
@@ -1166,6 +1174,7 @@ public class UnifiedTo {
         this.unified = new Unified(sdkConfiguration);
         this.apicall = new Apicall(sdkConfiguration);
         this.connection = new Connection(sdkConfiguration);
+        this.environment = new Environment(sdkConfiguration);
         this.integration = new Integration(sdkConfiguration);
         this.auth = new Auth(sdkConfiguration);
         this.login = new Login(sdkConfiguration);

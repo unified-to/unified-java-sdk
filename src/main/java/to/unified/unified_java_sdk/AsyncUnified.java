@@ -4,7 +4,10 @@
 package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
+import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestlessOperation;
 
+import java.lang.String;
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateUnifiedWebhookRequest;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedApicallRequest;
@@ -22,12 +25,15 @@ import to.unified.unified_java_sdk.models.operations.PatchUnifiedConnectionReque
 import to.unified.unified_java_sdk.models.operations.PatchUnifiedWebhookRequest;
 import to.unified.unified_java_sdk.models.operations.PatchUnifiedWebhookTriggerRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveUnifiedConnectionRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveUnifiedEnvironmentRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveUnifiedWebhookRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateUnifiedConnectionRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateUnifiedWebhookRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateUnifiedWebhookTriggerRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateUnifiedConnectionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateUnifiedConnectionResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateUnifiedEnvironmentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateUnifiedEnvironmentResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateUnifiedWebhookRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateUnifiedWebhookResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetUnifiedApicallRequestBuilder;
@@ -44,6 +50,8 @@ import to.unified.unified_java_sdk.models.operations.async.ListUnifiedApicallsRe
 import to.unified.unified_java_sdk.models.operations.async.ListUnifiedApicallsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListUnifiedConnectionsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListUnifiedConnectionsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListUnifiedEnvironmentsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListUnifiedEnvironmentsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListUnifiedIntegrationWorkspacesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListUnifiedIntegrationWorkspacesResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListUnifiedIntegrationsRequestBuilder;
@@ -60,6 +68,8 @@ import to.unified.unified_java_sdk.models.operations.async.PatchUnifiedWebhookTr
 import to.unified.unified_java_sdk.models.operations.async.PatchUnifiedWebhookTriggerResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveUnifiedConnectionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveUnifiedConnectionResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveUnifiedEnvironmentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveUnifiedEnvironmentResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveUnifiedWebhookRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveUnifiedWebhookResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateUnifiedConnectionRequestBuilder;
@@ -70,6 +80,7 @@ import to.unified.unified_java_sdk.models.operations.async.UpdateUnifiedWebhookT
 import to.unified.unified_java_sdk.models.operations.async.UpdateUnifiedWebhookTriggerResponse;
 import to.unified.unified_java_sdk.models.shared.Connection;
 import to.unified.unified_java_sdk.operations.CreateUnifiedConnection;
+import to.unified.unified_java_sdk.operations.CreateUnifiedEnvironment;
 import to.unified.unified_java_sdk.operations.CreateUnifiedWebhook;
 import to.unified.unified_java_sdk.operations.GetUnifiedApicall;
 import to.unified.unified_java_sdk.operations.GetUnifiedConnection;
@@ -78,6 +89,7 @@ import to.unified.unified_java_sdk.operations.GetUnifiedIssue;
 import to.unified.unified_java_sdk.operations.GetUnifiedWebhook;
 import to.unified.unified_java_sdk.operations.ListUnifiedApicalls;
 import to.unified.unified_java_sdk.operations.ListUnifiedConnections;
+import to.unified.unified_java_sdk.operations.ListUnifiedEnvironments;
 import to.unified.unified_java_sdk.operations.ListUnifiedIntegrationWorkspaces;
 import to.unified.unified_java_sdk.operations.ListUnifiedIntegrations;
 import to.unified.unified_java_sdk.operations.ListUnifiedIssues;
@@ -86,6 +98,7 @@ import to.unified.unified_java_sdk.operations.PatchUnifiedConnection;
 import to.unified.unified_java_sdk.operations.PatchUnifiedWebhook;
 import to.unified.unified_java_sdk.operations.PatchUnifiedWebhookTrigger;
 import to.unified.unified_java_sdk.operations.RemoveUnifiedConnection;
+import to.unified.unified_java_sdk.operations.RemoveUnifiedEnvironment;
 import to.unified.unified_java_sdk.operations.RemoveUnifiedWebhook;
 import to.unified.unified_java_sdk.operations.UpdateUnifiedConnection;
 import to.unified.unified_java_sdk.operations.UpdateUnifiedWebhook;
@@ -135,6 +148,29 @@ public class AsyncUnified {
     public CompletableFuture<CreateUnifiedConnectionResponse> createUnifiedConnection(Connection request) {
         AsyncRequestOperation<Connection, CreateUnifiedConnectionResponse> operation
               = new CreateUnifiedConnection.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Returns a builder to make an async request.
+     * 
+     * @return The async call builder
+     */
+    public CreateUnifiedEnvironmentRequestBuilder createUnifiedEnvironment() {
+        return new CreateUnifiedEnvironmentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Makes an async request
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateUnifiedEnvironmentResponse>} - The async response
+     */
+    public CompletableFuture<CreateUnifiedEnvironmentResponse> createUnifiedEnvironment(List<String> request) {
+        AsyncRequestOperation<List<String>, CreateUnifiedEnvironmentResponse> operation
+              = new CreateUnifiedEnvironment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -339,6 +375,28 @@ public class AsyncUnified {
 
 
     /**
+     * Returns a builder to make an async request.
+     * 
+     * @return The async call builder
+     */
+    public ListUnifiedEnvironmentsRequestBuilder listUnifiedEnvironments() {
+        return new ListUnifiedEnvironmentsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Makes an async request
+     * 
+     * @return {@code CompletableFuture<ListUnifiedEnvironmentsResponse>} - The async response
+     */
+    public CompletableFuture<ListUnifiedEnvironmentsResponse> listUnifiedEnvironmentsDirect() {
+        AsyncRequestlessOperation<ListUnifiedEnvironmentsResponse> operation
+            = new ListUnifiedEnvironments.Async(sdkConfiguration, _headers);
+        return operation.doRequest()
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Returns all activated integrations in a workspace
      * 
      * <p>No authentication required as this is to be used by front-end interface
@@ -521,6 +579,29 @@ public class AsyncUnified {
     public CompletableFuture<RemoveUnifiedConnectionResponse> removeUnifiedConnection(RemoveUnifiedConnectionRequest request) {
         AsyncRequestOperation<RemoveUnifiedConnectionRequest, RemoveUnifiedConnectionResponse> operation
               = new RemoveUnifiedConnection.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Returns a builder to make an async request.
+     * 
+     * @return The async call builder
+     */
+    public RemoveUnifiedEnvironmentRequestBuilder removeUnifiedEnvironment() {
+        return new RemoveUnifiedEnvironmentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Makes an async request
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveUnifiedEnvironmentResponse>} - The async response
+     */
+    public CompletableFuture<RemoveUnifiedEnvironmentResponse> removeUnifiedEnvironment(RemoveUnifiedEnvironmentRequest request) {
+        AsyncRequestOperation<RemoveUnifiedEnvironmentRequest, RemoveUnifiedEnvironmentResponse> operation
+              = new RemoveUnifiedEnvironment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

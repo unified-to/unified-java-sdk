@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: e5fd42ded6b39076e927e9c9bcaeaeda
+  docChecksum: 7e48c8065cf75c07215a397f53c91620
   docVersion: "1.0"
-  speakeasyVersion: 1.660.0
-  generationVersion: 2.760.2
-  releaseVersion: 0.45.7
-  configChecksum: dd983d487bb6ee4ab563c1e1e49a91e8
+  speakeasyVersion: 1.661.2
+  generationVersion: 2.763.3
+  releaseVersion: 0.45.8
+  configChecksum: 45be11b5301624f35b98300162a1cbd0
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -15,7 +15,7 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.1
-    core: 3.55.3
+    core: 3.55.5
     downloadStreams: 0.1.1
     globalSecurity: 2.83.1
     globalSecurityCallbacks: 0.1.0
@@ -190,6 +190,7 @@ generatedFiles:
   - docs/models/operations/CreateUcRecordingRequest.md
   - docs/models/operations/CreateUcRecordingResponse.md
   - docs/models/operations/CreateUnifiedConnectionResponse.md
+  - docs/models/operations/CreateUnifiedEnvironmentResponse.md
   - docs/models/operations/CreateUnifiedWebhookRequest.md
   - docs/models/operations/CreateUnifiedWebhookResponse.md
   - docs/models/operations/CreateVerificationRequestRequest.md
@@ -588,6 +589,7 @@ generatedFiles:
   - docs/models/operations/ListUnifiedApicallsResponse.md
   - docs/models/operations/ListUnifiedConnectionsRequest.md
   - docs/models/operations/ListUnifiedConnectionsResponse.md
+  - docs/models/operations/ListUnifiedEnvironmentsResponse.md
   - docs/models/operations/ListUnifiedIntegrationWorkspacesRequest.md
   - docs/models/operations/ListUnifiedIntegrationWorkspacesResponse.md
   - docs/models/operations/ListUnifiedIntegrationsQueryParamCategories.md
@@ -922,6 +924,8 @@ generatedFiles:
   - docs/models/operations/RemoveUcRecordingResponse.md
   - docs/models/operations/RemoveUnifiedConnectionRequest.md
   - docs/models/operations/RemoveUnifiedConnectionResponse.md
+  - docs/models/operations/RemoveUnifiedEnvironmentRequest.md
+  - docs/models/operations/RemoveUnifiedEnvironmentResponse.md
   - docs/models/operations/RemoveUnifiedWebhookRequest.md
   - docs/models/operations/RemoveUnifiedWebhookResponse.md
   - docs/models/operations/RemoveVerificationRequestRequest.md
@@ -1689,6 +1693,7 @@ generatedFiles:
   - docs/sdks/embedding/README.md
   - docs/sdks/employee/README.md
   - docs/sdks/enrich/README.md
+  - docs/sdks/environment/README.md
   - docs/sdks/event/README.md
   - docs/sdks/expense/README.md
   - docs/sdks/file/README.md
@@ -1821,6 +1826,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/AsyncEmbedding.java
   - src/main/java/to/unified/unified_java_sdk/AsyncEmployee.java
   - src/main/java/to/unified/unified_java_sdk/AsyncEnrich.java
+  - src/main/java/to/unified/unified_java_sdk/AsyncEnvironment.java
   - src/main/java/to/unified/unified_java_sdk/AsyncEvent.java
   - src/main/java/to/unified/unified_java_sdk/AsyncExpense.java
   - src/main/java/to/unified/unified_java_sdk/AsyncFile.java
@@ -1927,6 +1933,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/Embedding.java
   - src/main/java/to/unified/unified_java_sdk/Employee.java
   - src/main/java/to/unified/unified_java_sdk/Enrich.java
+  - src/main/java/to/unified/unified_java_sdk/Environment.java
   - src/main/java/to/unified/unified_java_sdk/Event.java
   - src/main/java/to/unified/unified_java_sdk/Expense.java
   - src/main/java/to/unified/unified_java_sdk/File.java
@@ -2087,6 +2094,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateUcContactRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateUcRecordingRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateUnifiedConnectionRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateUnifiedEnvironmentRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateUnifiedWebhookRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateVerificationRequestRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingAccountRequestBuilder.java
@@ -2286,6 +2294,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListUcRecordingsRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListUnifiedApicallsRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListUnifiedConnectionsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListUnifiedEnvironmentsRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListUnifiedIntegrationWorkspacesRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListUnifiedIntegrationsRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/ListUnifiedIssuesRequestBuilder.java
@@ -2452,6 +2461,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveUcContactRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveUcRecordingRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveUnifiedConnectionRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveUnifiedEnvironmentRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveUnifiedWebhookRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveVerificationRequestRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateAccountingAccountRequestBuilder.java
@@ -2779,6 +2789,8 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateUcRecordingResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateUnifiedConnectionRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateUnifiedConnectionResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/CreateUnifiedEnvironmentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/CreateUnifiedEnvironmentResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateUnifiedWebhookRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateUnifiedWebhookRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/CreateUnifiedWebhookResponse.java
@@ -3376,6 +3388,8 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListUnifiedConnectionsRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListUnifiedConnectionsRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListUnifiedConnectionsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/ListUnifiedEnvironmentsRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/ListUnifiedEnvironmentsResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListUnifiedIntegrationWorkspacesRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListUnifiedIntegrationWorkspacesRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/ListUnifiedIntegrationWorkspacesResponse.java
@@ -3876,6 +3890,9 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveUnifiedConnectionRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveUnifiedConnectionRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveUnifiedConnectionResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveUnifiedEnvironmentRequest.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveUnifiedEnvironmentRequestBuilder.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveUnifiedEnvironmentResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveUnifiedWebhookRequest.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveUnifiedWebhookRequestBuilder.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/RemoveUnifiedWebhookResponse.java
@@ -4209,6 +4226,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateUcContactResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateUcRecordingResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateUnifiedConnectionResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateUnifiedEnvironmentResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateUnifiedWebhookResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateVerificationRequestResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingAccountResponse.java
@@ -4408,6 +4426,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListUcRecordingsResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListUnifiedApicallsResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListUnifiedConnectionsResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListUnifiedEnvironmentsResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListUnifiedIntegrationWorkspacesResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListUnifiedIntegrationsResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/ListUnifiedIssuesResponse.java
@@ -4574,6 +4593,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveUcContactResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveUcRecordingResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveUnifiedConnectionResponse.java
+  - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveUnifiedEnvironmentResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveUnifiedWebhookResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveVerificationRequestResponse.java
   - src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateAccountingAccountResponse.java
@@ -5299,6 +5319,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/CreateUcContact.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateUcRecording.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateUnifiedConnection.java
+  - src/main/java/to/unified/unified_java_sdk/operations/CreateUnifiedEnvironment.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateUnifiedWebhook.java
   - src/main/java/to/unified/unified_java_sdk/operations/CreateVerificationRequest.java
   - src/main/java/to/unified/unified_java_sdk/operations/GetAccountingAccount.java
@@ -5498,6 +5519,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/ListUcRecordings.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListUnifiedApicalls.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListUnifiedConnections.java
+  - src/main/java/to/unified/unified_java_sdk/operations/ListUnifiedEnvironments.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListUnifiedIntegrationWorkspaces.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListUnifiedIntegrations.java
   - src/main/java/to/unified/unified_java_sdk/operations/ListUnifiedIssues.java
@@ -5665,6 +5687,7 @@ generatedFiles:
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveUcContact.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveUcRecording.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveUnifiedConnection.java
+  - src/main/java/to/unified/unified_java_sdk/operations/RemoveUnifiedEnvironment.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveUnifiedWebhook.java
   - src/main/java/to/unified/unified_java_sdk/operations/RemoveVerificationRequest.java
   - src/main/java/to/unified/unified_java_sdk/operations/UpdateAccountingAccount.java
@@ -10633,6 +10656,33 @@ examples:
       responses:
         "200":
           application/json: {}
+  createUnifiedEnvironment:
+    speakeasy-default-create-unified-environment:
+      requestBody:
+        application/json: []
+      responses:
+        "200":
+          application/json: ["<value 1>", "<value 2>", "<value 3>"]
+  listUnifiedEnvironments:
+    speakeasy-default-list-unified-environments:
+      responses:
+        "200":
+          application/json: ["<value 1>", "<value 2>", "<value 3>"]
+  removeUnifiedEnvironment:
+    speakeasy-default-remove-unified-environment:
+      parameters:
+        path:
+          env: "<value>"
+      responses:
+        "200":
+          application/json: ["<value 1>", "<value 2>", "<value 3>"]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Java SDK Changes Detected:\n* `unified-to.commerce.listCommerceSaleschannels()`:  `response.[].itemMetadata` **Removed** **Breaking** :warning:\n* `unified-to.saleschannel.updateCommerceSaleschannel()`: \n  *  `request.commerceSaleschannel.itemMetadata` **Removed** **Breaking** :warning:\n  *  `response.item_metadata` **Removed** **Breaking** :warning:\n* `unified-to.saleschannel.patchCommerceSaleschannel()`: \n  *  `request.commerceSaleschannel.itemMetadata` **Removed** **Breaking** :warning:\n  *  `response.item_metadata` **Removed** **Breaking** :warning:\n* `unified-to.commerce.createCommerceSaleschannel()`: \n  *  `request.commerceSaleschannel.itemMetadata` **Removed** **Breaking** :warning:\n  *  `response.item_metadata` **Removed** **Breaking** :warning:\n* `unified-to.saleschannel.listCommerceSaleschannels()`:  `response.[].itemMetadata` **Removed** **Breaking** :warning:\n* `unified-to.saleschannel.getCommerceSaleschannel()`:  `response.item_metadata` **Removed** **Breaking** :warning:\n* `unified-to.saleschannel.createCommerceSaleschannel()`: \n  *  `request.commerceSaleschannel.itemMetadata` **Removed** **Breaking** :warning:\n  *  `response.item_metadata` **Removed** **Breaking** :warning:\n* `unified-to.commerce.getCommerceSaleschannel()`:  `response.item_metadata` **Removed** **Breaking** :warning:\n* `unified-to.commerce.updateCommerceSaleschannel()`: \n  *  `request.commerceSaleschannel.itemMetadata` **Removed** **Breaking** :warning:\n  *  `response.item_metadata` **Removed** **Breaking** :warning:\n* `unified-to.commerce.patchCommerceSaleschannel()`: \n  *  `request.commerceSaleschannel.itemMetadata` **Removed** **Breaking** :warning:\n  *  `response.item_metadata` **Removed** **Breaking** :warning:\n* `unified-to.collection.listCommerceCollections()`:  `response.[]` **Changed**\n* `unified-to.item.listCommerceItems()`:  `response.[].media.[].metadata.[]` **Changed**\n* `unified-to.commerce.patchCommerceCollection()`: \n  *  `request.commerceCollection` **Changed**\n  *  `response` **Changed**\n* `unified-to.commerce.patchCommerceItem()`: \n  *  `request.commerceItem.media.[].metadata.[]` **Changed**\n  *  `response.media.[].metadata.[]` **Changed**\n* `unified-to.commerce.patchCommerceReview()`: \n  *  `request.commerceReview.comments.[].metadata.[]` **Changed**\n  *  `response.comments.[].metadata.[]` **Changed**\n* `unified-to.commerce.listCommerceItems()`:  `response.[].media.[].metadata.[]` **Changed**\n* `unified-to.commerce.updateCommerceCollection()`: \n  *  `request.commerceCollection` **Changed**\n  *  `response` **Changed**\n* `unified-to.commerce.updateCommerceItem()`: \n  *  `request.commerceItem.media.[].metadata.[]` **Changed**\n  *  `response.media.[].metadata.[]` **Changed**\n* `unified-to.commerce.updateCommerceReview()`: \n  *  `request.commerceReview.comments.[].metadata.[]` **Changed**\n  *  `response.comments.[].metadata.[]` **Changed**\n* `unified-to.commerce.listCommerceCollections()`:  `response.[]` **Changed**\n* `unified-to.collection.createCommerceCollection()`: \n  *  `request.commerceCollection` **Changed**\n  *  `response` **Changed**\n* `unified-to.collection.getCommerceCollection()`:  `response` **Changed**\n* `unified-to.commerce.createCommerceCollection()`: \n  *  `request.commerceCollection` **Changed**\n  *  `response` **Changed**\n* `unified-to.collection.patchCommerceCollection()`: \n  *  `request.commerceCollection` **Changed**\n  *  `response` **Changed**\n* `unified-to.collection.updateCommerceCollection()`: \n  *  `request.commerceCollection` **Changed**\n  *  `response` **Changed**\n* `unified-to.item.createCommerceItem()`: \n  *  `request.commerceItem.media.[].metadata.[]` **Changed**\n  *  `response.media.[].metadata.[]` **Changed**\n* `unified-to.item.getCommerceItem()`:  `response.media.[].metadata.[]` **Changed**\n* `unified-to.commerce.listCommerceReviews()`:  `response.[].comments.[].metadata.[]` **Changed**\n* `unified-to.item.patchCommerceItem()`: \n  *  `request.commerceItem.media.[].metadata.[]` **Changed**\n  *  `response.media.[].metadata.[]` **Changed**\n* `unified-to.item.updateCommerceItem()`: \n  *  `request.commerceItem.media.[].metadata.[]` **Changed**\n  *  `response.media.[].metadata.[]` **Changed**\n* `unified-to.review.createCommerceReview()`: \n  *  `request.commerceReview.comments.[].metadata.[]` **Changed**\n  *  `response.comments.[].metadata.[]` **Changed**\n* `unified-to.review.getCommerceReview()`:  `response.comments.[].metadata.[]` **Changed**\n* `unified-to.review.listCommerceReviews()`:  `response.[].comments.[].metadata.[]` **Changed**\n* `unified-to.review.patchCommerceReview()`: \n  *  `request.commerceReview.comments.[].metadata.[]` **Changed**\n  *  `response.comments.[].metadata.[]` **Changed**\n* `unified-to.review.updateCommerceReview()`: \n  *  `request.commerceReview.comments.[].metadata.[]` **Changed**\n  *  `response.comments.[].metadata.[]` **Changed**\n* `unified-to.commerce.getCommerceReview()`:  `response.comments.[].metadata.[]` **Changed**\n* `unified-to.commerce.getCommerceItem()`:  `response.media.[].metadata.[]` **Changed**\n* `unified-to.commerce.getCommerceCollection()`:  `response` **Changed**\n* `unified-to.commerce.createCommerceReview()`: \n  *  `request.commerceReview.comments.[].metadata.[]` **Changed**\n  *  `response.comments.[].metadata.[]` **Changed**\n* `unified-to.commerce.createCommerceItem()`: \n  *  `request.commerceItem.media.[].metadata.[]` **Changed**\n  *  `response.media.[].metadata.[]` **Changed**\n* `unified-to.messaging.listMessagingChannels()`: \n  *  `request.type` **Added**\n* `unified-to.messaging.listMessagingMessages()`: \n  *  `request.type` **Added**\n* `unified-to.channel.listMessagingChannels()`: \n  *  `request.type` **Added**\n* `unified-to.message.listMessagingMessages()`: \n  *  `request.type` **Added**\n"
+releaseNotes: |
+  ## Java SDK Changes Detected:
+  * `unified-to.unified.createUnifiedEnvironment()`: **Added**
+  * `unified-to.unified.listUnifiedEnvironments()`: **Added**
+  * `unified-to.unified.removeUnifiedEnvironment()`: **Added**
+  * `unified-to.environment.createUnifiedEnvironment()`: **Added**
+  * `unified-to.environment.listUnifiedEnvironments()`: **Added**
+  * `unified-to.environment.removeUnifiedEnvironment()`: **Added**

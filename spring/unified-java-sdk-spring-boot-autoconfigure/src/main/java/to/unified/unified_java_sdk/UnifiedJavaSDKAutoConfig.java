@@ -1354,6 +1354,17 @@ public class UnifiedJavaSDKAutoConfig {
         return unifiedTo.connection();
     }
     /**
+     * Creates a Environment sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Environment instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Environment environment(UnifiedTo unifiedTo) {
+        return unifiedTo.environment();
+    }
+    /**
      * Creates a Integration sub-SDK bean if none exists.
      *
      * @param unifiedTo the main SDK instance
@@ -2586,6 +2597,17 @@ public class UnifiedJavaSDKAutoConfig {
     @ConditionalOnMissingBean
     public AsyncConnection asyncConnection(AsyncUnifiedTo asyncUnifiedTo) {
         return asyncUnifiedTo.connection();
+    }
+    /**
+     * Creates an AsyncEnvironment sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncEnvironment instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncEnvironment asyncEnvironment(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.environment();
     }
     /**
      * Creates an AsyncIntegration sub-SDK bean if none exists.

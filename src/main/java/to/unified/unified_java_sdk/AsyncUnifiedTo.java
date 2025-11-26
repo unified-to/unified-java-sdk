@@ -217,6 +217,8 @@ public class AsyncUnifiedTo {
 
     private final AsyncConnection connection;
 
+    private final AsyncEnvironment environment;
+
     private final AsyncIntegration integration;
 
     private final AsyncAuth auth;
@@ -645,6 +647,10 @@ public class AsyncUnifiedTo {
         return connection;
     }
 
+    public AsyncEnvironment environment() {
+        return environment;
+    }
+
     public AsyncIntegration integration() {
         return integration;
     }
@@ -786,6 +792,7 @@ public class AsyncUnifiedTo {
         this.unified = new AsyncUnified(syncSDK.unified(), sdkConfiguration);
         this.apicall = new AsyncApicall(syncSDK.apicall(), sdkConfiguration);
         this.connection = new AsyncConnection(syncSDK.connection(), sdkConfiguration);
+        this.environment = new AsyncEnvironment(syncSDK.environment(), sdkConfiguration);
         this.integration = new AsyncIntegration(syncSDK.integration(), sdkConfiguration);
         this.auth = new AsyncAuth(syncSDK.auth(), sdkConfiguration);
         this.login = new AsyncLogin(syncSDK.login(), sdkConfiguration);

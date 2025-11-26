@@ -4,9 +4,14 @@
 package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+import static to.unified.unified_java_sdk.operations.Operations.RequestlessOperation;
 
+import java.lang.String;
+import java.util.List;
 import to.unified.unified_java_sdk.models.operations.CreateUnifiedConnectionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateUnifiedConnectionResponse;
+import to.unified.unified_java_sdk.models.operations.CreateUnifiedEnvironmentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateUnifiedEnvironmentResponse;
 import to.unified.unified_java_sdk.models.operations.CreateUnifiedWebhookRequest;
 import to.unified.unified_java_sdk.models.operations.CreateUnifiedWebhookRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateUnifiedWebhookResponse;
@@ -31,6 +36,8 @@ import to.unified.unified_java_sdk.models.operations.ListUnifiedApicallsResponse
 import to.unified.unified_java_sdk.models.operations.ListUnifiedConnectionsRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedConnectionsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedConnectionsResponse;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedEnvironmentsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedEnvironmentsResponse;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedIntegrationWorkspacesRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedIntegrationWorkspacesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedIntegrationWorkspacesResponse;
@@ -55,6 +62,9 @@ import to.unified.unified_java_sdk.models.operations.PatchUnifiedWebhookTriggerR
 import to.unified.unified_java_sdk.models.operations.RemoveUnifiedConnectionRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveUnifiedConnectionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveUnifiedConnectionResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveUnifiedEnvironmentRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveUnifiedEnvironmentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveUnifiedEnvironmentResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveUnifiedWebhookRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveUnifiedWebhookRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveUnifiedWebhookResponse;
@@ -69,6 +79,7 @@ import to.unified.unified_java_sdk.models.operations.UpdateUnifiedWebhookTrigger
 import to.unified.unified_java_sdk.models.operations.UpdateUnifiedWebhookTriggerResponse;
 import to.unified.unified_java_sdk.models.shared.Connection;
 import to.unified.unified_java_sdk.operations.CreateUnifiedConnection;
+import to.unified.unified_java_sdk.operations.CreateUnifiedEnvironment;
 import to.unified.unified_java_sdk.operations.CreateUnifiedWebhook;
 import to.unified.unified_java_sdk.operations.GetUnifiedApicall;
 import to.unified.unified_java_sdk.operations.GetUnifiedConnection;
@@ -77,6 +88,7 @@ import to.unified.unified_java_sdk.operations.GetUnifiedIssue;
 import to.unified.unified_java_sdk.operations.GetUnifiedWebhook;
 import to.unified.unified_java_sdk.operations.ListUnifiedApicalls;
 import to.unified.unified_java_sdk.operations.ListUnifiedConnections;
+import to.unified.unified_java_sdk.operations.ListUnifiedEnvironments;
 import to.unified.unified_java_sdk.operations.ListUnifiedIntegrationWorkspaces;
 import to.unified.unified_java_sdk.operations.ListUnifiedIntegrations;
 import to.unified.unified_java_sdk.operations.ListUnifiedIssues;
@@ -85,6 +97,7 @@ import to.unified.unified_java_sdk.operations.PatchUnifiedConnection;
 import to.unified.unified_java_sdk.operations.PatchUnifiedWebhook;
 import to.unified.unified_java_sdk.operations.PatchUnifiedWebhookTrigger;
 import to.unified.unified_java_sdk.operations.RemoveUnifiedConnection;
+import to.unified.unified_java_sdk.operations.RemoveUnifiedEnvironment;
 import to.unified.unified_java_sdk.operations.RemoveUnifiedWebhook;
 import to.unified.unified_java_sdk.operations.UpdateUnifiedConnection;
 import to.unified.unified_java_sdk.operations.UpdateUnifiedWebhook;
@@ -134,6 +147,28 @@ public class Unified {
     public CreateUnifiedConnectionResponse createUnifiedConnection(Connection request) {
         RequestOperation<Connection, CreateUnifiedConnectionResponse> operation
               = new CreateUnifiedConnection.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Returns a builder to make a request.
+     * 
+     * @return The call builder
+     */
+    public CreateUnifiedEnvironmentRequestBuilder createUnifiedEnvironment() {
+        return new CreateUnifiedEnvironmentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Makes a request.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateUnifiedEnvironmentResponse createUnifiedEnvironment(List<String> request) {
+        RequestOperation<List<String>, CreateUnifiedEnvironmentResponse> operation
+              = new CreateUnifiedEnvironment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -328,6 +363,27 @@ public class Unified {
     }
 
     /**
+     * Returns a builder to make a request.
+     * 
+     * @return The call builder
+     */
+    public ListUnifiedEnvironmentsRequestBuilder listUnifiedEnvironments() {
+        return new ListUnifiedEnvironmentsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Makes a request.
+     * 
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedEnvironmentsResponse listUnifiedEnvironmentsDirect() {
+        RequestlessOperation<ListUnifiedEnvironmentsResponse> operation
+            = new ListUnifiedEnvironments.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest());
+    }
+
+    /**
      * Returns all activated integrations in a workspace
      * 
      * <p>No authentication required as this is to be used by front-end interface
@@ -504,6 +560,28 @@ public class Unified {
     public RemoveUnifiedConnectionResponse removeUnifiedConnection(RemoveUnifiedConnectionRequest request) {
         RequestOperation<RemoveUnifiedConnectionRequest, RemoveUnifiedConnectionResponse> operation
               = new RemoveUnifiedConnection.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Returns a builder to make a request.
+     * 
+     * @return The call builder
+     */
+    public RemoveUnifiedEnvironmentRequestBuilder removeUnifiedEnvironment() {
+        return new RemoveUnifiedEnvironmentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Makes a request.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveUnifiedEnvironmentResponse removeUnifiedEnvironment(RemoveUnifiedEnvironmentRequest request) {
+        RequestOperation<RemoveUnifiedEnvironmentRequest, RemoveUnifiedEnvironmentResponse> operation
+              = new RemoveUnifiedEnvironment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

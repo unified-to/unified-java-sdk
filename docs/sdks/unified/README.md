@@ -6,6 +6,7 @@
 ### Available Operations
 
 * [createUnifiedConnection](#createunifiedconnection) - Create connection
+* [createUnifiedEnvironment](#createunifiedenvironment)
 * [createUnifiedWebhook](#createunifiedwebhook) - Create webhook subscription
 * [getUnifiedApicall](#getunifiedapicall) - Retrieve specific API Call by its ID
 * [getUnifiedConnection](#getunifiedconnection) - Retrieve connection
@@ -14,6 +15,7 @@
 * [getUnifiedWebhook](#getunifiedwebhook) - Retrieve webhook by its ID
 * [listUnifiedApicalls](#listunifiedapicalls) - Returns API Calls
 * [listUnifiedConnections](#listunifiedconnections) - List all connections
+* [listUnifiedEnvironments](#listunifiedenvironments)
 * [listUnifiedIntegrationWorkspaces](#listunifiedintegrationworkspaces) - Returns all activated integrations in a workspace
 * [listUnifiedIntegrations](#listunifiedintegrations) - Returns all integrations
 * [listUnifiedIssues](#listunifiedissues) - List support issues
@@ -22,6 +24,7 @@
 * [patchUnifiedWebhook](#patchunifiedwebhook) - Update webhook subscription
 * [patchUnifiedWebhookTrigger](#patchunifiedwebhooktrigger) - Trigger webhook
 * [removeUnifiedConnection](#removeunifiedconnection) - Remove connection
+* [removeUnifiedEnvironment](#removeunifiedenvironment)
 * [removeUnifiedWebhook](#removeunifiedwebhook) - Remove webhook subscription
 * [updateUnifiedConnection](#updateunifiedconnection) - Update connection
 * [updateUnifiedWebhook](#updateunifiedwebhook) - Update webhook subscription
@@ -80,6 +83,60 @@ public class Application {
 ### Response
 
 **[CreateUnifiedConnectionResponse](../../models/operations/CreateUnifiedConnectionResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## createUnifiedEnvironment
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createUnifiedEnvironment" method="post" path="/unified/environment" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.lang.String;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateUnifiedEnvironmentResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        List<String> req = List.of();
+
+        CreateUnifiedEnvironmentResponse res = sdk.unified().createUnifiedEnvironment()
+                .request(req)
+                .call();
+
+        if (res.s().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                  | Type                                       | Required                                   | Description                                |
+| ------------------------------------------ | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
+| `request`                                  | [List<String>](../../models//.md)          | :heavy_check_mark:                         | The request object to use for the request. |
+
+### Response
+
+**[CreateUnifiedEnvironmentResponse](../../models/operations/CreateUnifiedEnvironmentResponse.md)**
 
 ### Errors
 
@@ -536,6 +593,49 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listUnifiedEnvironments
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listUnifiedEnvironments" method="get" path="/unified/environment" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedEnvironmentsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListUnifiedEnvironmentsResponse res = sdk.unified().listUnifiedEnvironments()
+                .call();
+
+        if (res.s().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Response
+
+**[ListUnifiedEnvironmentsResponse](../../models/operations/ListUnifiedEnvironmentsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listUnifiedIntegrationWorkspaces
 
 No authentication required as this is to be used by front-end interface
@@ -975,6 +1075,61 @@ public class Application {
 ### Response
 
 **[RemoveUnifiedConnectionResponse](../../models/operations/RemoveUnifiedConnectionResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeUnifiedEnvironment
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeUnifiedEnvironment" method="delete" path="/unified/environment/{env}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveUnifiedEnvironmentRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveUnifiedEnvironmentResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveUnifiedEnvironmentRequest req = RemoveUnifiedEnvironmentRequest.builder()
+                .env("<value>")
+                .build();
+
+        RemoveUnifiedEnvironmentResponse res = sdk.unified().removeUnifiedEnvironment()
+                .request(req)
+                .call();
+
+        if (res.s().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [RemoveUnifiedEnvironmentRequest](../../models/operations/RemoveUnifiedEnvironmentRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+
+### Response
+
+**[RemoveUnifiedEnvironmentResponse](../../models/operations/RemoveUnifiedEnvironmentResponse.md)**
 
 ### Errors
 

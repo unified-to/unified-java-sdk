@@ -25,7 +25,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 java:
-  version: 0.45.7
+  version: 0.45.8
   additionalDependencies: []
   additionalPlugins: []
   artifactID: unified-java-sdk
@@ -52,6 +52,7 @@ java:
       operations: models/operations
       shared: models/shared
       webhooks: models/webhooks
+  inferUnionDiscriminators: false
   inputModelSuffix: input
   languageVersion: 11
   license:

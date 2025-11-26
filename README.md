@@ -36,7 +36,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.45.7'
+implementation 'to.unified:unified-java-sdk:0.45.8'
 ```
 
 Maven:
@@ -44,7 +44,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.45.7</version>
+    <version>0.45.8</version>
 </dependency>
 ```
 
@@ -704,6 +704,12 @@ public class Application {
 
 * [listEnrichCompanies](docs/sdks/enrich/README.md#listenrichcompanies) - Retrieve enrichment information for a company
 * [listEnrichPeople](docs/sdks/enrich/README.md#listenrichpeople) - Retrieve enrichment information for a person
+
+### [environment()](docs/sdks/environment/README.md)
+
+* [createUnifiedEnvironment](docs/sdks/environment/README.md#createunifiedenvironment)
+* [listUnifiedEnvironments](docs/sdks/environment/README.md#listunifiedenvironments)
+* [removeUnifiedEnvironment](docs/sdks/environment/README.md#removeunifiedenvironment)
 
 ### [event()](docs/sdks/event/README.md)
 
@@ -1466,6 +1472,7 @@ public class Application {
 ### [unified()](docs/sdks/unified/README.md)
 
 * [createUnifiedConnection](docs/sdks/unified/README.md#createunifiedconnection) - Create connection
+* [createUnifiedEnvironment](docs/sdks/unified/README.md#createunifiedenvironment)
 * [createUnifiedWebhook](docs/sdks/unified/README.md#createunifiedwebhook) - Create webhook subscription
 * [getUnifiedApicall](docs/sdks/unified/README.md#getunifiedapicall) - Retrieve specific API Call by its ID
 * [getUnifiedConnection](docs/sdks/unified/README.md#getunifiedconnection) - Retrieve connection
@@ -1474,6 +1481,7 @@ public class Application {
 * [getUnifiedWebhook](docs/sdks/unified/README.md#getunifiedwebhook) - Retrieve webhook by its ID
 * [listUnifiedApicalls](docs/sdks/unified/README.md#listunifiedapicalls) - Returns API Calls
 * [listUnifiedConnections](docs/sdks/unified/README.md#listunifiedconnections) - List all connections
+* [listUnifiedEnvironments](docs/sdks/unified/README.md#listunifiedenvironments)
 * [listUnifiedIntegrationWorkspaces](docs/sdks/unified/README.md#listunifiedintegrationworkspaces) - Returns all activated integrations in a workspace
 * [listUnifiedIntegrations](docs/sdks/unified/README.md#listunifiedintegrations) - Returns all integrations
 * [listUnifiedIssues](docs/sdks/unified/README.md#listunifiedissues) - List support issues
@@ -1482,6 +1490,7 @@ public class Application {
 * [patchUnifiedWebhook](docs/sdks/unified/README.md#patchunifiedwebhook) - Update webhook subscription
 * [patchUnifiedWebhookTrigger](docs/sdks/unified/README.md#patchunifiedwebhooktrigger) - Trigger webhook
 * [removeUnifiedConnection](docs/sdks/unified/README.md#removeunifiedconnection) - Remove connection
+* [removeUnifiedEnvironment](docs/sdks/unified/README.md#removeunifiedenvironment)
 * [removeUnifiedWebhook](docs/sdks/unified/README.md#removeunifiedwebhook) - Remove webhook subscription
 * [updateUnifiedConnection](docs/sdks/unified/README.md#updateunifiedconnection) - Update connection
 * [updateUnifiedWebhook](docs/sdks/unified/README.md#updateunifiedwebhook) - Update webhook subscription
