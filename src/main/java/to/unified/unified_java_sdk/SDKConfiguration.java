@@ -18,7 +18,7 @@ public class SDKConfiguration {
 
     private static final String LANGUAGE = "java";
     public static final String OPENAPI_DOC_VERSION = "1.0";
-    public static final String SDK_VERSION = "0.45.8";
+    public static final String SDK_VERSION = "0.45.9";
     public static final String GEN_VERSION = "2.763.3";
     private static final String BASE_PACKAGE = "to.unified.unified_java_sdk";
     public static final String USER_AGENT = 

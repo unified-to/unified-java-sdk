@@ -107,6 +107,11 @@ public class CalendarEvent {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("send_notifications")
+    private Optional<Boolean> sendNotifications;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private Optional<String> startAt;
 
@@ -154,6 +159,7 @@ public class CalendarEvent {
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
             @JsonProperty("recurrence") Optional<? extends List<CalendarEventRecurrence>> recurrence,
             @JsonProperty("recurring_event_id") Optional<String> recurringEventId,
+            @JsonProperty("send_notifications") Optional<Boolean> sendNotifications,
             @JsonProperty("start_at") Optional<String> startAt,
             @JsonProperty("status") Optional<? extends CalendarEventStatus> status,
             @JsonProperty("subject") Optional<String> subject,
@@ -177,6 +183,7 @@ public class CalendarEvent {
         Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(recurrence, "recurrence");
         Utils.checkNotNull(recurringEventId, "recurringEventId");
+        Utils.checkNotNull(sendNotifications, "sendNotifications");
         Utils.checkNotNull(startAt, "startAt");
         Utils.checkNotNull(status, "status");
         Utils.checkNotNull(subject, "subject");
@@ -200,6 +207,7 @@ public class CalendarEvent {
         this.raw = raw;
         this.recurrence = recurrence;
         this.recurringEventId = recurringEventId;
+        this.sendNotifications = sendNotifications;
         this.startAt = startAt;
         this.status = status;
         this.subject = subject;
@@ -216,7 +224,7 @@ public class CalendarEvent {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -308,6 +316,11 @@ public class CalendarEvent {
     @JsonIgnore
     public Optional<String> recurringEventId() {
         return recurringEventId;
+    }
+
+    @JsonIgnore
+    public Optional<Boolean> sendNotifications() {
+        return sendNotifications;
     }
 
     @JsonIgnore
@@ -567,6 +580,19 @@ public class CalendarEvent {
         return this;
     }
 
+    public CalendarEvent withSendNotifications(boolean sendNotifications) {
+        Utils.checkNotNull(sendNotifications, "sendNotifications");
+        this.sendNotifications = Optional.ofNullable(sendNotifications);
+        return this;
+    }
+
+
+    public CalendarEvent withSendNotifications(Optional<Boolean> sendNotifications) {
+        Utils.checkNotNull(sendNotifications, "sendNotifications");
+        this.sendNotifications = sendNotifications;
+        return this;
+    }
+
     public CalendarEvent withStartAt(String startAt) {
         Utils.checkNotNull(startAt, "startAt");
         this.startAt = Optional.ofNullable(startAt);
@@ -672,6 +698,7 @@ public class CalendarEvent {
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.recurrence, other.recurrence) &&
             Utils.enhancedDeepEquals(this.recurringEventId, other.recurringEventId) &&
+            Utils.enhancedDeepEquals(this.sendNotifications, other.sendNotifications) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
             Utils.enhancedDeepEquals(this.subject, other.subject) &&
@@ -688,9 +715,9 @@ public class CalendarEvent {
             hasConference, id, isAllDay,
             isFree, isPrivate, location,
             notes, organizer, raw,
-            recurrence, recurringEventId, startAt,
-            status, subject, timezone,
-            updatedAt, webUrl);
+            recurrence, recurringEventId, sendNotifications,
+            startAt, status, subject,
+            timezone, updatedAt, webUrl);
     }
     
     @Override
@@ -713,6 +740,7 @@ public class CalendarEvent {
                 "raw", raw,
                 "recurrence", recurrence,
                 "recurringEventId", recurringEventId,
+                "sendNotifications", sendNotifications,
                 "startAt", startAt,
                 "status", status,
                 "subject", subject,
@@ -757,6 +785,8 @@ public class CalendarEvent {
         private Optional<? extends List<CalendarEventRecurrence>> recurrence = Optional.empty();
 
         private Optional<String> recurringEventId = Optional.empty();
+
+        private Optional<Boolean> sendNotifications = Optional.empty();
 
         private Optional<String> startAt = Optional.empty();
 
@@ -996,6 +1026,19 @@ public class CalendarEvent {
         }
 
 
+        public Builder sendNotifications(boolean sendNotifications) {
+            Utils.checkNotNull(sendNotifications, "sendNotifications");
+            this.sendNotifications = Optional.ofNullable(sendNotifications);
+            return this;
+        }
+
+        public Builder sendNotifications(Optional<Boolean> sendNotifications) {
+            Utils.checkNotNull(sendNotifications, "sendNotifications");
+            this.sendNotifications = sendNotifications;
+            return this;
+        }
+
+
         public Builder startAt(String startAt) {
             Utils.checkNotNull(startAt, "startAt");
             this.startAt = Optional.ofNullable(startAt);
@@ -1081,9 +1124,9 @@ public class CalendarEvent {
                 hasConference, id, isAllDay,
                 isFree, isPrivate, location,
                 notes, organizer, raw,
-                recurrence, recurringEventId, startAt,
-                status, subject, timezone,
-                updatedAt, webUrl);
+                recurrence, recurringEventId, sendNotifications,
+                startAt, status, subject,
+                timezone, updatedAt, webUrl);
         }
 
     }
