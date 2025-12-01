@@ -50,6 +50,7 @@ public class DbType {
     public static final DbType POSTGRES = new DbType("postgres");
     public static final DbType MSSQL = new DbType("mssql");
     public static final DbType MARIADB = new DbType("mariadb");
+    public static final DbType SUPABASE = new DbType("supabase");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -126,6 +127,7 @@ public class DbType {
         map.put("postgres", POSTGRES);
         map.put("mssql", MSSQL);
         map.put("mariadb", MARIADB);
+        map.put("supabase", SUPABASE);
         return map;
     }
 
@@ -136,6 +138,7 @@ public class DbType {
         map.put("postgres", DbTypeEnum.POSTGRES);
         map.put("mssql", DbTypeEnum.MSSQL);
         map.put("mariadb", DbTypeEnum.MARIADB);
+        map.put("supabase", DbTypeEnum.SUPABASE);
         return map;
     }
     
@@ -175,7 +178,8 @@ public class DbType {
         MYSQL("mysql"),
         POSTGRES("postgres"),
         MSSQL("mssql"),
-        MARIADB("mariadb"),;
+        MARIADB("mariadb"),
+        SUPABASE("supabase"),;
 
         private final String value;
 

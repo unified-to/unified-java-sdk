@@ -14,7 +14,9 @@ import to.unified.unified_java_sdk.utils.SpeakeasyHTTPClient;
 import to.unified.unified_java_sdk.utils.Utils;
 
 /**
- * Unified.to API: One API to Rule Them All
+ * Unified.to  API: One API to Rule Them All
+ * 
+ * <p><a href="https://docs.unified.to">API Documentation</a>
  */
 public class UnifiedTo {
     private static final Headers _headers = Headers.EMPTY;

@@ -7,7 +7,9 @@
 <!-- Start Summary [summary] -->
 ## Summary
 
-Unified.to API: One API to Rule Them All
+Unified.to  API: One API to Rule Them All
+
+For more information about the API: [API Documentation](https://docs.unified.to)
 <!-- End Summary [summary] -->
 
 <!-- Start Table of Contents [toc] -->
@@ -36,7 +38,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.45.9'
+implementation 'to.unified:unified-java-sdk:0.46.0'
 ```
 
 Maven:
@@ -44,7 +46,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.45.9</version>
+    <version>0.46.0</version>
 </dependency>
 ```
 
