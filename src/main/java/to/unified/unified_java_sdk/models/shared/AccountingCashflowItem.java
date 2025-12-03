@@ -36,7 +36,7 @@ public class AccountingCashflowItem {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sub_items")
-    private Optional<? extends List<PropertyAccountingCashflowItemSubItems>> subItems;
+    private Optional<? extends List<AccountingCashflowItem>> subItems;
 
     /**
      * Optional linkage to transactions
@@ -50,7 +50,7 @@ public class AccountingCashflowItem {
             @JsonProperty("account_id") Optional<String> accountId,
             @JsonProperty("amount") Optional<Double> amount,
             @JsonProperty("name") Optional<String> name,
-            @JsonProperty("sub_items") Optional<? extends List<PropertyAccountingCashflowItemSubItems>> subItems,
+            @JsonProperty("sub_items") Optional<? extends List<AccountingCashflowItem>> subItems,
             @JsonProperty("transaction_ids") Optional<? extends List<String>> transactionIds) {
         Utils.checkNotNull(accountId, "accountId");
         Utils.checkNotNull(amount, "amount");
@@ -86,8 +86,8 @@ public class AccountingCashflowItem {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<PropertyAccountingCashflowItemSubItems>> subItems() {
-        return (Optional<List<PropertyAccountingCashflowItemSubItems>>) subItems;
+    public Optional<List<AccountingCashflowItem>> subItems() {
+        return (Optional<List<AccountingCashflowItem>>) subItems;
     }
 
     /**
@@ -143,14 +143,14 @@ public class AccountingCashflowItem {
         return this;
     }
 
-    public AccountingCashflowItem withSubItems(List<PropertyAccountingCashflowItemSubItems> subItems) {
+    public AccountingCashflowItem withSubItems(List<AccountingCashflowItem> subItems) {
         Utils.checkNotNull(subItems, "subItems");
         this.subItems = Optional.ofNullable(subItems);
         return this;
     }
 
 
-    public AccountingCashflowItem withSubItems(Optional<? extends List<PropertyAccountingCashflowItemSubItems>> subItems) {
+    public AccountingCashflowItem withSubItems(Optional<? extends List<AccountingCashflowItem>> subItems) {
         Utils.checkNotNull(subItems, "subItems");
         this.subItems = subItems;
         return this;
@@ -218,7 +218,7 @@ public class AccountingCashflowItem {
 
         private Optional<String> name = Optional.empty();
 
-        private Optional<? extends List<PropertyAccountingCashflowItemSubItems>> subItems = Optional.empty();
+        private Optional<? extends List<AccountingCashflowItem>> subItems = Optional.empty();
 
         private Optional<? extends List<String>> transactionIds = Optional.empty();
 
@@ -266,13 +266,13 @@ public class AccountingCashflowItem {
         }
 
 
-        public Builder subItems(List<PropertyAccountingCashflowItemSubItems> subItems) {
+        public Builder subItems(List<AccountingCashflowItem> subItems) {
             Utils.checkNotNull(subItems, "subItems");
             this.subItems = Optional.ofNullable(subItems);
             return this;
         }
 
-        public Builder subItems(Optional<? extends List<PropertyAccountingCashflowItemSubItems>> subItems) {
+        public Builder subItems(Optional<? extends List<AccountingCashflowItem>> subItems) {
             Utils.checkNotNull(subItems, "subItems");
             this.subItems = subItems;
             return this;
