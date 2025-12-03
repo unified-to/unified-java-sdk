@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 0b28d8593f165fb3de853a45b8c6ab17
+  docChecksum: 5cc9bd003a02a42d13a2683d5b08bc71
   docVersion: "1.0"
-  speakeasyVersion: 1.665.0
-  generationVersion: 2.767.2
-  releaseVersion: 0.46.0
-  configChecksum: 8b135501c05395d8a97a27b9ccc267ca
+  speakeasyVersion: 1.666.2
+  generationVersion: 2.768.1
+  releaseVersion: 0.46.1
+  configChecksum: d09bea68508621331c974af950585c74
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -10678,3 +10678,4 @@ examples:
           application/json: ["<value 1>", "<value 2>", "<value 3>"]
 examplesVersion: 1.0.2
 generatedTests: {}
+releaseNotes: "## Java SDK Changes:\n* `unified-to.commerce.createCommerceItem()`: \n  *  `request.commerceItem.collections` **Added**\n  *  `response.collections` **Added**\n* `unified-to.commerce.createCommerceSaleschannel()`: \n  *  `request.commerceSaleschannel.collections.[].type` **Added**\n  *  `response.collections.[].type` **Added**\n* `unified-to.commerce.getCommerceItem()`:  `response.collections` **Added**\n* `unified-to.commerce.getCommerceSaleschannel()`:  `response.collections.[].type` **Added**\n* `unified-to.commerce.listCommerceItems()`:  `response.[].collections` **Added**\n* `unified-to.commerce.listCommerceSaleschannels()`:  `response.[].collections.[].type` **Added**\n* `unified-to.commerce.patchCommerceItem()`: \n  *  `request.commerceItem.collections` **Added**\n  *  `response.collections` **Added**\n* `unified-to.commerce.patchCommerceSaleschannel()`: \n  *  `request.commerceSaleschannel.collections.[].type` **Added**\n  *  `response.collections.[].type` **Added**\n* `unified-to.commerce.updateCommerceItem()`: \n  *  `request.commerceItem.collections` **Added**\n  *  `response.collections` **Added**\n* `unified-to.commerce.updateCommerceSaleschannel()`: \n  *  `request.commerceSaleschannel.collections.[].type` **Added**\n  *  `response.collections.[].type` **Added**\n* `unified-to.item.createCommerceItem()`: \n  *  `request.commerceItem.collections` **Added**\n  *  `response.collections` **Added**\n* `unified-to.item.getCommerceItem()`:  `response.collections` **Added**\n* `unified-to.item.listCommerceItems()`:  `response.[].collections` **Added**\n* `unified-to.item.patchCommerceItem()`: \n  *  `request.commerceItem.collections` **Added**\n  *  `response.collections` **Added**\n* `unified-to.item.updateCommerceItem()`: \n  *  `request.commerceItem.collections` **Added**\n  *  `response.collections` **Added**\n* `unified-to.saleschannel.createCommerceSaleschannel()`: \n  *  `request.commerceSaleschannel.collections.[].type` **Added**\n  *  `response.collections.[].type` **Added**\n* `unified-to.saleschannel.getCommerceSaleschannel()`:  `response.collections.[].type` **Added**\n* `unified-to.saleschannel.listCommerceSaleschannels()`:  `response.[].collections.[].type` **Added**\n* `unified-to.saleschannel.patchCommerceSaleschannel()`: \n  *  `request.commerceSaleschannel.collections.[].type` **Added**\n  *  `response.collections.[].type` **Added**\n* `unified-to.saleschannel.updateCommerceSaleschannel()`: \n  *  `request.commerceSaleschannel.collections.[].type` **Added**\n  *  `response.collections.[].type` **Added**\n"

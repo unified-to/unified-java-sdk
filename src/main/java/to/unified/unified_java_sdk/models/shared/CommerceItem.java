@@ -26,10 +26,19 @@ public class CommerceItem {
     @JsonProperty("account_id")
     private Optional<String> accountId;
 
-
+    /**
+     * &#64;deprecated; use collections instead
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collection_ids")
     private Optional<? extends List<String>> collectionIds;
+
+    /**
+     * points to Collection with id, name, and type fields
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("collections")
+    private Optional<? extends List<CommerceReference>> collections;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -127,6 +136,7 @@ public class CommerceItem {
     public CommerceItem(
             @JsonProperty("account_id") Optional<String> accountId,
             @JsonProperty("collection_ids") Optional<? extends List<String>> collectionIds,
+            @JsonProperty("collections") Optional<? extends List<CommerceReference>> collections,
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("description") Optional<String> description,
             @JsonProperty("global_code") Optional<String> globalCode,
@@ -147,6 +157,7 @@ public class CommerceItem {
             @JsonProperty("vendor_name") Optional<String> vendorName) {
         Utils.checkNotNull(accountId, "accountId");
         Utils.checkNotNull(collectionIds, "collectionIds");
+        Utils.checkNotNull(collections, "collections");
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(description, "description");
         Utils.checkNotNull(globalCode, "globalCode");
@@ -167,6 +178,7 @@ public class CommerceItem {
         Utils.checkNotNull(vendorName, "vendorName");
         this.accountId = accountId;
         this.collectionIds = collectionIds;
+        this.collections = collections;
         this.createdAt = createdAt;
         this.description = description;
         this.globalCode = globalCode;
@@ -194,7 +206,7 @@ public class CommerceItem {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -202,10 +214,22 @@ public class CommerceItem {
         return accountId;
     }
 
+    /**
+     * &#64;deprecated; use collections instead
+     */
     @SuppressWarnings("unchecked")
     @JsonIgnore
     public Optional<List<String>> collectionIds() {
         return (Optional<List<String>>) collectionIds;
+    }
+
+    /**
+     * points to Collection with id, name, and type fields
+     */
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<CommerceReference>> collections() {
+        return (Optional<List<CommerceReference>>) collections;
     }
 
     @JsonIgnore
@@ -324,6 +348,9 @@ public class CommerceItem {
         return this;
     }
 
+    /**
+     * &#64;deprecated; use collections instead
+     */
     public CommerceItem withCollectionIds(List<String> collectionIds) {
         Utils.checkNotNull(collectionIds, "collectionIds");
         this.collectionIds = Optional.ofNullable(collectionIds);
@@ -331,9 +358,31 @@ public class CommerceItem {
     }
 
 
+    /**
+     * &#64;deprecated; use collections instead
+     */
     public CommerceItem withCollectionIds(Optional<? extends List<String>> collectionIds) {
         Utils.checkNotNull(collectionIds, "collectionIds");
         this.collectionIds = collectionIds;
+        return this;
+    }
+
+    /**
+     * points to Collection with id, name, and type fields
+     */
+    public CommerceItem withCollections(List<CommerceReference> collections) {
+        Utils.checkNotNull(collections, "collections");
+        this.collections = Optional.ofNullable(collections);
+        return this;
+    }
+
+
+    /**
+     * points to Collection with id, name, and type fields
+     */
+    public CommerceItem withCollections(Optional<? extends List<CommerceReference>> collections) {
+        Utils.checkNotNull(collections, "collections");
+        this.collections = collections;
         return this;
     }
 
@@ -589,6 +638,7 @@ public class CommerceItem {
         return 
             Utils.enhancedDeepEquals(this.accountId, other.accountId) &&
             Utils.enhancedDeepEquals(this.collectionIds, other.collectionIds) &&
+            Utils.enhancedDeepEquals(this.collections, other.collections) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.globalCode, other.globalCode) &&
@@ -612,13 +662,13 @@ public class CommerceItem {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            accountId, collectionIds, createdAt,
-            description, globalCode, id,
-            isActive, isTaxable, media,
-            metadata, name, publicDescription,
-            publicName, raw, slug,
-            tags, type, updatedAt,
-            variants, vendorName);
+            accountId, collectionIds, collections,
+            createdAt, description, globalCode,
+            id, isActive, isTaxable,
+            media, metadata, name,
+            publicDescription, publicName, raw,
+            slug, tags, type,
+            updatedAt, variants, vendorName);
     }
     
     @Override
@@ -626,6 +676,7 @@ public class CommerceItem {
         return Utils.toString(CommerceItem.class,
                 "accountId", accountId,
                 "collectionIds", collectionIds,
+                "collections", collections,
                 "createdAt", createdAt,
                 "description", description,
                 "globalCode", globalCode,
@@ -652,6 +703,8 @@ public class CommerceItem {
         private Optional<String> accountId = Optional.empty();
 
         private Optional<? extends List<String>> collectionIds = Optional.empty();
+
+        private Optional<? extends List<CommerceReference>> collections = Optional.empty();
 
         private Optional<OffsetDateTime> createdAt = Optional.empty();
 
@@ -707,15 +760,40 @@ public class CommerceItem {
         }
 
 
+        /**
+         * &#64;deprecated; use collections instead
+         */
         public Builder collectionIds(List<String> collectionIds) {
             Utils.checkNotNull(collectionIds, "collectionIds");
             this.collectionIds = Optional.ofNullable(collectionIds);
             return this;
         }
 
+        /**
+         * &#64;deprecated; use collections instead
+         */
         public Builder collectionIds(Optional<? extends List<String>> collectionIds) {
             Utils.checkNotNull(collectionIds, "collectionIds");
             this.collectionIds = collectionIds;
+            return this;
+        }
+
+
+        /**
+         * points to Collection with id, name, and type fields
+         */
+        public Builder collections(List<CommerceReference> collections) {
+            Utils.checkNotNull(collections, "collections");
+            this.collections = Optional.ofNullable(collections);
+            return this;
+        }
+
+        /**
+         * points to Collection with id, name, and type fields
+         */
+        public Builder collections(Optional<? extends List<CommerceReference>> collections) {
+            Utils.checkNotNull(collections, "collections");
+            this.collections = collections;
             return this;
         }
 
@@ -962,13 +1040,13 @@ public class CommerceItem {
         public CommerceItem build() {
 
             return new CommerceItem(
-                accountId, collectionIds, createdAt,
-                description, globalCode, id,
-                isActive, isTaxable, media,
-                metadata, name, publicDescription,
-                publicName, raw, slug,
-                tags, type, updatedAt,
-                variants, vendorName);
+                accountId, collectionIds, collections,
+                createdAt, description, globalCode,
+                id, isActive, isTaxable,
+                media, metadata, name,
+                publicDescription, publicName, raw,
+                slug, tags, type,
+                updatedAt, variants, vendorName);
         }
 
     }

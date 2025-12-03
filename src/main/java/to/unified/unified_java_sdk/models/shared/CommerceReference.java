@@ -25,18 +25,26 @@ public class CommerceReference {
     @JsonProperty("name")
     private Optional<String> name;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    private Optional<String> type;
+
     @JsonCreator
     public CommerceReference(
             @JsonProperty("id") Optional<String> id,
-            @JsonProperty("name") Optional<String> name) {
+            @JsonProperty("name") Optional<String> name,
+            @JsonProperty("type") Optional<String> type) {
         Utils.checkNotNull(id, "id");
         Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(type, "type");
         this.id = id;
         this.name = name;
+        this.type = type;
     }
     
     public CommerceReference() {
-        this(Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -47,6 +55,11 @@ public class CommerceReference {
     @JsonIgnore
     public Optional<String> name() {
         return name;
+    }
+
+    @JsonIgnore
+    public Optional<String> type() {
+        return type;
     }
 
     public static Builder builder() {
@@ -80,6 +93,19 @@ public class CommerceReference {
         return this;
     }
 
+    public CommerceReference withType(String type) {
+        Utils.checkNotNull(type, "type");
+        this.type = Optional.ofNullable(type);
+        return this;
+    }
+
+
+    public CommerceReference withType(Optional<String> type) {
+        Utils.checkNotNull(type, "type");
+        this.type = type;
+        return this;
+    }
+
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -91,20 +117,22 @@ public class CommerceReference {
         CommerceReference other = (CommerceReference) o;
         return 
             Utils.enhancedDeepEquals(this.id, other.id) &&
-            Utils.enhancedDeepEquals(this.name, other.name);
+            Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.type, other.type);
     }
     
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            id, name);
+            id, name, type);
     }
     
     @Override
     public String toString() {
         return Utils.toString(CommerceReference.class,
                 "id", id,
-                "name", name);
+                "name", name,
+                "type", type);
     }
 
     @SuppressWarnings("UnusedReturnValue")
@@ -113,6 +141,8 @@ public class CommerceReference {
         private Optional<String> id = Optional.empty();
 
         private Optional<String> name = Optional.empty();
+
+        private Optional<String> type = Optional.empty();
 
         private Builder() {
           // force use of static builder() method
@@ -144,10 +174,23 @@ public class CommerceReference {
             return this;
         }
 
+
+        public Builder type(String type) {
+            Utils.checkNotNull(type, "type");
+            this.type = Optional.ofNullable(type);
+            return this;
+        }
+
+        public Builder type(Optional<String> type) {
+            Utils.checkNotNull(type, "type");
+            this.type = type;
+            return this;
+        }
+
         public CommerceReference build() {
 
             return new CommerceReference(
-                id, name);
+                id, name, type);
         }
 
     }
