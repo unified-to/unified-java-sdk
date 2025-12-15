@@ -3,21 +3,10 @@
  */
 package to.unified.unified_java_sdk.models.shared;
 
-import com.fasterxml.jackson.core.JacksonException;
-import com.fasterxml.jackson.core.JsonGenerator;
-import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.DeserializationContext;
-import com.fasterxml.jackson.databind.SerializerProvider;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
-import com.fasterxml.jackson.databind.ser.std.StdSerializer;
-import java.io.IOException;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -25,24 +14,10 @@ import java.util.Objects;
 import java.util.Optional;
 
 /**
- * <p>Wrapper class for an "open" enum. "Open" enums are those that are expected
- * to evolve (particularly with the addition of enum members over time). If an
- * open enum is used then the appearance of unexpected enum values (say in a 
- * response from an updated an API) will not bring about a runtime error thus 
- * ensuring that non-updated client versions can continue to work without error.
- *
- * <p>Note that instances are immutable and are singletons (an internal thread-safe
- * cache is maintained to ensure that). As a consequence instances created with the 
- * same value will satisfy reference equality (via {@code ==}).
- * 
- * <p>This class is intended to emulate an enum (in terms of common usage and with 
- * reference equality) but with the ability to carry unknown values. Unfortunately
- * Java does not permit the use of an instance in a switch expression but you can 
- * use the {@code asEnum()} method (after dealing with the `Optional` appropriately).
- *
+ * Wrapper for an "open" enum that can handle unknown values from API responses
+ * without runtime errors. Instances are immutable singletons with reference equality.
+ * Use {@code asEnum()} for switch expressions.
  */
-@JsonDeserialize(using = VirtualWebhookItemId._Deserializer.class)
-@JsonSerialize(using = VirtualWebhookItemId._Serializer.class)
 public class VirtualWebhookItemId {
 
     public static final VirtualWebhookItemId SUPPORTED_REQUIRED = new VirtualWebhookItemId("supported-required");
@@ -70,12 +45,14 @@ public class VirtualWebhookItemId {
      * 
      * @param value value to be wrapped as VirtualWebhookItemId
      */ 
+    @JsonCreator
     public static VirtualWebhookItemId of(String value) {
         synchronized (VirtualWebhookItemId.class) {
             return values.computeIfAbsent(value, v -> new VirtualWebhookItemId(v));
         }
     }
 
+    @JsonValue
     public String value() {
         return value;
     }
@@ -133,35 +110,6 @@ public class VirtualWebhookItemId {
         return map;
     }
     
-    @SuppressWarnings("serial")
-    public static final class _Serializer extends StdSerializer<VirtualWebhookItemId> {
-
-        protected _Serializer() {
-            super(VirtualWebhookItemId.class);
-        }
-
-        @Override
-        public void serialize(VirtualWebhookItemId value, JsonGenerator g, SerializerProvider provider)
-                throws IOException, JsonProcessingException {
-            g.writeObject(value.value);
-        }
-    }
-
-    @SuppressWarnings("serial")
-    public static final class _Deserializer extends StdDeserializer<VirtualWebhookItemId> {
-
-        protected _Deserializer() {
-            super(VirtualWebhookItemId.class);
-        }
-
-        @Override
-        public VirtualWebhookItemId deserialize(JsonParser p, DeserializationContext ctxt)
-                throws IOException, JacksonException {
-            String v = p.readValueAs(new TypeReference<String>() {});
-            // use the factory method to ensure we get singletons
-            return VirtualWebhookItemId.of(v);
-        }
-    }
     
     public enum VirtualWebhookItemIdEnum {
 

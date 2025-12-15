@@ -174,6 +174,13 @@ public class HrisEmployee {
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+    /**
+     * the employee's personal relationships (eg. emergency contacts, spouse, dependants, ...)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("relationships")
+    private Optional<? extends List<HrisEmployeerelationship>> relationships;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salutation")
@@ -256,6 +263,7 @@ public class HrisEmployee {
             @JsonProperty("name") Optional<String> name,
             @JsonProperty("pronouns") Optional<String> pronouns,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("relationships") Optional<? extends List<HrisEmployeerelationship>> relationships,
             @JsonProperty("salutation") Optional<String> salutation,
             @JsonProperty("ssn_sin") Optional<String> ssnSin,
             @JsonProperty("storage_quota_allocated") Optional<Double> storageQuotaAllocated,
@@ -296,6 +304,7 @@ public class HrisEmployee {
         Utils.checkNotNull(name, "name");
         Utils.checkNotNull(pronouns, "pronouns");
         Utils.checkNotNull(raw, "raw");
+        Utils.checkNotNull(relationships, "relationships");
         Utils.checkNotNull(salutation, "salutation");
         Utils.checkNotNull(ssnSin, "ssnSin");
         Utils.checkNotNull(storageQuotaAllocated, "storageQuotaAllocated");
@@ -336,6 +345,7 @@ public class HrisEmployee {
         this.name = name;
         this.pronouns = pronouns;
         this.raw = raw;
+        this.relationships = relationships;
         this.salutation = salutation;
         this.ssnSin = ssnSin;
         this.storageQuotaAllocated = storageQuotaAllocated;
@@ -362,7 +372,7 @@ public class HrisEmployee {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -529,6 +539,15 @@ public class HrisEmployee {
     @JsonIgnore
     public Optional<Map<String, Object>> raw() {
         return (Optional<Map<String, Object>>) raw;
+    }
+
+    /**
+     * the employee's personal relationships (eg. emergency contacts, spouse, dependants, ...)
+     */
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<HrisEmployeerelationship>> relationships() {
+        return (Optional<List<HrisEmployeerelationship>>) relationships;
     }
 
     @JsonIgnore
@@ -985,6 +1004,25 @@ public class HrisEmployee {
         return this;
     }
 
+    /**
+     * the employee's personal relationships (eg. emergency contacts, spouse, dependants, ...)
+     */
+    public HrisEmployee withRelationships(List<HrisEmployeerelationship> relationships) {
+        Utils.checkNotNull(relationships, "relationships");
+        this.relationships = Optional.ofNullable(relationships);
+        return this;
+    }
+
+
+    /**
+     * the employee's personal relationships (eg. emergency contacts, spouse, dependants, ...)
+     */
+    public HrisEmployee withRelationships(Optional<? extends List<HrisEmployeerelationship>> relationships) {
+        Utils.checkNotNull(relationships, "relationships");
+        this.relationships = relationships;
+        return this;
+    }
+
     public HrisEmployee withSalutation(String salutation) {
         Utils.checkNotNull(salutation, "salutation");
         this.salutation = Optional.ofNullable(salutation);
@@ -1155,6 +1193,7 @@ public class HrisEmployee {
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.pronouns, other.pronouns) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.relationships, other.relationships) &&
             Utils.enhancedDeepEquals(this.salutation, other.salutation) &&
             Utils.enhancedDeepEquals(this.ssnSin, other.ssnSin) &&
             Utils.enhancedDeepEquals(this.storageQuotaAllocated, other.storageQuotaAllocated) &&
@@ -1180,10 +1219,10 @@ public class HrisEmployee {
             lastName, location, locations,
             managerId, maritalStatus, metadata,
             name, pronouns, raw,
-            salutation, ssnSin, storageQuotaAllocated,
-            storageQuotaAvailable, storageQuotaUsed, telephones,
-            terminatedAt, timezone, title,
-            updatedAt);
+            relationships, salutation, ssnSin,
+            storageQuotaAllocated, storageQuotaAvailable, storageQuotaUsed,
+            telephones, terminatedAt, timezone,
+            title, updatedAt);
     }
     
     @Override
@@ -1219,6 +1258,7 @@ public class HrisEmployee {
                 "name", name,
                 "pronouns", pronouns,
                 "raw", raw,
+                "relationships", relationships,
                 "salutation", salutation,
                 "ssnSin", ssnSin,
                 "storageQuotaAllocated", storageQuotaAllocated,
@@ -1293,6 +1333,8 @@ public class HrisEmployee {
         private Optional<String> pronouns = Optional.empty();
 
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
+
+        private Optional<? extends List<HrisEmployeerelationship>> relationships = Optional.empty();
 
         private Optional<String> salutation = Optional.empty();
 
@@ -1717,6 +1759,25 @@ public class HrisEmployee {
         }
 
 
+        /**
+         * the employee's personal relationships (eg. emergency contacts, spouse, dependants, ...)
+         */
+        public Builder relationships(List<HrisEmployeerelationship> relationships) {
+            Utils.checkNotNull(relationships, "relationships");
+            this.relationships = Optional.ofNullable(relationships);
+            return this;
+        }
+
+        /**
+         * the employee's personal relationships (eg. emergency contacts, spouse, dependants, ...)
+         */
+        public Builder relationships(Optional<? extends List<HrisEmployeerelationship>> relationships) {
+            Utils.checkNotNull(relationships, "relationships");
+            this.relationships = relationships;
+            return this;
+        }
+
+
         public Builder salutation(String salutation) {
             Utils.checkNotNull(salutation, "salutation");
             this.salutation = Optional.ofNullable(salutation);
@@ -1859,10 +1920,10 @@ public class HrisEmployee {
                 lastName, location, locations,
                 managerId, maritalStatus, metadata,
                 name, pronouns, raw,
-                salutation, ssnSin, storageQuotaAllocated,
-                storageQuotaAvailable, storageQuotaUsed, telephones,
-                terminatedAt, timezone, title,
-                updatedAt);
+                relationships, salutation, ssnSin,
+                storageQuotaAllocated, storageQuotaAvailable, storageQuotaUsed,
+                telephones, terminatedAt, timezone,
+                title, updatedAt);
         }
 
     }

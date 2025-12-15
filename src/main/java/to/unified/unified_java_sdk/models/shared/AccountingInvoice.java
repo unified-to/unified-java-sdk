@@ -114,6 +114,11 @@ public class AccountingInvoice {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reference")
+    private Optional<String> reference;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refund_amount")
     private Optional<Double> refundAmount;
 
@@ -182,6 +187,7 @@ public class AccountingInvoice {
             @JsonProperty("payment_collection_method") Optional<? extends AccountingInvoicePaymentCollectionMethod> paymentCollectionMethod,
             @JsonProperty("posted_at") Optional<OffsetDateTime> postedAt,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("reference") Optional<String> reference,
             @JsonProperty("refund_amount") Optional<Double> refundAmount,
             @JsonProperty("refund_reason") Optional<String> refundReason,
             @JsonProperty("refunded_at") Optional<OffsetDateTime> refundedAt,
@@ -210,6 +216,7 @@ public class AccountingInvoice {
         Utils.checkNotNull(paymentCollectionMethod, "paymentCollectionMethod");
         Utils.checkNotNull(postedAt, "postedAt");
         Utils.checkNotNull(raw, "raw");
+        Utils.checkNotNull(reference, "reference");
         Utils.checkNotNull(refundAmount, "refundAmount");
         Utils.checkNotNull(refundReason, "refundReason");
         Utils.checkNotNull(refundedAt, "refundedAt");
@@ -238,6 +245,7 @@ public class AccountingInvoice {
         this.paymentCollectionMethod = paymentCollectionMethod;
         this.postedAt = postedAt;
         this.raw = raw;
+        this.reference = reference;
         this.refundAmount = refundAmount;
         this.refundReason = refundReason;
         this.refundedAt = refundedAt;
@@ -260,7 +268,7 @@ public class AccountingInvoice {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -355,6 +363,11 @@ public class AccountingInvoice {
     @JsonIgnore
     public Optional<Map<String, Object>> raw() {
         return (Optional<Map<String, Object>>) raw;
+    }
+
+    @JsonIgnore
+    public Optional<String> reference() {
+        return reference;
     }
 
     @JsonIgnore
@@ -648,6 +661,19 @@ public class AccountingInvoice {
         return this;
     }
 
+    public AccountingInvoice withReference(String reference) {
+        Utils.checkNotNull(reference, "reference");
+        this.reference = Optional.ofNullable(reference);
+        return this;
+    }
+
+
+    public AccountingInvoice withReference(Optional<String> reference) {
+        Utils.checkNotNull(reference, "reference");
+        this.reference = reference;
+        return this;
+    }
+
     public AccountingInvoice withRefundAmount(double refundAmount) {
         Utils.checkNotNull(refundAmount, "refundAmount");
         this.refundAmount = Optional.ofNullable(refundAmount);
@@ -806,6 +832,7 @@ public class AccountingInvoice {
             Utils.enhancedDeepEquals(this.paymentCollectionMethod, other.paymentCollectionMethod) &&
             Utils.enhancedDeepEquals(this.postedAt, other.postedAt) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.reference, other.reference) &&
             Utils.enhancedDeepEquals(this.refundAmount, other.refundAmount) &&
             Utils.enhancedDeepEquals(this.refundReason, other.refundReason) &&
             Utils.enhancedDeepEquals(this.refundedAt, other.refundedAt) &&
@@ -827,10 +854,10 @@ public class AccountingInvoice {
             invoiceAt, invoiceNumber, lineitems,
             notes, paidAmount, paidAt,
             paymentCollectionMethod, postedAt, raw,
-            refundAmount, refundReason, refundedAt,
-            send, status, taxAmount,
-            totalAmount, type, updatedAt,
-            url);
+            reference, refundAmount, refundReason,
+            refundedAt, send, status,
+            taxAmount, totalAmount, type,
+            updatedAt, url);
     }
     
     @Override
@@ -854,6 +881,7 @@ public class AccountingInvoice {
                 "paymentCollectionMethod", paymentCollectionMethod,
                 "postedAt", postedAt,
                 "raw", raw,
+                "reference", reference,
                 "refundAmount", refundAmount,
                 "refundReason", refundReason,
                 "refundedAt", refundedAt,
@@ -904,6 +932,8 @@ public class AccountingInvoice {
         private Optional<OffsetDateTime> postedAt = Optional.empty();
 
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
+
+        private Optional<String> reference = Optional.empty();
 
         private Optional<Double> refundAmount = Optional.empty();
 
@@ -1164,6 +1194,19 @@ public class AccountingInvoice {
         }
 
 
+        public Builder reference(String reference) {
+            Utils.checkNotNull(reference, "reference");
+            this.reference = Optional.ofNullable(reference);
+            return this;
+        }
+
+        public Builder reference(Optional<String> reference) {
+            Utils.checkNotNull(reference, "reference");
+            this.reference = reference;
+            return this;
+        }
+
+
         public Builder refundAmount(double refundAmount) {
             Utils.checkNotNull(refundAmount, "refundAmount");
             this.refundAmount = Optional.ofNullable(refundAmount);
@@ -1302,10 +1345,10 @@ public class AccountingInvoice {
                 invoiceAt, invoiceNumber, lineitems,
                 notes, paidAmount, paidAt,
                 paymentCollectionMethod, postedAt, raw,
-                refundAmount, refundReason, refundedAt,
-                send, status, taxAmount,
-                totalAmount, type, updatedAt,
-                url);
+                reference, refundAmount, refundReason,
+                refundedAt, send, status,
+                taxAmount, totalAmount, type,
+                updatedAt, url);
         }
 
     }

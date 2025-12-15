@@ -45,6 +45,11 @@ public class CrmStage {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_closed")
+    private Optional<Boolean> isClosed;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
 
@@ -60,6 +65,7 @@ public class CrmStage {
             @JsonProperty("deal_probability") Optional<Double> dealProbability,
             @JsonProperty("display_order") Optional<Double> displayOrder,
             @JsonProperty("id") Optional<String> id,
+            @JsonProperty("is_closed") Optional<Boolean> isClosed,
             @JsonProperty("name") Optional<String> name,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(active, "active");
@@ -67,6 +73,7 @@ public class CrmStage {
         Utils.checkNotNull(dealProbability, "dealProbability");
         Utils.checkNotNull(displayOrder, "displayOrder");
         Utils.checkNotNull(id, "id");
+        Utils.checkNotNull(isClosed, "isClosed");
         Utils.checkNotNull(name, "name");
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.active = active;
@@ -74,6 +81,7 @@ public class CrmStage {
         this.dealProbability = dealProbability;
         this.displayOrder = displayOrder;
         this.id = id;
+        this.isClosed = isClosed;
         this.name = name;
         this.updatedAt = updatedAt;
     }
@@ -81,7 +89,7 @@ public class CrmStage {
     public CrmStage() {
         this(Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -107,6 +115,11 @@ public class CrmStage {
     @JsonIgnore
     public Optional<String> id() {
         return id;
+    }
+
+    @JsonIgnore
+    public Optional<Boolean> isClosed() {
+        return isClosed;
     }
 
     @JsonIgnore
@@ -189,6 +202,19 @@ public class CrmStage {
         return this;
     }
 
+    public CrmStage withIsClosed(boolean isClosed) {
+        Utils.checkNotNull(isClosed, "isClosed");
+        this.isClosed = Optional.ofNullable(isClosed);
+        return this;
+    }
+
+
+    public CrmStage withIsClosed(Optional<Boolean> isClosed) {
+        Utils.checkNotNull(isClosed, "isClosed");
+        this.isClosed = isClosed;
+        return this;
+    }
+
     public CrmStage withName(String name) {
         Utils.checkNotNull(name, "name");
         this.name = Optional.ofNullable(name);
@@ -230,6 +256,7 @@ public class CrmStage {
             Utils.enhancedDeepEquals(this.dealProbability, other.dealProbability) &&
             Utils.enhancedDeepEquals(this.displayOrder, other.displayOrder) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.isClosed, other.isClosed) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
@@ -238,8 +265,8 @@ public class CrmStage {
     public int hashCode() {
         return Utils.enhancedHash(
             active, createdAt, dealProbability,
-            displayOrder, id, name,
-            updatedAt);
+            displayOrder, id, isClosed,
+            name, updatedAt);
     }
     
     @Override
@@ -250,6 +277,7 @@ public class CrmStage {
                 "dealProbability", dealProbability,
                 "displayOrder", displayOrder,
                 "id", id,
+                "isClosed", isClosed,
                 "name", name,
                 "updatedAt", updatedAt);
     }
@@ -266,6 +294,8 @@ public class CrmStage {
         private Optional<Double> displayOrder = Optional.empty();
 
         private Optional<String> id = Optional.empty();
+
+        private Optional<Boolean> isClosed = Optional.empty();
 
         private Optional<String> name = Optional.empty();
 
@@ -341,6 +371,19 @@ public class CrmStage {
         }
 
 
+        public Builder isClosed(boolean isClosed) {
+            Utils.checkNotNull(isClosed, "isClosed");
+            this.isClosed = Optional.ofNullable(isClosed);
+            return this;
+        }
+
+        public Builder isClosed(Optional<Boolean> isClosed) {
+            Utils.checkNotNull(isClosed, "isClosed");
+            this.isClosed = isClosed;
+            return this;
+        }
+
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = Optional.ofNullable(name);
@@ -370,8 +413,8 @@ public class CrmStage {
 
             return new CrmStage(
                 active, createdAt, dealProbability,
-                displayOrder, id, name,
-                updatedAt);
+                displayOrder, id, isClosed,
+                name, updatedAt);
         }
 
     }

@@ -1,5 +1,4 @@
 # Package
-(*package_()*)
 
 ## Overview
 
