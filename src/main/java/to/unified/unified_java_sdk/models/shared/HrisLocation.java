@@ -28,6 +28,11 @@ public class HrisLocation {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("company_id")
+    private Optional<String> companyId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
@@ -99,6 +104,7 @@ public class HrisLocation {
     @JsonCreator
     public HrisLocation(
             @JsonProperty("address") Optional<? extends PropertyHrisLocationAddress> address,
+            @JsonProperty("company_id") Optional<String> companyId,
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("currency") Optional<String> currency,
             @JsonProperty("description") Optional<String> description,
@@ -114,6 +120,7 @@ public class HrisLocation {
             @JsonProperty("timezone") Optional<String> timezone,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(address, "address");
+        Utils.checkNotNull(companyId, "companyId");
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(currency, "currency");
         Utils.checkNotNull(description, "description");
@@ -129,6 +136,7 @@ public class HrisLocation {
         Utils.checkNotNull(timezone, "timezone");
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.address = address;
+        this.companyId = companyId;
         this.createdAt = createdAt;
         this.currency = currency;
         this.description = description;
@@ -150,13 +158,19 @@ public class HrisLocation {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
     public Optional<PropertyHrisLocationAddress> address() {
         return (Optional<PropertyHrisLocationAddress>) address;
+    }
+
+    @JsonIgnore
+    public Optional<String> companyId() {
+        return companyId;
     }
 
     @JsonIgnore
@@ -246,6 +260,19 @@ public class HrisLocation {
     public HrisLocation withAddress(Optional<? extends PropertyHrisLocationAddress> address) {
         Utils.checkNotNull(address, "address");
         this.address = address;
+        return this;
+    }
+
+    public HrisLocation withCompanyId(String companyId) {
+        Utils.checkNotNull(companyId, "companyId");
+        this.companyId = Optional.ofNullable(companyId);
+        return this;
+    }
+
+
+    public HrisLocation withCompanyId(Optional<String> companyId) {
+        Utils.checkNotNull(companyId, "companyId");
+        this.companyId = companyId;
         return this;
     }
 
@@ -442,6 +469,7 @@ public class HrisLocation {
         HrisLocation other = (HrisLocation) o;
         return 
             Utils.enhancedDeepEquals(this.address, other.address) &&
+            Utils.enhancedDeepEquals(this.companyId, other.companyId) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
@@ -461,17 +489,19 @@ public class HrisLocation {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            address, createdAt, currency,
-            description, externalIdentifier, id,
-            isActive, isHq, languageLocale,
-            name, parentId, raw,
-            telephones, timezone, updatedAt);
+            address, companyId, createdAt,
+            currency, description, externalIdentifier,
+            id, isActive, isHq,
+            languageLocale, name, parentId,
+            raw, telephones, timezone,
+            updatedAt);
     }
     
     @Override
     public String toString() {
         return Utils.toString(HrisLocation.class,
                 "address", address,
+                "companyId", companyId,
                 "createdAt", createdAt,
                 "currency", currency,
                 "description", description,
@@ -492,6 +522,8 @@ public class HrisLocation {
     public final static class Builder {
 
         private Optional<? extends PropertyHrisLocationAddress> address = Optional.empty();
+
+        private Optional<String> companyId = Optional.empty();
 
         private Optional<OffsetDateTime> createdAt = Optional.empty();
 
@@ -535,6 +567,19 @@ public class HrisLocation {
         public Builder address(Optional<? extends PropertyHrisLocationAddress> address) {
             Utils.checkNotNull(address, "address");
             this.address = address;
+            return this;
+        }
+
+
+        public Builder companyId(String companyId) {
+            Utils.checkNotNull(companyId, "companyId");
+            this.companyId = Optional.ofNullable(companyId);
+            return this;
+        }
+
+        public Builder companyId(Optional<String> companyId) {
+            Utils.checkNotNull(companyId, "companyId");
+            this.companyId = companyId;
             return this;
         }
 
@@ -723,11 +768,12 @@ public class HrisLocation {
         public HrisLocation build() {
 
             return new HrisLocation(
-                address, createdAt, currency,
-                description, externalIdentifier, id,
-                isActive, isHq, languageLocale,
-                name, parentId, raw,
-                telephones, timezone, updatedAt);
+                address, companyId, createdAt,
+                currency, description, externalIdentifier,
+                id, isActive, isHq,
+                languageLocale, name, parentId,
+                raw, telephones, timezone,
+                updatedAt);
         }
 
     }

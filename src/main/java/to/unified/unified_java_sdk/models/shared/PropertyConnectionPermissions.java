@@ -158,6 +158,8 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions MESSAGING_MESSAGE_READ = new PropertyConnectionPermissions("messaging_message_read");
     public static final PropertyConnectionPermissions MESSAGING_MESSAGE_WRITE = new PropertyConnectionPermissions("messaging_message_write");
     public static final PropertyConnectionPermissions MESSAGING_CHANNEL_READ = new PropertyConnectionPermissions("messaging_channel_read");
+    public static final PropertyConnectionPermissions MESSAGING_EVENT_READ = new PropertyConnectionPermissions("messaging_event_read");
+    public static final PropertyConnectionPermissions MESSAGING_EVENT_WRITE = new PropertyConnectionPermissions("messaging_event_write");
     public static final PropertyConnectionPermissions KMS_SPACE_READ = new PropertyConnectionPermissions("kms_space_read");
     public static final PropertyConnectionPermissions KMS_SPACE_WRITE = new PropertyConnectionPermissions("kms_space_write");
     public static final PropertyConnectionPermissions KMS_PAGE_READ = new PropertyConnectionPermissions("kms_page_read");
@@ -417,6 +419,8 @@ public class PropertyConnectionPermissions {
         map.put("messaging_message_read", MESSAGING_MESSAGE_READ);
         map.put("messaging_message_write", MESSAGING_MESSAGE_WRITE);
         map.put("messaging_channel_read", MESSAGING_CHANNEL_READ);
+        map.put("messaging_event_read", MESSAGING_EVENT_READ);
+        map.put("messaging_event_write", MESSAGING_EVENT_WRITE);
         map.put("kms_space_read", KMS_SPACE_READ);
         map.put("kms_space_write", KMS_SPACE_WRITE);
         map.put("kms_page_read", KMS_PAGE_READ);
@@ -608,6 +612,8 @@ public class PropertyConnectionPermissions {
         map.put("messaging_message_read", PropertyConnectionPermissionsEnum.MESSAGING_MESSAGE_READ);
         map.put("messaging_message_write", PropertyConnectionPermissionsEnum.MESSAGING_MESSAGE_WRITE);
         map.put("messaging_channel_read", PropertyConnectionPermissionsEnum.MESSAGING_CHANNEL_READ);
+        map.put("messaging_event_read", PropertyConnectionPermissionsEnum.MESSAGING_EVENT_READ);
+        map.put("messaging_event_write", PropertyConnectionPermissionsEnum.MESSAGING_EVENT_WRITE);
         map.put("kms_space_read", PropertyConnectionPermissionsEnum.KMS_SPACE_READ);
         map.put("kms_space_write", PropertyConnectionPermissionsEnum.KMS_SPACE_WRITE);
         map.put("kms_page_read", PropertyConnectionPermissionsEnum.KMS_PAGE_READ);
@@ -800,6 +806,8 @@ public class PropertyConnectionPermissions {
         MESSAGING_MESSAGE_READ("messaging_message_read"),
         MESSAGING_MESSAGE_WRITE("messaging_message_write"),
         MESSAGING_CHANNEL_READ("messaging_channel_read"),
+        MESSAGING_EVENT_READ("messaging_event_read"),
+        MESSAGING_EVENT_WRITE("messaging_event_write"),
         KMS_SPACE_READ("kms_space_read"),
         KMS_SPACE_WRITE("kms_space_write"),
         KMS_PAGE_READ("kms_page_read"),

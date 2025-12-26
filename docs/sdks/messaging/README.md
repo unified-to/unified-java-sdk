@@ -9,8 +9,10 @@
 * [getMessagingMessage](#getmessagingmessage) - Retrieve a message
 * [listMessagingChannels](#listmessagingchannels) - List all channels
 * [listMessagingMessages](#listmessagingmessages) - List all messages
+* [patchMessagingEvent](#patchmessagingevent) - Update an event
 * [patchMessagingMessage](#patchmessagingmessage) - Update a message
 * [removeMessagingMessage](#removemessagingmessage) - Remove a message
+* [updateMessagingEvent](#updatemessagingevent) - Update an event
 * [updateMessagingMessage](#updatemessagingmessage) - Update a message
 
 ## createMessagingMessage
@@ -303,6 +305,67 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## patchMessagingEvent
+
+Update an event
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchMessagingEvent" method="patch" path="/messaging/{connection_id}/event/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchMessagingEventRequest;
+import to.unified.unified_java_sdk.models.operations.PatchMessagingEventResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchMessagingEventRequest req = PatchMessagingEventRequest.builder()
+                .messagingEvent(MessagingEvent.builder()
+                    .type(MessagingEventType.CHANNEL_JOINED)
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchMessagingEventResponse res = sdk.messaging().patchMessagingEvent()
+                .request(req)
+                .call();
+
+        if (res.messagingEvent().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [PatchMessagingEventRequest](../../models/operations/PatchMessagingEventRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[PatchMessagingEventResponse](../../models/operations/PatchMessagingEventResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## patchMessagingMessage
 
 Update a message
@@ -413,6 +476,67 @@ public class Application {
 ### Response
 
 **[RemoveMessagingMessageResponse](../../models/operations/RemoveMessagingMessageResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateMessagingEvent
+
+Update an event
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateMessagingEvent" method="put" path="/messaging/{connection_id}/event/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateMessagingEventRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateMessagingEventResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateMessagingEventRequest req = UpdateMessagingEventRequest.builder()
+                .messagingEvent(MessagingEvent.builder()
+                    .type(MessagingEventType.CHANNEL_JOINED)
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateMessagingEventResponse res = sdk.messaging().updateMessagingEvent()
+                .request(req)
+                .call();
+
+        if (res.messagingEvent().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [UpdateMessagingEventRequest](../../models/operations/UpdateMessagingEventRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[UpdateMessagingEventResponse](../../models/operations/UpdateMessagingEventResponse.md)**
 
 ### Errors
 

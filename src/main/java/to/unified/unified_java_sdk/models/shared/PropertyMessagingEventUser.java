@@ -14,7 +14,7 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-public class MessagingChannelMessage {
+public class PropertyMessagingEventUser {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
@@ -26,7 +26,7 @@ public class MessagingChannelMessage {
     private Optional<String> name;
 
     @JsonCreator
-    public MessagingChannelMessage(
+    public PropertyMessagingEventUser(
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("name") Optional<String> name) {
         Utils.checkNotNull(id, "id");
@@ -35,7 +35,7 @@ public class MessagingChannelMessage {
         this.name = name;
     }
     
-    public MessagingChannelMessage() {
+    public PropertyMessagingEventUser() {
         this(Optional.empty(), Optional.empty());
     }
 
@@ -54,27 +54,27 @@ public class MessagingChannelMessage {
     }
 
 
-    public MessagingChannelMessage withId(String id) {
+    public PropertyMessagingEventUser withId(String id) {
         Utils.checkNotNull(id, "id");
         this.id = Optional.ofNullable(id);
         return this;
     }
 
 
-    public MessagingChannelMessage withId(Optional<String> id) {
+    public PropertyMessagingEventUser withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
         return this;
     }
 
-    public MessagingChannelMessage withName(String name) {
+    public PropertyMessagingEventUser withName(String name) {
         Utils.checkNotNull(name, "name");
         this.name = Optional.ofNullable(name);
         return this;
     }
 
 
-    public MessagingChannelMessage withName(Optional<String> name) {
+    public PropertyMessagingEventUser withName(Optional<String> name) {
         Utils.checkNotNull(name, "name");
         this.name = name;
         return this;
@@ -88,7 +88,7 @@ public class MessagingChannelMessage {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        MessagingChannelMessage other = (MessagingChannelMessage) o;
+        PropertyMessagingEventUser other = (PropertyMessagingEventUser) o;
         return 
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.name, other.name);
@@ -102,7 +102,7 @@ public class MessagingChannelMessage {
     
     @Override
     public String toString() {
-        return Utils.toString(MessagingChannelMessage.class,
+        return Utils.toString(PropertyMessagingEventUser.class,
                 "id", id,
                 "name", name);
     }
@@ -144,9 +144,9 @@ public class MessagingChannelMessage {
             return this;
         }
 
-        public MessagingChannelMessage build() {
+        public PropertyMessagingEventUser build() {
 
-            return new MessagingChannelMessage(
+            return new PropertyMessagingEventUser(
                 id, name);
         }
 

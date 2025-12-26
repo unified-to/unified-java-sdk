@@ -20,12 +20,18 @@ import to.unified.unified_java_sdk.models.operations.ListMessagingChannelsRespon
 import to.unified.unified_java_sdk.models.operations.ListMessagingMessagesRequest;
 import to.unified.unified_java_sdk.models.operations.ListMessagingMessagesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListMessagingMessagesResponse;
+import to.unified.unified_java_sdk.models.operations.PatchMessagingEventRequest;
+import to.unified.unified_java_sdk.models.operations.PatchMessagingEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchMessagingEventResponse;
 import to.unified.unified_java_sdk.models.operations.PatchMessagingMessageRequest;
 import to.unified.unified_java_sdk.models.operations.PatchMessagingMessageRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchMessagingMessageResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveMessagingMessageRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveMessagingMessageRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveMessagingMessageResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateMessagingEventRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateMessagingEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateMessagingEventResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateMessagingMessageRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateMessagingMessageRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateMessagingMessageResponse;
@@ -34,8 +40,10 @@ import to.unified.unified_java_sdk.operations.GetMessagingChannel;
 import to.unified.unified_java_sdk.operations.GetMessagingMessage;
 import to.unified.unified_java_sdk.operations.ListMessagingChannels;
 import to.unified.unified_java_sdk.operations.ListMessagingMessages;
+import to.unified.unified_java_sdk.operations.PatchMessagingEvent;
 import to.unified.unified_java_sdk.operations.PatchMessagingMessage;
 import to.unified.unified_java_sdk.operations.RemoveMessagingMessage;
+import to.unified.unified_java_sdk.operations.UpdateMessagingEvent;
 import to.unified.unified_java_sdk.operations.UpdateMessagingMessage;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -170,6 +178,28 @@ public class Messaging {
     }
 
     /**
+     * Update an event
+     * 
+     * @return The call builder
+     */
+    public PatchMessagingEventRequestBuilder patchMessagingEvent() {
+        return new PatchMessagingEventRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an event
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchMessagingEventResponse patchMessagingEvent(PatchMessagingEventRequest request) {
+        RequestOperation<PatchMessagingEventRequest, PatchMessagingEventResponse> operation
+              = new PatchMessagingEvent.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Update a message
      * 
      * @return The call builder
@@ -210,6 +240,28 @@ public class Messaging {
     public RemoveMessagingMessageResponse removeMessagingMessage(RemoveMessagingMessageRequest request) {
         RequestOperation<RemoveMessagingMessageRequest, RemoveMessagingMessageResponse> operation
               = new RemoveMessagingMessage.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update an event
+     * 
+     * @return The call builder
+     */
+    public UpdateMessagingEventRequestBuilder updateMessagingEvent() {
+        return new UpdateMessagingEventRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an event
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateMessagingEventResponse updateMessagingEvent(UpdateMessagingEventRequest request) {
+        RequestOperation<UpdateMessagingEventRequest, UpdateMessagingEventResponse> operation
+              = new UpdateMessagingEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -11,8 +11,10 @@ import to.unified.unified_java_sdk.models.operations.GetMessagingChannelRequest;
 import to.unified.unified_java_sdk.models.operations.GetMessagingMessageRequest;
 import to.unified.unified_java_sdk.models.operations.ListMessagingChannelsRequest;
 import to.unified.unified_java_sdk.models.operations.ListMessagingMessagesRequest;
+import to.unified.unified_java_sdk.models.operations.PatchMessagingEventRequest;
 import to.unified.unified_java_sdk.models.operations.PatchMessagingMessageRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveMessagingMessageRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateMessagingEventRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateMessagingMessageRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateMessagingMessageRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateMessagingMessageResponse;
@@ -24,10 +26,14 @@ import to.unified.unified_java_sdk.models.operations.async.ListMessagingChannels
 import to.unified.unified_java_sdk.models.operations.async.ListMessagingChannelsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListMessagingMessagesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListMessagingMessagesResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchMessagingEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchMessagingEventResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchMessagingMessageRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchMessagingMessageResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveMessagingMessageRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveMessagingMessageResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateMessagingEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateMessagingEventResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateMessagingMessageRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateMessagingMessageResponse;
 import to.unified.unified_java_sdk.operations.CreateMessagingMessage;
@@ -35,8 +41,10 @@ import to.unified.unified_java_sdk.operations.GetMessagingChannel;
 import to.unified.unified_java_sdk.operations.GetMessagingMessage;
 import to.unified.unified_java_sdk.operations.ListMessagingChannels;
 import to.unified.unified_java_sdk.operations.ListMessagingMessages;
+import to.unified.unified_java_sdk.operations.PatchMessagingEvent;
 import to.unified.unified_java_sdk.operations.PatchMessagingMessage;
 import to.unified.unified_java_sdk.operations.RemoveMessagingMessage;
+import to.unified.unified_java_sdk.operations.UpdateMessagingEvent;
 import to.unified.unified_java_sdk.operations.UpdateMessagingMessage;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -177,6 +185,29 @@ public class AsyncMessaging {
 
 
     /**
+     * Update an event
+     * 
+     * @return The async call builder
+     */
+    public PatchMessagingEventRequestBuilder patchMessagingEvent() {
+        return new PatchMessagingEventRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an event
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchMessagingEventResponse>} - The async response
+     */
+    public CompletableFuture<PatchMessagingEventResponse> patchMessagingEvent(PatchMessagingEventRequest request) {
+        AsyncRequestOperation<PatchMessagingEventRequest, PatchMessagingEventResponse> operation
+              = new PatchMessagingEvent.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Update a message
      * 
      * @return The async call builder
@@ -217,6 +248,29 @@ public class AsyncMessaging {
     public CompletableFuture<RemoveMessagingMessageResponse> removeMessagingMessage(RemoveMessagingMessageRequest request) {
         AsyncRequestOperation<RemoveMessagingMessageRequest, RemoveMessagingMessageResponse> operation
               = new RemoveMessagingMessage.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update an event
+     * 
+     * @return The async call builder
+     */
+    public UpdateMessagingEventRequestBuilder updateMessagingEvent() {
+        return new UpdateMessagingEventRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an event
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdateMessagingEventResponse>} - The async response
+     */
+    public CompletableFuture<UpdateMessagingEventResponse> updateMessagingEvent(UpdateMessagingEventRequest request) {
+        AsyncRequestOperation<UpdateMessagingEventRequest, UpdateMessagingEventResponse> operation
+              = new UpdateMessagingEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

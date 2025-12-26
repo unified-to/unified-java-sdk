@@ -14,10 +14,12 @@ import to.unified.unified_java_sdk.models.operations.ListCalendarEventsRequest;
 import to.unified.unified_java_sdk.models.operations.ListCrmEventsRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCalendarEventRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCrmEventRequest;
+import to.unified.unified_java_sdk.models.operations.PatchMessagingEventRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveCalendarEventRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveCrmEventRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCalendarEventRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmEventRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateMessagingEventRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateCalendarEventRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateCalendarEventResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateCrmEventRequestBuilder;
@@ -34,6 +36,8 @@ import to.unified.unified_java_sdk.models.operations.async.PatchCalendarEventReq
 import to.unified.unified_java_sdk.models.operations.async.PatchCalendarEventResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchCrmEventRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchCrmEventResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchMessagingEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchMessagingEventResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveCalendarEventRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveCalendarEventResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveCrmEventRequestBuilder;
@@ -42,6 +46,8 @@ import to.unified.unified_java_sdk.models.operations.async.UpdateCalendarEventRe
 import to.unified.unified_java_sdk.models.operations.async.UpdateCalendarEventResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateCrmEventRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateCrmEventResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateMessagingEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateMessagingEventResponse;
 import to.unified.unified_java_sdk.operations.CreateCalendarEvent;
 import to.unified.unified_java_sdk.operations.CreateCrmEvent;
 import to.unified.unified_java_sdk.operations.GetCalendarEvent;
@@ -50,10 +56,12 @@ import to.unified.unified_java_sdk.operations.ListCalendarEvents;
 import to.unified.unified_java_sdk.operations.ListCrmEvents;
 import to.unified.unified_java_sdk.operations.PatchCalendarEvent;
 import to.unified.unified_java_sdk.operations.PatchCrmEvent;
+import to.unified.unified_java_sdk.operations.PatchMessagingEvent;
 import to.unified.unified_java_sdk.operations.RemoveCalendarEvent;
 import to.unified.unified_java_sdk.operations.RemoveCrmEvent;
 import to.unified.unified_java_sdk.operations.UpdateCalendarEvent;
 import to.unified.unified_java_sdk.operations.UpdateCrmEvent;
+import to.unified.unified_java_sdk.operations.UpdateMessagingEvent;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -262,6 +270,29 @@ public class AsyncEvent {
 
 
     /**
+     * Update an event
+     * 
+     * @return The async call builder
+     */
+    public PatchMessagingEventRequestBuilder patchMessagingEvent() {
+        return new PatchMessagingEventRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an event
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchMessagingEventResponse>} - The async response
+     */
+    public CompletableFuture<PatchMessagingEventResponse> patchMessagingEvent(PatchMessagingEventRequest request) {
+        AsyncRequestOperation<PatchMessagingEventRequest, PatchMessagingEventResponse> operation
+              = new PatchMessagingEvent.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Remove an event
      * 
      * @return The async call builder
@@ -348,6 +379,29 @@ public class AsyncEvent {
     public CompletableFuture<UpdateCrmEventResponse> updateCrmEvent(UpdateCrmEventRequest request) {
         AsyncRequestOperation<UpdateCrmEventRequest, UpdateCrmEventResponse> operation
               = new UpdateCrmEvent.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update an event
+     * 
+     * @return The async call builder
+     */
+    public UpdateMessagingEventRequestBuilder updateMessagingEvent() {
+        return new UpdateMessagingEventRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an event
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdateMessagingEventResponse>} - The async response
+     */
+    public CompletableFuture<UpdateMessagingEventResponse> updateMessagingEvent(UpdateMessagingEventRequest request) {
+        AsyncRequestOperation<UpdateMessagingEventRequest, UpdateMessagingEventResponse> operation
+              = new UpdateMessagingEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

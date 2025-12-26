@@ -27,6 +27,7 @@ public class AccountingInvoiceStatus {
     public static final AccountingInvoiceStatus PARTIALLY_PAID = new AccountingInvoiceStatus("PARTIALLY_PAID");
     public static final AccountingInvoiceStatus PARTIALLY_REFUNDED = new AccountingInvoiceStatus("PARTIALLY_REFUNDED");
     public static final AccountingInvoiceStatus REFUNDED = new AccountingInvoiceStatus("REFUNDED");
+    public static final AccountingInvoiceStatus OVERDUE = new AccountingInvoiceStatus("OVERDUE");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -107,6 +108,7 @@ public class AccountingInvoiceStatus {
         map.put("PARTIALLY_PAID", PARTIALLY_PAID);
         map.put("PARTIALLY_REFUNDED", PARTIALLY_REFUNDED);
         map.put("REFUNDED", REFUNDED);
+        map.put("OVERDUE", OVERDUE);
         return map;
     }
 
@@ -119,6 +121,7 @@ public class AccountingInvoiceStatus {
         map.put("PARTIALLY_PAID", AccountingInvoiceStatusEnum.PARTIALLY_PAID);
         map.put("PARTIALLY_REFUNDED", AccountingInvoiceStatusEnum.PARTIALLY_REFUNDED);
         map.put("REFUNDED", AccountingInvoiceStatusEnum.REFUNDED);
+        map.put("OVERDUE", AccountingInvoiceStatusEnum.OVERDUE);
         return map;
     }
     
@@ -131,7 +134,8 @@ public class AccountingInvoiceStatus {
         PAID("PAID"),
         PARTIALLY_PAID("PARTIALLY_PAID"),
         PARTIALLY_REFUNDED("PARTIALLY_REFUNDED"),
-        REFUNDED("REFUNDED"),;
+        REFUNDED("REFUNDED"),
+        OVERDUE("OVERDUE"),;
 
         private final String value;
 

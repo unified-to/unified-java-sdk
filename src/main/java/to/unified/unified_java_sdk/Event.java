@@ -29,6 +29,9 @@ import to.unified.unified_java_sdk.models.operations.PatchCalendarEventResponse;
 import to.unified.unified_java_sdk.models.operations.PatchCrmEventRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCrmEventRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchCrmEventResponse;
+import to.unified.unified_java_sdk.models.operations.PatchMessagingEventRequest;
+import to.unified.unified_java_sdk.models.operations.PatchMessagingEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchMessagingEventResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveCalendarEventRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveCalendarEventRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveCalendarEventResponse;
@@ -41,6 +44,9 @@ import to.unified.unified_java_sdk.models.operations.UpdateCalendarEventResponse
 import to.unified.unified_java_sdk.models.operations.UpdateCrmEventRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmEventRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmEventResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateMessagingEventRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateMessagingEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateMessagingEventResponse;
 import to.unified.unified_java_sdk.operations.CreateCalendarEvent;
 import to.unified.unified_java_sdk.operations.CreateCrmEvent;
 import to.unified.unified_java_sdk.operations.GetCalendarEvent;
@@ -49,10 +55,12 @@ import to.unified.unified_java_sdk.operations.ListCalendarEvents;
 import to.unified.unified_java_sdk.operations.ListCrmEvents;
 import to.unified.unified_java_sdk.operations.PatchCalendarEvent;
 import to.unified.unified_java_sdk.operations.PatchCrmEvent;
+import to.unified.unified_java_sdk.operations.PatchMessagingEvent;
 import to.unified.unified_java_sdk.operations.RemoveCalendarEvent;
 import to.unified.unified_java_sdk.operations.RemoveCrmEvent;
 import to.unified.unified_java_sdk.operations.UpdateCalendarEvent;
 import to.unified.unified_java_sdk.operations.UpdateCrmEvent;
+import to.unified.unified_java_sdk.operations.UpdateMessagingEvent;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -252,6 +260,28 @@ public class Event {
     }
 
     /**
+     * Update an event
+     * 
+     * @return The call builder
+     */
+    public PatchMessagingEventRequestBuilder patchMessagingEvent() {
+        return new PatchMessagingEventRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an event
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchMessagingEventResponse patchMessagingEvent(PatchMessagingEventRequest request) {
+        RequestOperation<PatchMessagingEventRequest, PatchMessagingEventResponse> operation
+              = new PatchMessagingEvent.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Remove an event
      * 
      * @return The call builder
@@ -336,6 +366,28 @@ public class Event {
     public UpdateCrmEventResponse updateCrmEvent(UpdateCrmEventRequest request) {
         RequestOperation<UpdateCrmEventRequest, UpdateCrmEventResponse> operation
               = new UpdateCrmEvent.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update an event
+     * 
+     * @return The call builder
+     */
+    public UpdateMessagingEventRequestBuilder updateMessagingEvent() {
+        return new UpdateMessagingEventRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an event
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateMessagingEventResponse updateMessagingEvent(UpdateMessagingEventRequest request) {
+        RequestOperation<UpdateMessagingEventRequest, UpdateMessagingEventResponse> operation
+              = new UpdateMessagingEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -20,7 +20,7 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-public class MessagingMessage {
+public class PropertyMessagingEventMessage {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachments")
@@ -29,7 +29,7 @@ public class MessagingMessage {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author_member")
-    private Optional<? extends PropertyMessagingMessageAuthorMember> authorMember;
+    private Optional<? extends PropertyMessagingEventMessageAuthorMember> authorMember;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -157,9 +157,9 @@ public class MessagingMessage {
     private Optional<String> webUrl;
 
     @JsonCreator
-    public MessagingMessage(
+    public PropertyMessagingEventMessage(
             @JsonProperty("attachments") Optional<? extends List<MessagingAttachment>> attachments,
-            @JsonProperty("author_member") Optional<? extends PropertyMessagingMessageAuthorMember> authorMember,
+            @JsonProperty("author_member") Optional<? extends PropertyMessagingEventMessageAuthorMember> authorMember,
             @JsonProperty("buttons") Optional<? extends List<MessagingButton>> buttons,
             @JsonProperty("channel_id") Optional<String> channelId,
             @JsonProperty("channel_ids") Optional<? extends List<String>> channelIds,
@@ -238,7 +238,7 @@ public class MessagingMessage {
         this.webUrl = webUrl;
     }
     
-    public MessagingMessage() {
+    public PropertyMessagingEventMessage() {
         this(Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
@@ -258,8 +258,8 @@ public class MessagingMessage {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<PropertyMessagingMessageAuthorMember> authorMember() {
-        return (Optional<PropertyMessagingMessageAuthorMember>) authorMember;
+    public Optional<PropertyMessagingEventMessageAuthorMember> authorMember() {
+        return (Optional<PropertyMessagingEventMessageAuthorMember>) authorMember;
     }
 
     @SuppressWarnings("unchecked")
@@ -402,53 +402,53 @@ public class MessagingMessage {
     }
 
 
-    public MessagingMessage withAttachments(List<MessagingAttachment> attachments) {
+    public PropertyMessagingEventMessage withAttachments(List<MessagingAttachment> attachments) {
         Utils.checkNotNull(attachments, "attachments");
         this.attachments = Optional.ofNullable(attachments);
         return this;
     }
 
 
-    public MessagingMessage withAttachments(Optional<? extends List<MessagingAttachment>> attachments) {
+    public PropertyMessagingEventMessage withAttachments(Optional<? extends List<MessagingAttachment>> attachments) {
         Utils.checkNotNull(attachments, "attachments");
         this.attachments = attachments;
         return this;
     }
 
-    public MessagingMessage withAuthorMember(PropertyMessagingMessageAuthorMember authorMember) {
+    public PropertyMessagingEventMessage withAuthorMember(PropertyMessagingEventMessageAuthorMember authorMember) {
         Utils.checkNotNull(authorMember, "authorMember");
         this.authorMember = Optional.ofNullable(authorMember);
         return this;
     }
 
 
-    public MessagingMessage withAuthorMember(Optional<? extends PropertyMessagingMessageAuthorMember> authorMember) {
+    public PropertyMessagingEventMessage withAuthorMember(Optional<? extends PropertyMessagingEventMessageAuthorMember> authorMember) {
         Utils.checkNotNull(authorMember, "authorMember");
         this.authorMember = authorMember;
         return this;
     }
 
-    public MessagingMessage withButtons(List<MessagingButton> buttons) {
+    public PropertyMessagingEventMessage withButtons(List<MessagingButton> buttons) {
         Utils.checkNotNull(buttons, "buttons");
         this.buttons = Optional.ofNullable(buttons);
         return this;
     }
 
 
-    public MessagingMessage withButtons(Optional<? extends List<MessagingButton>> buttons) {
+    public PropertyMessagingEventMessage withButtons(Optional<? extends List<MessagingButton>> buttons) {
         Utils.checkNotNull(buttons, "buttons");
         this.buttons = buttons;
         return this;
     }
 
-    public MessagingMessage withChannelId(String channelId) {
+    public PropertyMessagingEventMessage withChannelId(String channelId) {
         Utils.checkNotNull(channelId, "channelId");
         this.channelId = Optional.ofNullable(channelId);
         return this;
     }
 
 
-    public MessagingMessage withChannelId(Optional<String> channelId) {
+    public PropertyMessagingEventMessage withChannelId(Optional<String> channelId) {
         Utils.checkNotNull(channelId, "channelId");
         this.channelId = channelId;
         return this;
@@ -457,7 +457,7 @@ public class MessagingMessage {
     /**
      * &#64;deprecated; use channels instead
      */
-    public MessagingMessage withChannelIds(List<String> channelIds) {
+    public PropertyMessagingEventMessage withChannelIds(List<String> channelIds) {
         Utils.checkNotNull(channelIds, "channelIds");
         this.channelIds = Optional.ofNullable(channelIds);
         return this;
@@ -467,7 +467,7 @@ public class MessagingMessage {
     /**
      * &#64;deprecated; use channels instead
      */
-    public MessagingMessage withChannelIds(Optional<? extends List<String>> channelIds) {
+    public PropertyMessagingEventMessage withChannelIds(Optional<? extends List<String>> channelIds) {
         Utils.checkNotNull(channelIds, "channelIds");
         this.channelIds = channelIds;
         return this;
@@ -477,7 +477,7 @@ public class MessagingMessage {
      * Represents the names of all channels to which the message is sent. Identifies the channels where the
      * message is posted.
      */
-    public MessagingMessage withChannels(List<MessagingReference> channels) {
+    public PropertyMessagingEventMessage withChannels(List<MessagingReference> channels) {
         Utils.checkNotNull(channels, "channels");
         this.channels = Optional.ofNullable(channels);
         return this;
@@ -488,267 +488,267 @@ public class MessagingMessage {
      * Represents the names of all channels to which the message is sent. Identifies the channels where the
      * message is posted.
      */
-    public MessagingMessage withChannels(Optional<? extends List<MessagingReference>> channels) {
+    public PropertyMessagingEventMessage withChannels(Optional<? extends List<MessagingReference>> channels) {
         Utils.checkNotNull(channels, "channels");
         this.channels = channels;
         return this;
     }
 
-    public MessagingMessage withCreatedAt(OffsetDateTime createdAt) {
+    public PropertyMessagingEventMessage withCreatedAt(OffsetDateTime createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
 
 
-    public MessagingMessage withCreatedAt(Optional<OffsetDateTime> createdAt) {
+    public PropertyMessagingEventMessage withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
         return this;
     }
 
-    public MessagingMessage withDestinationMembers(List<MessagingMember> destinationMembers) {
+    public PropertyMessagingEventMessage withDestinationMembers(List<MessagingMember> destinationMembers) {
         Utils.checkNotNull(destinationMembers, "destinationMembers");
         this.destinationMembers = Optional.ofNullable(destinationMembers);
         return this;
     }
 
 
-    public MessagingMessage withDestinationMembers(Optional<? extends List<MessagingMember>> destinationMembers) {
+    public PropertyMessagingEventMessage withDestinationMembers(Optional<? extends List<MessagingMember>> destinationMembers) {
         Utils.checkNotNull(destinationMembers, "destinationMembers");
         this.destinationMembers = destinationMembers;
         return this;
     }
 
-    public MessagingMessage withHasChildren(boolean hasChildren) {
+    public PropertyMessagingEventMessage withHasChildren(boolean hasChildren) {
         Utils.checkNotNull(hasChildren, "hasChildren");
         this.hasChildren = Optional.ofNullable(hasChildren);
         return this;
     }
 
 
-    public MessagingMessage withHasChildren(Optional<Boolean> hasChildren) {
+    public PropertyMessagingEventMessage withHasChildren(Optional<Boolean> hasChildren) {
         Utils.checkNotNull(hasChildren, "hasChildren");
         this.hasChildren = hasChildren;
         return this;
     }
 
-    public MessagingMessage withHiddenMembers(List<MessagingMember> hiddenMembers) {
+    public PropertyMessagingEventMessage withHiddenMembers(List<MessagingMember> hiddenMembers) {
         Utils.checkNotNull(hiddenMembers, "hiddenMembers");
         this.hiddenMembers = Optional.ofNullable(hiddenMembers);
         return this;
     }
 
 
-    public MessagingMessage withHiddenMembers(Optional<? extends List<MessagingMember>> hiddenMembers) {
+    public PropertyMessagingEventMessage withHiddenMembers(Optional<? extends List<MessagingMember>> hiddenMembers) {
         Utils.checkNotNull(hiddenMembers, "hiddenMembers");
         this.hiddenMembers = hiddenMembers;
         return this;
     }
 
-    public MessagingMessage withId(String id) {
+    public PropertyMessagingEventMessage withId(String id) {
         Utils.checkNotNull(id, "id");
         this.id = Optional.ofNullable(id);
         return this;
     }
 
 
-    public MessagingMessage withId(Optional<String> id) {
+    public PropertyMessagingEventMessage withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
         return this;
     }
 
-    public MessagingMessage withIsUnread(boolean isUnread) {
+    public PropertyMessagingEventMessage withIsUnread(boolean isUnread) {
         Utils.checkNotNull(isUnread, "isUnread");
         this.isUnread = Optional.ofNullable(isUnread);
         return this;
     }
 
 
-    public MessagingMessage withIsUnread(Optional<Boolean> isUnread) {
+    public PropertyMessagingEventMessage withIsUnread(Optional<Boolean> isUnread) {
         Utils.checkNotNull(isUnread, "isUnread");
         this.isUnread = isUnread;
         return this;
     }
 
-    public MessagingMessage withMentionedMembers(List<MessagingMember> mentionedMembers) {
+    public PropertyMessagingEventMessage withMentionedMembers(List<MessagingMember> mentionedMembers) {
         Utils.checkNotNull(mentionedMembers, "mentionedMembers");
         this.mentionedMembers = Optional.ofNullable(mentionedMembers);
         return this;
     }
 
 
-    public MessagingMessage withMentionedMembers(Optional<? extends List<MessagingMember>> mentionedMembers) {
+    public PropertyMessagingEventMessage withMentionedMembers(Optional<? extends List<MessagingMember>> mentionedMembers) {
         Utils.checkNotNull(mentionedMembers, "mentionedMembers");
         this.mentionedMembers = mentionedMembers;
         return this;
     }
 
-    public MessagingMessage withMessage(String message) {
+    public PropertyMessagingEventMessage withMessage(String message) {
         Utils.checkNotNull(message, "message");
         this.message = Optional.ofNullable(message);
         return this;
     }
 
 
-    public MessagingMessage withMessage(Optional<String> message) {
+    public PropertyMessagingEventMessage withMessage(Optional<String> message) {
         Utils.checkNotNull(message, "message");
         this.message = message;
         return this;
     }
 
-    public MessagingMessage withMessageHtml(String messageHtml) {
+    public PropertyMessagingEventMessage withMessageHtml(String messageHtml) {
         Utils.checkNotNull(messageHtml, "messageHtml");
         this.messageHtml = Optional.ofNullable(messageHtml);
         return this;
     }
 
 
-    public MessagingMessage withMessageHtml(Optional<String> messageHtml) {
+    public PropertyMessagingEventMessage withMessageHtml(Optional<String> messageHtml) {
         Utils.checkNotNull(messageHtml, "messageHtml");
         this.messageHtml = messageHtml;
         return this;
     }
 
-    public MessagingMessage withMessageMarkdown(String messageMarkdown) {
+    public PropertyMessagingEventMessage withMessageMarkdown(String messageMarkdown) {
         Utils.checkNotNull(messageMarkdown, "messageMarkdown");
         this.messageMarkdown = Optional.ofNullable(messageMarkdown);
         return this;
     }
 
 
-    public MessagingMessage withMessageMarkdown(Optional<String> messageMarkdown) {
+    public PropertyMessagingEventMessage withMessageMarkdown(Optional<String> messageMarkdown) {
         Utils.checkNotNull(messageMarkdown, "messageMarkdown");
         this.messageMarkdown = messageMarkdown;
         return this;
     }
 
-    public MessagingMessage withMessageThreadIdentifier(String messageThreadIdentifier) {
+    public PropertyMessagingEventMessage withMessageThreadIdentifier(String messageThreadIdentifier) {
         Utils.checkNotNull(messageThreadIdentifier, "messageThreadIdentifier");
         this.messageThreadIdentifier = Optional.ofNullable(messageThreadIdentifier);
         return this;
     }
 
 
-    public MessagingMessage withMessageThreadIdentifier(Optional<String> messageThreadIdentifier) {
+    public PropertyMessagingEventMessage withMessageThreadIdentifier(Optional<String> messageThreadIdentifier) {
         Utils.checkNotNull(messageThreadIdentifier, "messageThreadIdentifier");
         this.messageThreadIdentifier = messageThreadIdentifier;
         return this;
     }
 
-    public MessagingMessage withParentId(String parentId) {
+    public PropertyMessagingEventMessage withParentId(String parentId) {
         Utils.checkNotNull(parentId, "parentId");
         this.parentId = Optional.ofNullable(parentId);
         return this;
     }
 
 
-    public MessagingMessage withParentId(Optional<String> parentId) {
+    public PropertyMessagingEventMessage withParentId(Optional<String> parentId) {
         Utils.checkNotNull(parentId, "parentId");
         this.parentId = parentId;
         return this;
     }
 
-    public MessagingMessage withParentMessageId(String parentMessageId) {
+    public PropertyMessagingEventMessage withParentMessageId(String parentMessageId) {
         Utils.checkNotNull(parentMessageId, "parentMessageId");
         this.parentMessageId = Optional.ofNullable(parentMessageId);
         return this;
     }
 
 
-    public MessagingMessage withParentMessageId(Optional<String> parentMessageId) {
+    public PropertyMessagingEventMessage withParentMessageId(Optional<String> parentMessageId) {
         Utils.checkNotNull(parentMessageId, "parentMessageId");
         this.parentMessageId = parentMessageId;
         return this;
     }
 
-    public MessagingMessage withRaw(Map<String, Object> raw) {
+    public PropertyMessagingEventMessage withRaw(Map<String, Object> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
         return this;
     }
 
 
-    public MessagingMessage withRaw(Optional<? extends Map<String, Object>> raw) {
+    public PropertyMessagingEventMessage withRaw(Optional<? extends Map<String, Object>> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
         return this;
     }
 
-    public MessagingMessage withReactions(List<MessagingReaction> reactions) {
+    public PropertyMessagingEventMessage withReactions(List<MessagingReaction> reactions) {
         Utils.checkNotNull(reactions, "reactions");
         this.reactions = Optional.ofNullable(reactions);
         return this;
     }
 
 
-    public MessagingMessage withReactions(Optional<? extends List<MessagingReaction>> reactions) {
+    public PropertyMessagingEventMessage withReactions(Optional<? extends List<MessagingReaction>> reactions) {
         Utils.checkNotNull(reactions, "reactions");
         this.reactions = reactions;
         return this;
     }
 
-    public MessagingMessage withReference(String reference) {
+    public PropertyMessagingEventMessage withReference(String reference) {
         Utils.checkNotNull(reference, "reference");
         this.reference = Optional.ofNullable(reference);
         return this;
     }
 
 
-    public MessagingMessage withReference(Optional<String> reference) {
+    public PropertyMessagingEventMessage withReference(Optional<String> reference) {
         Utils.checkNotNull(reference, "reference");
         this.reference = reference;
         return this;
     }
 
-    public MessagingMessage withRootMessageId(String rootMessageId) {
+    public PropertyMessagingEventMessage withRootMessageId(String rootMessageId) {
         Utils.checkNotNull(rootMessageId, "rootMessageId");
         this.rootMessageId = Optional.ofNullable(rootMessageId);
         return this;
     }
 
 
-    public MessagingMessage withRootMessageId(Optional<String> rootMessageId) {
+    public PropertyMessagingEventMessage withRootMessageId(Optional<String> rootMessageId) {
         Utils.checkNotNull(rootMessageId, "rootMessageId");
         this.rootMessageId = rootMessageId;
         return this;
     }
 
-    public MessagingMessage withSubject(String subject) {
+    public PropertyMessagingEventMessage withSubject(String subject) {
         Utils.checkNotNull(subject, "subject");
         this.subject = Optional.ofNullable(subject);
         return this;
     }
 
 
-    public MessagingMessage withSubject(Optional<String> subject) {
+    public PropertyMessagingEventMessage withSubject(Optional<String> subject) {
         Utils.checkNotNull(subject, "subject");
         this.subject = subject;
         return this;
     }
 
-    public MessagingMessage withUpdatedAt(OffsetDateTime updatedAt) {
+    public PropertyMessagingEventMessage withUpdatedAt(OffsetDateTime updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = Optional.ofNullable(updatedAt);
         return this;
     }
 
 
-    public MessagingMessage withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
+    public PropertyMessagingEventMessage withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
     }
 
-    public MessagingMessage withWebUrl(String webUrl) {
+    public PropertyMessagingEventMessage withWebUrl(String webUrl) {
         Utils.checkNotNull(webUrl, "webUrl");
         this.webUrl = Optional.ofNullable(webUrl);
         return this;
     }
 
 
-    public MessagingMessage withWebUrl(Optional<String> webUrl) {
+    public PropertyMessagingEventMessage withWebUrl(Optional<String> webUrl) {
         Utils.checkNotNull(webUrl, "webUrl");
         this.webUrl = webUrl;
         return this;
@@ -762,7 +762,7 @@ public class MessagingMessage {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        MessagingMessage other = (MessagingMessage) o;
+        PropertyMessagingEventMessage other = (PropertyMessagingEventMessage) o;
         return 
             Utils.enhancedDeepEquals(this.attachments, other.attachments) &&
             Utils.enhancedDeepEquals(this.authorMember, other.authorMember) &&
@@ -808,7 +808,7 @@ public class MessagingMessage {
     
     @Override
     public String toString() {
-        return Utils.toString(MessagingMessage.class,
+        return Utils.toString(PropertyMessagingEventMessage.class,
                 "attachments", attachments,
                 "authorMember", authorMember,
                 "buttons", buttons,
@@ -842,7 +842,7 @@ public class MessagingMessage {
 
         private Optional<? extends List<MessagingAttachment>> attachments = Optional.empty();
 
-        private Optional<? extends PropertyMessagingMessageAuthorMember> authorMember = Optional.empty();
+        private Optional<? extends PropertyMessagingEventMessageAuthorMember> authorMember = Optional.empty();
 
         private Optional<? extends List<MessagingButton>> buttons = Optional.empty();
 
@@ -910,13 +910,13 @@ public class MessagingMessage {
         }
 
 
-        public Builder authorMember(PropertyMessagingMessageAuthorMember authorMember) {
+        public Builder authorMember(PropertyMessagingEventMessageAuthorMember authorMember) {
             Utils.checkNotNull(authorMember, "authorMember");
             this.authorMember = Optional.ofNullable(authorMember);
             return this;
         }
 
-        public Builder authorMember(Optional<? extends PropertyMessagingMessageAuthorMember> authorMember) {
+        public Builder authorMember(Optional<? extends PropertyMessagingEventMessageAuthorMember> authorMember) {
             Utils.checkNotNull(authorMember, "authorMember");
             this.authorMember = authorMember;
             return this;
@@ -1248,9 +1248,9 @@ public class MessagingMessage {
             return this;
         }
 
-        public MessagingMessage build() {
+        public PropertyMessagingEventMessage build() {
 
-            return new MessagingMessage(
+            return new PropertyMessagingEventMessage(
                 attachments, authorMember, buttons,
                 channelId, channelIds, channels,
                 createdAt, destinationMembers, hasChildren,

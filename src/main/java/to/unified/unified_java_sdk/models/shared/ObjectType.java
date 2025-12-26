@@ -96,6 +96,7 @@ public class ObjectType {
     public static final ObjectType GENAI_EMBEDDING = new ObjectType("genai_embedding");
     public static final ObjectType MESSAGING_MESSAGE = new ObjectType("messaging_message");
     public static final ObjectType MESSAGING_CHANNEL = new ObjectType("messaging_channel");
+    public static final ObjectType MESSAGING_EVENT = new ObjectType("messaging_event");
     public static final ObjectType KMS_SPACE = new ObjectType("kms_space");
     public static final ObjectType KMS_PAGE = new ObjectType("kms_page");
     public static final ObjectType KMS_COMMENT = new ObjectType("kms_comment");
@@ -269,6 +270,7 @@ public class ObjectType {
         map.put("genai_embedding", GENAI_EMBEDDING);
         map.put("messaging_message", MESSAGING_MESSAGE);
         map.put("messaging_channel", MESSAGING_CHANNEL);
+        map.put("messaging_event", MESSAGING_EVENT);
         map.put("kms_space", KMS_SPACE);
         map.put("kms_page", KMS_PAGE);
         map.put("kms_comment", KMS_COMMENT);
@@ -374,6 +376,7 @@ public class ObjectType {
         map.put("genai_embedding", ObjectTypeEnum.GENAI_EMBEDDING);
         map.put("messaging_message", ObjectTypeEnum.MESSAGING_MESSAGE);
         map.put("messaging_channel", ObjectTypeEnum.MESSAGING_CHANNEL);
+        map.put("messaging_event", ObjectTypeEnum.MESSAGING_EVENT);
         map.put("kms_space", ObjectTypeEnum.KMS_SPACE);
         map.put("kms_page", ObjectTypeEnum.KMS_PAGE);
         map.put("kms_comment", ObjectTypeEnum.KMS_COMMENT);
@@ -480,6 +483,7 @@ public class ObjectType {
         GENAI_EMBEDDING("genai_embedding"),
         MESSAGING_MESSAGE("messaging_message"),
         MESSAGING_CHANNEL("messaging_channel"),
+        MESSAGING_EVENT("messaging_event"),
         KMS_SPACE("kms_space"),
         KMS_PAGE("kms_page"),
         KMS_COMMENT("kms_comment"),
