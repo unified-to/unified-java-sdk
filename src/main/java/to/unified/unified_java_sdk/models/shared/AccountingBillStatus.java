@@ -27,6 +27,8 @@ public class AccountingBillStatus {
     public static final AccountingBillStatus PARTIALLY_PAID = new AccountingBillStatus("PARTIALLY_PAID");
     public static final AccountingBillStatus PARTIALLY_REFUNDED = new AccountingBillStatus("PARTIALLY_REFUNDED");
     public static final AccountingBillStatus REFUNDED = new AccountingBillStatus("REFUNDED");
+    public static final AccountingBillStatus SUBMITTED = new AccountingBillStatus("SUBMITTED");
+    public static final AccountingBillStatus DELETED = new AccountingBillStatus("DELETED");
     public static final AccountingBillStatus OVERDUE = new AccountingBillStatus("OVERDUE");
 
     // This map will grow whenever a Color gets created with a new
@@ -108,6 +110,8 @@ public class AccountingBillStatus {
         map.put("PARTIALLY_PAID", PARTIALLY_PAID);
         map.put("PARTIALLY_REFUNDED", PARTIALLY_REFUNDED);
         map.put("REFUNDED", REFUNDED);
+        map.put("SUBMITTED", SUBMITTED);
+        map.put("DELETED", DELETED);
         map.put("OVERDUE", OVERDUE);
         return map;
     }
@@ -121,6 +125,8 @@ public class AccountingBillStatus {
         map.put("PARTIALLY_PAID", AccountingBillStatusEnum.PARTIALLY_PAID);
         map.put("PARTIALLY_REFUNDED", AccountingBillStatusEnum.PARTIALLY_REFUNDED);
         map.put("REFUNDED", AccountingBillStatusEnum.REFUNDED);
+        map.put("SUBMITTED", AccountingBillStatusEnum.SUBMITTED);
+        map.put("DELETED", AccountingBillStatusEnum.DELETED);
         map.put("OVERDUE", AccountingBillStatusEnum.OVERDUE);
         return map;
     }
@@ -135,6 +141,8 @@ public class AccountingBillStatus {
         PARTIALLY_PAID("PARTIALLY_PAID"),
         PARTIALLY_REFUNDED("PARTIALLY_REFUNDED"),
         REFUNDED("REFUNDED"),
+        SUBMITTED("SUBMITTED"),
+        DELETED("DELETED"),
         OVERDUE("OVERDUE"),;
 
         private final String value;

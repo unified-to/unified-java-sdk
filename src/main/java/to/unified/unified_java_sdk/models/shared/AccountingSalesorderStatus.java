@@ -27,6 +27,8 @@ public class AccountingSalesorderStatus {
     public static final AccountingSalesorderStatus PARTIALLY_PAID = new AccountingSalesorderStatus("PARTIALLY_PAID");
     public static final AccountingSalesorderStatus PARTIALLY_REFUNDED = new AccountingSalesorderStatus("PARTIALLY_REFUNDED");
     public static final AccountingSalesorderStatus REFUNDED = new AccountingSalesorderStatus("REFUNDED");
+    public static final AccountingSalesorderStatus SUBMITTED = new AccountingSalesorderStatus("SUBMITTED");
+    public static final AccountingSalesorderStatus DELETED = new AccountingSalesorderStatus("DELETED");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -107,6 +109,8 @@ public class AccountingSalesorderStatus {
         map.put("PARTIALLY_PAID", PARTIALLY_PAID);
         map.put("PARTIALLY_REFUNDED", PARTIALLY_REFUNDED);
         map.put("REFUNDED", REFUNDED);
+        map.put("SUBMITTED", SUBMITTED);
+        map.put("DELETED", DELETED);
         return map;
     }
 
@@ -119,6 +123,8 @@ public class AccountingSalesorderStatus {
         map.put("PARTIALLY_PAID", AccountingSalesorderStatusEnum.PARTIALLY_PAID);
         map.put("PARTIALLY_REFUNDED", AccountingSalesorderStatusEnum.PARTIALLY_REFUNDED);
         map.put("REFUNDED", AccountingSalesorderStatusEnum.REFUNDED);
+        map.put("SUBMITTED", AccountingSalesorderStatusEnum.SUBMITTED);
+        map.put("DELETED", AccountingSalesorderStatusEnum.DELETED);
         return map;
     }
     
@@ -131,7 +137,9 @@ public class AccountingSalesorderStatus {
         PAID("PAID"),
         PARTIALLY_PAID("PARTIALLY_PAID"),
         PARTIALLY_REFUNDED("PARTIALLY_REFUNDED"),
-        REFUNDED("REFUNDED"),;
+        REFUNDED("REFUNDED"),
+        SUBMITTED("SUBMITTED"),
+        DELETED("DELETED"),;
 
         private final String value;
 

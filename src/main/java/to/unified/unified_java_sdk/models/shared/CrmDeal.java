@@ -37,6 +37,11 @@ public class CrmDeal {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("closing_at")
+    private Optional<OffsetDateTime> closingAt;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_ids")
     private Optional<? extends List<String>> companyIds;
 
@@ -134,6 +139,7 @@ public class CrmDeal {
     public CrmDeal(
             @JsonProperty("amount") Optional<Double> amount,
             @JsonProperty("closed_at") Optional<OffsetDateTime> closedAt,
+            @JsonProperty("closing_at") Optional<OffsetDateTime> closingAt,
             @JsonProperty("company_ids") Optional<? extends List<String>> companyIds,
             @JsonProperty("contact_ids") Optional<? extends List<String>> contactIds,
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
@@ -155,6 +161,7 @@ public class CrmDeal {
             @JsonProperty("won_reason") Optional<String> wonReason) {
         Utils.checkNotNull(amount, "amount");
         Utils.checkNotNull(closedAt, "closedAt");
+        Utils.checkNotNull(closingAt, "closingAt");
         Utils.checkNotNull(companyIds, "companyIds");
         Utils.checkNotNull(contactIds, "contactIds");
         Utils.checkNotNull(createdAt, "createdAt");
@@ -176,6 +183,7 @@ public class CrmDeal {
         Utils.checkNotNull(wonReason, "wonReason");
         this.amount = amount;
         this.closedAt = closedAt;
+        this.closingAt = closingAt;
         this.companyIds = companyIds;
         this.contactIds = contactIds;
         this.createdAt = createdAt;
@@ -204,7 +212,8 @@ public class CrmDeal {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -215,6 +224,11 @@ public class CrmDeal {
     @JsonIgnore
     public Optional<OffsetDateTime> closedAt() {
         return closedAt;
+    }
+
+    @JsonIgnore
+    public Optional<OffsetDateTime> closingAt() {
+        return closingAt;
     }
 
     @SuppressWarnings("unchecked")
@@ -345,6 +359,19 @@ public class CrmDeal {
     public CrmDeal withClosedAt(Optional<OffsetDateTime> closedAt) {
         Utils.checkNotNull(closedAt, "closedAt");
         this.closedAt = closedAt;
+        return this;
+    }
+
+    public CrmDeal withClosingAt(OffsetDateTime closingAt) {
+        Utils.checkNotNull(closingAt, "closingAt");
+        this.closingAt = Optional.ofNullable(closingAt);
+        return this;
+    }
+
+
+    public CrmDeal withClosingAt(Optional<OffsetDateTime> closingAt) {
+        Utils.checkNotNull(closingAt, "closingAt");
+        this.closingAt = closingAt;
         return this;
     }
 
@@ -607,6 +634,7 @@ public class CrmDeal {
         return 
             Utils.enhancedDeepEquals(this.amount, other.amount) &&
             Utils.enhancedDeepEquals(this.closedAt, other.closedAt) &&
+            Utils.enhancedDeepEquals(this.closingAt, other.closingAt) &&
             Utils.enhancedDeepEquals(this.companyIds, other.companyIds) &&
             Utils.enhancedDeepEquals(this.contactIds, other.contactIds) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
@@ -631,13 +659,14 @@ public class CrmDeal {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            amount, closedAt, companyIds,
-            contactIds, createdAt, currency,
-            id, lostReason, metadata,
-            name, pipeline, pipelineId,
-            probability, raw, source,
-            stage, stageId, tags,
-            updatedAt, userId, wonReason);
+            amount, closedAt, closingAt,
+            companyIds, contactIds, createdAt,
+            currency, id, lostReason,
+            metadata, name, pipeline,
+            pipelineId, probability, raw,
+            source, stage, stageId,
+            tags, updatedAt, userId,
+            wonReason);
     }
     
     @Override
@@ -645,6 +674,7 @@ public class CrmDeal {
         return Utils.toString(CrmDeal.class,
                 "amount", amount,
                 "closedAt", closedAt,
+                "closingAt", closingAt,
                 "companyIds", companyIds,
                 "contactIds", contactIds,
                 "createdAt", createdAt,
@@ -672,6 +702,8 @@ public class CrmDeal {
         private Optional<Double> amount = Optional.empty();
 
         private Optional<OffsetDateTime> closedAt = Optional.empty();
+
+        private Optional<OffsetDateTime> closingAt = Optional.empty();
 
         private Optional<? extends List<String>> companyIds = Optional.empty();
 
@@ -738,6 +770,19 @@ public class CrmDeal {
         public Builder closedAt(Optional<OffsetDateTime> closedAt) {
             Utils.checkNotNull(closedAt, "closedAt");
             this.closedAt = closedAt;
+            return this;
+        }
+
+
+        public Builder closingAt(OffsetDateTime closingAt) {
+            Utils.checkNotNull(closingAt, "closingAt");
+            this.closingAt = Optional.ofNullable(closingAt);
+            return this;
+        }
+
+        public Builder closingAt(Optional<OffsetDateTime> closingAt) {
+            Utils.checkNotNull(closingAt, "closingAt");
+            this.closingAt = closingAt;
             return this;
         }
 
@@ -991,13 +1036,14 @@ public class CrmDeal {
         public CrmDeal build() {
 
             return new CrmDeal(
-                amount, closedAt, companyIds,
-                contactIds, createdAt, currency,
-                id, lostReason, metadata,
-                name, pipeline, pipelineId,
-                probability, raw, source,
-                stage, stageId, tags,
-                updatedAt, userId, wonReason);
+                amount, closedAt, closingAt,
+                companyIds, contactIds, createdAt,
+                currency, id, lostReason,
+                metadata, name, pipeline,
+                pipelineId, probability, raw,
+                source, stage, stageId,
+                tags, updatedAt, userId,
+                wonReason);
         }
 
     }

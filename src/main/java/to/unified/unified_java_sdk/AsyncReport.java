@@ -8,12 +8,16 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetAccountingReportRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingReportsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsReportsRequest;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingReportRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingReportResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingReportsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingReportsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListAdsReportsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAdsReportsResponse;
 import to.unified.unified_java_sdk.operations.GetAccountingReport;
 import to.unified.unified_java_sdk.operations.ListAccountingReports;
+import to.unified.unified_java_sdk.operations.ListAdsReports;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -78,6 +82,29 @@ public class AsyncReport {
     public CompletableFuture<ListAccountingReportsResponse> listAccountingReports(ListAccountingReportsRequest request) {
         AsyncRequestOperation<ListAccountingReportsRequest, ListAccountingReportsResponse> operation
               = new ListAccountingReports.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all reports
+     * 
+     * @return The async call builder
+     */
+    public ListAdsReportsRequestBuilder listAdsReports() {
+        return new ListAdsReportsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all reports
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListAdsReportsResponse>} - The async response
+     */
+    public CompletableFuture<ListAdsReportsResponse> listAdsReports(ListAdsReportsRequest request) {
+        AsyncRequestOperation<ListAdsReportsRequest, ListAdsReportsResponse> operation
+              = new ListAdsReports.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

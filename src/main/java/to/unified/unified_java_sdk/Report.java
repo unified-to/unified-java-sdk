@@ -11,8 +11,12 @@ import to.unified.unified_java_sdk.models.operations.GetAccountingReportResponse
 import to.unified.unified_java_sdk.models.operations.ListAccountingReportsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingReportsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAccountingReportsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAdsReportsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsReportsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAdsReportsResponse;
 import to.unified.unified_java_sdk.operations.GetAccountingReport;
 import to.unified.unified_java_sdk.operations.ListAccountingReports;
+import to.unified.unified_java_sdk.operations.ListAdsReports;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -76,6 +80,28 @@ public class Report {
     public ListAccountingReportsResponse listAccountingReports(ListAccountingReportsRequest request) {
         RequestOperation<ListAccountingReportsRequest, ListAccountingReportsResponse> operation
               = new ListAccountingReports.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all reports
+     * 
+     * @return The call builder
+     */
+    public ListAdsReportsRequestBuilder listAdsReports() {
+        return new ListAdsReportsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all reports
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAdsReportsResponse listAdsReports(ListAdsReportsRequest request) {
+        RequestOperation<ListAdsReportsRequest, ListAdsReportsResponse> operation
+              = new ListAdsReports.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

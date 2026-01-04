@@ -27,6 +27,8 @@ public class AccountingCreditmemoStatus {
     public static final AccountingCreditmemoStatus PARTIALLY_PAID = new AccountingCreditmemoStatus("PARTIALLY_PAID");
     public static final AccountingCreditmemoStatus PARTIALLY_REFUNDED = new AccountingCreditmemoStatus("PARTIALLY_REFUNDED");
     public static final AccountingCreditmemoStatus REFUNDED = new AccountingCreditmemoStatus("REFUNDED");
+    public static final AccountingCreditmemoStatus SUBMITTED = new AccountingCreditmemoStatus("SUBMITTED");
+    public static final AccountingCreditmemoStatus DELETED = new AccountingCreditmemoStatus("DELETED");
     public static final AccountingCreditmemoStatus OVERDUE = new AccountingCreditmemoStatus("OVERDUE");
 
     // This map will grow whenever a Color gets created with a new
@@ -108,6 +110,8 @@ public class AccountingCreditmemoStatus {
         map.put("PARTIALLY_PAID", PARTIALLY_PAID);
         map.put("PARTIALLY_REFUNDED", PARTIALLY_REFUNDED);
         map.put("REFUNDED", REFUNDED);
+        map.put("SUBMITTED", SUBMITTED);
+        map.put("DELETED", DELETED);
         map.put("OVERDUE", OVERDUE);
         return map;
     }
@@ -121,6 +125,8 @@ public class AccountingCreditmemoStatus {
         map.put("PARTIALLY_PAID", AccountingCreditmemoStatusEnum.PARTIALLY_PAID);
         map.put("PARTIALLY_REFUNDED", AccountingCreditmemoStatusEnum.PARTIALLY_REFUNDED);
         map.put("REFUNDED", AccountingCreditmemoStatusEnum.REFUNDED);
+        map.put("SUBMITTED", AccountingCreditmemoStatusEnum.SUBMITTED);
+        map.put("DELETED", AccountingCreditmemoStatusEnum.DELETED);
         map.put("OVERDUE", AccountingCreditmemoStatusEnum.OVERDUE);
         return map;
     }
@@ -135,6 +141,8 @@ public class AccountingCreditmemoStatus {
         PARTIALLY_PAID("PARTIALLY_PAID"),
         PARTIALLY_REFUNDED("PARTIALLY_REFUNDED"),
         REFUNDED("REFUNDED"),
+        SUBMITTED("SUBMITTED"),
+        DELETED("DELETED"),
         OVERDUE("OVERDUE"),;
 
         private final String value;

@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
@@ -108,6 +109,11 @@ public class HrisEmployee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groups")
     private Optional<? extends List<HrisGroup>> groups;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("has_mfa")
+    private Optional<Boolean> hasMfa;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -250,6 +256,7 @@ public class HrisEmployee {
             @JsonProperty("first_name") Optional<String> firstName,
             @JsonProperty("gender") Optional<? extends HrisEmployeeGender> gender,
             @JsonProperty("groups") Optional<? extends List<HrisGroup>> groups,
+            @JsonProperty("has_mfa") Optional<Boolean> hasMfa,
             @JsonProperty("hired_at") Optional<OffsetDateTime> hiredAt,
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("image_url") Optional<String> imageUrl,
@@ -291,6 +298,7 @@ public class HrisEmployee {
         Utils.checkNotNull(firstName, "firstName");
         Utils.checkNotNull(gender, "gender");
         Utils.checkNotNull(groups, "groups");
+        Utils.checkNotNull(hasMfa, "hasMfa");
         Utils.checkNotNull(hiredAt, "hiredAt");
         Utils.checkNotNull(id, "id");
         Utils.checkNotNull(imageUrl, "imageUrl");
@@ -332,6 +340,7 @@ public class HrisEmployee {
         this.firstName = firstName;
         this.gender = gender;
         this.groups = groups;
+        this.hasMfa = hasMfa;
         this.hiredAt = hiredAt;
         this.id = id;
         this.imageUrl = imageUrl;
@@ -372,7 +381,7 @@ public class HrisEmployee {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -470,6 +479,11 @@ public class HrisEmployee {
     @JsonIgnore
     public Optional<List<HrisGroup>> groups() {
         return (Optional<List<HrisGroup>>) groups;
+    }
+
+    @JsonIgnore
+    public Optional<Boolean> hasMfa() {
+        return hasMfa;
     }
 
     @JsonIgnore
@@ -835,6 +849,19 @@ public class HrisEmployee {
         return this;
     }
 
+    public HrisEmployee withHasMfa(boolean hasMfa) {
+        Utils.checkNotNull(hasMfa, "hasMfa");
+        this.hasMfa = Optional.ofNullable(hasMfa);
+        return this;
+    }
+
+
+    public HrisEmployee withHasMfa(Optional<Boolean> hasMfa) {
+        Utils.checkNotNull(hasMfa, "hasMfa");
+        this.hasMfa = hasMfa;
+        return this;
+    }
+
     public HrisEmployee withHiredAt(OffsetDateTime hiredAt) {
         Utils.checkNotNull(hiredAt, "hiredAt");
         this.hiredAt = Optional.ofNullable(hiredAt);
@@ -1180,6 +1207,7 @@ public class HrisEmployee {
             Utils.enhancedDeepEquals(this.firstName, other.firstName) &&
             Utils.enhancedDeepEquals(this.gender, other.gender) &&
             Utils.enhancedDeepEquals(this.groups, other.groups) &&
+            Utils.enhancedDeepEquals(this.hasMfa, other.hasMfa) &&
             Utils.enhancedDeepEquals(this.hiredAt, other.hiredAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.imageUrl, other.imageUrl) &&
@@ -1214,15 +1242,15 @@ public class HrisEmployee {
             dateOfBirth, department, division,
             emails, employeeNumber, employeeRoles,
             employmentStatus, employmentType, firstName,
-            gender, groups, hiredAt,
-            id, imageUrl, languageLocale,
-            lastName, location, locations,
-            managerId, maritalStatus, metadata,
-            name, pronouns, raw,
-            relationships, salutation, ssnSin,
-            storageQuotaAllocated, storageQuotaAvailable, storageQuotaUsed,
-            telephones, terminatedAt, timezone,
-            title, updatedAt);
+            gender, groups, hasMfa,
+            hiredAt, id, imageUrl,
+            languageLocale, lastName, location,
+            locations, managerId, maritalStatus,
+            metadata, name, pronouns,
+            raw, relationships, salutation,
+            ssnSin, storageQuotaAllocated, storageQuotaAvailable,
+            storageQuotaUsed, telephones, terminatedAt,
+            timezone, title, updatedAt);
     }
     
     @Override
@@ -1245,6 +1273,7 @@ public class HrisEmployee {
                 "firstName", firstName,
                 "gender", gender,
                 "groups", groups,
+                "hasMfa", hasMfa,
                 "hiredAt", hiredAt,
                 "id", id,
                 "imageUrl", imageUrl,
@@ -1307,6 +1336,8 @@ public class HrisEmployee {
         private Optional<? extends HrisEmployeeGender> gender = Optional.empty();
 
         private Optional<? extends List<HrisGroup>> groups = Optional.empty();
+
+        private Optional<Boolean> hasMfa = Optional.empty();
 
         private Optional<OffsetDateTime> hiredAt = Optional.empty();
 
@@ -1586,6 +1617,19 @@ public class HrisEmployee {
         public Builder groups(Optional<? extends List<HrisGroup>> groups) {
             Utils.checkNotNull(groups, "groups");
             this.groups = groups;
+            return this;
+        }
+
+
+        public Builder hasMfa(boolean hasMfa) {
+            Utils.checkNotNull(hasMfa, "hasMfa");
+            this.hasMfa = Optional.ofNullable(hasMfa);
+            return this;
+        }
+
+        public Builder hasMfa(Optional<Boolean> hasMfa) {
+            Utils.checkNotNull(hasMfa, "hasMfa");
+            this.hasMfa = hasMfa;
             return this;
         }
 
@@ -1915,15 +1959,15 @@ public class HrisEmployee {
                 dateOfBirth, department, division,
                 emails, employeeNumber, employeeRoles,
                 employmentStatus, employmentType, firstName,
-                gender, groups, hiredAt,
-                id, imageUrl, languageLocale,
-                lastName, location, locations,
-                managerId, maritalStatus, metadata,
-                name, pronouns, raw,
-                relationships, salutation, ssnSin,
-                storageQuotaAllocated, storageQuotaAvailable, storageQuotaUsed,
-                telephones, terminatedAt, timezone,
-                title, updatedAt);
+                gender, groups, hasMfa,
+                hiredAt, id, imageUrl,
+                languageLocale, lastName, location,
+                locations, managerId, maritalStatus,
+                metadata, name, pronouns,
+                raw, relationships, salutation,
+                ssnSin, storageQuotaAllocated, storageQuotaAvailable,
+                storageQuotaUsed, telephones, terminatedAt,
+                timezone, title, updatedAt);
         }
 
     }

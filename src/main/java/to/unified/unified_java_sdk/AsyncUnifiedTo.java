@@ -53,6 +53,14 @@ public class AsyncUnifiedTo {
 
     private final AsyncTrialbalance trialbalance;
 
+    private final AsyncAds ads;
+
+    private final AsyncAd ad;
+
+    private final AsyncCampaign campaign;
+
+    private final AsyncGroup group;
+
     private final AsyncAts ats;
 
     private final AsyncActivity activity;
@@ -126,8 +134,6 @@ public class AsyncUnifiedTo {
     private final AsyncDevice device;
 
     private final AsyncEmployee employee;
-
-    private final AsyncGroup group;
 
     private final AsyncPayslip payslip;
 
@@ -317,6 +323,22 @@ public class AsyncUnifiedTo {
         return trialbalance;
     }
 
+    public AsyncAds ads() {
+        return ads;
+    }
+
+    public AsyncAd ad() {
+        return ad;
+    }
+
+    public AsyncCampaign campaign() {
+        return campaign;
+    }
+
+    public AsyncGroup group() {
+        return group;
+    }
+
     public AsyncAts ats() {
         return ats;
     }
@@ -463,10 +485,6 @@ public class AsyncUnifiedTo {
 
     public AsyncEmployee employee() {
         return employee;
-    }
-
-    public AsyncGroup group() {
-        return group;
     }
 
     public AsyncPayslip payslip() {
@@ -711,6 +729,10 @@ public class AsyncUnifiedTo {
         this.taxrate = new AsyncTaxrate(syncSDK.taxrate(), sdkConfiguration);
         this.transaction = new AsyncTransaction(syncSDK.transaction(), sdkConfiguration);
         this.trialbalance = new AsyncTrialbalance(syncSDK.trialbalance(), sdkConfiguration);
+        this.ads = new AsyncAds(syncSDK.ads(), sdkConfiguration);
+        this.ad = new AsyncAd(syncSDK.ad(), sdkConfiguration);
+        this.campaign = new AsyncCampaign(syncSDK.campaign(), sdkConfiguration);
+        this.group = new AsyncGroup(syncSDK.group(), sdkConfiguration);
         this.ats = new AsyncAts(syncSDK.ats(), sdkConfiguration);
         this.activity = new AsyncActivity(syncSDK.activity(), sdkConfiguration);
         this.application = new AsyncApplication(syncSDK.application(), sdkConfiguration);
@@ -748,7 +770,6 @@ public class AsyncUnifiedTo {
         this.deduction = new AsyncDeduction(syncSDK.deduction(), sdkConfiguration);
         this.device = new AsyncDevice(syncSDK.device(), sdkConfiguration);
         this.employee = new AsyncEmployee(syncSDK.employee(), sdkConfiguration);
-        this.group = new AsyncGroup(syncSDK.group(), sdkConfiguration);
         this.payslip = new AsyncPayslip(syncSDK.payslip(), sdkConfiguration);
         this.timeoff = new AsyncTimeoff(syncSDK.timeoff(), sdkConfiguration);
         this.timeshift = new AsyncTimeshift(syncSDK.timeshift(), sdkConfiguration);

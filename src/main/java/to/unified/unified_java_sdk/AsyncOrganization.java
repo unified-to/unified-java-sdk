@@ -6,37 +6,61 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import java.util.concurrent.CompletableFuture;
+import to.unified.unified_java_sdk.models.operations.CreateAdsOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateRepoOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.GetAdsOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.GetRepoOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingOrganizationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsOrganizationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListRepoOrganizationsRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAdsOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.PatchRepoOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveRepoOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateAdsOrganizationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAdsOrganizationResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateRepoOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateRepoOrganizationResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetAdsOrganizationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAdsOrganizationResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetRepoOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetRepoOrganizationResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingOrganizationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingOrganizationsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListAdsOrganizationsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAdsOrganizationsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListRepoOrganizationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListRepoOrganizationsResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchAdsOrganizationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAdsOrganizationResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchRepoOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchRepoOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAdsOrganizationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAdsOrganizationResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveRepoOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveRepoOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAdsOrganizationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAdsOrganizationResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateRepoOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateRepoOrganizationResponse;
+import to.unified.unified_java_sdk.operations.CreateAdsOrganization;
 import to.unified.unified_java_sdk.operations.CreateRepoOrganization;
 import to.unified.unified_java_sdk.operations.GetAccountingOrganization;
+import to.unified.unified_java_sdk.operations.GetAdsOrganization;
 import to.unified.unified_java_sdk.operations.GetRepoOrganization;
 import to.unified.unified_java_sdk.operations.ListAccountingOrganizations;
+import to.unified.unified_java_sdk.operations.ListAdsOrganizations;
 import to.unified.unified_java_sdk.operations.ListRepoOrganizations;
+import to.unified.unified_java_sdk.operations.PatchAdsOrganization;
 import to.unified.unified_java_sdk.operations.PatchRepoOrganization;
+import to.unified.unified_java_sdk.operations.RemoveAdsOrganization;
 import to.unified.unified_java_sdk.operations.RemoveRepoOrganization;
+import to.unified.unified_java_sdk.operations.UpdateAdsOrganization;
 import to.unified.unified_java_sdk.operations.UpdateRepoOrganization;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -58,6 +82,29 @@ public class AsyncOrganization {
      */
     public Organization sync() {
         return syncSDK;
+    }
+
+
+    /**
+     * Create an organization
+     * 
+     * @return The async call builder
+     */
+    public CreateAdsOrganizationRequestBuilder createAdsOrganization() {
+        return new CreateAdsOrganizationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create an organization
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateAdsOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<CreateAdsOrganizationResponse> createAdsOrganization(CreateAdsOrganizationRequest request) {
+        AsyncRequestOperation<CreateAdsOrganizationRequest, CreateAdsOrganizationResponse> operation
+              = new CreateAdsOrganization.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
     }
 
 
@@ -102,6 +149,29 @@ public class AsyncOrganization {
     public CompletableFuture<GetAccountingOrganizationResponse> getAccountingOrganization(GetAccountingOrganizationRequest request) {
         AsyncRequestOperation<GetAccountingOrganizationRequest, GetAccountingOrganizationResponse> operation
               = new GetAccountingOrganization.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve an organization
+     * 
+     * @return The async call builder
+     */
+    public GetAdsOrganizationRequestBuilder getAdsOrganization() {
+        return new GetAdsOrganizationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an organization
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetAdsOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<GetAdsOrganizationResponse> getAdsOrganization(GetAdsOrganizationRequest request) {
+        AsyncRequestOperation<GetAdsOrganizationRequest, GetAdsOrganizationResponse> operation
+              = new GetAdsOrganization.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -158,6 +228,29 @@ public class AsyncOrganization {
      * 
      * @return The async call builder
      */
+    public ListAdsOrganizationsRequestBuilder listAdsOrganizations() {
+        return new ListAdsOrganizationsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all organizations
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListAdsOrganizationsResponse>} - The async response
+     */
+    public CompletableFuture<ListAdsOrganizationsResponse> listAdsOrganizations(ListAdsOrganizationsRequest request) {
+        AsyncRequestOperation<ListAdsOrganizationsRequest, ListAdsOrganizationsResponse> operation
+              = new ListAdsOrganizations.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all organizations
+     * 
+     * @return The async call builder
+     */
     public ListRepoOrganizationsRequestBuilder listRepoOrganizations() {
         return new ListRepoOrganizationsRequestBuilder(sdkConfiguration);
     }
@@ -171,6 +264,29 @@ public class AsyncOrganization {
     public CompletableFuture<ListRepoOrganizationsResponse> listRepoOrganizations(ListRepoOrganizationsRequest request) {
         AsyncRequestOperation<ListRepoOrganizationsRequest, ListRepoOrganizationsResponse> operation
               = new ListRepoOrganizations.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update an organization
+     * 
+     * @return The async call builder
+     */
+    public PatchAdsOrganizationRequestBuilder patchAdsOrganization() {
+        return new PatchAdsOrganizationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an organization
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchAdsOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<PatchAdsOrganizationResponse> patchAdsOrganization(PatchAdsOrganizationRequest request) {
+        AsyncRequestOperation<PatchAdsOrganizationRequest, PatchAdsOrganizationResponse> operation
+              = new PatchAdsOrganization.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -204,6 +320,29 @@ public class AsyncOrganization {
      * 
      * @return The async call builder
      */
+    public RemoveAdsOrganizationRequestBuilder removeAdsOrganization() {
+        return new RemoveAdsOrganizationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove an organization
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveAdsOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAdsOrganizationResponse> removeAdsOrganization(RemoveAdsOrganizationRequest request) {
+        AsyncRequestOperation<RemoveAdsOrganizationRequest, RemoveAdsOrganizationResponse> operation
+              = new RemoveAdsOrganization.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Remove an organization
+     * 
+     * @return The async call builder
+     */
     public RemoveRepoOrganizationRequestBuilder removeRepoOrganization() {
         return new RemoveRepoOrganizationRequestBuilder(sdkConfiguration);
     }
@@ -217,6 +356,29 @@ public class AsyncOrganization {
     public CompletableFuture<RemoveRepoOrganizationResponse> removeRepoOrganization(RemoveRepoOrganizationRequest request) {
         AsyncRequestOperation<RemoveRepoOrganizationRequest, RemoveRepoOrganizationResponse> operation
               = new RemoveRepoOrganization.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update an organization
+     * 
+     * @return The async call builder
+     */
+    public UpdateAdsOrganizationRequestBuilder updateAdsOrganization() {
+        return new UpdateAdsOrganizationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an organization
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdateAdsOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAdsOrganizationResponse> updateAdsOrganization(UpdateAdsOrganizationRequest request) {
+        AsyncRequestOperation<UpdateAdsOrganizationRequest, UpdateAdsOrganizationResponse> operation
+              = new UpdateAdsOrganization.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -4,18 +4,84 @@
 
 ### Available Operations
 
+* [createAdsGroup](#createadsgroup) - Create a group
 * [createHrisGroup](#createhrisgroup) - Create a group
 * [createScimGroups](#createscimgroups) - Create group
+* [getAdsGroup](#getadsgroup) - Retrieve a group
 * [getHrisGroup](#gethrisgroup) - Retrieve a group
 * [getScimGroups](#getscimgroups) - Get group
+* [listAdsGroups](#listadsgroups) - List all groups
 * [listHrisGroups](#listhrisgroups) - List all groups
 * [listScimGroups](#listscimgroups) - List groups
+* [patchAdsGroup](#patchadsgroup) - Update a group
 * [patchHrisGroup](#patchhrisgroup) - Update a group
 * [patchScimGroups](#patchscimgroups) - Update group
+* [removeAdsGroup](#removeadsgroup) - Remove a group
 * [removeHrisGroup](#removehrisgroup) - Remove a group
 * [removeScimGroups](#removescimgroups) - Delete group
+* [updateAdsGroup](#updateadsgroup) - Update a group
 * [updateHrisGroup](#updatehrisgroup) - Update a group
 * [updateScimGroups](#updatescimgroups) - Update group
+
+## createAdsGroup
+
+Create a group
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createAdsGroup" method="post" path="/ads/{connection_id}/group" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAdsGroupRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAdsGroupResponse;
+import to.unified.unified_java_sdk.models.shared.AdsGroup;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateAdsGroupRequest req = CreateAdsGroupRequest.builder()
+                .adsGroup(AdsGroup.builder()
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateAdsGroupResponse res = sdk.group().createAdsGroup()
+                .request(req)
+                .call();
+
+        if (res.adsGroup().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [CreateAdsGroupRequest](../../models/operations/CreateAdsGroupRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+
+### Response
+
+**[CreateAdsGroupResponse](../../models/operations/CreateAdsGroupResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createHrisGroup
 
@@ -131,6 +197,64 @@ public class Application {
 ### Response
 
 **[CreateScimGroupsResponse](../../models/operations/CreateScimGroupsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getAdsGroup
+
+Retrieve a group
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getAdsGroup" method="get" path="/ads/{connection_id}/group/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAdsGroupRequest;
+import to.unified.unified_java_sdk.models.operations.GetAdsGroupResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetAdsGroupRequest req = GetAdsGroupRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetAdsGroupResponse res = sdk.group().getAdsGroup()
+                .request(req)
+                .call();
+
+        if (res.adsGroup().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `request`                                                           | [GetAdsGroupRequest](../../models/operations/GetAdsGroupRequest.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
+
+### Response
+
+**[GetAdsGroupResponse](../../models/operations/GetAdsGroupResponse.md)**
 
 ### Errors
 
@@ -254,6 +378,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listAdsGroups
+
+List all groups
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listAdsGroups" method="get" path="/ads/{connection_id}/group" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAdsGroupsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsGroupsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListAdsGroupsRequest req = ListAdsGroupsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListAdsGroupsResponse res = sdk.group().listAdsGroups()
+                .request(req)
+                .call();
+
+        if (res.adsGroups().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [ListAdsGroupsRequest](../../models/operations/ListAdsGroupsRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+
+### Response
+
+**[ListAdsGroupsResponse](../../models/operations/ListAdsGroupsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listHrisGroups
 
 List all groups
@@ -361,6 +542,67 @@ public class Application {
 ### Response
 
 **[ListScimGroupsResponse](../../models/operations/ListScimGroupsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchAdsGroup
+
+Update a group
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchAdsGroup" method="patch" path="/ads/{connection_id}/group/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAdsGroupRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAdsGroupResponse;
+import to.unified.unified_java_sdk.models.shared.AdsGroup;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchAdsGroupRequest req = PatchAdsGroupRequest.builder()
+                .adsGroup(AdsGroup.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchAdsGroupResponse res = sdk.group().patchAdsGroup()
+                .request(req)
+                .call();
+
+        if (res.adsGroup().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [PatchAdsGroupRequest](../../models/operations/PatchAdsGroupRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+
+### Response
+
+**[PatchAdsGroupResponse](../../models/operations/PatchAdsGroupResponse.md)**
 
 ### Errors
 
@@ -491,6 +733,62 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removeAdsGroup
+
+Remove a group
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAdsGroup" method="delete" path="/ads/{connection_id}/group/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsGroupRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsGroupResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAdsGroupRequest req = RemoveAdsGroupRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAdsGroupResponse res = sdk.group().removeAdsGroup()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [RemoveAdsGroupRequest](../../models/operations/RemoveAdsGroupRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+
+### Response
+
+**[RemoveAdsGroupResponse](../../models/operations/RemoveAdsGroupResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## removeHrisGroup
 
 Remove a group
@@ -596,6 +894,67 @@ public class Application {
 ### Response
 
 **[RemoveScimGroupsResponse](../../models/operations/RemoveScimGroupsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateAdsGroup
+
+Update a group
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateAdsGroup" method="put" path="/ads/{connection_id}/group/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsGroupRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsGroupResponse;
+import to.unified.unified_java_sdk.models.shared.AdsGroup;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateAdsGroupRequest req = UpdateAdsGroupRequest.builder()
+                .adsGroup(AdsGroup.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateAdsGroupResponse res = sdk.group().updateAdsGroup()
+                .request(req)
+                .call();
+
+        if (res.adsGroup().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [UpdateAdsGroupRequest](../../models/operations/UpdateAdsGroupRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+
+### Response
+
+**[UpdateAdsGroupResponse](../../models/operations/UpdateAdsGroupResponse.md)**
 
 ### Errors
 

@@ -101,6 +101,18 @@ public class UnifiedTo {
     private final Trialbalance trialbalance;
 
 
+    private final Ads ads;
+
+
+    private final Ad ad;
+
+
+    private final Campaign campaign;
+
+
+    private final Group group;
+
+
     private final Ats ats;
 
 
@@ -210,9 +222,6 @@ public class UnifiedTo {
 
 
     private final Employee employee;
-
-
-    private final Group group;
 
 
     private final Payslip payslip;
@@ -477,6 +486,26 @@ public class UnifiedTo {
     }
 
 
+    public Ads ads() {
+        return ads;
+    }
+
+
+    public Ad ad() {
+        return ad;
+    }
+
+
+    public Campaign campaign() {
+        return campaign;
+    }
+
+
+    public Group group() {
+        return group;
+    }
+
+
     public Ats ats() {
         return ats;
     }
@@ -659,11 +688,6 @@ public class UnifiedTo {
 
     public Employee employee() {
         return employee;
-    }
-
-
-    public Group group() {
-        return group;
     }
 
 
@@ -1093,6 +1117,10 @@ public class UnifiedTo {
         this.taxrate = new Taxrate(sdkConfiguration);
         this.transaction = new Transaction(sdkConfiguration);
         this.trialbalance = new Trialbalance(sdkConfiguration);
+        this.ads = new Ads(sdkConfiguration);
+        this.ad = new Ad(sdkConfiguration);
+        this.campaign = new Campaign(sdkConfiguration);
+        this.group = new Group(sdkConfiguration);
         this.ats = new Ats(sdkConfiguration);
         this.activity = new Activity(sdkConfiguration);
         this.application = new Application(sdkConfiguration);
@@ -1130,7 +1158,6 @@ public class UnifiedTo {
         this.deduction = new Deduction(sdkConfiguration);
         this.device = new Device(sdkConfiguration);
         this.employee = new Employee(sdkConfiguration);
-        this.group = new Group(sdkConfiguration);
         this.payslip = new Payslip(sdkConfiguration);
         this.timeoff = new Timeoff(sdkConfiguration);
         this.timeshift = new Timeshift(sdkConfiguration);

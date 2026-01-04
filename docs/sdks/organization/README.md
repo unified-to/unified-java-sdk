@@ -4,14 +4,80 @@
 
 ### Available Operations
 
+* [createAdsOrganization](#createadsorganization) - Create an organization
 * [createRepoOrganization](#createrepoorganization) - Create an organization
 * [getAccountingOrganization](#getaccountingorganization) - Retrieve an organization
+* [getAdsOrganization](#getadsorganization) - Retrieve an organization
 * [getRepoOrganization](#getrepoorganization) - Retrieve an organization
 * [listAccountingOrganizations](#listaccountingorganizations) - List all organizations
+* [listAdsOrganizations](#listadsorganizations) - List all organizations
 * [listRepoOrganizations](#listrepoorganizations) - List all organizations
+* [patchAdsOrganization](#patchadsorganization) - Update an organization
 * [patchRepoOrganization](#patchrepoorganization) - Update an organization
+* [removeAdsOrganization](#removeadsorganization) - Remove an organization
 * [removeRepoOrganization](#removerepoorganization) - Remove an organization
+* [updateAdsOrganization](#updateadsorganization) - Update an organization
 * [updateRepoOrganization](#updaterepoorganization) - Update an organization
+
+## createAdsOrganization
+
+Create an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createAdsOrganization" method="post" path="/ads/{connection_id}/organization" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAdsOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAdsOrganizationResponse;
+import to.unified.unified_java_sdk.models.shared.AdsOrganization;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateAdsOrganizationRequest req = CreateAdsOrganizationRequest.builder()
+                .adsOrganization(AdsOrganization.builder()
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateAdsOrganizationResponse res = sdk.organization().createAdsOrganization()
+                .request(req)
+                .call();
+
+        if (res.adsOrganization().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [CreateAdsOrganizationRequest](../../models/operations/CreateAdsOrganizationRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[CreateAdsOrganizationResponse](../../models/operations/CreateAdsOrganizationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createRepoOrganization
 
@@ -124,6 +190,64 @@ public class Application {
 ### Response
 
 **[GetAccountingOrganizationResponse](../../models/operations/GetAccountingOrganizationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getAdsOrganization
+
+Retrieve an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getAdsOrganization" method="get" path="/ads/{connection_id}/organization/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAdsOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.GetAdsOrganizationResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetAdsOrganizationRequest req = GetAdsOrganizationRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetAdsOrganizationResponse res = sdk.organization().getAdsOrganization()
+                .request(req)
+                .call();
+
+        if (res.adsOrganization().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [GetAdsOrganizationRequest](../../models/operations/GetAdsOrganizationRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[GetAdsOrganizationResponse](../../models/operations/GetAdsOrganizationResponse.md)**
 
 ### Errors
 
@@ -246,6 +370,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listAdsOrganizations
+
+List all organizations
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listAdsOrganizations" method="get" path="/ads/{connection_id}/organization" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAdsOrganizationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsOrganizationsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListAdsOrganizationsRequest req = ListAdsOrganizationsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListAdsOrganizationsResponse res = sdk.organization().listAdsOrganizations()
+                .request(req)
+                .call();
+
+        if (res.adsOrganizations().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [ListAdsOrganizationsRequest](../../models/operations/ListAdsOrganizationsRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[ListAdsOrganizationsResponse](../../models/operations/ListAdsOrganizationsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listRepoOrganizations
 
 List all organizations
@@ -296,6 +477,67 @@ public class Application {
 ### Response
 
 **[ListRepoOrganizationsResponse](../../models/operations/ListRepoOrganizationsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchAdsOrganization
+
+Update an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchAdsOrganization" method="patch" path="/ads/{connection_id}/organization/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAdsOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAdsOrganizationResponse;
+import to.unified.unified_java_sdk.models.shared.AdsOrganization;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchAdsOrganizationRequest req = PatchAdsOrganizationRequest.builder()
+                .adsOrganization(AdsOrganization.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchAdsOrganizationResponse res = sdk.organization().patchAdsOrganization()
+                .request(req)
+                .call();
+
+        if (res.adsOrganization().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [PatchAdsOrganizationRequest](../../models/operations/PatchAdsOrganizationRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[PatchAdsOrganizationResponse](../../models/operations/PatchAdsOrganizationResponse.md)**
 
 ### Errors
 
@@ -364,6 +606,62 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removeAdsOrganization
+
+Remove an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAdsOrganization" method="delete" path="/ads/{connection_id}/organization/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsOrganizationResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAdsOrganizationRequest req = RemoveAdsOrganizationRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAdsOrganizationResponse res = sdk.organization().removeAdsOrganization()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [RemoveAdsOrganizationRequest](../../models/operations/RemoveAdsOrganizationRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[RemoveAdsOrganizationResponse](../../models/operations/RemoveAdsOrganizationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## removeRepoOrganization
 
 Remove an organization
@@ -413,6 +711,67 @@ public class Application {
 ### Response
 
 **[RemoveRepoOrganizationResponse](../../models/operations/RemoveRepoOrganizationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateAdsOrganization
+
+Update an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateAdsOrganization" method="put" path="/ads/{connection_id}/organization/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganizationResponse;
+import to.unified.unified_java_sdk.models.shared.AdsOrganization;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateAdsOrganizationRequest req = UpdateAdsOrganizationRequest.builder()
+                .adsOrganization(AdsOrganization.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateAdsOrganizationResponse res = sdk.organization().updateAdsOrganization()
+                .request(req)
+                .call();
+
+        if (res.adsOrganization().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [UpdateAdsOrganizationRequest](../../models/operations/UpdateAdsOrganizationRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[UpdateAdsOrganizationResponse](../../models/operations/UpdateAdsOrganizationResponse.md)**
 
 ### Errors
 

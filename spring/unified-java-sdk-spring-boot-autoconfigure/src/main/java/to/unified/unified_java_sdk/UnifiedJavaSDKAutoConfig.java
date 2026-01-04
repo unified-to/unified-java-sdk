@@ -441,6 +441,50 @@ public class UnifiedJavaSDKAutoConfig {
         return unifiedTo.trialbalance();
     }
     /**
+     * Creates a Ads sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Ads instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Ads ads(UnifiedTo unifiedTo) {
+        return unifiedTo.ads();
+    }
+    /**
+     * Creates a Ad sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Ad instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Ad ad(UnifiedTo unifiedTo) {
+        return unifiedTo.ad();
+    }
+    /**
+     * Creates a Campaign sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Campaign instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Campaign campaign(UnifiedTo unifiedTo) {
+        return unifiedTo.campaign();
+    }
+    /**
+     * Creates a Group sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Group instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Group group(UnifiedTo unifiedTo) {
+        return unifiedTo.group();
+    }
+    /**
      * Creates a Ats sub-SDK bean if none exists.
      *
      * @param unifiedTo the main SDK instance
@@ -846,17 +890,6 @@ public class UnifiedJavaSDKAutoConfig {
     @ConditionalOnMissingBean
     public Employee employee(UnifiedTo unifiedTo) {
         return unifiedTo.employee();
-    }
-    /**
-     * Creates a Group sub-SDK bean if none exists.
-     *
-     * @param unifiedTo the main SDK instance
-     * @return A configured Group instance
-     */
-    @Bean
-    @ConditionalOnMissingBean
-    public Group group(UnifiedTo unifiedTo) {
-        return unifiedTo.group();
     }
     /**
      * Creates a Payslip sub-SDK bean if none exists.
@@ -1686,6 +1719,50 @@ public class UnifiedJavaSDKAutoConfig {
         return asyncUnifiedTo.trialbalance();
     }
     /**
+     * Creates an AsyncAds sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncAds instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncAds asyncAds(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.ads();
+    }
+    /**
+     * Creates an AsyncAd sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncAd instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncAd asyncAd(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.ad();
+    }
+    /**
+     * Creates an AsyncCampaign sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncCampaign instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncCampaign asyncCampaign(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.campaign();
+    }
+    /**
+     * Creates an AsyncGroup sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncGroup instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncGroup asyncGroup(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.group();
+    }
+    /**
      * Creates an AsyncAts sub-SDK bean if none exists.
      *
      * @param asyncUnifiedTo the async SDK instance
@@ -2091,17 +2168,6 @@ public class UnifiedJavaSDKAutoConfig {
     @ConditionalOnMissingBean
     public AsyncEmployee asyncEmployee(AsyncUnifiedTo asyncUnifiedTo) {
         return asyncUnifiedTo.employee();
-    }
-    /**
-     * Creates an AsyncGroup sub-SDK bean if none exists.
-     *
-     * @param asyncUnifiedTo the async SDK instance
-     * @return A configured AsyncGroup instance
-     */
-    @Bean
-    @ConditionalOnMissingBean
-    public AsyncGroup asyncGroup(AsyncUnifiedTo asyncUnifiedTo) {
-        return asyncUnifiedTo.group();
     }
     /**
      * Creates an AsyncPayslip sub-SDK bean if none exists.

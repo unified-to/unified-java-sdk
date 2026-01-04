@@ -38,7 +38,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.47.2'
+implementation 'to.unified:unified-java-sdk:0.47.3'
 ```
 
 Maven:
@@ -46,7 +46,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.47.2</version>
+    <version>0.47.3</version>
 </dependency>
 ```
 
@@ -269,6 +269,43 @@ public class Application {
 * [removeAtsActivity](docs/sdks/activity/README.md#removeatsactivity) - Remove an activity
 * [updateAtsActivity](docs/sdks/activity/README.md#updateatsactivity) - Update an activity
 
+### [Ad](docs/sdks/ad/README.md)
+
+* [createAdsAd](docs/sdks/ad/README.md#createadsad) - Create an ad
+* [getAdsAd](docs/sdks/ad/README.md#getadsad) - Retrieve an ad
+* [listAdsAds](docs/sdks/ad/README.md#listadsads) - List all ads
+* [patchAdsAd](docs/sdks/ad/README.md#patchadsad) - Update an ad
+* [removeAdsAd](docs/sdks/ad/README.md#removeadsad) - Remove an ad
+* [updateAdsAd](docs/sdks/ad/README.md#updateadsad) - Update an ad
+
+### [Ads](docs/sdks/ads/README.md)
+
+* [createAdsAd](docs/sdks/ads/README.md#createadsad) - Create an ad
+* [createAdsCampaign](docs/sdks/ads/README.md#createadscampaign) - Create a campaign
+* [createAdsGroup](docs/sdks/ads/README.md#createadsgroup) - Create a group
+* [createAdsOrganization](docs/sdks/ads/README.md#createadsorganization) - Create an organization
+* [getAdsAd](docs/sdks/ads/README.md#getadsad) - Retrieve an ad
+* [getAdsCampaign](docs/sdks/ads/README.md#getadscampaign) - Retrieve a campaign
+* [getAdsGroup](docs/sdks/ads/README.md#getadsgroup) - Retrieve a group
+* [getAdsOrganization](docs/sdks/ads/README.md#getadsorganization) - Retrieve an organization
+* [listAdsAds](docs/sdks/ads/README.md#listadsads) - List all ads
+* [listAdsCampaigns](docs/sdks/ads/README.md#listadscampaigns) - List all campaigns
+* [listAdsGroups](docs/sdks/ads/README.md#listadsgroups) - List all groups
+* [listAdsOrganizations](docs/sdks/ads/README.md#listadsorganizations) - List all organizations
+* [listAdsReports](docs/sdks/ads/README.md#listadsreports) - List all reports
+* [patchAdsAd](docs/sdks/ads/README.md#patchadsad) - Update an ad
+* [patchAdsCampaign](docs/sdks/ads/README.md#patchadscampaign) - Update a campaign
+* [patchAdsGroup](docs/sdks/ads/README.md#patchadsgroup) - Update a group
+* [patchAdsOrganization](docs/sdks/ads/README.md#patchadsorganization) - Update an organization
+* [removeAdsAd](docs/sdks/ads/README.md#removeadsad) - Remove an ad
+* [removeAdsCampaign](docs/sdks/ads/README.md#removeadscampaign) - Remove a campaign
+* [removeAdsGroup](docs/sdks/ads/README.md#removeadsgroup) - Remove a group
+* [removeAdsOrganization](docs/sdks/ads/README.md#removeadsorganization) - Remove an organization
+* [updateAdsAd](docs/sdks/ads/README.md#updateadsad) - Update an ad
+* [updateAdsCampaign](docs/sdks/ads/README.md#updateadscampaign) - Update a campaign
+* [updateAdsGroup](docs/sdks/ads/README.md#updateadsgroup) - Update a group
+* [updateAdsOrganization](docs/sdks/ads/README.md#updateadsorganization) - Update an organization
+
 ### [Apicall](docs/sdks/apicall/README.md)
 
 * [getUnifiedApicall](docs/sdks/apicall/README.md#getunifiedapicall) - Retrieve specific API Call by its ID
@@ -408,6 +445,15 @@ public class Application {
 
 * [getUcCall](docs/sdks/call/README.md#getuccall) - Retrieve a call
 * [listUcCalls](docs/sdks/call/README.md#listuccalls) - List all calls
+
+### [Campaign](docs/sdks/campaign/README.md)
+
+* [createAdsCampaign](docs/sdks/campaign/README.md#createadscampaign) - Create a campaign
+* [getAdsCampaign](docs/sdks/campaign/README.md#getadscampaign) - Retrieve a campaign
+* [listAdsCampaigns](docs/sdks/campaign/README.md#listadscampaigns) - List all campaigns
+* [patchAdsCampaign](docs/sdks/campaign/README.md#patchadscampaign) - Update a campaign
+* [removeAdsCampaign](docs/sdks/campaign/README.md#removeadscampaign) - Remove a campaign
+* [updateAdsCampaign](docs/sdks/campaign/README.md#updateadscampaign) - Update a campaign
 
 ### [Candidate](docs/sdks/candidate/README.md)
 
@@ -757,16 +803,22 @@ public class Application {
 
 ### [Group](docs/sdks/group/README.md)
 
+* [createAdsGroup](docs/sdks/group/README.md#createadsgroup) - Create a group
 * [createHrisGroup](docs/sdks/group/README.md#createhrisgroup) - Create a group
 * [createScimGroups](docs/sdks/group/README.md#createscimgroups) - Create group
+* [getAdsGroup](docs/sdks/group/README.md#getadsgroup) - Retrieve a group
 * [getHrisGroup](docs/sdks/group/README.md#gethrisgroup) - Retrieve a group
 * [getScimGroups](docs/sdks/group/README.md#getscimgroups) - Get group
+* [listAdsGroups](docs/sdks/group/README.md#listadsgroups) - List all groups
 * [listHrisGroups](docs/sdks/group/README.md#listhrisgroups) - List all groups
 * [listScimGroups](docs/sdks/group/README.md#listscimgroups) - List groups
+* [patchAdsGroup](docs/sdks/group/README.md#patchadsgroup) - Update a group
 * [patchHrisGroup](docs/sdks/group/README.md#patchhrisgroup) - Update a group
 * [patchScimGroups](docs/sdks/group/README.md#patchscimgroups) - Update group
+* [removeAdsGroup](docs/sdks/group/README.md#removeadsgroup) - Remove a group
 * [removeHrisGroup](docs/sdks/group/README.md#removehrisgroup) - Remove a group
 * [removeScimGroups](docs/sdks/group/README.md#removescimgroups) - Delete group
+* [updateAdsGroup](docs/sdks/group/README.md#updateadsgroup) - Update a group
 * [updateHrisGroup](docs/sdks/group/README.md#updatehrisgroup) - Update a group
 * [updateScimGroups](docs/sdks/group/README.md#updatescimgroups) - Update group
 
@@ -1079,13 +1131,19 @@ public class Application {
 
 ### [Organization](docs/sdks/organization/README.md)
 
+* [createAdsOrganization](docs/sdks/organization/README.md#createadsorganization) - Create an organization
 * [createRepoOrganization](docs/sdks/organization/README.md#createrepoorganization) - Create an organization
 * [getAccountingOrganization](docs/sdks/organization/README.md#getaccountingorganization) - Retrieve an organization
+* [getAdsOrganization](docs/sdks/organization/README.md#getadsorganization) - Retrieve an organization
 * [getRepoOrganization](docs/sdks/organization/README.md#getrepoorganization) - Retrieve an organization
 * [listAccountingOrganizations](docs/sdks/organization/README.md#listaccountingorganizations) - List all organizations
+* [listAdsOrganizations](docs/sdks/organization/README.md#listadsorganizations) - List all organizations
 * [listRepoOrganizations](docs/sdks/organization/README.md#listrepoorganizations) - List all organizations
+* [patchAdsOrganization](docs/sdks/organization/README.md#patchadsorganization) - Update an organization
 * [patchRepoOrganization](docs/sdks/organization/README.md#patchrepoorganization) - Update an organization
+* [removeAdsOrganization](docs/sdks/organization/README.md#removeadsorganization) - Remove an organization
 * [removeRepoOrganization](docs/sdks/organization/README.md#removerepoorganization) - Remove an organization
+* [updateAdsOrganization](docs/sdks/organization/README.md#updateadsorganization) - Update an organization
 * [updateRepoOrganization](docs/sdks/organization/README.md#updaterepoorganization) - Update an organization
 
 ### [Package](docs/sdks/package/README.md)
@@ -1250,6 +1308,7 @@ public class Application {
 
 * [getAccountingReport](docs/sdks/report/README.md#getaccountingreport) - Retrieve a report
 * [listAccountingReports](docs/sdks/report/README.md#listaccountingreports) - List all reports
+* [listAdsReports](docs/sdks/report/README.md#listadsreports) - List all reports
 
 ### [Repository](docs/sdks/repository/README.md)
 

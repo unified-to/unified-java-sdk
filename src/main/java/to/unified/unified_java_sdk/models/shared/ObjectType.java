@@ -121,6 +121,11 @@ public class ObjectType {
     public static final ObjectType CALENDAR_BUSY = new ObjectType("calendar_busy");
     public static final ObjectType CALENDAR_LINK = new ObjectType("calendar_link");
     public static final ObjectType CALENDAR_RECORDING = new ObjectType("calendar_recording");
+    public static final ObjectType ADS_ORGANIZATION = new ObjectType("ads_organization");
+    public static final ObjectType ADS_AD = new ObjectType("ads_ad");
+    public static final ObjectType ADS_CAMPAIGN = new ObjectType("ads_campaign");
+    public static final ObjectType ADS_REPORT = new ObjectType("ads_report");
+    public static final ObjectType ADS_GROUP = new ObjectType("ads_group");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -295,6 +300,11 @@ public class ObjectType {
         map.put("calendar_busy", CALENDAR_BUSY);
         map.put("calendar_link", CALENDAR_LINK);
         map.put("calendar_recording", CALENDAR_RECORDING);
+        map.put("ads_organization", ADS_ORGANIZATION);
+        map.put("ads_ad", ADS_AD);
+        map.put("ads_campaign", ADS_CAMPAIGN);
+        map.put("ads_report", ADS_REPORT);
+        map.put("ads_group", ADS_GROUP);
         return map;
     }
 
@@ -401,6 +411,11 @@ public class ObjectType {
         map.put("calendar_busy", ObjectTypeEnum.CALENDAR_BUSY);
         map.put("calendar_link", ObjectTypeEnum.CALENDAR_LINK);
         map.put("calendar_recording", ObjectTypeEnum.CALENDAR_RECORDING);
+        map.put("ads_organization", ObjectTypeEnum.ADS_ORGANIZATION);
+        map.put("ads_ad", ObjectTypeEnum.ADS_AD);
+        map.put("ads_campaign", ObjectTypeEnum.ADS_CAMPAIGN);
+        map.put("ads_report", ObjectTypeEnum.ADS_REPORT);
+        map.put("ads_group", ObjectTypeEnum.ADS_GROUP);
         return map;
     }
     
@@ -507,7 +522,12 @@ public class ObjectType {
         CALENDAR_EVENT("calendar_event"),
         CALENDAR_BUSY("calendar_busy"),
         CALENDAR_LINK("calendar_link"),
-        CALENDAR_RECORDING("calendar_recording"),;
+        CALENDAR_RECORDING("calendar_recording"),
+        ADS_ORGANIZATION("ads_organization"),
+        ADS_AD("ads_ad"),
+        ADS_CAMPAIGN("ads_campaign"),
+        ADS_REPORT("ads_report"),
+        ADS_GROUP("ads_group"),;
 
         private final String value;
 

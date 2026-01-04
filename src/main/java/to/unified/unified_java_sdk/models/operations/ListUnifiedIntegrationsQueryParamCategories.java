@@ -31,7 +31,8 @@ public enum ListUnifiedIntegrationsQueryParamCategories {
     REPO("repo"),
     METADATA("metadata"),
     CALENDAR("calendar"),
-    VERIFICATION("verification");
+    VERIFICATION("verification"),
+    ADS("ads");
 
     @JsonValue
     private final String value;

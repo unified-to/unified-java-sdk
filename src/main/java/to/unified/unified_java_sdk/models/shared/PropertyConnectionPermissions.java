@@ -208,6 +208,15 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions CALENDAR_RECORDING_WRITE = new PropertyConnectionPermissions("calendar_recording_write");
     public static final PropertyConnectionPermissions ENRICH_PERSON_READ = new PropertyConnectionPermissions("enrich_person_read");
     public static final PropertyConnectionPermissions ENRICH_COMPANY_READ = new PropertyConnectionPermissions("enrich_company_read");
+    public static final PropertyConnectionPermissions ADS_AD_READ = new PropertyConnectionPermissions("ads_ad_read");
+    public static final PropertyConnectionPermissions ADS_AD_WRITE = new PropertyConnectionPermissions("ads_ad_write");
+    public static final PropertyConnectionPermissions ADS_CAMPAIGN_READ = new PropertyConnectionPermissions("ads_campaign_read");
+    public static final PropertyConnectionPermissions ADS_CAMPAIGN_WRITE = new PropertyConnectionPermissions("ads_campaign_write");
+    public static final PropertyConnectionPermissions ADS_GROUP_READ = new PropertyConnectionPermissions("ads_group_read");
+    public static final PropertyConnectionPermissions ADS_GROUP_WRITE = new PropertyConnectionPermissions("ads_group_write");
+    public static final PropertyConnectionPermissions ADS_REPORT_READ = new PropertyConnectionPermissions("ads_report_read");
+    public static final PropertyConnectionPermissions ADS_ORGANIZATION_READ = new PropertyConnectionPermissions("ads_organization_read");
+    public static final PropertyConnectionPermissions ADS_ORGANIZATION_WRITE = new PropertyConnectionPermissions("ads_organization_write");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -469,6 +478,15 @@ public class PropertyConnectionPermissions {
         map.put("calendar_recording_write", CALENDAR_RECORDING_WRITE);
         map.put("enrich_person_read", ENRICH_PERSON_READ);
         map.put("enrich_company_read", ENRICH_COMPANY_READ);
+        map.put("ads_ad_read", ADS_AD_READ);
+        map.put("ads_ad_write", ADS_AD_WRITE);
+        map.put("ads_campaign_read", ADS_CAMPAIGN_READ);
+        map.put("ads_campaign_write", ADS_CAMPAIGN_WRITE);
+        map.put("ads_group_read", ADS_GROUP_READ);
+        map.put("ads_group_write", ADS_GROUP_WRITE);
+        map.put("ads_report_read", ADS_REPORT_READ);
+        map.put("ads_organization_read", ADS_ORGANIZATION_READ);
+        map.put("ads_organization_write", ADS_ORGANIZATION_WRITE);
         return map;
     }
 
@@ -662,6 +680,15 @@ public class PropertyConnectionPermissions {
         map.put("calendar_recording_write", PropertyConnectionPermissionsEnum.CALENDAR_RECORDING_WRITE);
         map.put("enrich_person_read", PropertyConnectionPermissionsEnum.ENRICH_PERSON_READ);
         map.put("enrich_company_read", PropertyConnectionPermissionsEnum.ENRICH_COMPANY_READ);
+        map.put("ads_ad_read", PropertyConnectionPermissionsEnum.ADS_AD_READ);
+        map.put("ads_ad_write", PropertyConnectionPermissionsEnum.ADS_AD_WRITE);
+        map.put("ads_campaign_read", PropertyConnectionPermissionsEnum.ADS_CAMPAIGN_READ);
+        map.put("ads_campaign_write", PropertyConnectionPermissionsEnum.ADS_CAMPAIGN_WRITE);
+        map.put("ads_group_read", PropertyConnectionPermissionsEnum.ADS_GROUP_READ);
+        map.put("ads_group_write", PropertyConnectionPermissionsEnum.ADS_GROUP_WRITE);
+        map.put("ads_report_read", PropertyConnectionPermissionsEnum.ADS_REPORT_READ);
+        map.put("ads_organization_read", PropertyConnectionPermissionsEnum.ADS_ORGANIZATION_READ);
+        map.put("ads_organization_write", PropertyConnectionPermissionsEnum.ADS_ORGANIZATION_WRITE);
         return map;
     }
     
@@ -855,7 +882,16 @@ public class PropertyConnectionPermissions {
         CALENDAR_RECORDING_READ("calendar_recording_read"),
         CALENDAR_RECORDING_WRITE("calendar_recording_write"),
         ENRICH_PERSON_READ("enrich_person_read"),
-        ENRICH_COMPANY_READ("enrich_company_read"),;
+        ENRICH_COMPANY_READ("enrich_company_read"),
+        ADS_AD_READ("ads_ad_read"),
+        ADS_AD_WRITE("ads_ad_write"),
+        ADS_CAMPAIGN_READ("ads_campaign_read"),
+        ADS_CAMPAIGN_WRITE("ads_campaign_write"),
+        ADS_GROUP_READ("ads_group_read"),
+        ADS_GROUP_WRITE("ads_group_write"),
+        ADS_REPORT_READ("ads_report_read"),
+        ADS_ORGANIZATION_READ("ads_organization_read"),
+        ADS_ORGANIZATION_WRITE("ads_organization_write"),;
 
         private final String value;
 

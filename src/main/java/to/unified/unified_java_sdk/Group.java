@@ -5,52 +5,76 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import to.unified.unified_java_sdk.models.operations.CreateAdsGroupRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAdsGroupRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAdsGroupResponse;
 import to.unified.unified_java_sdk.models.operations.CreateHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisGroupRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisGroupResponse;
 import to.unified.unified_java_sdk.models.operations.CreateScimGroupsRequest;
 import to.unified.unified_java_sdk.models.operations.CreateScimGroupsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateScimGroupsResponse;
+import to.unified.unified_java_sdk.models.operations.GetAdsGroupRequest;
+import to.unified.unified_java_sdk.models.operations.GetAdsGroupRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAdsGroupResponse;
 import to.unified.unified_java_sdk.models.operations.GetHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisGroupRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHrisGroupResponse;
 import to.unified.unified_java_sdk.models.operations.GetScimGroupsRequest;
 import to.unified.unified_java_sdk.models.operations.GetScimGroupsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetScimGroupsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAdsGroupsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsGroupsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAdsGroupsResponse;
 import to.unified.unified_java_sdk.models.operations.ListHrisGroupsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisGroupsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHrisGroupsResponse;
 import to.unified.unified_java_sdk.models.operations.ListScimGroupsRequest;
 import to.unified.unified_java_sdk.models.operations.ListScimGroupsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListScimGroupsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAdsGroupRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAdsGroupRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAdsGroupResponse;
 import to.unified.unified_java_sdk.models.operations.PatchHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisGroupRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchHrisGroupResponse;
 import to.unified.unified_java_sdk.models.operations.PatchScimGroupsRequest;
 import to.unified.unified_java_sdk.models.operations.PatchScimGroupsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchScimGroupsResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsGroupRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsGroupRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsGroupResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisGroupRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisGroupResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveScimGroupsRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveScimGroupsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveScimGroupsResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsGroupRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsGroupRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsGroupResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisGroupRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisGroupResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateScimGroupsRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateScimGroupsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateScimGroupsResponse;
+import to.unified.unified_java_sdk.operations.CreateAdsGroup;
 import to.unified.unified_java_sdk.operations.CreateHrisGroup;
 import to.unified.unified_java_sdk.operations.CreateScimGroups;
+import to.unified.unified_java_sdk.operations.GetAdsGroup;
 import to.unified.unified_java_sdk.operations.GetHrisGroup;
 import to.unified.unified_java_sdk.operations.GetScimGroups;
+import to.unified.unified_java_sdk.operations.ListAdsGroups;
 import to.unified.unified_java_sdk.operations.ListHrisGroups;
 import to.unified.unified_java_sdk.operations.ListScimGroups;
+import to.unified.unified_java_sdk.operations.PatchAdsGroup;
 import to.unified.unified_java_sdk.operations.PatchHrisGroup;
 import to.unified.unified_java_sdk.operations.PatchScimGroups;
+import to.unified.unified_java_sdk.operations.RemoveAdsGroup;
 import to.unified.unified_java_sdk.operations.RemoveHrisGroup;
 import to.unified.unified_java_sdk.operations.RemoveScimGroups;
+import to.unified.unified_java_sdk.operations.UpdateAdsGroup;
 import to.unified.unified_java_sdk.operations.UpdateHrisGroup;
 import to.unified.unified_java_sdk.operations.UpdateScimGroups;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -73,6 +97,28 @@ public class Group {
      */
     public AsyncGroup async() {
         return asyncSDK;
+    }
+
+    /**
+     * Create a group
+     * 
+     * @return The call builder
+     */
+    public CreateAdsGroupRequestBuilder createAdsGroup() {
+        return new CreateAdsGroupRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a group
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAdsGroupResponse createAdsGroup(CreateAdsGroupRequest request) {
+        RequestOperation<CreateAdsGroupRequest, CreateAdsGroupResponse> operation
+              = new CreateAdsGroup.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
     }
 
     /**
@@ -116,6 +162,28 @@ public class Group {
     public CreateScimGroupsResponse createScimGroups(CreateScimGroupsRequest request) {
         RequestOperation<CreateScimGroupsRequest, CreateScimGroupsResponse> operation
               = new CreateScimGroups.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a group
+     * 
+     * @return The call builder
+     */
+    public GetAdsGroupRequestBuilder getAdsGroup() {
+        return new GetAdsGroupRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a group
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAdsGroupResponse getAdsGroup(GetAdsGroupRequest request) {
+        RequestOperation<GetAdsGroupRequest, GetAdsGroupResponse> operation
+              = new GetAdsGroup.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -168,6 +236,28 @@ public class Group {
      * 
      * @return The call builder
      */
+    public ListAdsGroupsRequestBuilder listAdsGroups() {
+        return new ListAdsGroupsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all groups
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAdsGroupsResponse listAdsGroups(ListAdsGroupsRequest request) {
+        RequestOperation<ListAdsGroupsRequest, ListAdsGroupsResponse> operation
+              = new ListAdsGroups.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all groups
+     * 
+     * @return The call builder
+     */
     public ListHrisGroupsRequestBuilder listHrisGroups() {
         return new ListHrisGroupsRequestBuilder(sdkConfiguration);
     }
@@ -204,6 +294,28 @@ public class Group {
     public ListScimGroupsResponse listScimGroups(ListScimGroupsRequest request) {
         RequestOperation<ListScimGroupsRequest, ListScimGroupsResponse> operation
               = new ListScimGroups.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a group
+     * 
+     * @return The call builder
+     */
+    public PatchAdsGroupRequestBuilder patchAdsGroup() {
+        return new PatchAdsGroupRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a group
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAdsGroupResponse patchAdsGroup(PatchAdsGroupRequest request) {
+        RequestOperation<PatchAdsGroupRequest, PatchAdsGroupResponse> operation
+              = new PatchAdsGroup.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -256,6 +368,28 @@ public class Group {
      * 
      * @return The call builder
      */
+    public RemoveAdsGroupRequestBuilder removeAdsGroup() {
+        return new RemoveAdsGroupRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a group
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAdsGroupResponse removeAdsGroup(RemoveAdsGroupRequest request) {
+        RequestOperation<RemoveAdsGroupRequest, RemoveAdsGroupResponse> operation
+              = new RemoveAdsGroup.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove a group
+     * 
+     * @return The call builder
+     */
     public RemoveHrisGroupRequestBuilder removeHrisGroup() {
         return new RemoveHrisGroupRequestBuilder(sdkConfiguration);
     }
@@ -292,6 +426,28 @@ public class Group {
     public RemoveScimGroupsResponse removeScimGroups(RemoveScimGroupsRequest request) {
         RequestOperation<RemoveScimGroupsRequest, RemoveScimGroupsResponse> operation
               = new RemoveScimGroups.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a group
+     * 
+     * @return The call builder
+     */
+    public UpdateAdsGroupRequestBuilder updateAdsGroup() {
+        return new UpdateAdsGroupRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a group
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAdsGroupResponse updateAdsGroup(UpdateAdsGroupRequest request) {
+        RequestOperation<UpdateAdsGroupRequest, UpdateAdsGroupResponse> operation
+              = new UpdateAdsGroup.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

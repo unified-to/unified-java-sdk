@@ -43,6 +43,7 @@ public class PropertyIntegrationCategories {
     public static final PropertyIntegrationCategories METADATA = new PropertyIntegrationCategories("metadata");
     public static final PropertyIntegrationCategories CALENDAR = new PropertyIntegrationCategories("calendar");
     public static final PropertyIntegrationCategories VERIFICATION = new PropertyIntegrationCategories("verification");
+    public static final PropertyIntegrationCategories ADS = new PropertyIntegrationCategories("ads");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -139,6 +140,7 @@ public class PropertyIntegrationCategories {
         map.put("metadata", METADATA);
         map.put("calendar", CALENDAR);
         map.put("verification", VERIFICATION);
+        map.put("ads", ADS);
         return map;
     }
 
@@ -167,6 +169,7 @@ public class PropertyIntegrationCategories {
         map.put("metadata", PropertyIntegrationCategoriesEnum.METADATA);
         map.put("calendar", PropertyIntegrationCategoriesEnum.CALENDAR);
         map.put("verification", PropertyIntegrationCategoriesEnum.VERIFICATION);
+        map.put("ads", PropertyIntegrationCategoriesEnum.ADS);
         return map;
     }
     
@@ -195,7 +198,8 @@ public class PropertyIntegrationCategories {
         REPO("repo"),
         METADATA("metadata"),
         CALENDAR("calendar"),
-        VERIFICATION("verification"),;
+        VERIFICATION("verification"),
+        ADS("ads"),;
 
         private final String value;
 
