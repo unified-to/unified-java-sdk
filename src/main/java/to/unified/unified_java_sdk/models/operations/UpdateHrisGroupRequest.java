@@ -27,10 +27,10 @@ public class UpdateHrisGroupRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<UpdateHrisGroupQueryParamFields>> fields;
 
     /**
      * ID of the Group
@@ -50,7 +50,7 @@ public class UpdateHrisGroupRequest {
     public UpdateHrisGroupRequest(
             HrisGroup hrisGroup,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<UpdateHrisGroupQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(hrisGroup, "hrisGroup");
@@ -87,12 +87,12 @@ public class UpdateHrisGroupRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<UpdateHrisGroupQueryParamFields>> fields() {
+        return (Optional<List<UpdateHrisGroupQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class UpdateHrisGroupRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateHrisGroupRequest withFields(List<String> fields) {
+    public UpdateHrisGroupRequest withFields(List<UpdateHrisGroupQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class UpdateHrisGroupRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateHrisGroupRequest withFields(Optional<? extends List<String>> fields) {
+    public UpdateHrisGroupRequest withFields(Optional<? extends List<UpdateHrisGroupQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class UpdateHrisGroupRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<UpdateHrisGroupQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class UpdateHrisGroupRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<UpdateHrisGroupQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<UpdateHrisGroupQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

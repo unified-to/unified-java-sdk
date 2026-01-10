@@ -168,7 +168,7 @@ public class CreateUnifiedEnvironment {
             
             if (Utils.statusCodeMatches(response.statusCode(), "200")) {
                 if (Utils.contentTypeMatches(contentType, "application/json")) {
-                    return res.withS(Utils.unmarshal(response, new TypeReference<List<String>>() {}));
+                    return res.withEnvironments(Utils.unmarshal(response, new TypeReference<List<String>>() {}));
                 } else {
                     throw SDKError.from("Unexpected content-type received: " + contentType, response);
                 }
@@ -239,7 +239,7 @@ public class CreateUnifiedEnvironment {
             if (Utils.statusCodeMatches(response.statusCode(), "200")) {
                 if (Utils.contentTypeMatches(contentType, "application/json")) {
                     return Utils.unmarshalAsync(response, new TypeReference<List<String>>() {})
-                            .thenApply(res::withS);
+                            .thenApply(res::withEnvironments);
                 } else {
                     return Utils.createAsyncApiError(response, "Unexpected content-type received: " + contentType);
                 }

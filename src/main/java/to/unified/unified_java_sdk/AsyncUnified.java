@@ -154,7 +154,7 @@ public class AsyncUnified {
 
 
     /**
-     * Returns a builder to make an async request.
+     * Create new environments
      * 
      * @return The async call builder
      */
@@ -163,7 +163,7 @@ public class AsyncUnified {
     }
 
     /**
-     * Makes an async request
+     * Create new environments
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateUnifiedEnvironmentResponse>} - The async response
@@ -375,7 +375,7 @@ public class AsyncUnified {
 
 
     /**
-     * Returns a builder to make an async request.
+     * Returns all environments
      * 
      * @return The async call builder
      */
@@ -384,7 +384,7 @@ public class AsyncUnified {
     }
 
     /**
-     * Makes an async request
+     * Returns all environments
      * 
      * @return {@code CompletableFuture<ListUnifiedEnvironmentsResponse>} - The async response
      */
@@ -585,7 +585,7 @@ public class AsyncUnified {
 
 
     /**
-     * Returns a builder to make an async request.
+     * Remove an environment
      * 
      * @return The async call builder
      */
@@ -594,7 +594,7 @@ public class AsyncUnified {
     }
 
     /**
-     * Makes an async request
+     * Remove an environment
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveUnifiedEnvironmentResponse>} - The async response

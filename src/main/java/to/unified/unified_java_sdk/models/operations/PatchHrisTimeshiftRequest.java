@@ -27,10 +27,10 @@ public class PatchHrisTimeshiftRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<PatchHrisTimeshiftQueryParamFields>> fields;
 
     /**
      * ID of the Timeshift
@@ -50,7 +50,7 @@ public class PatchHrisTimeshiftRequest {
     public PatchHrisTimeshiftRequest(
             HrisTimeshift hrisTimeshift,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<PatchHrisTimeshiftQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(hrisTimeshift, "hrisTimeshift");
@@ -87,12 +87,12 @@ public class PatchHrisTimeshiftRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<PatchHrisTimeshiftQueryParamFields>> fields() {
+        return (Optional<List<PatchHrisTimeshiftQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class PatchHrisTimeshiftRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchHrisTimeshiftRequest withFields(List<String> fields) {
+    public PatchHrisTimeshiftRequest withFields(List<PatchHrisTimeshiftQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class PatchHrisTimeshiftRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchHrisTimeshiftRequest withFields(Optional<? extends List<String>> fields) {
+    public PatchHrisTimeshiftRequest withFields(Optional<? extends List<PatchHrisTimeshiftQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class PatchHrisTimeshiftRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<PatchHrisTimeshiftQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class PatchHrisTimeshiftRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<PatchHrisTimeshiftQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<PatchHrisTimeshiftQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

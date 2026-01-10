@@ -27,10 +27,10 @@ public class UpdatePaymentLinkRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<UpdatePaymentLinkQueryParamFields>> fields;
 
     /**
      * ID of the Link
@@ -50,7 +50,7 @@ public class UpdatePaymentLinkRequest {
     public UpdatePaymentLinkRequest(
             PaymentLink paymentLink,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<UpdatePaymentLinkQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(paymentLink, "paymentLink");
@@ -87,12 +87,12 @@ public class UpdatePaymentLinkRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<UpdatePaymentLinkQueryParamFields>> fields() {
+        return (Optional<List<UpdatePaymentLinkQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class UpdatePaymentLinkRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdatePaymentLinkRequest withFields(List<String> fields) {
+    public UpdatePaymentLinkRequest withFields(List<UpdatePaymentLinkQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class UpdatePaymentLinkRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdatePaymentLinkRequest withFields(Optional<? extends List<String>> fields) {
+    public UpdatePaymentLinkRequest withFields(Optional<? extends List<UpdatePaymentLinkQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class UpdatePaymentLinkRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<UpdatePaymentLinkQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class UpdatePaymentLinkRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<UpdatePaymentLinkQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<UpdatePaymentLinkQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

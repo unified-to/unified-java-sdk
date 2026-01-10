@@ -59,7 +59,8 @@ public class ListUnifiedWebhooksRequest {
     private Optional<String> sort;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private Optional<String> updatedGte;
@@ -163,7 +164,8 @@ public class ListUnifiedWebhooksRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> updatedGte() {
@@ -317,7 +319,8 @@ public class ListUnifiedWebhooksRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListUnifiedWebhooksRequest withUpdatedGte(String updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -327,7 +330,8 @@ public class ListUnifiedWebhooksRequest {
 
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListUnifiedWebhooksRequest withUpdatedGte(Optional<String> updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -551,7 +555,8 @@ public class ListUnifiedWebhooksRequest {
 
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(String updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -560,7 +565,8 @@ public class ListUnifiedWebhooksRequest {
         }
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(Optional<String> updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");

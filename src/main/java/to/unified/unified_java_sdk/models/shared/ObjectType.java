@@ -45,6 +45,7 @@ public class ObjectType {
     public static final ObjectType PAYMENT_REFUND = new ObjectType("payment_refund");
     public static final ObjectType PAYMENT_SUBSCRIPTION = new ObjectType("payment_subscription");
     public static final ObjectType COMMERCE_ITEM = new ObjectType("commerce_item");
+    public static final ObjectType COMMERCE_ITEMVARIANT = new ObjectType("commerce_itemvariant");
     public static final ObjectType COMMERCE_COLLECTION = new ObjectType("commerce_collection");
     public static final ObjectType COMMERCE_INVENTORY = new ObjectType("commerce_inventory");
     public static final ObjectType COMMERCE_LOCATION = new ObjectType("commerce_location");
@@ -126,6 +127,8 @@ public class ObjectType {
     public static final ObjectType ADS_CAMPAIGN = new ObjectType("ads_campaign");
     public static final ObjectType ADS_REPORT = new ObjectType("ads_report");
     public static final ObjectType ADS_GROUP = new ObjectType("ads_group");
+    public static final ObjectType FORMS_FORM = new ObjectType("forms_form");
+    public static final ObjectType FORMS_SUBMISSION = new ObjectType("forms_submission");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -224,6 +227,7 @@ public class ObjectType {
         map.put("payment_refund", PAYMENT_REFUND);
         map.put("payment_subscription", PAYMENT_SUBSCRIPTION);
         map.put("commerce_item", COMMERCE_ITEM);
+        map.put("commerce_itemvariant", COMMERCE_ITEMVARIANT);
         map.put("commerce_collection", COMMERCE_COLLECTION);
         map.put("commerce_inventory", COMMERCE_INVENTORY);
         map.put("commerce_location", COMMERCE_LOCATION);
@@ -305,6 +309,8 @@ public class ObjectType {
         map.put("ads_campaign", ADS_CAMPAIGN);
         map.put("ads_report", ADS_REPORT);
         map.put("ads_group", ADS_GROUP);
+        map.put("forms_form", FORMS_FORM);
+        map.put("forms_submission", FORMS_SUBMISSION);
         return map;
     }
 
@@ -335,6 +341,7 @@ public class ObjectType {
         map.put("payment_refund", ObjectTypeEnum.PAYMENT_REFUND);
         map.put("payment_subscription", ObjectTypeEnum.PAYMENT_SUBSCRIPTION);
         map.put("commerce_item", ObjectTypeEnum.COMMERCE_ITEM);
+        map.put("commerce_itemvariant", ObjectTypeEnum.COMMERCE_ITEMVARIANT);
         map.put("commerce_collection", ObjectTypeEnum.COMMERCE_COLLECTION);
         map.put("commerce_inventory", ObjectTypeEnum.COMMERCE_INVENTORY);
         map.put("commerce_location", ObjectTypeEnum.COMMERCE_LOCATION);
@@ -416,6 +423,8 @@ public class ObjectType {
         map.put("ads_campaign", ObjectTypeEnum.ADS_CAMPAIGN);
         map.put("ads_report", ObjectTypeEnum.ADS_REPORT);
         map.put("ads_group", ObjectTypeEnum.ADS_GROUP);
+        map.put("forms_form", ObjectTypeEnum.FORMS_FORM);
+        map.put("forms_submission", ObjectTypeEnum.FORMS_SUBMISSION);
         return map;
     }
     
@@ -447,6 +456,7 @@ public class ObjectType {
         PAYMENT_REFUND("payment_refund"),
         PAYMENT_SUBSCRIPTION("payment_subscription"),
         COMMERCE_ITEM("commerce_item"),
+        COMMERCE_ITEMVARIANT("commerce_itemvariant"),
         COMMERCE_COLLECTION("commerce_collection"),
         COMMERCE_INVENTORY("commerce_inventory"),
         COMMERCE_LOCATION("commerce_location"),
@@ -527,7 +537,9 @@ public class ObjectType {
         ADS_AD("ads_ad"),
         ADS_CAMPAIGN("ads_campaign"),
         ADS_REPORT("ads_report"),
-        ADS_GROUP("ads_group"),;
+        ADS_GROUP("ads_group"),
+        FORMS_FORM("forms_form"),
+        FORMS_SUBMISSION("forms_submission"),;
 
         private final String value;
 

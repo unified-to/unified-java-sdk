@@ -17,7 +17,7 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListCommerceItemsRequest {
     /**
-     * The collection ID to filter by
+     * The collection ID to filter by (reference to CommerceCollection)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=collection_id")
     private Optional<String> collectionId;
@@ -29,10 +29,10 @@ public class ListCommerceItemsRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<ListCommerceItemsQueryParamFields>> fields;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
@@ -65,7 +65,8 @@ public class ListCommerceItemsRequest {
     private Optional<String> sort;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private Optional<String> updatedGte;
@@ -74,7 +75,7 @@ public class ListCommerceItemsRequest {
     public ListCommerceItemsRequest(
             Optional<String> collectionId,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<ListCommerceItemsQueryParamFields>> fields,
             Optional<Double> limit,
             Optional<Double> offset,
             Optional<String> order,
@@ -113,7 +114,7 @@ public class ListCommerceItemsRequest {
     }
 
     /**
-     * The collection ID to filter by
+     * The collection ID to filter by (reference to CommerceCollection)
      */
     @JsonIgnore
     public Optional<String> collectionId() {
@@ -129,12 +130,12 @@ public class ListCommerceItemsRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<ListCommerceItemsQueryParamFields>> fields() {
+        return (Optional<List<ListCommerceItemsQueryParamFields>>) fields;
     }
 
     @JsonIgnore
@@ -176,7 +177,8 @@ public class ListCommerceItemsRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> updatedGte() {
@@ -189,7 +191,7 @@ public class ListCommerceItemsRequest {
 
 
     /**
-     * The collection ID to filter by
+     * The collection ID to filter by (reference to CommerceCollection)
      */
     public ListCommerceItemsRequest withCollectionId(String collectionId) {
         Utils.checkNotNull(collectionId, "collectionId");
@@ -199,7 +201,7 @@ public class ListCommerceItemsRequest {
 
 
     /**
-     * The collection ID to filter by
+     * The collection ID to filter by (reference to CommerceCollection)
      */
     public ListCommerceItemsRequest withCollectionId(Optional<String> collectionId) {
         Utils.checkNotNull(collectionId, "collectionId");
@@ -217,9 +219,9 @@ public class ListCommerceItemsRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListCommerceItemsRequest withFields(List<String> fields) {
+    public ListCommerceItemsRequest withFields(List<ListCommerceItemsQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -227,9 +229,9 @@ public class ListCommerceItemsRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListCommerceItemsRequest withFields(Optional<? extends List<String>> fields) {
+    public ListCommerceItemsRequest withFields(Optional<? extends List<ListCommerceItemsQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -330,7 +332,8 @@ public class ListCommerceItemsRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListCommerceItemsRequest withUpdatedGte(String updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -340,7 +343,8 @@ public class ListCommerceItemsRequest {
 
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListCommerceItemsRequest withUpdatedGte(Optional<String> updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -401,7 +405,7 @@ public class ListCommerceItemsRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<ListCommerceItemsQueryParamFields>> fields = Optional.empty();
 
         private Optional<Double> limit = Optional.empty();
 
@@ -423,7 +427,7 @@ public class ListCommerceItemsRequest {
 
 
         /**
-         * The collection ID to filter by
+         * The collection ID to filter by (reference to CommerceCollection)
          */
         public Builder collectionId(String collectionId) {
             Utils.checkNotNull(collectionId, "collectionId");
@@ -432,7 +436,7 @@ public class ListCommerceItemsRequest {
         }
 
         /**
-         * The collection ID to filter by
+         * The collection ID to filter by (reference to CommerceCollection)
          */
         public Builder collectionId(Optional<String> collectionId) {
             Utils.checkNotNull(collectionId, "collectionId");
@@ -452,18 +456,18 @@ public class ListCommerceItemsRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<ListCommerceItemsQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<ListCommerceItemsQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;
@@ -565,7 +569,8 @@ public class ListCommerceItemsRequest {
 
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(String updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -574,7 +579,8 @@ public class ListCommerceItemsRequest {
         }
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(Optional<String> updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");

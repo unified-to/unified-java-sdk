@@ -27,10 +27,10 @@ public class UpdateTicketingNoteRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<UpdateTicketingNoteQueryParamFields>> fields;
 
     /**
      * ID of the Note
@@ -50,7 +50,7 @@ public class UpdateTicketingNoteRequest {
     public UpdateTicketingNoteRequest(
             TicketingNote ticketingNote,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<UpdateTicketingNoteQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(ticketingNote, "ticketingNote");
@@ -87,12 +87,12 @@ public class UpdateTicketingNoteRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<UpdateTicketingNoteQueryParamFields>> fields() {
+        return (Optional<List<UpdateTicketingNoteQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class UpdateTicketingNoteRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateTicketingNoteRequest withFields(List<String> fields) {
+    public UpdateTicketingNoteRequest withFields(List<UpdateTicketingNoteQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class UpdateTicketingNoteRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateTicketingNoteRequest withFields(Optional<? extends List<String>> fields) {
+    public UpdateTicketingNoteRequest withFields(Optional<? extends List<UpdateTicketingNoteQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class UpdateTicketingNoteRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<UpdateTicketingNoteQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class UpdateTicketingNoteRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<UpdateTicketingNoteQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<UpdateTicketingNoteQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

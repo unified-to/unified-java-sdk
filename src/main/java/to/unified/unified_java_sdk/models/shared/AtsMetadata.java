@@ -33,11 +33,6 @@ public class AtsMetadata {
 
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("key")
-    private Optional<String> key;
-
-
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespace")
     private Optional<String> namespace;
 
@@ -45,11 +40,6 @@ public class AtsMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     private Optional<String> slug;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("type")
-    private Optional<String> type;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -61,33 +51,26 @@ public class AtsMetadata {
             @JsonProperty("extra_data") Optional<? extends ExtraData> extraData,
             @JsonProperty("format") Optional<? extends Format> format,
             @JsonProperty("id") Optional<String> id,
-            @JsonProperty("key") Optional<String> key,
             @JsonProperty("namespace") Optional<String> namespace,
             @JsonProperty("slug") Optional<String> slug,
-            @JsonProperty("type") Optional<String> type,
             @JsonProperty("value") Optional<? extends Value> value) {
         Utils.checkNotNull(extraData, "extraData");
         Utils.checkNotNull(format, "format");
         Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(key, "key");
         Utils.checkNotNull(namespace, "namespace");
         Utils.checkNotNull(slug, "slug");
-        Utils.checkNotNull(type, "type");
         Utils.checkNotNull(value, "value");
         this.extraData = extraData;
         this.format = format;
         this.id = id;
-        this.key = key;
         this.namespace = namespace;
         this.slug = slug;
-        this.type = type;
         this.value = value;
     }
     
     public AtsMetadata() {
         this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -108,11 +91,6 @@ public class AtsMetadata {
     }
 
     @JsonIgnore
-    public Optional<String> key() {
-        return key;
-    }
-
-    @JsonIgnore
     public Optional<String> namespace() {
         return namespace;
     }
@@ -120,11 +98,6 @@ public class AtsMetadata {
     @JsonIgnore
     public Optional<String> slug() {
         return slug;
-    }
-
-    @JsonIgnore
-    public Optional<String> type() {
-        return type;
     }
 
     @SuppressWarnings("unchecked")
@@ -177,19 +150,6 @@ public class AtsMetadata {
         return this;
     }
 
-    public AtsMetadata withKey(String key) {
-        Utils.checkNotNull(key, "key");
-        this.key = Optional.ofNullable(key);
-        return this;
-    }
-
-
-    public AtsMetadata withKey(Optional<String> key) {
-        Utils.checkNotNull(key, "key");
-        this.key = key;
-        return this;
-    }
-
     public AtsMetadata withNamespace(String namespace) {
         Utils.checkNotNull(namespace, "namespace");
         this.namespace = Optional.ofNullable(namespace);
@@ -213,19 +173,6 @@ public class AtsMetadata {
     public AtsMetadata withSlug(Optional<String> slug) {
         Utils.checkNotNull(slug, "slug");
         this.slug = slug;
-        return this;
-    }
-
-    public AtsMetadata withType(String type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
-        return this;
-    }
-
-
-    public AtsMetadata withType(Optional<String> type) {
-        Utils.checkNotNull(type, "type");
-        this.type = type;
         return this;
     }
 
@@ -255,10 +202,8 @@ public class AtsMetadata {
             Utils.enhancedDeepEquals(this.extraData, other.extraData) &&
             Utils.enhancedDeepEquals(this.format, other.format) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
-            Utils.enhancedDeepEquals(this.key, other.key) &&
             Utils.enhancedDeepEquals(this.namespace, other.namespace) &&
             Utils.enhancedDeepEquals(this.slug, other.slug) &&
-            Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.value, other.value);
     }
     
@@ -266,8 +211,7 @@ public class AtsMetadata {
     public int hashCode() {
         return Utils.enhancedHash(
             extraData, format, id,
-            key, namespace, slug,
-            type, value);
+            namespace, slug, value);
     }
     
     @Override
@@ -276,10 +220,8 @@ public class AtsMetadata {
                 "extraData", extraData,
                 "format", format,
                 "id", id,
-                "key", key,
                 "namespace", namespace,
                 "slug", slug,
-                "type", type,
                 "value", value);
     }
 
@@ -292,13 +234,9 @@ public class AtsMetadata {
 
         private Optional<String> id = Optional.empty();
 
-        private Optional<String> key = Optional.empty();
-
         private Optional<String> namespace = Optional.empty();
 
         private Optional<String> slug = Optional.empty();
-
-        private Optional<String> type = Optional.empty();
 
         private Optional<? extends Value> value = Optional.empty();
 
@@ -346,19 +284,6 @@ public class AtsMetadata {
         }
 
 
-        public Builder key(String key) {
-            Utils.checkNotNull(key, "key");
-            this.key = Optional.ofNullable(key);
-            return this;
-        }
-
-        public Builder key(Optional<String> key) {
-            Utils.checkNotNull(key, "key");
-            this.key = key;
-            return this;
-        }
-
-
         public Builder namespace(String namespace) {
             Utils.checkNotNull(namespace, "namespace");
             this.namespace = Optional.ofNullable(namespace);
@@ -385,19 +310,6 @@ public class AtsMetadata {
         }
 
 
-        public Builder type(String type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<String> type) {
-            Utils.checkNotNull(type, "type");
-            this.type = type;
-            return this;
-        }
-
-
         public Builder value(Value value) {
             Utils.checkNotNull(value, "value");
             this.value = Optional.ofNullable(value);
@@ -414,8 +326,7 @@ public class AtsMetadata {
 
             return new AtsMetadata(
                 extraData, format, id,
-                key, namespace, slug,
-                type, value);
+                namespace, slug, value);
         }
 
     }

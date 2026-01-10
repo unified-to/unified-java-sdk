@@ -27,10 +27,10 @@ public class PatchKmsPageRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<PatchKmsPageQueryParamFields>> fields;
 
     /**
      * ID of the Page
@@ -50,7 +50,7 @@ public class PatchKmsPageRequest {
     public PatchKmsPageRequest(
             KmsPage kmsPage,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<PatchKmsPageQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(kmsPage, "kmsPage");
@@ -87,12 +87,12 @@ public class PatchKmsPageRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<PatchKmsPageQueryParamFields>> fields() {
+        return (Optional<List<PatchKmsPageQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class PatchKmsPageRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchKmsPageRequest withFields(List<String> fields) {
+    public PatchKmsPageRequest withFields(List<PatchKmsPageQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class PatchKmsPageRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchKmsPageRequest withFields(Optional<? extends List<String>> fields) {
+    public PatchKmsPageRequest withFields(Optional<? extends List<PatchKmsPageQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class PatchKmsPageRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<PatchKmsPageQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class PatchKmsPageRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<PatchKmsPageQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<PatchKmsPageQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

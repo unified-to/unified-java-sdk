@@ -22,10 +22,10 @@ public class GetAccountingProfitlossRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<GetAccountingProfitlossQueryParamFields>> fields;
 
     /**
      * ID of the Profitloss
@@ -44,7 +44,7 @@ public class GetAccountingProfitlossRequest {
     @JsonCreator
     public GetAccountingProfitlossRequest(
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<GetAccountingProfitlossQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(connectionId, "connectionId");
@@ -73,12 +73,12 @@ public class GetAccountingProfitlossRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<GetAccountingProfitlossQueryParamFields>> fields() {
+        return (Optional<List<GetAccountingProfitlossQueryParamFields>>) fields;
     }
 
     /**
@@ -114,9 +114,9 @@ public class GetAccountingProfitlossRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public GetAccountingProfitlossRequest withFields(List<String> fields) {
+    public GetAccountingProfitlossRequest withFields(List<GetAccountingProfitlossQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -124,9 +124,9 @@ public class GetAccountingProfitlossRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public GetAccountingProfitlossRequest withFields(Optional<? extends List<String>> fields) {
+    public GetAccountingProfitlossRequest withFields(Optional<? extends List<GetAccountingProfitlossQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -201,7 +201,7 @@ public class GetAccountingProfitlossRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<GetAccountingProfitlossQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -223,18 +223,18 @@ public class GetAccountingProfitlossRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<GetAccountingProfitlossQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<GetAccountingProfitlossQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

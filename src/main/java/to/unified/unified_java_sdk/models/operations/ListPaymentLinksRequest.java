@@ -23,16 +23,16 @@ public class ListPaymentLinksRequest {
     private String connectionId;
 
     /**
-     * The contact ID to filter by
+     * The contact ID to filter by (reference to AccountingContact)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contact_id")
     private Optional<String> contactId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<ListPaymentLinksQueryParamFields>> fields;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
@@ -47,7 +47,7 @@ public class ListPaymentLinksRequest {
     private Optional<String> order;
 
     /**
-     * The payment ID to filter by
+     * The payment ID to filter by (reference to PaymentPayment)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payment_id")
     private Optional<String> paymentId;
@@ -71,7 +71,8 @@ public class ListPaymentLinksRequest {
     private Optional<String> sort;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private Optional<String> updatedGte;
@@ -80,7 +81,7 @@ public class ListPaymentLinksRequest {
     public ListPaymentLinksRequest(
             String connectionId,
             Optional<String> contactId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<ListPaymentLinksQueryParamFields>> fields,
             Optional<Double> limit,
             Optional<Double> offset,
             Optional<String> order,
@@ -130,7 +131,7 @@ public class ListPaymentLinksRequest {
     }
 
     /**
-     * The contact ID to filter by
+     * The contact ID to filter by (reference to AccountingContact)
      */
     @JsonIgnore
     public Optional<String> contactId() {
@@ -138,12 +139,12 @@ public class ListPaymentLinksRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<ListPaymentLinksQueryParamFields>> fields() {
+        return (Optional<List<ListPaymentLinksQueryParamFields>>) fields;
     }
 
     @JsonIgnore
@@ -162,7 +163,7 @@ public class ListPaymentLinksRequest {
     }
 
     /**
-     * The payment ID to filter by
+     * The payment ID to filter by (reference to PaymentPayment)
      */
     @JsonIgnore
     public Optional<String> paymentId() {
@@ -193,7 +194,8 @@ public class ListPaymentLinksRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> updatedGte() {
@@ -215,7 +217,7 @@ public class ListPaymentLinksRequest {
     }
 
     /**
-     * The contact ID to filter by
+     * The contact ID to filter by (reference to AccountingContact)
      */
     public ListPaymentLinksRequest withContactId(String contactId) {
         Utils.checkNotNull(contactId, "contactId");
@@ -225,7 +227,7 @@ public class ListPaymentLinksRequest {
 
 
     /**
-     * The contact ID to filter by
+     * The contact ID to filter by (reference to AccountingContact)
      */
     public ListPaymentLinksRequest withContactId(Optional<String> contactId) {
         Utils.checkNotNull(contactId, "contactId");
@@ -234,9 +236,9 @@ public class ListPaymentLinksRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListPaymentLinksRequest withFields(List<String> fields) {
+    public ListPaymentLinksRequest withFields(List<ListPaymentLinksQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -244,9 +246,9 @@ public class ListPaymentLinksRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListPaymentLinksRequest withFields(Optional<? extends List<String>> fields) {
+    public ListPaymentLinksRequest withFields(Optional<? extends List<ListPaymentLinksQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -292,7 +294,7 @@ public class ListPaymentLinksRequest {
     }
 
     /**
-     * The payment ID to filter by
+     * The payment ID to filter by (reference to PaymentPayment)
      */
     public ListPaymentLinksRequest withPaymentId(String paymentId) {
         Utils.checkNotNull(paymentId, "paymentId");
@@ -302,7 +304,7 @@ public class ListPaymentLinksRequest {
 
 
     /**
-     * The payment ID to filter by
+     * The payment ID to filter by (reference to PaymentPayment)
      */
     public ListPaymentLinksRequest withPaymentId(Optional<String> paymentId) {
         Utils.checkNotNull(paymentId, "paymentId");
@@ -366,7 +368,8 @@ public class ListPaymentLinksRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListPaymentLinksRequest withUpdatedGte(String updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -376,7 +379,8 @@ public class ListPaymentLinksRequest {
 
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListPaymentLinksRequest withUpdatedGte(Optional<String> updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -439,7 +443,7 @@ public class ListPaymentLinksRequest {
 
         private Optional<String> contactId = Optional.empty();
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<ListPaymentLinksQueryParamFields>> fields = Optional.empty();
 
         private Optional<Double> limit = Optional.empty();
 
@@ -473,7 +477,7 @@ public class ListPaymentLinksRequest {
 
 
         /**
-         * The contact ID to filter by
+         * The contact ID to filter by (reference to AccountingContact)
          */
         public Builder contactId(String contactId) {
             Utils.checkNotNull(contactId, "contactId");
@@ -482,7 +486,7 @@ public class ListPaymentLinksRequest {
         }
 
         /**
-         * The contact ID to filter by
+         * The contact ID to filter by (reference to AccountingContact)
          */
         public Builder contactId(Optional<String> contactId) {
             Utils.checkNotNull(contactId, "contactId");
@@ -492,18 +496,18 @@ public class ListPaymentLinksRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<ListPaymentLinksQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<ListPaymentLinksQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;
@@ -550,7 +554,7 @@ public class ListPaymentLinksRequest {
 
 
         /**
-         * The payment ID to filter by
+         * The payment ID to filter by (reference to PaymentPayment)
          */
         public Builder paymentId(String paymentId) {
             Utils.checkNotNull(paymentId, "paymentId");
@@ -559,7 +563,7 @@ public class ListPaymentLinksRequest {
         }
 
         /**
-         * The payment ID to filter by
+         * The payment ID to filter by (reference to PaymentPayment)
          */
         public Builder paymentId(Optional<String> paymentId) {
             Utils.checkNotNull(paymentId, "paymentId");
@@ -624,7 +628,8 @@ public class ListPaymentLinksRequest {
 
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(String updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -633,7 +638,8 @@ public class ListPaymentLinksRequest {
         }
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(Optional<String> updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");

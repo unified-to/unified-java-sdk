@@ -27,10 +27,10 @@ public class PatchCalendarLinkRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<PatchCalendarLinkQueryParamFields>> fields;
 
     /**
      * ID of the Link
@@ -50,7 +50,7 @@ public class PatchCalendarLinkRequest {
     public PatchCalendarLinkRequest(
             CalendarLink calendarLink,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<PatchCalendarLinkQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(calendarLink, "calendarLink");
@@ -87,12 +87,12 @@ public class PatchCalendarLinkRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<PatchCalendarLinkQueryParamFields>> fields() {
+        return (Optional<List<PatchCalendarLinkQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class PatchCalendarLinkRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchCalendarLinkRequest withFields(List<String> fields) {
+    public PatchCalendarLinkRequest withFields(List<PatchCalendarLinkQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class PatchCalendarLinkRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchCalendarLinkRequest withFields(Optional<? extends List<String>> fields) {
+    public PatchCalendarLinkRequest withFields(Optional<? extends List<PatchCalendarLinkQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class PatchCalendarLinkRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<PatchCalendarLinkQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class PatchCalendarLinkRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<PatchCalendarLinkQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<PatchCalendarLinkQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

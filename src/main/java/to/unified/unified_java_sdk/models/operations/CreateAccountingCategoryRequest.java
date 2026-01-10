@@ -27,10 +27,10 @@ public class CreateAccountingCategoryRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<CreateAccountingCategoryQueryParamFields>> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -44,7 +44,7 @@ public class CreateAccountingCategoryRequest {
     public CreateAccountingCategoryRequest(
             AccountingCategory accountingCategory,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<CreateAccountingCategoryQueryParamFields>> fields,
             Optional<String> raw) {
         Utils.checkNotNull(accountingCategory, "accountingCategory");
         Utils.checkNotNull(connectionId, "connectionId");
@@ -77,12 +77,12 @@ public class CreateAccountingCategoryRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<CreateAccountingCategoryQueryParamFields>> fields() {
+        return (Optional<List<CreateAccountingCategoryQueryParamFields>>) fields;
     }
 
     /**
@@ -116,9 +116,9 @@ public class CreateAccountingCategoryRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public CreateAccountingCategoryRequest withFields(List<String> fields) {
+    public CreateAccountingCategoryRequest withFields(List<CreateAccountingCategoryQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -126,9 +126,9 @@ public class CreateAccountingCategoryRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public CreateAccountingCategoryRequest withFields(Optional<? extends List<String>> fields) {
+    public CreateAccountingCategoryRequest withFields(Optional<? extends List<CreateAccountingCategoryQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -196,7 +196,7 @@ public class CreateAccountingCategoryRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<CreateAccountingCategoryQueryParamFields>> fields = Optional.empty();
 
         private Optional<String> raw = Optional.empty();
 
@@ -223,18 +223,18 @@ public class CreateAccountingCategoryRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<CreateAccountingCategoryQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<CreateAccountingCategoryQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

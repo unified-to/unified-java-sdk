@@ -99,6 +99,8 @@ public class AsyncUnifiedTo {
 
     private final AsyncItem item;
 
+    private final AsyncItemvariant itemvariant;
+
     private final AsyncLocation location;
 
     private final AsyncReview review;
@@ -116,6 +118,12 @@ public class AsyncUnifiedTo {
     private final AsyncEnrich enrich;
 
     private final AsyncPerson person;
+
+    private final AsyncForms forms;
+
+    private final AsyncForm form;
+
+    private final AsyncSubmission submission;
 
     private final AsyncGenai genai;
 
@@ -415,6 +423,10 @@ public class AsyncUnifiedTo {
         return item;
     }
 
+    public AsyncItemvariant itemvariant() {
+        return itemvariant;
+    }
+
     public AsyncLocation location() {
         return location;
     }
@@ -449,6 +461,18 @@ public class AsyncUnifiedTo {
 
     public AsyncPerson person() {
         return person;
+    }
+
+    public AsyncForms forms() {
+        return forms;
+    }
+
+    public AsyncForm form() {
+        return form;
+    }
+
+    public AsyncSubmission submission() {
+        return submission;
     }
 
     public AsyncGenai genai() {
@@ -752,6 +776,7 @@ public class AsyncUnifiedTo {
         this.collection = new AsyncCollection(syncSDK.collection(), sdkConfiguration);
         this.inventory = new AsyncInventory(syncSDK.inventory(), sdkConfiguration);
         this.item = new AsyncItem(syncSDK.item(), sdkConfiguration);
+        this.itemvariant = new AsyncItemvariant(syncSDK.itemvariant(), sdkConfiguration);
         this.location = new AsyncLocation(syncSDK.location(), sdkConfiguration);
         this.review = new AsyncReview(syncSDK.review(), sdkConfiguration);
         this.saleschannel = new AsyncSaleschannel(syncSDK.saleschannel(), sdkConfiguration);
@@ -761,6 +786,9 @@ public class AsyncUnifiedTo {
         this.pipeline = new AsyncPipeline(syncSDK.pipeline(), sdkConfiguration);
         this.enrich = new AsyncEnrich(syncSDK.enrich(), sdkConfiguration);
         this.person = new AsyncPerson(syncSDK.person(), sdkConfiguration);
+        this.forms = new AsyncForms(syncSDK.forms(), sdkConfiguration);
+        this.form = new AsyncForm(syncSDK.form(), sdkConfiguration);
+        this.submission = new AsyncSubmission(syncSDK.submission(), sdkConfiguration);
         this.genai = new AsyncGenai(syncSDK.genai(), sdkConfiguration);
         this.embedding = new AsyncEmbedding(syncSDK.embedding(), sdkConfiguration);
         this.model = new AsyncModel(syncSDK.model(), sdkConfiguration);

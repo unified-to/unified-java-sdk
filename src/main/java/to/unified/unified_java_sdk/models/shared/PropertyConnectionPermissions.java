@@ -67,6 +67,8 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions PAYMENT_SUBSCRIPTION_WRITE = new PropertyConnectionPermissions("payment_subscription_write");
     public static final PropertyConnectionPermissions COMMERCE_ITEM_READ = new PropertyConnectionPermissions("commerce_item_read");
     public static final PropertyConnectionPermissions COMMERCE_ITEM_WRITE = new PropertyConnectionPermissions("commerce_item_write");
+    public static final PropertyConnectionPermissions COMMERCE_ITEMVARIANT_READ = new PropertyConnectionPermissions("commerce_itemvariant_read");
+    public static final PropertyConnectionPermissions COMMERCE_ITEMVARIANT_WRITE = new PropertyConnectionPermissions("commerce_itemvariant_write");
     public static final PropertyConnectionPermissions COMMERCE_COLLECTION_READ = new PropertyConnectionPermissions("commerce_collection_read");
     public static final PropertyConnectionPermissions COMMERCE_COLLECTION_WRITE = new PropertyConnectionPermissions("commerce_collection_write");
     public static final PropertyConnectionPermissions COMMERCE_INVENTORY_READ = new PropertyConnectionPermissions("commerce_inventory_read");
@@ -217,6 +219,10 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions ADS_REPORT_READ = new PropertyConnectionPermissions("ads_report_read");
     public static final PropertyConnectionPermissions ADS_ORGANIZATION_READ = new PropertyConnectionPermissions("ads_organization_read");
     public static final PropertyConnectionPermissions ADS_ORGANIZATION_WRITE = new PropertyConnectionPermissions("ads_organization_write");
+    public static final PropertyConnectionPermissions FORMS_FORM_READ = new PropertyConnectionPermissions("forms_form_read");
+    public static final PropertyConnectionPermissions FORMS_FORM_WRITE = new PropertyConnectionPermissions("forms_form_write");
+    public static final PropertyConnectionPermissions FORMS_SUBMISSION_READ = new PropertyConnectionPermissions("forms_submission_read");
+    public static final PropertyConnectionPermissions FORMS_SUBMISSION_WRITE = new PropertyConnectionPermissions("forms_submission_write");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -337,6 +343,8 @@ public class PropertyConnectionPermissions {
         map.put("payment_subscription_write", PAYMENT_SUBSCRIPTION_WRITE);
         map.put("commerce_item_read", COMMERCE_ITEM_READ);
         map.put("commerce_item_write", COMMERCE_ITEM_WRITE);
+        map.put("commerce_itemvariant_read", COMMERCE_ITEMVARIANT_READ);
+        map.put("commerce_itemvariant_write", COMMERCE_ITEMVARIANT_WRITE);
         map.put("commerce_collection_read", COMMERCE_COLLECTION_READ);
         map.put("commerce_collection_write", COMMERCE_COLLECTION_WRITE);
         map.put("commerce_inventory_read", COMMERCE_INVENTORY_READ);
@@ -487,6 +495,10 @@ public class PropertyConnectionPermissions {
         map.put("ads_report_read", ADS_REPORT_READ);
         map.put("ads_organization_read", ADS_ORGANIZATION_READ);
         map.put("ads_organization_write", ADS_ORGANIZATION_WRITE);
+        map.put("forms_form_read", FORMS_FORM_READ);
+        map.put("forms_form_write", FORMS_FORM_WRITE);
+        map.put("forms_submission_read", FORMS_SUBMISSION_READ);
+        map.put("forms_submission_write", FORMS_SUBMISSION_WRITE);
         return map;
     }
 
@@ -539,6 +551,8 @@ public class PropertyConnectionPermissions {
         map.put("payment_subscription_write", PropertyConnectionPermissionsEnum.PAYMENT_SUBSCRIPTION_WRITE);
         map.put("commerce_item_read", PropertyConnectionPermissionsEnum.COMMERCE_ITEM_READ);
         map.put("commerce_item_write", PropertyConnectionPermissionsEnum.COMMERCE_ITEM_WRITE);
+        map.put("commerce_itemvariant_read", PropertyConnectionPermissionsEnum.COMMERCE_ITEMVARIANT_READ);
+        map.put("commerce_itemvariant_write", PropertyConnectionPermissionsEnum.COMMERCE_ITEMVARIANT_WRITE);
         map.put("commerce_collection_read", PropertyConnectionPermissionsEnum.COMMERCE_COLLECTION_READ);
         map.put("commerce_collection_write", PropertyConnectionPermissionsEnum.COMMERCE_COLLECTION_WRITE);
         map.put("commerce_inventory_read", PropertyConnectionPermissionsEnum.COMMERCE_INVENTORY_READ);
@@ -689,6 +703,10 @@ public class PropertyConnectionPermissions {
         map.put("ads_report_read", PropertyConnectionPermissionsEnum.ADS_REPORT_READ);
         map.put("ads_organization_read", PropertyConnectionPermissionsEnum.ADS_ORGANIZATION_READ);
         map.put("ads_organization_write", PropertyConnectionPermissionsEnum.ADS_ORGANIZATION_WRITE);
+        map.put("forms_form_read", PropertyConnectionPermissionsEnum.FORMS_FORM_READ);
+        map.put("forms_form_write", PropertyConnectionPermissionsEnum.FORMS_FORM_WRITE);
+        map.put("forms_submission_read", PropertyConnectionPermissionsEnum.FORMS_SUBMISSION_READ);
+        map.put("forms_submission_write", PropertyConnectionPermissionsEnum.FORMS_SUBMISSION_WRITE);
         return map;
     }
     
@@ -742,6 +760,8 @@ public class PropertyConnectionPermissions {
         PAYMENT_SUBSCRIPTION_WRITE("payment_subscription_write"),
         COMMERCE_ITEM_READ("commerce_item_read"),
         COMMERCE_ITEM_WRITE("commerce_item_write"),
+        COMMERCE_ITEMVARIANT_READ("commerce_itemvariant_read"),
+        COMMERCE_ITEMVARIANT_WRITE("commerce_itemvariant_write"),
         COMMERCE_COLLECTION_READ("commerce_collection_read"),
         COMMERCE_COLLECTION_WRITE("commerce_collection_write"),
         COMMERCE_INVENTORY_READ("commerce_inventory_read"),
@@ -891,7 +911,11 @@ public class PropertyConnectionPermissions {
         ADS_GROUP_WRITE("ads_group_write"),
         ADS_REPORT_READ("ads_report_read"),
         ADS_ORGANIZATION_READ("ads_organization_read"),
-        ADS_ORGANIZATION_WRITE("ads_organization_write"),;
+        ADS_ORGANIZATION_WRITE("ads_organization_write"),
+        FORMS_FORM_READ("forms_form_read"),
+        FORMS_FORM_WRITE("forms_form_write"),
+        FORMS_SUBMISSION_READ("forms_submission_read"),
+        FORMS_SUBMISSION_WRITE("forms_submission_write"),;
 
         private final String value;
 

@@ -27,10 +27,10 @@ public class UpdateHrisLocationRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<UpdateHrisLocationQueryParamFields>> fields;
 
     /**
      * ID of the Location
@@ -50,7 +50,7 @@ public class UpdateHrisLocationRequest {
     public UpdateHrisLocationRequest(
             HrisLocation hrisLocation,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<UpdateHrisLocationQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(hrisLocation, "hrisLocation");
@@ -87,12 +87,12 @@ public class UpdateHrisLocationRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<UpdateHrisLocationQueryParamFields>> fields() {
+        return (Optional<List<UpdateHrisLocationQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class UpdateHrisLocationRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateHrisLocationRequest withFields(List<String> fields) {
+    public UpdateHrisLocationRequest withFields(List<UpdateHrisLocationQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class UpdateHrisLocationRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateHrisLocationRequest withFields(Optional<? extends List<String>> fields) {
+    public UpdateHrisLocationRequest withFields(Optional<? extends List<UpdateHrisLocationQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class UpdateHrisLocationRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<UpdateHrisLocationQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class UpdateHrisLocationRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<UpdateHrisLocationQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<UpdateHrisLocationQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

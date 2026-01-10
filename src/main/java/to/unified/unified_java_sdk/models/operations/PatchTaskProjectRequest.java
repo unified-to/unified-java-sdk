@@ -27,10 +27,10 @@ public class PatchTaskProjectRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<PatchTaskProjectQueryParamFields>> fields;
 
     /**
      * ID of the Project
@@ -50,7 +50,7 @@ public class PatchTaskProjectRequest {
     public PatchTaskProjectRequest(
             TaskProject taskProject,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<PatchTaskProjectQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(taskProject, "taskProject");
@@ -87,12 +87,12 @@ public class PatchTaskProjectRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<PatchTaskProjectQueryParamFields>> fields() {
+        return (Optional<List<PatchTaskProjectQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class PatchTaskProjectRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchTaskProjectRequest withFields(List<String> fields) {
+    public PatchTaskProjectRequest withFields(List<PatchTaskProjectQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class PatchTaskProjectRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchTaskProjectRequest withFields(Optional<? extends List<String>> fields) {
+    public PatchTaskProjectRequest withFields(Optional<? extends List<PatchTaskProjectQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class PatchTaskProjectRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<PatchTaskProjectQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class PatchTaskProjectRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<PatchTaskProjectQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<PatchTaskProjectQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

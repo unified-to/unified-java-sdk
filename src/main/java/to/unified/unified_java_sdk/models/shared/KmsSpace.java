@@ -8,7 +8,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.core.type.TypeReference;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.Override;
@@ -17,7 +16,6 @@ import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.Map;
 import java.util.Optional;
-import to.unified.unified_java_sdk.utils.LazySingletonValue;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
@@ -58,11 +56,6 @@ public class KmsSpace {
 
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("parent_space_id")
-    private Optional<String> parentSpaceId;
-
-
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
@@ -85,7 +78,6 @@ public class KmsSpace {
             @JsonProperty("name") String name,
             @JsonProperty("parent_id") Optional<String> parentId,
             @JsonProperty("parent_page_id") Optional<String> parentPageId,
-            @JsonProperty("parent_space_id") Optional<String> parentSpaceId,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
             @JsonProperty("user_id") Optional<String> userId) {
@@ -96,7 +88,6 @@ public class KmsSpace {
         Utils.checkNotNull(name, "name");
         Utils.checkNotNull(parentId, "parentId");
         Utils.checkNotNull(parentPageId, "parentPageId");
-        Utils.checkNotNull(parentSpaceId, "parentSpaceId");
         Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(updatedAt, "updatedAt");
         Utils.checkNotNull(userId, "userId");
@@ -107,7 +98,6 @@ public class KmsSpace {
         this.name = name;
         this.parentId = parentId;
         this.parentPageId = parentPageId;
-        this.parentSpaceId = parentSpaceId;
         this.raw = raw;
         this.updatedAt = updatedAt;
         this.userId = userId;
@@ -118,7 +108,7 @@ public class KmsSpace {
         this(Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), name, Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -154,11 +144,6 @@ public class KmsSpace {
     @JsonIgnore
     public Optional<String> parentPageId() {
         return parentPageId;
-    }
-
-    @JsonIgnore
-    public Optional<String> parentSpaceId() {
-        return parentSpaceId;
     }
 
     @SuppressWarnings("unchecked")
@@ -266,19 +251,6 @@ public class KmsSpace {
         return this;
     }
 
-    public KmsSpace withParentSpaceId(String parentSpaceId) {
-        Utils.checkNotNull(parentSpaceId, "parentSpaceId");
-        this.parentSpaceId = Optional.ofNullable(parentSpaceId);
-        return this;
-    }
-
-
-    public KmsSpace withParentSpaceId(Optional<String> parentSpaceId) {
-        Utils.checkNotNull(parentSpaceId, "parentSpaceId");
-        this.parentSpaceId = parentSpaceId;
-        return this;
-    }
-
     public KmsSpace withRaw(Map<String, Object> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
@@ -335,7 +307,6 @@ public class KmsSpace {
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.parentPageId, other.parentPageId) &&
-            Utils.enhancedDeepEquals(this.parentSpaceId, other.parentSpaceId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
             Utils.enhancedDeepEquals(this.userId, other.userId);
@@ -346,8 +317,8 @@ public class KmsSpace {
         return Utils.enhancedHash(
             createdAt, description, id,
             isActive, name, parentId,
-            parentPageId, parentSpaceId, raw,
-            updatedAt, userId);
+            parentPageId, raw, updatedAt,
+            userId);
     }
     
     @Override
@@ -360,7 +331,6 @@ public class KmsSpace {
                 "name", name,
                 "parentId", parentId,
                 "parentPageId", parentPageId,
-                "parentSpaceId", parentSpaceId,
                 "raw", raw,
                 "updatedAt", updatedAt,
                 "userId", userId);
@@ -382,8 +352,6 @@ public class KmsSpace {
         private Optional<String> parentId = Optional.empty();
 
         private Optional<String> parentPageId = Optional.empty();
-
-        private Optional<String> parentSpaceId;
 
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
 
@@ -481,19 +449,6 @@ public class KmsSpace {
         }
 
 
-        public Builder parentSpaceId(String parentSpaceId) {
-            Utils.checkNotNull(parentSpaceId, "parentSpaceId");
-            this.parentSpaceId = Optional.ofNullable(parentSpaceId);
-            return this;
-        }
-
-        public Builder parentSpaceId(Optional<String> parentSpaceId) {
-            Utils.checkNotNull(parentSpaceId, "parentSpaceId");
-            this.parentSpaceId = parentSpaceId;
-            return this;
-        }
-
-
         public Builder raw(Map<String, Object> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
@@ -533,22 +488,13 @@ public class KmsSpace {
         }
 
         public KmsSpace build() {
-            if (parentSpaceId == null) {
-                parentSpaceId = _SINGLETON_VALUE_ParentSpaceId.value();
-            }
 
             return new KmsSpace(
                 createdAt, description, id,
                 isActive, name, parentId,
-                parentPageId, parentSpaceId, raw,
-                updatedAt, userId);
+                parentPageId, raw, updatedAt,
+                userId);
         }
 
-
-        private static final LazySingletonValue<Optional<String>> _SINGLETON_VALUE_ParentSpaceId =
-                new LazySingletonValue<>(
-                        "parent_space_id",
-                        "\"sp\"",
-                        new TypeReference<Optional<String>>() {});
     }
 }

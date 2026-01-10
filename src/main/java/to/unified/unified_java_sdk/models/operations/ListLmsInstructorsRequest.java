@@ -17,13 +17,13 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListLmsInstructorsRequest {
     /**
-     * The class ID to filter by
+     * The class ID to filter by (reference to LmsClass)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=class_id")
     private Optional<String> classId;
 
     /**
-     * The company ID to filter by
+     * The company ID to filter by (reference to HrisCompany)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=company_id")
     private Optional<String> companyId;
@@ -35,26 +35,20 @@ public class ListLmsInstructorsRequest {
     private String connectionId;
 
     /**
-     * The course ID to filter by
+     * The course ID to filter by (reference to Course)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=course_id")
     private Optional<String> courseId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<ListLmsInstructorsQueryParamFields>> fields;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     private Optional<Double> limit;
-
-    /**
-     * The location ID to filter by
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
-    private Optional<String> locationId;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
@@ -83,7 +77,8 @@ public class ListLmsInstructorsRequest {
     private Optional<String> sort;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private Optional<String> updatedGte;
@@ -94,9 +89,8 @@ public class ListLmsInstructorsRequest {
             Optional<String> companyId,
             String connectionId,
             Optional<String> courseId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<ListLmsInstructorsQueryParamFields>> fields,
             Optional<Double> limit,
-            Optional<String> locationId,
             Optional<Double> offset,
             Optional<String> order,
             Optional<String> query,
@@ -109,7 +103,6 @@ public class ListLmsInstructorsRequest {
         Utils.checkNotNull(courseId, "courseId");
         Utils.checkNotNull(fields, "fields");
         Utils.checkNotNull(limit, "limit");
-        Utils.checkNotNull(locationId, "locationId");
         Utils.checkNotNull(offset, "offset");
         Utils.checkNotNull(order, "order");
         Utils.checkNotNull(query, "query");
@@ -122,7 +115,6 @@ public class ListLmsInstructorsRequest {
         this.courseId = courseId;
         this.fields = fields;
         this.limit = limit;
-        this.locationId = locationId;
         this.offset = offset;
         this.order = order;
         this.query = query;
@@ -136,12 +128,11 @@ public class ListLmsInstructorsRequest {
         this(Optional.empty(), Optional.empty(), connectionId,
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     /**
-     * The class ID to filter by
+     * The class ID to filter by (reference to LmsClass)
      */
     @JsonIgnore
     public Optional<String> classId() {
@@ -149,7 +140,7 @@ public class ListLmsInstructorsRequest {
     }
 
     /**
-     * The company ID to filter by
+     * The company ID to filter by (reference to HrisCompany)
      */
     @JsonIgnore
     public Optional<String> companyId() {
@@ -165,7 +156,7 @@ public class ListLmsInstructorsRequest {
     }
 
     /**
-     * The course ID to filter by
+     * The course ID to filter by (reference to Course)
      */
     @JsonIgnore
     public Optional<String> courseId() {
@@ -173,25 +164,17 @@ public class ListLmsInstructorsRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<ListLmsInstructorsQueryParamFields>> fields() {
+        return (Optional<List<ListLmsInstructorsQueryParamFields>>) fields;
     }
 
     @JsonIgnore
     public Optional<Double> limit() {
         return limit;
-    }
-
-    /**
-     * The location ID to filter by
-     */
-    @JsonIgnore
-    public Optional<String> locationId() {
-        return locationId;
     }
 
     @JsonIgnore
@@ -228,7 +211,8 @@ public class ListLmsInstructorsRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> updatedGte() {
@@ -241,7 +225,7 @@ public class ListLmsInstructorsRequest {
 
 
     /**
-     * The class ID to filter by
+     * The class ID to filter by (reference to LmsClass)
      */
     public ListLmsInstructorsRequest withClassId(String classId) {
         Utils.checkNotNull(classId, "classId");
@@ -251,7 +235,7 @@ public class ListLmsInstructorsRequest {
 
 
     /**
-     * The class ID to filter by
+     * The class ID to filter by (reference to LmsClass)
      */
     public ListLmsInstructorsRequest withClassId(Optional<String> classId) {
         Utils.checkNotNull(classId, "classId");
@@ -260,7 +244,7 @@ public class ListLmsInstructorsRequest {
     }
 
     /**
-     * The company ID to filter by
+     * The company ID to filter by (reference to HrisCompany)
      */
     public ListLmsInstructorsRequest withCompanyId(String companyId) {
         Utils.checkNotNull(companyId, "companyId");
@@ -270,7 +254,7 @@ public class ListLmsInstructorsRequest {
 
 
     /**
-     * The company ID to filter by
+     * The company ID to filter by (reference to HrisCompany)
      */
     public ListLmsInstructorsRequest withCompanyId(Optional<String> companyId) {
         Utils.checkNotNull(companyId, "companyId");
@@ -288,7 +272,7 @@ public class ListLmsInstructorsRequest {
     }
 
     /**
-     * The course ID to filter by
+     * The course ID to filter by (reference to Course)
      */
     public ListLmsInstructorsRequest withCourseId(String courseId) {
         Utils.checkNotNull(courseId, "courseId");
@@ -298,7 +282,7 @@ public class ListLmsInstructorsRequest {
 
 
     /**
-     * The course ID to filter by
+     * The course ID to filter by (reference to Course)
      */
     public ListLmsInstructorsRequest withCourseId(Optional<String> courseId) {
         Utils.checkNotNull(courseId, "courseId");
@@ -307,9 +291,9 @@ public class ListLmsInstructorsRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListLmsInstructorsRequest withFields(List<String> fields) {
+    public ListLmsInstructorsRequest withFields(List<ListLmsInstructorsQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -317,9 +301,9 @@ public class ListLmsInstructorsRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListLmsInstructorsRequest withFields(Optional<? extends List<String>> fields) {
+    public ListLmsInstructorsRequest withFields(Optional<? extends List<ListLmsInstructorsQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -335,25 +319,6 @@ public class ListLmsInstructorsRequest {
     public ListLmsInstructorsRequest withLimit(Optional<Double> limit) {
         Utils.checkNotNull(limit, "limit");
         this.limit = limit;
-        return this;
-    }
-
-    /**
-     * The location ID to filter by
-     */
-    public ListLmsInstructorsRequest withLocationId(String locationId) {
-        Utils.checkNotNull(locationId, "locationId");
-        this.locationId = Optional.ofNullable(locationId);
-        return this;
-    }
-
-
-    /**
-     * The location ID to filter by
-     */
-    public ListLmsInstructorsRequest withLocationId(Optional<String> locationId) {
-        Utils.checkNotNull(locationId, "locationId");
-        this.locationId = locationId;
         return this;
     }
 
@@ -439,7 +404,8 @@ public class ListLmsInstructorsRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListLmsInstructorsRequest withUpdatedGte(String updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -449,7 +415,8 @@ public class ListLmsInstructorsRequest {
 
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListLmsInstructorsRequest withUpdatedGte(Optional<String> updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -473,7 +440,6 @@ public class ListLmsInstructorsRequest {
             Utils.enhancedDeepEquals(this.courseId, other.courseId) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
-            Utils.enhancedDeepEquals(this.locationId, other.locationId) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
             Utils.enhancedDeepEquals(this.order, other.order) &&
             Utils.enhancedDeepEquals(this.query, other.query) &&
@@ -487,9 +453,8 @@ public class ListLmsInstructorsRequest {
         return Utils.enhancedHash(
             classId, companyId, connectionId,
             courseId, fields, limit,
-            locationId, offset, order,
-            query, raw, sort,
-            updatedGte);
+            offset, order, query,
+            raw, sort, updatedGte);
     }
     
     @Override
@@ -501,7 +466,6 @@ public class ListLmsInstructorsRequest {
                 "courseId", courseId,
                 "fields", fields,
                 "limit", limit,
-                "locationId", locationId,
                 "offset", offset,
                 "order", order,
                 "query", query,
@@ -521,11 +485,9 @@ public class ListLmsInstructorsRequest {
 
         private Optional<String> courseId = Optional.empty();
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<ListLmsInstructorsQueryParamFields>> fields = Optional.empty();
 
         private Optional<Double> limit = Optional.empty();
-
-        private Optional<String> locationId = Optional.empty();
 
         private Optional<Double> offset = Optional.empty();
 
@@ -545,7 +507,7 @@ public class ListLmsInstructorsRequest {
 
 
         /**
-         * The class ID to filter by
+         * The class ID to filter by (reference to LmsClass)
          */
         public Builder classId(String classId) {
             Utils.checkNotNull(classId, "classId");
@@ -554,7 +516,7 @@ public class ListLmsInstructorsRequest {
         }
 
         /**
-         * The class ID to filter by
+         * The class ID to filter by (reference to LmsClass)
          */
         public Builder classId(Optional<String> classId) {
             Utils.checkNotNull(classId, "classId");
@@ -564,7 +526,7 @@ public class ListLmsInstructorsRequest {
 
 
         /**
-         * The company ID to filter by
+         * The company ID to filter by (reference to HrisCompany)
          */
         public Builder companyId(String companyId) {
             Utils.checkNotNull(companyId, "companyId");
@@ -573,7 +535,7 @@ public class ListLmsInstructorsRequest {
         }
 
         /**
-         * The company ID to filter by
+         * The company ID to filter by (reference to HrisCompany)
          */
         public Builder companyId(Optional<String> companyId) {
             Utils.checkNotNull(companyId, "companyId");
@@ -593,7 +555,7 @@ public class ListLmsInstructorsRequest {
 
 
         /**
-         * The course ID to filter by
+         * The course ID to filter by (reference to Course)
          */
         public Builder courseId(String courseId) {
             Utils.checkNotNull(courseId, "courseId");
@@ -602,7 +564,7 @@ public class ListLmsInstructorsRequest {
         }
 
         /**
-         * The course ID to filter by
+         * The course ID to filter by (reference to Course)
          */
         public Builder courseId(Optional<String> courseId) {
             Utils.checkNotNull(courseId, "courseId");
@@ -612,18 +574,18 @@ public class ListLmsInstructorsRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<ListLmsInstructorsQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<ListLmsInstructorsQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;
@@ -639,25 +601,6 @@ public class ListLmsInstructorsRequest {
         public Builder limit(Optional<Double> limit) {
             Utils.checkNotNull(limit, "limit");
             this.limit = limit;
-            return this;
-        }
-
-
-        /**
-         * The location ID to filter by
-         */
-        public Builder locationId(String locationId) {
-            Utils.checkNotNull(locationId, "locationId");
-            this.locationId = Optional.ofNullable(locationId);
-            return this;
-        }
-
-        /**
-         * The location ID to filter by
-         */
-        public Builder locationId(Optional<String> locationId) {
-            Utils.checkNotNull(locationId, "locationId");
-            this.locationId = locationId;
             return this;
         }
 
@@ -744,7 +687,8 @@ public class ListLmsInstructorsRequest {
 
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(String updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -753,7 +697,8 @@ public class ListLmsInstructorsRequest {
         }
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(Optional<String> updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -766,9 +711,8 @@ public class ListLmsInstructorsRequest {
             return new ListLmsInstructorsRequest(
                 classId, companyId, connectionId,
                 courseId, fields, limit,
-                locationId, offset, order,
-                query, raw, sort,
-                updatedGte);
+                offset, order, query,
+                raw, sort, updatedGte);
         }
 
     }

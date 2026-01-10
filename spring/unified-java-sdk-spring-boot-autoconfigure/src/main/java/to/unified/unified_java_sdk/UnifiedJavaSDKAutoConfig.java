@@ -694,6 +694,17 @@ public class UnifiedJavaSDKAutoConfig {
         return unifiedTo.item();
     }
     /**
+     * Creates a Itemvariant sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Itemvariant instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Itemvariant itemvariant(UnifiedTo unifiedTo) {
+        return unifiedTo.itemvariant();
+    }
+    /**
      * Creates a Location sub-SDK bean if none exists.
      *
      * @param unifiedTo the main SDK instance
@@ -791,6 +802,39 @@ public class UnifiedJavaSDKAutoConfig {
     @ConditionalOnMissingBean
     public Person person(UnifiedTo unifiedTo) {
         return unifiedTo.person();
+    }
+    /**
+     * Creates a Forms sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Forms instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Forms forms(UnifiedTo unifiedTo) {
+        return unifiedTo.forms();
+    }
+    /**
+     * Creates a Form sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Form instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Form form(UnifiedTo unifiedTo) {
+        return unifiedTo.form();
+    }
+    /**
+     * Creates a Submission sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Submission instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Submission submission(UnifiedTo unifiedTo) {
+        return unifiedTo.submission();
     }
     /**
      * Creates a Genai sub-SDK bean if none exists.
@@ -1972,6 +2016,17 @@ public class UnifiedJavaSDKAutoConfig {
         return asyncUnifiedTo.item();
     }
     /**
+     * Creates an AsyncItemvariant sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncItemvariant instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncItemvariant asyncItemvariant(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.itemvariant();
+    }
+    /**
      * Creates an AsyncLocation sub-SDK bean if none exists.
      *
      * @param asyncUnifiedTo the async SDK instance
@@ -2069,6 +2124,39 @@ public class UnifiedJavaSDKAutoConfig {
     @ConditionalOnMissingBean
     public AsyncPerson asyncPerson(AsyncUnifiedTo asyncUnifiedTo) {
         return asyncUnifiedTo.person();
+    }
+    /**
+     * Creates an AsyncForms sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncForms instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncForms asyncForms(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.forms();
+    }
+    /**
+     * Creates an AsyncForm sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncForm instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncForm asyncForm(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.form();
+    }
+    /**
+     * Creates an AsyncSubmission sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncSubmission instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncSubmission asyncSubmission(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.submission();
     }
     /**
      * Creates an AsyncGenai sub-SDK bean if none exists.

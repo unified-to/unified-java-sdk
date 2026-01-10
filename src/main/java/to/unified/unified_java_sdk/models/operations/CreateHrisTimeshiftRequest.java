@@ -27,10 +27,10 @@ public class CreateHrisTimeshiftRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<CreateHrisTimeshiftQueryParamFields>> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -44,7 +44,7 @@ public class CreateHrisTimeshiftRequest {
     public CreateHrisTimeshiftRequest(
             HrisTimeshift hrisTimeshift,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<CreateHrisTimeshiftQueryParamFields>> fields,
             Optional<String> raw) {
         Utils.checkNotNull(hrisTimeshift, "hrisTimeshift");
         Utils.checkNotNull(connectionId, "connectionId");
@@ -77,12 +77,12 @@ public class CreateHrisTimeshiftRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<CreateHrisTimeshiftQueryParamFields>> fields() {
+        return (Optional<List<CreateHrisTimeshiftQueryParamFields>>) fields;
     }
 
     /**
@@ -116,9 +116,9 @@ public class CreateHrisTimeshiftRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public CreateHrisTimeshiftRequest withFields(List<String> fields) {
+    public CreateHrisTimeshiftRequest withFields(List<CreateHrisTimeshiftQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -126,9 +126,9 @@ public class CreateHrisTimeshiftRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public CreateHrisTimeshiftRequest withFields(Optional<? extends List<String>> fields) {
+    public CreateHrisTimeshiftRequest withFields(Optional<? extends List<CreateHrisTimeshiftQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -196,7 +196,7 @@ public class CreateHrisTimeshiftRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<CreateHrisTimeshiftQueryParamFields>> fields = Optional.empty();
 
         private Optional<String> raw = Optional.empty();
 
@@ -223,18 +223,18 @@ public class CreateHrisTimeshiftRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<CreateHrisTimeshiftQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<CreateHrisTimeshiftQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

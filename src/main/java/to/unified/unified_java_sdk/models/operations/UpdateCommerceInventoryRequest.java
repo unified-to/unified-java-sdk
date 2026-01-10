@@ -27,10 +27,10 @@ public class UpdateCommerceInventoryRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<UpdateCommerceInventoryQueryParamFields>> fields;
 
     /**
      * ID of the Inventory
@@ -50,7 +50,7 @@ public class UpdateCommerceInventoryRequest {
     public UpdateCommerceInventoryRequest(
             CommerceInventory commerceInventory,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<UpdateCommerceInventoryQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(commerceInventory, "commerceInventory");
@@ -87,12 +87,12 @@ public class UpdateCommerceInventoryRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<UpdateCommerceInventoryQueryParamFields>> fields() {
+        return (Optional<List<UpdateCommerceInventoryQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class UpdateCommerceInventoryRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateCommerceInventoryRequest withFields(List<String> fields) {
+    public UpdateCommerceInventoryRequest withFields(List<UpdateCommerceInventoryQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class UpdateCommerceInventoryRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateCommerceInventoryRequest withFields(Optional<? extends List<String>> fields) {
+    public UpdateCommerceInventoryRequest withFields(Optional<? extends List<UpdateCommerceInventoryQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class UpdateCommerceInventoryRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<UpdateCommerceInventoryQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class UpdateCommerceInventoryRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<UpdateCommerceInventoryQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<UpdateCommerceInventoryQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

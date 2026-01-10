@@ -29,10 +29,10 @@ public class CreateCrmContactRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<CreateCrmContactQueryParamFields>> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -46,7 +46,7 @@ public class CreateCrmContactRequest {
     public CreateCrmContactRequest(
             CrmContact crmContact,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<CreateCrmContactQueryParamFields>> fields,
             Optional<String> raw) {
         Utils.checkNotNull(crmContact, "crmContact");
         Utils.checkNotNull(connectionId, "connectionId");
@@ -82,12 +82,12 @@ public class CreateCrmContactRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<CreateCrmContactQueryParamFields>> fields() {
+        return (Optional<List<CreateCrmContactQueryParamFields>>) fields;
     }
 
     /**
@@ -124,9 +124,9 @@ public class CreateCrmContactRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public CreateCrmContactRequest withFields(List<String> fields) {
+    public CreateCrmContactRequest withFields(List<CreateCrmContactQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -134,9 +134,9 @@ public class CreateCrmContactRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public CreateCrmContactRequest withFields(Optional<? extends List<String>> fields) {
+    public CreateCrmContactRequest withFields(Optional<? extends List<CreateCrmContactQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -204,7 +204,7 @@ public class CreateCrmContactRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<CreateCrmContactQueryParamFields>> fields = Optional.empty();
 
         private Optional<String> raw = Optional.empty();
 
@@ -234,18 +234,18 @@ public class CreateCrmContactRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<CreateCrmContactQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<CreateCrmContactQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

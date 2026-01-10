@@ -72,11 +72,6 @@ public class AccountingAccount {
 
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("parent_account_id")
-    private Optional<String> parentAccountId;
-
-
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     private Optional<String> parentId;
 
@@ -126,7 +121,6 @@ public class AccountingAccount {
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("is_payable") Optional<Boolean> isPayable,
             @JsonProperty("name") Optional<String> name,
-            @JsonProperty("parent_account_id") Optional<String> parentAccountId,
             @JsonProperty("parent_id") Optional<String> parentId,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
             @JsonProperty("section") Optional<String> section,
@@ -144,7 +138,6 @@ public class AccountingAccount {
         Utils.checkNotNull(id, "id");
         Utils.checkNotNull(isPayable, "isPayable");
         Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(parentAccountId, "parentAccountId");
         Utils.checkNotNull(parentId, "parentId");
         Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(section, "section");
@@ -162,7 +155,6 @@ public class AccountingAccount {
         this.id = id;
         this.isPayable = isPayable;
         this.name = name;
-        this.parentAccountId = parentAccountId;
         this.parentId = parentId;
         this.raw = raw;
         this.section = section;
@@ -179,7 +171,7 @@ public class AccountingAccount {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -225,11 +217,6 @@ public class AccountingAccount {
     @JsonIgnore
     public Optional<String> name() {
         return name;
-    }
-
-    @JsonIgnore
-    public Optional<String> parentAccountId() {
-        return parentAccountId;
     }
 
     @JsonIgnore
@@ -397,19 +384,6 @@ public class AccountingAccount {
         return this;
     }
 
-    public AccountingAccount withParentAccountId(String parentAccountId) {
-        Utils.checkNotNull(parentAccountId, "parentAccountId");
-        this.parentAccountId = Optional.ofNullable(parentAccountId);
-        return this;
-    }
-
-
-    public AccountingAccount withParentAccountId(Optional<String> parentAccountId) {
-        Utils.checkNotNull(parentAccountId, "parentAccountId");
-        this.parentAccountId = parentAccountId;
-        return this;
-    }
-
     public AccountingAccount withParentId(String parentId) {
         Utils.checkNotNull(parentId, "parentId");
         this.parentId = Optional.ofNullable(parentId);
@@ -533,7 +507,6 @@ public class AccountingAccount {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isPayable, other.isPayable) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
-            Utils.enhancedDeepEquals(this.parentAccountId, other.parentAccountId) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.section, other.section) &&
@@ -550,9 +523,9 @@ public class AccountingAccount {
             balance, createdAt, currency,
             customerDefinedCode, description, group,
             id, isPayable, name,
-            parentAccountId, parentId, raw,
-            section, status, subgroup,
-            subsection, type, updatedAt);
+            parentId, raw, section,
+            status, subgroup, subsection,
+            type, updatedAt);
     }
     
     @Override
@@ -567,7 +540,6 @@ public class AccountingAccount {
                 "id", id,
                 "isPayable", isPayable,
                 "name", name,
-                "parentAccountId", parentAccountId,
                 "parentId", parentId,
                 "raw", raw,
                 "section", section,
@@ -598,8 +570,6 @@ public class AccountingAccount {
         private Optional<Boolean> isPayable = Optional.empty();
 
         private Optional<String> name = Optional.empty();
-
-        private Optional<String> parentAccountId = Optional.empty();
 
         private Optional<String> parentId = Optional.empty();
 
@@ -739,19 +709,6 @@ public class AccountingAccount {
         }
 
 
-        public Builder parentAccountId(String parentAccountId) {
-            Utils.checkNotNull(parentAccountId, "parentAccountId");
-            this.parentAccountId = Optional.ofNullable(parentAccountId);
-            return this;
-        }
-
-        public Builder parentAccountId(Optional<String> parentAccountId) {
-            Utils.checkNotNull(parentAccountId, "parentAccountId");
-            this.parentAccountId = parentAccountId;
-            return this;
-        }
-
-
         public Builder parentId(String parentId) {
             Utils.checkNotNull(parentId, "parentId");
             this.parentId = Optional.ofNullable(parentId);
@@ -861,9 +818,9 @@ public class AccountingAccount {
                 balance, createdAt, currency,
                 customerDefinedCode, description, group,
                 id, isPayable, name,
-                parentAccountId, parentId, raw,
-                section, status, subgroup,
-                subsection, type, updatedAt);
+                parentId, raw, section,
+                status, subgroup, subsection,
+                type, updatedAt);
         }
 
     }

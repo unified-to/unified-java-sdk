@@ -52,6 +52,8 @@
 | `PAYMENT_SUBSCRIPTION_WRITE`     | payment_subscription_write       |
 | `COMMERCE_ITEM_READ`             | commerce_item_read               |
 | `COMMERCE_ITEM_WRITE`            | commerce_item_write              |
+| `COMMERCE_ITEMVARIANT_READ`      | commerce_itemvariant_read        |
+| `COMMERCE_ITEMVARIANT_WRITE`     | commerce_itemvariant_write       |
 | `COMMERCE_COLLECTION_READ`       | commerce_collection_read         |
 | `COMMERCE_COLLECTION_WRITE`      | commerce_collection_write        |
 | `COMMERCE_INVENTORY_READ`        | commerce_inventory_read          |
@@ -202,3 +204,7 @@
 | `ADS_REPORT_READ`                | ads_report_read                  |
 | `ADS_ORGANIZATION_READ`          | ads_organization_read            |
 | `ADS_ORGANIZATION_WRITE`         | ads_organization_write           |
+| `FORMS_FORM_READ`                | forms_form_read                  |
+| `FORMS_FORM_WRITE`               | forms_form_write                 |
+| `FORMS_SUBMISSION_READ`          | forms_submission_read            |
+| `FORMS_SUBMISSION_WRITE`         | forms_submission_write           |

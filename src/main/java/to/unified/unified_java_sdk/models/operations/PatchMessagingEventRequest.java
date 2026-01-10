@@ -27,10 +27,10 @@ public class PatchMessagingEventRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<PatchMessagingEventQueryParamFields>> fields;
 
     /**
      * ID of the Event
@@ -50,7 +50,7 @@ public class PatchMessagingEventRequest {
     public PatchMessagingEventRequest(
             MessagingEvent messagingEvent,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<PatchMessagingEventQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(messagingEvent, "messagingEvent");
@@ -87,12 +87,12 @@ public class PatchMessagingEventRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<PatchMessagingEventQueryParamFields>> fields() {
+        return (Optional<List<PatchMessagingEventQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class PatchMessagingEventRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchMessagingEventRequest withFields(List<String> fields) {
+    public PatchMessagingEventRequest withFields(List<PatchMessagingEventQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class PatchMessagingEventRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchMessagingEventRequest withFields(Optional<? extends List<String>> fields) {
+    public PatchMessagingEventRequest withFields(Optional<? extends List<PatchMessagingEventQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class PatchMessagingEventRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<PatchMessagingEventQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class PatchMessagingEventRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<PatchMessagingEventQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<PatchMessagingEventQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

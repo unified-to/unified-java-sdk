@@ -27,10 +27,10 @@ public class UpdateCalendarCalendarRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<UpdateCalendarCalendarQueryParamFields>> fields;
 
     /**
      * ID of the Calendar
@@ -50,7 +50,7 @@ public class UpdateCalendarCalendarRequest {
     public UpdateCalendarCalendarRequest(
             CalendarCalendar calendarCalendar,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<UpdateCalendarCalendarQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(calendarCalendar, "calendarCalendar");
@@ -87,12 +87,12 @@ public class UpdateCalendarCalendarRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<UpdateCalendarCalendarQueryParamFields>> fields() {
+        return (Optional<List<UpdateCalendarCalendarQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class UpdateCalendarCalendarRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateCalendarCalendarRequest withFields(List<String> fields) {
+    public UpdateCalendarCalendarRequest withFields(List<UpdateCalendarCalendarQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class UpdateCalendarCalendarRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateCalendarCalendarRequest withFields(Optional<? extends List<String>> fields) {
+    public UpdateCalendarCalendarRequest withFields(Optional<? extends List<UpdateCalendarCalendarQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class UpdateCalendarCalendarRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<UpdateCalendarCalendarQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class UpdateCalendarCalendarRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<UpdateCalendarCalendarQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<UpdateCalendarCalendarQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

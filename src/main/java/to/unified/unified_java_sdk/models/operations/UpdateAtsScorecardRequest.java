@@ -27,10 +27,10 @@ public class UpdateAtsScorecardRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<UpdateAtsScorecardQueryParamFields>> fields;
 
     /**
      * ID of the Scorecard
@@ -50,7 +50,7 @@ public class UpdateAtsScorecardRequest {
     public UpdateAtsScorecardRequest(
             AtsScorecard atsScorecard,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<UpdateAtsScorecardQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(atsScorecard, "atsScorecard");
@@ -87,12 +87,12 @@ public class UpdateAtsScorecardRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<UpdateAtsScorecardQueryParamFields>> fields() {
+        return (Optional<List<UpdateAtsScorecardQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class UpdateAtsScorecardRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateAtsScorecardRequest withFields(List<String> fields) {
+    public UpdateAtsScorecardRequest withFields(List<UpdateAtsScorecardQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class UpdateAtsScorecardRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateAtsScorecardRequest withFields(Optional<? extends List<String>> fields) {
+    public UpdateAtsScorecardRequest withFields(Optional<? extends List<UpdateAtsScorecardQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class UpdateAtsScorecardRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<UpdateAtsScorecardQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class UpdateAtsScorecardRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<UpdateAtsScorecardQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<UpdateAtsScorecardQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

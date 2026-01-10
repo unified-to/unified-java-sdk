@@ -27,10 +27,10 @@ public class UpdateRepoRepositoryRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<UpdateRepoRepositoryQueryParamFields>> fields;
 
     /**
      * ID of the Repository
@@ -50,7 +50,7 @@ public class UpdateRepoRepositoryRequest {
     public UpdateRepoRepositoryRequest(
             RepoRepository repoRepository,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<UpdateRepoRepositoryQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(repoRepository, "repoRepository");
@@ -87,12 +87,12 @@ public class UpdateRepoRepositoryRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<UpdateRepoRepositoryQueryParamFields>> fields() {
+        return (Optional<List<UpdateRepoRepositoryQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class UpdateRepoRepositoryRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateRepoRepositoryRequest withFields(List<String> fields) {
+    public UpdateRepoRepositoryRequest withFields(List<UpdateRepoRepositoryQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class UpdateRepoRepositoryRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateRepoRepositoryRequest withFields(Optional<? extends List<String>> fields) {
+    public UpdateRepoRepositoryRequest withFields(Optional<? extends List<UpdateRepoRepositoryQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class UpdateRepoRepositoryRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<UpdateRepoRepositoryQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class UpdateRepoRepositoryRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<UpdateRepoRepositoryQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<UpdateRepoRepositoryQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

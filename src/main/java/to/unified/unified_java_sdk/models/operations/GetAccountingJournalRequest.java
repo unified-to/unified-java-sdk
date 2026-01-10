@@ -22,10 +22,10 @@ public class GetAccountingJournalRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<GetAccountingJournalQueryParamFields>> fields;
 
     /**
      * ID of the Journal
@@ -44,7 +44,7 @@ public class GetAccountingJournalRequest {
     @JsonCreator
     public GetAccountingJournalRequest(
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<GetAccountingJournalQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(connectionId, "connectionId");
@@ -73,12 +73,12 @@ public class GetAccountingJournalRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<GetAccountingJournalQueryParamFields>> fields() {
+        return (Optional<List<GetAccountingJournalQueryParamFields>>) fields;
     }
 
     /**
@@ -114,9 +114,9 @@ public class GetAccountingJournalRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public GetAccountingJournalRequest withFields(List<String> fields) {
+    public GetAccountingJournalRequest withFields(List<GetAccountingJournalQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -124,9 +124,9 @@ public class GetAccountingJournalRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public GetAccountingJournalRequest withFields(Optional<? extends List<String>> fields) {
+    public GetAccountingJournalRequest withFields(Optional<? extends List<GetAccountingJournalQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -201,7 +201,7 @@ public class GetAccountingJournalRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<GetAccountingJournalQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -223,18 +223,18 @@ public class GetAccountingJournalRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<GetAccountingJournalQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<GetAccountingJournalQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

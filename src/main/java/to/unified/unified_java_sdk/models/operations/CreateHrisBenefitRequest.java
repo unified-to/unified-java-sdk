@@ -29,10 +29,10 @@ public class CreateHrisBenefitRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<CreateHrisBenefitQueryParamFields>> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -46,7 +46,7 @@ public class CreateHrisBenefitRequest {
     public CreateHrisBenefitRequest(
             HrisBenefit hrisBenefit,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<CreateHrisBenefitQueryParamFields>> fields,
             Optional<String> raw) {
         Utils.checkNotNull(hrisBenefit, "hrisBenefit");
         Utils.checkNotNull(connectionId, "connectionId");
@@ -82,12 +82,12 @@ public class CreateHrisBenefitRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<CreateHrisBenefitQueryParamFields>> fields() {
+        return (Optional<List<CreateHrisBenefitQueryParamFields>>) fields;
     }
 
     /**
@@ -124,9 +124,9 @@ public class CreateHrisBenefitRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public CreateHrisBenefitRequest withFields(List<String> fields) {
+    public CreateHrisBenefitRequest withFields(List<CreateHrisBenefitQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -134,9 +134,9 @@ public class CreateHrisBenefitRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public CreateHrisBenefitRequest withFields(Optional<? extends List<String>> fields) {
+    public CreateHrisBenefitRequest withFields(Optional<? extends List<CreateHrisBenefitQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -204,7 +204,7 @@ public class CreateHrisBenefitRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<CreateHrisBenefitQueryParamFields>> fields = Optional.empty();
 
         private Optional<String> raw = Optional.empty();
 
@@ -234,18 +234,18 @@ public class CreateHrisBenefitRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<CreateHrisBenefitQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<CreateHrisBenefitQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

@@ -23,16 +23,16 @@ public class ListAccountingCreditmemoesRequest {
     private String connectionId;
 
     /**
-     * The contact ID to filter by
+     * The contact ID to filter by (reference to AccountingContact)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contact_id")
     private Optional<String> contactId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<ListAccountingCreditmemoesQueryParamFields>> fields;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
@@ -47,7 +47,7 @@ public class ListAccountingCreditmemoesRequest {
     private Optional<String> order;
 
     /**
-     * The org ID to filter by
+     * The org ID to filter by (reference to AccountingOrganization)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org_id")
     private Optional<String> orgId;
@@ -71,7 +71,8 @@ public class ListAccountingCreditmemoesRequest {
     private Optional<String> sort;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private Optional<String> updatedGte;
@@ -80,7 +81,7 @@ public class ListAccountingCreditmemoesRequest {
     public ListAccountingCreditmemoesRequest(
             String connectionId,
             Optional<String> contactId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<ListAccountingCreditmemoesQueryParamFields>> fields,
             Optional<Double> limit,
             Optional<Double> offset,
             Optional<String> order,
@@ -130,7 +131,7 @@ public class ListAccountingCreditmemoesRequest {
     }
 
     /**
-     * The contact ID to filter by
+     * The contact ID to filter by (reference to AccountingContact)
      */
     @JsonIgnore
     public Optional<String> contactId() {
@@ -138,12 +139,12 @@ public class ListAccountingCreditmemoesRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<ListAccountingCreditmemoesQueryParamFields>> fields() {
+        return (Optional<List<ListAccountingCreditmemoesQueryParamFields>>) fields;
     }
 
     @JsonIgnore
@@ -162,7 +163,7 @@ public class ListAccountingCreditmemoesRequest {
     }
 
     /**
-     * The org ID to filter by
+     * The org ID to filter by (reference to AccountingOrganization)
      */
     @JsonIgnore
     public Optional<String> orgId() {
@@ -193,7 +194,8 @@ public class ListAccountingCreditmemoesRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> updatedGte() {
@@ -215,7 +217,7 @@ public class ListAccountingCreditmemoesRequest {
     }
 
     /**
-     * The contact ID to filter by
+     * The contact ID to filter by (reference to AccountingContact)
      */
     public ListAccountingCreditmemoesRequest withContactId(String contactId) {
         Utils.checkNotNull(contactId, "contactId");
@@ -225,7 +227,7 @@ public class ListAccountingCreditmemoesRequest {
 
 
     /**
-     * The contact ID to filter by
+     * The contact ID to filter by (reference to AccountingContact)
      */
     public ListAccountingCreditmemoesRequest withContactId(Optional<String> contactId) {
         Utils.checkNotNull(contactId, "contactId");
@@ -234,9 +236,9 @@ public class ListAccountingCreditmemoesRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListAccountingCreditmemoesRequest withFields(List<String> fields) {
+    public ListAccountingCreditmemoesRequest withFields(List<ListAccountingCreditmemoesQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -244,9 +246,9 @@ public class ListAccountingCreditmemoesRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListAccountingCreditmemoesRequest withFields(Optional<? extends List<String>> fields) {
+    public ListAccountingCreditmemoesRequest withFields(Optional<? extends List<ListAccountingCreditmemoesQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -292,7 +294,7 @@ public class ListAccountingCreditmemoesRequest {
     }
 
     /**
-     * The org ID to filter by
+     * The org ID to filter by (reference to AccountingOrganization)
      */
     public ListAccountingCreditmemoesRequest withOrgId(String orgId) {
         Utils.checkNotNull(orgId, "orgId");
@@ -302,7 +304,7 @@ public class ListAccountingCreditmemoesRequest {
 
 
     /**
-     * The org ID to filter by
+     * The org ID to filter by (reference to AccountingOrganization)
      */
     public ListAccountingCreditmemoesRequest withOrgId(Optional<String> orgId) {
         Utils.checkNotNull(orgId, "orgId");
@@ -366,7 +368,8 @@ public class ListAccountingCreditmemoesRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListAccountingCreditmemoesRequest withUpdatedGte(String updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -376,7 +379,8 @@ public class ListAccountingCreditmemoesRequest {
 
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListAccountingCreditmemoesRequest withUpdatedGte(Optional<String> updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -439,7 +443,7 @@ public class ListAccountingCreditmemoesRequest {
 
         private Optional<String> contactId = Optional.empty();
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<ListAccountingCreditmemoesQueryParamFields>> fields = Optional.empty();
 
         private Optional<Double> limit = Optional.empty();
 
@@ -473,7 +477,7 @@ public class ListAccountingCreditmemoesRequest {
 
 
         /**
-         * The contact ID to filter by
+         * The contact ID to filter by (reference to AccountingContact)
          */
         public Builder contactId(String contactId) {
             Utils.checkNotNull(contactId, "contactId");
@@ -482,7 +486,7 @@ public class ListAccountingCreditmemoesRequest {
         }
 
         /**
-         * The contact ID to filter by
+         * The contact ID to filter by (reference to AccountingContact)
          */
         public Builder contactId(Optional<String> contactId) {
             Utils.checkNotNull(contactId, "contactId");
@@ -492,18 +496,18 @@ public class ListAccountingCreditmemoesRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<ListAccountingCreditmemoesQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<ListAccountingCreditmemoesQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;
@@ -550,7 +554,7 @@ public class ListAccountingCreditmemoesRequest {
 
 
         /**
-         * The org ID to filter by
+         * The org ID to filter by (reference to AccountingOrganization)
          */
         public Builder orgId(String orgId) {
             Utils.checkNotNull(orgId, "orgId");
@@ -559,7 +563,7 @@ public class ListAccountingCreditmemoesRequest {
         }
 
         /**
-         * The org ID to filter by
+         * The org ID to filter by (reference to AccountingOrganization)
          */
         public Builder orgId(Optional<String> orgId) {
             Utils.checkNotNull(orgId, "orgId");
@@ -624,7 +628,8 @@ public class ListAccountingCreditmemoesRequest {
 
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(String updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -633,7 +638,8 @@ public class ListAccountingCreditmemoesRequest {
         }
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(Optional<String> updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");

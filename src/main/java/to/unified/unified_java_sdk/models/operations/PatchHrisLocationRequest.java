@@ -27,10 +27,10 @@ public class PatchHrisLocationRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<PatchHrisLocationQueryParamFields>> fields;
 
     /**
      * ID of the Location
@@ -50,7 +50,7 @@ public class PatchHrisLocationRequest {
     public PatchHrisLocationRequest(
             HrisLocation hrisLocation,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<PatchHrisLocationQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(hrisLocation, "hrisLocation");
@@ -87,12 +87,12 @@ public class PatchHrisLocationRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<PatchHrisLocationQueryParamFields>> fields() {
+        return (Optional<List<PatchHrisLocationQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class PatchHrisLocationRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchHrisLocationRequest withFields(List<String> fields) {
+    public PatchHrisLocationRequest withFields(List<PatchHrisLocationQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class PatchHrisLocationRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchHrisLocationRequest withFields(Optional<? extends List<String>> fields) {
+    public PatchHrisLocationRequest withFields(Optional<? extends List<PatchHrisLocationQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class PatchHrisLocationRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<PatchHrisLocationQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class PatchHrisLocationRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<PatchHrisLocationQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<PatchHrisLocationQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

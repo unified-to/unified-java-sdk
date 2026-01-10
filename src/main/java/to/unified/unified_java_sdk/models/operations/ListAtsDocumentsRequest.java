@@ -35,10 +35,10 @@ public class ListAtsDocumentsRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<ListAtsDocumentsQueryParamFields>> fields;
 
     /**
      * The job ID to filter by
@@ -83,7 +83,8 @@ public class ListAtsDocumentsRequest {
     private Optional<String> type;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private Optional<String> updatedGte;
@@ -93,7 +94,7 @@ public class ListAtsDocumentsRequest {
             Optional<String> applicationId,
             Optional<String> candidateId,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<ListAtsDocumentsQueryParamFields>> fields,
             Optional<String> jobId,
             Optional<Double> limit,
             Optional<Double> offset,
@@ -165,12 +166,12 @@ public class ListAtsDocumentsRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<ListAtsDocumentsQueryParamFields>> fields() {
+        return (Optional<List<ListAtsDocumentsQueryParamFields>>) fields;
     }
 
     /**
@@ -228,7 +229,8 @@ public class ListAtsDocumentsRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> updatedGte() {
@@ -288,9 +290,9 @@ public class ListAtsDocumentsRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListAtsDocumentsRequest withFields(List<String> fields) {
+    public ListAtsDocumentsRequest withFields(List<ListAtsDocumentsQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -298,9 +300,9 @@ public class ListAtsDocumentsRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListAtsDocumentsRequest withFields(Optional<? extends List<String>> fields) {
+    public ListAtsDocumentsRequest withFields(Optional<? extends List<ListAtsDocumentsQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -439,7 +441,8 @@ public class ListAtsDocumentsRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListAtsDocumentsRequest withUpdatedGte(String updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -449,7 +452,8 @@ public class ListAtsDocumentsRequest {
 
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListAtsDocumentsRequest withUpdatedGte(Optional<String> updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -519,7 +523,7 @@ public class ListAtsDocumentsRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<ListAtsDocumentsQueryParamFields>> fields = Optional.empty();
 
         private Optional<String> jobId = Optional.empty();
 
@@ -593,18 +597,18 @@ public class ListAtsDocumentsRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<ListAtsDocumentsQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<ListAtsDocumentsQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;
@@ -744,7 +748,8 @@ public class ListAtsDocumentsRequest {
 
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(String updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -753,7 +758,8 @@ public class ListAtsDocumentsRequest {
         }
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(Optional<String> updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");

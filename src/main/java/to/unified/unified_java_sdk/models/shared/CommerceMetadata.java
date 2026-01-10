@@ -44,11 +44,6 @@ public class CommerceMetadata {
 
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("key")
-    private Optional<String> key;
-
-
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespace")
     private Optional<String> namespace;
 
@@ -56,11 +51,6 @@ public class CommerceMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     private Optional<String> slug;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("type")
-    private Optional<String> type;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -74,38 +64,31 @@ public class CommerceMetadata {
             @JsonProperty("format") Optional<? extends CommerceMetadataFormat> format,
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("is_required") Optional<Boolean> isRequired,
-            @JsonProperty("key") Optional<String> key,
             @JsonProperty("namespace") Optional<String> namespace,
             @JsonProperty("slug") Optional<String> slug,
-            @JsonProperty("type") Optional<String> type,
             @JsonProperty("value") Optional<? extends CommerceMetadataValue> value) {
         Utils.checkNotNull(description, "description");
         Utils.checkNotNull(extraData, "extraData");
         Utils.checkNotNull(format, "format");
         Utils.checkNotNull(id, "id");
         Utils.checkNotNull(isRequired, "isRequired");
-        Utils.checkNotNull(key, "key");
         Utils.checkNotNull(namespace, "namespace");
         Utils.checkNotNull(slug, "slug");
-        Utils.checkNotNull(type, "type");
         Utils.checkNotNull(value, "value");
         this.description = description;
         this.extraData = extraData;
         this.format = format;
         this.id = id;
         this.isRequired = isRequired;
-        this.key = key;
         this.namespace = namespace;
         this.slug = slug;
-        this.type = type;
         this.value = value;
     }
     
     public CommerceMetadata() {
         this(Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -136,11 +119,6 @@ public class CommerceMetadata {
     }
 
     @JsonIgnore
-    public Optional<String> key() {
-        return key;
-    }
-
-    @JsonIgnore
     public Optional<String> namespace() {
         return namespace;
     }
@@ -148,11 +126,6 @@ public class CommerceMetadata {
     @JsonIgnore
     public Optional<String> slug() {
         return slug;
-    }
-
-    @JsonIgnore
-    public Optional<String> type() {
-        return type;
     }
 
     @SuppressWarnings("unchecked")
@@ -231,19 +204,6 @@ public class CommerceMetadata {
         return this;
     }
 
-    public CommerceMetadata withKey(String key) {
-        Utils.checkNotNull(key, "key");
-        this.key = Optional.ofNullable(key);
-        return this;
-    }
-
-
-    public CommerceMetadata withKey(Optional<String> key) {
-        Utils.checkNotNull(key, "key");
-        this.key = key;
-        return this;
-    }
-
     public CommerceMetadata withNamespace(String namespace) {
         Utils.checkNotNull(namespace, "namespace");
         this.namespace = Optional.ofNullable(namespace);
@@ -267,19 +227,6 @@ public class CommerceMetadata {
     public CommerceMetadata withSlug(Optional<String> slug) {
         Utils.checkNotNull(slug, "slug");
         this.slug = slug;
-        return this;
-    }
-
-    public CommerceMetadata withType(String type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
-        return this;
-    }
-
-
-    public CommerceMetadata withType(Optional<String> type) {
-        Utils.checkNotNull(type, "type");
-        this.type = type;
         return this;
     }
 
@@ -311,10 +258,8 @@ public class CommerceMetadata {
             Utils.enhancedDeepEquals(this.format, other.format) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isRequired, other.isRequired) &&
-            Utils.enhancedDeepEquals(this.key, other.key) &&
             Utils.enhancedDeepEquals(this.namespace, other.namespace) &&
             Utils.enhancedDeepEquals(this.slug, other.slug) &&
-            Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.value, other.value);
     }
     
@@ -322,9 +267,8 @@ public class CommerceMetadata {
     public int hashCode() {
         return Utils.enhancedHash(
             description, extraData, format,
-            id, isRequired, key,
-            namespace, slug, type,
-            value);
+            id, isRequired, namespace,
+            slug, value);
     }
     
     @Override
@@ -335,10 +279,8 @@ public class CommerceMetadata {
                 "format", format,
                 "id", id,
                 "isRequired", isRequired,
-                "key", key,
                 "namespace", namespace,
                 "slug", slug,
-                "type", type,
                 "value", value);
     }
 
@@ -355,13 +297,9 @@ public class CommerceMetadata {
 
         private Optional<Boolean> isRequired = Optional.empty();
 
-        private Optional<String> key = Optional.empty();
-
         private Optional<String> namespace = Optional.empty();
 
         private Optional<String> slug = Optional.empty();
-
-        private Optional<String> type = Optional.empty();
 
         private Optional<? extends CommerceMetadataValue> value = Optional.empty();
 
@@ -435,19 +373,6 @@ public class CommerceMetadata {
         }
 
 
-        public Builder key(String key) {
-            Utils.checkNotNull(key, "key");
-            this.key = Optional.ofNullable(key);
-            return this;
-        }
-
-        public Builder key(Optional<String> key) {
-            Utils.checkNotNull(key, "key");
-            this.key = key;
-            return this;
-        }
-
-
         public Builder namespace(String namespace) {
             Utils.checkNotNull(namespace, "namespace");
             this.namespace = Optional.ofNullable(namespace);
@@ -474,19 +399,6 @@ public class CommerceMetadata {
         }
 
 
-        public Builder type(String type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<String> type) {
-            Utils.checkNotNull(type, "type");
-            this.type = type;
-            return this;
-        }
-
-
         public Builder value(CommerceMetadataValue value) {
             Utils.checkNotNull(value, "value");
             this.value = Optional.ofNullable(value);
@@ -503,9 +415,8 @@ public class CommerceMetadata {
 
             return new CommerceMetadata(
                 description, extraData, format,
-                id, isRequired, key,
-                namespace, slug, type,
-                value);
+                id, isRequired, namespace,
+                slug, value);
         }
 
     }

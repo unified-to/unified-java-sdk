@@ -27,10 +27,10 @@ public class PatchHrisEmployeeRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<PatchHrisEmployeeQueryParamFields>> fields;
 
     /**
      * ID of the Employee
@@ -50,7 +50,7 @@ public class PatchHrisEmployeeRequest {
     public PatchHrisEmployeeRequest(
             HrisEmployee hrisEmployee,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<PatchHrisEmployeeQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(hrisEmployee, "hrisEmployee");
@@ -87,12 +87,12 @@ public class PatchHrisEmployeeRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<PatchHrisEmployeeQueryParamFields>> fields() {
+        return (Optional<List<PatchHrisEmployeeQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class PatchHrisEmployeeRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchHrisEmployeeRequest withFields(List<String> fields) {
+    public PatchHrisEmployeeRequest withFields(List<PatchHrisEmployeeQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class PatchHrisEmployeeRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchHrisEmployeeRequest withFields(Optional<? extends List<String>> fields) {
+    public PatchHrisEmployeeRequest withFields(Optional<? extends List<PatchHrisEmployeeQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class PatchHrisEmployeeRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<PatchHrisEmployeeQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class PatchHrisEmployeeRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<PatchHrisEmployeeQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<PatchHrisEmployeeQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

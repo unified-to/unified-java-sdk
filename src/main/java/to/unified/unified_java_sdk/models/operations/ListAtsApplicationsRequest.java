@@ -23,7 +23,7 @@ public class ListAtsApplicationsRequest {
     private Optional<String> candidateId;
 
     /**
-     * The company ID to filter by
+     * The company ID to filter by (reference to AtsCompany)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=company_id")
     private Optional<String> companyId;
@@ -35,10 +35,10 @@ public class ListAtsApplicationsRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<ListAtsApplicationsQueryParamFields>> fields;
 
     /**
      * The job ID to filter by
@@ -77,7 +77,8 @@ public class ListAtsApplicationsRequest {
     private Optional<String> sort;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private Optional<String> updatedGte;
@@ -87,7 +88,7 @@ public class ListAtsApplicationsRequest {
             Optional<String> candidateId,
             Optional<String> companyId,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<ListAtsApplicationsQueryParamFields>> fields,
             Optional<String> jobId,
             Optional<Double> limit,
             Optional<Double> offset,
@@ -139,7 +140,7 @@ public class ListAtsApplicationsRequest {
     }
 
     /**
-     * The company ID to filter by
+     * The company ID to filter by (reference to AtsCompany)
      */
     @JsonIgnore
     public Optional<String> companyId() {
@@ -155,12 +156,12 @@ public class ListAtsApplicationsRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<ListAtsApplicationsQueryParamFields>> fields() {
+        return (Optional<List<ListAtsApplicationsQueryParamFields>>) fields;
     }
 
     /**
@@ -210,7 +211,8 @@ public class ListAtsApplicationsRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> updatedGte() {
@@ -242,7 +244,7 @@ public class ListAtsApplicationsRequest {
     }
 
     /**
-     * The company ID to filter by
+     * The company ID to filter by (reference to AtsCompany)
      */
     public ListAtsApplicationsRequest withCompanyId(String companyId) {
         Utils.checkNotNull(companyId, "companyId");
@@ -252,7 +254,7 @@ public class ListAtsApplicationsRequest {
 
 
     /**
-     * The company ID to filter by
+     * The company ID to filter by (reference to AtsCompany)
      */
     public ListAtsApplicationsRequest withCompanyId(Optional<String> companyId) {
         Utils.checkNotNull(companyId, "companyId");
@@ -270,9 +272,9 @@ public class ListAtsApplicationsRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListAtsApplicationsRequest withFields(List<String> fields) {
+    public ListAtsApplicationsRequest withFields(List<ListAtsApplicationsQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -280,9 +282,9 @@ public class ListAtsApplicationsRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListAtsApplicationsRequest withFields(Optional<? extends List<String>> fields) {
+    public ListAtsApplicationsRequest withFields(Optional<? extends List<ListAtsApplicationsQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -402,7 +404,8 @@ public class ListAtsApplicationsRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListAtsApplicationsRequest withUpdatedGte(String updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -412,7 +415,8 @@ public class ListAtsApplicationsRequest {
 
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListAtsApplicationsRequest withUpdatedGte(Optional<String> updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -479,7 +483,7 @@ public class ListAtsApplicationsRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<ListAtsApplicationsQueryParamFields>> fields = Optional.empty();
 
         private Optional<String> jobId = Optional.empty();
 
@@ -522,7 +526,7 @@ public class ListAtsApplicationsRequest {
 
 
         /**
-         * The company ID to filter by
+         * The company ID to filter by (reference to AtsCompany)
          */
         public Builder companyId(String companyId) {
             Utils.checkNotNull(companyId, "companyId");
@@ -531,7 +535,7 @@ public class ListAtsApplicationsRequest {
         }
 
         /**
-         * The company ID to filter by
+         * The company ID to filter by (reference to AtsCompany)
          */
         public Builder companyId(Optional<String> companyId) {
             Utils.checkNotNull(companyId, "companyId");
@@ -551,18 +555,18 @@ public class ListAtsApplicationsRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<ListAtsApplicationsQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<ListAtsApplicationsQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;
@@ -683,7 +687,8 @@ public class ListAtsApplicationsRequest {
 
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(String updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -692,7 +697,8 @@ public class ListAtsApplicationsRequest {
         }
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(Optional<String> updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");

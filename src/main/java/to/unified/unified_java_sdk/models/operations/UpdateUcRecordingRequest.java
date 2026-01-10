@@ -27,10 +27,10 @@ public class UpdateUcRecordingRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<UpdateUcRecordingQueryParamFields>> fields;
 
     /**
      * ID of the Recording
@@ -50,7 +50,7 @@ public class UpdateUcRecordingRequest {
     public UpdateUcRecordingRequest(
             UcRecording ucRecording,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<UpdateUcRecordingQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(ucRecording, "ucRecording");
@@ -87,12 +87,12 @@ public class UpdateUcRecordingRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<UpdateUcRecordingQueryParamFields>> fields() {
+        return (Optional<List<UpdateUcRecordingQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class UpdateUcRecordingRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateUcRecordingRequest withFields(List<String> fields) {
+    public UpdateUcRecordingRequest withFields(List<UpdateUcRecordingQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class UpdateUcRecordingRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateUcRecordingRequest withFields(Optional<? extends List<String>> fields) {
+    public UpdateUcRecordingRequest withFields(Optional<? extends List<UpdateUcRecordingQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class UpdateUcRecordingRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<UpdateUcRecordingQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class UpdateUcRecordingRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<UpdateUcRecordingQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<UpdateUcRecordingQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

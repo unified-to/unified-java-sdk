@@ -27,10 +27,10 @@ public class UpdateAccountingCreditmemoRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<UpdateAccountingCreditmemoQueryParamFields>> fields;
 
     /**
      * ID of the Creditmemo
@@ -50,7 +50,7 @@ public class UpdateAccountingCreditmemoRequest {
     public UpdateAccountingCreditmemoRequest(
             AccountingCreditmemo accountingCreditmemo,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<UpdateAccountingCreditmemoQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(accountingCreditmemo, "accountingCreditmemo");
@@ -87,12 +87,12 @@ public class UpdateAccountingCreditmemoRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<UpdateAccountingCreditmemoQueryParamFields>> fields() {
+        return (Optional<List<UpdateAccountingCreditmemoQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class UpdateAccountingCreditmemoRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateAccountingCreditmemoRequest withFields(List<String> fields) {
+    public UpdateAccountingCreditmemoRequest withFields(List<UpdateAccountingCreditmemoQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class UpdateAccountingCreditmemoRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateAccountingCreditmemoRequest withFields(Optional<? extends List<String>> fields) {
+    public UpdateAccountingCreditmemoRequest withFields(Optional<? extends List<UpdateAccountingCreditmemoQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class UpdateAccountingCreditmemoRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<UpdateAccountingCreditmemoQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class UpdateAccountingCreditmemoRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<UpdateAccountingCreditmemoQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<UpdateAccountingCreditmemoQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

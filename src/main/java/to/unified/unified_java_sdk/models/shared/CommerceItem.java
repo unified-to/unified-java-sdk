@@ -112,6 +112,11 @@ public class CommerceItem {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("taxrate_id")
+    private Optional<String> taxrateId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private Optional<String> type;
 
@@ -151,6 +156,7 @@ public class CommerceItem {
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
             @JsonProperty("slug") Optional<String> slug,
             @JsonProperty("tags") Optional<? extends List<String>> tags,
+            @JsonProperty("taxrate_id") Optional<String> taxrateId,
             @JsonProperty("type") Optional<String> type,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
             @JsonProperty("variants") Optional<? extends List<CommerceItemVariant>> variants,
@@ -172,6 +178,7 @@ public class CommerceItem {
         Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(slug, "slug");
         Utils.checkNotNull(tags, "tags");
+        Utils.checkNotNull(taxrateId, "taxrateId");
         Utils.checkNotNull(type, "type");
         Utils.checkNotNull(updatedAt, "updatedAt");
         Utils.checkNotNull(variants, "variants");
@@ -193,6 +200,7 @@ public class CommerceItem {
         this.raw = raw;
         this.slug = slug;
         this.tags = tags;
+        this.taxrateId = taxrateId;
         this.type = type;
         this.updatedAt = updatedAt;
         this.variants = variants;
@@ -206,7 +214,8 @@ public class CommerceItem {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -304,6 +313,11 @@ public class CommerceItem {
     @JsonIgnore
     public Optional<List<String>> tags() {
         return (Optional<List<String>>) tags;
+    }
+
+    @JsonIgnore
+    public Optional<String> taxrateId() {
+        return taxrateId;
     }
 
     @JsonIgnore
@@ -568,6 +582,19 @@ public class CommerceItem {
         return this;
     }
 
+    public CommerceItem withTaxrateId(String taxrateId) {
+        Utils.checkNotNull(taxrateId, "taxrateId");
+        this.taxrateId = Optional.ofNullable(taxrateId);
+        return this;
+    }
+
+
+    public CommerceItem withTaxrateId(Optional<String> taxrateId) {
+        Utils.checkNotNull(taxrateId, "taxrateId");
+        this.taxrateId = taxrateId;
+        return this;
+    }
+
     public CommerceItem withType(String type) {
         Utils.checkNotNull(type, "type");
         this.type = Optional.ofNullable(type);
@@ -653,6 +680,7 @@ public class CommerceItem {
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.slug, other.slug) &&
             Utils.enhancedDeepEquals(this.tags, other.tags) &&
+            Utils.enhancedDeepEquals(this.taxrateId, other.taxrateId) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
             Utils.enhancedDeepEquals(this.variants, other.variants) &&
@@ -667,8 +695,9 @@ public class CommerceItem {
             id, isActive, isTaxable,
             media, metadata, name,
             publicDescription, publicName, raw,
-            slug, tags, type,
-            updatedAt, variants, vendorName);
+            slug, tags, taxrateId,
+            type, updatedAt, variants,
+            vendorName);
     }
     
     @Override
@@ -691,6 +720,7 @@ public class CommerceItem {
                 "raw", raw,
                 "slug", slug,
                 "tags", tags,
+                "taxrateId", taxrateId,
                 "type", type,
                 "updatedAt", updatedAt,
                 "variants", variants,
@@ -733,6 +763,8 @@ public class CommerceItem {
         private Optional<String> slug = Optional.empty();
 
         private Optional<? extends List<String>> tags = Optional.empty();
+
+        private Optional<String> taxrateId = Optional.empty();
 
         private Optional<String> type = Optional.empty();
 
@@ -980,6 +1012,19 @@ public class CommerceItem {
         }
 
 
+        public Builder taxrateId(String taxrateId) {
+            Utils.checkNotNull(taxrateId, "taxrateId");
+            this.taxrateId = Optional.ofNullable(taxrateId);
+            return this;
+        }
+
+        public Builder taxrateId(Optional<String> taxrateId) {
+            Utils.checkNotNull(taxrateId, "taxrateId");
+            this.taxrateId = taxrateId;
+            return this;
+        }
+
+
         public Builder type(String type) {
             Utils.checkNotNull(type, "type");
             this.type = Optional.ofNullable(type);
@@ -1045,8 +1090,9 @@ public class CommerceItem {
                 id, isActive, isTaxable,
                 media, metadata, name,
                 publicDescription, publicName, raw,
-                slug, tags, type,
-                updatedAt, variants, vendorName);
+                slug, tags, taxrateId,
+                type, updatedAt, variants,
+                vendorName);
         }
 
     }

@@ -30,10 +30,10 @@ public class PatchCrmEventRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<PatchCrmEventQueryParamFields>> fields;
 
     /**
      * ID of the Event
@@ -53,7 +53,7 @@ public class PatchCrmEventRequest {
     public PatchCrmEventRequest(
             CrmEvent crmEvent,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<PatchCrmEventQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(crmEvent, "crmEvent");
@@ -94,12 +94,12 @@ public class PatchCrmEventRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<PatchCrmEventQueryParamFields>> fields() {
+        return (Optional<List<PatchCrmEventQueryParamFields>>) fields;
     }
 
     /**
@@ -145,9 +145,9 @@ public class PatchCrmEventRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchCrmEventRequest withFields(List<String> fields) {
+    public PatchCrmEventRequest withFields(List<PatchCrmEventQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -155,9 +155,9 @@ public class PatchCrmEventRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchCrmEventRequest withFields(Optional<? extends List<String>> fields) {
+    public PatchCrmEventRequest withFields(Optional<? extends List<PatchCrmEventQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -236,7 +236,7 @@ public class PatchCrmEventRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<PatchCrmEventQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -269,18 +269,18 @@ public class PatchCrmEventRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<PatchCrmEventQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<PatchCrmEventQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

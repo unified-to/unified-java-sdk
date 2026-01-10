@@ -22,10 +22,10 @@ public class GetAccountingBalancesheetRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<GetAccountingBalancesheetQueryParamFields>> fields;
 
     /**
      * ID of the Balancesheet
@@ -44,7 +44,7 @@ public class GetAccountingBalancesheetRequest {
     @JsonCreator
     public GetAccountingBalancesheetRequest(
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<GetAccountingBalancesheetQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(connectionId, "connectionId");
@@ -73,12 +73,12 @@ public class GetAccountingBalancesheetRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<GetAccountingBalancesheetQueryParamFields>> fields() {
+        return (Optional<List<GetAccountingBalancesheetQueryParamFields>>) fields;
     }
 
     /**
@@ -114,9 +114,9 @@ public class GetAccountingBalancesheetRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public GetAccountingBalancesheetRequest withFields(List<String> fields) {
+    public GetAccountingBalancesheetRequest withFields(List<GetAccountingBalancesheetQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -124,9 +124,9 @@ public class GetAccountingBalancesheetRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public GetAccountingBalancesheetRequest withFields(Optional<? extends List<String>> fields) {
+    public GetAccountingBalancesheetRequest withFields(Optional<? extends List<GetAccountingBalancesheetQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -201,7 +201,7 @@ public class GetAccountingBalancesheetRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<GetAccountingBalancesheetQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -223,18 +223,18 @@ public class GetAccountingBalancesheetRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<GetAccountingBalancesheetQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<GetAccountingBalancesheetQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

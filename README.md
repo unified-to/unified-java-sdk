@@ -38,7 +38,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.47.3'
+implementation 'to.unified:unified-java-sdk:0.47.4'
 ```
 
 Maven:
@@ -46,7 +46,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.47.3</version>
+    <version>0.47.4</version>
 </dependency>
 ```
 
@@ -538,36 +538,42 @@ public class Application {
 * [createCommerceCollection](docs/sdks/commerce/README.md#createcommercecollection) - Create a collection
 * [createCommerceInventory](docs/sdks/commerce/README.md#createcommerceinventory) - Create an inventory
 * [createCommerceItem](docs/sdks/commerce/README.md#createcommerceitem) - Create an item
+* [createCommerceItemvariant](docs/sdks/commerce/README.md#createcommerceitemvariant) - Create an itemvariant
 * [createCommerceLocation](docs/sdks/commerce/README.md#createcommercelocation) - Create a location
 * [createCommerceReview](docs/sdks/commerce/README.md#createcommercereview) - Create a review
 * [createCommerceSaleschannel](docs/sdks/commerce/README.md#createcommercesaleschannel) - Create a saleschannel
 * [getCommerceCollection](docs/sdks/commerce/README.md#getcommercecollection) - Retrieve a collection
 * [getCommerceInventory](docs/sdks/commerce/README.md#getcommerceinventory) - Retrieve an inventory
 * [getCommerceItem](docs/sdks/commerce/README.md#getcommerceitem) - Retrieve an item
+* [getCommerceItemvariant](docs/sdks/commerce/README.md#getcommerceitemvariant) - Retrieve an itemvariant
 * [getCommerceLocation](docs/sdks/commerce/README.md#getcommercelocation) - Retrieve a location
 * [getCommerceReview](docs/sdks/commerce/README.md#getcommercereview) - Retrieve a review
 * [getCommerceSaleschannel](docs/sdks/commerce/README.md#getcommercesaleschannel) - Retrieve a saleschannel
 * [listCommerceCollections](docs/sdks/commerce/README.md#listcommercecollections) - List all collections
 * [listCommerceInventories](docs/sdks/commerce/README.md#listcommerceinventories) - List all inventories
 * [listCommerceItems](docs/sdks/commerce/README.md#listcommerceitems) - List all items
+* [listCommerceItemvariants](docs/sdks/commerce/README.md#listcommerceitemvariants) - List all itemvariants
 * [listCommerceLocations](docs/sdks/commerce/README.md#listcommercelocations) - List all locations
 * [listCommerceReviews](docs/sdks/commerce/README.md#listcommercereviews) - List all reviews
 * [listCommerceSaleschannels](docs/sdks/commerce/README.md#listcommercesaleschannels) - List all saleschannels
 * [patchCommerceCollection](docs/sdks/commerce/README.md#patchcommercecollection) - Update a collection
 * [patchCommerceInventory](docs/sdks/commerce/README.md#patchcommerceinventory) - Update an inventory
 * [patchCommerceItem](docs/sdks/commerce/README.md#patchcommerceitem) - Update an item
+* [patchCommerceItemvariant](docs/sdks/commerce/README.md#patchcommerceitemvariant) - Update an itemvariant
 * [patchCommerceLocation](docs/sdks/commerce/README.md#patchcommercelocation) - Update a location
 * [patchCommerceReview](docs/sdks/commerce/README.md#patchcommercereview) - Update a review
 * [patchCommerceSaleschannel](docs/sdks/commerce/README.md#patchcommercesaleschannel) - Update a saleschannel
 * [removeCommerceCollection](docs/sdks/commerce/README.md#removecommercecollection) - Remove a collection
 * [removeCommerceInventory](docs/sdks/commerce/README.md#removecommerceinventory) - Remove an inventory
 * [removeCommerceItem](docs/sdks/commerce/README.md#removecommerceitem) - Remove an item
+* [removeCommerceItemvariant](docs/sdks/commerce/README.md#removecommerceitemvariant) - Remove an itemvariant
 * [removeCommerceLocation](docs/sdks/commerce/README.md#removecommercelocation) - Remove a location
 * [removeCommerceReview](docs/sdks/commerce/README.md#removecommercereview) - Remove a review
 * [removeCommerceSaleschannel](docs/sdks/commerce/README.md#removecommercesaleschannel) - Remove a saleschannel
 * [updateCommerceCollection](docs/sdks/commerce/README.md#updatecommercecollection) - Update a collection
 * [updateCommerceInventory](docs/sdks/commerce/README.md#updatecommerceinventory) - Update an inventory
 * [updateCommerceItem](docs/sdks/commerce/README.md#updatecommerceitem) - Update an item
+* [updateCommerceItemvariant](docs/sdks/commerce/README.md#updatecommerceitemvariant) - Update an itemvariant
 * [updateCommerceLocation](docs/sdks/commerce/README.md#updatecommercelocation) - Update a location
 * [updateCommerceReview](docs/sdks/commerce/README.md#updatecommercereview) - Update a review
 * [updateCommerceSaleschannel](docs/sdks/commerce/README.md#updatecommercesaleschannel) - Update a saleschannel
@@ -755,9 +761,9 @@ public class Application {
 
 ### [Environment](docs/sdks/environment/README.md)
 
-* [createUnifiedEnvironment](docs/sdks/environment/README.md#createunifiedenvironment)
-* [listUnifiedEnvironments](docs/sdks/environment/README.md#listunifiedenvironments)
-* [removeUnifiedEnvironment](docs/sdks/environment/README.md#removeunifiedenvironment)
+* [createUnifiedEnvironment](docs/sdks/environment/README.md#createunifiedenvironment) - Create new environments
+* [listUnifiedEnvironments](docs/sdks/environment/README.md#listunifiedenvironments) - Returns all environments
+* [removeUnifiedEnvironment](docs/sdks/environment/README.md#removeunifiedenvironment) - Remove an environment
 
 ### [Event](docs/sdks/event/README.md)
 
@@ -793,6 +799,26 @@ public class Application {
 * [patchStorageFile](docs/sdks/file/README.md#patchstoragefile) - Update a file
 * [removeStorageFile](docs/sdks/file/README.md#removestoragefile) - Remove a file
 * [updateStorageFile](docs/sdks/file/README.md#updatestoragefile) - Update a file
+
+### [Form](docs/sdks/form/README.md)
+
+* [createFormsForm](docs/sdks/form/README.md#createformsform) - Create a form
+* [getFormsForm](docs/sdks/form/README.md#getformsform) - Retrieve a form
+* [listFormsForms](docs/sdks/form/README.md#listformsforms) - List all forms
+* [patchFormsForm](docs/sdks/form/README.md#patchformsform) - Update a form
+* [removeFormsForm](docs/sdks/form/README.md#removeformsform) - Remove a form
+* [updateFormsForm](docs/sdks/form/README.md#updateformsform) - Update a form
+
+### [Forms](docs/sdks/forms/README.md)
+
+* [createFormsForm](docs/sdks/forms/README.md#createformsform) - Create a form
+* [getFormsForm](docs/sdks/forms/README.md#getformsform) - Retrieve a form
+* [getFormsSubmission](docs/sdks/forms/README.md#getformssubmission) - Retrieve a submission
+* [listFormsForms](docs/sdks/forms/README.md#listformsforms) - List all forms
+* [listFormsSubmissions](docs/sdks/forms/README.md#listformssubmissions) - List all submissions
+* [patchFormsForm](docs/sdks/forms/README.md#patchformsform) - Update a form
+* [removeFormsForm](docs/sdks/forms/README.md#removeformsform) - Remove a form
+* [updateFormsForm](docs/sdks/forms/README.md#updateformsform) - Update a form
 
 ### [Genai](docs/sdks/genai/README.md)
 
@@ -932,6 +958,15 @@ public class Application {
 * [patchCommerceItem](docs/sdks/item/README.md#patchcommerceitem) - Update an item
 * [removeCommerceItem](docs/sdks/item/README.md#removecommerceitem) - Remove an item
 * [updateCommerceItem](docs/sdks/item/README.md#updatecommerceitem) - Update an item
+
+### [Itemvariant](docs/sdks/itemvariant/README.md)
+
+* [createCommerceItemvariant](docs/sdks/itemvariant/README.md#createcommerceitemvariant) - Create an itemvariant
+* [getCommerceItemvariant](docs/sdks/itemvariant/README.md#getcommerceitemvariant) - Retrieve an itemvariant
+* [listCommerceItemvariants](docs/sdks/itemvariant/README.md#listcommerceitemvariants) - List all itemvariants
+* [patchCommerceItemvariant](docs/sdks/itemvariant/README.md#patchcommerceitemvariant) - Update an itemvariant
+* [removeCommerceItemvariant](docs/sdks/itemvariant/README.md#removecommerceitemvariant) - Remove an itemvariant
+* [updateCommerceItemvariant](docs/sdks/itemvariant/README.md#updatecommerceitemvariant) - Update an itemvariant
 
 ### [Job](docs/sdks/job/README.md)
 
@@ -1406,6 +1441,11 @@ public class Application {
 * [removeLmsStudent](docs/sdks/student/README.md#removelmsstudent) - Remove a student
 * [updateLmsStudent](docs/sdks/student/README.md#updatelmsstudent) - Update a student
 
+### [Submission](docs/sdks/submission/README.md)
+
+* [getFormsSubmission](docs/sdks/submission/README.md#getformssubmission) - Retrieve a submission
+* [listFormsSubmissions](docs/sdks/submission/README.md#listformssubmissions) - List all submissions
+
 ### [Subscription](docs/sdks/subscription/README.md)
 
 * [createPaymentSubscription](docs/sdks/subscription/README.md#createpaymentsubscription) - Create a subscription
@@ -1537,7 +1577,7 @@ public class Application {
 ### [Unified](docs/sdks/unified/README.md)
 
 * [createUnifiedConnection](docs/sdks/unified/README.md#createunifiedconnection) - Create connection
-* [createUnifiedEnvironment](docs/sdks/unified/README.md#createunifiedenvironment)
+* [createUnifiedEnvironment](docs/sdks/unified/README.md#createunifiedenvironment) - Create new environments
 * [createUnifiedWebhook](docs/sdks/unified/README.md#createunifiedwebhook) - Create webhook subscription
 * [getUnifiedApicall](docs/sdks/unified/README.md#getunifiedapicall) - Retrieve specific API Call by its ID
 * [getUnifiedConnection](docs/sdks/unified/README.md#getunifiedconnection) - Retrieve connection
@@ -1546,7 +1586,7 @@ public class Application {
 * [getUnifiedWebhook](docs/sdks/unified/README.md#getunifiedwebhook) - Retrieve webhook by its ID
 * [listUnifiedApicalls](docs/sdks/unified/README.md#listunifiedapicalls) - Returns API Calls
 * [listUnifiedConnections](docs/sdks/unified/README.md#listunifiedconnections) - List all connections
-* [listUnifiedEnvironments](docs/sdks/unified/README.md#listunifiedenvironments)
+* [listUnifiedEnvironments](docs/sdks/unified/README.md#listunifiedenvironments) - Returns all environments
 * [listUnifiedIntegrationWorkspaces](docs/sdks/unified/README.md#listunifiedintegrationworkspaces) - Returns all activated integrations in a workspace
 * [listUnifiedIntegrations](docs/sdks/unified/README.md#listunifiedintegrations) - Returns all integrations
 * [listUnifiedIssues](docs/sdks/unified/README.md#listunifiedissues) - List support issues
@@ -1555,7 +1595,7 @@ public class Application {
 * [patchUnifiedWebhook](docs/sdks/unified/README.md#patchunifiedwebhook) - Update webhook subscription
 * [patchUnifiedWebhookTrigger](docs/sdks/unified/README.md#patchunifiedwebhooktrigger) - Trigger webhook
 * [removeUnifiedConnection](docs/sdks/unified/README.md#removeunifiedconnection) - Remove connection
-* [removeUnifiedEnvironment](docs/sdks/unified/README.md#removeunifiedenvironment)
+* [removeUnifiedEnvironment](docs/sdks/unified/README.md#removeunifiedenvironment) - Remove an environment
 * [removeUnifiedWebhook](docs/sdks/unified/README.md#removeunifiedwebhook) - Remove webhook subscription
 * [updateUnifiedConnection](docs/sdks/unified/README.md#updateunifiedconnection) - Update connection
 * [updateUnifiedWebhook](docs/sdks/unified/README.md#updateunifiedwebhook) - Update webhook subscription

@@ -17,7 +17,7 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListHrisTimeoffsRequest {
     /**
-     * The company ID to filter by
+     * The company ID to filter by (reference to HrisCompany)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=company_id")
     private Optional<String> companyId;
@@ -29,22 +29,16 @@ public class ListHrisTimeoffsRequest {
     private String connectionId;
 
     /**
-     * The end date to filter by (deprecated)
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_le")
-    private Optional<String> endLe;
-
-    /**
-     * The end date to filter by
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_lt")
     private Optional<String> endLt;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<ListHrisTimeoffsQueryParamFields>> fields;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
@@ -77,19 +71,20 @@ public class ListHrisTimeoffsRequest {
     private Optional<String> sort;
 
     /**
-     * The start date to filter by
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_gte")
     private Optional<String> startGte;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private Optional<String> updatedGte;
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
     private Optional<String> userId;
@@ -98,9 +93,8 @@ public class ListHrisTimeoffsRequest {
     public ListHrisTimeoffsRequest(
             Optional<String> companyId,
             String connectionId,
-            Optional<String> endLe,
             Optional<String> endLt,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<ListHrisTimeoffsQueryParamFields>> fields,
             Optional<Double> limit,
             Optional<Double> offset,
             Optional<String> order,
@@ -112,7 +106,6 @@ public class ListHrisTimeoffsRequest {
             Optional<String> userId) {
         Utils.checkNotNull(companyId, "companyId");
         Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(endLe, "endLe");
         Utils.checkNotNull(endLt, "endLt");
         Utils.checkNotNull(fields, "fields");
         Utils.checkNotNull(limit, "limit");
@@ -126,7 +119,6 @@ public class ListHrisTimeoffsRequest {
         Utils.checkNotNull(userId, "userId");
         this.companyId = companyId;
         this.connectionId = connectionId;
-        this.endLe = endLe;
         this.endLt = endLt;
         this.fields = fields;
         this.limit = limit;
@@ -146,11 +138,11 @@ public class ListHrisTimeoffsRequest {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            Optional.empty());
     }
 
     /**
-     * The company ID to filter by
+     * The company ID to filter by (reference to HrisCompany)
      */
     @JsonIgnore
     public Optional<String> companyId() {
@@ -166,15 +158,7 @@ public class ListHrisTimeoffsRequest {
     }
 
     /**
-     * The end date to filter by (deprecated)
-     */
-    @JsonIgnore
-    public Optional<String> endLe() {
-        return endLe;
-    }
-
-    /**
-     * The end date to filter by
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> endLt() {
@@ -182,12 +166,12 @@ public class ListHrisTimeoffsRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<ListHrisTimeoffsQueryParamFields>> fields() {
+        return (Optional<List<ListHrisTimeoffsQueryParamFields>>) fields;
     }
 
     @JsonIgnore
@@ -229,7 +213,7 @@ public class ListHrisTimeoffsRequest {
     }
 
     /**
-     * The start date to filter by
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> startGte() {
@@ -237,7 +221,8 @@ public class ListHrisTimeoffsRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> updatedGte() {
@@ -245,7 +230,7 @@ public class ListHrisTimeoffsRequest {
     }
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      */
     @JsonIgnore
     public Optional<String> userId() {
@@ -258,7 +243,7 @@ public class ListHrisTimeoffsRequest {
 
 
     /**
-     * The company ID to filter by
+     * The company ID to filter by (reference to HrisCompany)
      */
     public ListHrisTimeoffsRequest withCompanyId(String companyId) {
         Utils.checkNotNull(companyId, "companyId");
@@ -268,7 +253,7 @@ public class ListHrisTimeoffsRequest {
 
 
     /**
-     * The company ID to filter by
+     * The company ID to filter by (reference to HrisCompany)
      */
     public ListHrisTimeoffsRequest withCompanyId(Optional<String> companyId) {
         Utils.checkNotNull(companyId, "companyId");
@@ -286,26 +271,7 @@ public class ListHrisTimeoffsRequest {
     }
 
     /**
-     * The end date to filter by (deprecated)
-     */
-    public ListHrisTimeoffsRequest withEndLe(String endLe) {
-        Utils.checkNotNull(endLe, "endLe");
-        this.endLe = Optional.ofNullable(endLe);
-        return this;
-    }
-
-
-    /**
-     * The end date to filter by (deprecated)
-     */
-    public ListHrisTimeoffsRequest withEndLe(Optional<String> endLe) {
-        Utils.checkNotNull(endLe, "endLe");
-        this.endLe = endLe;
-        return this;
-    }
-
-    /**
-     * The end date to filter by
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListHrisTimeoffsRequest withEndLt(String endLt) {
         Utils.checkNotNull(endLt, "endLt");
@@ -315,7 +281,7 @@ public class ListHrisTimeoffsRequest {
 
 
     /**
-     * The end date to filter by
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListHrisTimeoffsRequest withEndLt(Optional<String> endLt) {
         Utils.checkNotNull(endLt, "endLt");
@@ -324,9 +290,9 @@ public class ListHrisTimeoffsRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListHrisTimeoffsRequest withFields(List<String> fields) {
+    public ListHrisTimeoffsRequest withFields(List<ListHrisTimeoffsQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -334,9 +300,9 @@ public class ListHrisTimeoffsRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListHrisTimeoffsRequest withFields(Optional<? extends List<String>> fields) {
+    public ListHrisTimeoffsRequest withFields(Optional<? extends List<ListHrisTimeoffsQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -437,7 +403,7 @@ public class ListHrisTimeoffsRequest {
     }
 
     /**
-     * The start date to filter by
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListHrisTimeoffsRequest withStartGte(String startGte) {
         Utils.checkNotNull(startGte, "startGte");
@@ -447,7 +413,7 @@ public class ListHrisTimeoffsRequest {
 
 
     /**
-     * The start date to filter by
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListHrisTimeoffsRequest withStartGte(Optional<String> startGte) {
         Utils.checkNotNull(startGte, "startGte");
@@ -456,7 +422,8 @@ public class ListHrisTimeoffsRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListHrisTimeoffsRequest withUpdatedGte(String updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -466,7 +433,8 @@ public class ListHrisTimeoffsRequest {
 
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListHrisTimeoffsRequest withUpdatedGte(Optional<String> updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -475,7 +443,7 @@ public class ListHrisTimeoffsRequest {
     }
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      */
     public ListHrisTimeoffsRequest withUserId(String userId) {
         Utils.checkNotNull(userId, "userId");
@@ -485,7 +453,7 @@ public class ListHrisTimeoffsRequest {
 
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      */
     public ListHrisTimeoffsRequest withUserId(Optional<String> userId) {
         Utils.checkNotNull(userId, "userId");
@@ -505,7 +473,6 @@ public class ListHrisTimeoffsRequest {
         return 
             Utils.enhancedDeepEquals(this.companyId, other.companyId) &&
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
-            Utils.enhancedDeepEquals(this.endLe, other.endLe) &&
             Utils.enhancedDeepEquals(this.endLt, other.endLt) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
@@ -522,11 +489,11 @@ public class ListHrisTimeoffsRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            companyId, connectionId, endLe,
-            endLt, fields, limit,
-            offset, order, query,
-            raw, sort, startGte,
-            updatedGte, userId);
+            companyId, connectionId, endLt,
+            fields, limit, offset,
+            order, query, raw,
+            sort, startGte, updatedGte,
+            userId);
     }
     
     @Override
@@ -534,7 +501,6 @@ public class ListHrisTimeoffsRequest {
         return Utils.toString(ListHrisTimeoffsRequest.class,
                 "companyId", companyId,
                 "connectionId", connectionId,
-                "endLe", endLe,
                 "endLt", endLt,
                 "fields", fields,
                 "limit", limit,
@@ -555,11 +521,9 @@ public class ListHrisTimeoffsRequest {
 
         private String connectionId;
 
-        private Optional<String> endLe = Optional.empty();
-
         private Optional<String> endLt = Optional.empty();
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<ListHrisTimeoffsQueryParamFields>> fields = Optional.empty();
 
         private Optional<Double> limit = Optional.empty();
 
@@ -585,7 +549,7 @@ public class ListHrisTimeoffsRequest {
 
 
         /**
-         * The company ID to filter by
+         * The company ID to filter by (reference to HrisCompany)
          */
         public Builder companyId(String companyId) {
             Utils.checkNotNull(companyId, "companyId");
@@ -594,7 +558,7 @@ public class ListHrisTimeoffsRequest {
         }
 
         /**
-         * The company ID to filter by
+         * The company ID to filter by (reference to HrisCompany)
          */
         public Builder companyId(Optional<String> companyId) {
             Utils.checkNotNull(companyId, "companyId");
@@ -614,26 +578,7 @@ public class ListHrisTimeoffsRequest {
 
 
         /**
-         * The end date to filter by (deprecated)
-         */
-        public Builder endLe(String endLe) {
-            Utils.checkNotNull(endLe, "endLe");
-            this.endLe = Optional.ofNullable(endLe);
-            return this;
-        }
-
-        /**
-         * The end date to filter by (deprecated)
-         */
-        public Builder endLe(Optional<String> endLe) {
-            Utils.checkNotNull(endLe, "endLe");
-            this.endLe = endLe;
-            return this;
-        }
-
-
-        /**
-         * The end date to filter by
+         * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder endLt(String endLt) {
             Utils.checkNotNull(endLt, "endLt");
@@ -642,7 +587,7 @@ public class ListHrisTimeoffsRequest {
         }
 
         /**
-         * The end date to filter by
+         * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder endLt(Optional<String> endLt) {
             Utils.checkNotNull(endLt, "endLt");
@@ -652,18 +597,18 @@ public class ListHrisTimeoffsRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<ListHrisTimeoffsQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<ListHrisTimeoffsQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;
@@ -765,7 +710,7 @@ public class ListHrisTimeoffsRequest {
 
 
         /**
-         * The start date to filter by
+         * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder startGte(String startGte) {
             Utils.checkNotNull(startGte, "startGte");
@@ -774,7 +719,7 @@ public class ListHrisTimeoffsRequest {
         }
 
         /**
-         * The start date to filter by
+         * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder startGte(Optional<String> startGte) {
             Utils.checkNotNull(startGte, "startGte");
@@ -784,7 +729,8 @@ public class ListHrisTimeoffsRequest {
 
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(String updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -793,7 +739,8 @@ public class ListHrisTimeoffsRequest {
         }
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(Optional<String> updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -803,7 +750,7 @@ public class ListHrisTimeoffsRequest {
 
 
         /**
-         * The user/employee ID to filter by
+         * The user/employee ID to filter by (reference to HrisEmployee)
          */
         public Builder userId(String userId) {
             Utils.checkNotNull(userId, "userId");
@@ -812,7 +759,7 @@ public class ListHrisTimeoffsRequest {
         }
 
         /**
-         * The user/employee ID to filter by
+         * The user/employee ID to filter by (reference to HrisEmployee)
          */
         public Builder userId(Optional<String> userId) {
             Utils.checkNotNull(userId, "userId");
@@ -823,11 +770,11 @@ public class ListHrisTimeoffsRequest {
         public ListHrisTimeoffsRequest build() {
 
             return new ListHrisTimeoffsRequest(
-                companyId, connectionId, endLe,
-                endLt, fields, limit,
-                offset, order, query,
-                raw, sort, startGte,
-                updatedGte, userId);
+                companyId, connectionId, endLt,
+                fields, limit, offset,
+                order, query, raw,
+                sort, startGte, updatedGte,
+                userId);
         }
 
     }

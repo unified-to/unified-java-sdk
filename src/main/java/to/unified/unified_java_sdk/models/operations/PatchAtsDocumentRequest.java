@@ -27,10 +27,10 @@ public class PatchAtsDocumentRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<PatchAtsDocumentQueryParamFields>> fields;
 
     /**
      * ID of the Document
@@ -50,7 +50,7 @@ public class PatchAtsDocumentRequest {
     public PatchAtsDocumentRequest(
             AtsDocument atsDocument,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<PatchAtsDocumentQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(atsDocument, "atsDocument");
@@ -87,12 +87,12 @@ public class PatchAtsDocumentRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<PatchAtsDocumentQueryParamFields>> fields() {
+        return (Optional<List<PatchAtsDocumentQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class PatchAtsDocumentRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchAtsDocumentRequest withFields(List<String> fields) {
+    public PatchAtsDocumentRequest withFields(List<PatchAtsDocumentQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class PatchAtsDocumentRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchAtsDocumentRequest withFields(Optional<? extends List<String>> fields) {
+    public PatchAtsDocumentRequest withFields(Optional<? extends List<PatchAtsDocumentQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class PatchAtsDocumentRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<PatchAtsDocumentQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class PatchAtsDocumentRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<PatchAtsDocumentQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<PatchAtsDocumentQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

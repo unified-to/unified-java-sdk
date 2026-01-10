@@ -17,16 +17,22 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListTaskProjectsRequest {
     /**
+     * The company ID to filter by (reference to HrisCompany)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=company_id")
+    private Optional<String> companyId;
+
+    /**
      * ID of the connection
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<ListTaskProjectsQueryParamFields>> fields;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
@@ -39,12 +45,6 @@ public class ListTaskProjectsRequest {
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     private Optional<String> order;
-
-    /**
-     * The org ID to filter by
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org_id")
-    private Optional<String> orgId;
 
     /**
      * The parent ID to filter by
@@ -71,54 +71,72 @@ public class ListTaskProjectsRequest {
     private Optional<String> sort;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private Optional<String> updatedGte;
 
+    /**
+     * The user/employee ID to filter by (reference to HrisEmployee)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
+    private Optional<String> userId;
+
     @JsonCreator
     public ListTaskProjectsRequest(
+            Optional<String> companyId,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<ListTaskProjectsQueryParamFields>> fields,
             Optional<Double> limit,
             Optional<Double> offset,
             Optional<String> order,
-            Optional<String> orgId,
             Optional<String> parentId,
             Optional<String> query,
             Optional<String> raw,
             Optional<String> sort,
-            Optional<String> updatedGte) {
+            Optional<String> updatedGte,
+            Optional<String> userId) {
+        Utils.checkNotNull(companyId, "companyId");
         Utils.checkNotNull(connectionId, "connectionId");
         Utils.checkNotNull(fields, "fields");
         Utils.checkNotNull(limit, "limit");
         Utils.checkNotNull(offset, "offset");
         Utils.checkNotNull(order, "order");
-        Utils.checkNotNull(orgId, "orgId");
         Utils.checkNotNull(parentId, "parentId");
         Utils.checkNotNull(query, "query");
         Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(sort, "sort");
         Utils.checkNotNull(updatedGte, "updatedGte");
+        Utils.checkNotNull(userId, "userId");
+        this.companyId = companyId;
         this.connectionId = connectionId;
         this.fields = fields;
         this.limit = limit;
         this.offset = offset;
         this.order = order;
-        this.orgId = orgId;
         this.parentId = parentId;
         this.query = query;
         this.raw = raw;
         this.sort = sort;
         this.updatedGte = updatedGte;
+        this.userId = userId;
     }
     
     public ListTaskProjectsRequest(
             String connectionId) {
-        this(connectionId, Optional.empty(), Optional.empty(),
+        this(Optional.empty(), connectionId, Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty());
+    }
+
+    /**
+     * The company ID to filter by (reference to HrisCompany)
+     */
+    @JsonIgnore
+    public Optional<String> companyId() {
+        return companyId;
     }
 
     /**
@@ -130,12 +148,12 @@ public class ListTaskProjectsRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<ListTaskProjectsQueryParamFields>> fields() {
+        return (Optional<List<ListTaskProjectsQueryParamFields>>) fields;
     }
 
     @JsonIgnore
@@ -151,14 +169,6 @@ public class ListTaskProjectsRequest {
     @JsonIgnore
     public Optional<String> order() {
         return order;
-    }
-
-    /**
-     * The org ID to filter by
-     */
-    @JsonIgnore
-    public Optional<String> orgId() {
-        return orgId;
     }
 
     /**
@@ -193,17 +203,45 @@ public class ListTaskProjectsRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> updatedGte() {
         return updatedGte;
     }
 
+    /**
+     * The user/employee ID to filter by (reference to HrisEmployee)
+     */
+    @JsonIgnore
+    public Optional<String> userId() {
+        return userId;
+    }
+
     public static Builder builder() {
         return new Builder();
     }
 
+
+    /**
+     * The company ID to filter by (reference to HrisCompany)
+     */
+    public ListTaskProjectsRequest withCompanyId(String companyId) {
+        Utils.checkNotNull(companyId, "companyId");
+        this.companyId = Optional.ofNullable(companyId);
+        return this;
+    }
+
+
+    /**
+     * The company ID to filter by (reference to HrisCompany)
+     */
+    public ListTaskProjectsRequest withCompanyId(Optional<String> companyId) {
+        Utils.checkNotNull(companyId, "companyId");
+        this.companyId = companyId;
+        return this;
+    }
 
     /**
      * ID of the connection
@@ -215,9 +253,9 @@ public class ListTaskProjectsRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListTaskProjectsRequest withFields(List<String> fields) {
+    public ListTaskProjectsRequest withFields(List<ListTaskProjectsQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -225,9 +263,9 @@ public class ListTaskProjectsRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListTaskProjectsRequest withFields(Optional<? extends List<String>> fields) {
+    public ListTaskProjectsRequest withFields(Optional<? extends List<ListTaskProjectsQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -269,25 +307,6 @@ public class ListTaskProjectsRequest {
     public ListTaskProjectsRequest withOrder(Optional<String> order) {
         Utils.checkNotNull(order, "order");
         this.order = order;
-        return this;
-    }
-
-    /**
-     * The org ID to filter by
-     */
-    public ListTaskProjectsRequest withOrgId(String orgId) {
-        Utils.checkNotNull(orgId, "orgId");
-        this.orgId = Optional.ofNullable(orgId);
-        return this;
-    }
-
-
-    /**
-     * The org ID to filter by
-     */
-    public ListTaskProjectsRequest withOrgId(Optional<String> orgId) {
-        Utils.checkNotNull(orgId, "orgId");
-        this.orgId = orgId;
         return this;
     }
 
@@ -366,7 +385,8 @@ public class ListTaskProjectsRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListTaskProjectsRequest withUpdatedGte(String updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -376,11 +396,31 @@ public class ListTaskProjectsRequest {
 
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListTaskProjectsRequest withUpdatedGte(Optional<String> updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
         this.updatedGte = updatedGte;
+        return this;
+    }
+
+    /**
+     * The user/employee ID to filter by (reference to HrisEmployee)
+     */
+    public ListTaskProjectsRequest withUserId(String userId) {
+        Utils.checkNotNull(userId, "userId");
+        this.userId = Optional.ofNullable(userId);
+        return this;
+    }
+
+
+    /**
+     * The user/employee ID to filter by (reference to HrisEmployee)
+     */
+    public ListTaskProjectsRequest withUserId(Optional<String> userId) {
+        Utils.checkNotNull(userId, "userId");
+        this.userId = userId;
         return this;
     }
 
@@ -394,58 +434,60 @@ public class ListTaskProjectsRequest {
         }
         ListTaskProjectsRequest other = (ListTaskProjectsRequest) o;
         return 
+            Utils.enhancedDeepEquals(this.companyId, other.companyId) &&
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
             Utils.enhancedDeepEquals(this.order, other.order) &&
-            Utils.enhancedDeepEquals(this.orgId, other.orgId) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
-            Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte);
+            Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte) &&
+            Utils.enhancedDeepEquals(this.userId, other.userId);
     }
     
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId, fields, limit,
-            offset, order, orgId,
+            companyId, connectionId, fields,
+            limit, offset, order,
             parentId, query, raw,
-            sort, updatedGte);
+            sort, updatedGte, userId);
     }
     
     @Override
     public String toString() {
         return Utils.toString(ListTaskProjectsRequest.class,
+                "companyId", companyId,
                 "connectionId", connectionId,
                 "fields", fields,
                 "limit", limit,
                 "offset", offset,
                 "order", order,
-                "orgId", orgId,
                 "parentId", parentId,
                 "query", query,
                 "raw", raw,
                 "sort", sort,
-                "updatedGte", updatedGte);
+                "updatedGte", updatedGte,
+                "userId", userId);
     }
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
+        private Optional<String> companyId = Optional.empty();
+
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<ListTaskProjectsQueryParamFields>> fields = Optional.empty();
 
         private Optional<Double> limit = Optional.empty();
 
         private Optional<Double> offset = Optional.empty();
 
         private Optional<String> order = Optional.empty();
-
-        private Optional<String> orgId = Optional.empty();
 
         private Optional<String> parentId = Optional.empty();
 
@@ -457,8 +499,29 @@ public class ListTaskProjectsRequest {
 
         private Optional<String> updatedGte = Optional.empty();
 
+        private Optional<String> userId = Optional.empty();
+
         private Builder() {
           // force use of static builder() method
+        }
+
+
+        /**
+         * The company ID to filter by (reference to HrisCompany)
+         */
+        public Builder companyId(String companyId) {
+            Utils.checkNotNull(companyId, "companyId");
+            this.companyId = Optional.ofNullable(companyId);
+            return this;
+        }
+
+        /**
+         * The company ID to filter by (reference to HrisCompany)
+         */
+        public Builder companyId(Optional<String> companyId) {
+            Utils.checkNotNull(companyId, "companyId");
+            this.companyId = companyId;
+            return this;
         }
 
 
@@ -473,18 +536,18 @@ public class ListTaskProjectsRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<ListTaskProjectsQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<ListTaskProjectsQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;
@@ -526,25 +589,6 @@ public class ListTaskProjectsRequest {
         public Builder order(Optional<String> order) {
             Utils.checkNotNull(order, "order");
             this.order = order;
-            return this;
-        }
-
-
-        /**
-         * The org ID to filter by
-         */
-        public Builder orgId(String orgId) {
-            Utils.checkNotNull(orgId, "orgId");
-            this.orgId = Optional.ofNullable(orgId);
-            return this;
-        }
-
-        /**
-         * The org ID to filter by
-         */
-        public Builder orgId(Optional<String> orgId) {
-            Utils.checkNotNull(orgId, "orgId");
-            this.orgId = orgId;
             return this;
         }
 
@@ -624,7 +668,8 @@ public class ListTaskProjectsRequest {
 
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(String updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -633,7 +678,8 @@ public class ListTaskProjectsRequest {
         }
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(Optional<String> updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -641,13 +687,32 @@ public class ListTaskProjectsRequest {
             return this;
         }
 
+
+        /**
+         * The user/employee ID to filter by (reference to HrisEmployee)
+         */
+        public Builder userId(String userId) {
+            Utils.checkNotNull(userId, "userId");
+            this.userId = Optional.ofNullable(userId);
+            return this;
+        }
+
+        /**
+         * The user/employee ID to filter by (reference to HrisEmployee)
+         */
+        public Builder userId(Optional<String> userId) {
+            Utils.checkNotNull(userId, "userId");
+            this.userId = userId;
+            return this;
+        }
+
         public ListTaskProjectsRequest build() {
 
             return new ListTaskProjectsRequest(
-                connectionId, fields, limit,
-                offset, order, orgId,
+                companyId, connectionId, fields,
+                limit, offset, order,
                 parentId, query, raw,
-                sort, updatedGte);
+                sort, updatedGte, userId);
         }
 
     }

@@ -23,22 +23,16 @@ public class ListAccountingReportsRequest {
     private String connectionId;
 
     /**
-     * The end date to filter by (deprecated)
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_le")
-    private Optional<String> endLe;
-
-    /**
-     * The end date to filter by
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_lt")
     private Optional<String> endLt;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<ListAccountingReportsQueryParamFields>> fields;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
@@ -71,7 +65,7 @@ public class ListAccountingReportsRequest {
     private Optional<String> sort;
 
     /**
-     * The start date to filter by
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_gte")
     private Optional<String> startGte;
@@ -81,7 +75,8 @@ public class ListAccountingReportsRequest {
     private Optional<String> type;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private Optional<String> updatedGte;
@@ -89,9 +84,8 @@ public class ListAccountingReportsRequest {
     @JsonCreator
     public ListAccountingReportsRequest(
             String connectionId,
-            Optional<String> endLe,
             Optional<String> endLt,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<ListAccountingReportsQueryParamFields>> fields,
             Optional<Double> limit,
             Optional<Double> offset,
             Optional<String> order,
@@ -102,7 +96,6 @@ public class ListAccountingReportsRequest {
             Optional<String> type,
             Optional<String> updatedGte) {
         Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(endLe, "endLe");
         Utils.checkNotNull(endLt, "endLt");
         Utils.checkNotNull(fields, "fields");
         Utils.checkNotNull(limit, "limit");
@@ -115,7 +108,6 @@ public class ListAccountingReportsRequest {
         Utils.checkNotNull(type, "type");
         Utils.checkNotNull(updatedGte, "updatedGte");
         this.connectionId = connectionId;
-        this.endLe = endLe;
         this.endLt = endLt;
         this.fields = fields;
         this.limit = limit;
@@ -134,8 +126,7 @@ public class ListAccountingReportsRequest {
         this(connectionId, Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     /**
@@ -147,15 +138,7 @@ public class ListAccountingReportsRequest {
     }
 
     /**
-     * The end date to filter by (deprecated)
-     */
-    @JsonIgnore
-    public Optional<String> endLe() {
-        return endLe;
-    }
-
-    /**
-     * The end date to filter by
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> endLt() {
@@ -163,12 +146,12 @@ public class ListAccountingReportsRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<ListAccountingReportsQueryParamFields>> fields() {
+        return (Optional<List<ListAccountingReportsQueryParamFields>>) fields;
     }
 
     @JsonIgnore
@@ -210,7 +193,7 @@ public class ListAccountingReportsRequest {
     }
 
     /**
-     * The start date to filter by
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> startGte() {
@@ -223,7 +206,8 @@ public class ListAccountingReportsRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> updatedGte() {
@@ -245,26 +229,7 @@ public class ListAccountingReportsRequest {
     }
 
     /**
-     * The end date to filter by (deprecated)
-     */
-    public ListAccountingReportsRequest withEndLe(String endLe) {
-        Utils.checkNotNull(endLe, "endLe");
-        this.endLe = Optional.ofNullable(endLe);
-        return this;
-    }
-
-
-    /**
-     * The end date to filter by (deprecated)
-     */
-    public ListAccountingReportsRequest withEndLe(Optional<String> endLe) {
-        Utils.checkNotNull(endLe, "endLe");
-        this.endLe = endLe;
-        return this;
-    }
-
-    /**
-     * The end date to filter by
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListAccountingReportsRequest withEndLt(String endLt) {
         Utils.checkNotNull(endLt, "endLt");
@@ -274,7 +239,7 @@ public class ListAccountingReportsRequest {
 
 
     /**
-     * The end date to filter by
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListAccountingReportsRequest withEndLt(Optional<String> endLt) {
         Utils.checkNotNull(endLt, "endLt");
@@ -283,9 +248,9 @@ public class ListAccountingReportsRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListAccountingReportsRequest withFields(List<String> fields) {
+    public ListAccountingReportsRequest withFields(List<ListAccountingReportsQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -293,9 +258,9 @@ public class ListAccountingReportsRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListAccountingReportsRequest withFields(Optional<? extends List<String>> fields) {
+    public ListAccountingReportsRequest withFields(Optional<? extends List<ListAccountingReportsQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -396,7 +361,7 @@ public class ListAccountingReportsRequest {
     }
 
     /**
-     * The start date to filter by
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListAccountingReportsRequest withStartGte(String startGte) {
         Utils.checkNotNull(startGte, "startGte");
@@ -406,7 +371,7 @@ public class ListAccountingReportsRequest {
 
 
     /**
-     * The start date to filter by
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListAccountingReportsRequest withStartGte(Optional<String> startGte) {
         Utils.checkNotNull(startGte, "startGte");
@@ -428,7 +393,8 @@ public class ListAccountingReportsRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListAccountingReportsRequest withUpdatedGte(String updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -438,7 +404,8 @@ public class ListAccountingReportsRequest {
 
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListAccountingReportsRequest withUpdatedGte(Optional<String> updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -457,7 +424,6 @@ public class ListAccountingReportsRequest {
         ListAccountingReportsRequest other = (ListAccountingReportsRequest) o;
         return 
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
-            Utils.enhancedDeepEquals(this.endLe, other.endLe) &&
             Utils.enhancedDeepEquals(this.endLt, other.endLt) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
@@ -474,18 +440,16 @@ public class ListAccountingReportsRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId, endLe, endLt,
-            fields, limit, offset,
-            order, query, raw,
-            sort, startGte, type,
-            updatedGte);
+            connectionId, endLt, fields,
+            limit, offset, order,
+            query, raw, sort,
+            startGte, type, updatedGte);
     }
     
     @Override
     public String toString() {
         return Utils.toString(ListAccountingReportsRequest.class,
                 "connectionId", connectionId,
-                "endLe", endLe,
                 "endLt", endLt,
                 "fields", fields,
                 "limit", limit,
@@ -504,11 +468,9 @@ public class ListAccountingReportsRequest {
 
         private String connectionId;
 
-        private Optional<String> endLe = Optional.empty();
-
         private Optional<String> endLt = Optional.empty();
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<ListAccountingReportsQueryParamFields>> fields = Optional.empty();
 
         private Optional<Double> limit = Optional.empty();
 
@@ -544,26 +506,7 @@ public class ListAccountingReportsRequest {
 
 
         /**
-         * The end date to filter by (deprecated)
-         */
-        public Builder endLe(String endLe) {
-            Utils.checkNotNull(endLe, "endLe");
-            this.endLe = Optional.ofNullable(endLe);
-            return this;
-        }
-
-        /**
-         * The end date to filter by (deprecated)
-         */
-        public Builder endLe(Optional<String> endLe) {
-            Utils.checkNotNull(endLe, "endLe");
-            this.endLe = endLe;
-            return this;
-        }
-
-
-        /**
-         * The end date to filter by
+         * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder endLt(String endLt) {
             Utils.checkNotNull(endLt, "endLt");
@@ -572,7 +515,7 @@ public class ListAccountingReportsRequest {
         }
 
         /**
-         * The end date to filter by
+         * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder endLt(Optional<String> endLt) {
             Utils.checkNotNull(endLt, "endLt");
@@ -582,18 +525,18 @@ public class ListAccountingReportsRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<ListAccountingReportsQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<ListAccountingReportsQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;
@@ -695,7 +638,7 @@ public class ListAccountingReportsRequest {
 
 
         /**
-         * The start date to filter by
+         * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder startGte(String startGte) {
             Utils.checkNotNull(startGte, "startGte");
@@ -704,7 +647,7 @@ public class ListAccountingReportsRequest {
         }
 
         /**
-         * The start date to filter by
+         * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder startGte(Optional<String> startGte) {
             Utils.checkNotNull(startGte, "startGte");
@@ -727,7 +670,8 @@ public class ListAccountingReportsRequest {
 
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(String updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -736,7 +680,8 @@ public class ListAccountingReportsRequest {
         }
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(Optional<String> updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -747,11 +692,10 @@ public class ListAccountingReportsRequest {
         public ListAccountingReportsRequest build() {
 
             return new ListAccountingReportsRequest(
-                connectionId, endLe, endLt,
-                fields, limit, offset,
-                order, query, raw,
-                sort, startGte, type,
-                updatedGte);
+                connectionId, endLt, fields,
+                limit, offset, order,
+                query, raw, sort,
+                startGte, type, updatedGte);
         }
 
     }

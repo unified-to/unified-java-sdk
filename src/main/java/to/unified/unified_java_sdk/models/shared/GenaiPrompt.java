@@ -27,6 +27,11 @@ public class GenaiPrompt {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("mcp_deferred_tools")
+    private Optional<? extends List<String>> mcpDeferredTools;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mcp_url")
     private Optional<String> mcpUrl;
 
@@ -63,6 +68,7 @@ public class GenaiPrompt {
     @JsonCreator
     public GenaiPrompt(
             @JsonProperty("max_tokens") Optional<Double> maxTokens,
+            @JsonProperty("mcp_deferred_tools") Optional<? extends List<String>> mcpDeferredTools,
             @JsonProperty("mcp_url") Optional<String> mcpUrl,
             @JsonProperty("messages") Optional<? extends List<GenaiContent>> messages,
             @JsonProperty("model_id") Optional<String> modelId,
@@ -71,6 +77,7 @@ public class GenaiPrompt {
             @JsonProperty("temperature") Optional<Double> temperature,
             @JsonProperty("tokens_used") Optional<Double> tokensUsed) {
         Utils.checkNotNull(maxTokens, "maxTokens");
+        Utils.checkNotNull(mcpDeferredTools, "mcpDeferredTools");
         Utils.checkNotNull(mcpUrl, "mcpUrl");
         Utils.checkNotNull(messages, "messages");
         Utils.checkNotNull(modelId, "modelId");
@@ -79,6 +86,7 @@ public class GenaiPrompt {
         Utils.checkNotNull(temperature, "temperature");
         Utils.checkNotNull(tokensUsed, "tokensUsed");
         this.maxTokens = maxTokens;
+        this.mcpDeferredTools = mcpDeferredTools;
         this.mcpUrl = mcpUrl;
         this.messages = messages;
         this.modelId = modelId;
@@ -91,12 +99,18 @@ public class GenaiPrompt {
     public GenaiPrompt() {
         this(Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
     public Optional<Double> maxTokens() {
         return maxTokens;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<String>> mcpDeferredTools() {
+        return (Optional<List<String>>) mcpDeferredTools;
     }
 
     @JsonIgnore
@@ -152,6 +166,19 @@ public class GenaiPrompt {
     public GenaiPrompt withMaxTokens(Optional<Double> maxTokens) {
         Utils.checkNotNull(maxTokens, "maxTokens");
         this.maxTokens = maxTokens;
+        return this;
+    }
+
+    public GenaiPrompt withMcpDeferredTools(List<String> mcpDeferredTools) {
+        Utils.checkNotNull(mcpDeferredTools, "mcpDeferredTools");
+        this.mcpDeferredTools = Optional.ofNullable(mcpDeferredTools);
+        return this;
+    }
+
+
+    public GenaiPrompt withMcpDeferredTools(Optional<? extends List<String>> mcpDeferredTools) {
+        Utils.checkNotNull(mcpDeferredTools, "mcpDeferredTools");
+        this.mcpDeferredTools = mcpDeferredTools;
         return this;
     }
 
@@ -257,6 +284,7 @@ public class GenaiPrompt {
         GenaiPrompt other = (GenaiPrompt) o;
         return 
             Utils.enhancedDeepEquals(this.maxTokens, other.maxTokens) &&
+            Utils.enhancedDeepEquals(this.mcpDeferredTools, other.mcpDeferredTools) &&
             Utils.enhancedDeepEquals(this.mcpUrl, other.mcpUrl) &&
             Utils.enhancedDeepEquals(this.messages, other.messages) &&
             Utils.enhancedDeepEquals(this.modelId, other.modelId) &&
@@ -269,15 +297,16 @@ public class GenaiPrompt {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            maxTokens, mcpUrl, messages,
-            modelId, raw, responses,
-            temperature, tokensUsed);
+            maxTokens, mcpDeferredTools, mcpUrl,
+            messages, modelId, raw,
+            responses, temperature, tokensUsed);
     }
     
     @Override
     public String toString() {
         return Utils.toString(GenaiPrompt.class,
                 "maxTokens", maxTokens,
+                "mcpDeferredTools", mcpDeferredTools,
                 "mcpUrl", mcpUrl,
                 "messages", messages,
                 "modelId", modelId,
@@ -291,6 +320,8 @@ public class GenaiPrompt {
     public final static class Builder {
 
         private Optional<Double> maxTokens = Optional.empty();
+
+        private Optional<? extends List<String>> mcpDeferredTools = Optional.empty();
 
         private Optional<String> mcpUrl = Optional.empty();
 
@@ -320,6 +351,19 @@ public class GenaiPrompt {
         public Builder maxTokens(Optional<Double> maxTokens) {
             Utils.checkNotNull(maxTokens, "maxTokens");
             this.maxTokens = maxTokens;
+            return this;
+        }
+
+
+        public Builder mcpDeferredTools(List<String> mcpDeferredTools) {
+            Utils.checkNotNull(mcpDeferredTools, "mcpDeferredTools");
+            this.mcpDeferredTools = Optional.ofNullable(mcpDeferredTools);
+            return this;
+        }
+
+        public Builder mcpDeferredTools(Optional<? extends List<String>> mcpDeferredTools) {
+            Utils.checkNotNull(mcpDeferredTools, "mcpDeferredTools");
+            this.mcpDeferredTools = mcpDeferredTools;
             return this;
         }
 
@@ -417,9 +461,9 @@ public class GenaiPrompt {
         public GenaiPrompt build() {
 
             return new GenaiPrompt(
-                maxTokens, mcpUrl, messages,
-                modelId, raw, responses,
-                temperature, tokensUsed);
+                maxTokens, mcpDeferredTools, mcpUrl,
+                messages, modelId, raw,
+                responses, temperature, tokensUsed);
         }
 
     }

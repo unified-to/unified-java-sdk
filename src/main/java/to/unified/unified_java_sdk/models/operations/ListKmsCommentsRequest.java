@@ -23,10 +23,10 @@ public class ListKmsCommentsRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<ListKmsCommentsQueryParamFields>> fields;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
@@ -41,7 +41,7 @@ public class ListKmsCommentsRequest {
     private Optional<String> order;
 
     /**
-     * The page ID to filter by
+     * The page ID to filter by (reference to KmsPage)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_id")
     private Optional<String> pageId;
@@ -77,7 +77,8 @@ public class ListKmsCommentsRequest {
     private Optional<String> type;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private Optional<String> updatedGte;
@@ -85,7 +86,7 @@ public class ListKmsCommentsRequest {
     @JsonCreator
     public ListKmsCommentsRequest(
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<ListKmsCommentsQueryParamFields>> fields,
             Optional<Double> limit,
             Optional<Double> offset,
             Optional<String> order,
@@ -139,12 +140,12 @@ public class ListKmsCommentsRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<ListKmsCommentsQueryParamFields>> fields() {
+        return (Optional<List<ListKmsCommentsQueryParamFields>>) fields;
     }
 
     @JsonIgnore
@@ -163,7 +164,7 @@ public class ListKmsCommentsRequest {
     }
 
     /**
-     * The page ID to filter by
+     * The page ID to filter by (reference to KmsPage)
      */
     @JsonIgnore
     public Optional<String> pageId() {
@@ -210,7 +211,8 @@ public class ListKmsCommentsRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> updatedGte() {
@@ -232,9 +234,9 @@ public class ListKmsCommentsRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListKmsCommentsRequest withFields(List<String> fields) {
+    public ListKmsCommentsRequest withFields(List<ListKmsCommentsQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -242,9 +244,9 @@ public class ListKmsCommentsRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListKmsCommentsRequest withFields(Optional<? extends List<String>> fields) {
+    public ListKmsCommentsRequest withFields(Optional<? extends List<ListKmsCommentsQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -290,7 +292,7 @@ public class ListKmsCommentsRequest {
     }
 
     /**
-     * The page ID to filter by
+     * The page ID to filter by (reference to KmsPage)
      */
     public ListKmsCommentsRequest withPageId(String pageId) {
         Utils.checkNotNull(pageId, "pageId");
@@ -300,7 +302,7 @@ public class ListKmsCommentsRequest {
 
 
     /**
-     * The page ID to filter by
+     * The page ID to filter by (reference to KmsPage)
      */
     public ListKmsCommentsRequest withPageId(Optional<String> pageId) {
         Utils.checkNotNull(pageId, "pageId");
@@ -402,7 +404,8 @@ public class ListKmsCommentsRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListKmsCommentsRequest withUpdatedGte(String updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -412,7 +415,8 @@ public class ListKmsCommentsRequest {
 
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListKmsCommentsRequest withUpdatedGte(Optional<String> updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -475,7 +479,7 @@ public class ListKmsCommentsRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<ListKmsCommentsQueryParamFields>> fields = Optional.empty();
 
         private Optional<Double> limit = Optional.empty();
 
@@ -513,18 +517,18 @@ public class ListKmsCommentsRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<ListKmsCommentsQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<ListKmsCommentsQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;
@@ -571,7 +575,7 @@ public class ListKmsCommentsRequest {
 
 
         /**
-         * The page ID to filter by
+         * The page ID to filter by (reference to KmsPage)
          */
         public Builder pageId(String pageId) {
             Utils.checkNotNull(pageId, "pageId");
@@ -580,7 +584,7 @@ public class ListKmsCommentsRequest {
         }
 
         /**
-         * The page ID to filter by
+         * The page ID to filter by (reference to KmsPage)
          */
         public Builder pageId(Optional<String> pageId) {
             Utils.checkNotNull(pageId, "pageId");
@@ -683,7 +687,8 @@ public class ListKmsCommentsRequest {
 
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(String updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -692,7 +697,8 @@ public class ListKmsCommentsRequest {
         }
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(Optional<String> updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");

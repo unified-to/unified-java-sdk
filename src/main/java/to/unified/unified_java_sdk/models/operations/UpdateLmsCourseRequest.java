@@ -27,10 +27,10 @@ public class UpdateLmsCourseRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<UpdateLmsCourseQueryParamFields>> fields;
 
     /**
      * ID of the Course
@@ -50,7 +50,7 @@ public class UpdateLmsCourseRequest {
     public UpdateLmsCourseRequest(
             LmsCourse lmsCourse,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<UpdateLmsCourseQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(lmsCourse, "lmsCourse");
@@ -87,12 +87,12 @@ public class UpdateLmsCourseRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<UpdateLmsCourseQueryParamFields>> fields() {
+        return (Optional<List<UpdateLmsCourseQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class UpdateLmsCourseRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateLmsCourseRequest withFields(List<String> fields) {
+    public UpdateLmsCourseRequest withFields(List<UpdateLmsCourseQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class UpdateLmsCourseRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateLmsCourseRequest withFields(Optional<? extends List<String>> fields) {
+    public UpdateLmsCourseRequest withFields(Optional<? extends List<UpdateLmsCourseQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class UpdateLmsCourseRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<UpdateLmsCourseQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class UpdateLmsCourseRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<UpdateLmsCourseQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<UpdateLmsCourseQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

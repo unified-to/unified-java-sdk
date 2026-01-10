@@ -23,10 +23,10 @@ public class ListAccountingContactsRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<ListAccountingContactsQueryParamFields>> fields;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
@@ -41,7 +41,7 @@ public class ListAccountingContactsRequest {
     private Optional<String> order;
 
     /**
-     * The org ID to filter by
+     * The org ID to filter by (reference to AccountingOrganization)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org_id")
     private Optional<String> orgId;
@@ -69,7 +69,8 @@ public class ListAccountingContactsRequest {
     private Optional<String> type;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private Optional<String> updatedGte;
@@ -77,7 +78,7 @@ public class ListAccountingContactsRequest {
     @JsonCreator
     public ListAccountingContactsRequest(
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<ListAccountingContactsQueryParamFields>> fields,
             Optional<Double> limit,
             Optional<Double> offset,
             Optional<String> order,
@@ -128,12 +129,12 @@ public class ListAccountingContactsRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<ListAccountingContactsQueryParamFields>> fields() {
+        return (Optional<List<ListAccountingContactsQueryParamFields>>) fields;
     }
 
     @JsonIgnore
@@ -152,7 +153,7 @@ public class ListAccountingContactsRequest {
     }
 
     /**
-     * The org ID to filter by
+     * The org ID to filter by (reference to AccountingOrganization)
      */
     @JsonIgnore
     public Optional<String> orgId() {
@@ -188,7 +189,8 @@ public class ListAccountingContactsRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> updatedGte() {
@@ -210,9 +212,9 @@ public class ListAccountingContactsRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListAccountingContactsRequest withFields(List<String> fields) {
+    public ListAccountingContactsRequest withFields(List<ListAccountingContactsQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -220,9 +222,9 @@ public class ListAccountingContactsRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListAccountingContactsRequest withFields(Optional<? extends List<String>> fields) {
+    public ListAccountingContactsRequest withFields(Optional<? extends List<ListAccountingContactsQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -268,7 +270,7 @@ public class ListAccountingContactsRequest {
     }
 
     /**
-     * The org ID to filter by
+     * The org ID to filter by (reference to AccountingOrganization)
      */
     public ListAccountingContactsRequest withOrgId(String orgId) {
         Utils.checkNotNull(orgId, "orgId");
@@ -278,7 +280,7 @@ public class ListAccountingContactsRequest {
 
 
     /**
-     * The org ID to filter by
+     * The org ID to filter by (reference to AccountingOrganization)
      */
     public ListAccountingContactsRequest withOrgId(Optional<String> orgId) {
         Utils.checkNotNull(orgId, "orgId");
@@ -355,7 +357,8 @@ public class ListAccountingContactsRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListAccountingContactsRequest withUpdatedGte(String updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -365,7 +368,8 @@ public class ListAccountingContactsRequest {
 
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListAccountingContactsRequest withUpdatedGte(Optional<String> updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -426,7 +430,7 @@ public class ListAccountingContactsRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<ListAccountingContactsQueryParamFields>> fields = Optional.empty();
 
         private Optional<Double> limit = Optional.empty();
 
@@ -462,18 +466,18 @@ public class ListAccountingContactsRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<ListAccountingContactsQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<ListAccountingContactsQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;
@@ -520,7 +524,7 @@ public class ListAccountingContactsRequest {
 
 
         /**
-         * The org ID to filter by
+         * The org ID to filter by (reference to AccountingOrganization)
          */
         public Builder orgId(String orgId) {
             Utils.checkNotNull(orgId, "orgId");
@@ -529,7 +533,7 @@ public class ListAccountingContactsRequest {
         }
 
         /**
-         * The org ID to filter by
+         * The org ID to filter by (reference to AccountingOrganization)
          */
         public Builder orgId(Optional<String> orgId) {
             Utils.checkNotNull(orgId, "orgId");
@@ -607,7 +611,8 @@ public class ListAccountingContactsRequest {
 
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(String updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -616,7 +621,8 @@ public class ListAccountingContactsRequest {
         }
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(Optional<String> updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");

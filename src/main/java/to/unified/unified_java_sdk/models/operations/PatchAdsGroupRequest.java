@@ -27,10 +27,10 @@ public class PatchAdsGroupRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<PatchAdsGroupQueryParamFields>> fields;
 
     /**
      * ID of the Group
@@ -50,7 +50,7 @@ public class PatchAdsGroupRequest {
     public PatchAdsGroupRequest(
             AdsGroup adsGroup,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<PatchAdsGroupQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(adsGroup, "adsGroup");
@@ -87,12 +87,12 @@ public class PatchAdsGroupRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<PatchAdsGroupQueryParamFields>> fields() {
+        return (Optional<List<PatchAdsGroupQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class PatchAdsGroupRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchAdsGroupRequest withFields(List<String> fields) {
+    public PatchAdsGroupRequest withFields(List<PatchAdsGroupQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class PatchAdsGroupRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchAdsGroupRequest withFields(Optional<? extends List<String>> fields) {
+    public PatchAdsGroupRequest withFields(Optional<? extends List<PatchAdsGroupQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class PatchAdsGroupRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<PatchAdsGroupQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class PatchAdsGroupRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<PatchAdsGroupQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<PatchAdsGroupQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

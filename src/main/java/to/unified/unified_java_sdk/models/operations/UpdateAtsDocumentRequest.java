@@ -27,10 +27,10 @@ public class UpdateAtsDocumentRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<UpdateAtsDocumentQueryParamFields>> fields;
 
     /**
      * ID of the Document
@@ -50,7 +50,7 @@ public class UpdateAtsDocumentRequest {
     public UpdateAtsDocumentRequest(
             AtsDocument atsDocument,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<UpdateAtsDocumentQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(atsDocument, "atsDocument");
@@ -87,12 +87,12 @@ public class UpdateAtsDocumentRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<UpdateAtsDocumentQueryParamFields>> fields() {
+        return (Optional<List<UpdateAtsDocumentQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class UpdateAtsDocumentRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateAtsDocumentRequest withFields(List<String> fields) {
+    public UpdateAtsDocumentRequest withFields(List<UpdateAtsDocumentQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class UpdateAtsDocumentRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateAtsDocumentRequest withFields(Optional<? extends List<String>> fields) {
+    public UpdateAtsDocumentRequest withFields(Optional<? extends List<UpdateAtsDocumentQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class UpdateAtsDocumentRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<UpdateAtsDocumentQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class UpdateAtsDocumentRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<UpdateAtsDocumentQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<UpdateAtsDocumentQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

@@ -51,11 +51,6 @@ public class AtsActivity {
     @JsonProperty("description")
     private Optional<String> description;
 
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("document_id")
-    private Optional<String> documentId;
-
     /**
      * IDs for AtsDocument.get
      */
@@ -133,7 +128,6 @@ public class AtsActivity {
             @JsonProperty("cc") Optional<? extends List<AtsEmail>> cc,
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("description") Optional<String> description,
-            @JsonProperty("document_id") Optional<String> documentId,
             @JsonProperty("document_ids") Optional<? extends List<String>> documentIds,
             @JsonProperty("from") Optional<? extends PropertyAtsActivityFrom> from,
             @JsonProperty("id") Optional<String> id,
@@ -153,7 +147,6 @@ public class AtsActivity {
         Utils.checkNotNull(cc, "cc");
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(documentId, "documentId");
         Utils.checkNotNull(documentIds, "documentIds");
         Utils.checkNotNull(from, "from");
         Utils.checkNotNull(id, "id");
@@ -173,7 +166,6 @@ public class AtsActivity {
         this.cc = cc;
         this.createdAt = createdAt;
         this.description = description;
-        this.documentId = documentId;
         this.documentIds = documentIds;
         this.from = from;
         this.id = id;
@@ -196,7 +188,7 @@ public class AtsActivity {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            Optional.empty());
     }
 
     @JsonIgnore
@@ -229,11 +221,6 @@ public class AtsActivity {
     @JsonIgnore
     public Optional<String> description() {
         return description;
-    }
-
-    @JsonIgnore
-    public Optional<String> documentId() {
-        return documentId;
     }
 
     /**
@@ -393,19 +380,6 @@ public class AtsActivity {
     public AtsActivity withDescription(Optional<String> description) {
         Utils.checkNotNull(description, "description");
         this.description = description;
-        return this;
-    }
-
-    public AtsActivity withDocumentId(String documentId) {
-        Utils.checkNotNull(documentId, "documentId");
-        this.documentId = Optional.ofNullable(documentId);
-        return this;
-    }
-
-
-    public AtsActivity withDocumentId(Optional<String> documentId) {
-        Utils.checkNotNull(documentId, "documentId");
-        this.documentId = documentId;
         return this;
     }
 
@@ -606,7 +580,6 @@ public class AtsActivity {
             Utils.enhancedDeepEquals(this.cc, other.cc) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
-            Utils.enhancedDeepEquals(this.documentId, other.documentId) &&
             Utils.enhancedDeepEquals(this.documentIds, other.documentIds) &&
             Utils.enhancedDeepEquals(this.from, other.from) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
@@ -627,11 +600,11 @@ public class AtsActivity {
         return Utils.enhancedHash(
             applicationId, bcc, candidateId,
             cc, createdAt, description,
-            documentId, documentIds, from,
-            id, interviewId, isPrivate,
-            jobId, raw, subType,
-            title, to, type,
-            updatedAt, userIds);
+            documentIds, from, id,
+            interviewId, isPrivate, jobId,
+            raw, subType, title,
+            to, type, updatedAt,
+            userIds);
     }
     
     @Override
@@ -643,7 +616,6 @@ public class AtsActivity {
                 "cc", cc,
                 "createdAt", createdAt,
                 "description", description,
-                "documentId", documentId,
                 "documentIds", documentIds,
                 "from", from,
                 "id", id,
@@ -673,8 +645,6 @@ public class AtsActivity {
         private Optional<OffsetDateTime> createdAt = Optional.empty();
 
         private Optional<String> description = Optional.empty();
-
-        private Optional<String> documentId = Optional.empty();
 
         private Optional<? extends List<String>> documentIds = Optional.empty();
 
@@ -781,19 +751,6 @@ public class AtsActivity {
         public Builder description(Optional<String> description) {
             Utils.checkNotNull(description, "description");
             this.description = description;
-            return this;
-        }
-
-
-        public Builder documentId(String documentId) {
-            Utils.checkNotNull(documentId, "documentId");
-            this.documentId = Optional.ofNullable(documentId);
-            return this;
-        }
-
-        public Builder documentId(Optional<String> documentId) {
-            Utils.checkNotNull(documentId, "documentId");
-            this.documentId = documentId;
             return this;
         }
 
@@ -983,11 +940,11 @@ public class AtsActivity {
             return new AtsActivity(
                 applicationId, bcc, candidateId,
                 cc, createdAt, description,
-                documentId, documentIds, from,
-                id, interviewId, isPrivate,
-                jobId, raw, subType,
-                title, to, type,
-                updatedAt, userIds);
+                documentIds, from, id,
+                interviewId, isPrivate, jobId,
+                raw, subType, title,
+                to, type, updatedAt,
+                userIds);
         }
 
     }

@@ -29,10 +29,10 @@ public class CreateMartechListRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<CreateMartechListQueryParamFields>> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -46,7 +46,7 @@ public class CreateMartechListRequest {
     public CreateMartechListRequest(
             MarketingList marketingList,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<CreateMartechListQueryParamFields>> fields,
             Optional<String> raw) {
         Utils.checkNotNull(marketingList, "marketingList");
         Utils.checkNotNull(connectionId, "connectionId");
@@ -82,12 +82,12 @@ public class CreateMartechListRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<CreateMartechListQueryParamFields>> fields() {
+        return (Optional<List<CreateMartechListQueryParamFields>>) fields;
     }
 
     /**
@@ -124,9 +124,9 @@ public class CreateMartechListRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public CreateMartechListRequest withFields(List<String> fields) {
+    public CreateMartechListRequest withFields(List<CreateMartechListQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -134,9 +134,9 @@ public class CreateMartechListRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public CreateMartechListRequest withFields(Optional<? extends List<String>> fields) {
+    public CreateMartechListRequest withFields(Optional<? extends List<CreateMartechListQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -204,7 +204,7 @@ public class CreateMartechListRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<CreateMartechListQueryParamFields>> fields = Optional.empty();
 
         private Optional<String> raw = Optional.empty();
 
@@ -234,18 +234,18 @@ public class CreateMartechListRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<CreateMartechListQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<CreateMartechListQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

@@ -27,10 +27,10 @@ public class UpdateKmsSpaceRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<UpdateKmsSpaceQueryParamFields>> fields;
 
     /**
      * ID of the Space
@@ -50,7 +50,7 @@ public class UpdateKmsSpaceRequest {
     public UpdateKmsSpaceRequest(
             KmsSpace kmsSpace,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<UpdateKmsSpaceQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(kmsSpace, "kmsSpace");
@@ -87,12 +87,12 @@ public class UpdateKmsSpaceRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<UpdateKmsSpaceQueryParamFields>> fields() {
+        return (Optional<List<UpdateKmsSpaceQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class UpdateKmsSpaceRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateKmsSpaceRequest withFields(List<String> fields) {
+    public UpdateKmsSpaceRequest withFields(List<UpdateKmsSpaceQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class UpdateKmsSpaceRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateKmsSpaceRequest withFields(Optional<? extends List<String>> fields) {
+    public UpdateKmsSpaceRequest withFields(Optional<? extends List<UpdateKmsSpaceQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class UpdateKmsSpaceRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<UpdateKmsSpaceQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class UpdateKmsSpaceRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<UpdateKmsSpaceQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<UpdateKmsSpaceQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

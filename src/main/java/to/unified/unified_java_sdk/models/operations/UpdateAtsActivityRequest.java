@@ -27,10 +27,10 @@ public class UpdateAtsActivityRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<UpdateAtsActivityQueryParamFields>> fields;
 
     /**
      * ID of the Activity
@@ -50,7 +50,7 @@ public class UpdateAtsActivityRequest {
     public UpdateAtsActivityRequest(
             AtsActivity atsActivity,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<UpdateAtsActivityQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(atsActivity, "atsActivity");
@@ -87,12 +87,12 @@ public class UpdateAtsActivityRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<UpdateAtsActivityQueryParamFields>> fields() {
+        return (Optional<List<UpdateAtsActivityQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class UpdateAtsActivityRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateAtsActivityRequest withFields(List<String> fields) {
+    public UpdateAtsActivityRequest withFields(List<UpdateAtsActivityQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class UpdateAtsActivityRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateAtsActivityRequest withFields(Optional<? extends List<String>> fields) {
+    public UpdateAtsActivityRequest withFields(Optional<? extends List<UpdateAtsActivityQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class UpdateAtsActivityRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<UpdateAtsActivityQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class UpdateAtsActivityRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<UpdateAtsActivityQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<UpdateAtsActivityQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

@@ -4,11 +4,13 @@
 
 ### Available Operations
 
-* [createUnifiedEnvironment](#createunifiedenvironment)
-* [listUnifiedEnvironments](#listunifiedenvironments)
-* [removeUnifiedEnvironment](#removeunifiedenvironment)
+* [createUnifiedEnvironment](#createunifiedenvironment) - Create new environments
+* [listUnifiedEnvironments](#listunifiedenvironments) - Returns all environments
+* [removeUnifiedEnvironment](#removeunifiedenvironment) - Remove an environment
 
 ## createUnifiedEnvironment
+
+Create new environments
 
 ### Example Usage
 
@@ -39,7 +41,7 @@ public class Application {
                 .request(req)
                 .call();
 
-        if (res.s().isPresent()) {
+        if (res.environments().isPresent()) {
             // handle response
         }
     }
@@ -63,6 +65,8 @@ public class Application {
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listUnifiedEnvironments
+
+Returns all environments
 
 ### Example Usage
 
@@ -88,7 +92,7 @@ public class Application {
         ListUnifiedEnvironmentsResponse res = sdk.environment().listUnifiedEnvironments()
                 .call();
 
-        if (res.s().isPresent()) {
+        if (res.environments().isPresent()) {
             // handle response
         }
     }
@@ -106,6 +110,8 @@ public class Application {
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeUnifiedEnvironment
+
+Remove an environment
 
 ### Example Usage
 
@@ -137,7 +143,7 @@ public class Application {
                 .request(req)
                 .call();
 
-        if (res.s().isPresent()) {
+        if (res.environments().isPresent()) {
             // handle response
         }
     }

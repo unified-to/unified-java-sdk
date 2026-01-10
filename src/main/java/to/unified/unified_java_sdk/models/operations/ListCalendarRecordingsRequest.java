@@ -23,28 +23,22 @@ public class ListCalendarRecordingsRequest {
     private String connectionId;
 
     /**
-     * The end date to filter by (deprecated)
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_le")
-    private Optional<String> endLe;
-
-    /**
-     * The end date to filter by
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_lt")
     private Optional<String> endLt;
 
     /**
-     * The event ID to filter by
+     * The event ID to filter by (reference to CalendarEvent)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=event_id")
     private Optional<String> eventId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<ListCalendarRecordingsQueryParamFields>> fields;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
@@ -77,13 +71,14 @@ public class ListCalendarRecordingsRequest {
     private Optional<String> sort;
 
     /**
-     * The start date to filter by
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_gte")
     private Optional<String> startGte;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private Optional<String> updatedGte;
@@ -91,10 +86,9 @@ public class ListCalendarRecordingsRequest {
     @JsonCreator
     public ListCalendarRecordingsRequest(
             String connectionId,
-            Optional<String> endLe,
             Optional<String> endLt,
             Optional<String> eventId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<ListCalendarRecordingsQueryParamFields>> fields,
             Optional<Double> limit,
             Optional<Double> offset,
             Optional<String> order,
@@ -104,7 +98,6 @@ public class ListCalendarRecordingsRequest {
             Optional<String> startGte,
             Optional<String> updatedGte) {
         Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(endLe, "endLe");
         Utils.checkNotNull(endLt, "endLt");
         Utils.checkNotNull(eventId, "eventId");
         Utils.checkNotNull(fields, "fields");
@@ -117,7 +110,6 @@ public class ListCalendarRecordingsRequest {
         Utils.checkNotNull(startGte, "startGte");
         Utils.checkNotNull(updatedGte, "updatedGte");
         this.connectionId = connectionId;
-        this.endLe = endLe;
         this.endLt = endLt;
         this.eventId = eventId;
         this.fields = fields;
@@ -136,8 +128,7 @@ public class ListCalendarRecordingsRequest {
         this(connectionId, Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     /**
@@ -149,15 +140,7 @@ public class ListCalendarRecordingsRequest {
     }
 
     /**
-     * The end date to filter by (deprecated)
-     */
-    @JsonIgnore
-    public Optional<String> endLe() {
-        return endLe;
-    }
-
-    /**
-     * The end date to filter by
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> endLt() {
@@ -165,7 +148,7 @@ public class ListCalendarRecordingsRequest {
     }
 
     /**
-     * The event ID to filter by
+     * The event ID to filter by (reference to CalendarEvent)
      */
     @JsonIgnore
     public Optional<String> eventId() {
@@ -173,12 +156,12 @@ public class ListCalendarRecordingsRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<ListCalendarRecordingsQueryParamFields>> fields() {
+        return (Optional<List<ListCalendarRecordingsQueryParamFields>>) fields;
     }
 
     @JsonIgnore
@@ -220,7 +203,7 @@ public class ListCalendarRecordingsRequest {
     }
 
     /**
-     * The start date to filter by
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> startGte() {
@@ -228,7 +211,8 @@ public class ListCalendarRecordingsRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> updatedGte() {
@@ -250,26 +234,7 @@ public class ListCalendarRecordingsRequest {
     }
 
     /**
-     * The end date to filter by (deprecated)
-     */
-    public ListCalendarRecordingsRequest withEndLe(String endLe) {
-        Utils.checkNotNull(endLe, "endLe");
-        this.endLe = Optional.ofNullable(endLe);
-        return this;
-    }
-
-
-    /**
-     * The end date to filter by (deprecated)
-     */
-    public ListCalendarRecordingsRequest withEndLe(Optional<String> endLe) {
-        Utils.checkNotNull(endLe, "endLe");
-        this.endLe = endLe;
-        return this;
-    }
-
-    /**
-     * The end date to filter by
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListCalendarRecordingsRequest withEndLt(String endLt) {
         Utils.checkNotNull(endLt, "endLt");
@@ -279,7 +244,7 @@ public class ListCalendarRecordingsRequest {
 
 
     /**
-     * The end date to filter by
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListCalendarRecordingsRequest withEndLt(Optional<String> endLt) {
         Utils.checkNotNull(endLt, "endLt");
@@ -288,7 +253,7 @@ public class ListCalendarRecordingsRequest {
     }
 
     /**
-     * The event ID to filter by
+     * The event ID to filter by (reference to CalendarEvent)
      */
     public ListCalendarRecordingsRequest withEventId(String eventId) {
         Utils.checkNotNull(eventId, "eventId");
@@ -298,7 +263,7 @@ public class ListCalendarRecordingsRequest {
 
 
     /**
-     * The event ID to filter by
+     * The event ID to filter by (reference to CalendarEvent)
      */
     public ListCalendarRecordingsRequest withEventId(Optional<String> eventId) {
         Utils.checkNotNull(eventId, "eventId");
@@ -307,9 +272,9 @@ public class ListCalendarRecordingsRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListCalendarRecordingsRequest withFields(List<String> fields) {
+    public ListCalendarRecordingsRequest withFields(List<ListCalendarRecordingsQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -317,9 +282,9 @@ public class ListCalendarRecordingsRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListCalendarRecordingsRequest withFields(Optional<? extends List<String>> fields) {
+    public ListCalendarRecordingsRequest withFields(Optional<? extends List<ListCalendarRecordingsQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -420,7 +385,7 @@ public class ListCalendarRecordingsRequest {
     }
 
     /**
-     * The start date to filter by
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListCalendarRecordingsRequest withStartGte(String startGte) {
         Utils.checkNotNull(startGte, "startGte");
@@ -430,7 +395,7 @@ public class ListCalendarRecordingsRequest {
 
 
     /**
-     * The start date to filter by
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListCalendarRecordingsRequest withStartGte(Optional<String> startGte) {
         Utils.checkNotNull(startGte, "startGte");
@@ -439,7 +404,8 @@ public class ListCalendarRecordingsRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListCalendarRecordingsRequest withUpdatedGte(String updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -449,7 +415,8 @@ public class ListCalendarRecordingsRequest {
 
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListCalendarRecordingsRequest withUpdatedGte(Optional<String> updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -468,7 +435,6 @@ public class ListCalendarRecordingsRequest {
         ListCalendarRecordingsRequest other = (ListCalendarRecordingsRequest) o;
         return 
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
-            Utils.enhancedDeepEquals(this.endLe, other.endLe) &&
             Utils.enhancedDeepEquals(this.endLt, other.endLt) &&
             Utils.enhancedDeepEquals(this.eventId, other.eventId) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
@@ -485,18 +451,16 @@ public class ListCalendarRecordingsRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId, endLe, endLt,
-            eventId, fields, limit,
-            offset, order, query,
-            raw, sort, startGte,
-            updatedGte);
+            connectionId, endLt, eventId,
+            fields, limit, offset,
+            order, query, raw,
+            sort, startGte, updatedGte);
     }
     
     @Override
     public String toString() {
         return Utils.toString(ListCalendarRecordingsRequest.class,
                 "connectionId", connectionId,
-                "endLe", endLe,
                 "endLt", endLt,
                 "eventId", eventId,
                 "fields", fields,
@@ -515,13 +479,11 @@ public class ListCalendarRecordingsRequest {
 
         private String connectionId;
 
-        private Optional<String> endLe = Optional.empty();
-
         private Optional<String> endLt = Optional.empty();
 
         private Optional<String> eventId = Optional.empty();
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<ListCalendarRecordingsQueryParamFields>> fields = Optional.empty();
 
         private Optional<Double> limit = Optional.empty();
 
@@ -555,26 +517,7 @@ public class ListCalendarRecordingsRequest {
 
 
         /**
-         * The end date to filter by (deprecated)
-         */
-        public Builder endLe(String endLe) {
-            Utils.checkNotNull(endLe, "endLe");
-            this.endLe = Optional.ofNullable(endLe);
-            return this;
-        }
-
-        /**
-         * The end date to filter by (deprecated)
-         */
-        public Builder endLe(Optional<String> endLe) {
-            Utils.checkNotNull(endLe, "endLe");
-            this.endLe = endLe;
-            return this;
-        }
-
-
-        /**
-         * The end date to filter by
+         * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder endLt(String endLt) {
             Utils.checkNotNull(endLt, "endLt");
@@ -583,7 +526,7 @@ public class ListCalendarRecordingsRequest {
         }
 
         /**
-         * The end date to filter by
+         * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder endLt(Optional<String> endLt) {
             Utils.checkNotNull(endLt, "endLt");
@@ -593,7 +536,7 @@ public class ListCalendarRecordingsRequest {
 
 
         /**
-         * The event ID to filter by
+         * The event ID to filter by (reference to CalendarEvent)
          */
         public Builder eventId(String eventId) {
             Utils.checkNotNull(eventId, "eventId");
@@ -602,7 +545,7 @@ public class ListCalendarRecordingsRequest {
         }
 
         /**
-         * The event ID to filter by
+         * The event ID to filter by (reference to CalendarEvent)
          */
         public Builder eventId(Optional<String> eventId) {
             Utils.checkNotNull(eventId, "eventId");
@@ -612,18 +555,18 @@ public class ListCalendarRecordingsRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<ListCalendarRecordingsQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<ListCalendarRecordingsQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;
@@ -725,7 +668,7 @@ public class ListCalendarRecordingsRequest {
 
 
         /**
-         * The start date to filter by
+         * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder startGte(String startGte) {
             Utils.checkNotNull(startGte, "startGte");
@@ -734,7 +677,7 @@ public class ListCalendarRecordingsRequest {
         }
 
         /**
-         * The start date to filter by
+         * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder startGte(Optional<String> startGte) {
             Utils.checkNotNull(startGte, "startGte");
@@ -744,7 +687,8 @@ public class ListCalendarRecordingsRequest {
 
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(String updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -753,7 +697,8 @@ public class ListCalendarRecordingsRequest {
         }
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(Optional<String> updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -764,11 +709,10 @@ public class ListCalendarRecordingsRequest {
         public ListCalendarRecordingsRequest build() {
 
             return new ListCalendarRecordingsRequest(
-                connectionId, endLe, endLt,
-                eventId, fields, limit,
-                offset, order, query,
-                raw, sort, startGte,
-                updatedGte);
+                connectionId, endLt, eventId,
+                fields, limit, offset,
+                order, query, raw,
+                sort, startGte, updatedGte);
         }
 
     }

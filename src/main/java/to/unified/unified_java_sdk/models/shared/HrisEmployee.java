@@ -59,16 +59,6 @@ public class HrisEmployee {
 
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("department")
-    private Optional<String> department;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("division")
-    private Optional<String> division;
-
-
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
     private Optional<? extends List<HrisEmail>> emails;
 
@@ -139,11 +129,6 @@ public class HrisEmployee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
     private Optional<String> lastName;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("location")
-    private Optional<String> location;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -224,6 +209,11 @@ public class HrisEmployee {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("termination_reason")
+    private Optional<String> terminationReason;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     private Optional<String> timezone;
 
@@ -246,8 +236,6 @@ public class HrisEmployee {
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("currency") Optional<String> currency,
             @JsonProperty("date_of_birth") Optional<OffsetDateTime> dateOfBirth,
-            @JsonProperty("department") Optional<String> department,
-            @JsonProperty("division") Optional<String> division,
             @JsonProperty("emails") Optional<? extends List<HrisEmail>> emails,
             @JsonProperty("employee_number") Optional<String> employeeNumber,
             @JsonProperty("employee_roles") Optional<? extends List<PropertyHrisEmployeeEmployeeRoles>> employeeRoles,
@@ -262,7 +250,6 @@ public class HrisEmployee {
             @JsonProperty("image_url") Optional<String> imageUrl,
             @JsonProperty("language_locale") Optional<String> languageLocale,
             @JsonProperty("last_name") Optional<String> lastName,
-            @JsonProperty("location") Optional<String> location,
             @JsonProperty("locations") Optional<? extends List<HrisLocation>> locations,
             @JsonProperty("manager_id") Optional<String> managerId,
             @JsonProperty("marital_status") Optional<? extends MaritalStatus> maritalStatus,
@@ -278,6 +265,7 @@ public class HrisEmployee {
             @JsonProperty("storage_quota_used") Optional<Double> storageQuotaUsed,
             @JsonProperty("telephones") Optional<? extends List<HrisTelephone>> telephones,
             @JsonProperty("terminated_at") Optional<OffsetDateTime> terminatedAt,
+            @JsonProperty("termination_reason") Optional<String> terminationReason,
             @JsonProperty("timezone") Optional<String> timezone,
             @JsonProperty("title") Optional<String> title,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
@@ -288,8 +276,6 @@ public class HrisEmployee {
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(currency, "currency");
         Utils.checkNotNull(dateOfBirth, "dateOfBirth");
-        Utils.checkNotNull(department, "department");
-        Utils.checkNotNull(division, "division");
         Utils.checkNotNull(emails, "emails");
         Utils.checkNotNull(employeeNumber, "employeeNumber");
         Utils.checkNotNull(employeeRoles, "employeeRoles");
@@ -304,7 +290,6 @@ public class HrisEmployee {
         Utils.checkNotNull(imageUrl, "imageUrl");
         Utils.checkNotNull(languageLocale, "languageLocale");
         Utils.checkNotNull(lastName, "lastName");
-        Utils.checkNotNull(location, "location");
         Utils.checkNotNull(locations, "locations");
         Utils.checkNotNull(managerId, "managerId");
         Utils.checkNotNull(maritalStatus, "maritalStatus");
@@ -320,6 +305,7 @@ public class HrisEmployee {
         Utils.checkNotNull(storageQuotaUsed, "storageQuotaUsed");
         Utils.checkNotNull(telephones, "telephones");
         Utils.checkNotNull(terminatedAt, "terminatedAt");
+        Utils.checkNotNull(terminationReason, "terminationReason");
         Utils.checkNotNull(timezone, "timezone");
         Utils.checkNotNull(title, "title");
         Utils.checkNotNull(updatedAt, "updatedAt");
@@ -330,8 +316,6 @@ public class HrisEmployee {
         this.createdAt = createdAt;
         this.currency = currency;
         this.dateOfBirth = dateOfBirth;
-        this.department = department;
-        this.division = division;
         this.emails = emails;
         this.employeeNumber = employeeNumber;
         this.employeeRoles = employeeRoles;
@@ -346,7 +330,6 @@ public class HrisEmployee {
         this.imageUrl = imageUrl;
         this.languageLocale = languageLocale;
         this.lastName = lastName;
-        this.location = location;
         this.locations = locations;
         this.managerId = managerId;
         this.maritalStatus = maritalStatus;
@@ -362,6 +345,7 @@ public class HrisEmployee {
         this.storageQuotaUsed = storageQuotaUsed;
         this.telephones = telephones;
         this.terminatedAt = terminatedAt;
+        this.terminationReason = terminationReason;
         this.timezone = timezone;
         this.title = title;
         this.updatedAt = updatedAt;
@@ -381,7 +365,7 @@ public class HrisEmployee {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+            Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -419,16 +403,6 @@ public class HrisEmployee {
     @JsonIgnore
     public Optional<OffsetDateTime> dateOfBirth() {
         return dateOfBirth;
-    }
-
-    @JsonIgnore
-    public Optional<String> department() {
-        return department;
-    }
-
-    @JsonIgnore
-    public Optional<String> division() {
-        return division;
     }
 
     @SuppressWarnings("unchecked")
@@ -509,11 +483,6 @@ public class HrisEmployee {
     @JsonIgnore
     public Optional<String> lastName() {
         return lastName;
-    }
-
-    @JsonIgnore
-    public Optional<String> location() {
-        return location;
     }
 
     @SuppressWarnings("unchecked")
@@ -598,6 +567,11 @@ public class HrisEmployee {
     @JsonIgnore
     public Optional<OffsetDateTime> terminatedAt() {
         return terminatedAt;
+    }
+
+    @JsonIgnore
+    public Optional<String> terminationReason() {
+        return terminationReason;
     }
 
     @JsonIgnore
@@ -708,32 +682,6 @@ public class HrisEmployee {
     public HrisEmployee withDateOfBirth(Optional<OffsetDateTime> dateOfBirth) {
         Utils.checkNotNull(dateOfBirth, "dateOfBirth");
         this.dateOfBirth = dateOfBirth;
-        return this;
-    }
-
-    public HrisEmployee withDepartment(String department) {
-        Utils.checkNotNull(department, "department");
-        this.department = Optional.ofNullable(department);
-        return this;
-    }
-
-
-    public HrisEmployee withDepartment(Optional<String> department) {
-        Utils.checkNotNull(department, "department");
-        this.department = department;
-        return this;
-    }
-
-    public HrisEmployee withDivision(String division) {
-        Utils.checkNotNull(division, "division");
-        this.division = Optional.ofNullable(division);
-        return this;
-    }
-
-
-    public HrisEmployee withDivision(Optional<String> division) {
-        Utils.checkNotNull(division, "division");
-        this.division = division;
         return this;
     }
 
@@ -924,19 +872,6 @@ public class HrisEmployee {
     public HrisEmployee withLastName(Optional<String> lastName) {
         Utils.checkNotNull(lastName, "lastName");
         this.lastName = lastName;
-        return this;
-    }
-
-    public HrisEmployee withLocation(String location) {
-        Utils.checkNotNull(location, "location");
-        this.location = Optional.ofNullable(location);
-        return this;
-    }
-
-
-    public HrisEmployee withLocation(Optional<String> location) {
-        Utils.checkNotNull(location, "location");
-        this.location = location;
         return this;
     }
 
@@ -1141,6 +1076,19 @@ public class HrisEmployee {
         return this;
     }
 
+    public HrisEmployee withTerminationReason(String terminationReason) {
+        Utils.checkNotNull(terminationReason, "terminationReason");
+        this.terminationReason = Optional.ofNullable(terminationReason);
+        return this;
+    }
+
+
+    public HrisEmployee withTerminationReason(Optional<String> terminationReason) {
+        Utils.checkNotNull(terminationReason, "terminationReason");
+        this.terminationReason = terminationReason;
+        return this;
+    }
+
     public HrisEmployee withTimezone(String timezone) {
         Utils.checkNotNull(timezone, "timezone");
         this.timezone = Optional.ofNullable(timezone);
@@ -1197,8 +1145,6 @@ public class HrisEmployee {
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.dateOfBirth, other.dateOfBirth) &&
-            Utils.enhancedDeepEquals(this.department, other.department) &&
-            Utils.enhancedDeepEquals(this.division, other.division) &&
             Utils.enhancedDeepEquals(this.emails, other.emails) &&
             Utils.enhancedDeepEquals(this.employeeNumber, other.employeeNumber) &&
             Utils.enhancedDeepEquals(this.employeeRoles, other.employeeRoles) &&
@@ -1213,7 +1159,6 @@ public class HrisEmployee {
             Utils.enhancedDeepEquals(this.imageUrl, other.imageUrl) &&
             Utils.enhancedDeepEquals(this.languageLocale, other.languageLocale) &&
             Utils.enhancedDeepEquals(this.lastName, other.lastName) &&
-            Utils.enhancedDeepEquals(this.location, other.location) &&
             Utils.enhancedDeepEquals(this.locations, other.locations) &&
             Utils.enhancedDeepEquals(this.managerId, other.managerId) &&
             Utils.enhancedDeepEquals(this.maritalStatus, other.maritalStatus) &&
@@ -1229,6 +1174,7 @@ public class HrisEmployee {
             Utils.enhancedDeepEquals(this.storageQuotaUsed, other.storageQuotaUsed) &&
             Utils.enhancedDeepEquals(this.telephones, other.telephones) &&
             Utils.enhancedDeepEquals(this.terminatedAt, other.terminatedAt) &&
+            Utils.enhancedDeepEquals(this.terminationReason, other.terminationReason) &&
             Utils.enhancedDeepEquals(this.timezone, other.timezone) &&
             Utils.enhancedDeepEquals(this.title, other.title) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
@@ -1239,18 +1185,18 @@ public class HrisEmployee {
         return Utils.enhancedHash(
             address, bio, companyId,
             compensation, createdAt, currency,
-            dateOfBirth, department, division,
-            emails, employeeNumber, employeeRoles,
-            employmentStatus, employmentType, firstName,
-            gender, groups, hasMfa,
-            hiredAt, id, imageUrl,
-            languageLocale, lastName, location,
+            dateOfBirth, emails, employeeNumber,
+            employeeRoles, employmentStatus, employmentType,
+            firstName, gender, groups,
+            hasMfa, hiredAt, id,
+            imageUrl, languageLocale, lastName,
             locations, managerId, maritalStatus,
             metadata, name, pronouns,
             raw, relationships, salutation,
             ssnSin, storageQuotaAllocated, storageQuotaAvailable,
             storageQuotaUsed, telephones, terminatedAt,
-            timezone, title, updatedAt);
+            terminationReason, timezone, title,
+            updatedAt);
     }
     
     @Override
@@ -1263,8 +1209,6 @@ public class HrisEmployee {
                 "createdAt", createdAt,
                 "currency", currency,
                 "dateOfBirth", dateOfBirth,
-                "department", department,
-                "division", division,
                 "emails", emails,
                 "employeeNumber", employeeNumber,
                 "employeeRoles", employeeRoles,
@@ -1279,7 +1223,6 @@ public class HrisEmployee {
                 "imageUrl", imageUrl,
                 "languageLocale", languageLocale,
                 "lastName", lastName,
-                "location", location,
                 "locations", locations,
                 "managerId", managerId,
                 "maritalStatus", maritalStatus,
@@ -1295,6 +1238,7 @@ public class HrisEmployee {
                 "storageQuotaUsed", storageQuotaUsed,
                 "telephones", telephones,
                 "terminatedAt", terminatedAt,
+                "terminationReason", terminationReason,
                 "timezone", timezone,
                 "title", title,
                 "updatedAt", updatedAt);
@@ -1316,10 +1260,6 @@ public class HrisEmployee {
         private Optional<String> currency = Optional.empty();
 
         private Optional<OffsetDateTime> dateOfBirth = Optional.empty();
-
-        private Optional<String> department = Optional.empty();
-
-        private Optional<String> division = Optional.empty();
 
         private Optional<? extends List<HrisEmail>> emails = Optional.empty();
 
@@ -1348,8 +1288,6 @@ public class HrisEmployee {
         private Optional<String> languageLocale = Optional.empty();
 
         private Optional<String> lastName = Optional.empty();
-
-        private Optional<String> location = Optional.empty();
 
         private Optional<? extends List<HrisLocation>> locations = Optional.empty();
 
@@ -1380,6 +1318,8 @@ public class HrisEmployee {
         private Optional<? extends List<HrisTelephone>> telephones = Optional.empty();
 
         private Optional<OffsetDateTime> terminatedAt = Optional.empty();
+
+        private Optional<String> terminationReason = Optional.empty();
 
         private Optional<String> timezone = Optional.empty();
 
@@ -1479,32 +1419,6 @@ public class HrisEmployee {
         public Builder dateOfBirth(Optional<OffsetDateTime> dateOfBirth) {
             Utils.checkNotNull(dateOfBirth, "dateOfBirth");
             this.dateOfBirth = dateOfBirth;
-            return this;
-        }
-
-
-        public Builder department(String department) {
-            Utils.checkNotNull(department, "department");
-            this.department = Optional.ofNullable(department);
-            return this;
-        }
-
-        public Builder department(Optional<String> department) {
-            Utils.checkNotNull(department, "department");
-            this.department = department;
-            return this;
-        }
-
-
-        public Builder division(String division) {
-            Utils.checkNotNull(division, "division");
-            this.division = Optional.ofNullable(division);
-            return this;
-        }
-
-        public Builder division(Optional<String> division) {
-            Utils.checkNotNull(division, "division");
-            this.division = division;
             return this;
         }
 
@@ -1695,19 +1609,6 @@ public class HrisEmployee {
         public Builder lastName(Optional<String> lastName) {
             Utils.checkNotNull(lastName, "lastName");
             this.lastName = lastName;
-            return this;
-        }
-
-
-        public Builder location(String location) {
-            Utils.checkNotNull(location, "location");
-            this.location = Optional.ofNullable(location);
-            return this;
-        }
-
-        public Builder location(Optional<String> location) {
-            Utils.checkNotNull(location, "location");
-            this.location = location;
             return this;
         }
 
@@ -1913,6 +1814,19 @@ public class HrisEmployee {
         }
 
 
+        public Builder terminationReason(String terminationReason) {
+            Utils.checkNotNull(terminationReason, "terminationReason");
+            this.terminationReason = Optional.ofNullable(terminationReason);
+            return this;
+        }
+
+        public Builder terminationReason(Optional<String> terminationReason) {
+            Utils.checkNotNull(terminationReason, "terminationReason");
+            this.terminationReason = terminationReason;
+            return this;
+        }
+
+
         public Builder timezone(String timezone) {
             Utils.checkNotNull(timezone, "timezone");
             this.timezone = Optional.ofNullable(timezone);
@@ -1956,18 +1870,18 @@ public class HrisEmployee {
             return new HrisEmployee(
                 address, bio, companyId,
                 compensation, createdAt, currency,
-                dateOfBirth, department, division,
-                emails, employeeNumber, employeeRoles,
-                employmentStatus, employmentType, firstName,
-                gender, groups, hasMfa,
-                hiredAt, id, imageUrl,
-                languageLocale, lastName, location,
+                dateOfBirth, emails, employeeNumber,
+                employeeRoles, employmentStatus, employmentType,
+                firstName, gender, groups,
+                hasMfa, hiredAt, id,
+                imageUrl, languageLocale, lastName,
                 locations, managerId, maritalStatus,
                 metadata, name, pronouns,
                 raw, relationships, salutation,
                 ssnSin, storageQuotaAllocated, storageQuotaAvailable,
                 storageQuotaUsed, telephones, terminatedAt,
-                timezone, title, updatedAt);
+                terminationReason, timezone, title,
+                updatedAt);
         }
 
     }

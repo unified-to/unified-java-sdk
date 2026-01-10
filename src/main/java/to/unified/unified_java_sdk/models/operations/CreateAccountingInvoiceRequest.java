@@ -27,10 +27,10 @@ public class CreateAccountingInvoiceRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<CreateAccountingInvoiceQueryParamFields>> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -44,7 +44,7 @@ public class CreateAccountingInvoiceRequest {
     public CreateAccountingInvoiceRequest(
             AccountingInvoice accountingInvoice,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<CreateAccountingInvoiceQueryParamFields>> fields,
             Optional<String> raw) {
         Utils.checkNotNull(accountingInvoice, "accountingInvoice");
         Utils.checkNotNull(connectionId, "connectionId");
@@ -77,12 +77,12 @@ public class CreateAccountingInvoiceRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<CreateAccountingInvoiceQueryParamFields>> fields() {
+        return (Optional<List<CreateAccountingInvoiceQueryParamFields>>) fields;
     }
 
     /**
@@ -116,9 +116,9 @@ public class CreateAccountingInvoiceRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public CreateAccountingInvoiceRequest withFields(List<String> fields) {
+    public CreateAccountingInvoiceRequest withFields(List<CreateAccountingInvoiceQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -126,9 +126,9 @@ public class CreateAccountingInvoiceRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public CreateAccountingInvoiceRequest withFields(Optional<? extends List<String>> fields) {
+    public CreateAccountingInvoiceRequest withFields(Optional<? extends List<CreateAccountingInvoiceQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -196,7 +196,7 @@ public class CreateAccountingInvoiceRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<CreateAccountingInvoiceQueryParamFields>> fields = Optional.empty();
 
         private Optional<String> raw = Optional.empty();
 
@@ -223,18 +223,18 @@ public class CreateAccountingInvoiceRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<CreateAccountingInvoiceQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<CreateAccountingInvoiceQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

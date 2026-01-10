@@ -23,10 +23,10 @@ public class ListRepoRepositoriesRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<ListRepoRepositoriesQueryParamFields>> fields;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
@@ -41,7 +41,7 @@ public class ListRepoRepositoriesRequest {
     private Optional<String> order;
 
     /**
-     * The org ID to filter by
+     * The org ID to filter by (reference to RepoOrganization)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org_id")
     private Optional<String> orgId;
@@ -65,7 +65,8 @@ public class ListRepoRepositoriesRequest {
     private Optional<String> sort;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private Optional<String> updatedGte;
@@ -73,7 +74,7 @@ public class ListRepoRepositoriesRequest {
     @JsonCreator
     public ListRepoRepositoriesRequest(
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<ListRepoRepositoriesQueryParamFields>> fields,
             Optional<Double> limit,
             Optional<Double> offset,
             Optional<String> order,
@@ -121,12 +122,12 @@ public class ListRepoRepositoriesRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<ListRepoRepositoriesQueryParamFields>> fields() {
+        return (Optional<List<ListRepoRepositoriesQueryParamFields>>) fields;
     }
 
     @JsonIgnore
@@ -145,7 +146,7 @@ public class ListRepoRepositoriesRequest {
     }
 
     /**
-     * The org ID to filter by
+     * The org ID to filter by (reference to RepoOrganization)
      */
     @JsonIgnore
     public Optional<String> orgId() {
@@ -176,7 +177,8 @@ public class ListRepoRepositoriesRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> updatedGte() {
@@ -198,9 +200,9 @@ public class ListRepoRepositoriesRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListRepoRepositoriesRequest withFields(List<String> fields) {
+    public ListRepoRepositoriesRequest withFields(List<ListRepoRepositoriesQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -208,9 +210,9 @@ public class ListRepoRepositoriesRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListRepoRepositoriesRequest withFields(Optional<? extends List<String>> fields) {
+    public ListRepoRepositoriesRequest withFields(Optional<? extends List<ListRepoRepositoriesQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -256,7 +258,7 @@ public class ListRepoRepositoriesRequest {
     }
 
     /**
-     * The org ID to filter by
+     * The org ID to filter by (reference to RepoOrganization)
      */
     public ListRepoRepositoriesRequest withOrgId(String orgId) {
         Utils.checkNotNull(orgId, "orgId");
@@ -266,7 +268,7 @@ public class ListRepoRepositoriesRequest {
 
 
     /**
-     * The org ID to filter by
+     * The org ID to filter by (reference to RepoOrganization)
      */
     public ListRepoRepositoriesRequest withOrgId(Optional<String> orgId) {
         Utils.checkNotNull(orgId, "orgId");
@@ -330,7 +332,8 @@ public class ListRepoRepositoriesRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListRepoRepositoriesRequest withUpdatedGte(String updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -340,7 +343,8 @@ public class ListRepoRepositoriesRequest {
 
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListRepoRepositoriesRequest withUpdatedGte(Optional<String> updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -399,7 +403,7 @@ public class ListRepoRepositoriesRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<ListRepoRepositoriesQueryParamFields>> fields = Optional.empty();
 
         private Optional<Double> limit = Optional.empty();
 
@@ -433,18 +437,18 @@ public class ListRepoRepositoriesRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<ListRepoRepositoriesQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<ListRepoRepositoriesQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;
@@ -491,7 +495,7 @@ public class ListRepoRepositoriesRequest {
 
 
         /**
-         * The org ID to filter by
+         * The org ID to filter by (reference to RepoOrganization)
          */
         public Builder orgId(String orgId) {
             Utils.checkNotNull(orgId, "orgId");
@@ -500,7 +504,7 @@ public class ListRepoRepositoriesRequest {
         }
 
         /**
-         * The org ID to filter by
+         * The org ID to filter by (reference to RepoOrganization)
          */
         public Builder orgId(Optional<String> orgId) {
             Utils.checkNotNull(orgId, "orgId");
@@ -565,7 +569,8 @@ public class ListRepoRepositoriesRequest {
 
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(String updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -574,7 +579,8 @@ public class ListRepoRepositoriesRequest {
         }
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(Optional<String> updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");

@@ -29,10 +29,10 @@ public class PatchCrmContactRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<PatchCrmContactQueryParamFields>> fields;
 
     /**
      * ID of the Contact
@@ -52,7 +52,7 @@ public class PatchCrmContactRequest {
     public PatchCrmContactRequest(
             CrmContact crmContact,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<PatchCrmContactQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(crmContact, "crmContact");
@@ -92,12 +92,12 @@ public class PatchCrmContactRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<PatchCrmContactQueryParamFields>> fields() {
+        return (Optional<List<PatchCrmContactQueryParamFields>>) fields;
     }
 
     /**
@@ -142,9 +142,9 @@ public class PatchCrmContactRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchCrmContactRequest withFields(List<String> fields) {
+    public PatchCrmContactRequest withFields(List<PatchCrmContactQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -152,9 +152,9 @@ public class PatchCrmContactRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchCrmContactRequest withFields(Optional<? extends List<String>> fields) {
+    public PatchCrmContactRequest withFields(Optional<? extends List<PatchCrmContactQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -233,7 +233,7 @@ public class PatchCrmContactRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<PatchCrmContactQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -265,18 +265,18 @@ public class PatchCrmContactRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<PatchCrmContactQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<PatchCrmContactQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

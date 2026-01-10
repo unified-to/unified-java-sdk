@@ -27,10 +27,10 @@ public class CreateRepoRepositoryRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<CreateRepoRepositoryQueryParamFields>> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -44,7 +44,7 @@ public class CreateRepoRepositoryRequest {
     public CreateRepoRepositoryRequest(
             RepoRepository repoRepository,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<CreateRepoRepositoryQueryParamFields>> fields,
             Optional<String> raw) {
         Utils.checkNotNull(repoRepository, "repoRepository");
         Utils.checkNotNull(connectionId, "connectionId");
@@ -77,12 +77,12 @@ public class CreateRepoRepositoryRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<CreateRepoRepositoryQueryParamFields>> fields() {
+        return (Optional<List<CreateRepoRepositoryQueryParamFields>>) fields;
     }
 
     /**
@@ -116,9 +116,9 @@ public class CreateRepoRepositoryRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public CreateRepoRepositoryRequest withFields(List<String> fields) {
+    public CreateRepoRepositoryRequest withFields(List<CreateRepoRepositoryQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -126,9 +126,9 @@ public class CreateRepoRepositoryRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public CreateRepoRepositoryRequest withFields(Optional<? extends List<String>> fields) {
+    public CreateRepoRepositoryRequest withFields(Optional<? extends List<CreateRepoRepositoryQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -196,7 +196,7 @@ public class CreateRepoRepositoryRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<CreateRepoRepositoryQueryParamFields>> fields = Optional.empty();
 
         private Optional<String> raw = Optional.empty();
 
@@ -223,18 +223,18 @@ public class CreateRepoRepositoryRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<CreateRepoRepositoryQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<CreateRepoRepositoryQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

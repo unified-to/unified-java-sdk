@@ -27,10 +27,10 @@ public class UpdateAdsOrganizationRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<UpdateAdsOrganizationQueryParamFields>> fields;
 
     /**
      * ID of the Organization
@@ -50,7 +50,7 @@ public class UpdateAdsOrganizationRequest {
     public UpdateAdsOrganizationRequest(
             AdsOrganization adsOrganization,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<UpdateAdsOrganizationQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(adsOrganization, "adsOrganization");
@@ -87,12 +87,12 @@ public class UpdateAdsOrganizationRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<UpdateAdsOrganizationQueryParamFields>> fields() {
+        return (Optional<List<UpdateAdsOrganizationQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class UpdateAdsOrganizationRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateAdsOrganizationRequest withFields(List<String> fields) {
+    public UpdateAdsOrganizationRequest withFields(List<UpdateAdsOrganizationQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class UpdateAdsOrganizationRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateAdsOrganizationRequest withFields(Optional<? extends List<String>> fields) {
+    public UpdateAdsOrganizationRequest withFields(Optional<? extends List<UpdateAdsOrganizationQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class UpdateAdsOrganizationRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<UpdateAdsOrganizationQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class UpdateAdsOrganizationRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<UpdateAdsOrganizationQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<UpdateAdsOrganizationQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

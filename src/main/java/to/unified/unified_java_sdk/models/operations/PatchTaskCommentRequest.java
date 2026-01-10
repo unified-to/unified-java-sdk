@@ -27,10 +27,10 @@ public class PatchTaskCommentRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<PatchTaskCommentQueryParamFields>> fields;
 
     /**
      * ID of the Comment
@@ -50,7 +50,7 @@ public class PatchTaskCommentRequest {
     public PatchTaskCommentRequest(
             TaskComment taskComment,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<PatchTaskCommentQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(taskComment, "taskComment");
@@ -87,12 +87,12 @@ public class PatchTaskCommentRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<PatchTaskCommentQueryParamFields>> fields() {
+        return (Optional<List<PatchTaskCommentQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class PatchTaskCommentRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchTaskCommentRequest withFields(List<String> fields) {
+    public PatchTaskCommentRequest withFields(List<PatchTaskCommentQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class PatchTaskCommentRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchTaskCommentRequest withFields(Optional<? extends List<String>> fields) {
+    public PatchTaskCommentRequest withFields(Optional<? extends List<PatchTaskCommentQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class PatchTaskCommentRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<PatchTaskCommentQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class PatchTaskCommentRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<PatchTaskCommentQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<PatchTaskCommentQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

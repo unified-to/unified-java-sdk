@@ -17,7 +17,7 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListAccountingCashflowsRequest {
     /**
-     * The category ID to filter by
+     * The category ID to filter by (reference to AccountingCategory)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category_id")
     private Optional<String> categoryId;
@@ -29,28 +29,22 @@ public class ListAccountingCashflowsRequest {
     private String connectionId;
 
     /**
-     * The contact ID to filter by
+     * The contact ID to filter by (reference to AccountingContact)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contact_id")
     private Optional<String> contactId;
 
     /**
-     * The end date to filter by (deprecated)
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_le")
-    private Optional<String> endLe;
-
-    /**
-     * The end date to filter by
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_lt")
     private Optional<String> endLt;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<ListAccountingCashflowsQueryParamFields>> fields;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
@@ -83,13 +77,14 @@ public class ListAccountingCashflowsRequest {
     private Optional<String> sort;
 
     /**
-     * The start date to filter by
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_gte")
     private Optional<String> startGte;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private Optional<String> updatedGte;
@@ -99,9 +94,8 @@ public class ListAccountingCashflowsRequest {
             Optional<String> categoryId,
             String connectionId,
             Optional<String> contactId,
-            Optional<String> endLe,
             Optional<String> endLt,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<ListAccountingCashflowsQueryParamFields>> fields,
             Optional<Double> limit,
             Optional<Double> offset,
             Optional<String> order,
@@ -113,7 +107,6 @@ public class ListAccountingCashflowsRequest {
         Utils.checkNotNull(categoryId, "categoryId");
         Utils.checkNotNull(connectionId, "connectionId");
         Utils.checkNotNull(contactId, "contactId");
-        Utils.checkNotNull(endLe, "endLe");
         Utils.checkNotNull(endLt, "endLt");
         Utils.checkNotNull(fields, "fields");
         Utils.checkNotNull(limit, "limit");
@@ -127,7 +120,6 @@ public class ListAccountingCashflowsRequest {
         this.categoryId = categoryId;
         this.connectionId = connectionId;
         this.contactId = contactId;
-        this.endLe = endLe;
         this.endLt = endLt;
         this.fields = fields;
         this.limit = limit;
@@ -146,11 +138,11 @@ public class ListAccountingCashflowsRequest {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            Optional.empty());
     }
 
     /**
-     * The category ID to filter by
+     * The category ID to filter by (reference to AccountingCategory)
      */
     @JsonIgnore
     public Optional<String> categoryId() {
@@ -166,7 +158,7 @@ public class ListAccountingCashflowsRequest {
     }
 
     /**
-     * The contact ID to filter by
+     * The contact ID to filter by (reference to AccountingContact)
      */
     @JsonIgnore
     public Optional<String> contactId() {
@@ -174,15 +166,7 @@ public class ListAccountingCashflowsRequest {
     }
 
     /**
-     * The end date to filter by (deprecated)
-     */
-    @JsonIgnore
-    public Optional<String> endLe() {
-        return endLe;
-    }
-
-    /**
-     * The end date to filter by
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> endLt() {
@@ -190,12 +174,12 @@ public class ListAccountingCashflowsRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<ListAccountingCashflowsQueryParamFields>> fields() {
+        return (Optional<List<ListAccountingCashflowsQueryParamFields>>) fields;
     }
 
     @JsonIgnore
@@ -237,7 +221,7 @@ public class ListAccountingCashflowsRequest {
     }
 
     /**
-     * The start date to filter by
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> startGte() {
@@ -245,7 +229,8 @@ public class ListAccountingCashflowsRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> updatedGte() {
@@ -258,7 +243,7 @@ public class ListAccountingCashflowsRequest {
 
 
     /**
-     * The category ID to filter by
+     * The category ID to filter by (reference to AccountingCategory)
      */
     public ListAccountingCashflowsRequest withCategoryId(String categoryId) {
         Utils.checkNotNull(categoryId, "categoryId");
@@ -268,7 +253,7 @@ public class ListAccountingCashflowsRequest {
 
 
     /**
-     * The category ID to filter by
+     * The category ID to filter by (reference to AccountingCategory)
      */
     public ListAccountingCashflowsRequest withCategoryId(Optional<String> categoryId) {
         Utils.checkNotNull(categoryId, "categoryId");
@@ -286,7 +271,7 @@ public class ListAccountingCashflowsRequest {
     }
 
     /**
-     * The contact ID to filter by
+     * The contact ID to filter by (reference to AccountingContact)
      */
     public ListAccountingCashflowsRequest withContactId(String contactId) {
         Utils.checkNotNull(contactId, "contactId");
@@ -296,7 +281,7 @@ public class ListAccountingCashflowsRequest {
 
 
     /**
-     * The contact ID to filter by
+     * The contact ID to filter by (reference to AccountingContact)
      */
     public ListAccountingCashflowsRequest withContactId(Optional<String> contactId) {
         Utils.checkNotNull(contactId, "contactId");
@@ -305,26 +290,7 @@ public class ListAccountingCashflowsRequest {
     }
 
     /**
-     * The end date to filter by (deprecated)
-     */
-    public ListAccountingCashflowsRequest withEndLe(String endLe) {
-        Utils.checkNotNull(endLe, "endLe");
-        this.endLe = Optional.ofNullable(endLe);
-        return this;
-    }
-
-
-    /**
-     * The end date to filter by (deprecated)
-     */
-    public ListAccountingCashflowsRequest withEndLe(Optional<String> endLe) {
-        Utils.checkNotNull(endLe, "endLe");
-        this.endLe = endLe;
-        return this;
-    }
-
-    /**
-     * The end date to filter by
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListAccountingCashflowsRequest withEndLt(String endLt) {
         Utils.checkNotNull(endLt, "endLt");
@@ -334,7 +300,7 @@ public class ListAccountingCashflowsRequest {
 
 
     /**
-     * The end date to filter by
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListAccountingCashflowsRequest withEndLt(Optional<String> endLt) {
         Utils.checkNotNull(endLt, "endLt");
@@ -343,9 +309,9 @@ public class ListAccountingCashflowsRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListAccountingCashflowsRequest withFields(List<String> fields) {
+    public ListAccountingCashflowsRequest withFields(List<ListAccountingCashflowsQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -353,9 +319,9 @@ public class ListAccountingCashflowsRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListAccountingCashflowsRequest withFields(Optional<? extends List<String>> fields) {
+    public ListAccountingCashflowsRequest withFields(Optional<? extends List<ListAccountingCashflowsQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -456,7 +422,7 @@ public class ListAccountingCashflowsRequest {
     }
 
     /**
-     * The start date to filter by
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListAccountingCashflowsRequest withStartGte(String startGte) {
         Utils.checkNotNull(startGte, "startGte");
@@ -466,7 +432,7 @@ public class ListAccountingCashflowsRequest {
 
 
     /**
-     * The start date to filter by
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListAccountingCashflowsRequest withStartGte(Optional<String> startGte) {
         Utils.checkNotNull(startGte, "startGte");
@@ -475,7 +441,8 @@ public class ListAccountingCashflowsRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListAccountingCashflowsRequest withUpdatedGte(String updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -485,7 +452,8 @@ public class ListAccountingCashflowsRequest {
 
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListAccountingCashflowsRequest withUpdatedGte(Optional<String> updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -506,7 +474,6 @@ public class ListAccountingCashflowsRequest {
             Utils.enhancedDeepEquals(this.categoryId, other.categoryId) &&
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
-            Utils.enhancedDeepEquals(this.endLe, other.endLe) &&
             Utils.enhancedDeepEquals(this.endLt, other.endLt) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
@@ -523,10 +490,10 @@ public class ListAccountingCashflowsRequest {
     public int hashCode() {
         return Utils.enhancedHash(
             categoryId, connectionId, contactId,
-            endLe, endLt, fields,
-            limit, offset, order,
-            query, raw, sort,
-            startGte, updatedGte);
+            endLt, fields, limit,
+            offset, order, query,
+            raw, sort, startGte,
+            updatedGte);
     }
     
     @Override
@@ -535,7 +502,6 @@ public class ListAccountingCashflowsRequest {
                 "categoryId", categoryId,
                 "connectionId", connectionId,
                 "contactId", contactId,
-                "endLe", endLe,
                 "endLt", endLt,
                 "fields", fields,
                 "limit", limit,
@@ -557,11 +523,9 @@ public class ListAccountingCashflowsRequest {
 
         private Optional<String> contactId = Optional.empty();
 
-        private Optional<String> endLe = Optional.empty();
-
         private Optional<String> endLt = Optional.empty();
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<ListAccountingCashflowsQueryParamFields>> fields = Optional.empty();
 
         private Optional<Double> limit = Optional.empty();
 
@@ -585,7 +549,7 @@ public class ListAccountingCashflowsRequest {
 
 
         /**
-         * The category ID to filter by
+         * The category ID to filter by (reference to AccountingCategory)
          */
         public Builder categoryId(String categoryId) {
             Utils.checkNotNull(categoryId, "categoryId");
@@ -594,7 +558,7 @@ public class ListAccountingCashflowsRequest {
         }
 
         /**
-         * The category ID to filter by
+         * The category ID to filter by (reference to AccountingCategory)
          */
         public Builder categoryId(Optional<String> categoryId) {
             Utils.checkNotNull(categoryId, "categoryId");
@@ -614,7 +578,7 @@ public class ListAccountingCashflowsRequest {
 
 
         /**
-         * The contact ID to filter by
+         * The contact ID to filter by (reference to AccountingContact)
          */
         public Builder contactId(String contactId) {
             Utils.checkNotNull(contactId, "contactId");
@@ -623,7 +587,7 @@ public class ListAccountingCashflowsRequest {
         }
 
         /**
-         * The contact ID to filter by
+         * The contact ID to filter by (reference to AccountingContact)
          */
         public Builder contactId(Optional<String> contactId) {
             Utils.checkNotNull(contactId, "contactId");
@@ -633,26 +597,7 @@ public class ListAccountingCashflowsRequest {
 
 
         /**
-         * The end date to filter by (deprecated)
-         */
-        public Builder endLe(String endLe) {
-            Utils.checkNotNull(endLe, "endLe");
-            this.endLe = Optional.ofNullable(endLe);
-            return this;
-        }
-
-        /**
-         * The end date to filter by (deprecated)
-         */
-        public Builder endLe(Optional<String> endLe) {
-            Utils.checkNotNull(endLe, "endLe");
-            this.endLe = endLe;
-            return this;
-        }
-
-
-        /**
-         * The end date to filter by
+         * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder endLt(String endLt) {
             Utils.checkNotNull(endLt, "endLt");
@@ -661,7 +606,7 @@ public class ListAccountingCashflowsRequest {
         }
 
         /**
-         * The end date to filter by
+         * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder endLt(Optional<String> endLt) {
             Utils.checkNotNull(endLt, "endLt");
@@ -671,18 +616,18 @@ public class ListAccountingCashflowsRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<ListAccountingCashflowsQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<ListAccountingCashflowsQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;
@@ -784,7 +729,7 @@ public class ListAccountingCashflowsRequest {
 
 
         /**
-         * The start date to filter by
+         * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder startGte(String startGte) {
             Utils.checkNotNull(startGte, "startGte");
@@ -793,7 +738,7 @@ public class ListAccountingCashflowsRequest {
         }
 
         /**
-         * The start date to filter by
+         * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder startGte(Optional<String> startGte) {
             Utils.checkNotNull(startGte, "startGte");
@@ -803,7 +748,8 @@ public class ListAccountingCashflowsRequest {
 
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(String updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -812,7 +758,8 @@ public class ListAccountingCashflowsRequest {
         }
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(Optional<String> updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -824,10 +771,10 @@ public class ListAccountingCashflowsRequest {
 
             return new ListAccountingCashflowsRequest(
                 categoryId, connectionId, contactId,
-                endLe, endLt, fields,
-                limit, offset, order,
-                query, raw, sort,
-                startGte, updatedGte);
+                endLt, fields, limit,
+                offset, order, query,
+                raw, sort, startGte,
+                updatedGte);
         }
 
     }

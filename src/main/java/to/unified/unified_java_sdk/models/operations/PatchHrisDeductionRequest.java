@@ -29,10 +29,10 @@ public class PatchHrisDeductionRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<PatchHrisDeductionQueryParamFields>> fields;
 
     /**
      * ID of the Deduction
@@ -52,7 +52,7 @@ public class PatchHrisDeductionRequest {
     public PatchHrisDeductionRequest(
             HrisDeduction hrisDeduction,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<PatchHrisDeductionQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(hrisDeduction, "hrisDeduction");
@@ -92,12 +92,12 @@ public class PatchHrisDeductionRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<PatchHrisDeductionQueryParamFields>> fields() {
+        return (Optional<List<PatchHrisDeductionQueryParamFields>>) fields;
     }
 
     /**
@@ -142,9 +142,9 @@ public class PatchHrisDeductionRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchHrisDeductionRequest withFields(List<String> fields) {
+    public PatchHrisDeductionRequest withFields(List<PatchHrisDeductionQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -152,9 +152,9 @@ public class PatchHrisDeductionRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchHrisDeductionRequest withFields(Optional<? extends List<String>> fields) {
+    public PatchHrisDeductionRequest withFields(Optional<? extends List<PatchHrisDeductionQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -233,7 +233,7 @@ public class PatchHrisDeductionRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<PatchHrisDeductionQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -265,18 +265,18 @@ public class PatchHrisDeductionRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<PatchHrisDeductionQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<PatchHrisDeductionQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

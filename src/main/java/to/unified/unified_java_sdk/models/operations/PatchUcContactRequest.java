@@ -29,10 +29,10 @@ public class PatchUcContactRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<PatchUcContactQueryParamFields>> fields;
 
     /**
      * ID of the Contact
@@ -52,7 +52,7 @@ public class PatchUcContactRequest {
     public PatchUcContactRequest(
             UcContact ucContact,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<PatchUcContactQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(ucContact, "ucContact");
@@ -92,12 +92,12 @@ public class PatchUcContactRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<PatchUcContactQueryParamFields>> fields() {
+        return (Optional<List<PatchUcContactQueryParamFields>>) fields;
     }
 
     /**
@@ -142,9 +142,9 @@ public class PatchUcContactRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchUcContactRequest withFields(List<String> fields) {
+    public PatchUcContactRequest withFields(List<PatchUcContactQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -152,9 +152,9 @@ public class PatchUcContactRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchUcContactRequest withFields(Optional<? extends List<String>> fields) {
+    public PatchUcContactRequest withFields(Optional<? extends List<PatchUcContactQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -233,7 +233,7 @@ public class PatchUcContactRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<PatchUcContactQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -265,18 +265,18 @@ public class PatchUcContactRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<PatchUcContactQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<PatchUcContactQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

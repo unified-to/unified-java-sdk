@@ -23,19 +23,19 @@ public class ListPaymentPaymentsRequest {
     private String connectionId;
 
     /**
-     * The contact ID to filter by
+     * The contact ID to filter by (reference to AccountingContact)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contact_id")
     private Optional<String> contactId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<ListPaymentPaymentsQueryParamFields>> fields;
 
     /**
-     * The invoice ID to filter by
+     * The invoice ID to filter by (reference to AccountingInvoice)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=invoice_id")
     private Optional<String> invoiceId;
@@ -71,7 +71,8 @@ public class ListPaymentPaymentsRequest {
     private Optional<String> sort;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private Optional<String> updatedGte;
@@ -80,7 +81,7 @@ public class ListPaymentPaymentsRequest {
     public ListPaymentPaymentsRequest(
             String connectionId,
             Optional<String> contactId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<ListPaymentPaymentsQueryParamFields>> fields,
             Optional<String> invoiceId,
             Optional<Double> limit,
             Optional<Double> offset,
@@ -130,7 +131,7 @@ public class ListPaymentPaymentsRequest {
     }
 
     /**
-     * The contact ID to filter by
+     * The contact ID to filter by (reference to AccountingContact)
      */
     @JsonIgnore
     public Optional<String> contactId() {
@@ -138,16 +139,16 @@ public class ListPaymentPaymentsRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<ListPaymentPaymentsQueryParamFields>> fields() {
+        return (Optional<List<ListPaymentPaymentsQueryParamFields>>) fields;
     }
 
     /**
-     * The invoice ID to filter by
+     * The invoice ID to filter by (reference to AccountingInvoice)
      */
     @JsonIgnore
     public Optional<String> invoiceId() {
@@ -193,7 +194,8 @@ public class ListPaymentPaymentsRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> updatedGte() {
@@ -215,7 +217,7 @@ public class ListPaymentPaymentsRequest {
     }
 
     /**
-     * The contact ID to filter by
+     * The contact ID to filter by (reference to AccountingContact)
      */
     public ListPaymentPaymentsRequest withContactId(String contactId) {
         Utils.checkNotNull(contactId, "contactId");
@@ -225,7 +227,7 @@ public class ListPaymentPaymentsRequest {
 
 
     /**
-     * The contact ID to filter by
+     * The contact ID to filter by (reference to AccountingContact)
      */
     public ListPaymentPaymentsRequest withContactId(Optional<String> contactId) {
         Utils.checkNotNull(contactId, "contactId");
@@ -234,9 +236,9 @@ public class ListPaymentPaymentsRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListPaymentPaymentsRequest withFields(List<String> fields) {
+    public ListPaymentPaymentsRequest withFields(List<ListPaymentPaymentsQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -244,16 +246,16 @@ public class ListPaymentPaymentsRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListPaymentPaymentsRequest withFields(Optional<? extends List<String>> fields) {
+    public ListPaymentPaymentsRequest withFields(Optional<? extends List<ListPaymentPaymentsQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
     }
 
     /**
-     * The invoice ID to filter by
+     * The invoice ID to filter by (reference to AccountingInvoice)
      */
     public ListPaymentPaymentsRequest withInvoiceId(String invoiceId) {
         Utils.checkNotNull(invoiceId, "invoiceId");
@@ -263,7 +265,7 @@ public class ListPaymentPaymentsRequest {
 
 
     /**
-     * The invoice ID to filter by
+     * The invoice ID to filter by (reference to AccountingInvoice)
      */
     public ListPaymentPaymentsRequest withInvoiceId(Optional<String> invoiceId) {
         Utils.checkNotNull(invoiceId, "invoiceId");
@@ -366,7 +368,8 @@ public class ListPaymentPaymentsRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListPaymentPaymentsRequest withUpdatedGte(String updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -376,7 +379,8 @@ public class ListPaymentPaymentsRequest {
 
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListPaymentPaymentsRequest withUpdatedGte(Optional<String> updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -439,7 +443,7 @@ public class ListPaymentPaymentsRequest {
 
         private Optional<String> contactId = Optional.empty();
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<ListPaymentPaymentsQueryParamFields>> fields = Optional.empty();
 
         private Optional<String> invoiceId = Optional.empty();
 
@@ -473,7 +477,7 @@ public class ListPaymentPaymentsRequest {
 
 
         /**
-         * The contact ID to filter by
+         * The contact ID to filter by (reference to AccountingContact)
          */
         public Builder contactId(String contactId) {
             Utils.checkNotNull(contactId, "contactId");
@@ -482,7 +486,7 @@ public class ListPaymentPaymentsRequest {
         }
 
         /**
-         * The contact ID to filter by
+         * The contact ID to filter by (reference to AccountingContact)
          */
         public Builder contactId(Optional<String> contactId) {
             Utils.checkNotNull(contactId, "contactId");
@@ -492,18 +496,18 @@ public class ListPaymentPaymentsRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<ListPaymentPaymentsQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<ListPaymentPaymentsQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;
@@ -511,7 +515,7 @@ public class ListPaymentPaymentsRequest {
 
 
         /**
-         * The invoice ID to filter by
+         * The invoice ID to filter by (reference to AccountingInvoice)
          */
         public Builder invoiceId(String invoiceId) {
             Utils.checkNotNull(invoiceId, "invoiceId");
@@ -520,7 +524,7 @@ public class ListPaymentPaymentsRequest {
         }
 
         /**
-         * The invoice ID to filter by
+         * The invoice ID to filter by (reference to AccountingInvoice)
          */
         public Builder invoiceId(Optional<String> invoiceId) {
             Utils.checkNotNull(invoiceId, "invoiceId");
@@ -624,7 +628,8 @@ public class ListPaymentPaymentsRequest {
 
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(String updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -633,7 +638,8 @@ public class ListPaymentPaymentsRequest {
         }
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(Optional<String> updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");

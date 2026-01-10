@@ -22,10 +22,10 @@ public class GetMessagingMessageRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<GetMessagingMessageQueryParamFields>> fields;
 
     /**
      * ID of the Message
@@ -44,7 +44,7 @@ public class GetMessagingMessageRequest {
     @JsonCreator
     public GetMessagingMessageRequest(
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<GetMessagingMessageQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(connectionId, "connectionId");
@@ -73,12 +73,12 @@ public class GetMessagingMessageRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<GetMessagingMessageQueryParamFields>> fields() {
+        return (Optional<List<GetMessagingMessageQueryParamFields>>) fields;
     }
 
     /**
@@ -114,9 +114,9 @@ public class GetMessagingMessageRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public GetMessagingMessageRequest withFields(List<String> fields) {
+    public GetMessagingMessageRequest withFields(List<GetMessagingMessageQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -124,9 +124,9 @@ public class GetMessagingMessageRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public GetMessagingMessageRequest withFields(Optional<? extends List<String>> fields) {
+    public GetMessagingMessageRequest withFields(Optional<? extends List<GetMessagingMessageQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -201,7 +201,7 @@ public class GetMessagingMessageRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<GetMessagingMessageQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -223,18 +223,18 @@ public class GetMessagingMessageRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<GetMessagingMessageQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<GetMessagingMessageQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

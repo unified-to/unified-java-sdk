@@ -28,11 +28,6 @@ public class AccountingTransaction {
 
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("contact_id")
-    private Optional<String> contactId;
-
-
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contacts")
     private Optional<? extends List<AccountingTransactionContact>> contacts;
 
@@ -119,7 +114,6 @@ public class AccountingTransaction {
     @JsonCreator
     public AccountingTransaction(
             @JsonProperty("account_id") Optional<String> accountId,
-            @JsonProperty("contact_id") Optional<String> contactId,
             @JsonProperty("contacts") Optional<? extends List<AccountingTransactionContact>> contacts,
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("currency") Optional<String> currency,
@@ -138,7 +132,6 @@ public class AccountingTransaction {
             @JsonProperty("type") Optional<String> type,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(accountId, "accountId");
-        Utils.checkNotNull(contactId, "contactId");
         Utils.checkNotNull(contacts, "contacts");
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(currency, "currency");
@@ -157,7 +150,6 @@ public class AccountingTransaction {
         Utils.checkNotNull(type, "type");
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.accountId = accountId;
-        this.contactId = contactId;
         this.contacts = contacts;
         this.createdAt = createdAt;
         this.currency = currency;
@@ -183,18 +175,12 @@ public class AccountingTransaction {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
     public Optional<String> accountId() {
         return accountId;
-    }
-
-    @JsonIgnore
-    public Optional<String> contactId() {
-        return contactId;
     }
 
     @SuppressWarnings("unchecked")
@@ -300,19 +286,6 @@ public class AccountingTransaction {
     public AccountingTransaction withAccountId(Optional<String> accountId) {
         Utils.checkNotNull(accountId, "accountId");
         this.accountId = accountId;
-        return this;
-    }
-
-    public AccountingTransaction withContactId(String contactId) {
-        Utils.checkNotNull(contactId, "contactId");
-        this.contactId = Optional.ofNullable(contactId);
-        return this;
-    }
-
-
-    public AccountingTransaction withContactId(Optional<String> contactId) {
-        Utils.checkNotNull(contactId, "contactId");
-        this.contactId = contactId;
         return this;
     }
 
@@ -548,7 +521,6 @@ public class AccountingTransaction {
         AccountingTransaction other = (AccountingTransaction) o;
         return 
             Utils.enhancedDeepEquals(this.accountId, other.accountId) &&
-            Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
             Utils.enhancedDeepEquals(this.contacts, other.contacts) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
@@ -571,20 +543,18 @@ public class AccountingTransaction {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            accountId, contactId, contacts,
-            createdAt, currency, customerMessage,
-            id, lineitems, memo,
-            paymentMethod, paymentTerms, raw,
-            reference, splitAccountId, subTotalAmount,
-            taxAmount, totalAmount, type,
-            updatedAt);
+            accountId, contacts, createdAt,
+            currency, customerMessage, id,
+            lineitems, memo, paymentMethod,
+            paymentTerms, raw, reference,
+            splitAccountId, subTotalAmount, taxAmount,
+            totalAmount, type, updatedAt);
     }
     
     @Override
     public String toString() {
         return Utils.toString(AccountingTransaction.class,
                 "accountId", accountId,
-                "contactId", contactId,
                 "contacts", contacts,
                 "createdAt", createdAt,
                 "currency", currency,
@@ -608,8 +578,6 @@ public class AccountingTransaction {
     public final static class Builder {
 
         private Optional<String> accountId = Optional.empty();
-
-        private Optional<String> contactId = Optional.empty();
 
         private Optional<? extends List<AccountingTransactionContact>> contacts = Optional.empty();
 
@@ -659,19 +627,6 @@ public class AccountingTransaction {
         public Builder accountId(Optional<String> accountId) {
             Utils.checkNotNull(accountId, "accountId");
             this.accountId = accountId;
-            return this;
-        }
-
-
-        public Builder contactId(String contactId) {
-            Utils.checkNotNull(contactId, "contactId");
-            this.contactId = Optional.ofNullable(contactId);
-            return this;
-        }
-
-        public Builder contactId(Optional<String> contactId) {
-            Utils.checkNotNull(contactId, "contactId");
-            this.contactId = contactId;
             return this;
         }
 
@@ -899,13 +854,12 @@ public class AccountingTransaction {
         public AccountingTransaction build() {
 
             return new AccountingTransaction(
-                accountId, contactId, contacts,
-                createdAt, currency, customerMessage,
-                id, lineitems, memo,
-                paymentMethod, paymentTerms, raw,
-                reference, splitAccountId, subTotalAmount,
-                taxAmount, totalAmount, type,
-                updatedAt);
+                accountId, contacts, createdAt,
+                currency, customerMessage, id,
+                lineitems, memo, paymentMethod,
+                paymentTerms, raw, reference,
+                splitAccountId, subTotalAmount, taxAmount,
+                totalAmount, type, updatedAt);
         }
 
     }

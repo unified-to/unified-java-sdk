@@ -22,10 +22,10 @@ public class GetHrisEmployeeRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<GetHrisEmployeeQueryParamFields>> fields;
 
     /**
      * ID of the Employee
@@ -44,7 +44,7 @@ public class GetHrisEmployeeRequest {
     @JsonCreator
     public GetHrisEmployeeRequest(
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<GetHrisEmployeeQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(connectionId, "connectionId");
@@ -73,12 +73,12 @@ public class GetHrisEmployeeRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<GetHrisEmployeeQueryParamFields>> fields() {
+        return (Optional<List<GetHrisEmployeeQueryParamFields>>) fields;
     }
 
     /**
@@ -114,9 +114,9 @@ public class GetHrisEmployeeRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public GetHrisEmployeeRequest withFields(List<String> fields) {
+    public GetHrisEmployeeRequest withFields(List<GetHrisEmployeeQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -124,9 +124,9 @@ public class GetHrisEmployeeRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public GetHrisEmployeeRequest withFields(Optional<? extends List<String>> fields) {
+    public GetHrisEmployeeRequest withFields(Optional<? extends List<GetHrisEmployeeQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -201,7 +201,7 @@ public class GetHrisEmployeeRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<GetHrisEmployeeQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -223,18 +223,18 @@ public class GetHrisEmployeeRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<GetHrisEmployeeQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<GetHrisEmployeeQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

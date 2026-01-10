@@ -27,10 +27,10 @@ public class UpdateAccountingContactRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<UpdateAccountingContactQueryParamFields>> fields;
 
     /**
      * ID of the Contact
@@ -50,7 +50,7 @@ public class UpdateAccountingContactRequest {
     public UpdateAccountingContactRequest(
             AccountingContact accountingContact,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<UpdateAccountingContactQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(accountingContact, "accountingContact");
@@ -87,12 +87,12 @@ public class UpdateAccountingContactRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<UpdateAccountingContactQueryParamFields>> fields() {
+        return (Optional<List<UpdateAccountingContactQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class UpdateAccountingContactRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateAccountingContactRequest withFields(List<String> fields) {
+    public UpdateAccountingContactRequest withFields(List<UpdateAccountingContactQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class UpdateAccountingContactRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateAccountingContactRequest withFields(Optional<? extends List<String>> fields) {
+    public UpdateAccountingContactRequest withFields(Optional<? extends List<UpdateAccountingContactQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class UpdateAccountingContactRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<UpdateAccountingContactQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class UpdateAccountingContactRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<UpdateAccountingContactQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<UpdateAccountingContactQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

@@ -23,13 +23,13 @@ public class ListCommerceInventoriesRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<ListCommerceInventoriesQueryParamFields>> fields;
 
     /**
-     * The item variant ID to filter by
+     * The item variant ID to filter by (reference to CommerceItemVariant)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=item_variant_id")
     private Optional<String> itemVariantId;
@@ -39,7 +39,7 @@ public class ListCommerceInventoriesRequest {
     private Optional<Double> limit;
 
     /**
-     * The location ID to filter by
+     * The location ID to filter by (reference to CommerceLocation)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
     private Optional<String> locationId;
@@ -71,7 +71,8 @@ public class ListCommerceInventoriesRequest {
     private Optional<String> sort;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private Optional<String> updatedGte;
@@ -79,7 +80,7 @@ public class ListCommerceInventoriesRequest {
     @JsonCreator
     public ListCommerceInventoriesRequest(
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<ListCommerceInventoriesQueryParamFields>> fields,
             Optional<String> itemVariantId,
             Optional<Double> limit,
             Optional<String> locationId,
@@ -130,16 +131,16 @@ public class ListCommerceInventoriesRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<ListCommerceInventoriesQueryParamFields>> fields() {
+        return (Optional<List<ListCommerceInventoriesQueryParamFields>>) fields;
     }
 
     /**
-     * The item variant ID to filter by
+     * The item variant ID to filter by (reference to CommerceItemVariant)
      */
     @JsonIgnore
     public Optional<String> itemVariantId() {
@@ -152,7 +153,7 @@ public class ListCommerceInventoriesRequest {
     }
 
     /**
-     * The location ID to filter by
+     * The location ID to filter by (reference to CommerceLocation)
      */
     @JsonIgnore
     public Optional<String> locationId() {
@@ -193,7 +194,8 @@ public class ListCommerceInventoriesRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> updatedGte() {
@@ -215,9 +217,9 @@ public class ListCommerceInventoriesRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListCommerceInventoriesRequest withFields(List<String> fields) {
+    public ListCommerceInventoriesRequest withFields(List<ListCommerceInventoriesQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -225,16 +227,16 @@ public class ListCommerceInventoriesRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListCommerceInventoriesRequest withFields(Optional<? extends List<String>> fields) {
+    public ListCommerceInventoriesRequest withFields(Optional<? extends List<ListCommerceInventoriesQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
     }
 
     /**
-     * The item variant ID to filter by
+     * The item variant ID to filter by (reference to CommerceItemVariant)
      */
     public ListCommerceInventoriesRequest withItemVariantId(String itemVariantId) {
         Utils.checkNotNull(itemVariantId, "itemVariantId");
@@ -244,7 +246,7 @@ public class ListCommerceInventoriesRequest {
 
 
     /**
-     * The item variant ID to filter by
+     * The item variant ID to filter by (reference to CommerceItemVariant)
      */
     public ListCommerceInventoriesRequest withItemVariantId(Optional<String> itemVariantId) {
         Utils.checkNotNull(itemVariantId, "itemVariantId");
@@ -266,7 +268,7 @@ public class ListCommerceInventoriesRequest {
     }
 
     /**
-     * The location ID to filter by
+     * The location ID to filter by (reference to CommerceLocation)
      */
     public ListCommerceInventoriesRequest withLocationId(String locationId) {
         Utils.checkNotNull(locationId, "locationId");
@@ -276,7 +278,7 @@ public class ListCommerceInventoriesRequest {
 
 
     /**
-     * The location ID to filter by
+     * The location ID to filter by (reference to CommerceLocation)
      */
     public ListCommerceInventoriesRequest withLocationId(Optional<String> locationId) {
         Utils.checkNotNull(locationId, "locationId");
@@ -366,7 +368,8 @@ public class ListCommerceInventoriesRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListCommerceInventoriesRequest withUpdatedGte(String updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -376,7 +379,8 @@ public class ListCommerceInventoriesRequest {
 
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListCommerceInventoriesRequest withUpdatedGte(Optional<String> updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -437,7 +441,7 @@ public class ListCommerceInventoriesRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<ListCommerceInventoriesQueryParamFields>> fields = Optional.empty();
 
         private Optional<String> itemVariantId = Optional.empty();
 
@@ -473,18 +477,18 @@ public class ListCommerceInventoriesRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<ListCommerceInventoriesQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<ListCommerceInventoriesQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;
@@ -492,7 +496,7 @@ public class ListCommerceInventoriesRequest {
 
 
         /**
-         * The item variant ID to filter by
+         * The item variant ID to filter by (reference to CommerceItemVariant)
          */
         public Builder itemVariantId(String itemVariantId) {
             Utils.checkNotNull(itemVariantId, "itemVariantId");
@@ -501,7 +505,7 @@ public class ListCommerceInventoriesRequest {
         }
 
         /**
-         * The item variant ID to filter by
+         * The item variant ID to filter by (reference to CommerceItemVariant)
          */
         public Builder itemVariantId(Optional<String> itemVariantId) {
             Utils.checkNotNull(itemVariantId, "itemVariantId");
@@ -524,7 +528,7 @@ public class ListCommerceInventoriesRequest {
 
 
         /**
-         * The location ID to filter by
+         * The location ID to filter by (reference to CommerceLocation)
          */
         public Builder locationId(String locationId) {
             Utils.checkNotNull(locationId, "locationId");
@@ -533,7 +537,7 @@ public class ListCommerceInventoriesRequest {
         }
 
         /**
-         * The location ID to filter by
+         * The location ID to filter by (reference to CommerceLocation)
          */
         public Builder locationId(Optional<String> locationId) {
             Utils.checkNotNull(locationId, "locationId");
@@ -624,7 +628,8 @@ public class ListCommerceInventoriesRequest {
 
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(String updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -633,7 +638,8 @@ public class ListCommerceInventoriesRequest {
         }
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(Optional<String> updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");

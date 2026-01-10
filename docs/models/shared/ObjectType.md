@@ -30,6 +30,7 @@
 | `PAYMENT_REFUND`           | payment_refund             |
 | `PAYMENT_SUBSCRIPTION`     | payment_subscription       |
 | `COMMERCE_ITEM`            | commerce_item              |
+| `COMMERCE_ITEMVARIANT`     | commerce_itemvariant       |
 | `COMMERCE_COLLECTION`      | commerce_collection        |
 | `COMMERCE_INVENTORY`       | commerce_inventory         |
 | `COMMERCE_LOCATION`        | commerce_location          |
@@ -111,3 +112,5 @@
 | `ADS_CAMPAIGN`             | ads_campaign               |
 | `ADS_REPORT`               | ads_report                 |
 | `ADS_GROUP`                | ads_group                  |
+| `FORMS_FORM`               | forms_form                 |
+| `FORMS_SUBMISSION`         | forms_submission           |

@@ -5,7 +5,7 @@
 ### Available Operations
 
 * [createUnifiedConnection](#createunifiedconnection) - Create connection
-* [createUnifiedEnvironment](#createunifiedenvironment)
+* [createUnifiedEnvironment](#createunifiedenvironment) - Create new environments
 * [createUnifiedWebhook](#createunifiedwebhook) - Create webhook subscription
 * [getUnifiedApicall](#getunifiedapicall) - Retrieve specific API Call by its ID
 * [getUnifiedConnection](#getunifiedconnection) - Retrieve connection
@@ -14,7 +14,7 @@
 * [getUnifiedWebhook](#getunifiedwebhook) - Retrieve webhook by its ID
 * [listUnifiedApicalls](#listunifiedapicalls) - Returns API Calls
 * [listUnifiedConnections](#listunifiedconnections) - List all connections
-* [listUnifiedEnvironments](#listunifiedenvironments)
+* [listUnifiedEnvironments](#listunifiedenvironments) - Returns all environments
 * [listUnifiedIntegrationWorkspaces](#listunifiedintegrationworkspaces) - Returns all activated integrations in a workspace
 * [listUnifiedIntegrations](#listunifiedintegrations) - Returns all integrations
 * [listUnifiedIssues](#listunifiedissues) - List support issues
@@ -23,7 +23,7 @@
 * [patchUnifiedWebhook](#patchunifiedwebhook) - Update webhook subscription
 * [patchUnifiedWebhookTrigger](#patchunifiedwebhooktrigger) - Trigger webhook
 * [removeUnifiedConnection](#removeunifiedconnection) - Remove connection
-* [removeUnifiedEnvironment](#removeunifiedenvironment)
+* [removeUnifiedEnvironment](#removeunifiedenvironment) - Remove an environment
 * [removeUnifiedWebhook](#removeunifiedwebhook) - Remove webhook subscription
 * [updateUnifiedConnection](#updateunifiedconnection) - Update connection
 * [updateUnifiedWebhook](#updateunifiedwebhook) - Update webhook subscription
@@ -91,6 +91,8 @@ public class Application {
 
 ## createUnifiedEnvironment
 
+Create new environments
+
 ### Example Usage
 
 <!-- UsageSnippet language="java" operationID="createUnifiedEnvironment" method="post" path="/unified/environment" -->
@@ -120,7 +122,7 @@ public class Application {
                 .request(req)
                 .call();
 
-        if (res.s().isPresent()) {
+        if (res.environments().isPresent()) {
             // handle response
         }
     }
@@ -594,6 +596,8 @@ public class Application {
 
 ## listUnifiedEnvironments
 
+Returns all environments
+
 ### Example Usage
 
 <!-- UsageSnippet language="java" operationID="listUnifiedEnvironments" method="get" path="/unified/environment" -->
@@ -618,7 +622,7 @@ public class Application {
         ListUnifiedEnvironmentsResponse res = sdk.unified().listUnifiedEnvironments()
                 .call();
 
-        if (res.s().isPresent()) {
+        if (res.environments().isPresent()) {
             // handle response
         }
     }
@@ -1083,6 +1087,8 @@ public class Application {
 
 ## removeUnifiedEnvironment
 
+Remove an environment
+
 ### Example Usage
 
 <!-- UsageSnippet language="java" operationID="removeUnifiedEnvironment" method="delete" path="/unified/environment/{env}" -->
@@ -1113,7 +1119,7 @@ public class Application {
                 .request(req)
                 .call();
 
-        if (res.s().isPresent()) {
+        if (res.environments().isPresent()) {
             // handle response
         }
     }

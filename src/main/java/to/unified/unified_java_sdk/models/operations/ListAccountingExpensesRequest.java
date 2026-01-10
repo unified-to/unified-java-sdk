@@ -23,10 +23,10 @@ public class ListAccountingExpensesRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<ListAccountingExpensesQueryParamFields>> fields;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
@@ -59,13 +59,14 @@ public class ListAccountingExpensesRequest {
     private Optional<String> sort;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private Optional<String> updatedGte;
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
     private Optional<String> userId;
@@ -73,7 +74,7 @@ public class ListAccountingExpensesRequest {
     @JsonCreator
     public ListAccountingExpensesRequest(
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<ListAccountingExpensesQueryParamFields>> fields,
             Optional<Double> limit,
             Optional<Double> offset,
             Optional<String> order,
@@ -121,12 +122,12 @@ public class ListAccountingExpensesRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<ListAccountingExpensesQueryParamFields>> fields() {
+        return (Optional<List<ListAccountingExpensesQueryParamFields>>) fields;
     }
 
     @JsonIgnore
@@ -168,7 +169,8 @@ public class ListAccountingExpensesRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> updatedGte() {
@@ -176,7 +178,7 @@ public class ListAccountingExpensesRequest {
     }
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      */
     @JsonIgnore
     public Optional<String> userId() {
@@ -198,9 +200,9 @@ public class ListAccountingExpensesRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListAccountingExpensesRequest withFields(List<String> fields) {
+    public ListAccountingExpensesRequest withFields(List<ListAccountingExpensesQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -208,9 +210,9 @@ public class ListAccountingExpensesRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListAccountingExpensesRequest withFields(Optional<? extends List<String>> fields) {
+    public ListAccountingExpensesRequest withFields(Optional<? extends List<ListAccountingExpensesQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -311,7 +313,8 @@ public class ListAccountingExpensesRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListAccountingExpensesRequest withUpdatedGte(String updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -321,7 +324,8 @@ public class ListAccountingExpensesRequest {
 
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListAccountingExpensesRequest withUpdatedGte(Optional<String> updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -330,7 +334,7 @@ public class ListAccountingExpensesRequest {
     }
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      */
     public ListAccountingExpensesRequest withUserId(String userId) {
         Utils.checkNotNull(userId, "userId");
@@ -340,7 +344,7 @@ public class ListAccountingExpensesRequest {
 
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      */
     public ListAccountingExpensesRequest withUserId(Optional<String> userId) {
         Utils.checkNotNull(userId, "userId");
@@ -399,7 +403,7 @@ public class ListAccountingExpensesRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<ListAccountingExpensesQueryParamFields>> fields = Optional.empty();
 
         private Optional<Double> limit = Optional.empty();
 
@@ -433,18 +437,18 @@ public class ListAccountingExpensesRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<ListAccountingExpensesQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<ListAccountingExpensesQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;
@@ -546,7 +550,8 @@ public class ListAccountingExpensesRequest {
 
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(String updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -555,7 +560,8 @@ public class ListAccountingExpensesRequest {
         }
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(Optional<String> updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -565,7 +571,7 @@ public class ListAccountingExpensesRequest {
 
 
         /**
-         * The user/employee ID to filter by
+         * The user/employee ID to filter by (reference to HrisEmployee)
          */
         public Builder userId(String userId) {
             Utils.checkNotNull(userId, "userId");
@@ -574,7 +580,7 @@ public class ListAccountingExpensesRequest {
         }
 
         /**
-         * The user/employee ID to filter by
+         * The user/employee ID to filter by (reference to HrisEmployee)
          */
         public Builder userId(Optional<String> userId) {
             Utils.checkNotNull(userId, "userId");

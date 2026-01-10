@@ -44,6 +44,7 @@ public class PropertyConnectionCategories {
     public static final PropertyConnectionCategories CALENDAR = new PropertyConnectionCategories("calendar");
     public static final PropertyConnectionCategories VERIFICATION = new PropertyConnectionCategories("verification");
     public static final PropertyConnectionCategories ADS = new PropertyConnectionCategories("ads");
+    public static final PropertyConnectionCategories FORMS = new PropertyConnectionCategories("forms");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -141,6 +142,7 @@ public class PropertyConnectionCategories {
         map.put("calendar", CALENDAR);
         map.put("verification", VERIFICATION);
         map.put("ads", ADS);
+        map.put("forms", FORMS);
         return map;
     }
 
@@ -170,6 +172,7 @@ public class PropertyConnectionCategories {
         map.put("calendar", PropertyConnectionCategoriesEnum.CALENDAR);
         map.put("verification", PropertyConnectionCategoriesEnum.VERIFICATION);
         map.put("ads", PropertyConnectionCategoriesEnum.ADS);
+        map.put("forms", PropertyConnectionCategoriesEnum.FORMS);
         return map;
     }
     
@@ -199,7 +202,8 @@ public class PropertyConnectionCategories {
         METADATA("metadata"),
         CALENDAR("calendar"),
         VERIFICATION("verification"),
-        ADS("ads"),;
+        ADS("ads"),
+        FORMS("forms"),;
 
         private final String value;
 

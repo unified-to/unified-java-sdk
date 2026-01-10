@@ -41,7 +41,7 @@ public class Environment {
     }
 
     /**
-     * Returns a builder to make a request.
+     * Create new environments
      * 
      * @return The call builder
      */
@@ -50,7 +50,7 @@ public class Environment {
     }
 
     /**
-     * Makes a request.
+     * Create new environments
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -63,7 +63,7 @@ public class Environment {
     }
 
     /**
-     * Returns a builder to make a request.
+     * Returns all environments
      * 
      * @return The call builder
      */
@@ -72,7 +72,7 @@ public class Environment {
     }
 
     /**
-     * Makes a request.
+     * Returns all environments
      * 
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
@@ -84,7 +84,7 @@ public class Environment {
     }
 
     /**
-     * Returns a builder to make a request.
+     * Remove an environment
      * 
      * @return The call builder
      */
@@ -93,7 +93,7 @@ public class Environment {
     }
 
     /**
-     * Makes a request.
+     * Remove an environment
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

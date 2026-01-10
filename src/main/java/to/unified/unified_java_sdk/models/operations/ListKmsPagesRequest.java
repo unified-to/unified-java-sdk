@@ -23,10 +23,10 @@ public class ListKmsPagesRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<ListKmsPagesQueryParamFields>> fields;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
@@ -65,13 +65,14 @@ public class ListKmsPagesRequest {
     private Optional<String> sort;
 
     /**
-     * The space ID to filter by
+     * The space ID to filter by (reference to KmsSpace)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=space_id")
     private Optional<String> spaceId;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private Optional<String> updatedGte;
@@ -79,7 +80,7 @@ public class ListKmsPagesRequest {
     @JsonCreator
     public ListKmsPagesRequest(
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<ListKmsPagesQueryParamFields>> fields,
             Optional<Double> limit,
             Optional<Double> offset,
             Optional<String> order,
@@ -130,12 +131,12 @@ public class ListKmsPagesRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<ListKmsPagesQueryParamFields>> fields() {
+        return (Optional<List<ListKmsPagesQueryParamFields>>) fields;
     }
 
     @JsonIgnore
@@ -185,7 +186,7 @@ public class ListKmsPagesRequest {
     }
 
     /**
-     * The space ID to filter by
+     * The space ID to filter by (reference to KmsSpace)
      */
     @JsonIgnore
     public Optional<String> spaceId() {
@@ -193,7 +194,8 @@ public class ListKmsPagesRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> updatedGte() {
@@ -215,9 +217,9 @@ public class ListKmsPagesRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListKmsPagesRequest withFields(List<String> fields) {
+    public ListKmsPagesRequest withFields(List<ListKmsPagesQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -225,9 +227,9 @@ public class ListKmsPagesRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListKmsPagesRequest withFields(Optional<? extends List<String>> fields) {
+    public ListKmsPagesRequest withFields(Optional<? extends List<ListKmsPagesQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -347,7 +349,7 @@ public class ListKmsPagesRequest {
     }
 
     /**
-     * The space ID to filter by
+     * The space ID to filter by (reference to KmsSpace)
      */
     public ListKmsPagesRequest withSpaceId(String spaceId) {
         Utils.checkNotNull(spaceId, "spaceId");
@@ -357,7 +359,7 @@ public class ListKmsPagesRequest {
 
 
     /**
-     * The space ID to filter by
+     * The space ID to filter by (reference to KmsSpace)
      */
     public ListKmsPagesRequest withSpaceId(Optional<String> spaceId) {
         Utils.checkNotNull(spaceId, "spaceId");
@@ -366,7 +368,8 @@ public class ListKmsPagesRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListKmsPagesRequest withUpdatedGte(String updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -376,7 +379,8 @@ public class ListKmsPagesRequest {
 
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListKmsPagesRequest withUpdatedGte(Optional<String> updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -437,7 +441,7 @@ public class ListKmsPagesRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<ListKmsPagesQueryParamFields>> fields = Optional.empty();
 
         private Optional<Double> limit = Optional.empty();
 
@@ -473,18 +477,18 @@ public class ListKmsPagesRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<ListKmsPagesQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<ListKmsPagesQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;
@@ -605,7 +609,7 @@ public class ListKmsPagesRequest {
 
 
         /**
-         * The space ID to filter by
+         * The space ID to filter by (reference to KmsSpace)
          */
         public Builder spaceId(String spaceId) {
             Utils.checkNotNull(spaceId, "spaceId");
@@ -614,7 +618,7 @@ public class ListKmsPagesRequest {
         }
 
         /**
-         * The space ID to filter by
+         * The space ID to filter by (reference to KmsSpace)
          */
         public Builder spaceId(Optional<String> spaceId) {
             Utils.checkNotNull(spaceId, "spaceId");
@@ -624,7 +628,8 @@ public class ListKmsPagesRequest {
 
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(String updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -633,7 +638,8 @@ public class ListKmsPagesRequest {
         }
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(Optional<String> updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");

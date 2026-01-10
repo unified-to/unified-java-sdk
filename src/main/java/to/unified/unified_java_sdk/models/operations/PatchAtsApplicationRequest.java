@@ -27,10 +27,10 @@ public class PatchAtsApplicationRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<PatchAtsApplicationQueryParamFields>> fields;
 
     /**
      * ID of the Application
@@ -50,7 +50,7 @@ public class PatchAtsApplicationRequest {
     public PatchAtsApplicationRequest(
             AtsApplication atsApplication,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<PatchAtsApplicationQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(atsApplication, "atsApplication");
@@ -87,12 +87,12 @@ public class PatchAtsApplicationRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<PatchAtsApplicationQueryParamFields>> fields() {
+        return (Optional<List<PatchAtsApplicationQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class PatchAtsApplicationRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchAtsApplicationRequest withFields(List<String> fields) {
+    public PatchAtsApplicationRequest withFields(List<PatchAtsApplicationQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class PatchAtsApplicationRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchAtsApplicationRequest withFields(Optional<? extends List<String>> fields) {
+    public PatchAtsApplicationRequest withFields(Optional<? extends List<PatchAtsApplicationQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class PatchAtsApplicationRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<PatchAtsApplicationQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class PatchAtsApplicationRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<PatchAtsApplicationQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<PatchAtsApplicationQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

@@ -27,10 +27,10 @@ public class PatchCrmPipelineRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<PatchCrmPipelineQueryParamFields>> fields;
 
     /**
      * ID of the Pipeline
@@ -50,7 +50,7 @@ public class PatchCrmPipelineRequest {
     public PatchCrmPipelineRequest(
             CrmPipeline crmPipeline,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<PatchCrmPipelineQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(crmPipeline, "crmPipeline");
@@ -87,12 +87,12 @@ public class PatchCrmPipelineRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<PatchCrmPipelineQueryParamFields>> fields() {
+        return (Optional<List<PatchCrmPipelineQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class PatchCrmPipelineRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchCrmPipelineRequest withFields(List<String> fields) {
+    public PatchCrmPipelineRequest withFields(List<PatchCrmPipelineQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class PatchCrmPipelineRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchCrmPipelineRequest withFields(Optional<? extends List<String>> fields) {
+    public PatchCrmPipelineRequest withFields(Optional<? extends List<PatchCrmPipelineQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class PatchCrmPipelineRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<PatchCrmPipelineQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class PatchCrmPipelineRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<PatchCrmPipelineQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<PatchCrmPipelineQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

@@ -29,10 +29,10 @@ public class PatchCommerceCollectionRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<PatchCommerceCollectionQueryParamFields>> fields;
 
     /**
      * ID of the Collection
@@ -52,7 +52,7 @@ public class PatchCommerceCollectionRequest {
     public PatchCommerceCollectionRequest(
             CommerceCollection commerceCollection,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<PatchCommerceCollectionQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(commerceCollection, "commerceCollection");
@@ -92,12 +92,12 @@ public class PatchCommerceCollectionRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<PatchCommerceCollectionQueryParamFields>> fields() {
+        return (Optional<List<PatchCommerceCollectionQueryParamFields>>) fields;
     }
 
     /**
@@ -142,9 +142,9 @@ public class PatchCommerceCollectionRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchCommerceCollectionRequest withFields(List<String> fields) {
+    public PatchCommerceCollectionRequest withFields(List<PatchCommerceCollectionQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -152,9 +152,9 @@ public class PatchCommerceCollectionRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchCommerceCollectionRequest withFields(Optional<? extends List<String>> fields) {
+    public PatchCommerceCollectionRequest withFields(Optional<? extends List<PatchCommerceCollectionQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -233,7 +233,7 @@ public class PatchCommerceCollectionRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<PatchCommerceCollectionQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -265,18 +265,18 @@ public class PatchCommerceCollectionRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<PatchCommerceCollectionQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<PatchCommerceCollectionQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

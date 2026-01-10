@@ -29,10 +29,10 @@ public class PatchCrmDealRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<PatchCrmDealQueryParamFields>> fields;
 
     /**
      * ID of the Deal
@@ -52,7 +52,7 @@ public class PatchCrmDealRequest {
     public PatchCrmDealRequest(
             CrmDeal crmDeal,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<PatchCrmDealQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(crmDeal, "crmDeal");
@@ -92,12 +92,12 @@ public class PatchCrmDealRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<PatchCrmDealQueryParamFields>> fields() {
+        return (Optional<List<PatchCrmDealQueryParamFields>>) fields;
     }
 
     /**
@@ -142,9 +142,9 @@ public class PatchCrmDealRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchCrmDealRequest withFields(List<String> fields) {
+    public PatchCrmDealRequest withFields(List<PatchCrmDealQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -152,9 +152,9 @@ public class PatchCrmDealRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchCrmDealRequest withFields(Optional<? extends List<String>> fields) {
+    public PatchCrmDealRequest withFields(Optional<? extends List<PatchCrmDealQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -233,7 +233,7 @@ public class PatchCrmDealRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<PatchCrmDealQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -265,18 +265,18 @@ public class PatchCrmDealRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<PatchCrmDealQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<PatchCrmDealQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

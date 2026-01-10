@@ -27,10 +27,10 @@ public class PatchAccountingPurchaseorderRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<PatchAccountingPurchaseorderQueryParamFields>> fields;
 
     /**
      * ID of the Purchaseorder
@@ -50,7 +50,7 @@ public class PatchAccountingPurchaseorderRequest {
     public PatchAccountingPurchaseorderRequest(
             AccountingPurchaseorder accountingPurchaseorder,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<PatchAccountingPurchaseorderQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(accountingPurchaseorder, "accountingPurchaseorder");
@@ -87,12 +87,12 @@ public class PatchAccountingPurchaseorderRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<PatchAccountingPurchaseorderQueryParamFields>> fields() {
+        return (Optional<List<PatchAccountingPurchaseorderQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class PatchAccountingPurchaseorderRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchAccountingPurchaseorderRequest withFields(List<String> fields) {
+    public PatchAccountingPurchaseorderRequest withFields(List<PatchAccountingPurchaseorderQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class PatchAccountingPurchaseorderRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchAccountingPurchaseorderRequest withFields(Optional<? extends List<String>> fields) {
+    public PatchAccountingPurchaseorderRequest withFields(Optional<? extends List<PatchAccountingPurchaseorderQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class PatchAccountingPurchaseorderRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<PatchAccountingPurchaseorderQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class PatchAccountingPurchaseorderRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<PatchAccountingPurchaseorderQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<PatchAccountingPurchaseorderQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

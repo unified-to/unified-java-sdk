@@ -29,10 +29,10 @@ public class CreateUcContactRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<CreateUcContactQueryParamFields>> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -46,7 +46,7 @@ public class CreateUcContactRequest {
     public CreateUcContactRequest(
             UcContact ucContact,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<CreateUcContactQueryParamFields>> fields,
             Optional<String> raw) {
         Utils.checkNotNull(ucContact, "ucContact");
         Utils.checkNotNull(connectionId, "connectionId");
@@ -82,12 +82,12 @@ public class CreateUcContactRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<CreateUcContactQueryParamFields>> fields() {
+        return (Optional<List<CreateUcContactQueryParamFields>>) fields;
     }
 
     /**
@@ -124,9 +124,9 @@ public class CreateUcContactRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public CreateUcContactRequest withFields(List<String> fields) {
+    public CreateUcContactRequest withFields(List<CreateUcContactQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -134,9 +134,9 @@ public class CreateUcContactRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public CreateUcContactRequest withFields(Optional<? extends List<String>> fields) {
+    public CreateUcContactRequest withFields(Optional<? extends List<CreateUcContactQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -204,7 +204,7 @@ public class CreateUcContactRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<CreateUcContactQueryParamFields>> fields = Optional.empty();
 
         private Optional<String> raw = Optional.empty();
 
@@ -234,18 +234,18 @@ public class CreateUcContactRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<CreateUcContactQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<CreateUcContactQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

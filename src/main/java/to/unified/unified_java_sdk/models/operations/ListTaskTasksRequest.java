@@ -23,10 +23,10 @@ public class ListTaskTasksRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<ListTaskTasksQueryParamFields>> fields;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
@@ -47,7 +47,7 @@ public class ListTaskTasksRequest {
     private Optional<String> parentId;
 
     /**
-     * The project ID to filter by
+     * The project ID to filter by (reference to TaskProject)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=project_id")
     private Optional<String> projectId;
@@ -77,13 +77,14 @@ public class ListTaskTasksRequest {
     private Optional<String> status;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private Optional<String> updatedGte;
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
     private Optional<String> userId;
@@ -91,7 +92,7 @@ public class ListTaskTasksRequest {
     @JsonCreator
     public ListTaskTasksRequest(
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<ListTaskTasksQueryParamFields>> fields,
             Optional<Double> limit,
             Optional<Double> offset,
             Optional<String> order,
@@ -149,12 +150,12 @@ public class ListTaskTasksRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<ListTaskTasksQueryParamFields>> fields() {
+        return (Optional<List<ListTaskTasksQueryParamFields>>) fields;
     }
 
     @JsonIgnore
@@ -181,7 +182,7 @@ public class ListTaskTasksRequest {
     }
 
     /**
-     * The project ID to filter by
+     * The project ID to filter by (reference to TaskProject)
      */
     @JsonIgnore
     public Optional<String> projectId() {
@@ -220,7 +221,8 @@ public class ListTaskTasksRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> updatedGte() {
@@ -228,7 +230,7 @@ public class ListTaskTasksRequest {
     }
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      */
     @JsonIgnore
     public Optional<String> userId() {
@@ -250,9 +252,9 @@ public class ListTaskTasksRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListTaskTasksRequest withFields(List<String> fields) {
+    public ListTaskTasksRequest withFields(List<ListTaskTasksQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -260,9 +262,9 @@ public class ListTaskTasksRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListTaskTasksRequest withFields(Optional<? extends List<String>> fields) {
+    public ListTaskTasksRequest withFields(Optional<? extends List<ListTaskTasksQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -327,7 +329,7 @@ public class ListTaskTasksRequest {
     }
 
     /**
-     * The project ID to filter by
+     * The project ID to filter by (reference to TaskProject)
      */
     public ListTaskTasksRequest withProjectId(String projectId) {
         Utils.checkNotNull(projectId, "projectId");
@@ -337,7 +339,7 @@ public class ListTaskTasksRequest {
 
 
     /**
-     * The project ID to filter by
+     * The project ID to filter by (reference to TaskProject)
      */
     public ListTaskTasksRequest withProjectId(Optional<String> projectId) {
         Utils.checkNotNull(projectId, "projectId");
@@ -420,7 +422,8 @@ public class ListTaskTasksRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListTaskTasksRequest withUpdatedGte(String updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -430,7 +433,8 @@ public class ListTaskTasksRequest {
 
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListTaskTasksRequest withUpdatedGte(Optional<String> updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -439,7 +443,7 @@ public class ListTaskTasksRequest {
     }
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      */
     public ListTaskTasksRequest withUserId(String userId) {
         Utils.checkNotNull(userId, "userId");
@@ -449,7 +453,7 @@ public class ListTaskTasksRequest {
 
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      */
     public ListTaskTasksRequest withUserId(Optional<String> userId) {
         Utils.checkNotNull(userId, "userId");
@@ -515,7 +519,7 @@ public class ListTaskTasksRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<ListTaskTasksQueryParamFields>> fields = Optional.empty();
 
         private Optional<Double> limit = Optional.empty();
 
@@ -555,18 +559,18 @@ public class ListTaskTasksRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<ListTaskTasksQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<ListTaskTasksQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;
@@ -632,7 +636,7 @@ public class ListTaskTasksRequest {
 
 
         /**
-         * The project ID to filter by
+         * The project ID to filter by (reference to TaskProject)
          */
         public Builder projectId(String projectId) {
             Utils.checkNotNull(projectId, "projectId");
@@ -641,7 +645,7 @@ public class ListTaskTasksRequest {
         }
 
         /**
-         * The project ID to filter by
+         * The project ID to filter by (reference to TaskProject)
          */
         public Builder projectId(Optional<String> projectId) {
             Utils.checkNotNull(projectId, "projectId");
@@ -725,7 +729,8 @@ public class ListTaskTasksRequest {
 
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(String updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -734,7 +739,8 @@ public class ListTaskTasksRequest {
         }
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(Optional<String> updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -744,7 +750,7 @@ public class ListTaskTasksRequest {
 
 
         /**
-         * The user/employee ID to filter by
+         * The user/employee ID to filter by (reference to HrisEmployee)
          */
         public Builder userId(String userId) {
             Utils.checkNotNull(userId, "userId");
@@ -753,7 +759,7 @@ public class ListTaskTasksRequest {
         }
 
         /**
-         * The user/employee ID to filter by
+         * The user/employee ID to filter by (reference to HrisEmployee)
          */
         public Builder userId(Optional<String> userId) {
             Utils.checkNotNull(userId, "userId");

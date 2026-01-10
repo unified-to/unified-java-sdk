@@ -47,13 +47,6 @@ public class AtsJob {
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
-    /**
-     * &#64;deprecated Use `groups` instead
-     */
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("departments")
-    private Optional<? extends List<String>> departments;
-
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
@@ -172,7 +165,6 @@ public class AtsJob {
             @JsonProperty("company_id") Optional<String> companyId,
             @JsonProperty("compensation") Optional<? extends List<AtsCompensation>> compensation,
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("departments") Optional<? extends List<String>> departments,
             @JsonProperty("description") Optional<String> description,
             @JsonProperty("employment_type") Optional<? extends EmploymentType> employmentType,
             @JsonProperty("groups") Optional<? extends List<AtsGroup>> groups,
@@ -199,7 +191,6 @@ public class AtsJob {
         Utils.checkNotNull(companyId, "companyId");
         Utils.checkNotNull(compensation, "compensation");
         Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(departments, "departments");
         Utils.checkNotNull(description, "description");
         Utils.checkNotNull(employmentType, "employmentType");
         Utils.checkNotNull(groups, "groups");
@@ -226,7 +217,6 @@ public class AtsJob {
         this.companyId = companyId;
         this.compensation = compensation;
         this.createdAt = createdAt;
-        this.departments = departments;
         this.description = description;
         this.employmentType = employmentType;
         this.groups = groups;
@@ -259,7 +249,7 @@ public class AtsJob {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -287,15 +277,6 @@ public class AtsJob {
     @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
         return createdAt;
-    }
-
-    /**
-     * &#64;deprecated Use `groups` instead
-     */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
-    public Optional<List<String>> departments() {
-        return (Optional<List<String>>) departments;
     }
 
     @JsonIgnore
@@ -491,25 +472,6 @@ public class AtsJob {
     public AtsJob withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
-        return this;
-    }
-
-    /**
-     * &#64;deprecated Use `groups` instead
-     */
-    public AtsJob withDepartments(List<String> departments) {
-        Utils.checkNotNull(departments, "departments");
-        this.departments = Optional.ofNullable(departments);
-        return this;
-    }
-
-
-    /**
-     * &#64;deprecated Use `groups` instead
-     */
-    public AtsJob withDepartments(Optional<? extends List<String>> departments) {
-        Utils.checkNotNull(departments, "departments");
-        this.departments = departments;
         return this;
     }
 
@@ -819,7 +781,6 @@ public class AtsJob {
             Utils.enhancedDeepEquals(this.companyId, other.companyId) &&
             Utils.enhancedDeepEquals(this.compensation, other.compensation) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
-            Utils.enhancedDeepEquals(this.departments, other.departments) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.employmentType, other.employmentType) &&
             Utils.enhancedDeepEquals(this.groups, other.groups) &&
@@ -847,14 +808,14 @@ public class AtsJob {
     public int hashCode() {
         return Utils.enhancedHash(
             addresses, closedAt, companyId,
-            compensation, createdAt, departments,
-            description, employmentType, groups,
-            hiringManagerIds, id, languageLocale,
-            metadata, minimumDegree, minimumExperienceYears,
-            name, numberOfOpenings, openings,
-            postings, publicJobUrls, questions,
-            raw, recruiterIds, remote,
-            skills, status, updatedAt);
+            compensation, createdAt, description,
+            employmentType, groups, hiringManagerIds,
+            id, languageLocale, metadata,
+            minimumDegree, minimumExperienceYears, name,
+            numberOfOpenings, openings, postings,
+            publicJobUrls, questions, raw,
+            recruiterIds, remote, skills,
+            status, updatedAt);
     }
     
     @Override
@@ -865,7 +826,6 @@ public class AtsJob {
                 "companyId", companyId,
                 "compensation", compensation,
                 "createdAt", createdAt,
-                "departments", departments,
                 "description", description,
                 "employmentType", employmentType,
                 "groups", groups,
@@ -901,8 +861,6 @@ public class AtsJob {
         private Optional<? extends List<AtsCompensation>> compensation = Optional.empty();
 
         private Optional<OffsetDateTime> createdAt = Optional.empty();
-
-        private Optional<? extends List<String>> departments = Optional.empty();
 
         private Optional<String> description = Optional.empty();
 
@@ -1012,25 +970,6 @@ public class AtsJob {
         public Builder createdAt(Optional<OffsetDateTime> createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = createdAt;
-            return this;
-        }
-
-
-        /**
-         * &#64;deprecated Use `groups` instead
-         */
-        public Builder departments(List<String> departments) {
-            Utils.checkNotNull(departments, "departments");
-            this.departments = Optional.ofNullable(departments);
-            return this;
-        }
-
-        /**
-         * &#64;deprecated Use `groups` instead
-         */
-        public Builder departments(Optional<? extends List<String>> departments) {
-            Utils.checkNotNull(departments, "departments");
-            this.departments = departments;
             return this;
         }
 
@@ -1329,14 +1268,14 @@ public class AtsJob {
 
             return new AtsJob(
                 addresses, closedAt, companyId,
-                compensation, createdAt, departments,
-                description, employmentType, groups,
-                hiringManagerIds, id, languageLocale,
-                metadata, minimumDegree, minimumExperienceYears,
-                name, numberOfOpenings, openings,
-                postings, publicJobUrls, questions,
-                raw, recruiterIds, remote,
-                skills, status, updatedAt);
+                compensation, createdAt, description,
+                employmentType, groups, hiringManagerIds,
+                id, languageLocale, metadata,
+                minimumDegree, minimumExperienceYears, name,
+                numberOfOpenings, openings, postings,
+                publicJobUrls, questions, raw,
+                recruiterIds, remote, skills,
+                status, updatedAt);
         }
 
     }

@@ -27,10 +27,10 @@ public class PatchRepoPullrequestRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<PatchRepoPullrequestQueryParamFields>> fields;
 
     /**
      * ID of the Pullrequest
@@ -50,7 +50,7 @@ public class PatchRepoPullrequestRequest {
     public PatchRepoPullrequestRequest(
             RepoPullrequest repoPullrequest,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<PatchRepoPullrequestQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(repoPullrequest, "repoPullrequest");
@@ -87,12 +87,12 @@ public class PatchRepoPullrequestRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<PatchRepoPullrequestQueryParamFields>> fields() {
+        return (Optional<List<PatchRepoPullrequestQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class PatchRepoPullrequestRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchRepoPullrequestRequest withFields(List<String> fields) {
+    public PatchRepoPullrequestRequest withFields(List<PatchRepoPullrequestQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class PatchRepoPullrequestRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchRepoPullrequestRequest withFields(Optional<? extends List<String>> fields) {
+    public PatchRepoPullrequestRequest withFields(Optional<? extends List<PatchRepoPullrequestQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class PatchRepoPullrequestRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<PatchRepoPullrequestQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class PatchRepoPullrequestRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<PatchRepoPullrequestQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<PatchRepoPullrequestQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

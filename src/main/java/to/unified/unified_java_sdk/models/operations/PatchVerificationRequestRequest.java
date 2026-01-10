@@ -27,10 +27,10 @@ public class PatchVerificationRequestRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<PatchVerificationRequestQueryParamFields>> fields;
 
     /**
      * ID of the Request
@@ -50,7 +50,7 @@ public class PatchVerificationRequestRequest {
     public PatchVerificationRequestRequest(
             VerificationRequest verificationRequest,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<PatchVerificationRequestQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(verificationRequest, "verificationRequest");
@@ -87,12 +87,12 @@ public class PatchVerificationRequestRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<PatchVerificationRequestQueryParamFields>> fields() {
+        return (Optional<List<PatchVerificationRequestQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class PatchVerificationRequestRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchVerificationRequestRequest withFields(List<String> fields) {
+    public PatchVerificationRequestRequest withFields(List<PatchVerificationRequestQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class PatchVerificationRequestRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchVerificationRequestRequest withFields(Optional<? extends List<String>> fields) {
+    public PatchVerificationRequestRequest withFields(Optional<? extends List<PatchVerificationRequestQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class PatchVerificationRequestRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<PatchVerificationRequestQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class PatchVerificationRequestRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<PatchVerificationRequestQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<PatchVerificationRequestQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

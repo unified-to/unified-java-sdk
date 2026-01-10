@@ -24,6 +24,11 @@ public class ListUnifiedEnvironmentsResponse implements Response {
     private String contentType;
 
     /**
+     * Successful
+     */
+    private Optional<? extends List<String>> environments;
+
+    /**
      * HTTP response status code for this operation
      */
     private int statusCode;
@@ -33,33 +38,28 @@ public class ListUnifiedEnvironmentsResponse implements Response {
      */
     private HttpResponse<InputStream> rawResponse;
 
-    /**
-     * Successful
-     */
-    private Optional<? extends List<String>> s;
-
     @JsonCreator
     public ListUnifiedEnvironmentsResponse(
             String contentType,
+            Optional<? extends List<String>> environments,
             int statusCode,
-            HttpResponse<InputStream> rawResponse,
-            Optional<? extends List<String>> s) {
+            HttpResponse<InputStream> rawResponse) {
         Utils.checkNotNull(contentType, "contentType");
+        Utils.checkNotNull(environments, "environments");
         Utils.checkNotNull(statusCode, "statusCode");
         Utils.checkNotNull(rawResponse, "rawResponse");
-        Utils.checkNotNull(s, "s");
         this.contentType = contentType;
+        this.environments = environments;
         this.statusCode = statusCode;
         this.rawResponse = rawResponse;
-        this.s = s;
     }
     
     public ListUnifiedEnvironmentsResponse(
             String contentType,
             int statusCode,
             HttpResponse<InputStream> rawResponse) {
-        this(contentType, statusCode, rawResponse,
-            Optional.empty());
+        this(contentType, Optional.empty(), statusCode,
+            rawResponse);
     }
 
     /**
@@ -68,6 +68,15 @@ public class ListUnifiedEnvironmentsResponse implements Response {
     @JsonIgnore
     public String contentType() {
         return contentType;
+    }
+
+    /**
+     * Successful
+     */
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<String>> environments() {
+        return (Optional<List<String>>) environments;
     }
 
     /**
@@ -86,15 +95,6 @@ public class ListUnifiedEnvironmentsResponse implements Response {
         return rawResponse;
     }
 
-    /**
-     * Successful
-     */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
-    public Optional<List<String>> s() {
-        return (Optional<List<String>>) s;
-    }
-
     public static Builder builder() {
         return new Builder();
     }
@@ -106,6 +106,25 @@ public class ListUnifiedEnvironmentsResponse implements Response {
     public ListUnifiedEnvironmentsResponse withContentType(String contentType) {
         Utils.checkNotNull(contentType, "contentType");
         this.contentType = contentType;
+        return this;
+    }
+
+    /**
+     * Successful
+     */
+    public ListUnifiedEnvironmentsResponse withEnvironments(List<String> environments) {
+        Utils.checkNotNull(environments, "environments");
+        this.environments = Optional.ofNullable(environments);
+        return this;
+    }
+
+
+    /**
+     * Successful
+     */
+    public ListUnifiedEnvironmentsResponse withEnvironments(Optional<? extends List<String>> environments) {
+        Utils.checkNotNull(environments, "environments");
+        this.environments = environments;
         return this;
     }
 
@@ -127,25 +146,6 @@ public class ListUnifiedEnvironmentsResponse implements Response {
         return this;
     }
 
-    /**
-     * Successful
-     */
-    public ListUnifiedEnvironmentsResponse withS(List<String> s) {
-        Utils.checkNotNull(s, "s");
-        this.s = Optional.ofNullable(s);
-        return this;
-    }
-
-
-    /**
-     * Successful
-     */
-    public ListUnifiedEnvironmentsResponse withS(Optional<? extends List<String>> s) {
-        Utils.checkNotNull(s, "s");
-        this.s = s;
-        return this;
-    }
-
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -157,25 +157,25 @@ public class ListUnifiedEnvironmentsResponse implements Response {
         ListUnifiedEnvironmentsResponse other = (ListUnifiedEnvironmentsResponse) o;
         return 
             Utils.enhancedDeepEquals(this.contentType, other.contentType) &&
+            Utils.enhancedDeepEquals(this.environments, other.environments) &&
             Utils.enhancedDeepEquals(this.statusCode, other.statusCode) &&
-            Utils.enhancedDeepEquals(this.rawResponse, other.rawResponse) &&
-            Utils.enhancedDeepEquals(this.s, other.s);
+            Utils.enhancedDeepEquals(this.rawResponse, other.rawResponse);
     }
     
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            contentType, statusCode, rawResponse,
-            s);
+            contentType, environments, statusCode,
+            rawResponse);
     }
     
     @Override
     public String toString() {
         return Utils.toString(ListUnifiedEnvironmentsResponse.class,
                 "contentType", contentType,
+                "environments", environments,
                 "statusCode", statusCode,
-                "rawResponse", rawResponse,
-                "s", s);
+                "rawResponse", rawResponse);
     }
 
     @SuppressWarnings("UnusedReturnValue")
@@ -183,11 +183,11 @@ public class ListUnifiedEnvironmentsResponse implements Response {
 
         private String contentType;
 
+        private Optional<? extends List<String>> environments = Optional.empty();
+
         private Integer statusCode;
 
         private HttpResponse<InputStream> rawResponse;
-
-        private Optional<? extends List<String>> s = Optional.empty();
 
         private Builder() {
           // force use of static builder() method
@@ -200,6 +200,25 @@ public class ListUnifiedEnvironmentsResponse implements Response {
         public Builder contentType(String contentType) {
             Utils.checkNotNull(contentType, "contentType");
             this.contentType = contentType;
+            return this;
+        }
+
+
+        /**
+         * Successful
+         */
+        public Builder environments(List<String> environments) {
+            Utils.checkNotNull(environments, "environments");
+            this.environments = Optional.ofNullable(environments);
+            return this;
+        }
+
+        /**
+         * Successful
+         */
+        public Builder environments(Optional<? extends List<String>> environments) {
+            Utils.checkNotNull(environments, "environments");
+            this.environments = environments;
             return this;
         }
 
@@ -223,30 +242,11 @@ public class ListUnifiedEnvironmentsResponse implements Response {
             return this;
         }
 
-
-        /**
-         * Successful
-         */
-        public Builder s(List<String> s) {
-            Utils.checkNotNull(s, "s");
-            this.s = Optional.ofNullable(s);
-            return this;
-        }
-
-        /**
-         * Successful
-         */
-        public Builder s(Optional<? extends List<String>> s) {
-            Utils.checkNotNull(s, "s");
-            this.s = s;
-            return this;
-        }
-
         public ListUnifiedEnvironmentsResponse build() {
 
             return new ListUnifiedEnvironmentsResponse(
-                contentType, statusCode, rawResponse,
-                s);
+                contentType, environments, statusCode,
+                rawResponse);
         }
 
     }

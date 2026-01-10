@@ -29,10 +29,10 @@ public class CreateCrmDealRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<CreateCrmDealQueryParamFields>> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -46,7 +46,7 @@ public class CreateCrmDealRequest {
     public CreateCrmDealRequest(
             CrmDeal crmDeal,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<CreateCrmDealQueryParamFields>> fields,
             Optional<String> raw) {
         Utils.checkNotNull(crmDeal, "crmDeal");
         Utils.checkNotNull(connectionId, "connectionId");
@@ -82,12 +82,12 @@ public class CreateCrmDealRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<CreateCrmDealQueryParamFields>> fields() {
+        return (Optional<List<CreateCrmDealQueryParamFields>>) fields;
     }
 
     /**
@@ -124,9 +124,9 @@ public class CreateCrmDealRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public CreateCrmDealRequest withFields(List<String> fields) {
+    public CreateCrmDealRequest withFields(List<CreateCrmDealQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -134,9 +134,9 @@ public class CreateCrmDealRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public CreateCrmDealRequest withFields(Optional<? extends List<String>> fields) {
+    public CreateCrmDealRequest withFields(Optional<? extends List<CreateCrmDealQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -204,7 +204,7 @@ public class CreateCrmDealRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<CreateCrmDealQueryParamFields>> fields = Optional.empty();
 
         private Optional<String> raw = Optional.empty();
 
@@ -234,18 +234,18 @@ public class CreateCrmDealRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<CreateCrmDealQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<CreateCrmDealQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

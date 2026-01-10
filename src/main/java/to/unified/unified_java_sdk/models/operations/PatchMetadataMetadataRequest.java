@@ -27,10 +27,10 @@ public class PatchMetadataMetadataRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<PatchMetadataMetadataQueryParamFields>> fields;
 
     /**
      * ID of the Metadata
@@ -50,7 +50,7 @@ public class PatchMetadataMetadataRequest {
     public PatchMetadataMetadataRequest(
             MetadataMetadata metadataMetadata,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<PatchMetadataMetadataQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(metadataMetadata, "metadataMetadata");
@@ -87,12 +87,12 @@ public class PatchMetadataMetadataRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<PatchMetadataMetadataQueryParamFields>> fields() {
+        return (Optional<List<PatchMetadataMetadataQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class PatchMetadataMetadataRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchMetadataMetadataRequest withFields(List<String> fields) {
+    public PatchMetadataMetadataRequest withFields(List<PatchMetadataMetadataQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class PatchMetadataMetadataRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchMetadataMetadataRequest withFields(Optional<? extends List<String>> fields) {
+    public PatchMetadataMetadataRequest withFields(Optional<? extends List<PatchMetadataMetadataQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class PatchMetadataMetadataRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<PatchMetadataMetadataQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class PatchMetadataMetadataRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<PatchMetadataMetadataQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<PatchMetadataMetadataQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

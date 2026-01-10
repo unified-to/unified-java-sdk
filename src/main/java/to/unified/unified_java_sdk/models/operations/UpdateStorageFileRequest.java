@@ -27,10 +27,10 @@ public class UpdateStorageFileRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<UpdateStorageFileQueryParamFields>> fields;
 
     /**
      * ID of the File
@@ -50,7 +50,7 @@ public class UpdateStorageFileRequest {
     public UpdateStorageFileRequest(
             StorageFile storageFile,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<UpdateStorageFileQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(storageFile, "storageFile");
@@ -87,12 +87,12 @@ public class UpdateStorageFileRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<UpdateStorageFileQueryParamFields>> fields() {
+        return (Optional<List<UpdateStorageFileQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class UpdateStorageFileRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateStorageFileRequest withFields(List<String> fields) {
+    public UpdateStorageFileRequest withFields(List<UpdateStorageFileQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class UpdateStorageFileRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateStorageFileRequest withFields(Optional<? extends List<String>> fields) {
+    public UpdateStorageFileRequest withFields(Optional<? extends List<UpdateStorageFileQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class UpdateStorageFileRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<UpdateStorageFileQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class UpdateStorageFileRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<UpdateStorageFileQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<UpdateStorageFileQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

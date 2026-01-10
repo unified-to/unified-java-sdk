@@ -27,10 +27,10 @@ public class PatchPaymentSubscriptionRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<PatchPaymentSubscriptionQueryParamFields>> fields;
 
     /**
      * ID of the Subscription
@@ -50,7 +50,7 @@ public class PatchPaymentSubscriptionRequest {
     public PatchPaymentSubscriptionRequest(
             PaymentSubscription paymentSubscription,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<PatchPaymentSubscriptionQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(paymentSubscription, "paymentSubscription");
@@ -87,12 +87,12 @@ public class PatchPaymentSubscriptionRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<PatchPaymentSubscriptionQueryParamFields>> fields() {
+        return (Optional<List<PatchPaymentSubscriptionQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class PatchPaymentSubscriptionRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchPaymentSubscriptionRequest withFields(List<String> fields) {
+    public PatchPaymentSubscriptionRequest withFields(List<PatchPaymentSubscriptionQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class PatchPaymentSubscriptionRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchPaymentSubscriptionRequest withFields(Optional<? extends List<String>> fields) {
+    public PatchPaymentSubscriptionRequest withFields(Optional<? extends List<PatchPaymentSubscriptionQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class PatchPaymentSubscriptionRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<PatchPaymentSubscriptionQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class PatchPaymentSubscriptionRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<PatchPaymentSubscriptionQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<PatchPaymentSubscriptionQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

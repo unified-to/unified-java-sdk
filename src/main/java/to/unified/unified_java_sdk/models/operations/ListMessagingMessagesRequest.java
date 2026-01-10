@@ -18,7 +18,8 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListMessagingMessagesRequest {
     /**
-     * The channel ID to filter by. You can also use these aliases; INBOX, SENT or DRAFT
+     * The channel ID to filter by. You can also use these aliases; INBOX, SENT or DRAFT (reference to
+     * MessagingChannel)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=channel_id")
     private Optional<String> channelId;
@@ -30,13 +31,7 @@ public class ListMessagingMessagesRequest {
     private String connectionId;
 
     /**
-     * The end date to filter by (deprecated)
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_le")
-    private Optional<String> endLe;
-
-    /**
-     * The end date to filter by
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_lt")
     private Optional<String> endLt;
@@ -48,10 +43,10 @@ public class ListMessagingMessagesRequest {
     private Optional<Boolean> expand;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<ListMessagingMessagesQueryParamFields>> fields;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
@@ -90,7 +85,7 @@ public class ListMessagingMessagesRequest {
     private Optional<String> sort;
 
     /**
-     * The start date to filter by
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_gte")
     private Optional<String> startGte;
@@ -100,13 +95,14 @@ public class ListMessagingMessagesRequest {
     private Optional<String> type;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private Optional<String> updatedGte;
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
     private Optional<String> userId;
@@ -121,10 +117,9 @@ public class ListMessagingMessagesRequest {
     public ListMessagingMessagesRequest(
             Optional<String> channelId,
             String connectionId,
-            Optional<String> endLe,
             Optional<String> endLt,
             Optional<Boolean> expand,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<ListMessagingMessagesQueryParamFields>> fields,
             Optional<Double> limit,
             Optional<Double> offset,
             Optional<String> order,
@@ -139,7 +134,6 @@ public class ListMessagingMessagesRequest {
             Optional<String> userMentionedId) {
         Utils.checkNotNull(channelId, "channelId");
         Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(endLe, "endLe");
         Utils.checkNotNull(endLt, "endLt");
         Utils.checkNotNull(expand, "expand");
         Utils.checkNotNull(fields, "fields");
@@ -157,7 +151,6 @@ public class ListMessagingMessagesRequest {
         Utils.checkNotNull(userMentionedId, "userMentionedId");
         this.channelId = channelId;
         this.connectionId = connectionId;
-        this.endLe = endLe;
         this.endLt = endLt;
         this.expand = expand;
         this.fields = fields;
@@ -182,11 +175,12 @@ public class ListMessagingMessagesRequest {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty());
     }
 
     /**
-     * The channel ID to filter by. You can also use these aliases; INBOX, SENT or DRAFT
+     * The channel ID to filter by. You can also use these aliases; INBOX, SENT or DRAFT (reference to
+     * MessagingChannel)
      */
     @JsonIgnore
     public Optional<String> channelId() {
@@ -202,15 +196,7 @@ public class ListMessagingMessagesRequest {
     }
 
     /**
-     * The end date to filter by (deprecated)
-     */
-    @JsonIgnore
-    public Optional<String> endLe() {
-        return endLe;
-    }
-
-    /**
-     * The end date to filter by
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> endLt() {
@@ -226,12 +212,12 @@ public class ListMessagingMessagesRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<ListMessagingMessagesQueryParamFields>> fields() {
+        return (Optional<List<ListMessagingMessagesQueryParamFields>>) fields;
     }
 
     @JsonIgnore
@@ -281,7 +267,7 @@ public class ListMessagingMessagesRequest {
     }
 
     /**
-     * The start date to filter by
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> startGte() {
@@ -294,7 +280,8 @@ public class ListMessagingMessagesRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> updatedGte() {
@@ -302,7 +289,7 @@ public class ListMessagingMessagesRequest {
     }
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      */
     @JsonIgnore
     public Optional<String> userId() {
@@ -323,7 +310,8 @@ public class ListMessagingMessagesRequest {
 
 
     /**
-     * The channel ID to filter by. You can also use these aliases; INBOX, SENT or DRAFT
+     * The channel ID to filter by. You can also use these aliases; INBOX, SENT or DRAFT (reference to
+     * MessagingChannel)
      */
     public ListMessagingMessagesRequest withChannelId(String channelId) {
         Utils.checkNotNull(channelId, "channelId");
@@ -333,7 +321,8 @@ public class ListMessagingMessagesRequest {
 
 
     /**
-     * The channel ID to filter by. You can also use these aliases; INBOX, SENT or DRAFT
+     * The channel ID to filter by. You can also use these aliases; INBOX, SENT or DRAFT (reference to
+     * MessagingChannel)
      */
     public ListMessagingMessagesRequest withChannelId(Optional<String> channelId) {
         Utils.checkNotNull(channelId, "channelId");
@@ -351,26 +340,7 @@ public class ListMessagingMessagesRequest {
     }
 
     /**
-     * The end date to filter by (deprecated)
-     */
-    public ListMessagingMessagesRequest withEndLe(String endLe) {
-        Utils.checkNotNull(endLe, "endLe");
-        this.endLe = Optional.ofNullable(endLe);
-        return this;
-    }
-
-
-    /**
-     * The end date to filter by (deprecated)
-     */
-    public ListMessagingMessagesRequest withEndLe(Optional<String> endLe) {
-        Utils.checkNotNull(endLe, "endLe");
-        this.endLe = endLe;
-        return this;
-    }
-
-    /**
-     * The end date to filter by
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListMessagingMessagesRequest withEndLt(String endLt) {
         Utils.checkNotNull(endLt, "endLt");
@@ -380,7 +350,7 @@ public class ListMessagingMessagesRequest {
 
 
     /**
-     * The end date to filter by
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListMessagingMessagesRequest withEndLt(Optional<String> endLt) {
         Utils.checkNotNull(endLt, "endLt");
@@ -408,9 +378,9 @@ public class ListMessagingMessagesRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListMessagingMessagesRequest withFields(List<String> fields) {
+    public ListMessagingMessagesRequest withFields(List<ListMessagingMessagesQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -418,9 +388,9 @@ public class ListMessagingMessagesRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListMessagingMessagesRequest withFields(Optional<? extends List<String>> fields) {
+    public ListMessagingMessagesRequest withFields(Optional<? extends List<ListMessagingMessagesQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -540,7 +510,7 @@ public class ListMessagingMessagesRequest {
     }
 
     /**
-     * The start date to filter by
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListMessagingMessagesRequest withStartGte(String startGte) {
         Utils.checkNotNull(startGte, "startGte");
@@ -550,7 +520,7 @@ public class ListMessagingMessagesRequest {
 
 
     /**
-     * The start date to filter by
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListMessagingMessagesRequest withStartGte(Optional<String> startGte) {
         Utils.checkNotNull(startGte, "startGte");
@@ -572,7 +542,8 @@ public class ListMessagingMessagesRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListMessagingMessagesRequest withUpdatedGte(String updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -582,7 +553,8 @@ public class ListMessagingMessagesRequest {
 
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListMessagingMessagesRequest withUpdatedGte(Optional<String> updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -591,7 +563,7 @@ public class ListMessagingMessagesRequest {
     }
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      */
     public ListMessagingMessagesRequest withUserId(String userId) {
         Utils.checkNotNull(userId, "userId");
@@ -601,7 +573,7 @@ public class ListMessagingMessagesRequest {
 
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      */
     public ListMessagingMessagesRequest withUserId(Optional<String> userId) {
         Utils.checkNotNull(userId, "userId");
@@ -640,7 +612,6 @@ public class ListMessagingMessagesRequest {
         return 
             Utils.enhancedDeepEquals(this.channelId, other.channelId) &&
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
-            Utils.enhancedDeepEquals(this.endLe, other.endLe) &&
             Utils.enhancedDeepEquals(this.endLt, other.endLt) &&
             Utils.enhancedDeepEquals(this.expand, other.expand) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
@@ -661,12 +632,12 @@ public class ListMessagingMessagesRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            channelId, connectionId, endLe,
-            endLt, expand, fields,
-            limit, offset, order,
-            parentId, query, raw,
-            sort, startGte, type,
-            updatedGte, userId, userMentionedId);
+            channelId, connectionId, endLt,
+            expand, fields, limit,
+            offset, order, parentId,
+            query, raw, sort,
+            startGte, type, updatedGte,
+            userId, userMentionedId);
     }
     
     @Override
@@ -674,7 +645,6 @@ public class ListMessagingMessagesRequest {
         return Utils.toString(ListMessagingMessagesRequest.class,
                 "channelId", channelId,
                 "connectionId", connectionId,
-                "endLe", endLe,
                 "endLt", endLt,
                 "expand", expand,
                 "fields", fields,
@@ -699,13 +669,11 @@ public class ListMessagingMessagesRequest {
 
         private String connectionId;
 
-        private Optional<String> endLe = Optional.empty();
-
         private Optional<String> endLt = Optional.empty();
 
         private Optional<Boolean> expand = Optional.empty();
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<ListMessagingMessagesQueryParamFields>> fields = Optional.empty();
 
         private Optional<Double> limit = Optional.empty();
 
@@ -737,7 +705,8 @@ public class ListMessagingMessagesRequest {
 
 
         /**
-         * The channel ID to filter by. You can also use these aliases; INBOX, SENT or DRAFT
+         * The channel ID to filter by. You can also use these aliases; INBOX, SENT or DRAFT (reference to
+         * MessagingChannel)
          */
         public Builder channelId(String channelId) {
             Utils.checkNotNull(channelId, "channelId");
@@ -746,7 +715,8 @@ public class ListMessagingMessagesRequest {
         }
 
         /**
-         * The channel ID to filter by. You can also use these aliases; INBOX, SENT or DRAFT
+         * The channel ID to filter by. You can also use these aliases; INBOX, SENT or DRAFT (reference to
+         * MessagingChannel)
          */
         public Builder channelId(Optional<String> channelId) {
             Utils.checkNotNull(channelId, "channelId");
@@ -766,26 +736,7 @@ public class ListMessagingMessagesRequest {
 
 
         /**
-         * The end date to filter by (deprecated)
-         */
-        public Builder endLe(String endLe) {
-            Utils.checkNotNull(endLe, "endLe");
-            this.endLe = Optional.ofNullable(endLe);
-            return this;
-        }
-
-        /**
-         * The end date to filter by (deprecated)
-         */
-        public Builder endLe(Optional<String> endLe) {
-            Utils.checkNotNull(endLe, "endLe");
-            this.endLe = endLe;
-            return this;
-        }
-
-
-        /**
-         * The end date to filter by
+         * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder endLt(String endLt) {
             Utils.checkNotNull(endLt, "endLt");
@@ -794,7 +745,7 @@ public class ListMessagingMessagesRequest {
         }
 
         /**
-         * The end date to filter by
+         * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder endLt(Optional<String> endLt) {
             Utils.checkNotNull(endLt, "endLt");
@@ -823,18 +774,18 @@ public class ListMessagingMessagesRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<ListMessagingMessagesQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<ListMessagingMessagesQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;
@@ -955,7 +906,7 @@ public class ListMessagingMessagesRequest {
 
 
         /**
-         * The start date to filter by
+         * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder startGte(String startGte) {
             Utils.checkNotNull(startGte, "startGte");
@@ -964,7 +915,7 @@ public class ListMessagingMessagesRequest {
         }
 
         /**
-         * The start date to filter by
+         * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder startGte(Optional<String> startGte) {
             Utils.checkNotNull(startGte, "startGte");
@@ -987,7 +938,8 @@ public class ListMessagingMessagesRequest {
 
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(String updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -996,7 +948,8 @@ public class ListMessagingMessagesRequest {
         }
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(Optional<String> updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -1006,7 +959,7 @@ public class ListMessagingMessagesRequest {
 
 
         /**
-         * The user/employee ID to filter by
+         * The user/employee ID to filter by (reference to HrisEmployee)
          */
         public Builder userId(String userId) {
             Utils.checkNotNull(userId, "userId");
@@ -1015,7 +968,7 @@ public class ListMessagingMessagesRequest {
         }
 
         /**
-         * The user/employee ID to filter by
+         * The user/employee ID to filter by (reference to HrisEmployee)
          */
         public Builder userId(Optional<String> userId) {
             Utils.checkNotNull(userId, "userId");
@@ -1045,12 +998,12 @@ public class ListMessagingMessagesRequest {
         public ListMessagingMessagesRequest build() {
 
             return new ListMessagingMessagesRequest(
-                channelId, connectionId, endLe,
-                endLt, expand, fields,
-                limit, offset, order,
-                parentId, query, raw,
-                sort, startGte, type,
-                updatedGte, userId, userMentionedId);
+                channelId, connectionId, endLt,
+                expand, fields, limit,
+                offset, order, parentId,
+                query, raw, sort,
+                startGte, type, updatedGte,
+                userId, userMentionedId);
         }
 
     }

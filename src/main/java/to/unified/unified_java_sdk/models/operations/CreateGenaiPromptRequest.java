@@ -27,10 +27,10 @@ public class CreateGenaiPromptRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<CreateGenaiPromptQueryParamFields>> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -44,7 +44,7 @@ public class CreateGenaiPromptRequest {
     public CreateGenaiPromptRequest(
             GenaiPrompt genaiPrompt,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<CreateGenaiPromptQueryParamFields>> fields,
             Optional<String> raw) {
         Utils.checkNotNull(genaiPrompt, "genaiPrompt");
         Utils.checkNotNull(connectionId, "connectionId");
@@ -77,12 +77,12 @@ public class CreateGenaiPromptRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<CreateGenaiPromptQueryParamFields>> fields() {
+        return (Optional<List<CreateGenaiPromptQueryParamFields>>) fields;
     }
 
     /**
@@ -116,9 +116,9 @@ public class CreateGenaiPromptRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public CreateGenaiPromptRequest withFields(List<String> fields) {
+    public CreateGenaiPromptRequest withFields(List<CreateGenaiPromptQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -126,9 +126,9 @@ public class CreateGenaiPromptRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public CreateGenaiPromptRequest withFields(Optional<? extends List<String>> fields) {
+    public CreateGenaiPromptRequest withFields(Optional<? extends List<CreateGenaiPromptQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -196,7 +196,7 @@ public class CreateGenaiPromptRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<CreateGenaiPromptQueryParamFields>> fields = Optional.empty();
 
         private Optional<String> raw = Optional.empty();
 
@@ -223,18 +223,18 @@ public class CreateGenaiPromptRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<CreateGenaiPromptQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<CreateGenaiPromptQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

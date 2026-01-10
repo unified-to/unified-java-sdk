@@ -69,11 +69,6 @@ public class AccountingInvoice {
 
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("invoice_at")
-    private Optional<OffsetDateTime> invoiceAt;
-
-
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoice_number")
     private Optional<String> invoiceNumber;
 
@@ -178,7 +173,6 @@ public class AccountingInvoice {
             @JsonProperty("discount_amount") Optional<Double> discountAmount,
             @JsonProperty("due_at") Optional<OffsetDateTime> dueAt,
             @JsonProperty("id") Optional<String> id,
-            @JsonProperty("invoice_at") Optional<OffsetDateTime> invoiceAt,
             @JsonProperty("invoice_number") Optional<String> invoiceNumber,
             @JsonProperty("lineitems") Optional<? extends List<AccountingLineitem>> lineitems,
             @JsonProperty("notes") Optional<String> notes,
@@ -207,7 +201,6 @@ public class AccountingInvoice {
         Utils.checkNotNull(discountAmount, "discountAmount");
         Utils.checkNotNull(dueAt, "dueAt");
         Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(invoiceAt, "invoiceAt");
         Utils.checkNotNull(invoiceNumber, "invoiceNumber");
         Utils.checkNotNull(lineitems, "lineitems");
         Utils.checkNotNull(notes, "notes");
@@ -236,7 +229,6 @@ public class AccountingInvoice {
         this.discountAmount = discountAmount;
         this.dueAt = dueAt;
         this.id = id;
-        this.invoiceAt = invoiceAt;
         this.invoiceNumber = invoiceNumber;
         this.lineitems = lineitems;
         this.notes = notes;
@@ -268,7 +260,7 @@ public class AccountingInvoice {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -315,11 +307,6 @@ public class AccountingInvoice {
     @JsonIgnore
     public Optional<String> id() {
         return id;
-    }
-
-    @JsonIgnore
-    public Optional<OffsetDateTime> invoiceAt() {
-        return invoiceAt;
     }
 
     @JsonIgnore
@@ -541,19 +528,6 @@ public class AccountingInvoice {
     public AccountingInvoice withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
-        return this;
-    }
-
-    public AccountingInvoice withInvoiceAt(OffsetDateTime invoiceAt) {
-        Utils.checkNotNull(invoiceAt, "invoiceAt");
-        this.invoiceAt = Optional.ofNullable(invoiceAt);
-        return this;
-    }
-
-
-    public AccountingInvoice withInvoiceAt(Optional<OffsetDateTime> invoiceAt) {
-        Utils.checkNotNull(invoiceAt, "invoiceAt");
-        this.invoiceAt = invoiceAt;
         return this;
     }
 
@@ -823,7 +797,6 @@ public class AccountingInvoice {
             Utils.enhancedDeepEquals(this.discountAmount, other.discountAmount) &&
             Utils.enhancedDeepEquals(this.dueAt, other.dueAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
-            Utils.enhancedDeepEquals(this.invoiceAt, other.invoiceAt) &&
             Utils.enhancedDeepEquals(this.invoiceNumber, other.invoiceNumber) &&
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
             Utils.enhancedDeepEquals(this.notes, other.notes) &&
@@ -851,13 +824,13 @@ public class AccountingInvoice {
             attachments, balanceAmount, cancelledAt,
             contactId, createdAt, currency,
             discountAmount, dueAt, id,
-            invoiceAt, invoiceNumber, lineitems,
-            notes, paidAmount, paidAt,
-            paymentCollectionMethod, postedAt, raw,
-            reference, refundAmount, refundReason,
-            refundedAt, send, status,
-            taxAmount, totalAmount, type,
-            updatedAt, url);
+            invoiceNumber, lineitems, notes,
+            paidAmount, paidAt, paymentCollectionMethod,
+            postedAt, raw, reference,
+            refundAmount, refundReason, refundedAt,
+            send, status, taxAmount,
+            totalAmount, type, updatedAt,
+            url);
     }
     
     @Override
@@ -872,7 +845,6 @@ public class AccountingInvoice {
                 "discountAmount", discountAmount,
                 "dueAt", dueAt,
                 "id", id,
-                "invoiceAt", invoiceAt,
                 "invoiceNumber", invoiceNumber,
                 "lineitems", lineitems,
                 "notes", notes,
@@ -914,8 +886,6 @@ public class AccountingInvoice {
         private Optional<OffsetDateTime> dueAt = Optional.empty();
 
         private Optional<String> id = Optional.empty();
-
-        private Optional<OffsetDateTime> invoiceAt = Optional.empty();
 
         private Optional<String> invoiceNumber = Optional.empty();
 
@@ -1073,19 +1043,6 @@ public class AccountingInvoice {
         public Builder id(Optional<String> id) {
             Utils.checkNotNull(id, "id");
             this.id = id;
-            return this;
-        }
-
-
-        public Builder invoiceAt(OffsetDateTime invoiceAt) {
-            Utils.checkNotNull(invoiceAt, "invoiceAt");
-            this.invoiceAt = Optional.ofNullable(invoiceAt);
-            return this;
-        }
-
-        public Builder invoiceAt(Optional<OffsetDateTime> invoiceAt) {
-            Utils.checkNotNull(invoiceAt, "invoiceAt");
-            this.invoiceAt = invoiceAt;
             return this;
         }
 
@@ -1342,13 +1299,13 @@ public class AccountingInvoice {
                 attachments, balanceAmount, cancelledAt,
                 contactId, createdAt, currency,
                 discountAmount, dueAt, id,
-                invoiceAt, invoiceNumber, lineitems,
-                notes, paidAmount, paidAt,
-                paymentCollectionMethod, postedAt, raw,
-                reference, refundAmount, refundReason,
-                refundedAt, send, status,
-                taxAmount, totalAmount, type,
-                updatedAt, url);
+                invoiceNumber, lineitems, notes,
+                paidAmount, paidAt, paymentCollectionMethod,
+                postedAt, raw, reference,
+                refundAmount, refundReason, refundedAt,
+                send, status, taxAmount,
+                totalAmount, type, updatedAt,
+                url);
         }
 
     }

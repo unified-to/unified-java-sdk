@@ -170,6 +170,9 @@ public class UnifiedTo {
     private final Item item;
 
 
+    private final Itemvariant itemvariant;
+
+
     private final Location location;
 
 
@@ -195,6 +198,15 @@ public class UnifiedTo {
 
 
     private final Person person;
+
+
+    private final Forms forms;
+
+
+    private final Form form;
+
+
+    private final Submission submission;
 
 
     private final Genai genai;
@@ -601,6 +613,11 @@ public class UnifiedTo {
     }
 
 
+    public Itemvariant itemvariant() {
+        return itemvariant;
+    }
+
+
     public Location location() {
         return location;
     }
@@ -643,6 +660,21 @@ public class UnifiedTo {
 
     public Person person() {
         return person;
+    }
+
+
+    public Forms forms() {
+        return forms;
+    }
+
+
+    public Form form() {
+        return form;
+    }
+
+
+    public Submission submission() {
+        return submission;
     }
 
 
@@ -1140,6 +1172,7 @@ public class UnifiedTo {
         this.collection = new Collection(sdkConfiguration);
         this.inventory = new Inventory(sdkConfiguration);
         this.item = new Item(sdkConfiguration);
+        this.itemvariant = new Itemvariant(sdkConfiguration);
         this.location = new Location(sdkConfiguration);
         this.review = new Review(sdkConfiguration);
         this.saleschannel = new Saleschannel(sdkConfiguration);
@@ -1149,6 +1182,9 @@ public class UnifiedTo {
         this.pipeline = new Pipeline(sdkConfiguration);
         this.enrich = new Enrich(sdkConfiguration);
         this.person = new Person(sdkConfiguration);
+        this.forms = new Forms(sdkConfiguration);
+        this.form = new Form(sdkConfiguration);
+        this.submission = new Submission(sdkConfiguration);
         this.genai = new Genai(sdkConfiguration);
         this.embedding = new Embedding(sdkConfiguration);
         this.model = new Model(sdkConfiguration);

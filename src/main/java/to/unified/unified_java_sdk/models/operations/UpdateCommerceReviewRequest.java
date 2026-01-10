@@ -27,10 +27,10 @@ public class UpdateCommerceReviewRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<UpdateCommerceReviewQueryParamFields>> fields;
 
     /**
      * ID of the Review
@@ -50,7 +50,7 @@ public class UpdateCommerceReviewRequest {
     public UpdateCommerceReviewRequest(
             CommerceReview commerceReview,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<UpdateCommerceReviewQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(commerceReview, "commerceReview");
@@ -87,12 +87,12 @@ public class UpdateCommerceReviewRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<UpdateCommerceReviewQueryParamFields>> fields() {
+        return (Optional<List<UpdateCommerceReviewQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class UpdateCommerceReviewRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateCommerceReviewRequest withFields(List<String> fields) {
+    public UpdateCommerceReviewRequest withFields(List<UpdateCommerceReviewQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class UpdateCommerceReviewRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateCommerceReviewRequest withFields(Optional<? extends List<String>> fields) {
+    public UpdateCommerceReviewRequest withFields(Optional<? extends List<UpdateCommerceReviewQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class UpdateCommerceReviewRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<UpdateCommerceReviewQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class UpdateCommerceReviewRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<UpdateCommerceReviewQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<UpdateCommerceReviewQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

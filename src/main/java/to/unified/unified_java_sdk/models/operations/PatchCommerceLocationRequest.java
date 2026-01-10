@@ -27,10 +27,10 @@ public class PatchCommerceLocationRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<PatchCommerceLocationQueryParamFields>> fields;
 
     /**
      * ID of the Location
@@ -50,7 +50,7 @@ public class PatchCommerceLocationRequest {
     public PatchCommerceLocationRequest(
             CommerceLocation commerceLocation,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<PatchCommerceLocationQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(commerceLocation, "commerceLocation");
@@ -87,12 +87,12 @@ public class PatchCommerceLocationRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<PatchCommerceLocationQueryParamFields>> fields() {
+        return (Optional<List<PatchCommerceLocationQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class PatchCommerceLocationRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchCommerceLocationRequest withFields(List<String> fields) {
+    public PatchCommerceLocationRequest withFields(List<PatchCommerceLocationQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class PatchCommerceLocationRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public PatchCommerceLocationRequest withFields(Optional<? extends List<String>> fields) {
+    public PatchCommerceLocationRequest withFields(Optional<? extends List<PatchCommerceLocationQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class PatchCommerceLocationRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<PatchCommerceLocationQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class PatchCommerceLocationRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<PatchCommerceLocationQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<PatchCommerceLocationQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

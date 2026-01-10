@@ -23,22 +23,22 @@ public class ListCrmCompaniesRequest {
     private String connectionId;
 
     /**
-     * The contact ID to filter by
+     * The contact ID to filter by (reference to CrmContact)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contact_id")
     private Optional<String> contactId;
 
     /**
-     * The deal ID to filter by
+     * The deal ID to filter by (reference to CrmDeal)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deal_id")
     private Optional<String> dealId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<ListCrmCompaniesQueryParamFields>> fields;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
@@ -71,13 +71,14 @@ public class ListCrmCompaniesRequest {
     private Optional<String> sort;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private Optional<String> updatedGte;
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
     private Optional<String> userId;
@@ -87,7 +88,7 @@ public class ListCrmCompaniesRequest {
             String connectionId,
             Optional<String> contactId,
             Optional<String> dealId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<ListCrmCompaniesQueryParamFields>> fields,
             Optional<Double> limit,
             Optional<Double> offset,
             Optional<String> order,
@@ -139,7 +140,7 @@ public class ListCrmCompaniesRequest {
     }
 
     /**
-     * The contact ID to filter by
+     * The contact ID to filter by (reference to CrmContact)
      */
     @JsonIgnore
     public Optional<String> contactId() {
@@ -147,7 +148,7 @@ public class ListCrmCompaniesRequest {
     }
 
     /**
-     * The deal ID to filter by
+     * The deal ID to filter by (reference to CrmDeal)
      */
     @JsonIgnore
     public Optional<String> dealId() {
@@ -155,12 +156,12 @@ public class ListCrmCompaniesRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<ListCrmCompaniesQueryParamFields>> fields() {
+        return (Optional<List<ListCrmCompaniesQueryParamFields>>) fields;
     }
 
     @JsonIgnore
@@ -202,7 +203,8 @@ public class ListCrmCompaniesRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> updatedGte() {
@@ -210,7 +212,7 @@ public class ListCrmCompaniesRequest {
     }
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      */
     @JsonIgnore
     public Optional<String> userId() {
@@ -232,7 +234,7 @@ public class ListCrmCompaniesRequest {
     }
 
     /**
-     * The contact ID to filter by
+     * The contact ID to filter by (reference to CrmContact)
      */
     public ListCrmCompaniesRequest withContactId(String contactId) {
         Utils.checkNotNull(contactId, "contactId");
@@ -242,7 +244,7 @@ public class ListCrmCompaniesRequest {
 
 
     /**
-     * The contact ID to filter by
+     * The contact ID to filter by (reference to CrmContact)
      */
     public ListCrmCompaniesRequest withContactId(Optional<String> contactId) {
         Utils.checkNotNull(contactId, "contactId");
@@ -251,7 +253,7 @@ public class ListCrmCompaniesRequest {
     }
 
     /**
-     * The deal ID to filter by
+     * The deal ID to filter by (reference to CrmDeal)
      */
     public ListCrmCompaniesRequest withDealId(String dealId) {
         Utils.checkNotNull(dealId, "dealId");
@@ -261,7 +263,7 @@ public class ListCrmCompaniesRequest {
 
 
     /**
-     * The deal ID to filter by
+     * The deal ID to filter by (reference to CrmDeal)
      */
     public ListCrmCompaniesRequest withDealId(Optional<String> dealId) {
         Utils.checkNotNull(dealId, "dealId");
@@ -270,9 +272,9 @@ public class ListCrmCompaniesRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListCrmCompaniesRequest withFields(List<String> fields) {
+    public ListCrmCompaniesRequest withFields(List<ListCrmCompaniesQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -280,9 +282,9 @@ public class ListCrmCompaniesRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListCrmCompaniesRequest withFields(Optional<? extends List<String>> fields) {
+    public ListCrmCompaniesRequest withFields(Optional<? extends List<ListCrmCompaniesQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -383,7 +385,8 @@ public class ListCrmCompaniesRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListCrmCompaniesRequest withUpdatedGte(String updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -393,7 +396,8 @@ public class ListCrmCompaniesRequest {
 
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListCrmCompaniesRequest withUpdatedGte(Optional<String> updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -402,7 +406,7 @@ public class ListCrmCompaniesRequest {
     }
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      */
     public ListCrmCompaniesRequest withUserId(String userId) {
         Utils.checkNotNull(userId, "userId");
@@ -412,7 +416,7 @@ public class ListCrmCompaniesRequest {
 
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      */
     public ListCrmCompaniesRequest withUserId(Optional<String> userId) {
         Utils.checkNotNull(userId, "userId");
@@ -479,7 +483,7 @@ public class ListCrmCompaniesRequest {
 
         private Optional<String> dealId = Optional.empty();
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<ListCrmCompaniesQueryParamFields>> fields = Optional.empty();
 
         private Optional<Double> limit = Optional.empty();
 
@@ -513,7 +517,7 @@ public class ListCrmCompaniesRequest {
 
 
         /**
-         * The contact ID to filter by
+         * The contact ID to filter by (reference to CrmContact)
          */
         public Builder contactId(String contactId) {
             Utils.checkNotNull(contactId, "contactId");
@@ -522,7 +526,7 @@ public class ListCrmCompaniesRequest {
         }
 
         /**
-         * The contact ID to filter by
+         * The contact ID to filter by (reference to CrmContact)
          */
         public Builder contactId(Optional<String> contactId) {
             Utils.checkNotNull(contactId, "contactId");
@@ -532,7 +536,7 @@ public class ListCrmCompaniesRequest {
 
 
         /**
-         * The deal ID to filter by
+         * The deal ID to filter by (reference to CrmDeal)
          */
         public Builder dealId(String dealId) {
             Utils.checkNotNull(dealId, "dealId");
@@ -541,7 +545,7 @@ public class ListCrmCompaniesRequest {
         }
 
         /**
-         * The deal ID to filter by
+         * The deal ID to filter by (reference to CrmDeal)
          */
         public Builder dealId(Optional<String> dealId) {
             Utils.checkNotNull(dealId, "dealId");
@@ -551,18 +555,18 @@ public class ListCrmCompaniesRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<ListCrmCompaniesQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<ListCrmCompaniesQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;
@@ -664,7 +668,8 @@ public class ListCrmCompaniesRequest {
 
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(String updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -673,7 +678,8 @@ public class ListCrmCompaniesRequest {
         }
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(Optional<String> updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -683,7 +689,7 @@ public class ListCrmCompaniesRequest {
 
 
         /**
-         * The user/employee ID to filter by
+         * The user/employee ID to filter by (reference to HrisEmployee)
          */
         public Builder userId(String userId) {
             Utils.checkNotNull(userId, "userId");
@@ -692,7 +698,7 @@ public class ListCrmCompaniesRequest {
         }
 
         /**
-         * The user/employee ID to filter by
+         * The user/employee ID to filter by (reference to HrisEmployee)
          */
         public Builder userId(Optional<String> userId) {
             Utils.checkNotNull(userId, "userId");

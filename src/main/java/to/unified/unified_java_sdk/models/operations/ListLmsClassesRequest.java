@@ -23,26 +23,20 @@ public class ListLmsClassesRequest {
     private String connectionId;
 
     /**
-     * The course ID to filter by
+     * The course ID to filter by (reference to Course)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=course_id")
     private Optional<String> courseId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<ListLmsClassesQueryParamFields>> fields;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     private Optional<Double> limit;
-
-    /**
-     * The location ID to filter by
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
-    private Optional<String> locationId;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
@@ -71,7 +65,8 @@ public class ListLmsClassesRequest {
     private Optional<String> sort;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private Optional<String> updatedGte;
@@ -80,9 +75,8 @@ public class ListLmsClassesRequest {
     public ListLmsClassesRequest(
             String connectionId,
             Optional<String> courseId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<ListLmsClassesQueryParamFields>> fields,
             Optional<Double> limit,
-            Optional<String> locationId,
             Optional<Double> offset,
             Optional<String> order,
             Optional<String> query,
@@ -93,7 +87,6 @@ public class ListLmsClassesRequest {
         Utils.checkNotNull(courseId, "courseId");
         Utils.checkNotNull(fields, "fields");
         Utils.checkNotNull(limit, "limit");
-        Utils.checkNotNull(locationId, "locationId");
         Utils.checkNotNull(offset, "offset");
         Utils.checkNotNull(order, "order");
         Utils.checkNotNull(query, "query");
@@ -104,7 +97,6 @@ public class ListLmsClassesRequest {
         this.courseId = courseId;
         this.fields = fields;
         this.limit = limit;
-        this.locationId = locationId;
         this.offset = offset;
         this.order = order;
         this.query = query;
@@ -118,7 +110,7 @@ public class ListLmsClassesRequest {
         this(connectionId, Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            Optional.empty());
     }
 
     /**
@@ -130,7 +122,7 @@ public class ListLmsClassesRequest {
     }
 
     /**
-     * The course ID to filter by
+     * The course ID to filter by (reference to Course)
      */
     @JsonIgnore
     public Optional<String> courseId() {
@@ -138,25 +130,17 @@ public class ListLmsClassesRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<ListLmsClassesQueryParamFields>> fields() {
+        return (Optional<List<ListLmsClassesQueryParamFields>>) fields;
     }
 
     @JsonIgnore
     public Optional<Double> limit() {
         return limit;
-    }
-
-    /**
-     * The location ID to filter by
-     */
-    @JsonIgnore
-    public Optional<String> locationId() {
-        return locationId;
     }
 
     @JsonIgnore
@@ -193,7 +177,8 @@ public class ListLmsClassesRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> updatedGte() {
@@ -215,7 +200,7 @@ public class ListLmsClassesRequest {
     }
 
     /**
-     * The course ID to filter by
+     * The course ID to filter by (reference to Course)
      */
     public ListLmsClassesRequest withCourseId(String courseId) {
         Utils.checkNotNull(courseId, "courseId");
@@ -225,7 +210,7 @@ public class ListLmsClassesRequest {
 
 
     /**
-     * The course ID to filter by
+     * The course ID to filter by (reference to Course)
      */
     public ListLmsClassesRequest withCourseId(Optional<String> courseId) {
         Utils.checkNotNull(courseId, "courseId");
@@ -234,9 +219,9 @@ public class ListLmsClassesRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListLmsClassesRequest withFields(List<String> fields) {
+    public ListLmsClassesRequest withFields(List<ListLmsClassesQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -244,9 +229,9 @@ public class ListLmsClassesRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListLmsClassesRequest withFields(Optional<? extends List<String>> fields) {
+    public ListLmsClassesRequest withFields(Optional<? extends List<ListLmsClassesQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -262,25 +247,6 @@ public class ListLmsClassesRequest {
     public ListLmsClassesRequest withLimit(Optional<Double> limit) {
         Utils.checkNotNull(limit, "limit");
         this.limit = limit;
-        return this;
-    }
-
-    /**
-     * The location ID to filter by
-     */
-    public ListLmsClassesRequest withLocationId(String locationId) {
-        Utils.checkNotNull(locationId, "locationId");
-        this.locationId = Optional.ofNullable(locationId);
-        return this;
-    }
-
-
-    /**
-     * The location ID to filter by
-     */
-    public ListLmsClassesRequest withLocationId(Optional<String> locationId) {
-        Utils.checkNotNull(locationId, "locationId");
-        this.locationId = locationId;
         return this;
     }
 
@@ -366,7 +332,8 @@ public class ListLmsClassesRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListLmsClassesRequest withUpdatedGte(String updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -376,7 +343,8 @@ public class ListLmsClassesRequest {
 
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListLmsClassesRequest withUpdatedGte(Optional<String> updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -398,7 +366,6 @@ public class ListLmsClassesRequest {
             Utils.enhancedDeepEquals(this.courseId, other.courseId) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
-            Utils.enhancedDeepEquals(this.locationId, other.locationId) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
             Utils.enhancedDeepEquals(this.order, other.order) &&
             Utils.enhancedDeepEquals(this.query, other.query) &&
@@ -411,9 +378,9 @@ public class ListLmsClassesRequest {
     public int hashCode() {
         return Utils.enhancedHash(
             connectionId, courseId, fields,
-            limit, locationId, offset,
-            order, query, raw,
-            sort, updatedGte);
+            limit, offset, order,
+            query, raw, sort,
+            updatedGte);
     }
     
     @Override
@@ -423,7 +390,6 @@ public class ListLmsClassesRequest {
                 "courseId", courseId,
                 "fields", fields,
                 "limit", limit,
-                "locationId", locationId,
                 "offset", offset,
                 "order", order,
                 "query", query,
@@ -439,11 +405,9 @@ public class ListLmsClassesRequest {
 
         private Optional<String> courseId = Optional.empty();
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<ListLmsClassesQueryParamFields>> fields = Optional.empty();
 
         private Optional<Double> limit = Optional.empty();
-
-        private Optional<String> locationId = Optional.empty();
 
         private Optional<Double> offset = Optional.empty();
 
@@ -473,7 +437,7 @@ public class ListLmsClassesRequest {
 
 
         /**
-         * The course ID to filter by
+         * The course ID to filter by (reference to Course)
          */
         public Builder courseId(String courseId) {
             Utils.checkNotNull(courseId, "courseId");
@@ -482,7 +446,7 @@ public class ListLmsClassesRequest {
         }
 
         /**
-         * The course ID to filter by
+         * The course ID to filter by (reference to Course)
          */
         public Builder courseId(Optional<String> courseId) {
             Utils.checkNotNull(courseId, "courseId");
@@ -492,18 +456,18 @@ public class ListLmsClassesRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<ListLmsClassesQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<ListLmsClassesQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;
@@ -519,25 +483,6 @@ public class ListLmsClassesRequest {
         public Builder limit(Optional<Double> limit) {
             Utils.checkNotNull(limit, "limit");
             this.limit = limit;
-            return this;
-        }
-
-
-        /**
-         * The location ID to filter by
-         */
-        public Builder locationId(String locationId) {
-            Utils.checkNotNull(locationId, "locationId");
-            this.locationId = Optional.ofNullable(locationId);
-            return this;
-        }
-
-        /**
-         * The location ID to filter by
-         */
-        public Builder locationId(Optional<String> locationId) {
-            Utils.checkNotNull(locationId, "locationId");
-            this.locationId = locationId;
             return this;
         }
 
@@ -624,7 +569,8 @@ public class ListLmsClassesRequest {
 
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(String updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -633,7 +579,8 @@ public class ListLmsClassesRequest {
         }
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(Optional<String> updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -645,9 +592,9 @@ public class ListLmsClassesRequest {
 
             return new ListLmsClassesRequest(
                 connectionId, courseId, fields,
-                limit, locationId, offset,
-                order, query, raw,
-                sort, updatedGte);
+                limit, offset, order,
+                query, raw, sort,
+                updatedGte);
         }
 
     }

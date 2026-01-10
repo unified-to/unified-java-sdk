@@ -27,10 +27,10 @@ public class UpdateAtsJobRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<UpdateAtsJobQueryParamFields>> fields;
 
     /**
      * ID of the Job
@@ -50,7 +50,7 @@ public class UpdateAtsJobRequest {
     public UpdateAtsJobRequest(
             AtsJob atsJob,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<UpdateAtsJobQueryParamFields>> fields,
             String id,
             Optional<String> raw) {
         Utils.checkNotNull(atsJob, "atsJob");
@@ -87,12 +87,12 @@ public class UpdateAtsJobRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<UpdateAtsJobQueryParamFields>> fields() {
+        return (Optional<List<UpdateAtsJobQueryParamFields>>) fields;
     }
 
     /**
@@ -134,9 +134,9 @@ public class UpdateAtsJobRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateAtsJobRequest withFields(List<String> fields) {
+    public UpdateAtsJobRequest withFields(List<UpdateAtsJobQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -144,9 +144,9 @@ public class UpdateAtsJobRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public UpdateAtsJobRequest withFields(Optional<? extends List<String>> fields) {
+    public UpdateAtsJobRequest withFields(Optional<? extends List<UpdateAtsJobQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -225,7 +225,7 @@ public class UpdateAtsJobRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<UpdateAtsJobQueryParamFields>> fields = Optional.empty();
 
         private String id;
 
@@ -254,18 +254,18 @@ public class UpdateAtsJobRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<UpdateAtsJobQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<UpdateAtsJobQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;

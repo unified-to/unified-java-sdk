@@ -23,7 +23,7 @@ public class ListHrisDeductionsRequest {
     private Optional<String> benefitId;
 
     /**
-     * The company ID to filter by
+     * The company ID to filter by (reference to HrisCompany)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=company_id")
     private Optional<String> companyId;
@@ -35,10 +35,10 @@ public class ListHrisDeductionsRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<ListHrisDeductionsQueryParamFields>> fields;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
@@ -77,13 +77,14 @@ public class ListHrisDeductionsRequest {
     private Optional<String> sort;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private Optional<String> updatedGte;
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
     private Optional<String> userId;
@@ -93,7 +94,7 @@ public class ListHrisDeductionsRequest {
             Optional<String> benefitId,
             Optional<String> companyId,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<ListHrisDeductionsQueryParamFields>> fields,
             Optional<Double> limit,
             Optional<Double> offset,
             Optional<String> order,
@@ -149,7 +150,7 @@ public class ListHrisDeductionsRequest {
     }
 
     /**
-     * The company ID to filter by
+     * The company ID to filter by (reference to HrisCompany)
      */
     @JsonIgnore
     public Optional<String> companyId() {
@@ -165,12 +166,12 @@ public class ListHrisDeductionsRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<ListHrisDeductionsQueryParamFields>> fields() {
+        return (Optional<List<ListHrisDeductionsQueryParamFields>>) fields;
     }
 
     @JsonIgnore
@@ -220,7 +221,8 @@ public class ListHrisDeductionsRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> updatedGte() {
@@ -228,7 +230,7 @@ public class ListHrisDeductionsRequest {
     }
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      */
     @JsonIgnore
     public Optional<String> userId() {
@@ -260,7 +262,7 @@ public class ListHrisDeductionsRequest {
     }
 
     /**
-     * The company ID to filter by
+     * The company ID to filter by (reference to HrisCompany)
      */
     public ListHrisDeductionsRequest withCompanyId(String companyId) {
         Utils.checkNotNull(companyId, "companyId");
@@ -270,7 +272,7 @@ public class ListHrisDeductionsRequest {
 
 
     /**
-     * The company ID to filter by
+     * The company ID to filter by (reference to HrisCompany)
      */
     public ListHrisDeductionsRequest withCompanyId(Optional<String> companyId) {
         Utils.checkNotNull(companyId, "companyId");
@@ -288,9 +290,9 @@ public class ListHrisDeductionsRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListHrisDeductionsRequest withFields(List<String> fields) {
+    public ListHrisDeductionsRequest withFields(List<ListHrisDeductionsQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -298,9 +300,9 @@ public class ListHrisDeductionsRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListHrisDeductionsRequest withFields(Optional<? extends List<String>> fields) {
+    public ListHrisDeductionsRequest withFields(Optional<? extends List<ListHrisDeductionsQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
@@ -420,7 +422,8 @@ public class ListHrisDeductionsRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListHrisDeductionsRequest withUpdatedGte(String updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -430,7 +433,8 @@ public class ListHrisDeductionsRequest {
 
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListHrisDeductionsRequest withUpdatedGte(Optional<String> updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -439,7 +443,7 @@ public class ListHrisDeductionsRequest {
     }
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      */
     public ListHrisDeductionsRequest withUserId(String userId) {
         Utils.checkNotNull(userId, "userId");
@@ -449,7 +453,7 @@ public class ListHrisDeductionsRequest {
 
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      */
     public ListHrisDeductionsRequest withUserId(Optional<String> userId) {
         Utils.checkNotNull(userId, "userId");
@@ -519,7 +523,7 @@ public class ListHrisDeductionsRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<ListHrisDeductionsQueryParamFields>> fields = Optional.empty();
 
         private Optional<Double> limit = Optional.empty();
 
@@ -564,7 +568,7 @@ public class ListHrisDeductionsRequest {
 
 
         /**
-         * The company ID to filter by
+         * The company ID to filter by (reference to HrisCompany)
          */
         public Builder companyId(String companyId) {
             Utils.checkNotNull(companyId, "companyId");
@@ -573,7 +577,7 @@ public class ListHrisDeductionsRequest {
         }
 
         /**
-         * The company ID to filter by
+         * The company ID to filter by (reference to HrisCompany)
          */
         public Builder companyId(Optional<String> companyId) {
             Utils.checkNotNull(companyId, "companyId");
@@ -593,18 +597,18 @@ public class ListHrisDeductionsRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<ListHrisDeductionsQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<ListHrisDeductionsQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;
@@ -725,7 +729,8 @@ public class ListHrisDeductionsRequest {
 
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(String updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -734,7 +739,8 @@ public class ListHrisDeductionsRequest {
         }
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(Optional<String> updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -744,7 +750,7 @@ public class ListHrisDeductionsRequest {
 
 
         /**
-         * The user/employee ID to filter by
+         * The user/employee ID to filter by (reference to HrisEmployee)
          */
         public Builder userId(String userId) {
             Utils.checkNotNull(userId, "userId");
@@ -753,7 +759,7 @@ public class ListHrisDeductionsRequest {
         }
 
         /**
-         * The user/employee ID to filter by
+         * The user/employee ID to filter by (reference to HrisEmployee)
          */
         public Builder userId(Optional<String> userId) {
             Utils.checkNotNull(userId, "userId");

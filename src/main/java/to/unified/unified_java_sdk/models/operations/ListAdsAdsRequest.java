@@ -29,13 +29,13 @@ public class ListAdsAdsRequest {
     private String connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<String>> fields;
+    private Optional<? extends List<ListAdsAdsQueryParamFields>> fields;
 
     /**
-     * The group ID to filter by
+     * The group ID to filter by (reference to HrisGroup)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_id")
     private Optional<String> groupId;
@@ -53,7 +53,7 @@ public class ListAdsAdsRequest {
     private Optional<String> order;
 
     /**
-     * The org ID to filter by
+     * The org ID to filter by (reference to AdsOrganization)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org_id")
     private Optional<String> orgId;
@@ -77,7 +77,8 @@ public class ListAdsAdsRequest {
     private Optional<String> sort;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private Optional<String> updatedGte;
@@ -86,7 +87,7 @@ public class ListAdsAdsRequest {
     public ListAdsAdsRequest(
             Optional<String> campaignId,
             String connectionId,
-            Optional<? extends List<String>> fields,
+            Optional<? extends List<ListAdsAdsQueryParamFields>> fields,
             Optional<String> groupId,
             Optional<Double> limit,
             Optional<Double> offset,
@@ -147,16 +148,16 @@ public class ListAdsAdsRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<String>> fields() {
-        return (Optional<List<String>>) fields;
+    public Optional<List<ListAdsAdsQueryParamFields>> fields() {
+        return (Optional<List<ListAdsAdsQueryParamFields>>) fields;
     }
 
     /**
-     * The group ID to filter by
+     * The group ID to filter by (reference to HrisGroup)
      */
     @JsonIgnore
     public Optional<String> groupId() {
@@ -179,7 +180,7 @@ public class ListAdsAdsRequest {
     }
 
     /**
-     * The org ID to filter by
+     * The org ID to filter by (reference to AdsOrganization)
      */
     @JsonIgnore
     public Optional<String> orgId() {
@@ -210,7 +211,8 @@ public class ListAdsAdsRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonIgnore
     public Optional<String> updatedGte() {
@@ -251,9 +253,9 @@ public class ListAdsAdsRequest {
     }
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListAdsAdsRequest withFields(List<String> fields) {
+    public ListAdsAdsRequest withFields(List<ListAdsAdsQueryParamFields> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = Optional.ofNullable(fields);
         return this;
@@ -261,16 +263,16 @@ public class ListAdsAdsRequest {
 
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      */
-    public ListAdsAdsRequest withFields(Optional<? extends List<String>> fields) {
+    public ListAdsAdsRequest withFields(Optional<? extends List<ListAdsAdsQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
         return this;
     }
 
     /**
-     * The group ID to filter by
+     * The group ID to filter by (reference to HrisGroup)
      */
     public ListAdsAdsRequest withGroupId(String groupId) {
         Utils.checkNotNull(groupId, "groupId");
@@ -280,7 +282,7 @@ public class ListAdsAdsRequest {
 
 
     /**
-     * The group ID to filter by
+     * The group ID to filter by (reference to HrisGroup)
      */
     public ListAdsAdsRequest withGroupId(Optional<String> groupId) {
         Utils.checkNotNull(groupId, "groupId");
@@ -328,7 +330,7 @@ public class ListAdsAdsRequest {
     }
 
     /**
-     * The org ID to filter by
+     * The org ID to filter by (reference to AdsOrganization)
      */
     public ListAdsAdsRequest withOrgId(String orgId) {
         Utils.checkNotNull(orgId, "orgId");
@@ -338,7 +340,7 @@ public class ListAdsAdsRequest {
 
 
     /**
-     * The org ID to filter by
+     * The org ID to filter by (reference to AdsOrganization)
      */
     public ListAdsAdsRequest withOrgId(Optional<String> orgId) {
         Utils.checkNotNull(orgId, "orgId");
@@ -402,7 +404,8 @@ public class ListAdsAdsRequest {
     }
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListAdsAdsRequest withUpdatedGte(String updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -412,7 +415,8 @@ public class ListAdsAdsRequest {
 
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ListAdsAdsRequest withUpdatedGte(Optional<String> updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -477,7 +481,7 @@ public class ListAdsAdsRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<String>> fields = Optional.empty();
+        private Optional<? extends List<ListAdsAdsQueryParamFields>> fields = Optional.empty();
 
         private Optional<String> groupId = Optional.empty();
 
@@ -532,18 +536,18 @@ public class ListAdsAdsRequest {
 
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(List<String> fields) {
+        public Builder fields(List<ListAdsAdsQueryParamFields> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = Optional.ofNullable(fields);
             return this;
         }
 
         /**
-         * Comma-delimited fields to return
+         * Fields to return
          */
-        public Builder fields(Optional<? extends List<String>> fields) {
+        public Builder fields(Optional<? extends List<ListAdsAdsQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
             return this;
@@ -551,7 +555,7 @@ public class ListAdsAdsRequest {
 
 
         /**
-         * The group ID to filter by
+         * The group ID to filter by (reference to HrisGroup)
          */
         public Builder groupId(String groupId) {
             Utils.checkNotNull(groupId, "groupId");
@@ -560,7 +564,7 @@ public class ListAdsAdsRequest {
         }
 
         /**
-         * The group ID to filter by
+         * The group ID to filter by (reference to HrisGroup)
          */
         public Builder groupId(Optional<String> groupId) {
             Utils.checkNotNull(groupId, "groupId");
@@ -609,7 +613,7 @@ public class ListAdsAdsRequest {
 
 
         /**
-         * The org ID to filter by
+         * The org ID to filter by (reference to AdsOrganization)
          */
         public Builder orgId(String orgId) {
             Utils.checkNotNull(orgId, "orgId");
@@ -618,7 +622,7 @@ public class ListAdsAdsRequest {
         }
 
         /**
-         * The org ID to filter by
+         * The org ID to filter by (reference to AdsOrganization)
          */
         public Builder orgId(Optional<String> orgId) {
             Utils.checkNotNull(orgId, "orgId");
@@ -683,7 +687,8 @@ public class ListAdsAdsRequest {
 
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(String updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
@@ -692,7 +697,8 @@ public class ListAdsAdsRequest {
         }
 
         /**
-         * Return only results whose updated date is equal or greater to this value
+         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedGte(Optional<String> updatedGte) {
             Utils.checkNotNull(updatedGte, "updatedGte");
