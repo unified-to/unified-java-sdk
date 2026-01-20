@@ -67,8 +67,6 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions PAYMENT_SUBSCRIPTION_WRITE = new PropertyConnectionPermissions("payment_subscription_write");
     public static final PropertyConnectionPermissions COMMERCE_ITEM_READ = new PropertyConnectionPermissions("commerce_item_read");
     public static final PropertyConnectionPermissions COMMERCE_ITEM_WRITE = new PropertyConnectionPermissions("commerce_item_write");
-    public static final PropertyConnectionPermissions COMMERCE_ITEMVARIANT_READ = new PropertyConnectionPermissions("commerce_itemvariant_read");
-    public static final PropertyConnectionPermissions COMMERCE_ITEMVARIANT_WRITE = new PropertyConnectionPermissions("commerce_itemvariant_write");
     public static final PropertyConnectionPermissions COMMERCE_COLLECTION_READ = new PropertyConnectionPermissions("commerce_collection_read");
     public static final PropertyConnectionPermissions COMMERCE_COLLECTION_WRITE = new PropertyConnectionPermissions("commerce_collection_write");
     public static final PropertyConnectionPermissions COMMERCE_INVENTORY_READ = new PropertyConnectionPermissions("commerce_inventory_read");
@@ -79,6 +77,8 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions COMMERCE_REVIEW_WRITE = new PropertyConnectionPermissions("commerce_review_write");
     public static final PropertyConnectionPermissions COMMERCE_SALESCHANNEL_READ = new PropertyConnectionPermissions("commerce_saleschannel_read");
     public static final PropertyConnectionPermissions COMMERCE_SALESCHANNEL_WRITE = new PropertyConnectionPermissions("commerce_saleschannel_write");
+    public static final PropertyConnectionPermissions COMMERCE_ITEMVARIANT_READ = new PropertyConnectionPermissions("commerce_itemvariant_read");
+    public static final PropertyConnectionPermissions COMMERCE_ITEMVARIANT_WRITE = new PropertyConnectionPermissions("commerce_itemvariant_write");
     public static final PropertyConnectionPermissions VERIFICATION_PACKAGE_READ = new PropertyConnectionPermissions("verification_package_read");
     public static final PropertyConnectionPermissions VERIFICATION_REQUEST_READ = new PropertyConnectionPermissions("verification_request_read");
     public static final PropertyConnectionPermissions VERIFICATION_REQUEST_WRITE = new PropertyConnectionPermissions("verification_request_write");
@@ -223,6 +223,13 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions FORMS_FORM_WRITE = new PropertyConnectionPermissions("forms_form_write");
     public static final PropertyConnectionPermissions FORMS_SUBMISSION_READ = new PropertyConnectionPermissions("forms_submission_read");
     public static final PropertyConnectionPermissions FORMS_SUBMISSION_WRITE = new PropertyConnectionPermissions("forms_submission_write");
+    public static final PropertyConnectionPermissions SHIPPING_SHIPMENT_READ = new PropertyConnectionPermissions("shipping_shipment_read");
+    public static final PropertyConnectionPermissions SHIPPING_SHIPMENT_WRITE = new PropertyConnectionPermissions("shipping_shipment_write");
+    public static final PropertyConnectionPermissions SHIPPING_LABEL_READ = new PropertyConnectionPermissions("shipping_label_read");
+    public static final PropertyConnectionPermissions SHIPPING_LABEL_WRITE = new PropertyConnectionPermissions("shipping_label_write");
+    public static final PropertyConnectionPermissions SHIPPING_TRACKING_READ = new PropertyConnectionPermissions("shipping_tracking_read");
+    public static final PropertyConnectionPermissions SHIPPING_RATE_READ = new PropertyConnectionPermissions("shipping_rate_read");
+    public static final PropertyConnectionPermissions SHIPPING_CARRIER_READ = new PropertyConnectionPermissions("shipping_carrier_read");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -343,8 +350,6 @@ public class PropertyConnectionPermissions {
         map.put("payment_subscription_write", PAYMENT_SUBSCRIPTION_WRITE);
         map.put("commerce_item_read", COMMERCE_ITEM_READ);
         map.put("commerce_item_write", COMMERCE_ITEM_WRITE);
-        map.put("commerce_itemvariant_read", COMMERCE_ITEMVARIANT_READ);
-        map.put("commerce_itemvariant_write", COMMERCE_ITEMVARIANT_WRITE);
         map.put("commerce_collection_read", COMMERCE_COLLECTION_READ);
         map.put("commerce_collection_write", COMMERCE_COLLECTION_WRITE);
         map.put("commerce_inventory_read", COMMERCE_INVENTORY_READ);
@@ -355,6 +360,8 @@ public class PropertyConnectionPermissions {
         map.put("commerce_review_write", COMMERCE_REVIEW_WRITE);
         map.put("commerce_saleschannel_read", COMMERCE_SALESCHANNEL_READ);
         map.put("commerce_saleschannel_write", COMMERCE_SALESCHANNEL_WRITE);
+        map.put("commerce_itemvariant_read", COMMERCE_ITEMVARIANT_READ);
+        map.put("commerce_itemvariant_write", COMMERCE_ITEMVARIANT_WRITE);
         map.put("verification_package_read", VERIFICATION_PACKAGE_READ);
         map.put("verification_request_read", VERIFICATION_REQUEST_READ);
         map.put("verification_request_write", VERIFICATION_REQUEST_WRITE);
@@ -499,6 +506,13 @@ public class PropertyConnectionPermissions {
         map.put("forms_form_write", FORMS_FORM_WRITE);
         map.put("forms_submission_read", FORMS_SUBMISSION_READ);
         map.put("forms_submission_write", FORMS_SUBMISSION_WRITE);
+        map.put("shipping_shipment_read", SHIPPING_SHIPMENT_READ);
+        map.put("shipping_shipment_write", SHIPPING_SHIPMENT_WRITE);
+        map.put("shipping_label_read", SHIPPING_LABEL_READ);
+        map.put("shipping_label_write", SHIPPING_LABEL_WRITE);
+        map.put("shipping_tracking_read", SHIPPING_TRACKING_READ);
+        map.put("shipping_rate_read", SHIPPING_RATE_READ);
+        map.put("shipping_carrier_read", SHIPPING_CARRIER_READ);
         return map;
     }
 
@@ -551,8 +565,6 @@ public class PropertyConnectionPermissions {
         map.put("payment_subscription_write", PropertyConnectionPermissionsEnum.PAYMENT_SUBSCRIPTION_WRITE);
         map.put("commerce_item_read", PropertyConnectionPermissionsEnum.COMMERCE_ITEM_READ);
         map.put("commerce_item_write", PropertyConnectionPermissionsEnum.COMMERCE_ITEM_WRITE);
-        map.put("commerce_itemvariant_read", PropertyConnectionPermissionsEnum.COMMERCE_ITEMVARIANT_READ);
-        map.put("commerce_itemvariant_write", PropertyConnectionPermissionsEnum.COMMERCE_ITEMVARIANT_WRITE);
         map.put("commerce_collection_read", PropertyConnectionPermissionsEnum.COMMERCE_COLLECTION_READ);
         map.put("commerce_collection_write", PropertyConnectionPermissionsEnum.COMMERCE_COLLECTION_WRITE);
         map.put("commerce_inventory_read", PropertyConnectionPermissionsEnum.COMMERCE_INVENTORY_READ);
@@ -563,6 +575,8 @@ public class PropertyConnectionPermissions {
         map.put("commerce_review_write", PropertyConnectionPermissionsEnum.COMMERCE_REVIEW_WRITE);
         map.put("commerce_saleschannel_read", PropertyConnectionPermissionsEnum.COMMERCE_SALESCHANNEL_READ);
         map.put("commerce_saleschannel_write", PropertyConnectionPermissionsEnum.COMMERCE_SALESCHANNEL_WRITE);
+        map.put("commerce_itemvariant_read", PropertyConnectionPermissionsEnum.COMMERCE_ITEMVARIANT_READ);
+        map.put("commerce_itemvariant_write", PropertyConnectionPermissionsEnum.COMMERCE_ITEMVARIANT_WRITE);
         map.put("verification_package_read", PropertyConnectionPermissionsEnum.VERIFICATION_PACKAGE_READ);
         map.put("verification_request_read", PropertyConnectionPermissionsEnum.VERIFICATION_REQUEST_READ);
         map.put("verification_request_write", PropertyConnectionPermissionsEnum.VERIFICATION_REQUEST_WRITE);
@@ -707,6 +721,13 @@ public class PropertyConnectionPermissions {
         map.put("forms_form_write", PropertyConnectionPermissionsEnum.FORMS_FORM_WRITE);
         map.put("forms_submission_read", PropertyConnectionPermissionsEnum.FORMS_SUBMISSION_READ);
         map.put("forms_submission_write", PropertyConnectionPermissionsEnum.FORMS_SUBMISSION_WRITE);
+        map.put("shipping_shipment_read", PropertyConnectionPermissionsEnum.SHIPPING_SHIPMENT_READ);
+        map.put("shipping_shipment_write", PropertyConnectionPermissionsEnum.SHIPPING_SHIPMENT_WRITE);
+        map.put("shipping_label_read", PropertyConnectionPermissionsEnum.SHIPPING_LABEL_READ);
+        map.put("shipping_label_write", PropertyConnectionPermissionsEnum.SHIPPING_LABEL_WRITE);
+        map.put("shipping_tracking_read", PropertyConnectionPermissionsEnum.SHIPPING_TRACKING_READ);
+        map.put("shipping_rate_read", PropertyConnectionPermissionsEnum.SHIPPING_RATE_READ);
+        map.put("shipping_carrier_read", PropertyConnectionPermissionsEnum.SHIPPING_CARRIER_READ);
         return map;
     }
     
@@ -760,8 +781,6 @@ public class PropertyConnectionPermissions {
         PAYMENT_SUBSCRIPTION_WRITE("payment_subscription_write"),
         COMMERCE_ITEM_READ("commerce_item_read"),
         COMMERCE_ITEM_WRITE("commerce_item_write"),
-        COMMERCE_ITEMVARIANT_READ("commerce_itemvariant_read"),
-        COMMERCE_ITEMVARIANT_WRITE("commerce_itemvariant_write"),
         COMMERCE_COLLECTION_READ("commerce_collection_read"),
         COMMERCE_COLLECTION_WRITE("commerce_collection_write"),
         COMMERCE_INVENTORY_READ("commerce_inventory_read"),
@@ -772,6 +791,8 @@ public class PropertyConnectionPermissions {
         COMMERCE_REVIEW_WRITE("commerce_review_write"),
         COMMERCE_SALESCHANNEL_READ("commerce_saleschannel_read"),
         COMMERCE_SALESCHANNEL_WRITE("commerce_saleschannel_write"),
+        COMMERCE_ITEMVARIANT_READ("commerce_itemvariant_read"),
+        COMMERCE_ITEMVARIANT_WRITE("commerce_itemvariant_write"),
         VERIFICATION_PACKAGE_READ("verification_package_read"),
         VERIFICATION_REQUEST_READ("verification_request_read"),
         VERIFICATION_REQUEST_WRITE("verification_request_write"),
@@ -915,7 +936,14 @@ public class PropertyConnectionPermissions {
         FORMS_FORM_READ("forms_form_read"),
         FORMS_FORM_WRITE("forms_form_write"),
         FORMS_SUBMISSION_READ("forms_submission_read"),
-        FORMS_SUBMISSION_WRITE("forms_submission_write"),;
+        FORMS_SUBMISSION_WRITE("forms_submission_write"),
+        SHIPPING_SHIPMENT_READ("shipping_shipment_read"),
+        SHIPPING_SHIPMENT_WRITE("shipping_shipment_write"),
+        SHIPPING_LABEL_READ("shipping_label_read"),
+        SHIPPING_LABEL_WRITE("shipping_label_write"),
+        SHIPPING_TRACKING_READ("shipping_tracking_read"),
+        SHIPPING_RATE_READ("shipping_rate_read"),
+        SHIPPING_CARRIER_READ("shipping_carrier_read"),;
 
         private final String value;
 

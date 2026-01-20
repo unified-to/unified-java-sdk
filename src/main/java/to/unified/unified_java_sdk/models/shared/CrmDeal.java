@@ -92,6 +92,11 @@ public class CrmDeal {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pipelines")
+    private Optional<? extends List<CrmReference>> pipelines;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("probability")
     private Optional<Double> probability;
 
@@ -114,6 +119,11 @@ public class CrmDeal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stage_id")
     private Optional<String> stageId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("stages")
+    private Optional<? extends List<CrmReference>> stages;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -150,11 +160,13 @@ public class CrmDeal {
             @JsonProperty("name") Optional<String> name,
             @JsonProperty("pipeline") Optional<String> pipeline,
             @JsonProperty("pipeline_id") Optional<String> pipelineId,
+            @JsonProperty("pipelines") Optional<? extends List<CrmReference>> pipelines,
             @JsonProperty("probability") Optional<Double> probability,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
             @JsonProperty("source") Optional<String> source,
             @JsonProperty("stage") Optional<String> stage,
             @JsonProperty("stage_id") Optional<String> stageId,
+            @JsonProperty("stages") Optional<? extends List<CrmReference>> stages,
             @JsonProperty("tags") Optional<? extends List<String>> tags,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
             @JsonProperty("user_id") Optional<String> userId,
@@ -172,11 +184,13 @@ public class CrmDeal {
         Utils.checkNotNull(name, "name");
         Utils.checkNotNull(pipeline, "pipeline");
         Utils.checkNotNull(pipelineId, "pipelineId");
+        Utils.checkNotNull(pipelines, "pipelines");
         Utils.checkNotNull(probability, "probability");
         Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(source, "source");
         Utils.checkNotNull(stage, "stage");
         Utils.checkNotNull(stageId, "stageId");
+        Utils.checkNotNull(stages, "stages");
         Utils.checkNotNull(tags, "tags");
         Utils.checkNotNull(updatedAt, "updatedAt");
         Utils.checkNotNull(userId, "userId");
@@ -194,11 +208,13 @@ public class CrmDeal {
         this.name = name;
         this.pipeline = pipeline;
         this.pipelineId = pipelineId;
+        this.pipelines = pipelines;
         this.probability = probability;
         this.raw = raw;
         this.source = source;
         this.stage = stage;
         this.stageId = stageId;
+        this.stages = stages;
         this.tags = tags;
         this.updatedAt = updatedAt;
         this.userId = userId;
@@ -213,7 +229,7 @@ public class CrmDeal {
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -284,6 +300,12 @@ public class CrmDeal {
         return pipelineId;
     }
 
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<CrmReference>> pipelines() {
+        return (Optional<List<CrmReference>>) pipelines;
+    }
+
     @JsonIgnore
     public Optional<Double> probability() {
         return probability;
@@ -308,6 +330,12 @@ public class CrmDeal {
     @JsonIgnore
     public Optional<String> stageId() {
         return stageId;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<CrmReference>> stages() {
+        return (Optional<List<CrmReference>>) stages;
     }
 
     @SuppressWarnings("unchecked")
@@ -505,6 +533,19 @@ public class CrmDeal {
         return this;
     }
 
+    public CrmDeal withPipelines(List<CrmReference> pipelines) {
+        Utils.checkNotNull(pipelines, "pipelines");
+        this.pipelines = Optional.ofNullable(pipelines);
+        return this;
+    }
+
+
+    public CrmDeal withPipelines(Optional<? extends List<CrmReference>> pipelines) {
+        Utils.checkNotNull(pipelines, "pipelines");
+        this.pipelines = pipelines;
+        return this;
+    }
+
     public CrmDeal withProbability(double probability) {
         Utils.checkNotNull(probability, "probability");
         this.probability = Optional.ofNullable(probability);
@@ -567,6 +608,19 @@ public class CrmDeal {
     public CrmDeal withStageId(Optional<String> stageId) {
         Utils.checkNotNull(stageId, "stageId");
         this.stageId = stageId;
+        return this;
+    }
+
+    public CrmDeal withStages(List<CrmReference> stages) {
+        Utils.checkNotNull(stages, "stages");
+        this.stages = Optional.ofNullable(stages);
+        return this;
+    }
+
+
+    public CrmDeal withStages(Optional<? extends List<CrmReference>> stages) {
+        Utils.checkNotNull(stages, "stages");
+        this.stages = stages;
         return this;
     }
 
@@ -645,11 +699,13 @@ public class CrmDeal {
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.pipeline, other.pipeline) &&
             Utils.enhancedDeepEquals(this.pipelineId, other.pipelineId) &&
+            Utils.enhancedDeepEquals(this.pipelines, other.pipelines) &&
             Utils.enhancedDeepEquals(this.probability, other.probability) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.source, other.source) &&
             Utils.enhancedDeepEquals(this.stage, other.stage) &&
             Utils.enhancedDeepEquals(this.stageId, other.stageId) &&
+            Utils.enhancedDeepEquals(this.stages, other.stages) &&
             Utils.enhancedDeepEquals(this.tags, other.tags) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
             Utils.enhancedDeepEquals(this.userId, other.userId) &&
@@ -663,10 +719,10 @@ public class CrmDeal {
             companyIds, contactIds, createdAt,
             currency, id, lostReason,
             metadata, name, pipeline,
-            pipelineId, probability, raw,
-            source, stage, stageId,
-            tags, updatedAt, userId,
-            wonReason);
+            pipelineId, pipelines, probability,
+            raw, source, stage,
+            stageId, stages, tags,
+            updatedAt, userId, wonReason);
     }
     
     @Override
@@ -685,11 +741,13 @@ public class CrmDeal {
                 "name", name,
                 "pipeline", pipeline,
                 "pipelineId", pipelineId,
+                "pipelines", pipelines,
                 "probability", probability,
                 "raw", raw,
                 "source", source,
                 "stage", stage,
                 "stageId", stageId,
+                "stages", stages,
                 "tags", tags,
                 "updatedAt", updatedAt,
                 "userId", userId,
@@ -725,6 +783,8 @@ public class CrmDeal {
 
         private Optional<String> pipelineId = Optional.empty();
 
+        private Optional<? extends List<CrmReference>> pipelines = Optional.empty();
+
         private Optional<Double> probability = Optional.empty();
 
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
@@ -734,6 +794,8 @@ public class CrmDeal {
         private Optional<String> stage = Optional.empty();
 
         private Optional<String> stageId = Optional.empty();
+
+        private Optional<? extends List<CrmReference>> stages = Optional.empty();
 
         private Optional<? extends List<String>> tags = Optional.empty();
 
@@ -917,6 +979,19 @@ public class CrmDeal {
         }
 
 
+        public Builder pipelines(List<CrmReference> pipelines) {
+            Utils.checkNotNull(pipelines, "pipelines");
+            this.pipelines = Optional.ofNullable(pipelines);
+            return this;
+        }
+
+        public Builder pipelines(Optional<? extends List<CrmReference>> pipelines) {
+            Utils.checkNotNull(pipelines, "pipelines");
+            this.pipelines = pipelines;
+            return this;
+        }
+
+
         public Builder probability(double probability) {
             Utils.checkNotNull(probability, "probability");
             this.probability = Optional.ofNullable(probability);
@@ -982,6 +1057,19 @@ public class CrmDeal {
         }
 
 
+        public Builder stages(List<CrmReference> stages) {
+            Utils.checkNotNull(stages, "stages");
+            this.stages = Optional.ofNullable(stages);
+            return this;
+        }
+
+        public Builder stages(Optional<? extends List<CrmReference>> stages) {
+            Utils.checkNotNull(stages, "stages");
+            this.stages = stages;
+            return this;
+        }
+
+
         public Builder tags(List<String> tags) {
             Utils.checkNotNull(tags, "tags");
             this.tags = Optional.ofNullable(tags);
@@ -1040,10 +1128,10 @@ public class CrmDeal {
                 companyIds, contactIds, createdAt,
                 currency, id, lostReason,
                 metadata, name, pipeline,
-                pipelineId, probability, raw,
-                source, stage, stageId,
-                tags, updatedAt, userId,
-                wonReason);
+                pipelineId, pipelines, probability,
+                raw, source, stage,
+                stageId, stages, tags,
+                updatedAt, userId, wonReason);
         }
 
     }

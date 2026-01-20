@@ -319,7 +319,8 @@ import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchMessagingEventRequest;
 import to.unified.unified_java_sdk.models.operations.PatchMessagingEventResponse;
-import to.unified.unified_java_sdk.models.shared.*;
+import to.unified.unified_java_sdk.models.shared.MessagingEvent;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -333,7 +334,6 @@ public class Application {
 
         PatchMessagingEventRequest req = PatchMessagingEventRequest.builder()
                 .messagingEvent(MessagingEvent.builder()
-                    .type(MessagingEventType.CHANNEL_JOINED)
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -497,7 +497,8 @@ import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateMessagingEventRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateMessagingEventResponse;
-import to.unified.unified_java_sdk.models.shared.*;
+import to.unified.unified_java_sdk.models.shared.MessagingEvent;
+import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
 
@@ -511,7 +512,6 @@ public class Application {
 
         UpdateMessagingEventRequest req = UpdateMessagingEventRequest.builder()
                 .messagingEvent(MessagingEvent.builder()
-                    .type(MessagingEventType.CHANNEL_JOINED)
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

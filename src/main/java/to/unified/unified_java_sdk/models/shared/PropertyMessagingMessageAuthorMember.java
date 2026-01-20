@@ -13,7 +13,11 @@ import java.lang.String;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
-
+/**
+ * PropertyMessagingMessageAuthorMember
+ * 
+ * <p>for email systems, this field represents the From value
+ */
 public class PropertyMessagingMessageAuthorMember {
 
     @JsonInclude(Include.NON_ABSENT)

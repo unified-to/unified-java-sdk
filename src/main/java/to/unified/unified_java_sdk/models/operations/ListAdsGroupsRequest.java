@@ -53,6 +53,12 @@ public class ListAdsGroupsRequest {
     private Optional<String> orgId;
 
     /**
+     * The parent ID to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent_id")
+    private Optional<String> parentId;
+
+    /**
      * Query string to search. eg. email address or name
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
@@ -86,6 +92,7 @@ public class ListAdsGroupsRequest {
             Optional<Double> offset,
             Optional<String> order,
             Optional<String> orgId,
+            Optional<String> parentId,
             Optional<String> query,
             Optional<String> raw,
             Optional<String> sort,
@@ -97,6 +104,7 @@ public class ListAdsGroupsRequest {
         Utils.checkNotNull(offset, "offset");
         Utils.checkNotNull(order, "order");
         Utils.checkNotNull(orgId, "orgId");
+        Utils.checkNotNull(parentId, "parentId");
         Utils.checkNotNull(query, "query");
         Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(sort, "sort");
@@ -108,6 +116,7 @@ public class ListAdsGroupsRequest {
         this.offset = offset;
         this.order = order;
         this.orgId = orgId;
+        this.parentId = parentId;
         this.query = query;
         this.raw = raw;
         this.sort = sort;
@@ -119,7 +128,7 @@ public class ListAdsGroupsRequest {
         this(Optional.empty(), connectionId, Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     /**
@@ -168,6 +177,14 @@ public class ListAdsGroupsRequest {
     @JsonIgnore
     public Optional<String> orgId() {
         return orgId;
+    }
+
+    /**
+     * The parent ID to filter by
+     */
+    @JsonIgnore
+    public Optional<String> parentId() {
+        return parentId;
     }
 
     /**
@@ -313,6 +330,25 @@ public class ListAdsGroupsRequest {
     }
 
     /**
+     * The parent ID to filter by
+     */
+    public ListAdsGroupsRequest withParentId(String parentId) {
+        Utils.checkNotNull(parentId, "parentId");
+        this.parentId = Optional.ofNullable(parentId);
+        return this;
+    }
+
+
+    /**
+     * The parent ID to filter by
+     */
+    public ListAdsGroupsRequest withParentId(Optional<String> parentId) {
+        Utils.checkNotNull(parentId, "parentId");
+        this.parentId = parentId;
+        return this;
+    }
+
+    /**
      * Query string to search. eg. email address or name
      */
     public ListAdsGroupsRequest withQuery(String query) {
@@ -405,6 +441,7 @@ public class ListAdsGroupsRequest {
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
             Utils.enhancedDeepEquals(this.order, other.order) &&
             Utils.enhancedDeepEquals(this.orgId, other.orgId) &&
+            Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
@@ -416,8 +453,8 @@ public class ListAdsGroupsRequest {
         return Utils.enhancedHash(
             campaignId, connectionId, fields,
             limit, offset, order,
-            orgId, query, raw,
-            sort, updatedGte);
+            orgId, parentId, query,
+            raw, sort, updatedGte);
     }
     
     @Override
@@ -430,6 +467,7 @@ public class ListAdsGroupsRequest {
                 "offset", offset,
                 "order", order,
                 "orgId", orgId,
+                "parentId", parentId,
                 "query", query,
                 "raw", raw,
                 "sort", sort,
@@ -452,6 +490,8 @@ public class ListAdsGroupsRequest {
         private Optional<String> order = Optional.empty();
 
         private Optional<String> orgId = Optional.empty();
+
+        private Optional<String> parentId = Optional.empty();
 
         private Optional<String> query = Optional.empty();
 
@@ -573,6 +613,25 @@ public class ListAdsGroupsRequest {
 
 
         /**
+         * The parent ID to filter by
+         */
+        public Builder parentId(String parentId) {
+            Utils.checkNotNull(parentId, "parentId");
+            this.parentId = Optional.ofNullable(parentId);
+            return this;
+        }
+
+        /**
+         * The parent ID to filter by
+         */
+        public Builder parentId(Optional<String> parentId) {
+            Utils.checkNotNull(parentId, "parentId");
+            this.parentId = parentId;
+            return this;
+        }
+
+
+        /**
          * Query string to search. eg. email address or name
          */
         public Builder query(String query) {
@@ -652,8 +711,8 @@ public class ListAdsGroupsRequest {
             return new ListAdsGroupsRequest(
                 campaignId, connectionId, fields,
                 limit, offset, order,
-                orgId, query, raw,
-                sort, updatedGte);
+                orgId, parentId, query,
+                raw, sort, updatedGte);
         }
 
     }

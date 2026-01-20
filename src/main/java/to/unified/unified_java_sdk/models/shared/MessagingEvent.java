@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
@@ -41,6 +42,11 @@ public class MessagingEvent {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_replacing_original")
+    private Optional<Boolean> isReplacingOriginal;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     private Optional<? extends PropertyMessagingEventMessage> message;
 
@@ -50,8 +56,9 @@ public class MessagingEvent {
     private Optional<? extends Map<String, Object>> raw;
 
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private MessagingEventType type;
+    private Optional<? extends MessagingEventType> type;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -64,14 +71,16 @@ public class MessagingEvent {
             @JsonProperty("channel") Optional<? extends PropertyMessagingEventChannel> channel,
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("id") Optional<String> id,
+            @JsonProperty("is_replacing_original") Optional<Boolean> isReplacingOriginal,
             @JsonProperty("message") Optional<? extends PropertyMessagingEventMessage> message,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("type") MessagingEventType type,
+            @JsonProperty("type") Optional<? extends MessagingEventType> type,
             @JsonProperty("user") Optional<? extends PropertyMessagingEventUser> user) {
         Utils.checkNotNull(button, "button");
         Utils.checkNotNull(channel, "channel");
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(id, "id");
+        Utils.checkNotNull(isReplacingOriginal, "isReplacingOriginal");
         Utils.checkNotNull(message, "message");
         Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(type, "type");
@@ -80,17 +89,17 @@ public class MessagingEvent {
         this.channel = channel;
         this.createdAt = createdAt;
         this.id = id;
+        this.isReplacingOriginal = isReplacingOriginal;
         this.message = message;
         this.raw = raw;
         this.type = type;
         this.user = user;
     }
     
-    public MessagingEvent(
-            MessagingEventType type) {
+    public MessagingEvent() {
         this(Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            type, Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -115,6 +124,11 @@ public class MessagingEvent {
         return id;
     }
 
+    @JsonIgnore
+    public Optional<Boolean> isReplacingOriginal() {
+        return isReplacingOriginal;
+    }
+
     @SuppressWarnings("unchecked")
     @JsonIgnore
     public Optional<PropertyMessagingEventMessage> message() {
@@ -127,9 +141,10 @@ public class MessagingEvent {
         return (Optional<Map<String, Object>>) raw;
     }
 
+    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public MessagingEventType type() {
-        return type;
+    public Optional<MessagingEventType> type() {
+        return (Optional<MessagingEventType>) type;
     }
 
     @SuppressWarnings("unchecked")
@@ -195,6 +210,19 @@ public class MessagingEvent {
         return this;
     }
 
+    public MessagingEvent withIsReplacingOriginal(boolean isReplacingOriginal) {
+        Utils.checkNotNull(isReplacingOriginal, "isReplacingOriginal");
+        this.isReplacingOriginal = Optional.ofNullable(isReplacingOriginal);
+        return this;
+    }
+
+
+    public MessagingEvent withIsReplacingOriginal(Optional<Boolean> isReplacingOriginal) {
+        Utils.checkNotNull(isReplacingOriginal, "isReplacingOriginal");
+        this.isReplacingOriginal = isReplacingOriginal;
+        return this;
+    }
+
     public MessagingEvent withMessage(PropertyMessagingEventMessage message) {
         Utils.checkNotNull(message, "message");
         this.message = Optional.ofNullable(message);
@@ -222,6 +250,13 @@ public class MessagingEvent {
     }
 
     public MessagingEvent withType(MessagingEventType type) {
+        Utils.checkNotNull(type, "type");
+        this.type = Optional.ofNullable(type);
+        return this;
+    }
+
+
+    public MessagingEvent withType(Optional<? extends MessagingEventType> type) {
         Utils.checkNotNull(type, "type");
         this.type = type;
         return this;
@@ -254,6 +289,7 @@ public class MessagingEvent {
             Utils.enhancedDeepEquals(this.channel, other.channel) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.isReplacingOriginal, other.isReplacingOriginal) &&
             Utils.enhancedDeepEquals(this.message, other.message) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
@@ -264,8 +300,8 @@ public class MessagingEvent {
     public int hashCode() {
         return Utils.enhancedHash(
             button, channel, createdAt,
-            id, message, raw,
-            type, user);
+            id, isReplacingOriginal, message,
+            raw, type, user);
     }
     
     @Override
@@ -275,6 +311,7 @@ public class MessagingEvent {
                 "channel", channel,
                 "createdAt", createdAt,
                 "id", id,
+                "isReplacingOriginal", isReplacingOriginal,
                 "message", message,
                 "raw", raw,
                 "type", type,
@@ -292,11 +329,13 @@ public class MessagingEvent {
 
         private Optional<String> id = Optional.empty();
 
+        private Optional<Boolean> isReplacingOriginal = Optional.empty();
+
         private Optional<? extends PropertyMessagingEventMessage> message = Optional.empty();
 
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
 
-        private MessagingEventType type;
+        private Optional<? extends MessagingEventType> type = Optional.empty();
 
         private Optional<? extends PropertyMessagingEventUser> user = Optional.empty();
 
@@ -357,6 +396,19 @@ public class MessagingEvent {
         }
 
 
+        public Builder isReplacingOriginal(boolean isReplacingOriginal) {
+            Utils.checkNotNull(isReplacingOriginal, "isReplacingOriginal");
+            this.isReplacingOriginal = Optional.ofNullable(isReplacingOriginal);
+            return this;
+        }
+
+        public Builder isReplacingOriginal(Optional<Boolean> isReplacingOriginal) {
+            Utils.checkNotNull(isReplacingOriginal, "isReplacingOriginal");
+            this.isReplacingOriginal = isReplacingOriginal;
+            return this;
+        }
+
+
         public Builder message(PropertyMessagingEventMessage message) {
             Utils.checkNotNull(message, "message");
             this.message = Optional.ofNullable(message);
@@ -385,6 +437,12 @@ public class MessagingEvent {
 
         public Builder type(MessagingEventType type) {
             Utils.checkNotNull(type, "type");
+            this.type = Optional.ofNullable(type);
+            return this;
+        }
+
+        public Builder type(Optional<? extends MessagingEventType> type) {
+            Utils.checkNotNull(type, "type");
             this.type = type;
             return this;
         }
@@ -406,8 +464,8 @@ public class MessagingEvent {
 
             return new MessagingEvent(
                 button, channel, createdAt,
-                id, message, raw,
-                type, user);
+                id, isReplacingOriginal, message,
+                raw, type, user);
         }
 
     }

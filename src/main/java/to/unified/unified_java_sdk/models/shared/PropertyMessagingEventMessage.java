@@ -26,7 +26,9 @@ public class PropertyMessagingEventMessage {
     @JsonProperty("attachments")
     private Optional<? extends List<MessagingAttachment>> attachments;
 
-
+    /**
+     * for email systems, this field represents the From value
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author_member")
     private Optional<? extends PropertyMessagingEventMessageAuthorMember> authorMember;
@@ -61,7 +63,9 @@ public class PropertyMessagingEventMessage {
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
-
+    /**
+     * for email systems, this field represents the To value
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination_members")
     private Optional<? extends List<MessagingMember>> destinationMembers;
@@ -71,7 +75,9 @@ public class PropertyMessagingEventMessage {
     @JsonProperty("has_children")
     private Optional<Boolean> hasChildren;
 
-
+    /**
+     * for email systems, this field represents the BCC value
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hidden_members")
     private Optional<? extends List<MessagingMember>> hiddenMembers;
@@ -86,7 +92,9 @@ public class PropertyMessagingEventMessage {
     @JsonProperty("is_unread")
     private Optional<Boolean> isUnread;
 
-
+    /**
+     * for email systems, this field represents the CC value
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mentioned_members")
     private Optional<? extends List<MessagingMember>> mentionedMembers;
@@ -256,6 +264,9 @@ public class PropertyMessagingEventMessage {
         return (Optional<List<MessagingAttachment>>) attachments;
     }
 
+    /**
+     * for email systems, this field represents the From value
+     */
     @SuppressWarnings("unchecked")
     @JsonIgnore
     public Optional<PropertyMessagingEventMessageAuthorMember> authorMember() {
@@ -297,6 +308,9 @@ public class PropertyMessagingEventMessage {
         return createdAt;
     }
 
+    /**
+     * for email systems, this field represents the To value
+     */
     @SuppressWarnings("unchecked")
     @JsonIgnore
     public Optional<List<MessagingMember>> destinationMembers() {
@@ -308,6 +322,9 @@ public class PropertyMessagingEventMessage {
         return hasChildren;
     }
 
+    /**
+     * for email systems, this field represents the BCC value
+     */
     @SuppressWarnings("unchecked")
     @JsonIgnore
     public Optional<List<MessagingMember>> hiddenMembers() {
@@ -324,6 +341,9 @@ public class PropertyMessagingEventMessage {
         return isUnread;
     }
 
+    /**
+     * for email systems, this field represents the CC value
+     */
     @SuppressWarnings("unchecked")
     @JsonIgnore
     public Optional<List<MessagingMember>> mentionedMembers() {
@@ -415,6 +435,9 @@ public class PropertyMessagingEventMessage {
         return this;
     }
 
+    /**
+     * for email systems, this field represents the From value
+     */
     public PropertyMessagingEventMessage withAuthorMember(PropertyMessagingEventMessageAuthorMember authorMember) {
         Utils.checkNotNull(authorMember, "authorMember");
         this.authorMember = Optional.ofNullable(authorMember);
@@ -422,6 +445,9 @@ public class PropertyMessagingEventMessage {
     }
 
 
+    /**
+     * for email systems, this field represents the From value
+     */
     public PropertyMessagingEventMessage withAuthorMember(Optional<? extends PropertyMessagingEventMessageAuthorMember> authorMember) {
         Utils.checkNotNull(authorMember, "authorMember");
         this.authorMember = authorMember;
@@ -507,6 +533,9 @@ public class PropertyMessagingEventMessage {
         return this;
     }
 
+    /**
+     * for email systems, this field represents the To value
+     */
     public PropertyMessagingEventMessage withDestinationMembers(List<MessagingMember> destinationMembers) {
         Utils.checkNotNull(destinationMembers, "destinationMembers");
         this.destinationMembers = Optional.ofNullable(destinationMembers);
@@ -514,6 +543,9 @@ public class PropertyMessagingEventMessage {
     }
 
 
+    /**
+     * for email systems, this field represents the To value
+     */
     public PropertyMessagingEventMessage withDestinationMembers(Optional<? extends List<MessagingMember>> destinationMembers) {
         Utils.checkNotNull(destinationMembers, "destinationMembers");
         this.destinationMembers = destinationMembers;
@@ -533,6 +565,9 @@ public class PropertyMessagingEventMessage {
         return this;
     }
 
+    /**
+     * for email systems, this field represents the BCC value
+     */
     public PropertyMessagingEventMessage withHiddenMembers(List<MessagingMember> hiddenMembers) {
         Utils.checkNotNull(hiddenMembers, "hiddenMembers");
         this.hiddenMembers = Optional.ofNullable(hiddenMembers);
@@ -540,6 +575,9 @@ public class PropertyMessagingEventMessage {
     }
 
 
+    /**
+     * for email systems, this field represents the BCC value
+     */
     public PropertyMessagingEventMessage withHiddenMembers(Optional<? extends List<MessagingMember>> hiddenMembers) {
         Utils.checkNotNull(hiddenMembers, "hiddenMembers");
         this.hiddenMembers = hiddenMembers;
@@ -572,6 +610,9 @@ public class PropertyMessagingEventMessage {
         return this;
     }
 
+    /**
+     * for email systems, this field represents the CC value
+     */
     public PropertyMessagingEventMessage withMentionedMembers(List<MessagingMember> mentionedMembers) {
         Utils.checkNotNull(mentionedMembers, "mentionedMembers");
         this.mentionedMembers = Optional.ofNullable(mentionedMembers);
@@ -579,6 +620,9 @@ public class PropertyMessagingEventMessage {
     }
 
 
+    /**
+     * for email systems, this field represents the CC value
+     */
     public PropertyMessagingEventMessage withMentionedMembers(Optional<? extends List<MessagingMember>> mentionedMembers) {
         Utils.checkNotNull(mentionedMembers, "mentionedMembers");
         this.mentionedMembers = mentionedMembers;
@@ -910,12 +954,18 @@ public class PropertyMessagingEventMessage {
         }
 
 
+        /**
+         * for email systems, this field represents the From value
+         */
         public Builder authorMember(PropertyMessagingEventMessageAuthorMember authorMember) {
             Utils.checkNotNull(authorMember, "authorMember");
             this.authorMember = Optional.ofNullable(authorMember);
             return this;
         }
 
+        /**
+         * for email systems, this field represents the From value
+         */
         public Builder authorMember(Optional<? extends PropertyMessagingEventMessageAuthorMember> authorMember) {
             Utils.checkNotNull(authorMember, "authorMember");
             this.authorMember = authorMember;
@@ -1002,12 +1052,18 @@ public class PropertyMessagingEventMessage {
         }
 
 
+        /**
+         * for email systems, this field represents the To value
+         */
         public Builder destinationMembers(List<MessagingMember> destinationMembers) {
             Utils.checkNotNull(destinationMembers, "destinationMembers");
             this.destinationMembers = Optional.ofNullable(destinationMembers);
             return this;
         }
 
+        /**
+         * for email systems, this field represents the To value
+         */
         public Builder destinationMembers(Optional<? extends List<MessagingMember>> destinationMembers) {
             Utils.checkNotNull(destinationMembers, "destinationMembers");
             this.destinationMembers = destinationMembers;
@@ -1028,12 +1084,18 @@ public class PropertyMessagingEventMessage {
         }
 
 
+        /**
+         * for email systems, this field represents the BCC value
+         */
         public Builder hiddenMembers(List<MessagingMember> hiddenMembers) {
             Utils.checkNotNull(hiddenMembers, "hiddenMembers");
             this.hiddenMembers = Optional.ofNullable(hiddenMembers);
             return this;
         }
 
+        /**
+         * for email systems, this field represents the BCC value
+         */
         public Builder hiddenMembers(Optional<? extends List<MessagingMember>> hiddenMembers) {
             Utils.checkNotNull(hiddenMembers, "hiddenMembers");
             this.hiddenMembers = hiddenMembers;
@@ -1067,12 +1129,18 @@ public class PropertyMessagingEventMessage {
         }
 
 
+        /**
+         * for email systems, this field represents the CC value
+         */
         public Builder mentionedMembers(List<MessagingMember> mentionedMembers) {
             Utils.checkNotNull(mentionedMembers, "mentionedMembers");
             this.mentionedMembers = Optional.ofNullable(mentionedMembers);
             return this;
         }
 
+        /**
+         * for email systems, this field represents the CC value
+         */
         public Builder mentionedMembers(Optional<? extends List<MessagingMember>> mentionedMembers) {
             Utils.checkNotNull(mentionedMembers, "mentionedMembers");
             this.mentionedMembers = mentionedMembers;

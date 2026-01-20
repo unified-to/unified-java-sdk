@@ -205,6 +205,18 @@ public class AsyncUnifiedTo {
 
     private final AsyncUser user;
 
+    private final AsyncShipping shipping;
+
+    private final AsyncCarrier carrier;
+
+    private final AsyncLabel label;
+
+    private final AsyncRate rate;
+
+    private final AsyncShipment shipment;
+
+    private final AsyncTracking tracking;
+
     private final AsyncStorage storage;
 
     private final AsyncFile file;
@@ -635,6 +647,30 @@ public class AsyncUnifiedTo {
         return user;
     }
 
+    public AsyncShipping shipping() {
+        return shipping;
+    }
+
+    public AsyncCarrier carrier() {
+        return carrier;
+    }
+
+    public AsyncLabel label() {
+        return label;
+    }
+
+    public AsyncRate rate() {
+        return rate;
+    }
+
+    public AsyncShipment shipment() {
+        return shipment;
+    }
+
+    public AsyncTracking tracking() {
+        return tracking;
+    }
+
     public AsyncStorage storage() {
         return storage;
     }
@@ -829,6 +865,12 @@ public class AsyncUnifiedTo {
         this.repository = new AsyncRepository(syncSDK.repository(), sdkConfiguration);
         this.scim = new AsyncScim(syncSDK.scim(), sdkConfiguration);
         this.user = new AsyncUser(syncSDK.user(), sdkConfiguration);
+        this.shipping = new AsyncShipping(syncSDK.shipping(), sdkConfiguration);
+        this.carrier = new AsyncCarrier(syncSDK.carrier(), sdkConfiguration);
+        this.label = new AsyncLabel(syncSDK.label(), sdkConfiguration);
+        this.rate = new AsyncRate(syncSDK.rate(), sdkConfiguration);
+        this.shipment = new AsyncShipment(syncSDK.shipment(), sdkConfiguration);
+        this.tracking = new AsyncTracking(syncSDK.tracking(), sdkConfiguration);
         this.storage = new AsyncStorage(syncSDK.storage(), sdkConfiguration);
         this.file = new AsyncFile(syncSDK.file(), sdkConfiguration);
         this.task = new AsyncTask(syncSDK.task(), sdkConfiguration);

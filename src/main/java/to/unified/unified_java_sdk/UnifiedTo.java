@@ -329,6 +329,24 @@ public class UnifiedTo {
     private final User user;
 
 
+    private final Shipping shipping;
+
+
+    private final Carrier carrier;
+
+
+    private final Label label;
+
+
+    private final Rate rate;
+
+
+    private final Shipment shipment;
+
+
+    private final Tracking tracking;
+
+
     private final Storage storage;
 
 
@@ -878,6 +896,36 @@ public class UnifiedTo {
     }
 
 
+    public Shipping shipping() {
+        return shipping;
+    }
+
+
+    public Carrier carrier() {
+        return carrier;
+    }
+
+
+    public Label label() {
+        return label;
+    }
+
+
+    public Rate rate() {
+        return rate;
+    }
+
+
+    public Shipment shipment() {
+        return shipment;
+    }
+
+
+    public Tracking tracking() {
+        return tracking;
+    }
+
+
     public Storage storage() {
         return storage;
     }
@@ -1225,6 +1273,12 @@ public class UnifiedTo {
         this.repository = new Repository(sdkConfiguration);
         this.scim = new Scim(sdkConfiguration);
         this.user = new User(sdkConfiguration);
+        this.shipping = new Shipping(sdkConfiguration);
+        this.carrier = new Carrier(sdkConfiguration);
+        this.label = new Label(sdkConfiguration);
+        this.rate = new Rate(sdkConfiguration);
+        this.shipment = new Shipment(sdkConfiguration);
+        this.tracking = new Tracking(sdkConfiguration);
         this.storage = new Storage(sdkConfiguration);
         this.file = new File(sdkConfiguration);
         this.task = new Task(sdkConfiguration);

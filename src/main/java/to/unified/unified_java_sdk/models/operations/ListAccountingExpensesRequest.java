@@ -17,16 +17,40 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListAccountingExpensesRequest {
     /**
+     * The category ID to filter by (reference to AccountingCategory)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category_id")
+    private Optional<String> categoryId;
+
+    /**
      * ID of the connection
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
     private String connectionId;
 
     /**
+     * The contact ID to filter by (reference to AccountingContact)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contact_id")
+    private Optional<String> contactId;
+
+    /**
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_lt")
+    private Optional<String> endLt;
+
+    /**
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     private Optional<? extends List<ListAccountingExpensesQueryParamFields>> fields;
+
+    /**
+     * The group ID to filter by (reference to HrisGroup)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_id")
+    private Optional<String> groupId;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
@@ -59,6 +83,12 @@ public class ListAccountingExpensesRequest {
     private Optional<String> sort;
 
     /**
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_gte")
+    private Optional<String> startGte;
+
+    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
@@ -73,44 +103,68 @@ public class ListAccountingExpensesRequest {
 
     @JsonCreator
     public ListAccountingExpensesRequest(
+            Optional<String> categoryId,
             String connectionId,
+            Optional<String> contactId,
+            Optional<String> endLt,
             Optional<? extends List<ListAccountingExpensesQueryParamFields>> fields,
+            Optional<String> groupId,
             Optional<Double> limit,
             Optional<Double> offset,
             Optional<String> order,
             Optional<String> query,
             Optional<String> raw,
             Optional<String> sort,
+            Optional<String> startGte,
             Optional<String> updatedGte,
             Optional<String> userId) {
+        Utils.checkNotNull(categoryId, "categoryId");
         Utils.checkNotNull(connectionId, "connectionId");
+        Utils.checkNotNull(contactId, "contactId");
+        Utils.checkNotNull(endLt, "endLt");
         Utils.checkNotNull(fields, "fields");
+        Utils.checkNotNull(groupId, "groupId");
         Utils.checkNotNull(limit, "limit");
         Utils.checkNotNull(offset, "offset");
         Utils.checkNotNull(order, "order");
         Utils.checkNotNull(query, "query");
         Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(sort, "sort");
+        Utils.checkNotNull(startGte, "startGte");
         Utils.checkNotNull(updatedGte, "updatedGte");
         Utils.checkNotNull(userId, "userId");
+        this.categoryId = categoryId;
         this.connectionId = connectionId;
+        this.contactId = contactId;
+        this.endLt = endLt;
         this.fields = fields;
+        this.groupId = groupId;
         this.limit = limit;
         this.offset = offset;
         this.order = order;
         this.query = query;
         this.raw = raw;
         this.sort = sort;
+        this.startGte = startGte;
         this.updatedGte = updatedGte;
         this.userId = userId;
     }
     
     public ListAccountingExpensesRequest(
             String connectionId) {
-        this(connectionId, Optional.empty(), Optional.empty(),
+        this(Optional.empty(), connectionId, Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty());
+    }
+
+    /**
+     * The category ID to filter by (reference to AccountingCategory)
+     */
+    @JsonIgnore
+    public Optional<String> categoryId() {
+        return categoryId;
     }
 
     /**
@@ -122,12 +176,36 @@ public class ListAccountingExpensesRequest {
     }
 
     /**
+     * The contact ID to filter by (reference to AccountingContact)
+     */
+    @JsonIgnore
+    public Optional<String> contactId() {
+        return contactId;
+    }
+
+    /**
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    @JsonIgnore
+    public Optional<String> endLt() {
+        return endLt;
+    }
+
+    /**
      * Fields to return
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
     public Optional<List<ListAccountingExpensesQueryParamFields>> fields() {
         return (Optional<List<ListAccountingExpensesQueryParamFields>>) fields;
+    }
+
+    /**
+     * The group ID to filter by (reference to HrisGroup)
+     */
+    @JsonIgnore
+    public Optional<String> groupId() {
+        return groupId;
     }
 
     @JsonIgnore
@@ -169,6 +247,14 @@ public class ListAccountingExpensesRequest {
     }
 
     /**
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    @JsonIgnore
+    public Optional<String> startGte() {
+        return startGte;
+    }
+
+    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
@@ -191,11 +277,68 @@ public class ListAccountingExpensesRequest {
 
 
     /**
+     * The category ID to filter by (reference to AccountingCategory)
+     */
+    public ListAccountingExpensesRequest withCategoryId(String categoryId) {
+        Utils.checkNotNull(categoryId, "categoryId");
+        this.categoryId = Optional.ofNullable(categoryId);
+        return this;
+    }
+
+
+    /**
+     * The category ID to filter by (reference to AccountingCategory)
+     */
+    public ListAccountingExpensesRequest withCategoryId(Optional<String> categoryId) {
+        Utils.checkNotNull(categoryId, "categoryId");
+        this.categoryId = categoryId;
+        return this;
+    }
+
+    /**
      * ID of the connection
      */
     public ListAccountingExpensesRequest withConnectionId(String connectionId) {
         Utils.checkNotNull(connectionId, "connectionId");
         this.connectionId = connectionId;
+        return this;
+    }
+
+    /**
+     * The contact ID to filter by (reference to AccountingContact)
+     */
+    public ListAccountingExpensesRequest withContactId(String contactId) {
+        Utils.checkNotNull(contactId, "contactId");
+        this.contactId = Optional.ofNullable(contactId);
+        return this;
+    }
+
+
+    /**
+     * The contact ID to filter by (reference to AccountingContact)
+     */
+    public ListAccountingExpensesRequest withContactId(Optional<String> contactId) {
+        Utils.checkNotNull(contactId, "contactId");
+        this.contactId = contactId;
+        return this;
+    }
+
+    /**
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public ListAccountingExpensesRequest withEndLt(String endLt) {
+        Utils.checkNotNull(endLt, "endLt");
+        this.endLt = Optional.ofNullable(endLt);
+        return this;
+    }
+
+
+    /**
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public ListAccountingExpensesRequest withEndLt(Optional<String> endLt) {
+        Utils.checkNotNull(endLt, "endLt");
+        this.endLt = endLt;
         return this;
     }
 
@@ -215,6 +358,25 @@ public class ListAccountingExpensesRequest {
     public ListAccountingExpensesRequest withFields(Optional<? extends List<ListAccountingExpensesQueryParamFields>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
+        return this;
+    }
+
+    /**
+     * The group ID to filter by (reference to HrisGroup)
+     */
+    public ListAccountingExpensesRequest withGroupId(String groupId) {
+        Utils.checkNotNull(groupId, "groupId");
+        this.groupId = Optional.ofNullable(groupId);
+        return this;
+    }
+
+
+    /**
+     * The group ID to filter by (reference to HrisGroup)
+     */
+    public ListAccountingExpensesRequest withGroupId(Optional<String> groupId) {
+        Utils.checkNotNull(groupId, "groupId");
+        this.groupId = groupId;
         return this;
     }
 
@@ -313,6 +475,25 @@ public class ListAccountingExpensesRequest {
     }
 
     /**
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public ListAccountingExpensesRequest withStartGte(String startGte) {
+        Utils.checkNotNull(startGte, "startGte");
+        this.startGte = Optional.ofNullable(startGte);
+        return this;
+    }
+
+
+    /**
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public ListAccountingExpensesRequest withStartGte(Optional<String> startGte) {
+        Utils.checkNotNull(startGte, "startGte");
+        this.startGte = startGte;
+        return this;
+    }
+
+    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
@@ -362,14 +543,19 @@ public class ListAccountingExpensesRequest {
         }
         ListAccountingExpensesRequest other = (ListAccountingExpensesRequest) o;
         return 
+            Utils.enhancedDeepEquals(this.categoryId, other.categoryId) &&
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
+            Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
+            Utils.enhancedDeepEquals(this.endLt, other.endLt) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
+            Utils.enhancedDeepEquals(this.groupId, other.groupId) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
             Utils.enhancedDeepEquals(this.order, other.order) &&
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
+            Utils.enhancedDeepEquals(this.startGte, other.startGte) &&
             Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte) &&
             Utils.enhancedDeepEquals(this.userId, other.userId);
     }
@@ -377,23 +563,29 @@ public class ListAccountingExpensesRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId, fields, limit,
-            offset, order, query,
-            raw, sort, updatedGte,
-            userId);
+            categoryId, connectionId, contactId,
+            endLt, fields, groupId,
+            limit, offset, order,
+            query, raw, sort,
+            startGte, updatedGte, userId);
     }
     
     @Override
     public String toString() {
         return Utils.toString(ListAccountingExpensesRequest.class,
+                "categoryId", categoryId,
                 "connectionId", connectionId,
+                "contactId", contactId,
+                "endLt", endLt,
                 "fields", fields,
+                "groupId", groupId,
                 "limit", limit,
                 "offset", offset,
                 "order", order,
                 "query", query,
                 "raw", raw,
                 "sort", sort,
+                "startGte", startGte,
                 "updatedGte", updatedGte,
                 "userId", userId);
     }
@@ -401,9 +593,17 @@ public class ListAccountingExpensesRequest {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
+        private Optional<String> categoryId = Optional.empty();
+
         private String connectionId;
 
+        private Optional<String> contactId = Optional.empty();
+
+        private Optional<String> endLt = Optional.empty();
+
         private Optional<? extends List<ListAccountingExpensesQueryParamFields>> fields = Optional.empty();
+
+        private Optional<String> groupId = Optional.empty();
 
         private Optional<Double> limit = Optional.empty();
 
@@ -417,6 +617,8 @@ public class ListAccountingExpensesRequest {
 
         private Optional<String> sort = Optional.empty();
 
+        private Optional<String> startGte = Optional.empty();
+
         private Optional<String> updatedGte = Optional.empty();
 
         private Optional<String> userId = Optional.empty();
@@ -427,11 +629,68 @@ public class ListAccountingExpensesRequest {
 
 
         /**
+         * The category ID to filter by (reference to AccountingCategory)
+         */
+        public Builder categoryId(String categoryId) {
+            Utils.checkNotNull(categoryId, "categoryId");
+            this.categoryId = Optional.ofNullable(categoryId);
+            return this;
+        }
+
+        /**
+         * The category ID to filter by (reference to AccountingCategory)
+         */
+        public Builder categoryId(Optional<String> categoryId) {
+            Utils.checkNotNull(categoryId, "categoryId");
+            this.categoryId = categoryId;
+            return this;
+        }
+
+
+        /**
          * ID of the connection
          */
         public Builder connectionId(String connectionId) {
             Utils.checkNotNull(connectionId, "connectionId");
             this.connectionId = connectionId;
+            return this;
+        }
+
+
+        /**
+         * The contact ID to filter by (reference to AccountingContact)
+         */
+        public Builder contactId(String contactId) {
+            Utils.checkNotNull(contactId, "contactId");
+            this.contactId = Optional.ofNullable(contactId);
+            return this;
+        }
+
+        /**
+         * The contact ID to filter by (reference to AccountingContact)
+         */
+        public Builder contactId(Optional<String> contactId) {
+            Utils.checkNotNull(contactId, "contactId");
+            this.contactId = contactId;
+            return this;
+        }
+
+
+        /**
+         * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
+        public Builder endLt(String endLt) {
+            Utils.checkNotNull(endLt, "endLt");
+            this.endLt = Optional.ofNullable(endLt);
+            return this;
+        }
+
+        /**
+         * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
+        public Builder endLt(Optional<String> endLt) {
+            Utils.checkNotNull(endLt, "endLt");
+            this.endLt = endLt;
             return this;
         }
 
@@ -451,6 +710,25 @@ public class ListAccountingExpensesRequest {
         public Builder fields(Optional<? extends List<ListAccountingExpensesQueryParamFields>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
+            return this;
+        }
+
+
+        /**
+         * The group ID to filter by (reference to HrisGroup)
+         */
+        public Builder groupId(String groupId) {
+            Utils.checkNotNull(groupId, "groupId");
+            this.groupId = Optional.ofNullable(groupId);
+            return this;
+        }
+
+        /**
+         * The group ID to filter by (reference to HrisGroup)
+         */
+        public Builder groupId(Optional<String> groupId) {
+            Utils.checkNotNull(groupId, "groupId");
+            this.groupId = groupId;
             return this;
         }
 
@@ -550,6 +828,25 @@ public class ListAccountingExpensesRequest {
 
 
         /**
+         * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
+        public Builder startGte(String startGte) {
+            Utils.checkNotNull(startGte, "startGte");
+            this.startGte = Optional.ofNullable(startGte);
+            return this;
+        }
+
+        /**
+         * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
+        public Builder startGte(Optional<String> startGte) {
+            Utils.checkNotNull(startGte, "startGte");
+            this.startGte = startGte;
+            return this;
+        }
+
+
+        /**
          * Return only results whose updated date is equal or greater to this value (ISO-8601 /
          * YYYY-MM-DDTHH:MM:SSZ format)
          */
@@ -591,10 +888,11 @@ public class ListAccountingExpensesRequest {
         public ListAccountingExpensesRequest build() {
 
             return new ListAccountingExpensesRequest(
-                connectionId, fields, limit,
-                offset, order, query,
-                raw, sort, updatedGte,
-                userId);
+                categoryId, connectionId, contactId,
+                endLt, fields, groupId,
+                limit, offset, order,
+                query, raw, sort,
+                startGte, updatedGte, userId);
         }
 
     }

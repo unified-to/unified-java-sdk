@@ -38,7 +38,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.47.4'
+implementation 'to.unified:unified-java-sdk:0.47.5'
 ```
 
 Maven:
@@ -46,7 +46,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.47.4</version>
+    <version>0.47.5</version>
 </dependency>
 ```
 
@@ -463,6 +463,11 @@ public class Application {
 * [patchAtsCandidate](docs/sdks/candidate/README.md#patchatscandidate) - Update a candidate
 * [removeAtsCandidate](docs/sdks/candidate/README.md#removeatscandidate) - Remove a candidate
 * [updateAtsCandidate](docs/sdks/candidate/README.md#updateatscandidate) - Update a candidate
+
+### [Carrier](docs/sdks/carrier/README.md)
+
+* [getShippingCarrier](docs/sdks/carrier/README.md#getshippingcarrier) - Retrieve a carrier
+* [listShippingCarriers](docs/sdks/carrier/README.md#listshippingcarriers) - List all carriers
 
 ### [Cashflow](docs/sdks/cashflow/README.md)
 
@@ -1007,6 +1012,13 @@ public class Application {
 * [updateKmsPage](docs/sdks/kms/README.md#updatekmspage) - Update a page
 * [updateKmsSpace](docs/sdks/kms/README.md#updatekmsspace) - Update a space
 
+### [Label](docs/sdks/label/README.md)
+
+* [createShippingLabel](docs/sdks/label/README.md#createshippinglabel) - Create a label
+* [getShippingLabel](docs/sdks/label/README.md#getshippinglabel) - Retrieve a label
+* [listShippingLabels](docs/sdks/label/README.md#listshippinglabels) - List all labels
+* [removeShippingLabel](docs/sdks/label/README.md#removeshippinglabel) - Remove a label
+
 ### [Lead](docs/sdks/lead/README.md)
 
 * [createCrmLead](docs/sdks/lead/README.md#createcrmlead) - Create a lead
@@ -1290,6 +1302,11 @@ public class Application {
 * [removeAccountingPurchaseorder](docs/sdks/purchaseorder/README.md#removeaccountingpurchaseorder) - Remove a purchaseorder
 * [updateAccountingPurchaseorder](docs/sdks/purchaseorder/README.md#updateaccountingpurchaseorder) - Update a purchaseorder
 
+### [Rate](docs/sdks/rate/README.md)
+
+* [createShippingRate](docs/sdks/rate/README.md#createshippingrate) - Create a rate
+* [getShippingRate](docs/sdks/rate/README.md#getshippingrate) - Retrieve a rate
+
 ### [Recording](docs/sdks/recording/README.md)
 
 * [createUcRecording](docs/sdks/recording/README.md#createucrecording) - Create a recording
@@ -1414,6 +1431,35 @@ public class Application {
 * [removeAtsScorecard](docs/sdks/scorecard/README.md#removeatsscorecard) - Remove a scorecard
 * [updateAtsScorecard](docs/sdks/scorecard/README.md#updateatsscorecard) - Update a scorecard
 
+### [Shipment](docs/sdks/shipment/README.md)
+
+* [createShippingShipment](docs/sdks/shipment/README.md#createshippingshipment) - Create a shipment
+* [getShippingShipment](docs/sdks/shipment/README.md#getshippingshipment) - Retrieve a shipment
+* [listShippingShipments](docs/sdks/shipment/README.md#listshippingshipments) - List all shipments
+* [patchShippingShipment](docs/sdks/shipment/README.md#patchshippingshipment) - Update a shipment
+* [removeShippingShipment](docs/sdks/shipment/README.md#removeshippingshipment) - Remove a shipment
+* [updateShippingShipment](docs/sdks/shipment/README.md#updateshippingshipment) - Update a shipment
+
+### [Shipping](docs/sdks/shipping/README.md)
+
+* [createShippingLabel](docs/sdks/shipping/README.md#createshippinglabel) - Create a label
+* [createShippingRate](docs/sdks/shipping/README.md#createshippingrate) - Create a rate
+* [createShippingShipment](docs/sdks/shipping/README.md#createshippingshipment) - Create a shipment
+* [createShippingTracking](docs/sdks/shipping/README.md#createshippingtracking) - Create a tracking
+* [getShippingCarrier](docs/sdks/shipping/README.md#getshippingcarrier) - Retrieve a carrier
+* [getShippingLabel](docs/sdks/shipping/README.md#getshippinglabel) - Retrieve a label
+* [getShippingRate](docs/sdks/shipping/README.md#getshippingrate) - Retrieve a rate
+* [getShippingShipment](docs/sdks/shipping/README.md#getshippingshipment) - Retrieve a shipment
+* [getShippingTracking](docs/sdks/shipping/README.md#getshippingtracking) - Retrieve a tracking
+* [listShippingCarriers](docs/sdks/shipping/README.md#listshippingcarriers) - List all carriers
+* [listShippingLabels](docs/sdks/shipping/README.md#listshippinglabels) - List all labels
+* [listShippingShipments](docs/sdks/shipping/README.md#listshippingshipments) - List all shipments
+* [listShippingTrackings](docs/sdks/shipping/README.md#listshippingtrackings) - List all trackings
+* [patchShippingShipment](docs/sdks/shipping/README.md#patchshippingshipment) - Update a shipment
+* [removeShippingLabel](docs/sdks/shipping/README.md#removeshippinglabel) - Remove a label
+* [removeShippingShipment](docs/sdks/shipping/README.md#removeshippingshipment) - Remove a shipment
+* [updateShippingShipment](docs/sdks/shipping/README.md#updateshippingshipment) - Update a shipment
+
 ### [Space](docs/sdks/space/README.md)
 
 * [createKmsSpace](docs/sdks/space/README.md#createkmsspace) - Create a space
@@ -1536,6 +1582,12 @@ public class Application {
 * [patchHrisTimeshift](docs/sdks/timeshift/README.md#patchhristimeshift) - Update a timeshift
 * [removeHrisTimeshift](docs/sdks/timeshift/README.md#removehristimeshift) - Remove a timeshift
 * [updateHrisTimeshift](docs/sdks/timeshift/README.md#updatehristimeshift) - Update a timeshift
+
+### [Tracking](docs/sdks/tracking/README.md)
+
+* [createShippingTracking](docs/sdks/tracking/README.md#createshippingtracking) - Create a tracking
+* [getShippingTracking](docs/sdks/tracking/README.md#getshippingtracking) - Retrieve a tracking
+* [listShippingTrackings](docs/sdks/tracking/README.md#listshippingtrackings) - List all trackings
 
 ### [Transaction](docs/sdks/transaction/README.md)
 

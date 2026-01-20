@@ -1277,6 +1277,72 @@ public class UnifiedJavaSDKAutoConfig {
         return unifiedTo.user();
     }
     /**
+     * Creates a Shipping sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Shipping instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Shipping shipping(UnifiedTo unifiedTo) {
+        return unifiedTo.shipping();
+    }
+    /**
+     * Creates a Carrier sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Carrier instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Carrier carrier(UnifiedTo unifiedTo) {
+        return unifiedTo.carrier();
+    }
+    /**
+     * Creates a Label sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Label instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Label label(UnifiedTo unifiedTo) {
+        return unifiedTo.label();
+    }
+    /**
+     * Creates a Rate sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Rate instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Rate rate(UnifiedTo unifiedTo) {
+        return unifiedTo.rate();
+    }
+    /**
+     * Creates a Shipment sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Shipment instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Shipment shipment(UnifiedTo unifiedTo) {
+        return unifiedTo.shipment();
+    }
+    /**
+     * Creates a Tracking sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Tracking instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Tracking tracking(UnifiedTo unifiedTo) {
+        return unifiedTo.tracking();
+    }
+    /**
      * Creates a Storage sub-SDK bean if none exists.
      *
      * @param unifiedTo the main SDK instance
@@ -2597,6 +2663,72 @@ public class UnifiedJavaSDKAutoConfig {
     @ConditionalOnMissingBean
     public AsyncUser asyncUser(AsyncUnifiedTo asyncUnifiedTo) {
         return asyncUnifiedTo.user();
+    }
+    /**
+     * Creates an AsyncShipping sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncShipping instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncShipping asyncShipping(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.shipping();
+    }
+    /**
+     * Creates an AsyncCarrier sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncCarrier instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncCarrier asyncCarrier(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.carrier();
+    }
+    /**
+     * Creates an AsyncLabel sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncLabel instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncLabel asyncLabel(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.label();
+    }
+    /**
+     * Creates an AsyncRate sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncRate instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncRate asyncRate(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.rate();
+    }
+    /**
+     * Creates an AsyncShipment sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncShipment instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncShipment asyncShipment(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.shipment();
+    }
+    /**
+     * Creates an AsyncTracking sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncTracking instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncTracking asyncTracking(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.tracking();
     }
     /**
      * Creates an AsyncStorage sub-SDK bean if none exists.

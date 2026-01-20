@@ -21,6 +21,7 @@ public enum ListCrmDealsQueryParamFields {
     STAGE_ID("stage_id"),
     PIPELINE("pipeline"),
     PIPELINE_ID("pipeline_id"),
+    STAGES("stages"),
     SOURCE("source"),
     PROBABILITY("probability"),
     TAGS("tags"),
@@ -30,7 +31,8 @@ public enum ListCrmDealsQueryParamFields {
     CONTACT_IDS("contact_ids"),
     COMPANY_IDS("company_ids"),
     METADATA("metadata"),
-    RAW("raw");
+    RAW("raw"),
+    PIPELINES("pipelines");
 
     @JsonValue
     private final String value;

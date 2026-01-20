@@ -16,7 +16,8 @@ public enum PatchMessagingEventQueryParamFields {
     MESSAGE("message"),
     BUTTON("button"),
     USER("user"),
-    RAW("raw");
+    RAW("raw"),
+    IS_REPLACING_ORIGINAL("is_replacing_original");
 
     @JsonValue
     private final String value;
