@@ -64,7 +64,7 @@ java:
     url: https://mit-license.org/
   maxMethodParams: 0
   multipartArrayFormat: legacy
-  nullFriendlyParameters: false
+  nullFriendlyParameters: true
   openUnions: true
   operationScopedParams: true
   outputModelSuffix: output
